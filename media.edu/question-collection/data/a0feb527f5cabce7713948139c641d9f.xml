@@ -1,0 +1,2576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati puisi berikut untuk menjawab soal&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Salju &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em style=&quot;line-height: 1.5;&quot;&gt;Wing Karjo&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.5;&quot;&gt;Ke manakah pergi&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mencari matahari&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ketika salju turun&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; pepohonan kehilangan daun&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;span style=&quot;line-height: 1.5;&quot;&gt;Ke manakah jalan&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; mencari lindungan&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ketika tubuh kuyup&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; dan pintu tertutup&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.5;&quot;&gt;Ke manakah lagi&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; mencari api&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ketika bara hati&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; padam tak berarti&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;span style=&quot;line-height: 1.5;&quot;&gt;Ke manakah pergi&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; selain mencuci diri&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Isi puisi tersebut adalah menggambarkan seseorang yang sedang mencari ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;matahari yang bersinar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tempat untuk berlindung&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penerang jalan kehidupan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;arah jalan tujuan kehidupan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ilmu pengetahuan tentang kehidupan&amp;nbsp;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;span style=&quot;line-height: 1.5;&quot;&gt;Cermati puisi berikut untuk menjawab soal&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Salju&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Wing Karjo&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Ke manakah pergi&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mencari matahari&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ketika salju turun&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; pepohonan kehilangan daun&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;span&gt;Ke manakah jalan&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; mencari lindungan&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ketika tubuh kuyup&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; dan pintu tertutup&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Ke manakah lagi&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; mencari api&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ketika bara hati&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; padam tak berarti&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;span&gt;Ke manakah pergi&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; selain mencuci diri&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.5;&quot;&gt;Amanat yang terdapat di dalam puisi tersebut adalah ...&lt;/span&gt;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Janganlah mudah putus asa.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bersabarlah dalam menerima cobaan.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span style=&quot;line-height: 1.5;&quot;&gt;Bekerjalah lebih giat bila ingin sukses.&lt;/span&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hati-hati dalam memperjuangkan nasib.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span&gt;Berjuanglah untuk mendapatkan yang kau inginkan.&lt;/span&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&amp;nbsp;Cermati puisi berikut untuk menjawab soal&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;Anggrek Bulan&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Muhammad Amin&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Sehabis magrib, langit biru&lt;/p&gt;
+&lt;p&gt;Purnama menguning&lt;/p&gt;
+&lt;p&gt;Awan berselendang lembayung&lt;/p&gt;
+&lt;p&gt;Anggrek bulan di pohon rambutan&lt;/p&gt;
+&lt;p&gt;Purnama rebah di rantingnya&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Benalu indah di pohon rambutan&lt;/p&gt;
+&lt;p&gt;Anggrek bulan mencium purnama&lt;/p&gt;
+&lt;p&gt;Anggrek bulan mandi cahaya&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Citraan yang dominan pada puisi tersebut adalah&amp;nbsp; ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;perabaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pencecap&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penglihatan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penciuman&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span&gt;pendengaran&lt;/span&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Cermati puisi berikut untuk menjawab soal&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;Anggrek Bulan&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Muhammad Amin&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Sehabis magrib, langit biru&lt;/p&gt;
+&lt;p&gt;Purnama menguning&lt;/p&gt;
+&lt;p&gt;Awan berselendang lembayung&lt;/p&gt;
+&lt;p&gt;Anggrek bulan di pohon rambutan&lt;/p&gt;
+&lt;p&gt;Purnama rebah di rantingnya&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Benalu indah di pohon rambutan&lt;/p&gt;
+&lt;p&gt;Anggrek bulan mencium purnama&lt;/p&gt;
+&lt;p&gt;Anggrek bulan mandi cahaya&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Kalimat bermajas personifikasi&amp;nbsp; terdapat pada larik ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Purnama menguning&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sehabis magrib, langit biru&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Anggrek bulan di pohon rambutan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Benalu indah di pohon rambutan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span&gt;Anggrek bulan mencium purnama&lt;/span&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ketika Ki Dalang sendiri pada gilirannya harus menyelenggarakan upacara pernikahan putrinya, beliau sendiri terlalu repot mengurus segala macam sehingga tidak bisa manggung.&amp;nbsp; Salah seorang muridnya yang paling pintar diberi tugas untuk memainkan lakon yang tersohor tersebut.&amp;nbsp; Di luar dugaan semua orang, bintang baru telah lahir.&amp;nbsp; Ki Dalang Muda memainkan cerita dengan lihai dan sempurna.&amp;nbsp; Hanya pada bagian terakhir lakon, semuanya menahan napas, karena Ki Dalang Muda rupa-rupanya telah memutuskan membuat kejutan sekaligus penerapan ajaran gurunya, yakni membiarkan Arjuna kalah, sementara Niwatakawaca terus terbahak-bahak mengepit Dewi Supraba sambil mematahkan panah yang menancap di mulutnya, terus melesat ke udara.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Ki Dalang Tua ikut tersentak di kursinya, lalu buru-buru mengirim perintah kilat lewat belakang.&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Cepat bunuh Niwatakawaca! Jangan macem-macem!&amp;rdquo;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Li&lt;/em&gt;ma &lt;em&gt;Belas&lt;/em&gt;, Putu Wijaya)&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Watak tokoh Ki Dalang Tua dalam kutipan cerpen tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;emosional&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;galak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cerewet&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;jahat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cerdas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ketika Ki Dalang sendiri pada gilirannya harus menyelenggarakan upacara pernikahan putrinya, beliau sendiri terlalu repot mengurus segala macam sehingga tidak bisa manggung.&amp;nbsp; Salah seorang muridnya yang paling pintar diberi tugas untuk memainkan lakon yang tersohor tersebut.&amp;nbsp; Di luar dugaan semua orang, bintang baru telah lahir.&amp;nbsp; Ki Dalang Muda memainkan cerita dengan lihai dan sempurna.&amp;nbsp; Hanya pada bagian terakhir lakon, semuanya menahan napas, karena Ki Dalang Muda rupa-rupanya telah memutuskan membuat kejutan sekaligus penerapan ajaran gurunya, yakni membiarkan Arjuna kalah, sementara Niwatakawaca terus terbahak-bahak mengepit Dewi Supraba sambil mematahkan panah yang menancap di mulutnya, terus melesat ke udara.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Ki Dalang Tua ikut tersentak di kursinya, lalu buru-buru mengirim perintah kilat lewat belakang.&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Cepat bunuh Niwatakawaca! Jangan macem-macem!&amp;rdquo;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Li&lt;/em&gt;ma&amp;nbsp;&lt;em&gt;Belas&lt;/em&gt;, Putu Wijaya)&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Watak tokoh Ki Dalang Muda &lt;em&gt;yang &lt;/em&gt;&lt;em&gt;kreatif&lt;/em&gt;dalam kutipan cerpen tersebut digambarkan pengarang melalui ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;lingkungan tokoh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pikiran tokoh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perilaku tokoh&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ucapan tokoh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;fisik tokoh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ketika Ki Dalang sendiri pada gilirannya harus menyelenggarakan upacara pernikahan putrinya, beliau sendiri terlalu repot mengurus segala macam sehingga tidak bisa manggung.&amp;nbsp; Salah seorang muridnya yang paling pintar diberi tugas untuk memainkan lakon yang tersohor tersebut.&amp;nbsp; Di luar dugaan semua orang, bintang baru telah lahir.&amp;nbsp; Ki Dalang Muda memainkan cerita dengan lihai dan sempurna.&amp;nbsp; Hanya pada bagian terakhir lakon, semuanya menahan napas, karena Ki Dalang Muda rupa-rupanya telah memutuskan membuat kejutan sekaligus penerapan ajaran gurunya, yakni membiarkan Arjuna kalah, sementara Niwatakawaca terus terbahak-bahak mengepit Dewi Supraba sambil mematahkan panah yang menancap di mulutnya, terus melesat ke udara.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Ki Dalang Tua ikut tersentak di kursinya, lalu buru-buru mengirim perintah kilat lewat belakang.&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Cepat bunuh Niwatakawaca! Jangan macem-macem!&amp;rdquo;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Li&lt;/em&gt;ma&amp;nbsp;&lt;em&gt;Belas&lt;/em&gt;, Putu Wijaya)&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Tahapan alur pada kutipan cerpen tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;perkenalan (eksposisi)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pertentangan (konflik)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penanjakan konflik (komplikasi)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;klimak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penyelesaian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Hatta beberapa lamanya maka isteri si Miskin itupun hamillah tiga bulan lamanya.&amp;nbsp; Maka isterinya menangis hendak makan buah mempelam yang ada di dalam taman raja itu.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;Maka suaminya itupun terketukkan antingnya tatkala ia di Keinderaan menjadi raja tiada ia mau beranak.&amp;nbsp; Maka sekarang telah mudhorot.&amp;nbsp; Maka baharulah hendak beranak seraya berkata kepada isterinya, &amp;rdquo;Ayo, hay Adinda Tuan hendak membunuh kakandalah rupanya ini tiadakah Tuan tahu akan hal kita yang sudah lalu itu jangankan hendak meminta barang suatu.&amp;nbsp; Hampir kepada kampung orang tiada boleh.&amp;rdquo;&amp;nbsp; Setelah didengar oleh isterinya kata suaminya demikian itu, maka makinlah sangat ia menangis.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Maka kata suaminya, &amp;rdquo;Diamlah Tuan, jangan menangis!&amp;nbsp; Berilah kakanda pergi mencaharikan Tuan buah mempelam itu, jikalau dapat oleh kakanda akan buah mempelam itu kakanda berikan pada Tuan&amp;rdquo;.&amp;nbsp; Maka isterinya itu pun diamlah.&amp;nbsp; Maka suaminya itu pun pergilah ke pasar mencahari buah mempelam itu.&amp;nbsp; Setelah sampai di kedai orang berjual buah mempelam. Maka si Miskin itu pun berhentilah di sana.&amp;nbsp; Hendak pun dimintanya takut ia akan dipalu orang.&amp;nbsp; Maka kata orang yang berjualan buah mempelam itu, &amp;rdquo;Hai miskin.&amp;nbsp; Apa kehendakmu?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;Maka sahut Si Miskin, &amp;rdquo;Jikalau ada belas dan kasihan serat Rahim Tuan akan hamba orang miskin hamba ini minta diberikan yang sudah terbuang itu.&amp;nbsp; Hamba hendak memohonkan buah mempelam Tuan yang sudah busuk itu barang sebiji sahaja tuan.&amp;rdquo;&amp;nbsp; Maka terlalu belas hati sekalian orang pasar itu yang mendengar kata si Miskin.&amp;nbsp; Seperti hancurlah rasa hatinya maka ada yang memberi buah mempelam ada yang memberikan nasi ada yang memberikan kain baju ada yang memberikan buah-buahan.&amp;nbsp; Maka si Miskin itu pun heranlah akan dirirnya oleh sebab diberi orang pasar itu berbagai-bagai jenis pemberian.&amp;nbsp; Adapun akan dahulunya jangankan diberinya barang suatu hamper pun tiada boleh. Habislah dilemparnya dengan kayu dan batu.&amp;nbsp; Setelah sudah ia berpikir dalam hatinya demikian itu, maka iapun kembalilah ke dalam hutan mendapatkan isterinya.&amp;nbsp; Maka katanya, &amp;rdquo;Inilah Tuan, buah mempelam dan segala buah-buahan dan makan-makanan dan kain baju.&amp;nbsp; Itupun diinjakkannyalah isterinya seraya menceriterakan hal ihwalnya tatkala ia di pasar itu.&amp;nbsp; Maka isterinya pun menangis tiada mau makan jikalau bukan buah mempelam yang di dalam taman raja itu.&amp;nbsp; Biarlah aku mati sekali.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Hikayat Si Miskin&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;Isi cerita hikayat tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Si Miskin dan istrinya sudah lama ingin segera memiliki anak.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Istri meminta buah mempelam di taman raja sama dengan ingin membunuh suaminya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keheranan si Miskin akan kebaikan hati para penjual di pasar kepadanya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Istri si Miskin yang sedang hamil ingin makan buah mempelam yang di taman raja.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Upaya seorang suami untuk dapat memenuhi keinginan istrinya yang sedang hamil.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Hatta beberapa lamanya maka isteri si Miskin itupun hamillah tiga bulan lamanya.&amp;nbsp; Maka isterinya menangis hendak makan buah mempelam yang ada di dalam taman raja itu.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;Maka suaminya itupun terketukkan antingnya tatkala ia di Keinderaan menjadi raja tiada ia mau beranak.&amp;nbsp; Maka sekarang telah mudhorot.&amp;nbsp; Maka baharulah hendak beranak seraya berkata kepada isterinya, &amp;rdquo;Ayo, hay Adinda Tuan hendak membunuh kakandalah rupanya ini tiadakah Tuan tahu akan hal kita yang sudah lalu itu jangankan hendak meminta barang suatu.&amp;nbsp; Hampir kepada kampung orang tiada boleh.&amp;rdquo;&amp;nbsp; Setelah didengar oleh isterinya kata suaminya demikian itu, maka makinlah sangat ia menangis.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Maka kata suaminya, &amp;rdquo;Diamlah Tuan, jangan menangis!&amp;nbsp; Berilah kakanda pergi mencaharikan Tuan buah mempelam itu, jikalau dapat oleh kakanda akan buah mempelam itu kakanda berikan pada Tuan&amp;rdquo;.&amp;nbsp; Maka isterinya itu pun diamlah.&amp;nbsp; Maka suaminya itu pun pergilah ke pasar mencahari buah mempelam itu.&amp;nbsp; Setelah sampai di kedai orang berjual buah mempelam. Maka si Miskin itu pun berhentilah di sana.&amp;nbsp; Hendak pun dimintanya takut ia akan dipalu orang.&amp;nbsp; Maka kata orang yang berjualan buah mempelam itu, &amp;rdquo;Hai miskin.&amp;nbsp; Apa kehendakmu?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;Maka sahut Si Miskin, &amp;rdquo;Jikalau ada belas dan kasihan serat Rahim Tuan akan hamba orang miskin hamba ini minta diberikan yang sudah terbuang itu.&amp;nbsp; Hamba hendak memohonkan buah mempelam Tuan yang sudah busuk itu barang sebiji sahaja tuan.&amp;rdquo;&amp;nbsp; Maka terlalu belas hati sekalian orang pasar itu yang mendengar kata si Miskin.&amp;nbsp; Seperti hancurlah rasa hatinya maka ada yang memberi buah mempelam ada yang memberikan nasi ada yang memberikan kain baju ada yang memberikan buah-buahan.&amp;nbsp; Maka si Miskin itu pun heranlah akan dirirnya oleh sebab diberi orang pasar itu berbagai-bagai jenis pemberian.&amp;nbsp; Adapun akan dahulunya jangankan diberinya barang suatu hamper pun tiada boleh. Habislah dilemparnya dengan kayu dan batu.&amp;nbsp; Setelah sudah ia berpikir dalam hatinya demikian itu, maka iapun kembalilah ke dalam hutan mendapatkan isterinya.&amp;nbsp; Maka katanya, &amp;rdquo;Inilah Tuan, buah mempelam dan segala buah-buahan dan makan-makanan dan kain baju.&amp;nbsp; Itupun diinjakkannyalah isterinya seraya menceriterakan hal ihwalnya tatkala ia di pasar itu.&amp;nbsp; Maka isterinya pun menangis tiada mau makan jikalau bukan buah mempelam yang di dalam taman raja itu.&amp;nbsp; Biarlah aku mati sekali.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Hikayat Si Miskin&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Ciri-ciri cerita hikayat yang dominan pada teks tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;istana sentris&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kesaktian tokoh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penggambaran alam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bercerita hal yang ajaib&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penggunaan kata yang diulang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;span style=&quot;line-height: 1.5;&quot;&gt;&amp;rdquo;Hai, kenapa kalian berhenti! Tunjukkanlah kepada kami bahwa mata air itu milik kalian! Atau jangan-jangan kalian sudah menyerah!&amp;rdquo; seru Mbu`i Bungale.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Diam kau, hai perempuan cerewet! Jangan hanya pandai bicara!&amp;rdquo;&amp;nbsp; sergah pemimpin pelancong itu balik menantang Mbu`i Bungale. &amp;rdquo;Jika kamu pemilik mata air ini, buktikan pula kepada kami!&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Baiklah, Tuan-Tuan! Ketahuilah bahwa Tuhan Mahatahu mana hambanya yang benar, permintaannya akan dikabulkan!&amp;rdquo;&amp;nbsp; ujar jawab Mbu`i Bungale dengan penuh keyakinan.&lt;/p&gt;
+&lt;p&gt;Usai berkata begitu, Mbu`i Bungale segera duduk bersila di samping suaminya seraya bersedekap. Mulutnya pun komat-kamit membaca doa.&amp;nbsp; &amp;rdquo;Woyi, air kehidupan, mata air sakti, mata air yang memiliki berkah. Melebar dan meluaslah wahai mata air para bidadari.... membesarlah....!!!&amp;rdquo; demikian doa Mbu`i Bungale.&lt;/p&gt;
+&lt;p&gt;Usai berdoa, Mbu`i Bungale segera mengajak suaminya dan memerintahkan keempat pelancong tersebut untuk naik ke atas pohon yang paling tinggi karena sebentar lagi kawasan itu akan tenggelam. Doa Mbu`i Bungale pun dikabulkan.&amp;nbsp; Beberapa saat kemudian, perut bumi tiba-tiba bergemuruh, tanah bergetar dan menggelegar. Perlahan-lahan mata air Tupalo melebar dan meluas, kemudian menyemburkan air yang sangat deras.&amp;nbsp; Dalam waktu sekejap, tempat itu tergenang air.&amp;nbsp; Keempat pelancong tersebut takjub melihat keajaiban itu dari atas pohon kapuk.&lt;/p&gt;
+&lt;p&gt;Semakin lama, genangan air itu semakin tinggi hingga hampir mencapai tempat keempat pelancong yang berada di atas pohon kapuk itu.&amp;nbsp; Mereka pun berteriak-teriak ketakutan.&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Ampun Mbu`i Bungale! Kami mengaku salah.&amp;nbsp; Engkaulah pemilik tempat ini dan seisinya!&amp;rdquo; teriak pemimpin pelancong itu.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(&lt;em&gt;Asal Mula Danau Limboto&lt;/em&gt;)&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Isi cerita tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Niat baik akan membuahkan kebaikan. Demikian pula sebaliknya, keserakahan dapat membahayakan diri sendiri.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lebih baik kita mengalah daripada mempertahankan hal-hal yang dapat membahayakan diri kita.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lakukan sebisa yang kita lakukan demi mempertahankan&amp;nbsp; harga diri yang disepelekan orang lain.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berbuat baiklah kepada orang lain karena Tuhan akan memelihara dan mengabulkan doa orang yang baik.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bumi pun akan marah bila orang-orang yang mendiami bumi ini berbuat serakah dan mengakui yang bukan miliknya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&amp;rdquo;Hai, kenapa kalian berhenti! Tunjukkanlah kepada kami bahwa mata air itu milik kalian! Atau jangan-jangan kalian sudah menyerah!&amp;rdquo; seru Mbu`i Bungale.&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Diam kau, hai perempuan cerewet! Jangan hanya pandai bicara!&amp;rdquo;&amp;nbsp; sergah pemimpin pelancong itu balik menantang Mbu`i Bungale. &amp;rdquo;Jika kamu pemilik mata air ini, buktikan pula kepada kami!&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Baiklah, Tuan-Tuan! Ketahuilah bahwa Tuhan Mahatahu mana hambanya yang benar, permintaannya akan dikabulkan!&amp;rdquo;&amp;nbsp; ujar jawab Mbu`i Bungale dengan penuh keyakinan.&lt;/p&gt;
+&lt;p&gt;Usai berkata begitu, Mbu`i Bungale segera duduk bersila di samping suaminya seraya bersedekap. Mulutnya pun komat-kamit membaca doa.&amp;nbsp; &amp;rdquo;Woyi, air kehidupan, mata air sakti, mata air yang memiliki berkah. Melebar dan meluaslah wahai mata air para bidadari.... membesarlah....!!!&amp;rdquo; demikian doa Mbu`i Bungale.&lt;/p&gt;
+&lt;p&gt;Usai berdoa, Mbu`i Bungale segera mengajak suaminya dan memerintahkan keempat pelancong tersebut untuk naik ke atas pohon yang paling tinggi karena sebentar lagi kawasan itu akan tenggelam. Doa Mbu`i Bungale pun dikabulkan.&amp;nbsp; Beberapa saat kemudian, perut bumi tiba-tiba bergemuruh, tanah bergetar dan menggelegar. Perlahan-lahan mata air Tupalo melebar dan meluas, kemudian menyemburkan air yang sangat deras.&amp;nbsp; Dalam waktu sekejap, tempat itu tergenang air.&amp;nbsp; Keempat pelancong tersebut takjub melihat keajaiban itu dari atas pohon kapuk.&lt;/p&gt;
+&lt;p&gt;Semakin lama, genangan air itu semakin tinggi hingga hampir mencapai tempat keempat pelancong yang berada di atas pohon kapuk itu.&amp;nbsp; Mereka pun berteriak-teriak ketakutan.&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Ampun Mbu`i Bungale! Kami mengaku salah.&amp;nbsp; Engkaulah pemilik tempat ini dan seisinya!&amp;rdquo; teriak pemimpin pelancong itu.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(&lt;em&gt;Asal Mula Danau Limboto&lt;/em&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Keterkaitan isi cerita tersebut dengan kehidupan sekarang adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Dengan besar hati mengakui kesalahan yang telah diperbuat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Melakukan ritual berdoa sebelum melakukan suatu pekerjaan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berusaha menyelamatkan diri saat bencana alam melanda.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Suami dan istri saling mendukung dalam menghadapi masalah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Masih saja ada orang yang mengakui barang milik orang lain.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kutipan novel berikut untuk menjawab soal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ... Sudah lewat dua bulan ia tinggal di rumah mereka, tapi satu hal yang tak didengar seluruh penghuni rumahnya adalah suara yang berasal dari mulutnya.&amp;nbsp; Barangkali ia bisu, begitu ibunya pernah bilang.&amp;nbsp; Gora ingin membuktikan keyakinannya jika anak itu bisa berbicara atau setidaknya bisa bersuara.&amp;nbsp; Dan, ia bekerja keras untuk itu, satu hal yang dilakukannya dan kini mulai menampakkan hasil hingga membuat jiwanya dilanda kebahagiaan.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Siapa namamu?&amp;rdquo; tanya Gora.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Aku Gora,&amp;rdquo;&amp;nbsp; ia berbicara sembari memberi isyarat seolah ia berbicara dengan orang bisu.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Kau bisa bicara?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Namaku Gora. G &amp;ndash; O &amp;ndash; R &amp;ndash; A ...&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Anak itu diam saja.&amp;nbsp; Gora memainkan rambutnya yang dikuncit kelabang dua merambat hingga ke atas kepala.&amp;nbsp; Sementara matanya menatap burung emprityang berlarian di halaman belakang rumah dan sesekali menatap tubuh lelaki kecil hitam berbulu dengan wajah oval tak jauh dari dirinya.&amp;nbsp; Tiba-tiba ia tersentak ketika mendengar sebuah suara membalasnya.&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Kulung.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Ha ... Kulung?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Gora bengong.&amp;nbsp; Sesaat kemudia ia berlari dari dapur hingga teras depan rumah sambil berteriak-teriak, &amp;rdquo;Namanya Kulung, ia baru saja menyebutnya.&amp;nbsp; Kulung.&amp;nbsp; Ibu, nama anak itu Kulung Ibu!&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Seisi rumah mendengar sentakan suara Gora.&amp;nbsp; Termasuk Karyo Petir yang tengah berada di pande besi.&amp;nbsp; Teriakan Gora bagai sebuah ledakan dari kebisuan yang selama ini melekat pada diri anak itu.&amp;nbsp; Kulung, ia tak bisu.&amp;nbsp; Ia seolah menyimpan lidahnya hanya untuk sesuatu yang&amp;nbsp; ingin diucapkannya.&amp;nbsp; Ia tak memedulikan dunia di sekitarnya yang begitu bising dan riuh membicarakan sesuatu yang tak diinginkannya.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Peri Kecil di Sungai Nipah&lt;/em&gt;, Dyah Merta)&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Amanat yang dapat kita petik dari cerita tersebut adalah ...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Bicaralah seperlunya saja.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jangan mengganggu urusan orang lain.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bantulah orang yang sedang dalam kesulitan.&amp;nbsp;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hadapi suatu masalah dengan kepala dingin.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Teruslah berusaha dan jangan mudah putus asa.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kutipan novel berikut untuk menjawab soal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ... Sudah lewat dua bulan ia tinggal di rumah mereka, tapi satu hal yang tak didengar seluruh penghuni rumahnya adalah suara yang berasal dari mulutnya.&amp;nbsp; Barangkali ia bisu, begitu ibunya pernah bilang.&amp;nbsp; Gora ingin membuktikan keyakinannya jika anak itu bisa berbicara atau setidaknya bisa bersuara.&amp;nbsp; Dan, ia bekerja keras untuk itu, satu hal yang dilakukannya dan kini mulai menampakkan hasil hingga membuat jiwanya dilanda kebahagiaan.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Siapa namamu?&amp;rdquo; tanya Gora.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Aku Gora,&amp;rdquo;&amp;nbsp; ia berbicara sembari memberi isyarat seolah ia berbicara dengan orang bisu.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Kau bisa bicara?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Namaku Gora. G &amp;ndash; O &amp;ndash; R &amp;ndash; A ...&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Anak itu diam saja.&amp;nbsp; Gora memainkan rambutnya yang dikuncit kelabang dua merambat hingga ke atas kepala.&amp;nbsp; Sementara matanya menatap burung emprityang berlarian di halaman belakang rumah dan sesekali menatap tubuh lelaki kecil hitam berbulu dengan wajah oval tak jauh dari dirinya.&amp;nbsp; Tiba-tiba ia tersentak ketika mendengar sebuah suara membalasnya.&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Kulung.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Ha ... Kulung?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Gora bengong.&amp;nbsp; Sesaat kemudia ia berlari dari dapur hingga teras depan rumah sambil berteriak-teriak, &amp;rdquo;Namanya Kulung, ia baru saja menyebutnya.&amp;nbsp; Kulung.&amp;nbsp; Ibu, nama anak itu Kulung Ibu!&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Seisi rumah mendengar sentakan suara Gora.&amp;nbsp; Termasuk Karyo Petir yang tengah berada di pande besi.&amp;nbsp; Teriakan Gora bagai sebuah ledakan dari kebisuan yang selama ini melekat pada diri anak itu.&amp;nbsp; Kulung, ia tak bisu.&amp;nbsp; Ia seolah menyimpan lidahnya hanya untuk sesuatu yang&amp;nbsp; ingin diucapkannya.&amp;nbsp; Ia tak memedulikan dunia di sekitarnya yang begitu bising dan riuh membicarakan sesuatu yang tak diinginkannya.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Peri Kecil di Sungai Nipah&lt;/em&gt;, Dyah Merta)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Nilai moral yang kita peroleh dari cerita tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Belajar hidup mandiri.&amp;nbsp;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ingin tahu segala urusan orang lain.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mempelajari keadaan di sekitar kita.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Gigih dalam memperjuangkan sesuatu.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Membantu orang yang dalam kesulitan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kutipan novel berikut untuk menjawab soal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ... Sudah lewat dua bulan ia tinggal di rumah mereka, tapi satu hal yang tak didengar seluruh penghuni rumahnya adalah suara yang berasal dari mulutnya.&amp;nbsp; Barangkali ia bisu, begitu ibunya pernah bilang.&amp;nbsp; Gora ingin membuktikan keyakinannya jika anak itu bisa berbicara atau setidaknya bisa bersuara.&amp;nbsp; Dan, ia bekerja keras untuk itu, satu hal yang dilakukannya dan kini mulai menampakkan hasil hingga membuat jiwanya dilanda kebahagiaan.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Siapa namamu?&amp;rdquo; tanya Gora.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Aku Gora,&amp;rdquo;&amp;nbsp; ia berbicara sembari memberi isyarat seolah ia berbicara dengan orang bisu.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Kau bisa bicara?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Namaku Gora. G &amp;ndash; O &amp;ndash; R &amp;ndash; A ...&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Anak itu diam saja.&amp;nbsp; Gora memainkan rambutnya yang dikuncit kelabang dua merambat hingga ke atas kepala.&amp;nbsp; Sementara matanya menatap burung emprityang berlarian di halaman belakang rumah dan sesekali menatap tubuh lelaki kecil hitam berbulu dengan wajah oval tak jauh dari dirinya.&amp;nbsp; Tiba-tiba ia tersentak ketika mendengar sebuah suara membalasnya.&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Kulung.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Ha ... Kulung?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Gora bengong.&amp;nbsp; Sesaat kemudia ia berlari dari dapur hingga teras depan rumah sambil berteriak-teriak, &amp;rdquo;Namanya Kulung, ia baru saja menyebutnya.&amp;nbsp; Kulung.&amp;nbsp; Ibu, nama anak itu Kulung Ibu!&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Seisi rumah mendengar sentakan suara Gora.&amp;nbsp; Termasuk Karyo Petir yang tengah berada di pande besi.&amp;nbsp; Teriakan Gora bagai sebuah ledakan dari kebisuan yang selama ini melekat pada diri anak itu.&amp;nbsp; Kulung, ia tak bisu.&amp;nbsp; Ia seolah menyimpan lidahnya hanya untuk sesuatu yang&amp;nbsp; ingin diucapkannya.&amp;nbsp; Ia tak memedulikan dunia di sekitarnya yang begitu bising dan riuh membicarakan sesuatu yang tak diinginkannya.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Peri Kecil di Sungai Nipah&lt;/em&gt;, Dyah Merta)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Dari cerita tersebut, contoh yang kita jumpai dalam kehidupan sehari-hari adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kerukunan dan kepedulian dengan sesama anggota keluarga.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dalam hidup saling menolong dalam menyelesaikan sesuatu.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kesungguhan hati dalam menyelesaikan masalah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pentingnya komunikasi sesama anggota keluarga.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bersabar menghadapi setiap kesulitan hidup.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati Kutipan Gurindam Berikut:&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;184&quot;&gt;
+&lt;p&gt;Apabila perkataan yang amat kasar, &lt;br&gt; lekaslah orang sekalian gusar&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Isi gurindam tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Janganlah berkata-kata yang membuat orang marah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berbicara semaunya akan membuat orang bertindak kasar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perkataan yang amat kasar, akan membuat orang menjadi marah.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kekasaran seseorang diakibatkan kemarahan yang berkepanjangan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Biasakanlah tidak berkata kasar kepada siapa pun.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati puisi berikut untuk menjawab soal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Persetujuan dengan Bung Karno&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Chairil Anwar&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Ayo! Bung Karno kasi tangan mari kita bikin janji&lt;/p&gt;
+&lt;p&gt;Aku sudah cukup lama dengan bicaramu&lt;/p&gt;
+&lt;p&gt;Di panggang di atas apimu, digarami lautmu&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Dari mulai tgl. 17 Agustus 1945&lt;/p&gt;
+&lt;p&gt;Aku melangkah ke depan berada rapat di sisimu&lt;/p&gt;
+&lt;p&gt;Aku sekarang api aku sekarang laut&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Bung Karno!&amp;nbsp; Kau dan aku satu zat satu urat&lt;/p&gt;
+&lt;p&gt;Di zatmu di zatku kapal-kapal kita berlayar&lt;/p&gt;
+&lt;p&gt;Di uratmu di uratku kapal-kapal kita bertolak &amp;amp; berlabuh&lt;strong&gt;&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Isi puisi tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;keberanian untuk mengambil keputusan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;persamaan keinginan, pendapat, dan tujuan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kesamaan langkah dalam mencapai cita-cita&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kesepakatan mempertahankan kemerdekaan Indonesia&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tantangan dan hambatan mempertahankan kemerdekaan&amp;nbsp;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati puisi berikut untuk menjawab soal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Persetujuan dengan Bung Karno&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Chairil Anwar&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Ayo! Bung Karno kasi tangan mari kita bikin janji&lt;/p&gt;
+&lt;p&gt;Aku sudah cukup lama dengan bicaramu&lt;/p&gt;
+&lt;p&gt;Di panggang di atas apimu, digarami lautmu&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Dari mulai tgl. 17 Agustus 1945&lt;/p&gt;
+&lt;p&gt;Aku melangkah ke depan berada rapat di sisimu&lt;/p&gt;
+&lt;p&gt;Aku sekarang api aku sekarang laut&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Bung Karno!&amp;nbsp; Kau dan aku satu zat satu urat&lt;/p&gt;
+&lt;p&gt;Di zatmu di zatku kapal-kapal kita berlayar&lt;/p&gt;
+&lt;p&gt;Di uratmu di uratku kapal-kapal kita bertolak &amp;amp; berlabuh&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Latar budaya yang tampak pada puisi tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kesatuan langkah bersama dalam berjuang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;semangat bersatu menggalang persatuan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bung Karno sang Proklamator&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;api perjuangan Bung Karno&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tanggal 17 Agustus 1945&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kedua kutipan kutipan berikut:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Teks 1: Kutipan Cerita&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Karena penasaran, suatu hari aku pernah mendengar dari bibi, kalau ibu harus berjuang 5 tahun lamanya menunggu kelahiranku sampai merasa kakakku sudah cukup besar dan siap merawatku.&amp;nbsp; Kakak memiliki kondisi yang sangat baik ketika masih kecil tapi tiba-tiba saat berusia 5 tahun, ia mengalami demam panas yang tinggi hingga membuat dirinya pingsan, ketika dilarikan ke rumah sakit otaknya mengerut dan akhirnya ia jadi seperti ini hingga tak bisa disembuhkan lagi, ia juga mengalami masalah kesehatan karena tubuhnya gampang terserang virus sehingga tak boleh terlalu lelah.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;My Idiot Brother, &lt;/em&gt;Agnes Davonar)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Teks 2: Kutipan Hikayat&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Syahdan maka siti Sarah pun genaplah bulannya itu, maka ini pun sakit perutlah akan hendak beranak itu.&amp;nbsp; Maka segala bini orang besar-besar dan bini orang kaya-kaya pun masuklah mengadap Raja perempuan akan beranak itu.&amp;nbsp; Maka pada ketika yang baik dan pada saat yang sempurna maka Raja perempuan pun beranaklah seorang anak laki-laki terlalu amat baik rupanya itu menurut ayahanda Baginda itu.&amp;nbsp; Maka disambut oleh segala bini orang besar-besar itu lalu dimandikan oleh bini segala raja-raja pada pasuh emas.&amp;nbsp; Setelah sudah dimandikan oleh bini segala raja-raja itu, maka lalulah dipakaikan kain yang keemasan.&amp;nbsp; Setelah sudah itu maka diberikan nama oleh Baginda bunda akan anakanda&amp;nbsp; itu Raja Siwalkhar itu. Setelah itu maka dipungutkan ayahanda dan pengaruh oleh bunda Baginda maka lalulah dipeliharakan dengan sepertinya itu dan betapa adatnya orang segala raja-raja yang beranak.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Hikayat Bayan Budiman&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Persamaan tema dari kedua teks tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;peran orang tua dalam mengasuh anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menjaga dan merawat anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menanti kehadiran sang buah hati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kasih sayang orang tua kepada anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kehadiran anak dalam keluarga&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kedua teks berikut:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Teks 1: Drama Konvensional&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;&lt;strong&gt;MARSUDI&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;Kalau sekiranya perlu berteduh mampirlah kerumah saya nak&amp;hellip;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;&lt;strong&gt;SULAIMAN&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;Hujannya tidak begitu deras pak.&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;&lt;strong&gt;MARSUDI&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;Tetapi lebih enak menunggu di dalam.&amp;nbsp;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;&lt;strong&gt;SULAIMAN &amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;Saya mencari seseorang.&amp;nbsp;Bapak kenal dengan seseorang yang bernama Mursiwi?&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;&lt;strong&gt;MARSUDI&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;O,&amp;nbsp;dia sedang mengunjungi perhelatan temannya.&amp;nbsp;Itu tempatnya.&amp;nbsp;Yang musiknya terdengar dari sini.&amp;nbsp;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;&lt;strong&gt;SULAIMAN&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;Suaminya juga ?&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;&lt;strong&gt;MARSUDI&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;O,&amp;nbsp;dia ada pekerjaan,&amp;nbsp;katanya.&amp;nbsp;Sebentar lagi ia pulang.&amp;nbsp;Biasanya Mursiwi sendiri yang menjemput.&amp;nbsp;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;&lt;strong&gt;SULAIMAN&lt;/strong&gt;&amp;nbsp;&lt;em&gt;( Mengangguk )&lt;/em&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;Terimakasih Pak.&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;&lt;strong&gt;MARSUDI&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;Itu rumah saya Nak.&amp;nbsp;Kapan-kapan mampirlah,&amp;nbsp;nama saya Marsudi.&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;&lt;strong&gt;SULAIMAN&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;nospacing&quot;&gt;Saya Sulaiman.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Senja dengan Dua Kelelawar, &lt;/em&gt;Kirdjomulyo)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Teks 2: Drama Mutakhir&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Si sakit mengaduh dan jatuh.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Salah Seorang :&amp;nbsp; Tengok!&lt;/p&gt;
+&lt;p&gt;Salah Seorang :&amp;nbsp; Yakin! Tangannya berdarah.&lt;/p&gt;
+&lt;p&gt;Salah Seorang :&amp;nbsp; Wah!&lt;/p&gt;
+&lt;p&gt;Salah Seorang :&amp;nbsp; Apa tindakan kita?&lt;/p&gt;
+&lt;p&gt;Salah Seorang :&amp;nbsp; Jadi sungguh-sungguh, ya?&lt;/p&gt;
+&lt;p&gt;Salah Seorang :&amp;nbsp; Nah inilah, mulai berbahaya kalau ada pihak ketiga.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(&lt;em&gt;Aduh, &lt;/em&gt;Putu Wijaya)&lt;/p&gt;
+&lt;p&gt;Dilihat dari unsur intrinsik, perbedaan kedua teks tersebut adalah ...&lt;/p&gt;
+&lt;table style=&quot;width: 551px; height: 225px;&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;22&quot;&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;205&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Teks 1&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Teks 2&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;22&quot;&gt;
+&lt;p&gt;A.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;205&quot;&gt;
+&lt;p&gt;mengutamakan tokoh protagonis&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;
+&lt;p&gt;mengutamakan tokoh antagonis&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;22&quot;&gt;
+&lt;p&gt;B.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;205&quot;&gt;
+&lt;p&gt;penokohan secara analitik&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;
+&lt;p&gt;penokohan secara dramatik&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;22&quot;&gt;
+&lt;p&gt;C.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;205&quot;&gt;
+&lt;p&gt;nama dan jumlah pelaku jelas&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;
+&lt;p&gt;nama dan jumlah pelaku tidak jelas&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;22&quot;&gt;
+&lt;p&gt;D.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;205&quot;&gt;
+&lt;p&gt;penyampaian pesan berbelit-belit&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;
+&lt;p&gt;pesan disampaikan secara terus terang&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;22&quot;&gt;
+&lt;p&gt;E.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;205&quot;&gt;
+&lt;p&gt;penerapan latar sulit dianalisis&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;
+&lt;p&gt;latar mudah ditemukan dan dianalisi&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;A&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;B&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;C&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;D&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;E&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kedua teks berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Teks 1: &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Sangat dianjurkan untuk membaca novel &lt;em&gt;Surat Kecil untuk Tuhan. &lt;/em&gt;Bagi yang belum membaca, karena ceritanya cukup menyentuh dan dapat dipastikan pembaca akan meneteskan air mata,jika menghayati cerita dari para tokoh dalam novel tersebut. Terutama tokoh utama yang pantang menyerah menghadapi kankernya yang ganas dan selalu menyerahkan hidupnya kepada Tuhan. Selain itu, terdapat berbagai tokoh pendukung yaitu sosok ayah dan ibu yang selalu tegar menghadapi putrinya, kedua kakak yang selalu mendampingi adiknya, kekasihnya yang tetap setia dan menerima Keke apa adanya, dan para sahabat Keke yang selalu setia menemaninya untuk memberikan semangat agar Keke tetap tegar.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Teks 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a href=&quot;http://sinopsisnovelku.blogspot.com/&quot;&gt;Buku ini, &lt;em&gt;Surat Kecil untuk Tuhan &lt;/em&gt;&lt;/a&gt;merupakan kisah nyata.&amp;nbsp; Sang penulis mengemas perjuangan Keke melawan penyakit dengan baik, kanker yang bernama &lt;em&gt;Rabdosmiosarkoma&lt;/em&gt; atau yang dalam bahasa awam dikenal dengan nama kanker jaringan lunak.&amp;nbsp; Meskipun pada beberapa bagian ia terlalu memaksakan pesan moral masuk pada dialog beberapa tokoh sehingga mengacaukan setting. Namun, toh, buku ini tetap memberi spirit utamanya bagi generasi muda bahwa seberapa pun cobaannya, kita harus berani berdiri dan menghadapinya.&lt;strong&gt;&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Perbedaan dari kedua teks tersebut adalah ...&lt;/p&gt;
+&lt;table style=&quot;width: 630px; height: 205px;&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;22&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;205&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Teks 1&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Teks 2&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;22&quot;&gt;
+&lt;p&gt;A.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;205&quot;&gt;
+&lt;p&gt;menilai keunggulan isi buku&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;
+&lt;p&gt;menggambarkan isi buku&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;22&quot;&gt;
+&lt;p&gt;B.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;205&quot;&gt;
+&lt;p&gt;mengulas pesan agama&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;
+&lt;p&gt;mengulas pesan moral&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;22&quot;&gt;
+&lt;p&gt;C.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;205&quot;&gt;
+&lt;p&gt;tokoh pendukung menginpirasi tokoh utama&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;
+&lt;p&gt;tokoh utama menginspirasi pembaca&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;22&quot;&gt;
+&lt;p&gt;D.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;205&quot;&gt;
+&lt;p&gt;penggambaran karakter tokoh yang kuat&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;
+&lt;p&gt;penggambaran karakter tokoh yang lemah&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;22&quot;&gt;
+&lt;p&gt;E.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;205&quot;&gt;
+&lt;p&gt;menjelaskan simpulan isi buku&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;
+&lt;p&gt;menjelaskan isi buku secara umum&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;A&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;B&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;C&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;D&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;E&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;&amp;nbsp;Cermati rangkaian kalimat berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(1)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Di belakang, Parman nampak menggendong sesosok bayangan.&lt;/p&gt;
+&lt;p&gt;(2)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Tapi mandor itu nampak menunggu perintahnya.&lt;/p&gt;
+&lt;p&gt;(3)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Sigit melangkah pelan keluar dari pintu mobil hitamnya.&lt;/p&gt;
+&lt;p&gt;(4)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Ragu Sigit menatap Parman.&lt;/p&gt;
+&lt;p&gt;(5)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Hanya diterangi sebuah senter kecil, ia melangkah mendekati bibir Kali Welang.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), (4), (3), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), (4), (5), dan (1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (5), (1), (4), dan (2)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4), (2), (1), (3), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5), (1), (3), (4), dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;&amp;nbsp;Cermati rangkaian kalimat berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Muhammad Arief anak yang paling jelek tampangnya di antara teman-temannya sesekolah dan sepermainan di Koto dulu.&amp;nbsp; ... seperti kaleng terinjak kerbau menurut ejekan anak-anak sebayanya di kala itu.&lt;/p&gt;
+&lt;p&gt;Bila sekarang ini pujian dan pujaan tadi dikatakan langsung kepadanya, Arief selalu menjawab, &amp;rdquo;Aku beruntung saja.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Beruntung bagaimana maksudmu?&amp;rdquo; tanya Imran suatu kali.&amp;nbsp; Imran adalah seorang temannya sejak mereka kanak-kanak dulu, yang dianggapnya teman baiknya, sesuatu yang tidak banyak dimiliki Arief.&amp;nbsp; Imran tidak termasuk dalam kelompok yang mencemooh atau mengejeknya.&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Aku beruntung punya orang tua yang aku miliki.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Orang tuamu punya sepuluh anak,&amp;rdquo; kata Imran sambil mengernyitkan dahinya.&amp;nbsp; &amp;rdquo;Kamu dulu suka mengeluh bagaimana mereka tidak punya cukup waktu untuk memperhatikan setiap anak-anak mereka.&amp;nbsp; Suka marah.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Ya, itu maksudku.&amp;nbsp; Karena itulah aku bisa berbuat semauku sejak kecil.&amp;nbsp; Kamu kan tahu, kadang-kadang aku tidak perlu pulang semalaman, tidur di surau atau di rumahmu.&amp;rdquo;&lt;strong&gt;&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ubahan cerita tersebut menjadi teks drama adalah&amp;nbsp; ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Arief &amp;nbsp;&amp;nbsp;:&amp;nbsp; &amp;rdquo;Aku beruntung saja.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Imran&amp;nbsp;&amp;nbsp; &amp;nbsp; :&amp;nbsp; &amp;rdquo;Beruntung bagaimana maksudmu?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Arief&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;:&amp;nbsp; &amp;rdquo;Aku beruntung punya orang tua yang aku miliki.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Imran &amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp; &amp;rdquo;Orang tuamu punya sepuluh anak. Kamu dulu suka mengeluh bagaimana mereka tidak&lt;/p&gt;
+&lt;p&gt;punya cukup waktu untuk memperhatikan setiap anak-anak mereka.&amp;nbsp; Suka marah.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :&amp;nbsp; &amp;rdquo;Ya, itu maksudku.&amp;nbsp; Karena itulah aku bisa berbuat semauku sejak kecil.&amp;nbsp; Kamu kan tahu,&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; kadang-kadang aku tidak perlu pulang semalaman, tidur di surau atau di rumahmu.&amp;rdquo;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(&lt;em&gt;Muhammad Arief anak yang paling jelek tampangnya di antara teman-temannya sesekolah dan sepermainan di Koto dulu.&amp;nbsp; ... seperti kaleng terinjak kerbau menurut ejekan anak-anak sebayanya di kala itu. Bila sekarang pujian dan pujaan dikatakan langsung kepadanya ...&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp; : &amp;rdquo;Aku beruntung saja.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Imran&amp;nbsp; :&amp;nbsp; &amp;rdquo;Beruntung bagaimana maksudmu?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp; :&amp;nbsp; &amp;rdquo;Aku beruntung punya orang tua yang aku miliki.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Imran&amp;nbsp; :&amp;nbsp; &amp;rdquo;Orang tuamu punya sepuluh anak,&amp;rdquo; (&lt;em&gt;Sambil mengernyitkan dahi) &lt;/em&gt;&amp;nbsp;&amp;rdquo;Kamu dulu suka mengeluh bagaimana mereka tidak punya cukup waktu untuk memperhatikan setiap anak-anak mereka.&amp;nbsp; Suka marah.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp; :&amp;nbsp; &amp;rdquo;Ya, itu maksudku.&amp;nbsp; Karena itulah aku bisa berbuat semauku sejak kecil.&amp;nbsp; Kamu kan tahu, kadang-kadang aku tidak perlu pulang semalaman, tidur di surau atau di rumahmu.&amp;rdquo;&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp; :&amp;nbsp; &amp;rdquo;Aku beruntung saja.&amp;rdquo; (&lt;em&gt;Jawab Arief selalu bila sekarang pujian dan pujaan dikatakan langsung kepadanya&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;Imran&amp;nbsp; :&amp;nbsp; &amp;rdquo;Beruntung bagaimana maksudmu?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp; :&amp;nbsp; &amp;rdquo;Aku beruntung punya orang tua yang aku miliki.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Imran&amp;nbsp; :&amp;nbsp; (&lt;em&gt;Sambil mengernyitkan dahi) &lt;/em&gt;&amp;rdquo;Orang tuamu punya sepuluh anak, kamu dulu suka mengeluh bagaimana mereka tidak punya cukup waktu untuk memperhatikan setiap anak-anak mereka.&amp;nbsp; Kamu juga suka marah-marah.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp; :&amp;nbsp; &amp;rdquo;Ya, itu maksudku.&amp;nbsp; Karena itulah aku bisa berbuat semauku sejak kecil.&amp;nbsp; Kamu kan tahu, kadang-kadang aku tidak perlu pulang semalaman, tidur di surau atau di rumahmu.&amp;rdquo;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp; :&amp;nbsp; &amp;rdquo;Aku beruntung saja.&amp;rdquo; (&lt;em&gt;Jawaban Arief selalu bila sekarang pujian dan pujaan dikatakan langsung kepadanya&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;Imran&amp;nbsp; :&amp;nbsp; &amp;rdquo;Beruntung bagaimana maksudmu?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp; :&amp;nbsp; &amp;rdquo;Aku beruntung punya orang tua yang aku miliki.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Imran&amp;nbsp; :&amp;nbsp; &amp;rdquo;Orang tuamu punya sepuluh anak,&amp;rdquo; (&lt;em&gt;Sambil mengernyitkan dahi) &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Kamu dulu suka mengeluh bagaimana mereka tidak punya cukup waktu untuk memperhatikan setiap anak-anak mereka.&amp;nbsp; Suka marah.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp; :&amp;nbsp; &amp;rdquo;Ya, itu maksudku.&amp;nbsp; Karena itulah aku bisa berbuat semauku sejak kecil.&amp;nbsp; Kamu kan tahu, kadang-kadang aku tidak perlu pulang semalaman, tidur di surau atau di rumahmu.&amp;rdquo;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(&lt;em&gt;Muhammad Arief anak yang paling jelek tampangnya di antara teman-temannya sesekolah dan sepermainan di Koto dulu.&amp;nbsp; ... seperti kaleng terinjak kerbau menurut ejekan anak-anak sebayanya di kala itu.) &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp; :&amp;nbsp; &amp;rdquo;Aku beruntung saja.&amp;rdquo;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Imran&amp;nbsp; :&amp;nbsp; &amp;rdquo;Beruntung bagaimana maksudmu?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp; :&amp;nbsp; &amp;rdquo;Aku beruntung punya orang tua yang aku miliki.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Imran&amp;nbsp; :&amp;nbsp; &amp;rdquo;Orang tuamu punya sepuluh anak.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Kamu dulu suka mengeluh bagaimana mereka tidak punya cukup waktu untuk memperhatikan setiap anak-anak mereka.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;rdquo;Suka marah.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Arief&amp;nbsp;&amp;nbsp;&amp;nbsp; :&amp;nbsp; &amp;rdquo;Ya, itu maksudku.&amp;nbsp; Karena itulah aku bisa berbuat semauku sejak kecil.&amp;nbsp; Kamu kan tahu, kadang-kadang aku tidak perlu pulang semalaman, tidur di surau atau di rumahmu.&amp;rdquo;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati teks drama berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Sore hari, di rumah Aryo Sekti, Panembahan Reso duduk berembuk dengan Aryo Sekti.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Reso : Anda tadi, di rumah saya, berkata bahwa hanya aku yang bias menyelamatkan kerajaan dari bencana perpecah; Benarkah itu?&lt;/p&gt;
+&lt;p&gt;Sekti : Tentu saja. Apakah Anda berpura-pura tidak menyadari kenyataan itu? Bukan kerendahan hati!&lt;/p&gt;
+&lt;p&gt;Reso : &lt;strong&gt;. . .&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Sekti : Ya, begitulah kenyataannya. Orang boleh suka atau tidak suka kepada Anda, tetapi toh harus mengakui kenyataan bahwa Anda sangat dibutuhkan oleh Negara untuk mengatasi perpecahan.&lt;/p&gt;
+&lt;p&gt;Reso : Jadi, Anda menganggap aku dibutuhkan oleh negara! Tetapi, mengenai suka atau tidak suka terhadap diriku itu bagaimana? Anda termasuk yang suka atau tidak suka?&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;40 Pertemuan dari Hari Ke Hari, &lt;/em&gt;W.S. Rendra)&lt;strong&gt;&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Kalimat yang tepat untuk melengkapi dialog drama tersebut adalah ...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Takaran Anda memang bukan takaran manusia biasa.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Itulah sebabnya Anda mengingkari pemberontakan Panji Tumbal.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Nasib baik atau buruk, kita harus berani menanggung atau mensyukuri.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Istriku, karena ketakutan, menentang cita-citaku untuk menjadi Raja.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bukannya tidak menyadari, tetapi kurang meyakini.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati puisi berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;156&quot;&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Tuan raja belajar menari&lt;/p&gt;
+&lt;p&gt;Ditemani para hulu baling&lt;/p&gt;
+&lt;p&gt;Hidup rajin bagaikan mentari&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;. . .&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Larik yang tepat untuk melengkapi bagian isi pantun tersebut adalah &amp;hellip; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Hidup bahagia sepanjang hari&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pikiran pun menjadi terang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pekerjaan&amp;nbsp; berat menjadi ringan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bila berperang pastilah menang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kelak hidupmu akan cemerlang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;Cermati puisi berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;274&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Sajak Dalam-dalam&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Sumarsono&lt;/p&gt;
+&lt;p&gt;Dalam laut ada tiram&lt;/p&gt;
+&lt;p&gt;Dalam tiram ada mutiara&lt;/p&gt;
+&lt;p&gt;Dalam mutiara: ah tak ada apa&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Dalam baju ada aku&lt;/p&gt;
+&lt;p&gt;Dalam aku ada hati&lt;/p&gt;
+&lt;p&gt;Dalam hati: ah tak ada jua yang ada&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Dalam syair ada kata&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;. . .&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Dalam makna: mudah-mudahan ada kau&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Larik yang tepat untuk melengkapi puisi tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Dalam kata ada aku&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dalam aku ada kata&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dalam kata ada makna&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dalam hati ada kata&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span&gt;Dalam syair ada rima&lt;/span&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati puisi berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;293&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Semua yang Kau lakukan&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Songi&lt;/p&gt;
+&lt;p&gt;Semua yang kau lakukan,&lt;/p&gt;
+&lt;p&gt;Semua yang tiada kau lakukan, kebohongan.&lt;/p&gt;
+&lt;p&gt;Saat aku mencinta, telah kubuat dirimu&lt;/p&gt;
+&lt;p&gt;Jadi musuhku.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Namun kata-katamu&lt;/p&gt;
+&lt;p&gt;Tetap tinggal dalam&lt;strong&gt;. . .&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Kata yang tepat untuk melengkapi puisi tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;benakmu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kataku&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hatimu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;diriku&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span&gt;dirimu&lt;/span&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati puisi berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;340&quot;&gt;
+&lt;p&gt;&lt;strong&gt;17 Runcing Agustus&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Rasyiqi&lt;/p&gt;
+&lt;p&gt;dalam rangka menyambut agustus&lt;/p&gt;
+&lt;p&gt;sayang, lapangan sudah tak sehijau dulu&lt;/p&gt;
+&lt;p&gt;meranggas.&amp;nbsp; Haus pada darah pahlawan&lt;/p&gt;
+&lt;p&gt;di simpang kiri kanan jalan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;. . .&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;sedang di lapangan anak bangsa hormat kiri&lt;/p&gt;
+&lt;p&gt;pada pahlawan yang tak puya darah&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Larik bermajas yang sesuai untuk melengkapi puisi&amp;nbsp; tersebut adalah &amp;hellip; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pohon rindang menyejukkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pepohonan mengheningkan cipta&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bunga kapas melayang tertiup angin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mangga gedong ranum menggoda&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span&gt;pohon cemara berbaris teratur&lt;/span&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati &lt;/strong&gt;&lt;strong&gt;kutipan cerita&lt;/strong&gt;&lt;strong&gt; berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;593&quot;&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Pengembara merenung.&amp;nbsp; Dalam keheningannya ia mencoba memahami segala yang terjadi, &lt;strong&gt;. . .&lt;/strong&gt;&amp;nbsp; Ya, perulangan yang kadang menjemukan.&amp;nbsp; Akan tetapi, dalam perulangan itu banyak sekali terjadi peristiwa dan hal-hal tak terduga yang datangnya sering mengejutkan.&amp;nbsp; Karena itu, begitu perempuan tua itu menyuruhnya naik ke sampan, ia tak lagi bertanya-tanya.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Mencari Buah Khuldi, &lt;/em&gt;Bambang Joko Susilo)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Kalimat dengan &lt;em&gt;sudut pandang orang ketiga&lt;/em&gt; yang tepat untuk melengkapi kutipan tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dan akhirnya ia sadar bahwa hidup ini ternyata memang cuma perulangan belaka&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pengembara pun tidak ingin bertanya, percuma,&amp;nbsp; tidak menemukan jawaban&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perempuan itu seperti jelmaan makhluk purba yang telah lebur kesemestaan alam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pengembara termenung lama dan berdiam diri di tepi danau yang sunyi itu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span&gt;akan tetapi segera ia berpikir, barangkali ia memang ditakdirkan melihat keanehan&lt;/span&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati &lt;/strong&gt;&lt;strong&gt;kutipan cerita&lt;/strong&gt;&lt;strong&gt; berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;593&quot;&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Suasana jadi panas.&amp;nbsp; Juga para pimpinan musyawarah sama memperlihatkan sikap kurang senang terhadap pembicara.&amp;nbsp; &lt;strong&gt;. . .&lt;/strong&gt;&amp;nbsp; Tapi komponis tua itu tidak berubah wajah.&amp;nbsp; Dengan tenang kedua tangannya dia angkat sedikit ke atas.&amp;nbsp; Meski belum sama sekali tenang, tapi keriuhan sudah mulai berkurang.&amp;nbsp; Dan komponis tua itu cepat meneruskan bicaranya.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Komponis Tua, &lt;/em&gt;B. Soelarto)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Kalimat pernyataan peristiwa yang sesuai untuk melengkapi kutipan tersebut adalah &amp;hellip; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Semoga musyawarah ini menghasilkan pemikiran yang kreatif.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dalam keriuhan itu terdengar suara orang batuk-batuk.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Beberapa hadirin terpesona oleh ucapannya itu.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mereka saling berunding dengan berbisik. &amp;nbsp;&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span&gt;Tepuk tangan meledak, menggemuruh.&lt;/span&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kutipan drama berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;600&quot;&gt;
+&lt;p&gt;(&lt;em&gt;Dia membisu.&amp;nbsp; Lama berdiam diri. &amp;ndash; Seorang Abdi Dalam perempuan muncul) &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kertanagara :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Apa yang membawa kau kemari?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abdi Dalam Perempuan :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Rakrian Apatih, Paduka, mohon diizinkan menghadap.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kertanagara :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Atas nama kami, persilakan dia datang kemari.&lt;/p&gt;
+&lt;p&gt;( &lt;strong&gt;. . . )&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kertanagara :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Yang Mulia, Anda mendengarnya, sekarang kerajaan minta perhatian kami.&lt;/p&gt;
+&lt;p&gt;(&lt;em&gt;Baskara pergi Raganata masuk&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kertanagara :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Rakian Apatih?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Raganata :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Paduka!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kertanagara :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Katakanlah kepada saya, bagaimana penerimaan kaum bangsawan terhadap undang-undang kami yang baru?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Raganata :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Tersinggung, Paduka Raja.&amp;nbsp; Sangat merasa tidak puas. Kebanyakan merasa tidak senang.&amp;nbsp; Banyak yang meninggalkan Singasari, susul menyusul. Dengan berbagai alasan.&amp;nbsp; ...&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; (&lt;em&gt;Burung Garuda Terbang Sendiri, &lt;/em&gt;Sanoesi Pane)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Petunjuk laku yang tepat&amp;nbsp; untuk melengkapi teks drama tersebut adalah &amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(&lt;em&gt;Abdi Dalam Perempuan menggeleng&lt;/em&gt;)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(&lt;em&gt;Abdi Dalam Perempuan menunduk&lt;/em&gt;)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(&lt;em&gt;Abdi Dalam Perempuan bungkam&lt;/em&gt;)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(&lt;em&gt;Abdi Dalam Perempuan diam&lt;/em&gt;)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span&gt;(&lt;/span&gt;&lt;em&gt;Abdi Dalam Perempuan pergi&lt;/em&gt;&lt;span&gt;)&lt;/span&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kata-kata&lt;/strong&gt;&lt;strong&gt;berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;265&quot;&gt;
+&lt;p&gt;&lt;em&gt;kabut &amp;ndash; bayangan &amp;ndash; lelah &amp;ndash; ke pinggiran &lt;/em&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bait puisi yang sesuai dari susunan deret kata tersebut sebagai kata kunci adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;bersenandung mengiringi malam berkabut&lt;/p&gt;
+&lt;p&gt;bersama hari-hari dan bayangan&lt;/p&gt;
+&lt;p&gt;hingga ke pinggiran waktu&lt;/p&gt;
+&lt;p&gt;lelah, lelah, dan lelah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&amp;nbsp;&lt;span style=&quot;line-height: 1.5;&quot;&gt;sampai jalan berkabut itu&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;kami masih mencoba ngejar bayangan masa depan&lt;/p&gt;
+&lt;p&gt;tapi lelah&lt;/p&gt;
+&lt;p&gt;kami ke pinggiran jalan nasib&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&amp;nbsp;&lt;span style=&quot;line-height: 1.5;&quot;&gt;dalam bayangan kelam&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;kelelahan mendera&lt;/p&gt;
+&lt;p&gt;ke pinggiran kota&lt;/p&gt;
+&lt;p&gt;kabut melayang di langit biru&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kabut di langit kelabu&lt;/p&gt;
+&lt;p&gt;lelah dalam rasa dan raga&lt;/p&gt;
+&lt;p&gt;bayangan berbaris menjelajah hingga ke perut bumi&lt;/p&gt;
+&lt;p&gt;ke pinggiran rasa&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&lt;span style=&quot;line-height: 1.5;&quot;&gt;saat senja mulai berkabut&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;bayang-bayang&amp;nbsp; mengikuti jalan&lt;/p&gt;
+&lt;p&gt;saat-saat kelelahan singgah di hati&lt;/p&gt;
+&lt;p&gt;ke pinggiran waktu&amp;nbsp;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati karya puisi&lt;/strong&gt;&lt;strong&gt;berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table style=&quot;height: 398px; width: 333px;&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;283&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Penghormatan Topeng&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Abdul Wachid B. S.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;untuk memasuki rumahmu&lt;/p&gt;
+&lt;p&gt;kembali&lt;/p&gt;
+&lt;p&gt;kukenakan topeng yang&lt;/p&gt;
+&lt;p&gt;telah lama kau ciptakan&lt;/p&gt;
+&lt;p&gt;lalu kau dan aku&lt;/p&gt;
+&lt;p&gt;sama menggali lobang&lt;/p&gt;
+&lt;p&gt;sebagai persembunyian&lt;/p&gt;
+&lt;p&gt;dan sorot matahari&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;1989&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Makna lambang dari kata &lt;em&gt;topeng&lt;/em&gt; pada puisi tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;penutup&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pelindung&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kedok&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kebohongan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span&gt;kepura-puraan&lt;/span&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kutipan teks drama berikut untuk menjawab soal&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; valign=&quot;top&quot; width=&quot;606&quot;&gt;
+&lt;p&gt;(&lt;em&gt;Sementara itu R.A. Kartina bangkit dari duduknya mendapatkan kedua pemuda itu&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Karnasih&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Eeh Ibu di sini, sejak tadi kami mencari Ibu.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;R.A. Kartinah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Sudah lama aku duduk dekat lentera di bawah pohon kayu itu.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Karnasih&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Memang ada kulihat dari tadi orang duduk di sana, tetapi kukira agen polisi yang menjaga&amp;nbsp; di sini.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;R.A. Kartinah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Aku bersyukur kepada Tuhan, kamu berdua telah saling mendapati hati masing-masing.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Karnasih&amp;nbsp; &lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Ah, Ibu mendengar rupanya.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;R.A. Kartinah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Dengan tiada perantaraan orang lain, hanya karena hati bertemu hati semata-mata.&amp;nbsp; Sejak tadi, ibu dengar, tiap orang lalu hanya bertengkaran dan berbantah saja,&amp;nbsp; seolah-olah tempat bencana ini masih saja hendak&amp;nbsp; merasakan pengaruhnya memecah belah manusia.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Irwan&amp;nbsp;&amp;nbsp; &lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;(&lt;em&gt;mengulang dengan tak insaf&lt;/em&gt;)&amp;nbsp; &amp;rdquo;Pengaruh memecah belah.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;R.A. Kartinah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Ibu duduk di bekas rumah kita ini merenungkan kehidupan ibu dengan Raden Hendrapati selama dua puluh tujuh tahun ini.&amp;nbsp; Sekarang ia tidak ada lagi di sini, matanya sudah berhenti menatap membelenggu ibu, dapatlah ibu berpikir kembali tenang dan merdeka!&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Karnasih&amp;nbsp; &lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Tidakkah baik ibu beristirahat dulu?&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;R.A. Kartinah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Biarlah, Nak, ibu girang engkau berdua telah dapat mengatasi segala pengaruh bencana ini dengan kekuatan jiwa sendiri.&amp;nbsp; tiadalah ini selain dari tuntutan Tuhan semata-mata, suatu tanda Mahaadil Dia!&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Karnasih&amp;nbsp; &lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Aku sudah takut Ibu takkan sanggup menahan kehilangan ini.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;R.A. Kartinah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Besar kasihku pada ayahmu hanyalah Tuhan yang tahu.&amp;nbsp; Benar juga dugaanmu, kehilangan ini hampir tak tertanggung olehku.&amp;nbsp; Tetapi akan menyesalkah aku, jika kehilangan ini dapat membawa bahagia pada anakku dan kepada orang lain juga. Tuhan mengampuni ayahmu yang selama ini hidupnya tak lain kerjanya hanyalah memecah dan menceraiberaikan orang saja dan dengan demikian selalu berusaha menambah dan menguatkan kekuasaan dan kejayaan diri sendiri.&amp;nbsp; Hampir semua orang yang bergaul dengan dia pernah jadi korbannya.&amp;nbsp; Tidak, aku takkan menyesal.&amp;nbsp; Aku yang paling dekat padanya akulah pula yang terbanyak mengetahui buruk baiknya.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;(&lt;em&gt;Masuk sep polisi yang berpakaian preman tadi bersama-sama dengan agen polisi&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;3&quot;&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p align=&quot;right&quot;&gt;(&lt;em&gt;Api, &lt;/em&gt;Usmar Ismail)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Ringkasan isi teks drama tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sebuah peristiwa masa lalu, yang memecah belas antarmanusia, yang menimbulkan kebencian di hati masyarakat sekitar, yang menimbulkan pengaruh bagi warga,&amp;nbsp; saling bertengkar dan berbantah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Merenungkan kehidupan yang telah dijalani selama dua puluh tujuh tahun dalam belenggu kekuasaan suami yang egois, yang pekerjaannya hanya memecah belah dan menceraiberaikan orang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rasa syukur seorang ibu atas kebahagiaan anaknya, yang telah menemukan pasangan hidupnya di balik masa lalu sang ibu yang terbelenggu oleh keegoisan suami, yang suka memecah belah warga masyarakat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Seorang ibu sedang mengenang peristiwa yang pernah terjadi di rumah yang pernah dia tinggali dengan suami yang egois, memecah belah orang, dan kini, kehilangan suaminya itu membuatnya merdeka, serta kebahagiaan bagi anaknya dan orang lain.&amp;nbsp;&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Baik buruknya seseorang hanyalah menjadi kenangan yang tidak mudah terlupakan, apalagi sampai menimbulkan korban, dan menyakitkan yang berkepanjangan. Kehilangannya membawa kemerdekaan dan kebahagiaan bagi keluarganya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kutipan teks drama berikut untuk menjawab soal&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot; valign=&quot;top&quot; width=&quot;606&quot;&gt;
+&lt;p&gt;(&lt;em&gt;Sementara itu R.A. Kartina bangkit dari duduknya mendapatkan kedua pemuda itu&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Karnasih&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Eeh Ibu di sini, sejak tadi kami mencari Ibu.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;R.A. Kartinah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Sudah lama aku duduk dekat lentera di bawah pohon kayu itu.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Karnasih&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Memang ada kulihat dari tadi orang duduk di sana, tetapi kukira agen polisi yang menjaga&amp;nbsp; di sini.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;R.A. Kartinah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Aku bersyukur kepada Tuhan, kamu berdua telah saling mendapati hati masing-masing.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Karnasih&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Ah, Ibu mendengar rupanya.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;R.A. Kartinah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Dengan tiada perantaraan orang lain, hanya karena hati bertemu hati semata-mata.&amp;nbsp; Sejak tadi, ibu dengar, tiap orang lalu hanya bertengkaran dan berbantah saja,&amp;nbsp; seolah-olah tempat bencana ini masih saja hendak&amp;nbsp; merasakan pengaruhnya memecah belah manusia.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Irwan&amp;nbsp;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;(&lt;em&gt;mengulang dengan tak insaf&lt;/em&gt;)&amp;nbsp; &amp;rdquo;Pengaruh memecah belah.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;R.A. Kartinah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Ibu duduk di bekas rumah kita ini merenungkan kehidupan ibu dengan Raden Hendrapati selama dua puluh tujuh tahun ini.&amp;nbsp; Sekarang ia tidak ada lagi di sini, matanya sudah berhenti menatap membelenggu ibu, dapatlah ibu berpikir kembali tenang dan merdeka!&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Karnasih&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Tidakkah baik ibu beristirahat dulu?&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;R.A. Kartinah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Biarlah, Nak, ibu girang engkau berdua telah dapat mengatasi segala pengaruh bencana ini dengan kekuatan jiwa sendiri.&amp;nbsp; tiadalah ini selain dari tuntutan Tuhan semata-mata, suatu tanda Mahaadil Dia!&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Karnasih&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Aku sudah takut Ibu takkan sanggup menahan kehilangan ini.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;R.A. Kartinah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p&gt;&amp;rdquo;Besar kasihku pada ayahmu hanyalah Tuhan yang tahu.&amp;nbsp; Benar juga dugaanmu, kehilangan ini hampir tak tertanggung olehku.&amp;nbsp; Tetapi akan menyesalkah aku, jika kehilangan ini dapat membawa bahagia pada anakku dan kepada orang lain juga. Tuhan mengampuni ayahmu yang selama ini hidupnya tak lain kerjanya hanyalah memecah dan menceraiberaikan orang saja dan dengan demikian selalu berusaha menambah dan menguatkan kekuasaan dan kejayaan diri sendiri.&amp;nbsp; Hampir semua orang yang bergaul dengan dia pernah jadi korbannya.&amp;nbsp; Tidak, aku takkan menyesal.&amp;nbsp; Aku yang paling dekat padanya akulah pula yang terbanyak mengetahui buruk baiknya.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;(&lt;em&gt;Masuk sep polisi yang berpakaian preman tadi bersama-sama dengan agen polisi&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;104&quot;&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;19&quot;&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;483&quot;&gt;
+&lt;p align=&quot;right&quot;&gt;(&lt;em&gt;Api,&amp;nbsp;&lt;/em&gt;Usmar Ismail)&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Tema drama tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kebahagiaan di balik kenangan buruk yang amat membekas&amp;nbsp; di hati seorang ibu.&amp;nbsp;&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Untuk mencapai kejayaan, seseorang dapat berbuat yang merugikan orang lain.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kesetiaan seorang istri dalam mendampingi suami, dalam keadaan apa pun.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Baik buruknya suami, sebagai seorang istri haruslah dapat mengetahuinya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span&gt;Perasaan kehilangan terhadap orang terdekat sangatlah sulit dihilangkan&lt;/span&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kutipan cerita berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table style=&quot;width: 567px;&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;567&quot;&gt;
+&lt;p&gt;Putri Adipati kemudian menyusun rencana.&amp;nbsp; Dia meminta bantuan seorang emban kepercayaannya untuk mengeluarkan Suta dari penjara bawah tanah.&amp;nbsp; Sementara itu ia menunggu bersama kudanya di salah satu sisi di Kadipaten.&amp;nbsp; Rencana pun dilaksanakan pada suatu malam, si emban mengendap-endap menuju penjara bawah tanah.&amp;nbsp; Dia berhasil melewati penjaga yang tertidur karena memakan kue yang sudah dipersiapkan sebelumnya.&amp;nbsp; Emban pun menemui Suta.&lt;/p&gt;
+&lt;p&gt;Di dalam sel, Suta terkapar lemah.&amp;nbsp; Badannya yang semula kurus menjadi makin kurus.&amp;nbsp; Dia juga menggigil. Emban memberinya pakaian.&amp;nbsp; Mereka kemudian keluar dan mendatangi putri Adipati yang sudah berpakian layaknya warga desa.&lt;/p&gt;
+&lt;p&gt;Suta dan Putri menaiki kuda dan melaju ke luar Kadipaten. Untunglah malam itu sangat gelap pekat sehingga sulit mengenali mereka berdua. Putri memacu kudanya semakin kencang.&amp;nbsp; Dia mengarahkan kudanya kearah selatan lereng Gunung Slamet.&lt;/p&gt;
+&lt;p&gt;Ketika hari beranjak siang, mereka lelah dan beristirahat di dekat sungai. Putri baru menyadari bahwa Suta sedang sakit demam, dia pun merawat Suta dengan penuh kasih sayang. Karena kesabarannya, Suta pun berangsur pulih.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Suta dan Putri menyukai lokasi tempat mereka berada. Hawa yang sejuk serta pemandangannya yang asri membuat mereka jatuh cinta. Akhirnya mereka menikah dan membina keluarga di sana.&amp;nbsp; Kini tempat tersebut dikenal dengan nama Baturaden yang artinya pembantu dan bangsawan.&lt;/p&gt;
+&lt;p&gt;(&lt;a href=&quot;http://jurirakyat.blogspot.com/2013/04/cerita-rakyat-jawa-tengah-baturaden.html&quot;&gt;&lt;em&gt;Cerita Rakyat Jawa Tengah-Baturaden&lt;/em&gt;&lt;/a&gt;)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Tema cerita tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;saling menolong dalam kehidupan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;orang yang sabar akan meraih kebahagiaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;jalinan cinta kasih tidak mengenal status sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menjalani hidup layaknya air mengalir&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cinta pada keindahan alam semesta&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kutipan cerpen berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;548&quot;&gt;
+&lt;p&gt;Itulah yang dikhawatirkan Jalil.&amp;nbsp; Jika di pantai ini dibangun hotel-hotel dan &lt;em&gt;cafe &lt;/em&gt;lalu dipenuhi turis, maka perlahan-lahan penduduk asli pantai ini akan terusir dari kampung halamannya sendiri.&amp;nbsp; Mereka tak akan bebas lagi berjalan-jalan mengitari pantai&amp;nbsp; sebab harus membayar karcis masuk.&amp;nbsp; Nelayan-nelayan tak akan bebas melabuhkan perahu-perahunya di pantai ini sebab pantai ini sudah menjadi tempat wisata.&amp;nbsp; Perahu-perahu nelayan mungkin akan dianggap mengganggu kenyamanan pengunjung yang datang.&amp;nbsp; Bahkan, jika semakin banyak pula lahan-lahan warga yang digusur demi mengembangkan fasilitas pantai.&amp;nbsp; Pengusaha akan mendapat banyak untung, orang-orang kampung akan buntung.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Jalil beranjak meninggalkan pantai itu ketika sengatan matahari semakin mengganas.&amp;nbsp; Jalil memang hanya seorang nelayan, tetapi ia bukanlah nelayan bodoh yang tidak pernah mengenyam pendidikan.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(&lt;em&gt;Lelaki Penjaga Laut, &lt;/em&gt;Badrul Munir Chair)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Nilai sosial yang terdapat pada kutipan cerpen tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pengembangan area nelayan menjadi tempat wisata.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penggusuran lahan pantai untuk membuat fasilitas pantai.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Terampasnya kebabasan dan keakraban masyarakat pantai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kekhawatiran akan sirnanya kekerabatan dengan alam.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hubungan pengembang pantai dan warga pantai.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kutipan puisi berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;416&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Antara Nol dan Tiga Ratus Enam Puluh Derajat&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Hendry Febrian Z&lt;/p&gt;
+&lt;p&gt;Moskow&lt;/p&gt;
+&lt;p&gt;Kau tinggalkan aku di antara dua segitiga&lt;/p&gt;
+&lt;p&gt;Memang sudah aku sadari&lt;/p&gt;
+&lt;p&gt;Liang langit tidak akan mungkin diusung&lt;/p&gt;
+&lt;p&gt;Ke pemakaman&lt;/p&gt;
+&lt;p&gt;Tapi aku musafir di dua segitiga&lt;/p&gt;
+&lt;p&gt;Digayuti perasaan bersalah dan ronta&lt;/p&gt;
+&lt;p&gt;Bertahta&lt;/p&gt;
+&lt;p&gt;Hati pecah di pelabuhan senja&lt;/p&gt;
+&lt;p&gt;. . .&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Kalimat tanggapan (esai) yang sesuai dengan kutipan puisi tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Memilih kata untuk mengkongkretkan kesan dan angan memerlukan kepiawaian yang terlatih.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dengan membangun latar, suasana, dan medan makna secara konkret, spesifik, dan padu akan membuahkan sajak yang indah.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bagaimana menggambarkan perasaan hati saat kata-kata tidak dapat lagi digunakan sebagai kuas di atas kanvas kehidupan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perjalanan kata menjadi sebuah kereta kencana di halaman penantian terakhir mewakili pikiran penulis.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pemilihan kata-kata untuk menggambarkan latar yang diciptakan penulis menjadi rangsangan angan pembacanya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati kutipan cerita berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;548&quot;&gt;
+&lt;p&gt;&amp;rdquo;Kakakmu ... Dia sudah pergi ... beristirahatlah dengan tenang.&amp;rdquo; Jawab ayah membuat air mataku tiba-tiba langsung menetes.&lt;/p&gt;
+&lt;p&gt;Ada rasa kaget dan tak percaya mendengar jawaban ayah.&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Gak mungkin!&amp;nbsp; Kenapa bisa begitu?&amp;nbsp; Tadi Kakak masih baik-baik saja?&amp;rdquo; jeritku histeris.&lt;/p&gt;
+&lt;p&gt;Dari perkataan Ayah , aku jadi tahu mengapa kakakku tergeletak begitu kaku di tempat tidurnya tadi dan menyebabkan ia terjatuh.&amp;nbsp; Semua karena ia terlalu memaksakan dirinya untukku.&amp;nbsp; Aku menangis terisak dan baru menyadari betapa aku tak menyangka kakakku mau melakukan semua untukku.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(&lt;em&gt;My Idiot Brother, &lt;/em&gt;Agnes Davonar)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Kalimat resensi yang menyatakan keunggulan sesuai kutipan tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kisah pengorbanan kakak kepada adikny aini adalah cerita biasa bukan? Bukankah memang harus seperti itu?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Setiap kehilangan akan menimbulkan luka mendalam dan penulis telah menggoreskan luka itu juga untuk pembacanya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Banyak cara untuk mengungkapkan kasih sayang dan Agnes telah memberikan sebuah pilihan untuk Anda.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kesabaran dan kasih sayang dalam menghadapi sebuah perbedaan akan menjadi indah pada waktunya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kisah pengorbanan kakak kepada adiknya pada buku ini telah menjadi inspirasi akan arti dari sebuah pengorbanan. &amp;nbsp;&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati puisi berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;312&quot;&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Dalam Perjalanan&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Kang Gangwol&lt;/p&gt;
+&lt;p&gt;Dalam seribu perjalanan,&lt;/p&gt;
+&lt;p&gt;aku bertemu&amp;ndash;kami saling menyentuh dan berpisah.&lt;/p&gt;
+&lt;p&gt;Kini ketika mimpiku begitu jauh,&lt;/p&gt;
+&lt;p&gt;kekasihku akan menunggu&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Setiap pagi, aku terjaga,&lt;/p&gt;
+&lt;p&gt;dengan bayangan impian.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Kalimat kritik yang tepat dengan isi cerita tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kisah percintaan akankah hanya akan berakhir di penghujung mimpi?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kesepian diungkapkan jauh lebih dalam dan lebih rumit daripada kata &amp;rdquo;cinta &amp;rdquo;.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sebuah kenyataan, kerinduan dan kesepian dapat mengisolasi jiwa seseorang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bagaimana memberikan esensi makna kesepian dengan rangkaian kata.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Cinta dan kesepian dapat diibaratkan sebagai dua sisi mata uang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;Cermati teks drama berikut!&lt;/strong&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;548&quot;&gt;
+&lt;p&gt;MARWAN&lt;/p&gt;
+&lt;p&gt;Dengar tidak?&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;SATPAM PUJO&lt;/p&gt;
+&lt;p&gt;Ya ..saya dengar, seperti gemuruh demonstran? Tetapi&amp;hellip;(&lt;em&gt;wajahnya ragu dan pucat&lt;/em&gt;) Mati..Mati&amp;hellip;Mati (&lt;em&gt;menirukan suara yang didengar&lt;/em&gt;) Suara siapa ya?&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;MARWAN&lt;/p&gt;
+&lt;p&gt;Itulah yang sedang kami buru&amp;hellip;seperti suara orang berdoa&amp;hellip;atau seperti paduan suara&amp;hellip;iramanya seperti detak jantung&amp;hellip;dug&amp;hellip;dug&amp;hellip;dug&amp;hellip;dug&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;SATPAM PUJO&lt;/p&gt;
+&lt;p&gt;Sok tahu kamu! Menurutku itu seperti pasukan demonstran atau ribuan orang yang sedang marah. Tetapi...siapa mereka ?&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;SURTI&lt;/p&gt;
+&lt;p&gt;Itulah yang membuat kami penasaran. Wong sejak sore tidak ada tamu yang datang.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;SATPAM PUJO&lt;/p&gt;
+&lt;p&gt;(&lt;em&gt;Mengangguk-angguk&lt;/em&gt;) Benar! Aku juga tidak melihat tamu-tamu itu. Padahal sejak sore aku &lt;em&gt;stand bay&lt;/em&gt; di pos satpam.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;MARWAN&lt;/p&gt;
+&lt;p&gt;Yang membuat kami penasaran lagi kenapa orang-orang itu bersuara mati&amp;hellip;mati..mati&amp;hellip;seperti ditujukan kepada Tuan Besar?&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;SATPAM PUJO&lt;/p&gt;
+&lt;p&gt;Ya..siapa lagi? Di sini yang sakit kan cuma Tuan Besar?&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(&lt;em&gt;Akhirnya Mati Juga, &lt;/em&gt;Slamet Setya Budi)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Tahapan&amp;nbsp; alur&amp;nbsp; pada kutipan drama tersebut adalah&amp;nbsp; ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;perkenalan (eksposisi)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pertentangan (konflik)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penanjakan konflik (komplikasi)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;klimaks&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;span&gt;penyelesaian&lt;/span&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

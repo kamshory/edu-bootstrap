@@ -1,0 +1,1916 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Tiga bentuk tenaga endogen yang mengubah bentuk muka bumi adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;vulkanisme,tektonisme, gempa&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;eksogen, tektotisme, vulkanisme&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;vulkanisme, gempa, eksogen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tektonisme, eksogen, gempa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Proses pecahnya batuan menjadi pecahan-pecahan batuan yang lebih kecil tanpa mengalami perubahan sifat dinamakan pelapukan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;mekanis&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kimiawi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;biologis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;organis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Gambar di bawah ini menunjukkan proses interaksi sosial antara...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;individu-individu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kelompok-kelompok&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;individu-kelompok&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;semua benar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Berdasarkan gambar di bawah, yang merupakan tahapan sosialisasi dalam pembentukan kepribadian yang lebih dahulu dikenal seseorang adalah di lingkungan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;keluarga&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;individu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kelompok&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sekolah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Manusia juga dikenal sebagi makhluk ekonomi (homoeconomicus) makhluk yang berusaha mencari kepuasan dan kesejahteraan hidup dengan mempertimbangkan pengorbanan yang harus dilakukan.&lt;br&gt; Ciri manusia sebagai makhluk ekonomi (&lt;em&gt;homoeconomicus&lt;/em&gt;) adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menaati aturan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;suka berkelompok&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mencari kesejahteraan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;suka menolong&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Menekan biaya bahan dan tenaga kerja merupakan penerapan prinsip ekonomi bagi...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;produsen&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;konsumen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;distributor&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pedagang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Alasan yang mendorong manusia melakukan kegiatan ekonomi ini bisa bersifat ekonomi dan non-ekonomi. Alasan yang yang bersifat ekonomi biasa disebut...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;tindakan ekonomi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;motif ekonomi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;prinsip ekonomi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;konsep ekonomi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perbedaan peta dan globe adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;peta merupakan lukisan bumi berbentuk bola, sedangkan globe merupakan lukisan bumi pada bidang datar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;peta merupakan lukisan bumi pada bidang datar, sedangkan globe merupakan lukisan bumi yang berbentuk bola&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;peta merupakan lukisan bumi pada bidang datar, sedangkan globe merupakan kumpulan peta dalam sebuah buku&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;peta merupakan kumpulan gambar dalam sebuah buku, sedangkan globe merupakan lukisan bumi pada bidang datar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Diketahui skala 1 : 2.500.000, jarak kota A dan kota B pada peta 5 cm, maka jarak sesungguhnya antara kota A dan B adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;12,5 km&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;125 km&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1.2599 km&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;12.500 km&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;El-Nino merupakan gejala cuaca yang muncul secara periodik. Bagi Indonesia, El-Nino menyebabkan terjadinya...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;hujan deras dan banjir&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;musim paceklik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kemarau panjang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;musim kebakaran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan gambar siklus hidrologi dibawah ini!&lt;br&gt;
+Gambar siklus hidrologi di atas menunjukkan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;siklus pendek&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;siklus sedang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;siklus panjang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;siklus sederhana&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kerajaan Hindu pertama di Indoesia adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kerajaan Sriwijaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kerajaan Tarumanagara&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kerajaan Kutai&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kerajaan Majapahit&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pengaruh kolonial Belanda terhadap perkembangan pendidikan di Indonesia adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pemerintah kolonial membangun sekolah-sekolah untuk kaum bumi pribumi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengirimkan rakyat Indnesia untuk belajar di Belanda&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menyerahkan sistem sekolah Indonesia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;melahirkan kaum cerdik pandai di Indonesia&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kreativitas merupakan kunci sukses untuk bisa menjadi wirausahawan. Banyak orang ingin sukses tetapi tidak mau menggali kreativitasnya, akibatnya keinginan untuk sukses itu hanya mimpi belaka.&lt;br&gt;
+Yang tidak termasuk ciri manusia kreatif adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;otonom, bebas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memiliki rasa ingin tahu, suka mencoba-coba&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sering mengajukan pertanyaan yang baik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;meniru hasil karya orang lain&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Meredith dalam Suprojo Pusposutardjo (1999),&lt;br&gt;
+(1) percaya diri,&lt;br&gt;
+(2) berorientasi tugas dan hasil,&lt;br&gt;
+(3) berani mengambil risiko,&lt;br&gt;
+(4) berjiwa kepemimpinan,&lt;br&gt;
+(5) berorientasi ke depan, dan&lt;br&gt;
+(6) keorisinilan.&lt;br&gt;
+Pernyataan di atas merupakan ciri-ciri dari...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kreativitas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;wirausaha&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bertanggung jawab&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;disiplin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;1. Menikah di usia dini&lt;br&gt;
+2. UU Perkawinan&lt;br&gt;
+3. Adanya pendapat banyak anak banyak rezeki&lt;br&gt;
+4. Program KB&lt;br&gt;
+5. Wajib Belajar 9 tahun&lt;br&gt;
+6. Anak dipandang sebagai penerus keturunan&lt;br&gt;
+Berdasarkan data di atas, yang termasuk faktor pendukung tingginya angka kelahiran adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1, 2, 3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1, 3, 5&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2, 4, 6&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1, 3, 6&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Berikut ini merupakan usaha pencegahan kerusakan lingkungan, kecuali...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Reboisasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rehabilitasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ekstensifikasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penghijauan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Faktor dari dalam yang mempengaruhi lahirnya pergerakan nasional, adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Lahirnya golongan cendikiawan atau terpelajar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kemenangan Jepang atas Rusia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kebangkitan Nasional negara-negara tetangga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pengaruh masuknya faham-faham baru seperti nasionalisme demokrasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan nama-nama Organisasi pada masa Kebangkitan Nasional.&lt;br&gt;
+1. Budi Utomo&lt;br&gt;
+2. Sarekat Islam&lt;br&gt;
+3. Indische Partij&lt;br&gt;
+4. Perhimpunan Indonesia&lt;br&gt;
+5. Partai Komunis Indonesia&lt;br&gt;
+6. Partai Nasional Indonesia&lt;br&gt;
+Yang termasuk Organisasi yang bersifat Radikal dan Non Kooperatif, adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1, 2, dan 3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2, 3, dan 4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4, 5, dan 6&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3, 4, dan 6&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Organisasi pergerakan nasional yang pertama bergerak di bidang politik, adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Budi Utomo&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sarekat Islam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Indische Partij&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;TrikoroDarmo&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Tujuan para pemuda membawa Ir. Soekarno dan Drs. Moch. Hatta ke Rengasdengklok pada tanggal 16 Agustus 1945 adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Supaya tidak terpengaruh oleh Jepang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Agar mudah dihubungi oleh para pemuda&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Supaya mudah dipengaruhi anggota PPKI&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Agar supaya tenang memikirkan bangsa dan negara&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan nama-nama tokoh di bawah ini.&lt;br&gt;
+1. Drs. Moch. Hatta&lt;br&gt;
+2. Ir. Soekarno&lt;br&gt;
+3. Drs. Moch. Yamin&lt;br&gt;
+4. Dr. Radjiman Widyadiningrat&lt;br&gt;
+5. B.M. Diah&lt;br&gt;
+6. Suhud&lt;br&gt;
+7. Sayuti Malik&lt;br&gt;
+8. Laksamana Meida&lt;br&gt;
+9. Achmad Soebarjo&lt;br&gt;
+10. Fatmawati&lt;br&gt;
+Yang termasuk tokoh yang terlibat dalam penyusunan naskah teks proklamasi, adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1, 5, dan 8&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1, 2, dan 9&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3, 7, dan 10&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2, 4, dan 6&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Rapat raksasa di lapangan Ikada 19 September 1945 bertujuan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Menginformasikan kekalahan Jepang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Meyambut proklamasi kemerdekaan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Membentuk UUD&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Membina persatuan dan kesatuan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Gambar di bawah menunjukkan pengendalian sosial yang bersifat...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Represif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Preventif&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kooperatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kuratif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Jika pengendalian sosial gagal mengarahkan perilaku masyarakat untuk mematuhi nilai dan norma sosial, maka pengendalian dapat dilakukan melalui...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kekuatan dan kekuasaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Teguran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sosialisasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tekanan sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Seorang ibu mengarahkan puteranya agar tidak terlambat pulang ke rumah, pernyataan tersebut merupakan contoh pranata...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Politik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ekonomi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keluarga&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sekolah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Di bawah ini yang merupakan ciri negara maju adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pendapatan perkapita tinggi, tingkat pendidikan tinggi, dan tingkat pertumbuhan penduduk tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Angka harapan hidup tinggi, mobilitas penduduk tinggi, dan ketergantungan terhadap alam tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tingkat kesehatan tinggi, tingkat pengangguran rendah, dan pendapatan rata-rata penduduk rendah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pendapatan perkapita tinggi, tingkat pendidikan tinggi, dan pengangguran rendah&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Salah satu isi perjanjian Linggarjati antara Belanda - Indonesia adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Belanda mengakui kedaulatan RI secara de facto atas Jawa, Sumatera dan Madura&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Daerah Indonesia hasil agresi militer pertama diakui oleh Belanda sebagai daerahnya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Belanda mengakui kedaulatan RIS pada akhir Desember 1949&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penyelesaian status Irian barat ditunda setahun setelah adanya pengakuan kedaulatan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Serangan umum 1 Maret 1949 mempunyai arti bagi perjuangan diplomasi di luar negeri, yaitu...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;PBB memerintahkan tentara Belanda ditarik dari Indonesia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mendorong perubahan sikap Belanda terhadap Indonesia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dunia Internasional mendukung penyerahan kedaulatan kepada NIS (Negara Indonesia Serikat)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;TNI mendapat bantuan persenjataan dari luar negeri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Tujuan kedatangan AFNEI ke Indonesia adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Mengumpulkan dan melucuti serta me-mulangkan tentara Jepang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sebagai mediator antara Indonesia dan Belanda&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Merebut kekuasaan secara mutlak dari tangan Jepang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memprovokasi rakyat Indonesia agar berpihak kepada AFNEI&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Insiden Bendera di Hotel Yamato Surabaya pada tanggal 19 September 1945 dilatarbelakangi oleh...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pengibaran bendera merah putih&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pengibaran bendera sekutu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berkibarnya bendera Jepang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berkibarnya bendera Belanda&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Konferensi Meja Bundar (KMB) tanggal 23 Agustus 1940 s.d. 2 Nopember 1949, salah satu hasilnya adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;RIS dan Belanda akan membentuk Uni Indonesia Belanda di kepalai Ratu Belanda&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Semua pasukan RI harus ditarik dari wilayah yang diduduki Belanda dan kembali ke wilayah sendiri (RI)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Republ ik Indonesia dan Belanda akan bekerja sama membentuk NIS, dimana RI menjadi salah satu negara bagiannya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Belanda mengakui kedaulatan RIS tanpa syarat paling lambat akhir tahun 1949&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Gambar dibawah ini merupakan perubahan sosial budaya juga disebabkan&lt;br&gt;
+faktor-faktor dari luar masyarakat (faktor eksternal), yaitu...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Faktor alam&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Faktor Sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Peperangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pengaruh Budaya Luar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penggunaan mesin traktor untuk mengolah lahan pertanian&lt;br&gt;
+Menurut gambar di atas, perubahan sosial yang terjadi bersifat...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Progress&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Regresi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Evolusi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Revolusi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Undang-Undang Anti Korupsi yang bertujuan menghilangkan budaya korupsi dalam masyarakat, merupakan contoh perubahan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Direncanakan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak direncanakan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak dikehendaki&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Terkendali&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Proses bertemunya dua kebudayaan atau lebih yang bercampur menjadi satu disebut...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;difusi kebudayaan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;akulturasi kebudayaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Asimilasi kebudayaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sintesa kebudayaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masyarakat selalu mengalami perubahan meskipun tingkat kecepatannya berbeda-beda. Keadaan ini menunjukkan bahwa masyarakat...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;statis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;stagnan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dinamis&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Permanen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masyarakat yang masih terikat kuat terhadap tradisi-tradisi leluhur dalam lingkungan alam di sekitarnya merupakan prilaku masyarakat...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tradisional&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Modern&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Liberal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kota&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan peta kontur berikut!&lt;br&gt;
+Huruf A di atas menggambarkan kontur muka bumi...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Landai&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Curam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bergelombang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Data&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Batas wilayah Asia Tenggara sebelah timur adalah perairan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Samudra Hindia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Samudra Atlantik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Samudra Pasifik&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Laut Cina Selatan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Satu-satunya negara di Asia Tenggara yang tidak pernah dijajah adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Thailand&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Laos&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kamboja&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Singapura&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan tabel berikut !&lt;/p&gt;
+&lt;table style=&quot;width: 289px; height: 151px;&quot; border=&quot;1&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;A&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;B&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;C&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;D&lt;/td&gt;
+&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Amerika&lt;/td&gt;
+&lt;td&gt;Asia&lt;/td&gt;
+&lt;td&gt;Australia&lt;/td&gt;
+&lt;td&gt;Afrika&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Afrika&lt;/td&gt;
+&lt;td&gt;Amerika&lt;/td&gt;
+&lt;td&gt;Afrika&lt;/td&gt;
+&lt;td&gt;Eropa&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Eropa&lt;/td&gt;
+&lt;td&gt;Afrika&lt;/td&gt;
+&lt;td&gt;Eropa&lt;/td&gt;
+&lt;td&gt;Asia&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Asia&lt;/td&gt;
+&lt;td&gt;Eropa&lt;/td&gt;
+&lt;td&gt;Asia&lt;/td&gt;
+&lt;td&gt;Amerika&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Australia&lt;/td&gt;
+&lt;td&gt;Australia&lt;/td&gt;
+&lt;td&gt;Amerika&lt;/td&gt;
+&lt;td&gt;Australia&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Urutan lima benua dari yang terbesar terdapat pada kolom...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;A&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;B&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;C&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;D&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kawasan Asia Tenggara merupakan wilayah negara-negara yang terletak di wilayah Asia bagian Tenggara. Negara-Negara ini tergabung dalam suatu Persatuan Bangsa-Bangsa Asia Tenggara yang dikenal dengan sebutan Association of South East Asian Nations disingkat menjadi ASEAN. ASEAN didirikan berdasarkan:&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;deklarasi Bangkok pada tanggal 8 Agustus 1966&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;deklarasi Bangkok pada tanggal 8 Agustus 1967&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;deklarasi Yangon pada tanggal 8 Agustus 1966&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;deklarasi Kuala Lumpur pada tanggal 8 Agustus 1967&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penyelenggaraan KAA didasarkan pada beberapa kejadian yang melanda dunia.&lt;br&gt;
+Yang bukan latar belakang pelaksanaan KAA adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pertentangan antara Blok Barat (kapitalis) dan Blok Timur (komunis) yang mengancam ketertiban dan perdamaian dunia.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sebagian besar negara-negara Asia dan Afrika yang menjadi korban imperialisme-kolonialisme negara-negara Barat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kawasan Asia Afrika sudah maju dalam masalah pembangunan ekonomi, sosial, pendidikan, dan kebudayaan dibanding kawasan lainnya.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pelaksanaan politik aparheid (diskriminasi) di beberapa negara.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Badan PBB yang mengurusi pembiayaan program-program pembangunan bagi negara-negara berkembang...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;International Monetary Fund (IMF)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Asian Development Bank (ADB)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Islamic Development Bank (IBD)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;United Nations Development Program (UNDP)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Salah satu peranan Indonesia dalam rangka ikut menciptakan perdamaian dunia adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pengiriman pasukan Garuda&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membuka hubungan diplomatik disetiap negara&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengikuti ideologi negara lain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bersekutu dengan Malaysia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Indonesia pernah keluar sebagai anggota PBB. Keputusan pemerintah&lt;br&gt;
+Indonesia itu sangat tepat karena...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;PBB tidak menghormati hak-hak bangsa dan negara Indonesia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Inggris dan Amerika Serikat membantu Malaysia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;PBB bersikap tidak adil dalam menyelesaikan masalah Indonesia dan Malaysia&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tuntutan PresidenSoekarno tidak dipenuhi oleh PBB&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bentuk kerja sama internasional yang bergerak di bidang kesehatan adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;World Health Organization (WHO)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;World Trade Organization (WTO)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Organization of Petrol Exporting Countries (OPEC)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Asia Pasific Economic Corporation (APEC)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perdagangan bebas seperti yang digagas dan dipraktekkan oleh WTO...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sangat menguntungkan perekonomian Indonesia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Merugikan perekonomian Indonesia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak berdampak apapun terhadap perekonomian Indonesia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menguntungkan semua negara anggotanya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dalam prakteknya perdagangan bebas mengalami penyimpangan, proteksionisme terjadi dan umumnya dilakukan oleh negara industri maju, dan sangat merugikan negara-negara yang sedang berkembang. Salah satu bentuk proteksionisme negara maju adalah....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pembatasan quota hasil produksi negara sedang berkembang.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tidak melakukan dumping oleh negara maju&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perlakuan terhadap negara sedang berkembang dengan tarif rendah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perlakuan tidak diskriminatif dalam pelayanan pelabuhan dan sistem pembayaran.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

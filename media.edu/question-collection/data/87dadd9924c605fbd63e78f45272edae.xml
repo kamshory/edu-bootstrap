@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Tasya : I don't have any pen. ..., please?&lt;br&gt;
+Rudy : Sure. Here you are.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;What is this&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Take me the pen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;May I have one&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Give me the pen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Hani : Do you have a spare ruler, Nita?&lt;br&gt;
+Nita : Yes. I have got two.&lt;br&gt;
+Hani : ....&lt;br&gt;
+Nita : Certainly.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Can I have one of the rulers, please?&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Are you using them?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Where do you put them?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Where are your rulers?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Budi : May I borrow your book, please?&lt;br&gt;
+Citra : ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Thank you.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Yes, I do.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;I'm sorry I'm using it now.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;What?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Tiara : How many classrooms are there in the school?&lt;br&gt;
+Fika : ... twenty four classrooms.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;It is&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They are&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;These are&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;There are&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Risa : Hey, there is a new computer in the living room.&lt;br&gt;
+Rudy : ...&lt;br&gt;
+Risa : Absolutely.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;That's great.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;I think so.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Are you sure?&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;I like computers.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Aris : My house is big. There is a large garden in front of my house.&lt;br&gt;
+Dina : ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Really?&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;May I borrow it?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;I don't think so.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It is a nice garden.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Via : Where are the books, Dony?&lt;br&gt;
+Dony : ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;They are on the shelves&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They are on the tables&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They are in the cupboards&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They are on the chairs&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Citra : Excuse me, where are the students?&lt;br&gt;
+Dita : ....&lt;br&gt;
+Citra : Thank you.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;They are in the library&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They are in the language laboratory&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They are in the canteen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They are in the classroom&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Adi : Angelina, do you think a pilot is a good job?&lt;br&gt;
+Angelina : ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;I think so.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Really?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;He flies a plane.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;He is handsome.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sinta : ..., Ratna?&lt;br&gt;
+Ratna : She is a nurse.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Who is your mother&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Where is your mother&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;What does your mother do&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;What does your father do&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Miss Tiara is a flight attendant. She takes care of ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;patients&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;passengers&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;fields&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;animals&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Mr Rahadi is a chef. He cooks food at a ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;hospital&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;restaurant&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;plane&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;shop&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Adi : What fruits do you like?&lt;br&gt;
+Laila : ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;I like soup very much&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;I like pizza&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Yes, I do. I like fruits&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;I like apples and oranges&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Tina : How do you record on this tape recorder, Ali?&lt;br&gt;
+Ali : Just ... the record button and then speak into the microphone.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pull&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;plug&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;push&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Citra : ... me that eraser, please.&lt;br&gt;
+Edi : This eraser? Here you are. Citra : Thanks.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pass&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Put&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Borrow&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Throw&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Angelina : Dad, get me an apple, please.&lt;br&gt;
+Father : ....&lt;br&gt;
+Angelina : Thanks, Dad.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;I'm busy&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Get one yourself&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sure, honey&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;I'm sorry&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Read the text and answer the questions by choosing the correct alternative.&lt;br&gt;&lt;br&gt;
+My family and I live in a new house in Surabaya on Jl. Kartini. It is a very nice house and I like it. The house has four bedrooms, one living room and one kitchen. There are two bathrooms and one of them is next to my room. My house also has a garage. Beside the garage, there is a small swimming pool. There is also a large garden in front of the house. We love the house.&lt;br&gt;&lt;br&gt;
+Where does the writer live?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Semarang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jakarta.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Surabaya.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bandung.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Read the text and answer the questions by choosing the correct alternative.&lt;br&gt;&lt;br&gt;
+My family and I live in a new house in Surabaya on Jl. Kartini. It is a very nice house and I like it. The house has four bedrooms, one living room and one kitchen. There are two bathrooms and one of them is next to my room. My house also has a garage. Beside the garage, there is a small swimming pool. There is also a large garden in front of the house. We love the house.&lt;br&gt;&lt;br&gt;
+How is the writer's house?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;It is large.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It is beautiful.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It is big.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It is small.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Read the text and answer the questions by choosing the correct alternative.&lt;br&gt;&lt;br&gt;
+My family and I live in a new house in Surabaya on Jl. Kartini. It is a very nice house and I like it. The house has four bedrooms, one living room and one kitchen. There are two bathrooms and one of them is next to my room. My house also has a garage. Beside the garage, there is a small swimming pool. There is also a large garden in front of the house. We love the house.&lt;br&gt;&lt;br&gt;
+How many bedrooms does the house have?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Two.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Three.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Four.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Five.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Read the text and answer the questions by choosing the correct alternative.&lt;br&gt;&lt;br&gt;
+My family and I live in a new house in Surabaya on Jl. Kartini. It is a very nice house and I like it. The house has four bedrooms, one living room and one kitchen. There are two bathrooms and one of them is next to my room. My house also has a garage. Beside the garage, there is a small swimming pool. There is also a large garden in front of the house. We love the house.&lt;br&gt;&lt;br&gt;
+What is next to the writer's room?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kitchen.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Living room.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bathroom.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Garage.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Read the text and answer the questions by choosing the correct alternative.&lt;br&gt;&lt;br&gt;
+My family and I live in a new house in Surabaya on Jl. Kartini. It is a very nice house and I like it. The house has four bedrooms, one living room and one kitchen. There are two bathrooms and one of them is next to my room. My house also has a garage. Beside the garage, there is a small swimming pool. There is also a large garden in front of the house. We love the house.&lt;br&gt;&lt;br&gt;
+What is next to the garage?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Swimming pool.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bathroom.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kitchen.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Living room.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ingredients&lt;br&gt;
+&amp;bull; 1 cup uncooked rice&lt;br&gt;
+&amp;bull; 2 tablespoons butter&lt;br&gt;
+&amp;bull; 1 teaspoon curry powder&lt;br&gt;
+&amp;bull; 1/2 chopped onion&lt;br&gt;
+&amp;bull; 1/2 cup raisins&lt;br&gt;
+&amp;bull; 2 cups water&lt;br&gt;&lt;br&gt;
+Curried Rice Procedure&lt;br&gt;
+&amp;bull; Find a large saucepan or frying pan which has a lid, place on a medium heat, add butter, and then add chopped onion. Cook the onion for a couple of minutes until it starts to brown slightly.&lt;br&gt;
+&amp;bull; Add curry powder stir with onions for a minute.&lt;br&gt;
+&amp;bull; Add raisins, rice, and water.&lt;br&gt;
+&amp;bull; Put on lid and simmer until water is absorbed (about 15 minutes)&lt;br&gt;
+http://en.wikibooks.org/wiki/Cookbook&lt;br&gt;&lt;br&gt;
+What does the text tell you?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;How to make curried rice.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;How to buy curried rice.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;How to get curried rice.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;How to find curried rice.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ingredients&lt;br&gt;
+&amp;bull; 1 cup uncooked rice&lt;br&gt;
+&amp;bull; 2 tablespoons butter&lt;br&gt;
+&amp;bull; 1 teaspoon curry powder&lt;br&gt;
+&amp;bull; 1/2 chopped onion&lt;br&gt;
+&amp;bull; 1/2 cup raisins&lt;br&gt;
+&amp;bull; 2 cups water&lt;br&gt;&lt;br&gt;
+Curried Rice Procedure&lt;br&gt;
+&amp;bull; Find a large saucepan or frying pan which has a lid, place on a medium heat, add butter, and then add chopped onion. Cook the onion for a couple of minutes until it starts to brown slightly.&lt;br&gt;
+&amp;bull; Add curry powder stir with onions for a minute.&lt;br&gt;
+&amp;bull; Add raisins, rice, and water.&lt;br&gt;
+&amp;bull; Put on lid and simmer until water is absorbed (about 15 minutes)&lt;br&gt;
+http://en.wikibooks.org/wiki/Cookbook&lt;br&gt;&lt;br&gt;
+The following is NOT the ingredient to make curried rice ..&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;2 cups water&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1 teaspoon curry powder&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1 cup uncooked rice&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2 teaspoons sugar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ingredients&lt;br&gt;
+&amp;bull; 1 cup uncooked rice&lt;br&gt;
+&amp;bull; 2 tablespoons butter&lt;br&gt;
+&amp;bull; 1 teaspoon curry powder&lt;br&gt;
+&amp;bull; 1/2 chopped onion&lt;br&gt;
+&amp;bull; 1/2 cup raisins&lt;br&gt;
+&amp;bull; 2 cups water&lt;br&gt;&lt;br&gt;
+Curried Rice Procedure&lt;br&gt;
+&amp;bull; Find a large saucepan or frying pan which has a lid, place on a medium heat, add butter, and then add chopped onion. Cook the onion for a couple of minutes until it starts to brown slightly.&lt;br&gt;
+&amp;bull; Add curry powder stir with onions for a minute.&lt;br&gt;
+&amp;bull; Add raisins, rice, and water.&lt;br&gt;
+&amp;bull; Put on lid and simmer until water is absorbed (about 15 minutes)&lt;br&gt;
+http://en.wikibooks.org/wiki/Cookbook&lt;br&gt;&lt;br&gt;
+We need ... minutes to cook the curried rice.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;20&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;15&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;25&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ingredients&lt;br&gt;
+&amp;bull; 1 cup uncooked rice&lt;br&gt;
+&amp;bull; 2 tablespoons butter&lt;br&gt;
+&amp;bull; 1 teaspoon curry powder&lt;br&gt;
+&amp;bull; 1/2 chopped onion&lt;br&gt;
+&amp;bull; 1/2 cup raisins&lt;br&gt;
+&amp;bull; 2 cups water&lt;br&gt;&lt;br&gt;
+Curried Rice Procedure&lt;br&gt;
+&amp;bull; Find a large saucepan or frying pan which has a lid, place on a medium heat, add butter, and then add chopped onion. Cook the onion for a couple of minutes until it starts to brown slightly.&lt;br&gt;
+&amp;bull; Add curry powder stir with onions for a minute.&lt;br&gt;
+&amp;bull; Add raisins, rice, and water.&lt;br&gt;
+&amp;bull; Put on lid and simmer until water is absorbed (about 15 minutes)&lt;br&gt;
+http://en.wikibooks.org/wiki/Cookbook&lt;br&gt;&lt;br&gt;
+How much raisins is needed to cook curried rice?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;2 cups.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1 cup.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2 cup.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;% cup.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

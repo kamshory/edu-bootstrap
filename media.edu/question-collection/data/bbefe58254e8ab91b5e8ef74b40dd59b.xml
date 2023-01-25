@@ -1,0 +1,2167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Seorang sosiolog berusaha untuk mencari jawaban atas pertanyaan beberapa media massa berkaitan dengan konflik yang sering terjadi di Indonesia. Dengan fenomena tersebut, sosiolog menelusuri penyebab terjadinya konflik. Metode yang digunakan oleh sosiolog tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kuantitatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Komparatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Induktif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kualitatif&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Deduktif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Akhir-akhir ini sering kita dengar dan saksikan di media massa tentang adanya kecelakaan lalu lintas sebagai akibat pelanggaran terhadap peraturan lalu lintas seperti tabrakan antara kereta api dengan mobil tangki BBM di rel Bintaro atau kecelakaan yang menimpa pengendara motor di jalan layang non tol Casablanca. Untuk mencegah bertambahnya kasus serupa maka pemerintah harus melakukan beberapa upaya seperti...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Meningkatkan pemerataan pembangunan dan pendidikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Meningkatkan kesadaran sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Melakukan sosialisasi UU Lalu Lintas pada segenap lapisan masyarakat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Membuka lebih banyak lagi lapangan usaha bagi keluarga korban&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Meningkatkan pelayanan kesehatan bagi korban kecelakaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perilaku membuang sampah pada tempatnya, memberikan salam ketika bertemu guru serta memberikan ucapan selamat hari raya, merupakkan contoh dari cara-cara bertindak yang disukai masyarakat Indonesia sehingga dilakukan secara berulang-ulang. Berdasarkan kekuatan mengikatnya maka perilaku tersebut merupakan contoh norma...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Folkway&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Usage&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mores&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Custom&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Law&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Beberapa fenomena sosial sosial sebagai berikut.&lt;br&gt;
+1) Pengemudi mobil ditilang polisi karena memakai jalur busway&lt;br&gt;
+2) Seorang anak diskorsing karena terlibat tawuran&lt;br&gt;
+3) Pejabat yang terlibat korupsi dihukum penjara&lt;br&gt;
+4) Seorang murid diberi peringatan oleh guru karena tidak memakai kaos kaki&lt;br&gt;
+Dari contoh tersebut yang termasuk fungsi norma hukum adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1) dan 2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1) dan 3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2) dan 3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2) dan 4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3) dan 4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Gejala sosial berikut ini yang menggambarkan adanya keterkaitan antara norma dengan keteraturan sosial adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Rajin belajar meningkatkan prestasi siswa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Semakin dalam pemahaman agama seseorang, semakin tinggi tingkat toleransinya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Semakin tinggi ilmu pengetahuan, semakin luas wawasannya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kedisiplinan dalam kehadiran di sekolah membentuk kepribadian disiplin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ketentuan menggunakan helm bagi pengendara motor menurunkan angka kematian karena kecelakaan lalu lintas&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Lingkungan sosial sangat mempengaruhi perilaku individu dalam hidup bermasyarakat. Anak yang dilahirkan di lingkungan keluarga berpendidikan tinggi akan mencerminkan karakteristik berpendidikan. Sedangkan anak yang dilahirkan di lingkungan masyarakat yang kurang baik akan berkepribadian kurang baik. Kenyataan itu menunjukan bahwa sosialisasi bertujuan untuk membentuk kepribadian yang sesuai dengan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Perkembangan masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kebutuhan masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tindakan Masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Budaya masyarakat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perilaku individu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cinta yang sewaktu kecil adalah anak yang pendiam menjadi pandai menari seperti Girl Band setelah sering menonton pertunjukan Girl Band Korea di saluran TV kabel. Media sosialisasi yang berperan dalam sosialisasi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sekolah formal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Media massa&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keluarga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lingkungan Kerja&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Teman sebaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Rieke Dyah Pitaloka melakukan diskusi dengan para pendukungnya tentang &quot; Pemilu yang Jujur dan Adil&quot; di sebuah gedung pertemuan. Peristiwa tersebut disebut interaksi sosial karena mengandung unsur-unsur...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kontak primer dan kontak sekunder&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kontak sosial dan komunikasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Komunikasi dan tindakan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tindakan sosial dan kontak sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tindakan sosial dan interaksi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Para murid SD di kota Medan mengumpulkan uang untuk membantu korban letusan Gunung Sinabung. Interaksi sosial tersebut didorong oleh faktor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Imitasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Identifikasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Simpati&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Empati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Motivasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dalam proses interaksi sosial, terjadi hubungan timbal balik yang melibatkan aspek sosial dan kemanusiaan pada kedua belah pihak, seperti emosi, fisik dan kepentingan. Di dalam interaksi salah satu pihak memberikan stimulus dan pihak lain memberikan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Reaksi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Emosi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pernyataaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kata-kata&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bahasa Tubuh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Beberapa relawan memberikan bantuan makanan dan obat-obatan pada masyarakat yang terkena banjir di Jakarta.&lt;br&gt;
+Hubungan interaksi antara para relawan dengan masyarakat yang mengalami bencana tersebut berbentuk...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;konsolidasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kontravensi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Akomodasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kompetisi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kerjasama&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perbuatan menghasut, berkhianat dan provokasi baik secara sembunyi maupun terang-terangan adalah perilaku yang mengarah pada bentuk interaksi sosial yang bersifat...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Asosiatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kontravensi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;disosiatif&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Asimilasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Konsiliasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Naomi diajarkan untuk disiplin belajar di sekolah, tetapi di rumah ia sangat dimanjakan orang tuanya sehingga tumbuh menjadi pemalas dan sering datang terlambat ke sekolah. Penyimpangan tersebut terjadi karena...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sosialisasi sub budaya menyimpang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pengetahuan agama terbatas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Masa transisi remaja&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pencarian jati diri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Proses sosialisasi yang tidak sempurna&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Tata tertib di sekolah telah melarang siswa-siswa untuk merokok dan mengkonsumsi narkoba. Namun demikian masih ada siswa-siswa yang relatif mudah untuk mendapatkan hal-hal tersebut melalui teman sebaya. Ketidaksesuaian tersebut merupakan gejala sosialisasi...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Budaya yang menyimpang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kemajemukan budaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Nilai dan norma budaya teman sebaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Peran sosial individu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Status sosial individu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan perilaku menyimpang berikut ini!&lt;br&gt;
+1). Memakai seragam ketat ke sekolah&lt;br&gt;
+2). Memberikan sumbangan kepada korban bencana alam&lt;br&gt;
+3). Mengendarai motor dengan kencang di sirkuit balap&lt;br&gt;
+4). Terlambat datang ke sekolah setiap hari&lt;br&gt;
+Pernyataan di atas yang merupakan perilaku menyimpang primer adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1) dan 2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1) dan 3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1) dan 4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2) dan 4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3) dan 4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Gosip sebagai bentuk pengendalian sosial akan muncul ketika kritik sosial secara terbuka tidak dapat dilontarkan. Gosip juga sangat cepat menyebar meskipun terkadang tidak berdasarkan fakta yang ada. Tujuan dari dilakukannya gosip adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Merubah perilaku yang menyimpang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Melakukan pengucilan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memperkuat aturan yang ada&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memanaskan suasana&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menciptakan kerukunan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Setiap warga masyarakat mempunyai kewajiban untuk melakukan pengawasan atau pengendalian terhadap perilaku menyimpang yang terjadi di lingkungannya. Dalam hal ini maka pengendalian sosial berfungsi untuk terciptanya...&lt;br&gt;
+A. Keadilan sosial&lt;br&gt;
+C. Kesejahteraan sosial&lt;br&gt;
+E. Kemajuan sosial&lt;br&gt;
+B. Keteraturan sosial&lt;br&gt;
+D. Kemajemukan sosial&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering></numbering>
+	
+	</question>
+
+		<answer>
+		
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penanaman nilai-nilai persatuan, kebersamaan, kesetiakawanan, kedisiplinan dan cinta perdamaian melalui organisasi.&lt;br&gt;
+Pramuka merupakan salah satu cara pengendalian sosial melalui sarana&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Agama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pendidikan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Organisasi masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Adat istiadat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tokoh masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penganiayaan yang dilakukan warga negara Singapura terhadap TKI yang bekerja padanya, akhirnya harus diselesaikan melalui jalur hukum. Lembaga yang sangat berperan dalam menyelesaikan masalah ini adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Polisi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tokoh masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tokoh adat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pengadilan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kedutaan besar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Setiap masyarakat memiliki struktur sosial. Struktur sosial biasanya ditandai oleh dua ciri salah satunya adalah pembedaan anggota masyarakat dalam golongan-golongan yang tidak memperhatikan perbedaan Iapisan. Penggolongan masyarakat yang sepeni ini disebut...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Stratifikasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Diferensiasi sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jaringan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sistem sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kemajemukan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Gambar di bawah menunjukkan bahwa profesi merupakan salah satu ciri mendasar pelapisan sosial karena...&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;39bb0e_eb94ebdf124c39a6698c68e1cd576907.png&quot;&gt;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>39bb0e_eb94ebdf124c39a6698c68e1cd576907.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data>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dXj/nf3ssyus9ayqVbVqFSM09AOrNGOMIIwwcwZ94H+f9sp997UAIEyUUhDCNImN1tuEKriADqZROjU99chvp9n5HTDwDj/0ry749oU/u/PebVp4/re+dvQbXv/Ag4++44R3nH76x9qj8yhjaRpd9L0LX3PY4eNbx6+99tq99tory7Ivf/nLK1eufPqpp7/59W/MHZlz2823blq/ZecVO0xtGb/u6qtbrVRbsGDBkgMP2nf16kuvvvrKPfbYbd6chUuXLNtvv31Wr75yZHjuIw8/eughh1588cW/o4UP33/Pqj32CDz2ilfs/6m/O+MTn/jEvffe+4q99k2SzuLFS0855eSzzzn30EOO3HmXXXbYYeWGrdNHveltK3da1WiMvO6oN/7txz8/Mm+HSy+9/tBDjrz15tvfd8qH+t2S4ajI5PjWidM+fOrap5847i1vGJ+c+uSZ//Dek0879LAj77z7jp/cdOvtd93zwdP+9gOnffiDp32kHAw0t53m0OJ5Sy74lwvuuO2OVrtjrXleJf5iVMSJ8YmpicmiyJUWYcgkrxECjCBKCLaAEcp8ihBSSjpnAQDOGWutNrbRaDDGgiCAGEkpIxZKqR667+E/VJCx8MerbzriNcfsuese999zJwDg2mtvWbxoh9G52735ze/ae++DAABB1JTKPPDA/YcccsgOO+3wutcd6fvRM8+sT5LWYYccsWLligMPOHTJkmUHHHbIbqv2nL9waW9QJUmn1Rj2SEwwa6RDvdk6zwTBIXC4LLnnRc4ha/HLdtjxhBPecfnll2/4be8K07Cq1P33PzI1ObFp49YF8xYREixcsHTJksUAgB122OWRXz7x8CMPX/yjyxYuWvKy7ZeJPJNVAQA44JX7zB8eXTx33vBw56hj/qoz0txt911X7b/36uuv+ewXPusI5hwCFBz7tnf+8EdXfuc73/rI6R/fa99X7rfP/rXSLIgAAIiwobnzslp853uX9PoC0mh4zsIgiCllvh88jyJ/ETorU1umxsbGALAAAIIJlwWlzFinpAwCH2HirBOiopRhxCj1sixjzIuTNM8yCIGxDgDnrImiGCFkjCk4D4Jg511X/seyrrnm2le9av9tBunqq6/ecccdly1bdttttz3xxOOLFy854ogjAACPPPLILrvsAgBYv3792rVr2+32qlWrAADdbldrvS2hxPr1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</data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Profesi menunjukkan kepemilikan harta&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penghargaan yang diberikan masyarakat terhadap jenis pekerjaan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Adanya kompleksitas jenis pekerjaan di masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kecenderungan seseorang untuk memilih pekerjaan sesuai minat dan bakatnya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Persaingan yang ketat untuk memperoleh suatu pekerjaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Tawuran antar pelajar seringkali muncul karena pengaruh para alumni terhadap adik kelasnya tentang kelompok siswa sekolah lain yang dianggap sebagai &quot;musuh abadi&quot;. Konflik tersebut muncul karena adanya...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Perubahan norma&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kecemburuan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Degradasi moral&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Solidaritas sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sub kebudayaan menyimpang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Setelah diberlakukannya embargo ekonomi (pelarangan perniagaan dan perdagangan dengan suatu negara) akibat konflik dengan Amerika Serikat dan sekutunya. rakyat Iran menjadi memiliki mental lebih mandiri dan tahan terhadap penderitaan. Contoh kasus tersebut menunjukan adanya dampak positif dari konflik yaitu...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Adanya perubahan kepribadian&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Banyak korban jiwa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Solidaritas intern menguat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kerusakan harta benda&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kenyamanani terganggu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pernyataan berikut ini yang menunjukan bentuk akomodasi secara koersi adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Ronald yang beragama Nasrani mengucapkan selamat hari raya idul fitri kepada Vita yang merayakannya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Nia Daniati menggugat cerai suaminya di Pengadilan Negeri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Amerika Serikat dan Uni Soviet sepakan untuk mengakhiri perang dingin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Doni membeli buku untuk mengganti buku Perpustakaan Sekolah yang telah dihilangkannya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Polisi mengancam untuk menyemprotkan gas air mata terhadap kaum demonstran yang mulai bertindak anarkis&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Gambar di bawah menggambarkan sifat stratifikasi sosial...&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;acb950_ab3d1a55a18db36872637c0264128cfa.png&quot;&gt;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>acb950_ab3d1a55a18db36872637c0264128cfa.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data>iVBORw0KGgoAAAANSUhEUgAAARIAAAB/CAIAAAHbT+rSAAAgAElEQVR4nO2deVwVVd/AZ+bOnbt4ARVJ3B7JhVQ0jBT10cxyz0RBTFAUsLRMzBK1zHxscQlBE1csc0HcFQR33EVFEBegR6yezMckRVAB4e5zz/vHqXlu987MnXPvDGDv/f7BZ+5w5sxv5pw562/BAQC5ubkYImq1WqvVol2TkJAA0JHL5Ujp09PTCZsb4zguUMR169YhPZLtnQAA8CAxMZH/SmuZwsPDrf81dOhQvjtVVVVZ/2POnDk+Pj6cAhKExWKBx76+vvv27bP+7/Hjx48ePWp7zdKlS+umnMjnnntu1KhRRUVF3bp1y8rKYiQICQnBMEwmk9E0Dc936dKFIAj4ek0m04EDB0aPHs0khi8Tx/EDBw4wmYwaNQoe9O/f/4+617ZtW4dy0TSt0+mYn+vWrQMAfPPNNwKf6Y9yunPnDleR8PPhhx8KTGlb9/iSEoRSqWR+0jSNJNP/7mRdSEKIi4uDB+PGjUO7E6wCTtx19+7d7733nsNkeEpKSk5ODvyRlpbG/CM2NtZkMmEYJpPJtm7dypyfOHEirH7jxo0bOXIkPBkZGSmTyTAMoyhq06ZNTOKoqCh4EBQU5GS7x9Q9gbC0e9JBms1m5kdhYSHTmr344ovM+aKiIrPZjOM4TdM9evSAJ3/77beioiIMw2iafumll5jE165dI0kSwzCTyfTyyy/Dk3q9Hs/JyYGvGAnYdghPj4M/W25J+UsJvfnmmxMnTsQwzLqaIXHq1CnW8yRzNGnSpEOHDsHj6upq526jUqlYz//vaVJTU5ljtVrt3G04i4Cn1sNOgZ+hQ4cK+YDwESNGaDQarVZLkmR6ejq898GDBzdu3EhRlNFozMzMxDCse/fuJpNJLpfDZiIgIGDPnj2MrExv9Nlnn/Xs2RPDsLy8PNij8j3Nxo0bbc48fPhQiNQ5OTms56VqC8aPH2/984/bdO3a1fqsh4eHzWUURbFmZ5OSqWk7duz4Szqux09JSRHyllgpKCiwOfOX2zRv3hwAEB8f37hxY6R8jxw5Ag/S0tKee+45+wR4dHQ0bEANBsPevXvhIx44cIAZnll3SDExMTCxXC7fvHkzc37ChAmwbd25cydzkul4OF+afU0TSF3XNBtI6x+wC8Ew7LfffmNO5ufnK5XK8vJyHx8fm36IOWbO//zzz56enjYnMQzDlixZ4tz7cQKKoiTNPyMjg+TqPKdMmcLMDDAMAwDI5XKapjdu3Gif+N1337Xu8SE0TW/ZssX6DAAAw7DIyEibPgD27Bs2bLDPefLkySaTSalUWgtDkiRrYgAA32iqV69e2F9rPcbbeTgEzml42pi5c+fKZDLrM3l5ecJvyj5mCwsLgweXL18Gf+0Tv/vuOwzDPv/8c/urhAB7JtaBESzJhIQEm3I2Go2MDELm0QRB/OWRVCrVt99+++jRI9bUsNBdfB6bdwQb0ZiYGIeXAwDgC+WCpmnnR+9OgDqHZoVnSLR//37CuhB9fX353xD/64FUVFTA3PV6vc2/jEYjhmHr169nzqxdu5Y/t4sXL7IUAgcymeyPNQHIhAkT+HO3qZyswIcRuGYEn5A/N5szV69e5UpssVj+It/y5ct/+OEHIXJgKKtcPHz00Ueol4wdO5bv3859P5hrDbfT8I/1OOfYb7zxBtfzf/zxxxjP3MZZuOZkDLCaPXnyhD8Z+/McOXLE+ueoUaNkMtnrr7+OYVhCQgKCmILR6XT2Jzt27MjUamZRgB9CyGeQmZlJ0/Tp06et12ycRvii8c8//3zu3DnhOeM4TiDVHFGqGVJDIqRFZQB1NluoM9DK5+2333b9ltOmTROeuF+/fsITAwDwS5cuoYvkDBaLBcdxUXotVgAAdbSqVzf8rb4ckvXs0aNHMzIyDAYDQfwxj4ATBOtlD4Zr166xjianTp0KJ4I2vPPOO9bVAQAgk8mmTJkSHBxsnzg6OpqZnMMzFEVZD2T/Autg4euvv4YXDxw40OG4Y//+/aznt23b5vBahrS0NADA3r17hSQ+e/Ys63n2aqbVauVyuVqtPnnyJHMyLCyMdbVAoVCwZsLax3MBG4axY8cyyzSQVatWMbtKDNaLB3+B9RFtpuzW2M/ADh06xJpy06ZNQl4zBPtzssn63549e1r/zM7OZk3GUjKdOnVatGgR1ys0Go0ajcb+pboCQRBwu+Kdd95hTZCfn3/mzBmHd2TZoy8qKuKfTtXU1Fj/hKtK9gh/SIvFIpfL+dO89tprcODLk7Ptwzx69KiystJ+xcyG5s2bM8ePHz9mTVNZWcmfCeTLL7/EMOzp06cOU54+fXr//v0Yz9TAus6Fh4cLr+X1wqhRo3j++5eSadmypZB3CVm6dKnwxFw0a9YMKb21/oI9ZFhYGE3TAAC4ZBoSEqJQKO7cuXPlyhX71MOGDYMNsUqlOnz48OXLly0Wi16vP3HiBEwwc+bMU6dOAQAwDFMqlWazmamxOI77+/vTNA23vCDMklpwcLCvr6/9x2CdGFJQUDBv3jz7HUGTycTeNC9btsxhiXfq1AkeZGZmMicjIyP1er3FYrFYLEid5s6dOwWmHDZs2JkzZ1j/xd4QAQGjT4PBAA+s1+lxHKcoCr5guMsoEM5+0A6ZTGa/XgdxfqCJNBkUkZCQEGv9Fmv+ItDUqVOFZ/ruu++6JBSGYcKWoW3o06cPVzH+5WHy8/OFZzpnzhz+BELqqsC+yJpu3boJ6jRv3LgBDxwuqFqP7a07b7lcztxJyMPwN7X2dOzYkS9n2waBJIU3QfZERkaiXmIvg9PYfsTWKjlc2OgFWOPEoBMAwDrnsycgIMBxXvYMGDCA6+mVSiXPuxk/frxzL5Wr62DgEtUa9ub1zJkzf9nCxjAcx7t164YhTrmEM2DAgEaNGtmf79ev3/Xr10ePHg2ELLwIeW0dOnQQouMDXCgZVnAcF3hfCMnoDTIoFIpffvnl7NmzzJmff/4ZHowbN04mk1l3l/CW1nofDG+88UazZs1s+gQAwPbt2+0Tv/76676+vkzOAACZTDZhwoRt27bZJ46OjrbfXTObzewls2LFCuHv4/Dhw8yxdckgqZ/s2rVLeGK0BQ2kYRXgqM1I4x0kfUSubvBvtQjofpiGCvt8xmQyWetSMdh0PhCCIBhF38ePH1+/fh3OcLi+GSYBg9ls5lrisVY5hhgMBs5xhvA2RAiTJk0SN0Mk8MTExNmzZ7M/6LMMVLGtbymcJykpiRA+/XZTl7Rv3/5v1Tz/zUArm6+//lp4Yls9cl64zCm4QLLbYB2Ac7F7927hiYWriGEYhqR/gqGWDdO5Z2VlMYuY1luGkE6dOm3evNmhCpM1SON1DFETxsakkh/rMQn+J15eXqyJtVptRkaGwJxRJ+toZXP37l0cxzMzM0NCQtq2bQs3iwcNGmST7NatW7GxsXq9vl+/fg71KSGo9oRIZYNk/CWTydavX+/l5XX48OG33nrL19cXAMBVujqdLjQ0FMOwnJwcLy+vJUuWiCUGxjWCtic4OLhLly49evRgXopD01GZTHbhwgUMw/Ly8kaOHPnw4UMkyeoFHx+fzz//fPr06VB5acSIEfzpmbH8K6+8AssvKSnpX//6F7LRORuCvhtvb+/8/PyUlBSkWzI7sL169Xr48GFERARj32OPw71nGxwupFrPrYSMRV999dWBAweWl5c3bdpUuBj2n8Ls2bO1Wu3ChQuZnXJWkYTg4LtZtWpVTk4OrPIEQXDND4Wwa9eu3Nzcvn372quc1zs4/j/VNaTWkosvvvjCJlsnIEmS3LdvX3V1NVMFaJqG3fju3bubNGkyatSonTt3wn1mri6RlbfffnvXrl1wC5qp5uHh4WPGjHnzzTeZSgQPuPSLeNiwYQNFUfaVkblXenq6Xq/HcXz69Ok8+UAPAsxPnU4ncBCoVCr5beABANbOGh48eCAwZ5qmSZLEFi1axLVmwL+j4TQzZsyQIlsbBAr/4osvSi2Jn5+fE1ft37+f4GroFy5c+K9//UtIIaOyatUqa+t6iRA4KBo8eLDUknDpMvBD0zSfvcC8efNszjh062INj3GBve4V125+VFTUtWvXnjx5UllZ+ehPfv/9d1bFS2usleW4rK5Wr16dlJRkcxJqhwlEiLb47t27YS1HmntSFMWpW3/w4EH7k1yJWeFJbN9JlJeXc2XSpk2bJk2aeHp6ev9J06ZNkcY8XIlZJ1WMtpAQhIwA+/fvf/36dQxx7mlrp2YNq/ei+sK+mKWzN5ACHoNdHjjLpmPHjqtWrXJVKA4cGpPWDb169UJaIXSO8+fPz507F8MwGwVrh3CWzeTJk2fOnOmqXGwsXLjw+++/lyJnVPr06SOKWi0/4eHh0OoJqbXE+NcFAAA2Kk5OeCWy4dixY3fv3u3cubPNea42ymw2Q6Mp65admYG5zooVK2yqoLgKnZ988gmjIsylr8mFg3l+9+7d4+Li1qxZA3+2a9du7NixAlcHqqurbezyCgoKvvzyS9axTbNmzSIjI5mfNE2bzWaapv/zn//Ex8frdDqZTMbUDKPRiGRQvXfv3vPnz9ufN5vNFEXduHEjKCjI39+fJEmSJGNjY4XnnJiYuG7dOpPJZP9OCIK4deuWl5fX7du3165d63AKzIIQG2+VSuXE7MmGd999l8uIhgdxNcO4SE5OjoqKEjfPrl27fvLJJ05fnp6eLugL0Gq1a9asuXDhwq5du9BKHsMwDLtx48bEiROLi4uduLZu+OCDDzAMw3H8ypUrjCs6V9BoNDbWSE4gtG2Ni4vbtWtXUlKSQqHg8R6BYRj0Jwfp1q3bgAEDunfv3pALhgEA0KNHD5VKNXnyZOdymD9//nPPPYfZmYk5iXN+K65evWp/krHBxnH86NGjTn/O1tRNm2ZPQUFBnz59+FfboGkgjuMdO3aEW3Aikp6eTji0rGMlKCjI/iTj1Wzv3r3Dhg1zpcbUOy+//PKlS5cKCwu5EmRlZYWEhLRp0wYA8P7779+/f19cAQCqf4fk5GQhycaMGYNxWIFzcfr0aSRJkDQuWJ2TcSHQ0CQkJGTkyJH79u0DAAh0AmxtZ+sQHMc516FZQV0REp4YdbEWKT1S21BbWys8MdJ0EnnNBqAsX0pnaIckBoZY8EhiI63UISVGfUa37mDDxV02DRe0skFqMaVrdjDxdpJcTIz0QpBWIwEAJNIbnDdvHv/E0xqBntogw4cPv3LlirW9GkVRVVVVWq322LFjvr6+BoOBWbPCcRxpetinT5/Lly/zj3oAADKZzGKxCFR2hCiVyuLiYrjcx5MzPLDXiuIH37Zt27Zt2/hMWv6EIAiDwSBcIUYul+v1eqVSqdPpeD4LuMwMX421VTUAAMfxysrK5s2bm0wmgiAYfR2CIIxGI0mSNE07FBuaR9M0zf9pAgDMZjNBEDRNQ0n4NZhgngqFAlqS8BQ8AECpVBqNRmt9I34AADqdDr969WpNTQ2q6l5DBvp9hp6PhNS5BojFYunbty82f/58cRcbGgJHjhz58MMP61sKl5gyZQqBpGL6rODn59emTZv6lsIlVCqVrc/uvw3g2Xf/+PcsmL8H7rJpuKDZBUyZMsVoNFIUBVcPoYoFHKTCBNBlJIZhRqMxMjJS+E5BbGwsHFw5TAkA0Gg0wvWzduzYcfHiRf61UZL8I1JXTU2N8BXudevWFRUVmUwmOOymKIp1WAjH5UCwq57/SYWU+s0332RC+TkEKYCjv7+/vYovF0JCITCUlpY6jHTA8MknnwjPuaioKCUlRWDiBQsWCM8ZgtamMV4rGUPIuXPnfvPNN6h3tQcpWBmSiRbSoMB6g8ChWiHSGgzqBgGGWjbMdkXbtm3lcjlUILJRRxo6dChUY0Sa9CHpbiGVDdJOj7Xa28aNG5kqyKpiCCPQXLt2TUjOTjiiQCubZs2azZ8/H8fxtm3bmkymXr16ZWdn26Q5fvy4SqWSy+U2QVv5Qdqk4orKxgqS1RWzeZidnV1aWgpX8JYvX87a3kL/oCNGjPDz8+P0sf0nTsxV0C6YPXv23bt3AQBr164dOHAgq0IehmFffPGFyWSCHaNzalP8ILUPSG0abKYCAgKWLl168eJFs9k8Z86cWbNmsSaGJXf//v07d+7k5+f7+PjwfENOzLcQxgKM9TqGYV27drV3K2BDaGjohQsXYBg/a53Nhgxcjty6deukSZMwDEtJSeFxQ2rdTMExGKyLAoPtOkRQ2RQVFQUGBj59+pTVdx0XsAspKysLCgo6d+6c8CFNfbFy5cq1a9daV3B+/7D2I34AwIsvvmg2m5E2GrgQ1KYFBgbeuHFDo9E4Zyd97dq1tLQ0e6/O1oi7xGKvC++QAwcOzJ49+7PPPhN+CevbKCoqmjlzpv2I2YnlcMdl89prr23ZsiUwMBBD3Mq01m6pqanhd2iMVDZSLPuHhoaazWYhXukZuIZeFRUVy5YtsznpxMaugwu2b9/etm1bJj6rKx7J9u7d26FDB6cvdxohBfnKK68gKY85xGAwtGjRwsVMHJTNlClToHt4+BPV8sqa/v37N0xfbfPmzQsODh4wYACG2DDwM3DgQDjPcxqSR1Vuw4YN0EnD/fv3oRtuJCU8e/88t2/fHjduHOuCFdKw2KEYubm5zPzUYTO1fPlypj1A2v/lV0hPS0uTyWRM44asOEgQ+Pjx42GQc3gKLl9aLJbGjRuPGTNm7969T58+hc2CTCazthFwSEZGRm1tLQCAqYxKpXL69OkrVqwwm81wJgEXLvV6fUBAgHCnAz/88ENxcfHTp09VKpV9TTeZTFVVVSUlJT179lQoFGq1+q233uLJ7dNPP2X8NxUXF1+9elVgf+bQL8eiRYv8/PxgXO1r165dvXpV4Ky5devWR44cwZKTk7m2RZlAFiKyefNmV2KiCweGt3KIc04zhOO0o/24uDhOf52pqalS2BDHxMSIEnDSIUJap5KSkoqKCknFgCETnEAmk3GOBT799FPh2wFIuOJMSjhC2vcff/yR1cWFiIwePdo51zMAAE6fKaIblDCIZeLMj5DvZuPGjXB4Jh1LliyxjhogHJPJhHfp0qVz586Mu0y4f6fX6/Pz82GcOezPnTu5XD5mzBjhqxEwyo5Wq2X2OUwmk5eX14MHD8xms7V+j16vHzRoEGvMmcDAQJPJBEcozPQNGjTrdDrWioXjuE6nk8vl7du3h1cdPnyYVcKePXvahMJasGBBcXExbOf5RwRGo9FoNApxAdulS5ebN28uWrQoJydH4FZIu3btNBoNtnr1ata+KDQ01P7k999/L7w3W79+Pet51liCc+bMYU3cuXPnx48fl5eXP3nypKKioqKi4smTJ4mJicLFWLJkCde/OnfubHNm1qxZwnOeMmWKkGQwaOfMmTOF5wwAmDZtGsnaLl+5coXVrQlAWVlBmgyxhlWBd/T09GTUEDAMw3EcaRbCIzOqMwbhOVsD3dajOu9TKpXstlFVVVWsu/1Ir5urNyYIgglJxcC1O2kwGJiZEBPSGGkrk2chy/7ZkVwhC5xOwv061LknTdPscnt6esbHxyPlJRz4lm1OcjXuXD2K+GJJhtPameyXBQcHl5SUuCCPm/8Bm2snvA9yFmmTJk1ckogbpN1+SambmRY0Lvfx8UG9kLNsUGMGCic5ORnuBtU7paWldXAXOKpCddCF8ZSNt7e3SxJxc/fuXYlyRqUuqwhqwAWMp2w++eST9PR01+RhB2lvUVLi4uJyc3MlvcXx48fHjh2LOfXdcDa4r776akRERFhYmEui2bF69WqoqVNn8MxCRowYwWhCS8RXX30FgzI4YRnIWTYBAQH2Q3KkzpNVmlmzZrF+3VwDTTi8MZlMTls98k8wbeKDI91FyFCecfDvhON4vqH3zp07oV99Bq7ZO3vWdq+7oKCAa3eO66VAl1c2/0UKO8/fmCxevNha8x2pbBx+cJmZmZcvX4bHToyh+b6DwMDA4ODghQsXMmd27NjBr8rEAAAYOHCgzcn+/ftzqTJfv349PDyceTVardbLy0sul5eUlISEhHh6ejJGxvCvcBt2X1/fCRMmsFpUAwBMJlN6evqlS5dMJpNSqUSa1b3wwgujRo1SKpX2tRAA8PTp0x9++GHkyJGJiYkqlcqZjaJvvvmGf9Gta9euSIt0XCxbtmzIkCGoV7Vr106Uu/OQnJw8btw40bNNSUlhXS8WyAcffOC4bMLCwrZt2+b0PRicc/pZB2UDAGjUqJHoeWKuBRv94IMPHPft+/fvb9WqFVRIcBoXI8FITU1NjXUwFNdp164d9HPvCoKW4UpLS50YZjC88MILDblgIKNHj27Xrp0oWUVHRyckJHTv3t3FfIQukcK1elSLRQzDmjRp8v7776NeVfekp6fPnz8/OjraxXxatmzZqFEjON90EbQg6fHx8dDfIw9M/LikpCS5XH7x4kWJfOeLzttvvw0AQBqg26BQKL788kskQ1cekO09Bw0a1Lhx4/fee8/+v3l5eRRFnT17ds2aNb6+vleuXDGZTF26dBFF0LohNTW1oqICx3GBahHMhG/lypWtWrU6ffo0dH4rCsjbPtOmTausrGSNwNK7d2/oqP7mzZunTp1CcnfaoAAAxMTEOOxiNRqNVqvt1KmTl5eXn59faWlp3759RRTDyS05GHCUoaCgALoSgDb269atCwgIEEG6+mPw4ME8CwrZ2dk4juv1epIk27dvX1VVNXr0aNFlIEXZ3+3Ro8exY8fg8fHjx13PsIHj5eUF97dGjx595MgRKW4BACB37Nhx48YN/t0FmqbVanVtbW1kZKRDZU+muQsJCfH29q6trVUoFDxjaOi0rm/fvsLDXKSlpWVlZTVt2vTJkyf8K2CwjeWJ+WpDYmLijRs3gJXeiA1w1RWuXpeXlwufGyxfvlz4jKdt27ZeXl7kxIkT4+LiBF6DFP18xIgR/PaS1nz88cfCcy4rK9uzZ4/AxEjRr8rKyrZv3y4wMYxrLJAHDx4gWctOnz6dQNqPQ7JbQ9oXQQ3HLTwx0gIw0tKAdKb0GIaRJInmPw1JGqTESN2edO7dpaupqCG3aJpG86sunRtxpMSuhxbjAukBkao16mIdn42Hm3rHXTYNF3fZNFzcZdNwcZdNw8VdNg0XtLJBGgiKMoZmPS+dfw/pAhM5AVocj8ePHxcVFQlJaW2eKYQnT57Y5AxdUGAYVlhYCHNj3gXSVB8AUFhYyP8eLRYLrARlZWXCczYajdDIi/9JjUajTCYrLy8XnjMEX7Vq1YwZMwSmvnnzpsA5OY7jrLEMucjNzYWrFPAndNrbq1evjh077t+/H5rjMsorqOFRr1+/DmN08KQBABgMBtQNmMLCQq1Wy2+1YjQaFQqF2WwODg4WnvP06dPR9gik28Ts06cP63mCIF588UUXMxfujQUV6SwRKIrCg4KCNBoNf52CS+LQtl24SjRcZodVnicZ9P4NPdwwKXEch07C79y5A33q1tbWMtVTJpOZTCbwZzQhnswBABRF1dbWQu04fjGMRqNKpWLckvM/HSNzdXW1p6cnT+Y4jsNmgCCErpCpVKrAwEB87dq16enprVu3JknSYrFIqlTvxmlwHCdJ0mg0njt3rkOHDi+88IJer3fC57QbV1CpVPfu3evcuTNZWVk5cuTIZ0VLyY2Hh0doaKjw0ZsbccnKyjp58iRhHYPDTQOnpKTEYDC44jPVjYtAUyH3YpobN8i4Pxs3bpBxfzZu3CAjoQukJUuW3L17t0+fPnA4KJPJamtrSZKEemXQshL8GX8bBn5mzUev10PHqzRNw4W+S5cude/e/cMPPxRd5mPHjq1YsWLMmDEymYxHJCfQ6/W5ubnDhg2TIgjQkiVLCgsLQ0JCzGazKzLDPRToFxWu3W3YsGHmzJn8bs+dIyIion379i+88ILBYICL7ARByGQymqbhwjeGHjvEbDZbLJYdO3Z89tln9s4TRETCz8ZsNgcEBFibTm7atKmwsBB6L7FYLAaD4Z133nFiX4amaSd89ggBbn0J161H4tGjR/yxC5wGx/FXX31VlEhINuTn5zvhukoICoVi8ODBUjh//vHHH6VT+YVI+NkolUob99ze3t4HDx789ddfofdpgiBWr16NYVjLli2XLVvGU+oFBQV6vb5fv37wJ7xcIrGlC3quUqkkKk6DwSCRXotarWa1bGrTpo1SqXz55ZfhHj7UIzAYDO3atRMY51WhUEj0NuCWqxQ5M0j42Vhr2Gzfvv3XX3/97rvv7t69S1EUTdM0Tet0utGjRy9atMihTej58+ePHTt24sQJDMOGDh3q7e39z3/+UwqZJXUbwgxQRUepVErkclSr1bJuqqrV6p9++unevXtwXGSxWDw8PFJSUsaPHy8wZ6h1hGHYkCFDqqurhw8f3qtXL+Fxx3lAdRzuBBIuCTRp0kSn00VFReE4vnDhwt9///3IkSObNm3y8vKiadrf37+goCAjI0OIHfWsWbMY//hjxox5+PBhXFwcVwBhF5Fu612n00mn6yjR105RFLNNdPny5eTkZB8fH29vb29v76ZNmxqNRvjZzJ49u7q6Wvg3g1l5R8zOzp49e7a3t/fKlSv9/PxwHJ82bZpAB3Cs0DQt9daWVJ9NZGTktGnTdu7c2bZtWwDAf/7zH+hpIDY2Nj4+HgBQXFz88ssvO5HzlClT3nnnHRjXoqSkxMvLC8fx5cuXi/4IovNs+YCHAACuXLkybtw4HMffeOONysrK8vLyR48eXbp0KSIiokmTJps3bwYAJCYmouYMVx3gcXh4eFxc3LFjx+7cuQMVRZcsWSKTyYKDg22iqwhE6lct8mdz7ty5iIgIHMe9vLxCQ0Ojo6MXL15skwbJRJ2Vhw8fwj4hNTW1qqoqNTV1z549rVu3ZnxOuBGF48ePnzt37ujRoz4+PgCAx48fWzsFXbt2bUVFRUxMjNP5c3XsMTExeXl558+fHzx4cKJAq3wAABATSURBVN++fXEcr5vYb8IR87Pp3bv3gAEDHj9+XFlZmZKS0qlTJ4k++iZNmliPdiZOnJiXl7dy5crw8HAcx50LaebGmvXr1+M4Hh0d/fTp03Xr1q1Zs0b0W8jlcv7xcN++fRcvXmw0Gq9cubJ06VJ/f38kfxmSIs5n8/nnn+M4/vvvv2dmZmZnZ3t4eGAY5unpKdGqFLPSb014eHhNTc1HH320ZMkSp/dG5HK5pKZWLrYjnTt35nqlYol94cKFNm3avP/++9HR0Q8ePAgNDX38+LEoOdtgNpsFLmP06NHj559/njdv3tSpU3EcX79+PX96mUwm3XIoJiTwuhDmzZuXmJi4bNmyu3fvjhw5Em5XYRgGtzhdzx8JGAH59u3bFEXBlTc3wpkzZ84rr7zSsmVLAMCWLVswDGPCSdc7sbGxWq126tSp8fHxYrnZdBpXPxsPD4+VK1fu2LFjzpw5cJIHTZQwDKNpurq6WgwhkcnLyxs6dOiQIUOYoN1/b0QZDEdFRW3atCk1NTUvL485yfgdbyBs2LBBq9XCMZu1nHUMwdRyJ4iNjW3ZsmVZWdmoUaOYXRqS/MNkVKFQaDQaMYW1wqHMBw8ezMjI2Lx589GjR4VnK/V6vyi7K/bP7nq2ERERBw4cWLVqlU1cFa5Yw67jyjgqPT1dp9PxhAeRLnAefBukRqPJysqqqqqCsU7sHwZqlMFWR6lU1tbW4jiuUCi2b9/+4MGDWbNmJSYmWiwWuDUL1Yqgb9vTp09PnTpVCtHlcnlmZuYvv/zi4eGh0+nUajUAwGZwD81cfXx85s2bd+PGDbi9oNPprO17IRaLRS6Xm0wmi8Vy+/ZtSf3x7ty585dfftFqtQqFgiAIh2bJDPD9P3r0iKbpkydPVldX19TUKJVKuVyu0+muXbvmiv/3SZMm/fLLL6yKP82aNUtLS7t165aIOyE0TSuVyuLiYqcbqZ49e+7Zs2fChAn+/v4//fSTzX8bNWr07bffHjt2TFxbMpPJ9I9//EOhUKjVamz16tUOY6rYM3fuXAzDNmzYgHph3RMUFOTj45Obm1vfgohAUVGRt7d3UlKSiHmOGTOmRYsWmZmZIuZZN1y/fr19+/bNmzevy5tmZGR8+OGHhFarRe0ut27dmpycPGfOHIk6E3H57rvv2rRpA7/zZ51u3bqxriI6zcKFC/fv3//pp5/WcaBIUejevfvMmTMtFsuGDRvq7KY0TcNRFXIZ7N69G8fxQYMGSSGW6AQFBY0ePbqgoGDbtm31LYsIiKj7k5eXt23bttTUVOF+2hsaM2bM6Nev33vvvYfkjN0V4LiagA5vhF+WlZV14cKFL774YsiQIdIJJy4LFizo3bs3khe0hoxYWzRr16718PDgiq36rJCenu7r61tnIa9VKhVJkgRFUZWVlcIvO3z4cNeuXYcPHy6dZFIwbNiwpKQkqUN4S01eXp5cLq+qqhIlt6qqKinsz+qehISEjRs3nj9/vg7uZTQaCYIgtVptRUVFQUEB7P3tx2xwcUyr1eI4ThCE0Wj09PTU6/WsOnZw2gRdy23ZsuWll16aMmWK6KJ///33d+7cGT58OOPbjnVNBhoJ6nQ6pVKp0WhkMllpaSmP2HCWeffuXeGK1ZGRkVlZWSNHjlSr1XBNDJpF2Libg4tmhYWFarU6ICAAdhd6vV6tVgsZdOE4rtVqPTw8GjVqNHHixDZt2uTn58ML4WL0nj17OnbsiGRdl5GRkZ+fHxYWxp8sLi6uWbNmb775JtKQhB+4V7F06dI5c+Zw+ZVEomXLlh4eHv3794c/P/74Y39//4CAAHE3agEAGo3GYDDU1taSKpWqQ4cOwp2Qbty4US6X9+zZ02HKY8eOSeSskKbp5557Dsnkxmw2azQaf39/fmPSJ0+e/Pe//xWeLUEQLVu2/Oabb1q0aMGfkqbp1atXN2vWzMVAwqycOXMGdeR2//79jh07Oly2VqvVnTp1QvVRKwRodyBKVoMGDWrduvXw4cPhHp3FYvHz8+vdu7comdvw008/KZVKAsn6PDs7+/Tp0x999JGQxHAU6IKEnDh0lGpPZWUl3IDiT0bTNNJmAgAAGkUBAGAbwTivtgHuC0mk8OZE82QymYQMzvV6vUQyMw4DRKFr165qtZr52bDsbSiKkslkTMRXfoDdFmQ9Al31OpQHOgUWni3jRFiIAh6MjCg8c+E4MRoBLmiHiIWIAz+SJGtra5mf0qmnwME82mczYMCA3r17f/nllxLJ5MaNc+j1eqYVwHFc6oU15E0btVpd762UGzc2nDt3jjkGAAgcEDkN8mcjk8l+/fVXKUSRlFu3blVUVEjt0OQZQiaT/fbbb5cuXapvQUTgzJkztbW1hw8fhj8BAFDBUjqQP5u1a9faGMc+E2RkZHz66adSrAg9o8yYMaNv375MVXvWMZvNZ8+ehcc4jtt4GhMdZ7SbXnrppdTU1IKCAtGlkYjvv/++pKSkefPm9S1Iw6J169ZpaWn//ve/61sQVxk3bly/fv0YT4VSW39gzn02kydPvnPnzqlTp0SXRiL27t0bGBgYGxtb34I0LKKiogiCgFaczy4xMTEAgBEjRjBnDAaDiGt0rDjz2YSFhW3atCkpKenQoUN8WRPO6ImKzpgxYwoLC4WPKpGssmwW2aFXa9Yc4IKvRA2hExtZGIb16dMnPDw8OTn54sWLXGmk85wEfX+7mElOTs7p06d79eo1duxY5qSkPiIhTsodGxs7ceLEsWPHwqivrNTW1kq0bwMAEFj/Pv744zNnzmzcuFHgnjH0Go4kCfTYjWGYyWSC2zLwwGIFTGw0GgWGpUXFYDA4tyOUmJjYrVs3Hg1oqFHlgmicKJVKpODFrEyfPt3b29um+a6DQJrOb9OuWLGiuLj49ddf5/Js0rhx49LS0hMnTrjy3u2bDRzHb9++7ePj4/DasLCww4cPb9682boH50cul9+7d+/QoUNwY9fmvxaLBe4PwPjCJEmWl5cbjcacnByNRkOSJEmSrLoIOI4bDIaysrLWrVsLlAQJDw+PH3/88cSJE8Kd48DvmSTJxYsXv/XWW+PGjYuLi9NqtUajEW63m0wmpVL566+/SuQ3uKam5vr163q9Xi6XQ1Nc4YauGIb5+vouXry4urp6zZo12dnZ8LVTFGUymR4+fCidUfQfJCQkOGHdyTBp0iToAd3pHCTijTfeUCqVO3fulPQuUVFR7dq1k/QWdcC5c+datGjxz3/+s74FEQp0vtGsWbOTJ0/W8a3T09M/+OADVz/KrVu3EgTx1Vdfmc1mKQLOOEdERERBQcG3334bEREh6Y2gWwVJb1EH9O/f//fff2/VqpVard6/f38Dtwo5fPjw+PHjO3XqVFJSUl8yiDBs3bx5c3Z29u7duzUazZkzZ1zP0BWWL19OkuTzzz9fVlZWBwZY0kXaqXtKS0vj4+PDwsIWLVpU37JwcuTIkbCwsODg4Hr8ZjCxvHIGBgbm5uauWbMmMjKyviyfTpw40bhx44MHD5rNZikiEfx/4Kuvvvruu++SkpJatWp18ODB+hbHlp49e0ZFRaWlpdW740gxF0liYmIePHjg7e1NkmSHDh2QHJS5wty5cxs1ahQTE3P69Glmq9iNc0RFRVVWVrZv3378+PGvvfZafYuDYRh29OhRhUKhVCrHjh37+PFj67Xm+kL8tcX169ebzeaQkJDJkyfDhRrRb8EwcOBAkiRv3ryZkpJSWloaFBQk3b3+X3H+/PmnT5++/vrrFEVBV2n1IkZKSkpgYGBoaGj//v31en3DcT8k1XbkihUr7t+/bzabs7KyPDw8mjZtGh8f70Q+0dHRMpnM09OTOVNSUjJ48GCNRuPp6RkUFGQ2mw8dOvSs+5FomCxYsMBoNO7bt2/RokUKhaJr164rVqwQ9xbLli2z3x44evToq6++qlQqFy1aFB4ertfr631UZoPEy9sYBtcKc3NzT5w48fzzzz98+PDUqVMONx9Pnjw5Y8aMO3fuQEWJ2tpaHx8fHMfLy8sHDhw4d+7cZ8hvzrPOgAEDbt26hWHYsmXLduzYMX/+fJVKFRoa2rVrV4F2vqwkJCQkJyffv3+/ZcuWBw8eVKlUmZmZJ0+eLCsr8/PzS0hIGDx4sHgPITYu7tuIztSpU59//nkMw0iSVKvVFEVB7xbDhg2rb9FYGD9+/N9g38YJkpKSPvvsMycuPHfunL+/PwzlAotYqVSq1eru3bsfOHBAdDlFR5x9G9GBHhazs7Oh/x4AAEVR33777alTp9asWfPsOsL7m+HckDsmJmbr1q2MNgCO49A1e+PGjT///PNRo0aJKqOEkBRFlZeXwx/FxcXdunVzMcebN2926dLFxUyGDBliPQx75sx73LCyZcsWa4Vr6LYKfkUSOZoRHaikR9I0XVNTk5ubazabcRznUYZ1COzFCIK4cOEC9JPWs2fPadOmiSg0ZNu2bT/++OPAgQOhQicAAD4McFbvFapyWSyW/Pz8srKyr7/+WlR5/+CLL74wGAzDhg2jKAr67jAajRRFOS02QRAwptDevXvbtm0rhZbGtGnTmjRpYu0nDdZyVJkZ3XCCIGAOCxYs+Oqrr6RQeIuPj+/QoUP37t1hhRQrWwBAo0aNYMgm0mg0+vn5ieLlzYYrV65IpHii1+u9vb2l2FWoqqq6f/++6NlCGjdu3KhRI8YLnoicPXtWIpMEjUYTGBgoReXu2LGjRDbqFoulffv2UlRpDMNu375tsVgIiqIk0gw3mUwSvRfomkyinCmKkiJnDMN0Op1EmUtnz6jX6yXSw4exhqTIGYb9kSJn7E8Hq8iu05FuIEW2GLo3M+FI5wEQwzCCICQSWxSTL1ZcD9PLhXT+j8xms6QmN3K5vP6tL924eeZwfzZu3CDj/mzcuEHG/dm4cYOM+7Nx4wYZ92fjxg0yEn420rnYcvP3QLoaItGeCgMh3TaFXq+XyBWvXC6XyKOPQqFAypkkSeH7D2q1WqLipChKIoUMDw8PiSo31AySImeKoqSLOADDqJEymUyi99KqVasDBw7k5OS4oi1mA/Tld//+/ZCQEFEytIEkyX//+9/vvvsu6wYiVKmC29tms5miqMuXL5eVlcXGxsrlcqhgBi+0eaU4jhuNRq1WO2nSJInE3rdvX15ensFgcEURAb5ei8WiUCj0er1Cofjhhx8Y38ri0qJFi5SUlNTUVIqizGazyWRyuimE5QKjDMjl8rKyMulsdeD7wRMSEhQKxcyZMyW6zd+biIiICxcu3Lt3r74FcVNHpKennz17liQI4t69ezdv3oR6Ja7oaEAPi7D7gsqnUD9X3N6MUXaG+ZtMJujWUZScrXtF+x7SYrHQNE2SJAAAPmZVVRVBENnZ2a1atQIAGI1GkiS5eleLxSKTyUwmk0wmg0MUF+NXmkwmGNgQamFB8VxRWmFiKpIkCXsAlUpl/SywKF13ssxUDCgw1IVxRXKmssHY4NBDqisSskIQxK1bt0iS/D9060iJHefrHgAAAABJRU5ErkJggg==</data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tertutup&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Campuran&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Setengah terbuka&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Setengah tertutup&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sejak Gubernur Banten Ratu Atut Chosiyah ditetapkan sebagai tersangka korupsi alat-alat kesehatan, maka wakil Gubernur Rano Karno diangkat sebagai Gubernur Banten untuk menggantikan Ratu Atut Chosiyah. Dalam hal ini maka Rano Karno telah mengalami mobilitas sosial...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Intragenerasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Antargenerasi naik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Intragenerasi turun&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Antargenerasi turun&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Intragenerasi naik&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Hanif hanya menempuh pendidikan hingga SMP karena keterbatasan ekonomi keluarganya. la sulit mencari pekerjaan untuk memperbaiki status ekonomi keluarganya. Faktor penghambat mobilitas sosial tersebiut disebabkan oleh...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Perbedaan kelas sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Diskriminasi kelas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Agama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kemiskinan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jenis Kelamin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Di era globalisasi saat ini maka setiap individu harus meningkatkan kualitas ilmu di bidang tekhnologi dan komunikasi agar mampu menghadapi tantangan masa depan dan dapat meningkatkan kelas sosialnya, maka saluran mobilitas yang tepat dalam hal ini adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Organisasi politik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kelompok perusahaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Institusi ekonomi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lembaga pendidikan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Organisasi pemerintah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pada masa kolonialisme Belanda di Indonesia, terdapat perbedaan dalam memperoleh kesempatan untuk memperoleh pendidikan antara kaum bangsawan dan rakyatjelata. Sehingga mengakibatkan terhambatnya mobilitas sosial melalui pendidikan bagi kaum rakyatjelata. Dari uraian tersebut maka dapat diketahui bahwa penghambat terjadinya mobilitas sosial pada masa kolonialisme Belanda di Indonesia adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Peperangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Diskriminasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Faktor ekonomi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Situasi politik&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Faktor budaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan ciri-ciri hubungan sosial berikut!&lt;br&gt;
+1) hubungan bersifat formal&lt;br&gt;
+2) Memperhitungkan nilai guna (utilitarian&lt;br&gt;
+3) lebih bersifat kekal&lt;br&gt;
+4) lkatan perasaan bersifat mendalam&lt;br&gt;
+Yang menunjukan ciri-ciri masyarakat paguyuban adalah....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1) dan 2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1) dan 3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2) dan 3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2) dan 4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3) dan 4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masyarakat majemuk adalah masyarakat yang terdiri dari beranekaragam suku bangsa, ras dan agama. Kemajemukan tersebut berpotensi untuk menciptakan disintegrasi sosial. Disintegrasi sosial dalam kehidupan masyarakat majemuk ditunjukan dengan adanya...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Perubahan sosial dalam masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pengelompokan masyarakat secara horizontal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Meningkatnya konflik horizontal dan vertikal&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Munculnya kesenjangan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Segmentasi dalam kelompok sub kultur&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Struktur sosial pada komunitas masyarakat industri di negara berkembang biasanya terdiri dari kelompok terbesar para buruh dan kelompok kecil para pemilik modal. Berdasarkan jumlah dan perannya, komunitas tersebut membentuk k0nfigurasi...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kompetisi seimbang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mayoritas dominan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Minoritas dominan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Fragmentasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lnterseksi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan gambar di bawah ini!&lt;br&gt;&lt;img src=&quot;1041c2_33.png&quot; alt=&quot;33.png&quot;&gt;&lt;br&gt;
+Berdasarkan gambar tersebut, munculnya solidaritas baru yang mendorong proses integrasi disebabkan oleh&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>1041c2_33.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data>iVBORw0KGgoAAAANSUhEUgAAAOwAAAC/CAMAAADKF8B/AAAAA3NCSVQICAjb4U/gAAACtVBMVEUjHyDa/f9Qn9iIiIjlr3AjSISPze+9nVuPSCpQHyAjH07i4uIte6VQH05ERESge06hoaH//dhprbXjsqr///9lKSBlioS/5/n958ZhYWEjKX6/ez6wzd4jHyrLr358SCotY46PYzj//+vx/dh8v+mujljLvJJljqplnaVlKT4tHyD92p9Ke6/LkWRKH05QUFDN8/3/88qw2vGRkZEjTp/y8vLB47x8KSBpr+GgTirnypf95a8jSH5QHz58KVJln9QtHz5KHyDn/f///++gdz4jKWQtY6OevKXan1vz2r+9r4stKXu/fk6Pr83/8b9Kjsr//eHnv4TBwcGg2PG/8fcjSJLYn1vl2J+PSD7x//kjHz5KHypKKWjL5+ugYzgtH1vav6ote79xcXH/89Rljrq92vF8KTgjHzhKKX7x//+Prbfa8/2uez4tSIR8KSr///nnzaXar37S0tJ8n7+xsbFKfrzNoprx//d8r8EtaK3NjlL///d/SDG/n3vl/f+FhYXN5/nxv37Y8/2PvNrN5dHNr45/v975+flQH1tKSIQtTp+eTir957ygTjGuvK2wjmSw5fl/rZ2waDjx/+tJSUm/e0Tz2KNQHyppKSDNonvL5/llkcZ4n6MjKXDYypItSJItH06SYz6PTirY5bx8r9jzzZLnzaiwe07//eeSr9r/89pKfqP9/+vYn2h4KSDavJItY5eg2vd/SD79//GgYz6ev7K9jmRKHzh8KT5KfrJKKXAtKWj//eWwyq2waD6PSDH9//ktSH58KVv9581KH1uSY0nz2q9/v+Ute62/8f0tY5Lnza/z///958qwzedpKTgtaKW/rY5ljq////GPTjGPSESw2vcjH1J/SCotKX6/8fv/89vx//1KH1Kje06xj1hQn9l8v+staK+xj2Tz2sHB8fu/nVv3MHnXAAAA53RSTlP//////////////////////////wD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+75OmaAAAACXBIWXMAAAsSAAALEgHS3X78AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABZ0RVh0Q3JlYXRpb24gVGltZQAwMi8xOC8xN/bpU/QAAAtkSURBVHic7Zz7exxVGcdP04ul0aHRiSHESFnvSbWEUktEbBtsRQ1LCV5Ri22UWqtdi40XUGHrJQVTixgU8QKosTVaaVQUMYKKCtV4I15Sn6pPfNS/w3Of2Z05M2fmzHknuzvfH9pNMuec93Pm3Oa77y5yjbQ8RPaLphVKWS4sVM3ADYoaKgVsfLDKsA2KZqGEsBohqS4xKJqVksAmiqP2YoOiGUobNlX7BrfKBq8erEHDJkFnzasDa9Ck8RzMFDce1qA1X9FsajFUHKxBQ/VFM6wqpaJhM44vb9woWAux5YsbAWtQeURRO7XqSQlrL6j8cFWwBrXGF7VaeYTCYW13fk43NxQWoOdzublhsCCB5EEbAmswKxIVhWrHUxAWLgZw2gAsZATQtPWwsO0D09bBQvc1bHu1sPBrBmiLNbDwrLBt+mHzYAUt6oPNJ2DIdj3YvFgBW5aw+bHCte2HTdmeSVHYxgWszc7d1N1tWkU2RRFAa+2OY15JFkU92JRtaRTVgIUZyEhcb7FjNWHt31oJm7IlnaI6sCC3FvGrbXarLqz1WytgU7ajVVQLFuLWItd+p2rD2r61HDZlK3pF9WABbm2rwVofP/qwlscxAuhRTVj7gbQYrP3RkwDWbiQIYn9rb8+2vrRFQWAB6itg64UiR3t39y3RDWQOW1/hSDfVnpHkRYNCUReNOI4zHtlAbP3JFKxxrcO1IXHRoCJhu3Eja83qT6YwWGrp4G4/lLRoUFGw4xjVmTSrP5mUsO4tToyPZQq71tnjOo5624CE3WgbdtIZwT2qXqIAYfEgi1miDGHpwefGiNPPchsKwDpkNXYi+jwTWHZTJ9VdCgTLtckqrONM0j5VLvowsHQYb9oQtVKaw47IPlVttTr1J5MSlkza6AO2GewGPk0mnY0G9SeTGjZyW9ANRgk7LmbJIeUAgoQ9FPeYaAS7UTBi6hvT159MYbCTa7H2OMrxlSAY5YOAN3o3qJZ9VdHUilqN41k1YFVd4j1wj7erVn0LsPW/Gm+nitl3iufZoFoPFuB9YMvV6RWFsFIBatMr2oKwS2Ic248D4o0t+3VpFm1FWGvjh+VAxWdCgb0ZbbNP2fs8SyQ5yHYCiTYsxDJpOzUoCaylEDzZTvrShQXZ/2yn8yWAtROAX7YTNTVhYQ42tlNw9WCBDnG2k6u1YW00Xi/bafNasFCnc9sfiNCBBXsSsf1RFw1YuKcu2x9iiocFfMK0/fG0WFjIp2nrHzxklqwyEwrUOWjhj5RCtw7cty39MXDICKBZW/2rG1hVKcPQLwrSSJ1a/utWeH3pKtQqart+hYqvSJK1Wun8nG6rW3ytWV3lqWpXFbVQZQIVX0WYTSP1RfNGLb4+VNlaiuaW18qgguRFgyq+8je64QQtL69XqqL6hWJUfE23ZhzhsaguMSialYqv1teQQbC5cFKlheUyCBWSkssQtrFUwDarCthmVQHbrCpgm1UFbLOqgG1WFbDNqgK2WVXANqtQ+aFF8v/Ewo7D8peVb34rt4BsisMOrF7Z5f2yfKAtt4BsisHuvPMrd/h+2dSwV9z0t1X+XzYzbGXFfY/TH058cRv6zTvd8maELlnm/u6faO879rtu/5EH8YSu/PZCRP5Y6nni2fQql17wwj/jfjnxyU56afmhDx1nZZamMOxzp95y9Rx5XRnGTNc8fAe7sxPf2zI3O/zvj7n956z51DP+O/XWa935k2dOl3rQyq7ZYdwZOx8ZGxrd1duGBwZe3EZ37d5X3tw7NjTxkSU7LFD5hmd2otdfRF4PvOu0iyPHQR9oo//jX/1l0e1/Gr7vpR7yY/+RmVIPWcrwC7d6Ly41+oM2l077m6+8ZFn5wNgQfZE3lUIIj9kPf/VHl5LX/TTK6pnTBLbjKLlBhJGAUc2//cLrFks95Kr+yxcZfukudh+n/9R5Pi2HYc8/nRNMnDDsjsN8Ma4iKhY0mbhEAhbPy70veM3lHmzHoIR97Fjf9nf/qxFgyRi87G48N90qiZ6IwrLDhsuGLB7VL7+Y39AA7MCj6/dTxsaArazYiv+tislGYeX2Q2EZe3Vr2DDGA58M+EaBxScovEaVr5/xFigGRRcoCXvFTb456y1QFHZgdcPAumT7qdx56p7KNf9YxRany/7wpaHZYdwHFLbUs+Pw/MFtfli59ZRv2DI3fRw1DmypBx+ipj+6Da37PR7VL8NLq/vqc9HeJ2/lw5ieIJ78xNG270hYFwPSQ0XlfReg7Ve98cjMkoc1LM92qAZRelh2eCj/YibDaCzL4M6SkxU9TzaMDGDJVF3Cp/4QtZYtk3cAkCpgm1UtB1verDzz8Ac96sLQn/EZqbp1UXG1d01y9X9BUaraRyKoXfYVXm/1+uhNH9HqrlOFzwKfP/iwz3yMg00nNSwlmD7u39BTOoKIHIWe+h7xJFsvXmvNoTAXWFf6Jb6wkgpREvqQFiZeK3vUEa3nAlvDlx4W95lnS9RJwhJ35sGFHV+nc/bLC4j4FvSPpB9KPU88vxOdetsDnb3r92c+ZzksCZG7u8zrFQauZ+7Gz1lyoGeuA1HHoDCi/LBkGFNH9aUEtm/N4z+TjiuD7R0bGlhN/nm0zRD25itZAHIZ8Q1j6e4y+5MbuJ65Gw9L56NqHLPAT7z43ouYo0pX4/u4teqDxX1Dn2OZoWrhzp53/9VznrsrTTJ2p6S5Gwvrs5hCYOnW4z3DU1hSpaRisLhb6SOftN0yhKVbz/arhnzurmiCGrg+oygOVgyb8PXYF3gtrLCXAWAlgefu0iaEgZsAlnWX9FLC5ywgrGrOuv7hR5qQBm4CWL5/UVMpKCUs4DD2YGXFNAxh4CaA5beUWd4BhcLSBeou/g7J6C4wWM/dlbDEwE0AyyEVnmAoLN56vn/wti5cZmXX6C4EBuu5u6SbpYGbAFYM3/BxHD6MX3U3OnWPS7akvt4f/w8OVrq7xOt9nTBwE8CmiKthVcA2qwrYZlUB26wqYJtVqP8c8bgYpnorNSj64C514gN/TRFExyA+AyXyUnlwKp9QIcSOief96tLQP4dZqbWqhY07sIUrBjbES2XBpYRV+TJhVmqtoGBrvVQWXGrY8CjDrNRagcEGny8s3VnqPvKcVbf62p/i542Pz9Es1t5vvxLDipRVPL1629ygx+klsBrA+rxU+mLNZ7+Lo3rsWJ8MBp16Hq5InT8r5uz9LDE1wkqdFTmrzEr95Qx9np0dJpeKlFUaWIjHKbOINGC1vNSOo2NDEwto976BN22Zcz//okW3suK9XfMn+3BF6vxZvhojxVtbPit1iuesnqVOBX18Jn09O0wen3nKKg0szOMU+WHp72ytl0oH4sQCDoa8oMG8YhVeSU/eviwif5bf2ZC1jsFKK5Vn1lbP/J023jHIGxIWB01ZlXO21uOsTWBNDBv0Uj9HKxRW0n+O9fFg3Orty2QwwebFnFUYx96qgAcFGwIS9oMUk8KKlFUGG/A4fQmsaWCDXupzBgUsmaDrPvM1HgyFVefPClixuSitVO8dkiCsTFmlfwt6nIlgdbzUDgF7duol35jzgiGwEfmz9bARd1bsPsFhLFNW6d+CHqfhMA56qSUxjNl4xnuQN4wj8me1hzFrky5QHHafXKBkyqoHW+dxmi9QjFF4qWKBYrBT23AwYoGKyJ+NW6A82J0iZ1XCVlb8/GK69ciUVbr2hXicSbaeCFjPS935yPr9ZOs5W/3Jte6vL0AkGL71ROTP8q1nzfvDM9X8xxaRsyph3fkHOtEfn4Ini0hZJebq7jcHPU6ZwGoIK71Ud/qHfXuf/und+8hRYt2z3oDLY0B2qFDnzwI+4gEksEZ98gQ3DwILkcDKUsBD10DZPMydBUhgJQdIepqNaB4GFiKBFU9Vlckgmv8/RB6WeTnpjyYAAAAASUVORK5CYII=</data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kemajemukan wilayah memberi kebebasan berpindah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pekerjaan dapat menyatukan perbedaan asal-usul&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pekerjaan dapat berfungsi menyatukan senioritas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perbedaan pekerjaan identik dengan perbedaan suku bangsa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perbedaan suku bangsa berbeda dengan perbedaan pekerjaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masyarakat Indonesia terdiri dari berbagai kelompok suku bangsa, ras dan agama. Kemajemukan atau pluralitas ras dan agama tersebut terjadi melalui proses sosiologis sejak zaman dahulu yang dilatarbelakangi oleh....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Isolasi karena bentuk wilayah kepulauan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penjajahan bangsa barat yang lama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Fasiltas komunikasi dan transportasi sangat terbatas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kontak dan komunikasi secara langsung dengan bangsa asing&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perdagangan antarbangsa di dunia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masyarakat Indonesia adalah masyarakat multikultural yang ditandai dengan adanya berbagai kelompok suku bangsa dengan ragam budaya yang berbeda. Secara politik, apabila masing-masing kelompok tetap mempertahankan sikap primordial, maka hal itu akan berpengaruh terhadap timbulnya...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Disintegrasi sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perubahan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mobiltas sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lntegrasi nasional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Konflik Vertikal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pada masyarakat multikultural tingkat kekuatan masing-masing kelompok sangat mempengaruhi hubungan sosial antar kelompok, sehubungan dengan tujuan bermasyarakat maka hubungan antarkelompok tersebut hendaknya...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Memperlakukan secara istimewa kelompok tertentu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memperkuat konsolidasi sosial antarkelompok&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Melakukan mobilitas sosial secara vertikal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menguasai kelompok lain yang lebih kecil&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bersikap kooperatif dengan kelompok lain&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kemajemukan rnasyarakat Indonesia memiliki potensi untuk terciptanya konflik sosial yang sering kali berubah menjadi konflik terbuka. Untuk mengatasi masalah tersebut maka perlu dikembangkan sikap...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Nasionalisme&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Toleransi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Etnosentrisme&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Fanatisme&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Patriotisme&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perkembangan model baju muslim yang sangat beragam di Indonesia adalah salah satu contoh bentuk perubahan yang pengaruhnya kecil, hal ini karena...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Perubahan tidak merata dalam masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mempunyai dampak positif bagi masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak direncanakan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Terjadi secara lambat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak mengubah struktur sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dewasa ini banyak kaum remaja di Jakarta yang gemar mengunjungi tempat hiburan malam, mengenakan pakaian minim dan melakukan pergaulan bebas. Kebiasaan kaum remaja ini merupakan akibat negatif dari....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Demokratisasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lndustrialisasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Westernisasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Urbanisasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Modernisasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Semakin maraknya sosial media di dunia maya telah berhasil membangun sistem jejaring sosial bagi masyarakat. Hal ini akan membawa dampak positif yaitu...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Memperlancar disintegrasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memperlancar komunikasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Membentuk perilaku individu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Meningkatkan penggunaan ponsel&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Meningkatkan jumlah pemirsa televisi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Beberapa gejala sosial dalam masyarakat:&lt;br&gt;
+(1) Penggantian bahan bakar bensin dengan gas untuk kendaraan bermotor&lt;br&gt;
+(2) Terjaminnya kesehatan karena kemajuan ilmu dan tekhnologi kesehatan&lt;br&gt;
+(3) Bencana alam meletusnya gunung Kelud menyebabkan terjadinya migrasi&lt;br&gt;
+(4) Penanaman modal usaha oleh negara-negara maju di berbagai sektor industri di negara berkembang&lt;br&gt;
+Dari pernyataan di atas yang menjadi faktor ekstern penyebab perubahan sosial adalah....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perubahan sosial pada masyarakat tradisional seringkali be-rjalan dengan lambat , hal ini karena pada umumnya ada beberapa anggota masyarakat yang belum mendukung sepenuhnya perubahan di lingkungannya. Hal ini disebabkan oleh....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kehidupan masyarakatnya masih sangat sederhana&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perubahan dikuatirkan akan mendatangkan masalah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Adanya unsur-unsur budaya yang diperoleh dari luar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Adanya unsur-unsur yang menyangkut adat dan falsafah hidup&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Belum ada keinginan untuk melakukan perubahan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pesatnya pembangunan di kota mengakibatkan banyak penduduk desa yang tertarik untuk mencari pekerjaan di kota. Tingkat persaingan di kota ternyata lebih besar dan kedatangan penduduk desa ke kota yang tidak memiliki ketrampilan menimbulkan banyak permasalahan di kota. Hal tersebut menunjukkan bahwa perubahan sosial terjadi karena faktor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tingkat kebutuhan masyarakat desa yang semakin kompleks&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kesadaran mengenai kekurangan pada kebudayaan sendiri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keinginan untuk beradaptasi dengan nilai baru&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ketidakpuasan terhadap kondisi dan situasi yang ada&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keterbukaan masyarakat terhadap hal-hal baru&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Setiap masyarakat memiliki lembaga sosial sebagai hasil interaksi sosial dalam rangka pemenuhan kebutuhan hidup mereka, agar berlangsung secara tertib dan teratur. Adapun yang dimaksud dengan lembaga sosial adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Seperangkat norma yang mengatur kegiatan bersama dalam pemenuhan kebutuhan hidup&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Seperangkat peralatan kebutuhan hidup yang dibutuhkan masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Organisasi sosial yang mengatur kehidupan masyarakat agar tertib&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Nilai sosial yang disepakati oleh tokoh-tokoh masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Seperangkat norma yang mengatur kegiatan sebagian masyarakat yang dianggap melakukan penyimpangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Lembaga keluarga mempunyai peran penting dalam pembentukan kepribadian seseorang karena keluarga merupakan agen sosialisasi primer. Peran besar keluarga tersebut sesuai dengan fungsinya yaitu...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Memberikan kasih sayang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menanamkan nilai dan norma&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Melindungi anggota keluarga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Melanjutkan keturunan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memenuhi kebutuhan hidup&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan pernyataan berikut&lt;br&gt;
+1) tidak dapat berubah&lt;br&gt;
+2) Memiliki anggota lebih dari satu&lt;br&gt;
+3) Memiliki tingkat kekelan tertentu&lt;br&gt;
+4) Ditolak oleh sejumlah besar masyarakat&lt;br&gt;
+Dari pernyataan di atas yang merupakan ciri-ciri lembaga sosial adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1) dan 2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1) dan 3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1) dan 4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2) dan 3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3) dan 4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Seorang peneliti melakukan penelitian tentang pengaruh penggunaan gadget sebagai media pembelajaran terhadap prestasi belajar siswa. Peneliti membuat dua kelompok siswa yaitu kelompok pertama siswa diminta menggunakan gadget untuk mencari informasi yang berhubungan dengan pelajaran di kelas dan kelompok kedua tidak diperbolehkan menggunakan gadget untuk mencari informasi yang berhubungan dengan pelajaran di kelas, kemudian hasilnya dibandingkan. Berdasarkan caranya, penelitian termasuk jenis...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Studi kasus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Komparatif&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Deskriptif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Korelatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Eksperimen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dalam melakukan penelitian seringkali seorang sosiolog menggunakan informan dalam upaya memperoleh data yang diperlukan. Jenis penelitian seperti itu adalah penelitian dengan pendekatan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kualitatif&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kuantitatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Survey&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kepustakaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Seorang sosiolog meneliti fenomena sosial tentang pengaruh kharisma seorang pemimpin terhadap hasil pemungutan suara Pilkada Jakarta, berdasarkan metode penelitiannya maka penelitian terebut termasuk penelitian...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Deskriptif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Survey&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Eksplanatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Eksploratif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Veri&amp;#64257;kastif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kegiatan presentasi merupakan salah satu upaya untuk mengkomunikasikan hasil penelitian secara lisan dalam suatu forum ilmiah. Kegiatan tersebut bertujuan untuk mendapatkan tanggapan dan kritik konstruktif, sedangkan bagi peneliti kegiatan ini berguna untuk...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Merumuskan langkah-langkah penelitian lanjutan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menambah wawasan dalam penelitian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menyebarkan hasil wawancara kepada masyarakat umum&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menyempurnakan hasil penelitian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mendapatkan keuntungan secara materi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

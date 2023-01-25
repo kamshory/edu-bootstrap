@@ -1,0 +1,8 @@
+<FilesMatch "-src/">
+	Order allow,deny
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ([A-Za-z0-9]*/(.*)) index.php?v=$1 [L,NC,QSA]
+</IfModule>

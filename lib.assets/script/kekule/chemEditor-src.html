@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html manifest1="chemEditor.manifest1">
+<head>
+	<meta charset="UTF-8">
+	<title>Molecule Editor</title>
+	<script src="libs/raphael-min.2.0.1.js"></script>
+	<script src="libs/kekule/kekule.js?modules=chemWidget,algorithm"></script>
+	<link rel="stylesheet" type="text/css" href="libs/kekule/themes/default/kekule.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		var chemEditor;
+		var chemComposer		
+		function init()
+		{
+			var elem = document.getElementById('chemComposer');
+			var chemEditor = new Kekule.Editor.ChemSpaceEditor(document, null, Kekule.Render.RendererType.R2D);
+			chemComposer = new Kekule.Editor.Composer(elem, chemEditor);
+			adjustSize();
+			window.onresize = adjustSize;
+		}
+		function adjustSize()
+		{
+			var dim = Kekule.HtmlElementUtils.getViewportDimension(document);
+			chemComposer.setWidth(dim.width - 24 + 'px').setHeight(dim.height - 80 + 'px');
+		}
+		Kekule.X.domReady(init);
+		function trimCanvas(c) {
+			var ctx = c.getContext('2d'),
+				copy = document.createElement('canvas').getContext('2d'),
+				pixels = ctx.getImageData(0, 0, c.width, c.height),
+				l = pixels.data.length,
+				i,
+				bound = {
+					top: null,
+					left: null,
+					right: null,
+					bottom: null
+				},
+				x, y;
+		
+			for (i = 0; i < l; i += 4) 
+			{
+				if (pixels.data[i + 3] !== 0) {
+					x = (i / 4) % c.width;
+					y = ~~((i / 4) / c.width);
+		
+					if (bound.top === null) {
+						bound.top = y;
+					}
+		
+					if (bound.left === null) {
+						bound.left = x;
+					} else if (x < bound.left) {
+						bound.left = x;
+					}
+		
+					if (bound.right === null) {
+						bound.right = x;
+					} else if (bound.right < x) {
+						bound.right = x;
+					}
+		
+					if (bound.bottom === null) {
+						bound.bottom = y;
+					} else if (bound.bottom < y) {
+						bound.bottom = y;
+					}
+				}
+			}
+		
+			var trimHeight = bound.bottom - bound.top,
+				trimWidth = bound.right - bound.left;
+			var trimmed;
+			if(trimWidth == 0 || trimHeight == 0 || bound.left == null || bound.top == null)
+			{
+				trimmed = ctx.getImageData(0, 0, 1, 1);
+			}
+			else
+			{
+				trimmed = ctx.getImageData(bound.left, bound.top, trimWidth, trimHeight);
+			}
+			copy.canvas.width = trimWidth;
+			copy.canvas.height = trimHeight;
+			copy.putImageData(trimmed, 0, 0);
+		
+			// open new window with trimmed image:
+			return copy.canvas;
+		}		
+		function exportImage()
+		{
+			var parentNode = document.getElementsByClassName("objContextParentElem")[0];
+			var canvas = parentNode.getElementsByTagName('canvas')[0];
+			var canvas2 = trimCanvas(canvas);
+			window.open(canvas2.toDataURL());
+		}
+		
+	</script>
+    <style type="text/css">
+	body{
+		margin:0;
+		padding:0;
+	}
+	select{
+	padding: 4px;
+	border: 1px solid #DDDDDD;
+	box-sizing: border-box;
+	margin:0;
+	}
+	input[type="text"], textarea{
+		padding: 4px;
+		border: 1px solid #DDDDDD;
+		box-sizing: border-box;
+		margin:0;
+	}
+	.K-Dialog .K-Widget.K-Toolbar
+	{
+		margin:4px 0;
+	}
+	body{
+		position:relative;
+	}
+	.all{
+		width:100%;
+		height:calc(100vh - 80px);
+		padding:10px;
+		box-sizing:border-box;
+		position:relative;
+	}
+	.chemComposer{
+		width:100%;
+		height:calc(100vh - 100px);
+	}
+	</style>
+</head>
+<body onload="init()">
+	<div class="all">
+        <div id="chemComposer"></div>
+    </div>
+</body>
+</html>

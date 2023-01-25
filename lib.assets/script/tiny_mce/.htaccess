@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteRule ^themes/(.*)$  themes/$1 [L,NC,QSA]
+RewriteRule .*/themes/(.*)$  themes/$1 [L,NC,QSA]
+
+</IfModule>

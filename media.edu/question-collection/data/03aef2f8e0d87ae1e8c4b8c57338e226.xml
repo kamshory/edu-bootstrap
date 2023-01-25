@@ -1,0 +1,2174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Amir ingin mencari pekerjaan sesuai dengan pendidikannya, ia sudah diwawancarai di beberapa perusahaan yaitu: perusahaan kontraktor dengan memperoleh penghasilan Rp 3.500.000,00 per bulan, di perusahaan akuntan dengan memperoleh penghasilan Rp 3.800.000,00 per bulan dan perusahaan ekspedisi dengan memperoleh penghasilan sebesar Rp 4.000.000,00 per bulan. Bapak Amir memilih bekerja di perusahaan ekspedisi, besar biaya peluangnya adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Rp 200.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 500.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 3.500.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 3.800.000,00&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 4.000.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Berikut ini pernyataan tentang kebaikan dari sistem ekonomi:&lt;br&gt;
+(1) Terjadi persaingan antarprodusen untuk menghasilkan barang yang bermutu&lt;br&gt;
+(2) Kegiatan yang dilakukan hanya untuk memmenuhi kebutuhan sehari-hari&lt;br&gt;
+(3) Adanya pemerataan penerimaan pendapatan&lt;br&gt;
+(4) Efisiensi dan evektifitas yang tinggi karena tindakanya selalu didasarkan pada prinsip ekonomi&lt;br&gt;
+(5) Adanya kegiatan individu untuk memiliki sumber-sumber daya produksi&lt;br&gt;
+Dari pernyataan di atas, yang merupakan kebaikan sistem ekonomi pasar adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (4), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Berikut ini contoh prilaku konsumen dan produsen:&lt;br&gt;
+(1) Pak Hendra pengusaha batik terkenal menyumbangkan uangnya sebesar Rp 10 Juta untuk membangun tempat ibadah di desanya&lt;br&gt;
+(2) Wati membeli pakaian seragam baru untuk menggantikan pakaian seragam yang sudah rusak&lt;br&gt;
+(3) Persedian semen di gudang habis dibeli konsumen, Pak Rudi segera membeli semen sebanyak 100 sak semen sebagai persedian di gudang&lt;br&gt;
+(4) Ibu Ami membuat jus dari buah-buahan seperti alpukat, jambu, mangga dan sirsak untuk dijual kepada konsumen&lt;br&gt;
+(5) Kegiatan yang dilakukan Anggi saat ini membuka usaha membeli dan menjual mobil bekas&lt;br&gt;
+Contoh yang merupakan perilaku seorang produsen adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Beberapa contoh perusahaan berbagai kebutuhan sebagai berikut:&lt;br&gt;
+(1) Bapak Adi menyisihkan sebagian gajinya untuk membayar uang kuliah kakak&lt;br&gt;
+(2) Bapak Hasan membeli sepeda motor untuk kuliah adik, walaupun jarak dari kos ke kampus relatif dekat&lt;br&gt;
+(3) Setiap bulan Bapak Rino membayar premi asuransi pendidikan untuk persiapan kuliah anaknya&lt;br&gt;
+(4) Ibu selalu membeli barang kebutuhan sehari-hari untuk satu bulan di supermarket&lt;br&gt;
+(5) Setiap bulan Bapak Rino membayar biaya berlangganan internet&lt;br&gt;
+Yang merupakan pemenuhan kebutuhan yang diprioritaskan adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kedelai sebagai bahan membuat tahu dan tempe dirasakan produsen saat ini sangat sulit diperoleh, karena persediaan di dalam negeri terbatas. Petani lokal tidak dapat meningkatkan produksinya karena bibit kedelai sangat mahal harganya.&lt;br&gt;
+Salah satu cara untuk mengatasi masalah kelangkaan tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Produsen Tahu dan tempe berhenti berproduksi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memproduksi kedelai sinte.tis untuk menambah stok nasional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengimpor kedelai dari luar negeri yang murah dan banyak jumlahnya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pemerintah memberikan subsidi kepada petani kedelai agar kedelai dapat terjangkau harganya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pemerintah memberikan subsidi kepada importir kedelai agar impor kedelai meningkat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Globalisasi ekonomi mengakibatkan persaingan usaha sangat ketat, sehingga produk-produk luar baik Cina maupun Korea marak di pasar dalam negeri. Mirna pengusaha sepatu ingin mengembangkan usahanya agar dapat bersaing dan dapat menigkatakan keuntungan.&lt;br&gt;
+Masalah ekonomi yang dihadapi mirna adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Berapa banyak sepeda diproduksi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Untuk siapa sepatu diproduksi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kapas sebaiknya sepatu diproduksi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Barang apa yang akan diproduksi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bagaimana cara memproduksi sepatu&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan tabel berikut!&lt;/p&gt;
+&lt;table style=&quot;width: 388px; height: 311px;&quot; border=&quot;1&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;Pasar Faktor Produksi Modal&lt;/td&gt;
+&lt;td&gt;Pasar Faktor Produksi Sumber Daya Alam&lt;/td&gt;
+&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;Balas jasa yang diterima berupa kuntungan&lt;/td&gt;
+&lt;td&gt;Balas jasa yang diterima berupa sewa&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;Permintan terhadap modal naik sedangkan penawaran modal tetap maka modal akan naik&lt;/td&gt;
+&lt;td&gt;Penawaran tanah tidak dapat ditambah segangkan permintaan tanah naik&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;C&lt;/td&gt;
+&lt;td&gt;Menginvestasikan uangnya dalam proses produksi&lt;/td&gt;
+&lt;td&gt;Menginvestasikan uangnya dalam mengatur usahanya&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D&lt;/td&gt;
+&lt;td&gt;Penawaran datang dari produsen&lt;/td&gt;
+&lt;td&gt;Penawaran datang dari produsen&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E&lt;/td&gt;
+&lt;td&gt;Faktor utama yang memenuhi adalah tingkat pengembalian&lt;/td&gt;
+&lt;td&gt;Faktor utama yang mempengaruhi adalah tingkat suku bunga&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Perbedaan pasar faktor produksi modal dan pasar faktor produksi sumber daya alam yang benar adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;A&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;B&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;C&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;D&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;E&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan Circular Flow diagram berikut!&lt;br&gt;&lt;img alt=&quot;&quot; src=&quot;2cc1a5_b909421915a97a0f0a6837ec94042c84.png&quot;&gt;&lt;br&gt; Berdasarkan diagram di atas, nomor 5 menunjukkan arus...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>2cc1a5_b909421915a97a0f0a6837ec94042c84.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data>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</data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Konsumen membayar faktor produksi ke produsen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Konsumen menerima pendapatan dari produsen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Konsumen menggunakan barang dan jasa&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Produsen membayar ganti rugi kepada konsumen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Konsumen membelanjakan pendapatanya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Diketahui fungsi permintaan Pd = 100 - Q.&lt;br&gt;
+Jika jumlah yang diminta berubah dari 20 menjadi 30, maka besar koefisien elastisitasnya adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1/5&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1/2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;9&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;10&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;15&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan contoh-contoh permintaan berikut!&lt;br&gt;
+(1) Besok amir akan membeli kemeja seperti yang dipakai Bapak Presiden&lt;br&gt;
+(2) Dengan uang yang dimilikinya pak Yosep pergi ke toko Ananda membeli baju baru&lt;br&gt;
+(3) Uang sebesar Rp 15.000.000,00 oleh pak Bagus akan dibelikan motor baru&lt;br&gt;
+(4) Andi sakit perut, Bapak pergi ke apotek untuk membeli obat&lt;br&gt;
+(5) Dengan hasil tabungan rini akan pergi berlibur ke Gunung Bromo&lt;br&gt;
+Dari contoh di atas yang termasuk permintaan potensial adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Salah satu masalah yang dihadapi negara berkembang adalah tingkat investasi yang rendah. Cara yang paling tepat untuk memecahkan permasalahan ekonomi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Mendatangkan tenaga dari luar negeri untuk melakukan produksi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memberi modal usaha pengusaha unit usaha kecil dan menengah&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengundang investor asing berinvestasi dan mempermudah prosedur perizinan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mewajibkan masyarakat menabung agar tersedia modal untuk investasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mendirikan Badan Usaha Milik Negara dan meningkatkan partisipasi swasta&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan data berikut ini!&lt;/p&gt;
+&lt;table style=&quot;width: 300px;&quot; border=&quot;1&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot; rowspan=&quot;2&quot;&gt;No&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot; rowspan=&quot;2&quot;&gt;Nama Barang&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot; colspan=&quot;3&quot;&gt;Harga&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;Th 2008&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;Th 2009&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;Th 2010&lt;/td&gt;
+&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&amp;nbsp;1&lt;/td&gt;
+&lt;td&gt;Gula Putih&lt;/td&gt;
+&lt;td&gt;4.000,00&lt;/td&gt;
+&lt;td&gt;7.000,00&lt;/td&gt;
+&lt;td&gt;9.000,00&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;nbsp;2&lt;/td&gt;
+&lt;td&gt;Minyak Goreng&lt;/td&gt;
+&lt;td&gt;3.000,00&lt;/td&gt;
+&lt;td&gt;6.000,00&lt;/td&gt;
+&lt;td&gt;8.000,00&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;nbsp;3&lt;/td&gt;
+&lt;td&gt;Beras&lt;/td&gt;
+&lt;td&gt;4.500,00&lt;/td&gt;
+&lt;td&gt;5.000,00&lt;/td&gt;
+&lt;td&gt;7.000,00&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Apabila dihitung dengan metode indeks harga agregatif sederhana (tahun dasar 2009), maka tingkat inflasi tahun 2010 berdasarkan tingkat keparahannya adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Inflasi sangat ringan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Inflasi ringan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Inflasi sedang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Inflasi berat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hyper inflasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ketika Ali belum bekerja dan masih tinggal dengan orang tuanya, pengeluaran konsumen setiap bulannya sebesar Rp 100.000,00. Pada saat Ali sudah bekerja dan mendapatkan penghasilan sebesar Rp 1.000.000,00/bulan besarnya konsumsi tiap bulan Rp 800.000,00.&lt;br&gt;
+Bentuk fungsi konsumsi Tuan Ali adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;C = 100.000 + 0,30Y&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;C = 100.000 + 0,70Y&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;C = -100.000 + 0,30Y&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;C = -100.000 + 0,70Y&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;C = 800.000 + 0,70Y&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan pernyataan berikut!&lt;br&gt;
+(1) Budi melakukan investasi tanah daripada menyimpan uang&lt;br&gt;
+(2) Ibu Ani lebih menyukai menyimpan emas dan berlian&lt;br&gt;
+(3) Bapak Roni menyimpan uang untuk kebutuhan yang mendesak&lt;br&gt;
+(4) Tuah Rajasa melakukan investasi surat berharga&lt;br&gt;
+(5) Uang Tunai untuk kebutuhan setiap hari&lt;br&gt;
+Dari pernyataan di atas, yang merupakan motif spekulasi adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan data pendataan nasional berikut ini!&lt;br&gt;
+(dalam miliar rupiah)&lt;br&gt;
+- Produk Domestik Bruto: 600.000&lt;br&gt;
+- Penerimaan warga negara di luar negeri: 430.000&lt;br&gt;
+- Penerimaan WNA di dalam negeri: 150.000&lt;br&gt;
+- Penyusutan barang modal: 70.000&lt;br&gt;
+- Pajak langsung: 80.000&lt;br&gt;
+- Pajak tidak langsung: 100.000&lt;br&gt;
+Besarnya Pendapatan Nasional Neto adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Rp 900.000 miliar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 730.000 miliar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 710.000 miliar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 630.000 miliar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 150.000 miliar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Komponen pendapatan nasional sebagai berikut:&lt;br&gt;
+(1) Keahlian mendapat reward dari atasannya&lt;br&gt;
+(2) Pemerintah belanja barang dan jasa untuk keperluan dinas&lt;br&gt;
+(3) Keuntungan produksi sepatu sebesar 10% dari harga&lt;br&gt;
+(4) Konsumsi keluarga Rahmat 70% dari pendapatan&lt;br&gt;
+(5) Pengeluaran barang dan jasa ekspor oleh masyarakat luar negeri&lt;br&gt;
+Komponen pendapat nasional dengan pendekatan pengeluaran adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan tabel berikut!&lt;/p&gt;
+&lt;table style=&quot;width: 300px;&quot; border=&quot;1&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Negara&lt;/td&gt;
+&lt;td&gt;Pendapatan Nasional&lt;/td&gt;
+&lt;td&gt;Jumlah Penduduk&lt;/td&gt;
+&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;1&lt;/td&gt;
+&lt;td&gt;Denario&lt;/td&gt;
+&lt;td&gt;465.000.000&lt;/td&gt;
+&lt;td&gt;246 juta&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;2&lt;/td&gt;
+&lt;td&gt;Fivarario&lt;/td&gt;
+&lt;td&gt;387.000.000&lt;/td&gt;
+&lt;td&gt;186 juta&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;3&lt;/td&gt;
+&lt;td&gt;Noverario&lt;/td&gt;
+&lt;td&gt;641.000.000&lt;/td&gt;
+&lt;td&gt;198 juta&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;4&lt;/td&gt;
+&lt;td&gt;Lusianiro&lt;/td&gt;
+&lt;td&gt;269.000.000&lt;/td&gt;
+&lt;td&gt;86 juta&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;5&lt;/td&gt;
+&lt;td&gt;Sivario&lt;/td&gt;
+&lt;td&gt;516.000.000&lt;/td&gt;
+&lt;td&gt;210 juta&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Untuk negara tertinggi sampai terendah pendapatan per kapita adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Denario, Fivarario, Sivario, Lusianiro, dan Noverario&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Fivarario, Noverario, Denario, Sivario, dan Lusianiro&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Noverario, Lusianiro, Sivario, Fivarario, dan Denario&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lusianario, Noverario, Fivarario, Denario, dan Sivario&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sivario, Lusianiro, Noverario, Fivarario, dan Denario&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perekonomian paska krisis tahun 1997 pada umumnya ditandai dengan naiknya harga barang-barang sehingga tingkat inflasi meningkat tajam. Untuk mengatasi inflasi tersebut dapat dilakukan dengan kebijakan moneter yaitu...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Membeli saham dan obligasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menurunkan suku bunga bank&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menaikan giro wajib minuman&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mempermudah pemberian kredit&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menaikan tarif pajak bangunan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Manfaat pasar modal:&lt;br&gt;
+(1) Meningkatkan kapasitas produksi&lt;br&gt;
+(2) Memperoleh tambahan dana&lt;br&gt;
+(3) Investasi secara langsung&lt;br&gt;
+(4) Mempertemukan penawaran jual dan beli efek&lt;br&gt;
+(5) Alternatif sumber dana selain bank&lt;br&gt;
+Manfaat pasar modal bagi emiten adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kerja sama antarnegara di bidang perdagangan internasional banyak memiliki keuntungan. Negara lain membutuhkan bahan baku dari negara kita, sebaliknya negara kita membutuhkan barang berkualitas yang belum mampu diproduksi sendiri dari negara lain.&lt;br&gt;
+Salah satu keuntungan dari kerja sama antarnegara bagi Indonesia adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Efisiensi akan menghasilkan produksi dengan kualitas tinggi sehingga memiliki daya saing di pasar internasional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dapat memenuhi kebutuhan barang/jasa yang tidak atau belum mampu dihasilkan di dalam negeri&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Meningkatkan efisiensi dalam menghasilkan produk tertentu dengan keunggulan komparatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memperoleh barang mentah sebagai bahan baku yang tidak tersedia di dalam negeri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menggunakan mesin yang berteknologi sehingga waktu pengerjaannya efisien&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Banyak lulusan dari perguruan tinggi, akan menambah penawaran kerja. Ketidakseimbangan antara penawaran tenaga kerja dan permintaan tenaga kerja akan menimbulkan banyak pengangguran, dampaknya timbul keresahan masyarakat yaitu tindak kriminal.&lt;br&gt;
+Untuk mengatasi masalah tersebut maka yang dilakukan oleh pemerintah adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Program transmigrasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pembatasan usia pernikahan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Meningkatkan daya beli masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengikutkan pelatihan tentang kewirausahaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memberikan pelatihan tentang kewirausahaan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Fungsi dan tujuan APBN sebagai berikut:&lt;br&gt;
+(1) Meningkatkan pertumbuhan ekonomi&lt;br&gt;
+(2) Mengatur alokasi belanja negara&lt;br&gt;
+(3) Bahan pertimbangan menentukan kebijakan ekonomi&lt;br&gt;
+(4) Memperluas kesempatan kerja&lt;br&gt;
+(5) Mengatur penerimaan dan pengeluaran negara&lt;br&gt;
+Yang merupakan fungsi APBN adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Transaksi selama Januari 2010 sebagai berikut:&lt;br&gt;
+Jan 1 Tuan Hasan menyetorkan uangnya sebagai modal awal perusahaan transportasi sebesar Rp 200.000,00&lt;br&gt;
+Jan 7 Diterima pendapatan jasa transportasi secara tunai sebesar Rp 50.000.000,00.&lt;br&gt;
+Jan 8 Tuan Hasan meminjam uang dari bank untuk tambahan modal sebesar Rp 50.000.000,00.&lt;br&gt;
+Transaksi tersebut dicatat ke dalam jurnal umum adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;img alt=&quot;23pila.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;a2a1db_e8c1e7_23pila.jpg&quot;&gt;</text>
+			<value>1</value>
+			
+			<file>
+			<name>a2a1db_e8c1e7_23pila.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;23pilb.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;1b4f4b_1656ab_23pilb.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>1b4f4b_1656ab_23pilb.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;23pilc.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;10bda8_8c0892_23pilc.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>10bda8_8c0892_23pilc.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;23pild.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;254314_f8e71d_23pild.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>254314_f8e71d_23pild.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;23pile.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;bbd02a_f672a0_23pile.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>bbd02a_f672a0_23pile.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan jurnal umum berikut!&lt;br&gt;&lt;img alt=&quot;24pt.jpg&quot; src=&quot;5cc564_335a98_24pt.jpg&quot;&gt;&lt;br&gt;
+Jika mempunyai saldo sebesar Rp 4.500.000,00, posting ke buku besar yang benar adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>5cc564_335a98_24pt.jpg</name>
+		<type>image/jpeg</type>
+		<encoding>base64</encoding>
+		<data></data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;img alt=&quot;24pila.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;024136_e7bc22_24pila.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>024136_e7bc22_24pila.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;24pilb.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;6c18a0_f36c94_24pilb.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>6c18a0_f36c94_24pilb.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;24pilc.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;7d78d7_599f4a_24pilc.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>7d78d7_599f4a_24pilc.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;24pild.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;1ec154_647857_24pild.jpg&quot;&gt;</text>
+			<value>1</value>
+			
+			<file>
+			<name>1ec154_647857_24pild.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;24pile.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;ffea8d_fc7c8d_24pile.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>ffea8d_fc7c8d_24pile.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Berikut sebagian data CV &quot;Anda&quot; milik Tuan Adi:&lt;br&gt;
+Kas Rp 10.100.000,00&lt;br&gt;
+Perlengkapan Rp 1.000.000,00&lt;br&gt;
+Piutang Usaha Rp 5.600.000,00&lt;br&gt;
+Peralatan Rp 8.000.000,00&lt;br&gt;
+Akumulasi penyusutan peralatan Rp 1.000.000,00&lt;br&gt;
+Utang gaji Rp 10.000.000,00&lt;br&gt;
+Utang sewa Rp 4.000.000,00&lt;br&gt;
+Besarnya modal awal CV &quot;Anda&quot; adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Rp 10.600.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 14.700.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 15.000.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 9.100.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 9.700.000,00&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Transaksi bengkel &quot;Lancar&quot; selama bulan Juli 2012 sebagai berikut:&lt;br&gt;
+(1) Juli 2 Dibeli bensin sepeda motor untuk keperluan bengkel Rp 25.000,00&lt;br&gt;
+(2) Juli 5 Perlengkapan bengkel masih tersisa senilai Rp 8.000.000,00&lt;br&gt;
+(3) Juli 9 Diterima pendapatan jasa servis dari pelanggan Rp 1.400.000,00&lt;br&gt;
+(4) Juli 15 Dibayar angsuran untuk bank Rp 1.200.000,00&lt;br&gt;
+(5) Juli 20 Diambil uang untuk keperluan pribadi Rp 500.000,00&lt;br&gt;
+Yang merupakan transaksi-transaksi ekstern adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sebuah usaha rental komputer &quot;Berkah&quot; yang didirikan Tuan Sultan pada bulan Juli 2011 mempunyai transaksi sebagai berikut:&lt;br&gt;
+Tanggal 2 : Tuan Sultan menginvestasikan uang tunai sebesar Rp 25.000.000,00 dan peralatan seharga Rp 15.000.000,00&lt;br&gt;
+Tanggal 5 : Dibeli perlengkapan seharga Rp 5.000.000,00, baru dibayar Rp 1.000.000,00&lt;br&gt;
+Pencatatan transaksi ke dalam persamaan akuntansi adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;img alt=&quot;27pila.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;4a40fd_20911f_27pila.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>4a40fd_20911f_27pila.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;27pilb.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;792092_afaeb6_27pilb.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>792092_afaeb6_27pilb.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;27pilc.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;2de029_1d2b78_27pilc.jpg&quot;&gt;</text>
+			<value>1</value>
+			
+			<file>
+			<name>2de029_1d2b78_27pilc.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;27pild.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;0db385_399414_27pild.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>0db385_399414_27pild.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;27pile.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;1a2088_2ed71f_27pile.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>1a2088_2ed71f_27pile.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Salon &quot;Cantik&quot; mempunyai daftar sisa (seimbang) dan data penyesuaian, berikut ini:&lt;br&gt;
+a. Daftar sisa 31 Desember 2009 (dalam ribuan rupiah)&lt;br&gt;&lt;img alt=&quot;28pt1.jpg&quot; src=&quot;209552_44f000_28pt1.jpg&quot;&gt;&lt;br&gt;
+b. Data penyesuaian:&lt;br&gt;
+1. Sewa kios dibayar tanggal 1 April 2009 untuk satu tahun&lt;br&gt;
+2. Asuransi dibayar di muka 1 Mei 2009 untuk satu tahun&lt;br&gt;
+3. Gaji karyawan untuk bulan Desember 2009 yang belum dibayar Rp 1.500.000,00&lt;br&gt;
+Berdasarkan daftar sisa dan data penyesuaian dibuat kertas kerja berikut ini:&lt;br&gt;&lt;img alt=&quot;28pt2.jpg&quot; src=&quot;716fb0_d8f0f7_28pt2.jpg&quot;&gt;&lt;br&gt;
+Penyelesaian kertas kerja yang benar adalah akun nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>209552_44f000_28pt1.jpg</name>
+		<type>image/jpeg</type>
+		<encoding>base64</encoding>
+		<data></data>
+		</file>
+
+		<file>
+		<name>716fb0_d8f0f7_28pt2.jpg</name>
+		<type>image/jpeg</type>
+		<encoding>base64</encoding>
+		<data></data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (5), dan (6)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pada tanggal 19 Juli 2012, diselesaikan pekerjaan servis mobil sebesar Rp 3.000.000,00 diterima tunai sebesar Rp 2.000.000,00 sisanya diterima kemudian.&lt;br&gt;
+Dari transaksai di atas, mekanisme pencatatan debet dan kredit adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kas (D) Rp 2.000.000,00, pendapatan jasa (D) Rp 1.000.000,00, dan piutang usaha (K) Rp 3.000.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kas (D) Rp 2.000.000,00, utang usaha (D) Rp 1.000.000,00, dan pendapatan jasa (K) Rp 3.000.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kas (D) Rp 2.000.000,00, utang usaha (D) Rp 1.000.000,00, dan pendapatan jasa (K) Rp 3.000.000,00&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kas (D) Rp 3.000.000,00, piutang usaha (K) Rp 1.000.000,00, dan pendapatan jasa (K) Rp2.000.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kas (D) Rp 3.000.000,00, utang usaha (K) Rp 1.000.000,00, dan pendapatan jasa (K) Rp 2.000.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan data CV &quot;Anugrah&quot; berikut ini!&lt;br&gt;
+- Pembelian Rp 4.500.000,00&lt;br&gt;
+- Beban angkut pembelian Rp 750.000,00&lt;br&gt;
+- Retur pembelian Rp 750.000,00&lt;br&gt;
+- Potongan Pembelian Rp 500.000,00&lt;br&gt;
+- Persedian Awal Rp 1.300.000,00&lt;br&gt;
+- Persedian akhir Rp 1.800.000,00&lt;br&gt;
+Berdasarkan data di atas, besar barang yang tersedia untuk dijual adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Rp 2.700.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 5.300.000,00&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 6.000.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 6.500.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 7.100.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sebagian neraca saldo UD &quot;Makmur&quot;&lt;br&gt;
+- Kas Rp 3.000.000,00&lt;br&gt;
+- Persedian barang dagang Rp 2.500.000,00&lt;br&gt;
+- Perlengkapan Rp 2.000.000,00&lt;br&gt;
+- Peralatan Rp 4.000.000,00&lt;br&gt;&lt;br&gt;
+Data penyesuaian per 31 Desember 2011 sebagai berikut:&lt;br&gt;
+1. Persediaan barang dagang Rp 1.500.000,00&lt;br&gt;&lt;br&gt;
+Ayat jurnal penyesuaian yang benar berdasarkan pendekatan ikhtisar laba/rugi adalah...&lt;br&gt;
+A. Persediaan barang dagang Rp 1.500.000,00&lt;br&gt;
+Ikhtisar laba rugi Rp 1.500.000,00&lt;br&gt;
+B. Persediaan barang dagang Rp 1.000.000,00&lt;br&gt;
+Ikhtisar laba/rugi Rp 1.000.000,00&lt;br&gt;
+Ikhtisar laba rugi Rp 2.500.000,00&lt;br&gt;
+Persediaan barang dagang Rp 2.500.000,00&lt;br&gt;
+C. Persediaan barang dagang Rp 1.500.000,00&lt;br&gt;
+Ikhtisar Jaba/rugi Rp 1.500.000,00&lt;br&gt;
+Ikhtisar laba rugi Rp 2.500.000,00&lt;br&gt;
+Persediaan barang dagang Rp 2.500.000,00&lt;br&gt;
+D. Persediaan barang dagang Rp 1.500.000,00&lt;br&gt;
+Ikhtisar laba rugi Rp 1.500.000,00&lt;br&gt;
+Persediaan barang dagang Rp 2.500.000,00&lt;br&gt;
+Ikhtisar laba/rugi Rp 2.500.000,00&lt;br&gt;
+E. Persediaan barang dagang Rp 2.500.000,00&lt;br&gt;
+Ikhtisar laba rugi R 2.500.000,00&lt;br&gt;
+Persediaan barang dagang Rp 1.500.000,00&lt;br&gt;
+Ikhtisar laba/rigi Rp 1.500.000,00&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering></numbering>
+	
+	</question>
+
+		<answer>
+		
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Jurnal pengeluaran kas&lt;br&gt;&lt;img alt=&quot;33pt.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;553a04_2f113e_33pt.jpg&quot;&gt;&lt;br&gt;
+Saldo utang:&lt;br&gt;
+Toko Adi Rp 200.000,00&lt;br&gt;
+Toko Rio Rp 300.000,00&lt;br&gt;
+Toko Alif Rp 300.000,00&lt;br&gt;
+Posting ke buku besar pembantu utang yang benar adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>553a04_2f113e_33pt.jpg</name>
+		<type>image/jpeg</type>
+		<encoding>base64</encoding>
+		<data></data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;img alt=&quot;33pila.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;6eac49_e52aa3_33pila.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>6eac49_e52aa3_33pila.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;33pilb.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;e93f51_478bc3_33pilb.jpg&quot;&gt;</text>
+			<value>1</value>
+			
+			<file>
+			<name>e93f51_478bc3_33pilb.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;33pilc.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;957f80_53559e_33pilc.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>957f80_53559e_33pilc.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;33pild.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;d8db59_178970_33pild.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>d8db59_178970_33pild.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;33pile.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;94495f_e1dbf5_33pile.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>94495f_e1dbf5_33pile.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sebagian data keuangan perusahaan dagang dalam kertas kerja sebagai berikut:&lt;br&gt;&lt;img alt=&quot;34pt.jpg&quot; src=&quot;124ba2_2f01a4_34pt.jpg&quot;&gt;&lt;br&gt;
+Berdasarkan data tersebut maka penyusunan jurnal penutup yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>124ba2_2f01a4_34pt.jpg</name>
+		<type>image/jpeg</type>
+		<encoding>base64</encoding>
+		<data></data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;img alt=&quot;34pila.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;b1b6f0_f4bd45_34pila.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>b1b6f0_f4bd45_34pila.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;34pilb.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;91945d_e91a31_34pilb.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>91945d_e91a31_34pilb.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;34pilc.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;36179b_7d3fab_34pilc.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>36179b_7d3fab_34pilc.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;34pild.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;6331a6_b35a9e_34pild.jpg&quot;&gt;</text>
+			<value>1</value>
+			
+			<file>
+			<name>6331a6_b35a9e_34pild.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;34pile.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;67632d_9d23a3_34pile.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>67632d_9d23a3_34pile.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan data berikut ini!&lt;br&gt;
+- Persediaan barang dagang per 1 Desember Rp 8.300.000,00&lt;br&gt;
+- Persediaan barang dagang per 31 Desember Rp 19.700.000,00&lt;br&gt;
+- Penjualan Rp 45.800.000,00&lt;br&gt;
+- Beban angkut penjualan Rp 500.000,00&lt;br&gt;
+- Pembelian bersih Rp 15.000.000,00&lt;br&gt;
+- Beban administrasi Rp 1.500.000,00&lt;br&gt;
+- Beban penjualan Rp 5.000.000,00&lt;br&gt;
+Berdasarkan data tersebut, besar laba bersih adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Rp 25.700.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 28.300.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 28.800.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 35.200.000,00&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 35.700.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Koprasi &quot;Harapan Bangsa&quot; mempunyai data sebagai berikut:&lt;br&gt;
+Modal anggota Rp 25.000.000,00&lt;br&gt;
+Pinjaman anggota Rp 10.000.000,00&lt;br&gt;
+SHU Rp 5.000.000,00&lt;br&gt;
+Dengan ketentuan: Jasa modal 40%&lt;br&gt;
+Jasa pinjaman 30%&lt;br&gt;&lt;br&gt;
+Pak Harno anggota Koperasi &quot;Harapan Bangsa&quot; mempunyai data:&lt;br&gt;
+Jumlah simpanan Rp 1.000.000,00&lt;br&gt;
+Jumlah pinjaman Rp 500.000,00&lt;br&gt;&lt;br&gt;
+Besar sisa hasil usaha (SHU) yang diperoleh Pak Harno adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Rp 155.000,00&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 170.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 180.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 185.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 190.000,00&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Di daerah Sumatra produksi duren sangat melimpah dengan harga yang cukup murah. Pak Kusnaidi mengkoordinir para petani duren dan menjualnya ke Jakarta dengan keuntungan yang lebih besar.&lt;br&gt;
+Peran wirausaha yang ditunjukan oleh Pak Kusnaedi adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Berani mengambil resiko&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berusaha meningkatkan kemampuan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Meningkatkan pendapatan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memiliki percaya diri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memperluas kesempatan kerja&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ketua koperasi &quot;Makmur Bersama&quot; ingin mengundurkan diri dari kepengurusan karena mereka tidak mampu memimpin dan bermasalah dalam kesehatan.&lt;br&gt;
+Cara menyelesaikan masalah yang ada di koperasi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Mengadakan rapat pimpinan koperasi secara terbatas untuk memutuskan pengganti ketua koperasi yang baru&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menunggu rapat anggota tahunan yang akan datang untuk meminta pertanggugjawaban ketua lama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Membiarkan ketua koperasi berhenti dengan cara mengajukan surat berhenti kepada pengurus yang lain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Apabila rapat anggota tahunan masih lama, pengurus dapat mengundang rapat anggota tahunan luar biasa&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Segera memilih ketua baru dari pengurus yang ada dan hasilnya dilaporkan kepada Rapat Anggota Tahunan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pak Sulaiman memiliki perusahaan perkebunan kelapa sawit mencoba melakukan cara baru dalam mengelola lahan perkebunan agar kelapa sawit yang dihasilkan bisa berkembang lebih baik lagi.&lt;br&gt;
+Usaha pak Sulaiman ini termasuk dalam unsur manajemen...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Man&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Money&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Material&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Machine&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Method&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Berikut ini peran dan ciri-ciri dan peran BUMN:&lt;br&gt;
+(1) Melayani kepentingan masyarakat secara maksimal&lt;br&gt;
+(2) Dikelola secara efisien agar memberikan keuntungan maksimal&lt;br&gt;
+(3) Sebagai pelopor dalam sektor usaha yang vital&lt;br&gt;
+(4) Modal seluruhnya/ sebagian dari pemerintah&lt;br&gt;
+(5) Meningkatkan penerimaan devisa negara dari kegiatan ekspor impor&lt;br&gt;
+Yang merupakan ciri-ciri BUMN adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pada bulan Maret 2011 UD Kencana mempunyai transaksi sebagai berikut:&lt;br&gt;
+Tanggal 1 : Dibeli barang dagang dari CV. &quot;Andika&quot; : sebesar Rp 4.000.000,00 dengan&lt;br&gt;
+syarat 3/10, n/30&lt;br&gt;
+Tanggal 5 : Dibeli barang dagang sebesar Rp 3.600.000,00 secara tunai dari Toko Sempurna&lt;br&gt;
+Tanggal 7 : Dibayar kepada Toko Surya untuk pembelian barang dagang tanggal 2 sebesar Rp 2.000.000,00&lt;br&gt;
+Tanggal 10 : Dibeli perlengkapan sebesar Rp 3.000.000,00 secara kredit dari Toko Abadi&lt;br&gt;
+Tanggal 15 : Dijual kepada Tn Ali barang dagang sebesar Rp 1.800.000,00 secara kredit&lt;br&gt;
+Transaksi di atas, dicatat dalam jurnal khusus yang benar adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;img alt=&quot;32pila.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;cb2e32_ff75d8_32pila.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>cb2e32_ff75d8_32pila.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;32pilb.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;eb2680_bbb652_32pilb.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>eb2680_bbb652_32pilb.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;32pilc.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;3fcd04_3a29a9_32pilc.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>3fcd04_3a29a9_32pilc.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;32pild.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;a9ac88_c2964d_32pild.jpg&quot;&gt;</text>
+			<value>1</value>
+			
+			<file>
+			<name>a9ac88_c2964d_32pild.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;32pile.jpg&quot; style=&quot;vertical-align:top&quot; src=&quot;7c6f1a_47539b_32pile.jpg&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>7c6f1a_47539b_32pile.jpg</name>
+			<type>image/jpeg</type>
+			<encoding>base64</encoding>
+			<data></data>
+			</file>
+
+		</option>
+
+		</answer>
+</item>
+</test>

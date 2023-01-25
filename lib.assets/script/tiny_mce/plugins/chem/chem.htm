@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>{#chem_dlg.title}</title>
+	<script type="text/javascript" src="../../../kekule/libs/raphael-min.2.0.1.js"></script>
+    <script type="text/javascript" src="../../../kekule/libs/kekule/kekule.js?modules=chemWidget,algorithm"></script>
+    <link rel="stylesheet" type="text/css" href="../../../kekule/libs/kekule/themes/default/kekule.css" />
+    <script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+    <style type="text/css">
+	.latex-input{
+		width:100%;
+		box-sizing:border-box;
+		height:118px;
+		padding:10px;
+		font-size:16px;
+		font-family:"Times New Roman", Times, serif;
+		font-variant:"Serif";
+		border:1px solid #DDDDDD;
+		resize:none;
+	}
+	.output-area{
+		padding:10px;
+		border:1px solid #DDDDDD;
+		background-color:#FFFFFF;
+		height:118px;
+		box-sizing:border-box;
+		overflow:auto;
+	}
+	.label{
+		padding:4px 0;
+	}
+	.K-Normal-Background{
+		background-color:#F0F0EE !important;
+	}
+	.chemComposer{
+		width:100%;
+		height:calc(100vh - 100px);
+	}
+	.K-ComboBox .K-ComboBox-TextWrappe{
+		margin-right:21px !important;
+	}
+	 .K-ComboBox .K-SelectBox, .K-SelectBox{
+		padding: 3px !important;
+		border: 1px solid #DDDDDD !important;
+		box-sizing: border-box !important;
+		margin:0;
+		font-size:12px !important;
+	}
+	.K-ComboBox  .K-TextBox{
+		font-size:12px !important;
+		padding: 3px !important;
+		border: 1px solid #DDDDDD !important;
+		box-sizing: border-box !important;
+		border: none !important;
+		margin:0;
+	}
+	.K-TextArea{
+		height:25px;
+		min-width:200px !important;
+	}
+	</style>
+    <script type="text/javascript">
+
+	</script>
+</head>
+<body onload="init()">
+
+<form onsubmit="return false;">
+    <div id="chemComposer"></div>
+	<div class="mceActionPanel">
+		<input type="button" id="insert" name="insert" value="{#insert}" onclick="ChemsitryEditorDialog.insert();" />
+		<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+	</div>
+</form>
+
+</body>
+</html>

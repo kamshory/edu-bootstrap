@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Molecule Editor</title>
+<script type="text/javascript" src="../lib.assets/script/kekule/libs/raphael-min.2.0.1.js"></script>
+<script type="text/javascript" src="../lib.assets/script/kekule/libs/kekule/kekule.js?modules=chemWidget,algorithm"></script>
+<link rel="stylesheet" type="text/css" href="../lib.assets/script/kekule/libs/kekule/themes/default/kekule.css" />
+<link rel="stylesheet" type="text/css" href="../lib.assets/theme/default/css/test-editor.min.css">
+<script>
+var chemEditor;
+var chemComposer		
+function init()
+{
+	var elem = document.getElementById('chemComposer');
+	var chemEditor = new Kekule.Editor.ChemSpaceEditor(document, null, Kekule.Render.RendererType.R2D);
+	chemComposer = new Kekule.Editor.Composer(elem, chemEditor);
+	adjustSize();
+	window.onresize = adjustSize;
+}
+function adjustSize()
+{
+	var dim = Kekule.HtmlElementUtils.getViewportDimension(document);
+	chemComposer.setWidth(dim.width - 24 + 'px').setHeight(dim.height - 90 + 'px');
+}
+Kekule.X.domReady(init);
+function trimCanvas(t){var l,a,e,o=t.getContext("2d"),n=document.createElement("canvas").getContext("2d"),g=o.getImageData(0,0,t.width,t.height),h=g.data.length,i={top:null,left:null,right:null,bottom:null};for(l=0;l<h;l+=4)0!==g.data[l+3]&&(a=l/4%t.width,e=~~(l/4/t.width),null===i.top&&(i.top=e),null===i.left?i.left=a:a<i.left&&(i.left=a),null===i.right?i.right=a:i.right<a&&(i.right=a),null===i.bottom?i.bottom=e:i.bottom<e&&(i.bottom=e));i.bottom<t.height-1&&i.bottom++,i.right<t.width-1&&i.right++;var m,r=i.bottom-i.top,u=i.right-i.left;return m=0==u||0==r||null==i.left||null==i.top?o.getImageData(0,0,1,1):o.getImageData(i.left,i.top,u,r),n.canvas.width=u,n.canvas.height=r,n.putImageData(m,0,0),n.canvas}
+function insertMolecule()
+{
+	var parentNode = document.getElementsByClassName("objContextParentElem")[0];
+	var canvas = parentNode.getElementsByTagName('canvas')[0];
+	var canvas2 = trimCanvas(canvas);
+	window.parent.uploadBase64Image(canvas2.toDataURL(), '#text-top');
+	window.parent.closeChemistryDialog();
+}
+</script>
+<style type="text/css">
+body{
+    margin:0;
+    padding:0;
+}
+select{
+padding: 4px;
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+margin:0;
+}
+input[type="text"], textarea{
+    padding: 4px;
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    margin:0;
+}
+.K-Dialog .K-Widget.K-Toolbar
+{
+    margin:4px 0;
+}
+body{
+    position:relative;
+}
+.main-content{
+    width:100%;
+    height:calc(100vh - 80px);
+    padding:10px 10px 0 10px;
+    box-sizing:border-box;
+    position:relative;
+    margin-bottom:11px;
+}
+.chemComposer{
+    width:100%;
+    height:calc(100vh - 100px);
+}
+.K-TextArea{
+	height:25px;
+	min-width:200px !important;
+}
+</style>
+</head>
+<body onload="init()">
+    <div class="main-content">
+        <div id="chemComposer"></div>
+    </div>
+    <div class="button-area file-dialog-control">
+        <input type="button" id="insert0" name="insert" value="Masukkan Ke Soal" onClick="insertMolecule(false)">
+        <input name="cancel" type="button" id="cancel" class="com-button" value="Batalkan" onclick="window.parent.closeChemistryDialog()">
+    </div>
+</body>
+</html>

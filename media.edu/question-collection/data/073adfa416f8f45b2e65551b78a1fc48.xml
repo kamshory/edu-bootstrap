@@ -1,0 +1,1772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dalam kurun waktu lima tahun terakhir, wilayah pantai Barat Sumatera sudah beberapa kali diguncang gempa tektonik dan dilihat dari struktur geologinya wilayah tersebut berada di zona tumbukan lempeng.&lt;br&gt;
+Prinsip geografi yang digunakan untuk mengkaji fenomena tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;prinsip persebaran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;prinsip distribusi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;prinsip interelasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;prinsip deskripsi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;prinsip korologi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pak Seno pengusaha dari Jakarta memiliki lahan 2 ha di kawasan Puncak yang dijadikan sebagai tempat peristirahatan. Sedangkan Pak Dadang memiiiki lahan 1 ha di samping tanah Pak Seno yang ditanami dengan palawija untuk memenuhi kebutuhan hari-hari.&lt;br&gt;
+Konsep geografi yang digunakan untuk mengkaji fenomena tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;konsep pola&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;konsep morfologi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;konsep keterjangkauan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;konsep nilai kegunaan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;konsep aglomerasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Banjir yang sering terjadi di sekitar pemukiman penduduk di daerah perkotaan akibat semakin dangkal dasar sungai. Pendangkalan sungai terjadi akibat adanya penduduk yang membuang sampah ke sungai.&lt;br&gt;
+Pendekatan geografi untuk mengkaji hal tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pendekatan keruangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pendekatan ekologi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pendekatan korologi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pendekatan kewilayahan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pendekatan kompleks wilayah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Benua-benua yang ada di permukaan Bumi sampai sekarang masih terus bergerak. Hal itu dibuktikan dengan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pematang tengah samudera semakin melebar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kawasan Kutub semakin melebar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pergeseran magma yang keluar dari gunung api&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;adanya gerakan tanah dengan ekshalasi magma&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dasar samudera semakin dekat ke permukaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Proses pembentukan Tatasurya menurut teori Kabut Kant-Laplace adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;terjadinya ledakan yang hebat suatu massa yang besar dan bertenaga tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;adanya perputaran kabut bola yang panas dan lambat makin lama semakin cepat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sebuah kabut dengan inti yang dingin berputar secara cepat dan membeku&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;terjadi gaya tarik menarik antar inti sehingga sebagian terlepas dari inti tersebut&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;adanya gravitasi dari bintang yang meledak di sekeliling Matahari dan membeku&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Elemen yang sama dalam geografi menurut para ahli adalah sebagai berikut, kecuali...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;bumi sebagai tempat tinggal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hubungan manusia dengan lingkungan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dimensi ruang dan dimensi historis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pendekatan spasial, ekologi, dan regional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;makna wilayah bagi manusia&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Indonesia merupakan hasil pertemuan dari tiga lempeng besar, yaitu...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;lempeng Samudera Hindia-Australia, Pasifik, dan Asia Tenggara&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lempeng Pasifik, Asia Selatan, dan Lempeng Samudera Hindia-Australia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lempeng Pasifik, Papua, dan Australia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lempeng China, Pasifik, dan Australia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lempeng Sulawesi, Jawa, dan Pasifik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ciri bentang alam muka bumi pada lereng per-bukitan sebagai akibat proses debris avalance (luncuran batu-batuan) ditunjukkan oleh kenam-pakan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dataran fluvial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kipas aluvial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;erosi tebing&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;longsor lahan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dataran nyaris&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Proses pembentukan embun selalu terjadi pada malam dan pagi hari, ada kaitannya dengan kondisi cuaca dan iklim, yaitu&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;belum ada sinar matahari&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;udara jenuh terlampaui&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tekanan udara rendah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kecepatan angina rendah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;belum ada angin berembus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Tanah luas yang ditumbuhi tumbuh-tumbuhan rumput dan dikelilingi oleh tumbuh-tumbuhan keras (perdu) disebut&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;gurun&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sabana&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;stepa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hutan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tundra&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Peristiwa gunung meletus, gempa bumi dan tanah longsor sering terjadi di wilayah Indonesia. Hal itu merupakan contoh aspek geosfer pada lapisan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;atmosfer&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lithosfer&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hidrosfer&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;biosfer&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;antroposfer&lt;br&gt;
+Pembahasan:&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Daerah pantai sering dilanda banjir pasang (rob). Kondisi itu dimanfaatkan penduduk untuk usaha pertambakan. Pertambakan geografi untuk menganalisis hal tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pendekatan spasial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pendekatan ekologi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pendekatan keruangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pendekatan kelingkungan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pendekatan kewilayahan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Tanah gersang kurang bermanfaat dalam pertanian karena...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;curah hujan rendah dan kandungan hara tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;daerah berelief curam dan drainase baik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kandungan hara dan curah hujan sedikit&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;terasering menghambat air dan drainase kurang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kandungan hara minim dan air banyak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pernyataan:&lt;br&gt;
+(1) kesuburan tanah;&lt;br&gt;
+(2) jenis tanaman;&lt;br&gt;
+(3) iklim;&lt;br&gt;
+(4) keadaan air;&lt;br&gt;
+(5) pupuk; dan&lt;br&gt;
+(6) ketinggian tempat.&lt;br&gt;
+Faktor-faktor yang menyebabkan flora dan fauna tumbuh tidak merata di bumi Indonesia adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (3), (4), (6)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), (5), (6)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), (4), (6)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), (5), (6)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (2), (3), (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dari gambar pergerakan lempeng tektonik yang akan membentuk benua Asia adalah...&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;eb9ae7_fb9759bf556f84f788a197f74c8d29ab.png&quot;&gt;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>eb9ae7_fb9759bf556f84f788a197f74c8d29ab.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data>iVBORw0KGgoAAAANSUhEUgAAALUAAAB4CAIAAAFMQBQCAAAgAElEQVR4nOy9f1xb1f0/fkp/2Na21rba2qqttbW1UrG1iCAMQYTBGIggyGAgwhgMxmAIwhDGYDAGbxiDMRBEGIOBDAQZvBEGMhBhIIJIhCIxMRJjYlKaNE1MmibP7x/35heEn23dPt/H+/nXueeee3LuK+ee8zqvn4TcLMAU4lNDllY6OJ412diol+LiIpONAHT1dC6qcfdyXNxLVGzookYZWUlUITMnjSrM8+fdfd1WH4tfuBdVSEmNHRwbiImPBDDHY+oaZOUk5pbkLO3FzJBADa+/TQh59dWf9vT1P/W4nVypvnr16sI8jxCSlv0aIUS1bedj58+viboBwf4AJCIhAE9ve1392MSIyddZ/EYAegd6abrkpwJob2+kLv0DTFMEQHhkyCaqF8Oh/a7gN1s1m70DAsanPuF+/eVPXgzbeduO9c2XrNxMpUrV2tluWMmZZ9naHaPKrb2L/3ITb0She6i7p7crwN8XQEhMAABrq5MAIqOCV6fL1PSku5cTAK8AT5FERFUODvYFhHrO8+Yi44Oomo6hxcMhhBBXN9tFtQnxkVRBAzWAuISY+PjI5uYmO6czi1raOpgv+0ZLkVOQbm9vsdxd070EBLqNjQ9dsDkGgMll8oQCmVSYmpVQV1+ybC83ASb7dvWxWVrZ3NHQ2FK/1tfRoWe426hrg6VgTb3o/mZXf2eqkJ+fCWBgeGBRy8g438W9sDhsw8uxiVGxfIEqZ5dkAggK8aMuo5ydVxlLRITjgkTU1d0FICBM/xEmpydX11es6Y1c3RwAdPe35lUUA4iIDAVQ39mm0qiWPr9sL2z2HIDxmTEAsfERzR31Ko2KyZqZmZ1aRy8APP3dbOzPU+X2Lv3H3dLRslwvZoumzwzzs9a/dTxhe44QUtdQt//QIULIJ59+RAiRiwWEkD+9Xrz6rEtLT+we7MktyVcqFcIFIQANYG51XtcgLi5spTdycDOnCkqVHEBkUhiA2blZABUNRTExIVHRYQCSshPWRBcdvMN8AETFBQv4XKqmpLYEQFRS+LK9nDl3SlfOKswCEBFFb7JqjVp3KzwyEEB0TODqYzl+9giTM02VNVC7ebnPzU05uZteX1b6rNcFpVo2Nj54Iz2saSiW1pbL3WrurAfQ3k5PTLFEzOOx/CN9l7ZMy4oNT4hc91CCQnxWHpwW+r/NM8KTK+CW15TparoGOmdYy354AAbH+nsH2kwMpayyXFc7z2VThb6hnkXPZxVk1jfWD43262ruOrwVwPjUsK6GMT1JFRqbmuJjQzMykwoLcw07ae5tXToy01RhcZmGl9bOpwF1QJifWMYHEBYTOTo5ml9a4OPnCaC4tDi3OL+svhxAS0tLYX4egP4Jet6IJSIAIRHepuiyhqEsRUh44KKa6trKlR+ZY876By/LM218KH0G/4ghRsYHbVwtz1qdHxoeWnQrKSNu7eOghmKCoVuEp562cfdyO378pN8P/X77p99KvxHfe/fhHTuJhY3Da6/Gb9tMDh85plLL3/xzw6+SE7N/l8v86rPtW3ffe/c97//7fbsn7d6sfvPll17OLPgfv+e92tobX4lO/uUrPyd3mc3PXNy9c8+bf/67XHll5217Nm3atApVhgZ71Wp1eVVZTWPdHJtZW1s5L5gHEJcRvyCRUG1qm+rau9qkCrHuqcyKzK4u09vNClRZ3xLXNdILgCNkc/nzVA2bw6IKLu62oaFuAOLSEhc9FRxy86ZtZk6Co+M5Wwf6YDU2OhCfFidVyqlLsULc3d0FwM2b5rt8/Ry6u5tW7XZNQzl1/gh3nmVY09XVBWB8cjQxKdbXzzUhOx1AVlFWZWXh4PiAV6hzcEigQCYAUFCcNTMz5u3tDKCjq216lkH1EBXpv46hNDTXrjx2JpcFICI+cHZu1ifIp3+oH4Cdg0VzWwuTw+zpo7l5qUyme2RwbDH7B4DFY1c2lRnWrP4H7d67eYW7s6yZjKz0guIcDWS19dUAwqMDHJwsT5y5yzvAydHOimpW0VCcnhKz8kuu6WP+bkB/zP8VSElJWZluq6KttXV4ZPFSuy50dXWZLeZsl0dy8iuPPHrs66+Yi+p/6OlpceGRRZW//Z9Ezxe+f/X6lZtDD6FQmJ6dbPJWRX0lgOmZCcNKb1/HukYTh5Oo9OCV6UFSTY1DBWVCxmIm2iRaO1pSMlMASGRSAO19rT7BK60Z+Vkmfq6rq2sxPdKz0tby8xRyc3Or66sMa7JKs9b4bECwp+lxxCeGL/OIHqUFifb25oY1o+NGkp/+ob6xiTHdZXxqxModisTCts66rq4u/TT9n9+/ThUiI4N/+UogIeSfw/80nElK5dWIuN//619TzzzzlK7S8twTSo2SEDLwYe/f3vn75u1mjz/2+GfcGeru7Vu3Xfn2kq7x35rfWDQ7999xoLGjnZ6nrW1GTCVPyF75Jdy8Hbx83ABU15ZSNY1d9CanUtM8dnp2mqu9Vf9ApwLKkHCa11cPjC/tLb8wj6aHWnXdcIztHf8ghLz2219Qlz/7mR8h5I9/LaAuf5eX3dH03tt/71Bevzb9ySRVyfuMRRW2aNcB5jxr930Hya6dlX/OffP1t6hKM7tzSz/YPbdvpunR3Ny8MgHs7E45OJ7IK8odGumbnKb3UvHCQkFRblFZXnFxPlXTXF0NoKi4gLr0CXBz8XM22aExdZ26urq2mBEik11aOkwdfpP9K/Wu/QP/+8H7/37/j0V/tH7a7tGHHyGE8Pi8r4Vfnzl5xsLS+o+v/35ydi4jJbP13XdmWZ9SD/69tmOFbnWweOwsTY+mplX2fQAWtqcNL5VqvSRkhEF/IHKlVP+WwS6r9kkhNDqInh+X5ZeXG6zdM09ShUOHjuoqBz4aeKOh7I2KP1GXTzzyeNhPfnSNXMsvLfnTn2hxRkf1u2shBiHk9l1baXqUlRUvN9j9x/b1DnbPcaYj4oIBdHd3AnDzdKO+i7auxgWxEIAaSolMFBLmo1IrFRrFGilBYWJ8eHBggKSmpJSUmZCFL8LM3Iyu7BfsA4DNZtlZHxsZ6WGxmB2dbcmZiZNzo8mZCQCGxwYB9A0PjoyPACguLQLQ1NUEIDUvBUBqdhIAO2uLsvJC6NbT4qKVxuHkYZOWnjDHYhRX5M0bLy1imbijq32Z59aK9LxM+nsZ+2hyhf/vn+98QBV+7HuguKpss9rM28PvoRMPEUJmvmS5Of+AupuW9rOMjD8TQt5+5+/Pe76wxslBCNmm2kwIMdMQsu/A3uUavTfwHlUY/XD0jj0HR/p6iWrzQyce+uaKgBBCFJsSf5X4zw96CSGfMKaecTz92ecMahAffvpvQsjA+92rjuOrrz4nhGwxI2RBsSy3cs7icapw1z13v93dnFf0xun7H3rOx/Hnv0ju6+/77WvZTz72GCHkhz96ZudWYrb/9PEH7qPaWz7yJCFkE7asOo7I6PivvpzfQgj5cnZ6uUZ33nEHVbjvyD0P3OtNlX8el/TMU88KxZc00JhtMiOEmF1TvNX0geGDX3DZx+59gOzZuuo43nu/79TRE2aEkLPnH1+56Qsvft/Lw/Gtt6t/9+ffSa5IrsqvEkJe/OGLZpvMPv3yM0LIO00f/OMfbxNCTj98yMXR5sXnnzp27wOEELvH7FYdx6njRwkleL3j3oO62nfe+YuuvGfXpk8vfkIIYX3O+sc/PvB7/qWfBPxE+q30wK69v8n+jd/LfoQQ/hfzhBAlvv3hD58/b/PgxRn+fcd23HHwuOEv/fHNP+b96ffLjUOpVhBqnkpY87raHbt268pXruKR048SQj768DP59auEEOVV5b0H7+V/Izx2/Gh0eDghxNbWlhBy26YdFy9+UlNeJ7oq8nR4+b6TD1M9fDrzESHkFy//4q4771puHEcPHyGE0PxpXWPdqh96Q1PD0MhQTUMNddnV05lZkBmTGAIgNCzAK8BxfGJUqZEzZlaS4i1CbkEmlvKnHh4m9CY6tPe0AEgpS2Ox5oaGaOFRaU0xAIFAkJQSDcDC9j41lAAmp/p0D44xJnr6Ogy7Cot3N7w0wScDaGit6+ozoZcDUFZbCsDa/uz0/NToiF7iWFlZGhTpp7tkcWcPH9uZnp8MICUrVleflBivUEixBKbHoUNNTWV2burS+nkBOyKN+lVNem4yAPMLJ6wdzoZHhgD0JufscS4zmx7BectTQtH8cr+CFc4vS1HfWO3ma5ueF9/f3watGkYDjUugnuOysDo2NNxf3VJ94vie0FA/tVq9TGemxlFQULDG1rcOk5OTmwghtjY2aenpKy42/z/BtWvXWPOsrZu3Xt+k3EJuu66QmpltE0vFRLP58MHDwyMj5eXlWwghNrbWzz777C0dygcD741PjrS/23LP4fv5X85Kv1U8Zf1sUMhLO27beseeIztv27xz136q5cQnH5x71Obrr1hvVFVqFGrBwle8S4JTJ82dnZ0O33Vo777D9xy85xYN8vC999IUuW3r9hvv7mvB13/I+8NlCXfrru0JMYkPPHDa8O5T33N86nuOP/95smHlm3VlYslVoXDezcXVDBorKyce98vrm83CwgL27L3Dwtoq2PullX9U/u2VnPzfaczUZx6z8HXz20JWZzXWhDUuJIYYZwyFRwZ4+Tlt4FutrKQNa2QyaVFpIQAGZ2Zps9RcIzlIc2t9TX31Gn9CrpBX1ZQHBvkooVz7wLq6umiKrEVkNzQyuJa9eVWIFkQAahpKe3o6AOSU5BveHR4ZBsAWsgFwtTpaHdjceQBypbyoOB/rh1+4e2TMSrKe1SmSk5vW2Ni4gd9eGT7+HonpkYGRns2t1e1tbcVlehORxEy9dNDbYALKlFJq3/IPDBCJhQBcw5w0Gs2NDGNktN8/1GucoZdj6Sli+NV4eDm1d7eZ6mF98A3z4bBYAKoqKwE4edlWN1UtbTZubGRFvWJrO61kKqleLA6d5kxX1pcDsHe3p2piYsPa2kyrX7Lzafo2tTTOsUx8mDrk5GZj6Rwpbyxf4Rnqnxkap3UbJaUr8Q5sHpsqTExOAgiM9QcQH6fXg+fm5lZUlyjVcplcr3AbHBoCsOfUPgCTM5OGHabkJqvUNL8l18iqqkv8AxxjY33cPOxjU8PjE8K8/dwiogKDI4IdXa28fJxctexuTXUVgLKalV4NQFV9FZbOka5+0zwqBRZ3lipk5iWMjNImcS5eDvYOevsHnkhIFWKiQ/KLjfTeXBFfopUezc7NsudZAKztzAEUlRYBsNXaI/mE0uLpyLQwAHUNVQDi0mmtYGOH/ivu6Wv39HAAoFDJAfQOmpBELIgFjXWrKKYBlJYVYOkcaWxsWPXJ5SBXyH0D3AMCbEJC7XJzUjKK0oQLwo7+DgAD48MAxGJxXWM9AB6fNzo+DCCvorC1tQFAYTEtnxKJRc2djSKpCABfTC+rdYWFul+ZnJ0EIJZJAUTGhQDgcDkjjGWNG9eO7MIULJ0jRYV5G+6xvqmye7CTMTvV2d3W1dt8zvJ4WlpsaFwggKq6KgAayPMq6Q2ipYf+Mycn6ZeprKkEINFIF2QLcywmAOY8EwCTx4LWyrRWe7Ycn56UmjoY3QhKKnKhpYiepdm398DG2Jm/vvX6tl37nn3q+4SQRx4y//TLi+OjnxNCvvyKSQg5e+688tq127btUMmVVPvnnvkBIUSivCwQioJ//vJfit+8a89+QsieTbvITrL9yHYmm3n/ffcTQh685wFCyIl7HvzffzZflS18I/ry7gP3n3v40Y2NcwVw+Vyja2qOtLSuz4yAwsDQAACpTAJgnjt/zOIIgIHx/rzCPABdXR0AeONGkoFRreFNaWUxgFCtSUrREvGuGotPiiosa+l3IwgO8cPSr6akfFkb7eVQUVUCIDk3Q6lSTjDGZjmzZdUFAKrr6LU9Lc9I+1hRR++mYRGhKo0EQElFkQwKqUwaHh0GQKlSLkhF5TW0wicuLQZQ5BXlKBSyGdZYXvnqkuiNIS0vDVqKmBFCNIQQQhbEC+udbGEv/YwQIhZwh4bf/3h66qH7H7K2/h4hxMvd75OZjwkhajW5yP6UEPLaH35NCLks5Dc0//Uf//u29LJAfOlbQsjPwn5+/tEHd+3cdfLoic+/Ybp6Pj3Y857F6dOtA62EkILf/JGQ2175+au33bbz9AOPv/KTVzf6WSwLJb79a+tff+wd9MUXX2zbto2upeZIQWFGXGLUwPBgZ2+bX7ALACtH6zPnDgEICQuPSwwTLywACAn1tHe2AuDh45hdlCyQcwNCfNNy43X0DovUazAHhvvsnWxmZ6YBNLbrN87Y9HgAY+NjAAb6jcyCVwZ/gcecn76R6bAIze114xP0V7x4901bRr++Ag4fO5iQHNXY3BgRGUDVKJXS8or8yAj/wcEuAHm52QBy8uhdbG6eBYDD5wq0nMvI9AgAiUxy+sxRZ7fzJ08e5mq5O5MoLNjIiWZV5OSnYylF3D1X1z4uQmJyfHFlKQCuQKCrdPCmzWWqq4oBSOUSAKERIQByK/I4Qi6A6iY979PV1wPtImpuawnA1ulCeAQtn0xKj7S2sxgcpXnlqoa1Hn/XhdAQbyylSGxs1Ho7YrLnAEiUMgDjDL0+Oyldb3jWN9Dt4mUTHUcfOrsGuzKzTdsrlNWWA3D3so2LD3Zxo1nhla0Iphm0ZUhy8uoGDCugpa0ZhisrpTAXXGavd1l68NiJ80+f37Nt58s/+fG5R84RQir+9gYhxM/Ln2rw5aUvn3jqKSsbp7vvOUgI+eyz0cdOnT14z15iYEX1/icfEEL+/dG/Vd8qr12/9o+33y/4n+p3Oz7+Z++7hBDlVbnJn/7Bc88QQniXONSlVKZZ7+ANsYmoja6pOZKQGr1hGttYn/EPcAsLDywtL2zr7ACQkpkGrSHyNGe6tLygs6crJikkLikWQH55IYfH7R3qA5BRmq3rp7enV6GQ1ddX9fa1ZGglA87uDv4BjlK5EEB6Rnxqmt4oVbRAe0dI5JINDx5ARVUFln411IlrKRq1Z+Kz5qcATGmtDCl0dTResDy5/yDxD3BxdTlrZW/h5esAwNrpwiyTPhz2TdA6jOyCtNb+FoXSSK6lAfr7+qgCR8RbkC4EhnsD4PJYDfVVISH+AOycT/n4O/mHeN3Ia6+AqsZyLKWIn6+76dZahxJvX0cALNbccv1y+bwCrRp9YLAfwMzcNAAPLw8AAcFeXgEOAGaYswCmGBMSSAD0jfQBmGJMASguyQMQlxQhEvEBOLo7isULweHu3X09ZeXFAArzF5tcpWenixbonYsxywCQV5C5XooMDHRgKc/q7LnYSYtCdExobmmuSCo2P3MfAFd/n9b2laxtXJztGtpo+SMlAVJDIRTSg25tb/QJ8wJg5WI1OT3R2tEKoKOrTSoT1jZWZRVnz7In1RoVkznr4kKPJ7OYXok9vPQWKOfOmwOoa60x/OmyhjL+giAzY31i44TEkIHBAawgVYyIDA4IW6PHgmnklaQKhbQ7VVRsJICamkort/MAKLeb3v5eFnt2jjPj5uUKQCQRWtlZtHYZeX0NDQ32DfbyeLPt7VUDwx3JGcmOjpYuLrZNzXUApmYYANp7aXWlQLrAFwoAsOZnVx2eR6CLk6uF9v/Sw7RUcRHY7Fkb+3MxcatY4S5FV3cDl68X5Kk1qo6e5paWZrlMroK6qChvama0oDijUCtYsrE5S4ltrOzOA5ieYXR3t6fkpwAIjPABMDoxwuPzALj7GNkqDYwPAEhOjWzv6GjvNuGPodaoJxmj511Mu98ajXldsngdsvIyrO3PNzTXrN4UANDYXLf/ru0hkQFzc7Pp2Unh0cEzswwAXJnQ2u4sgMLCNGsbcwBNTTURsaGsebaj64XAwEBPP9eAQA+pjJ5r7p5OANgcNoDungYAqZnxdx3aOT5tZNcnlIoKS9MDwv1ra6vW/lIU1jRH1gImkxkeE+zoYp2aFzPP56zQMiY2DMAEm7FCGwAKNW3mzxfyqK2NEtxK1TIAcrkkPS1hcLA3JSHexdk2PCJgykCefiNYLDHaMB588MHX/1i9arN/vv+/trZWH8+M/uH3aQP9g99+iyP37xd8c+kpx6fnWXy5QrZ92+133KbasXNfVEwEJFI2R1z05h/9/Xx7d+6ztbM6cMeBXTt3EUJ27Njz69/kEkKeesrxxgf/f/g/rBObCCHd3asbzP3/AzweT4VrZts2qdRqteSa7NurGqKQSGX7du+zeMzS2dn5P++08sUXnx2+974veZ+fuN98YmLi7sP7jxy8/z8ykk2U58x3QI633nrj4sXpsclJiUwoEy084/DDZ908t+/cfOKBM3vv3Llj251K5VW5Qrr3jn1CkUgmlu68/Y70jNjj952cmJm9Y/fWJ+2dHzi8f9uW3U9aP33rBnkLyRH8k+dnv5hRSElZ0esnTt1/4I5jN6Xbv9X9tXugfW567Cl7j5CXwh8+8fBN6ZbCzSRHRUXF6OgHW3epz5w0j/7Z6jLhK1cvv93c+MHYyPe/b7Nl01ZbK+d33nnn3BNn//Xv0Y963j98/33PvuDxrOUzK3fy8ccfNb5d9+22a3GRMffvf+gGX2F1l9FV0djY4OBqo1Svz9L9tP0xyjl6dGIlB/a0tNiwuIDq+sqxcdOevIaYn59Ny070i/ZgcVirNjYJmiobeNI3xMvN2yElbU2OV4uQl6Pnhv1Cl/VoFYgEAPqGaTFKSKjfci2XQiwWJqRE5+Sv1bOKwrrJwZgej02OFWrlDhtAVBwtH61pqQEwamwnIpKJAARrgzXUNtS297YJtEeYwZH+NFMuaiuAyZoJDvIrrViTEm4d5AhPCOcL+Osaiul+4oMBpGXQSpzBSb1HrUQmqdDayXAlersqSkKh1trJevuvw69eh+7BTnt3q7oV/fZXJ4dKpXByt55ePubJepGdkyKViwDoXEvyi/IBdPTQsoyY+DAAUhmt319kPDfLYQIIjFjJyXFlVNWUOXvbmby1Ejm4Im5qenJvb4fJuzcCryAn3xCnqLhg6lKpVlbVmhAdNLfqNS8j48MAevt6q1vqRCL+1Nxkn9ZoZ8PwDXBs7zQSl5gmh0KpsHc4jRtGbn5GdLRvaLR/6TL6c/Y8HSEjvyCHK+H0DOoNmFq0Qkkma4bBYABo7GwA0NbZVlZPe6YXlmax2atLw1ZGbV1hYJgrVV5MjtS0OBsnS6lMvMyz64CNiyUAyjUiMTXG/PzJZUZTyxXqFX2Uj7BEJQFQ3Wg0ZcbHaOlGeX3ZLGeWJxMCGB0f8fHzMNlzYmpygdbms7gofeXRisViLCLHiQumRwzAy8deA/XU1JhXAP3bh833r9B7fHw8DCL4MNhTcpmE0oYZgidkS6VCAGmFGQByC3IAZJVkLO2QskmUKGhVC2N6OjU3KiTMY2ikE0BYRLDJYSRk0m4QTZ1rihCx1p3F2ZVee2wcT6yl35T0BABNrc0A5GrpIq8IJpsVlxjM4bJ9A72ycumXd/OnBaKNS0J+NHY0AKiuqdLVODhaxcQEBAY7JaVHJibFBIZ7+/q5JWRG+Qe4e3g7hYZ4KVRKAIGhIQBG1yw0MyKHWLLsN+Lseo4qVDWXAyivXMW4sV4b5CIhRa9PCwj2Con0c3ChKRsdS2teB4eXZUyVGiUAqUoyOj4KoLCiQCQVlpTl+Xg4+Ho5+oU4TzDGVUolXykcHzdlbzc5B6Cwaq3mAUbkUKmWtU6yd9TrZfz8XYtLCwBMz83sO7y5oEDPF9W2NgOQiMUAJLIFAJ0DpjcmhVJhaXMOQHY+ra+cF/GowgyTXl9lKhkAlVIGoKqxFgCl00nPpXlNO9uzCqWUM88G0NVt+ociw9ah0zMiR0fnsj6mR47u05Wd3I0E9kkZ8afO7s/KSQTg4uoIwN7jQlpGMoCotAgAGYVZqWl0rMui4rzu/o7kVL0NwMjoKIC2nna+iA8gKzcFgLMPbaXa090BoLOnE0BPfw+Ajr4OAEzWTEV9GYCWrgYAFyzNW1pNW9/Pc1aSaS+CETmYTObKrVdAYUleUJBLXEKAt49DXHwIALFi8aengQaAWq0CkFOcDcDZyQpAVmYmgMaWRgB8Ec/e2ZLNY1IaFgC+9jYAJqYnSqsqZjmzcrkCQFl1mS5qV07ROiJGrAwjckiXXztWBZs9ZWdzOijYxdn1jK2tOYDyypKWlsUWLMHR9GGkvLosLT3V2e0cj8/rG+oNCVniBK9RTQ73dQ12APAOpZWEwzOjAPoG+1QapW+gV0RcmI2H1YbHrP8p7UpvRA7uRs/FAAqKcocm+ju724tK8wOCPU6c3A1gjm+k9FZACSDbwCI+M4c+uRganoskC9MzelMxKhJo/xDNg3r5eQPwDTatdb9BGJFjaKBvY72k5CQBiE8zMh4ZGR0BMDAwAIOYliKZnuMamRjvHewDMMecBRAWEzLNoG37mzr1FlVyqHTBt0qraJtMqUE/NxFG5GhrWSU0xnKor69xdtOHDJWrFFMzkwDYxiGtfLRzPrssG4BXkF7SMc+bl6kVIfHhAOw97QFkZOv5yFk2A0BtHU2L1MykjY1zVRjvLO0bcQoaGOosrSiBwXyeZIwD0GiNiuvq6wHIFXIAGdpttWugEwCLwwHQ0NEUl5IIQKaSTc9Mq7SqdrH2UFtYmVuvNWbXFW4iJNpDiRE5dMb268KxE0cBJKYnAJAqZVRY1Lo22lihpLhAyuTEREUAoGzys8oyNVDmFSRxBEwNNCPa+H1SqRRAVWMNgGptsCSxhLaEGp6m7USDE0zEyr5BLIhNkWNobN1xN8tr9bbn+QZmViwD38HJuQkAxeVFfBE/PS9FIOID8A9ynpubqm2tVqvUANz89ccwBx/9d5eVnQGgp68HAF/Ab1wtotvGoNHOR2O+g7Os9dNyqKyktwmKxXTzt9fdamtvkWsUPN48DOJ6xqfHA4iNj3DzoVvyeJyJuUm5QsYxCOFk/sUAACAASURBVCGcXUgvHFX1pWLJQlFVHqCJTAha7/DWCyNy1DWv29B138FtlnanBEIugJSsxebNTO4MgOKmQgADWnPaqKQolVIVEOAyx5xJy0sCMD4xVmkQ95TyCMgvyLSyPNbd0znLnFEo5SL5LdlKdAgO9cEicrT0bGRnEYrpgbZ2tja21o7OjQGgzMCwJIgalzfnF+A+y5wQS4Q9/R1DQ4MAQqND+/t7AKQXpDY1Vs/Pc72CHAWSW/v+OlCme/P8eSwix8hGI+Ep5Eq+gM2X0ILlqNQYADplhwYqqUwUnhIeGE5rBtQa9dT0hJe32/mzpwJDfIpK81rbG4JCvNo7mlrampVqZUZGYlpaMoD8gpxirX9VWXUp5TU5yZzuG6S1DS0dbVMzUwB6h3rzCvOGhocBlFSXtXQ1FtcVAYiIDs/Kz6htaABQUFngE+mp0Chd/V0iIgNCw/37h/sB+PnTTJ0ROaytj3sEugG478T+zPxUABaWZ3r6ugFYnD9pfvYEANcgD08Pm7zKXAAevm7eQc4AJiYGo6KjAJRULPbqiY4NDQjwUinVALqHTTgvevqsNUYVTXrVTZDUGaK6Vs8QG5GDbcqVfC0YmRkKCfNmzI7lFKRbWp+RSIQd3U0OjlbxibEACiuKVFBz5jkAOns7ATS0GLkwBq4YL3QR4pPWbcO3Kha0hs1G5OgbWp9sumewx8PPMzUtLC09AYBCLhOJBQD8At18PK27etp6BmmvFp2ANzGFXm5lSplcJacinQLILUhzdTt/8uzRhOTYxT9jjOTUVRpsAMNa3seIHIWF6wtV4h/gA2Biil4sKSaS0rxOM2e9fO2per8wesmgpF6lNXq2snukGwBrng3A2dV5QcwDkLbkhSUycVwO7XFRUb1xV9DlQPlmYBE5ZqbXp1uidsSxyTEAIrEYQOdA54JEkF9B22cnJkU5utsCCAgLAMAR83TPJuXRcXFmWEwAY9O0ODM4OnCOM2fvcJ5iVsaZwzaO55KT9IfDlIJ1eyutCqk2XLMx37FEPLEqcooWW4XnFWYDKK6paGprkCvEaWnxU9OLJbdstl5CpYIawIJ4AYBcKQdgbWsRFu4RFOx1xmKPh5u10bhl0oo6o2wZJSVFAJpa6rv7utY7eB14PHo8RuQYXL9eq06rCpliTACYm9fztSqNGsAkY9zBzS4qhj5oMGYYAIbHRwDNkKl9vam1JjLOJzLcT8ePh8SstNDGJVATRykUblx/PDVLf+9G5Jianlj+EdPwD6PPGhnZeuVIVUt1TVMVgJbOVpnWlbq9u04ul6uhikuMAjDB1n+YlGXIDHOGJ2B6+Lg6OtsEBdq5utpPMSd6+tqVS2zJDRETR+cgmp9fh0x0ORiRo7V93bFPBDKhXKagFNoCsQBARnEmAI8Avfy6uZNmdrNy45NT4wCMTQwCqGisBlBcXyFRyqgg56NTYwBYXBYMtBwBppInVFeX1bfUA0jPSQLAla4UWWtVzMzSHIYROYZHVorxsBxSUuIAiBXidIMJotTIMgpyAczO0Z8Pgzvp5mnbUF9TVlGicx5oaKoHwOFxAFTUlc+ypqgVVCQVA/D0dCwoMOF6nJgUMzo2SpVDk4MBCBcWR5VZFyj1GBaLjrVWJetFdHyUu5u9l5+LnYOFbt8dGhkEwF8QAMipyAkNDwIwOjkwNTMNQA0NgDnmHBWIuXOwY2SMlrYEBnoCsHOi1RcpGSkODuYeng4AGKzpsFAvoVi/TFDJS6RSmVixcdew1jZa72dEDg3kG+4RgIvrBU9Pe1vb4w5O5wJD9TOczWNTYfMoeUq/sVQlKSs5uzwLgBoqABKFGIBSJW/vqAfgHuJUWVXCmGS4el3wC3D2cDbaaG4W8kvpeW1EjuVw9sIRAAP9PXweH8AijXliQuxp8/2OTiet7U86Opw7efqwSiWXysTRKdEAVFBFxUcBSEiKm2PR8vEpzvQ4k/bA6OhoBVBWSh926lrrcooyOFwmgMAgn4Hudi6X6+Fv7+Nnk5IaVVlViFuA+lZa+LYmckREBQGQKmjG3tbxAoDs3Dwb+3MRkZFiLcPP4jHDw31hIFwCMDE5AUAsl8iViqjokAnGOIDaNiM/p/yi/PqWurGxMQBObrTexMHFEoBEvgAg0N85Ji7Uy8vWw8N0oC+VWpWcnVhRU1bd3VBaWrp2QlAoq6GpbESOOaZp05GIuEAA8wL6roef6TxbgMbWxXZocgSAUiEFwGKxFqQLlGAZgLe/g06KkWcq7EpUTJi2pYtI67/u5HS2prFmZnoCgHBB2NqyWL6dVqDXwqXlpUml614B+7VJdIhhGqoTD5o2U71z9wFCyF17D1GX0stik80I2fT+u++/lhhHCPmMxyeEjI2N3LnrTuW1S4SQQ/fsafrbe3fvufut7rcIIa/84pV3ut+5JBLo/g9CiM33npDIJS+//OKT9vb79x94/oVnCSF5f/jL0b2H3qwqZ3752YE7D3wj5Ot+z8fHjRDym7jfEEK+1VwnhIS8+GLf8Ltfff3ZMiM0Dd5XxqEsAExzpiaWsYM4de4YAFcft7auFr5YbOOwbHY6AHKlNDo6VCwVZ+ZmAWhsawKghio9S38wr6ouHRwcAuAf7g0gMDIIgK3deQC+kTTD4u7lVFtbNcGY6O7p6J8dY8wyJidHoqLo6TPJmOjqaweQla/f3curacmFUrmOQCk9Pe1HzxzWzQ6aHADmOSwb2wtr72g5lBTnAcjMywTQO0TbGSQkGMkpGpvoOT8xNywR8wG4+ji4uNqlpiR5BbuUlxYIJXwAnZ3NIpkQQKC/3pdzbGwUkA1NDUq0agdDLE0ktBzKKwoCgj0N08kZkYOCUMS3djojuzHzsPDIYMPLxqYaRxcbkVwEYGiS1pjUN9QC6BxoB1BQnpGTa2S+JRILh4eHJicnerqbhkd7UrISI6Ij3Fxs3d2tAaRnG2ntWw1S0qVmriIQES3wrW1PpqTEL71lghw6BIV4NTdvMPKWrZOlULsWsnksAGUVeeOTE03NtTDO9AUgMTtyaHBkfGYQAJvN7u5qE4uF4xPDKVkpAKaZRpFOAkI8svLTAKSkJcsUekZpQS4GkJ5lIp6uDmNTI37hTkrVslEeVyIHhbq6Gkencz3rPz6ftKAtZKiX9/R1HhjoqKmpbuhsBNDa1pKQGF5TXy0S8gH09rax5meHhvsaGvV7cGxKFFfEGxweoDh3jVZd0zfQA2BgfBSAtzZLhwaquMTFKWUpSCSS6NTwuo7VT2Srk0OHs/ZnAkI9V29ngO37zQAIxfQ04fHZAFqaazpMhRqc48yWVhUDCAr100le5jjTPN58RX2pWCIaHR8AIBQKhob6bL1sAcSnRgMQCtiBoX5DS9LIcbhMe1vz5mYTGTyXwzrIQUEik7h52xVU5Pev7bzHFwkKirJt7M84OtulpEcDSNOm4Roc7qOidjo52ZRWFB49flAJ5Xk7CwBRMeHhUREs7hR3nukX5BESETo01l9cREXYyQLQ0Fgrks/bO9rGJywOiNI73Bfg71ZWmS+RrduPYN3kMIS1zVk7B4uGNWTEoDA3N1dRXQpAIBUAqGgupUjTP9ybkZVs6XAGwJlTd1GNB4f7AXR2ttvYniwqyR8e6otPDQPg4HTi3PkTVudPymT6bUWhkDl7W589s6+mZtl0FGvBDZFDh8HhvtMWJ1zcLxSVrSLX9Q/whDaAziK0G+VK0xhy+lzefF9X77yYFmr4+dqr1PKE2KjoCH8fb7f4xDCR5CbIfnATE2/qwOLM1lSXnzx90C/I0c3PpaOzmcWZ7hvuEfBZSSlxnCUBFcZmxnQRVtKyaTuW1MwUN0+nlpYGhULh6eWsUsnUGpWN7dmjJ/c5OlmlpoWLxXyhkIebDfIdZDu7rrm+xWyL5Irko49H51hT1ySq7u52Pp/H+YpFtmzdvXvv8cPH5GaKnbdvV4uvvZIQ1fj39p9FxTTXVt517GRJUenPIgIOHb7P0c33yP57b90gKXx3jqP/T+C/KQHd/+H/8N8P+nvJy819JSHhPzuU/8N/Dz766KMLFy4QXZyXK1Lpf3Q8Nx/XiAbXr9+2ZdtHjA8VEplao5LLhDzewle8L8cmP1LIpZu3bFcqrinkcmi2qq7JNm9V7b5zr0KqWLjK37/3sExy+fa9d2812/w5Z2bbzt1nzljcpt65fdtm8RVxZmba6Oj0xYuTZ80tFiSyiPCoHTtu+0+/7k3GpUt0KkB6fly/rvzPDWbduHr1MmPu4q6t29m8z9rb2hmTF/fu2/7114Jd23fe/8DRLVu3Hz1y1MvrhVMPP/DFJfHj5paEEPmVSzv37L9ZA3j0UaP8XNfJFbHo0ujoyMjHExzOF199MX/s+P0yiZQr/CooIOLOO7fdfts+c/Oj995rIk3kfzno+WFmtnpitP8I3ht4d3xi7OLUGJf7xd47Dj1lY3v7vr3uns89ec6aEGJufu6Hzn4rPH7sIB0ufbnJwRV9/e7gO/1djTKRSoPN4ssCxbfkrsP37tyxbeLiuNmmrbYX7MmurU+evhDgH7Rjxy6TnWwhew4c2OPm9oCb24srDObSlcusz+fe/6CL+elnLO4XPIEwPCj8zn27t2zd6fdCwJrI8Z2D5j9SU1Iyfvvb/+A4Rj/6d1Vl1afzjCfPWltaWB07fmzX7p0Pn16cdvkG8fVlQWRUkEp1+cSpx+/Yfuftt+96Ne5X1K3qhr+89GIwVe4dHa6oKGyoeEv34EcTA5OTH3m4/2hw+INZzuwl/qWxscEzZ86EvRR+6oT5jp2m5826cO36tXfa3xoe7lPIFQeO7lsQSuxtPV74oY/uP/ou0d3d7eLior++8Wze60Vnb3NCfLiVlWV2XtbIxOit/rnsvAwXP3u5QgQgPCqssJiWWqmgBCBTyNz8vQGU15WPT+uTqzB5RkY1gVEhYpkJRU9zV1NLW2N8YqxfiEdeQaZasw4d2KoYZYyW1pRGJES4+DqmZiePT4yxb4bZ08rQh2X8DuaHRqMpqSrpHewODQtsaqjp6e1QKm/IsmS9v+/lb2T4rfNg1CzJ+tA/PIBloNSol7tFgUqJRSGnIMfRw25kYoNG/6tiaKQ/Lz/HN9g9IjqssaluaHm/9Y3h1s4PFodd11YfkRKeXZjGmJ5c/YFbhoUFYUR0EIDOwa4mA+e/wYn+/hG9IWlmfppgQW9zVddQ191nOk+CRElbYTU1100zpgGMTCx2opvncmqaaH1PSlqCX6AXX3TL/VMYM1PJybGeXo4XXE52jXYrVOuL3bUIN39+9A32WTleyMrK3IBO89ZBA01wUJBSKW9up/+w0srCRgNttFAoXNCa5SwsLMzMMBRqhRIqACq1KlCbgya7YLE+OCDUZ9ggDFrfoD7W2bg2421uad74DG044h3s1tNrIjjxrUNjW72bm7NPgHtvX4dcuT6rhJswP9g8dlZuur2DdUpG4vjUjQYrunXIL8yNiqGTu4Uk0WbeA8P6v7OxuXGeMw9gapmgWAVl+SzWLICiygKhUDg7pzc0qGlb7OtbsSRPXlt7W99QHwCPIM+ekXWkb7m56OztiIwNiIkKjowJ6x1ZJerVxudHYVnOBSeLpqZ16MtvKZRqRc9gF3PFlIMAxicH4xJC4xJCahqK6uqLExOjz5w56R3gAaBvxGhyn7E6PTg6CIAxPRoc4S+RGpn1VtdVUYXAcHehdteora/KyTZy6ZCqJaU1Ri4XpaXFAEQSUWpmSmi0X1P3TUgCeiOYnJ1MSIo7b3UhISmCJ1zsSbyO+SESCXzCvcytT/QNtuLGLJZvCsLCwqzsz5WW5U6MdKsNls2AYLfS6iKxch0GliER/pWNFQDEUomTm3OXQbQ1zjx7YHhgcm4SwPTczHl7SxZXH3lhfn6eOTcHoKSsSJcRgooBV1VTVV2rX0Ko6TWtNV5VqPU2SWOMUSdXu5TsWPl3yq2bgFqjLCvPc3HVG3uvMj8YbNZZK/PQsIDe/g4F1sTpCIQCmUysUskUSgW0dFkUaF6qlMiUEr5wg8waizUXbWD54ubtRllEyBSSgkq9lYVPoOmQa0vR1t3Y2FTH4c+PzumZ6NTCxayG4cxYhDHtyTw5Xe+vxpii96nJuWU97ZKzEtx8HQUiDoCp6an4pLjS8rUan7M5bGdfh7JWI+M75tysraOFSrXxqVbVpJ/WK82PsrqKsNiNxIxwdrYyjIjh4+MYEGiU94PJmSy7AeOdgGC9k0RZLe3S39rerFKrNGr6pDrQ321jYyUWr86O1bWW5ualTGmNPgGU1pQD4PP4/f29lOsegDmefnJk5mdqW5Y299CWnRKZJCkrAYAamu7udgBqtXpyZnyaPQWgqKowXhsAVywWxaREePs5RkR4+Qa5DC9hAhw9rVo6jTbuWc7MDGuqt797ZKRParBYKpWS4ECj+GA5JetOmrgIwfHBurJufmjl6wZz5TZsSU/MXCJSWx2aTdu2bt+tu/z733v9fuLW2vH3537wAlXT2Nie/MqvNtAzIaT5nb+//HIYIeTHYS/+6c+v/zTgp4SQf7zX+vSzz2wx20II+Z/X8175aYLd9569564/tHc2BLz408+YF3fv2aoGed7zhXvuu9vC4ry97YWOtrZ/dL23e/vWgqLSH3lGGP5ExI9/Qgg5eM/Bg/cc1FXuMNv6w+Dn//Cb/BPHHnjtl68RQq58e3Vm5rOIH0dcunLp/b73n/N87ne/yiWEmJFNV2RSQoiZmdmjp8/9tjjztZ+b//ylX3z46Yfnv3f69q3b9x04dPuma5uvK1XX79y7846kV15Vm72298COBcGVnXv3q8w0RENq36guzM+7a9+hrdt3bt+72Wzz9q3YeteRfccPHuZweC+88CNqVNu27fn+wVPfO3T/AP9LQsjf3v5reOCPNkZYHbw9nrumUW4zM6VrNExe0tjevLFoxy4uVgL+Yi8+W/vzVIKnwnL9FsCYmbZ1smxqXYdnb2SMf3dfOwAmk7kgXhiaHOXyOO39rSq1akLrylvbXEdlmIJBDlQ11PNcJoDCkkKZXAZgbHy4pCQLgF+UD0/IB9Dd0yHXCgyyCrK6eroA1LUuNsqOSjSdfi8lJ5VnYMvW3N7E5LKpckyyobG+hjE5FpsY7ePrFRbq3NJczeRO52iDizK1NG/rW2tkkYzStOK0pKbGajZ34yHydAiK1C/2K+0v3UPduvyR64KtwzmRbLFbI5vPOm1+3D/AROiKpqZaFxfLY2f2RkR5NrVULyzo+RK5Um7ncJ6vjdwYlxSVlBILYJajt07s1Apa1EDvoP4MYuVqzWTR9AoM8atvqNVo1ADqG2vdfGiPKicXm5k52s9RsGDEDw0zRqMzYwB0dnQMjesFoDwR/WocU9l7+ocHhRIRgJ6h/t7+XgDVTZUFFfQnweZyAEzOThSUZk+MjwAYGx0IDvWh8uv29Ha6uFh2dtRXVJZa25pjPeL54LiQ+oFlw0muCxUGDNDi+WG4ftQ3lA+vM8AFgPK68viE2JR0E3HQCkqzGTMrxUSYnpuOiAu2czznF+YQEuHW3l0zOzfu6ens7n4+Oj48IzsZwNjk2DyX7RPk09XfBWBkYnhRJw0N1Xv27x4apWVWjBlGV1/7yOiQXCEDkFeYWd9SNTY9PMuaARAS7MVkzjKZc9BG/y2vLh+fNPJFL6su6uxvBZCWkzYyOSJXSABU1FdQwoye7nYOa1qxoOcJpFJZQ4veoDi/xiiWamh4oC5K7fDI4AyT5og5fJa7r214eJBCYcJC+btEYpreP2al9aOiuiL9FsQWWTtCgr0DAm0j4308fC/4+DhERnpY25ya0MrpR2dG9p+i4zHPC/kh0aEAunv0cqe8onyZXMY3CGWQk5tlmPqRxZrLL0jLzklgsed0nGx0VPD09ACAqJgoTx99IMiWjtbE1AQAhRUFLG2A74qS7HkuLXGRSBb7PVNRGVl8NoCx8bH2znYAM8wZALkFGQkpUZW1ZR097Rq1WqVR5RauLz/CrUPKGudHQ8N/RvalgsLi3LEjx26/YHP0yImtR45uO3vuiJXdYXuHk9bWJ109LsTGR/j4uCuVSgByhUSx5Cx35OihpZGddV4Bc6w5G2fbeR4XAIs5pcvZnFuYXtdQB2BwuN8wmHBbX5thP/HxkVU1VdBoaqqqqJqCEv2C3DfU19XZweay+kb0ktm27taYeH3MlvyS9BhjDmZOYNqp97sHi8t0DdS7M6+0v9RUV/BXTFJ9KzAw3nfqzCHdJRUtm8OZl8kXSV80KrVyenZyQULLwcQyMQCuYLGrQ01D1RSL3i8CooLlGqPJNMuctnM0r22oBLAgFQHg8mj2oq27KSjMOykpsqa+HEBOUXpzm967Z47FrGqoA1BRV075GqUVZHQaJz2vqqsordC7hVc0lgMoKstr6dhgsNTvBglpelZ6pflRWlacn5/7XY6Mx+NcsLWQaiXZrPm5foMwvI7uLtUtyy5p0xw9697d25lTlm14l8vjxGtPEH19PSVaZyWfUHcmc26CpdektLa3DUyZUO5nFmaqlpgBAFCoTav7y7VcnhrqmsaqublZAPlFuW3/3ZMDQHWTfk6veH7pbTUIwfldwNvPnWOwYo1PjTe3NgOoaa1mzDEALEhFoQmhlo506P++gXY3P4fUvBSBNlxkXHJ8brVe8kZxFRyu/rCdkEMLqezdrL383Lg8o/UmNlmfwykuXV+OMA73zBXRPM2ggVQtITMJQF55hlS6INHubmkZiS7u9HKdU5DFW7K8/Rcir1g/B1aaHx3tbdNT6wvBdiMICvftXJKWIiMvY3SSFl1TDEReZboSip7RHqFY4OJjOzY1LBBxamuroVDkJSZCs2zAqaLqQqZWPFBRUx4ZE1xSniaTSwG0thp5AHuH+5ZWlwBYkCyEROklyB6B3mpthgaxSmrpZSORSwHEJCe0dhmp7Gf4MwDUkCanhomlYgDtQ631nf9hVdxaIBQKo5P1vNFK+0tBcTaVQeU7gIX5qZLCor4hiqfTNLU2AdDFWSirzAUwxaJPLrMs1jkrc92z7T0dM3MMAH4+7gs87sjosFgjySjWB73oMQgll5oWV1SUEx0bHBjuO89hAwhJCC6pKgbUg1qbsfbeLgDFlaXhCVEAJBJxRU05AIlaAqC4qtjQAbahrb6suhSUQs4gvUrfcH9kLK0kyqvMLl+i7v/vhFAi8PBz1l2utH5k5WdVNq2UZOymYGxq1DvCYWRKL4AK1CbMAsDhcvR/W3c7gLzCLP9AOnETm8vWReEH4ODhIuAbybhKa/R3vXz1eorouECugA2go7vTzc/V8BGN8QrU2dvtrm3Q1d0pli20dejFqSwOa2aaPt9OMfSJrAfG6DFX1FQkJuuTk/w/gfwivYB7pfnR3tU8t9F4uGtHSkaKh6d9RW0ZpeOtrq+dmmbweSy5QqLTl9a2lAPoN4jZkJgWn0PrVzVWdpaT0+NZZVmUrEym1TMb/s/hsaHcBUrcqW5ubvT2dq6uKQUQER/Y3N0gVogzMpIiYkMAtHS1ePl5zM5OqqCIT6ZTFclV8gsO51RKuuex8WHG7KREIurp7U7LiLd0OO0f6hIVG3TO8qyLj11gqFdwlG944i0Pe37rIFqYp1jPleZHU1PNd2M/zJlnCfiC4ZF+O6cLKi1HXNNYI5fLARSU5vcZzIzBscHiUloimZQVTy31E4z+ktrFwXtlmsUGCS2ddYHh3lZWFnaOlukZce5eTsHBXi5e9mOMofzC/L7+3vjMaAsnC29/u+6+1tLq/JHpYQC+Aa6x8SEd7bUBfm6FhVldnU3uns42TubFZdkCwcaTvvx3QiaX2jpY8PicsGAfgWB+dHR0Wf4jJy+lvLpshb5uLrp6O0vKigH0GKR6HJsZVajlAKZZ0wCUWrOalrbm+fl5pYGVjS7qI4BJ7iSArp6O8soyT3cHy/MnMnNTu7o7srIyTp06ZmV9preveXx8WMCfZ7KmAXAEnJjkyFmOfoOws7c+a3PcL9RrcLzvVr70fwaU44VKGzdpgjHmF+oDICMvvb3XiOPs7OykJsYWsgT7Dxy+565DS+s3AMbnMx+81/aUtRUht5ubW1KV7/3r3WtEqZTJvpz/IuTlyKcdHX/0Y8+q8l/v2HfI/IlTB3c9+Cnz4uOnLQkh31wWPfzAw4SQbWbbBJcFqmuq5374PNXJ15e+1kBz5MCR0+YP/vHPv29r67wi52X+Ou/RI486P+NGCPnJyz/9lDnzyImHCSGTFy9evMimHkzOfsXB3tn5KWflt5d3bt0+PTk53N/dxK2RXFf7e/kO/GuIEBL36i/faX6nq7vz1NFHA14MkMglza1/P3jHXZsIPmZMBYWF3Lv/XkLIG2+8eeD+fdu2b3X73g90r6y8Jm/v/8eC7LLFcYsnHrWmKj9hzswxJjZtvY0vFP7sJdqo4KtvvlKr1GYwk16VPnyaTuh95eqVz+dmySay+659h/bds2vHTqp+9OKH27eaEZgR1SbVZvXjDz1O1X/J/fLgoYO3bbntk08+0pCtjz366KK/4Lrm2hazbVTZbNMWQsgW7X9uRrZKRQKB4Ktj9x787NPZHzjqnzIzMzPqxXD9yMiMbWysBTAyOSyR0TIrnsBIMTvKGBkbN3Lu0Gg0UokUAIe3QV1zRXVRa1cjAIXWinGOO8MT8hQKozhhecV5Mrmsf6DLzcM2JTOePc+sa64FUFRWCGBoZCgrN0uhkouVEq5UODc/r9ByD41djQCGxvSii+m56cGJoTPnjm9swKuisq4kKMylu/c7OgzeRCy2D9IYzBWN2XaJTEoIeeLRJ3WV99x9xHA+WT7yxKJ5umnTpl17dhFC7r/nQbIGaAD2POsiY5L95Xzju01zs2MRQS+1NLW89krq8Xu2ya9v3XvgwMU5xt133s4XSndv33no3kNmanL48OHTJ81HhwefdnRekF49/EH9/AAAFRFJREFUferUJbH0R88HfKtUKq7ICSHWT1hbP2FNCLmN7LhjGyG7CCHkw48/NCPkBecXvvqGa/34k4SQX/36V8+4Oj3zpCMh5NPxzx9/2pLH51pZnImNTHj44TNbtmzesnXXHXvuWMuLrACFTLF358lnHZ+7wX6+A3z4yYf1dTUFvy82fdtw/UhMiq6tu7Xn24rqovKKYgBSqV6pXd9YD6BF68UUnhRMFeJTY4QiPoDq6sqz546GR/oBYLLpVcozwLOpuQkAX8jNyc8E0NLWwuazAfT0G1kppGozlzFm9QyHUCSM1yZWnZwZA8BhswCUlmfY2F/IyEo+b3/Uy8thQbymRXGGPa0bGICSsuKsFQMp/vdgYnIiNVtvQrvS+cXP34M5d2v1inX1VSIhTwNIIB9jjC+SfeaX0ZLyGTbLxsGSxZ0F0DfSX9VQBaC9p/HUuaNR8SGV9RVUiq+aptoabYA81jyLErymapMHRyfpTVIEEj4AnxD/Lm0OIYlSydcaQ03NTPINcmvINBoAzR0tAGLiApbLzjPGHI9IC0nPiHP3cckszjBM715bW5eTtziVxX8nJDJxikEC4pXkp0mpMcobMINeCxYkwsBwP4E2hn5tSy2Aydm5MQZDl/quoq6CqU3mKFaLAIjkNDPU1tFkZ3feytKcxZkDkJaZqNIoahsqAAyM9cmhVKoVlFRtRJulTwl1XOZigVWIVvmeXZgnMTDTdw1wd/d1B9Ax1Aagf7DLxeW8r49LXGK4q6/dxMRQY1O5s7e9W4CtrduF+MSY+WVynFZU5ocn3/zsgLcCfD43w8C2a6X1w9PDsbh8rXmkN4zIhNDS6nyGgWNBfn6OTCYCUGugrR0c7FmUwyU7P4c5z8zLz2TMThZXF7i427e0NkgVwuIKA/tW9iwlTuHw2QCExnkX+AIBACXQOzwErTmPDhpoug02pti4CL9ANy8fp8BAN29fBxdXi+Bgl5ycxM6uhrBw/8mpjXtgT0yN+Yf4UfF8AfT1d3v6OPKFN5R3YsOYZk3FxJvQ7xsfYwghhLh7eXk/77thTmeN+HPuGzyW+JET9Hns488mfvnLV3fu3E8IcXNxpSor3qwgm7c/+7QzIaSs4s9MwUVCSPIvXzXTYOue3Y889OhQzwfxsUnPefqNjYy/98++x5649/kXnrp06atHjj0UF/fzV19LVnz77TffcA/s3E8I+fzzzyc++4QQcvDuuwkh2wi5prhMiOYJyyeuEfLVN4KKv1Qorytff+P1Z7/nSAj5kvvZyy8/J1cI79hpdnD31nsPHNh1++b/yauorn731Vd/T3bcecHW6lHzx3/6y5fYX7E3QIG9u24/dPCuO3fQXPDT33v2nruObtu688boukE8/IC5va3t0noT/g1qop77dOae793y4Joz85Nvtb7l95zfG397/UfP+X88MbFrz+2dg+1PWthaPvYEIeTMmTPbd9Jn94if/OzS5cuEkH998K+dO2//Rdgvvvr6q/RfZ19SXCKE8EULb7/VQbV86+03//KX6v99Z+DylW/4POHdx+69dPmbaea0neXThJBrmuv//Ff3Dxzdriivfv9pNy0VcOTug8FBwR/OfRgRFvHJRUZWbsrt+263cf6+WnV919adX4svQaU8vu0xNufzf499fA1yqUL+akQyISTI96WW9pZf/vSXa3nlUcboE+b00e8b8Te7dxo6E0CpVhidJL9bnLO0WPaeIf9hbXdhqZvCLUJIRLBngF5tGBEfIRQKAXANxC1WzhaxGTSj0DnYnVVM2y7VtTbUNddTUTfKm8rDE0Klcjox1QRjVGc+ODVFp1KpqC+vbDbwfFwS0r+kkvaYLa4oEctEI6ND9g62AKa0xtUjo6NDQ4PlNcUAeAKul7drfmE21gCpSpGel+Ht49rWqbcS6uhpiU0O013y+Lzg4HWkY7y5aG5tDtd6sWNl/iMuMXJhYeN5yjaAwGAfezcbsUzQ0t7Y2dva1d+hgpLiSQE0dTYBGBzplyll/cNDErm4wdhuQ6mS+0bRvhsTjAlnb0uZQpiRlVZTV6YzR2WwZ2eY0wD8gv28ojwVMJK5ARjXZvDoG+xpNE6j0tLczOFyAIgWxN09HRlZ8aHhriyW/pDM5XHSMxPzCrKnpscXddve1R4WExYS4jdoHBleA8SlxPmG+tQ11wFQaZCckRgSFVRVu+5sfzcF45PjlQZuwyvNj/j0cKzN5/bmgivgRcaE2tqf8/Sxc3VzdHN1cnI+7+JiGRTobmN31sPHcYpBWwxVNNDimaqWWrFa/P+1d/1BaV35/qgRjYmuzY8mTWI1bswP18TVaq2peVbWgZFmsFYWSzE6VMvqyLMyvhAdq3W1mkRX69NxdTVWa7WxrqmuT+tItY6Oq6v14VIohmigRMNiIAZiIVAC3/cHCGijMUnT7b73Pv/Aufeec7l3Dueee76f7+cjFAmv9F4BAIl0lpoUAwCjE8N0xqo4qlypAoBltTr/QgFPxP+hCsO4YLy0rgQAqmvLNRo1AIjnRUyWlT+m02uJ0f7RNp5EMqnQN8ArK+ssAFRVXiDgQymUU+kMklan7hvoxUdHRGJDLlz4qYW7Hg/tHR2tHVYCw9r5qe38QzA9r9HpN//ceu/9vPjf/bb4j+8jhO4j9Kemqosf5DX9+U8IoZv/EL9zjvEq6TekM68Z0boa3qrvbs+JZz7ruLykVLo4Y5aWbmMc1S5ueoyz612levb6nLfnQQfkVH/po6vfzBjvG8Ne/DdTRaHw66ampsMHD79OeP2OStHa3MZisBBCoS+GGLfo+Nf+fv6DYtORu37hhhDiibjvncv1O/irEy+/bNr+n01VgdEnu9ifvXTsJRcH5zuaW0FBoQKhECH0UVNLWto7f/3qrwihGzfFb7zx+kthp7v+8gVC6Nsb4tfioxOS49N+l7SkUty5e3d4koOcnPVGpyWlJo78SlV5blFO3heDfzt37p+p+rd5zEn++8C+3evuth0/kumJBsMDGLnroa6ulEyxziEMem1EeLClyBNyo4g42+N5nJGCPBbhND4yMsTX1yPA1yeWhM8uzKxvrACjGgDqGqo9Pd3CAnzJ8cTmy3X5NqnxsGJ9CgAyxSKXywUAiVTi4uFSXWdNUI7EhXE5DzbezCzOVK28Us5KrLoXU1OTNt+tblG1zVUZqw1U6AzajNDaeENjIzEmkkwNpsSFxdOjqAnRubkp9GRSeIRPWeXPJbfloahrqMzIpFuKa+Mvtripkn2nUbtt32z0wQ45ubk+aynq9EaMq1XvEWN0VC5JLcXpq9N8oSj39xc3aDAwIMgO4xgZF/XeuT9YNhZ/UHgq9IXtzrsDfh2MECKdIbV/3L5n57MXqy5GhePVN9QIoaZPW50dt/T1/5f3L/f7BRxDCLG//BKHNccl79275+TohAvBzl6fq/mw5lL5pUPPH1pYXKCn0j//7HOEDB9/8vGZN898+PGHb51569btW7S3z+Cw2HcY50zV3zv/+68mxsovlPufOC5blB9d8V9zdNZ57Xef+3b5tnzBw/MQMhi2ubphlpfy363r6Lj0yZ8/evO3iRvfQEDGguIc9fI/jge+YO/g/tKLYb88cNC0647qDpVC7LzS47T1SYNBG2NZrcLjotfdbTt+EGOwD2T0r4fWjtqUs4mW4qJyIRJ/3FIUSYTYqJOP0aPlisUdux2raysBILcwBwA0Wi0A6ECXnmMmeKrVKpM/IADoQS9blC0uSm3zBE3oH1mr6iSSiPr6exdkYlNxSSVnFZpp6+zBAalMTE+lmphUC1JRUUFqXVOFUqPSg144JwQbMiKRHIWLPD7FGweAK/V1ADC4YpVe11ATHOxVsX56nEQyS00kFpVbCbOLakXuhWIAmBYJMnKtNHrW2ZSnnX3Zz74ywbHOoDdaX6ckER6p6aGh3kRarKU4Msn2Dz1kKU5OTEbgH9+FFHc6zNt3m+0WqUwKAEKhYHqaI5KIAKCP3R2fGGPy2Qo9dbyzpwMAOgbNq66t3S0DE+z6hpq0jJTFlYTv8uqygqICg0E7J5rLKTFfu0AgOMtKWdbIYyhm5mlUHG6CMzLNG1eplKY0qitdHdV1xQBgNOpORYSZaGzNPR0DowMAkJBA6mP3Dwyyo+Kw+cXZBYVrs5EVKgWZRiIQ8ZypMR2o9StZW40ta3XMhiYHouPxVc0VAFCUly22Md1+Grjc2djV/YD56dr+IVcuRmBDd2+zz81l8AT8dVp7BDx5Is3c3OwRH6/YOIJ4JUdmbGKkqMoc95qcnhzlmnOymZlpGenJAFBRX2uKuhWWWP+d6cwU4YygoqZStmRe3ckrzSFnRNNSSOk20ii4GBwAdPS3+ATsb71cLxHPAUBtQ/XsvLCvv7U4LzMpkaxQLAIAR8ABAIVMlroigzMyNJBAo/gFe5aVrbIJBIBudhsjM0UwY44npLFS5cvr6ijJNUuyJdmM0NwnSsvyDeukYz0Jethd1ASS96G9sXEhWsOq8Wmj8cOCyclxBpOGxYdnZWcsqx/ffflHQTQptL6hWiQWqbVqVl4WAFTWVZTUmkfvCxUFZEqMRCJKTqNIZOZoWeuK6Vx3n1kBYUE+7xPgYTKunuaPZ+UyAWCaNz3CGVtUSJisJMZZGomCIycRJrirFGfHJoeTqHGkWNxJfGhaagKTmRwcElRQyCKTTvoe35acFEUkB+Nj/ImUVZx4AFCplpiZybEknFRmXvHT6NQiySq2gEAs3uDCM1kMy7D35Ghoqg89GZDOpA2PbCRh+Mj6hUqVLC+PGRDosdfbhSd86nLYP0Rvfx8zMxUAuLzpeYVkUSYrry0BgHH+aDydIpGLAGBOJCxbESpNzzLbdGr0WoVCYTQau3qsuUw/1JvQG9XEBFxLSy3YWEICACM/NYb2aA9ckWR2fGJQIp5hZibRksgA0NXTCgBDo70yuWxoRapkXr4AAFMcc4S5b7CvtbddJpeyspkAIBALACAnnzUnEjzwLJuDrqik0D/gUFTUyeaWCo16eZPVNjV+bIDW9gbfYK+AIC8qlbzwIL2Up4GhIXZQ0FGxiDvBGU5KjQeTcndNlUnNZk4kwhKDSityFGppWW0ZAGi0CpHkwUSWvqG+iurK9Gx6SFhAFClyZoYvmOVxplfl37a1XU5NM7/yjYz1cvnjTBaDFEcEMMiVivbedgCYEowCwIXKbANo9KABgCWVSqO3jtXssT5mlnk2HXk6wrI9tyB7Vsy35AhWNVbJtUuWpHOZYh4fHd7ds1nXRwt6RvqZhZmUVGp2Aeuhmp8b4EfWT5Ytiju72yMIwbFJ2IHB7odXeALUN1X7h/kKJRwA6Ohr4/A4ANAz1FtaWwoAk5yx3fu2Ecn400QChRIbGuZ3yGdfSOhRfNTJID9vCpVIZyXVNq7VyGtsb5wWTgMAIz2JTk8CgJq68p6eTgDQ6lVGMBaXWuMscoV0jDMIABob293qhvIrXZcBoKIuT2dQyeRSldb8RE5JofIFPI1heXhiCAC6B1Z5oI6ODdMzzK9g9Q2lwSFH6PTEzdyHZfWyXLHQ3NyII4SSyYS8QpZE+qPNYZ90/NgYBqOuf7ArnBB0NjcjhoRj5TGMDxO3f1QsyBZYuWdpqbRTEaeOBnkI+BwAUBvVo9xBjU5DZ1BUK2QiXGxED3ttl42OjTQYH2yPXF1X2dRqXn2fm1s1QzcpDLT2twBAW0e9RisViWf9Arxsj+FwxnU6rVKpWFBIVVplPI2UxIgXzJrjMrMSIXNForN/tLe6toRAwZKohNLqYtXDZ3jG/v5+RkZiMoPc3FBr0G72YfEY+En9G0zgznCoiUQ8Pnift31JWSaPx9M/yirtxtDpNHwBL7uQdZpK2OHh6Opu39nRAgBHw31M76WdPT0WFiOXz+noaonAm9UASquK+gb6SsqLGEwqAMTERALAkkaZzKSRqAT2SD8AhBMDB8fYAMDlTmWkpwBAWXl+a1uDalkRHhGanELj8rkA0NRaU1CcnpaeaGq5qKRwbKQXAOYX5rp7LvsH7PEPcjtyBFNTUzIw0LveIrVer5scH0qkElJS42JJpwKx/tFx2J9YmXij9dOnhBNHA1qa/mK75cbNb8+fL/jm67/f37Jlm5uzj6cn5Q2q7+HAnTufXa+R9YDBbP3VMb/id1ctyxKif1N3vuKZ7TsRQq+9+mr9J5fefjP5XPF/2Bsczude3L3juZexL7R39uw7uJ/L5bo4bN31jBdCyOPIkWtX+Xs89ytvfuu+Y0fn51deDg3z9vA7sNsDIXTiRIAG6RECrXZZMi+6PnvNdSem6ELRv6elRL6Cd/jens+ZN7jobt5d2O92IPktqmR+YWTksz9W17wShh/44ptdO1fZWH39Nb+X3eXpcaCz8/LEV6Murlv9fh2a9+75Q0f8mlp6H/0ePzX8uM+XJ4RGp1brlhgZSTjiqdMxUdiocO8gz9h44vDYsE6/2dfsuESCZRVYpdM0dJrnemUVZurk0GqrFzKdzCpiTU1NlBbnUynm9QzO9CQAKG3oiewRtlQmSUyNT8lI5HDGAKCsopiWTBsaHgAw5/5m5dNi4sIrqgp6epqzctIiIvwjsEfCwry9vV2PH/fx8fHCEkK6rrRNT601Bvn5wDJ+/Fz8xR4JiruKhRuST7s/lS9IxdevKRV3HFwctmNcJTdEmnt6RyeNk6OLs7MrxtV1337vvTue1WpuHTvsFxIU6LwV477Hw33nM7yr/KCjwXUfNRqMmtSkDDeX7RgnE7EPTPckL+9duVyeQKNOcgTvpKQghNo+bfsOdFeFf/P08HJz3Xsi4IRIJMxKT8PYOe7Z5eaAQbwbsxjXfU73HQ4f2hURFk2i0Lyee/6fep8eHxZ/MXP/yMnJef9fp388HjS6u3dUt+F7x2vX+EFBgXfvLY+OjiqWbtxW6MTXrzpu3X7wueeXl5cEM4L79rr5+dkjR48qb31vb2dwcHB03+Xusc9jlM3e7vqc9zHfSGyE+y+2RmBfs9/yAALv/wKs7R/79u5Npr9t3mnhadhZ/k4rX2wpHBvutewxfQCsKq6qYocQIEDI4m0OgFb5nAMCO2RnbXGlcZuz21Y3/wy7taew/kLbdgAhO2SP7BBCRhMPxt7eHtljnDF6vR4hZI/sjcho0OuNCDk6OiIA/f371ku1vU7rRf7L48svB0dHxxBCyNXV9WEH/z/+7+J/AGZULTEPz/7LAAAAAElFTkSuQmCC</data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;I&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;II&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;III&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;IV&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;V&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pernyataan:&lt;br&gt;
+(1) adanya pegunungan Himalaya;&lt;br&gt;
+(2) adanya pegunungan Sirkum Pasifik;&lt;br&gt;
+(3) bentuk pantai Amerika Selatan sama dengan pantai barat Afrika;&lt;br&gt;
+(4) Greenland bergerak menjauhi Eropa; dan&lt;br&gt;
+(5) adanya pantai laut dalam.&lt;br&gt;
+Bukti teori apungan oleh Wegener adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pernyataan:&lt;br&gt;
+(1) reboisasi;&lt;br&gt;
+(2) diversifikasi;&lt;br&gt;
+(3) ekstensifikasi;&lt;br&gt;
+(4) intensifikasi; dan&lt;br&gt;
+(5) penghijauan.&lt;br&gt;
+Upaya pemanfaatan lingkungan hidup untuk meningkatkan produksi di bidang pertanian adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Lapiasan atmosfer yang berperan memancarkan gelombang pendek radio terjadi pada lapisan nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pernyataan:&lt;br&gt;
+(1) menggunakan bahan tambang sebanyak-banyaknya;&lt;br&gt;
+(2) menggunakan teknologi yang tidak ramah pada lingkungan;&lt;br&gt;
+(3) pengembangan dan pengelolaan keanekaragaman hayati; dan&lt;br&gt;
+(4) reklamasi dan rehabilitasi lahan kritis.&lt;br&gt;
+Tindakan yang mencerminkan pem-bangunan berkelanjutan adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pabrik minuman di Ungaran mengalami perkembangan yang pesat. Hal itu disebabkan adanya faktor-faktor pendorong industri utama yaitu...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;modal, tenaga kerja, dan daya beli rendah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bahan mentah, tenaga kerja, dan pemasaran&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tenaga ahli, modal dan relief tanah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kesuburan tanah, iklim sejuk dan kebudayaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pegunungan, otonomi daerah dan sarana yang cukup&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ciri iklim Koppen: temperatur bulan terdingin tidak kurang dari 180C rata-rata curah hujan tahunan &amp;gt; 60 mm tumbuhan beraneka ragam&lt;br&gt;
+Jenis iklim yang sesuai dengan ciri-ciri tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;iklim A&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;iklim B&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;iklim C&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;iklim D&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;iklim E&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Desa Spasial merupakan data grafis yang mengidentifikasi kenampakan yang menunjukkan keruangan, lokasi, atau tempat-tempat di permukaan bumi. Model data yang dibentuk oleh kemampuan sel atau piksel (picture element) dengan bentuk grid dan setiap piksel mempunyai referensi. Model data tersebut disebut...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;data vektor&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;data atribut&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;data kualitatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;data kuantitatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;data raster&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pernyataan:&lt;br&gt;
+(1) pendapatan penduduk meningkat;&lt;br&gt;
+(2) adanya asimilasi budaya masyarakat;&lt;br&gt;
+(3) kesejahteraan penduduk meningkat;&lt;br&gt;
+(4) teknologi dan transportasi berkembang pesat; dan&lt;br&gt;
+(5) anggaran pendapatan daerah meningkat.&lt;br&gt;
+Faktor-faktor yang memengaruhi pusat pertumbuhan terhadap ekonomi masyarakat adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pernyataan:&lt;br&gt;
+(1) banyak mengandung mineral;&lt;br&gt;
+(2) daya serap air baik;&lt;br&gt;
+(3) sirkulasi udara di dalam tanah baik;&lt;br&gt;
+(4) selalu tergenang air; dan&lt;br&gt;
+(5) terdapat di daerah pegunungan.&lt;br&gt;
+Ciri-ciri tanah yang subur untuk kegiatan pertanian adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Di kota besar dibangun mal yang berdekatan dengan penduduk padat dan status sosial tinggi. Prinsip geografi yang berkaitan dengan fenomena tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;prinsip persebaran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;prinsip interelasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;prisip korologi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;prinsip lokasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;prinsip deskripsi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dibawah ini yang termasuk kajian litosfer adalah. . . .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;jumlah, mutu, persebaran dan peristiwa-peristiwa yang berhubungan dengan air&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;proses-proses yang menyebabkan terjadinya perubahan bentuk permukaan bumi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sejarah kehidupan, pertumbuhan kehidupan, dan persebaran kehidupan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;manusia dan hubungannya dengan lingkungan alam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cuaca dan iklim&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Keterkaitan antara faktor yang satu dengan faktor yang lainnya dan terjadi di permukaan bumi tersebar tidak merata, dapat dipelajari dengan menggunakan prinsip...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;distribusi dan interaksi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;interelasi dan distribusi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;korologi dan keruangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;deskripsi dan interelasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;korologi dan dependensi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bumi yang berkerut seperti jeruk yang kering sebagai gambaran tentang keberadaan bumi akibat proses penurunan suhu dan pada akhirnya membentuk pegunugan dan lembah, ini merupakan pendapat dari teori . . . .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kabut&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kontraksi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;apungan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pergeseran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hipotesis planetisimal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Faktor yang tidak berpengaruh terhadap pelapukan atau proses penghancuran massa batuan adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;struktur batuan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;iklim&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;topografi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;gempa bumi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;faktor biologis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Susunan benda angkasa yang membentuk suatu sistem dengan matahari sebagai pusatnya dinamakan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;komet&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;galaksi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;semesta&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tatasurya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bintang berekor&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Di bawah ini adalah fungsi peta, kecuali...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menunjukkan lokasi di permukaan bumi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menunjukkan arah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menunjukkan jarak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;melukiskan permukaan bumi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;melukiskan luas&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Proses pembentukan muka bumi oleh pelipatan dan patahan dinamakan . . . .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;vulkanisme&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;diatropisme&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;plutonisme&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;oksigen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;endogen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Daerah berbukit-bukit pada peta menggunakan warna...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;biru&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hijau&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;coklat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;merah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kuning&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Konservasi tanah dengan metode vegetatif dapat dilakukan dengan cara...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;reboisasi dan pengapuran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;terassiring dan pengapuran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;reboisasi dan terassiring&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;terassering dan cekdam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;strip cropping dan crop rotation&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ada sebuah peta berskala 1: 200.000. Peta tersebut termasuk jenis...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;peta tematik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;peta kadaster&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;peta berskala besar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;peta berskala menengah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;peta berskala kecil&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Salah satu cirri piramida penduduk stasioner adalah tingkat...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kematian tinggi, kelahiran rendah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kelahiran tinggi, kematian rendah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kelahiran tinggi, migrasi rendah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kelahiran rendah, migrasi tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kelahiran rendah, kematian rendah&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Industri di Indonesia dapat dibedakan menjadi beberapa kelompok, antara lain aneka industri. Jenis industri yang termasuk dalam kelompok aneka industri adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;industri mesin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;industri baja&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;industri kertas&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;industri kecil&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;industri tekstil&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pola desa didaerah pegunungan kapur seperti yang terdapat di Gunung Kidul Yogyakarta pada umumnya...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;mengelompok&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tersebar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memanjang pantai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memanjang sungai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memusat didaerah tertentu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perubahan pola keruangan perkotaan dipengaruhi oleh...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;banyaknya gedung perkantoran yang dibangun&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;banyaknya pabrik yang didirikan dikota&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;besarnya arus urbanisasi dan banyaknya jaringan transportasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menyempitnya lahan karena abrasi pantai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;terlalu banyaknya sarana hiburan dikota&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sebuah pabrik kimia diprotes oleh masyarakat setempat, karena mencemari lahan pertanian. Akhirnya pabrik ditutup dan tidak berproduksi lagi. Kasus ini tidak akan terjadi apabila pabrik...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;mengelola limbah&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mempekerjakan masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;patungan modal dengan masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mendirikan serikat kerja&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memproduksi sumber daya alam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

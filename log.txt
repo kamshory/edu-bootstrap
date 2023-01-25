@@ -1,0 +1,120 @@
+2023-01-24 19:16:16 fhwifehqwfqwf
+2023-01-24 19:16:16 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063cfcea4954a4c43129', 'fhwifehqwfqwf', '063ce6a99c2c55214e6e', '4', '1', '1', 'upper-alpha', '0059fc751be50aba19064bf74010d545', 
+					'2023-01-24 19:27:16', 'aaaaaaaaaaaaa', '2023-01-24 19:27:16', 'aaaaaaaaaaaaa', '1');
+					
+2023-01-24 19:16:16 ehfuihefhihfiwef
+2023-01-24 19:16:16 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063cfcea495a100eb566', 'ehfuihefhihfiwef', '063ce6a99c2c55214e6e', '5', '1', '1', 'upper-alpha', '539c3edbc9a66a154df7814205b0f6dc', 
+					'2023-01-24 19:27:16', 'aaaaaaaaaaaaa', '2023-01-24 19:27:16', 'aaaaaaaaaaaaa', '1');
+					
+2023-01-24 19:16:16 Perhatikan Persamaan berikut:<br />
+Disediakan persamaan egfiuwef wefuwegfugweuifweufwuegfuwgefuweufwuef<br />
+<img src="media.edu/school/063ce682801be89951aa/test/063ce6a99c2c55214e6e/37f0d72eb5c45dcd47768ffd60b4467d.svg" alt="37f0d72eb5c45dcd47768ffd60b4467d.svg" style="vertical-align:middle" data-latex="f(x)=a_0+\sum_(n=1)^&infin; (a_n  \cos (n&pi;x/L)+b_n  \sin (n&pi;x/L) ) " class="latex-image" alt="f(x)=a_0+\sum_(n=1)^&infin; (a_n  \cos (n&pi;x/L)+b_n  \sin (n&pi;x/L) ) "><br />
+Nilai x pada persamaan berikut adalah:
+2023-01-24 19:16:16 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063cfcea4963f93e66cc', 'Perhatikan Persamaan berikut:<br />
+Disediakan persamaan egfiuwef wefuwegfugweuifweufwuegfuwgefuweufwuef<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063ce6a99c2c55214e6e/37f0d72eb5c45dcd47768ffd60b4467d.svg\" alt=\"37f0d72eb5c45dcd47768ffd60b4467d.svg\" style=\"vertical-align:middle\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \" class=\"latex-image\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \"><br />
+Nilai x pada persamaan berikut adalah:', '063ce6a99c2c55214e6e', '6', '1', '1', 'upper-alpha', '3aa2cc619634c2ab2540c7bf911838d8', 
+					'2023-01-24 19:27:16', 'aaaaaaaaaaaaa', '2023-01-24 19:27:16', 'aaaaaaaaaaaaa', '1');
+					
+2023-01-24 19:16:16 Perhatikan persamaan berikut:<br />
+<img src="media.edu/school/063ce682801be89951aa/test/063ce6a99c2c55214e6e/4b178628291896053717482b980d2ff5.svg" alt="4b178628291896053717482b980d2ff5.svg" style="vertical-align:middle" data-latex="(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;" class="latex-image" alt="(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;"><br />
+Nila x adalah...
+2023-01-24 19:16:16 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063cfcea4969889a0450', 'Perhatikan persamaan berikut:<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063ce6a99c2c55214e6e/4b178628291896053717482b980d2ff5.svg\" alt=\"4b178628291896053717482b980d2ff5.svg\" style=\"vertical-align:middle\" data-latex=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" class=\"latex-image\" alt=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\"><br />
+Nila x adalah...', '063ce6a99c2c55214e6e', '7', '1', '1', 'upper-alpha', 'a9f78fa7e24afa2ec9cb595db0663746', 
+					'2023-01-24 19:27:16', 'aaaaaaaaaaaaa', '2023-01-24 19:27:16', 'aaaaaaaaaaaaa', '1');
+					
+2023-01-24 19:16:16 Berikut adalah ayat Al Quran<br />
+&#1589;&#1616;&#1585;&#1614;&#1575;&#1591;&#1614; &#1575;&#1604;&#1614;&#1617;&#1584;&#1616;&#1610;&#1606;&#1614; &#1571;&#1614;&#1606;&#1618;&#1593;&#1614;&#1605;&#1618;&#1578;&#1614; &#1593;&#1614;&#1604;&#1614;&#1610;&#1618;&#1607;&#1616;&#1605;&#1618; &#1594;&#1614;&#1610;&#1618;&#1585;&#1616; &#1575;&#1604;&#1618;&#1605;&#1614;&#1594;&#1618;&#1590;&#1615;&#1608;&#1576;&#1616; &#1593;&#1614;&#1604;&#1614;&#1610;&#1618;&#1607;&#1616;&#1605;&#1618; &#1608;&#1614;&#1604;&#1575; &#1575;&#1604;&#1590;&#1614;&#1617;&#1575;&#1604;&#1616;&#1617;&#1610;&#1606;&#1614;<br />
+Ayat  tersebut terdapat pada surat
+2023-01-24 19:16:16 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063cfcea496ff16c4bc1', 'Berikut adalah ayat Al Quran<br />
+&#1589;&#1616;&#1585;&#1614;&#1575;&#1591;&#1614; &#1575;&#1604;&#1614;&#1617;&#1584;&#1616;&#1610;&#1606;&#1614; &#1571;&#1614;&#1606;&#1618;&#1593;&#1614;&#1605;&#1618;&#1578;&#1614; &#1593;&#1614;&#1604;&#1614;&#1610;&#1618;&#1607;&#1616;&#1605;&#1618; &#1594;&#1614;&#1610;&#1618;&#1585;&#1616; &#1575;&#1604;&#1618;&#1605;&#1614;&#1594;&#1618;&#1590;&#1615;&#1608;&#1576;&#1616; &#1593;&#1614;&#1604;&#1614;&#1610;&#1618;&#1607;&#1616;&#1605;&#1618; &#1608;&#1614;&#1604;&#1575; &#1575;&#1604;&#1590;&#1614;&#1617;&#1575;&#1604;&#1616;&#1617;&#1610;&#1606;&#1614;<br />
+Ayat  tersebut terdapat pada surat', '063ce6a99c2c55214e6e', '8', '1', '1', 'upper-alpha', '401e6684386db582eb33d0498ab9ab70', 
+					'2023-01-24 19:27:16', 'aaaaaaaaaaaaa', '2023-01-24 19:27:16', 'aaaaaaaaaaaaa', '1');
+					
+2023-01-24 19:16:16 Perhatikan persamaan berikut:<br />
+<img src="media.edu/school/063ce682801be89951aa/test/063ce6a99c2c55214e6e/868803a61cefd15bd4e514564de8a2d2.svg" alt="868803a61cefd15bd4e514564de8a2d2.svg" style="vertical-align:middle" data-latex="\sin &alpha;&plusmn;\sin &beta;=2 \sin (1/2 (&alpha;&plusmn;&beta;))  \cos (1/2 (&alpha;&#8723;&beta;))" class="latex-image" alt="\sin &alpha;&plusmn;\sin &beta;=2 \sin (1/2 (&alpha;&plusmn;&beta;))  \cos (1/2 (&alpha;&#8723;&beta;))"><br />
+Persamaan di atas adalah:
+2023-01-24 19:16:16 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063cfcea49778a59418e', 'Perhatikan persamaan berikut:<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063ce6a99c2c55214e6e/868803a61cefd15bd4e514564de8a2d2.svg\" alt=\"868803a61cefd15bd4e514564de8a2d2.svg\" style=\"vertical-align:middle\" data-latex=\"\\sin &alpha;&plusmn;\\sin &beta;=2 \\sin (1/2 (&alpha;&plusmn;&beta;))  \\cos (1/2 (&alpha;&#8723;&beta;))\" class=\"latex-image\" alt=\"\\sin &alpha;&plusmn;\\sin &beta;=2 \\sin (1/2 (&alpha;&plusmn;&beta;))  \\cos (1/2 (&alpha;&#8723;&beta;))\"><br />
+Persamaan di atas adalah:', '063ce6a99c2c55214e6e', '9', '1', '1', 'upper-alpha', '34c66207d20f68d80e6b225fb90f8f07', 
+					'2023-01-24 19:27:16', 'aaaaaaaaaaaaa', '2023-01-24 19:27:16', 'aaaaaaaaaaaaa', '1');
+					
+2023-01-24 19:30:30 fhwifehqwfqwf
+2023-01-24 19:30:30 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063cfd3da2fb62500f55', 'fhwifehqwfqwf', '063ce6a99c2c55214e6e', '10', '1', '1', 'upper-alpha', '0059fc751be50aba19064bf74010d545', 
+					'2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '1');
+					
+2023-01-24 19:30:30 ehfuihefhihfiwef
+2023-01-24 19:30:30 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063cfd3da300e0018808', 'ehfuihefhihfiwef', '063ce6a99c2c55214e6e', '11', '1', '1', 'upper-alpha', '539c3edbc9a66a154df7814205b0f6dc', 
+					'2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '1');
+					
+2023-01-24 19:30:30 Perhatikan Persamaan berikut:<br />
+Disediakan persamaan egfiuwef wefuwegfugweuifweufwuegfuwgefuweufwuef<br />
+<img src="media.edu/school/063ce682801be89951aa/test/063ce6a99c2c55214e6e/37f0d72eb5c45dcd47768ffd60b4467d.svg" alt="37f0d72eb5c45dcd47768ffd60b4467d.svg" style="vertical-align:middle" data-latex="f(x)=a_0+\sum_(n=1)^&infin; (a_n  \cos (n&pi;x/L)+b_n  \sin (n&pi;x/L) ) " class="latex-image" alt="f(x)=a_0+\sum_(n=1)^&infin; (a_n  \cos (n&pi;x/L)+b_n  \sin (n&pi;x/L) ) "><br />
+Nilai x pada persamaan berikut adalah:
+2023-01-24 19:30:30 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063cfd3da30767c40cda', 'Perhatikan Persamaan berikut:<br />
+Disediakan persamaan egfiuwef wefuwegfugweuifweufwuegfuwgefuweufwuef<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063ce6a99c2c55214e6e/37f0d72eb5c45dcd47768ffd60b4467d.svg\" alt=\"37f0d72eb5c45dcd47768ffd60b4467d.svg\" style=\"vertical-align:middle\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \" class=\"latex-image\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \"><br />
+Nilai x pada persamaan berikut adalah:', '063ce6a99c2c55214e6e', '12', '1', '1', 'upper-alpha', '3aa2cc619634c2ab2540c7bf911838d8', 
+					'2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '1');
+					
+2023-01-24 19:30:30 Perhatikan persamaan berikut:<br />
+<img src="media.edu/school/063ce682801be89951aa/test/063ce6a99c2c55214e6e/4b178628291896053717482b980d2ff5.svg" alt="4b178628291896053717482b980d2ff5.svg" style="vertical-align:middle" data-latex="(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;" class="latex-image" alt="(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;"><br />
+Nila x adalah...
+2023-01-24 19:30:30 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063cfd3da30dbc20ad23', 'Perhatikan persamaan berikut:<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063ce6a99c2c55214e6e/4b178628291896053717482b980d2ff5.svg\" alt=\"4b178628291896053717482b980d2ff5.svg\" style=\"vertical-align:middle\" data-latex=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" class=\"latex-image\" alt=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\"><br />
+Nila x adalah...', '063ce6a99c2c55214e6e', '13', '1', '1', 'upper-alpha', 'a9f78fa7e24afa2ec9cb595db0663746', 
+					'2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '1');
+					
+2023-01-24 19:30:30 Berikut adalah ayat Al Quran<br />
+&#1589;&#1616;&#1585;&#1614;&#1575;&#1591;&#1614; &#1575;&#1604;&#1614;&#1617;&#1584;&#1616;&#1610;&#1606;&#1614; &#1571;&#1614;&#1606;&#1618;&#1593;&#1614;&#1605;&#1618;&#1578;&#1614; &#1593;&#1614;&#1604;&#1614;&#1610;&#1618;&#1607;&#1616;&#1605;&#1618; &#1594;&#1614;&#1610;&#1618;&#1585;&#1616; &#1575;&#1604;&#1618;&#1605;&#1614;&#1594;&#1618;&#1590;&#1615;&#1608;&#1576;&#1616; &#1593;&#1614;&#1604;&#1614;&#1610;&#1618;&#1607;&#1616;&#1605;&#1618; &#1608;&#1614;&#1604;&#1575; &#1575;&#1604;&#1590;&#1614;&#1617;&#1575;&#1604;&#1616;&#1617;&#1610;&#1606;&#1614;<br />
+Ayat  tersebut terdapat pada surat
+2023-01-24 19:30:30 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063cfd3da312b443ba80', 'Berikut adalah ayat Al Quran<br />
+&#1589;&#1616;&#1585;&#1614;&#1575;&#1591;&#1614; &#1575;&#1604;&#1614;&#1617;&#1584;&#1616;&#1610;&#1606;&#1614; &#1571;&#1614;&#1606;&#1618;&#1593;&#1614;&#1605;&#1618;&#1578;&#1614; &#1593;&#1614;&#1604;&#1614;&#1610;&#1618;&#1607;&#1616;&#1605;&#1618; &#1594;&#1614;&#1610;&#1618;&#1585;&#1616; &#1575;&#1604;&#1618;&#1605;&#1614;&#1594;&#1618;&#1590;&#1615;&#1608;&#1576;&#1616; &#1593;&#1614;&#1604;&#1614;&#1610;&#1618;&#1607;&#1616;&#1605;&#1618; &#1608;&#1614;&#1604;&#1575; &#1575;&#1604;&#1590;&#1614;&#1617;&#1575;&#1604;&#1616;&#1617;&#1610;&#1606;&#1614;<br />
+Ayat  tersebut terdapat pada surat', '063ce6a99c2c55214e6e', '14', '1', '1', 'upper-alpha', '401e6684386db582eb33d0498ab9ab70', 
+					'2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '1');
+					
+2023-01-24 19:30:30 Perhatikan persamaan berikut:<br />
+<img src="media.edu/school/063ce682801be89951aa/test/063ce6a99c2c55214e6e/868803a61cefd15bd4e514564de8a2d2.svg" alt="868803a61cefd15bd4e514564de8a2d2.svg" style="vertical-align:middle" data-latex="\sin &alpha;&plusmn;\sin &beta;=2 \sin (1/2 (&alpha;&plusmn;&beta;))  \cos (1/2 (&alpha;&#8723;&beta;))" class="latex-image" alt="\sin &alpha;&plusmn;\sin &beta;=2 \sin (1/2 (&alpha;&plusmn;&beta;))  \cos (1/2 (&alpha;&#8723;&beta;))"><br />
+Persamaan di atas adalah:
+2023-01-24 19:30:30 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063cfd3da315f63c5dc9', 'Perhatikan persamaan berikut:<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063ce6a99c2c55214e6e/868803a61cefd15bd4e514564de8a2d2.svg\" alt=\"868803a61cefd15bd4e514564de8a2d2.svg\" style=\"vertical-align:middle\" data-latex=\"\\sin &alpha;&plusmn;\\sin &beta;=2 \\sin (1/2 (&alpha;&plusmn;&beta;))  \\cos (1/2 (&alpha;&#8723;&beta;))\" class=\"latex-image\" alt=\"\\sin &alpha;&plusmn;\\sin &beta;=2 \\sin (1/2 (&alpha;&plusmn;&beta;))  \\cos (1/2 (&alpha;&#8723;&beta;))\"><br />
+Persamaan di atas adalah:', '063ce6a99c2c55214e6e', '15', '1', '1', 'upper-alpha', '34c66207d20f68d80e6b225fb90f8f07', 
+					'2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '1');
+					

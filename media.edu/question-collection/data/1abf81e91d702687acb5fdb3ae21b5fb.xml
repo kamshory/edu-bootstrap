@@ -1,0 +1,2740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Pendidikan pada hakikatnya merupakan proses membangun peradaban bangsa. Pendidikan harus selalu bertumpu pada konsep pertumbuhan, pengembangan, pembaruan, dan kelangsungan penyelenggaraannya harus dikelola secara profesional. Mengingat pendidikan mempunyai peran yang sangat strategis dalam proses pembangunan peradaban bangsa diperlukan komitmen nasional dalam bidang pendidikan. Adanya dukungan pemerintah perlu ditindaklanjuti oleh kabupaten/kota dengan memberikan alokasi anggaran pendidikan di daerahnya sesuai dengan amanat konstitusi. Penggunaan anggaran pun harus dipantau dan dievaluasi setiap saat.&lt;br&gt;&lt;br&gt;
+Ide pokok paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pembangunan peradaban bangsa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Proses pembangunan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penggunaan anggaran pendidikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hakikat pendidikan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perlunya komitmen nasional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;ermati paragraf berikut!&lt;br&gt;
+Pendidikan pada hakikatnya merupakan proses membangun peradaban bangsa. Pendidikan harus selalu bertumpu pada konsep pertumbuhan, pengembangan, pembaruan, dan kelangsungan penyelenggaraannya harus dikelola secara profesional. Mengingat pendidikan mempunyai peran yang sangat strategis dalam proses pembangunan peradaban bangsa diperlukan komitmen nasional dalam bidang pendidikan. Adanya dukungan pemerintah perlu ditindaklanjuti oleh kabupaten/kota dengan memberikan alokasi anggaran pendidikan di daerahnya sesuai dengan amanat konstitusi. Penggunaan anggaran pun harus dipantau dan dievaluasi setiap saat.&lt;br&gt;&lt;br&gt;
+Arti profesional yang digunakan dalam paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Menunjukkan suatu kelebihan diri kepada orang lain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memerlukan kepandaian khusus untuk menjalankannya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mempunyai keinginan besar untuk mencapai tujuan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menampilkan suatu hal yang menakjubkan bagi orang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengakui kepandaian orang lain dengan objektif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+(1) Lagu merupakan sebuah karya yang mengandung makna sangat dalam. (2) Pembuatan lagu membutuhkan waktu yang cukup lama. (3) Langkah awal yang harusditentukan adalah konsep lagu yang akan dibuat. (4) Konsep harus didasarkan pada kenyataan yang terjadi disekitarnya dan tema yang diambil, janganlah memilihh tema yang umum. (5) Seandainya konsep sudah jadi, tinggal membuat lirik dan nada yang diinginkan.&lt;br&gt;&lt;br&gt;
+Kalimat utama paragraf tersebut adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat-kalimat berikut!&lt;br&gt;
+Kalimat utama:&lt;br&gt;
+Salah satu pihak yang menjadi tulang punggung kesehatan di Indonesia ialah Badan Penyelenggara Jaminan Sosial ( BPJS ) Kesehatan.&lt;br&gt;
+Kalimat penjelas:&lt;br&gt;
+(1)   Badan hukum publik yang dibentuk pemerintah hadir untuk mewujudkan terlaksananya program Jaminan Kesehatan nasional (JKN) bagi seluruh masyarakat.&lt;br&gt;
+(2)   Kegiatan deteksi dini kanker telah digalakkan guna mengurangi peserta JKN terkena kanker leher.&lt;br&gt;
+(3)   Badan ini menargetkan semua penduduk Indonesia terdaftar sebagai peserrta JKN paling lambat 1 Januari 2014 dengan tingkat kepuasan 85 persen.&lt;br&gt;
+(4)   Metode deteksi dilakukan dengan dua cara, yakni papsmear dan visual asam asetat (IVA).&lt;br&gt;
+(5)   Untuk mempermudah peserta memperoleh layanan kesehatan, BPJS Kesehatan meluncurkan Surat Eligibilitas peserta (SEP) Mandiri.&lt;br&gt;
+Kalimat penjelas yang sesuai dengan kalimat utama adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1),(2),(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1),(3),(5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1),(4),(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2),(3),(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3),(4),(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+(1) Estimasi populasi gajah Sumatera di alam liar diperkirakan 1.724 individu. (2) Populasi tersebut terus mengalami penurunan akibat fragmentasi habitat, konflik manusia dengan satwa, perburuan, dan perdagangan ilegal. (3) Sejak tahun 2012, kasus kematian gajah di Aceh tercatat di Kecamatan Aceh Jaya, Aceh Selatan, Aceh Barat, Aceh Timur, Aceh Utara, dan Bireuen. (4) Peningkatan kasus kematan gajah Sumatra ini sangat memprihatinkan, sehingga perlu perhatian yang lebih serius dari pemerintah untuk segera melakukan tindakan nyata. (5) Selain penyelidikan dan penyelesaian melalui jalur hukum, pendekatan lain melalui peran aktif kalangan masyarakat madani juga sangat penting.&lt;br&gt;&lt;br&gt;
+Pernyataan fakta yang sesuai isi paragraf terdapat pada kalimat...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+(1) Estimasi populasi gajah Sumatera di alam liar diperkirakan 1.724 individu. (2) Populasi tersebut terus mengalami penurunan akibat fragmentasi habitat, konflik manusia dengan satwa, perburuan, dan perdagangan ilegal. (3) Sejak tahun 2012, kasus kematian gajah di Aceh tercatat di Kecamatan Aceh Jaya, Aceh Selatan, Aceh Barat, Aceh Timur, Aceh Utara, dan Bireuen. (4) Peningkatan kasus kematan gajah Sumatra ini sangat memprihatinkan, sehingga perlu perhatian yang lebih serius dari pemerintah untuk segera melakukan tindakan nyata. (5) Selain penyelidikan dan penyelesaian melalui jalur hukum, pendekatan lain melalui peran aktif kalangan masyarakat madani juga sangat penting.&lt;br&gt;&lt;br&gt;
+Simpulan yang sesuai isi paragraf adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Peran masyarakat dalam pelestarian gajah perlu diperhatikan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perlu perhatian pemerintah daerah membuka lahan baru untuk gajah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Populasi Gajah Sumatera menurun akibat kasus kematian.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penyelidikan mengenai kasus kematian di Sumatera menggembirakan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kelangsungan hidup gajah mendapat perhatian pemerintah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Saat ini menurut buku Bank Dunia tidak banyak orang yang membantah kenyataan bahwa merokok dapat merusak kesehatan manusia dalam skala global. Akan tetapi, pemerintah menghindar melakukan aksi pengawasan terhadap rokok dengan cara, mengenakan pajak yang lebih tinggi, melarang pemasangan iklan dan promosi secara nyata atau melarang merokok di tempat-tempat umum. Ini terjadi karena pemerintah takut hal itu akan membawa konsekuensi yang buruk pada perekonomian dan akan mengurangi ribuan pekerjaan secara permanen. Pengenaan pajak yang tinggi pada tembakau akan mengakibatkan rendahnya pendapatan pemerintah. Selain itu, penetapan harga tinggi untuk rokok akan mendorong penyelundupan rokok secara besar-besaran.&lt;br&gt;&lt;br&gt;
+Mengapa pemerintah menghindar melakukan aksi pengawasan terhadap rokok ?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Takut Adanya dampak buruk terhadap perekonomian, lapangan pekerjaan, pendapatan pemerintah, dan penyelundupan rokok.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ketakutan akan membawa konsekuensi yang buruk pada petani tembakau dan perekonomian masyarakatnya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sulitnya melarang masyarakat yang tergolong pecandu rokok untuk tidak merokok.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Masih banyak orang yang tergiur oleh iklan dan promosi rokok secara bebas.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Baru sebagian kecil yang mengetahui yang mengetahui dampak buruk rokok terhadap kesehatan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Saat ini menurut buku Bank Dunia tidak banyak orang yang membantah kenyataan bahwa merokok dapat merusak kesehatan manusia dalam skala global. Akan tetapi, pemerintah menghindar melakukan aksi pengawasan terhadap rokok dengan cara, mengenakan pajak yang lebih tinggi, melarang pemasangan iklan dan promosi secara nyata atau melarang merokok di tempat-tempat umum. Ini terjadi karena pemerintah takut hal itu akan membawa konsekuensi yang buruk pada perekonomian dan akan mengurangi ribuan pekerjaan secara permanen. Pengenaan pajak yang tinggi pada tembakau akan mengakibatkan rendahnya pendapatan pemerintah. Selain itu, penetapan harga tinggi untuk rokok akan mendorong penyelundupan rokok secara besar-besaran.&lt;br&gt;&lt;br&gt;
+Tujuan pengarang sesuai isi paragraf adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Menjelaskan bahwa penyebab rendahnya pendapatan negara adalah pelarangan merokok.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Melaporkan bahwa investasi yang paling besar untuk negara indonesia adalah pajak rokok.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memberitahukan alasan pemerintah menghindar melakukan aksi pengawasan terhadap rokok.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengimbau kepada perokok agar jangan semena-mena merokok di tempat umum.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengajak pengusaha industri rokok menutup usahanya agar rakyat menjadi sehat karena tidak merokok.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati Penggalan biografi berikut!&lt;br&gt;
+Nama Emil Salim dan lingkungan hidup seolah tak bisa dipisahkan. Kepeduliannya pada lingkungan membuat Emil Salim pernah dipercaya sebagai menteri yang mengurusi lingkungan hidup. Rupanya kepedulian Emil pada lingkungan karena pengaruh ibundanya. Sang ibunda juga memberikan filosofi tentang hubungan manusia yang mendalam terhadap mantan Menteri Pengawasan Pembangunan dan Lingkungan Hidup ini. Besarnya perhatian pada lingkungan, membuat Emil mendapat penghargaan dari World Wide Fund (WWF) The Leader of Living Planet Award. Emil salim mendapatkan penghargaan yang sama dengan yang didapatkan mantan Sekjen PBB Kofi Annan karena sumbangannya terhadap lingkungan.&lt;br&gt;&lt;br&gt;
+Keteladanan Emil Salim pada penggalan biografi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Mendapat kepercayaan sebagai menteri yang mengurusi lingkungan hidup.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kepedulian Emil Salim terhadap lingkungan dilakukan sepanjang hidupnya.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Patuh menjalankan filosofi tentang hunbungan manusia yang diberikan ibundanya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mendapatkan penghargaan dari World Wide Fund (WWF) The Leader Of Living Planet Award.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mendapatkan penghargaan yang sama dengan yang didapatkan mantan SekjenPBB Kofi Annan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati tajuk rencana berikut!&lt;br&gt;
+Penggunaan jasa penerbangan tentu berharap semua maskapai mencapai standar keselamatan excellent. Berbeda dengan bus kota yang boleh mogok ditengah jalan, bagi transportasi udara, kerusakan mesin dan kekacauan sistem pascalepas landas adalah dosa terbesar.&lt;br&gt;
+Maskapai penerbangan tidak boleh terjebak dalam perang tarif. Liberalisme dalam pasar bebas tidak berarti kebebasan dalam mematikan pesaing dalam menerapkan tarif serendah-serendahnya. Karena kalau itu yang terjadi, dan standar keselamatan dikorbankan, maskapai penerbangan sejatinya tengah mematikan pengguna jasa dalam arti harfiah.&lt;br&gt;&lt;br&gt;
+Opini penulis yang terungkap dalam kutipan tajuk rencana tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Maskapai penerbangan harus memiliki standar keselamatan dan tidak boleh terjebak dalam perang tarif.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Transportasi udara yang mengalami kerusakan mesin merupakan bencana dan dosa besar.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Maskapai penerbangan tidak boleh melakukan liberalisasi dalam pasar bebas.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jika standar keselamatan dikorbankan sejatinya telah merapkan tarif serendah-rendahnya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Selama ini maskapai penerbangan terus-menerus menyeramkan bagi pengguna jasa.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati tajuk rencana berikut!&lt;br&gt;
+Penggunaan jasa penerbangan tentu berharap semua maskapai mencapai standar keselamatan excellent. Berbeda dengan bus kota yang boleh mogok ditengah jalan, bagi transportasi udara, kerusakan mesin dan kekacauan sistem pascalepas landas adalah dosa terbesar.&lt;br&gt;
+Maskapai penerbangan tidak boleh terjebak dalam perang tarif. Liberalisme dalam pasar bebas tidak berarti kebebasan dalam mematikan pesaing dalam menerapkan tarif serendah-serendahnya. Karena kalau itu yang terjadi, dan standar keselamatan dikorbankan, maskapai penerbangan sejatinya tengah mematikan pengguna jasa dalam arti harfiah.&lt;br&gt;&lt;br&gt;
+Keberpihakan penulis dalam kutipan tajuk rencana adalah kepada...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Maskapai penerbangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pengusaha penerbangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penggunaan jasa penerbangan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pemerintah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pengelola penerbangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati tabel berikut!&lt;/p&gt;
+&lt;div&gt;Bahan Ekspor Utama Komoditas Pertanian Indonesia ke Italia&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;table style=&quot;width: 475px; height: 365px;&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td rowspan=&quot;2&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;&lt;strong&gt;No.&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;td rowspan=&quot;2&quot; width=&quot;72&quot;&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Kode&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;td rowspan=&quot;2&quot; width=&quot;240&quot;&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Nama Produk Komoditas&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;td colspan=&quot;3&quot; width=&quot;241&quot;&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Tahun&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;&lt;strong&gt;2011&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;&lt;strong&gt;2012&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;&lt;strong&gt;2013&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;1.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*15&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Lemak nabati dan hewan (kelapa sawit, kelapa, dll)&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;603435&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;713597&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;960156&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;2.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*40&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Karet&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;266969&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;141168&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;122442&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;3.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*09&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Kopi, teh, dan rempah&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;78101&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;75960&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;102498&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;4.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*03&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Ikan dan udang&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;73485&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;65963&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;50164&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;5.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*42&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Kulit binatang&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;21252&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;37544&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;37814&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;6.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*44&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Kayu, produk kayu, dan arang&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;37325&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;27869&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;20703&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;7.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*52&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Kapas&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;26778&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;12587&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;17210&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;8.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*14&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Bahan kerajianan dari tanaman&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;16634&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;5991&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;11403&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;9.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*16&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Produk laut olahan&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;1996&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;2694&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;76096&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;10.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*47&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Pulp dan serat&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;18898&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;11918&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;6124&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Pernyataan yang sesuai dengan isi tabel tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Komoditas pertanian Indonesia yang paling banyak diekspor ke Italia pada tahun 2011 adalah kapas dan karet.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ekspor ikan dan udang pada tahun 2011 dan 2012 lebih banyak dibandingkan dengan ekspor lemak nabati.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pada tahun 2012, jumlah produk laut olahan yang diekspor ke Italia paling rendah dibanding komoditas lain.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Produk lemak nabati dan hewan yang diekspor ke Italia mengalami penurunan pada tahun 2012 dan 2013.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Karet dan bahan kerajinan dari tanaman merupakan komoditas yang paling banyak diekspor pada tahun 2012.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati tabel berikut!&lt;/p&gt;
+&lt;div&gt;Bahan Ekspor Utama Komoditas Pertanian Indonesia ke Italia&lt;/div&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;table style=&quot;width: 475px; height: 365px;&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td rowspan=&quot;2&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;&lt;strong&gt;No.&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;td rowspan=&quot;2&quot; width=&quot;72&quot;&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Kode&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;td rowspan=&quot;2&quot; width=&quot;240&quot;&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Nama Produk Komoditas&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;td colspan=&quot;3&quot; width=&quot;241&quot;&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Tahun&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;&lt;strong&gt;2011&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;&lt;strong&gt;2012&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;&lt;strong&gt;2013&lt;/strong&gt;&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;1.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*15&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Lemak nabati dan hewan (kelapa sawit, kelapa, dll)&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;603435&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;713597&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;960156&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;2.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*40&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Karet&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;266969&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;141168&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;122442&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;3.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*09&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Kopi, teh, dan rempah&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;78101&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;75960&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;102498&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;4.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*03&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Ikan dan udang&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;73485&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;65963&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;50164&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;5.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*42&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Kulit binatang&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;21252&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;37544&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;37814&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;6.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*44&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Kayu, produk kayu, dan arang&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;37325&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;27869&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;20703&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;7.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*52&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Kapas&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;26778&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;12587&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;17210&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;8.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*14&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Bahan kerajianan dari tanaman&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;16634&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;5991&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;11403&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;9.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*16&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Produk laut olahan&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;1996&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;2694&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;76096&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; width=&quot;37&quot;&gt;
+&lt;div&gt;10.&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;72&quot;&gt;
+&lt;div&gt;*47&lt;/div&gt;
+&lt;/td&gt;
+&lt;td width=&quot;240&quot;&gt;
+&lt;div&gt;Pulp dan serat&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;84&quot;&gt;
+&lt;div&gt;18898&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;78&quot;&gt;
+&lt;div&gt;11918&lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: right;&quot; width=&quot;79&quot;&gt;
+&lt;div&gt;6124&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Simpulan isi tabel tersebut yang sesuai adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Bahan ekspor utama komoditas pertanian Indonesia ke Italia pada rentang waktu 2011-2013 mengalami pasang surut.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dalam kurun waktu 2011-2013, jumlah bahan ekspor utama produk/komoditas pertanian mengalami penurunan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Semua jenis produk pertanian yang diekspor ke Italia mengalami peningkatan pada tahun 2012, tetapi meningkat pada tahun 2013.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Semua jenis produk pertanian yang diekspor ke Italian mengalami peningkatan pada tahun 2012, tetapi menurun pada tahun 2013.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Semua jenis produk pertanian Indonesia yang diekspor ke Italia rentang waktu 2011-2013 terus mengalami penurunan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan Sastra Melayu Klasik berikut dengan seksama!&lt;br&gt;&lt;br&gt;
+... Pemburu itu merentangkan jaringnya dan membubuh umpannya berkeliling, kemudian bersembunyilah ia di balik hutan itu.&lt;br&gt;&lt;br&gt;
+Seketika datanglah sekawanan burung tekukur, adalah dalam sekawanan tekukur itu seorang rajanya. Sekalian tekukur itu singgahlah memakan umpan itu. Sekaliannya itu pun terkenalah jaring itu.&lt;br&gt;&lt;br&gt;
+Demi dilihat oleh pemburu itu segala tekukur itu sudah terkena jaring,sukacitalah ia terlalu sangat serta berlari-lari datang hendak menangkap burung itu. Pada ketika itu berkatalah raja tekukur itu kepada ssegala rakyatnya, &amp;ldquo;Hai kamu sekalian, dengarlah olehmu bicaraku. Sementara belum datang pemburu itu , hendaklah kamu sekalian terbangkan jaring itu, supaya kita terlepas daripada bahaya ini.&amp;rdquo;&lt;br&gt;&lt;br&gt;
+Demi didengar oleh segala tekukur itu akan titah rajanya, sekaliannya itu pun terbanglah ke udara membawa jaring itu.&lt;br&gt;
+(Hikayat Kalilah dan damnah)&lt;br&gt;&lt;br&gt;
+Kemustahilan yang terdapat dalam kutipan tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sekawanan burung tekukur menerbangkan jaring yang berisi teman-temannya yang terjerat.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sekawanan burung tekukur memakan umpan yang ditebarkan pemburu di sekeliling jaring.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dalam sekawanan burung tekukur terdapat seekor burung sebagai rajanya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Raja tekukur ikut terbang bersama rakyatnya dan terjerat jaring pemburu.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Seorang mempunyai pikiran yang cerdik untuk melepaskan rakyatnya dari kebinasaan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan Sastra Melayu Klasik berikut dengan seksama!&lt;br&gt;&lt;br&gt;
+... Pemburu itu merentangkan jaringnya dan membubuh umpannya berkeliling, kemudian bersembunyilah ia di balik hutan itu.&lt;br&gt;&lt;br&gt;
+Seketika datanglah sekawanan burung tekukur, adalah dalam sekawanan tekukur itu seorang rajanya. Sekalian tekukur itu singgahlah memakan umpan itu. Sekaliannya itu pun terkenalah jaring itu.&lt;br&gt;&lt;br&gt;
+Demi dilihat oleh pemburu itu segala tekukur itu sudah terkena jaring,sukacitalah ia terlalu sangat serta berlari-lari datang hendak menangkap burung itu. Pada ketika itu berkatalah raja tekukur itu kepada ssegala rakyatnya, &amp;ldquo;Hai kamu sekalian, dengarlah olehmu bicaraku. Sementara belum datang pemburu itu , hendaklah kamu sekalian terbangkan jaring itu, supaya kita terlepas daripada bahaya ini.&amp;rdquo;&lt;br&gt;&lt;br&gt;
+Demi didengar oleh segala tekukur itu akan titah rajanya, sekaliannya itu pun terbanglah ke udara membawa jaring itu.&lt;br&gt;
+(Hikayat Kalilah dan damnah)&lt;br&gt;&lt;br&gt;
+Nilai moral yang tampak pada kutipan tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Memberi makan burung-burung bebas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Raja ikut sengsara bersama rakyatnya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menolong sesama dari kesulitan atau bahaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bersuka cita melihat jerat mengena sasaran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan cermat!&lt;br&gt;
+(1) Manakala hutan-hutan sudah rusak. (2) Manakala sawah-sawah sudah berbau obat penyemprot hama, dan manakala sudah terlalu banyak pemuda menyandang senapan angin . (3) Maka wilayah Segara Anakan di NTT serta daerah berawa-rawa di sekitarnya adalah tempat terakhir bagi berjenis-jenis burung unttuk mempertahankan keberadaannya. (4) Suaka burung dadali yang sudah sulit ditemukan di daerah pedalaman ternyata masih banyak di sana. (5) Demikian juga burung-burung pemakan biji-bijian seperti tekukur,balam, dan perkutut.&lt;br&gt;
+(Lintang Kemukus Dini Hari, A.Tohari)&lt;br&gt;&lt;br&gt;
+Kalimat yang membuktikan latar tempat adalah kalimat nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kutipan cerpen berikut!&lt;br&gt;
+Tiap hari Cenana  membantu ibunya memarut puluhan butir kelapa. Mereka membuat minyak kelapa yang pagi-pagi sekali harus disetor ke pasar. Pulang agak siang, Cenana langsung membantu ibunya memasak. Untuk mencari tambahan nafkah satu &amp;ndash;dua ribu perak, Jero Sandat membuka warung kecil yang menjual lawar dan pepes tlengis. Keringat kedua perempuan itu benar-benar diperas habis untuk sekadar bisa hidup. Bagi Cenana, sekolah hanya impian yang terlalu mewah.&lt;br&gt;&lt;br&gt;
+Pendeskripsian watak Cenana seorang yang &amp;ldquo;rajin&amp;rdquo; pada kutipan novel tersebut diungkapkan melalui&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Gambaran fisik tokoh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ucapan tokoh lain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tindakan tokoh&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pikiran tokoh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dialog antartokoh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan cerpen berikut dengan cermat untuk menjawab soal nomor 18 dan 19!&lt;br&gt;
+Salman baru sadar terhadap tindakannya yang sudah keterlaluan. Maka karena itulah ia menjelaskan pokok permasalahannya.&lt;br&gt;
+&amp;ldquo;Jadi Bu, kejadian ini terjadi karena kecemburuan terhadap Anjas yang telah merebut kesempatan untuk  mempertahankan ranking satu semester ini ,&amp;rdquo;ujarnya sambil menyesali perbuatan.&lt;br&gt;
+&amp;ldquo;Oh begitu pokok permasalahan. Ibu dapat memaklumi, tetapi janganlah bertindak demikian karena kita makhluk hidup yang paling sempurna , dianugerahi akal pikiran yang berguna sebagai filter. Maka sebaiknya, tingkah laku kita harus dipikirkan dulu dengan matang,&amp;rdquo; ucap Bu guru dengan harapan bisa membuka mata hati si pelaku.&lt;br&gt;&lt;br&gt;
+Keterkaitan peristiwa dalam kutipan cerpen tersebut dengan kehidupan sehari-hari adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Menyesal tidak memanfaatkan kesempatan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Seorang siswa diintimidasi oleh gurunya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sadar terhadap kesalahan yang telah dilakukan seseorang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mempertahankan rangking satu dengan cara yang tidak wajar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Seorang guru menasihati muridnya yang bersalah.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan cerpen berikut dengan cermat untuk menjawab soal nomor 18 dan 19!&lt;br&gt;
+Salman baru sadar terhadap tindakannya yang sudah keterlaluan. Maka karena itulah ia menjelaskan pokok permasalahannya.&lt;br&gt;
+&amp;ldquo;Jadi Bu, kejadian ini terjadi karena kecemburuan terhadap Anjas yang telah merebut kesempatan untuk  mempertahankan ranking satu semester ini ,&amp;rdquo;ujarnya sambil menyesali perbuatan.&lt;br&gt;
+&amp;ldquo;Oh begitu pokok permasalahan. Ibu dapat memaklumi, tetapi janganlah bertindak demikian karena kita makhluk hidup yang paling sempurna , dianugerahi akal pikiran yang berguna sebagai filter. Maka sebaiknya, tingkah laku kita harus dipikirkan dulu dengan matang,&amp;rdquo; ucap Bu guru dengan harapan bisa membuka mata hati si pelaku.&lt;br&gt;&lt;br&gt;
+Mengapa Salman diinterogasi oleh guru?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Salman berbuat tidak jujur.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Salman benci kepada Anjas.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Salman berbuat tidak masuk akal.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Salman mempertahankan rangking satu.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Salman bertindak gegabah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kutipan cerpen berikut!&lt;br&gt;
+Hal itu terjadi seminggu yang lalu. Pak Hardi seperti biasa mengendarai sepeda ontelnya berkeliling mencari dagangan pisang. Ia menerobos kebun-kebun dan ladang-ladang petani. Karena kepergiannya dengan pikiran yang kalut, ia tidak pikir panjang menebang pisang milik orang lain yang belum dikenalnya. Dua tandan pisang raja nangka dibawanya ke bos pisang. Ia tidak sadar kalau ada orang yang mengetahui perbuatannya. Satu hari dari kejadian itu, Pak Hardi dijemput paksa oleh seorang polisi yang masih sangat muda. Bahasanya cukup tegas (kalau tidak mau dikatakan kasar). Hanya beberapa kata yang diucapkannya. Pak Hardi pun tak berkutik. Tanpa perlawanan ia mengikuti sang polisi. Ia sadar kalau ia melanggar hukum karena telah mencuri pisang milik orang lain.&lt;br&gt;
+(Dua Sisi Mata Pisau, Lanang Anwarsono)&lt;br&gt;&lt;br&gt;
+Nilai positif yang sesuai dengan karakter tokoh Pak Hardi pada kutipan cerpen tersebut adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Menyadari kesalahannya karena telah mengambil milik orang lain.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menurut kata kepala Polisi karena dia takut melawan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mencari kehidupan dengan menerobos kebun-kebun orang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menebang pisang orang sebelum meminta kepada pemiliknya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak membalas perlakuan polisi yang telah menangkapnya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kutipan cerpen berikut!&lt;br&gt;
+Hal itu terjadi seminggu yang lalu. Pak Hardi seperti biasa mengendarai sepeda ontelnya berkeliling mencari dagangan pisang. Ia menerobos kebun-kebun dan ladang-ladang petani. Karena kepergiannya dengan pikiran yang kalut, ia tidak pikir panjang menebang pisang milik orang lain yang belum dikenalnya. Dua tandan pisang raja nangka dibawanya ke bos pisang. Ia tidak sadar kalau ada orang yang mengetahui perbuatannya. Satu hari dari kejadian itu, Pak Hardi dijemput paksa oleh seorang polisi yang masih sangat muda. Bahasanya cukup tegas (kalau tidak mau dikatakan kasar). Hanya beberapa kata yang diucapkannya. Pak Hardi pun tak berkutik. Tanpa perlawanan ia mengikuti sang polisi. Ia sadar kalau ia melanggar hukum karena telah mencuri pisang milik orang lain.&lt;br&gt;
+(Dua Sisi Mata Pisau, Lanang Anwarsono)&lt;br&gt;&lt;br&gt;
+Simpulan yang sesuai dengan isi cerpen adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Seseorang yang terpaksa mengambil hak orang, pada awalnya ketakutan, tetapi lama-lama menjadi biasa.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bila tidak berpikir panjang dalam bertindak, akan berdampak buruk kepada diri sendiri.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Seorang polisi yang tidak bertindak adil dalam melaksanakan tugasnya akan melakukan kesalahan dalam bertindak.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kebiasaan buruk seseorang akan sulit dihilangkan karena suatu ketika akan terulang kembali.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Seorang pedagang akan mengalami kerugian apabila dia tidak jujur dalam melakukan jual-beli.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah puisi berikut dengan cermat!&lt;br&gt;
+Pinggir Sawah&lt;br&gt;
+Kalau kita lintasi jalan yang lenggang&lt;br&gt;
+Di mana batang bambu melunglai lelah&lt;br&gt;
+Bagai tanglung alam mengulir salam,&lt;br&gt;
+Kita dengarkan sambil melenggang lalu&lt;br&gt;
+Lenguh lembu di belakang bambu.&lt;br&gt;&lt;br&gt;
+Dalam bayangan daun mendesau&lt;br&gt;
+Hati mengaji hikmat yang sedap,&lt;br&gt;
+Alangkah sukur bekerja di sini&lt;br&gt;
+Di tengah rakhmat kaum petani&lt;br&gt;
+Dan di medan kehijauan terlaksana bahagia&lt;br&gt;
+Manusia pertama di permukaan zaman.&lt;br&gt;&lt;br&gt;
+Cobalah melengah lelah di pinggir parit&lt;br&gt;
+Menggerisik bisik airnya mengalir melalui lapangan&lt;br&gt;
+Gerak pendarnya menampung terawan benderang&lt;br&gt;
+Yang kini biru menuang terang&lt;br&gt;
+Padi hijau membaris garis, menggantang baying&lt;br&gt;
+Di atas kaca yang menggenang gemilang.&lt;br&gt;&lt;br&gt;
+(Walujati)&lt;br&gt;&lt;br&gt;
+Suasana dalam puisi tersebut adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Takut&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Nyaman&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sedih&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bimbang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Cemas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah puisi berikut dengan cermat!&lt;br&gt;&lt;br&gt;
+Salju&lt;br&gt;&lt;br&gt;
+Ke manakah pergi&lt;br&gt;
+Mencari matahari&lt;br&gt;
+Ketika salju turun&lt;br&gt;
+Pepohonan kehilangan daun&lt;br&gt;
+Ke manakah jalan&lt;br&gt;
+Mencari lindungan&lt;br&gt;
+Ketika tubuh kuyup&lt;br&gt;
+Dan pintu tertutup&lt;br&gt;
+Ke manakah lari&lt;br&gt;
+Mencari api&lt;br&gt;
+Ketika bara hati&lt;br&gt;
+Padam tak berarti&lt;br&gt;
+Ke manakah pergi&lt;br&gt;
+Selain mencuci diri\\&lt;br&gt;
+(Wing Kardjo)&lt;br&gt;&lt;br&gt;
+Makna kata salju pada puisi tersebut&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Keindahan alam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kondisi dingin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kemudian melihat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kepasrahan diri&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kebekuan berpikir&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati gurindam berikut!&lt;br&gt;
+Kepada dirinya ia aniaya&lt;br&gt;
+Orang itu jangan engkau percaya.&lt;br&gt;&lt;br&gt;
+Maksud isi gurindam tersebut adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Orang yang menganiaya diri sendiri akan dibenci lagi oleh orang lain.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jangan percaya kepada orang yang sering menganiaya orang lain.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Janganlah menganiaya diri sendiri bila ingin dipercaya orang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Orang yang tidak menghargai dirinya sendiri, jangan diberi kepercayaan.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Seseorang akan dipercaya orang lain jika tidak menganiaya orang tersebut.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Ponorogo berlokasi di perbatasan Jawa Tengah dan Jawa Timur, berdekatan dengan Madiun. Ponorogo dikenal memiliki alam yang menawan. Cobalah Anda kunjungi Telaga Ngebel. Wisata alam memang menjadi andalan Ponorogo. Hawa yang sejuk, angin bertiup lembut, dan pemandangan bukit menghijau menjadi latar danau yang kebiruan mempersembahkan ketentraman. Telaga ini berlokasi sekitar 25 kilometer dari pusat kota Ponorogo, di lereng Gunung Wilis.&lt;br&gt;
+Perbaikan kalimat yang tepat untuk menggantikan kalimat bercetak miring dalam paragraf tersebut adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Ada pula air terjun yang tak kalah apiknya yaitu Air Terjun Pletuk dan Air Terjun Klenteng.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jika ingin lebih menantang nyali, kunjungilah Gua Lowo yang letaknya sekitar 20 kilometer dari Ponorogo.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bila ingin berwisata rohani, ada Gua Maria Tirto Waluyo Jati dan Pondok Modern Darussalam Gontor.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Telaga ini cocok Anda jadikan tempat beristirahat ketika ingin keluar dari kepenatan hidup.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kita dapat pula menikmati keunikan Air Terjun Toyomerto, yang memiliki dua tingkatan air dengan ketinggian 25-30 meter.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat berikut!&lt;br&gt;
+Teknik ticketing&lt;br&gt;
+(1)   Selain tanda, pada tiket tersebut dapat pula diberi tanggal penggunaanya.&lt;br&gt;
+(2)   Pada tiket juga diberi beberapa petunjuk tentang cara masuk, aturan yang harus dipatuhi, serta hal lain yang dianggap perlu.&lt;br&gt;
+(3)   Caranya tiket yang sudah digunakan diberi tanda.&lt;br&gt;
+(4)   Dengan tanda tersebut, tiket akan berbeda dengan tiket sebelumnya.&lt;br&gt;
+(5)   Saan kondisi normal, satu orang pengurus tiket dapat melayani lebih dari seribu orang.&lt;br&gt;&lt;br&gt;
+Urutan yang tepat agar menjadi paragraf eksposisi yang padu adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(5),(4),(3),(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5),(3),(4),(1) dan (2)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5),(3),(1),(4) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3),(4),(5),(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3),(1),(5),(4) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf deskripsi berikut!&lt;br&gt;
+Malam itu indah sekali. Saat aku memandang ke langit bulan terlihat bersinar terang&amp;hellip;. Angin bertiup sepoi-sepoi. Sesekali terdengar suara jangkrik, burung malam, dan kelelawar mengusik sepinya malam.&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi paragraf deskripsi tersebut adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Malam itu membuat hatiku senang dan ceria.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Langit hitam, mendung menggelayut di angkasa.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Cahaya rembulan memancarkan sinar yang terang ke bumi.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Suasana malam itu semarak penuh keceriaan dan kebahagiaan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keindahan malam itu menciptakan suasana yang romantic.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf narasi berikut!&lt;br&gt;
+Aku menutup novel yang telah habis kubaca. Mataku mulai terasa perih setelah semalaman terpaku pada baris demi baris yang kubaca. Kuregangkan tubuhku sejenak lalu aku berdiri dan berjalan ke bordes gerbong kereta. Kulemparkan pandanganku ke luar kereta. Perlahan, langit hitam malam mulai memudar&amp;hellip; udara di luar kereta terasa sejuk. Bau tanah pagi yang khas di antara sawah dan hujan jati. Ah, rindu pada desaku semakin membongkah.&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi paragraf tersebut adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Di langit timur bulan purnama tersenyum menyambut malam.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Langit subuh mulai terlihat antara rimbun pepohonan pohon jati.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jalan desa masih lengang dan gemericik air terdengar jelas.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Anak-anak sekolah terlihat berlarian riang di jalan raya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pak tani menggiring lembunya ke sawah sambil membawa bajak.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati teks pidato berikut!&lt;br&gt;
+Hadirin yang berbahagia,&lt;br&gt;
+Bencana alam terjadi dimana-mana sehingga sangat merugikan bagi manusia dan alam sekitarnya. Kita kehilangan harta benda ataupun orang-orang yang kita sayangi. Mengapa bencana alam terjadi? Apakah karena ulah manusia sendiri yang mulai kurang peduli dengan lingkungan? Hutan digunduli tanpa perhitungan, pohon-pohon dijarah oleh manusia serakah, sampah dibuang di saluran-saluran air. Pembangunan dilakukan tanpa memperhatikan lingkungan. Kita tidak ingin bencana alam terjadi lagi&amp;hellip;&lt;br&gt;&lt;br&gt;
+Kalimat imbauan untuk melengkapi teks pidato tersebut adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Marilah kita jaga lingkungan kita dengan bersikap lebih bijak dan peduli terhadap alam di sekitar kita.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jangan mengulang sikap-sikap yang tidak terpuji karena kita tidak ingin bencana terulang lagi.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sebaiknya kita bersatu padu menjaga dan melestarikan kekayaan bangsa dan tanah air kita.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lingkungan harus dijaga dengan baik sehingga akan memberikan manfaat kepada kita.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Manusia dapat bersikap bijaksana dalam mengelola lingkungan dan berpartisipasi terhadap lingkungan sekitar kita.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut!&lt;br&gt;
+Pada masa lalu, jika seseorang mau menabung atau mengambil uang di bank, ia harus dating langsung ke bank itu dengan memenuhi segala persyaratan. Begitu pula jika nasabah ingin menransfer dana ke rekening lain. Sekarang nasabah dimanjaya dengan ditawarkannya berbagai pelayanan baru dalam perbankan. Berbagai transaksi ini dapat dilayani dengan &amp;lsquo;telebanking&amp;rsquo;.&lt;br&gt;&lt;br&gt;
+Kata baku yang tepat untuk mengganti kata bercetak miring adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Ingin, mentransfer, dimanjakan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ingin, meneransfer, memanjakan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hendak, menteransfer, dimanja&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hendak, meneransfer, bermanja&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Akan, mentransfer, dimanja&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Di sudut kanan lapangan sekolah itu tampak siswa duduk berkelompok. Setiap kelompok asyik melakukan &amp;hellip; rutin setiap sabtu sesuai kegiatan ekstrakurikuler yang dipilihnya&amp;hellip; sekali mereka mengikutinya. Banyak guru yang menilai kegiatan ini sangat &amp;hellip; untuk mengisi waktu luang mereka.&lt;br&gt;&lt;br&gt;
+Kata serapan yang tepat untuk melengkapi paragraph tersebut adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Aktivitas, antusias, efektif&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Aktif, antusiasme, efektivitas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Aktivitas, antusiasi, efektivitas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keaktifan, keantusiasan, keefektifisan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Aktif, keantusiasan, efektif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Museum Sejarah merupakan museum yang tata pamernya disusun dengan menggunakan pendekatan sejarah. Umumnya Museum Sejarah menceritakan kisah dan peristiwa sejarah atau penggalan kisah sejarah, baik dalam skala lokal maupun nasional. Di Indonesia belum ada museum yang ... sejarah indonesia secara utuh. Museum- museum yang ada sekarang ini, umumya hanya ... bagian tertentu dari sebuah peristiwa sejarah. Karena itu, keberadaan museum sejarah indonesia secara utuh dan lengkap merupakan sebuah tuntutan yang nyata, terutama untuk ... lunturnya kesadaransejarah indonesia yang sedang menggejala.&lt;br&gt;&lt;br&gt;
+Kata berimbuhan yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Berkisah,menggambar,disikapi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berkisah,digambarkan,disikapi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengisahkan,digambari,menyikapi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengisahkan,menggambarkan,menyikapi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengisahkan,menggambarkan,mensikapi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati pelajaran berikut!&lt;br&gt;
+Dia sudah minta maaf ... tetapi permintaan maafnya tetap tidak dihiraukan. Dia pun marah dan ...pintu sehingga suara gaduh terdengar di kamar. Anak terkecilnya ... histeris karena ketakutan&lt;br&gt;
+Kata ulang yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sekali-kali,memukul-mukul,jerit-jerit&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berkali-kali,memukul-mukul,menjerit-jerit&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berkali-kali,mukul-memukul,menjerit-jerit&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sekali-kali,pukul-memukul,berjerit-jeritan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berkali-kali,berpukul-pukulan,jerit-jeritan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati teks berikut!&lt;br&gt;
+Di Negara kepulauan seperti indonesia hidup dua kelompok masyarakat yang saling membutuhkan, yaitu petani dan nelayan. Petani hidup di lahan pertanian yang subur,asyik dengan bajak dan cungkulnya. Kegiatannya mulai dengan menanam padi, memberikan pupuk, dan menyiangi tanaman padinya dari rumput-rumput liar. Semuanya  mereka kerjakan dengan ... dan berharap akan mendapatkan panen yang baik. Sementara, saudaranya yang hidup sebagai nelayan menjalani kesehariannya di pantai dan laut berjuang melawan arus dan gelombang laut yang kadang-kadang mengganas.&lt;br&gt;&lt;br&gt;
+Ungkapan yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sepenuh hati&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Besar hati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tangan kanan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lapang dada&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kepala dingin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dua bulan yang lalu buruh nelayan itu tidak melaut karena angin laut sedang pasang. Kini, mereka harus antre mendapatkan soal bersubsidi yang pembeliannya dua puluh ton per kapal. Ratusan kapal penangkapan ikan antre untuk membeli solar agar bisa melaut. Ternyata kapal-kapal itu tetap tidak dapat melaut karena tidak mendapatkan solar.&lt;br&gt;&lt;br&gt;
+Peribahasa yang sesuai dengan isi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sudah jatuh tertimpa tangga&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bagai pinang dibelah dua&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Air beriak tanda tak dalam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ada air ada ikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ada sampan hendak berenang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf deskripsi berikut!&lt;br&gt;&lt;br&gt;
+Malam terasa dingin. Rasa dingin itu membuatku takut. Lolongan anjing yang terus-menerus menyurutkan keberanianku untuk bangun. Perlahan-lahan kuselimuti tubuhku dengan sarung,lalu kucoba baerlindung dibalik bantal. Ketakutanku mulai mereda.&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk mengganti kalimat yang bercetak miring dalam paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Angin malam berhembus ke arahku&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bintang bertaburan dilangit yang cerah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hembusan angin malam itu melelapkan tidurku&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Semilir angin membangunkan bulu kuduku&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hembusan angin dari pintu tersa dingin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati teks berikut!&lt;br&gt;&lt;br&gt;
+Brisbane adalah kota di Australia yang menyodorkan suguhan-suguhan ... wisatawan dapat berenang dikolam yang airnya ... yang membuat tubuh menggigil. Selain itu, wisatawan pun bisa berjalan menikmati suasana alam di Sungai Brisbane. Koala dan binatang ... pun dapat ditemui disana.&lt;br&gt;
+Frasa yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Agak eksotis, cukup dingin, paling aneh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sangat eksotis, sangat dingin, sangat unik&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Paling modern, cukup jernih, agak banyak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lebih unik, agak hangat, sangat banyak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sangat indah, paling bersih, amat lucu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Dulu ketika masyarakat bangsa kita masih konservatif dan fendal dengan aturan-aturan tradisi dan tata cara budaya yang serba ketat ... mengikat, orang yang berbicara dengan memandang mitra tuturnya dianggap tidak santun. Masyarakat jawa dan sunda , misalnya dilarang bertutur sapa dengan cara demikian. Terlebih-lebih dengan orang lebih tua umurnya ... lebih tinggi derajatnya. Wanita yang berjalan dengan langkah kaki yang lebar dan panjang ... mengenadahkan mukanya ke atas, dikatakan tidak tahu tata krama.&lt;br&gt;&lt;br&gt;
+Kata penghubung yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Serta,dan,juga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Atau,sambil,tetapi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Atau,lagi pula,tetapi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tetapi,serta,setelah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dan,atau,sambil&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Berbagi program kesehatan dikembangkan oleh kementrian kesehatan republik indonesia. Hal itu dilakukan untuk memperoleh kualitas kesehatan nasional. Salah satu programnya adalah imunitasi. Program ini sangat disarankan khususnya bagi bayi dan anak-anak. Pelaksanaanya dengan cara menyuntikan vaksinasi dan abiotik ke dalam tubuh. Manfaatnya tentu sangat banyak, yaitu untuk meningkatkan kekebalan tubuh terhadap serangan penyakit.&lt;br&gt;&lt;br&gt;
+Perbaiki istilah yang tercetak miring dalam paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Rehabilitasi,serum,abiotik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sterilisasi,serum,organik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Inkubasi,vaksinator,anorganik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Imunisasi,vaksin,antibodi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Imunitas,vaksinasi,antibodi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati ilustrasi berikut!&lt;br&gt;
+Rizka adalah lulusan dari perguruan tinggi ternama. Dia sarjana teknik, lulus dengan nilai memuaskan , mampu berbahasa inggris secara aktif.&lt;br&gt;&lt;br&gt;
+Kalimat pembuka surat lamaran kerja berdasarkan inisiatif sendiri yang sesuai dengan ilustrasi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Saya Rizka sarjana teknik mampu berbahasa inggris secara aktif mengajukan lamaran pekerjaan di perusahaan Bapak pimpin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Saya bertanda tangan dibawah ini,Rizka, ingin mengajukan lamaran pekerjaan di perusahaan bapak, karena saya mampu berbahasa inggris&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Saya,Rizka ingin bergabung dengan perusahaan bapak karena saya memiliki kemampuan berbahasa inggris dan menyandangkan gelar sarjana teknik&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Saya,Rizka bermaksud melamar pekerjaan sebagai karyawan di perusahaan Bapak sesuai dengan pendidikan dan nilai saya yang memuaskan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Saya,Rizka mengajukan lamaran pekerjaan sesuai dengan pendidikan saya karena dibutuhkan oleh perusahaan Bapak sekarang ini.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kalimat pembuka surat lamaran pekerjaan berikut dengan seksama!&lt;br&gt;
+Berdasarkan iklan di harian warta, 1 Agustus 2014 dengan ini saya bermaksud mengajukan lamaran pekerjaan sebagai tenaga editor pada kantor penerbit yang Bapak pimpin.&lt;br&gt;&lt;br&gt;
+Perbaiki kalimat pembuka surat lamaran pekerjaan tersebut...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Mengganti kata berdasarkan dengan sehubungan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengganti kata berdasarkan dengan berhubungan dengan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengganti kata bermaksud dengan berkeinginan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menghilangkan kata bermaksud&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menghilangkan karta editor&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat berikut!&lt;br&gt;
+Karya ilmiah saya yang berjudul &amp;ldquo;upaya melestarikan dolanan anak ditengah serbuan mainan modern&amp;rdquo;, siap disajikan hari ini.&lt;br&gt;&lt;br&gt;
+Penulisan judul karya ilmiah tersebut yang tepat berdasarkan EYD adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Upaya Melestarikan dolanan anak di tengah serbuan Mainan Modern&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Upaya Melestarikan Dolanan Anak di Tengah Serbuan Mainan Modern&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Upaya Melestarikan dolanan anak di tengah Serbuan Mianan modern&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Upaya Melestarikan Dolanan Anak di Tengah Serbuan mainan Modern&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Upaya melestarikan Dolanan anak di Tengah Serbuan mainan Modern&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati topik berikut!&lt;br&gt;
+Topik : Dampak negatif penggunaan media sosial pada anak&lt;br&gt;
+Latar belakang yang sesuai dengan topik tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Media sosial adalah kebutuhan bagi anak di kota-kota besar seperti Jakarta&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Semakin banyak media sosial yang diunggah anak untuk belajar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Semakin banyak kejahatan yang dilakukan anak akibat penggunaan media sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penggunaan media sosial semakin banyak dan menguntungkan pembuatnya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Anak &amp;ndash;anak dan orang tua memanfaatkan media sosial untuk pergaulan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati topik berikut!&lt;br&gt;
+Topik : transportasi massal untuk mengatasi kemacetan&lt;br&gt;
+Rumusan masalah yang sesuai dengan topik tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Mengapa transportasi massal dapat mengatasi kemacetan ?&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Apakah penggunaan mobil pribadi menyebabkan kemacetan ?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengapa masyarakat kota senang memakai mobil pribadi ?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Benarkah kereta api salah satu transportasi massal ?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Di manakah trasportasi perlu diperbanyak ?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah pantun berikut!&lt;br&gt;
+Mari mandi ke pergi&lt;br&gt;
+Bawalah sabun bersihkan badan&lt;br&gt;
+Dalam bergaul berhati-hati&lt;br&gt;
+..............&lt;br&gt;
+Kalimat yang tepat untuk melengkapi pantun tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Banyak uang banyaklah jajan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jangan pilih-pilih mencari teman&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Buka telinga alat pendengaran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jangan terkena bujukan menyesatkan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak baik berlari-larian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati bait puisi berikut!&lt;br&gt;
+KAU?&lt;br&gt;
+Sirna dalam sekejab&lt;br&gt;
+Tanpa seucap kata&lt;br&gt;
+Kau berlalu&lt;br&gt;
+Tinggalkan derita&lt;br&gt;
+Kejam&lt;br&gt;
+Kau iris sembilu&lt;br&gt;
+............&lt;br&gt;
+Itulah kebodohanku&lt;br&gt;
+Tertipu&lt;br&gt;
+Mulut manismu&lt;br&gt;&lt;br&gt;
+Larik yang tepat untuk melengkapi kalimat puisi di atas tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Untukmu meneliti langkah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dan kinilah waktunya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dalam lembaran cintaku&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Yang telah tertabur&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Doaku untukmu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati penggalan naskah tersebut!&lt;br&gt;
+Ami : &quot;aku menemukan kunci jawaban di tas sekolahku&quot;&lt;br&gt;
+Isti : &quot;kemarin aku yang meletakkannnya&quot;&lt;br&gt;
+Ami : &quot;kenapa kau lakukan?&quot;&lt;br&gt;
+Isti : &quot;......&quot;&lt;br&gt;
+Ami : &quot;aku tidak perlu pertolongan seprti itu!&quot;&lt;br&gt;
+Isti : &quot;biar nilai kita bagus&quot;&lt;br&gt;
+Ami : &quot;apa artinya nilai bagus tanpa kejujuran&quot;&lt;br&gt;
+Isti : &quot;maafkan aku, ami&quot;&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi naskah drama tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kamu ini aneh-aneh saja&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Aku ingin menolongmu&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mana mungkin ada asap tak ada api&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Coba, tanya lagi pada teman yang lain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sumpah aku tidak melakukannya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati penjelasan tersebut!&lt;br&gt;
+Tokoh di dalam cerpen &amp;ldquo; Kisah Pilot Bejo&amp;rdquo; yang ditulis oleh Budi Darma bernama Bejo. Diceritakan Bejo menjadi Pilot, tetapi tidak melalui prosedur yang resmi. Si tokoh digambarkan seorang yang lugu, tidak pintar , tetapi jujur. Dia memiliki keyakinan bahwa dirinya selalu beruntung sesuai dengan namanya &amp;ldquo;Bejo&amp;rdquo;. Jadilah dia pilot bejo yang bertugas di sebuah maskapai  AA (Amburadul Airline) dengan pengetahuan kepilotan seadanya. Namun, melalui tokoh Bejo, si pengarang membuka kebobrokan maskapai penerbangan dalam banyak hal dengan sajian tingkah laku bejo yang mengundang tawa pembaca. Sesungguhnya, peristiwa yang dialami bejo mengandung sindiran tajam.&lt;br&gt;&lt;br&gt;
+Kalimat resensi yang sesuai dengan penjelasan tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Cerpen &amp;ldquo; Pilot Bejo &amp;ldquo; yang ditulis budi darma lebih cocok dikategorikan ke dalam sebuah anekdot karena penuh keluncuan dan sindiran yang ditampilkan melalui tokoh &amp;ldquo;Bejo&amp;rdquo;&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Budi darma dalam ceritanya menyajikan peristiwa-peristiwanya yang tidak menimbulkan kesan yang menarik kepada pembaca karena menceritakan kisah seorang pilot.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Cerpen &amp;ldquo; Pilot Bejo&amp;rdquo; karya budi darma dapat menggambarkan isi cerita melalui judul cerpen, sehingga si pembaca tidak akan tertarik untuk membacannya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Peristiwa yang disajikan oleh budi darma dalam cerpen &amp;ldquo;Pilot Bejo&amp;rdquo; akan dibaca oleh orang-orang tertentu, terutama orang-orang yang berprofesi sebagai pilot&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak heran jika cerpen &amp;ldquo;Pilot Bejo&amp;rdquo; karya budi darma banyak dibaca orang dalam berbagai tingkat usia karena ceritanya berisi lelucon&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kutipan bait puisi tersebut!&lt;br&gt;
+Di jari manismu ada rindu&lt;br&gt;
+Kurantai kata agar jadi sajak berkalung&lt;br&gt;
+Kurangkai bait-baitnya agar hati menyatu&lt;br&gt;
+Yang menulis cincin tunangan&lt;br&gt;
+Di jari manisnya ada rindu&lt;br&gt;
+(hamami adaby)&lt;br&gt;&lt;br&gt;
+Kalimat kritik yang tepat  untuk kutipan karya sastra tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Hubungan makna antara larik ketiga ke larik ke empat ada lompatan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kata-kata puitis yang melambung selalu mewarnai perasaan dalam khayalan penyair&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pilihan kata penyair terlalu tinggi sehingga sulit dimaknai secara lugas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Makna kata tidak tampak menggambarkan persaan penyair, terkesan sangat biasa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Larik-larik bermajas tidak memberikan nuansa keindahan yang menawan hati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati penggalan novel berikut!&lt;br&gt;
+Midah terpikat lagu keroncong ketika ia bermain di jalanan. Ia langsung jatuh cinta pada keroncong, tapi ayahnya menentangnya. &amp;ldquo;musik haram!&amp;rdquo; kata ayahnya. Tak lama berselang, sang gadis manis dinikahkan dengan seorang hari. Haji terbus, oramh terkenal di cibatok. Pernikahan itu tidak lama. Midah melarikan diri.&lt;br&gt;
+(midah simanis bergigi emas,pramoedya anantatoer)&lt;br&gt;&lt;br&gt;
+Kalimat esay yag sesuai dengan penggalan novel tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Midah dan sosoknya adalah tokoh tertutup yang aneh kalau diterjemahkan sebagai tokoh kontrolversial seperti tokoh-tokoh dalam novel Pram&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Midah menulis dari sejarah untuk sejarah, dia menulis berupa dasar dan hasil pengamatan yang kuat melalui proses perenungan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kebagkitan sejarah dan perjuangan rakyat indonesia selama dan sesudah era koloniallisme belanda menjadi hiasan dalam novel&amp;rdquo;.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Novel-novelnya tidak menyatakan sikap tegas atas ketidak adilan dan penindasan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Untuk memahami pembentukan jati diri, tampak Pram memberikan pelajaran bahwa keterpaksaan dapat merugikan diri.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

@@ -1,0 +1,1611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+<item>
+	<question>
+		<text>&lt;p&gt;Nilai dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;39887d3657503407ca28af848fe9b2a8.png&quot; alt=&quot;\frac{25^{\frac{2}{3}}\left(36^{\frac{5}{2}}+9^{\frac{5}{2}}\right)2^{4}}{22.10^{3}}&quot; data-latex=&quot;\frac{25^{\frac{2}{3}}\left(36^{\frac{5}{2}}+9^{\frac{5}{2}}\right)2^{4}}{22.10^{3}}&quot;&gt; adalah ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>39887d3657503407ca28af848fe9b2a8.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAH4AAAA7CAYAAAC9tj5XAAAFEklEQVR4nO2c3dGrIBCG3xIsILe59d4CrCAdpIP0YA+pwS4sIlWkCc8FvgNBQFDxQ88+M05mopGfhWVZdgMIgiBcmSeA+q8rYVFD1ev03AD0AMbpekf85g6gylSf0bpylZOC2T8jgMa41zh/cQJqqIZVUAIdp08fd+P5HIyZ3ruFHn7N0wNoD6xLFmoAXeB+BeADpSVyMQL4Tp85B1gKPXSdPvidGBWAAeHJUjQtwkIH1DKQe32rjM8PgEfm8mIwB98b8+WwgRocp+MFra5auNVaDTXqc2IuOxR8CWr0C63l3nBPkAFl1DWaGnODyiX4Hvln+x1K2FT3r8zlxTLg1/h1LT8tVN0vxQ2q0TnX9rNTwT9pUjhigkXzghr1QhjfMhDLC8fYUQDmap6XyYBj1G5MXY4mpU4PrLeDGiiB8/pzqMJO66g4ENpLqVu7G/ROIYvw16ghNqY016mLEmbKiHTr/om5RnFuD6vpYdMCthvtetkatflY+J2rLr5loZrufRDnGk4lpX0V1EQwHTN7aLURc1m0+N0ZdPA7poKzvbd+3GE+K5/Yx6nAARRbFz5vj/o79ADN5eVKEXwPJQzuVDjAt+5cevwO6qdVTgv34ABUH/JcIErDch02XxYrePuQxp6tnKGxuNY5Cn1JBa45MDKJFTy3p3bnDnBrqze0ZhgQHhw9lvt9iHgmCjbEVFWxgncd0pjENATT7xuoTrIF/N5QlxTtECt4n93iays9dzFu5Jj++mCnXZLLf9xCVZhr79IaVkE1yDYAYxpiev/skyxqo26qo7nOLb0z9MwNvxYwlxj7O9/s/OLXC1dD9VGorVTFoYOjpf56TOVsPnziGhJ6EQ0Z3xpGwX0wX3tiZzymd9v2Bt/dGWXT7++bOTEHRlsFb7uHO4T9FbHH0aH+Yrs32zjsoJjRw5lnd3YNrS2oXs0ZmyJ4sxwOoFS1GnNg5GOrs8dnhzTQA5EDzoevXRw4m93erVXAfaFCtANswS8djLyQ7o0yBc9y7Q61rV8g/sAoVO5aqIJtKmjDjleq4NnH9vFuMnfM1bu9/zONPXPPmrq2LG3nXLsJe0mxt04U8N7ewDWC5wzeRQVjPqBdgRo0YpMZ4HbOmAJ4Q89kbo3WNGzJgUNLnuUMmM9S08bgMzlcwKmCp2/dtD/2qIMphxfcsio+cENctmmscdkWCY21SzQmM2sPaYplQDnRMCWz5Vi2SCQQI46tgRjFIaFXy+wVelUcRcWCFcglgy0B7W4sIcGhREoJBc/CYYGAJ8P2ol6OI1Kozgb75DJbOB+5kybPBN2xl1XxNjnTpM+GRB8LgpABX2aHXNe8BEEQhCQa6CCWL8Qi/294QsccvnBxb5swh9mpl/e2CRoGg/YQwe8KkypCWaiM5eeWJVYIruhiYgd0+v6rhuyVVCpMjNDrKH3Z5nEuj3cZsMCEyiUhmGnfLhjCXUENPlc6VA89CB8RZQobaKCEFYpMYQhy6H4DHcxo40oadaU9N9Ah5wNE1WeF+eAhtcu8tSV8gneVcaaw8MsRk1ackg7tE7wr24fPSuDIH8B/y/DBvLTY8+w1gi/hL1H/KzqEO5255imq2Cd4ruei6v+YDr8q9oH5nyUM1ncx2aM+wXO5MI27GNtC2BHfv2rYQjbVO1W++bxLwNwhuGL+Bvxu5wZI9s9h3DDPJedFwTee+6agbcG3xnc8YLGdPnfjGeb5y2wXBEEQBEEQyuIfAGhBvv+r9ZIAAAAASUVORK5CYII=</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;3&lt;sup&gt;5&lt;/sup&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;3&lt;sup&gt;6&lt;/sup&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;3&lt;sup&gt;8&lt;/sup&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;3&lt;sup&gt;9&lt;/sup&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;3&lt;sup&gt;4&lt;/sup&gt;&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Bentuk sederhana dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;5fec67ac541eb2d171b6e14b0ab90f22.png&quot; alt=&quot;\frac{3sqrt{2}-2sqrt{2}}{sqrt{6}-2}&quot; data-latex=&quot;\frac{3sqrt{2}-2sqrt{2}}{sqrt{6}-2}&quot;&gt; adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>5fec67ac541eb2d171b6e14b0ab90f22.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAE4AAAArCAYAAADWk770AAACxklEQVRoge2a3dWyMAyAnxEYgFtuuXcAJmADN3AHdnAGt2AIp3AJ34s0n7W2Jf4U8Xx9zuEChaZNk7QkhcomOAJXw7VFdsCJL/S/c4J7oPl04ytwBAZkHKtycIJ/kQY4f0v4zG9aGoibHl59uQH2iOavwOWJxlrE1H0GRJkaFybKKvYdeRP3Ltq63y6urTOi3CinQNjevWRxvzF4bo8MonX3g2trb2jrFd6VNwf3V2RMIPqYESWaJqJ3DViC5WxodEYmZy2s8ixuukN00eceatyDusoovfstDKItjzMW42zo4Cfx5flhKPSgiYwbOtSCk8ahVnbltrVQdoiSQvcduZl1itF1OmeVveFqk2/n5XXc4lY48Uurqa64S2MET0jMPEPhR/ID6pH4sOTyJ8Nlibc5eeHEd8h4lvq19MwdDfEA6wvXwJlCN8VWS3kXizx/4g/k3XTCaGkhqZVJhQ+Zhjse3TPcsnwSqzx/4udMexP3Yx9JLA6hknQ7Epu9FnGHS+J/tUTfXXrKrarPyjsgfU+54Bj5L4z5/9CVVBeHOfWgQ/dOqY7FPo5LKe5ZeQ2iuJibqlHE2stuR6w0rBe7SrD6x3ylUqlUKpUclgJFvbZdbKpU3mSPrV5ZCTjzXBKygnxEP5UErAhLicJKgjnxu6asL7yYYTWiBSY/zbT5rEgqnz8gChsoG/e09qA5tM7dr1mifImYm6rSvjXrmvD8Ov5RgdB6YuXAC+Wq+RYmbDXg4uiRrjP3btnxWCjRarim3K8sx7iO5Vqr1Xo77CcTVkMr3Wp14VkSuBV/Rm6WOJIfzIHlWqvldIDWGDZ5DM23uplHN1XFhZQ8jIPrR7JCtQXU6nQLkPo/jIVqhSXQsqGvtJK13ZeZSbuEukt4lCxVm/0E4cEh7cPm0EM7qcM1ekRBN6RHygVrXYx+JqGwqVWrUqn81/wB2EI56Vq3pEYAAAAASUVORK5CYII=</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;1b1b43d46d4b7ba96dcdb8139a6df28c.png&quot; alt=&quot;5\sqrt{2}+\frac{1}{2}\sqrt{3}&quot; data-latex=&quot;5\sqrt{2}+\frac{1}{2}\sqrt{3}&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>1b1b43d46d4b7ba96dcdb8139a6df28c.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAFEAAAAoCAYAAACGohY/AAACIklEQVRoge2YwbWCMBBFbwkUwJYt+18AFdiBHdCDPVgDXaQIqrAJ/iLMAUKARALoce45bDQmmedkJg9QFEX5WO5AffUmvpUCMECHFVKJJAeeQAY0qIi7UREToCImQEVMQCoRb/08eYK5ohbtAp6jSSFiBrScHE/eL3r6P+fBAI+dc1RcUBIqbCZeScM0ewzvX7of2HvnqTyvWPRA2lQTVUAZONakWvQDKLBJEU2Jv2iGiPjH/NhUDBaswx6PLGI/TeDaR3DD7n+MG4+4owki4jvUWCGFe7+gNJiKeD97pYgN0+boxiNazZpXqIi+umcCfmf6zYVyhogVcyEywuLp8DTSLRHv2MBeTNM4tH60xHXKo0Ws+8ctWb7SNKbECu8dU2AFMv3EL6bHL8eK537uqx8uN6yIn1gTW6bZWK+sK/WwZTtmYHAf7uCaaTYa1sUp+/Fb158QZ7BUU/e4CqnXUu/Mxj4zBm2CarxhflRzBnG36kfBvEiHclYmjk+XvJMMwRBY49uFSR8MKb3kUgrmRzjm7nVmd74zCBnquho8Ioppl6AlZX2BSDa2+I+pZOj4u9K36MYmzxIxY+gDvlPTML0XShOe1UW5C4195587aIRkow/peu7zqSLCejxF//2LIXmSvCfIWRd5L2eLeHQ8X8Neq/nzpLCaigdDXB1WPMRaTcXhHaupjAi1msoCe6ymwn6r+fOksJo/TwqrqSiKoiTgH6XUw4J1x/GIAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;bf42054f0307808a858186d011dc9b51.png&quot; alt=&quot;\frac{5}{2}sqrt{2}+sqrt{3}&quot; data-latex=&quot;\frac{5}{2}sqrt{2}+sqrt{3}&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>bf42054f0307808a858186d011dc9b51.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAEgAAAAoCAYAAABdGbwdAAACBElEQVRoge2Yy7GDMAxFTwkUwJYt+xRABemADuiBHqiBLlxEqkgT7y2Ehv/HxgQGfGZYhCRYvvpYAgKBI8mA9GwjrkIK/E1cQaAGFSgwQxBohSDQCgnwBQwi1BfIzzTo6rwRobKzDbkyBqjONuIAXkh27D6hP7gLFDVGTLUOw+vXGBe7amRDUfNZU8xV5azzzCsRI3ZZk9NX1iCh6EqJFP6rkSHOP53P2QbMUHEBxyVIBF2RSziuoJ+eWrA/uPdYPor5lONSJKq6peXwCDO0xR6kKJadeyX2B4APgXL6fV2KOEvtiBEneouyqHlol5j11iBCNmwTRTYCaVREg/tm4t6QGg+9X4REgWF8ZL5ZPyViZMM2p+RWgXT9oQMixN45kub3U8I6EdMOuN1UqRhH1ZAKey/ZplhJP1W0e56ipl8bRwLt6XYNbRSteQnafmvJS3Mv72xe5mmUas3Z0pe9EJGcGsk5ssaQuFmgWPltt1jb4FKka9rNmo3/KRzXWuSDbHzJSzp6KJrzW3ExWiPxzfaU1vnRKxpFZub7hHFa5RwvEM26X6Zf22hvpjVTj/lDmtylBxuma8gvBOqWgCERklLdBrbA0yk2JOXYDnRP2HsZTn2MA7fGxzjwKFzGgUfhMg48Cpdx4DFsGQcey55x4PbsHQdujY9x4NYY9o8DgUAgEPDIPymmtIfyaOBGAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;3720d03a61ae21daa69b3d8ab8b66290.png&quot; alt=&quot;\frac{5}{2}\sqrt{2}+2\sqrt{3}&quot; data-latex=&quot;\frac{5}{2}\sqrt{2}+2\sqrt{3}&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>3720d03a61ae21daa69b3d8ab8b66290.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAFEAAAAoCAYAAACGohY/AAACGUlEQVRoge2YzZGDMAxGXwkUkCvX3LcAKqCDdJAe0kNqoAuKSBU0kT3YWsD82oIhbPRmmElIBn0IW9IHGMYZKIDr0SLOxBV4jxyWxAgkiYYCS+IGWBI3IAcaoMYlswFuRwr6D5S4ZBZHCzk7NfA8WsRBlLideNFe6EV6EjMvYmxsCo9PI8Pde7T2CnfTmf8u2zl1Tiw61zwbBYm6b7RN5e0//yiEPHDN6ox8jPbX0QIUfIT2HPc0z0jOhzTTO/1SIE1GinXKDBrTgDTxSoZjXUG/1D1pe8du1EGQCrcy5dyD+KYVk0RNvIr+WCO9Qs6Js9tsp2UM56gLy9sh80JiVqNmFBqLVzBMRIZL2BotpULPX7CHD1gFv5UrAly8kJjur0liGO/uj3B1/vjzU1xx9z33n2hhsrS7Qp4sT/lP4ou3JolT8V70V+Od6S0v9fDFhBXWuIqadjWu2Q5SY+YK89QL4pQXxnPxCn8deehL2jNaE7KpiegKWdoOUodSOlvKSlyKl9F27jW1XKgZljE1si3mJn2xgULOvo1lbbwbbSLXNouKHZIoq7Ge+D1nuKVu7JfEmHjSuRvGa3lFfy6UUrPLK8KwSHepGa9peyUxNt6Daasn7quhbSzq8WaKK/ua9j1fmUk9V7OFNft6trBmRkCKNTMCUqyZEZBizYwOa6yZMYPGmhnordnXs4U1+3pq9NbMMAzD+HJ+AfkxykxWmAvlAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;22c5f749c7d70c023652a55c366b7059.png&quot; alt=&quot;5sqrt{2}+2sqrt{3}&quot; data-latex=&quot;5sqrt{2}+2sqrt{3}&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>22c5f749c7d70c023652a55c366b7059.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAEwAAAAWCAYAAABqgnq6AAAB3klEQVRYhe2Xy5GDMBBEXwgEwJUrdwfgCMiADMiBHBwDWSgIoiAJ70EaWwhZjABTu1t0FRcVmh56vsAFgBswAN2ZpA/gqXh+I3rgzon+V9gI1UBxlNETMZ5N2GAj9BdRYTPsVAxAeTbpQWg5KNh3bImtoQDMEYQeKs4r7U3Brok3OI1gd2yUwjPj2enJE0D6oRZb+WLBLt39ydkaiWSgCLYFPTYjBK1zQqIm0ycUNYUcwfbw3ViuEk9sTwYrqEz/WRZqBCuJ17pROGawImiRm2EpvgLrdyxTegVPi822GdYE64krXaObMCN5S+FewXy+CptJD5brg0nYkAQZmFfQy+jEuw9MxFN6ZC5Q55xJoXH3Uj2lDh7j7vln2sb8iU+SQgJRYkWMoWXeD1e5G/dymMJyLgbWFr4aK/4iQgGG4JHg+Wea0b/GZ3iLpNkdK3dnQjFEfOOCgnf2pSIkZFv3sy0lqeGTgSC+a3y7odwYRuKCSBNMLXwVy7JIiRsiV7AcPmkr2t+hsJRfDrYeYRN7yUGybCIeIdlt/LKo+d6UzOWTb4sNoVAcWSsW4souI43OkG7m8n4MHfEl+FuC5fJJwD99X8NcC23pJlEcYSSBjvVBsQfftH3hwoULF/4LfgD3Gamg7bV7dAAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;36dc0bc316fc5b5bb847c8c661999f26.png&quot; alt=&quot;5sqrt{3}+2sqrt{2}&quot; data-latex=&quot;5sqrt{3}+2sqrt{2}&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>36dc0bc316fc5b5bb847c8c661999f26.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAEwAAAAWCAYAAABqgnq6AAAB+klEQVRYhe2YzZGDMAyFvxIoIFeu3FMAFdABHdADPVADXVAEVdBE9mBrMP53ljCbHd6MLwYk8fQkC+A8TMAM1Cfa/Ld4oMh6Zay/iCcXx9/p9a2YgJYLq2NCqexbsVztcL3a4YlogPEMQ602dplDAzVQnWwzhAHVw4rQ4G9wOYT5HLYomYudiTIC5kzfIX9jgT+7Oh76+U3bWvEQKoS9g8UKrtd70tPEdokKSwiz/bXaX5/x7AOVTBMv9gOs0rY3rASkCKtRL+zLxpwRmBlEDkoVZmPBjavFPZg6vR/DE0+1pQhrjQdbaz9GhPS3IRGUjd8Stho+G5SKVlyVz6RPd1HsQWE1SnaLvrjhl/TMMXMj4dlF+slKOouNtRZUIsy93LGl0z7tHiYvLnak3GKotK1kdXS4aoJdZUJSjkOxFesps7UkeeZeinRQxG6Ek7ixq6xNxCRxZffeBbchwi5t6Wu5tnJ6neCdkqxJl1jP3sBj1YG+XvT1suInTKQ9kpd1cEs55/4SwmrcMvTFXrG3myVib+SoPmkPhwB7w6GUUShomVF8s87Mce6SAyWXXLGRS5j0IlMtDeEEicpC1dF5rjnxCOPSqBfi028sQ1Kq5uBX+mFeQtiAf+gOESYq873fgz3ud4b4ICo++7E98Nk/B/c/uxs3bty4kcYPemepduXTgfAAAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Bentuk sederhana dari &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,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&quot; alt=&quot;\left(\frac{\log _{2}3c\dot \log _{3}16-\log _{2}16}{\log _{3}\frac{1}{9}+\log _{3}243}\right)^{2}&quot; data-latex=&quot;\left(\frac{\log _{2}3c\dot \log _{3}16-\log _{2}16}{\log _{3}\frac{1}{9}+\log _{3}243}\right)^{2}&quot; /&gt; adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAApElEQVQ4je2UzQ2FIBAGpwQK4OrVuwVYgR3YgT3YgzXQhUVYBU3gwc9o9LH6bu/HSUggzC4bAgsfiwMGoLoSKyACCSgtsQZazS/lPT8tO8m1JRVAYLvnpLUZ9PAW6cb4LxzQs726CaMdBGAEvNaNgvxR9Lz+HSPQHeUyIweNE5GlbbldgiknF9pMCuxzZeSI3PyDjU4y8SwNMqo0M9ta7+l+v5EZMtMzDAlWLX8AAAAASUVORK5CYII=&quot; alt=&quot;\frac{1}{9}&quot; data-latex=&quot;\frac{1}{9}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAkUlEQVQ4je3UywkDIRCA4a8EC8h1r7lvAVaQDraW9JAa0sUWkSq2ic1BJQ+IGsghrx8GFP5BR8bhbQk4YGyJIxas2NbEiCmvm/I1Xy2HLMeaNODo8s5r3leT/jzF2hG/yyB1X7OnA2adH2CPXY8cpWmkJW/y8aFHnqXCCkWe7pPKHR9Fs9DXjoPCKcuL2zo+jjN46zK0feR1WAAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{1}{4}&quot; data-latex=&quot;\frac{1}{4}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAq0lEQVQ4je2UzQ3DIAxG3wgdgCtX7hkgi7BBdsgOnYEtGKJTdAl6iFESZIgvlSK1T7KExYf/JAy34wFE4AUU4C2+SgJWeYScCxCsmcoo+hEn4skifopdEoHMXn+XmXOjQ2E6+J5Og15JHXvizNZ9a6bR/TGhzbe130JbBUtP3K6CKI9mS6YgYn9VzsT2s4dRa7QiZZm2keOb64uRuL2oo3OauE6gNpgx1ntnPjnQNfYtIujZAAAAAElFTkSuQmCC&quot; alt=&quot;\frac{2}{3}&quot; data-latex=&quot;\frac{2}{3}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAuUlEQVQ4je2USw3DMBBEHwQD8DVX3wugCMygDMohHIohLAwiKEwiPeyuqjjxR+qlVTvSSrH0Is8kmoWP1gRkIPRAByRgG4FnII7AV+Chz03Y6/VuBE5IMJPBt/Il81ibbtAhCPW9IYG7WhXO7HP89Z5av9rmt+SQsmYk/QpcavCCVMvr2drjS9Bz3owE3Es4VOBF56CM7AxbBUF9n8IT+zrNNRs1ZQZLG/WmpjyyhbrNjrz8Hr7vN+oJIBo7DqBbnTMAAAAASUVORK5CYII=&quot; alt=&quot;\frac{4}{9}&quot; data-latex=&quot;\frac{4}{9}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAu0lEQVQ4je2UwQ3DIAxF3wgMwJVr7h0gE2SDbNAd2KEzZAuGyBQsQQ8YtYWaIOUSqf2SD4FnY1C+4XIygAcikIAduGnwBgTAyvciSbYGrWxM1XoA7jU8KfAm0SgCD+m9FNg12MlmkkSvtaEpAvMIuMhJXVlglaruqFrpt3nfv04rDcTvypH/vtqTjQzZTt8M3MjzmhldeCY7nCPYyvFmBA58eq7Aa51UetTi8KJDENJ3YnDAvI+x7uy4up6D8TsO0EutcgAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{9}{4}&quot; data-latex=&quot;\frac{9}{4}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Nilai x yang memenuhi pertidaksamaan&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;63ff03158f0f9d5a523a7df721d47433.png&quot; alt=&quot;\log _{2}\left(x^{2}-x-6\right)-\log _{2}\left(2x+3\right)leq \log _{2}\left(x+2\right)&quot; data-latex=&quot;\log _{2}\left(x^{2}-x-6\right)-\log _{2}\left(2x+3\right)leq \log _{2}\left(x+2\right)&quot;&gt; adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>63ff03158f0f9d5a523a7df721d47433.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>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</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;abe1cf5d871a9f22338d37317595a4d5.png&quot; alt=&quot;-6&amp;lt;x&amp;lt;-2&quot; data-latex=&quot;-6&amp;lt;x&amp;lt;-2&quot;&gt;&amp;nbsp;atau&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;f6227cb90bd8c5c259c97a64b047e47f.png&quot; alt=&quot;x&amp;gt; -\frac{3}{2}&quot; data-latex=&quot;x&amp;gt; -\frac{3}{2}&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>Array</name>
+			<type>Array</type>
+			<encoding>Array</encoding>
+			<data>Array</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;abe1cf5d871a9f22338d37317595a4d5.png&quot; alt=&quot;-6&amp;lt;x&amp;lt;-2&quot; data-latex=&quot;-6&amp;lt;x&amp;lt;-2&quot;&gt;&amp;nbsp;atau&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;60a08e9f64e85442abb97e0108ea3442.png&quot; alt=&quot;x&amp;gt;3&quot; data-latex=&quot;x&amp;gt;3&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>Array</name>
+			<type>Array</type>
+			<encoding>Array</encoding>
+			<data>Array</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;88de6912e5ff118a1c08a6956d5d0ec1.png&quot; alt=&quot;-2&amp;lt;x&amp;lt;3&quot; data-latex=&quot;-2&amp;lt;x&amp;lt;3&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>88de6912e5ff118a1c08a6956d5d0ec1.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAFEAAAAVCAYAAAA+RgJMAAABUElEQVRYhe2Wwa2DMAyGvxEyAFeuvXcAJngbsEF36A7M0C0Ygim6BD3YFoFWkJCohz5/UqSiRk5++48TcBzHcRzndwhAD0zADDz1+xf5pPVWI/ADuOsC6O8ZuBTE7DTuN2mQhPztzNlq7RGtXe3NBA2c60YT8UQ2WlKEHKxgE5LAsD99xQXR2tbeVKOBr4nzr8CAiOhJF9EhCR/1O7AkI2WPdiwH8gsWWPb95sJOg++NI+sOOvbYikhNuBEQ18YFe3DsiG3Bmsx1YXHfrGu+FaA0iT3ijCM3WS+pcWRHHSlHyoTXoKFO/1/RsW66RxsocWLMjfTE1HBizNn+/5HtbdpmBD7bE22dEemNOZT2xJgqSTQhsXg7+jnk3s4tUri4L55xV87tvE2YtaVSRzOyNNp4lFTn6J046f8meKD8vZbyTrRTYxpHvvcUcxzHcf4bLyATZTm1ZBwYAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;f6227cb90bd8c5c259c97a64b047e47f.png&quot; alt=&quot;x&amp;gt; - \frac{3}{2}&quot; data-latex=&quot;x&amp;gt; - \frac{3}{2}&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>f6227cb90bd8c5c259c97a64b047e47f.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAABTUlEQVRoge2Z242DMBBFTwkugF//8p8CtoJ0QAf0QA+pgS5SBFXQxO7H9Qg2EiQkIuDHkawkSoxmNI87dqBQKJyYGrgBv2HdAX+kQXtSA2N4BaiAIaxs6FHEk8cDDXLWHWzL7vSofkfkdPIOGxfkdH+0Id+kRdHOhoaEHW6QBFXhs8lSd5hFO+NQCg9MTaslo6ZVKGykA65kVCMVagojcr5e//m58Ki7jUxt3US7Wto04wcdxe7h/emjbu17QHrWIcO34sNe07/Tn0VNx95xdo6J/pY51ob+tbX0vGf7Fqety9qXLxBVhB3T9chWQ6OrYYfSxSOjW9R111I72i5tKWhRvaIoPxu6s9Phwgl4vKa1Mk2Sx2taT7niSZ8OqU4WeN6bKaLEofr9dESOAhuiohmEPsGhmp07m/R/Szf+p7GldpLYSe/lo2GhUIiPPyenYH7u+UWVAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;60a08e9f64e85442abb97e0108ea3442.png&quot; alt=&quot;x&amp;gt;3&quot; data-latex=&quot;x&amp;gt;3&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>60a08e9f64e85442abb97e0108ea3442.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACcAAAAVCAYAAADFEfeTAAAA4UlEQVRIie2USxGEMBBEnwQEcM117whYBTjAAR7wsBpwgQhUYII9TE8Rlk8B2WNeVSpAZdKdyQyQyWQyV3gBH2DWGIDwj407oAaKBGOTZoASGDWSKYFWAl0kkkKPZXJFwBxPEkXCc/R+xhu7kkHPd7MZgEbGNrGtPo5a1EnkLkGxo+Yr9dNjSZikfXiwVhs/MRbj9dPfiKkwg4cxFXaKpzzJXIyX0oaCpa3vbppac06zZ67A0hkk0GLdd3a9qd3aYBn2hvNS6OJFfg2erVruV4t2SP3PFSw17g3hjZnJZH75AsauN+3bBOhYAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Batas &amp;ndash; batas nilai p agar persamaan kuadrat &amp;nbsp;x&lt;sup&gt;2&lt;/sup&gt; &amp;ndash; 2px + p + 2 = 0 , mempunyai akar &amp;ndash; akar real adalah ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;p &amp;le; &amp;ndash;2 atau p &amp;ge; 1&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;p &amp;le; &amp;ndash;1 atau p &amp;ge; 2&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;p  2&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&amp;ndash;1 &amp;le; p &amp;le; 2&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&amp;ndash;1 &lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Misalkan akar &amp;ndash; akar persamaan 2x&lt;sup&gt;2 &lt;/sup&gt;+ (2a &amp;ndash; 7)x + 24 = 0 adalah&amp;nbsp;&amp;alpha; dan &amp;beta;. Jika&amp;nbsp;&amp;alpha; = 3&amp;beta; untuk &amp;alpha;,&amp;nbsp;&amp;beta; positif, maka nilai (1 &amp;ndash; 2a) &amp;nbsp;= ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;10&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;9&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;8&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;6&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Persamaan garis singgung lingkaran x&lt;sup&gt;2&lt;/sup&gt; + y&lt;sup&gt;2&lt;/sup&gt; &amp;ndash; 14x + 8y + 60 = 0, yang sejajar garis 2x &amp;ndash; y &amp;ndash; 5 = 0 adalah &amp;hellip;&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2x + y &amp;ndash; 13 = 0 dan 2x + y &amp;ndash; 23 = 0&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;x + 2y &amp;ndash; 3 = 0 dan x + 2y &amp;ndash; 15 = 0&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2x &amp;ndash; y + 13 = 0 dan 2x &amp;ndash; y + 23 = 0&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2x &amp;ndash; y &amp;ndash; 3 = 0&amp;nbsp; dan&amp;nbsp; 2x &amp;ndash; y &amp;ndash; 15 = 0&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;2x &amp;ndash; y&amp;nbsp; &amp;ndash; 13 = 0&amp;nbsp; dan 2x &amp;ndash; y &amp;ndash; 23 = 0&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Jika diketahui f(x) = x + 1 dan g(x) = 3x&lt;sup&gt;2&lt;/sup&gt; + x + 3 maka (gof)(x) = ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;3x&lt;sup&gt;2&lt;/sup&gt; + x + 4&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;3x&lt;sup&gt;2&lt;/sup&gt; + x + 7&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;3x&lt;sup&gt;2&lt;/sup&gt; + &amp;nbsp;7x + 7&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;7x&lt;sup&gt;2 &lt;/sup&gt;&amp;nbsp;+ 3x + 3&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;7x&lt;sup&gt;2&lt;/sup&gt; + 7x + 3&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Diketahui fungsi&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ0AAAAoCAYAAADkIfgQAAADwElEQVR4nO2by7WCMBBAbwkUwJYtewqwAjugA3uwB2uwC4qwCpvwLcIcMS8kE0CEkHsOCwQlTobJfDKQyWQymUwmo6YGbsCrPzqgWvgZr4h7C6AFHv33nsBl4fFsgTXkvklqzKTW/XmJmezHws+JUbo7cMUoHxgFfAGnhcf0S9aS+264Y97AJYlROpu6/37qVuAbct88Fcaq3HhbGeGCmfjL4N4HxiJpmKJ0BdD040nJytn45J40d97+U8vnn6+AM2bixeLciRNQrNKJdXv1z6r9t+8Wn9wPQ4MRwN1xrcAIKPRGDhXGd2gUqcRYU+39e8Un90MgS6mLDvNGxjLHpxNln/LcPeGTe/JItGhzwvhxU5zducI8gtKNyT05JB9W9ucSutsBwqn/rMEIpnDc4yNGmLaCyWSU7tt3iVbukynQOYi/EGqBMet2IlbGW/IZtRb9vU/iUhgxSicR6zBpmpo/F5L7LFqMc6iZoDNpChgOsmysRcNbWzvr2pV4cylmtpk9skySDDPlNZ/hbo1RninmUkokh8zZZPxIjdBFh1kup9KRfrS2B4bO/s+pGC9Ci/M9Z7At/5frzLpUbKgWKiH88BgGClIucqGtYcrSHTsO13E0Thj3pOvPC8yqFLuD40JczVfSSE/ec9yxoJskf8zFmJWKqWGK0qUYyX4TSUXIatOgyx5oXt6Qu9P1R2mdL8aV8TpZ67kGuhrmWkqnEfbWDi0d0zdGnojzqc/8D/7uuDefTv6PD8+gQkoH4UBBo3R5efVzYXoBvSNuWXQFlU8WTH1JEDGmEC3jSy/oapiidJuJnHZGhVEc3zwMmbu82tfPvMuFiyA/OIYojOuB2hqmz2fM+FcC8ZWHfl2L/gXuiF+Sh0bkjJnTLvI3vNwIm23btMbWMK9sKFzfIGNb2B98BmdSw9VGoSXTlEWMhFSTbizcTPQknPidUgITCj6bNjL/afhOHjM2TTLGov6cRCkhUz1HcS6sa+XsVjjtBoVvoWlB3HI/gfj8ofGp5C4JRq0GS+JXe7/kmGL7D+Zgt8JV/H7b9N5bEGW8oezE1+Qub612a9MWBLu1bdNHaUHcmtxXxRV5zW1BnMJRWhCFxSPevSD+SGV9FtOCWGCsU+jQdpSl3IIouOR+CCT4GbMq2hZEUcrQoRHwEVoQQ3JPFtmJEZrYjvX3+aXcgqiVe3IU/O/NcKVs5rQgziVFpdPKPUlsR13M/ZC5LYgx2AqWYgsi6OSeJKJEY7tTlmpBjB1T6i2IIblnMplMJpPJZBLhD0f9okSKTqPdAAAAAElFTkSuQmCC&quot; alt=&quot;f\left(x\right)=\frac{3x+3}{2x-3},xneq \frac{3}{2}&quot; data-latex=&quot;f\left(x\right)=\frac{3x+3}{2x-3},xneq \frac{3}{2}&quot; /&gt; dan &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAAAXCAYAAADwSpp8AAACNklEQVRoge2YzRWCMAyAvxEYgCtX7g7gBGzgBuzADszgFg7hFC6BhyRPwFBbfjxov/d6UEKbJmmSAplMJvNznCPlTkB5pCL/SgXcgAYoIuRrlb8cp9L/UQIPxBmpXPkdZxSss8Fu9Kw3ZgkMfCdN1Yiug44r+xqu1jljKYEOCeIBuBOf2t3JthqyV4WOpEY2XOvvSn+nGC5mjZT5BiSVg5wmC5JVtmyQXL+FBomGEBWy0dBIje4W2fhepDpizgUJDpeKl6fuKjxerA8sbhttR3PdeY/+WuVCRb7VdUKjXXzbp2MaRIXOMyBdHUiqeBCXMtY6otT5F1OlFeFOlSyYGhaWi22FRPpZ36lU1jO2OaJ2nh1FNdLLaPR3h+h6JpwyS6Yn0rLD/KSGuPCqWR0LacmL9nG0wOeux5zXsxzxMY7YMzUVhKP8pM8/nTCLYhs3XnVnPGKw9v+BY6dhpqxF0Vgwpv28fZCJccReqcnST2gtC57UE7q1Rpy8dT3jmNfHhGoEiCPvKrdETI3Yg4JX6jA8vTpE58Z5FmKrI9yAtLbUbsotfpsZ6ngsx5qnC+f9T3PsSc/0hFuKGtOpTIs4zfYeQ4oj5ka39tW1g3U9Vs29C4d3j7D/bAOFvrt0+/7GPcKCwRvw3h3ZveNG/ElNPRFW3E2PnlmxPvEeBdb9eEpt+UzxzZv10VSkt9BBrkxzp0XH0iL5W9NBWCtlR8YucjHvxBa4/PX1YGI/WtX8RjrKZDKZf+IJVuew6M/iKg8AAAAASUVORK5CYII=&quot; alt=&quot;g\left(x\right)=2x+3&quot; data-latex=&quot;g\left(x\right)=2x+3&quot; /&gt;. Persamaan&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGoAAAAZCAYAAADZl7v4AAACVUlEQVRoge2Zy5GrMBBFTwgE4C1b9gTgCJwBGZADORADWRAEUTgJv0WrCwz68RH41XCqVK4ZbLhqtW5LAm5ubm62kAEV0F4t5MZNBtTIQHUXa/mzfBzNNiCF4///LZlpv8DjwHvFDlTsM4/Uthq1h/xKEYYHoqXmmMQJDVQJ9OYzxNHaVtGY5iIz19VeYjp0BBUSwL28PPd5mmtrg36UtmgKYMAvtGNcNXXmN2fRIUHZyryGTbVnwJvtLrJX2yp6JONcFEgHr/LlEglmCpup2bdsT6ntiwfhQWiRGXclqex2QKxvD6eUgqd5kE/EtPmyL0es4IMEIMZOtIh/zGeFZPmcFBajSWqz8Rzpw5sxiWvsSR3Spo4Uat5yElMQB/zWqLQTwU/Cs7BEBL5mf9uys+P4fZAG0GZbuqIbkD41uGdeCm0LQjt2X9bNmc9M30wFydZpJvoCl3KgfNSE7fEnBipkjVPWzCjbAsW3hL5qoMqI74S0HWZ9b8/1NiBiyrRG9fhrVMV3AHSZbKtPmPv69nlb0AC6dGZI/33fgTTaFvjsBpb2dBQ6U3NkVoUsJrZOrsVVEzPGU5re6Csc+lJpW/DGLjYnvj6tRQPxQbJRn2XbJmidTHG01bKcxQ3fq9bXROeZ2ha4jo9e+G1xKxXLzGxw16eUryhiVqc+Tn19ovVhfrQy4K4Ze5guyWHMWNusfrDviCeGrXu0M7Qt0A1eyVi3GtIcjWgW62qnxz5Ihbm29+QgRMa42Y7lLG1W9JX1L7zm0NP6M88Xn8QF/gptNzc3N3+Jf9NGvmvKkgzsAAAAAElFTkSuQmCC&quot; alt=&quot;\left(f circ g\right)^{-1}\left(x\right)=&quot; data-latex=&quot;\left(f circ g\right)^{-1}\left(x\right)=&quot; /&gt;&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAAoCAYAAADXNiVcAAADTElEQVR4nO2azZWrMAyFbwkUwJbt7FMAFdABHdADPaSGdEERqSJN8BbyPTYOfwaR8Ii+c7yY4CGOry1ZsgDDMAzDSKIC0AF4fXkcJIOMp/7yOM5CAZmPTPOlnOQ7gD/NF++kBdDDxAdkDnrX1KDwreZLFSghi/EBE78BcINsTFXxK4iZnzMlpevTub8ziChPzYEEhObNxPeoi99BJriFCNy7v3P3PIOsvNw9u7nnheYgRsbE95v4HnXxewwnO4f3/zFd1HfunUttStAGYo0Ixf+b+Z9f4RDx40nl4SKmgYhxFAW2LZhfQV38J94PezXewz364U+HgWb2PeriU2iGeDlkQTRBnwL+HEC/X8OfC46kw/kikW9xg8y/6rxzAfQQ4cOd9oQIz2jg7vqVmgOYgHH+p77vrJQQDTgXLxx/6DYMwzAMY5wWv30u+WmOSnUbB1FARHvBh08N0sOpG9LD0dp9N9PprXuP8SEaSAjL8HaN6Q5Drqm2lAVtMMytcMHtvqdfk1f/lbaWBrIAtvjsHGkpb6aww7qJGv7GNEbzdxojMHO2hRZpBTA09yF3DDOqxofI4LOWazJme83+I3pOS2D+/iCmbgRZLMJLqwayi9ea//j6eQ0tZOdn7rvU/L0xTo93kSgCd3vl+qWc2iliCmGEUcMXzRqQydHcBRmGoZwWW8K7MU7l7+kDx3xQjmG513Oi3x4eSDtAlZCdQ397x3DxNDj37dcLaXNY4qAT/g1e2DEBQvPJqt+l4s9UUsRniMRdzWKH/+X+n+ONF+wUBbw+qpTwh6Ip8WMYImnW+qfu/Jgx/34FuNl4NjmMtYLSBGXRZ3vKvLeK/wfZ8afxn8q0EOEXS7kK12muzfnBNeIzLVpFn6WWecfj6uB/JNvSYY3+fmuW7uzc4KupF8Vnle1cm9sha8TnZcQUHdaVecfjotUIP1sjaAZvEq9U8MlSelrXUPxDKqmXxKcJmmNrmfden99t/N6zwuzjx/L6c+K3GO6saqTvnjLvveLH6dOroV6+HZK5l4+Z2grvpj4Wa2+Zd4r4DwzDJE7MFf0+OaR8m6IxjuQFBScyj56FjWJplHmniF/gPel0xTCPhHH+JSuHzp6RMwzDMIxv8w/N2m7VdZ8E+gAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{6x-4}{-12x+3},xneq \frac{1}{4}&quot; data-latex=&quot;\frac{6x-4}{-12x+3},xneq \frac{1}{4}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAAAoCAYAAAAiyK7sAAADQUlEQVR4nO2b27GDIBBATwkW4K+//qcAK7ADO7AHe7AGu7CIVJEmvB+wV3wDamIMZ4aZOGoUln3ArhAIBAKBE4mAAngCHfACyoOfUejmygNoFs5lQIt65w6oUH25EzGqXy9UH5+ofs/SMByEQt+0eIMHroKMgFq/x5wgC5QQY32c6Wt9JsuV6YBc/zbHJF68wyDVFycHvpCrIGv9/IJljRzTOlz7rRQo7VwlQpmymqk2ZvoPWuPaBqXqti/goy0ugnxyvEu4CjFKBg0bCiZaKKYsNc5FqAGK9XnxWy4ae7Ygc5Qg7+YjoXd1EgdYmVVxrh1DYQqtbltCbIyHLzUbAdkIMkVZiyNdwRVJUGP/wnLCRiwHDiV+fugsjUz0eatZegMeLCvZLHOCNGeEK2cIMmFqTmuPZ3wT4gJnBTkWmthkc5abM1/8ZIG9JvgKsmQ+oIqYmviUe0WtY6HJ8mMxwJRIVXxXy1DiT9QAycyXa13Wma6CLBku9uUdzPO+fvebyBmOQ82H3YivRgYCgUDgJ6k4dl868CFstykDJyBr0Bd9FCiRsEtU+EBppAtmylAyTw/H/whoStRy6okaWBvzeMS2Y4maPKlx3HHAHvHWi31rs0U2HHx8XIzbujVhuisjedU5juzn7ZG9Sx8qHPY86U2qSc19U29vw8y422RO9prWZnReNDT4RwvGgydIYlwSASVKu2xNbElfgmFLRb/Jn3Kgf/wFGqYZERlQ0cKcPmlri08S24yUC/p91IAFLcebLp8lxxxv8Y8pw4yIa2nH0TiVBWoyi2s+yYvtSTbXb+uJKaUTEpEl+viTKaKOHWWBF0RyjTXrJnrc7xaHUo85xDFfBauywBviXOoxpmLomCXqM8NnKZk805xZlwXeFCnE9tJIWe+YA5fr4wo1qBnrAUCMmkVbbQ2vssAbIVuKrsue/5vXtOyB3bciokVbzQbnssCbIBvszoj5XNMUKZ30ttme7PYVX0bFDk1sGQ7UXKmhLK69HrKD1bLAm1ExrHfKcej3+PsPMbHjB2T0FW/yacHROJcF3oicqTndspL/iNlaSpuMo1NZd7ac57MuVxb4BmL6jYBx+wVLFAgEAoHALv4AMeVWu7fLP98AAAAASUVORK5CYII=&quot; alt=&quot;\frac{3x+12}{2x-3},xneq \frac{3}{2}&quot; data-latex=&quot;\frac{3x+12}{2x-3},xneq \frac{3}{2}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHYAAAAoCAYAAAArIw6WAAADNElEQVR4nO2by7XqMAxFdwkpIFOmzCmACtIBHaSH9EANdJEiqIImeAPlrJh8wHacdyHxXssDLrnxR5YsyQIymUwm8+MUwAW4A0/gAdSJ+7h0zZcT0HbjeQINNs4tUWLzemBzvAPnlB3ceF24S9dRyk5CBHvs+q+6zyUm5CbheL4Bd44FcO3+Vq7VoRb2kPCdIYJtsM3mcurGtDWtdblg2pucAlvAK2NtPXedts6zN8x8+BAi2BtjwWqzHT3f8UuU2PreSKtMQL9wz64DdwEL7Mwtu+9PEYMIEWzFqxDV/xYFq2NPfsSsGb45D861oTa46ECfW8S2a5+EunQctfNc63zeqik+YPN8sOIcC2wRpzSs5r1A5gj1iodU+Jv9X0V+xKpWaUqw7q4KZYlgC1YIBb6Q5H7EUIiy+669P2Ca6p6zF/xd81jBKp7dWqgzFKLCnaRWSZ6we6a5u+aOCVW2X8+GaFCMYOWFb1VTK16TMFdWjGHXYukZm8lkMpndcmZ7jlsGc2iSp/kycSiPrbAM+lx3iIet+DkE9/pTt2ant/+R8abCtEy3RD7m1M3ZvmvvqLHNc3Q+J0mD+gxsC82XE8uKBlr8hXJgnDW60N+GDUk5z92hnHdMiu5MWNwtE+xyJX0lSgYzv3f6KoV3LDXFwztkaXA+XyOYupAXDaZ1Nb1J9dUepVhD0CYqMAux9WvGVbkxFsDQ+z3S55x9FznGkz1ggn1g2q88cCaClvSmLibEmeLPztepgrG/RDvc9673zHff+jz4vOmmyk8XbdQzn0tT/hcFJtAr26ln0l3rlffm/8lr+WnLgtIYVUHElrikRJPJuVgjujRGC3nADvihYFOl4nypWLl468eQJQ1ej5pe9acEG5qKk2v/qc0NtKXPp+qcUfnN3pDT5hNzvzCMzSTYgnHI4JuKUx3UpzZ3O6IyHH2vn3KExpBbQBs8GGmET33vklRcCFOVkMoA7YmGCE2dY8oUux1FmYVA7ox36Wq/X/lSGl43d8VChaqZDsSXpOJCkRA1kbIb014S5xXjjT38eU0Q8r6ezotTpOJikHAVoO+lkrFk/njcSjyfyWQymczX8g8hG1s0vY/jtgAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{-3x+9}{4x-6},xneq \frac{3}{2}&quot; data-latex=&quot;\frac{-3x+9}{4x-6},xneq \frac{3}{2}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI8AAAAoCAYAAADHeqnFAAADQElEQVR4nO2czbWyMBCGnxIswC1b9hZgBbcDOqAHe7AGuqAIq7AJv0WYjxAD5I8rF+c5JwslJwHnZTKTH0FRFEVRvoYT0AAP4AU8gbZwH81QYrkA3cy1K9Bj7vkF3DDPooxsbtuO6Q/fDB1dC/YRK54TcB/uwyeeBiOc8/D5OtRNEeiR+Q3bTqiHDqqCbcaK5z703zDveVz6iLrfyha2BYw6LxjDucq8Ylxeb9XtMO4whNRhK0Y8D8oPt0dhybbZiCJlmKidjlvMEPFijENi1Lu1eH4w4tGY550l207orIpzZckYZ8wY+ZrppB/KmnBy70MIEU+N8YrFXfHBWLNtEU7MB58taXHFVp6nGq6fF+ooI0u2LYavgwrjdZ4J7W0hnor3oeqe0Me3UVQ8bmOSztlvs/2GS9zTEP7Gp4qnxR+Un3gfPms023IJsW0WEoVLLNIzHRMfGKPIGy51Y6L2WPG0TCcA5R7s66lx1DexZts/QarnURRFURSlKDc2XCtSjk3oEo1yEGSO6MmYtkoGF5PGXjCeJwZ7i4Ssel8i21A+SIuZenhgjBky9JRYcmkxgq2tzy92sCa39mDfVEKRSciUmOVM3LxSxfu6kuxL8mEvaC6VuXmbkr+T4uFC+o94I27CTYYrmzu6jeRPYu9WDFmRzx22Oue6eCKNd3bK3CKgbGaTxd4W40VCh68Ws4cohhvjQm7NjuIdxc+LdyOLEcXb/Az1YrKmlI1ndobXDP32kW18FRWfe7NOTFPxUqSk5z4OE+9UTFPIUixue/TgHqe5ky6+ln3vLnzyu/HOJjaWvTFLaV8qMeJxj9NIqlriLd8b8mw5L0cMm9n4xjjuf9rzuPhiFiWeTWx8Zdy66Ws498hNqnhqzAMfIib4MGs2TuKMEYW4TbfhlCM3tVN6jOLt79YCWIl3Umd+lZE1GyfTMxWCNNx4Oug99X10ThGvZX8XIogTo5vVHYjp9ITbOBgxTOh6SeqRm9yYp0/sV4m3cRZzDeYcuckVjzulr+SxRVL0/zCYO6TkHrmJEU/HNHWVdFbjnjLM2Tgb+/9bKuu73CM3MeKpMBnWkzFg1jS9HD4b75q9z/IqiqIoivJ3+AcsvoS4ocbovgAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{-3x+12}{4x+3},xneq -\frac{3}{4}&quot; data-latex=&quot;\frac{-3x+12}{4x+3},xneq -\frac{3}{4}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI8AAAAoCAYAAADHeqnFAAADXklEQVR4nO2czdWqMBBAbwkW4JYtewqggq8DOqAHe6AGuqAIq7AJ3iLMIUBA8sNTYe45WSiRoDOZmWQmgqIoiqJchhtQAU+gB15AnXiMami+FEC7cq0EOswz98AD812UkcNl2zL94athoDLhGL7KcwOa4TlcylNhFOc+vC6HviEKemb+h2wn5MMAWcJ7+ipPM4xfsW555nQefa/KEbIFjHYWGMHNNbPEmLzO6ttizOEeQt2Wj/I8Se9uz8KWbKMRjRQ3kc8GrjEuomeMQ3y092jl+cMoj8Y8S7ZkO6G1Oq61LWHcMT6yXxmkG9o7xYl9DmGP8uQYq5jcFJ+Md7JNwo314LMmLK44yvJkw/X7Rh9lZEu2yXANkGGszivgfkcoT8bSVTUBY1yNpMozv5ks5+zZbM9wiXsq9s/4UOWpcQflN5buM0dXW3P2yDYKicIlFumY+sQnRigyw6WvT9Tuqzw10w1AeQb7emgcdSXeyfYnCLU8iqIoiqIk5cGBuSLl3OxN0SgnQfaIXozLVlnB+SxjC4zl8cEukZCsd+F5D+WD1JithydGmHtcT4qUS41R2Nx63fMFObl3X+xKbS+yCRkSs9zx21fKWOaVpC7JhZ3Q3Gpr+zYpfyfFQUH4j/jAb8NN3JVNg5aR/CR2teKejHys22pn18USabzzpawlAaWYTZK9NcaK7HVfNaaGyIcHYyI354viHcVNz1LIIkSxNn9DP59VU0jhmb3Cq4ZxO897XIqMz82sG9OleCpClucuThPvZEyXkKnYLHvcwM4Gh1YI1hGf/R+8OD7ecR29SZqgltqYrWVfKCHK8xiep+C88YAswxuO/Y7zozfJy1AfjH7/08ojinNWpfk0SctQS8bSTZfyxB658VEe1yaakha7EjT6Rh3jLJ8LLuTITT5rHcaq2e+tBbCydW/76CeqTClpSFTn3TFVBFGeiqXAOkd/F+2sidWy31vbS5H+MituGDcWUnCvLJFUSHRIIDHO3nxJ6JEbH7c134GFMbBU6xNHycF/BLEmpJgjNz7KI5t3Noedrb4QJcu0SPLles/SpcQeufFRHlEU2RGW3FO38/PKEpn4tsVJfhjB3kTKrPdij9z4LtWL2bPof+7E0eEOS37iJMu37/IqiqIoivI7/ANcpYRNcKYcvAAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{-3x+12}{4x+6},xneq -\frac{3}{2}&quot; data-latex=&quot;\frac{-3x+12}{4x+6},xneq -\frac{3}{2}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Diketahui suku banyak &lt;em&gt;f(x) = &lt;/em&gt;&lt;em&gt;2x&lt;sup&gt;3&lt;/sup&gt; + ax&lt;sup&gt;2&lt;/sup&gt; &amp;ndash; 15x &amp;ndash; 6&lt;/em&gt;. f(x) dibagi oleh (x + 2) mempunyai sisa 4. Hasil bagi f(x) jika dibagi oleh (2x &amp;ndash; 3) adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;x&lt;sup&gt;2&lt;/sup&gt; + x &amp;ndash; 6&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2x&lt;sup&gt;2&lt;/sup&gt; + 2x &amp;ndash; 12&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;3x&lt;sup&gt;2&lt;/sup&gt; + 3x &amp;ndash; 18&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;x&lt;sup&gt;2&lt;/sup&gt; + x + 6&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2x&lt;sup&gt;2&lt;/sup&gt; + 2x+12&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Diketahui (x &amp;ndash; 1) dan (x + 2) adalah faktor dari suku banyak &lt;em&gt;f(x) = 2x&lt;sup&gt;3&lt;/sup&gt; &amp;ndash; x&lt;sup&gt;2&lt;/sup&gt; &amp;ndash; ax + b&lt;/em&gt;. Jika x&lt;sub&gt;1, &lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; dan x&lt;sub&gt;3&lt;/sub&gt; adalah akar-akar persamaan suku banyak f(x) = 0 dengan x&lt;sub&gt;1&lt;/sub&gt;2 3. Nilai 2x&lt;sub&gt;3&lt;/sub&gt; + x&lt;sub&gt;2&lt;/sub&gt; &amp;ndash; 2x&lt;sub&gt;1&lt;/sub&gt; = ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;6&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;8&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;10&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;12&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;16&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Adik membeli 2 kg mangga dan 3 kg salak, ia membayar Rp60.000,00. Kakak membeli 3 kg mangga dan 5 kg salak di toko buah yang sama ia membayar Rp95.000,00. Bibi membeli 3 kg mangga dan 3 kg salak ditoko buah yang sama, ia membayar dengan 2 lembar uang Rp50.000,00, maka sisa uang (kembalian) yang di terima Bibi adalah..&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;Rp15.000,00&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;Rp25.000,00&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;Rp35.000,00&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;Rp55.000,00&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;Rp75.000,00&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Seorang ibu penjaja kue Risol dan Lemper, yang menjajakan kuenya dengan menggunakan sebuah baskom, dengan kapasitas maksimum 100 kue. Harga kue Risol dan Lemper adalah Rp4.000,00 dan Rp5.000,00. Modal yang dimilikinya adalah Rp460.000,00. Keuntungan hasil penjualan sebuah Risol dan sebuah Lemper adalah Rp800,00 dan Rp1.000,00. Jika semuanya terjual habis maka keuntungan maksimum yang diperoleh adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;Rp85.000,00&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;Rp87.500,00&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;Rp90.000,00&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;Rp92.000,00&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;Rp100.000,00&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Diberikan matriks &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAA2CAYAAAAWCr1AAAAC10lEQVR4nO2c0ZGrIBRATwkW4K+/+U8BqSAdpAN7SA+pIV2kiFSxTeR9XO8s4SHiEiPKPTPM7LqY9XICAoJgGIZhVEQLXLxkxDnxXl6ndS/nnQPwAu6Y0FRcoVp2xaBCTeTfMKE7w4TujOqEXiks4Bk0wA04RvJUJfREgQEncgR+kOs/RPIVF99SQjvgAfQUFnAC2osFEwpIU/VApF4oLOCZmFCkVp6Hn9cW2iExxlIXOb96oUekI6Go0MY7/i20yY+lPnJ+9UK1IxFKRQWeSPVCfdZucnMxoR498Fzos5emQcomNvlelVAdh76QCYat0CGS3NvHnbDYqoTWgAndGSZ0Z5jQnZEsVAe9S2NC80gSqjP93+jum9A8JoU2iMjjkHkKf4FXKMUGxiY0j0mhPTLe0YKewoSuS1TowfljqtBcTGgeUaF3ZJ0s/BZ07NEOWA1dm1GhusbTTzEZep4JXY+g0BbpCLXOMZ0YnhKaiwnNIyg09JC1Y3qm/xOY0Dz+E3pzDjZexheyNsetuZ/GhOZhU387w4TuDBO6M6oSemJep+7Ab59CC2pqHL4EDVIez+E6fhgvn6qEztlvekAKTodp3fD7GoV1R5bMaCf1yvgQ0oTOoOc7059T6JxAKJbNCXWbHh0vx3Zj+efmCL0iw7a1aZH4Q3FvSmjPezOo05NNIG+IHKE6sbLGPdTnxviq/80I1QJ17xtn4jXG33bwHFLqtgOlQb5In5gly90KcUFiHvsSb0aoNrUuN+LB+xuDrkNK3RgEUnB3PjeHnbNZ6cR75yjEZoT6a5pCNXaKuU2ubkN0/8caG5xAZPrxb7pTdEVqaDPkOQ/5WqSWptxH5wq98d7MatP7bXSzshvjWCybEdohQt1B9WM4ltpRmSNU11CF0rd5jFzHpoV+ghpeZFWV0JZlH/2VQFVCa8CE7oxihdrLG9Mp+uWN9nrV+RT9elXDMIxK+Ac37FIELov7rAAAAABJRU5ErkJggg==&quot; alt=&quot;A=\left[\begin{array}{ccc}4 &amp;amp; -1 \\a+2 &amp;amp; -2 \\\end{array}\right]&quot; data-latex=&quot;A=\left[\begin{array}{ccc}4 &amp;amp; -1 \\a+2 &amp;amp; -2 \\\end{array}\right]&quot; /&gt;;&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAA2CAYAAACP8mT1AAACKklEQVRoge2bzdGCMBBAXwkU4NWrdwuwAjqwA3qwB2qwC4ugCprgOyw75IuAZIjK4r6ZzPjDkPiGbJYNguM4DgDXqB2+OJbTyHg2RQc0bE9Wg4xtU3TA/duDGOGOy1qMy0rAlKwDcANahrh2ydjveaJfxZSsDij71wVQ95+tXQDCc+1GVswVucrWUgPH/ny7k3VApt8d+ZG52J2sa/99h8SvnDnY7mQpR+CBTMMiU7+7lQWyenVIlp2DXcs64bJGZcVidLlvMvZbvTifGVkgOdaDIcDX5AnwVXTeZqJ/U7K+jctKwGUl4LISmJQVZsraWiSo5koCpzAnC2SFuAXvT4iwd9ehTcrqkCw5RGvjU1x4LvDH7VUNypysY/SFFt4ezE/Dn5RV8hyzbrw/XoFBWTWS2SpLb1p/8spqGY9X1cixIT8nS+NVOOWK/rNP7MiakqU3rEpYaPvE7rAZWUeGbeowGc1dwp3DjKwt4LIScFkJTMnSamlH3i2wpZiSBZLO5NhYneI207c5WVckYX4Hlxd9m5NV855cT9OjaqZvc7JaJHZVDJsLa+9XC0TUq+cdTMnSO4uyf12Qp75WMTydsxtZJSInXAnvrJN15n8MVFkFz7HRlKy4EqLHliPHLkUfjBtr8RhMyYorIRfyPhgCO5mGYbyCYT9gzVU1xtwWvhlZZd90wA3P9ba1aJ6lVeEYM7K2gMtKwGUl4LIS2Kws/6PTQvwvdI7jLOEPYTgtMAtZ3gwAAAAASUVORK5CYII=&quot; alt=&quot;B=\left[\begin{array}{ccc}3 &amp;amp; 1 \\b &amp;amp; 4 \\\end{array}\right]&quot; data-latex=&quot;B=\left[\begin{array}{ccc}3 &amp;amp; 1 \\b &amp;amp; 4 \\\end{array}\right]&quot; /&gt; dan &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAA2CAYAAAA4T5zSAAACo0lEQVR4nO2czZmqMBSG3xIogK1b91MAFdiBHdiDPVgDXVgEVdAEdxFyE2ICgoacYN7nycJhBr7DB/k5OSMUCoXCT9MAV6ud08qJwplpjNe0cqa0wMDvGNCh4hWDNuBXEBevOEGRERfvtwXdv3iuGGRnwAl4ApXn2HX8W7eloEHp1Bru+DVnZYB9g0PH2xiiVnJF3fx6/NxgJhYu2RhwA/5QMwjpBvh44teWjQGaXA3oUA+Ry6EMaIAeM7fuUG/NJ9TjNZfaHJdRS/ZjAMwbYFOhBr4B0xdvoRk1LbU5vT1q8uDjsAaAMmFAPYEpOKHimXsADm1ATToDTrx2Ow/P72VnwB/hbmXA9Pm6C+rx970xqVCzHrvbOZP5LKixjg2oG9syDfKBGYCH8XOo743JzdJgt6wNOCri4hUnKDLi4hUnKDLi4hUnKDKz8VZMd20GXkf3XQUdkGC8eir1xCy1dVbvk5XlZkEHJRhvaA7dz5zM3VD3tWaroIPijVevIJdulksxYD3eePVCYu8VJBQD/v9wS169vAHr8cYb2j5bohiwHm+8PemqtYoBqBlQh5lu1qjE1h5p3WIAavB98JrJ2yOzWAxIjDhBkREXrzhBkREXbylNTExIUI1Jj4RKTiSVJr5LNgbYm+s6UejmqiQXZoXIxgAXvTlvF0UVA77Au4J0alzCG6Ar33SXtyaJmaUBFSpgd2EYozRxidt4Tf0mtiuvmaUBLcuzm2+VJs6h0/af/B9bdgbceT8lErs0UW/XfkJWBtyZJgkvzD99sUsTt6bt3XNkYcCF126nZWrA3qWJN0z9ZzVqXLuLmIUBNWYB5jbbgL1LEytLb8e2FH4WBhwZcfGKExQZcfGKExQZcfGKExQZcfGWL+tITPm6mkKhUEjDPxXSTX3XuwxwAAAAAElFTkSuQmCC&quot; alt=&quot;C=\left[\begin{array}{ccc}15 &amp;amp; -2 \\25 &amp;amp; c \\\end{array}\right]&quot; data-latex=&quot;C=\left[\begin{array}{ccc}15 &amp;amp; -2 \\25 &amp;amp; c \\\end{array}\right]&quot; /&gt;.&lt;/p&gt;
+&lt;p&gt;Jika 2A + AB = C, maka nilai a - bc =&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;-20&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;-10&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;10&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;20&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;30&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Diketahui matriks &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAA2CAYAAACP8mT1AAACFElEQVRoge2bwZWCMBBAfwkUwJUrdwugAjuwA3qgh62BLizCKmzCPcRZIwZJNuHB6Pz3clhAZvIfCWOygmEYBjVwmrQt6Sa5dNum80wL3ICR/cmSvHaDyNpaUgiTlYB6WcOKuUxRJWu8n/NbyeQr4DwTmxXiZbMka83hObyJDSbrjw74WYhhsoAGN/yqhRiqZA3ABbjySLwpEPPs3edjZPnUuE5eMuP1wNH7W2S1gRzUygI43K/979PV8Pp29dtHyerIkxXiI4ZhixtyIkaGYenkz8wXumpk1bhEZXK/4jpVFYwtddaN8OqCGll7wGQlYLISMFkJRMsaYy/MRL2sA+7tk1stx6BaVoWTJNXyEtPNhlBr33xetaweV3NIJ5b4WlmtdzJWVi5qZY24yhkenVj6HvaVT5bsk03bu47K575KVo2b1GvvWEWcrFzUyRpxE7uPrP2svX2tStaPd7CaXHjDLWH4T1xpVMnaGpOVgMlKwGQlECtroFziHW4ulnl5bgVWpSzZqCiR+Innl5bcOxRfnSzZPe5ZL/HzzL1VyZL/cmnu59dK/MJrnQnKZPm7x2vJOuJkqZ6zDriCWRBZ1eR4buwr84sFamTJfmGolehAw/MqSwg1sqaUHIYNr0Mv9LSqldVTZk/Af2n4Oah/GwpSC0kBmUNP/NBWKWsrTFYCJisBk5XAbmXZD50isJ/QGYYRyy81vSZudMoFGwAAAABJRU5ErkJggg==&quot; alt=&quot;A=\left[\begin{array}{ccc}5 &amp;amp; 4 \\ 4 &amp;amp; 2 \end{array}\right]&quot; data-latex=&quot;A=\left[\begin{array}{ccc}5 &amp;amp; 4 \\ 4 &amp;amp; 2 \end{array}\right]&quot; /&gt;,&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAA2CAYAAACP8mT1AAACG0lEQVRoge2bzbGCMBRGTwkU4JYtewuwAjqwA3ugB2ugC4uwCprgLZI7RghKngG5eM8MM/5kIB6TkORTMAzDAOA8OA5frEsVqc+m6IE725N1x9VtU/RA++1KRGgxWbMxWQmoknUAGqDjMa4dM1yvAq7+nD1wA8pIOVWyeqD2jwvch+r84/9S+XNU/vkB9yXcI2VVyRpy9GWrdwUTaXEtLfa6WlknX/aTlhVS4qYI14lzqpVV4LpK/abcXEREhxO2K1ktbrDPzREnLHZ9lbIa8rWoGBfiUtTJanhen9XkH+DP7EBWzbjrtXwmS9Z8sv6UqUOsi6uRdeAxGR0en8gqcN1OFsmdf76rAf4bmKwETFYCJiuBSVly+wyPjumlQE7UyQK3qg9vobJCX3ofWqWsnvF+keyNT3FivME/PE5vKqVOVjl4Qzbebrzuhj8pq2Y8ZjUsP16BQllX3ExWmLvR9pMtqyM+Xl0iZUN+TpaMV2GXK/xraySyqmTVuIFcKHmEA2ukw2pklTxW4OFktGG9GF2NrC1gshIwWQmYrATWju9DmolrgzJZS8T3IRLa7kLWkJzxvUyPLi+urVpWrvheWqnE97uTlTO+vwTn2aWsXPH9kedfzIisgvEvaVTKyhnfT2WRsTqok7V0fL+bbrhEfD9E0ukYamQtFd+HyN1VdoWHqJG1BUxWAiYrAZOVwGZl2R+dZmJ/oTMMYw5/MlQvkfV+GUkAAAAASUVORK5CYII=&quot; alt=&quot;B=\left[\begin{array}{ccc}2 &amp;amp; 3 \\ 2 &amp;amp; 4 \end{array}\right]&quot; data-latex=&quot;B=\left[\begin{array}{ccc}2 &amp;amp; 3 \\ 2 &amp;amp; 4 \end{array}\right]&quot; /&gt; dan&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAVCAYAAACQcBTNAAAAcUlEQVQokWNgGAXYgR4DA8N/KE6CiiVhEYODFgYGhgNIfBmowhZcpr9C04xVIQxcYWBgcCVGIQMDA0Mw1HSCChkYIG7+z8DAoEpIYQvU5OmETEZ2oyXUdAFc7jyAJoY1bGEBvxJJzBUq9ooBEpwjAwAAl/gbNqtyFRkAAAAASUVORK5CYII=&quot; alt=&quot;X&quot; data-latex=&quot;X&quot; /&gt; adalah matriks ordo 2x2. Jika &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAeCAYAAABpE5PpAAABn0lEQVRoge2YwZWDIBCGvxIswGuuuVuAFaQDO0gP6SE10AVFpAqbcA8wTyTgaoTN5mW+97gYcMafmWEIKIqiKIqifD0GGN7txKfxdaI1uA++v9uRT6EBrjjRzJt9+ReYzLgm5p5R0QAnRGqcMnNVtJ18nWiSdke4APZF25MfwpR4VoMhsjUBI+5Aa9YWdn7i44Dx2PB5x9rWr+mCZzfvU6oMlMZ6e8LZ2862Pw1OrI76u7qGwUUqOKEe/C7YsGFs2bx4w/D2s6Jdgd6/vJZo0pKMzOEfC9IzC7VFMCgj2onld7e4qLNk0jMs3DVFs3603pEx45CUiL9ISeHCc2m5sVLPDO5DYBattMM9eZFCpDzsuVGUiLQ7y55T/EiuS50aewv4FgzLIpvihItE2bh2dfZMCdFG0vXsqXlv/Q+hcw11RJtYv4THNcySvm3UQOpZmAWiw5PPqWuQvKAv7JhlTjkpsrJZ4cktDGxL5xLEfaVE/EgU7XecOCZyTNLTxgsOIpEk7+6C55ZldLfMjW7tf0tCv8KmNtxURVEURVFe4gdulYjdWzClgQAAAABJRU5ErkJggg==&quot; alt=&quot;A^{-1}c \dot X=B&quot; data-latex=&quot;A^{-1}c \dot X=B&quot; /&gt;, maka nilai determinan matriks&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAVCAYAAACQcBTNAAAAcUlEQVQokWNgGAXYgR4DA8N/KE6CiiVhEYODFgYGhgNIfBmowhZcpr9C04xVIQxcYWBgcCVGIQMDA0Mw1HSCChkYIG7+z8DAoEpIYQvU5OmETEZ2oyXUdAFc7jyAJoY1bGEBvxJJzBUq9ooBEpwjAwAAl/gbNqtyFRkAAAAASUVORK5CYII=&quot; alt=&quot;X&quot; data-latex=&quot;X&quot; /&gt; adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;-12&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;-6&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;6&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;12&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Persamaan bayangan garis 3x + 4y + 2 = 0 karena refleksi terhadap sumbu X dilanjutkan dengan transformasi matriks&amp;nbsp;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;71abd8256c315ddf28255191643eecb0.png&quot; alt=&quot;\left[\begin{array}{ccc}-1 &amp;amp; 1 \\
+0 &amp;amp; 2 \\
+\end{array}\right]&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cleft%5B%5C%5Cbegin%7Barray%7D%7Bccc%7D-1%20%26%201%20%5C%5C%5C%5C%5Cr%5Cn0%20%26%202%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright%5D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22squareBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; adalah ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>71abd8256c315ddf28255191643eecb0.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAABjklEQVRoge2awZGEIBAAOwQD2K9f/xeAiZjB5bA5GINZGMRGYRJ7D5gSWTkfjuzO3XQVLyygVUYcAMcxxw0YsmKNfPxdfkEHPIEJ+5J3gsuLQ1eqMEjRxSWNUV1yAL6V22yAEfgq1FeTbIFZuU0IYkts9yV6RqpI3gh3umGN1hr0SVtvl0zRlExRlWxi3VFpCh2akGwJAz0qbaFDE5JncckTfJTkTFhLatIQxtoX6qtJTsAjtvkkyJ5dFEh8kO+k/FDksr6sc0lDuKRLGsIlXdIQLumShnBJlzSES7pkgYH1T32mnLXToIn9ScZhYX+8qpIi2LLuTyyUc7BnmQj5Imlf9iHzhJaq5INt3qbl9wSTNpLQysesJnmL1+c7SzXndWkMapJyff6qSAatBmMsOVUk9zrWZiAEur35ryYp8+8dr2vPNgDlqAaehW3gKc0RTXq206HlwsADQTD9hNwJr9BVyO51+gT3juOoSoqYpOxHwtO8ijnpKy2XSn4qLumShjiU/NMHCP/FUVDHMcAPAIn2LpxFNdIAAAAASUVORK5CYII=</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;x + 6y &amp;ndash; 4 = 0&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;x &amp;ndash; 4y + 4 = 0&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;6x + y &amp;ndash; 4 = 0&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;6x &amp;ndash; y &amp;ndash; 4 = 0&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;6x + 3y &amp;ndash; 4 = 0&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Diketahui barisan bilangan:&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;46e84682faa8cf1b3f6c44a98a0a2757.png&quot; alt=&quot;12,6,3,\frac{3}{2},\frac{3}{4},...&quot; data-latex=&quot;12,6,3,\frac{3}{2},\frac{3}{4},...&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Jumlah n suku pertama dari barisan bilangan tersebut adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>46e84682faa8cf1b3f6c44a98a0a2757.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAGEAAAAoCAYAAADuUZQHAAACaklEQVRoge2azZmCMBCG3xIogCtX7hZABXZAB/RgD9ZAFxRhFTbBHiazhIiaBFZdmfd5OKwkIzsfzh+AYRiG8SIaYABGd5yB4g02dkuLOK90f9eIE08vtmEEjMDxA2zskhq5e7s329gtGssvSHx/l43dUyAhZETi/LtsGEiS7T/Axq7pWe/ALWzshp55Ta/lZUpM38LGrqmQaubKlFRTS8stbBiGkUyBxL/DwrmS25/l0rpn9ju39xy5p3ZrtU4fkBDxlRyYHFwvnPdb9QJxxpX4QVbl1rfEO7F2e/R6SkTAS+T+f0XD1HzcEyHkkLBWBdiiotBq5auJdWzj1sb8Es6sr6sr5EbZxRg5RoSC+FKtYBr9+rE9ZRTcuz0azkwExCmxTvTn7/5M/kp6va15K+ZXNUYcr7CRxTMRTqQ5T0UIbea2/h1/+M9/Co9EODGfHh4frFVKltv83ATb8uUiaPxeqmKO3IagnkmEe3e8rhu4fUSofcY9x7ZI7tF9WqL61/EpA7ml8XYdfD5636N57pfKfah9gi5WMcrgnH+EIiz1AAXiOL/h8hu91tlf2qfNnSbmjnli3qJk3cLG0iPPJBG24IA4N4eO/EeGA+md+9Y2CuQGKZ8t/Gty63cdh+TQ8LwBDF9XOTG/zhgbik4KwrDT8cWjlLWEr6tog5n7aFJDqj3aXMlAXhJumDp/E2ElF9LzT4WIV2AirOaIiJCauwammG8irEBHJakJtGNeeqoINSZGEtoHpZaQFY/nRiZCJBW3IWhNY2bhKBGt6/0QVLNuRDFgb2QnoRPX8MgVwR+92HtHhmEYxub8AHU55KaO9h78AAAAAElFTkSuQmCC</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;474b0492aa59080fdf1b5485744e268f.png&quot; alt=&quot;12\left(1-\left(\frac{1}{2}\right)^{n}\right)&quot; data-latex=&quot;12\left(1-\left(\frac{1}{2}\right)^{n}\right)&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>474b0492aa59080fdf1b5485744e268f.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAGcAAAA2CAYAAADak4erAAADsUlEQVR4nO2czZHqMAyAvxJSAFeu3CmACuiADughPVADXaQIqqAJ3sHRACE/ciLH8tt8M5mdnc3GjiTLsiwHNjY2NjZmss/dAUdUOJLHCahzd8IRe+BBUFJWDkCDg46szAl4AmfgCrzan8KRIJdsVAQLcTOEO8zpl/Z/TsCF8P4HgjK63qNu78nCFb/ubO6IrgmC13D7uPfa838VYXTtIvuwmB1hKK/esIKlPv9OGAlTfAq+advtKujSPm9VavyOmoYwcoY4Mi6wHUHwY8rd8z2nNPSP1IpgxGP9MUVGjce55syw4CuCK3qN3CNcsDO+VQ1ZJkJviI8fstIbwaA0rsZyvjgSDGKViPbBd9johTO68FU7D1havITdSdmzsg+N4IEu0tIqR97VwuJvyjYXcSZ02BsiSI0biomgtAqfQuSW1LXdyRAaKriiX5HHKKcmWP1SxHg0IfpsXmRc9Y4QMw/GKOeEncUnlZ1o32KYWyKhvdYqr+ijzdhnj5HU64gVeQsGJFSdmm/E9b3a64FOWE9sLP7WPisJF3wGA6n7ZWXxSftZp3z4AlIHKVdsLF4itl7PI+mLPv+5Iwj/yXvId++7E7dHMZXDsqJJ3I6VxR8YUM6Rt+D7NPfivYKtCC/cTf5pLTQmh2VB6ghS5tqluURRzlemQDaGQD+hyyT7ea9W2DE5LAtSK2fQ4mc+Z7Cv2kb64vvYkbCGciTULUE5YKAc2X7uJuo8KmfSGg3bcKGcO/3Z2FTKEbc7dg0tfLXKeU1cY7hRTs1wartk5SzBhXK61SJn5gUEwubWfhnsq+xn91nhmV9XdmeZcmJyWHORdypWOXuCUGWdI0IWJe06f/u85ihnbg5rLqUoJ+ko97qXk1o5knZJsgi1IjZ9sxYNOqM58M5ciBfQCDx5+saCkhOfB74rc/bt79pCD4u5czTxuZT/bctACtCnKGLLoC/f5gHtZluXGp2bLmKzzes2tYTTMVvJ8i5Tc47k7iwMMnlA5bXAo0Ff4CHVnBojkwSwBcll5zWc1pZGVfwurscoqjSq5KJC2UT8VMyU4LUjbIpVigq9l+OOLfA+DzvB270NIeF3MeW44LeQ/cSwa5OILma7oLhCdij3CEjss6xO7q16BMTz4akTdgvGIg9PZWkwgoZlo2eH3XcEVj92CP4P7DakP7CrIcuBXfB/1H2OUGKOuk+R7ai7NP5XPxKhIetHIuDvfl5liuyfVxG2DxN94+bDRIJX15YDV5/02tjY2FiJfyOSUtz4v13fAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;0d8fb7889eb02f89c215a66661e4bb13.png&quot; alt=&quot;24\left(1-\left(\frac{1}{2}\right)^{n}\right)&quot; data-latex=&quot;24\left(1-\left(\frac{1}{2}\right)^{n}\right)&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>0d8fb7889eb02f89c215a66661e4bb13.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAGcAAAA2CAYAAADak4erAAADwUlEQVR4nO2cy63qMBBATwkpgC1b9hRABXRAB/SQHqiBLlIEVdwm8hbO6CYmiceJv+/mSAgJBduZn8dfODg4ODjYyDl3AwqioSB53IA2dyMK4gx8MErKygXoKKAhibkBP8AdeAL98C1cMXLJRoOxkGJc2GJLu7T/uQEPzPtfMMqwo0c7PJOFJ+WGs60e3WIEr+E1evY5878G410nzzbs5oRx5eQVK9gb898YT3AxFnw31Gsr6DGUl5SWcr2mw3jOElfWBXbCCH5NuWemfUrHvKc2GCNea09QxGtK7GvuLAu+wYSifuUZ4UE440tqyNIRlobE+CUrfWEMShNqQvYXV4xBJMloP0zTxlK4o0tftf1ASIuXtDsqZxLHUA8+6DItrXLkXUNY/EtZ5y7umAaXhghSE4Z8Miitwl2I3KKGtjcZUkMFT/Qjch/ltBir34sYjyZF30xPxlHvCj79oI9yboSz+KiyE+2HcPOQSGqvtcon+mzTt+w1okYdsaLSkgFJVV39jYS+fvh80AnrhzAW/xrKisKDMpOB2O0KZfFR29nGLHwHsZOUJ2EsXjK2SeRp+B3V97jdVMKXzRu/NQrXHFYousj1hLL4CzPKeWOsXjKOdu6hgTNGeUvK0QjBZw4rBLEzSDHWvXOJopzVmQKZKbVfqMFY4dJAUytsnzmsEMRWzqzF7yhnta1L6WGLUYwUYuPrCSmUI+9Sg3JA0dYX36Pe6+i3mpSjssZAdURXzoPvRaGT9dtYOWPhxlKOrMevfZYGvlrl9I7PGkmUI1uY7KkI6bxdDa9ZOXuIrpwbU0Gd5x6yGjNX8BHW9vHVVlnvHnvMw35oxNJ0iK9yfOawtrKUeYYkqnI65sPV3AuNxzm2YLXK2TqHtZValBPVy0tdy4mtHBn3JRmEbsV3+iYVHTqjuTBNft7oBB51+iYUNU98XpjuzJHwrd3oEaLvnJ34DMX/tmQgG9BdVLFkIFlcrYttNi26MF3FYlupy9SSTvssJcu7uPocmbsLYZDRE6pSN3h06Dd4yG5OjZEtrW1tIbrsSk2ntVujGkz7tZ5Q1daomjcVynrVWDEuwWs9zEWSTYWlb8ddG+CNDzvBb3hbQtLvarbjQrkb2W8shzbJ6HyWC6rbyA71HgHxLWtLej5H0iMgJR+espdGtlLt4aksFXrQsc97ToS7RyD5sUMo/8BuR/wDuxqyHNiF8o+6bxGKz1F3F9mOukvlf/WSCA1ZL4mAv3u9iovs16sIx8VEU4q5mEgoNbTloKgrvQ4ODg4S8Q+tpVsGvCtIfQAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;cba3b9cb3c0d245d24d27d1255673357.png&quot; alt=&quot;12\left(\left(\frac{1}{2}\right)^{n}-1\right)&quot; data-latex=&quot;12\left(\left(\frac{1}{2}\right)^{n}-1\right)&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>cba3b9cb3c0d245d24d27d1255673357.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAGcAAAA2CAYAAADak4erAAADn0lEQVR4nO2cy3GDMBBAXwkUwNVX31OAK3AH7sA90ENqcBcU4SrchHNY74QQAbsgITnRm/FkMiGSvD+tVhJQqVQqlZUccg+gIBoKkscJ6HIPoiAOwB1RUlaOQE/+gZyAB3AGrsDz9TMXH4hcstEgFmJ14TWubv2fE3B5jeeICCe3N3fImLJwxS6AtR7WIYK38Dl49ur4v1Q0iDe3e3fcIqHD0vHWGHxDPGGJoSD6V7+5FXRBxr8rHXav6RHPmeLAvFe1iODnlKttDPuca3MvGsSI575/VNRrLPPBmXnLubzaei60cyH/HLIWjyFvRifeJTTmTlnNFQlXR5aVky1+R+AD+X67ePEdW5p6xpZOWpQDO1tgZDTNT8oBewy9Y5uQrcrRvnPPI2v4ZIfE4IxPkJYwZFUO2BVeGiq3pIZ1w2YBV+wrZI9yOsQK3w01VsuSYDVPbKte67wEPuWceN/QZpXdKlT7S2FFU22rlWg2YwmB3rZLwhp1VqFWu5QMWIV9Qgar65zH6/el9dODjDWrDXwiY0+CLhhjPbeWpBaYkKRy6YyNpxbelYQWmBDN2IKRp0FcKxSvW0T4j1cD98BzN2wZWE9a5aT2TA8X/InPL+V88C34kOaefK9gG0TA42Kj1SOSZiV8z305t4K10Or5rqqcH5UC3YgC++peJ/Xhs0/KUM6kBe5Ei0SgBpGHVzmTz1u/VGg9YVGOprp/WTlDPMqBCMrR7edxoc6inEXriMC/Vs6NcPU3pnKehs9SH1uUczF8LO3vqpyO6dL2X/Kct1PO+LTIGX9C8C7KiUU05eh+dqg2duZ3KLvhV4728V+U0+PbAPwlmwMiVF3nqJBVSe3ob8NPTaXD3JCkSeXUs7wYTRpVSlmEahmkmPPIRoKL0FjELt9YSkYhSirfeEjq8bELn5aS0dQ4LKd/SmO28LmV1FsGoZJRiLplEMAqPM/O5hDrFnTdbAtg3abWdNqzlTxVMhqjtbsS0mgvyT3emon1+O7HTJWMxqh3vSOps9gkR6PmSkahZ+vRqAliHypcKhmNeVAPFU7iPY475xGWktGQI7ZUu0R2OY4L9gODJ6ZDm7VkNKQeZDcQ6wqIB80A6xWQBTyXp/Tg4Fbq5alEHfZs856WQu71r2D3a4fgv7Dbk/7CbolkubAL/qvuawbpuepeGlmvSpb0kogSyfqSCCjn9Sqlkf31Kkp9MdFPinkxkfLO4Sc2Rb3Sq1KpVHbiC+nQVFVdGoWiAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;abc98edc140293014031ffdf5721c882.png&quot; alt=&quot;24\left(\left(\frac{1}{2}\right)^{n}-1\right)&quot; data-latex=&quot;24\left(\left(\frac{1}{2}\right)^{n}-1\right)&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>abc98edc140293014031ffdf5721c882.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAGcAAAA2CAYAAADak4erAAADvklEQVR4nO2c3ZGCMBCAvxIogFdffbcAK7ADOrAHerAGu6CIq8ImvIewIyIhm5CQ6OSbcW7uhgtx/9jNJkClUqlUAjnknkBBNBQkjzPQ555EQRyAP4ySsnIEBvJP5Aw8gAtwBZ7jz1ycMHLJRoOxEK0Lh7i69n/OQDfO54gRTm5v7jFzysIVvQBCPazHCF7DbXLt1eP/UtFgvLnd+8YtJnRobrw1Bt8xnuBiKohhvG9uBXWY+e9Kj95rBozn2Diw7lUtRvBrypUxpvdcG3MvGowRr33/qIjXaJ4HF9YtpxvHejrG6cj/DAnFx5A3Iw9eFxJzbVZzxYSrI27lZIvfEThhvt8uXvyHLk29oEsnNcqBnS0wMpLmJ+WAPob+oXsga5Uj9879HAnhxg6JwQU/QWrCkFY5oFd4aYjckhrWHZ0FXNFXyD7K6TFW+G2IsWpKgmCe6Kpe7XMJ/JRz5ntDm1Z2QYj2XWFFUm2tlUg2owmBvmOXhDbqBCFW60oGtMI+YyYrdc5j/N1VPz3IuGa1gRtm7kmQgjHWdaEktcCEJJVLrxw8tfCuJLTAhEjG9hZ5Gl5VvYSPtbAg4WvOHV0GNpBWOak904cO/8TnTTl3jNVLhtMvXTRywCjPphyN0JNmJbyMJ2crWBZafb6rKGd1pUBWSueDNuMNbYXmkzKUs2iBO9JiHu4NRh6+ylm93paO9hjF2OoOjXJk7F9WzhQf5YBCNjc+q+zT5G9blKOyjo38rHI6PptQ7exvU+VMlRFTOU/Fx3WPLcrpFB/N+NGUI1uY5ksfN3RC+iXPKUo5Uo0Lh5VBa1jTs1k5Sz36bn7RBNvyi0Y5tkwwJiUpZ8CvAfghm4HlcLUkwGmdM29F11T6xZ1XUf/EyNhVjCaNKqUUoVKHFbMfWYmqCA0l9vJNiwkJU0/VtAJKWr7xIanHx174nFqRrE649qfJPDS7f0pjceEzFqlbBpKIuCZfWwYLaIXn09mcom1B12bbAto2taTTPq1kObHgeljK2l0JabQvyT1em4kN+J2PkbaGC1uv6RtIncUm2Rolq+Haa+vWKAuxNxXODxhJy8LGg7qp0Irvdtw1j7jwGcruK2Mf0aXaJbLLdlzQbxg8Yw9tcuZmaVnJppy6kV1BrCMgPkgGWI+AOPA5PDVvVYRSD08luuHANu9pKeRcfwC7HzsE/wO7A+kP7JZIlgO74H/UPWSSPkfdSyPrUcmSXhJRIllfEgHlvF6lNLK/XkWoLyZ6p5gXEwnfHH5iU9QrvSqVSmUn/gFz8lx/SUri7AAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;d88db4578fb48e838288ea2602fa30a5.png&quot; alt=&quot;12\left(1+\left(\frac{1}{2}\right)^{n}\right)&quot; data-latex=&quot;12\left(1+\left(\frac{1}{2}\right)^{n}\right)&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>d88db4578fb48e838288ea2602fa30a5.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAGcAAAA2CAYAAADak4erAAADu0lEQVR4nO2czZGrMAyAvxIoINdcuaeAVEAH6YAe6CE1pAuKSBVpIu9gNCEsPzLYWH7hm8ns7C4BI8myLMuGg4ODg4OVnFM3wBAFhuRxBZrUjTDEGXjilJSUEmgx0JCduQIvoAJq4N39FC44uSSjwFmImS48YE27tN+5Ajfc+5c4ZQy9R9Ndk4Qau+5sbY9ucILXcO9dW498r8D1rpNnGzZzwnXl3R+sYKvPf+B6whJ9wbfdc4cKunX325UGu72mxfWcKS7MC+yEE/yccs98jykt4z21wBnxXHuCIr3G4lhTMS34AueK3jPXCDfCGd+uhiwDoTXEx09Z6R1nUBpXE3K8uOAMYpeI9sl32GiFCl34qh0HQlq8hN1RObOzD/XgiS7S0ipH3jWExd+Vz9xEhWuwNUSQGjfkE0FpFb6EyC2qa3uQIDRUUKOfkfsop8FZ/VbEeDQh+mreJJz1zuAzDvoo50o4i48qO9F+iG4eEgnttVZZo482fe89R1SvI1ZkLRiQUHVpvBHX9+4+T3TCehHG4u/dvaJww2YwELtdoSw+ajubmDffQOwgpSaMxUvENup5JH0x5j9POOG/+HT54XUP/NYolnJYU5T4uc525XO0hLL4kgnlXPgIfuzF33xmsAXuhYfJP62F+uSwxrjh5+NjR5Ay1m7NJYpyvjIFsjAE+gFdBtn+tVph++SwxrCmnEmLX3mfybZqHzIW3/v2hD2UI6FuDsqBAMqR5edhos6ichatMQCmlPNgPBsbSzniduUjY1v/b1MTX61y3gufOcwop2E6tZ2zcrZgQjnDapGKdQGBcLi1v0y2Vdazx6yw4q8re7BNOT45rD4+ypF3ylY5Z5xQZZ4jQhYlnQb/63/WKGdtDkv42VB6C3ut5VhTjqRdokxCQ+GbvllLrPRNySdzIV5AI/Do6ZsQ5Jz4LPmuzDl3v2sLPUJUG80mPrfyvy0ZSAH6ElksGYzl2yygXWwb0qBz01kstlldppZw2mcpWd5lacyR3F0Ig4weUFkt8GjRF3hINafGyCQBHILossu9NKrg7+R6jqxKo3IuKpRFxL5ilgSv7WFL7FJUaL0cd26C19/sBB/3NoWE39mU44LdQvYr065NIjqf5YLsCtkh3y0gvvcKtXNv1y0gljdPXQk3Ycxy81SSB3rQsq33nAh3jsDu2w7B/obdlvgbdjUk2bAL9re6rxGKz1b3JZJtdZeH/+ohERqSHhIBv3u8yhLJj1cRjoOJvjFzMJFg1bWlwNSRXgcHBwc78Q9IPVrQeQdcRAAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Seorang petani mangga mencatat hasil panennya selama satu bulan pertama. Setiap harinya mengalami kenaikan tetap dimulai hari pertama, kedua, ketiga berturut-turut 17 kg, 19 kg, 21 kg dan seterusnya. Jumlah seluruh hasil panen selama satu bulan (30 hari) adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;1180 kb&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;1260 kg&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;1280 kg&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;1380 kg&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2760 kg&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Seorang atlet lari berlatih untuk persiapan lomba. Pada hari pertama ia berlatih menempuh jarak 4 km, pada hari-hari &amp;nbsp;berikutnya ia dapat menempuh jarak&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;1f21a08107c1dc6cd8c0ef54c4c2f250.png&quot; alt=&quot;\frac{3}{2}&quot; data-latex=&quot;\frac{3}{2}&quot;&gt; dari jarak yang ditempuh pada hari sebelumnya. Jumlah jarak yang di tempuh atlet tersebut selama enam hari adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>1f21a08107c1dc6cd8c0ef54c4c2f250.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAqklEQVQ4je2UwQ3DIAxF3wgMwJVr7hkgi7BBd8gOmSFbZIhO0SXcQ4zURBD+pVKk9kscEM/mG2HD7RSADDwBA17AowWvwOxBeKABk3LT4HDq2RmBpZe1ZDO3NSgWIrt/UwOCw1mBuYLPB+XpYg0uL1AK3BD9/iXLhPVbqo2C5sc/j4LvtVV0eFTgxVdXmb2tQodj4ljoJbh+7BONAlPl6tyCN+pfU55Id9QbAeQ19v/SVdIAAAAASUVORK5CYII=</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;3f4c7252900a772585f76fa3f8476910.png&quot; alt=&quot;63\frac{1}{8}&quot; data-equation=&quot;%7B%22latex%22%3A%2263%5C%5Cfrac%7B1%7D%7B8%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; km&lt;/p&gt;</text>
+		<file>
+			<name>3f4c7252900a772585f76fa3f8476910.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACAAAAAoCAYAAACfKfiZAAABP0lEQVRYhe2XwXGEMAxFXwkuwNe97p0CUgEduIPtgR6ogS4oYqtIE87BUnCMGdgdgyeJ38xeZGN9JFliofFP6ICphmMDjICvJWAEboCrJUBpApqA6gIewLOW45nQB7yIqBqJ30FPCNtnYrfAIHYN50dJx0Ycj8A9s+5FnO7VHm9LOh9eeMaxjtLb9HKYObDXEkI/EQZNEWY5MM7xxDq8juVKDZn1t/EiQt/IstRDjhtLoeai5g/8Vg+4xOZyGyM6Wc8V7Ms8WRfgXpHdSwpQZ3qYFVGPDWd6DYv2dxWhTSZNiTYozeFIwSL8s3T8jNostkvQutF5YQg1Vax97+EIb5xS7ObsoRHoI9uWqFNF6M3SGjgyb4pgCNc5HuE6ay4RkfsSNqzTcqqAeUNA2uROIS3COAWXddC0Eem/5Ubjmy+ICGjRQiwFnwAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;e426fbea6cf12687ffc7bf1fe2becadf.png&quot; alt=&quot;73\frac{1}{8}&quot; data-equation=&quot;%7B%22latex%22%3A%2273%5C%5Cfrac%7B1%7D%7B8%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; km&lt;/p&gt;</text>
+		<file>
+			<name>e426fbea6cf12687ffc7bf1fe2becadf.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACAAAAAoCAYAAACfKfiZAAABL0lEQVRYhe2XwXGEMAxFXwkugOte904BVEAHdJAetgdqoAuKoIo0QQ6yslrHZpgdG2cSvxkOYIM+svQN0Pgn9MBSI7ADZmCvJWAGbsBUS4DSBDQB1QV8AFutwCviA7sXUTUTv5eFZ5rsYdetAx7ApxkbcgrozLnzgWyAHRjNuHq8vS8boxdwxHRizttsPkCMDsnMgmw02RmQN3ORsYlnfTwolP4N6d8jbkh/p4TGCjo8ogycL6zez72fmHuaBUntGe65BegDY4UVBtM2zOrvM8c+PfLq6zOFivBP0fOatdVfuwStG7Vzh7R3MfsOmZA3Dsneuik0A6O5lhJVVIRu31oDMecsgkN8wm7h+j1xiYjYl7Dj57IUFbAmBKS2+qyERWiX4DIHDY1I/5YbjW++AFmdYXyv+ruOAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;5998151f6e7f90c58aacb64d2a96f6dc.png&quot; alt=&quot;83\frac{1}{8}&quot; data-equation=&quot;%7B%22latex%22%3A%2283%5C%5Cfrac%7B1%7D%7B8%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; km&lt;/p&gt;</text>
+		<file>
+			<name>5998151f6e7f90c58aacb64d2a96f6dc.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACAAAAAoCAYAAACfKfiZAAABRklEQVRYhe2XwZGEIBBFXwgE4NWrdwOYCCYDMzAHczAGszAIozAJ9gC9gwg7W1utbO3yqjiIUHy7fzclVP4JPbCUONgAM2BLCZiBFhhKCRCqgCqguIAR2EodvOL6gPUiikbi92KACdhxodr9swnWNNGaDXhoCVj8aPxz5w+YgjUWeAaCpcc3KGBxN1bIu9IZcNFQYcG5Vb6mwUUgFiXvHn5PqyUAXiGVkcrvELyfUAo/uNyuHD2w+wNTtH79ztGogv3GOG3oormRr3PcZ/b9iJQJRxJKAzpNAbEJJQVj5jApQ7X+HjeijXP+xSeSwxlFE/5Zeo5RW0n3lksQ30g/MbyMfUvqBtwXx6hVzjskAs9gLifqUhFSWeKBVOe8BIMr5/AKl1K/RUTqOjec03KpgDUjIHfJqRKbMEzBbR00bkTyt1ypfPIBTi5tPTsZBTQAAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;18033d49aa3beed654eca744395edc63.png&quot; alt=&quot;88\frac{1}{8}&quot; data-equation=&quot;%7B%22latex%22%3A%2288%5C%5Cfrac%7B1%7D%7B8%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; km&lt;/p&gt;</text>
+		<file>
+			<name>18033d49aa3beed654eca744395edc63.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACAAAAAoCAYAAACfKfiZAAABVElEQVRYhe2XwZGDMAxFXwkugGuu3FNAKqADOqCH9EANdEERWwVNsAdLG2HszGbH4EzWf4aDiUHPX7JMoOqf6ApMJQI7YATWUgAjcAH6UgCqClABigMMwFepwDO+D6wCUdSJ95UD7sCCt2qRsTNzLjzaqtrZ5wKY5Gpk3EqAuwFc8DlVqJuA3HIArPgTy8punVbmuGDORCYXJny1qgMN3gGFUgdsWlq515BJNr8xa51A6e8Lvi6yqGPrgK7O2juydaATkDbyvvUX1+6B8EWDQCjQ7iGBHhOLekmxIhxM0FQRzmTqbGERagoGGceKUFMQgv9JYSOKNZmwEc25gn+0rmxPw5kTXdPC1X7ieBR2tub1TD1+xaFSvSO71IHO3EtBHQqhO0trIOwlh0nPjs6MdaufAhH7Enbs03IowJwAyPYl9UxhEdoUnLINYd+I9N9yVdWPvgELsXRiGx0oCQAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;147917aaf61b787bfceb5bd01d0a4503.png&quot; alt=&quot;98\frac{1}{8}&quot; data-equation=&quot;%7B%22latex%22%3A%2298%5C%5Cfrac%7B1%7D%7B8%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%229%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; km&lt;/p&gt;</text>
+		<file>
+			<name>147917aaf61b787bfceb5bd01d0a4503.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACAAAAAoCAYAAACfKfiZAAABUElEQVRYhe2XwY2DMBBFXwkugCvX3CkgFdABHaSH9JAa6MJFbBU0wR48s0wmkJU2BkdZfwkJG8vzPfP9baDin6ADxhKBA3AD5lIEbkALDKUIKCqBSqA4gQvwVSpwJPnALCSKZuJ9EYArMLGkqnNjWhZb1TFDLgIjqVaNtHsJou0g5C7yDnCWMedXgzcy0cn1RwmIfJtNcEv85Szo5J7AyKJYzcDVkDhJX0MGTKT62sn9lgnSpxqYSLrIgtZMriuNLCVACNoMqE585jAknz2/YmIRmJbJIwqx7Oi5t84tEUYyO1tDUrWv75oItQTeL/6M3gRZU7Y3opgz+Mei4/40jByYNRWu7qRA2tbW4nfFQFqxx5Z3ZIdmoDd9W6R2JaFHvGrAe8lu0LOjN229cxxCYu0mHHgsy64E4gaBbDepZ/AitCU4ZBvCoxHp33JFxQ++AfU9b0adT+0sAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Diketahui volume prisma tegak beraturan ABC.DEF adalah 180cm&lt;sup&gt;3&lt;/sup&gt;, dan tinggi prisma 20 cm.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;a69190_20.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Luas permukaan prisma tersebut adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>a69190_20.gif</name>
+			<type>image/gif</type>
+			<encoding>base64</encoding>
+			<data>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</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;(180 + 9&amp;radic;3) cm&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;(180 + 18&amp;radic;3) cm&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;(360 + 9&amp;radic;3) cm&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;(360 + 18&amp;radic;3) cm&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;(360 + 36&amp;radic;3) cm&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Diketahui kubus ABCD.EFGH dengan panjang rusuk 6 cm. Titik P pada pertengahan AB dan Q pada pertengahan BC. Jarak titik P dengan bidang yang melalui titik D, Q dan H adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;b750638acc8e3a9553a33d1ef8079b6b.png&quot; alt=&quot;\frac{9}{5}\sqrt{5}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B9%7D%7B5%7D%5C%5Csqrt%7B5%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%229%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; cm&lt;/p&gt;</text>
+		<file>
+			<name>b750638acc8e3a9553a33d1ef8079b6b.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACEAAAAoCAYAAABw65OnAAABT0lEQVRYhe2WsbWDMAxF7wgMQEtLzwBMwAbZIDuwAzOwhYdgCpbgF7JigkPib4yTgnuOioQ4vGNJT4KLH6UAemAGFmACmtwiRsAApf3cWTHl3oHUlPaF9eZ7A9xziah3RIw2sjEDA1IbWEFTbhGVfeliBfVkTsceM9BGni2Am41oOuRmYmmQVC4B4VEi6mckRbH0+IUeRIerh6P+YA6eP0yFdNpX6Wy8oyUyXaEMPKdTzXAbp4rYdpWKSI76wPbaG3yDO0WEjv0B6aZi9eyOvwKcdhPgpu/aVc2L31WIWIMbC56TRrmapcfVQElYa+quEjsSPNZrQMvn1lQMib1E946BcKufUotokNswO89HpAa0gDUdyX1iQurjFTdcUarY4CX6P9Zac2zqPv4ku7XuifgqlwglyFpzk9xaYzH8wJqW3Fo/kc1a33HIWi8uUvIHk6NyNJgn7ZQAAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;49221835241121da3c595e9fd2782d9c.png&quot; alt=&quot;\frac{12}{5}\sqrt{5}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B12%7D%7B5%7D%5C%5Csqrt%7B5%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; cm&lt;/p&gt;</text>
+		<file>
+			<name>49221835241121da3c595e9fd2782d9c.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACoAAAAoCAYAAACIC2hQAAABkElEQVRYhe2YS7WDMBCGPwkRwJYtewSgAAd1UA94QAMuEIGKmqCLydxyQygpr2TBdw7nlGYgP5nMA+Dm5g8DtEDpGcuABngBIzAs2J1OORFReMZHoLa/DdBbe3OFOKUCHhNBPqEu5Q+2pxA6eWVtL13RKSFCDbJH6xW7UwkR2iGBFZU1oQ3HrKRB4uKxZrjEN6GNc+P6i+0aJeKZMeCYYexA5Rmrmbu72yG02XJtbifVPDracxWcOWPTY6vQfuN1l5IjFTB5atYDsiJiMVFaZDspBcduq8MYnHMVGgXNk66LS+Dp/BdNqEHST8u8w3oybw+jrijIPnTzcu+xy5EH6q39C0/FCqkMm6qHpeGzJzPC0lLNcuE5DXVrYScO7RN6IuTazh4t4uYQBiII1beBfmG8Q/akBp26PkoeHVjuYR98AkkfaNeL455muSDc7T/h6xW7Mybai+6b5LmFHo1WFO3sO04KhiPJkJThtmdJokk7+VXVTzhJCS0QN6sodX1yeTTj/+vzCwmuaB/Ebm5S5g2104iUXTdREwAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;308481660d272711613f304362dbce44.png&quot; alt=&quot;3\sqrt{5}&quot; data-equation=&quot;%7B%22latex%22%3A%223%5C%5Csqrt%7B5%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; cm&lt;/p&gt;</text>
+		<file>
+			<name>308481660d272711613f304362dbce44.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAABBUlEQVRIie2TsRWDMAxE/wgewG1a+gzABNmADdiBHZiBLRjCU7AEKSwFxyjgJH6pcu/RCOlOlk5QDxegAVxFzlMswFrwVcMV6GsSlqAX4Z8i/FrQA1NBTpcHnQQDcdkL5TtqgVsWswy0E52Agc3unSS2BaIj8Vxy0aaw6QcaKUzJ/IsmZiP2lqgjunDMBHriNFYRT5sbvhHV160ikBc59rvusE8lECegfOnqTHhJsrrtRFgJ5jMy4ViwJ/IEh+04z2Ywx/mpKHoRPoVpc2LHQYSt/xYGSzQX0JPxeSLbawP7U9HaManV8e4aVMfq4meO3TdZnSdc6nRtrnQih2hqEf3xx8e4AzyVTtfDtb8bAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;6934f2d3f11786b55f6a6058159f1a19.png&quot; alt=&quot;\frac{18}{5}\sqrt{5}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B18%7D%7B5%7D%5C%5Csqrt%7B5%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; cm&lt;/p&gt;</text>
+		<file>
+			<name>6934f2d3f11786b55f6a6058159f1a19.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACoAAAAoCAYAAACIC2hQAAABlElEQVRYhe2YwbGDIBCGvxIswKtX7xZgBekgHaQHe7AGu7AIq0gTvsPuPhSJj/gS4eA3w0wUHH5g+VkCFxe/FEAPNIG6SutmLRNwP0+aowGeKqL26gqte+hvgFbbtmcJtE5tdkJCa31feO8HEs0q7M9ohxNb67vyPGlrQkJBBE64GH0icZuMV0J71jN622l7Cnsx6jMiAzhCgcT34Rh/ZzONyIY6QqPfzhFlQ0HYckKbyZY+5LkxdBwImwoZnfnorM+t12Zp+OM/RKLfZ48NOntuWvZoSegoRs/6oLDN6pfkQifv+ZX9nYL5pL/EDZLcLEkmtEDsp0ecZOm/D7ZukXRGQeLQ9+Ux0K5CBjTi8ojNiRVzMhw6PZQOF5MlcbZkh8mpua4ta60d/2VLxkgCrx209MSnhhMJhDa4YzeE3RSySCEnJF5D3HEb6RN5xMuOYqj50o0glCsezT2/StIb5jtcQj+NnSiW9Q8kvh7HUCKW4adnWWKmnf2s2p9iWQmtkWU2Ubb02floyfr67N/pLy4uFvwA4DWROWrhTHUAAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;b294d5881fde3c246d4211f7652d3d91.png&quot; alt=&quot;4\sqrt{5}&quot; data-equation=&quot;%7B%22latex%22%3A%224%5C%5Csqrt%7B5%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; cm&lt;/p&gt;</text>
+		<file>
+			<name>b294d5881fde3c246d4211f7652d3d91.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAABA0lEQVRIie2UTQ2EMBBGn4QK4MqV+wpAwTqoAzzgAQ3rAhGowAR7mJkApS3NhrAXvqSXptP3dX4K16kGGsBdeOepZmApWJfpBXRXXliiTsG3arobWAGfgjM+d6BGmqIphLbAO9iLNVAS6oBRD5VCBzUaQkvj6RHXsaAKeVWoMbJXDG0R17GgDqnbonBTo0Z/glaIY/tNYkEOqfV2Hj3xUZlYy7SoscNPNbKvi0F9APcKdpu4s2+v0ZhdRqyGqbWFVrrXKuxsVEydgrPK1aRH0tdyMntBTBbqWF8Tk7124jgqqJGBteEsvVmDk146Jy4FSWvK+Yu1081caUaysiZ79Oh/+gLQA1CAUjx6fAAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Diketahui kubus ABCD.EFGH dengan panjang rusuk 6 cm. Titik P pada pertengahan FG. Cosius sudut antara AP dengan bidang CDHG adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;342fbec47eb65e9f17a7b36f649d86e3.png&quot; alt=&quot;\frac{2}{3}\sqrt{2}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B2%7D%7B3%7D%5C%5Csqrt%7B2%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>342fbec47eb65e9f17a7b36f649d86e3.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACEAAAAoCAYAAABw65OnAAABOElEQVRYhe2XwY3DIBBFXwkUwDXX3LcAV7AduIP0kB5cQ7qgCFeRJsiBQQHW2JssZiKtn4RkpMR8vof5Nhx8KAYYgRnwwF3mXbkBVxGDXHvg3FtIihER3d1IsSLiS1PEJEONEXA866M7A3mBqgi4JfMT7xdmPPL+FyNb0JE7MP5BRNzQS/93FZXvirgSNqbKrC3gRHBClQt5k1PJJUde4LvmkiG09xTLdqdtkkuGsBtH3lcAvmWs0SyXLMHO0taJn+6ULObSS12twPF0w8h8jV1yaSCItAR7Lxu/3S2XZrn5WpdsmUvVBTz1R9E6l6pEN5ZwtM2lKmcaBNZSa10rsl0oW2t8IRl6C0mJjUjlncAQzvuEkgtx957weFS/vizHZ2BOdxHlgvGIbsVyU+KJiIXpUK6Hg//LA9R1abYZdlzUAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;60fbe6f0c7416ca12d0a89268a0caccf.png&quot; alt=&quot;\frac{1}{2}\sqrt{2}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B1%7D%7B2%7D%5C%5Csqrt%7B2%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>60fbe6f0c7416ca12d0a89268a0caccf.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACEAAAAoCAYAAABw65OnAAABK0lEQVRYhe2WwbGDIBRFTwkU4NZt9inACtKBHaSH9GAN6YIirCJN8BfvMfqVr0ZA/oIz44yo4OX6uAiVf44BBuBeSsAd+AAOuJUQ0AG9nhcTMaeKqCJyiDBIobsDR7CzQ1ZLDB3wZlpxh2i1k88Jp+2zYl46ZlHG0gJaxImiPPm99/giHZHP/OHLWjmD1Rd73ogz/tqLhDFggGZxrUF24b1+jkg3DDIbi8xyzkOPLRoVEf270CB2Lm0dWLuzZCDg1qlUUyyTG0bbW/SsayaaDhHZIPY+d56dF2hSRh18KyV9jHtaEi9T74b9437L+hP0qUXA5EYIS7jOkou4kWDDKhKtS7JG61mSRGssyaI1hmC0XkmWaP2GrNF6VEDWaN3jsmjdwnJRtFYqe/wAhohjXdy0lZwAAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;841958205242324cf13954abc99ec9b1.png&quot; alt=&quot;\frac{1}{3}\sqrt{2}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B1%7D%7B3%7D%5C%5Csqrt%7B2%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>841958205242324cf13954abc99ec9b1.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACEAAAAoCAYAAABw65OnAAABQklEQVRYhe2X3ZGCMBRGTwkpIK+8+m4BVLAd0IE92AM12EWKoAqbiA/33oENLCiJG2fkzDAjaODLx/0TDj4cB/TAuZaAM3AHInCqIaAFOv1cTcSUQ8Qh4h0iHBLo8YljcXFEsiWHFrgxZtxTNLrI6kTU871irnrPqgy1BTSIE1W58Lv3WJAOyGu+82Ks7CHog40b4oxdu1KwDDjAJ9c80oW31kUy3XDIbgKyyyk/eqzhVUT2uOARO1Nbe+bupPQsuLWrqimB0Q2n52t0zGMmmxYR6RF7Lxu/nQZoUQa9+VqVtDJuNBROU3Mj/PF9w/wVdKVFwOjGEoHlOCsu4kSBhrVUWteC7C2kpdUGkty5IgsrRFVmAofke08lF2z3NlVVHXY9hdvtXoq02xL8u4j0gZaiW225KJYRFpiBD/gXdvCdPACajmTLoTsA8wAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;d5a09496ed9fe13b605d55eaccc65a11.png&quot; alt=&quot;\frac{1}{4}\sqrt{2}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B1%7D%7B4%7D%5C%5Csqrt%7B2%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>d5a09496ed9fe13b605d55eaccc65a11.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACEAAAAoCAYAAABw65OnAAABOklEQVRYhe2X25GDMAxFTwkuwL/+zX8KoILtgA7SAz1QQ7pwEVSRJrwfsoZnSIK9q51ZzoxneBkuF0kWcPLHcUAPXK0EXIEHkICLhYAGaPO2mYgpp4hTxE+IcEigpzfG5uSEZEsJDXBnzLi3CHmS1omU94+K6fI9TRmsBQTECVNuzNceDdIB+cwPPoyVI8T8YOWOOKPHOiqWAQf4xTGPrMKv5iUK3XDI20TkLad85bGHzyKK2wWP2Lm0tWftzpKeDbcOVbVMZHTD5f09WtYxU0yDiPSIvbcX104DtCpDvvleldQyrgQqp6m6EZ+cD6w/QVtbBIxubBHZjrPqIi5UXrACUlrNGhtNM9PuqkMqnum/h1YyExGeeRqZiIjMo1tFtL8lRmPg2TALUPN/j1ptfxHTXtC8bT/5f3wD7v9mdB9YhbQAAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;993068582b434dff3f5738c51930a958.png&quot; alt=&quot;\frac{1}{3}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B1%7D%7B3%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>993068582b434dff3f5738c51930a958.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAm0lEQVQ4je2UwQ2AIAxF3wgM4NWrdwZwETZwB3dwBrdwCKdwCTzQRmOUys2oPyGB8Nq0DR94rBwwAN4CPbAAEWhyYAsE2ZvwXq+GncBtDqqBkW3OUc7ZoF9FijfWt+RIhp1J3S9AdwWPQC9BSKD5rlWNwLVVjif9Stmsmk1dcsuHFan+YuMGC1RdwscLHV11BusEtMGJgl/pqVoBx5ExC7wc8CgAAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Diketahui panjang AD = 9 cm, dan BC = 9&amp;radic;6 cm; &amp;ang;CBD = 120&amp;deg;, &amp;ang;BAD = 45&amp;deg; dan &amp;ang;ABD = 60&amp;deg;.&lt;/p&gt;
+&lt;p&gt;Panjang CD = ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2&amp;radic;78 cm&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;3&amp;radic;78 cm&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;6&amp;radic;10 cm&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;9&amp;radic;10 cm&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;20&amp;radic;6 cm&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Persamaan yang menyatakan grafik berikut adalah...&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;eadad5_24.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>eadad5_24.gif</name>
+			<type>image/gif</type>
+			<encoding>base64</encoding>
+			<data>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</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;y = 3 cos (2x + 10)&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;y = 3 cos (2x &amp;ndash; 20)&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;y = 3 sin (2x + 20)&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;y = 3 sin (2x &amp;ndash; 10)&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;y = 3 sin (2x &amp;ndash; 20)&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Nilai dari&amp;nbsp;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;d103d11ba2a948d41be962d30482b849.png&quot; alt=&quot;\frac{\sin63^{\circ }+\sin177^{\circ }}{\cos87^{\circ }+\cos27^{\circ }}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B%5C%5Csin63%5E%7B%5C%5Ccirc%20%7D%2B%5C%5Csin177%5E%7B%5C%5Ccirc%20%7D%7D%7B%5C%5Ccos87%5E%7B%5C%5Ccirc%20%7D%2B%5C%5Ccos27%5E%7B%5C%5Ccirc%20%7D%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22sin%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%97%A6%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22sin%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%97%A6%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22cos%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%97%A6%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22cos%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%97%A6%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; = ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>d103d11ba2a948d41be962d30482b849.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAIgAAAAsCAYAAAC+N/CqAAAEVklEQVR4nO2czZGjMBCFXwgEwJWr7wTgCJyBM5gcnINjIAuCIIpJgj2IV2qE/rBkbGb7q6J2BwkBj1ZLiG4DiqIoiqIoSgkPAPPyr7KfBsAIo+H1s5dSnw7Ac/n/E0D7wWs5K7dlawAMpY1dYCztUtqQoId5uDPMAycNgDuAaSn7BfDjHPuqgRQLEeAd+tyxvW/A3MPs2aaddb7aQB4w7q2HuUDJsJRz/x1+N8ghxidiiHnvhWZSU58O1vXfPeUD1h2igelE1511OMS4+z8OjcM1jBAUv0tVzOBdBlKLFsYjslf7DMTlBvOQS+skaWAe3i+sa6dl0d2zh1yXvwcYL8DyVG/ukN/TGthhqJaFlxjIEfpIcg1kyqiXUyfJbWmIPfshGvW50AFGpJs4PtXTf5Zj5BxjwtZgeD6KXGtoKzGQI/SR5BjIdTlHzBvn1MmCbsjXW0MCyMlN46njQtF6cQx7pY8Wdq6x10g6cY3cZs++3Ad2hD6SHAOZkPZKOXWyucOIwF5OcgSAp46L75jUBI/C7nWRzdKm3GbPvj096936SFIGwmEs9gaXU+cleqzdYy0BHli/asm2Yz35FQMJtVODd+kjSRkI3/ZSbVRbSBxg3WeD9cRmjwvtEYbtUNgGZhI6ijquMfA1t0YvKDGQI/SRjAg/3JxOVfPtD4CdQHJyyNctYL1oBVjXJR+2rBO7qN6pK9c8WM4FtBlGqG+YpB6lzyDq8v7dOcQT6cWtnDqKw7evgygfpuZSuKIoiqIoiqIoR+ILJtFNN0VRFEVR9sPvHyMqBMf8YTrYkIVqH/LOwAhjGDd8WRDul/GEMYwOJ8kp6mGjuOkB5CdxGX7obtIQRuw3kDvqxJkcAaPr+EV5wms6ncpAeFMyzuJn2deKOu6NMKZVIgOFc4eYMxnIjHUczYh1rGmuThxiJpxgiLljHSxEZsS/vMportLzn8VAXHocp9MG5mfQRUlr67AN6JGW6JbHLNWNMAPCRkOqRWmj3EBiOrlpEhO2iUuhNIoc6DFDOtTUacMIG+nVYp2aMIkyeZO8kCdsWiRdYczKL1hHao2I31SVHI+FUgMZEdaJCWIcKpn2cBF/h9IoUjDkMeYdauq0gq7L95B8ZYy1pPUzxjQ3OUreqM/gJKlekyKUsyq33DC9mE6h+NMRdp4QS6NIkQpGLtUpCoOE95TNsNbKh+ybafvacx8IxfX1DnqvWpR4kJhOoVQON5A5lEYR44H0vKK2TitofbEynwdxDYGvnDPCcxDffCOUB0PRa+Z4lBhITKcWYQ/iS2Jy0yhCuMPQDeGsxLf9JAYzwV2P0Ioydw4ix1K5QpfKxfWlQXCIcW9wgJ3b1KLEQGI6AeZ6R2znIJ0oD6VR+Lhh6xV8aanv0GmDTE1whwn58wQz7MKLvECW+X7bw3euWHs8Z+qV7hVKJ6kxnZjzE1oAjKVRuLROXblJTd6l03/LmddBFEVRFEVR/gz/AMKJXctS3hewAAAAAElFTkSuQmCC</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;-&amp;radic;3&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;ae50b4f225a5c5a30186c9db18a97688.png&quot; alt=&quot;-\frac{1}{2}\sqrt3&quot; data-latex=&quot;-\frac{1}{2}\sqrt3&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>ae50b4f225a5c5a30186c9db18a97688.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAC4AAAAoCAYAAACB4MgqAAABZUlEQVRYhe2Y242DMBBFTwkuwL/88k8BVLAd0EF6SA/UQBcugirSRPZjPFrCY00I64eWIyHFsrFuhvGdAbi4iIoBeqBJLeQdGuABPIE6sZbdtEDnfxclfMolPDb/WrhBzkwXWngmZwhvgMHvFbpOwfjN2g/3uRMp3SokQurjTz8++gfcObLiUiHVtzi+/FUcPWAnY3WYEUnBB3BLoCvIOBsPyGE1ftxxjgEcQqM4T4mGcDRrRHj1B7p+xSAR7JHHbiZzN7ZbYuPnehJFW7EsH7nbWKtRVptdePyeajXM7vmkut35yWlL2Aatvyd5P6SRrJHI77FBrc5R+5g1Bn/17D9wWQhvvBC3MT8XqXZo15fHZURydw11Ej0vjoz6/ZoEvgzrZTl5Du5hXpazsKwjZGNZ76JVsagvWiAuUNzLQIdYlgmsy4qW10NaBC2vDVhFAYezYpke0T/oHMGx3s5mL/ziIne+AZ/QbzLO0y3uAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;60fbe6f0c7416ca12d0a89268a0caccf.png&quot; alt=&quot;\frac{1}{2}\sqrt2&quot; data-latex=&quot;\frac{1}{2}\sqrt2&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>60fbe6f0c7416ca12d0a89268a0caccf.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAACEAAAAoCAYAAABw65OnAAABK0lEQVRYhe2WwbGDIBRFTwkU4NZt9inACtKBHaSH9GAN6YIirCJN8BfvMfqVr0ZA/oIz44yo4OX6uAiVf44BBuBeSsAd+AAOuJUQ0AG9nhcTMaeKqCJyiDBIobsDR7CzQ1ZLDB3wZlpxh2i1k88Jp+2zYl46ZlHG0gJaxImiPPm99/giHZHP/OHLWjmD1Rd73ogz/tqLhDFggGZxrUF24b1+jkg3DDIbi8xyzkOPLRoVEf270CB2Lm0dWLuzZCDg1qlUUyyTG0bbW/SsayaaDhHZIPY+d56dF2hSRh18KyV9jHtaEi9T74b9437L+hP0qUXA5EYIS7jOkou4kWDDKhKtS7JG61mSRGssyaI1hmC0XkmWaP2GrNF6VEDWaN3jsmjdwnJRtFYqe/wAhohjXdy0lZwAAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;1&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&amp;radic;3&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Nilai dari &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOcAAAAiCAYAAACk0c4nAAAEt0lEQVR4nO2czZHiMBBGXwgE4CtX7gRABGTgDMiBHIiBLBwEUZAEe5C/svBItoQt27D9qly1u6O1JXW3+kfSgGEYhmEYhmEYC7EDLmt3wjBmpALqtTsxlR1wB45rd8QwZuYENDgd/0oa3CCM8pxxC+HLnuKPqIHbsFi2SY1TFmMZGuAA7Ffux//Ggy9zQDvgiVMWozwVzjiN5TnhDPRrqElXlqpgP0qzlb6fsKLbmjz5Iu/5YLyatceFvd9a9apw/b+wflHgSpkopWrf/cIpoBX2wlzJyD0fuAldI6zcJ3x7j+vjL+RHOVFCKUqFVTWu0ARuEbIaQpgT74WiQXb8NZA7y0xuSkfvdELv/9+Grip2ZV6vVJPnqQ+4FVH9aQgvKGtGAHuGV+098+T/J5YZ4xk3z8+Z31tK9pDmkN5YyzgvDK/kR8ITLw+kPE5GPqdC5AjowLtSV7hxhcamMa0R3tbE850d3WI3xTh3lN8yUF9vlIn4SslevAg7nGjjNcLasUXg2j4pNCPvyiV39exzJ66kL9bJye7EC1NXnMJM0YUd80cwoW80pOvFJ5SUPThjTn6/LxB5IV/RlZce6ZJ+5YFH7+e5VcAx40wpFvlt/e8rV33SKeQF18+UyumnAtrTbTjHlHSN0FZKHeJEp0wh40yZy75hlqoInxmPPLYsexg33jfGwtoDncFW7YcfOGHLPddtm5xVc8w4Uz3Mue2P/21VRmXgV/JK2J8ISKdutDIOGefSBZMjYYPRvqf6GjLOlLnUoq2n1Pia9t1X3Dz7epnT3yFKyl5tk+cn1Thz24yRYpxj71PMH0vAldeOCSflOFvqhCqvjLVPGffYM6Q8B/56iNgWSsP73GnO60D71LkcQnoy9sTk3i+4aHEJeaItyl7f+3nj1P7nUKhyJKN07TE171AYFaKU59R8PPmbk4UKFMoxUw3k07mck9DCpKitzxZlDz9knLGqlvIKP3zor56qHL7I3yedKqCYwkAXlpWi5j0vq0jPcWIynDKXc/Lg79xpvD5blT1k5Jza5/Rd/1aMU6dq+qi44U/6ofcuXUHbt20vbZvUkCxHQDVOaeTBVU6PGeCDjFL6B+i8svp/TvxeSBf071Pmck5kiP2tC19Ptix7yNj2U6VVeZuqtb7X8tsQaaPkPOcESmjF89Emcx+FDbG84Mr7qSKFbzneKkdAuiTuz1PsqF7FMt7H95430qqUfV2AeeZybjQ26Zsvpy3LXoQWwM0hI48NRIq8xqHxqaHN0HuXqNTKe6qSbaRTSvbQRZibP44q4xsKhX/prmfFcGV5bpT72C2U7aB92q+gYVx5dJJ/7RsdUziw/G97kPe0GyLb4caMKUFpg0i9gKq9t29Ep2fWCM83Hz79R4QumUyidFXOfhOC8b8QK3ACXZVTVVnfKHbtn0PPjbiB6j264a2/5+Q6g502jB9g1Akd6Q7mXto/K9TS6ZLQ8yC+adq0H1bo5hc8bqSHVTe+N2w1jDGuJDgr3SJJZewaUNP+TGcc/bY5xqmN45Kb84axBqNXH2UoF7qrNClVvAPDRaF+WKtjdZ+W8De/OWsYGexIsDOFqDrRsOR+m2EYhmEYhmEYhvG7/AMb5CJQcfHuDQAAAABJRU5ErkJggg==&quot; alt=&quot;\lim _{x \to \infty }\left(\left(2x+3\right)-\sqrt{4x^{2}-6x+3}\right)&quot; data-latex=&quot;\lim _{x \to \infty }\left(\left(2x+3\right)-\sqrt{4x^{2}-6x+3}\right)&quot; /&gt;= ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAqklEQVQ4je2UwQ3DIAxF3wgMwJVr7hkgi7BBd8gOmSFbZIhO0SXcQ4zURBD+pVKk9kscEM/mG2HD7RSADDwBA17AowWvwOxBeKABk3LT4HDq2RmBpZe1ZDO3NSgWIrt/UwOCw1mBuYLPB+XpYg0uL1AK3BD9/iXLhPVbqo2C5sc/j4LvtVV0eFTgxVdXmb2tQodj4ljoJbh+7BONAlPl6tyCN+pfU55Id9QbAeQ19v/SVdIAAAAASUVORK5CYII=&quot; alt=&quot;\frac{3}{2}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B3%7D%7B2%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAp0lEQVQ4je2UsQ2DMBBF3wgegNYtfQbwBNnAG2QHdmAGtmAIT8ESTsEhmch2fhMJKTzpCqTHPx26Ay7HAuRKpZY8FM8O2ICgdHqaLJGAqIjBUp2a+lJTM+dhmyzApIijpXpFni355jfUlv6z/gvHfnOJffqNzg0eS3/c3WQvjWqn3EsvGUx+KPJs9ZUIrAj/jcB50K5YHqynMaCvtI4teaW+mtKnuypvqKoxUhMj7+cAAAAASUVORK5CYII=&quot; alt=&quot;\frac{7}{2}&quot; data-latex=&quot;\frac{7}{2}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAwElEQVQ4je2UsQ3EIAxF3wgMQEub/gbIBNmADW4HdsgM2YIhMkWW4IoYiSMxRLomUu5JLoCPbZBtuB0GCMAGJGAFXpp4ASJgZT3JJVsLrRwM1X4E3rV4UMSL2IENmCX37GDVxE4Ok1wMWhoaGzBeEU4SqYkFvHh1PW8538P//vmZdMGehWEvzbJbvCZe2Esz92DgvInVSKnlvSTPEnUqlcxiXTz7GDAdHSPfD20KywnkUB7oTkJ7TRw5L81LX3dXPoeaN/fm+JLJAAAAAElFTkSuQmCC&quot; alt=&quot;\frac{9}{2}&quot; data-latex=&quot;\frac{9}{2}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAYAAAD+MdrbAAAAwElEQVRIie2WwQ3DIBAEpwQKyJcvfwqgkXTgHtIDNbgL1+MmyINDJpFysR1kKdKNxAOzWg4L7QEG4IAMREXjgUW0KhFYgQKED5q7rJdvZknEKIaTbBr2GPZoFWKG1xs6ESdFE0Vz04w8MLPdwyLz3jjJt7a+ytzvrdYwFMqgYfwjgdpS+/Q5nSyBGk8taD1bXA1jYvB9e1BfDEPw1OqGpLOj/j+tzxwym9G74CGz5c0s/2KYeT1mO/opWu+1mLqYJzKySiHeKRvNAAAAAElFTkSuQmCC&quot; alt=&quot;\frac{11}{2}&quot; data-latex=&quot;\frac{11}{2}&quot; /&gt;&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Nilai dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;5f7e688cab1cb14dc5eb0bf8b86b5386.png&quot; alt=&quot;\lim _{x \to 0}\frac{\cos5x-\cos3x}{\left(\frac{1}{2}\cos2x-\frac{1}{2}\right)}&quot; data-latex=&quot;\lim _{x \to 0}\frac{\cos5x-\cos3x}{\left(\frac{1}{2}\cos2x-\frac{1}{2}\right)}&quot;&gt; = ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>5f7e688cab1cb14dc5eb0bf8b86b5386.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAJQAAAA1CAYAAACnfMKfAAAE70lEQVR4nO2czbGrMAyFTwkUkC3b7FMAFdBBOkgP6YEa6IIiUkWauHeBz1g4/oMQB4i+GWbefSZghGxLQhagKIqi7IMGwPnbnVD2yRnAn+f4VYU6AbgDeGKUwwPjAFMyoUIpI38AWvPvCkBn/u/0tR7tDFWoOFeMs9WuqQDcYKfdJ+y0WyE+JbvtT8Sn7ByFasx1BnGP3ty7BCfYmYLPXIu+rCkPec8G43PWTtvNXOtm/q7Nfe8znqkoN4wv7wQ77V5N2120AeP0LG2eFuPDVeJ8/tZHDassFLg8n8p9Mu0X+IX8SQaMz1GZfjxgn3dtecC0U3nvmC53tblmY9prjPKosFEq2BeX2zbAjo4W+aPQB1+I7/eDOVLK1MNv6Mujz+zPxZzve2GflkdtrvX03J/37gJ92wxcgnxeVqitx/QFcd13Z5tcBoyCcrkhXxHWgrOFjxLyoEL73sew4HrF4dLiewC57EgG2PVccsEoxNbTFuOBV4WSo7UkXFp8lJBHSGkb+OW0SXpMp1Ku2Wwb8Goz1KJdGvAPxEdRb9rlvVwB0k6QL/CKMq50henMQiOb915THq7y0H51nY/G9EEux5s1yAH7AkNGsvR4BkxHqPQOc9b4K6xB7rveA1Ojk/cuGey7mH7Qi5P9W1seLaby6GCVlQOKsx8V9ImyToryy3DNLm18KgfG9WZinpeiJLlCFUpZEVehFOUtXIWih8EZStpZ0gO5wbqQ7jcn5YfJWfJ6TINkjH8wRsL4iS/ApvwYuQo19xwfqW9eeuzr8FJSoZQfQBVKWZUbpt9vtqRQZ2iOcwlarORQ0YOjgQ1YL+7pOacNnNOKc9ZSgAY7yL85CBXGb3qHHbwXjA/oUyamUijzicmOnvrhQj98MF+k/op4zpASJkd2hxysOZF7VajlpGRXdG9eyJ7hzpA/vJfEztnJl2MuUYVaTkp23OhQhJDXJXdXdFgeMc9dzlShlpOSHRPrZttS3G9Vw+5Fk+mg58DR4VWp5G+59WgJXcZva9Nv9f7mkyu7VCq1F+ZKc0aRedNMy/UdvmR1GZM6Y7lC5eSEy9D/Vndh+GoGpJbxTzNHdjkD2wuzB3JhdoGr4WvMUNz7dYRYiIzZMcbj2++2VWZvSe8wzkJMaj8hbwSd4ReKtJvkzt85HDmxL7bfbYswUJ0Nly9ZV+CdgBb3u7/j5X1aoWI1A2q87iaR8nDb5+Z+0dmQctlyzQC+i10HOT+tUAPCNQMeok0WnJDbqWg3cgnL7Se3H8kNl1uvGXCI1SL1ELPzcgSxmgG+Ntee6zBPiSQ9wrNObs2AUKE091hLdj+hUO8QqxkQapOekJvqnOux3ZHeCj5ge96qKlSCWMDUZ9+EKp1UeN3+HcItpdNiPzUD1IZKEKsZwDbXhpJ1lqTTwuBgrJ8tXpe53vnNlmsGxGb0XSHjN2sTqxnAaiu0KxhWITIomNqMccK0voBr4+yhZsAVB8k6eEB3zmwBVsTZPXfEo+y0Of4S5ymvzJHdkjpbmyTm3gPWruGysmsvpDC5sqONeJjS0rkJXgO2EwjcGwPCsvtGKciPkpOx2eL7X+/3Skp2OQmOu4JeT+ihGhwjI+EbpGR32MIprCfuTstSIBeoDTWHlOz4cfowtpMLK/u7NR9zvl0pU1KyozJtJQ72MU5QpSnBBergKIqiKEqKfzFXfSsXm6jxAAAAAElFTkSuQmCC</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;1&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;3&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;4&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;8&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Turunan pertama dari f(x) = cos&lt;sup&gt;4&lt;/sup&gt;(1-4x) adalah f&lt;sup&gt;'(x) =...&lt;/sup&gt;&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;-8sin(2-8x) . cos&lt;sup&gt;2&lt;/sup&gt;(1-4x)&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;8sin(2-8x) . cos&lt;sup&gt;2&lt;/sup&gt;(1-4x)&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;-8sin(8x-2) . cos&lt;sup&gt;2&lt;/sup&gt;(4x-1)&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;16sin(2-8x) . cos&lt;sup&gt;2&lt;/sup&gt;(1-4x)&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;16sin(8x-2) . cos&lt;sup&gt;2&lt;/sup&gt;(4x-1)&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Persamaan garis singgung kurva f(x) = x&lt;sup&gt;3&lt;/sup&gt; &amp;ndash; 9x&lt;sup&gt;2&lt;/sup&gt; + 5x + 10, di titik yang berabsis 1 adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;10x + y - 17 = 0&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;10x + y - 3 = 0&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;x + 10y - 3 = 0&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;10x + y + 3 = 0&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;10x + y + 17 = 0&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Sebuah perusahaan memproduksi x unit barang, dengan biaya total (100 + 4x + 0,2x&lt;sup&gt;2&lt;/sup&gt;) ribu rupiah. Jika semua barang&amp;nbsp; terjual&amp;nbsp; dengan&amp;nbsp; Rp60.000,00&amp;nbsp; untuk&amp;nbsp; setiap&amp;nbsp; barang, maka keuntungan maksimum yang diperoleh adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;Rp2.820.000,00&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;Rp2.830.000,00&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;Rp3.820.000,00&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;Rp3.830.000,00&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;Rp4.820.000,00&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Hasil dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;b35bf924b581acb446985c186122016b.png&quot; alt=&quot;\int 2x\left(2x-3\right)^{2}dx&quot; data-latex=&quot;\int 2x\left(2x-3\right)^{2}dx&quot;&gt; = ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>b35bf924b581acb446985c186122016b.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAHUAAAA6CAYAAACOChYFAAADa0lEQVR4nO2b3bGDIBCFTwkU4KuvvqcAK0gHdmAP6SE12IVFpIo04X2AMxKFCF4Myuw348zN3GSzcPhZlg0gCIIgXIAbgCeAAcA9sy9CAjpoQRsAo/lbuDANgDcAZV5X5hEuzBNAn9sJIR0KwAQ9W4VCaKFFFQqihw6MhIIYzCMUxAQJkoqCQVKX2xEhHQ1E1OKgqHKcKYgOImpxiKgF0kOLKnnedCjoyfJGpnhlgGSTUtNgvuG6IUP/iqjHUiFDYkdEPZYHMmxtE/KI2uK6lRUdtP9b9ADqg31xMgF4/fD7FPTlwZWTHQpasAFzUcESW9CtFCxPIMl0mLC95lfQywijuRd0ALCHAWtBU9pPRQs9+LiSPbEWsIe75IdXmfazxQDdB0kIEXXCvFRyptmlL6Hc4B6NqeynojM+cC9k1m3Z6QrazxRn/AFhS/omNcJEXcIwPbYxoSUze+0fiT3wbB5IU6D3RqL9lyMwVlQuL/ZMYhKDotXQs9Ie3aFCuey30A0fzWtl/D46Hmig2+AbjPQrBoV5u3kb20sbIf3pdThWVGWM26O2Nq8pRo11ENFY/4u1z8CkMjZuxv7RkSX3wxf8SyPbFXNsGfG5vI/4nO0h/ellj6jfNnTezbqCCn7Xf+wDc4dsCdoFPCGrhoLuYF+6L/aW6451vOArnP/Wn15i71Ifni+3GT32QkQNsc+jxBapRCWj53tjRXUN2m/B1ojI4x8DkpAPPRbvuzscaaGXKlfgwMb7RlyI/RpzZPxrfHVcsaIu+5urgItv/emFh94tUe9Yj64Bnw1pzXs4UNTiM9wPXY0Psc99xd5XOxyTghvwueRRONe+GrqtEFukO3QbXpjjBrLVn15CRK0wJwWWT4O5k+kQAx1XiL4MgELs83N2oPCEv5NTUGOdDPFtCzzThsJomQkWtp/ti+lPr0O/vO/zZWCuzIiTpTwp6q8S6xyVWZLcB7D8UdkpyFHKwpzqqTpiBxXOkaNekas+6QYt7JnSgDFwYJ7SfwYcuZy7al3Uqf1m1cMpR5ywDyllKRARtUBE1AKx7yeFQthzQS6cHN7VCQUhv0stDF4ZXbWgWnAgPzYuEBY1nTrlJcTBG3ehIJKW+Qv5+VYvJFwIu5DrAZmll4czk2nBHtevPBCghWX1nyAIgiAI8fwBg4oaynA1MG8AAAAASUVORK5CYII=</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;2x&lt;sup&gt;4&lt;/sup&gt; &amp;ndash; 8x&lt;sup&gt;3&lt;/sup&gt; + 9x&lt;sup&gt;2&lt;/sup&gt; + C&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2x&lt;sup&gt;4&lt;/sup&gt; + 8x&lt;sup&gt;3&lt;/sup&gt; + 18x&lt;sup&gt;2&lt;/sup&gt; + C&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2x&lt;sup&gt;3&lt;/sup&gt; &amp;ndash; 8x&lt;sup&gt;2&lt;/sup&gt; + 9x + C&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2x&lt;sup&gt;3&lt;/sup&gt; + 8x&lt;sup&gt;2&lt;/sup&gt; + 18x + C&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;x&lt;sup&gt;4&lt;/sup&gt; &amp;ndash; 8x&lt;sup&gt;3&lt;/sup&gt; + 9 + C&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Nilai dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;95756e1d8f027515d2860a027c50998f.png&quot; alt=&quot;\int \left(3x^{2}+4x-5\right)dx&quot; data-latex=&quot;\int \left(3x^{2}+4x-5\right)dx&quot;&gt; = ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>95756e1d8f027515d2860a027c50998f.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAIgAAAA6CAYAAABruBEsAAADvUlEQVR4nO2czZHqMBCEOwQHwJUrdwJwBGTgDJwDORCDsyAIoiAJv4PcKyEkM/IP9u7rr8q1ywLrsdSMZkZjACGEEGIXnAHcAHQALhvbInZGAyeOE4D78LsQAJwongCq4fFhOIQA4LxFu7URYp9UAHo4LyLEGzWcQIRI0sIFpUIk6YZDiCQ9FKCKDAxQm60NEfvkBAlEjECBKMUVSRpIIGIECUSM0sIJRPsuIkkHVVHFCBKIGKVUIAcAV/i2ALEuDTaOD3vYBVLD7dksbXAFNxBPqCYTc4Ab83orA3oAD8PrjsPr1ghmT/Dda2doybtGjyu4sT8b3sus1DKnJnrYNuo6pD/ZnFx6ojucmKZyMNoTnn+qR7sWnmsNOKHxEXOGfdI7vItsMhaBHJBOhdmmeApe98A89V4T5xmjwbQliT0wexCI1YYnbF6kw0JL0hG2QbqgTL1Tm51blHufKQI5wnm6Fr9LIDfYPMMT87z4D9yH+WTgzfCaI3xXfJjhVPCZEtVfw11EqPJQHCWtB6UCqeCXwdTkWO1dihKBNHhv7KrgRPMcjnb4GcJiKMeV8eRHsVkFkos/wuf7wbAGrwK5DAZxva8ThtHdj63BOUoF0sLf75OaHIu9S0LxPeCDy9wywngl5D4ch+Bx6MGPcNfEMT7CXZepTLGUQMgZ7mJT/4/PzW1MquFFwQnuor/lPum8KYzw/RXel0Wrvafo3LnDAr1BbusjFsgFr7eqAPkb3tj3E3v4Uay9IFaBAN6d5QycW0OZIxDWWVJHaqmx2LukQMLzpiY5FkgqWwmThph7oS0/NQeLQKyBZ8oNAu5CHlj+ds6pWQzfm/Oea9n7CWaMOYGE8UU8dxfkl+ca7nqKEghO5qcBzkX7DV6LZ0xzY1VfBwPZPV9huR7YOQJpkc7O1rQ3JgyGw4AztQzE8xBO+AV+PmJ7GUfRIfA8H7EKJFfdpCEMsLhm8+Li6J91kzuW28uZWwfp4QfrG/bG3ODHjzFCLkW94/VawwD3DPcBZQxYwXsjioUVWXMabBUIYC/SfJs5HuQ3kStWrgoFYllnS/L1bzKn1P6buGLddDtJabthB90/swXcRf96i0WpQBhz7NGT/FU43pv033AXttRFq3/1e2zamMUS+f+whosJqB9VjCKBiFEkEDEKq4RCJNlDy53YMaz9C5FE96CILGwW0tdtiyT64hgxCvshVDYXSdh9JESSRW/PE38Ldicp/hA/dPCC2KQ7SewXegyW1sPGYiEAOJGcoKxFCCGEEN/hH4P3L2RJFCnWAAAAAElFTkSuQmCC</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;-4&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;-2&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;6&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;8&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;13&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Hasil dari pengintegralan&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;c17de028b1c77f8ba8a1d05e8519b03b.png&quot; alt=&quot;\int 2\cos^{2}2x\c\dot \sinxdx&quot; data-latex=&quot;\int 2\cos^{2}2x\c\dot \sinxdx&quot;&gt; adalah ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>c17de028b1c77f8ba8a1d05e8519b03b.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAI8AAAA6CAYAAACJZApVAAADzUlEQVR4nO2czZGjMBCFXwgEwJWr7w6ACMiADJwDOTgGsiCIjcJJsAfpLUII/Xm2GM+8r8pVMyMQPdJTqyVaBoQQQogfyx3AE8AMYLjYFvFBjDDCuQFY7M9CJLkBeAFo7O+t/QiR5AngcbUR4vNoAKww3keIInoY8QhRzAMmQBaimNl+hChmhYJlUQGD5fFqQ8TncYPEIyqheLRMF8WMkHhEJRKPqOYBIx69x7qWER+4XTJDu8vfAYlH/C4kHlHNis8TTwtggrH7BZP9KC5gBfDnaiMKGbGlyD7wgbHChXCmmb6ishXpxudIf2ET23cZ7T3Su+M3mGQ3etkZQPef7Ypx9Y7+CtNuX1JRSjwrtpHewKRvuCmrV9EgnWfN9FruY3X29yu91XcQz9tbMx3yxONzx/Ubiw2MN6wRMPe2fiMcPG/D91ql4mHmYazjGphO4lT3wuYq2fHuNNh7904n97rlfH5pOsmEY/IbBcW6OmuXGxu02E9/sVhxtOW8lvUy0KfnYWeu9mfGJDPSAyPH5s6xmWWut26cZzIU6XFs8wM14mmsEakzXcxObLFNL2ywySmDrcv1ZIN9RuNc77p5doAbw+RCb9t5fxuwDQp2ott5LUyDUrQ8npTzjN6z0Z+2+IroYevm/bE2rrGZ6TduvYO9d7L398gMpmvEM2dUTiNDQfVZ2eLUOyBD+RU0iXpp2xPHUc/GzYGdPwbqAc7F47IgLy6K2czDm/6zQ4uFO0zbZHvx0lyeCXmnSGNpHmdlfirsCPPPvArsi0H3nIrTlpPnla5Q7timLT82yxHPfGJHiOXkWt9mijpE8QkaBr45RvpTxxB5UBsxhGUhzxNSPUfEO0efuUJ07Qmt0nqYDvfL3sl56nA8ffuV4imxOeSJyIS8cOQfNDpl5IDjVJUaxTP2rpTzM8sWHGOezil3g+s/GTbGeOIYcPsrDs71HFAMynm9GyswCD1jxL69/E7LnbZSU0jMZg7SAdvi5WHLGS+RydbFOJXXR8kRD4OuNfCJicddOfhTDwNo1rNg74ncVdrZfJ4LGzb0AbZGZmNRrC/sYwOuQGhPbJOR3sD9/3i9G+x32K+2noFrQlNlrs1cjXFT9O7d56+quCe2IKO9cz2PEAcoHn2ViihGKaiiGolHVMOgVeIRxXA1JPGIYpSCKqqReEQ1Eo+ohruJQhRTkwgmBID9+xQhitB7LVEF8z30XksUoy91EtUwcVpfrSKK4dEQIYrJOQUhxIFYgroQB9yE9QnyOiITehq+juDJRCGyaGE8j1ZXQgghhPiJ/AVa9lTAKreLEwAAAABJRU5ErkJggg==</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;97879d5d135a62e8018fa663517aaef3.png&quot; alt=&quot;-\frac{1}{2}\cos^{4}2x+C&quot; data-equation=&quot;%7B%22latex%22%3A%22-%5C%5Cfrac%7B1%7D%7B2%7Dcos%5E%7B4%7D2x%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22c%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22o%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22s%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>97879d5d135a62e8018fa663517aaef3.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAHAAAAAoCAYAAAAmPX7RAAACW0lEQVR4nO2ZwZGrMAyGvxIogCtX7imACuiADtIDPVADXVAEVdBE3sHWYFgDUcIu+I2+mcwsY68t/NuSLMAwDMO4mAzogMfVhhh6HsAEvIDyYlsMJRXQ+L9NwMQxARPHBEwcEzBxTMDEMQETJsMJWF1tiKGjAHrme+DLP99NyAZnl5EgD1yVyARMkBwnXokJmCQ9Lj6LgM1+d0qc4GE4KE6059ONlAMtP0PVf03J/LLhb6//xJxJF/75zIX6RECxo8MJCU7M8US7bs+nO//Jvuh/YccY+R/xFLcgwy2UuIeJOYvNWLqOkWWGu26fiGfAIsSRC13TAsNqvt6PJZ/Oqp1512gFrPxc+VHHK3niFiln/q4oC90GbQA1y4JBjRM1C/prRdqi8HOFMbD2zy3zdalVjKkVcGC5gTaRXbX3W0981P8d1yMFgNiH4K22gXnRat7f/Rqyg3HlG+jzYJyG79bpE6/xp0iiESvBbbX1LDdTg1vMiXNeVtzkXllQNpe2dKg5gXtrcxtyto2UttgJjO18ORX1F/ZkfvzQnliyIFmgdi6NgOLCby0guBfqmONYzey6euIxsAjaw4Rn5LtT2PEzSZpWfVrfR2K3JGHvoI2BI8u1Kf2cZ95Nv0bqqZJFhgJIUiOxYmB5IsPs9cXyZbU82I9R62xT7o2DYk6tgIUfX+w4+15qKLldSS/DnZiR+Akybk6PiwnhPSyJwGvEkfTaTmGibKX+RiJ03KjIauho0KXUxo2Qoq6JlyAVy7tNgSUxySCVgvDkNZiAyTAQLz2ZgIZhGIZh/Cr/AGjHy6SIwb8cAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;bd7837b0bca6b7c7c4aefa35ee3c354a.png&quot; alt=&quot;-\frac{1}{4}\cos^{4}2x+C&quot; data-equation=&quot;%7B%22latex%22%3A%22-%5C%5Cfrac%7B1%7D%7B4%7Dcos%5E%7B4%7D2x%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22c%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22o%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22s%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>bd7837b0bca6b7c7c4aefa35ee3c354a.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAHAAAAAoCAYAAAAmPX7RAAACU0lEQVR4nO2azY2DMBBGXwkUwJUr9xRABXRAB+mBHlIDXVAEVdBE9mCPbPMbExTwap6EtMhee/BnZsZDQFEURbmYDHgBj6sNUeJ5ACPwBsqLbVEiqYDG/q0CJo4KmDgqYOKogImjAiaOCpgwGUbA6mpDlDgKoMOdA9/2/m5CNhi7lAR5YKpEKmCC5BjxSlTAJOkw8VkEbLa7U2IE98NBcaI9RzdSDrTMQ9W/psQ9rH9t9R9xmXRh789cqCMCih0vjJBgxBxOtOv2HN35T7ZF/4Udw8L/iKe4BRlmocQ9jLgsNiN0HQNhhjttH1nOgEWIPRc6pQX6yXydHUs+nVUb806JFbCyc+V7Ha/kiVmkHPddURa69doAasKCQY0RNfP6x4q0RmHn8mNgbe9b3HGpjRgzVsCecAOtIrtq65pOvNf/E9cjBYClD8FrbT1u0Wo+3/0xZDvjyjfQ5844Dd+t0xGv8VMk0Vgqwa21dYSbqcEs5sg5DytucqssKJsrtnQY8wZurc1tyFk3UtqW3sClnS9vRf2FPZkd37dnKVmQLDB2rhgBxYXfWkAwD/TCxbEa57o6lmNg4bX7Cc/Ad2/hi3mSNE76tLaPxG5Jwj4hNgYOhGtT2jnPPJt+jdRTJYv0BZCkRmJFT/hG+tnrm/BhY3mwHaOm2aacG/uIOWMFLOz4YsfZ51IlkluX9KRicHufrcyR4J9E0FXmtMwP2UoiVLhUWwVMjJwwC1MBE6MnPJOIgA0q5O2RmLd2qYAJosIljP60MHEGXLnnVrU6RVEURVH+H39vGM67crqXGgAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;de4816c23ffa46fff2da0c2387c8bf67.png&quot; alt=&quot;-\frac{1}{4}\cos^{4}4x+C&quot; data-equation=&quot;%7B%22latex%22%3A%22-%5C%5Cfrac%7B1%7D%7B4%7Dcos%5E%7B4%7D4x%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22c%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22o%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22s%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>de4816c23ffa46fff2da0c2387c8bf67.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAHAAAAAoCAYAAAAmPX7RAAACTklEQVR4nO2awa2DMAyGvxEYgCtX7h2ACdiADdihO3SGbsEQTMESvENihdAUSEtF8uRPQqINFOM/2I4pKIqiKBdTAA/gdrUhSjw3YAJmoL7YFiWSBujsvgqYOSpg5qiAmaMCZo4KmDkqYMYUGAGbqw1R4qiAJ24dONvPqQnZYexSMuSG6RKpgBlSYsSrUQGz5InJzyJgt324x53zRf90IpUYe9ap6l9T4252uR2h4TdO+kTACiPcAyMkGDHHE+1KnhjHVcAA9BHn/MIOYQycU2METYIC4ywJDxOuii3wQ8eIX+GuxyfCFXBvx/dCaIERryJcuRb2uxn36qzZuO6aWAElEpR7B15Jj3FaiXuvKI6+L8YAWvyGQYsRtVgcH5PnQra0dj8kYIsRV/JjY/ePEivgYLddZFZtbesL7x1/JN9IAyD0Ivjd2IBzWsvx2b+HLDcEEbDgNVzJO9B+5zc7vvPTkahxKVJohFpw78ae+JOpwzhz4rubXVZ4e5NXJlds6zDmCdzyTTKUvDdSxkJPYGjmy1PRBsY+Yat7I1Vg7LVii6nkBQRzQw9cHmtxIfFJOAdWi/FlwTNyXsjpCZfqd3tNyd1ShB0hNgeO+L6pcUVWMkg/VarIpQCSfySUDfhP5LJ6nfFv9huk+ptx+XZdbdb28xBxzVgBZUkjtkyR5ysnk3RLTzoGycds5RVZAGeRdJVX7rwuspVMaHALXRUwM0r8KkwFzIwBf00iAnaokMkjOe/dpgJmiAqXMfrXwswZce2epHp1iqIoiqL8P/4A1TbQeRzRAjEAAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;4c249b2d7be88afad89d410321ba8ef7.png&quot; alt=&quot;-\frac{1}{8}\cos^{4}2x+C&quot; data-equation=&quot;%7B%22latex%22%3A%22-%5C%5Cfrac%7B1%7D%7B8%7Dcos%5E%7B4%7D2x%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22c%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22o%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22s%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>4c249b2d7be88afad89d410321ba8ef7.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAHAAAAAoCAYAAAAmPX7RAAACaklEQVR4nO2a0ZGDIBCGvxIswFdffU8BqcAO7CA92ENqsAuLsAqbyD3ADuChBuNFudlvJjNxILDyw+4CAUVRFOVkCuAJ3M42REnnBkzAC6hPtkVJ5A609rsKmDkqYOaogJmjAmaOCpg5KmDGFBgB72cboqRRAT1uH/iyz1cTssXYpWTIDXNKpAJmSIkRr0YFzJIeE59FwHa9OjVGcD8cVAfas3cilUDH71D1r6lxL+t/1upPuEy6ss9HDtQeAcWOJ0ZIMGKOB9p1efbO/Afron/DjjHyG/EUl6DADJS4hwmXxRaErmMkzHDn5RPxDFiE2HKhczpgmPXX27bk6uy+0u+cVAHvtq9yq+KZPDCDVOLuFWWgO68MoCE8MGgwohZe/VSRlqhsX34MbOxzh9sudQltpgo4EE6gRWRWrX3mHW/Vf8f1yAFA7CJ4qWzADVrD+7M/hWKjXbkDfWy00/LZOO3xGl9FEo3YEdxSWU84mVrMYE4c87LiJteOBWVypR4dpqzAtbG5DCXLRkpZbAXGZr6siuYDewrbvm9PLFmQLDC1rxQBxYVfWkAwL/TExbEG57p64jGw8sr9hGfks1X45HeSNM3qdLaOxG5Jwt4hNQaOhGNT2z6P3Jt+jJynShbpCyBJjcSKgXBF+tnri/BlU7mxHqPm2absG4eEPlMFrGz7YsfR+1Ilkcsd6cX2YR37V4HyZSQjlBhVY/x2yt5IOZFYlqh3bxkxzxJLzArUf2hnhJ8l6t8qMqMhXIGSWl/6+EdxxE4KZG+mZEAsiTn6Dk35Q+ZJjLjQd4+WlJOJXbhq/FMURVEU5c/5ATTc1C87tIsHAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;a52baac7ff4443e536880d231911d9fd.png&quot; alt=&quot;-\frac{1}{8}\sin^{4}2x+C&quot; data-equation=&quot;%7B%22latex%22%3A%22-%5C%5Cfrac%7B1%7D%7B8%7Dsin%5E%7B4%7D2x%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22s%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22i%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22n%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>a52baac7ff4443e536880d231911d9fd.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAG4AAAAoCAYAAAAfWs+KAAACX0lEQVR4nO2a0Y2DMAyGvxEYgFdeeWcAJugGbMAO3eFmYAuG6BQs0XtILEJEC0lzJdH5k5DaCIrx79iJKSiKoihfogJ+gO5qQ5TzdMACPIH2YluUk/TAYD+rcIWiwhWKClcoKlyhqHCFosIVSIURrr/aEI8BmK42IkcajGNkH/e033MQsMM0BVS4gqgxorWocEUxYdK3CDe8P11JzUT4jGlZ07Z7vKMHZufcO0b4VMTO/Nra4pei7IkRzuWMwwaMaLX93mMclHKWxgjXYAT7YbXtDjwS2pUtI3EizKSN7BjhHjvXtBghs6Bjm6ZmOy6R7xr/sGMdJvqedqxJbNMDI7rQ2LGFNfolKGqOCRVOnv3Mb1/GAtzsZ0kPgp8qpX5NmIeqMA5NGYU3+5tujRudew2YoAnZ8oQKN7MG8Fsm9gu6e/g3Pjr/aEEg+Hnct2tPOLdDM+7YFktr7Xk1g0eMeEeiDXzmn9Q19k+QTbwEh+u0M8Kl6o6IHe/SU8f5gHQJmXF7z5g17tJX+JZwUsPc9OinX/l7xpPwmhoiXEMBwrWYXC4Ou7GN6LOpcv7Ahspe74rhO7pizQazvWfL+ToXWuOkbotfxE+pF2HRiCMk57v1o3fGZfEiq8pl55x7pA2yOnxV02XvJE6T4Aq5X6hwvl+WwOuVRGTXM63YtmQW0reLlD9AapCsxFpMWolNW8qXkC6Gi768LICJbYO2xsw4/UdzAcjeRo4c3n4rB9zYzjhpGWXfrvnv7O3wR7bdDyVD9hYnsqFVMsZfnEiqHF9doOSBvwGX91WKoiiKoihR/AJOfdYPLvInIQAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Hasil dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;bff48ce8162695a919e21ddff5fd5de7.png&quot; alt=&quot;\int \frac{\left(2x+1\right)}{\sqrt{x^{2}+x+1}}dx&quot; data-latex=&quot;\int \frac{\left(2x+1\right)}{\sqrt{x^{2}+x+1}}dx&quot;&gt; = ...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>bff48ce8162695a919e21ddff5fd5de7.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAHkAAAA6CAYAAACUNvaLAAAEEUlEQVR4nO2c0bGCMBBFbwkU4C+//luAFdABHdCDPViDXVCEVdgE7yO5Q+Rh2IQECLNnJjPvoWDMJZvdDSugKIqinJAbgCeAF4Bm574oGWhhBL4C6O3fyom4AvgAqOz/F9uUE/EE0O3dCSUfFYABZjYrJ+UOI7JyYjoYRysXFwAPlOut32CijXrvjqzhZVsOagBvlL8U1DAT4b5zP6IZkM/pesPMBBfO7I/97Ln3rKVD3Mxr8Xssapg+Fxd10OlqM1y7wfwyMGA03ZV9jxu+peCFMOvBmbo0Fg/biuKKfCL3kK3DN6T37kNEvsCEkJU9zzcW7GtRUOTUa2ZIWEbvvpoc+2C0BBTgLfz80JnsnucTuchws0WeTvPmWVq/Khjhmsmxzp47IM67zSUy8L3cFEFukZd4wb/G9bYtCfyaNFoB95jEM5aKnGN5y0YH2YwLRSKyJHbuIAvvrpPW22u7xyTf8ZQiv5DHkVgy1w98DxQFcaHH+4n4fDXXDrlE9jkoDf6b6KkotT3mrsst5BYnVuR+pm8uRTpeuUQGzIBNZ8UFYxJk2jhwb9svettP+3pItilUZHru7EuP+aRIkSEUv1QOfiVDtiB2Ji9RZDKEacUcMDxKnbKUUCNtBo3X3CqtSQub5IYakG9zAtANijWELlHeC+UUGRg3JErdwblin63GJKFtjW1EVsLh0rAaxrIq8v7UGKOIN4zlc5+WZe6e4SQw5ve9FlJFPgYMKx8wYjIWdxMuDcyN8MCYohU5ZVKR52JabXFtDhYzTMd8zge4wdwQ4oc8cu4lK3KmXjR9pTmCM27M3qjI+zG3nz83s8kD/7dmvXCbMbXIe5vEI7cpzM03GPfROxgxa3yLyTCUT9fy/V5SiszOagsTGRi3exmL08JSwKkXzZKmHoKsXkqR74muoySGIqfYG2U1pHIwUj76E7PJwXThYM8v7nnmEkglMrM1oXANkjwK63LBtnnwOwq+AZlGWytyi/WD/gjoBy3AVsTuTfuqMTaDpnKtyD3W3ek1wgbj6CJLqzE2IcWjPyxziSVUYODYIodUY2xCCpFvmBdJUgHhClxBPiChIh+1GmMTUog8t5ZKKyDcB+d8pu1qX2Njaq+dtDliqjGm1+XWn3tMIvohRHbv7liWzu8hq4DwsUbkmL6cSmSm0iTMmWVJ6CStgAghdk2O7UvR5nqALL5lwnzA9yxo4M+WramA8BEj8lGrMbIT6uLTbJEnfodOaysgfISKfNRqjOxwHzMkb806Yg7OL+80RQWEjxCRj1yNkZ3Y4nPO5l+h0xZoWlPIdFaGnkehlQPD0CAGmiLl4CxV+Pu4Q39B9/DQy9RN/pPheohFll8qfjhzmcbskL6sUzkAF8h/HEVRFEVRlPT8AYXTQF+qs5ioAAAAAElFTkSuQmCC</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;bf576b4271997ea4e61a50246d2bf0aa.png&quot; alt=&quot;2\sqrt{x^{2}+x+1}+C&quot; data-equation=&quot;%7B%22latex%22%3A%222%5C%5Csqrt%7Bx%5E%7B2%7D%2Bx%2B1%7D%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>bf576b4271997ea4e61a50246d2bf0aa.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAHkAAAAXCAYAAAAvBOBjAAACIElEQVRoge2Z3bGCMBBGTwkU4CuvvlMAFdgBHdADPVCDXVAEVdiE92Gzl6gRslEQnZyZzIgKG/bL/gQgkzHSuHHN4+n4ao7AGRH58OG5ZFaiBepPTyKzLgM5gn+aAhHZiqb4KzCSF8muqZF0beUMlMgi0XqeWYkCcfCIRNUFm8M7JCpfwXqNLTtV3TVYqZDFu5W9I9AzdfIXvOA7I04u3HHn/hTr9DFhQj4l9kywZ5ELJmdvJXLt7DXOvpbQbm6SesISJXJDqaQIDPsWuUfuq2EbkQ+E9WqA09JJVYSBE+GtU42ki8Eda931o94XWEtGLBaRS2f3wtTcte4aMc1eavrcSuSOhGzaEx+dZx4dVSBO9BeLNlk+2gPoWEvk1s1pdDY6bHv6PYusWdeUDRsk+orAbyExh4XrDW7cC2zhSNwjw6UeokWEXhJYt3VzI0a8WJFfsae+iW5aa24bMP/7AUl3/m8VyyuonZngK6TU5CrxvD1Hsr4riKK+m5A2DvpZU68fBS3zdbtkWhzvxiqW3/Fas8qeRT4R6QsVw4/SkKH7Aj9X7Eumeq11+Z0vLywia9On99ki6S22LqeKrOXBisVeqLOuQ3YHwnXg3pAfzQeeN2cj4lRdND2PWeBVYkXWhanRqyv/6f4xgFXkllufqj/Wsqei+vZStqX/qNNOzOzBNmDP++Rvs/eARnN+ofDjJG2+M9/FgbinYZlMJpN5C394mP50e0/3YAAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;9ee1b85029e30e95a296985279909f1f.png&quot; alt=&quot;2x\sqrt{x^{2}+x+1}+C&quot; data-equation=&quot;%7B%22latex%22%3A%222x%5C%5Csqrt%7Bx%5E%7B2%7D%2Bx%2B1%7D%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>9ee1b85029e30e95a296985279909f1f.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAIIAAAAXCAYAAADHqJcNAAACZElEQVRoge2Z3ZHrIAyFvxIoIK9+9XsKcAXbgTtwD/TgGtKFi9gq0sTuA+iGxYQgnIl9E86MJ3/IwuJIOhBoaNgBJ2AEftqVvd4eI2D9a8MHY8FVhYYPhgG+955Ew/44A5PSxuDayBXXO1tLeQNYHBk06IHZvz/zIUJqT0jmfeOCfeX52be1LZyAi2L8yGsrSA1JDY7o2gTZ4i9c5x+cbutkwAWXscZ/tn5QX+EshY5bZtfCohOaRyfCmVvLq4mz1p/BLfoS+Bv8fe7G1fDcnvzlr1pMBKwtxJGJMHCb26uIYHHEM9H315zRyTsKS9bgjRb/2eAqSUnJn1mzTuxDP+JjCMaFJNCITS0RJj8X8dHhns0W2tfql1cQQdZzeDQwxszfUm5wAQoJcqE8S1Nk+fL21t9rYB10KV01p24aInR+PuKv83OKsyeHIxNBSK55HkZc1t8zWogERoQ48x9tG6VXareWMaS65K5HYlNa4kw+aH2Br9IFLhm31d8FndD+l5W5IEyJm4ZqNP5tIq+KJfjPEqaCWo2wVNoduSKo9N7A30XsEsYdLlApgdGRVqELeWJZHIG2iMkUaogw+LnU7HCOTITi4wBZ4HDB4kBK3wx1wsi6FYQC69He3+KCPwX+t7YIgZYIUg3l4MpQLhShfl9fJeKU/iTZZK1OOLKvkm8h3XMkkFLyhSgz9x8grApDyhnr3UHPbUeiEjQZlBJBiC0ElP9Erui2rJqFkaSScwTRLxpCaPzJwVWsl7RbcjWkKsyvcHYHRz5H+B/9VSE+c2j4YGgOYxreGD37tYWGhoaGhmr8Al2zEvjKNyE/AAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;5b92d475fbb3f3b175e429719b408e14.png&quot; alt=&quot;x\sqrt{x^{2}+x+1}+C&quot; data-equation=&quot;%7B%22latex%22%3A%22x%5C%5Csqrt%7Bx%5E%7B2%7D%2Bx%2B1%7D%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>5b92d475fbb3f3b175e429719b408e14.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAHkAAAAXCAYAAAAvBOBjAAACCUlEQVRoge2Y3a2DMAxGzwgMwCuvfWcAJmADNmAHdmCGbsEQnYIluA/GIqIU8kdLe3OkqKoUYpPPNk4gkXAgBxpgSmN3fDUN0M2/iR9lQLI58aNkwOPTTiTOpQRaj+cqJDgm4B7Vo0R0OkRoVx5IFciBEbjFdCoRlxilekAEt6HhvQ2eT1ecAT1+we9rr2GpjBOyp4XHWk8UyMuEUOO2GVcXuUQq04RfdXK1lyGCDoa9al4nSjNcz8OXah4uXFnkisW3d4ncIUG1roSj+adA0nxkUb7FLhL6F3P0eW3I1EZnzDEFLrHfEFeRbXzZw/cS4x0i5/P8w0RpWY5Beqlhm11b3+MCyW4tGQXSPZuRps6Z4wyRbXw54soiawBbv0+LiPZK4HXGHh2dstmB3sWJDe4cXxceHcFsfblZ2LIVz2ZeqL07jsfPkucoMru29WItxw3TQPzvp+83efB87sqZPOHwTtrya0kzKdju1gb2s0IvO0K77zU+Iof4cmWRRyz3IkOytECEaxHn1mXbbFZy9stExXJJot8M20bnCFeRQ33xPbdaNUSB9jpEF02+HAnkemuSZm89G9naBDObq/VChhGzk9WGbiTSwRx7kWP54rLp2tjpOVn7BRexXeyZFdi0F7TXms196EIBXPmc/I32nqiQKB0+7EfiZFwuEhJfyo3PlepEIpH4h/wBhRb9QHjtR8AAAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;f7ccc438e4cf00002b4c017714f2bd86.png&quot; alt=&quot;\frac{x}{2}\sqrt{x^{2}+x+1}+C&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7Bx%7D%7B2%7D%5C%5Csqrt%7Bx%5E%7B2%7D%2Bx%2B1%7D%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>f7ccc438e4cf00002b4c017714f2bd86.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAH4AAAAoCAYAAAA49E5iAAACf0lEQVR4nO2azZWrMAxGbwkUwJZt9hRABemADtIDPaQGunARU0WayFvIemGYJNjGECfRPYczP2fGVvxZsiwBhmEYhmEYhmF8DhUwAleg9b/rgIv/anwoR6ABBmQDdP5740toES8/vdoQY18qJNwfMoxVA70fz57HTxEMwA8S+tfS+/H6DGMZGzIgZ/sJcIj3rwn5DvF6o1Dm2fvB/+wQ8VOokMhhfBktadGiQzbMFbldGG/GwK0eEMMPEi1qJOrkSDKNHckR5h3hR03PvknkSNqm7EmLhCnZf+Xn0wh6Rda0SRgriAY4rxzjSFzEKF34Bln0K2l2xgpf+fkcNzs7P85mCfeRddfBjvgyccnC14gjaFl8D+EH5KicR8xLwtzBnLm/q07IB9BQ1yBhaFoanoreEr64scKH2PKM1FC/h/C1//vdeyz3zvcGiQIabhpkEaY7Ug2ePlsIH2LLEiULr5t68fOsKSvOPXvpGqclYQ19qWgn8dmzdB2MsSVkjUIEDRH+EDjfo403stFVeJotzic4sZyUOfKfx6lnvEv8v5I9PjWBDKLhfpboeO49WqBZm/XPSRF+jS0lC39JnCOKaUJU8zzEaI+/5XYG5er5xwq/1pZU4V3kPEqM8NpoU4fUW0WOxtt/pl7fPRhckzY9+7WOfyFfMSFU+Fy2xAo/8reQElPIiRG+QoSe5zvZCzfq9ectBg+k5Ht8Djbr28/LezHnhHb33CaWGZsyIl6ridlA3D06pvhhFIzecUO9/sDrwryREU2CUlqrxhtzJv9d2yicnnWvXRlviBY2TPQvouN35a3BXo3+ePQNkamn710UMV6AI73VaBiGYRiGYRTAP2pQGW4EbB5+AAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;d5f03484f54348e4623aa441ae8758e0.png&quot; alt=&quot;-x\sqrt{x^{2}+x+1}+C&quot; data-equation=&quot;%7B%22latex%22%3A%22-x%5C%5Csqrt%7Bx%5E%7B2%7D%2Bx%2B1%7D%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>d5f03484f54348e4623aa441ae8758e0.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAIYAAAAXCAYAAADOQzd3AAACNklEQVRoge2ZwXGDMBBFXwkUwJUrdxdABe6ADuiBHqghXVBEqqAJ57BaoxAMrLBBsfVmGDsewUroa/VXgUQiQnKgBm7pWrw+jhpo3WcicadHskYicScDvs/uRCI+LkBjvCdDtp0B2XvTFvSGtIg4LJRA575f+FBj9u7s3UZy4MvQvubYDBMi2gwRvnXB7IlXI3OhFVAPFAHPegoF48oPpcVmXGMXxoVxiywPiJchIui9eJV7zmkFwdVdoTTYVR2zMCrGvh0ljBYRYjb5fQiI/YsCSUEDo8Iatimum2mTIVvDjTGVVu75ldfOF4XFvFqFoWPRGDreduP9of7nCGHkrn211jCEhrHk1IOqrYHm/MUVefktIpCKv5OgqS7kVNAijML1R+MVrk/T1bVEzMJQ0a+OR1fq0vXI6DXIRD8SxTQzrJWputdaS9kpe8akZK5dx/JLLDfE2jrhW9rtjfeFzbgHMVc2+m532oGGZdetkxGyapYI9Rh94H0xZ4yXnwFpeaXp1qdg3uX2LK++FhHUHnM6R4gwKteXkAoqZmEMvFAYahYLZLIbZEDTLcU3bGtnD+pTGkYB7d1SFKsw1ONoRszYbjwh/Fwh1BRa4uni0wWbI+LfvRj1wZolrq5jcy/OzxrVg+DT6qN0f/fYDN8SW4Whjl0FqQZ7wFYiWyZKza2eY6j/sQjEEs/P9H68ww+2NGt0ZwR3xHyO8R/jPQXNCP3J/UhEiOVwKPFBlJz4z5lEIpFIvIofv4sGMplSboEAAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Luas daerah tertutup yang dibatasi kurva y&amp;nbsp;= &amp;ndash;x&lt;sup&gt;2&lt;/sup&gt; + 2x, garis x = -1, x = 2 dan sumbu X adalah&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAYAAAD+MdrbAAAA7ElEQVRIie2Wyw2EIBBAXwkU4JWrdwvYRujAHuzBGuxii7AKm2APMxM/EVcXLpvwEmIUfMIwYYTKgRYYgajtDfgc2aJXgAaYtRVjQmacjQeCylyubELit6g0W2h0Kp1KCQF6ZLbFCDnCgKRIo/eWNsOvQocscWbdlJ6Cm1KpHIiFWuVfcEjt6BL9ATl5bpXVbjO4Pek3md98eCFxpL30BS6EM3ImGl7Hvq5mmRI2+vwYiriZyCNhm3geuVEJnwq//k2cvWjxKrZkWAuVkYrrDkd653r2aTMguXiKR4JreWjB3opNYv0ja92uFOIDfMdXMVGb24sAAAAASUVORK5CYII=&quot; alt=&quot;\frac{3}{10}&quot; data-latex=&quot;\frac{3}{10}&quot; /&gt;&amp;nbsp;satuan luas&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;3 satuan luas&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAxElEQVQ4je2UsRXDIAxE/wgMQJuWPgNkgmzABuzgHTKDt/AQnsJLkAKRED2wVcYvufeofDqfQCf4OjggAiuQgQ1II/IMTFKEFGbgZvlTEPLlyM4VeBypVrUstoLFgqf4z9YCJ+RoIbNH1h/q1fkeud5AbXDB6PcPM7Lh/BYcJR0b71XQpv0Ds5w6v4GyQ6YeOVNmukUUga7y0ih7UdYCL7RJ2d1Gd6UcKE0OA6szl6SgS9b+EoMh0g1WG921qx9lHfk9E57n2D6BpkXEuAAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{3}{8}&quot; data-latex=&quot;\frac{3}{8}&quot; /&gt;&amp;nbsp;satuan luas&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAq0lEQVQ4je2UwQ2DMAxF3wgegGuv3DsAE7ABG3SH7tAZ2IIhMgVLhENsqUUh+pdKSPAlH6L8/NiWv+F0mIFciXRE7r7OBqzAoPw0OllCAiaFOLiqqaovVTXzW+whZuCtEHtXfSjkjyvf+A9qQ7+Pa8EonkuU6lcabomhD99N/khaBZIRDHhSjNBUDbXsafVKCh0l/6w+MCdLW4kWeX8Rrasum+hAFLgg5ntmbPOnMsBWiH9dAAAAAElFTkSuQmCC&quot; alt=&quot;\frac{7}{3}&quot; data-latex=&quot;\frac{7}{3}&quot; /&gt;&amp;nbsp;satuan luas&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;2 satuan luas&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Nilai modus data-data pada histrogram berikut adalah...&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;b27866_36.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+		<file>
+			<name>b27866_36.gif</name>
+			<type>image/gif</type>
+			<encoding>base64</encoding>
+			<data>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</data>
+		</file>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;141,25&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;141,50&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;141,75&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;142,25&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;142,50&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Nilai kuartil bawah dari data pada tabel distribusi frekuensi berikut adalah...&lt;/p&gt;
+&lt;table style=&quot;width: 206px; height: 236px;&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Nilai&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;
+&lt;p&gt;160&amp;ndash;164&lt;/p&gt;
+&lt;p&gt;165&amp;ndash;169&lt;/p&gt;
+&lt;p&gt;170&amp;ndash;174&lt;/p&gt;
+&lt;p&gt;175&amp;ndash;179&lt;/p&gt;
+&lt;p&gt;180&amp;ndash;184&lt;/p&gt;
+&lt;p&gt;185&amp;ndash;189&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;
+&lt;p&gt;7&lt;/p&gt;
+&lt;p&gt;11&lt;/p&gt;
+&lt;p&gt;16&lt;/p&gt;
+&lt;p&gt;24&lt;/p&gt;
+&lt;p&gt;16&lt;/p&gt;
+&lt;p&gt;6&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;
+&lt;p&gt;80&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;170,125&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;170,175&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;170,150&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;171,125&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;171,175&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Banyak bilangan yang bernilai kurang dari 1000, yang di susun oleh : 1, 2, 3, 4, 5 dan 6 adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;120&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;156&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;216&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;258&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;360&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Kelompok kebersihan &amp;ldquo;Sari Bersih&amp;rdquo; beranggotakan 5 orang, yang akan di bentuk (di pilih) dari 5 laki-laki dan 4 perempuan. Banyak kelompok kebersihan dapat terbentuk, jika sekurang kurangnya terdiri atas 3 laki-laki adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;20&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;21&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;60&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;81&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;120&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
+		<text>&lt;p&gt;Dari 6 orang pria dan 4 wanita dipilih 3 orang terdiri dari 2 orang pria dan 1 orang wanita. Peluang pemilihan tersebut adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<random>1</random>
+	</question>
+<answer>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;6a1ec43b287ee415dfc734b9623962f6.png&quot; alt=&quot;\frac{70}{120}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B70%7D%7B120%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>6a1ec43b287ee415dfc734b9623962f6.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAB0AAAAoCAYAAAACJPERAAABWUlEQVRYhe2XzY2EMAxGXwkpgCvXuVMAFdABHUwP9DA10AVFUAVNsAeSxTjmZyaMVlrlkyKUxPDASeQPyPojPYB5p9UirgR6Pz4Bz1Rop8ZaYBR950GduGf2cbdpAhrRrz3EibGXerEk1R4qAR0wqLjWv8gtGonT1vtmQR+pQCuNZ9AyFToSbypY1m/YgSYp7MjCmGuIM2Ct89vqWb7IUkF8ZCagSgGWnG+KiiX9s782B7FZWVmfa69Yf6NlZX1PjqWUWeWpYCljE2tVseJaETNw4iIqEWyVs5m1dDn/QG3WArAUH6BjflWzGq+rxqoyYke2hjvUZGnQTV2FasNW+L5O+SUDfgXqiJ1C8FP63pnYNX4E7Ykd4hF0z2ddhnbYXiis3+3p7dQDGhWr/9z21nkjx/5ua4hT2ivok+2ROfTB4T8znNOw+AFeqDnZJDSAwtwL26hn/SP9ALrQjhmmfMazAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+	<option>
+		<value>1</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;ced57add8d829e773dad88fd49bc6159.png&quot; alt=&quot;\frac{60}{120}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B60%7D%7B120%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>ced57add8d829e773dad88fd49bc6159.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAB0AAAAoCAYAAAACJPERAAABZ0lEQVRYhe2XzY2EMAyFvxIogCvXuVMAFdABHUwP9EANdEERUwVNsAfsjTGBiRh2tVrlSdGI2OQl/iFvIOMPoAJ6YAbaiG0EFrE/7yBsZLEGKJ2tEFsvzw8h7+4grE7si5ArBuD1CenM+a57YHJznWzkEmpCqCZCzmxORxkx0scVUn25JYSvlTkN9xnpUUqSSD1soQzcHF4tEl+xenoIJ7eFFMtzMmw76KKdzOlGSvYtM7PWw2XYxl9Yw+lzVbO2yCK//uORkZFxD5ZfHBkZP4eC9TaJXU8lQYrqrRLz64zPxBsVURvnmMaxF3ghC85sL3ElrMwBvM83GoIMSRVWKt6s74ut4K7Ep3m3WCqp172lPPuQJwnwFNKCvVJQhe/fXdirxkukI0EbpZAOn5L2xLWQ5u/28PZugdb5+n9uR3neoOC42lr2IR0d6ZNty5zqYJWb2qeafCUvnc0OS6pEVrZ6wZ7xz/AFwJaVZH03fucAAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;75f3fd1efde52e6bd2b4b6b87b6d5575.png&quot; alt=&quot;\frac{36}{120}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B36%7D%7B120%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>75f3fd1efde52e6bd2b4b6b87b6d5575.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAB0AAAAoCAYAAAACJPERAAABZklEQVRYhe2XwZGEIBBFfwgG4NXr3AlgIjADMzAHcpgYyMIgjMIk3IP9l7aF0nHY3aotfhU1Bfzh0QhFA1T9oR4AXgBWKROALuN1ypvzXAIu8gsALYBZipWXCTkAzV1gTgFbNClgcVgHYBBgY9pXxNUopiADLwLW0FG1z+KbS07CCSCYCS3SB5mQl7ZiGrFFo6HBeB4ovOSDgXocdzOht44Nv1MrdR4ZnwD0Um+wbbbpDpADjIgbZJG6PRrOeHzCU1VV9bnWXyxVVT8nXk8u0dciZgZMTVK+QXkmnNytTplTN7+9Oyfx66uMwE4FYD3fesofOPiVdMMlvDO2e5dixvg8G+wq9CleRtFK3S75ihjQR9AGW1S9asslZSuOCdwtaMA+XzqD2pfB21CPfYQUv1/x5fVmgN54mcBRue+8U4P8butxXNJgoHxq8MjwgZVUh/hM4DUUFLw1fbpoKEHseyHmzlX/VF/9AI/emeq44wAAAABJRU5ErkJggg==</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;10bb87d4a9307874a1a03b650a31cd0f.png&quot; alt=&quot;\frac{19}{120}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B19%7D%7B120%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%229%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>10bb87d4a9307874a1a03b650a31cd0f.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAB0AAAAoCAYAAAACJPERAAABTElEQVRYhe2XwZWEIAyGvxIogKtX7xYwFdiBHdiDPVCDXViEVdiEeyBZEWFmdtV5c+B/z0Mk8hEiLwGKvkANMGbGOmAGVmAR+5QM4GTCFLQTUC12LfbjDNQBlUyegs4cI+uB6QxUlYOuCWgn72+DOny0VmwrfrdCTQBZZRGOm7c3JQcMn4RW+IjtK8d31ONzl5PBH5PTx0VhE1vOZo4Ra3SO7bwWFRVdr/WDT1HRfdIOsEmMWXyBXtiqTsqvC3wmfCXKqgmcU2VqBdpgcZP4mwSwCgKIfX71YOvsctDUImPfGV+HVVpvXxb3d6EP8dUorNjxlqda1X9BDT6qNnhXZ77N3RD+DB05dn3PoO4sdGAfoUrzd/n2DtEEbeS7sP+RcnneyZD/21qOWzpG0J79kRl40vFXMoGeU02+wm00Fj4hVEHhVeOS5rvoe/UDXZGIJg9Enq8AAAAASUVORK5CYII=</data>
+		</file>
+	</option>
+	<option>
+		<value>0</value>
+		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;2b508c29d74b4e18e1a15a1a5e1c025b.png&quot; alt=&quot;\frac{10}{120}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B10%7D%7B120%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
+		<file>
+			<name>2b508c29d74b4e18e1a15a1a5e1c025b.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAB0AAAAoCAYAAAACJPERAAABPklEQVRYhe2XzQ2DMAyF3wgZgCtX7gzABGzABuzADpmBLRiCKVgiPWCXYJw2bUqpqjyJA7GTT/mTX4CsH1ANYAzESoo5AAuAPhVmAFgaUIMaAg30X1FulwK1WGfSBaANQYzoM6dAWSHoAGBSct2Z0FFpZ2h1BbQ8C2pxwfK2OB4kbZ/fUg/9RBY4XpkF671Ogk1YZ+MILGdcUzvH2xRgVlZWUO6LX1bWeWIHqJWnAmsZW7BVFS2v83ImPHERtZeseRyHrXQZGnDBvogzsPQmIHPuarD51VhjVSu5M/aGu6Sc5tlgsVDpewv6l0seZcBjoAZHp8AOX/YNvRBeho7YvFEM1KZCB+heiPfv48s7iAFakStfbqF93skgfNpaHJd0FNAe+yvz0AfzO5PvKW8+wwsR8z8fyiCOWeqb9ce6AWIei6t6S4TjAAAAAElFTkSuQmCC</data>
+		</file>
+	</option>
+</answer>
+</item></test>

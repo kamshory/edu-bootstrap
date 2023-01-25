@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>{#latex_dlg.title}</title>
+	<script type="text/javascript" src="../../../base64.js"></script>
+	<script type="text/javascript" src="../equation/js/ASCIIMathML.min.js"></script>
+    <script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery.min.js"></script>
+    <style type="text/css">
+	.latex-input{
+		width:100%;
+		box-sizing:border-box;
+		height:118px;
+		padding:10px;
+		font-size:16px;
+		font-family:"Times New Roman", Times, serif;
+		font-variant:"Serif";
+		border:1px solid #DDDDDD;
+		resize:none;
+	}
+	.output-area{
+		padding:10px;
+		border:1px solid #DDDDDD;
+		background-color:#FFFFFF;
+		height:118px;
+		box-sizing:border-box;
+		overflow:auto;
+	}
+	.label{
+		padding:4px 0;
+	}
+	</style>
+</head>
+<body>
+
+<form onsubmit="ExampleDialog.insert();return false;" action="#">
+	<div class="label">Type latex here</div>
+	<div class="input-area">
+    	<textarea id="latex-input" class="latex-input" spellcheck="false"></textarea>
+    </div>
+	<div class="label">Renderer 
+		<select id="renderer">
+			<option value="server-png">Server (all browser)</option>
+			<option value="browser-png">This browser (PNG)</option>
+			<option value="browser-mathml">Client browser (SVG)</option>
+		</select>
+	</div>
+	<div class="output-area">
+    	<div id="image-container"></div>
+    </div>
+	<div class="mceActionPanel">
+		<input type="button" id="insert" name="insert" value="{#insert}" onclick="LatexDialog.insert();" />
+		<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+	</div>
+</form>
+
+</body>
+</html>

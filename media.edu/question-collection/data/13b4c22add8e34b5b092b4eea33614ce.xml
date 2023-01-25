@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt; Tren sel&amp;#64257;e beberapa tahun ini merupakan sebuah fenomena. Hal ini diiringi pertumbuhan perangkat mobile dan media sosial (medsos). Selfie menjangkiti semua kalangan, mulai anak-anak, remaja hingga orang dewasa. Tak heran jika produsen smartphone pun tak menutup mata dengan tren yang semakin menjamur. Fitur kamera belakang menjadi salah satu nilai jual pada sebuah smartphone. (Koran Sindo, 22 Desember 2015)&lt;br&gt;&lt;br&gt; Makna kata fenomena pada teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kenyataan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;gejala alam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sesuatu yang luar biasa&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hal yang dapat disaksikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt; Tren sel&amp;#64257;e beberapa tahun ini merupakan sebuah fenomena. Hal ini diiringi pertumbuhan perangkat mobile dan media sosial (medsos). Selfie menjangkiti semua kalangan, mulai anak-anak, remaja hingga orang dewasa. Tak heran jika produsen smartphone pun tak menutup mata dengan tren yang semakin menjamur. Fitur kamera belakang menjadi salah satu nilai jual pada sebuah smartphone. (Koran Sindo, 22 Desember 2015)&lt;br&gt;&lt;br&gt; Pernyataan yang sesuai dengan isi teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Fenomena selfie berkembang di medsos&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Smartphone hanya digunakan untuk sel&amp;#64257;e&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Semua smartphane dilengkapi kamera belakang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Fitur kamera belakang meningkatkan nilai jual smartphone.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt; Tren sel&amp;#64257;e beberapa tahun ini merupakan sebuah fenomena. Hal ini diiringi pertumbuhan perangkat mobile dan media sosial (medsos). Selfie menjangkiti semua kalangan, mulai anak-anak, remaja hingga orang dewasa. Tak heran jika produsen smartphone pun tak menutup mata dengan tren yang semakin menjamur. Fitur kamera belakang menjadi salah satu nilai jual pada sebuah smartphone. (Koran Sindo, 22 Desember 2015)&lt;br&gt;&lt;br&gt;Simpulan teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Produsen smartphone mengikuti selera pasar.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Selfie menjadi gaya hidup masyarakat modern.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Smartphone lebih banyak digunakan untuk selfie.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Masyarakat lebih suka selfie daripada menggunakan kamera.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+Gadget memiliki banyak peranan. Benda ini sekarang menjelma menjadi barang yang wajib dibawa ke mana saja. Tanpa gadget liburan rnungkin akan terasa biasa saja. Gadget digunakan untuk mengupdate keberadaan kita. lni bertujuan untuk membagi momen liburan kepada orang lain. &lt;br&gt;
+(1) Meski gadget menjadi barang yang wajib dibawa saat berlibur, tak berarti kita terus-menerus bermain gadget. (2) Cobalah untuk mematikan koneksi Internet selama berlibur. (3) Ini bertujuan agar kita bisa benar-benar menikmati suasana kebersamaan, (4) Mematikan koneksi internet bisa menghindari kita untuk tidak terus bermain medsos. (Koran Sindo, 22 Desember 2015)&lt;br&gt;&lt;br&gt;
+lde pokok paragraf pertama teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;peranan gadget pada liburan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;liburan harus membawa gadget&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;gadget barang wajib dalam liburan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cara mengabadikan momen liburan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+Gadget memiliki banyak peranan. Benda ini sekarang menjelma menjadi barang yang wajib dibawa ke mana saja. Tanpa gadget liburan rnungkin akan terasa biasa saja. Gadget digunakan untuk mengupdate keberadaan kita. lni bertujuan untuk membagi momen liburan kepada orang lain. &lt;br&gt;
+(1) Meski gadget menjadi barang yang wajib dibawa saat berlibur, tak berarti kita terus-menerus bermain gadget. (2) Cobalah untuk mematikan koneksi Internet selama berlibur. (3) Ini bertujuan agar kita bisa benar-benar menikmati suasana kebersamaan, (4) Mematikan koneksi internet bisa menghindari kita untuk tidak terus bermain medsos. (Koran Sindo, 22 Desember 2015)&lt;br&gt;&lt;br&gt;
+Kalimat utama paragraf kedua teks tersebut terdapat pada kalimat...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;Gadget memiliki banyak peranan. Benda ini sekarang menjelma menjadi barang yang wajib dibawa ke mana saja. Tanpa gadget liburan rnungkin akan terasa biasa saja. Gadget digunakan untuk mengupdate keberadaan kita. lni bertujuan untuk membagi momen liburan kepada orang lain. &lt;br&gt;(1) Meski gadget menjadi barang yang wajib dibawa saat berlibur, tak berarti kita terus-menerus bermain gadget. (2) Cobalah untuk mematikan koneksi Internet selama berlibur. (3) Ini bertujuan agar kita bisa benar-benar menikmati suasana kebersamaan, (4) Mematikan koneksi internet bisa menghindari kita untuk tidak terus bermain medsos. (Koran Sindo, 22 Desember 2015)&lt;br&gt;&lt;br&gt;Ringkasan teks tersebut adalah... &lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Saat liburan gadget digunakan untuk mengunduh gambar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Gadget memiliki banyak peranan, tetapi gunakanlah sewaktu-waktu saja.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Gadget digunakan untuk mengabadikan momen liburan lalu meng-update-nya ke internet.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Gadget pelengkap utama acara liburan keberadaannya menentukan suasana liburan tersebut.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+(1) Kuatnya penggunaan internet sebagai sarana berbagi informasi memang memudahkan. (2) Namun, di Iain sisi pengguna juga kesulitan mencari informasi yang diinginkan. (3) Misalnya, acara untuk bidang dan segmen tertentu. (4) Nah, AdaAcara.com menyeienggarakan beragam event yang ditujukan untuk segmen mahasiswa. (5) AdaAcara.com merupakan platform yang menghubungkan pihak penyelenggara acara untuk mahasiswa dengan teman-teman mahasiswa. (Koran Sindo, 22 Desember 2015)&lt;br&gt;&lt;br&gt;
+Kalimat yang menyatakan pendapat menolak terhadap masalah pada teks tersebut ditandai&lt;br&gt;
+nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kedua teks berikut!&lt;br&gt;&lt;br&gt;
+[ Teks 1]&lt;br&gt;
+Peserta Orientasi PMR membuat parit di sekitar tenda. Hal ini di sebabkan cuaca mendung. Kemungkinan akan turun hujan, maka jikai ini benar-benar terjadi aliran air akan masuk ke parit. Sehingga tenda aman dari banjir.&lt;br&gt;&lt;br&gt;
+[Teks 2]&lt;br&gt;
+Lokasinya terletak di sektor 25. Sektor 25 selain dekat ke jalan, juga ketersediaan airnya pada MCK-nya cukup. Aliran listrik di sektor ini mudah dan berfungsi dengan baik. Kurang lebih seratus meter terdapat halang rintang untuk kegiatan ourbond.&lt;br&gt;&lt;br&gt;
+Perbedaan pola penyajian kedua teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;[Teks 1] dimulai dari hal umum&lt;br&gt;
+[Teks 2] dimulai dari hal khusus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;[Teks 1] urutan waktu&lt;br&gt;
+[Teks 2] urutan ruang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;[Teks 1] hubungan sebab-akibat&lt;br&gt;
+[Teks 2] urutan ruang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;[Teks 1] hubungan sebab-akibat&lt;br&gt;
+[Teks 2] hubungan akibat-sebab&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan teks berikut!&lt;br&gt;
+(1) Kumpu|an puisi berjudul Hujan Bulan Juni ditulis pada 1959-1994. (2)Buku yang memuat 102 judul puisi ini sudah dicetak beru|ang-ulang. Setiap cetakannya terdapat perubahan-perubahan. (3) Membaca buku ini terasa seperti kita berbicara dengan alam, kata-katanya mengalir ringan. (4) Da|am beberapa judul ditulis seperti sebuah narasi, tetapi tetap mencerminkan sebuah puisi. (5) Sayang, kertas yang digunakan kertas koran yang mudah sobek dan berkualitas rendah.&lt;br&gt;&lt;br&gt;
+Pernyataan yang menyatakan keunggulan buku terdapat pada kalimat nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4) dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;&lt;br&gt; Langkahnya bergegas dan ketika ditanyakan akan ke mana, ia menjawab mau membeli jamban.&lt;br&gt; Jamban? Ah, tapi tidak ada lagi yang bertanya. Pagi Minggu itu udara amat cerah. Sekelompok orang bercengkerama di mulut gang habis kerja bakti. Pembicaraan macam-macam ngalor ngidul, maklumlah jarang-jarang bertemu dalam suasana santai, kendati bermukim dalam satu wiiayah RT. &lt;br&gt; Anak muda dan anak kecil berebut menuangkan bubur kacang hijau ke gelas masing-masing. &amp;rdquo;Jangan berebut, masih banyak,&amp;rdquo; kata seorang ibu di antara ibu-ibu yang menyiapkan minuman hidangan kecil. Tapi dalam acara kerja bakti itu seperti ada terasa yang kurang, karena Pak Gayus tidak ikut. la memang tukang ngoceh, suka bersenda gurau, suaranya Iantang dan selalu ramai, canda terus mengalir dan tawa kerap pecah.&lt;br&gt; (Abdul Rahin Lubis: Jamban Gayus)&lt;br&gt;&lt;br&gt; Watak Pak Gayus pada teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kikir&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;supel&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;egois&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;malas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;&lt;br&gt; Langkahnya bergegas dan ketika ditanyakan akan ke mana, ia menjawab mau membeli jamban.&lt;br&gt; Jamban? Ah, tapi tidak ada lagi yang bertanya. Pagi Minggu itu udara amat cerah. Sekelompok orang bercengkerama di mulut gang habis kerja bakti. Pembicaraan macam-macam ngalor ngidul, maklumlah jarang-jarang bertemu dalam suasana santai, kendati bermukim dalam satu wiiayah RT. &lt;br&gt; Anak muda dan anak kecil berebut menuangkan bubur kacang hijau ke gelas masing-masing. &amp;rdquo;Jangan berebut, masih banyak,&amp;rdquo; kata seorang ibu di antara ibu-ibu yang menyiapkan minuman hidangan kecil. Tapi dalam acara kerja bakti itu seperti ada terasa yang kurang, karena Pak Gayus tidak ikut. la memang tukang ngoceh, suka bersenda gurau, suaranya Iantang dan selalu ramai, canda terus mengalir dan tawa kerap pecah.&lt;br&gt; (Abdul Rahin Lubis: Jamban Gayus)&lt;br&gt;&lt;br&gt;Makna kata bercengkerama pada teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;berdiskusi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bertengkar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;beramai-ramai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bercakap-cakap&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;&lt;br&gt; Langkahnya bergegas dan ketika ditanyakan akan ke mana, ia menjawab mau membeli jamban.&lt;br&gt; Jamban? Ah, tapi tidak ada lagi yang bertanya. Pagi Minggu itu udara amat cerah. Sekelompok orang bercengkerama di mulut gang habis kerja bakti. Pembicaraan macam-macam ngalor ngidul, maklumlah jarang-jarang bertemu dalam suasana santai, kendati bermukim dalam satu wiiayah RT. &lt;br&gt; Anak muda dan anak kecil berebut menuangkan bubur kacang hijau ke gelas masing-masing. &amp;rdquo;Jangan berebut, masih banyak,&amp;rdquo; kata seorang ibu di antara ibu-ibu yang menyiapkan minuman hidangan kecil. Tapi dalam acara kerja bakti itu seperti ada terasa yang kurang, karena Pak Gayus tidak ikut. la memang tukang ngoceh, suka bersenda gurau, suaranya Iantang dan selalu ramai, canda terus mengalir dan tawa kerap pecah.&lt;br&gt; (Abdul Rahin Lubis: Jamban Gayus)&lt;br&gt;&lt;br&gt;Amanat pada teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Rukunlah dalam hidup bertetangga!&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Janganlah membicarakan keburukan orang lain!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Selesaikan setiap persoalan dengan musyawarah!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berilah bantuan kepada orang yang membutuhkan!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;&lt;br&gt; Langkahnya bergegas dan ketika ditanyakan akan ke mana, ia menjawab mau membeli jamban.&lt;br&gt; Jamban? Ah, tapi tidak ada lagi yang bertanya. Pagi Minggu itu udara amat cerah. Sekelompok orang bercengkerama di mulut gang habis kerja bakti. Pembicaraan macam-macam ngalor ngidul, maklumlah jarang-jarang bertemu dalam suasana santai, kendati bermukim dalam satu wiiayah RT. &lt;br&gt; Anak muda dan anak kecil berebut menuangkan bubur kacang hijau ke gelas masing-masing. &amp;rdquo;Jangan berebut, masih banyak,&amp;rdquo; kata seorang ibu di antara ibu-ibu yang menyiapkan minuman hidangan kecil. Tapi dalam acara kerja bakti itu seperti ada terasa yang kurang, karena Pak Gayus tidak ikut. la memang tukang ngoceh, suka bersenda gurau, suaranya Iantang dan selalu ramai, canda terus mengalir dan tawa kerap pecah.&lt;br&gt; (Abdul Rahin Lubis: Jamban Gayus)&lt;br&gt;&lt;br&gt;Latar pada cerpen tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pagi, di ujung gang, akrab&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sore, di sebuah gang, ramai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pagi, di warung bubur, santai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;siang, di rumah Pak Gayus, rileks&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+Fajar, Jonathan, dan Diky memasuki gerbang sekolah. Awalnya mereka biasa saja, sambil bercakap-cakap. Tiba-tiba Jonathan berhenti persis di dekat tiang bendera.&lt;br&gt;
+&amp;ldquo;Lihat...lihat.... bendera ini kok dipasang setengah tiang,&amp;rdquo; katanya. Dia mendekati tiang bendera dan berusaha untuk menaikkan.&lt;br&gt;
+&amp;ldquo;Hei, jangan! ltu sengaja dipasang setengah tiang&amp;rdquo; teriak Pak Yoyon, satpam sekolah. &amp;ldquo;Kamu&lt;br&gt;
+tidak ingat ini kan tanggal 30 September,&amp;rdquo; kata Pak Yoyon. Kata bendera setengah tiang pada teks cerita tersebut merupakan simbol&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;berkabung&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perjuangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kemerdekaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perlawanan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks cerita berikut!&lt;br&gt;
+&amp;ldquo;Kamu mengaku saja, Lin. Lalu minta maaf kepada Eliza,&amp;rdquo; kata Jemmy.&lt;br&gt;
+&amp;ldquo;Tapi Jem, saya harus minta maaf untuk apa? Memang buku itu ada di laci meja saya. Saya sendiri tidak tahu siapa yang meletakkan buku itu,&amp;rdquo; bantah Polin.&lt;br&gt;
+Eliza kehilangan buku matematika di kelas. Di buku itu terdapat PR matematika. Ketika Pak Budi memintanya buku itu tidak ada. Akhirnya, Eliza dihukum. Ternyata setelah istirahat buku itu ditemukan di Iaci Polin. Eliza menuduh Polin dan Jemmy yang telah mengambilnya. Jemmy rneminta Polin untuk meminta maaf. Kini persahabatan Jemmy dan Polin mulai renggang. Bahkan Jemmy kini lebih dekat kepada Eliza.&lt;br&gt;&lt;br&gt;
+Sebab terjadinya kon&amp;#64258;ik pada teks cerita tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Eliza dihukum oleh Pak Budi.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Buku Eliza terdapat di laci meja Polin.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Polin dan Jemmy tidak memaafkan Eliza.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jemmy menuduh Polin mengambil buku Eliza.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks cerita berikut!&lt;br&gt;
+&amp;ldquo;Kamu mengaku saja, Lin. Lalu minta maaf kepada Eliza,&amp;rdquo; kata Jemmy.&lt;br&gt;
+&amp;ldquo;Tapi Jem, saya harus minta maaf untuk apa? Memang buku itu ada di laci meja saya. Saya sendiri tidak tahu siapa yang meletakkan buku itu,&amp;rdquo; bantah Polin.&lt;br&gt;
+Eliza kehilangan buku matematika di kelas. Di buku itu terdapat PR matematika. Ketika Pak Budi memintanya buku itu tidak ada. Akhirnya, Eliza dihukum. Ternyata setelah istirahat buku itu ditemukan di Iaci Polin. Eliza menuduh Polin dan Jemmy yang telah mengambilnya. Jemmy rneminta Polin untuk meminta maaf. Kini persahabatan Jemmy dan Polin mulai renggang. Bahkan Jemmy kini lebih dekat kepada Eliza.&lt;br&gt;&lt;br&gt;
+Akibat terjadinya kon&amp;#64258;ik pada teks cerita tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Polin meminta maaf kepada Eliza.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Eliza menjadi bersahabat dengan Polin.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Persahabatan Jemmy dan Polin menjadi renggang.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jemmy mendesak Polin untuk mengakui perbuatannya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kedua teks berikut!&lt;br&gt;&lt;br&gt;
+[ Teks I]&lt;br&gt;&lt;br&gt;
+la terbaring di atas kasur yang mengeras dan lembap oleh keringatnya. Matanya hitam dan cekung. Hanya mata hitam itu yang membuat wajahnya tampak hidup, sementara seluruh tubuhnya kurus dengan kulit kering yang seakan hampir terkelupas. la tampak renta dan tak berdaya. lbuku, perempuan yang seharusnya kusayangi dan kuratapi penderitaannya. &amp;rdquo;Sudah berbulan-bulan ibu begini. Tubuhnya penuh lecet,&amp;rdquo; kata Dinda, suaranya Iebih halus dari getar kipas angin yang mengaduk-aduk udara di dalam kamar.&lt;br&gt;&lt;br&gt;
+[ Teks II]&lt;br&gt;&lt;br&gt;
+Dugaanku benar. Ketika celengan kupecahkan, simpananku berjumlah lumayan banyak. Cukup untuk membeli sepuluh gram kalung emas. Aih! Uang simpanan selama setahun itu kuserahkan kepada suamiku untuk dia belikan apa yang begitu aku dambakan. Suamiku tak banyak omong saat menerima uang itu. Tetapi keharuan jelas terpancar dari wajahnya. &amp;rdquo;Tidakkah sebaiknya kita pergi bersama ke toko emas biar kamu Ieluasa memmh modelnya?&amp;rdquo; kata suamiku. &lt;br&gt;&lt;br&gt;
+Perbedaan pola pengembangan kedua teks cerita tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;[Teks I] diawali dengan pemunculan masalah&lt;br&gt;
+[Teks II] diawali dengan perkenalan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;[Teks I] diawali dengan konflik&lt;br&gt;
+[Teks II] diawali dengan perkenalan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;[Teks I] diawali dengan perkenalan&lt;br&gt;
+[Teks II] diawali dengan pemunculan masalah&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;[Teks I] diawali dengan pemunculan masalah&lt;br&gt;
+[Teks II] diawali dengan konflik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks cerita berikut!&lt;br&gt;
+Di sebuah kolam tinggallah beberapa ekor berudu. Kepalanya besar dan berekor panjang, tubuhnya berwarna hitam. Mereka berenang ke sana ke mari. &lt;br&gt;
+Suatu hari, berudu-berudu itu melihat ibu ikan gurame sedang memberi makan anak-anaknya. Para berudu mendekat dan berkata,&amp;rdquo;Tolong beritahu kami, bagaimana cara menemukan ibu kami?&amp;rdquo; &lt;br&gt;
+Ibu ikan gurame berkata&amp;rdquo; Ibu kalian memiliki mulut yang Iebar dan sepasang mata yang besar. Carilah yang seperti itu.&amp;rdquo; Para berudu berterima kasih Ialu berenang pergi untuk mencari ibunya.&lt;br&gt;
+Di tengah perjalanan mereka bertemu ikan mas dengan mulut lebar dan mata bundar. Mereka berteriak, &quot;Ibu! Ibu!&amp;rdquo; lkan mas tersenyum dan berkata, &amp;rdquo;Kalian salah. Ibu kalian mempunyai perut berwarna putih.&amp;rdquo;&lt;br&gt;
+(Didik Djunaedi: Berudu Mencari Ibu) &lt;br&gt;&lt;br&gt;
+Komentar terhadap isi teks cerita tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Perbuatan induk ikan mas sangat bijaksana&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Anak gurarne tidak dapat mencari makan sendiri.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lnduk berudu binatang yang tidak bertanggungjawab.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berudu mencari induknya karena iri kepada anakgurame.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks cerita berikut!&lt;br&gt;
+Di sebuah kolam tinggallah beberapa ekor berudu. Kepalanya besar dan berekor panjang, tubuhnya berwarna hitam. Mereka berenang ke sana ke mari. &lt;br&gt;
+Suatu hari, berudu-berudu itu melihat ibu ikan gurame sedang memberi makan anak-anaknya. Para berudu mendekat dan berkata,&amp;rdquo;Tolong beritahu kami, bagaimana cara menemukan ibu kami?&amp;rdquo; &lt;br&gt;
+Ibu ikan gurame berkata&amp;rdquo; Ibu kalian memiliki mulut yang Iebar dan sepasang mata yang besar. Carilah yang seperti itu.&amp;rdquo; Para berudu berterima kasih Ialu berenang pergi untuk mencari ibunya.&lt;br&gt;
+Di tengah perjalanan mereka bertemu ikan mas dengan mulut lebar dan mata bundar. Mereka berteriak, &quot;Ibu! Ibu!&amp;rdquo; lkan mas tersenyum dan berkata, &amp;rdquo;Kalian salah. Ibu kalian mempunyai perut berwarna putih.&amp;rdquo;&lt;br&gt;
+(Didik Djunaedi: Berudu Mencari Ibu) &lt;br&gt;&lt;br&gt;
+Tindakan terpuji tokoh pada teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menjelaskan sesuatu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memberikan pertolongan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memberi makan anak-anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membiarkan anak-anak bermain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+Bahasa tubuh penting untuk lebih dari [...] menunjukkan kepercayaan diri.&lt;br&gt;
+Kata yang tepat untuk melengkapi kalimat tersebut adalah&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;cuma&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hanya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;seperti&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sekadar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+Wanita menjadi pengendara ojek, mungkin masih jarang ditemukan, Anggapan bahwa ojek identik dengan pekerjaan laki-laki menjadi penyebabnya. [...] Namun, seiiring maraknya ojek berbasis aplikasi, bermunculan ojek-ojek wanita. Mereka tidak gentar menghadapi tantangan clan kerasnya jalanan.&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi teks tersebut adalah&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Banyak wanita yang tidak bisa mengendarai motor.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kulit wanita tidak tahan dengan terik matahari dijalanan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kerasnya jalanan sering dianggap hanya dapat ditaklukkan lelaki.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Wanita tidak sabar dengan keadaan lalu lintas dijalanan yang macet.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat-kalimat berikut!&lt;br&gt; (1) Pada kesempatan itu, 114 kontestan mengikuti Iima tantangan yang diperlombakan, yaitu &lt;em&gt;talent competition&lt;/em&gt;, olahraga, multimedia, top model, dan &lt;em&gt;beauty with a purpose&lt;/em&gt;.&lt;br&gt; (2) Ajang Miss World 2015 berlangsung meriah.&lt;br&gt; (3) Mereka tidak hanya cantik secara &amp;#64257;sik, juga cantik hati.&lt;br&gt; (4) Semua tantangan diniiai oleh para juri yang berkompeten.&lt;br&gt; (5) Masing-masing peserta memperlihatkan ciri khas negara masing-masing.&lt;br&gt;&lt;br&gt; Kalimat-ka|imat tersebut akan menjadi teks yang padu dengan susunan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(2), (3), (1), (4), (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (5), (3), (1), (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4), (5), (3), (1), (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5), (1), (4), (2), (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Petunjuk berbelok ketika mengemudi kendaraan bermotor&lt;br&gt;
+(1) Jika kondisi sudah memungkinkan berbeloklah dengan hati-hati!&lt;br&gt;
+(2) Nyalakan lampu sign kanan/kiri sesuai arah belok!&lt;br&gt;
+(3) Posisikan kembali kendaraan di jalur yang benar!&lt;br&gt;
+(4) Matikanlampu sign!&lt;br&gt;
+(5) Lihat kaca spion kanan/kiri sesuai arah belok!&lt;br&gt;&lt;br&gt;
+Urutan petunjuktersebut yang tepat adalah&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(2), (3), (4), (5), (1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (5), (1), (3), (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), (2), (5), (1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (5), (1), (2), (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+Nama kecil Ki Hajar Dewantara adaiah Raden Mas Soewardi Soeryaningrat. la lahir di Yogyakarta pada 2 Mei 1889. la berasal dari lingkungan keluarga Keraton Yogyakarta. Meskipun begitu, ia sangat sederhana dan dekat dengan rakyatnya. Ketika berusia 40 tahun, beliau berganti nama menjadi Ki Hajar Dewantara. Tujuannya adalah agar ia dapat bebas dekat dengan rakyatnya.&lt;br&gt;&lt;br&gt;
+Hal yang patut diteladani dari tokoh tersebut adalah&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;berganti nama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hidupsederhana&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dari lingkungan keraton&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bebas bergaul dengan rakyat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+Jenderal Soedirman merupakan pahlawan nasional. Beliau lahir tanggal 24 Januari 1916 di Dukuh, Rembang, Purbalingga. Ayahnya bernama Karsid Kartowirodji dan ibunya bernama Siyem. Ayahnya bekerja di Pabrik Gula Kalibagor, Banyumas. lbunya merupakan keturunan Wedana Rembang. Jenderal Soedirman dirawat oleh Raden Tjokrosoenarjo. Beliau mengenyam pendidikan keguruan. &lt;br&gt;&lt;br&gt;
+Keistimewaan tokoh tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pahlawan nasional&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;keturunan Wedana&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berpendidikan guru&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ayahnya pekerja pabrik gula&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+(1) Daun anggur dapat digunakan sebagai bahan pembersih wajah.&lt;br&gt;
+(2) Caranya ambillah daun anggur secukupnya!&lt;br&gt;
+(3) Lalu, tumbuklah sampai halus!&lt;br&gt;
+(4) Masaklah hasil tumbukan itu dengan air secukupnya dan tunggu sampai mendidih!&lt;br&gt;
+(5) [...]&lt;br&gt;
+(6) Setelah dingin, gunakan untuk membersihkan wajah!&lt;br&gt;
+(7) Kulit wajah Anda akan kelihatan bersih dan berseri-seri.&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Diamkan beberapa saat, Ialu cuci!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Daun anggur berkhasiat untuk obat!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Setelah daun anggur dicuci Ialu tiriskan!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Setelah itu, ramuan tersebut didinginkan.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+Dengan mengesampingkan beberapa kekurangan tadi, novel ini benar-benar buku yang sangat dibutuhkan oleh remaja negeri ini. [...] Dengan membaca novel ini, supaya mereka bersekolah dan melanjutkan ke pendidikan yang lebih tinggi. Selain itu, novel ini juga mengajarkan tentang ketidakmungkinan yang bisa diwujudkan dengan kerja keras.&lt;br&gt;&lt;br&gt;
+Kalimat berisi keunggulan untuk melengkapi teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Novel ini memberi motivasi, semangat, dan mimpi pada anak-anak yang patah semangat.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sangat disayangkan penjilidan novel ini terkesan seadanya sehingga mudah Iepas.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ilustrasi dan tahap-tahap penanaman bibit dijelaskan secara mendetail.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Terdapat banyak istilah bahasa daerah yang tidak dilengkapi dengan maknanya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan data-data berikut!&lt;br&gt;
+- Wahana Histeria mati mendadak pada ketinggian 20 meter&lt;br&gt;
+- penumpang panik dan ketakutan&lt;br&gt;
+- 30 menit kemudian petugas datang&lt;br&gt;
+- penumpang Iega dan bersyukur kepada Tuhan&lt;br&gt;&lt;br&gt;
+Penulisan teks Iaporan yang sesuai dengan data-data tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kami baru pertama kali menaiki Wahana Histeria. Di wahana ini kami dilambungkan pada ketinggian 20 meter lebih dari permukaan tanah. Hal itu berkali-kali dilakukan, Kami merasa ngilu dan jantung terasa ingin lepas ketika dihempaskan dari atas ke bawah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kami pun menaiki Wahana Histeria. Setelah beberapa saat, tiba-tiba wahana berhenti pada ketinggian 20 meter. Tak ada seorang pun yang menyangka hal ini bisa terjadi. Kami semua berteriak minta tolong. Semua orang yang terlihat sangat ketakutan, bahkan ada pula yang menangis.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Wahana Histeria mati mendadak pada ketinggian 20 meter. Semua penumpang panik ketakutan. Setelah hampir 30 menit, beberapa petugas datang memberi pertolongan. Semua&lt;br&gt;
+penumpang lega dan bersyukur kepada Tuhan karena dapat diselamatkan.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Wahana Histeria yang kami naiki, mendadak mati pada ketinggian 20 meter. Untunglah nyawa kami dapat diselamatkan. Kami semua merasa lega. Aku bersyukur karena Tuhan menyelamatkan kami semua. Sekarang aku merasa trauma ketika melihat Wahana yang serupa.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan data-data berikut!&lt;br&gt;
+Judul : Pedoman Budidaya Tambak Udang&lt;br&gt;
+Penulis :Tim Karya Tani Mandiri&lt;br&gt;
+Penerbit : Nuansa Aulia&lt;br&gt;
+Tahun : 2009&lt;br&gt;
+Keunggulan:&lt;br&gt;
+- Isinya himpunan hasil penelitian para ahli&lt;br&gt;
+- Menambah wawasan tentang prospek usaha tambak udang&lt;br&gt;
+- Bahasa mudah dipahami dilengkapi gambar&lt;br&gt;
+Kelemahan:&lt;br&gt;
+- Ukuran buku kecil dan tidak berwarna&lt;br&gt;&lt;br&gt;
+Paragraf resensi yang tepat berdasarkan ilustrasi tersebut adalah&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Buku ini menyajikan secara lengkap proses para ahli menambah wawasan tentang prospek tambak yang dapat dimanfaatkan pembaca. Penggunaan bahasa yang mudah dipahami semakin memudahkan pembaca untuk mencoba setahap demi setahap proses tersebut. Meskipun begitu buku ini dilengkapi ilustrasi gambar berwarna yang menarik bagi pembaca pemula.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Buku ini berisi himpunan hasil penelitian para ahli yang menjelaskan secara lengkap teknik budidaya udang mulai dari penentuan lokasi lahan tambak, pembibitan, pengolahan hingga pengendalian penyakitnya. Buku ini dapat menambah wawasan pembaca bertarnbah tentang prospek usaha tambak udang. Bahasa yang digunakan mudah dipahami. Meskipun buku ini berukuran kecil dan tidak berwarna, tidak masalah karena buku ini dilengkapi dengan gambar.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tujuan penulis buku ini ingin membuat pembaca termotivasi melakukan penelitian sederhana tentang usaha tambak udang. Buku ini ditulis oleh peneliti dari berbagai institusi. Dengan memanfaatkan media yang sederhana dapat menghasilkan udang berkualitas dan jumlah maksimal. Buku ini dilengkapi dengan ilustrasi gambar yang menarik. Hal ini semakin membuat pembaca mudah memahaminya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Buku yang secara garis besar menjelaskan bagaimana membuka tambak udang dalam kehidupan sehari-hari dengan memanfaatkan hasil penelitian para ahli. Buku yang disarankan untuk mereka yang senang meneliti karena dapat menambah wawasan. Selain itu, buku&lt;br&gt;
+ini juga dilengkapi dengan gambar berwarna. Bahasa yang digunakan sangat sulit bagi orang awam namun tidak menjadi masalah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+Pendidikan memiliki peran yang sangat strategis dan efektif dalam penciptaan karakter bangsa.&lt;br&gt;
+Kesalahan penggunaan kata pada kalimat tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pendidikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penciptaan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memiliki&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;efektif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat-kalimat berikut!&lt;br&gt;
+1) Buah sernangka banyak mengandung vitamin C.&lt;br&gt;
+2) Bung Karno terkenal sebagai orator yang ulung.&lt;br&gt;
+3) Nh. Dini termasuk salah satu pengarang novel yang produktif.&lt;br&gt;
+4) Pemandangan di Pantai Pangandaran sangat indah sekali.&lt;br&gt;&lt;br&gt;
+Kalimat yang tidak efektifditandai nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+(1) Pengarang dalam buku ini menggunakan bahasa yang komunikatif. (2) Hal itu memudahkan pembaca untuk memahami isi buku. (3) Selain itu, kertas yang digunakan mudah robek. (4) Atau dengan kata lain pesan yang ingin disampaikan oleh pengarang dapat dipahami langsung oleh pembaca.&lt;br&gt;&lt;br&gt;
+Kalimat yang tidak padu pada teks tersebut ditandai nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+Berdasarkan [...] yang dimiliki, Museum Negeri Provinsi Sumatera Utara dikategorikan sebagai museum umum.&lt;br&gt;&lt;br&gt;
+Istilah yang tepat untuk melengkapi kalimat tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;seleksi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;koleksi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;koneksi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;persepsi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt; Jahe memiliki rasa cukup pedas dan hangar yang [...] oleh adanya senyawa keton yaitu &lt;em&gt;zingeron&lt;/em&gt;.&lt;br&gt;&lt;br&gt; Kata berimbuhan yang tepat untuk melengkapi kalimat t&amp;eacute;rsebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dirasakan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dihasilkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;disebabkan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dikarenakan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+Ibu Reni tampak kewalahan saat [...] anak-anak penghuni panti karena mereka minta dibelikan mainan.&lt;br&gt;&lt;br&gt;
+Kata ulang yang tepat untuk melengkapi kalimat tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;ditarik-tarik&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ditarik-ditarik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menarik-tarik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menarik-menarik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+Olahraga tidak hanya dapat menyehatkan &amp;#64257;sik, tetapi dapat juga menyehatkan mental yang sangat diperlukan terhadap proses belajar.&lt;br&gt;&lt;br&gt;
+Perbaikan kata diperlukan pada kalimat tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;digunakan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dipengaruhi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berpengaruh&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menggunakan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+Guru sebagai seorang pendidik harus tahu apa yang diinginkan oleh para siswanya, seperti kebutuhan untuk berprestasi. Tidak sedikit siswa yang memiliki ilusi berprestasi yang rendah. Mereka cenderung takut gagal dan tidak mau menanggung risiko dalam mencapai prestasi belajar yang tinggi.&lt;br&gt;&lt;br&gt;
+Perbaikan penggunaan istilah ilusi pada teks tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;inspirasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;motivasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dedikasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;interupsi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+Manfaat olahraga bagi kesehatan manusia jelas sangat banyak sekali dan bisa dirasakan oleh&lt;br&gt;
+setiap orang.&lt;br&gt;&lt;br&gt;
+Perbaikan kalimat tersebut supaya menjadi kalimat efektifadalah menghilangkan kata...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;sangat, dan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;jelas, setiap&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bagi, sekali&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;jelas, sekali&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+(1) Faktor lain yang memengaruhi aktivitas belajar seseorang yakni motivasi. (2) Motivasi mempunyai peranan yang sangat penting dalam aktivitas be-Iajar siswa. (3) Mario Teguh salah satu motivator di Indonesia. (4) Dengan kata lain, tidak ada motivasi berarti tidak ada kegiatan belajar.&lt;br&gt;
+Diolah dari sumber: http://lokalpos.com&lt;br&gt;&lt;br&gt;
+Perbaikan teks tersebut supaya menjadi padu adalah mengganti kalimat nomor (3) menjadi...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tidak ada seorang pun yang belajar tanpa motivasi.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Guru dan orang tua harus saling mendukung demi keberhasilan anak.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Anak mandiri biasanya dapat memecahkan masalahnya sendiri.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Motivasi dapat berasal dari dalam diri dan luar diri kita sendiri.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+Seperti anak-anak lainnya, Rudy Hartono waktu kecil juga tertarik mengikuti berbagai macam ulah raga di sekolah, khususnya atletik.&lt;br&gt;&lt;br&gt;
+Alasan ketidaktepatan penggunaan kata pada kalimat tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Penulisan di seharusnya digabung karena di sebagai awalan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penulisan kata khususnya seharusnya ditulis kususnya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penulisan kata atletik yang tepat seharusnya ditulis athletik.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penulisan kata olah raga seharusnya ditulis olahraga.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+Orang yang gemar menyukai bersepeda, pada umumnya ialah orang-orang yang mencintai lingkungan dan alam sekitar.&lt;br&gt;&lt;br&gt;
+Alasan ketidakefektifan kalimat tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kata gemar dan menyukafdigunakan salah satu saja karena bermakna ganda.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kata orang-orang tidak diperlukan sehingga dapat dihilangkan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kata Iingkungan tidak diperlukan karena membingungkan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kata bersepeda tidak perlu ditulis karena bermakna ganda.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+(1) Olahraga tidak hanya dapat menyehatkan &amp;#64257;sik, tetapi dapat juga menyehatkan mental. (2) Hal tersebut sangat berpengaruh terhadap proses belajar. (3) Sebab, ternyata kegiatan belajar bukan hanya kegiatan intelektual saja, melainkan &amp;#64257;sik. (4) SMP N 300 membiasakan senam pagi setiap hari Jumat.&lt;br&gt;&lt;br&gt;
+Alasan ketidakpaduan paragraf tersebut adalah karena kalimat nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) tidak berkaitan dengan kalimat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) tidak berkaitan dengan kalimat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) tidak berkaitan dengan kalimat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4) tidak berkaitan dengan kalimat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+Riwayat pendidikan Sapardi Joko Damono dimulai dari Sekolah Dasar kasatrian di Surakarta. &lt;br&gt;&lt;br&gt;
+Kesalahan penggunaan ejaan pada kalimat tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kata kasatrian seharusnya ditulis Kasatrian.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kata dimului seharusnya ditulis di mulai.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kata Sekolah seharusnya ditulis sekolah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kata Dasar seharus nya ditulis dasar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+&amp;rdquo;Bapak telah lama meninggal dunia. Untuk itu, saya harus membantu ibu untuk mencari uang?&amp;rdquo; jawab gadis itu pelan.&lt;br&gt;&lt;br&gt;
+Kesalahan penggunaan tanda baca pada kalimat tersebut adalah&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tanda tanya (?) seharusnya diganti dengan tanda seru (!).&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tanda tanya (?) seharusnya diganti dengan tanda koma (,).&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tanda titik (.) seharusnya diganti dengan tanda tanya (?).&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tanda titik(.) seharusnya diganti dengan tanda seru (!).&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat-kalimat berikut!&lt;br&gt;
+(1) Chairil Anwar di lahirkan di Medan, 26 Juli 1922.&lt;br&gt;
+(2) Nh. Dini Iahir di Semarang, Jawa Tengah, 29 Pebruari 1936.&lt;br&gt;
+(3) Goenawan Mohamad adalah seora ngjurnalis dan sastrawan yang kritis serta berwawasan luas.&lt;br&gt;
+(4) Riwayat pendidikan Nh. Dini di mulai dari Sekolah Dasar di Semarang dan Iulus tahun 1950.&lt;br&gt;&lt;br&gt;
+Penggunaan ejaan yang tepat pada kalimat terse-but ditandai dengan nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+&amp;rdquo;Shinta, aku senang sekali bisa masuk di SMP ini, apalagi satu bangku denganmu&amp;rdquo; ujar Fira&lt;br&gt;
+bahagia.&lt;br&gt;&lt;br&gt;
+Penggunaan tanda baca yang tepat pada kalimat tersebut adalah&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;&amp;rdquo;Shinta, aku seneng banget bisa masuk di SMP ini, apalagi satu bangku sama kamu ujar&amp;rdquo; Fira bahagia.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&amp;rdquo;Shinta, aku seneng banget bisa masuk di SMP ini, apalagi satu bangku sama kamu ujar Fira bahagia&amp;rdquo;.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&amp;rdquo;Shinta, aku seneng banget bisa masuk di SMP ini, apalagi satu bangku sama kamu, ujar Fira bahagia.&quot;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&amp;rdquo;Shinta, aku seneng banget bisa masuk di SMP ini apalagi satu bangku sama kamu,&quot; ujar Fira bahagia.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat herikut!&lt;br&gt;
+Andrea Hirata Iahirdi pulau Belitung 24 Oktober 1982. Dia sebagai anak ke empat dari pasangan&lt;br&gt;
+Seman Said Harunayah dan Masturah.&lt;br&gt;&lt;br&gt;
+Perbaikan ejaan pada kalimat tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Andrea Hirata Iahirdi Pulau Belitung 24 Oktuber 1982. Dia sebagai anak ke empat dari pasangan Seman Said Harunayah dan Masturah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Andrea Hirata lahir dipulau Belitung 24 Oktober 1982. Dia sebagai anak keempat dari pasangan Seman Said Harunayah dan Masturah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Andrea Hirata Iahirdi Pulau Belitung, 24 Oktober 1982. Dia sebagai anak keempat dari pasangan Seman Said Harunayah dan Masturah.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Andrea Hirata lahir di Pulau Belitung 24 Oktober 1982. Dia sebagai anak ke empat dari pasangan Seman Said Harunayah dan Masturah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+Selain menguasai bahasa lnggris beliau juga, menguasai bahasa Jerman Belanda dan, Perancis.&lt;br&gt;&lt;br&gt;
+Perbaikan penggunaan tanda baca koma pada kalimat tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Selain menguasai bahasa lnggris beliau juga menguasai bahasa Jerman Belanda, dan Perancis.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Selain menguasai bahasa lnggris, beliau juga menguasai bahasa Jerman, Belanda, dan Perancis.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Selain menguasai bahasa lnggris beliau juga, menguasai bahasa Jerman, Belanda dan Perancis.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Selain menguasai bahasa lnggris beliau juga menguasai bahasa Jerman, Belanda dan, Perancis.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;
+Dewi Sartika meninggal 11 September 1947 di Tasikmalaya dan dimakamkan dipemakaman Cigagadon, Desa Rahayu, Kecamatan Cineam. &lt;br&gt;&lt;br&gt;
+Alasan ketidaktepatan penggunaan ejaan pada kalimat tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kata Cigagadon seharusnya cigagadon karena bukan nama diri.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kata dimakamkan seharusnya ditulis di makamkan karena di sebagai kata depan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kata Desa seharusnya ditulis desa supaya sesuai kaidah EYD.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kata dipemakaman seharusnya ditulis dipemakaman karena di adalah kata depan.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikutl&lt;br&gt; &amp;rdquo;Bagaimana supnya, Bangau!&amp;rdquo; tanya Rubah.&lt;br&gt;&lt;br&gt; Alasan ketidaktepatan penggunaan tanda baca pada kalimat tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tanda seru (!) tidak tepat digunakan karena bukan kalimat perintah.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tanda seru (!) tidaktepat digunakan seharusnya tanda koma (,).&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tanda koma (,) setelah kata supnya tidak tepat penggunaannya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tanda koma (,) setelah kata supnya diganti dengan tanda seru (!).&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

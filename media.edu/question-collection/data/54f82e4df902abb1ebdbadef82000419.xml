@@ -1,0 +1,2219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;We are announcing today that we are bringing the milestone and ever green brands evencloser together. Effective as of 5&lt;sup&gt;th&lt;/sup&gt; December 2009, our officilal name will be:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;GREEN MILES WEST&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The substitution of 'West' in our name replacing 'California' is the result of an agreementwe reached with Califomia Gardening association following a protest over the original useof 'Califomia' is our name.&lt;/p&gt;
+&lt;p&gt;We hope this does not create any confusion among loyal consumers. While this representsa change from our initial name introduction. it doesn't change the quality of products weoffer to our consumers.&lt;/p&gt;
+&lt;p&gt;What does the text tell us about?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The mergers of two companies.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The new service of company.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The new of&amp;iuml;&amp;not;&amp;#129;ce of company.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The change of of&amp;iuml;&amp;not;&amp;#129;ce name.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The result of agreement.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;DILI (AP): A strong earthquake struck off the coast of East Timor on Wednesday, prompting authorities to issue a tsunami warning - but no large waves hit the tiny nation's coast.&lt;br&gt;The 6.2 magnitude tremor struck 262 kilometers northeast of the capital. Dili. in Indonesia's Banda Sea at a depth of 10 kilometers, the U.S. Geological Survey said. Residents in Dili did not feel any shaking and there were no immediate reports of damage of injuries.Indonesia's Meteorology and Geophysics Agency issued a tsunami alert. saying it had been powerful enough to generate giant waves. The waming was later retracted. East Timor. a colony abandoned by the Portuguese that became Asia's youngest country after breaking from Indonesia in 1999. sits along a series of fault lines and volcanoes known as the Pacific Ring of Fire.&lt;br&gt; In December 2004, a massive earthquake struck off Indonesia's Sumatra and triggered a tsunami that killed more than 230,000 people in a dozen countries, including 160,000 people in Indonesia's western of province of Aceh.&lt;br&gt;What does the text infonn?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;A strong earthquake&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The coast of East Timor.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;A tsunami warning at East Timor.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Earthquake that struck off Sumatra.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Eanhquake that struck off East Timor.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;We are announcing today that we are bringing the milestone and ever green brands even&lt;br&gt;closer together. Effective as of 5&quot;&amp;acirc;&amp;#128;&amp;#152; December 2009, our of&amp;iuml;&amp;not;&amp;#129;cial name will be:&lt;br&gt;GREEN MILES WEST&lt;br&gt;The substitution of &amp;acirc;&amp;#128;&amp;#152;West&amp;acirc;&amp;#128;&amp;#153; in our name replacing &amp;acirc;&amp;#128;&amp;#153;California&amp;acirc;&amp;#128;&amp;#153; is the result of an agreement&lt;br&gt;we reached with Califomia Gardening association following a protest over the original use&lt;br&gt;of &amp;acirc;&amp;#128;&amp;#152;Califomia&amp;acirc;&amp;#128;&amp;#153; is our name.&lt;br&gt;We hope this does not create any confusion among loyal consumers. While this represents&lt;br&gt;a change from our initial name introduction. it doesn&amp;acirc;&amp;#128;&amp;#153;t change the quality of products we&lt;br&gt;offer to our consumers&lt;br&gt;Which of the following statement is TRUE according to the text?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The corporate of&amp;iuml;&amp;not;&amp;#129;ces were protested.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;There was con&amp;iuml;&amp;not;&amp;#130;ict between Green Miles West and Milestone.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The loyal consumers created an of&amp;iuml;&amp;not;&amp;#129;cial name for the company.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The quality of the products will be different from the former products.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The name green &amp;acirc;&amp;#128;&amp;#156;Miles West&amp;acirc;&amp;#128;&amp;#157; will be effective as of 5&quot;&amp;acirc;&amp;#128;&amp;#152; December 2009.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;DIENG RESTO&lt;br&gt;Every Saturday from 18.00 to 21.30&lt;br&gt;Dieng Restaurant&lt;br&gt;A selection of our original recipe,&lt;br&gt;Prepared in front of your eyes by our chef&lt;br&gt;- Included free Carica drink&lt;br&gt;- Enjoy the live music by Antrax Band&lt;br&gt;For more info:&lt;br&gt;Call: 3389777 ext. 651 ll &amp;acirc;&amp;#128;&amp;#148; 65112&lt;br&gt;DIENG RESTAURANT WONOSOBO&lt;br&gt;What is the purpose of the advertisement above?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;To promote Dieng Restaurant.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To enjoy Antrax Band.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To infonn Dieng Restaurant.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To describe Dieng Restaurant.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To explain Carica drink.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;DIENG RESTO&lt;br&gt;Every Saturday from 18.00 to 21.30&lt;br&gt;Dieng Restaurant&lt;br&gt;A selection of our original recipe,&lt;br&gt;Prepared in front of your eyes by our chef&lt;br&gt;- Included free Carica drink&lt;br&gt;- Enjoy the live music by Antrax Band&lt;br&gt;For more info:&lt;br&gt;Call: 3389777 ext. 651 ll &amp;acirc;&amp;#128;&amp;#148; 65112&lt;br&gt;DIENG RESTAURANT WONOSOBO&lt;br&gt;Dieng Restaurant opens on&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;everyday&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;every evening&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sunday to Friday&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;every Saturday evening&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;every Saturday from 18.00 to 21.30&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;McKenna&lt;br&gt;Gardens by McKenna&lt;br&gt;PO Box 687&lt;br&gt;l 103 Lisbon, Portugal&lt;br&gt;September 8. 2006&lt;br&gt;Guy Adamsons&lt;br&gt;Landscape Design Magazine&lt;br&gt;Ottho Heldringstraat 2&lt;br&gt;1006 AZ Amsterdam&lt;br&gt;The Netherlands&lt;br&gt;Dear Mr. Adamsons:&lt;br&gt;Thank you for sending the advertising information. We have decided not to place an ad 1n the December issue. but we will consider placing one in the next issue in March.&lt;br&gt;We will be in touch. Again thank you for your assistance.&lt;br&gt;Sincerely yours.&lt;br&gt;Landscape Architect&lt;br&gt;What is the purpose of the letter?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Designing skyscrapers.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Designing gardens.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Selling advertising.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Advertising.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Marketing.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;McKenna&lt;br&gt;Gardens by McKenna&lt;br&gt;PO Box 687&lt;br&gt;l 103 Lisbon, Portugal&lt;br&gt;September 8. 2006&lt;br&gt;Guy Adamsons&lt;br&gt;Landscape Design Magazine&lt;br&gt;Ottho Heldringstraat 2&lt;br&gt;1006 AZ Amsterdam&lt;br&gt;The Netherlands&lt;br&gt;Dear Mr. Adamsons:&lt;br&gt;Thank you for sending the advertising information. We have decided not to place an ad 1n the December issue. but we will consider placing one in the next issue in March.&lt;br&gt;We will be in touch. Again thank you for your assistance.&lt;br&gt;Sincerely yours.&lt;br&gt;Landscape Architect&lt;br&gt;Why did Mr. McKenna write this letter?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;To say he wasn&amp;acirc;&amp;#128;&amp;#153;t interested in placing an ad now.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To ask Mr. Adamsons for subscription.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To place an ad in December.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To refuse a business.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To get a job.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Govemment should not raise fuel price to solve the problem of economic issues. People were affected severely with the high fuel price like last year. Obviously they cut their spending. As an example they had to buy lower quality of rice or palm oil. There were also fewer buyers of secondary commodities like &amp;iuml;&amp;not;&amp;#130;our. or canned meat or &amp;iuml;&amp;not;&amp;#129;sh.&lt;br&gt;Furthermore, the condition of low income family will become even worse because their expenses will increase while their salaries will not. Many companies will have to trim the number of employees because they are incapable of managing buying or selling price, standard wages and personal affairs.&lt;br&gt;Finally. govemment should not raise fuel price to overcome economic problem but the solution should be sought by tapping into the nation&amp;acirc;&amp;#128;&amp;#153;s own potential and utilizing it to enhance productivity to its maximum.&lt;br&gt;What is the main idea of the last paragraph?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The government should enhance productivity to solve the economic problem.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The govemment should raise fuel price to solve the problem.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The government should consider condition of low family income.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The govemment should reduce the number of employees.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The govemment should decrease the standard of wages.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Govemment should not raise fuel price to solve the problem of economic issues. People were affected severely with the high fuel price like last year. Obviously they cut their spending. As an example they had to buy lower quality of rice or palm oil. There were also fewer buyers of secondary commodities like &amp;iuml;&amp;not;&amp;#130;our. or canned meat or &amp;iuml;&amp;not;&amp;#129;sh.&lt;br&gt;Furthermore, the condition of low income family will become even worse because their expenses will increase while their salaries will not. Many companies will have to trim the number of employees because they are incapable of managing buying or selling price, standard wages and personal affairs.&lt;br&gt;Finally. govemment should not raise fuel price to overcome economic problem but the solution should be sought by tapping into the nation&amp;acirc;&amp;#128;&amp;#153;s own potential and utilizing it to enhance productivity to its maximum.&lt;br&gt;The title of the text is&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The Price of the Secondary Commodities&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The Effect of Increasing Fuel Price&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Condition of Low income Family&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The Increasing of Fuel Price&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The Economic Problem&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Govemment should not raise fuel price to solve the problem of economic issues. People were affected severely with the high fuel price like last year. Obviously they cut their spending. As an example they had to buy lower quality of rice or palm oil. There were also fewer buyers of secondary commodities like &amp;iuml;&amp;not;&amp;#130;our. or canned meat or &amp;iuml;&amp;not;&amp;#129;sh.&lt;br&gt;Furthermore, the condition of low income family will become even worse because their expenses will increase while their salaries will not. Many companies will have to trim the number of employees because they are incapable of managing buying or selling price, standard wages and personal affairs.&lt;br&gt;Finally. govemment should not raise fuel price to overcome economic problem but the solution should be sought by tapping into the nation&amp;acirc;&amp;#128;&amp;#153;s own potential and utilizing it to enhance productivity to its maximum.&lt;br&gt;&amp;acirc;&amp;#128;&amp;#156;Many companies will have to trim the number of employee.&amp;acirc;&amp;#128;&amp;#157; (Paragraph 2)&lt;br&gt;Trim means&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;&amp;iuml;&amp;not;&amp;#129;re&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cut&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;add&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;reduce&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;border&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;BAGHDAD (Reuters) - Six U.S. soldiers were killed by a blast north of Baghdad on Monday, the U.S. military said on Tuesday, in one of the single deadliest ground attacks against American forces in Iraq in months.&lt;br&gt;Three other soldiers were wounded a&amp;iuml;&amp;not;&amp;#129;er an explosion went off near their vehicles in the province of Salahaddin, the military said in a statement, without giving details. Salahaddin is a Sunni Arab insurgent stronghold.&lt;br&gt;More than 3,170 U.S. soldiers have died in Iraq since the U.S.-led invasion in March 2003.&lt;br&gt;Iraqi and U.S. forces are in the third week of a security crackdown in Baghdad aimed at stemming sectarian violence. U.S. military commanders have expressed concems that insurgents could step up attacks outside Baghdad&lt;br&gt;The text talks about&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;six U.S. soldiers killed by a blast&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;attacking against American&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;a blast north of Baghdad&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;a Sunni Arab insurgent&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the U.S. military&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;BAGHDAD (Reuters) - Six U.S. soldiers were killed by a blast north of Baghdad on Monday, the U.S. military said on Tuesday, in one of the single deadliest ground attacks against American forces in Iraq in months.&lt;br&gt;Three other soldiers were wounded a&amp;iuml;&amp;not;&amp;#129;er an explosion went off near their vehicles in the province of Salahaddin, the military said in a statement, without giving details. Salahaddin is a Sunni Arab insurgent stronghold.&lt;br&gt;More than 3,170 U.S. soldiers have died in Iraq since the U.S.-led invasion in March 2003.&lt;br&gt;Iraqi and U.S. forces are in the third week of a security crackdown in Baghdad aimed at stemming sectarian violence. U.S. military commanders have expressed concems that insurgents could step up attacks outside Baghdad&lt;br&gt;Which of the following statements is NOT mentioned in the text?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Insurgents could increase attacks outside Baghdad.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Three soldiers were wounded alter an explosion went off.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The U.S invasion has caused more than 3,170 of its soldiers died.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Six, US, soldiers died due to a blast nonh of Baghdad on Monday.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Iraqi and U.S. forces are in the second week of a security crackdown in Baghdad.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;BAGHDAD (Reuters) - Six U.S. soldiers were killed by a blast north of Baghdad on Monday, the U.S. military said on Tuesday, in one of the single deadliest ground attacks against American forces in Iraq in months.&lt;br&gt;Three other soldiers were wounded a&amp;iuml;&amp;not;&amp;#129;er an explosion went off near their vehicles in the province of Salahaddin, the military said in a statement, without giving details. Salahaddin is a Sunni Arab insurgent stronghold.&lt;br&gt;More than 3,170 U.S. soldiers have died in Iraq since the U.S.-led invasion in March 2003.&lt;br&gt;Iraqi and U.S. forces are in the third week of a security crackdown in Baghdad aimed at stemming sectarian violence. U.S. military commanders have expressed concems that insurgents could step up attacks outside Baghdad&lt;br&gt;Iraqi and U.S. forces are in the third week of a security crackdown in Baghdad aimed at&lt;br&gt;stemming sectarian violence. (Paragraph3)&lt;br&gt;Crackdown means.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;line&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;guard&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;attack&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;clean-up&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;protection&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;DILI (AP): A strong earthquake struck off the coast of East Timor on Wednesday, prompting authorities to issue a tsunami warning - but no large waves hit the tiny nation's coast.&lt;br&gt;The 6.2 magnitude tremor struck 262 kilometers northeast of the capital. Dili. in Indonesia's Banda Sea at a depth of 10 kilometers, the U.S. Geological Survey said. Residents in Dili did not feel any shaking and there were no immediate reports of damage of injuries.&lt;br&gt;Indonesia's Meteorology and Geophysics Agency issued a tsunami alert. saying it had been powerful enough to generate giant waves. The waming was later retracted. East Timor. a colony abandoned by the Portuguese that became Asia's youngest country after breaking from Indonesia in 1999. sits along a series of fault lines and volcanoes known as the Paci&amp;iuml;&amp;not;&amp;#129;c Ring of Fire.&lt;br&gt;In December 2004. a massive earthquake struck off Indonesia's Sumatra and triggered a tsunami that killed more than 230,000 people in a dozen countries, including 160,000 people in Indonesia's western of province of Aceh.&lt;br&gt;What did a strong earthquake strucking off the coast of East Timor report?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Some damage and injuries.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Shaking northeast of Dili.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;No damage and injuries.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Generating giant waves.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Triggering a tsunami.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;DILI (AP): A strong earthquake struck off the coast of East Timor on Wednesday, prompting authorities to issue a tsunami warning - but no large waves hit the tiny nation's coast.&lt;br&gt;The 6.2 magnitude tremor struck 262 kilometers northeast of the capital. Dili. in Indonesia's Banda Sea at a depth of 10 kilometers, the U.S. Geological Survey said. Residents in Dili did not feel any shaking and there were no immediate reports of damage of injuries.&lt;br&gt;Indonesia's Meteorology and Geophysics Agency issued a tsunami alert. saying it had been powerful enough to generate giant waves. The waming was later retracted. East Timor. a colony abandoned by the Portuguese that became Asia's youngest country after breaking from Indonesia in 1999. sits along a series of fault lines and volcanoes known as the Paci&amp;iuml;&amp;not;&amp;#129;c Ring of Fire.&lt;br&gt;In December 2004. a massive earthquake struck off Indonesia's Sumatra and triggered a tsunami that killed more than 230,000 people in a dozen countries, including 160,000 people in Indonesia's western of province of Aceh.&lt;br&gt;Which of the following statements is true based on the text?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;In December 2004. a massive earthquake caused tsunami that killed few people.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;There were tsunamis waming due to large waves hit the tiny nation's coast.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;East Timor is located along a series of fault lines and volcanoes.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;A weak earthquake struck off the coast of East Timor.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The waming was retracted because it is too late.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;DILI (AP): A strong earthquake struck off the coast of East Timor on Wednesday, prompting authorities to issue a tsunami warning - but no large waves hit the tiny nation's coast.&lt;br&gt;The 6.2 magnitude tremor struck 262 kilometers northeast of the capital. Dili. in Indonesia's Banda Sea at a depth of 10 kilometers, the U.S. Geological Survey said. Residents in Dili did not feel any shaking and there were no immediate reports of damage of injuries.&lt;br&gt;Indonesia's Meteorology and Geophysics Agency issued a tsunami alert. saying it had been powerful enough to generate giant waves. The waming was later retracted. East Timor. a colony abandoned by the Portuguese that became Asia's youngest country after breaking from Indonesia in 1999. sits along a series of fault lines and volcanoes known as the Paci&amp;iuml;&amp;not;&amp;#129;c Ring of Fire.&lt;br&gt;In December 2004. a massive earthquake struck off Indonesia's Sumatra and triggered a tsunami that killed more than 230,000 people in a dozen countries, including 160,000 people in Indonesia's western of province of Aceh.&lt;br&gt;What does the text infonn?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;A strong earthquake&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The coast of East Timor.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;A tsunami warning at East Timor.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Earthquake that struck off Sumatra.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Eanhquake that struck off East Timor.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Faraday studied the magnetic &amp;iuml;&amp;not;&amp;#129;eld around a conductor canying a DC electric current. While conducting these studies, Faraday established the basis for the electromagnetic &amp;iuml;&amp;not;&amp;#129;eld concept in physics, subsequently enlarged upon by James Maxwell. He similarly discovered electromagnetic induction, diamagnetism, and laws of electrolysis. He established that magnetism could affect rays of light and that there was an underlying relationship between the two phenomena. His inventions of electromagnetic rotary devices formed the foundation of electric motor technology, and it was largely due to his efforts that electricity became viable for use in technology.&lt;br&gt;As a chemist. Michael Faraday discovered benzene, investigated the clathrate hydrate of chlorine. invented an early fonn of the Bunsen bumer and the system of oxidation numbers, and popularized tenninology such as anode, cathode, electrode, and ion.&lt;br&gt;Although Faraday received little formal education and knew little of higher mathematics, such as calculus, he was one of the most in&amp;iuml;&amp;not;&amp;#130;uential scientists in history. Historians of science refer to him as the best experimentalist in the history of science. The SI unit of capacitance, the farad, is named a&amp;iuml;&amp;not;&amp;#130;er him, as is the Faraday constant, the charge on a mole of electrons (about 96,485 coulombs). Faraday's law of induction states that magnetic &amp;iuml;&amp;not;&amp;#130;ux changing in time creates a proportional electromotive force. &lt;br&gt;Faraday was the &amp;iuml;&amp;not;&amp;#129;rst and foremost Fullerian Professor of Chemistry at the Royal Institution of Great Britain, a position to which he was appointed for life.&lt;br&gt;Albert Einstein kept a photograph of Faraday on his study wall alongside pictures of Isaac Newton and James Clerk Maxwell.&lt;br&gt;Faraday was highly religious. He was a member of the Sandemanian Church, a Christian sect founded in 1730 that demanded total faith and commitment. Biographers have noted that a strong sense of the unity of God and nature pervaded Faraday&amp;acirc;&amp;#128;&amp;#152;s life and work.&lt;br&gt;What was Michael Faraday expert?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;science, history and religion&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;chemistry, electricity and calculus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;electronic, technology and religion&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;chemistry, physic and mathematics&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;physic, technology and photography&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Faraday studied the magnetic &amp;iuml;&amp;not;&amp;#129;eld around a conductor canying a DC electric current. While conducting these studies, Faraday established the basis for the electromagnetic &amp;iuml;&amp;not;&amp;#129;eld concept in physics, subsequently enlarged upon by James Maxwell. He similarly discovered electromagnetic induction, diamagnetism, and laws of electrolysis. He established that magnetism could affect rays of light and that there was an underlying relationship between the two phenomena. His inventions of electromagnetic rotary devices formed the foundation of electric motor technology, and it was largely due to his efforts that electricity became viable for use in technology.&lt;br&gt;As a chemist. Michael Faraday discovered benzene, investigated the clathrate hydrate of chlorine. invented an early fonn of the Bunsen bumer and the system of oxidation numbers, and popularized tenninology such as anode, cathode, electrode, and ion.&lt;br&gt;Although Faraday received little formal education and knew little of higher mathematics, such as calculus, he was one of the most in&amp;iuml;&amp;not;&amp;#130;uential scientists in history. Historians of science refer to him as the best experimentalist in the history of science. The SI unit of capacitance, the farad, is named a&amp;iuml;&amp;not;&amp;#130;er him, as is the Faraday constant, the charge on a mole of electrons (about 96,485 coulombs). Faraday's law of induction states that magnetic &amp;iuml;&amp;not;&amp;#130;ux changing in time creates a proportional electromotive force. &lt;br&gt;Faraday was the &amp;iuml;&amp;not;&amp;#129;rst and foremost Fullerian Professor of Chemistry at the Royal Institution of Great Britain, a position to which he was appointed for life.&lt;br&gt;Albert Einstein kept a photograph of Faraday on his study wall alongside pictures of Isaac Newton and James Clerk Maxwell.&lt;br&gt;Faraday was highly religious. He was a member of the Sandemanian Church, a Christian sect founded in 1730 that demanded total faith and commitment. Biographers have noted that a strong sense of the unity of God and nature pervaded Faraday&amp;acirc;&amp;#128;&amp;#152;s life and work.&lt;br&gt;Which of the following statements closely relates to Michael Faraday?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Michael Faraday dedicated his life in science and religion.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Michael Faraday was downhearted his life in science.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Michael Faraday concentrated his life in technology.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Michael Faraday was one of successful scientists.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Michael Faraday poured his science in technology.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Faraday studied the magnetic &amp;iuml;&amp;not;&amp;#129;eld around a conductor canying a DC electric current. While conducting these studies, Faraday established the basis for the electromagnetic &amp;iuml;&amp;not;&amp;#129;eld concept in physics, subsequently enlarged upon by James Maxwell. He similarly discovered electromagnetic induction, diamagnetism, and laws of electrolysis. He established that magnetism could affect rays of light and that there was an underlying relationship between the two phenomena. His inventions of electromagnetic rotary devices formed the foundation of electric motor technology, and it was largely due to his efforts that electricity became viable for use in technology.&lt;br&gt;As a chemist. Michael Faraday discovered benzene, investigated the clathrate hydrate of chlorine. invented an early fonn of the Bunsen bumer and the system of oxidation numbers, and popularized tenninology such as anode, cathode, electrode, and ion.&lt;br&gt;Although Faraday received little formal education and knew little of higher mathematics, such as calculus, he was one of the most in&amp;iuml;&amp;not;&amp;#130;uential scientists in history. Historians of science refer to him as the best experimentalist in the history of science. The SI unit of capacitance, the farad, is named a&amp;iuml;&amp;not;&amp;#130;er him, as is the Faraday constant, the charge on a mole of electrons (about 96,485 coulombs). Faraday's law of induction states that magnetic &amp;iuml;&amp;not;&amp;#130;ux changing in time creates a proportional electromotive force. &lt;br&gt;Faraday was the &amp;iuml;&amp;not;&amp;#129;rst and foremost Fullerian Professor of Chemistry at the Royal Institution of Great Britain, a position to which he was appointed for life.&lt;br&gt;Albert Einstein kept a photograph of Faraday on his study wall alongside pictures of Isaac Newton and James Clerk Maxwell.&lt;br&gt;Faraday was highly religious. He was a member of the Sandemanian Church, a Christian sect founded in 1730 that demanded total faith and commitment. Biographers have noted that a strong sense of the unity of God and nature pervaded Faraday&amp;acirc;&amp;#128;&amp;#152;s life and work.&lt;br&gt;Based on the first paragraph. we conclude that&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Faraday and James found the similar electromagnetic&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Faraday found the electromagnetic induction&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;James discovered a DC electric current&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;James invented the motor technology&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Faraday found the motor technology&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ant-eaters are perhaps the most curious looking animals.&lt;br&gt;Their long head and snout look like tubes, and they have no teeth at all. Their front legs are very strong and armed with heavy curved claws with which they break open the nets of ants and temiites and then, when the insects rush out, use their long. sticky tongues to lick them up at great speed.&lt;br&gt;True ant-eaters are found in the swamps and forests of central and South America. Scaly ant-eaters, or pangolins. are found in Africa and tropical Asia. &lt;br&gt;Various other insect-eating animals are sometimes called ant-eaters. although they really belong to other groups of animals. One of them is the ant-bear, which lives on the plains of South and Central Africa. This has long. erect ears but short blunt claws, an almost hairless tail. yellow brown in color. Unlike the true ant-eaters. it has small teeth.&lt;br&gt;The text tells us&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;the story of ant-eaters&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the report of ant-eaters&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the discussion of ant-eaters&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the description of ant-eaters&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the explanation of ant-eater&amp;acirc;&amp;#128;&amp;#153;s body&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ant-eaters are perhaps the most curious looking animals.&lt;br&gt;Their long head and snout look like tubes, and they have no teeth at all. Their front legs are very strong and armed with heavy curved claws with which they break open the nets of ants and temiites and then, when the insects rush out, use their long. sticky tongues to lick them up at great speed.&lt;br&gt;True ant-eaters are found in the swamps and forests of central and South America. Scaly ant-eaters, or pangolins. are found in Africa and tropical Asia. &lt;br&gt;Various other insect-eating animals are sometimes called ant-eaters. although they really belong to other groups of animals. One of them is the ant-bear, which lives on the plains of South and Central Africa. This has long. erect ears but short blunt claws, an almost hairless tail. yellow brown in color. Unlike the true ant-eaters. it has small teeth.&lt;br&gt;What is the ant-bear?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The animal has long. erect ears and small teeth.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The animal looks like a pangolin.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The animal has no sticky tongue&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The animal does not like to eat ants.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The animal belongs to ants&amp;acirc;&amp;#128;&amp;#153; group.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ant-eaters are perhaps the most curious looking animals.&lt;br&gt;Their long head and snout look like tubes, and they have no teeth at all. Their front legs are very strong and armed with heavy curved claws with which they break open the nets of ants and temiites and then, when the insects rush out, use their long. sticky tongues to lick them up at great speed.&lt;br&gt;True ant-eaters are found in the swamps and forests of central and South America. Scaly ant-eaters, or pangolins. are found in Africa and tropical Asia. &lt;br&gt;Various other insect-eating animals are sometimes called ant-eaters. although they really belong to other groups of animals. One of them is the ant-bear, which lives on the plains of South and Central Africa. This has long. erect ears but short blunt claws, an almost hairless tail. yellow brown in color. Unlike the true ant-eaters. it has small teeth.&lt;br&gt;From the passage above. we can conclude that....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;all ants are friends of other insects&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ants live in the disgusted places&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ants are classi&amp;iuml;&amp;not;&amp;#129;ed as predators&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ants belong to the insect group&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ants usually eat death animals&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Human body is made up of countless millions of cells. Food is needed to built up new cells and replace the worn out cells. However, the food that we take must be changed into substances that can be carried in the blood to the places where they are needed. This process is called digestion.&lt;br&gt;The &amp;iuml;&amp;not;&amp;#129;rst digestive process takes place in the mouth. The food we eat is broken up into small pieces by the action of teeth. mixed with saliva, a juice secreted by glands in the mouth. Saliva contains digestive juices which moisten the food, so it can be swallowed easily.&lt;br&gt;From the mouth, food passes through the esophagus (the food passage) into the stomach. Here, the food is mixed with the juices secreted by the cells in the stomach for several hours. Then the food enters the small intestine. All the time the muscular walls of the intestine are squeezing. mixing and moving the food onwards.&lt;br&gt;In a few hours, the food changes into acids. These are soon absorbed by the villi (microscopic branch projections from the intestine walls) and passed into the bloodstream.&lt;br&gt;What is the text about?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The digestive system.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The digestive juice.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The method of the digestive system.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The process of intestine work.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The food substances.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Human body is made up of countless millions of cells. Food is needed to built up new cells and replace the worn out cells. However, the food that we take must be changed into substances that can be carried in the blood to the places where they are needed. This process is called digestion.&lt;br&gt;The &amp;iuml;&amp;not;&amp;#129;rst digestive process takes place in the mouth. The food we eat is broken up into small pieces by the action of teeth. mixed with saliva, a juice secreted by glands in the mouth. Saliva contains digestive juices which moisten the food, so it can be swallowed easily.&lt;br&gt;From the mouth, food passes through the esophagus (the food passage) into the stomach. Here, the food is mixed with the juices secreted by the cells in the stomach for several hours. Then the food enters the small intestine. All the time the muscular walls of the intestine are squeezing. mixing and moving the food onwards.&lt;br&gt;In a few hours, the food changes into acids. These are soon absorbed by the villi (microscopic branch projections from the intestine walls) and passed into the bloodstream.&lt;br&gt;How can we swallow the food easily?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The food changes into acids absorbed by the villi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The food must be degested &amp;iuml;&amp;not;&amp;#129;rst through the process&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The food is directly swallowed through esophagus into the stomach&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The food is mixed with the juices secreted by the cells in the stomach&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The food we take must be changed into substances carried in the blood to the places&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Human body is made up of countless millions of cells. Food is needed to built up new cells and replace the worn out cells. However, the food that we take must be changed into substances that can be carried in the blood to the places where they are needed. This process is called digestion.&lt;br&gt;The &amp;iuml;&amp;not;&amp;#129;rst digestive process takes place in the mouth. The food we eat is broken up into small pieces by the action of teeth. mixed with saliva, a juice secreted by glands in the mouth. Saliva contains digestive juices which moisten the food, so it can be swallowed easily.&lt;br&gt;From the mouth, food passes through the esophagus (the food passage) into the stomach. Here, the food is mixed with the juices secreted by the cells in the stomach for several hours. Then the food enters the small intestine. All the time the muscular walls of the intestine are squeezing. mixing and moving the food onwards.&lt;br&gt;In a few hours, the food changes into acids. These are soon absorbed by the villi (microscopic branch projections from the intestine walls) and passed into the bloodstream.&lt;br&gt;From the text above, we imply that&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;a good process of degistive system will help our body becoming healthier&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;no one concerned with the process of degistive system for their healths&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the degistive system is needed if we are eating the food instantly&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;every body must conduct the prosses of degistive system well&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the better we degist the food we eat. the healthier we will be.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Human body is made up of countless millions of cells. Food is needed to built up new cells and replace the worn out cells. However, the food that we take must be changed into substances that can be carried in the blood to the places where they are needed. This process is called digestion.&lt;br&gt;The &amp;iuml;&amp;not;&amp;#129;rst digestive process takes place in the mouth. The food we eat is broken up into small pieces by the action of teeth. mixed with saliva, a juice secreted by glands in the mouth. Saliva contains digestive juices which moisten the food, so it can be swallowed easily.&lt;br&gt;From the mouth, food passes through the esophagus (the food passage) into the stomach. Here, the food is mixed with the juices secreted by the cells in the stomach for several hours. Then the food enters the small intestine. All the time the muscular walls of the intestine are squeezing. mixing and moving the food onwards.&lt;br&gt;In a few hours, the food changes into acids. These are soon absorbed by the villi (microscopic branch projections from the intestine walls) and passed into the bloodstream.&lt;br&gt;&amp;acirc;&amp;#128;&amp;#156;Human body is made up of countless millions of cells.&quot; (Paragraph 1)&lt;br&gt;Made up means&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;produced&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;managed&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;arranged&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;completed&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;constructed&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;span&gt;Faraday studied the magnetic &amp;#64257;eld around a conductor canying a DC electric current. While conducting these studies, Faraday established the basis for the electromagnetic &amp;#64257;eld concept in physics, subsequently enlarged upon by James Maxwell. He similarly discovered electromagnetic induction, diamagnetism, and laws of electrolysis. He established that magnetism could affect rays of light and that there was an underlying relationship between the two phenomena. His inventions of electromagnetic rotary devices formed the foundation of electric motor technology, and it was largely due to his efforts that electricity became viable for use in technology.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;As a chemist. Michael Faraday discovered benzene, investigated the clathrate hydrate of chlorine. invented an early fonn of the Bunsen bumer and the system of oxidation numbers, and popularized tenninology such as anode, cathode, electrode, and ion.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Although Faraday received little formal education and knew little of higher mathematics, such as calculus, he was one of the most in&amp;#64258;uential scientists in history. Historians of science refer to him as the best experimentalist in the history of science. The SI unit of capacitance, the farad, is named a&amp;#64258;er him, as is the Faraday constant, the charge on a mole of electrons (about 96,485 coulombs). Faraday's law of induction states that magnetic &amp;#64258;ux changing in time creates a proportional electromotive force. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Faraday was the &amp;#64257;rst and foremost Fullerian Professor of Chemistry at the Royal Institution of Great Britain, a position to which he was appointed for life.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Albert Einstein kept a photograph of Faraday on his study wall alongside pictures of Isaac Newton and James Clerk Maxwell.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Faraday was highly religious. He was a member of the Sandemanian Church, a Christian sect founded in 1730 that demanded total faith and commitment. Biographers have noted that a strong sense of the unity of God and nature pervaded Faraday&amp;lsquo;s life and work.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;What was Michael Faraday expert?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;science, history and religion&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;chemistry, electricity and calculus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;electronic, technology and religion&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;chemistry, physic and mathematics&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;physic, technology and photography&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;span&gt;Faraday studied the magnetic &amp;#64257;eld around a conductor canying a DC electric current. While conducting these studies, Faraday established the basis for the electromagnetic &amp;#64257;eld concept in physics, subsequently enlarged upon by James Maxwell. He similarly discovered electromagnetic induction, diamagnetism, and laws of electrolysis. He established that magnetism could affect rays of light and that there was an underlying relationship between the two phenomena. His inventions of electromagnetic rotary devices formed the foundation of electric motor technology, and it was largely due to his efforts that electricity became viable for use in technology.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;As a chemist. Michael Faraday discovered benzene, investigated the clathrate hydrate of chlorine. invented an early fonn of the Bunsen bumer and the system of oxidation numbers, and popularized tenninology such as anode, cathode, electrode, and ion.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Although Faraday received little formal education and knew little of higher mathematics, such as calculus, he was one of the most in&amp;#64258;uential scientists in history. Historians of science refer to him as the best experimentalist in the history of science. The SI unit of capacitance, the farad, is named a&amp;#64258;er him, as is the Faraday constant, the charge on a mole of electrons (about 96,485 coulombs). Faraday's law of induction states that magnetic &amp;#64258;ux changing in time creates a proportional electromotive force. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Faraday was the &amp;#64257;rst and foremost Fullerian Professor of Chemistry at the Royal Institution of Great Britain, a position to which he was appointed for life.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Albert Einstein kept a photograph of Faraday on his study wall alongside pictures of Isaac Newton and James Clerk Maxwell.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Faraday was highly religious. He was a member of the Sandemanian Church, a Christian sect founded in 1730 that demanded total faith and commitment. Biographers have noted that a strong sense of the unity of God and nature pervaded Faraday&amp;lsquo;s life and work.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Which of the following statements closely relates to Michael Faraday?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Michael Faraday dedicated his life in science and religion.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Michael Faraday was downhearted his life in science.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Michael Faraday concentrated his life in technology.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Michael Faraday was one of successful scientists.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Michael Faraday poured his science in technology.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;span&gt;Faraday studied the magnetic &amp;#64257;eld around a conductor canying a DC electric current. While conducting these studies, Faraday established the basis for the electromagnetic &amp;#64257;eld concept in physics, subsequently enlarged upon by James Maxwell. He similarly discovered electromagnetic induction, diamagnetism, and laws of electrolysis. He established that magnetism could affect rays of light and that there was an underlying relationship between the two phenomena. His inventions of electromagnetic rotary devices formed the foundation of electric motor technology, and it was largely due to his efforts that electricity became viable for use in technology.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;As a chemist. Michael Faraday discovered benzene, investigated the clathrate hydrate of chlorine. invented an early fonn of the Bunsen bumer and the system of oxidation numbers, and popularized tenninology such as anode, cathode, electrode, and ion.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Although Faraday received little formal education and knew little of higher mathematics, such as calculus, he was one of the most in&amp;#64258;uential scientists in history. Historians of science refer to him as the best experimentalist in the history of science. The SI unit of capacitance, the farad, is named a&amp;#64258;er him, as is the Faraday constant, the charge on a mole of electrons (about 96,485 coulombs). Faraday's law of induction states that magnetic &amp;#64258;ux changing in time creates a proportional electromotive force. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Faraday was the &amp;#64257;rst and foremost Fullerian Professor of Chemistry at the Royal Institution of Great Britain, a position to which he was appointed for life.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Albert Einstein kept a photograph of Faraday on his study wall alongside pictures of Isaac Newton and James Clerk Maxwell.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Faraday was highly religious. He was a member of the Sandemanian Church, a Christian sect founded in 1730 that demanded total faith and commitment. Biographers have noted that a strong sense of the unity of God and nature pervaded Faraday&amp;lsquo;s life and work.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Based on the first paragraph. we conclude that&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Faraday and James found the similar electromagnetic&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Faraday found the electromagnetic induction&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;James discovered a DC electric current&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;James invented the motor technology&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Faraday found the motor technology&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ant-eaters are perhaps the most curious looking animals.Their long head and snout look like tubes, and they have no teeth at all. Their front legs are very strong and armed with heavy curved claws with which they break open the nets of ants and temiites and then, when the insects rush out, use their long. sticky tongues to lick them up at great speed.True ant-eaters are found in the swamps and forests of central and South America. Scaly ant-eaters, or pangolins. are found in Africa and tropical Asia. Various other insect-eating animals are sometimes called ant-eaters. although they really belong to other groups of animals. One of them is the ant-bear, which lives on the plains of South and Central Africa. This has long. erect ears but short blunt claws, an almost hairless tail. yellow brown in color. Unlike the true ant-eaters. it has small teeth.The text tells us&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;the story of ant-eaters&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the report of ant-eaters&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the discussion of ant-eaters&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the description of ant-eaters&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the explanation of ant-eater&amp;rsquo;s body&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ant-eaters are perhaps the most curious looking animals.Their long head and snout look like tubes, and they have no teeth at all. Their front legs are very strong and armed with heavy curved claws with which they break open the nets of ants and temiites and then, when the insects rush out, use their long. sticky tongues to lick them up at great speed.True ant-eaters are found in the swamps and forests of central and South America. Scaly ant-eaters, or pangolins. are found in Africa and tropical Asia. Various other insect-eating animals are sometimes called ant-eaters. although they really belong to other groups of animals. One of them is the ant-bear, which lives on the plains of South and Central Africa. This has long. erect ears but short blunt claws, an almost hairless tail. yellow brown in color. Unlike the true ant-eaters. it has small teeth.What is the ant-bear?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The animal has long. erect ears and small teeth.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The animal looks like a pangolin.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The animal has no sticky tongue&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The animal does not like to eat ants.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The animal belongs to ants&amp;acirc;&amp;#128;&amp;#153; group.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ant-eaters are perhaps the most curious looking animals.Their long head and snout look like tubes, and they have no teeth at all. Their front legs are very strong and armed with heavy curved claws with which they break open the nets of ants and temiites and then, when the insects rush out, use their long. sticky tongues to lick them up at great speed.True ant-eaters are found in the swamps and forests of central and South America. Scaly ant-eaters, or pangolins. are found in Africa and tropical Asia. Various other insect-eating animals are sometimes called ant-eaters. although they really belong to other groups of animals. One of them is the ant-bear, which lives on the plains of South and Central Africa. This has long. erect ears but short blunt claws, an almost hairless tail. yellow brown in color. Unlike the true ant-eaters. it has small teeth.From the passage above. we can conclude that....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;all ants are friends of other insects&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ants live in the disgusted places&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ants are classi&amp;iuml;&amp;not;&amp;#129;ed as predators&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ants belong to the insect group&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ants usually eat death animals&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Human body is made up of countless millions of cells. Food is needed to built up new cells and replace the worn out cells. However, the food that we take must be changed into substances that can be carried in the blood to the places where they are needed. This process is called digestion.The &amp;iuml;&amp;not;&amp;#129;rst digestive process takes place in the mouth. The food we eat is broken up into small pieces by the action of teeth. mixed with saliva, a juice secreted by glands in the mouth. Saliva contains digestive juices which moisten the food, so it can be swallowed easily.From the mouth, food passes through the esophagus (the food passage) into the stomach. Here, the food is mixed with the juices secreted by the cells in the stomach for several hours. Then the food enters the small intestine. All the time the muscular walls of the intestine are squeezing. mixing and moving the food onwards.In a few hours, the food changes into acids. These are soon absorbed by the villi (microscopic branch projections from the intestine walls) and passed into the bloodstream.What is the text about?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The digestive system.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The digestive juice.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The method of the digestive system.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The process of intestine work.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The food substances.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Human body is made up of countless millions of cells. Food is needed to built up new cells and replace the worn out cells. However, the food that we take must be changed into substances that can be carried in the blood to the places where they are needed. This process is called digestion.The &amp;iuml;&amp;not;&amp;#129;rst digestive process takes place in the mouth. The food we eat is broken up into small pieces by the action of teeth. mixed with saliva, a juice secreted by glands in the mouth. Saliva contains digestive juices which moisten the food, so it can be swallowed easily.From the mouth, food passes through the esophagus (the food passage) into the stomach. Here, the food is mixed with the juices secreted by the cells in the stomach for several hours. Then the food enters the small intestine. All the time the muscular walls of the intestine are squeezing. mixing and moving the food onwards.In a few hours, the food changes into acids. These are soon absorbed by the villi (microscopic branch projections from the intestine walls) and passed into the bloodstream.How can we swallow the food easily?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The food changes into acids absorbed by the villi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The food must be degested &amp;iuml;&amp;not;&amp;#129;rst through the process&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The food is directly swallowed through esophagus into the stomach&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The food is mixed with the juices secreted by the cells in the stomach&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The food we take must be changed into substances carried in the blood to the places&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Human body is made up of countless millions of cells. Food is needed to built up new cells and replace the worn out cells. However, the food that we take must be changed into substances that can be carried in the blood to the places where they are needed. This process is called digestion.The &amp;iuml;&amp;not;&amp;#129;rst digestive process takes place in the mouth. The food we eat is broken up into small pieces by the action of teeth. mixed with saliva, a juice secreted by glands in the mouth. Saliva contains digestive juices which moisten the food, so it can be swallowed easily.From the mouth, food passes through the esophagus (the food passage) into the stomach. Here, the food is mixed with the juices secreted by the cells in the stomach for several hours. Then the food enters the small intestine. All the time the muscular walls of the intestine are squeezing. mixing and moving the food onwards.In a few hours, the food changes into acids. These are soon absorbed by the villi (microscopic branch projections from the intestine walls) and passed into the bloodstream.From the text above, we imply that&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;a good process of degistive system will help our body becoming healthier&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;no one concerned with the process of degistive system for their healths&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the degistive system is needed if we are eating the food instantly&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;every body must conduct the prosses of degistive system well&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the better we degist the food we eat. the healthier we will be.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;DILI (AP): A strong earthquake struck off the coast of East Timor on Wednesday, prompting authorities to issue a tsunami warning - but no large waves hit the tiny nation's coast.&lt;br&gt;The 6.2 magnitude tremor struck 262 kilometers northeast of the capital. Dili. in Indonesia's Banda Sea at a depth of 10 kilometers, the U.S. Geological Survey said. Residents in Dili did not feel any shaking and there were no immediate reports of damage of injuries.Indonesia's Meteorology and Geophysics Agency issued a tsunami alert. saying it had been powerful enough to generate giant waves. The waming was later retracted. East Timor. a colony abandoned by the Portuguese that became Asia's youngest country after breaking from Indonesia in 1999. sits along a series of fault lines and volcanoes known as the Pacific Ring of Fire.&lt;br&gt; In December 2004, a massive earthquake struck off Indonesia's Sumatra and triggered a tsunami that killed more than 230,000 people in a dozen countries, including 160,000 people in Indonesia's western of province of Aceh.&lt;br&gt;Which of the following statements is true based on the text?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;In December 2004. a massive earthquake caused tsunami that killed few people.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;There were tsunamis waming due to large waves hit the tiny nation's coast.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;East Timor is located along a series of fault lines and volcanoes.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;A weak earthquake struck off the coast of East Timor.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The waming was retracted because it is too late.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;DILI (AP): A strong earthquake struck off the coast of East Timor on Wednesday, prompting authorities to issue a tsunami warning - but no large waves hit the tiny nation's coast.&lt;br&gt;The 6.2 magnitude tremor struck 262 kilometers northeast of the capital. Dili. in Indonesia's Banda Sea at a depth of 10 kilometers, the U.S. Geological Survey said. Residents in Dili did not feel any shaking and there were no immediate reports of damage of injuries.Indonesia's Meteorology and Geophysics Agency issued a tsunami alert. saying it had been powerful enough to generate giant waves. The waming was later retracted. East Timor. a colony abandoned by the Portuguese that became Asia's youngest country after breaking from Indonesia in 1999. sits along a series of fault lines and volcanoes known as the Pacific Ring of Fire.&lt;br&gt; In December 2004, a massive earthquake struck off Indonesia's Sumatra and triggered a tsunami that killed more than 230,000 people in a dozen countries, including 160,000 people in Indonesia's western of province of Aceh.&lt;br&gt;What did a strong earthquake strucking off the coast of East Timor report?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;No damage and injuries.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Generating giant waves.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Triggering a tsunami.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Some damage and injuries.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Shaking northeast of Dili.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;BAGHDAD (Reuters) - Six U.S. soldiers were killed by a blast north of Baghdad on Monday, the U.S. military said on Tuesday, in one of the single deadliest ground attacks against American forces in Iraq in months.&lt;br&gt;Three other soldiers were wounded afier an explossion went off near their vehicles in the province of Salahaddin, the military said in a statement, without giving details. Salahaddin is a Sunni Arab insurgent stronghold.&lt;br&gt;More than 3,170 U.S. soldiers have died in Iraq since the U.S. have died invasion in March 2003.Iraqi and U.S. forces are in the third week of a security crackdown in Baghdad aimed at stemming sectarian violence. U.S. military commanders have expressed concems that insurgents could step up attacks outside Baghdad.&lt;br&gt;Iraqi and U.S. forces are in the third week of a security crackdown in Baghdad aimed atstemming sectarian violence. (Paragraph3)Crackdown means.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;line&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;guard&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;attack&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;clean-up&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;protection&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;We are announcing today that we are bringing the milestone and ever green brands evencloser together. Effective as of 5&lt;sup&gt;th&lt;/sup&gt; December 2009, our officilal name will be:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;GREEN MILES WEST&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The substitution of 'West' in our name replacing 'California' is the result of an agreementwe reached with Califomia Gardening association following a protest over the original useof 'Califomia' is our name.&lt;/p&gt;
+&lt;p&gt;We hope this does not create any confusion among loyal consumers. While this representsa change from our initial name introduction. it doesn't change the quality of products weoffer to our consumers.&lt;/p&gt;
+&lt;p&gt;Which of the following statement is TRUE according to the text?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The corporate of&amp;iuml;&amp;not;&amp;#129;ces were protested.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;There was con&amp;iuml;&amp;not;&amp;sbquo;ict between Green Miles West and Milestone.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The loyal consumers created an of&amp;iuml;&amp;not;&amp;#129;cial name for the company.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The quality of the products will be different from the former products.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The name green &quot;Miles West&quot;&amp;#157; will be effective as of 5&lt;sup&gt;th&lt;/sup&gt; December 2009.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;strong&gt;DIENG RESTO&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Every Saturday from 18.00 to 21.30&lt;/p&gt;
+&lt;p&gt;Dieng Restaurant&lt;/p&gt;
+&lt;p&gt;A selection of our original recipe,&lt;/p&gt;
+&lt;p&gt;Prepared in front of your eyes by our chef&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Included free Carica drink&lt;/li&gt;
+&lt;li&gt;Enjoy the live music by Antrax Band&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;For more info:&lt;/p&gt;
+&lt;p&gt;Call: 3389777 ext. 6511 65112&lt;/p&gt;
+&lt;p&gt;DIENG RESTAURANT WONOSOBO&lt;/p&gt;
+&lt;p&gt;What is the purpose of the advertisement above?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;To promote Dieng Restaurant.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To enjoy Antrax Band.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To infonn Dieng Restaurant.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To describe Dieng Restaurant.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To explain Carica drink.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dieng Restaurant&lt;/p&gt;
+&lt;p&gt;A selection of our original recipe,&lt;/p&gt;
+&lt;p&gt;Prepared in front of your eyes by our chef&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Included free Carica drink&lt;/li&gt;
+&lt;li&gt;Enjoy the live music by Antrax Band&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;For more info:&lt;/p&gt;
+&lt;p&gt;Call: 3389777 ext. 6511 65112&lt;/p&gt;
+&lt;p&gt;DIENG RESTAURANT WONOSOBO&lt;/p&gt;
+&lt;p&gt;Dieng Restaurant opens on&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;everyday&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;every evening&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sunday to Friday&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;every Saturday evening&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;every Saturday from 18.00 to 21.30&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;span&gt;McKenna&lt;br&gt;Gardens by McKenna&lt;br&gt;PO Box 687&lt;br&gt;l 103 Lisbon, Portugal&lt;br&gt;September 8. 2006&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Guy Adamsons&lt;br&gt;Landscape Design Magazine&lt;br&gt;Ottho Heldringstraat 2&lt;br&gt;1006 AZ Amsterdam&lt;br&gt;The Netherlands&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Dear Mr. Adamsons:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Thank you for sending the advertising information. We have decided not to place an ad 1n the December issue. but we will consider placing one in the next issue in March.&lt;br&gt;We will be in touch. Again thank you for your assistance.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Sincerely yours.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Landscape Architect&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;What is the purpose of the letter?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Designing skyscrapers.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Designing gardens.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Selling advertising.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Advertising.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Marketing.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&lt;span&gt;McKenna&lt;br&gt;Gardens by McKenna&lt;br&gt;PO Box 687&lt;br&gt;l 103 Lisbon, Portugal&lt;br&gt;September 8. 2006&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Guy Adamsons&lt;br&gt;Landscape Design Magazine&lt;br&gt;Ottho Heldringstraat 2&lt;br&gt;1006 AZ Amsterdam&lt;br&gt;The Netherlands&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Dear Mr. Adamsons:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Thank you for sending the advertising information. We have decided not to place an ad 1n the December issue. but we will consider placing one in the next issue in March.&lt;br&gt;We will be in touch. Again thank you for your assistance.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Sincerely yours.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Landscape Architect&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Why did Mr. McKenna write this letter?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;To say he wasn&amp;acirc;&amp;euro;&amp;trade;t interested in placing an ad now.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To ask Mr. Adamsons for subscription.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To place an ad in December.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To refuse a business.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To get a job.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Govemment should not raise fuel price to solve the problem of economic issues. People were affected severely with the high fuel price like last year. Obviously they cut their spending. As an example they had to buy lower quality of rice or palm oil. There were also fewer buyers of secondary commodities like flour, or canned meat or fish.&lt;/p&gt;
+&lt;p&gt;Furthermore, the condition of low income family will become even worse because their expenses will increase while their salaries will not. Many companies will have to trim the number of employees because they are incapable of managing buying or selling price, standard wages and personal affairs.&lt;/p&gt;
+&lt;p&gt;Finally, govemment should not raise fuel price to overcome economic problem but the solution should be sought by tapping into the nation's own potential and utilizing it to enhance productivity to its maximum.&lt;/p&gt;
+&lt;p&gt;What is the main idea of the last paragraph?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The government should enhance productivity to solve the economic problem.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The govemment should raise fuel price to solve the problem.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The government should consider condition of low family income.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The govemment should reduce the number of employees.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The govemment should decrease the standard of wages.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Govemment should not raise fuel price to solve the problem of economic issues. People were affected severely with the high fuel price like last year. Obviously they cut their spending. As an example they had to buy lower quality of rice or palm oil. There were also fewer buyers of secondary commodities like flour, or canned meat or fish.&lt;/p&gt;
+&lt;p&gt;Furthermore, the condition of low income family will become even worse because their expenses will increase while their salaries will not. Many companies will have to trim the number of employees because they are incapable of managing buying or selling price, standard wages and personal affairs.&lt;/p&gt;
+&lt;p&gt;Finally, govemment should not raise fuel price to overcome economic problem but the solution should be sought by tapping into the nation's own potential and utilizing it to enhance productivity to its maximum.&lt;/p&gt;
+&lt;p&gt;The title of the text is&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The Price of the Secondary Commodities&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The Effect of Increasing Fuel Price&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Condition of Low income Family&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The Increasing of Fuel Price&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The Economic Problem&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Govemment should not raise fuel price to solve the problem of economic issues. People were affected severely with the high fuel price like last year. Obviously they cut their spending. As an example they had to buy lower quality of rice or palm oil. There were also fewer buyers of secondary commodities like flour, or canned meat or fish.&lt;/p&gt;
+&lt;p&gt;Furthermore, the condition of low income family will become even worse because their expenses will increase while their salaries will not. Many companies will have to trim the number of employees because they are incapable of managing buying or selling price, standard wages and personal affairs.&lt;/p&gt;
+&lt;p&gt;Finally, govemment should not raise fuel price to overcome economic problem but the solution should be sought by tapping into the nation's own potential and utilizing it to enhance productivity to its maximum.&lt;/p&gt;
+&lt;p&gt;&quot;Many companies will have to trim the number of employee.&quot; (Paragraph 2)&lt;/p&gt;
+&lt;p&gt;Trim means&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;&amp;iuml;&amp;not;&amp;#129;re&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cut&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;add&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;reduce&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;border&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;BAGHDAD (Reuters) - Six U.S. soldiers were killed by a blast north of Baghdad on Monday, the U.S. military said on Tuesday, in one of the single deadliest ground attacks against American forces in Iraq in months.&lt;br&gt;Three other soldiers were wounded afier an explossion went off near their vehicles in the province of Salahaddin, the military said in a statement, without giving details. Salahaddin is a Sunni Arab insurgent stronghold.&lt;br&gt;More than 3,170 U.S. soldiers have died in Iraq since the U.S. have died invasion in March 2003.Iraqi and U.S. forces are in the third week of a security crackdown in Baghdad aimed at stemming sectarian violence. U.S. military commanders have expressed concems that insurgents could step up attacks outside Baghdad.&lt;br&gt;The text talks about&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;six U.S. soldiers killed by a blast&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;attacking against American&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;a blast north of Baghdad&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;a Sunni Arab insurgent&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the U.S. military&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;BAGHDAD (Reuters) - Six U.S. soldiers were killed by a blast north of Baghdad on Monday, the U.S. military said on Tuesday, in one of the single deadliest ground attacks against American forces in Iraq in months.&lt;br&gt;Three other soldiers were wounded afier an explossion went off near their vehicles in the province of Salahaddin, the military said in a statement, without giving details. Salahaddin is a Sunni Arab insurgent stronghold.&lt;br&gt;More than 3,170 U.S. soldiers have died in Iraq since the U.S. have died invasion in March 2003.Iraqi and U.S. forces are in the third week of a security crackdown in Baghdad aimed at stemming sectarian violence. U.S. military commanders have expressed concems that insurgents could step up attacks outside Baghdad.&lt;br&gt;Which of the following statements is NOT mentioned in the text?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Insurgents could increase attacks outside Baghdad.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Three soldiers were wounded alter an explosion went off.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The U.S invasion has caused more than 3,170 of its soldiers died.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Six, US, soldiers died due to a blast nonh of Baghdad on Monday.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Iraqi and U.S. forces are in the second week of a security crackdown in Baghdad.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Human body is made up of countless millions of cells. Food is needed to built up new cells and replace the worn out cells. However, the food that we take must be changed into substances that can be carried in the blood to the places where they are needed. This process is called digestion.The &amp;iuml;&amp;not;&amp;#129;rst digestive process takes place in the mouth. The food we eat is broken up into small pieces by the action of teeth. mixed with saliva, a juice secreted by glands in the mouth. Saliva contains digestive juices which moisten the food, so it can be swallowed easily.From the mouth, food passes through the esophagus (the food passage) into the stomach. Here, the food is mixed with the juices secreted by the cells in the stomach for several hours. Then the food enters the small intestine. All the time the muscular walls of the intestine are squeezing. mixing and moving the food onwards.In a few hours, the food changes into acids. These are soon absorbed by the villi (microscopic branch projections from the intestine walls) and passed into the bloodstream&quot;Human body is made up of countless millions of cells.&quot; (Paragraph 1)Made up means&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;produced&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;managed&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;arranged&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;completed&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;constructed&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;We are announcing today that we are bringing the milestone and ever green brands even&lt;br&gt;closer together. Effective as of 5th December 2009, our of&amp;iuml;&amp;not;&amp;#129;cial name will be:&lt;br&gt;GREEN MILES WEST&lt;br&gt;The substitution of &amp;acirc;&amp;#128;&amp;#152;West&amp;acirc;&amp;#128;&amp;#153; in our name replacing &amp;acirc;&amp;#128;&amp;#153;California&amp;acirc;&amp;#128;&amp;#153; is the result of an agreement&lt;br&gt;we reached with Califomia Gardening association following a protest over the original use&lt;br&gt;of &amp;acirc;&amp;#128;&amp;#152;Califomia&amp;acirc;&amp;#128;&amp;#153; is our name.&lt;br&gt;We hope this does not create any confusion among loyal consumers. While this represents&lt;br&gt;a change from our initial name introduction. it doesn&amp;acirc;&amp;#128;&amp;#153;t change the quality of products we&lt;br&gt;offer to our consumers&lt;br&gt;What does the text tell us about?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The mergers of two companies.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The new service of company.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The new of&amp;iuml;&amp;not;&amp;#129;ce of company.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The change of of&amp;iuml;&amp;not;&amp;#129;ce name.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The result of agreement.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

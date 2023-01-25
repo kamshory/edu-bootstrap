@@ -1,0 +1,24 @@
+Options -Indexes
+
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule lib.tools/(.*) ../lib.tools/$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule lib.assets/(.*) ../lib.assets/$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule media.edu/(.*) ../media.edu/$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule eq/Fonts/(.*) ../lib.assets/script/tiny_mce/plugins/equation/eq/Fonts/$1
+
+
+</IfModule>

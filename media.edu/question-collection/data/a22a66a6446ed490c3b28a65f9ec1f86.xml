@@ -1,0 +1,1747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+ANNOUNCEMENT&lt;br&gt;
+Let&amp;rsquo;s Explore the World through Reading Club&lt;br&gt;&lt;br&gt;
+In connection with Literacy Program Development we are going to form a reading club. In the club, we are going to read and discuss various books such as education, history, geography, psychology etc. The meeting for discussion is held:&lt;br&gt;&lt;br&gt;
+Day: Saturday&lt;br&gt;
+Time: 09.00 a.m. to 11.00 p.m.&lt;br&gt;
+Venue: AV room&lt;br&gt;&lt;br&gt;
+If you have interest in reading and are committed individuals, you are deserved to be members of the club.&lt;br&gt;&lt;br&gt;
+For further information contact Nila: 08158030833&lt;br&gt;&lt;br&gt;
+What is the announcement mainly about?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Recruitment for Reading Club members&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The place of Reading Club meeting&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Literacy Program Development&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Exploring the world&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Various text books&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+ANNOUNCEMENT&lt;br&gt;
+Let&amp;rsquo;s Explore the World through Reading Club&lt;br&gt;&lt;br&gt;
+In connection with Literacy Program Development we are going to form a reading club. In the club, we are going to read and discuss various books such as education, history, geography, psychology etc. The meeting for discussion is held:&lt;br&gt;&lt;br&gt;
+Day: Saturday&lt;br&gt;
+Time: 09.00 a.m. to 11.00 p.m.&lt;br&gt;
+Venue: AV room&lt;br&gt;&lt;br&gt;
+If you have interest in reading and are committed individuals, you are deserved to be members of the club.&lt;br&gt;&lt;br&gt;
+For further information contact Nila: 08158030833&lt;br&gt;&lt;br&gt;
+What is the primary reason to establish the Reading Club?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;To go to overseas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To explore the world&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To develop education&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To read historical books&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To develop literacy program&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+ANNOUNCEMENT&lt;br&gt;
+Let&amp;rsquo;s Explore the World through Reading Club&lt;br&gt;&lt;br&gt;
+In connection with Literacy Program Development we are going to form a reading club. In the club, we are going to read and discuss various books such as education, history, geography, psychology etc. The meeting for discussion is held:&lt;br&gt;&lt;br&gt;
+Day: Saturday&lt;br&gt;
+Time: 09.00 a.m. to 11.00 p.m.&lt;br&gt;
+Venue: AV room&lt;br&gt;&lt;br&gt;
+If you have interest in reading and are committed individuals, you are deserved to be members of the club.&lt;br&gt;&lt;br&gt;
+For further information contact Nila: 08158030833&lt;br&gt;&lt;br&gt;
+It is implicitly expected that the Reading Club members will be ... .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kind&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;friendly&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;wealthy&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;generous&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;knowledgeable&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+17 December 2015 &lt;br&gt;&lt;br&gt;
+Mr. William Chan&lt;br&gt;
+Personnel Manager&lt;br&gt;
+Wong And Lim Consulting&lt;br&gt;
+PO Box 583&lt;br&gt;
+Kwai Chung&lt;br&gt;
+Kowloon&lt;br&gt;
+Dear Mr. Chan,&lt;br&gt;
+I am writing to apply for the post of Management Trainee, which was advertised on the Student Affairs Office notice board of the Hong Kong Polytechnic University on 17 December 2015.&lt;br&gt;&lt;br&gt;
+My working experience at Lucky Star Garment Manufactory Limited improved my leadership skills, communication skills and ability to work in a team environment. I have fluent spoken and written English. I also have fluent spoken and written Mandarin, and can therefore work in mainland China.&lt;br&gt;
+Currently I am studying a B.A. in Management at the Hong Kong Polytechnic University, graduating in 2016. Subjects which I am studying that are relevant to the post of Management Trainee include Operations Management, Human Resources Management, Accounting, Marketing and Strategic Management.&lt;br&gt;&lt;br&gt;
+My final year project is entitled Knowledge Management Practices in HK. Carrying out this project has improved my communication skills, my leadership skills and my ability to lead and supervise subordinates effectively. I have also learned how to run a project from the planning stage to its completion.&lt;br&gt;&lt;br&gt;
+During my studies I have held the post of Executive in the Management Society. While leading and organising Management Society activities I have improved my ability to lead and supervise subordinates effectively, ability to work under pressure and ability to work in a team environment. &lt;br&gt;&lt;br&gt;
+Working for Wong And Lim Consulting appeals to me because it has a good reputation and it provides excellent training. Your organization produces a high-quality service, and I can contribute to this with my leadership skills and my ability to work under pressure. &lt;br&gt;&lt;br&gt;
+I am available for interview at any time. I can be contacted most easily on the mobile phone (08158030837). I look forward to meeting you.&lt;br&gt;&lt;br&gt;
+Yours sincerely&lt;br&gt;
+Wong Wai Man Wilfred&lt;br&gt;
+Encl: Resume&lt;br&gt;&lt;br&gt;
+What is excluded from Wilfred&amp;rsquo;s expertise?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Accounting&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Operations Management&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Human Resources Management&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Marketing and Strategic Management.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Supply and Maintenance Management&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+17 December 2015 &lt;br&gt;&lt;br&gt;
+Mr. William Chan&lt;br&gt;
+Personnel Manager&lt;br&gt;
+Wong And Lim Consulting&lt;br&gt;
+PO Box 583&lt;br&gt;
+Kwai Chung&lt;br&gt;
+Kowloon&lt;br&gt;
+Dear Mr. Chan,&lt;br&gt;
+I am writing to apply for the post of Management Trainee, which was advertised on the Student Affairs Office notice board of the Hong Kong Polytechnic University on 17 December 2015.&lt;br&gt;&lt;br&gt;
+My working experience at Lucky Star Garment Manufactory Limited improved my leadership skills, communication skills and ability to work in a team environment. I have fluent spoken and written English. I also have fluent spoken and written Mandarin, and can therefore work in mainland China.&lt;br&gt;
+Currently I am studying a B.A. in Management at the Hong Kong Polytechnic University, graduating in 2016. Subjects which I am studying that are relevant to the post of Management Trainee include Operations Management, Human Resources Management, Accounting, Marketing and Strategic Management.&lt;br&gt;&lt;br&gt;
+My final year project is entitled Knowledge Management Practices in HK. Carrying out this project has improved my communication skills, my leadership skills and my ability to lead and supervise subordinates effectively. I have also learned how to run a project from the planning stage to its completion.&lt;br&gt;&lt;br&gt;
+During my studies I have held the post of Executive in the Management Society. While leading and organising Management Society activities I have improved my ability to lead and supervise subordinates effectively, ability to work under pressure and ability to work in a team environment. &lt;br&gt;&lt;br&gt;
+Working for Wong And Lim Consulting appeals to me because it has a good reputation and it provides excellent training. Your organization produces a high-quality service, and I can contribute to this with my leadership skills and my ability to work under pressure. &lt;br&gt;&lt;br&gt;
+I am available for interview at any time. I can be contacted most easily on the mobile phone (08158030837). I look forward to meeting you.&lt;br&gt;&lt;br&gt;
+Yours sincerely&lt;br&gt;
+Wong Wai Man Wilfred&lt;br&gt;
+Encl: Resume&lt;br&gt;&lt;br&gt;
+What reason does Wilfred intend to work at Wong And Lim Consulting?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;It offers excellent training.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It gives a good amount of salary.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It provides satisfactory facilities.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It produces a high-quality service.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;He can contribute to the company.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+How to Improve Scores on Writing and Speaking in IELTS&lt;br&gt;&lt;br&gt;
+Writing&lt;br&gt;
+1.	Write correct and simple sentences is just not enough. Try to use different word if you have use the same word over and over.&lt;br&gt;
+2.	Punctuation is very important in achieving the score you hope to. Before attempting writing exercises it is better to refresh you basic knowledge in things like punctuation.&lt;br&gt;
+3.	It is good to keep sentences short as it helps to express the ideas more clearly.&lt;br&gt;
+4.	Practice makes perfect. Get good study material and go through the given examples to familiarize your self with the patter of the exam.&lt;br&gt;
+Speaking&lt;br&gt;
+1.	Realize that this has lot to do with your own ability to speak English. If you are not able to clearly speak, the best thing is to listen to day-to-day English conversations .you may be able listen to radio, TV or may be to read dialogues written in English.&lt;br&gt;
+2.	Remember to answer the question asked, in order to do this you need to listen to the examiner carefully. For example, if the examiner asks you to talk about food in your country, just don't start to talk about the diet your people take. But you can talk about cuisine when talking about food.&lt;br&gt;
+3.	If you have a friend who has done IELTS, get that friend to practice few topics given for exam. Ask the friend to be the examiner and you be the candidate, keep lot of practice sessions and speak on different topics, keeping to what is asked.&lt;br&gt;
+4.	Speak as normal as you can, as if you are talking to some body in your day today life. Use lots of different words, and remember to use expressions.&lt;br&gt;
+5.	Relax when you speak, don't fill the gaps with ellipses. Just keeping a little gap between your words is ok, but practice to be fluent.&lt;br&gt;&lt;br&gt;
+What is the text mainly about?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Improving English skills&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Improving scores in IELTS&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Improving two language skills of IELTS&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Improving writing and speaking scores&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Improving IELTS scores on writing and speaking&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+How to Improve Scores on Writing and Speaking in IELTS&lt;br&gt;&lt;br&gt;
+Writing&lt;br&gt;
+1.	Write correct and simple sentences is just not enough. Try to use different word if you have use the same word over and over.&lt;br&gt;
+2.	Punctuation is very important in achieving the score you hope to. Before attempting writing exercises it is better to refresh you basic knowledge in things like punctuation.&lt;br&gt;
+3.	It is good to keep sentences short as it helps to express the ideas more clearly.&lt;br&gt;
+4.	Practice makes perfect. Get good study material and go through the given examples to familiarize your self with the patter of the exam.&lt;br&gt;
+Speaking&lt;br&gt;
+1.	Realize that this has lot to do with your own ability to speak English. If you are not able to clearly speak, the best thing is to listen to day-to-day English conversations .you may be able listen to radio, TV or may be to read dialogues written in English.&lt;br&gt;
+2.	Remember to answer the question asked, in order to do this you need to listen to the examiner carefully. For example, if the examiner asks you to talk about food in your country, just don't start to talk about the diet your people take. But you can talk about cuisine when talking about food.&lt;br&gt;
+3.	If you have a friend who has done IELTS, get that friend to practice few topics given for exam. Ask the friend to be the examiner and you be the candidate, keep lot of practice sessions and speak on different topics, keeping to what is asked.&lt;br&gt;
+4.	Speak as normal as you can, as if you are talking to some body in your day today life. Use lots of different words, and remember to use expressions.&lt;br&gt;
+5.	Relax when you speak, don't fill the gaps with ellipses. Just keeping a little gap between your words is ok, but practice to be fluent.&lt;br&gt;&lt;br&gt;
+During taking the speaking test, what does the test taker do before answering the question?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Watching a video&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Reading the question&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Looking at the picture&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Listening to the examiner&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Listening to the tape recorder&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+How to Improve Scores on Writing and Speaking in IELTS&lt;br&gt;&lt;br&gt;
+Writing&lt;br&gt;
+1.	Write correct and simple sentences is just not enough. Try to use different word if you have use the same word over and over.&lt;br&gt;
+2.	Punctuation is very important in achieving the score you hope to. Before attempting writing exercises it is better to refresh you basic knowledge in things like punctuation.&lt;br&gt;
+3.	It is good to keep sentences short as it helps to express the ideas more clearly.&lt;br&gt;
+4.	Practice makes perfect. Get good study material and go through the given examples to familiarize your self with the patter of the exam.&lt;br&gt;
+Speaking&lt;br&gt;
+1.	Realize that this has lot to do with your own ability to speak English. If you are not able to clearly speak, the best thing is to listen to day-to-day English conversations .you may be able listen to radio, TV or may be to read dialogues written in English.&lt;br&gt;
+2.	Remember to answer the question asked, in order to do this you need to listen to the examiner carefully. For example, if the examiner asks you to talk about food in your country, just don't start to talk about the diet your people take. But you can talk about cuisine when talking about food.&lt;br&gt;
+3.	If you have a friend who has done IELTS, get that friend to practice few topics given for exam. Ask the friend to be the examiner and you be the candidate, keep lot of practice sessions and speak on different topics, keeping to what is asked.&lt;br&gt;
+4.	Speak as normal as you can, as if you are talking to some body in your day today life. Use lots of different words, and remember to use expressions.&lt;br&gt;
+5.	Relax when you speak, don't fill the gaps with ellipses. Just keeping a little gap between your words is ok, but practice to be fluent.&lt;br&gt;&lt;br&gt;
+Why is it suggested to write in short sentences in the test?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;It saves the time.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It is clearer to read.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It is easy for the examiner to check.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It helps to express the ideas more clearly.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It is easier to connect ideas between sentences.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+About 500 ancient masks from many regions across Indonesia are being displayed at the Sonobudoyo Museum in Yogyakarta from Nov. 20 to 29.&lt;br&gt;&lt;br&gt;
+The event, called The Power of Topeng (The Power of the Mask), presents 400 masks that are simulacrums of statues from all over the country and the other masks that are from the collection of the Sonobudoyo Museum.&lt;br&gt;&lt;br&gt;
+The curator of the event, I Wayan Dana, said that based on Indonesian history, masks not only functioned as works of art, but also as instruments of religious rituals.&lt;br&gt;&lt;br&gt;
+&amp;ldquo;The two functions strengthen the mask's position as having strong roots in Indonesian cultures,&amp;rdquo; he said when speaking at the event's opening ceremony on Thursday night.&lt;br&gt;&lt;br&gt;
+In religious rituals, he said, masks were used as instruments to communicate with supernatural powers, while their shapes were adjusted to the traditions in each era. He added that the masks also developed side by side with the changes of kingdoms in this archipelago.&lt;br&gt;&lt;br&gt;
+Van Heekeren, the author of Prehistoric Life of Indonesia, published in 1955, noted that masks had been parts of Indonesian prehistory thousands of years ago. The Mask of Panji, which developed during the Majapahit Kingdom, for example, told a love story in the era.&lt;br&gt;&lt;br&gt;
+Other examples are the Ramayana Mask, which was developed during the Indonesian Hindu kingdoms, and the Ngayogyakarta Palace Mask that was made during the era of Hamengkubuwono VII.&lt;br&gt;
+The head of Yogyakarta Culture Agency, Umat Priyono, expressed his appreciation to the organizers of the event with the hope that it would widen people&amp;rsquo;s understanding of the development of masks as a cultural product in Indonesia. &lt;br&gt;
+(Retrieved from http://www.thejakartapost.com/news/2015/11/21/hundreds-ancient-masks-displayed-yogyakarta.html)&lt;br&gt;&lt;br&gt;
+As a part of religious rituals, what is the function of masks?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;They are used as a means of communication.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They represent the changes of kingdoms in the era.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They are used among the kingdoms in the archipelago.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They function as adjusting the tradition and the religion.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They are used for communicating with supernatural power.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+About 500 ancient masks from many regions across Indonesia are being displayed at the Sonobudoyo Museum in Yogyakarta from Nov. 20 to 29.&lt;br&gt;&lt;br&gt;
+The event, called The Power of Topeng (The Power of the Mask), presents 400 masks that are simulacrums of statues from all over the country and the other masks that are from the collection of the Sonobudoyo Museum.&lt;br&gt;&lt;br&gt;
+The curator of the event, I Wayan Dana, said that based on Indonesian history, masks not only functioned as works of art, but also as instruments of religious rituals.&lt;br&gt;&lt;br&gt;
+&amp;ldquo;The two functions strengthen the mask's position as having strong roots in Indonesian cultures,&amp;rdquo; he said when speaking at the event's opening ceremony on Thursday night.&lt;br&gt;&lt;br&gt;
+In religious rituals, he said, masks were used as instruments to communicate with supernatural powers, while their shapes were adjusted to the traditions in each era. He added that the masks also developed side by side with the changes of kingdoms in this archipelago.&lt;br&gt;&lt;br&gt;
+Van Heekeren, the author of Prehistoric Life of Indonesia, published in 1955, noted that masks had been parts of Indonesian prehistory thousands of years ago. The Mask of Panji, which developed during the Majapahit Kingdom, for example, told a love story in the era.&lt;br&gt;&lt;br&gt;
+Other examples are the Ramayana Mask, which was developed during the Indonesian Hindu kingdoms, and the Ngayogyakarta Palace Mask that was made during the era of Hamengkubuwono VII.&lt;br&gt;
+The head of Yogyakarta Culture Agency, Umat Priyono, expressed his appreciation to the organizers of the event with the hope that it would widen people&amp;rsquo;s understanding of the development of masks as a cultural product in Indonesia. &lt;br&gt;
+(Retrieved from http://www.thejakartapost.com/news/2015/11/21/hundreds-ancient-masks-displayed-yogyakarta.html)&lt;br&gt;&lt;br&gt;
+The second paragraph tells about....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;the venue of the event&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the purpose of the event&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the statues from all over the country&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the number of masks being presented&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the collection of the Sonobudoyo Museum.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+About 500 ancient masks from many regions across Indonesia are being displayed at the Sonobudoyo Museum in Yogyakarta from Nov. 20 to 29.&lt;br&gt;&lt;br&gt;
+The event, called The Power of Topeng (The Power of the Mask), presents 400 masks that are simulacrums of statues from all over the country and the other masks that are from the collection of the Sonobudoyo Museum.&lt;br&gt;&lt;br&gt;
+The curator of the event, I Wayan Dana, said that based on Indonesian history, masks not only functioned as works of art, but also as instruments of religious rituals.&lt;br&gt;&lt;br&gt;
+&amp;ldquo;The two functions strengthen the mask's position as having strong roots in Indonesian cultures,&amp;rdquo; he said when speaking at the event's opening ceremony on Thursday night.&lt;br&gt;&lt;br&gt;
+In religious rituals, he said, masks were used as instruments to communicate with supernatural powers, while their shapes were adjusted to the traditions in each era. He added that the masks also developed side by side with the changes of kingdoms in this archipelago.&lt;br&gt;&lt;br&gt;
+Van Heekeren, the author of Prehistoric Life of Indonesia, published in 1955, noted that masks had been parts of Indonesian prehistory thousands of years ago. The Mask of Panji, which developed during the Majapahit Kingdom, for example, told a love story in the era.&lt;br&gt;&lt;br&gt;
+Other examples are the Ramayana Mask, which was developed during the Indonesian Hindu kingdoms, and the Ngayogyakarta Palace Mask that was made during the era of Hamengkubuwono VII.&lt;br&gt;
+The head of Yogyakarta Culture Agency, Umat Priyono, expressed his appreciation to the organizers of the event with the hope that it would widen people&amp;rsquo;s understanding of the development of masks as a cultural product in Indonesia. &lt;br&gt;
+(Retrieved from http://www.thejakartapost.com/news/2015/11/21/hundreds-ancient-masks-displayed-yogyakarta.html)&lt;br&gt;&lt;br&gt;
+A part from being artistic, in the past masks were considered ... .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;scary&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;funny&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;exotic&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sacred&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;expensive&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt; About 500 ancient masks from many regions across Indonesia are being displayed at the Sonobudoyo Museum in Yogyakarta from Nov. 20 to 29.&lt;br&gt;&lt;br&gt; The event, called The Power of Topeng (The Power of the Mask), presents 400 masks that are simulacrums of statues from all over the country and the other masks that are from the collection of the Sonobudoyo Museum.&lt;br&gt;&lt;br&gt; The curator of the event, I Wayan Dana, said that based on Indonesian history, masks not only functioned as works of art, but also as instruments of religious rituals.&lt;br&gt;&lt;br&gt; &amp;ldquo;The two functions strengthen the mask's position as having strong roots in Indonesian cultures,&amp;rdquo; he said when speaking at the event's opening ceremony on Thursday night.&lt;br&gt;&lt;br&gt; In religious rituals, he said, masks were used as instruments to communicate with supernatural powers, while their shapes were adjusted to the traditions in each era. He added that the masks also developed side by side with the changes of kingdoms in this archipelago.&lt;br&gt;&lt;br&gt; Van Heekeren, the author of Prehistoric Life of Indonesia, published in 1955, noted that masks had been parts of Indonesian prehistory thousands of years ago. The Mask of Panji, which developed during the Majapahit Kingdom, for example, told a love story in the era.&lt;br&gt;&lt;br&gt; Other examples are the Ramayana Mask, which was developed during the Indonesian Hindu kingdoms, and the Ngayogyakarta Palace Mask that was made during the era of Hamengkubuwono VII.&lt;br&gt; The head of Yogyakarta Culture Agency, Umat Priyono, expressed his appreciation to the organizers of the event with the hope that it would widen people&amp;rsquo;s understanding of the development of masks as a cultural product in Indonesia. &lt;br&gt; (Retrieved from http://www.thejakartapost.com/news/2015/11/21/hundreds-ancient-masks-displayed-yogyakarta.html)&lt;br&gt;&lt;br&gt; &amp;ldquo;In religious rituals, he said, masks were used as instruments to communicate with supernatural powers, while their shapes were &lt;span style=&quot;text-decoration: underline;&quot;&gt;adjusted&lt;/span&gt; to the traditions in each era.&amp;rdquo; (Paragraph 5)&lt;br&gt; The underlined word is closest in meaning to ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;shown&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;created&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;matched&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;promoted&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;classified&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+The government will announce a decrease in the prices of subsidized fuel after a Cabinet meeting held in the State Palace this afternoon, according to Energy and Mineral Resources Minister Sudirman Said.&lt;br&gt;&lt;br&gt;
+&quot;There will be a Cabinet meeting in the afternoon; [the cuts] will be announced later,&quot; Sudirman Said in Jakarta on Wednesday.&lt;br&gt;&lt;br&gt;
+He explained the new prices will take effect on Jan. 5 to give gas stations time to prepare, including by selling their current stocks.&lt;br&gt;&lt;br&gt;
+&quot;It needs a transition to avoid chaos. So perhaps the new prices will be effective on Jan. 5,&quot; he add.&lt;br&gt;&lt;br&gt;
+Currently, the price of subsidized premium gasoline outside of Java, Madura and Bali is Rp 7,300 (49 US cents) per liter, subsidized diesel is Rp 6,700 per liter and kerosene is Rp 2,500 per liter.&lt;br&gt;&lt;br&gt;
+Earlier, the director general of oil and gas, I Gusti Nyoman Wiratmadja Puja, said the government will cut the price of Premium by Rp 200 to Rp 300 per liter, while subsidized diesel will go down by more than Rp 500 in January 2016.&lt;br&gt;&lt;br&gt;
+Referring to Energy and Mineral Resources Ministerial Regulation No. 4/2015, the government evaluates fuel prices every three months based on the latest update of the benchmark price. &lt;br&gt;
+(Retrieved from http://www.thejakartapost.com/news/2015/12/23/government-announce-cut-price-subsidized-fuel-today.html)&lt;br&gt;&lt;br&gt;
+What is the current price of the subsidized premium gasoline outside of Java, Madura and Bali?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Rp 7,600&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 7,300&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 6,700&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 4,900&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rp 2,500&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+The government will announce a decrease in the prices of subsidized fuel after a Cabinet meeting held in the State Palace this afternoon, according to Energy and Mineral Resources Minister Sudirman Said.&lt;br&gt;&lt;br&gt;
+&quot;There will be a Cabinet meeting in the afternoon; [the cuts] will be announced later,&quot; Sudirman Said in Jakarta on Wednesday.&lt;br&gt;&lt;br&gt;
+He explained the new prices will take effect on Jan. 5 to give gas stations time to prepare, including by selling their current stocks.&lt;br&gt;&lt;br&gt;
+&quot;It needs a transition to avoid chaos. So perhaps the new prices will be effective on Jan. 5,&quot; he add.&lt;br&gt;&lt;br&gt;
+Currently, the price of subsidized premium gasoline outside of Java, Madura and Bali is Rp 7,300 (49 US cents) per liter, subsidized diesel is Rp 6,700 per liter and kerosene is Rp 2,500 per liter.&lt;br&gt;&lt;br&gt;
+Earlier, the director general of oil and gas, I Gusti Nyoman Wiratmadja Puja, said the government will cut the price of Premium by Rp 200 to Rp 300 per liter, while subsidized diesel will go down by more than Rp 500 in January 2016.&lt;br&gt;&lt;br&gt;
+Referring to Energy and Mineral Resources Ministerial Regulation No. 4/2015, the government evaluates fuel prices every three months based on the latest update of the benchmark price. &lt;br&gt;
+(Retrieved from http://www.thejakartapost.com/news/2015/12/23/government-announce-cut-price-subsidized-fuel-today.html)&lt;br&gt;&lt;br&gt;
+Why will the new prices be realized on January 5?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;To prevent disorder&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To wait for the decision&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To adjust the government rules&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To wait for the president&amp;rsquo;s decision&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;To agree to the parliament&amp;rsquo;s proposal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+The government will announce a decrease in the prices of subsidized fuel after a Cabinet meeting held in the State Palace this afternoon, according to Energy and Mineral Resources Minister Sudirman Said.&lt;br&gt;&lt;br&gt;
+&quot;There will be a Cabinet meeting in the afternoon; [the cuts] will be announced later,&quot; Sudirman Said in Jakarta on Wednesday.&lt;br&gt;&lt;br&gt;
+He explained the new prices will take effect on Jan. 5 to give gas stations time to prepare, including by selling their current stocks.&lt;br&gt;&lt;br&gt;
+&quot;It needs a transition to avoid chaos. So perhaps the new prices will be effective on Jan. 5,&quot; he add.&lt;br&gt;&lt;br&gt;
+Currently, the price of subsidized premium gasoline outside of Java, Madura and Bali is Rp 7,300 (49 US cents) per liter, subsidized diesel is Rp 6,700 per liter and kerosene is Rp 2,500 per liter.&lt;br&gt;&lt;br&gt;
+Earlier, the director general of oil and gas, I Gusti Nyoman Wiratmadja Puja, said the government will cut the price of Premium by Rp 200 to Rp 300 per liter, while subsidized diesel will go down by more than Rp 500 in January 2016.&lt;br&gt;&lt;br&gt;
+Referring to Energy and Mineral Resources Ministerial Regulation No. 4/2015, the government evaluates fuel prices every three months based on the latest update of the benchmark price. &lt;br&gt;
+(Retrieved from http://www.thejakartapost.com/news/2015/12/23/government-announce-cut-price-subsidized-fuel-today.html)&lt;br&gt;&lt;br&gt;
+It implies that every three months of fuels will ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;change&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;decline&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;increase&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;be stable&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;be stagnant&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+The early 1600s saw the beginning of a great tide of emigration from Europe to North America. Spanning more than three centuries, this movement grew from a trickle of a few hundred English colonists to a flood of millions of newcomers. Impelled by powerful and diverse motivations, they built a new civilization on the northern part of the continent. &lt;br&gt;&lt;br&gt;
+The first English immigrants to what is now the United States crossed the Atlantic long after thriving Spanish colonies had been established in Mexico, the West Indies and South America. Like all early travelers to the New World, they came in small, overcrowded ships. During their six- to 12-week voyages, they lived on meager rations. Many died of disease; ships were often battered by storms and some were lost at sea. &lt;br&gt;&lt;br&gt;
+Most European emigrants left their homelands to escape political oppression, to seek the freedom to practice their religion, or for adventure and opportunities denied them at home. Between 1620 and 1635, economic difficulties swept England. Many people could not find work. Even skilled artisans could earn little more than a bare living. Poor crop yields added to the distress. In addition, the Industrial Revolution had created a burgeoning textile industry, which demanded an ever-increasing supply of wool to keep the looms running. Landlords enclosed farmlands and evicted the peasants in favor of sheep cultivation. Colonial expansion became an outlet for this displaced peasant population.&lt;br&gt;
+(Retrieved from http://www.let.rug.nl/usa/outlines/history-1994/early-america/early-settlements.php)&lt;br&gt;&lt;br&gt;
+What was the minimum period for the European immigrants to travel to North America?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;6 weeks&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;7 weeks&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;8 weeks&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;10 weeks&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;12 weeks&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+The early 1600s saw the beginning of a great tide of emigration from Europe to North America. Spanning more than three centuries, this movement grew from a trickle of a few hundred English colonists to a flood of millions of newcomers. Impelled by powerful and diverse motivations, they built a new civilization on the northern part of the continent. &lt;br&gt;&lt;br&gt;
+The first English immigrants to what is now the United States crossed the Atlantic long after thriving Spanish colonies had been established in Mexico, the West Indies and South America. Like all early travelers to the New World, they came in small, overcrowded ships. During their six- to 12-week voyages, they lived on meager rations. Many died of disease; ships were often battered by storms and some were lost at sea. &lt;br&gt;&lt;br&gt;
+Most European emigrants left their homelands to escape political oppression, to seek the freedom to practice their religion, or for adventure and opportunities denied them at home. Between 1620 and 1635, economic difficulties swept England. Many people could not find work. Even skilled artisans could earn little more than a bare living. Poor crop yields added to the distress. In addition, the Industrial Revolution had created a burgeoning textile industry, which demanded an ever-increasing supply of wool to keep the looms running. Landlords enclosed farmlands and evicted the peasants in favor of sheep cultivation. Colonial expansion became an outlet for this displaced peasant population.&lt;br&gt;
+(Retrieved from http://www.let.rug.nl/usa/outlines/history-1994/early-america/early-settlements.php)&lt;br&gt;&lt;br&gt;
+What is the main idea of paragraph 3?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Industrial Revolution&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Freedom of religion practices&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Economic difficulties sweeping England&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The political oppression of European rulers&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The reason of travelling to the North America&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+The early 1600s saw the beginning of a great tide of emigration from Europe to North America. Spanning more than three centuries, this movement grew from a trickle of a few hundred English colonists to a flood of millions of newcomers. Impelled by powerful and diverse motivations, they built a new civilization on the northern part of the continent. &lt;br&gt;&lt;br&gt;
+The first English immigrants to what is now the United States crossed the Atlantic long after thriving Spanish colonies had been established in Mexico, the West Indies and South America. Like all early travelers to the New World, they came in small, overcrowded ships. During their six- to 12-week voyages, they lived on meager rations. Many died of disease; ships were often battered by storms and some were lost at sea. &lt;br&gt;&lt;br&gt;
+Most European emigrants left their homelands to escape political oppression, to seek the freedom to practice their religion, or for adventure and opportunities denied them at home. Between 1620 and 1635, economic difficulties swept England. Many people could not find work. Even skilled artisans could earn little more than a bare living. Poor crop yields added to the distress. In addition, the Industrial Revolution had created a burgeoning textile industry, which demanded an ever-increasing supply of wool to keep the looms running. Landlords enclosed farmlands and evicted the peasants in favor of sheep cultivation. Colonial expansion became an outlet for this displaced peasant population.&lt;br&gt;
+(Retrieved from http://www.let.rug.nl/usa/outlines/history-1994/early-america/early-settlements.php)&lt;br&gt;&lt;br&gt;
+Why did peasants travel to the New World?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;They liked adventure.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They were given free farmlands.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They earned little more than a bare living.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They could not do their religion practices.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Their lands were converted to sheep cultivation.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+Cheating is the getting of a reward for ability or finding an easy way out of an unpleasant situation by dishonest means. It is generally used for the breaking of rules to gain unfair advantage in a competitive situation. This broad definition will necessarily include acts of bribery, cronyism, sleaze, nepotism and any situation where individuals are given preference using inappropriate criteria. The rules infringed may be explicit, or they may be from an unwritten code of conduct based on morality, ethics or custom, making the identification of cheating conduct a potentially subjective process. Cheating can refer specifically to marital infidelity. Someone who is known for cheating is referred to as a cheat in British English, and a cheater in American English. A person described as a &quot;cheat&quot; doesn't necessarily cheat all the time, but rather, relies on unfair tactics to the point of acquiring a reputation for it. &lt;br&gt;&lt;br&gt;
+Academic cheating is a significantly common occurrence in high schools and colleges in the United States. Statistically, 70% of public high school students admit to serious test cheating. 60% say they have plagiarized papers. Only 50% of private school students, however, admit to this. The report was made in June 2005 by Rutgers University professor Donald McCabe for The Center for Academic Integrity. The findings were corroborated in part by a Gallup survey. In McCabe's 2001 of 4500 high school students, &quot;74% said they cheated on a test, 72% cheated on a written work, and 97% reported to at least had copied someone's homework or peeked at someone's test. 1/3 reported to have repeatedly cheated.&quot; https://en.wikipedia.org/wiki/Cheating - cite_note-3 The new revolution in high-tech digital info contributes enormously to the new wave in cheating: online term-paper mills sell formatted reports on practically any topic; services exist to prepare any kind of homework or take online tests for students, despite the fact that this phenomenon, and these websites, are well known to educators, https://en.wikipedia.org/wiki/Cheating - cite_note-4and camera phones are used to send pictures of tests; MP3 players can hold digitalized notes; graphing calculators store formulas to solve math problems.&lt;br&gt;
+(Retrieved from https://en.wikipedia.org/wiki/Cheating)&lt;br&gt;&lt;br&gt;
+What is the percentage of high school students who have plagiarized papers?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;50%&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;60%&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;70%&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;72%&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;74%&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+Cheating is the getting of a reward for ability or finding an easy way out of an unpleasant situation by dishonest means. It is generally used for the breaking of rules to gain unfair advantage in a competitive situation. This broad definition will necessarily include acts of bribery, cronyism, sleaze, nepotism and any situation where individuals are given preference using inappropriate criteria. The rules infringed may be explicit, or they may be from an unwritten code of conduct based on morality, ethics or custom, making the identification of cheating conduct a potentially subjective process. Cheating can refer specifically to marital infidelity. Someone who is known for cheating is referred to as a cheat in British English, and a cheater in American English. A person described as a &quot;cheat&quot; doesn't necessarily cheat all the time, but rather, relies on unfair tactics to the point of acquiring a reputation for it. &lt;br&gt;&lt;br&gt;
+Academic cheating is a significantly common occurrence in high schools and colleges in the United States. Statistically, 70% of public high school students admit to serious test cheating. 60% say they have plagiarized papers. Only 50% of private school students, however, admit to this. The report was made in June 2005 by Rutgers University professor Donald McCabe for The Center for Academic Integrity. The findings were corroborated in part by a Gallup survey. In McCabe's 2001 of 4500 high school students, &quot;74% said they cheated on a test, 72% cheated on a written work, and 97% reported to at least had copied someone's homework or peeked at someone's test. 1/3 reported to have repeatedly cheated.&quot; https://en.wikipedia.org/wiki/Cheating - cite_note-3 The new revolution in high-tech digital info contributes enormously to the new wave in cheating: online term-paper mills sell formatted reports on practically any topic; services exist to prepare any kind of homework or take online tests for students, despite the fact that this phenomenon, and these websites, are well known to educators, https://en.wikipedia.org/wiki/Cheating - cite_note-4and camera phones are used to send pictures of tests; MP3 players can hold digitalized notes; graphing calculators store formulas to solve math problems.&lt;br&gt;
+(Retrieved from https://en.wikipedia.org/wiki/Cheating)&lt;br&gt;&lt;br&gt;
+What is considered to be a cheat?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;One who commits bribery&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;One who performs nepotism&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;One who cheats on a written work&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;One who always cheats all the time&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;One who relies on unfair tactics to get a reputation&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+Cheating is the getting of a reward for ability or finding an easy way out of an unpleasant situation by dishonest means. It is generally used for the breaking of rules to gain unfair advantage in a competitive situation. This broad definition will necessarily include acts of bribery, cronyism, sleaze, nepotism and any situation where individuals are given preference using inappropriate criteria. The rules infringed may be explicit, or they may be from an unwritten code of conduct based on morality, ethics or custom, making the identification of cheating conduct a potentially subjective process. Cheating can refer specifically to marital infidelity. Someone who is known for cheating is referred to as a cheat in British English, and a cheater in American English. A person described as a &quot;cheat&quot; doesn't necessarily cheat all the time, but rather, relies on unfair tactics to the point of acquiring a reputation for it. &lt;br&gt;&lt;br&gt;
+Academic cheating is a significantly common occurrence in high schools and colleges in the United States. Statistically, 70% of public high school students admit to serious test cheating. 60% say they have plagiarized papers. Only 50% of private school students, however, admit to this. The report was made in June 2005 by Rutgers University professor Donald McCabe for The Center for Academic Integrity. The findings were corroborated in part by a Gallup survey. In McCabe's 2001 of 4500 high school students, &quot;74% said they cheated on a test, 72% cheated on a written work, and 97% reported to at least had copied someone's homework or peeked at someone's test. 1/3 reported to have repeatedly cheated.&quot; https://en.wikipedia.org/wiki/Cheating - cite_note-3 The new revolution in high-tech digital info contributes enormously to the new wave in cheating: online term-paper mills sell formatted reports on practically any topic; services exist to prepare any kind of homework or take online tests for students, despite the fact that this phenomenon, and these websites, are well known to educators, https://en.wikipedia.org/wiki/Cheating - cite_note-4and camera phones are used to send pictures of tests; MP3 players can hold digitalized notes; graphing calculators store formulas to solve math problems.&lt;br&gt;
+(Retrieved from https://en.wikipedia.org/wiki/Cheating)&lt;br&gt;&lt;br&gt;
+What does paragraph 2 mainly inform?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Devices used for cheatings&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Students who perform plagiarism&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Students whose habit are cheating&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The occurrence of cheating in high schools&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The research done by professor Donald McCabe&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt; Ecommerce has become so popular and profitable. This article tells about some advantages of online shopping that attract both shoppers and online shop owners. &lt;br&gt;&lt;br&gt; The vast majority of online stores offer prices that are much lower than what you will find at a physical store. There are a few reasons for this. The first is because many people use the Internet to find cheaper items. Online business owners understand this. They will usually reduce their profit margin to get more customers.&lt;br&gt;&lt;br&gt; Another reason is because you can easily browse through dozens of different websites to find the best price. You can do the same at a mall, but it would take about an hour or longer. You also may not be taxed because most ecommerce stores won&amp;rsquo;t tax you unless they are stationed in your state.&lt;br&gt;&lt;br&gt; The other advantage of shopping online is convenient. You don&amp;rsquo;t need to get dressed and drive to your favorite store. You can easily visit their website, find the product you want and buy it without getting out of your pajamas. It&amp;rsquo;s also convenient because you don&amp;rsquo;t need to wait for the store to open.&lt;br&gt;&lt;br&gt; These three above reasons makes online shopping get higher in demand. It is common sense for buyers to have better prices, convenience, and variety while shopping. The shoppers obtain these privileges at online shopping.&lt;br&gt; (Adapted from http://quartsoft.com/blog/201303/top-online-shopping-benefits)&lt;br&gt;&lt;br&gt; In terms of convenience, what can the buyers do while shopping at online stores?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;They may not be taxed.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They can wear pajamas.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They get cheaper prices.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They can browse different websites.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They can choose variety of products.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+Ecommerce has become so popular and profitable. This article tells about some advantages of online shopping that attract both shoppers and online shop owners. &lt;br&gt;&lt;br&gt;
+The vast majority of online stores offer prices that are much lower than what you will find at a physical store. There are a few reasons for this. The first is because many people use the Internet to find cheaper items. Online business owners understand this. They will usually reduce their profit margin to get more customers.&lt;br&gt;&lt;br&gt;
+Another reason is because you can easily browse through dozens of different websites to find the best price. You can do the same at a mall, but it would take about an hour or longer. You also may not be taxed because most ecommerce stores won&amp;rsquo;t tax you unless they are stationed in your state.&lt;br&gt;&lt;br&gt;
+The other advantage of shopping online is convenient. You don&amp;rsquo;t need to get dressed and drive to your favorite store. You can easily visit their website, find the product you want and buy it without getting out of your pajamas. It&amp;rsquo;s also convenient because you don&amp;rsquo;t need to wait for the store to open.&lt;br&gt;&lt;br&gt;
+These three above reasons makes online shopping get higher in demand. It is common sense for buyers to have better prices, convenience, and variety while shopping. The shoppers  obtain these privileges at online shopping.&lt;br&gt;
+(Adapted from http://quartsoft.com/blog/201303/top-online-shopping-benefits)&lt;br&gt;&lt;br&gt;
+How can prices at ecommerce stores be lower?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Profit margin is reduced.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;There are a lot of buyers.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Buyers do not have to drive.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ecommerce stores do not employ workers.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Online stores at the state do not tax the buyers.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt; Ecommerce has become so popular and profitable. This article tells about some advantages of online shopping that attract both shoppers and online shop owners. &lt;br&gt;&lt;br&gt; The vast majority of online stores offer prices that are much lower than what you will find at a physical store. There are a few reasons for this. The first is because many people use the Internet to find cheaper items. Online business owners understand this. They will usually reduce their profit margin to get more customers.&lt;br&gt;&lt;br&gt; Another reason is because you can easily browse through dozens of different websites to find the best price. You can do the same at a mall, but it would take about an hour or longer. You also may not be taxed because most ecommerce stores won&amp;rsquo;t tax you unless they are stationed in your state.&lt;br&gt;&lt;br&gt; The other advantage of shopping online is convenient. You don&amp;rsquo;t need to get dressed and drive to your favorite store. You can easily visit their website, find the product you want and buy it without getting out of your pajamas. It&amp;rsquo;s also convenient because you don&amp;rsquo;t need to wait for the store to open.&lt;br&gt;&lt;br&gt; These three above reasons makes online shopping get higher in demand. It is common sense for buyers to have better prices, convenience, and variety while shopping. The shoppers obtain these privileges at online shopping.&lt;br&gt; (Adapted from http://quartsoft.com/blog/201303/top-online-shopping-benefits)&lt;br&gt;&lt;br&gt; &amp;ldquo;Ecommerce has become so popular and &lt;span style=&quot;text-decoration: underline;&quot;&gt;profitable&lt;/span&gt;.&amp;rdquo; (Paragraph 1)&lt;br&gt; What is the closest meaning of the underlined word?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;advantageous&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;convenient&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;interesting&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;famous&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kind&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt; An estimated 26 million animals are used every year in the United States for scientific and commercial testing. Animals are used to develop medical treatments, determine the toxicity of medications, check the safety of products destined for human use, and other biomedical, commercial, and health care uses. Research on living animals has been practiced since at least 500 BC.&lt;br&gt;&lt;br&gt; Proponents of animal testing say that it has enabled the development of numerous life-saving treatments for both humans and animals, that there is no alternative method for researching a complete living organism, and that strict regulations prevent the mistreatment of animals in laboratories.&lt;br&gt;&lt;br&gt; Opponents of animal testing say that it is cruel and inhumane to experiment on animals, that alternative methods available to researchers can replace animal testing, and that animals are so different from human beings that research on animals often yields irrelevant results.&lt;br&gt;&lt;br&gt; We are in the position that animals may be used for research as long as it is strictly regulated. Strict regulation prevents researchers to perform inhumane treatment on animals.&lt;br&gt; (Adapted from http://animal-testing.procon.org/)&lt;br&gt;&lt;br&gt; How often are 26 million animals used in the United States for scientific and commercial testing?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Every week&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Every month&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Every year&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Every century&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Every other year&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+An estimated 26 million animals are used every year in the United States for scientific and commercial testing. Animals are used to develop medical treatments, determine the toxicity of medications, check the safety of products destined for human use, and other biomedical, commercial, and health care uses. Research on living animals has been practiced since at least 500 BC.&lt;br&gt;&lt;br&gt;
+Proponents of animal testing say that it has enabled the development of numerous life-saving treatments for both humans and animals, that there is no alternative method for researching a complete living organism, and that strict regulations prevent the mistreatment of animals in laboratories.&lt;br&gt;&lt;br&gt;
+Opponents of animal testing say that it is cruel and inhumane to experiment on animals, that alternative methods available to researchers can replace animal testing, and that animals are so different from human beings that research on animals often yields irrelevant results.&lt;br&gt;&lt;br&gt;
+We are in the position that animals may be used for research as long as it is strictly regulated. Strict regulation prevents researchers to perform inhumane treatment on animals.&lt;br&gt;
+(Adapted from http://animal-testing.procon.org/)&lt;br&gt;&lt;br&gt;
+Why do people use animals for scientific and commercial testing?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Animals are easy to find for testing.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Animals are quite affordable for testing.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Animals and human are exactly the same in organism.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;People are free to use animals for scientific and commercial testing&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;There is no other method for researching a complete living organism.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt; An estimated 26 million animals are used every year in the United States for scientific and commercial testing. Animals are used to develop medical treatments, determine the toxicity of medications, check the safety of products destined for human use, and other biomedical, commercial, and health care uses. Research on living animals has been practiced since at least 500 BC.&lt;br&gt;&lt;br&gt; Proponents of animal testing say that it has enabled the development of numerous life-saving treatments for both humans and animals, that there is no alternative method for researching a complete living organism, and that strict regulations prevent the mistreatment of animals in laboratories.&lt;br&gt;&lt;br&gt; Opponents of animal testing say that it is cruel and inhumane to experiment on animals, that alternative methods available to researchers can replace animal testing, and that animals are so different from human beings that research on animals often yields irrelevant results.&lt;br&gt;&lt;br&gt; We are in the position that animals may be used for research as long as it is strictly regulated. Strict regulation prevents researchers to perform inhumane treatment on animals.&lt;br&gt; (Adapted from http://animal-testing.procon.org/)&lt;br&gt;&lt;br&gt; &amp;ldquo;Opponents of animal testing say that it is &lt;span style=&quot;text-decoration: underline;&quot;&gt;cruel&lt;/span&gt; and inhumane to experiment on animals ...&amp;rdquo; (Paragraph 3)&lt;br&gt; What is the closest meaning of the underlined word?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;messy&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pitiless&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;arrogant&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;boastful&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;offensive&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+Squirrels are generally small animals, ranging in size from the African pygmy squirrel at 7&amp;ndash;10 cm (2.8&amp;ndash;3.9 in) in length and just 10 g (0.35 oz) in weight, to the Alpine marmot, which is 53&amp;ndash;73 cm (21&amp;ndash;29 in) long and weighs from 5 to 8 kg (11 to 18 lb). Squirrels typically have slender bodies with bushy tails and large eyes. In general, their fur is soft and silky, although much thicker in some species than others. The color of squirrels is highly variable between&amp;mdash;and often even within&amp;mdash;species. &lt;br&gt;&lt;br&gt;
+In general, the hind limbs are longer than the fore limbs, and they have four or five toes on each paw. Their paws include an often poorly developed thumb, and have soft pads on the undersides.[6] Unlike most mammals, Tree squirrels can descend a tree head-first. They do so by rotating their ankles 180 degrees so the hind paws are backward-pointing and can grip the tree bark. &lt;br&gt;&lt;br&gt;
+Squirrels live in almost every habitat from tropical rainforest to semiarid desert, avoiding only the high polar regions and the driest of deserts. They are predominantly herbivorous, subsisting on seeds and nuts, but many will eat insects and even small vertebrates. &lt;br&gt;&lt;br&gt;
+As their large eyes indicate, in general squirrels have an excellent sense of vision, which is especially important for tree-dwelling species. They also have very versatile and sturdy claws for grasping and climbing. Many also have a good sense of touch, with vibrissae on their heads and limbs.&lt;br&gt;
+(Retrieved from https://en.wikipedia.org/wiki/Squirrel)&lt;br&gt;&lt;br&gt;
+What is the maximum length of African pygmy squirrel?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;5 cm&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;7 cm&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;8 cm&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;10 cm&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;18 cm&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+Squirrels are generally small animals, ranging in size from the African pygmy squirrel at 7&amp;ndash;10 cm (2.8&amp;ndash;3.9 in) in length and just 10 g (0.35 oz) in weight, to the Alpine marmot, which is 53&amp;ndash;73 cm (21&amp;ndash;29 in) long and weighs from 5 to 8 kg (11 to 18 lb). Squirrels typically have slender bodies with bushy tails and large eyes. In general, their fur is soft and silky, although much thicker in some species than others. The color of squirrels is highly variable between&amp;mdash;and often even within&amp;mdash;species. &lt;br&gt;&lt;br&gt;
+In general, the hind limbs are longer than the fore limbs, and they have four or five toes on each paw. Their paws include an often poorly developed thumb, and have soft pads on the undersides.[6] Unlike most mammals, Tree squirrels can descend a tree head-first. They do so by rotating their ankles 180 degrees so the hind paws are backward-pointing and can grip the tree bark. &lt;br&gt;&lt;br&gt;
+Squirrels live in almost every habitat from tropical rainforest to semiarid desert, avoiding only the high polar regions and the driest of deserts. They are predominantly herbivorous, subsisting on seeds and nuts, but many will eat insects and even small vertebrates. &lt;br&gt;&lt;br&gt;
+As their large eyes indicate, in general squirrels have an excellent sense of vision, which is especially important for tree-dwelling species. They also have very versatile and sturdy claws for grasping and climbing. Many also have a good sense of touch, with vibrissae on their heads and limbs.&lt;br&gt;
+(Retrieved from https://en.wikipedia.org/wiki/Squirrel)&lt;br&gt;&lt;br&gt;
+What does the third paragraph mainly tell about squirrels?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Their magnificent sight&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Their habitat and food&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Their physical appearance&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Their behavior and food&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The specialty of squirrels&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for question.&lt;br&gt;
+Squirrels are generally small animals, ranging in size from the African pygmy squirrel at 7&amp;ndash;10 cm (2.8&amp;ndash;3.9 in) in length and just 10 g (0.35 oz) in weight, to the Alpine marmot, which is 53&amp;ndash;73 cm (21&amp;ndash;29 in) long and weighs from 5 to 8 kg (11 to 18 lb). Squirrels typically have slender bodies with bushy tails and large eyes. In general, their fur is soft and silky, although much thicker in some species than others. The color of squirrels is highly variable between&amp;mdash;and often even within&amp;mdash;species. &lt;br&gt;&lt;br&gt;
+In general, the hind limbs are longer than the fore limbs, and they have four or five toes on each paw. Their paws include an often poorly developed thumb, and have soft pads on the undersides.[6] Unlike most mammals, Tree squirrels can descend a tree head-first. They do so by rotating their ankles 180 degrees so the hind paws are backward-pointing and can grip the tree bark. &lt;br&gt;&lt;br&gt;
+Squirrels live in almost every habitat from tropical rainforest to semiarid desert, avoiding only the high polar regions and the driest of deserts. They are predominantly herbivorous, subsisting on seeds and nuts, but many will eat insects and even small vertebrates. &lt;br&gt;&lt;br&gt;
+As their large eyes indicate, in general squirrels have an excellent sense of vision, which is especially important for tree-dwelling species. They also have very versatile and sturdy claws for grasping and climbing. Many also have a good sense of touch, with vibrissae on their heads and limbs.&lt;br&gt;
+(Retrieved from https://en.wikipedia.org/wiki/Squirrel)&lt;br&gt;&lt;br&gt;
+How can Tree squirrels  descend a tree head-first?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;They live on tree.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They rotate their ankles.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Their paws are so strong.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Their paws are very sharp.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Their paws can grip the tree bark.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Arrange these sentences into the correct and a meaningful paragraph!&lt;br&gt;
+1.	As soon as his invention was complete, he tested it by calling a rival scientist to announce his success. &lt;br&gt;
+2.	The first real mobile telephone call was made in 1973 by Dr Martin Cooper.&lt;br&gt;
+3.	Within a decade, mobile phones became available to the public. &lt;br&gt;
+4.	The streets of modern cities began to feature sharp-suited characters shouting into giant plastic bricks. &lt;br&gt;
+5.	Then the giant plastic bricks of the 80s had evolved into smooth little objects that fitted nicely into pockets and bags.&lt;br&gt;
+6.	In the mid-90s, cheaper handsets and cheaper calling rates made everyone had a mobile phone.&lt;br&gt;&lt;br&gt;
+The correct arrangement of the sentences is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;2 &amp;ndash; 1 &amp;ndash; 3 &amp;ndash; 4 &amp;ndash; 5 &amp;ndash; 6&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2 &amp;ndash; 1 &amp;ndash; 3 &amp;ndash; 4 &amp;ndash; 6 &amp;ndash; 5&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2 &amp;ndash; 1 &amp;ndash; 3 &amp;ndash; 5 &amp;ndash; 4 &amp;ndash; 6&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2 &amp;ndash; 1 &amp;ndash; 4 &amp;ndash; 3 &amp;ndash; 6 &amp;ndash; 5&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2 &amp;ndash; 1 &amp;ndash; 4 &amp;ndash; 6 &amp;ndash; 5 &amp;ndash; 3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Arrange these sentences into the correct and a meaningful paragraph!&lt;br&gt;
+1.	Highlight the word/phrase/sentence that you want to be linked.&lt;br&gt;
+2.	Right-click and find &amp;ldquo;Hyperlink&amp;rdquo;, then click it.&lt;br&gt;
+3.	Select the file you want to link.&lt;br&gt;
+4.	Put the file in the same folder with your power point file&lt;br&gt;
+5.	Then an underline appears on the word/phrase/sentence that you want to be linked,&lt;br&gt;
+6.	Find the file you want to link, then highlight it, and click &amp;ldquo;OK&amp;rdquo;.&lt;br&gt;&lt;br&gt;
+The correct arrangement of the sentences is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;3 &amp;ndash; 4 &amp;ndash; 1 &amp;ndash; 2 &amp;ndash; 6 &amp;ndash; 5&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3 &amp;ndash; 4 &amp;ndash; 1 &amp;ndash; 5 &amp;ndash; 2 &amp;ndash; 6&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3 &amp;ndash; 4 &amp;ndash; 1 &amp;ndash; 5 &amp;ndash; 6 &amp;ndash; 2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3 &amp;ndash; 4 &amp;ndash; 1 &amp;ndash; 6 &amp;ndash; 2 &amp;ndash; 5&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3 &amp;ndash; 5 &amp;ndash; 1 &amp;ndash; 6 &amp;ndash; 4 &amp;ndash; 2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;For question, complete the text with the correct words provided!&lt;br&gt;
+The history of the tank began in World War I, when armoured all-terrain fighting vehicles were first deployed as a response to the problems of trench warfare, ushering in a new era of mechanized warfare. Though initially crude and unreliable, tanks eventually (48) ... a mainstay of ground armies. By World War II, tank design had advanced (49) ... , and tanks were used in quantity in all land theatres of the war. The Cold War saw the rise of modern tank doctrine and the rise of the general-purpose (50)  ...  battle tank. The tank still provides the backbone to land combat operations in the 21st century.&lt;br&gt;&lt;br&gt;
+Word to fill number 48 is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;become&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;became&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;becomes&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;will become&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;is becoming&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;For question, complete the text with the correct words provided!&lt;br&gt;
+The history of the tank began in World War I, when armoured all-terrain fighting vehicles were first deployed as a response to the problems of trench warfare, ushering in a new era of mechanized warfare. Though initially crude and unreliable, tanks eventually (48) ... a mainstay of ground armies. By World War II, tank design had advanced (49) ... , and tanks were used in quantity in all land theatres of the war. The Cold War saw the rise of modern tank doctrine and the rise of the general-purpose (50)  ...  battle tank. The tank still provides the backbone to land combat operations in the 21st century.&lt;br&gt;&lt;br&gt;
+Word to fill number 48 is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Signify&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Signifying&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Significant&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Significance&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;significantly&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;For question, complete the text with the correct words provided!&lt;br&gt;
+The history of the tank began in World War I, when armoured all-terrain fighting vehicles were first deployed as a response to the problems of trench warfare, ushering in a new era of mechanized warfare. Though initially crude and unreliable, tanks eventually (48) ... a mainstay of ground armies. By World War II, tank design had advanced (49) ... , and tanks were used in quantity in all land theatres of the war. The Cold War saw the rise of modern tank doctrine and the rise of the general-purpose (50)  ...  battle tank. The tank still provides the backbone to land combat operations in the 21st century.&lt;br&gt;&lt;br&gt;
+Word to fill number 48 is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;interesting&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;general&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;main&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;expensive&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;protective&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

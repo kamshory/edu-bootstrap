@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html manifest1="chemEditor.manifest1">
+<head>
+	<meta charset="UTF-8">
+	<title>Molecule Editor</title>
+	<script src="libs/raphael-min.2.0.1.js"></script>
+	<script src="libs/kekule/kekule.js?modules=chemWidget,algorithm"></script>
+	<link rel="stylesheet" type="text/css" href="libs/kekule/themes/default/kekule.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		var chemEditor;
+		var chemComposer		
+		function init()
+		{
+			var elem = document.getElementById('chemComposer');
+			var chemEditor = new Kekule.Editor.ChemSpaceEditor(document, null, Kekule.Render.RendererType.R2D);
+			chemComposer = new Kekule.Editor.Composer(elem, chemEditor);
+			adjustSize();
+			window.onresize = adjustSize;
+		}
+		function adjustSize()
+		{
+			var dim = Kekule.HtmlElementUtils.getViewportDimension(document);
+			chemComposer.setWidth(dim.width - 24 + 'px').setHeight(dim.height - 80 + 'px');
+		}
+		Kekule.X.domReady(init);
+		function trimCanvas(t){var l,a,e,n=t.getContext("2d"),o=document.createElement("canvas").getContext("2d"),g=n.getImageData(0,0,t.width,t.height),h=g.data.length,i={top:null,left:null,right:null,bottom:null};for(l=0;l<h;l+=4)0!==g.data[l+3]&&(a=l/4%t.width,e=~~(l/4/t.width),null===i.top&&(i.top=e),null===i.left?i.left=a:a<i.left&&(i.left=a),null===i.right?i.right=a:i.right<a&&(i.right=a),null===i.bottom?i.bottom=e:i.bottom<e&&(i.bottom=e));var u,m=i.bottom-i.top,r=i.right-i.left;return u=0==r||0==m||null==i.left||null==i.top?n.getImageData(0,0,1,1):n.getImageData(i.left,i.top,r,m),o.canvas.width=r,o.canvas.height=m,o.putImageData(u,0,0),o.canvas}
+		function exportImage()
+		{
+			var parentNode = document.getElementsByClassName("objContextParentElem")[0];
+			var canvas = parentNode.getElementsByTagName('canvas')[0];
+			var canvas2 = trimCanvas(canvas);
+			window.open(canvas2.toDataURL());
+		}
+		
+	</script>
+    <style type="text/css">
+	body{
+		margin:0;
+		padding:0;
+	}
+	select{
+	padding: 4px;
+	border: 1px solid #DDDDDD;
+	box-sizing: border-box;
+	margin:0;
+	}
+	input[type="text"], textarea{
+		padding: 4px;
+		border: 1px solid #DDDDDD;
+		box-sizing: border-box;
+		margin:0;
+	}
+	.K-Dialog .K-Widget.K-Toolbar
+	{
+		margin:4px 0;
+	}
+	body{
+		position:relative;
+	}
+	.all{
+		width:100%;
+		height:calc(100vh - 80px);
+		padding:10px;
+		box-sizing:border-box;
+		position:relative;
+	}
+	.chemComposer{
+		width:100%;
+		height:calc(100vh - 100px);
+	}
+	</style>
+</head>
+<body onload="init()">
+	<div class="all">
+        <div id="chemComposer"></div>
+    </div>
+</body>
+</html>

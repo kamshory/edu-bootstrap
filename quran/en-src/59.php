@@ -1,0 +1,27 @@
+<?php 
+switch($verse){
+case 1:{?>All that is in the heavens and all that is in the earth glorifieth Allah, and He is the Mighty, the Wise.<?php break;}
+case 2:{?>He it is Who hath caused those of the People of the Scripture who disbelieved to go forth from their homes unto the first exile. Ye deemed not that they would go forth, while they deemed that their strongholds would protect them from Allah. But Allah reached them from a place whereof they reckoned not, and cast terror in their hearts so that they ruined their houses with their own hands and the hands of the believers. So learn a lesson, O ye who have eyes!<?php break;}
+case 3:{?>And if Allah had not decreed migration for them, He verily would have punished them in this world, and theirs in the Hereafter is the punishment of the Fire.<?php break;}
+case 4:{?>That is because they were opposed to Allah and His messenger; and whoso is opposed to Allah, ( for him ) verily Allah is stern in reprisal.<?php break;}
+case 5:{?>Whatsoever palm trees ye cut down or left standing on their roots, it was by Allah ' s leave, in order that He might confound the evil livers.<?php break;}
+case 6:{?>And that which Allah gave as spoil unto His messenger from them, ye urged not any horse or riding camel for the sake thereof, but Allah giveth His messenger lordship over whom He will. Allah is Able to do all things.<?php break;}
+case 7:{?>That which Allah giveth as spoil unto His messenger from the people of the townships, it is for Allah and His messenger and for the near of kin and the orphans and the needy and the wayfarer, that it become not a commodity between the rich among you. And whatsoever the messenger giveth you, take it. And whatsoever he forbiddeth, abstain ( from it ). And keep your duty to Allah. Lo! Allah is stern in reprisal.<?php break;}
+case 8:{?>And ( it is ) for the poor fugitives who have been driven out from their homes and their belongings, who seek bounty from Allah and help Allah and His messenger. They are the loyal.<?php break;}
+case 9:{?>Those who entered the city and the faith before them love these who flee unto them for refuge, and find in their breasts no need for that which hath been given them, but prefer ( the fugitives ) above themselves though poverty become their lot. And whoso is saved from his own avarice such are they who are successful.<?php break;}
+case 10:{?>And those who came ( into the faith ) after them say : Our Lord Forgive us and our brethren who were before us in the faith, and place not in our hearts any rancor toward those who believe. Our Lord! Thou art Full of Pity, Merciful.<?php break;}
+case 11:{?>Hast thou not observed those who are hypocrites, ( how ) they tell their brethren who disbelieve among the People of the Scripture : If ye are driven out, we surely will go out with you, and we will never obey anyone against you, and if ye are attacked we verily will help you. And Allah beareth witness that they verily are liars.<?php break;}
+case 12:{?>( For ) indeed if they are driven out they go not out with them, and indeed if they are attacked they help not, and indeed if they had helped them they would have turned and fled, and then they would not have been victorious.<?php break;}
+case 13:{?>Ye are more awful as a fear in their bosoms than Allah. That is because they are a folk who understand not.<?php break;}
+case 14:{?>They will not fight against you in a body save in fortified villages or from behind walls. Their adversity among themselves is very great. Ye think of them as a whole whereas their hearts are divers. That is because they are a folk who have no sense.<?php break;}
+case 15:{?>On the likeness of those ( who suffered ) a short time before them, they taste the ill effects of their conduct, and theirs is painful punishment.<?php break;}
+case 16:{?>( And the hypocrites are ) on the likeness of the devil when he telleth man to disbelieve, then, when be disbelieveth saith : Lo! I am quit of thee. Lo! I fear Allah, the Lord of the Worlds.<?php break;}
+case 17:{?>And the consequence for both will be that they are in the Fire, therein abiding. Such is the reward of evil doers.<?php break;}
+case 18:{?>O ye who believe! Observe your duty to Allah. And let every soul look to that which it sendeth on before for the morrow. And observe your duty to Allah! Lo! Allah is informed of what ye do.<?php break;}
+case 19:{?>And be not ye as those who forgot Allah, therefore He caused them to forget their souls. Such are the evil doers.<?php break;}
+case 20:{?>Not equal are the owners of the Fire and the owners of the Garden. The owners of the Garden, they are the victorious.<?php break;}
+case 21:{?>If We had caused this Quran to descend upon a mountain, thou ( O Muhammad ) verily hadst seen it humbled, rent asunder by the fear of Allah. Such similitudes coin We for mankind that haply they may reflect.<?php break;}
+case 22:{?>He is Allah, than whom there is no other God, the Knower of the invisible and the visible. He is the Beneficent, the Merciful.<?php break;}
+case 23:{?>He is Allah, than whom there is no other God, the Sovereign Lord the Holy One, Peace, the Keeper of Faith, the Guardian, the Majestic, the Compeller, the Superb. Glorified be Allah from all that they ascribe as partner ( unto Him ).<?php break;}
+case 24:{?>He is Allah, the Creator, the Shaper out of naught, the Fashioner. His are the most beautiful names. All that is in the heavens and the earth glorifieth Him, and He is the Mighty, the Wise.<?php break;}
+}?>

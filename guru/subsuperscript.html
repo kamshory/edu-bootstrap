@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Subscript &amp; Superscript</title>
+</head>
+<script type="text/javascript" src="../lib.assets/script/jquery/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../lib.assets/theme/default/css/test-editor.min.css">
+<style type="text/css">
+body{
+	margin:0;
+	padding:0;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	background-color:#FBFBFB;
+}
+.main-content{
+	padding:10px 10px 10px 10px;
+	background-color:#FFFFFF;
+}
+.latex-input{
+	width:100%;
+	box-sizing:border-box;
+	height:120px;
+	padding:10px;
+	font-size:16px;
+	font-family:"Times New Roman", Times, serif;
+	font-variant:"Serif";
+	border:1px solid #DDDDDD;
+	resize:none;
+}
+.output-area{
+	padding:10px;
+	border:1px solid #DDDDDD;
+	background-color:#FFFFFF;
+	height:120px;
+	box-sizing:border-box;
+	overflow:auto;
+}
+.label{
+	padding:2px 0;
+}
+.file-dialog-control{
+	text-align:right;
+	padding-left:10px;
+	padding-right:10px;
+}
+</style>
+<script type="text/javascript">
+var charmap = [
+	['&#8304;',     '&#8304;',  true,'superscript zero'],
+	['&#185;',     '&#185;',  true,'superscript one'],
+	['&#178;',     '&#178;',  true,'superscript two'],
+	['&#179;',     '&#179;',  true,'superscript three'],
+	['&#8308;',     '&#8308;',  true,'superscript four'],
+	['&#8309;',     '&#8309;',  true,'superscript five'],
+	['&#8310;',     '&#8310;',  true,'superscript six'],
+	['&#8311;',     '&#8311;',  true,'superscript seven'],
+	['&#8312;',     '&#8312;',  true,'superscript eight'],
+	['&#8313;',     '&#8313;',  true,'superscript nine'],
+	['&#8314;',     '&#8314;',  true,'superscript plus'],
+	['&#8315;',     '&#8315;',  true,'superscript minus'],
+	['&#8316;',     '&#8316;',  true,'superscript equal'],
+	['&#8317;',     '&#8317;',  true,'superscript left parenthesis'],
+	['&#8318;',     '&#8318;',  true,'superscript right parenthesis'],
+	['&#8305;',     '&#8305;',  true,'superscript i'],
+	['&#8319;',     '&#8319;',  true,'superscript n'],
+	
+	['&#8320;',     '&#8320;',  true,'subscript zero'],
+	['&#8321;',     '&#8321;',  true,'subscript one'],
+	['&#8322;',     '&#8322;',  true,'subscript two'],
+	['&#8323;',     '&#8323;',  true,'subscript three'],
+	['&#8324;',     '&#8324;',  true,'subscript four'],
+	['&#8325;',     '&#8325;',  true,'subscript five'],
+	['&#8326;',     '&#8326;',  true,'subscript six'],
+	['&#8327;',     '&#8327;',  true,'subscript seven'],
+	['&#8328;',     '&#8328;',  true,'subscript eight'],
+	['&#8329;',     '&#8329;',  true,'subscript nine'],
+	['&#8330;',     '&#8330;',  true,'subscript plus'],
+	['&#8331;',     '&#8331;',  true,'subscript minus'],
+	['&#8332;',     '&#8332;',  true,'subscript equal'],
+	['&#8333;',     '&#8333;',  true,'subscript left parenthesis'],
+	['&#8334;',     '&#8334;',  true,'subscript right parenthesis'],
+	['&#7522;',     '&#7522;',  true,'subscript i'],
+	['&#8336;',     '&#8336;',  true,'subscript a'],
+	['&#8337;',     '&#8337;',  true,'subscript e'],
+	['&#8338;',     '&#8338;',  true,'subscript o'],
+	['&#7523;',     '&#7523;',  true,'subscript r'],
+
+	['&#7524;',     '&#7524;',  true,'subscript u'],
+	['&#7525;',     '&#7525;',  true,'subscript v'],
+	['&#8339;',     '&#8339;',  true,'subscript x'],
+	['&#7526;',     '&#7526;',  true,'subscript beta'],
+	['&#7527;',     '&#7527;',  true,'subscript gamma'],
+	['&#7528;',     '&#7528;',  true,'subscript rho'],
+	['&#7529;',     '&#7529;',  true,'subscript phi'],
+	['&#7530;',     '&#7530;',  true,'subscript chi']
+	
+];
+function renderCharMapHTML() {
+	var charsPerRow = 17, tdWidth=20, tdHeight=20, i;
+	var html = '<div id="charmapgroup" aria-labelledby="charmap_label" tabindex="0" role="listbox">'+
+	'<table role="presentation" border="0" cellspacing="1" cellpadding="0" width="' + (tdWidth*charsPerRow) + 
+	'"><tr height="' + tdHeight + '">';
+	var cols=-1;
+
+	for (i=0; i<charmap.length; i++) 
+	{
+		var previewCharFn;
+
+		if (charmap[i][2]==true) {
+			cols++;
+			previewCharFn = 'previewChar(\'' + charmap[i][1].substring(1,charmap[i][1].length) + '\',\'' + charmap[i][0].substring(1,charmap[i][0].length) + '\',\'' + charmap[i][3] + '\');';
+			html += ''
+				+ '<td class="charmap">'
+				+ '<a class="charmaplink" role="button" onmouseover="'+previewCharFn+'" onfocus="'+previewCharFn+'" href="javascript:void(0)" onclick="insertChar(\'' + charmap[i][1].substring(2,charmap[i][1].length-1) + '\');" onclick="return false;" onmousedown="return false;" title="' + charmap[i][3] + ' '+'">'
+				+ charmap[i][1]
+				+ '</a></td>';
+			if ((cols+1) % charsPerRow == 0)
+				html += '</tr><tr height="' + tdHeight + '">';
+		}
+	 }
+
+	if (cols % charsPerRow > 0) {
+		var padd = charsPerRow - (cols % charsPerRow);
+		for (var i=0; i<padd-1; i++)
+			html += '<td width="' + tdWidth + '" height="' + tdHeight + '" class="charmap">&nbsp;</td>';
+	}
+
+	html += '</tr></table></div>';
+	html = html.replace(/<tr height="20"><\/tr>/g, '');
+
+	return html;
+}
+
+function insertChar(chr) {
+	window.parent.insertEquation(String.fromCharCode(chr));
+}
+
+function previewChar(codeA, codeB, codeN) {
+	var elmA = document.getElementById('codeA');
+	var elmB = document.getElementById('codeB');
+	var elmV = document.getElementById('codeV');
+	var elmN = document.getElementById('codeN');
+
+	if (codeA=='#160;') {
+		elmV.innerHTML = '__';
+	} else {
+		elmV.innerHTML = '&' + codeA;
+	}
+
+	elmB.innerHTML = '&amp;' + codeA;
+	elmA.innerHTML = '&amp;' + codeB;
+	elmN.innerHTML = codeN;
+}
+
+window.onload = function(e)
+{
+	$('#charmapView').append(renderCharMapHTML());
+}
+
+function insertSymbol(symbol)
+{
+	window.parent.insertEquation(symbol);
+}
+</script>
+    <style type="text/css">
+	#charmapView table{
+	}
+	#charmapView table a{
+		display:block;
+		border:1px solid #DDDDDD;
+		color:#555555;
+		text-decoration:none;
+		padding:4px 4px;
+		text-align:center;
+		width:16px;
+	}
+	#codeN{
+		border:1px solid #DDDDDD;
+		text-align:center;
+	}
+	#codeV{
+		border:1px solid #DDDDDD;
+		border-bottom:none;
+		text-align:center;
+	}
+	</style>
+
+</head>
+<body>
+<form action="#">
+    <div class="main-content">
+
+<table align="center" border="0" cellspacing="0" cellpadding="2" role="presentation">
+	<tr>
+		<td id="charmapView" rowspan="2" align="left" valign="top">
+			<!-- Chars will be rendered here -->
+		</td>
+		<td width="100" align="center" valign="top">
+			<table border="0" cellpadding="0" cellspacing="0" width="100" style="height:100px" role="presentation">
+				<tr>
+					<td id="codeV">&nbsp;</td>
+				</tr>
+				<tr>
+					<td id="codeN">&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td valign="bottom" style="padding-bottom: 3px;">
+			<table width="100" align="center" border="0" cellpadding="2" cellspacing="0" role="presentation">
+				<tr>
+					<td align="center" style="border-left: 1px solid #DDDDDD; border-top: 1px solid #DDDDDD; border-right: 1px solid #DDDDDD;"><label for="codeA">HTML-Code</label></td>
+				</tr>
+				<tr>
+					<td style="font-size: 15px; font-weight: bold; border-left: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; border-right: 1px solid #DDDDDD;" id="codeA" align="center">&nbsp;</td>
+				</tr>
+				<tr>
+					<td style="font-size: 1px;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center" style="border-left: 1px solid #DDDDDD; border-top: 1px solid #DDDDDD; border-right: 1px solid #DDDDDD;"><label for="codeB">NUM-Code</label></td>
+				</tr>
+				<tr>
+					<td style="font-size: 15px; font-weight: bold; border-left: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; border-right: 1px solid #DDDDDD;" id="codeB" align="center">&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	
+</table>
+    </div>
+    <div class="button-area file-dialog-control">
+        <input name="cancel" type="button" id="cancel" class="com-button" value="Batalkan" onclick="window.parent.closeEquationDialog()">
+    </div>
+</form>
+</body>
+</html>

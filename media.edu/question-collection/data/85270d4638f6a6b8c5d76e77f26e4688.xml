@@ -1,0 +1,4252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Orang lain di lingkungan masyarakat sangat berpengaruh terhadap perilaku individu, sebab tindakan individu ditujukan untuk mendapatkan tanggapan orang lain sehingga tercipta hubungan aksi &amp;acirc;&amp;#128;&amp;#147; reaksi. Konsep dasar sosiologi yang mendasari hubungan interaksi sosial tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;struktur sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mobilitas sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tindakan sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hubungan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;komunikasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pembangunan nasional ditujukan untuk meningkatkan kesejahteraan masyarakat. Untuk itu para ahli sosiologi dapat memberikan sumbangan pikiran dalam penyusunan program pembangunan agar tidak salah sasaran. Hal itu membuktikan, bahwa ilmu sosiologi berguna untuk ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pembinaan sumber ekonomi masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pembuatan rancangan pembangunan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penelitian kondisi ekonomi rakyat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pengembangan potensi masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;peningkatan karakter masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dalam forum lembaga pengadilan, banyak terjadi perdebatan sengit antara penasihat hukum terdakwa dengan jaksa penuntut umum. Sesuai aturan, masing-masing mengajukan argumen yang disertai bukti, data, dan saksi. Perdebatan tersebut termasuk interaksi sosial ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;positif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;negatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;disosiatif&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;asosiatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;interaktif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Karena ditulis dalam bahasa gaul (tidak baku), BOBI (samaran) mengalami kesulitan untuk memahami maksud surat dari temannya yang sedang tugas belajar di Jepang. Surat tidak dibalas karena BOBI tidak mengetahui maksud isi surat. Dalam contoh kasus tersebut, kegagalan hubungan interaksi dikarenakan tidak terpenuhi salah satu syaratnya, yaitu ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kontak sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;simbol sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;peranan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;identitas sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;komunikasi sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sejak sekolah dasar Sintana (nama samaran) sangat rajin membantu pekerjaan orang tua baik pekerjaan dalam menjaga kebersihan rumah dan lingkungannya maupun pekerjaan menggarap sawah dan kebun milik keluarga. Dalam keluarga sederhana yang hidup dari kegiatan bercocok tanam, Sintana tergolong anak yang menunjukkan peranan yang baik dalam bentuk ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menerima perhatian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menjalankan kewajiban&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mendapatkan penghasilan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menemukan lingkungan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengatur semua kegiatan keluarga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Hubungan sosial yang damai harmonis lebih mudah ditemui dalam masyarakat tradisional yang belum tersentuh modernisasi. Meskipun tidak ada aturan tertulis, masyarakat berperilaku baik dan harmonis. Jika terdapat warga yang berperilaku  menyimpang, warga lain atau tokoh setempat akan segera menegurnya. Perilaku sosial dalam masyarakat tersebut didasarkan ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;norma cara&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;norma adat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;norma mode&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;norma hukum&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;norma bersama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masyarakat melakukan sosialisasi terhadap generasi muda dengan memberikan keteladanan untuk bertindak santun dan membiasakan hidup taat aturan yang tertulis maupun tidak tertulis. Tujuan dari kegiatan sosialisasi tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;memberikan warisan budaya kepada individu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengendalikan individu yang menyimpang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membentuk karakter kepribadian individu&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menyediakan sarana belajar bagi individu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memenuhi kebutuhan hidup individu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sering terjadi kasus penipuan dengan dalih kerjasama modal usaha dengan sistem bagi hasil. Biasanya, masyarakat yang menjadi korban melaporkan pelaku penipuan kepada aparat hukum untuk mendapatkan penyelesaian. Tindak penipuan tergolong perilaku menyimpang sekunder karena ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;individu dan kelompok mengalami perubahan perilaku&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lingkungan sosial mempunyai keteraturan hidup bersama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pelaku menyimpang dari norma sosial yang menjadi tradisi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;masyarakat tidak mentolerir dengan memberikan sanksi sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;nilai dan norma sosial menjadi pedoman arah dan cara berperilaku&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masyarakat Indonesia mempunyai kekayaan budaya (multikultur) terkait dengan banyaknya kelompok suku bangsa di Nusantara. Disamping itu, dilihat dari banyaknya agama, masyarakat Indonesia terdiri dari berbagai kelompok umat beragama yang berbeda. Keanekaragaman kelompok suku dan agama melatarbelakangi terjadinya ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;diferensiasi sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perubahan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;organisasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mobilitas sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lembaga sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Beberapa ciri sosial dalam masyarakat:&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Beberapa pejabat negara terlibat tindak korupsi tingkat tinggi. Karena melakukan kejahatan yang termasuk luar biasa, mereka diproses secara hukum dan dikenakan sanksi hukuman berat (dipecat dengan tidak hormat). Dalam contoh kasus tersebut, mereka mengalami mobilitas sosial dalam bentuk ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;perubahan dari lingkungan miskin ke lingkungan kaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pergeseran dari gaya hidup mewah menjadi sederhana&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;peningkatan dari keluarga biasa menjadi istimewa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perpindahan dari pegawai daerah menjadi ibu kota&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penurunan dari pejabat menjadi nara pidana&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Meskipun hanya pegawai rendah, Surajin menjadi karyawan perusahaan yang dikagumi karena rajin dan jujur. Setelah berkarir hampir 33 tahun, Surajin diberi kepercayaan menjadi kepala gudang perusahaan.  Dalam contoh kasus tersebut, saluran mobilitas sosial yang digunakan adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;lembaga kemasyarakatan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;institusi pendidikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;organisasi ekonomi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perkumpulan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;partai politik baru&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Konflik sosial dalam bentuk sengketa antara para pendukung kandidat pemimpin daerah seringkali muncul pasca pemilukada. Perseteruan antara kelompok yang menang berhadapan dengan kelompok yang kalah perlu ditangani dengan baik agar tidak merusak integrasi sosial. Langkah awal dalam penanganan konflik tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;melakukan kerjasama rutin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mendorong proses akomodasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membuat rencana kerja bersama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menghilangkan perbedaan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengutamakan kepentingan bersama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sebagai anak yang berperilaku baik, Suro (samaran) sangat patuh kepada orang tua dan guru, serta santun dalam pergaulan dalam kelompok sebaya. Namun, setelah kuliah satu tahun, Suro justru menunjukkan regres, ia berubah menjadi anak muda ugal &amp;acirc;&amp;#128;&amp;#147; ugalan karena sering begadang bersama orang &amp;acirc;&amp;#128;&amp;#147; orang jalanan. Pada kasus tersebut, penyebab munculnya penyimpangan perilaku sosial adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;sosialisasi sub &amp;acirc;&amp;#128;&amp;#147; budaya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cara pengawasan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pemberian sanksi positif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penyerapan unsur budaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pembentukan kepribadian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perbedaan jenis suku dan budayanya dapat mengakibatkan diferensiasi sosial. Keragaman kelompok suku dalam suatu komunitas seringkali menjadi masalah yang mengganggu hubungan sosial antar kelompok dan menghambat proses menuju integrasi. Hal itu menunjukkan adanya pengaruh struktur sosial majemuk dalam bentuk ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;berkurangnya kemandirian individu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;meningkatnya solidaritas kelompok&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berkembangnya interaksi asosiatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bertambahnya jumlah kelompok&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;munculnya kesetiaan primordial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pesta demokrasi dalam bentuk Pemilukada (pemilihan kepala daerah) dapat menyebabkan terjadinya perubahan sosial. Pemimpin yang sudah berakhir masa baktinya digantikan oleh pemimpin baru. Kenyataan tersebut menunjukkan, bahwa mobilitas sosial vertikal dapat menyebabkan terjadinya ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;konflik sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;struktur sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pelapisan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;diferensiasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;konsolidasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dalam praktiknya, pembangunan nasional belum berhasil menyejahterakan seluruh rakyat, artinya masih terdapat kelompok masyarakat yang hidup miskin, sementara itu sebagian lain sudah lebih makmur dan kaya. Kesenjangan sosial ekonomi tersebut berpengaruh terhadap kehidupan masyarakat dalam bentuk ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;munculnya keresahan sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;banyaknya partai peserta pemilu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bertambahnya semangat kedaerahan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;meningkatnya kerusakan lingkungan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berkembangnya politik sektaran/aliran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Konflik atau sengketa di beberapa daerah yang dipicu oleh perbedaan faktor SARA (suku, agama, ras, dan golongan sosial) relatif sulit didamaikan. Berdasarkan pengalaman terbukti bahwa konflik SARA memerlukan waktu lama untuk penyelesaiannya karena terkait dengan masalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;tradisi/budaya masyarakat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;jumlah penduduk miskin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dampak bagi masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sumber kekayaan alam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;batas dan luas wilayah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sesuai dengan konstitusi, setiap kelompok suku bangsa berhak untuk mengembangkan kebudayaannya masing-masing. Dengan latar belakang fanatisme suku, setiap kelompok mempunyai kesetiaan primordial yang dapat memicu konflik horizontal. Oleh sebab itu diperlukan sikap mental yang menjadi syarat utama dalam memecahkan masalah sentimen kesukuan tersebut, yaitu ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pemahaman terhadap nilai norma budaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kesadaran tentang perbedaan status sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perilaku yang toleran dalam bermasyarakat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;keterbukaan dalam sistem komunikasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kerjasama dalam membangun ekonomi modern&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penyelesaian masalah pencemaran nama baik tokoh politik memerlukan proses panjang. Pihak tergugat dan penggugat terlibat konflik adu pendapat melalui masing-masing pembela atau penasihat hukum. Setelah berkali &amp;acirc;&amp;#128;&amp;#147; kali sidang, lembaga pengadilan menetapkan keputusan penyelesaian. Dalam kasus tersebut, penyelesaian konflik dilakukan oleh ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;lembaga formal&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lembaga mediasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lembaga arbitrasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lembaga informal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lembaga nonformal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dalam tinjauan sosiologis, masyarakat Indonesia sering mengalami kesulitan dalam membangun konsensus nasional, memiliki potensi konflik horizontal, dan integrasi yang terjadi didasarkan paksaan ataupun ketergantungan secara ekonomi. Deskripsi tersebut menggambarkan ciri &amp;acirc;&amp;#128;&amp;#147; ciri sebagai ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;masyarakat majemuk&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kelompok struktural&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ideologi masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kebudayaan agraris&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;akibat penjajajahan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Setelah lebih dari delapan tahun bekerja di luar negeri, banyak tenaga kerja Indonesia berhasil mengubah taraf hidup keluarganya. Mereka pulang ke kampung halamannya dengan menampakkan perubahan cara berpikir dan kebiasaan baru yang lebih berorientasi produktif untuk kehidupan ke masa depannya. Terjadinya perubahan sosial tersebut disebabkan oleh faktor ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;adanya perbedaan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berpindahnya penduduk&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bertambahnya penduduk&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;terjadinya penemuan baru&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;masuknya unsur budaya luar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perkembangan ilmu pengetahuan dan teknologi sangat pesat dengan berbagai penemuan ilmiah. Sistem komunikasi pun tidak luput terjadi revolusi yang sangat berkembang pesat sehingga semua informasi di Negara lain dapat segera diperoleh dalam sesaat. Berdasarkan deskripsi tersebut dapat dijelaskan bahwa ciri globalisasi adalah &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;terjadi perubahan sosial yang bersifat progressif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;timbulnya ketidakstabilan perekonomian negara&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hilangnya batas antarnegara secara geografis&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berkembangnya tindak kriminal secara virtual&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menguatkan konflik antar kelompok masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masyarakat perumahan di pinggiran kota terdiri dari berbagai latar belakang suku bangsa, agama, dan jenis pekerjaan yang berbeda. Mereka secara bersama &amp;acirc;&amp;#128;&amp;#147; sama membantu tetangga yang sedang dalam kesulitan. Hal ini terjadi karena adanya hubungan yang mengikat antar kelompok yang berupa &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;tingkat pendidikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kemampuan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;jenis kepercayaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tempat tinggal&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tingkat ekonomi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masyarakat yang ada di Bali terdiri dari berbagai latar belakang suku bangsa, budaya, dan agama yang berbeda. Sebagai daerah wisata maka Bali menjadi tujuan utama para wisatawan domestic maupun manca Negara. Untuk mewujudkan masyarakat yang harmonis maka di Bali diupayakan &amp;acirc;&amp;#128;&amp;brvbar;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;tetap menjaga tradisi yang diwarisi oleh masyarakat Bali dengan upacara ritual&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;warga luar yang ada di Bali tidak melakukan aktivitas saat perayaan hari Raya Nyepi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mendirikan kelompok seni tradisi daerahnya agar dapat dikenal oleh masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membentuk kelompok yang mengkritisi pelaksanaan kegiatan ritual masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;terus melakukan hubungan yang erat antarsesama suku bangsa atau agama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perubahan sosial merupakan perubahan yang terjadi pada kehidupan masyarakat akibat dari berbagai faktor diantaranya akibat modernisasi bidang pendidikan. Perubahan tersebut dapat berdampak positif bagi masyarakat yang berarti membawa kemajuan bagi masyarakat. Dampak negative dari perubahan tersebut adalah &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;longgarnya nilai dan norma akibat perubahan pola pikir masyarakat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kemampuan kerja tinggi sehingga cenderung bersikap individual&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penggunaan uang virtual yang memudahkan tindak penipuan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;eksplorasi sumber daya alam yang merusak lingkungan hidup&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perubahan sistem pemilihan kepala daerah secara langsung&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Globalisasi sebagai perubahan yang berdifusi secara intensif ke seluruh negara di dunia. Perubahan ini diantaranya yaitu pada sektor perdagangan yang berorientasi mengambil keuntungan dengan memudahkan masyarakat memperoleh barang kebutuhan pokok. Pengaruh gejala globalisasi dalam sistem perdagangan yang mengancam tatanan ekonomi masyarakat tersebut yaitu &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menguatnya sentimen masyarakat akan perkembangan pasar tradisional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menjamurnya pasar swalayan modern di hampir setiap pelosok daerah&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mudahnya memperoleh barang mewah buatan luar negeri yang terkenal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;melemahnya nilai tukar rupiah terhadap berbagai jenis valuta asing&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berkembangnya perusahaan multinasional dalam bidang ekspor impor&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perbedaan ragam budaya pada masyarakat Indonesia sangat berpotensi untuk terjadi konflik. Setiap suku bangsa cenderung mempertahankan kebudayaan yang diwarisi secara turun temurun. Langkah yang bijak dalam mengatasi permasalahan tersebut yaitu &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;memperkuat budaya lokal karena dianggap sebagai sumber budaya nasional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membentuk kelompok &amp;acirc;&amp;#128;&amp;#147; kelompok pecinta dan pelestari kebudayaan lokal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mempertahankan nilai dan norma yang menjadi sumber kearifan lokal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;melarang pementasan seni budaya tradisional di luar daerahnya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengadakan pekan pagelaran budaya tradisional secara bergiliran&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masyarakat Indonesia sangat beragam latar belakang suku bangsa dan agama. Dalam kehidupan sosial sering kali sentimen primordial tadi menjadi warna dalam pembentukan kelompok. Namun untuk membentuk generasi muda yang kuat dalam integrasi nasional maka dapat dilakukan &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;perayaan hari besar agama bagi para pemeluknya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;upacara bendera untuk memperkuat nasionalisme&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mendirikan sekolah berciri kelompok tertentu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mempertahankan tradisi melalui kearifan lokal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membentuk kelompok sedaerah di perantauan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Arus globalisasi tidak dapat dicegah pada perubahan zaman saat ini. Keterbukaan ekonomi menyebabkan warga Negara asing dapat bersaing untuk bekerja di Indonesia. Hal ini menjadi permasalahan sosial dalam masyarakat. Untuk mengantisipasi hal tersebut maka perlu direncanakan untuk &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;membuat peraturan yang meminimalisasi penggunaan tenaga asing&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memperkuat kearifan lokal dengan menjunjung nilai dan norma&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membentuk komite nasional untuk perlindungan tenaga kerja&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membangun sektor pertanian agar mampu berswasembada pangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menyiapkan sumberdaya manusia yang cerdas melalui pendidikan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Suatu penelitian dengan topik mengenai pengaruh media pembelajaran tertentu terhadap hasil belajar siswa. Tujuan dari penelitiannya adalah untuk mengetahui apakah suatu teori belajar masih relevan dengan kondisi saat ini. Berdasarkan fungsinya, deskripsi tersebut menggambarkan penelitian &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;verifikatif&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;deskriptif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;eksplanatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;eksploratif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;evaluatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Siswa melaksanakan kegiatan penelitian sebagai tugas mata pelajaran sosiologi. Ia tertarik untuk mengetahui motivasi para pengojek bergabung dalam ojek online ibu kota. Mereka mewawancarai beberapa pengojek online untuk mengumpulkan data. Berdasarkan tempat data diperoleh, penelitian tersebut tergolong &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;terapan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lapangan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pustaka&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dasar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pengujian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kehidupan anak jalanan sangat menarik perhatian sosiolog. Ia kemudian memutuskan untuk meneliti dengan cara ikut hidup bersama anak jalanan tersebut agar lebih mudah mengamati dan mewawancarai dalam rangka pengumpulan data. Data yang diperoleh sosiolog sangat rinci dan mendalam dengan metode yang digunakannya. Berdasarkan deskripsi tersebut maka dapat disimpulkan bahwa penelitian dengan metode &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;eksperimen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;deskriptif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;survei&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kepustakaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;studi kasus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Peneliti tertarik dengan perilaku menyimpang sebagian anak yang senang menunjukkan kekerasan. Ia berencana melakukan penelitian eksplanatori tentang hal itu untuk mengetahui permasalahan yang terjadi pada anak. Penelitian tersebut berguna untuk &amp;acirc;&amp;#128;&amp;brvbar;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menjelaskan penyebab terjadinya kenakalan anak&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengevaluasi pelaksanaan program pendidikan anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mencari cara terbaik dalam memecahkan masalah anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;meramalkan kemungkinan terjadi perkembangan anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengukur tingkat kenakalan yang terjadi pada anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Seorang siswa ingin meneliti tentang perilaku teman-temannya dalam dalam belajar dengan menggunakan handphone. Ia merasa termotivasi dan berharap kerja penelitiannya akan segera dapat ia selesaikan. Hal ini sudah sesuai dengan syarat menentukan topik penelitian yang baik yaitu &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;bukan duplikat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mampu diteliti&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menarik minat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bermanfaat nyata&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berbiaya sedikit&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Siswa tertarik dengan topik tentang keluarga miskin yang anak-anaknya berprestasi di sekolah dan sukses hingga menjadi sarjana. Ia ingin mengetahui pengaruh dari cara mendidik orang tuanya terhadap kemandirian dalam belajar.  Rumusan  masalah  yang  sesuai  dengan  deskripsi  tersebut yaitu &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Bagaimana pengaruh cara mendidik orang tua dengan prestasi belajar anak?&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Apakah yang mempengaruhi kesuksesan prestasi belajar anak keluarga miskin?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Apakah hubungan antara cara mendidik orang tua terhadap prestasi belajar anak?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perlukah cara mendidik orang tua demi kesuksesan belajar anak-anaknya?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Siapakah yang berperan dalam mendidik anak sehingga dapat berprestasi belajar?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan pernyataan tentang data berikut!&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;data kualitatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;data kuantitatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;data primer&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;data sekunder&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;data eksternal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penelitian dimaksudkan untuk melihat pengaruh belajar kelompok terhadap hasil belajar mata pelajaran sosiologi pada siswa kelas X IPS di suatu SMA. Variabel bebas pada penelitian tersebut adalah &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;belajar kelompok&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pelajaran sosiologi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;prestasi belajar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;siswa kelas X&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;siswa SMA&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Populasi penelitian sangat banyak dan tersebar di seluruh wilayah. Dalam wilayah tersebut terdiri dari 11 kota atau kabupaten dan 60 kecamatan yang semuanya harus terwakili. Untuk memperoleh data yang valid maka teknik pengambilan sampel yang tepat digunakan adalah &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;area sampling&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;stratified sampling&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cluster sampling&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;accidental sampling&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;purposive sampling&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Peneliti melakukan pengumpulan data, mengorganisasikan, memilah-milah data, dan mensintesiskan untuk dapat diuraikan menjadi jawaban pada focus penelitian. Diperlukan kepekaan, kecerdikan, kreatifitas, pengalaman dan keahlian menjadi kunci dalam menganalisa data. Deskripsi tersebut menjelaskan proses analisis data secara &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kualitatif&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kuantitatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;eksploratif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kontinum&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;inferensial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Peneliti akan mengumpulkan data mengenai penggunaan pupuk terhadap peningkatan produksi padi. Ia menemukan data awal, bahwa sebagian besar petani berpendidikan rendah dan kurang pandai baca-tulis. Supaya dapat diperoleh data yang lengkap, dalam rencana pengumpulan data, peneliti tersebut harus menyiapkan &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pedoman wawancara&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pedoman kuesioner&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pedoman observasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kajian kepustakaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pedoman percobaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Peneliti ingin mengetahui tentang persepsi para pedagang kecil terhadap kebijakan pemerintah daerah yang akan melakukan relokasi. Sampel diambil dari berbagai macam pedagang dengan latar belakang suku, agama, dan pendidikan yang berbeda. Untuk mendapatkan data yang valid dan lengkap, maka pengumpulan data menggunakan teknik &amp;acirc;&amp;#128;&amp;brvbar;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;wawancara&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kuesioner&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dokumentasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pengamatan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;partisipasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan ciri teknik pengumpulan data berikut!&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kegiatan analisis data:&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;coding&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;validating&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;measuring&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tabulating&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;interpretating&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Data hasil jajak pendapat siswa tentang metode belajar sebagai berikut&lt;/p&gt;
+&lt;table border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;No&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Metode Belajar&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Jumlah Siswa&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;P&lt;/strong&gt;&lt;strong&gt;ersen&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot;&gt;
+&lt;p&gt;1&lt;/p&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;Ceramah&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;20&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;88&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;7&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; valign=&quot;top&quot; width=&quot;31&quot;&gt;
+&lt;p&gt;2&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;163&quot;&gt;
+&lt;p&gt;Diskusi&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;114&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;30&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;88&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;10&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; valign=&quot;top&quot; width=&quot;31&quot;&gt;
+&lt;p&gt;3&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;163&quot;&gt;
+&lt;p&gt;Studi Lapangan&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;114&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;160&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;88&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;53&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; valign=&quot;top&quot; width=&quot;31&quot;&gt;
+&lt;p&gt;4&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;163&quot;&gt;
+&lt;p&gt;Penugasan&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;114&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;40&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;88&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;13&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: right;&quot; valign=&quot;top&quot; width=&quot;31&quot;&gt;
+&lt;p&gt;5&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;163&quot;&gt;
+&lt;p&gt;Tutor Sebaya&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;114&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;50&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;88&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;17&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; valign=&quot;top&quot;&gt;
+&lt;p&gt;Jumlah&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;114&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;50&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;88&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;100&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;sebagian besar siswa menyukai metode tutor sebaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;siswa rata-rata menyukai menggunakan metode diskusi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;metode ceramah lebih disukai dari pada tutor sebaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;para siswa paling tidak menyukai metode penugasan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;metode studi lapangan paling disukai oleh para siswa&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bagian (Bab I) Pendahuluan dalam penulisan laporan hasil penelitian terdapat bagian perumusan masalah. Bagian itu bermanfaat untuk &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;memperoleh gambaran umum tentang prosedur penelitian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membatasi permasalahan yang akan diteliti agar lebih fokus&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menjelaskan teori-teori yang mendukung permasalahan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memberikan gambaran hasil penelitian secara sederhana&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memberikan wadah bagi peneliti untuk berpendapat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Setelah selesai melakukan penelitian, maka peneliti membuat laporan hasil penelitian. Laporan hasil penelitian ini digunakan untuk mengomunikasikan hasil penelitian secara ilmiah. Kegunaan hasil penelitian bagi masyarakat umum adalah &amp;acirc;&amp;#128;&amp;brvbar; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;bahan untuk memandu kegiatan masyarakat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;alat untuk memecahkan permasalahan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memperoleh informasi yang bersifat ilmiah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sebagai salah satu bahan bacaan populer&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;upaya untuk meredakan konflik sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dalam kehidupan sosial, perilaku manusia sangat dipengaruhi oleh kehadiran orang lain di sekitarnya. Nilai dan norma masyarakat setempat menjadi faktor yang memengaruhi dan memaksa individu untuk berperilaku baik, tidak boleh sesuka hatinya sendiri. Konsep dasar yang mendasari perilaku individu tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;fakta sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;peranan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tindakan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;identitas sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kedudukan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Rencana atau program pembangunan pusat reaktor nuklir untuk tenaga listrik  mendapatkan resistensi/penolakan dari masyarakat sekitar sehingga tidak dapat berjalan sesuai skedul jadwal. Terkait dengan penyelesaian permasalahan tersebut, para ahli ilmu sosiologi dapat memberikan sumbangan dalam bentuk...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;perencanaan anggaran pembangunan sarana sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penelitian mengenai penyebab masyarakat menolak&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pemberdayaan tenaga kerja dari lingkungan setempat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pemberian dana bantuan kepada keluarga prasejahtera&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pengumpulan sumber dana pembangunan masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Di arena lomba paduan suara, masing-masing kelompok peserta menunjukkan kemampuan maksimalnya agar berhasil mengalahkan kelompok lainnya. Di antara kelompok peserta terjalin hubungan sosial disosiatif dalam bentuk...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;konflik sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kooperasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kompetisi sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;disintegrasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kontravensi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Setelah mendengarkan dan melihat langsung gambar mengenai penderitaan warga masyarakat yang tertimpa musibah tanah longsor, para siswa merasa kasihan dan secara bersama-sama mengumpulkan dana bantuan untuk diberikan kepada para korban bencana. Tindakan para siswa tersebut dipengaruhi oleh faktor ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;empati sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;simpati sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sugesti sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;imitasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;motivasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Banyak pengusaha nasional yang sukses membangun perusahaan melalui usaha sungguh-sungguh dengan modal dan pengetahuan managemen yang baik. Mereka menjalankan usahanya sesuai ketentuan perusahaan yang berlaku. Kedudukan sebagai pengusaha tersebut merupakan achieved status karena ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;diperoleh melalui perjuangan/ikhtiar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;diterima sebagai tradisi yang baik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;disesuaikan dengan lingkungan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;diakui oleh komunitas industri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dijalankan berdasarkan aturan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Setiap orang berkepentingan untuk tunduk pada perintah dan menjauhi larangan berdasarkan norma yang berlaku di lingkungan sosialnya. Dalam setiap masyarakat terdapat banyak norma yang harus dipatuhi. Norma yang banyak tersebut dibedakan atas dasar faktor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;sanksi sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;toleransi sisial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;struktur sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dinamika sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;solidaritas sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Beberapa kegiatan dalam keluarga:&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sejumlah remaja putri berbusana unik-eksentrik dengan menampakkan keganjilan pola maupun warna. Namun demikian, tindakan beberapa remaja tersebut tidak ditanggapi serius oleh lingkungan sosialnya dan dianggap sebagai gejala biasa. Perilaku aneh beberapa remaja tersebut tergolong...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pantang perilaku/tabu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perilaku yang terkena sanksi/delik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perilaku menyimpang sekunder&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bentuk pemberian sanksi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penyimpangan primer&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Diferensiasi sosial masyarakat Indonesia berdasarkan agama merupakan pengelompokan penduduk menjadi banyak golongan agama yang meliputi kelompok umat Islam, Kristen, Katolik, Hindu, dan Budha. Diferensiasi sosial tersebut membentuk struktur sosial horizontal, artinya hubungan sosial antara kelompok umat yang berbeda agama didasari prinsip...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;keadilan sosial bagi masyarakat banyak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kesempatan mendapatkan penghidupan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kesamaan hak &amp;amp; kewajiban (derajat) sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kebebasan untuk menjalankan ajaran agama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kesesuaian dengan situasi dan kondisi masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kelompok arisan keluarga dan kerabat mempunyai hubungan sosial yang intim dengan ikatan batin yang kuat. Di antara para anggota terjalin hubungan personal dan saling mengenal secara detail termasuk hal-hal yang bersifat pribadi. Ditinjau dari sifat interaksinya, bentuk kelompok sosial tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;asosiasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;organisasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;paguyuban&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pertemanan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;patembayan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Banyak pekerja yang terpaksa beralih profesi setelah masa kontrak kerjanya habis. Sebagai akibat dari sistem off sourching (sistem kontrak), para pekerja sering berpindah atau beralih pekerjaan meskipun masih dalam tingkat penghasilan yang sama. Gejala sosial berganti jenis pekerjaan merupakan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;faktor mobilitas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tujuan mobilitas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mobilitas vertikal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mobilitas geografis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mobilitas horizontal&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Setelah memberanikan diri membuka usaha bengkel motor dan didorong dengan semangat berwirausaha yang tinggi, banyak wirausahawan kecil dapat berhasil dan sukses dalam bisnis. Saluran yang digunakan dalam meningkatkan status dalam mobilitas sosial tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;organisasi ekonomi di bidang wirausaha&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lingkungan sosial tempat sosialisasi individu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perkumpulan yang beranggotakan para pengusaha&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;keluarga yang memberi dorongan untuk hidup maju&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;keinginan untuk mengubah kondisi hidup yang sederhana&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perbedaan kepentingan politik antarindividu dan kelompok partai politik seringkali memicu terjadinya konflik sosial. Supaya tidak merusak proses menuju integrasi, konflik sosial harus segera ditangani.  Proses sosial untuk menyelesaikan konflik tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;asimilasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;adjudikasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;akulturasi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;akomodasi sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kontravensi sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Berdasarkan pengalaman di sekolah, beberapa siswa yang melakukan penyimpangan sosial disebabkan oleh lingkungan keluarga yang gagal dalam menjalankan fungsi sosialisasi. Dari contoh kasus tersebut dapat diketahui,  bahwa  sosialisasi  yang  tidak baik dapat menjadi penyebab terjadinya...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;perbedaan nilai dan norma yang berlaku&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pergeseran status atau kedudukan individu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pembedaan sosial berdasarkan ciri sosial budaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perubahan yang tidak sesuai dengan tujuan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kepribadian individu dengan perilaku menyimpang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dilihat dari visi dan misinya, beberapa organisasi atau partai politik peserta Pemilu (pemilihan umum) di Indonesia beraliran agama tertentu. Munculnya partai politik aliran tersebut dilatarbelakangi oleh adanya...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;perbedaan program kerja&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ikatan tradisi yang kuat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kepentingan nasional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kebebasan berserikat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ideologi nonformal&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Banyaknya produk impor tekstil ilegal berimbas pada  perekonomian  Indonesia. Akibatnya banyak industri konveksi dalam negeri gulung  tikar  dan melakukan  pemutusan hubungan kerja (PHK)  secara besar-besaran, sehingga memicu peningkatan jumlah pengangguran. Realitas sosial tersebut menunjukkan, bahwa PHK menyebabkan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;mobilitas vertikal turun&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mobilitas vertikal naik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mobilitas antargenerasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mobilitas intragenerasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mobilitas horizontal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kelompok sosial yang tidak mempunyai kesempatan kerja akan menjadi miskin. Dalam struktur sosial yang tidak adil, golongan kaya mempunyai kemudahan untuk hidup makmur, sementara golongan miskin mengalami kesulitan untuk mendapatkan penghidupan. Deskripsi tersebut menggambarkan permasalahan sosial dalam bentuk...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kemerosotan moral dalam masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kerusakan lingkungan tempat hidup&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kekurangan sumber kekayaan alam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kesenjangan sosial di masyarakat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;keterbatasan ekonomi keluarga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sebuah perkumpulan yang dibentuk atas dasar kesukuan atau keagamaan cenderung bersifat eksklusif dan khusus. Pada tingkat nasional, corak perkumpulan tersebut tidak sesuai dengan kondisi sosial majemuk dalam masyarakat modern, karena...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;memilih pengurus baru yang memiliki kompetensi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menolak kehadiran individu dari luar kelompok&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membedakan hak dan kewajiban anggota&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membatasi masa periode kepemimpinan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memberikan pelayanan secara khusus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masalah konflik antara Pemerintah Indonesia dengan kelompok GAM (Gerakan Aceh Merdeka) dapat diselesaikan dengan  melalui keputusan yang dibuat bersama setelah difasilitasi oleh pihak ketiga (negara Finlandia). Bentuk akomodasi untuk penyelesaian konflik tersebut dinamakan ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kompromi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;konsiliasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;negoisasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;konversi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mediasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Guru di sekolah mengharuskan anak didiknya masuk sekolah tepat waktu, belajar dengan sungguh-sungguh, dan berperilaku santun sesuai tata tertib sekolah. Apabila melanggar aturan yang ditetapkan, para siswanya diberi sanksi sosial. Terkait dengan pengendalian sosial, kedudukan guru dalam contoh tersebut sebagai...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;lembaga pengendalian sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sasaran pengendalian sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tujuan pengendalian sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;metode pngendalian sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;agen pengendalian sosial&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Beberapa gejala sosial geografis masyarakat Indonesia:&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dalam masyarakat yang sudah demokratis, secara periodik diselenggarakan acara pergantian pemimpin formal melalui sistem pemilu sesuai konstitusi. Setiap pergantian kepala pemerintahan diikuti dengan perubahan kebijakan berbagai bidang meskipun tetap dalam kerangka konstitusi. Pergantian pemimpin negara tersebut merupakan perubahan sosial dalam bentuk ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;evolusi nasional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;planned changes&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;reformasi politik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;revolusi nasional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;unplanned changes&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Begitu cepatnya, model kendaraan produk mutakhir dengan teknologi yang lebih canggih banyak dipasarkan di tengah-tengah masyarakat. Kecanggihan produk teknologi kendaraan memberi pengaruh terhadap perilaku masyarakat. Kenyataan tersebut menjelaskan, bahwa perubahan sosial dapat disebabkan oleh faktor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dinamika sosial &amp;amp; budaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penemuan atau pembaruan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sistem pendidikan yang tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hubungan sosial yang intensif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kemajuan ekonomi dan industri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Globalisasi menyebabkan perubahan sosial akibat perkembangan ekonomi dunia yang sangat pesat. Keterbukaan bidang ekonomi menyebabkan terjadi invasi tenaga asing untuk bersaing di negara kita. Berdasarkan deskripsi tersebut dapat dijelaskan bahwa ciri globalisasi adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;terjadi perubahan sosial yang bersifat regressif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;timbulnya kelemahan perekonomian masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hilangnya batas antarnegara secara geografis&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berkembangnya sentimen yang bersifat primordial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menguatnya konflik kepentingan antara pengusaha&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Di sekolah terdapat dewan guru terdiri dari berbagai latar belakang suku bangsa, agama, dan daerah asal. Namun mereka secara sinergis bertujuan untuk memajukan pendidikan di sekolah dengan memberikan layanan terbaik bagi peserta didik. Hal ini terjadi karena adanya hubungan yang mengikat antarmereka yang berupa ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;tingkat pendidikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;jenis pekerjaan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;jenis kepercayaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tempat tinggal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tingkat ekonomi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masyarakat Indonesia sangat beragam dalam agama dan kepercayaan. Perbedaan ini dapat menjadi potensi konflik jika tidak dikelola dengan bijak. Untuk mewujudkan masyarakat yang harmonis maka masyarakat melakukan ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;saling berkunjung saat merayakan hari besar agama bagi warga yang berbeda kepercayaan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pelestarian tradisi masyarakat yang masih menjunjung tinggi pemurnian budaya nenek moyang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pelaksanaan kegiatan ritual secara besar-besaran dalam rangka memperkuat kebuadayaan daerah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pembentukan kelompok yang fokus untuk mempertahankan nlai-nilai luhur masyarakat tradisional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kegiatan monopoli perekonomian bagi kelompok masyarakat tertentu untuk memperkuat dirinya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penemuan pupuk kimia buatan dapat menggantikan kebutuhan pupuk kandang bagi petani. Diyakini bahwa penggunaan pupuk ini dapat meningkatkan produksi  beras secara signifikan. Dampak negatif dari perubahan tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;mengendurnya sistem kerja masyarakat secara gotong royong&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kemampuan kerja tinggi sehingga cenderung bersikap individual&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pemanfaatan pupuk kimia buatan meningkatkan hasil panen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penggunaan yang berlebihan dapat merusak lingkungan hidup&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perubahan sistem waktu penanaman padi menjadi lebih pendek&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pengaruh globalisasi dalam media informasi sangat kuat untuk mengubah perilaku masyarakat. Berbagai tayangan westernisasi dapat dikonsumsi tanpa batas usia, wilayah dan waktu dan cenderung digandrungi oleh generasi muda. Pengaruh gejala globalisasi dalam perilaku generasi muda tersebut nampak dalam hal ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menguatnya sentimen terhadap nilai dan norma yang masih tradisional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kebebasan dalam berbusana dan melonggarnya etika pergaulan remaja&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mudahnya memperoleh barang konsumtif dari dalam dan luar negeri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;melemahnya rasa dan semangat nasionalisme akibat budaya asing&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berkembangnya penggunaan kendaraan bermotor dari negara asing&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perbedaan agama dan budaya menjadi kekayaan budaya nasional tetapi sekaligus menjadi ancaman terhadap integrasi bangsa. Bentuk kegiatan yang mampu menjadi langkah yang bijak dalam mengatasi permasalahan tersebut yaitu ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;memperkuat ciri khas daerah melalui penggunaan batik motif daerah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menanamkan rasa cinta terhadap kuliner yang beraroma tradisional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mempertahankan nilai dan norma yang menjadi sumber kearifan lokal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengajarkan budaya demokratis dalam pembelajaran di sekolah&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengadakan pekan pagelaran budaya tradisional agar tidak punah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Masyarakat Pinggiran kota sangat beragam latar belakang suku bangsa dan agama karena para pendatang. Dalam kehidupan sosial sering kali terjadi konflik yang tajam dengan adanya perbedaan tersebut. Cara yang dapat dilakukan untuk meningkatkan integrasi sosial pada masyarakat tersebut yaitu ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;perayaan hari besar agama secara bersama-sama oleh warga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perayaan HUT RI dengan berbagai lomba oleh seluruh warga&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mendirikan kelompok pengkajian agama tertentu pada warga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mempertahankan seni tradisional penduduk asli setempat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membentuk kegiatan yang fokus membantu kelompoknya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Globalisasi suka tidak suka akan terus mengubah tatanan sosial dalam masyarakat. Budaya modern cenderung mengeksploitasi alam dengan alasan demi kesejahteraan rakyat sehingga banyak hutan dan lahan yang rusak.  Untuk mengantisipasi hal tersebut maka perlu direncanakan untuk ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;membuat peraturan yang meminimalisasi penggunaan hutan industri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memperkuat kearifan lokal dengan menjunjung nilai dan norma tradisional&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membentuk kelompok yang gencar menyuarakan perlindungan alam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membangun sektor pertanian dengan menggunakan mekanisasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menyiapkan sumberdaya manusia yang terampil mengolah hasil hutan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Suatu penelitian ditujukan untuk mengetahui efektifitas ketercapaian program pengentasan kemiskinan. Peneliti mengumpulkan data dari mulai perencanaan hingga akhir pelaksanaan kegiatan program. Dari deskripsi tersebut menggambarkan penelitian yang berfungsi ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;verifikatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;deskriptif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;eksplanatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;eksploratif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;evaluative&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Siswa mengetahui tentang penggunaan waktu luang siswa untuk menunjang prestasi belajar. Ia melakukan wawancara terhadap beberapa teman yang dianggap dapat mewakili teman-temannya. Berdasarkan cara memperolehnya, penelitian tersebut yaitu ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;terapan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lapangan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pustaka&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dasar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;eksperimen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Peneliti tertarik dengan ujian nasional menggunakan Computer Based Test (CBT) yang dianggap menghilangkan bentuk kecurangan. kemudian ia mewawancarai beberapa siswa yang telah selesai ujian tentang tanggapannya mengenai CBT tersebut. Berdasarkan deskripsi tersebut maka dapa disimpulkan bahwa penelitian dengan metode ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;eksperimen&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;deskriptif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;survai&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kepustakaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;studi kasus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Peneliti tertarik dengan perilaku menyimpang sebagian anak yang senang menunjukkan kekerasan. Ia berencana melakukan pemulihan perilaku dengan cara mendongeng dan bermain peran. Cara seperti ini dapat digolongkan sebagai penelitian eksploratif. Penelitian tersebut berguna untuk ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menjelaskan penyebab terjadinya kenakalan anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengevaluasi pelaksanaan program pendidikan anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mencari cara terbaik dalam memecahkan masalah anak&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;meramalkan kemungkinan terjadi perkembangan anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengukur tingkat kenakalan yang terjadi pada anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Siswa akan meneliti pendapat teman-temannya berkaitan dengan larangan berkendaraan bermotor ke sekolah. Ia berpikir akan mudah melakukan penelitian karena yang diwawancara adalah teman sendiri. Hal ini sudah sesuai denga sarat topik penelitian yang baik yaitu ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;sangat bermanfaat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menarik minat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mampu diteliti&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tersedia data&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;waktu singkat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Guru BK ingin mengetahui efektifitas metode studi lapangan terhadap perubahan pola pikir siswa kelas 11. Hal ini dipercayai akan membawa perubahan pada siswa setelah ia melihat langsung kondisi masyarakat di pedesaan. Rumusan masalah yang sesuai dengan deskripsi tersebut yaitu ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Bagaimana pengaruh metode studi lapangan terhadap perubahan pola pikir siswa?&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Apakah yang mempengaruhi pola pikir siswa setelah belajar dengan metode studi lapangan?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Adakah hubungan antara pola pikir siswa dengan kehidupan masyarakat pedesaan?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perlukah dilakukan studi lapangan ke masyarakat pedesaan untuk mengubah pola pikir siswa?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bagaimana hubungan studi lapangan pada masyarakat pedesaan dan perubahan pola pikir siswa?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan pernyataan tentang data berikut!&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;internal&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kuantitatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;primer&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sekunder&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;eksternal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penelitian dengan judul &amp;acirc;&amp;#128;&amp;#156; Pengaruh Metode Tutor Sebaya Terhadap Hasil Belajar Mata Pelajaran Sosiologi Pada Siswa Kelas X IPS di SMA Fantasi. Variabel  terikat  pada  penelitian  tersebut  adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;metode tutor sebaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pelajaran sosiologi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;prestasi belajar siswa&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;siswa kelas X IPS&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;siswa SMA Fantasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Peneliti mengambil sampel yang cukup banyak dari populasi penelitian yang akan dilakukan. Populasi memiliki karakter yang cenderung homogen sehingga peneliti memberi peluang yang sama bagi individu untuk menjadi sampel. Cara pengambilan sambil seperti itu menggunakan teknik ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;area sampling&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;radom sampling&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;stratified sampling&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;accidental sampling&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;purposive sampling&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Peneliti melakukan penyebaran daftar pertanyaan yang harus diisi responden. Hasil jawaban responden kemudian dipilah, diberikan skor, diukur tingkat kepercayaan jawaban dan homogenitasnya. Kemudian peneliti melakukan pengukuran secara statistic untuk menghubungkan varibel yang ada sehingga dapat dijadikan dasar dalam mengambil kesimpulan. Proses tahapan analisis data seperti deskripsi tersebut adalah secara ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kualitatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kuantitatif&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;eksploratif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;verifikatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;prediktif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Peneliti tertarik dengan produktivitas suatu perusahaan yang tumbuh dengan pesat. Ia melihat hubungannya dengan tingkat pendidikan dan pelatihan pegawai yang dilakukan oleh perusahaan. Untuk memudahkan pengumpulan data karena keterbatasan waktu maka ia menyiapkan instrumen penelitian yang berupa ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pedoman wawancara&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pedoman kuesioner&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pedoman observasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kajian kepustakaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pedoman percobaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penelitian tentang kehidupan masyarakat tradisional pada zaman kolonial mendorong peneliti untuk memikirkan cara memperoleh data. Ia mencari sumber data yang memungkinkan dapat dijadikan rujukan. Peneliti dapat memperoleh data tersebut dengan menggunakan teknik ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;wawancara&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kuesioner&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dokumentasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pengamatan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;partisipasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan ciri teknik pengumpulan data berikut!&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan pernyataan berikut ini!&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;coding&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;validating&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;measuring&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tabulating&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;interpretating&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Data hasil jajak pendapat siswa tentang metode belajar&lt;/p&gt;
+&lt;table style=&quot;width: 355px; height: 226px;&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td width=&quot;28&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;No&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td width=&quot;113&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Metode Belajar&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td width=&quot;113&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;Jumlah Siswa&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td width=&quot;85&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;strong&gt;P&lt;/strong&gt;&lt;strong&gt;ersen&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;28&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;1&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;113&quot;&gt;
+&lt;p&gt;Ceramah&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;113&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;20&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;85&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;7&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;28&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;2&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;113&quot;&gt;
+&lt;p&gt;Diskusi&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;113&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;30&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;85&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;10&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;28&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;3&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;113&quot;&gt;
+&lt;p&gt;Studi Lapangan&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;113&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;160&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;85&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;53&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;28&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;4&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;113&quot;&gt;
+&lt;p&gt;Penugasan&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;113&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;40&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;85&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;13&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;28&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;5&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;113&quot;&gt;
+&lt;p&gt;Tutor Sebaya&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;113&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;50&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;85&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;17&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; valign=&quot;top&quot; width=&quot;28&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Jumlah&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;113&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;50&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;85&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;100&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;sebagian besar siswa menyukai metode tutor sebaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;siswa rata-rata menyukai menggunakan metode diskusi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;metode ceramah lebih disukai dari pada tutor sebaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;para siswa paling tidak menyukai metode penugasan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;metode studi lapangan paling disukai oleh para siswa&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pada bagian pokok penulisan laporan hasil penelitan terdapat bagian tentang bab metodologi penelitian. Kegunaan bagian tersebut untuk ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;memperoleh gambaran umum tentang prosedur penelitian&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membatasi permasalahan yang akan diteliti agar lebih fokus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menjelaskan teori-teori yang mendukung permasalahan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memberikan gambaran hasil penelitian secara sederhana&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memberikan wadah bagi peneliti untuk berpendapat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Setelah selesai melakukan penelitian, maka peneliti membuat laporan hasil penelitian. Laporan penelitian digunakan untuk mengomunikasikan hasil penelitian secara ilmiah. Bagi masyarakat umum, kegunaan atau manfaat hasil penelitian adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;bahan untuk memandu kegiatan masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;alat untuk memecahkan permasalahan sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memperoleh informasi yang bersifat ilmiah&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sebagai salah satu bahan bacaan populer&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;upaya untuk meredakan konflik sosial&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

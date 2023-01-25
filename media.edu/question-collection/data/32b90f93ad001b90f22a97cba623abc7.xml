@@ -1,0 +1,2336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan cermat!&lt;br&gt;&lt;br&gt;
+(1) Sektor pertanian merupakan sektor yang mempunyai peranan strategis dalam struktur pembangunan perekonomian nasional, tetapi tidak mendapatkan perhatian secara serius dari pemerintah dalam pembangunan bangsa. (2) Mulai dari proteksi, kredit hingga kebijakan lain tidak satu pun yang menguntungkan bagi sektor ini. (3) Program-program pembangunan pertanian yang tidak terarah tujuannya. (4) Bahkan sektor ini semakin menjerumuskan pada kehancuran. (5) Padahal sektor ini merupakan sektor yang sangat banyak menampung luapan tenaga kerja dan sebagian besar penduduk kita tergantung padanya.&lt;br&gt;&lt;br&gt;
+Kalimat utama paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+Pembangunan pertanian di Indonesia dianggap penting dari keseluruhan pembangunan nasional. Ada beberapa hal yang mendasari mengapa pembangunan pertanian di Indonesia mempunyai peranan penting, antara lain: potensi Sumber Daya Alam yang besar dan beragam, pangsa terhadap pendapatan nasional yang cukup besar, besarnya pangsa terhadap ekspor nasional, besarnya penduduk Indonesia yang menggantungkan hidupnya pada sektor ini, perannya dalam penyediaan pangan masyarakat dan menjadi basis pertumbuhan di pedesaan.&lt;br&gt;&lt;br&gt;
+Ide pokok paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;potensi Sumber Daya Alam yang besar dan beragam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;yang menggantungkan hidupnya pada sektor pertanian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;beberapa hal yang mendasari pembangunan pertanian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pentingnya peranan pembangunan pertanian di Indonesia&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pangsa terhadap pendapatan nasional yang cukup besar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+Pembangunan pertanian di Indonesia dianggap penting dari keseluruhan pembangunan nasional. Ada beberapa hal yang mendasari mengapa pembangunan pertanian di Indonesia mempunyai peranan penting, antara lain: potensi Sumber Daya Alam yang besar dan beragam, pangsa terhadap pendapatan nasional yang cukup besar, besarnya pangsa terhadap ekspor nasional, besarnya penduduk Indonesia yang menggantungkan hidupnya pada sektor ini, perannya dalam penyediaan pangan masyarakat dan menjadi basis pertumbuhan di pedesaan.&lt;br&gt;&lt;br&gt;
+Mengapa pembangunan pertanian di Indonesia mempunyai peranan penting?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pertanian di Indonesia belum terlaksana dengan baik dan masih perlu perhatian.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Masyarakat menginginkan pemerintah membantu berbagai keperluan alat pertanian.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penduduk Indonesia yang menggantungkan hidupnya pada sektor pertanian.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Harus memfasilitasi berbagai kepentingan pertanian yang masih tertinggal.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengubah nasip para petani agar para petani mendapatkan kehidupan yang layak.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Teks berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+(1) Pembangunan pertanian pada masa mendatang tidak hanya dihadapkan untuk memecahkan masalah yang ada, tetapi juga pada tantangan untuk menghadapi perubahan tatanan politik di Indonesia. (2) Perubahan tersebut yang mengarah pada era demokratisasi yakni tuntutan otonomi daerah dan pemberdayaan petani. (3) Di samping itu, dihadapkan pula pada tantangan untuk mengantisipasi perubahan tatanan dunia yang mengarah pada globalisasi dunia. (4) Oleh karena itu, pembangunan pertanian di Indonesia tidak saja dituntut untuk menghasilkan produk-produk pertanian yang berdaya saing tinggi, tetapi juga mampu mengembangkan pertumbuhan daerah serta pemberdayaan masyarakat. (5)  Terdapat beberapa rekomendasi, tawaran, saran, masukan, dan juga tuntutan hasil dari pemikiran mahasiswa-mahasiswa pertanian Indonesia.&lt;br&gt;&lt;br&gt;
+Kalimat yang tidak padu dalam paragraf tersebut adalah bernomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Teks berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+(1) Pembangunan pertanian pada masa mendatang tidak hanya dihadapkan untuk memecahkan masalah yang ada, tetapi juga pada tantangan untuk menghadapi perubahan tatanan politik di Indonesia. (2) Perubahan tersebut yang mengarah pada era demokratisasi yakni tuntutan otonomi daerah dan pemberdayaan petani. (3) Di samping itu, dihadapkan pula pada tantangan untuk mengantisipasi perubahan tatanan dunia yang mengarah pada globalisasi dunia. (4) Oleh karena itu, pembangunan pertanian di Indonesia tidak saja dituntut untuk menghasilkan produk-produk pertanian yang berdaya saing tinggi, tetapi juga mampu mengembangkan pertumbuhan daerah serta pemberdayaan masyarakat. (5)  Terdapat beberapa rekomendasi, tawaran, saran, masukan, dan juga tuntutan hasil dari pemikiran mahasiswa-mahasiswa pertanian Indonesia.&lt;br&gt;&lt;br&gt;
+Makna istilah globalisasi dalam teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;keinginan untuk setara dengan negara lain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;masuknya ke ruang lingkup dunia&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kebesasan dalam melakukan perdagangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tidak ada halangan lagi untuk maju&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memasuki masa era modern&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Teks berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+(1) Pembangunan pertanian pada masa mendatang tidak hanya dihadapkan untuk memecahkan masalah yang ada, tetapi juga pada tantangan untuk menghadapi perubahan tatanan politik di Indonesia. (2) Perubahan tersebut yang mengarah pada era demokratisasi yakni tuntutan otonomi daerah dan pemberdayaan petani. (3) Di samping itu, dihadapkan pula pada tantangan untuk mengantisipasi perubahan tatanan dunia yang mengarah pada globalisasi dunia. (4) Oleh karena itu, pembangunan pertanian di Indonesia tidak saja dituntut untuk menghasilkan produk-produk pertanian yang berdaya saing tinggi, tetapi juga mampu mengembangkan pertumbuhan daerah serta pemberdayaan masyarakat. (5)  Terdapat beberapa rekomendasi, tawaran, saran, masukan, dan juga tuntutan hasil dari pemikiran mahasiswa-mahasiswa pertanian Indonesia.&lt;br&gt;&lt;br&gt;
+Tujuan penulis dalam paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Untuk mengantisipasi perubahan tatanan dunia yang mengarah pada globalisasi dunia.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perhatian terhadap pertanian di Indonesia yang sudah memberikan kemajuan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Agar pihak terkait lebih memperhatikan kemajuan dan perubahan pada sektor pertanian.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menginformasikan produk-produk pertanian yang telah berdaya saing tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menjelaskan bahwa pembangunan pertanian di Indonesia tidak ketinggalan lagi.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Teks berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+[Teks 1]&lt;br&gt;
+Federasi Sepak Bola Malaysia (FAM) menyatakan kesiapannya mengambil alih tugas PSSI untuk menggelar leg kedua final Piala AFF tahun itu karena kerusakan yang terjadi di Stadion Utama Gelora Bung Karno (SUGBK). Kesiapan ini diutarakan Asisten Sekjen FAM, Ahmad Fuad Bin Daud di Stadion Bukit Jalil, Malaysia, waktu itu. &amp;rdquo;Kami siap menjadi tuan rumah kembali. Namun, semua tergantung keputusan AFF,&amp;rdquo; ujarnya. Jatah Indonesia sebagai tuan rumah leg kedua final Piala AFF 2010 terancam batal setelah pendukung Indonesia mengamuk kemarin saat mengantre membeli tiket. Ratusan supporter ini masuk dan merusak beberapa bagian, termasuk lapangan&lt;br&gt;&lt;br&gt;
+[Teks 2]&lt;br&gt;
+(1) Ada apa sebenarnya dengan Indonesia? (2) Tiga gol dengan cepat bersarang ke gawang Markus Horison. (3) Buyarnya permainan Pasukan Merah-Putih sesungguhnya diawali dari protes tim yang membuat pertandingan terhenti beberapa saat karena ada gangguan sinar laser dari tribune penonton ke arah kiper Markus. (4) Firman Utina dan kawan-kawan takluk secara menyakitkan sekali pada tuan rumah, Malaysia, 0-3 dalam sesi pertama final. (5)Sungguh patut disayangkan, performan apik timnas Indonesia dalam lima pertandingan Piala AFF, mengalami antiklimaks di Stadion Bukit Jalil, Kuala Lumpur.&lt;br&gt;&lt;br&gt;
+Perbedaan isi kedua kutipan tersebut adalah...&lt;br&gt;
+A. [Teks 1]&lt;br&gt;
+Permasalahan pendukung Indonesia mengamuk saat mengantre membeli tiket.&lt;br&gt;
+[Teks 2]&lt;br&gt;
+Permasalahan, buyarnya permainan Pasukan Merah-Putih karena ada gangguan sinar laser dari tribune penonton ke arah kiper Markus.&lt;br&gt;
+A. [Teks 1]&lt;br&gt;
+Tempat di Stadion Utama Gelora Bung Karno (SUGBK).&lt;br&gt;
+[Teks 2]&lt;br&gt;
+Tempat di Stadion Bukit Jalil, Kuala Lumpur&lt;br&gt;
+B. [Teks 1]&lt;br&gt;
+Kurangnya kesiapan tim&lt;br&gt;
+[Teks 2]&lt;br&gt;
+Sangat siap kesiapan tim&lt;br&gt;
+C. [Teks 1]&lt;br&gt;
+Menang telak&lt;br&gt;
+[Teks 2]&lt;br&gt;
+Menang 0-3&lt;br&gt;
+D. [Teks 1]&lt;br&gt;
+Tidak adanya terjadi keributan&lt;br&gt;
+[Teks 2]&lt;br&gt;
+Terjadinya keributan&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering></numbering>
+	
+	</question>
+
+		<answer>
+		
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Teks berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+[Teks 1]&lt;br&gt;
+Federasi Sepak Bola Malaysia (FAM) menyatakan kesiapannya mengambil alih tugas PSSI untuk menggelar leg kedua final Piala AFF tahun itu karena kerusakan yang terjadi di Stadion Utama Gelora Bung Karno (SUGBK). Kesiapan ini diutarakan Asisten Sekjen FAM, Ahmad Fuad Bin Daud di Stadion Bukit Jalil, Malaysia, waktu itu. &amp;rdquo;Kami siap menjadi tuan rumah kembali. Namun, semua tergantung keputusan AFF,&amp;rdquo; ujarnya. Jatah Indonesia sebagai tuan rumah leg kedua final Piala AFF 2010 terancam batal setelah pendukung Indonesia mengamuk kemarin saat mengantre membeli tiket. Ratusan supporter ini masuk dan merusak beberapa bagian, termasuk lapangan&lt;br&gt;&lt;br&gt;
+[Teks 2]&lt;br&gt;
+(1) Ada apa sebenarnya dengan Indonesia? (2) Tiga gol dengan cepat bersarang ke gawang Markus Horison. (3) Buyarnya permainan Pasukan Merah-Putih sesungguhnya diawali dari protes tim yang membuat pertandingan terhenti beberapa saat karena ada gangguan sinar laser dari tribune penonton ke arah kiper Markus. (4) Firman Utina dan kawan-kawan takluk secara menyakitkan sekali pada tuan rumah, Malaysia, 0-3 dalam sesi pertama final. (5)Sungguh patut disayangkan, performan apik timnas Indonesia dalam lima pertandingan Piala AFF, mengalami antiklimaks di Stadion Bukit Jalil, Kuala Lumpur.&lt;br&gt;&lt;br&gt;
+Pernyataan yang berupa fakta dalam kutipan teks tersebut terdapat pada kalimat nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan biografi berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;Abdul Muis lahir pada tanggal 3 Juni 1883 di Bukittinggi, Sumatra Barat dan meninggal dunia di Bandung pada tanggal 17 Juni 1959 dalam usia 76 tahun. Ia adalah putra Datuk Tumenggung Lareh, Sungai Puar, Minangkabau. Abdul Muis memiliki jiwa petualang yang tinggi. Sejak masih remaja, ia sudah berani meninggalkan kampung halamannya, merantau ke Pulau Jawa. Bahkan, masa tuanya pun dihabiskannya di perantauan. Abdul Muis lulusan Sekolah Eropa Rendah (Eur. Lagere School atau yang sering disingkat ELS). Ia pernah belajar di Stovia selama tiga setengah tahun (1900-1902). Namun, karena sakit, ia &amp;nbsp;keluar dan sekolah kedokteran tersebut. Pada tahun 1917 ia &amp;nbsp;pergi ke negeri Belanda untuk menambah pengetahuannya. Pada tahun 1913 Abdul Muis keluar dan&amp;nbsp;&lt;em&gt;De Prianger Bode.&lt;/em&gt;&amp;nbsp;Sebagai pemuda yang berjiwa patriot, ia mulai tertarik pada dunia politik dan masuk &amp;nbsp;ke Serikat Islam (SI). Bersama dengan mendiang A.H. Wignyadisastra, Ia dipercaya memimpin&amp;nbsp;&lt;em&gt;Kaum Muda&lt;/em&gt;, salah satu surat kabar milik SI yang terbit di Bandung. Pada tahun itu, atas inisiatif dr. Cipto Mangunkusumo, Abdul Muis (bersama dengan Wignyadisastra dan Suwardi Suryaningrat) membentuk Komite Bumi Putra untuk mengadakan perlawanan terhadap maksud Belanda mengadakan &lt;em&gt;peringatan&lt;/em&gt; besar-besaran seratus tahun kemerdekaannya serta untuk mendesak Ratu Belanda agar memberikan kebebasan bagi bangsa Indonesia dalam berpolitik dan bernegara.&lt;br&gt;&lt;br&gt; Keteladanan dari sosok Abdul Muis adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;memiliki keberanian yang tinggi dalam berjuang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;meninggalkan kampung halaman untuk berjuang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengusir penjajah Belanda dari tanah Indonesia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sebagai pemuda yang berjiwa patriot berani melawan penjajah&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sekolah kedokteran di negeri Belanda&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan biografi berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;Abdul Muis lahir pada tanggal 3 Juni 1883 di Bukittinggi, Sumatra Barat dan meninggal dunia di Bandung pada tanggal 17 Juni 1959 dalam usia 76 tahun. Ia adalah putra Datuk Tumenggung Lareh, Sungai Puar, Minangkabau. Abdul Muis memiliki jiwa petualang yang tinggi. Sejak masih remaja, ia sudah berani meninggalkan kampung halamannya, merantau ke Pulau Jawa. Bahkan, masa tuanya pun dihabiskannya di perantauan. Abdul Muis lulusan Sekolah Eropa Rendah (Eur. Lagere School atau yang sering disingkat ELS). Ia pernah belajar di Stovia selama tiga setengah tahun (1900-1902). Namun, karena sakit, ia &amp;nbsp;keluar dan sekolah kedokteran tersebut. Pada tahun 1917 ia &amp;nbsp;pergi ke negeri Belanda untuk menambah pengetahuannya. Pada tahun 1913 Abdul Muis keluar dan&amp;nbsp;&lt;em&gt;De Prianger Bode.&lt;/em&gt;&amp;nbsp;Sebagai pemuda yang berjiwa patriot, ia mulai tertarik pada dunia politik dan masuk &amp;nbsp;ke Serikat Islam (SI). Bersama dengan mendiang A.H. Wignyadisastra, Ia dipercaya memimpin&amp;nbsp;&lt;em&gt;Kaum Muda&lt;/em&gt;, salah satu surat kabar milik SI yang terbit di Bandung. Pada tahun itu, atas inisiatif dr. Cipto Mangunkusumo, Abdul Muis (bersama dengan Wignyadisastra dan Suwardi Suryaningrat) membentuk Komite Bumi Putra untuk mengadakan perlawanan terhadap maksud Belanda mengadakan &lt;em&gt;peringatan&lt;/em&gt; besar-besaran seratus tahun kemerdekaannya serta untuk mendesak Ratu Belanda agar memberikan kebebasan bagi bangsa Indonesia dalam berpolitik dan bernegara.&lt;br&gt;&lt;br&gt; Mengapa Abdul Muis dikatakan memiliki jiwa petualang?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Ia hanya suka bersekolah di luar negeri dengan bebagai pengalaman.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lebih menyukai bahkan sangat tertarik kepada dunia politik.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Anak muda yang tidak gentar melawan penjajahan Belanda.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sejak masih remaja, ia sudah berani meninggalkan kampung halaman.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mempunyai banyak pengalaman kerja atau berpindah-pindah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan biografi berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;Abdul Muis lahir pada tanggal 3 Juni 1883 di Bukittinggi, Sumatra Barat dan meninggal dunia di Bandung pada tanggal 17 Juni 1959 dalam usia 76 tahun. Ia adalah putra Datuk Tumenggung Lareh, Sungai Puar, Minangkabau. Abdul Muis memiliki jiwa petualang yang tinggi. Sejak masih remaja, ia sudah berani meninggalkan kampung halamannya, merantau ke Pulau Jawa. Bahkan, masa tuanya pun dihabiskannya di perantauan. Abdul Muis lulusan Sekolah Eropa Rendah (Eur. Lagere School atau yang sering disingkat ELS). Ia pernah belajar di Stovia selama tiga setengah tahun (1900-1902). Namun, karena sakit, ia &amp;nbsp;keluar dan sekolah kedokteran tersebut. Pada tahun 1917 ia &amp;nbsp;pergi ke negeri Belanda untuk menambah pengetahuannya. Pada tahun 1913 Abdul Muis keluar dan&amp;nbsp;&lt;em&gt;De Prianger Bode.&lt;/em&gt;&amp;nbsp;Sebagai pemuda yang berjiwa patriot, ia mulai tertarik pada dunia politik dan masuk &amp;nbsp;ke Serikat Islam (SI). Bersama dengan mendiang A.H. Wignyadisastra, Ia dipercaya memimpin&amp;nbsp;&lt;em&gt;Kaum Muda&lt;/em&gt;, salah satu surat kabar milik SI yang terbit di Bandung. Pada tahun itu, atas inisiatif dr. Cipto Mangunkusumo, Abdul Muis (bersama dengan Wignyadisastra dan Suwardi Suryaningrat) membentuk Komite Bumi Putra untuk mengadakan perlawanan terhadap maksud Belanda mengadakan &lt;em&gt;peringatan&lt;/em&gt; besar-besaran seratus tahun kemerdekaannya serta untuk mendesak Ratu Belanda agar memberikan kebebasan bagi bangsa Indonesia dalam berpolitik dan bernegara.&lt;br&gt;&lt;br&gt; Istilah yang tepat untuk pengganti istilah yang tercetak miring pada kalimat terakhir teks biografi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pesta&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kenduri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perayaan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perhelatan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pertunjukan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kutipan tajuk rencana berikut untuk soal!&lt;br&gt;&lt;br&gt;
+Di zaman ini tidak jarang ibu menjadi tulang punggung keluarga. Banyak para ibu yang menafkahi dirinya sendiri dan anaknya tanpa bergantung pada suami. Banyak wanita perkasa di luar sana yang bekerja di berbagai bidang, seperti tukang ojek, tukang parkir, tukang bangunan, sopir taksi, sopir busway bahkan menjadi buruh yang mengangkut barang-barang berat. Mereka semua adalah wanita-wanita perkasa, pejuang keluarga.&lt;br&gt;
+Sudah banyak ibu-ibu yang mandiri, memiliki penghasilan sendiri, serta mempunyai banyak aktivitas. Perlu dicatat sudah banyak ibu yang meniti karier tanpa mengabaikan keluarga dan mereka tetap bisa mengurus suami dan anak-anak. Tanggung jawabnya sebagai ibu tetap bisa berjalan selaras dengan dunia pekerjaannya. Ini menepis anggapan istri harus berhenti bekerja jika sudah menikah dan memiliki anak karena semua tergantung bagaimana membagi waktu dan perhatian secara bijak.Tak bisa diabaikan juga adanya ibu yang gagal membina keluarganya karena kesibukannya bekerja dan alasan lain. Tetapi jauh lebih banyak ibu yang benar-benar menjadi ibu, yang selalu siap berkorban untuk keluarganya. Dengan demikian, sangat wajar dan sepantasnyalah kita berterimakasih untuk semua ibu yang setia dan sabar dengan tetap tidak melupakan kodratnya sebagai ibu. Terima kasih ibu, dan Selamat Hari Ibu buatmu!&lt;br&gt;&lt;br&gt;
+Opini penulis dalam kutipan tajuk rencana adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Ini menepis anggapan istri harus berhenti bekerja jika sudah menikah dan memiliki anak karena semua tergantung bagaimana membagi waktu dan perhatian secara bijak.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Banyak para ibu yang menafkahi dirinya sendiri dan anaknya tanpa bergantung pada suami pada zaman sekarang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Banyak wanita perkasa di luar sana yang bekerja di berbagai bidang, seperti tukang ojek, tukang parkir, tukang bangunan, sopir taksi, sopir busway bahkan menjadi buruh.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perlu dicatat sudah banyak ibu yang meniti karier tanpa mengabaikan keluarga dan mereka tetap bisa mengurus suami dan anak-anak.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dengan demikian, sangat wajar dan sepantasnyalah kita berterima kasih untuk semua ibu yang setia dan sabar dengan tetap tidak melupakan kodratnya sebagai ibu.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pihak yang dituju dalam teks tajuk rencana tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kaum ibu&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pemerintah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;para anak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;masyarakat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pekerja keras&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf kutipan cerpen berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+&amp;rdquo;Sukri!Jaga mulutmu. Kau ini apa-apaan. Pemuda tanpa modal. Jangan kau permainkan  anakku. Apa yang telah kau beri kepadanya sebagai rasa kasih dan cintamu? Datang hampir tiap malam dengan janji-janji. Jangan kau memberi harapan-harapan yang tidak pasti kepada kami. Pergi kau! Biarkan anakku mencari jodoh yang lebih sempurna daripada kau.&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Orang tua terkutuk! Mata duitan. Apa bedanya kau dengan orang tua lain kalau kau berpikir seperti itu? Anakmu akan kau jual belikan?&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Sukri! Sumarni adalah anakku. Berhak memilih yang terbaik untuknya.&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Apakah kau telah menganggap pemuda itu cukup baik?&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Dia punya skuter. Dia punya modal untuk anakku, dan kau? Hanya janji-janji yang tidak terbukti.&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Kalau begitu, kau adalah orang tua yang memandang benda-benda.&amp;rdquo;&lt;br&gt;
+Sukri Membawa Pisau Belati&lt;br&gt;&lt;br&gt;
+Masalah yang diungkapkan dalam kutipan teks cerpen  tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;penghinaan yang berkepanjangan atau henti-hentinya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;seseorang yang tidak menepati janjinya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penolakan perjodohan oleh orang tua wanita&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pertengkaran seseorang dengan orang tua kekasihnya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tidak tercapainya keinginan seseorang menjadi kaya raya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf kutipan cerpen berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+&amp;rdquo;Sukri!Jaga mulutmu. Kau ini apa-apaan. Pemuda tanpa modal. Jangan kau permainkan  anakku. Apa yang telah kau beri kepadanya sebagai rasa kasih dan cintamu? Datang hampir tiap malam dengan janji-janji. Jangan kau memberi harapan-harapan yang tidak pasti kepada kami. Pergi kau! Biarkan anakku mencari jodoh yang lebih sempurna daripada kau.&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Orang tua terkutuk! Mata duitan. Apa bedanya kau dengan orang tua lain kalau kau berpikir seperti itu? Anakmu akan kau jual belikan?&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Sukri! Sumarni adalah anakku. Berhak memilih yang terbaik untuknya.&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Apakah kau telah menganggap pemuda itu cukup baik?&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Dia punya skuter. Dia punya modal untuk anakku, dan kau? Hanya janji-janji yang tidak terbukti.&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Kalau begitu, kau adalah orang tua yang memandang benda-benda.&amp;rdquo;&lt;br&gt;
+Sukri Membawa Pisau Belati&lt;br&gt;&lt;br&gt;
+Suasana yang tergambar dalam kutipan adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;mencekam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bising&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;marah&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ramai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kacau&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf kutipan cerpen berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+&amp;rdquo;Sukri!Jaga mulutmu. Kau ini apa-apaan. Pemuda tanpa modal. Jangan kau permainkan  anakku. Apa yang telah kau beri kepadanya sebagai rasa kasih dan cintamu? Datang hampir tiap malam dengan janji-janji. Jangan kau memberi harapan-harapan yang tidak pasti kepada kami. Pergi kau! Biarkan anakku mencari jodoh yang lebih sempurna daripada kau.&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Orang tua terkutuk! Mata duitan. Apa bedanya kau dengan orang tua lain kalau kau berpikir seperti itu? Anakmu akan kau jual belikan?&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Sukri! Sumarni adalah anakku. Berhak memilih yang terbaik untuknya.&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Apakah kau telah menganggap pemuda itu cukup baik?&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Dia punya skuter. Dia punya modal untuk anakku, dan kau? Hanya janji-janji yang tidak terbukti.&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Kalau begitu, kau adalah orang tua yang memandang benda-benda.&amp;rdquo;&lt;br&gt;
+Sukri Membawa Pisau Belati&lt;br&gt;&lt;br&gt;
+Nilai moral dalam kutipan cerpen tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Orang tua yang akan memilihkan jodoh untuk anaknya seorang yang baik&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menghindari pemaksaan perkawian atau perjodohan oleh orang tua terhadap anaknya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengingatkan seseorang akan janji yang telah diikrarkan kepada seseorang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perilaku menghormati orang tua, terutama orang-orang yang ada di sekitarnya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengucapkan kata-kata yang baik bila berbicara dengan siapa pun dan di mana pun.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf  berikut untuk soal nomor!&lt;br&gt;&lt;br&gt;
+&amp;rdquo;Ayo kita ke pasar,&amp;rdquo; kata Ibu Nur. &amp;rdquo;Kami mau beli kembang, untuk nyekar.&amp;rdquo;&lt;br&gt;
+Kami tinggalkan warung di tepi sungai itu. Becak membawa kami ke pasar. Ibunya Nur membeli dua keranjang bunga rampai dan kami terus ke makam.&lt;br&gt;
+Di pemakaman itu kami sulit mencari dua makam ayah dan anaknya, suami dan mertuanya. Kucabut rimbunan semak menyiangi makam. Akhirnya kutemukan makam yang kami cari, R. Soedjatmiko, wafat 31 Agustus 1973. Kutabur bunga rampai. Kusentuh nisan yang bertulis namanya dan kupegang erat pusaranya.&lt;br&gt;
+&amp;rdquo;Maafkan aku Papi&amp;hellip; Kutanggalkan ikatan lima ikat rambutan itu, kucampur dengan daun segarnya, kubungkus dengan taplak meja rumah tempat aku kos. Aku tak punya kebun dan pohon rambutan Papi&amp;hellip; Maafkan aku membohongimu,&amp;rdquo; bisikku pelan supaya tidak didengar yang lain.&lt;br&gt;
+Wangi bunga rampai semerbak diterbangkan angin mengiring kami keluar dari pemakaman itu meninggalkannya&amp;hellip;&lt;br&gt;
+Nyekar, oleh Hamsad Rangkuti&lt;br&gt;&lt;br&gt;
+Pendeskripsian watak tokoh aku seorang yang pembohong adalah melalui ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dialog antartokoh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pikiran-pikiran tokoh&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penjelasan pengarang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lingkungan tokoh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tanggapan tokoh lain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf  berikut untuk soal nomor!&lt;br&gt;&lt;br&gt;
+&amp;rdquo;Ayo kita ke pasar,&amp;rdquo; kata Ibu Nur. &amp;rdquo;Kami mau beli kembang, untuk nyekar.&amp;rdquo;&lt;br&gt;
+Kami tinggalkan warung di tepi sungai itu. Becak membawa kami ke pasar. Ibunya Nur membeli dua keranjang bunga rampai dan kami terus ke makam.&lt;br&gt;
+Di pemakaman itu kami sulit mencari dua makam ayah dan anaknya, suami dan mertuanya. Kucabut rimbunan semak menyiangi makam. Akhirnya kutemukan makam yang kami cari, R. Soedjatmiko, wafat 31 Agustus 1973. Kutabur bunga rampai. Kusentuh nisan yang bertulis namanya dan kupegang erat pusaranya.&lt;br&gt;
+&amp;rdquo;Maafkan aku Papi&amp;hellip; Kutanggalkan ikatan lima ikat rambutan itu, kucampur dengan daun segarnya, kubungkus dengan taplak meja rumah tempat aku kos. Aku tak punya kebun dan pohon rambutan Papi&amp;hellip; Maafkan aku membohongimu,&amp;rdquo; bisikku pelan supaya tidak didengar yang lain.&lt;br&gt;
+Wangi bunga rampai semerbak diterbangkan angin mengiring kami keluar dari pemakaman itu meninggalkannya&amp;hellip;&lt;br&gt;
+Nyekar, oleh Hamsad Rangkuti&lt;br&gt;&lt;br&gt;
+Pembuktian bahwa latar dalam cerpen tersebut di pemakaman adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;nyekar, kembang, tabur, rambutan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;keranjang bunga, makam, pohon, nyekar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;keranjang, pusara, bunga rampai, pohon&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pohon, daun segar, bungkusan, rambutan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;nyekar,  nisan, pusara, bunga rampai&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf  berikut untuk soal nomor!&lt;br&gt;&lt;br&gt;
+&amp;rdquo;Ayo kita ke pasar,&amp;rdquo; kata Ibu Nur. &amp;rdquo;Kami mau beli kembang, untuk nyekar.&amp;rdquo;&lt;br&gt;
+Kami tinggalkan warung di tepi sungai itu. Becak membawa kami ke pasar. Ibunya Nur membeli dua keranjang bunga rampai dan kami terus ke makam.&lt;br&gt;
+Di pemakaman itu kami sulit mencari dua makam ayah dan anaknya, suami dan mertuanya. Kucabut rimbunan semak menyiangi makam. Akhirnya kutemukan makam yang kami cari, R. Soedjatmiko, wafat 31 Agustus 1973. Kutabur bunga rampai. Kusentuh nisan yang bertulis namanya dan kupegang erat pusaranya.&lt;br&gt;
+&amp;rdquo;Maafkan aku Papi&amp;hellip; Kutanggalkan ikatan lima ikat rambutan itu, kucampur dengan daun segarnya, kubungkus dengan taplak meja rumah tempat aku kos. Aku tak punya kebun dan pohon rambutan Papi&amp;hellip; Maafkan aku membohongimu,&amp;rdquo; bisikku pelan supaya tidak didengar yang lain.&lt;br&gt;
+Wangi bunga rampai semerbak diterbangkan angin mengiring kami keluar dari pemakaman itu meninggalkannya&amp;hellip;&lt;br&gt;
+Nyekar, oleh Hamsad Rangkuti&lt;br&gt;&lt;br&gt;
+Hal yang terdapat dalam kutipan novel yang masih ditemukan dalam kehidupan saat ini adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;berbecak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berwarung&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;nyekar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bernisan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengubur&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf  berikut untuk soal nomor!&lt;br&gt;&lt;br&gt;
+&amp;rdquo;Ayo kita ke pasar,&amp;rdquo; kata Ibu Nur. &amp;rdquo;Kami mau beli kembang, untuk nyekar.&amp;rdquo;&lt;br&gt;
+Kami tinggalkan warung di tepi sungai itu. Becak membawa kami ke pasar. Ibunya Nur membeli dua keranjang bunga rampai dan kami terus ke makam.&lt;br&gt;
+Di pemakaman itu kami sulit mencari dua makam ayah dan anaknya, suami dan mertuanya. Kucabut rimbunan semak menyiangi makam. Akhirnya kutemukan makam yang kami cari, R. Soedjatmiko, wafat 31 Agustus 1973. Kutabur bunga rampai. Kusentuh nisan yang bertulis namanya dan kupegang erat pusaranya.&lt;br&gt;
+&amp;rdquo;Maafkan aku Papi&amp;hellip; Kutanggalkan ikatan lima ikat rambutan itu, kucampur dengan daun segarnya, kubungkus dengan taplak meja rumah tempat aku kos. Aku tak punya kebun dan pohon rambutan Papi&amp;hellip; Maafkan aku membohongimu,&amp;rdquo; bisikku pelan supaya tidak didengar yang lain.&lt;br&gt;
+Wangi bunga rampai semerbak diterbangkan angin mengiring kami keluar dari pemakaman itu meninggalkannya&amp;hellip;&lt;br&gt;
+Nyekar, oleh Hamsad Rangkuti&lt;br&gt;&lt;br&gt;
+Amanat yang terdapat pada kutipan tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sebelum melakukan kebohongan, pikirkanlah agar tidak timbul penyesalan kelaknya.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Demi kebaikan, sering berbohong tidak menjadi masalah atau diperbolehkan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kepada orang tua tidak masalah berbohong karena mudah untuk meminta maaf.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Akuilah kebohongan apa saja yang pernah dilakukan  saat berada di kuburan orang tua.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berusahalah menutupi kebohongan yang telah dilakukan, terutama kepada anggota keluarga.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati gurindam berikut!&lt;br&gt;&lt;br&gt;
+Apabila terpelihara lidah&lt;br&gt;
+Niscaya dapat daripadanya faedah&lt;br&gt;&lt;br&gt;
+Amanat yang terkandung dalam gurindam tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Apabila kita dapat memelihara lidah kita, kita akan senantiasa memperoleh berbagai faedah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perbuatan yang baik, niscaya akan senantiasa memperoleh balasan yang baik pula.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Apabila kita berhati-hati dalam berbicara, ucapan yang keluar akan bermanfaat bagi orang.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kita harus menjaga kesehatan mulut agar terhindar dari berbagai kuman penyakit.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Semua perkataan yang keluar dari mulut kita tentulah akan selalu mendatangkan manfaat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati teks dialog berikut!&lt;br&gt;
+Tanti : &amp;rdquo;Teman-teman, sebentar lagi kita akan berpisah dengan guru kita. Kita beli kenang-kenangan untuk wali kelas kita ya.&amp;rdquo;&lt;br&gt;
+Nani : &amp;rdquo;Ide yang bagus itu. Kira-kira apa ya, Tan?&amp;rdquo;&lt;br&gt;
+Tanti : &amp;rdquo;Bagaimana kalau kita beli bahan baju batik Solo.&amp;rdquo;&lt;br&gt;
+Nani : &amp;rdquo;Boleh itu, kan bisa dipakai buat baju kerja nantinya.&amp;rdquo;&lt;br&gt;
+Tanti : &amp;rdquo;Kita pakai uang kas saja, uang kas kelas kita masih banyak, masih cukup buat beli bahan kain batik yang kualitasnya bagus.&amp;rdquo;&lt;br&gt;
+Nani : &amp;rdquo;Kalau begitu, mari kita beri tahu teman-teman kita.&amp;rdquo;&lt;br&gt;
+Tanti : &amp;rdquo;Yuk!&amp;rdquo;&lt;br&gt;
+Hal yang dibicarakan dalam kutipan tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;bahan kain baik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penggunaan uang kas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;rencana pengadaan perpisahan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ide yang bagus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hadiah untuk wali kelas&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati pantun berikut!&lt;br&gt;
+Ke toko beli kain batik&lt;br&gt;
+Coraknya khas budaya Betawi&lt;br&gt;
+Jika kamu berhati baik&lt;br&gt;
+&amp;hellip;.&lt;br&gt;
+Larik yang tepat untuk melengkapi pantun tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tidak seorang pun akan iri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Itu tandanya kamu berseri-seri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Carilah orang untuk menemani&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Banyak orang akan memuji&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lihatlah saja sampai nanti&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati naskah drama berikut!&lt;br&gt;&lt;br&gt;
+Paman : (heran) &amp;rdquo;Kau sendiri Andri?  Mana Nadal? Kenapa tidak pulang sama-sama?&amp;rdquo;&lt;br&gt;
+Andri : (ragu-ragu) &amp;rdquo;Nadal, Nadal ditahan polisi, Paman.&amp;rdquo;&lt;br&gt;
+Paman : (terkejut) &amp;rdquo;Apa? Ya Allah! &amp;hellip; Mengapa dia ditahan, An?&amp;rdquo; (menyeringit, penuh   tanda tanya)&lt;br&gt;
+Andri : &amp;rdquo;Tadi kami sama-sama menunggu Bus di halte. Tiba-tiba  ada yang kehilangan dompet. Kebetulan saya berada di dekatnya.&amp;rdquo;&lt;br&gt;
+Paman : (tidak sabar) &amp;rdquo;Lalu?&amp;rdquo;&lt;br&gt;
+Andri : &amp;rdquo;Sebenarnya banyak orang di situ, tetapi yang kehilangan menyangka saya yang mengambilnya. Tiba-tiba. Nadal marah kepada orang yang kehilangan itu karena menuduh seenaknya. Akhirnya, mereka bertengkar.&lt;br&gt;
+Nadal dipukuli.&amp;rdquo;&lt;br&gt;
+Paman : (terkejut dan cemas)&amp;rdquo;Dipukuli? Lalu di mana dan bagaimana dia sekarang, An? Sekarang Nadal di mana?&amp;rdquo; (berdiri dengan wajah semakin cemas dan gelisah)&lt;br&gt;
+Andri : &amp;rdquo;Tidak apa-apa, Om. (berdiri) Nadal membalas memukul, dan akhirnya mereka berkelahi. Seketika datang polisi Nadal ditahan polisi yang kebetulan patroli dan dia dibawa ke kantor polisi.&amp;rdquo;&lt;br&gt;
+Paman : &amp;rdquo;...&amp;rdquo;&lt;br&gt;
+Andri : &amp;rdquo;Mari, Bibi (menuju pintu tergesa-gesa, akan keluar)&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi bagian yang rumpang dalam kutipan tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(tertegun panik), bagaimana ini Andri?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(memandang Bibi) Sabar, ya, Paman?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(menangis) mengapa polisi itu menangkapnya?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(berjalan kian kemari) Mana telepon, ayo telepon.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(tak sabar) Ayo Andri, kita ke kantor polisi.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kedua pantun berikut!&lt;br&gt;&lt;br&gt;
+[Pantun 1]&lt;br&gt;
+Pagi-pagi makan gorengan&lt;br&gt;
+Makan gorengan dengan kopi&lt;br&gt;
+Hati-hati mencari teman&lt;br&gt;
+Jangan dekati yang tinggi hati&lt;br&gt;&lt;br&gt;
+[Pantun 2]&lt;br&gt;
+Pergi ke pasar beli sepatu&lt;br&gt;
+Sepatu produksi dalam negeri&lt;br&gt;
+Perbuatan jelek jangan ditiru&lt;br&gt;
+Nanti dirimu akan dibenci&lt;br&gt;&lt;br&gt;
+Jenis isi kedua bait pantun tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;nasihat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;jenaka&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;remaja&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;agama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;duka&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati penulisan judul buku berikut!&lt;br&gt;
+Akhirnya saya dapat juga hadiah sebuah buku dari kakak yang berjudul daun yang jatuh tak pernah membenci angin,karya Tere Liye&lt;br&gt;
+Perbaikan penulisan judul yang sesuai dengan EYD untuk judul buku tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Daun Yang Jatuh Tak Pernah Membenci Angin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Daun yang Jatuh tak Pernah Membenci Angin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Daun yang Jatuh Tak Pernah Membenci Angin&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Daun yang jatuh Tak pernah membenci angin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Daun yang jatuh tak Pernah Membenci Angin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat-kalimat untuk rangkaian cerita berikut!&lt;br&gt;
+Susunan rangkaian peristiwa yang tepat untuk penggalan cerita tersebut adalah...&lt;br&gt;
+Cermati urutan kalimat berikut!&lt;br&gt;
+(1) Karena keadaan mereka yang dimanja, dibesarkan dalam keluarga yang serba ada itu, justru Ibu Kembar merasa terusik dan harus peduli dengan kehidupan yang berbeda dari mereka, terutama terhadap pendidikkan anak-anak yang tidak mampu.&lt;br&gt;
+(2) Dengan kondisi yang demikian, Ibu Kembar memberikan semangat dengan kasih sayang.&lt;br&gt;
+(3) Sekolah yang terletak di tengah-tengah perkampungan kumuh ini, adalah binaan Bu Guru Kembar Sri Rosiati (Rosi) dan Sri Irianingsih (Rian), yang sudah lama tidak terdengar lagi kiprahnya.&lt;br&gt;
+(4) Kepedulian mereka diwujudkan dengan membangunkan sekolah sederhana,luasnya sekitar 8 x 5 meter dengan tripleks dan kayu,terlihat sesak dengan delapan puluh anak yang belajar dengan kondisi yang sangat memprihatinkan.&lt;br&gt;
+(5) Kedua ibu guru itu kita mengenalnya dengan sebutan Ibu Kembar.&lt;br&gt;
+(6) Patut kita acungkan jempol, kepada mereka itu karena sudahlah, cantik, pintar, dan kaya pula, dan semasa kecil mereka dikungkung dan dimanjakan orang tua mereka.&lt;br&gt;
+Urutan kalimat yang tepat untuk dijadikan paragraf yang baik adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(3), (5), (6), (1), (4), dan (2)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (2), (1), (6), (5), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4), (3), (1), (5), (2), dan (6)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5), (3), (1), (2), (4), dan (6)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(6), (4), (2), (3), (5), dan (1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kedua kutipan cerpen berikut!&lt;br&gt;&lt;br&gt;
+[Cerpen 1]&lt;br&gt;
+Mereka pun duduk di teras warung dan banyak di antara para nelayan yang mengejek lelaki tua itu dan ia tidak marah. Yang lain, yang lebih tua, memandang ke arahnya dan merasa kasihan. Tetapi, mereka tidak memperlihatkan perasaan itu dan bercakap-cakap dengan sopan tentang arus dan lubuk laut. Para nelayan yang beruntung telah menyembelih ikan todak mereka dan membawanya ke arah gudang.&lt;br&gt;
+Lelaki Tua dan Laut&lt;br&gt;&lt;br&gt;
+[Cerpen 1]&lt;br&gt;
+Ia seorang lelaki tua yang sendiri saja dalam sebuah perahu menangkap ikan di arus Teluk Meksiko dan kini sudah genap delapan puluh empat hari lamanya tidak berhasil menangkap seekor ikan pun. Selama empat puluh hari yang pertama ia ditemani oleh seorang anak laki-laki. Tetapi, setelah empat puluh hari itu berlalu tanpa menangkap ikan seekor pun, maka atas perintah orang tuanya anak itu kemudian ikut perahu lain.Anak itu merasa kasihan setiap kali menyaksikan lelaki tua tiba dari laut dengan perahu kosong dan ia selalu datang untuk menolongnya membawakan layar. Layar itu bertambah karung gandum.&lt;br&gt;
+Lelaki Tua dan Laut&lt;br&gt;&lt;br&gt;
+Persamaan isi dari kedua kutipan cerpen tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;gambaran suasana, yaitu kesedihan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;latar tempat, yaitu  di tengah Laut Meksiko&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pendeskripsian watak tokoh, yaitu melalui pikiran-pikiran tokoh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perwatakan tokoh, yaitu seorang yang sabar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;amanat, yaitu bantulah orang memerlukan pertolongan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat-kalimat dalam paragraf  berikut!&lt;br&gt;
+i. Pengangguran di negara kita belum teratasi.&lt;br&gt;
+ii. Banyaknya angka pengangguran, dipicu oleh keinginan generasi muda menjadi pegawai di perusahaan bonafide, apalagi ingin menjadi pegawai negeri.&lt;br&gt;
+iii. Mengapa hal ini bisa terjadi?&lt;br&gt;
+iv. Banyak yang beranggapan masih mengharapkan anak-anak mereka menjadi pengawai negeri karena memiliki jaminan hari tua.&lt;br&gt;
+v. Diharap kaum muda mau berwiraswasta, baik yang lulusan perguruan tinggi, sekolah menengah, maupun sekolah menengah kejuruan.&lt;br&gt;
+vi. Jadi, untuk mengatasi masalah tersebut, marilah kita ciptakan generasi wiraswastawan demi terciptanya lapangan kerja.&lt;br&gt;&lt;br&gt;
+Dua kalimat  berjenis deklaratif (pernyataan/informasi) terdapat pada nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1),(2), dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4), (5), dan (6)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4), (5), dan (6)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat yang berupa pendapat berikut!&lt;br&gt;
+Mempertahankan kesuburan tanah merupakan syarat mutlak bagi tiap-tiap usaha pertanian.&lt;br&gt;
+Kalimat yang mendukung pendapat tersebut adalah...&lt;br&gt;
+(1). Selama tanaman dalam proses menghasilkan, kesuburan tanah ini akan berkurang.&lt;br&gt;
+(2). Padahal kesuburan tanah wajib diperbaiki kembali dengan pemupukan.&lt;br&gt;
+(3). Cara menggunakan tanah dan menjaga kesuburannya dapat dilakukan sendiri.&lt;br&gt;
+(4). Kesuburan tanah sangat berpengaruh terhadap kesuburan tanaman.&lt;br&gt;
+(5). Tak hanya baik bagi kesuburan tanah, tapi juga akan memperbaiki kualitas.&lt;br&gt;
+(6). Tanaman subur, dapat menggembirakan hati para petani.&lt;br&gt;&lt;br&gt;
+Kalimat pendukung yang mendukung adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (4), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (3), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat-kalimat yang berupa alasan/pendapat berikut!&lt;/p&gt;
+&lt;p&gt;Karena seseorang sebelum berhenti bekerja atau pensiun dari pekerjaan, sudah berhemat atau menabung, dapat memanfaatkan uang simpanannya sedemikian rupa setelah tidak bekerja. Akan tetapi, dia harus lebih berhemat lagi karena otomasis memasukan keuangannya berkurang karena uang pensiun yang tidak memadai. Penghematan pengeluaran harus dilakukan secermat mungkin. Salah satu cara adalah dengan membuat &lt;strong&gt;anggaran rumah tangga&lt;/strong&gt; keluarga. &lt;em&gt;Seberapa pun uang ada di tangan akan terkuras tidak bersisa.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Perbaikan kalimat simpulan (tercetak miring) pada paragraf yang berupa akibat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Dengan demikian, dia tidak akan sampai kehabisan uang untuk biaya hidupnya.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jadi, sebaiknya bagi Anda yang masih bekerja dibuat juga anggaran pendapatan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hal yang sama juga berlaku untuk Anda yang masih bekerja dan perlu biaya hidup.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sebaiknya bagi Anda yang masih bekerja, dibuat juga anggaran pendapatan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Oleh sebab itu, pengeluaran keluarga harus sesuai dengan penghasilan kita.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat dalam paragraf berikut!&lt;/p&gt;
+&lt;p&gt;Federasi Sepak Bola Malaysia (FAM) menyatakan kesiapannya mengambil alih tugas PSSI untuk menggelar leg kedua final Piala AFF 2010 &amp;hellip; kerusakan yang terjadi di Stadion Utama Gelora Bung Karno (SUGBK). Kesiapan ini diutarakan Asisten Sekjen FAM, Ahmad Fuad Bin Daud di Stadion Bukit Jalil, Malaysia, semalam. &amp;rdquo;Kami siap menjadi tuan rumah kembali...., semua tergantung keputusan AFF,&amp;rdquo; ujarnya. Jatah Indonesia sebagai tuan rumah leg kedua final Piala AFF 2010 terancam batal &amp;hellip; pendukung Indonesia mengamuk kemarin saat mengantre membeli tiket. Ratusan supporter ini masuk &amp;hellip; merusak beberapa bagian, termasuk lapangan SUGBK.&lt;/p&gt;
+&lt;p&gt;Konjungsi yang tepat untuk melengkapi dalam paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;sehingga, selain itu, saat, dan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;karena, namun, setelah, dan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;setelah, oleh karena itu, dan, atau&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;jika, di samping itu, sejak, dan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;apabila, dengan demikian, sebelum, atau&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat dalam paragraf berikut!&lt;/p&gt;
+&lt;p&gt;Seorang yang ditunjuk sebagai pemimpin haruslah yang berwibawa dan bertanggung jawab. Seseorang yang ditunjuk bukan... mau. Dia harus tanggap dengan kebutuhan anak buahnya.... harus sensitif mendengarkan keluhan anak buahnya. Bila menjanjikan sesuatu, harus ditepati. Apalagi... sekarang terbuka, mereka berani menuntut haknya. Jangan sampai anak buah... pimpinan. Wibawanya akan jatuh.&lt;/p&gt;
+&lt;p&gt;Kata baku yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;sekadar, kuping, jaman, menasihati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sekadar, telinga, jaman, menasehati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sekedar, telinga, zaman, menasehati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sekadar, kuping, zaman, menasihati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sekadar, telinga, zaman, menasihati&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat dalam paragraf berikut!&lt;br&gt;&lt;br&gt;
+Perabotan rumah seperti berbagai lemari, kursi, meja yang dijual di toko &amp;rdquo;Murah&amp;rdquo; itu, telah menggunakan... bongkar pasang. Buatannya pun tampak halus karena menggunakan mesin dengan... canggih. Permukaan kayu jati yang digunakan sebagai bahan tidak tampak kasar. Oleh sebab itu,... perabotan di toko itu sangat baik.&lt;br&gt;&lt;br&gt;
+Kata serapan yang tepat penulisannya untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;systim, teknologi, kualitas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sistem, teknologi, kwalitas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sistim, tehnologi, kuwalitas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sistem, teknologi, kualitas&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;system, teknologi,kwalitas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Pedati menuju suatu tempat, mengikuti rodanya yang berputar menuju suatu arah. Ia akan menempuh jalan yang berkondisi baik dan tidak baik, berbelok-belok, belobang, berbatu-batu, atau becek.. kalau melalui jalan berkondisi baik, ia berjalan tenang. Akan tetapi, bila berkondisi buruk, akan berhati-hati agar pedati tidak oleng dan sumbu rodanya.Untuk itu, diperlukan kecermatan memilih jalan dan kehati-hatian sehingga sampai di tujuan. Sama halnya kehidupan yang ditempuh manusia. Adakalanya berjalan tanpa kendala atau tanpa cobaan, tetapi adakalanya mendapat kesulitan atau berbagai cobaan barulah mendapatkan kebahagiaan yang diinginkan....&lt;br&gt;
+Kalimat simpulan yang tepat untuk melengkapi paragraf tersebut  adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Oleh sebab itu, kehidupan  ini tidak selalu mudah, bagus, atau lancar, tetapi selalu mendapatkan berbagai cobaan atau rintangan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jadi, kita akan mendapat ujian kesabaran, kekuatan kita dengan berbagai cobaan yang memerlukan berbagai cara untuk mengatasi.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Begitulah manusia dan pedati supaya akan menempuh suatu jalan yang mulus penuh rintangan dan kendala yang sangat berbahaya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Maka, kita harus mengetahui apa yang harus dilakukan saat melalui rintang agar dapat dengan mudah mencapai sesuatu yang diinginkan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jadi, kehidupan manusia menuju kebahagiaan ibarat mengemudi pedati menuju suatu tempat dengan beragam kondisi jalan yang ditempuhnya.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Berbagai jenis bunga tumbuh di taman di depan rumahku. Ada mawar, anyelir, bougenvil, dan lain-lain.... Rumput-ruput di pinggir taman itu terpangkas rapi. Pohon bonsai di tengah taman dibentuk sangat unik dan terkesan artistik. Di sudut taman terdapat pula kolam kecil yang diperindah dengan air mancur yang mencurat sehingga memberikan kesan sejuk dan nyaman.&lt;br&gt;
+Kalimat deskripsi  yang  tepat  untuk  melengkapi kalimat yang rumpan dalam paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Semua tanaman indah itu ditanam untuk hiasan rumah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bunga-bunga itu tampak tumbuh subur dan tertata.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tanaman liar tidak terlihat ada tumbuh di sekitar taman.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bunga yang indah seakan memikat orang yang melihatnya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sudah banyak muncul bunga dan mekar semerbah baunya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Seruling bambu yang ditiup anak gembala yang sedang duduk di atas punggung kerbaunya terdengar... Dia mendendangkan lagu berirama melayu. Tangannya... menutup buka lobang sulingnya. Kepalanya pun ikut bergoyang mengikuti irama suling. Kebau yang ditungganinya terlihat... seakan menikmati nyanyian sang gembala.&lt;br&gt;
+Frasa adjektiva yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;sangat merdu, sangat lemah, sangat gembira&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sangat indah, sangat lemah, sangat gembira&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sangat merdu, sangat lincah, sangat terang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sangat merdu, sangat lincah, sangat gembira&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sangat indah, sangat lemah, sangat terang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+(1) Banyak orang merasakan bahwa teknologi informasi dapat menggantikan cara konventional. (2)  Banyak orang mencari sumber untuk acuan penulisan. (3) Pencarian data melalui search engine, chatting, mendengarkan musik, dan sebagainya pada tahapan ini pun orang sudah mulai menginvestasikan kepada perangkat komputer. (4) Dari manfaat yang didapatkan, teknologi informasi mulai digunakan dan diterapkan untuk membantu operasional dalam proses bisnis. (5) Misalnya perusahaan dalam memberikan pelayanan kepada pelanggan dengan menyediakan informasi jasa dan produk yang ditawarkan tanpa dibatasi waktu dan ruang.&lt;br&gt;
+Perbaikan kalimat bernomor 2 dalam paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Orang mulai melihat kelebihan lainnya, seperti menggantikan sarana pengiriman surat dengan surat eletronik (e-mail).&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ternyata banyak kelebihan lainnnya, seperti menggantikan sarana komunikasi dengan surat eletronik (e-mail).&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak perlu lagi menulis tangan karena sudah ada alat yang canggih dan mudah menggunakannya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak heran, pada zaman sekarang anak-anak sudah mampu mengoperasikan alat-alat teknologi canggih.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sudah saatnya kita beralih prinsip ke zaman teknologis agar tidak ketinggalan dengan Negara-negara maju.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Pernahkah kamu mendengar peribahasa &quot;...&quot;. Ini ditujukan untuk orang yang sudah meninggal, tetapi pada masa hidupnya dia seorang yang baik, suka membantu, mudah bergaul. Dengan kata lain, sewaktu hidupnya selalu melakukan kebaikan sehingga banyak yang menyenanginya.&lt;br&gt;
+Peribahasa yang tepat untuk melengkapi pada paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;mutiara sekalipun dia tenggelam di dalam lumpur tetap berkilau&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dalam laut dapat diduga, dalam hati tiada seorang pun yang tahu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pikir dahulu pendapan, sesal kemudian tidak akan berguna&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berlayar sampai ke pulau, berjalan sampai ke batas tujuan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;gajah mati meninggalkan gading, harimau mati meninggalkan belang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Di langit lepas aku melihat burung terbang bebas, seolah sedang mengantarkan sore merangkul senja, merelakan warna biru langit perlahan beralih menjadi lembayung jingga keemasan. Burung itu terbang... Tampaknya burung itu ingin &amp;hellip; menikmati sore yang indah. Mereka terbang &amp;hellip; seakan berirama. Sungguh pemandangan yang sangat elok untuk dinikmati. Tiba- tiba rentetan tanya menghampiriku. Hendak ke mana burung-burung itu, ke sarangnya, dan di mana sarangnya? Entahlah.&lt;br&gt;
+Kata ulang yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;berbondong-bondong, bersenang-senang, meliuk-liuk&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berbondong-bondong, senang-senangan, meliuk-liuk&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bondong-berbondong, bersenang-senang, meliuk-liukan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berbondongan-bondongan, senang-senangan, meliuk-liukan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bondong-berbondong, menyenang-nyenangkan, liuk-meliuk&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Pengangkatan anak Indonesia oleh orang asing itu merupakan tindakan yang memalukan seluruh bangsa.&amp;hellip;, harus dicegah. Perlulah kita mengadakan berbagai penelitian &amp;hellip; pemikiran kembali &amp;hellip; sebenarnya dalam hal itu masih banyak terdapat hal-hal positif, yang justru membantu kita menyelesaikan beberapa masalah yang mendesak&amp;hellip; kita mau jujur pada diri kita sendiri.&lt;br&gt;
+Konjungsi yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;jadi, atau, sehingga, kalau&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;akan tetapi, dan, lalu, atau&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;oleh karena itu, dan, sebab, kalau&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;namun, tetapi, sebab, jika&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bilamana, jika, sehingga, jika&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Kami merasa terharu menyaksikan kejujuran Anda. Jarang kami menjumpai orang sejujur Anda. Oleh sebab itu, wajiblah kami menghormati Anda. Bahkan, sangat layak bila Anda, kami...&lt;br&gt;
+Ungkapan yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;angkat tangan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bertekuk lutut.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membuka hati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;acungkan jempol.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tersenyum lebar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Pada tahun pelajaran 2014-2015 SMA Negeri Purwokerto mulai menyosialisasikan informasi tentang pengembangan kelas berbasis kecerdasan majemuk. Hal ini dilakukan untuk &amp;hellip; kelas khusus baru  di samping kelas olahraga yang telah... sejak lima tahun terakhir. Kelas khusus ini... mampu mengangkat nama baik sekolah.&lt;br&gt;&lt;br&gt;
+Kata berimbuhan yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;memopulerkan, perkembangan, pengharapan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memopulerkan, berkembangnya, berharap&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mempopulerkan, pengembangan, harapan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memopulerkan,  pengembangan, diharapkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memopulerkan, dikembangkan, diharapkan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf  prosedur berikut!&lt;br&gt;&lt;br&gt;
+Dari pada hal-hal yang diuraikan diatas, agaknya dapatlah ditariksimpulan yang mana sebaiknya kita-kita tidak terburu-buru menilai seseorang.&lt;br&gt;&lt;br&gt;
+Perbaikan kalimat tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Dari hal-hal yang yang diuraikan diatas, dapatlah ditarikkesimpulan bahwa sebaiknya kita kita tidak terburu-buru menilai seseorang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dari uraian tersebut, dapat disimpulkan bahwa sebaiknya kita jangan terburu-buru menilai seseorang.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dari hal-hal yang telah diuraikan tersebut, agaknya disimpulkan bahwa jika kita kita jangan terburu-buru menilai seseorang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dari uraian tersebut, dapat disimpulkan jika sebaiknya kita janganglah terburu-buru menilai seseorang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dari pada hal-hal yang diuraikan, dapatlah ditariksimpulan yang sebaiknya kita-kita tidak terburu-buru menilai seseorang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf sebab-akibat berikut!&lt;/p&gt;
+&lt;p&gt;Sistem pendidikan di Indonesia yang dikembangkan sekarang ini masih belum memenuhi harapan. Hal ini dapat terlihat dari keterampilan membaca siswa kelas IV SD di Indonesia yang berada pada peringkat terendah di Asia Timur setelah Philipina, Thailand, Singapura, dan Hongkong.Selain itu, berdasarkan penelitian, rata-rata nilai tes siswa SD kelas VI untuk mata pelajaran Bahasa Indonesia, Matematika, dan IPA dari tahun ke tahun semakin menurun. Anak-anak di Indonesia hanya dapat menguasai 30% materi bacaan. Kenyataan ini disajikan bukan untuk mencari kesalahan penentu kebijakan, pelaksana pendidikan, dan keadaan yang sedang melanda bangsa, tapi semata-mata agar kita menyadari sistem pendidikan kita mengalami krisis.&lt;/p&gt;
+&lt;p&gt;Kalimat sebab-akibat sesuai dengan teks tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Rendahnya kemampuan siswa SD dalam membaca, pelajaran bahasa Indonsia, matematika, dan IPA karena sistem pendidikan di Indonesia masih belum memadai.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keterampilan membaca siswa kelas IV SD di Indonesia rendah karena berada pada peringkat terendah di Asia Timur setelah Philipina, Thailand, Singapura, dan Hongkong.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rata-rata nilai tes siswa SD kelas VI untuk mata pelajaran Bahasa Indonesia, Matematika, dan IPA dari tahun ke tahun semakin menurun karena berdasarkan penelitian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Anak-anak di Indonesia hanya dapat menguasai 30% materi bacaan sebab kenyataan ini disajikan bukan untuk mencari kesalahan penentu kebijakan dan pelaksana pendidikan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keadaan pendidikan bangsa dapat dikatakan tertinggal karena kita tidak menyadari sistem pendidikan kita mengalami krisis.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Hal yang dipandang sebagai salah satu alternatif pemecahan-pemecahan masalah besar yang dihadapi oleh sebuah rumah tangga adalah tidak memiliki anak. Untuk itu mereka &amp;hellip;anak.&lt;br&gt;
+Istilah yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;adopsi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengadaptasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;beradaptasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;beradopsi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengadopsi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati puisi berikut berikut untuk menjawab soal!&lt;/p&gt;
+&lt;p&gt;Perhelatan bisa kacau tanpa kehadiran lelaki itu. Gulai kambing akan terasa hambar lantaran racikan bumbu tidak meresap ke dalam daging. Kuah gulai kentang dan gulai rebung bakal encer karena keliru menakar jumlah kelapa parut hingga setiap menu masakan kekurangan santan. Akibatnya, berseraklah fitnah dan cela yang mesti ditanggung tuan rumah. Bukan karena kenduri kurang meriah, tidak pula karena pelaminan tempat bersandingnya pasangan&lt;br&gt; pengantin tak sedap dipandang mata, tetapi karena macam-macam hidangan yang tersuguh tak menggugah selera. Nasi banyak gulai melimpah, tetapi helat tak bikin kenyang. Ini celakanya bila Makaji, juru masak handal itu tidak dilibatkan.&lt;br&gt; Juru Masak oleh Damhuri Muhammad&lt;/p&gt;
+&lt;p&gt;Kalimat (resensi) menyatakan keunggulan cerpen berdasarkan kutipan sastra tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pendeskripsian suasana dalam cerpen disajikan dengan bahasa yang sederhana dan sangat biasa.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Diksi yang digunakan dalam cerpen banyak menggunakan kata kias sehingga kesannya lebih dalam.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak ada kesulitan yang dirasakan sewaktu membaca cerpen ini sehingga dapat meju tarus membacanya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kemenarikan cerpen ini karena menyuguhkan adat tradisional berupa makanan khas pada saat pesta perkawinan.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Resep masakan yang dijelaskan dalam cerpen dapat menginspirasi untuk mencobanya sendiri.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati puisi berikut berikut untuk menjawab soal!&lt;/p&gt;
+&lt;p&gt;Perhelatan bisa kacau tanpa kehadiran lelaki itu. Gulai kambing akan terasa hambar lantaran racikan bumbu tidak meresap ke dalam daging. Kuah gulai kentang dan gulai rebung bakal encer karena keliru menakar jumlah kelapa parut hingga setiap menu masakan kekurangan santan. Akibatnya, berseraklah fitnah dan cela yang mesti ditanggung tuan rumah. Bukan karena kenduri kurang meriah, tidak pula karena pelaminan tempat bersandingnya pasangan&lt;br&gt; pengantin tak sedap dipandang mata, tetapi karena macam-macam hidangan yang tersuguh tak menggugah selera. Nasi banyak gulai melimpah, tetapi helat tak bikin kenyang. Ini celakanya bila Makaji, juru masak handal itu tidak dilibatkan.&lt;br&gt; Juru Masak oleh Damhuri Muhammad&lt;/p&gt;
+&lt;p&gt;Kalimat esai berdasarkan puisi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tentulah akan menarik siapa saja yang membaca cerita pendek ini.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Membaca cerpen ini terasa sekali warna lokalnya Sumatera Barat.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Juru masak dalam cerpen ini menunjukkan bahwa perhelatan besar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Nuansa kampung dalam kutipan hanya bisa dinikmati masyarat setempat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Disajikan dalam cerpen ini kehidupan masyarakat pada suatu perkampungan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati puisi berikut berikut untuk menjawab soal!&lt;/p&gt;
+&lt;p&gt;Perhelatan bisa kacau tanpa kehadiran lelaki itu. Gulai kambing akan terasa hambar lantaran racikan bumbu tidak meresap ke dalam daging. Kuah gulai kentang dan gulai rebung bakal encer karena keliru menakar jumlah kelapa parut hingga setiap menu masakan kekurangan santan. Akibatnya, berseraklah fitnah dan cela yang mesti ditanggung tuan rumah. Bukan karena kenduri kurang meriah, tidak pula karena pelaminan tempat bersandingnya pasangan&lt;br&gt; pengantin tak sedap dipandang mata, tetapi karena macam-macam hidangan yang tersuguh tak menggugah selera. Nasi banyak gulai melimpah, tetapi helat tak bikin kenyang. Ini celakanya bila Makaji, juru masak handal itu tidak dilibatkan.&lt;br&gt; Juru Masak oleh Damhuri Muhammad&lt;/p&gt;
+&lt;p&gt;Kalimat &lt;em&gt;kritik&lt;/em&gt; berdasarkan kutipan sastra tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kelompok kata &amp;rdquo;berseraklah fitnah&amp;rdquo; dalam terlalu bombastis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kalimat yang digunakan sangat lugas, tanpa kiasan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ditemukan kata kedaerahan yang menyulitkan pemahamannya perhelatan.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ditemukan kata tidak baku, antara lain: mesti,bikin, tak (kebebasan pengarang)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Gambaran pelaminan tempat bersandingnya pasangan menggambarkan sesuatu yang baru.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Teks berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+[Teks 1]&lt;br&gt;
+Federasi Sepak Bola Malaysia (FAM) menyatakan kesiapannya mengambil alih tugas PSSI untuk menggelar leg kedua final Piala AFF tahun itu karena kerusakan yang terjadi di Stadion Utama Gelora Bung Karno (SUGBK). Kesiapan ini diutarakan Asisten Sekjen FAM, Ahmad Fuad Bin Daud di Stadion Bukit Jalil, Malaysia, waktu itu. &amp;rdquo;Kami siap menjadi tuan rumah kembali. Namun, semua tergantung keputusan AFF,&amp;rdquo; ujarnya. Jatah Indonesia sebagai tuan rumah leg kedua final Piala AFF 2010 terancam batal setelah pendukung Indonesia mengamuk kemarin saat mengantre membeli tiket. Ratusan supporter ini masuk dan merusak beberapa bagian, termasuk lapangan&lt;br&gt;&lt;br&gt;
+[Teks 2]&lt;br&gt;
+(1) Ada apa sebenarnya dengan Indonesia? (2) Tiga gol dengan cepat bersarang ke gawang Markus Horison. (3) Buyarnya permainan Pasukan Merah-Putih sesungguhnya diawali dari protes tim yang membuat pertandingan terhenti beberapa saat karena ada gangguan sinar laser dari tribune penonton ke arah kiper Markus. (4) Firman Utina dan kawan-kawan takluk secara menyakitkan sekali pada tuan rumah, Malaysia, 0-3 dalam sesi pertama final. (5)Sungguh patut disayangkan, performan apik timnas Indonesia dalam lima pertandingan Piala AFF, mengalami antiklimaks di Stadion Bukit Jalil, Kuala Lumpur.&lt;br&gt;&lt;br&gt;
+Kata tidak baku dalam kutipan  teks 2 tersebut terdapat pada kalimat bernomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

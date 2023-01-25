@@ -1,0 +1,106 @@
+@import "equation.css";
+
+/* Menu CSS */
+/*----- Tabs -----*/
+.eq-tabs {
+    width:100%;
+    display:inline-block;
+}
+ 
+/*----- Tab Links -----*/
+/* Clearfix */
+.eq-tab-links:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+
+.eq-tab-links {
+    margin: 0px;
+    padding-left: 7px;
+    white-space: nowrap;
+}
+
+.eq-tab-links li {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /*float:left;*/
+    display:inline-block;
+    list-style:none;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+ 
+.eq-tab-links a {
+    padding:6px 14px;
+    display:inline-block;
+    background:#E0E0E0;
+    font-size:12px;
+    color:#000;
+    text-decoration:none;
+}
+
+.outer-eq-tab-links a:hover {
+    background:#C2C2C2;
+}
+
+.inner-eq-tab-links a:hover {
+    background:#A7A4A4;
+}
+
+.outerTab.active a, .outerTab.active a:hover {
+    background: #C2C2C2;
+}
+
+.innerTab.active a, .innerTab.active a:hover {
+    background: #A7A4A4;
+}
+
+.top-level-eq-tab {
+    background:#9C9C9C;
+}
+/*----- Content of Tabs -----*/
+.eq-tab-content {
+    padding: 10px 10px;
+}
+
+.eq-tab-content-nested {
+    background: #A7A4A4;
+}
+
+#eq-tab-content-top {
+    background: #C2C2C2;
+	min-height:110px;
+}
+ 
+.eq-tab {
+    display:none;
+}
+
+.eq-tab.active {
+    display:block;
+}
+
+.innerTabImg {
+}
+
+.menuItem {
+    background: transparent;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    padding: 4px;
+    vertical-align: top;
+}
+
+.menuItem:hover {
+    cursor: pointer;
+}
+
+.eq-tab.outer > .menuItem:hover {
+    background-color: #707070;
+}
+
+.eq-tab.inner > .menuItem:hover {
+    background-color: #545454;
+}

@@ -1,0 +1,1523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perang Diponegoro&lt;br&gt;&lt;br&gt; Pangeran Diponegoro, yang semula bernama Raden Mas Ontowiryo, adalah putra Sultan Hamengku Buwono III dari ibu yang bukan permaisri, R.A. Mangkarawati, seorang putri berdarah Madura. Pangeran Diponegoro dilahirkan di Yogyakarta tanggal 11 November 1785. Sejak kecil diash nenknya, Kanjeng Ratu Ageng, yang terkenal saleh, bermukim di Tegalrejo.&lt;br&gt; Campur tangan Belanda dalam persoalan Yogyakarta semakin merongrongkewibawaan raja. Diponegoro sangat marah ketika melihattingkah laku Belanda yang tidak menyenangkan.&lt;br&gt; Tanggal 20 Juli 1825 Pangeran Diponegoro mengangkat senjata melawan Bekanda dengan bantuan beberapa orang bangsawan yang antu penjajah.&lt;br&gt; Beberapa hal yang mendorong Diponegoro mengangkat senjata adalah kerja paksa membuat jalan Merak sampai Panarukan yang banyak memakan korban, rasa anti penjajah yang ditananmkan oleh Sri Sultan I dan II, sistem pajak tanah yang merugikan penduduk timbulnya tuan tanah yang diberikan kepada orang asing, di samping rongrongan kewibawaan raja oleh beberapa punggawa yang pro Belanda.&lt;br&gt;&lt;br&gt; Pikiran utama paragraf pertama wacana diatas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pangeran Diponegoro semula bernama Raden Mas Ontowiryo.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pangeran Diponegoro adalah putra Sultan Hamengku Buwono III.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pangeran Dponegoro adalah putra RA. Mangkarawati.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pangeran Diponegoro di masa kecilnya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perang Diponegoro&lt;br&gt;&lt;br&gt; Pangeran Diponegoro, yang semula bernama Raden Mas Ontowiryo, adalah putra Sultan Hamengku Buwono III dari ibu yang bukan permaisri, R.A. Mangkarawati, seorang putri berdarah Madura. Pangeran Diponegoro dilahirkan di Yogyakarta tanggal 11 November 1785. Sejak kecil diash nenknya, Kanjeng Ratu Ageng, yang terkenal saleh, bermukim di Tegalrejo.&lt;br&gt; Campur tangan Belanda dalam persoalan Yogyakarta semakin merongrongkewibawaan raja. Diponegoro sangat marah ketika melihattingkah laku Belanda yang tidak menyenangkan.&lt;br&gt; Tanggal 20 Juli 1825 Pangeran Diponegoro mengangkat senjata melawan Bekanda dengan bantuan beberapa orang bangsawan yang antu penjajah.&lt;br&gt; Beberapa hal yang mendorong Diponegoro mengangkat senjata adalah kerja paksa membuat jalan Merak sampai Panarukan yang banyak memakan korban, rasa anti penjajah yang ditananmkan oleh Sri Sultan I dan II, sistem pajak tanah yang merugikan penduduk timbulnya tuan tanah yang diberikan kepada orang asing, di samping rongrongan kewibawaan raja oleh beberapa punggawa yang pro Belanda.&lt;br&gt;&lt;br&gt; Mengapa Pangeran Diponegoro memusuhi Belanda?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Karena Pangeran Diponegoro orang Indonesia.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Karena Belanda bertempat tinggal di Indonesia.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Karena Diponegoro didukung beberapa bangsawan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Karena Belanda merongrong kewibawaan raja.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perang Diponegoro&lt;br&gt;&lt;br&gt; Pangeran Diponegoro, yang semula bernama Raden Mas Ontowiryo, adalah putra Sultan Hamengku Buwono III dari ibu yang bukan permaisri, R.A. Mangkarawati, seorang putri berdarah Madura. Pangeran Diponegoro dilahirkan di Yogyakarta tanggal 11 November 1785. Sejak kecil diash nenknya, Kanjeng Ratu Ageng, yang terkenal saleh, bermukim di Tegalrejo.&lt;br&gt; Campur tangan Belanda dalam persoalan Yogyakarta semakin merongrongkewibawaan raja. Diponegoro sangat marah ketika melihattingkah laku Belanda yang tidak menyenangkan.&lt;br&gt; Tanggal 20 Juli 1825 Pangeran Diponegoro mengangkat senjata melawan Bekanda dengan bantuan beberapa orang bangsawan yang antu penjajah.&lt;br&gt; Beberapa hal yang mendorong Diponegoro mengangkat senjata adalah kerja paksa membuat jalan Merak sampai Panarukan yang banyak memakan korban, rasa anti penjajah yang ditananmkan oleh Sri Sultan I dan II, sistem pajak tanah yang merugikan penduduk timbulnya tuan tanah yang diberikan kepada orang asing, di samping rongrongan kewibawaan raja oleh beberapa punggawa yang pro Belanda.&lt;br&gt;&lt;br&gt; Simpulan isi teks di atas adalah ..........&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tanggal 20 Juli 1825 Diponegoro mengangkat senjata.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perlawanan Diponegoro terhadap penjajah Belanda.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kerja paksa membuat jalan antara Merak sampai Panarukan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Timbulnya tuan tanah yang diberikan kepada orang asing.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kedisiplinan para siswa dapat dtingkatkan melalui beberapa upaya. Melalui kegiatan ekstrakurikuler misalnya upacara bendera, latihan baris berbaris, kepramukaan atau kegiatan paskibraka.&lt;br&gt;&lt;br&gt;
+Tanggapan yang baik sesuai dengan pernyataan di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Disiplin sangat diperlukan untuk membina mentalitas yang tangguh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kedisiplinan sebenarnya akan terbentuk langsung secara alami&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Melalui kegiatan ekstrakurikuler itulah akan terbina kedisiplinan yang matang dan semangat saling menghargai&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dengan jiwa yang disiplin, maka terbentuklah jiwa yang tangguh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penyebab kecelakaan lalu lintas di jalan raya adalah kesalahan pengemudi. Pengemudinya biasanya kurang sabar. Mereka saling mengebut dan ingin mendahului. Mengantuk juga sering menjadi penyebab kecelakaan. Jarak yang ditempuh kendaraan terlalujauh akan mengakibatkan sopir lelah dan mengantuk sehinga mudah tabrakan dengan kendaraan lain.&lt;br&gt;&lt;br&gt;
+Kalimat tanggapan yang sesuai dengan paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Jarak terlalu jauh mengakibatkan pengemudi kurang sabar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bila sopir, berhati-hati maka kecelakaan tidak akan terjadi.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Para pengemudi biasanya mengebut dan saling mendahului.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tabrakan terjadi karena pengemudi sering mengantuk.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kalimat berikut yang merupakan pendapat adalah....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pada musim layangan langit dipenuhi layangan adu dengan berbagai bentuk.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Belum jelas benar hilangnya layangan adu itu sehingga panitia akan mencarinya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Yang jelas, layangan hias dapat menentramkan hati yang menerbangkannya.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mereka bisa rekreasi, sekaligus melepas stres dengan layang-layang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;1. Setelah puas berkeliling, kami berkumpul untuk makan siang bersama.&lt;br&gt;
+2. Meskipun kelelahan, kami merasa puas karena sudah melihat Candi Borobudur di Jawa Tengah secara langsung.&lt;br&gt;
+3. Tepat pukul 17.00 kami bersiap pulang ke Kediri.&lt;br&gt;
+4. Sebelum berangkat kami mendapatkan pengarahan.&lt;br&gt;
+5. Kami berangkat bersama dari sekolah.&lt;br&gt;
+6. Sesampainya di Candi Borobudur, kami melihat-lihat relief-relief candi.&lt;br&gt;&lt;br&gt;
+Kalimat-kalimat tersebut akan menjadi laporan yang sistematisbila di susun dengan urutan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;4, 5, 6, 1, 3, 2&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5, 4, 6, 3, 2, 1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4, 6, 5, 3, 1, 2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5, 6, 4, 1, 3, 2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Carilah permasalahan untuk didiskusikan! Setiap anggota kelompok mencari permasalahan untuk diskusi (1) Jangan lupa, agar diskusi berjalan lancar, tentukan moderator (2) dan notulen (3) Bahaslah bersama-sama permasalahn itu ! Setiap kelompok diskusi dan berargumentasi (4).&lt;br&gt;&lt;br&gt;
+Istilah-istilah pada paragraf tersebut bila disusun menjadi kamus kecil, yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1, 2, 3, 4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2, 3, 4, 1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4, 3, 2, 1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4, 1, 2, 3&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kecintaan ayah dan ibu kepada anaknya betul-betul cinta yang tulus dan ikhlas tanpa kepalsuan. Ungkapan yang tepat untuk pernyataan tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Cinta yang murni&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Cinta yang buta&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Cinta segitiga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Cinta keluarga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sejak dulu dia mempunyai cita-cita berkarir di dunia musik. Dia membentuk group musik dengan teman-temannya. Pada awalnya orang tuanya tidak mengijinkan dia berkarir di dunia musik. Akan tetapi, sekarang orang tuanya sudah mengijinkan dan mendukung ihtiarnya.&lt;br&gt;
+Kata-kata tidak baku yang terdapat dalam paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Cita-cita, karir, musik, ihtiar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Karir, group, ijin, ihtiar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Musik, ijin, orang tua, ihtiar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sejak, lahir, sekarang, awal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kalimat berikut menggunakan kata berhomonim adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Bang Ali kemarin menabung di bank Jatim.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bisa ular bisa dijadikan obat kulit&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Setelah apel pagi dia membeli apel&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Saya sangsi terhadap sanksi yang diberikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;em&gt;Kegemaran&lt;/em&gt; akan bersepeda bukan main besarnya. Sambutan masyarakat terhadap lomba sepeda &lt;em&gt;gembira&lt;/em&gt; yang di gelar setiap bulan tidak kepalang tanggung. Kalau setiap lomba pesertanya tidak dibatasi, penyelenggara di Kediri akan mengalami &lt;em&gt;kerepotan&lt;/em&gt;.&lt;br&gt;&lt;br&gt; Sinonim kata-kata yang terecetak miring dalam paragraf di atas adalah...</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Keinginan, santai, kesulitan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kesenangan, suka ria, kesulitan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kebiasaan, kebanggaan, keresahan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kesukaan, riang, kesusahan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kalimat yang saudara susun kurang sesuai dengan struktur bahasa.&lt;br&gt;&lt;br&gt;
+Kalimat logis untuk menanggapi pernyataan di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Maaf, saya tidak menerima kritik Saudara !&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Terima kasih atas kritik Saudara, akan saya perhatikan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tanggapan Saudara tidak tepat disampaikan dalam diskusi ini&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Maaf, bukan saya yang menyusun, saya hanya menyampaikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Tetapi apa boleh buat, nasi sudah menjadi bubur.&lt;br&gt;&lt;br&gt;
+Makna peribahasa dalam kalimat di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Segala sesuatu ada resikonya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pada awalnya baik, namun akhirnya jelek&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Karena tidak mengerti, akhirnya merugi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perbuatan yang terlanjur tidak dapat kita sesali&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kalimat yang menggunakan kata tidak baku adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Polisi memberi isyarat agar kami segera menepi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Orang tua harus bisa menjadi suri teladan bagi anak-anaknya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jangan khawatir, persediaan barang masih banyak&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kita berdo&amp;rsquo;a agar Indonesia tetap aman dan damai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kalimat yang dapat kita pakai dalam menyanggah pendapat dalam diskusi antara lain:&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Saya kurang setuju&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pendapat anda tidak tepat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dangkal sekali pengetahuan anda&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pendapatmu tidak masuk akal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kesantunan seorang pemimpin diskusi tertera dibawah ini, kecuali...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Mengetahui aturan permainan diskusi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berpegang teguh pada faham tertentu&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Membuka dan menutup diskusi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menerangkan setiap pendapat peserta&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;18.  Cara-cara yang baik untuk menjadi pembawa acara seperti berikut ini, kecuali...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Carilah informasi akutal dari berbagai media agar wawasan luas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Gunakan ragam bahasa yang sesuai dengan acara&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tampillah dengan percaya diri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Buatlah susunan acara pada saat akan dimulai&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kalimat yang diucapkan oleh seorang pembawa acara yang benar adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Bapak Kepala Sekolah saya persilahkan untuk memberikan sambutan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Waktu dan tempat saya persilahkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kepada beliau waktu dan tempat saya haturkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bapak Kepala Sekolah saya mohon memberikan sambutan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Apabila kita menjadi pembawa acara kita harus berkonsultasi dengan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Panitia penyelenggara&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penonton&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penata penggung&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Katering&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Wabah penyakit demam berdarah melanda perkampungan. Beberapa anak terpaksa di bawa ke rumah sakit karena wabah itu. Penyebar penyakit itu adalah nyamuk. Oleh karena itu, pemberantasan terhadap perkembangbiakan nyamuk itu dilaksanakan besar-besaran.me&lt;br&gt;&lt;br&gt;
+Kalimat poster yang sesuai dengan ilustrasi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Biasakanlah pola hidup sehat setiap saat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jangan biarkan nyamuk ada di sekitar kita&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Demam berdarah merupakan penyakit berbahaya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berantaslah sarang nyamuk dimanapun berada&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Untuk megingatkan warga agar menjaga kebersihan lingkungan demi kenyamanan hidup, ketua RT. 01/01 mengajak sekretarisnya untuk memasangkan slogan di setiap gang di wilayah RT tersebut.&lt;br&gt;&lt;br&gt;
+Slogan yang sesuai dengan ilutasi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kebersihan mohon selalu dijaga bersama.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mari menjaga kebersihan untuk kenyamanan hidup&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lingkungan bersih menyebabkan hidup penuh kebahagiaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bersih lingkunganku nyaman hidupku&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kalimat yang cocok dijadikan poster adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Ayo kita belajar setap hari&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Belajarlah sepanjang hayat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak belajar menjadikan kita bodoh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Belajarlah dirumah saja jika tidak ke sekolah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Setiap hari Soni bermain-main saja. Buku pelajarannya tidak pernah dibuka, apalagi dipelajari. Tiap kali ayah dan ibunya mengingatkan Soni bahwa ujian sudah dekat. Akan tetapi, Soni tidak mau menurut. Ia msih saja tak mau mengubah sikap. Akhirnya, Soni tidak lulus ujian.&lt;br&gt;&lt;br&gt;
+Watak Soni dalam kutipan cerpen tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Nakal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pembangkang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pemberani&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pemalas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;(1) matahari membara, tepat di atas kepala, panas menyerang tanpa ampun, aspal meleleh, perutku kosong, kerongkongan kering. (2)aku melangkah seperti kerangka kayu yang reyot, pandangan berkunang-kunang. (3) kami kehausan dan menderita dehidrasi, bahkan sudah tidak lagi berkeringat.(4) aku tak sanggup, apalagi waktu melewati danau, aku ingin sekali membatalkan puasaku, tapi saat aku menoleh kepada Arai, ia tersenyum menggeleng...&amp;rdquo;bertahanlah Ika!&amp;rdquo;&lt;br&gt;&lt;br&gt;
+Bukti bahwa watak Arai tidak mudah menyerah terlihat pada kalimat nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Hari ini Mia kecelakaan. Bus yang ditumpanginya menabrak truk yang melaju sangat cepat. Padahal kemarin Mia sudah mempersiapkan semua keperluannya. Baju wisuda, topi toga, dan segala peralatanlainnya. Mia selalu bercerita untuk menjadi sarjanaia telah relakan waktu bermain dan bercandauntuk bekerja cari biaya kuliah.&lt;br&gt;&lt;br&gt;
+Cerita di atas disusun menggunakan alur...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Maju&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Regresif&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Linier&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Progresif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pesan penyair yang disampaikan kepada pembaca melalui kalimat-kalimat dalam pisi di sebut...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Setting&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Amanat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tema&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Alur&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ibu : (Dengan penuh kesabaran)sudahlah, nak. Nanti juga kelihatan siapayang benar dalam peristiwa itu.&lt;br&gt;
+Anak : Tidak, Bu! Aku tetap tidak terima atas perlakuan ini!&lt;br&gt;&lt;br&gt;
+Dalam cuplikan dialog di atas ucapan anak itu disertai perasaan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Gembira&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sedih&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jengkel&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menyesal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Teks berita sebaiknya ditulis secara.....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Panjang, lebar, dan jelas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Padat dan singkat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jelas dan singkat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jelas, padat, dan singkat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kami bicara padamu dalam &lt;em&gt;hening&lt;/em&gt; di malam sepi. Jika dada rasa hampa dan jam dinding yang berdetak.&lt;br&gt;&lt;br&gt; Kata yang tercetak miring dalam penggalan puisi di atas mengandung citraan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pendengaran&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penglihatan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penciuman&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perasaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Di bawah ini adalah peserta diskusi, kecuali...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pimpinan diskusi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Peserta diskusi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penulis diskusi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penonton diskusi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Slogan yang cocok untuk pelajar adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Aku mau hidup selama-lamanya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak ada yang lebih penting selain mencintai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Belajar hari ini untuk hidup seribu tahun di masa depan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Merokok sangat berbahaya bagi kesehatan sendiri dan orang lain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dan ada nasihat-nasihat ayahnya terlalu datar seperti air bengawan di musim kemarau, akupun telah mulai bosan. Setiap keadaan yang mungkin membawa ayah memberikannasihat-nasihatnya.&lt;br&gt;
+Sifat aku pada penggalan cerpen di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Patuh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penurut&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Disiplin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pembangkang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Meski kini&lt;br&gt;
+Mampu aku berdiri, berjalan sendiri&lt;br&gt;
+Tetapi aku anakmu&lt;br&gt;
+Butuh kasihmu&lt;br&gt;
+Ibu.......&lt;br&gt;&lt;br&gt;
+Pernyataan yang merupakan isi puisi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sesukses apapun seorang anak tetap membutuhkan kasih sayang ibu.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Meskipun bisa berdiri dan berjalan, seorang anak tetap membtuhkan ibunya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kasih sayang ibu mampu membuat anaknya berdiri dan berjalan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Seorang ibu tetap membutuhkan kasih sayang dari anaknya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Meski kini&lt;br&gt;
+Mampu aku berdiri, berjalan sendiri&lt;br&gt;
+Tetapi aku anakmu&lt;br&gt;
+Butuh kasihmu&lt;br&gt;
+Ibu.......&lt;br&gt;&lt;br&gt;
+Citraan puisi di atas adalah....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Penglihatan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pendengaran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perasaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penciuman&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Meski kini&lt;br&gt;
+Mampu aku berdiri, berjalan sendiri&lt;br&gt;
+Tetapi aku anakmu&lt;br&gt;
+Butuh kasihmu&lt;br&gt;
+Ibu.......&lt;br&gt;&lt;br&gt;
+Persamaan bunyi pada akhir baris di sebut...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Lagu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Irama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rima&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ritme&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Meski kini&lt;br&gt;
+Mampu aku berdiri, berjalan sendiri&lt;br&gt;
+Tetapi aku anakmu&lt;br&gt;
+Butuh kasihmu&lt;br&gt;
+Ibu.......&lt;br&gt;&lt;br&gt;
+Pemilihan kata yang tepat dalam menulis puisi di sebut...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Diksi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Imajinasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mimik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rima&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kalau kita akan menulis puisi kita harus memperhatikan hal-hal berikut ini, kecuali...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Diksi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Imajinasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Majas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Vokal&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dalam membacakan puisi kita harus memperhatikan hal-hal berikut ini, kecuali...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Suara harus keras&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mimik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tekanan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Intonasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Fungsi judul puisi secara umum adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menarik perhatian dan mengetahui isi puisi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menulis isi puisi dan tema puisi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menentukan tema dan diksi puisi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;memilih diksi dan bait puisi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

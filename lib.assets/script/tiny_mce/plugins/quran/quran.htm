@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{#quran_dlg.title}</title>
+<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+<script type="text/javascript" src="js/dialog.js"></script>
+<script type="text/javascript" src="../../../../../lib.assets/script/jquery/jquery.min.js"></script>
+<script type="text/javascript">
+function insertQuran(){
+	
+}
+</script>
+<base target="_self" />
+</head>
+<style type="text/css">
+#verse,#verse2{width:45px;}
+#lang,#surah{width:145px;}
+#versenumber{border:none; padding:0px;}
+</style>
+<body id="quran" style="display: none">
+<div align="center" style=" width:270px; margin:0px auto; text-align:left; ">
+<div class="title" style="text-align:center;"><span style="font-weight:normal; font-size:18px; ">&#1575;&#1614;&#1604;&#1618;&#1602;&#1615;&#1585;&#1618;&#1570;&#1606;&#1616;</span></div>
+<form name="form1" method="post" action="" style="margin:0px; padding:0px; ">
+<table width="270" border="0">
+<tr>
+<td width="80">{#quran_dlg.surah}</td>
+<td><span id="surahctrl"></span> </td>
+</tr>
+<tr>
+<td>{#quran_dlg.verse}</td>
+<td width="197"><span id="versectrl"></span> - <span id="versectrlto"></span></td>
+</tr>
+<tr>
+<td>{#quran_dlg.language}</td>
+<td><span id="language"></span></td>
+</tr>
+<tr>
+<td></td>
+<td><label><input name="versenumber" type="checkbox" id="versenumber" value="1" />
+ {#quran_dlg.versenumber}</label></td>
+</tr>
+<tr align="center">
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr align="center">
+<td colspan="2"><input type="button" id="insert" name="insert" value="{#insert}" onClick="QuranDialog.insert()">
+<input name="cancel" type="button" id="cancel" class="com-button" value="{#cancel}" onclick="tinyMCEPopup.close();">
+</td>
+</tr>
+</table>
+</form>
+</div>
+<script type="text/javascript">
+var sn2=new Array();var nv2=new Array();
+sn2[0]="";nv2[0]="";sn2[1]="Al Faatihah";nv2[1]=7;sn2[2]="Al Baqarah";nv2[2]=286;sn2[3]="Ali 'Imran";nv2[3]=200;sn2[4]="An Nisaa'";nv2[4]=176;sn2[5]="Al Maa-idah";nv2[5]=120;sn2[6]="Al An'am";nv2[6]=165;sn2[7]="Al A'raaf";nv2[7]=206;sn2[8]="Al Anfaal";nv2[8]=75;sn2[9]="At Taubah";nv2[9]=129;sn2[10]="Yunus";nv2[10]=109;sn2[11]="Huud";nv2[11]=123;sn2[12]="Yusuf";nv2[12]=111;sn2[13]="Ar Ra'd";nv2[13]=43;sn2[14]="Ibrahim";nv2[14]=52;sn2[15]="Al Hijr";nv2[15]=99;sn2[16]="An Nahl";nv2[16]=128;sn2[17]="Al Israa'";nv2[17]=111;sn2[18]="Al Kahfi";nv2[18]=110;sn2[19]="Maryam";nv2[19]=98;sn2[20]="Thaahaa";nv2[20]=135;sn2[21]="Al Anbiyaa'";nv2[21]=112;sn2[22]="Al Hajj";nv2[22]=78;sn2[23]="Al Mu'minuun";nv2[23]=118;sn2[24]="An Nuur";nv2[24]=64;sn2[25]="Al Furqaan";nv2[25]=77;sn2[26]="Asy Syu'araa'";nv2[26]=227;sn2[27]="An Naml";nv2[27]=93;sn2[28]="Al Qashash";nv2[28]=88;sn2[29]="Al 'Ankabuut";nv2[29]=69;sn2[30]="Ar Ruum";nv2[30]=60;sn2[31]="Luqman";nv2[31]=34;sn2[32]="As Sajdah";nv2[32]=30;sn2[33]="Al Ahzab";nv2[33]=73;sn2[34]="Saba'";nv2[34]=54;sn2[35]="Faathir";nv2[35]=45;sn2[36]="Yaasiin";nv2[36]=83;sn2[37]="Ash Shaaffat";nv2[37]=182;sn2[38]="Shaad";nv2[38]=88;sn2[39]="Az Zumar";nv2[39]=75;sn2[40]="Al Mu'min";nv2[40]=85;sn2[41]="Fushshilat";nv2[41]=54;sn2[42]="Asy Syuura";nv2[42]=53;sn2[43]="Az Zukhruf";nv2[43]=89;sn2[44]="Ad Dukhaan";nv2[44]=59;sn2[45]="Al Jaatsiyah";nv2[45]=37;sn2[46]="Al Ahqaaf";nv2[46]=35;sn2[47]="Muhammad";nv2[47]=38;sn2[48]="Al Fath";nv2[48]=29;sn2[49]="Al Hujuraat";nv2[49]=18;sn2[50]="Qaaf";nv2[50]=45;sn2[51]="Adz Dzariyaat";nv2[51]=60;sn2[52]="Ath Thuur";nv2[52]=49;sn2[53]="An Najm";nv2[53]=62;sn2[54]="Al Qamar";nv2[54]=55;sn2[55]="Ar Rahmaan";nv2[55]=78;sn2[56]="Al Waaqi'ah";nv2[56]=96;sn2[57]="Al Hadiid";nv2[57]=29;sn2[58]="Al Mujaadilah";nv2[58]=22;sn2[59]="Al Hasyr";nv2[59]=24;sn2[60]="Al Mumtahanah";nv2[60]=13;sn2[61]="Ash Shaff";nv2[61]=14;sn2[62]="Al Jumu'ah";nv2[62]=11;sn2[63]="Al Munaafiquun";nv2[63]=11;sn2[64]="At Taghaabun";nv2[64]=18;sn2[65]="Ath Thalaaq";nv2[65]=12;sn2[66]="At Tahriim";nv2[66]=12;sn2[67]="Al Mulk";nv2[67]=30;sn2[68]="Al Qalam";nv2[68]=52;sn2[69]="Al Haaqqah";nv2[69]=52;sn2[70]="Al Ma'aarij";nv2[70]=44;sn2[71]="Nuh";nv2[71]=28;sn2[72]="Al Jin";nv2[72]=28;sn2[73]="Al Muzzammil";nv2[73]=20;sn2[74]="Al Muddatstsir";nv2[74]=56;sn2[75]="Al Qiyaamah";nv2[75]=40;sn2[76]="Al Insaan";nv2[76]=31;sn2[77]="Al Mursalaat";nv2[77]=50;sn2[78]="An Naba'";nv2[78]=40;sn2[79]="An Nazi'at";nv2[79]=46;sn2[80]="'Abasa";nv2[80]=42;sn2[81]="At Takwiir";nv2[81]=29;sn2[82]="Al Infithaar";nv2[82]=19;sn2[83]="Al Muthaffifiin";nv2[83]=36;sn2[84]="Al Insyiqaaq";nv2[84]=25;sn2[85]="Al Buruuj";nv2[85]=22;sn2[86]="Ath Thaariq";nv2[86]=17;sn2[87]="Al A'laa";nv2[87]=19;sn2[88]="Al Ghaasyiyah";nv2[88]=26;sn2[89]="Al Fajr";nv2[89]=30;sn2[90]="Al Balad";nv2[90]=20;sn2[91]="Asy Syams";nv2[91]=15;sn2[92]="Al Lail";nv2[92]=21;sn2[93]="Adh Dhuhaa";nv2[93]=11;sn2[94]="Alam Nasyrah";nv2[94]=8;sn2[95]="At Tiin";nv2[95]=8;sn2[96]="Al 'Alaq";nv2[96]=19;sn2[97]="Al Qadr";nv2[97]=5;sn2[98]="Al Bayyinah";nv2[98]=8;sn2[99]="Al Zalzalah";nv2[99]=8;sn2[100]="Al 'Aadiyaat";nv2[100]=11;sn2[101]="Al Qaari'ah";nv2[101]=11;sn2[102]="At Takaatsur";nv2[102]=8;sn2[103]="Al 'Ashr";nv2[103]=3;sn2[104]="Al Humazah";nv2[104]=9;sn2[105]="Al Fiil";nv2[105]=5;sn2[106]="Quraisy";nv2[106]=4;sn2[107]="Al Maa'uun";nv2[107]=7;sn2[108]="Al Kautsar";nv2[108]=3;sn2[109]="Al Kaafiruun";nv2[109]=6;sn2[110]="An Nashr";nv2[110]=3;sn2[111]="Al Lahab";nv2[111]=5;sn2[112]="Al Ikhlash";nv2[112]=4;sn2[113]="Al Falaq";nv2[113]=5;sn2[114]="An Naas";nv2[114]=6;
+</script>
+<script type="text/javascript">
+var sctrl='';var vsctrl='';var ctrl2='';
+var availlang=new Array();
+availlang[0]='AR';availlang[1]='ID';availlang[2]='EN';
+var availlangval=new Array();
+availlangval[0]='Arabic';availlangval[1]='Bahasa Indonesia';availlangval[2]='English';
+var i;
+sctrl='<select name="surah" id="surah" class="surah" onChange="buildversemenu(this.value)">';
+for(i=1;i<=114;i++){
+sctrl += '<option value="'+i+'">'+i+'. '+sn2[i]+'</option>';
+}
+sctrl +='</select>';
+document.getElementById('surahctrl').innerHTML=sctrl;
+function setv2(value){
+	document.getElementById('verse2').selectedIndex=value;
+}
+function buildversemenu(j){
+	
+vctrl='<select name="verse" id="verse" class="verse" onchange="setv2(this.selectedIndex)">';
+for(i=1;i<=nv2[j];i++){
+vctrl += '<option value="'+i+'">'+i+'</option>';
+}
+vctrl +='</select>';
+vctrl2='<select name="verse2" id="verse2" class="verse">';
+for(i=1;i<=nv2[j];i++){
+vctrl2 += '<option value="'+i+'">'+i+'</option>';
+}
+vctrl2 +='</select>';
+
+document.getElementById('versectrl').innerHTML=vctrl;
+document.getElementById('versectrlto').innerHTML=vctrl2;
+}
+function buildlangmenu(){
+ctrl2='<select name="lang" id="lang" class="lang">';
+for(i=0;i<availlang.length;i++){
+ctrl2 += '<option value="'+availlang[i]+'">'+availlangval[i]+'</option>';
+}
+ctrl2 +='</select>';
+document.getElementById('language').innerHTML=ctrl2;
+}
+buildversemenu(1);
+buildlangmenu();
+</script>
+</body>
+</html>

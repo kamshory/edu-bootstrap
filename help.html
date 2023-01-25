@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Panduan Menggunakan Planet Edu</title>
+<link rel="stylesheet" type="text/css" href="lib.assets/fonts/roboto/font.css">
+<link rel="stylesheet" type="text/css" href="lib.assets/fonts/merriweather/font.css">
+<script type="text/javascript" src="lib.assets/script/jquery/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $('.navigator ul > li').each(function(index, element) {
+        var obj = $(this);
+		if(obj.find('li').length)
+		{
+			$(this).addClass('has-child');
+		}
+    });
+	$('.navigator ul > li.has-child').each(function(index, element) {
+        var obj = $(this);
+		obj.find('> a.expander').remove();
+		obj.prepend('<a href="#" class="expander"><span></span></a>');
+    });
+	$(document).on('click', '.navigator ul li a.expander', function(e){
+		var obj = $(this).closest('li');
+		obj.hasClass('expanded')?obj.removeClass('expanded'):obj.addClass('expanded');
+		saveState('.navigator', 'state');
+		e.preventDefault();
+	});
+	loadState('.navigator', 'state');
+});
+function saveState(obj, key)
+{
+	var state;
+	var arr = [];
+	$(obj).find('li').each(function(index, element) {
+        state = $(this).hasClass('expanded')?1:0;
+		arr[index] = state;
+    });
+	var value = JSON.stringify(arr);
+	window.localStorage.setItem(key, value);
+}
+function loadState(obj, key)
+{
+	var value = window.localStorage.getItem(key) || "";
+	var state;
+	var arr = [];
+	if(value != "")
+	{
+		arr = JSON.parse(value);
+		$(obj).find('li').each(function(index, element) {
+			state = parseInt((arr[index] || "0"));
+			if(state == 1)
+			{
+				$(this).addClass('expanded');
+			}
+		});
+	}
+}
+</script>
+<style type="text/css">
+body{
+	margin:0;
+	padding:0;
+	font-family: Roboto;
+	font-size:15px;
+	color:#333333;
+}
+.all{
+}
+.wrapper{
+	position:relative;
+	padding:16px;
+}
+.sidebar{
+	width:240px;
+	min-height:calc(100vh - 100px);
+	float:left;
+}
+.mainbar{
+	min-height:calc(100vh - 100px);
+	margin-left:260px;
+	width:calc(100% - 260px);
+}
+.header{
+	background-color:#F4FBFF;
+	padding:16px;
+}
+.header h3{
+	font-size:27px;
+	font-family:"Merriweather-Regular";
+	margin:0;
+	padding:0;
+}
+
+.navigator a{
+	color:#222222;
+	text-decoration:none;
+}
+.navigator ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+.navigator ul li ul
+{
+	display:none;
+}
+.navigator ul li.expanded > ul
+{
+	display:list-item;
+}
+.navigator ul li
+{
+	margin:0;
+	padding:0 0 0 16px;
+	position:relative;
+	line-height:1.5;
+}
+li a.expander{
+	position:absolute;
+	left:0px;
+	top:-1px;
+}
+li > a.expander > span::before{
+	content:"";
+	display:inline-block;
+	width:0px;
+	height:0px;
+	border:5px solid transparent;
+	border-left:5px solid #000000;
+	display:inline-block;
+}
+li.expanded > a.expander > span::before{
+	content:"";
+	width:0px;
+	height:0px;
+	border:5px solid transparent;
+	border-top:5px solid #000000;
+	display:inline-block;
+	margin-top:8px;
+}
+a{
+	color:#444444;
+}
+table td, th{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:11px;
+	color:#222222;
+}
+table[border="1"]{
+	border-collapse:collapse;
+}
+table[border="0"] td{
+	padding:4px 0;
+}
+table[border="1"] td{
+	padding:4px 5px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+<div class="all">
+    <div class="header">
+    <h3>Panduan Menggunakan Planet Edu</h3>
+    </div>
+	<div class="wrapper">
+    
+    
+    	<div class="sidebar">
+        	<div class="navigator">
+            	<ul>
+                	<li>
+                    	<a href="#">Bagian 1</a>
+                        <ul>
+                        	<li>
+                                <a href="#">Sub Bagian 1</a>
+                            </li>
+                        	<li>
+                                <a href="#">Sub Bagian 2</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Bagian 1</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Sub Bagian 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Sub Bagian 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Sub Bagian 3</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Bagian 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Bagian 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        	<li>
+                                <a href="#">Sub Bagian 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                	<li>
+                    	<a href="#">Bagian 2</a>
+                    </li>
+                	<li>
+                    	<a href="#">Bagian 3</a>
+                    </li>
+                	<li>
+                    	<a href="#">Bagian 4</a>
+                        <ul>
+                        	<li>
+                                <a href="#">Sub Bagian 1</a>
+                            </li>
+                        	<li>
+                                <a href="#">Sub Bagian 2</a>
+                            </li>
+                        	<li>
+                                <a href="#">Sub Bagian 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                	<li>
+                    	<a href="#">Bagian 5</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mainbar">
+          <p>Diagram alur pembuatan akun sekolah Planet Edu</p>
+          <p>Untuk mendaftarkan guru dan siswa ke dalam Planet Edu, sekolah harus     terlebih dahulu membuat sebuah akun yang nanti akan menjadi     administrator utama sekolah tersebut. Administrator ini yang akan     mendaftarkan sekolah, kelas, siswa, dan guru. Administrator ini juga     dapat menambahkan administrator lain yang nantinya akan sama-sama     mengelola sekolah di Planet Edu.</p>
+          <p> Untuk mendaftarkan sekolah, siswa, dan guru, administrator utama     dapat memasukkan semua data-data tersebut ke dalam sebuah file dengan     format yang dapat <a href="http://localhost/new-edu/admin/planetedu.xlsx">didownload</a> dari Planet Edu.</p>
+          <p>Sebelum membuat akun sekolah, pastikan bahwa Anda menggunakan akun resmi <a href="http://www.planetbiru.com/">Planetbiru</a> sekolah. Hal ini dikarenakan akun <a href="http://www.planetbiru.com/">Planetbiru</a> pembuat akun sekolah akan menjadi akun yang sangat penting dan memiliki     kewenangan tertinggi. Apabila sekolah belum memiliki akun resmi <a href="http://www.planetbiru.com/">Planetbiru</a>, sekolah dapat <a href="http://www.planetbiru.com/register.php" target="_blank">mendaftarkan sebuah akun baru</a>.</p>
+          <p>Data sekolah memiliki format XLSX yang dapat dibuat dengan menggunakan aplikasi <a href="http://www.openoffice.org/" target="_blank">OpenOffice</a>, <a href="https://www.libreoffice.org/" target="_blank">LibreOffice</a>, dan aplikasi sejenisnya. Data ini terdiri dari sheet sebagai berikut:</p>
+          <ol>
+            <li>SCHOOL</li>
+            <li>ADMIN</li>
+            <li>CLASS</li>
+            <li>STUDENT</li>
+            <li>TEACHER</li>
+            <li>CODE</li>
+          </ol>
+          <p>Nama sheet harus ditulis dengan huruf kapital semuanya. Kesalahan     penulisan ini akan menyebabkan data tidak dapat dibaca. Data pada     masing-masing sheet terdiri dari <em>header</em> atau kepada dan <em>body</em> atau isi. Data <em>header</em> harus dimulai dari kolom A1, B1, C1, dan seterusnya. <em>Header</em> terdiri dari 1 baris. <em>Header</em> tidak boleh berada di baris ke dua. Body dimulai dari baris ke dua atau A2, tepat di bawah <em>header</em>. Baris ketiga untuk data ke dua, baris keempat untuk data ke tiga, dan seterusnya hingga akhir dari data.</p>
+          <h3>Sheet SCHOOL</h3>
+          <p>Khusus untuk sheet SCHOOL, data terdiri dari satu baris saja. Program     akan mengabaikan data pada baris berikutnya jika ada. Hal ini berarti     bahwa satu file XLSX hanya untuk satu sekolah.</p>
+          <p> Kolom dari sheet SCHOOL adalah sebagai berikut:</p>
+          <ol>
+            <li>NAME</li>
+            <li>ADDRESS</li>
+            <li>PHONE</li>
+            <li>EMAIL</li>
+            <li>PUBLIC_PRIVATE</li>
+            <li>SCHOOL_GRADE</li>
+            <li>PRINCIPAL</li>
+            <li>COUNTRY</li>
+            <li>LANGUAGE</li>
+          </ol>
+          <p>Semua kolom di atas harus diisi dan tidak boleh ada kolom yang kosong.</p>
+          <p> <strong>NAME</strong> adalah nama dari sekolah. Nama ini harus unik     antara satu sekolah dengan sekolah lainnya. Penulisan nama sekolah     mengikuti aturan nomenklatur yang telah ditetapkan. Untuk mencegah     terjadinya kesalahan, sebaiknya menggunakan nama resmi yang telah     ditetapkan oleh dinas/pemerintah setempat. Jika nama sekolah tersebut     sudah dimasukkan ke data sebelumnya, maka program akan menggagalkan     proses impor kecuali data tersebut diimpor oleh pengguna yang sama dan     pengguna mencentang: &ldquo;Saya telah memasukkan data untuk sekolah ini     sebelumnya dan saya akan menggabungkan data baru dengan data-data     sebelumnya&rdquo;.</p>
+          <p> <strong>ADDRESS</strong> adalah alamat lengkap sekolah.</p>
+          <p> <strong>PHONE</strong> adalah nomor telepon resmi sekolah.</p>
+          <p> <strong>EMAIL</strong> adalah alamat surat elektronik resmi sekolah.</p>
+          <p> <strong>PUBLIC_PRIVAT</strong> adalah kode apakah sekolah tersebut merupakan sekolah negeri atau swasta. Lihat sheet CODE.</p>
+          <p> <strong>SCHOOL_GRADE</strong> adalah jenjang pendidikan sekolah. Lihat sheet CODE.</p>
+          <p> <strong>PRINCIPAL</strong> adalah nama kepala sekolah.</p>
+          <p> <strong>COUNTRY</strong> adalah kode negara 2 karakter sesuai dengan <strong>ISO 3166-1 alpha-2</strong>. Untuk Indonesia, gunakan ID. Selengkapnya kunjungi <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_blank">https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</a></p>
+          <p> <strong>LANGUAGE</strong> adalah bahasa yang akan digunakan. Bahasa ini tergantung dari bahasa yang tersedia di Planetbibu. Lihat sheet CODE.</p>
+          <h3>Sheet ADMIN</h3>
+          <p>Sheet ADMIN adalah sheet untuk memasukkan data administrator sekolah.     Program akan memeriksa alamat surat elektronik atau email dari admin     tersebut. Apabila pengguna dengan alamat email tersebut sudah   terdaftar   sebelumnya, maka pengguna yang bersangkutan akan menjadi   administrator   sekolah tersebut. Penggun tidak perlu khawatir akan   terjadinya   pembajaakan administrator, guru dan siswa karena Planet Edu   memungkinkan   pengguna baik administrator, guru dan siswa untuk   mengganti sekolahnya   sesuai dengan sekolah yang pernah dimasuki. </p>
+          <p> Sebagai contoh: Pengguna dengan nama Ahmad Dahlah dengan alamat email <a href="mailto:user@example.com">user@example.com</a> didaftarkan oleh sekolah A sebagai siswanya. Maka Ahmad Dahlan akan     menjadi siswa aktif di sekolah A. Setelah menjadi siswa aktif di sekolah     A, admin sekolah B memasukkan Ahmad Dahlah dengan alamat email <a href="mailto:user@example.com">user@example.com</a> sebagai siswa dari sekolah B. Planet Edu tidak akan mengubah sekolah untuk Ahmad Dahlah dengan alamat email <a href="mailto:user@example.com">user@example.com</a>. Planet Edu hanya menambahkan catatan bahwa Ahmad Dahlah dengan alamat email <a href="mailto:user@example.com">user@example.com</a> juga merupakan siswa di sekolah B. Ahmad Dahlah dengan alamat email <a href="mailto:user@example.com">user@example.com</a> harus mengganti sekolah secara manual agar menjadi siswa aktif di     sekolah B. Hal ini juga berlaku bagi admin, guru dan siswa. Khusus untuk     siswa, Planet Edu juga mencatat kelas siswa pada sekolah tersebut.     Ketika siswa mengganti sekolah secara manual, siswa tersebut secara     otomatis akan masuk ke dalam kelas tersebut.</p>
+          <p> Kolom dari sheet ADMIN adalah sebagai berikut:</p>
+          <ol>
+            <li>NAME</li>
+            <li>GENDER</li>
+            <li>PHONE</li>
+            <li>EMAIL</li>
+            <li>PASSWORD</li>
+            <li>BIRTH_DAY</li>
+            <li>ADDRESS</li>
+          </ol>
+          <p><strong>NAME</strong> adalah nama admin. <strong>GENDER</strong> adalah jenis kelamin admin. <strong>PHONE</strong> adalah nomor telepon admin. <strong>EMAIL</strong> adalah alamat surat elektronik admin. <strong>PASSWORD</strong> adalah password awal untuk admin. <strong>BIRTH_DAY</strong> adalah tanggal lahir admin. <strong>ADDRESS</strong> adalah alamat admin.</p>
+          <p> Kecuali alamat, semua kolom di atas wajib diisi. Planetbiru tidak     menjamin data yang tidak lengkap dapat dimasukkan ke dalam sistem.</p>
+          <h3>Sheet CLASS</h3>
+          <p>Sheet CLASS adalah sheet untuk memasukkan data-data kelas atau     rombongan belajar. Data ini penting untuk mengelompokkan siswa perkelas. </p>
+          <p> Kolom dari sheet CLASS adalah sebagai berikut:</p>
+          <ol>
+            <li><strong>NAME</strong></li>
+            <li><strong>GRADE</strong></li>
+            <li><strong>SCHOOL_PROGRAM</strong></li>
+          </ol>
+          <p><strong>NAME</strong> adalah nama kelas, misalnya 10IPA1 atau X.IPA.1 dan sebagainya. Nama kelas sebaiknya sama dengan nama kelas sesungguhnya.</p>
+          <p> <strong>GRADE</strong> adalah tingkat atau level kelas. Untuk lebih jelasnya, lihat sheet CODE.</p>
+          <p> <strong>SCHOOL _PROGRAM</strong> adalah nama jurusan dari kelas tersebut. Untuk jenjang SD dan SMP, SCHOOL_PROGRAM cukup dikosongkan tanpa menghapus <em>header</em> dari tabel.</p>
+          <h3>Sheet STUDENT</h3>
+          <p>Sheet STUDENT adalah sheet untuk memasukkan data siswa. Data siswa     merupakan data yang dinamis karena kelas siswa akan berubah setiap     tahunnya. Administrator sekolah harus mengaatur kelas tersebut secara     manual pada setiap kenaikan kelas.</p>
+          <p> Kolom dari sheet STUDENT adalah sebagai berikut:</p>
+          <ol>
+            <li>REG_NUMBER</li>
+            <li>REG_NUMBER_NATIONAL</li>
+            <li>NAME</li>
+            <li>CLASS</li>
+            <li>GENDER</li>
+            <li>BIRTH_PLACE</li>
+            <li>BIRTH_DAY</li>
+            <li>PHONE</li>
+            <li>EMAIL</li>
+            <li>ADDRESS</li>
+          </ol>
+          <p><strong>REG_NUMBER </strong>adalah Nomor Induk Siswa di sekolah   tersebut.Data   ini wajib diisi oleh administrator sekolah karena data   ini dapat   digunakan sebagai alternatif identitas pada sistem yang akan   dijelaskan   berikutnya.</p>
+          <p> <strong>REG_NUMBER_NATIONAL </strong>adalah Nomor Induk Siswa     Nasional. Data ini sebaiknya diisi oleh administrator sekolah karena     data ini dapat digunakan sebagai alternatif identitas pada sistem yang     akan dijelaskan berikutnya.</p>
+          <p> <strong>NAME</strong> adalah nama siswa. </p>
+          <p> <strong>CLASS </strong>adalah kelas atau rombongan belajar siswa   pada sekolah tersebut. Kelas   ini harus sama persis dengan kelas yang   didaftarkan pada sheet CLASS.   Jika berbeda, maka siswa tersebut tidak   akan masuk ke dalam kelas yang   benar.</p>
+          <p> <strong>GENDER</strong> adalah jenis kelamin siswa. </p>
+          <p> <strong>BIRTH_PLACE</strong> adalah tempat lahir siswa. </p>
+          <p> <strong>BIRTH_DAY</strong> adalah tanggal lahir siswa. </p>
+          <p> <strong>PHONE</strong> adalah nomor telepon siswa. Data ini boleh     dikosongkan apabila tidak ada. Jika ada, nomor telepon dapat digunakan     sebagai alternatif identitas pada sistem yang akan dijelaskan     berikutnya.</p>
+          <p> <strong>EMAIL</strong> adalah alamat surat elektronik siswa. Data     ini boleh dikosongkan apabila tidak ada namun Planet Edu akan membuat     alamat email fiktif sebagai identitas siswa. Alamat ini dapat digunakan     sebagai ID login namun tidak dapat digunakan untuk berkirim surat     sebagaimana email sesungguhnya. Adalapun format alamat email tersebut     adalah sebagai berikut:</p>
+          <p> {user}@edu.planetbiru.com di mana {user} adalah sebagai berikut:</p>
+          <ol>
+            <li>st_{NISN} apabila NISN ada</li>
+            <li>st_{NIS}_{SCHOOL_ID} apabila NISN tidak ada.</li>
+            <li>ph_{COUNTRY_ID}_{PHONE} apabila NISN dan NIS tidak ada</li>
+          </ol>
+          <p>Sebagai contoh: </p>
+          <p> Sekolah A terdaftar di Planet Edu dengan SCHOOL_ID 1238, sedangkan     data siswa tidak lengkap. Kode negara untuk Indonesia adalah ID atau   id.</p>
+          <table cellspacing="0" cellpadding="4" border="1">
+            <tbody>
+              <tr>
+                <td valign="top">REG_NUMBER</td>
+                <td valign="top">REG_NUMBER_NATIONAL</td>
+                <td valign="top">NAME</td>
+                <td valign="top">PHONE</td>
+                <td valign="top">EMAIL</td>
+                <td valign="top">Email di Sistem</td>
+              </tr>
+              <tr>
+                <td valign="top">1121116</td>
+                <td valign="top">99123455</td>
+                <td valign="top">BUDI</td>
+                <td valign="top">081374122889</td>
+                <td valign="top">umar@example.com</td>
+                <td valign="top">umar@example.com</td>
+              </tr>
+              <tr>
+                <td valign="top">1121117</td>
+                <td valign="top">99123456</td>
+                <td valign="top">DEDI</td>
+                <td valign="top">081374122888</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">st_99123456@edu.planetbiru.com</td>
+              </tr>
+              <tr>
+                <td valign="top">1121118</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">RUDI</td>
+                <td valign="top">081374122887</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">st_1121118_1238@edu.planetbiru.com</td>
+              </tr>
+              <tr>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">ZUHDI</td>
+                <td valign="top">081374122886</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">ph_id_081374122886@edu.planetbiru.com</td>
+              </tr>
+              <tr>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">MUKIDI</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top"> </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>MUKIDI pada kassus di atas tidak memiliki nomor identitas yang     bersifat unik sehingga MUKIDI dipastikan tidak bisa dimasukkan ke Planet     Edu.</p>
+          <p> <strong>ADDRESS</strong> adalah alamat siswa. Data ini boleh dikosongkan apabila tidak ada.</p>
+          <p> Password siswa dibuat secara otomatis oleh Planet Edu. Administrator     sekolah dapat mencetak password tersebut untuk dibagikan kepada     masing-massing siswa. Password siswa yang telah digganti tidak dapat     dilihat maupun dicetak oleh administrator.</p>
+          <p>Apabila siswa terdaftar di lebih dari satu sekolah, maka siswa secara   otomatis akan terdaftar di sekolah yang pertama mendaftarkannya.   Apabila sekolah berikutnya mendaftarkan siswa tersebut dengan   mencantumkan NISN, maka siswa tersebut tidak secara otomatis menjadi   siswa di sekolah tersebut melainkan siswa harus memilih sekolah secara   manual. Hal ini bertujuan untuk menghindari terjadinya pembajakan siswa   oleh akun palsu sehingga menyebabkan siswa keluar dari sekolah yang   benar dan masuk ke sekolah yang salah.</p>
+          <h3>Sheet TEACHER</h3>
+          <p>Sheet TEACHER adalah sheet untuk memasukkan data guru. </p>
+          <p> Kolom dari sheet TEACHER adalah sebagai berikut:</p>
+          <ol>
+            <li>REG_NUMBER</li>
+            <li>REG_NUMBER_NATIONAL</li>
+            <li>NAME</li>
+            <li>GENDER</li>
+            <li>BIRTH_PLACE</li>
+            <li>BIRTH_DAY</li>
+            <li>PHONE</li>
+            <li>EMAIL</li>
+            <li>ADDRESS</li>
+          </ol>
+          <p><strong>REG_NUMBER </strong>adalah Nomor Induk Guru di sekolah   tersebut. Data   ini wajib diisi oleh administrator sekolah karena data   ini dapat   digunakan sebagai alternatif identitas pada sistem yang akan   dijelaskan   berikutnya.</p>
+          <p> <strong>REG_NUMBER_NATIONAL </strong>adalah NUPTK. Data ini     sebaiknya diisi oleh administrator sekolah karena data ini dapat     digunakan sebagai alternatif identitas pada sistem yang akan dijelaskan     berikutnya.</p>
+          <p> <strong> NAME</strong> adalah nama guru. </p>
+          <p> <strong>GENDER</strong> adalah jenis kelamin guru. </p>
+          <p> <strong>BIRTH_PLACE</strong> adalah tempat lahir guru. </p>
+          <p> <strong>BIRTH_DAY</strong> adalah tanggal lahir guru. </p>
+          <p> <strong>PHONE</strong> adalah nomor telepon guru. Data ini boleh     dikosongkan apabila tidak ada. Jika ada, nomor telepon dapat digunakan     sebagai alternatif identitas pada sistem yang akan dijelaskan     berikutnya.</p>
+          <p> <strong>EMAIL</strong> adalah alamat surat elektronik guru. Data ini     boleh dikosongkan apabila tidak ada namun Planet Edu akan membuat     alamat email fiktif sebagai identitas guru. Alamat ini dapat digunakan     sebagai ID login namun tidak dapat digunakan untuk berkirim surat     sebagaimana email sesungguhnya. Adalapun format alamat email tersebut     adalah sebagai berikut:</p>
+          <p> {user}@edu.planetbiru.com di mana {user} adalah sebagai berikut:</p>
+          <ol>
+            <li>tc_{NUPTK} apabila NUPTK ada</li>
+            <li>tc_{NIG}_{SCHOOL_ID} apabila NUPTK tidak ada.</li>
+            <li>ph_{COUNTRY_ID}_{PHONE} apabila NUPTK dan NIG tidak ada</li>
+          </ol>
+          <p>Sebagai contoh: </p>
+          <p> Sekolah A terdaftar di Planet Edu dengan SCHOOL_ID 1238, sedangkan     data guru tidak lengkap. Kode negara untuk Indonesia adalah ID atau id.</p>
+          <table cellspacing="0" cellpadding="4" border="1">
+            <tbody>
+              <tr>
+                <td valign="top">REG_NUMBER</td>
+                <td valign="top">REG_NUMBER_NATIONAL</td>
+                <td valign="top">NAME</td>
+                <td valign="top">PHONE</td>
+                <td valign="top">EMAIL</td>
+                <td valign="top">Email di Sistem</td>
+              </tr>
+              <tr>
+                <td valign="top">2222216</td>
+                <td valign="top">89123455</td>
+                <td valign="top">UMAR BAKRI</td>
+                <td valign="top">081374122889</td>
+                <td valign="top">budi@example.com</td>
+                <td valign="top">budi@example.com</td>
+              </tr>
+              <tr>
+                <td valign="top">2222217</td>
+                <td valign="top">89123456</td>
+                <td valign="top">SUDIRMAN</td>
+                <td valign="top">081374122888</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">tc_89123456@edu.planetbiru.com</td>
+              </tr>
+              <tr>
+                <td valign="top">2222218</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">RIANYO</td>
+                <td valign="top">081374122887</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">tc_2222218_1238@edu.planetbiru.com</td>
+              </tr>
+              <tr>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">AMINAH</td>
+                <td valign="top">081374122886</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">ph_id_081374122886@edu.planetbiru.com</td>
+              </tr>
+              <tr>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">BEJO</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top">(tidak ada)</td>
+                <td valign="top"> </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>BEJO pada kassus di atas tidak memiliki nomor identitas yang bersifat     unik sehingga BEJO dipastikan tidak bisa dimasukkan ke Planet Edu.</p>
+          <p> <strong>ADDRESS</strong> adalah alamat guru. Data ini boleh dikosongkan apabila tidak ada.</p>
+          <p> Password guru dibuat secara otomatis oleh Planet Edu. Administrator     sekolah dapat mencetak password tersebut untuk dibagikan kepada     masing-massing guru. Password guru yang telah digganti tidak dapat     dilihat maupun dicetak oleh administrator.</p>
+          <p>Apabila guru mengajar di lebih dari satu sekolah, maka guru secara   otomatis akan terdaftar di sekolah yang pertama mendaftarkannya. Apabila   sekolah berikutnya mendaftarkan guru tersebut dengan mencantumkan   NUPTK, maka guru tersebut tidak secara otomatis menjadi guru di sekolah   tersebut melainkan guru harus memilih sekolah secara manual. Hal ini   bertujuan untuk menghindari terjadinya pembajakan guru oleh akun palsu   sehingga menyebabkan guru keluar dari sekolah yang benar dan masuk ke   sekolah yang salah.</p>
+          <h3>Sheet CODE</h3>
+          <p>Sheet CODE bukanlah sheet untuk memasukkan data. Sheet ini hanya merupakan sheet untuk kode referensi untuk 5 sheet lainnya.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

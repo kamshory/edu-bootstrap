@@ -1,0 +1,2360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan saksama.&lt;br&gt;&lt;br&gt;
+(1) Badan Pertahanan Nasional menyatakan ada 73 hektare lahan terlantar. (2) Lahan jutaan hektare tersebut selayaknya tidak dibiarkan terlantar. (3) Undang-undang agraria menyebutkan semua hak atas tanah mempunyai fungsi sosial. (4) Pemerintah dituntut memiliki kebijakan dan strategi pertahanan nasional, membagi dengan jelas peruntukan lahan pertanian, industri, permukiman, dan hutan. (5) Hal itu akan menjamin kepastian hukum sehingga setiap orang dapat bekerja dan berproduksi dengan tenang.&lt;br&gt;&lt;br&gt;
+Arti kata strategi pada paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;musyawarah untuk melaksanakan kegiatan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cara menempatkan personel dalam mengatur kegiatan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;rencana yang cermat mengenai kegiatan sesuai dengan tujuan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;usulan untuk menyusun sebuah kegiatan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;rencana untuk melaksanakan suatu tujuan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan saksama.&lt;br&gt;&lt;br&gt;
+(1) Badan Pertahanan Nasional menyatakan ada 73 hektare lahan terlantar. (2) Lahan jutaan hektare tersebut selayaknya tidak dibiarkan terlantar. (3) Undang-undang agraria menyebutkan semua hak atas tanah mempunyai fungsi sosial. (4) Pemerintah dituntut memiliki kebijakan dan strategi pertahanan nasional, membagi dengan jelas peruntukan lahan pertanian, industri, permukiman, dan hutan. (5) Hal itu akan menjamin kepastian hukum sehingga setiap orang dapat bekerja dan berproduksi dengan tenang.&lt;br&gt;&lt;br&gt;
+Kalimat fakta terdapat pada nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan saksama.&lt;br&gt;&lt;br&gt;
+(1) Badan Pertahanan Nasional menyatakan ada 73 hektare lahan terlantar. (2) Lahan jutaan hektare tersebut selayaknya tidak dibiarkan terlantar. (3) Undang-undang agraria menyebutkan semua hak atas tanah mempunyai fungsi sosial. (4) Pemerintah dituntut memiliki kebijakan dan strategi pertahanan nasional, membagi dengan jelas peruntukan lahan pertanian, industri, permukiman, dan hutan. (5) Hal itu akan menjamin kepastian hukum sehingga setiap orang dapat bekerja dan berproduksi dengan tenang.&lt;br&gt;&lt;br&gt;
+Tujuan penulis pada paragraf tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Memberitahukan pembagian lahan terlantar yang belum dilakukan dengan jelas.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menuntut pemerintah untuk mematuhi Undang-Undang Agraria.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menginformasikan bahwa Badan Pertahanan Nasional mempunyai data lahan terlantar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menjelaskan kebijakan dan strategi pemerintah tentang pertahanan nasional.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengimbau adanya kepastian hukum agar orang dapat bekerja dengan tenang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan cermat!&lt;br&gt;&lt;br&gt;
+Setelah dilakukan penilaian terhadap ulangan Bahasa Indonesia kelas XII IPA, yang memperoleh nilai 8 sebanyak 25 orang, nilai 7 sebanyak empat orang, dan 6 hanya 1 orang. Jumlah siswa 30 orang.&lt;br&gt;&lt;br&gt;
+Simpulan paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Dapat dikatakan nilai mereka baik.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Belum dapat dikatakan mereka pintar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mereka belum dikatakan siswa yang pandai.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jadi, guru mereka boleh berbangga.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memang mereka anak yang rajin-rajin.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Hikayat berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+Maka titah baginda: &quot;Baiklah esok pagi-pagi kita berburu&quot;. Maka setelah keesokan harinya maka jaring dan jerat pun ditahan oranglah. Maka segala rakyatpun masuklah ke dalam hutan itu mengalan-alan segala perburuan itu dari pagi-pagi hingga datang mengelincir matahari, seekor perburuan tiada diperoleh. Maka baginda pun amat hairanlah serta menitahkan menyuruh melepaskan anjing perburuan baginda sendiri itu. Maka anjing itu pun dilepaskan oranglah. Hatta ada sekira-kira dua jam lamanya maka berbunyilah suara anjing itu menyalak. Maka baginda pun segera mendapatkan suara anjing itu. Setelah baginda datang kepada suatu serokan tasik itu, maka baginda pun bertemulah dengan segala orang yang menurut anjing itu. Maka titah baginda:&quot;Apa yang disalak oleh anjing itu?&quot;&lt;br&gt;&lt;br&gt;
+Maka sembah mereka sekalian itu: &quot;Daulat Tuanku, patik mohonkan ampun dan karunia. Ada seekor pelanduk putih, besarnya seperti kambing, warna tubuhnya gilang gemilang. Itulah yang dihambat oleh anjing itu. Maka pelanduk itu pun lenyaplah pada pantai ini.&quot;&lt;br&gt;
+(Hikayat Seribu Satu Malam)&lt;br&gt;&lt;br&gt;
+Hal yang mustahil terungkap dalam kutipan hikayat tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;jaring dan jerat ditahan orang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pemburuan seekor pelanduk&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;suara anjing yang menyalak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;seekor pelanduk putih besar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pelanduk yang lenyap&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Hikayat berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+Maka titah baginda: &quot;Baiklah esok pagi-pagi kita berburu&quot;. Maka setelah keesokan harinya maka jaring dan jerat pun ditahan oranglah. Maka segala rakyatpun masuklah ke dalam hutan itu mengalan-alan segala perburuan itu dari pagi-pagi hingga datang mengelincir matahari, seekor perburuan tiada diperoleh. Maka baginda pun amat hairanlah serta menitahkan menyuruh melepaskan anjing perburuan baginda sendiri itu. Maka anjing itu pun dilepaskan oranglah. Hatta ada sekira-kira dua jam lamanya maka berbunyilah suara anjing itu menyalak. Maka baginda pun segera mendapatkan suara anjing itu. Setelah baginda datang kepada suatu serokan tasik itu, maka baginda pun bertemulah dengan segala orang yang menurut anjing itu. Maka titah baginda:&quot;Apa yang disalak oleh anjing itu?&quot;&lt;br&gt;&lt;br&gt;
+Maka sembah mereka sekalian itu: &quot;Daulat Tuanku, patik mohonkan ampun dan karunia. Ada seekor pelanduk putih, besarnya seperti kambing, warna tubuhnya gilang gemilang. Itulah yang dihambat oleh anjing itu. Maka pelanduk itu pun lenyaplah pada pantai ini.&quot;&lt;br&gt;
+(Hikayat Seribu Satu Malam)&lt;br&gt;&lt;br&gt;
+Nilai budaya yang terungkap dalam kutipan tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Raja (baginda) memelihara anjing.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rakyat patuh kepada raja (baginda).&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berburu dengan menggunakan anjing.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menggunakan jaring dalam berburu.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Gotong royong berburu pelanduk.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Untuk menjawab soal perhatikan puisi berikut!&lt;br&gt;&lt;br&gt;
+Prajurit Jaga Malam&lt;br&gt;&lt;br&gt;
+Waktu jalan.&lt;br&gt;
+Aku tidak tahu apa nasib waktu&lt;br&gt;
+Pemuda-pemuda yang lincah yang tua-tua keras, bermata tajam.&lt;br&gt;
+Mimpinya kemerdekaan bintang-bintangnya kepastian&lt;br&gt;
+Ada di sisiku selama menjaga daerah mati ini&lt;br&gt;
+Aku suka pada mereka yang berani hidup&lt;br&gt;
+Aku suka pada mereka yang masuk menemu malam&lt;br&gt;
+Malam yang berwangi mimpi, terlucut debu ......&lt;br&gt;
+Waktu jalan.&lt;br&gt;
+Aku tidak tahu apa nasib waktu!&lt;br&gt;&lt;br&gt;
+Suasana dalam puisi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;romantik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kesunyian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;semangat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bimbang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;haru&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Untuk menjawab soal perhatikan puisi berikut!&lt;br&gt;&lt;br&gt;
+Prajurit Jaga Malam&lt;br&gt;&lt;br&gt;
+Waktu jalan.&lt;br&gt;
+Aku tidak tahu apa nasib waktu&lt;br&gt;
+Pemuda-pemuda yang lincah yang tua-tua keras, bermata tajam.&lt;br&gt;
+Mimpinya kemerdekaan bintang-bintangnya kepastian&lt;br&gt;
+Ada di sisiku selama menjaga daerah mati ini&lt;br&gt;
+Aku suka pada mereka yang berani hidup&lt;br&gt;
+Aku suka pada mereka yang masuk menemu malam&lt;br&gt;
+Malam yang berwangi mimpi, terlucut debu ......&lt;br&gt;
+Waktu jalan.&lt;br&gt;
+Aku tidak tahu apa nasib waktu!&lt;br&gt;&lt;br&gt;
+Kata nasib waktu dalam puisi tersebut melambangkan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;perjuangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pandangan hidup&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penderitaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kemerdekaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;masa depan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Untuk menjawab soal perhatikan puisi berikut!&lt;br&gt;&lt;br&gt;
+Prajurit Jaga Malam&lt;br&gt;&lt;br&gt;
+Waktu jalan.&lt;br&gt;
+Aku tidak tahu apa nasib waktu&lt;br&gt;
+Pemuda-pemuda yang lincah yang tua-tua keras, bermata tajam.&lt;br&gt;
+Mimpinya kemerdekaan bintang-bintangnya kepastian&lt;br&gt;
+Ada di sisiku selama menjaga daerah mati ini&lt;br&gt;
+Aku suka pada mereka yang berani hidup&lt;br&gt;
+Aku suka pada mereka yang masuk menemu malam&lt;br&gt;
+Malam yang berwangi mimpi, terlucut debu ......&lt;br&gt;
+Waktu jalan.&lt;br&gt;
+Aku tidak tahu apa nasib waktu!&lt;br&gt;&lt;br&gt;
+Maksud larik pertama puisi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;akhir peristiwa yang terjadi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;akhir sebuah perjuangan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;akhir sebuah kematian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;nasib akhir seorang prajurit&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;gugurnya seorang prajurit&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermatilah penggalan naskah drama berikut!&lt;br&gt;&lt;br&gt;
+Ibu : &quot;Jamal, anak ibu!&quot;&lt;br&gt;
+Jamal : &quot;Ibu, selama ini Ibu ke mana saja? Jamal rindu sama Ibu.&quot;&lt;br&gt;
+Ibu : (tersenyum lembut)&quot;Kau kelihatan sedikit kurus.&quot;&lt;br&gt;
+Jamal : &quot;Ibu juga, Ibu terlihat lebih gemuk dan terlihat beda sekali&lt;br&gt;
+tidak seperti biasanya.&quot;&lt;br&gt;
+Ibu : &quot;Kau sekarang kelihatan dewasa, Jamal.&lt;br&gt;
+Salatmu masih rajin, kan?&lt;br&gt;
+Betapapun berat hidup yang kita jalani, apabila kita&lt;br&gt;
+tidak kembali kepada-Nya, semuanya akan sia-sia, Nak.&lt;br&gt;
+Kita ini hidup karena diembuskan napas olehnya-Nya, anakku.&quot;&lt;br&gt;
+Watak tokoh Jamal dalam penggalan naskah drama tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;peduli&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tanggung jawab&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;rajin&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;rendah diri&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;rendah hati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah penggalan naskah drama berikut!&lt;br&gt;&lt;br&gt;
+Ella : &quot;Mengapa Ella tidak punya ayah, Tante?&lt;br&gt;
+Ayah Ella nggak meninggal kan tante?&quot;&lt;br&gt;
+Tante Sara : &quot;Setahu tante tidak.&quot;&lt;br&gt;
+Ella : &quot;Lalu kenapa Eyang dan Tante tidak mencari ayah?&quot;&lt;br&gt;
+(Ella menatap penuh harap)&lt;br&gt;
+Tante Sara : &quot;Tante dan Eyang betul-betul tidak tahu di mana&lt;br&gt;
+ayah Ella sekarang. Betul-betul tidak tahu.&quot;&lt;br&gt;
+Ella : &quot;Waktu Ella lahir ayah sudah hilang?&quot;&lt;br&gt;
+Tante Sara : &quot;Sudah.&quot;&lt;br&gt;
+Ella : &quot;Waktu Ella di perut Ibu?&quot;&lt;br&gt;
+(Benang Kasih, Susi Hutapea)&lt;br&gt;&lt;br&gt;
+Konflik dalam naskah drama tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tante Sara tidak tahu keberadaan ayah Ella.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Eyang tidak mau mencari ayah Ella.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ayah Ella menghilang saat Ella belum lahir.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ayah Ella meninggalkan Tante Sara.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ella ingin mengetahui keberadaan ayahnya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+(1) Terjadinya kerusakan lingkungan di Indonesia, khususnya di Jawa Barat, lebih disebabkan masih lemahnya penegakan hukum di bidang lingkungan. (2) Bahkan, beberapa kasus yang benar-benar merusak lingkungan pun kadang luput dari jeratan hukum. (3) Kepala Badan Pengendalian Lingkungan Hidup Daerah (BPLHD) Jawa Barat, Ade Suhanda Adnawijaja, menyatakan secara ideal kasus yang menyangkut lingkungan seharusnya ditangani oleh pihak eksekutif. (4) Namun, hal itu tidak bisa dilakukan mengingat adanya keterbatasan kewenangan dan personel. (5) Oleh karena itu, penegakan hukum dalam berbagai bidang harus dilaksanakan secara bersih, transparan, dan profesional.&lt;br&gt;&lt;br&gt;
+Kalimat penjelas yang tidak padu dalam paragraf tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+(1) Terjadinya kerusakan lingkungan di Indonesia, khususnya di Jawa Barat, lebih disebabkan masih lemahnya penegakan hukum di bidang lingkungan. (2) Bahkan, beberapa kasus yang benar-benar merusak lingkungan pun kadang luput dari jeratan hukum. (3) Kepala Badan Pengendalian Lingkungan Hidup Daerah (BPLHD) Jawa Barat, Ade Suhanda Adnawijaja, menyatakan secara ideal kasus yang menyangkut lingkungan seharusnya ditangani oleh pihak eksekutif. (4) Namun, hal itu tidak bisa dilakukan mengingat adanya keterbatasan kewenangan dan personel. (5) Oleh karena itu, penegakan hukum dalam berbagai bidang harus dilaksanakan secara bersih, transparan, dan profesional.&lt;br&gt;&lt;br&gt;
+Kalimat utama paragraf tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati gurindam berikut!&lt;br&gt;&lt;br&gt;
+Cahari olehmu akan sahabat&lt;br&gt;
+yang dapat dijadikan obat&lt;br&gt;&lt;br&gt;
+Maksud gurindam tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kita harus mencari banyak sahabat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sahabat merupakan teman sejati.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sahabat bisa dijadikan obat saat luka.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Carilah sahabat yang bisa berbagi dalam suka dan duka.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sahabat akan selalu ada setiap kita membutuhkan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati pantun berikut!&lt;br&gt;&lt;br&gt;
+Bunga mawar bunga melati&lt;br&gt;
+Ditabur orang di batu karang&lt;br&gt;
+Sungguh elok tanahku ini&lt;br&gt;
+Walau jauh tetap kukenang&lt;br&gt;&lt;br&gt;
+Maksud pantun tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;cinta sesama manusia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cinta terhadap tanah air&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cinta kepada Tuhan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sayang kepada orang tua&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menjaga keindahan alam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan saksama!&lt;br&gt;&lt;br&gt;
+Osteoporosis (penipisan tulang) memang suatu risiko terjadinya fraktur (tulang patah). Namun, fraktur tidak hanya terjadi karena osteoporosis. Ada beberapa faktor lain yang dapat mempermudah terjadinya fraktur, seperti umur, jatuh, cedera, kegemukan, merokok, dan mengonsumsi alkohol.&lt;br&gt;&lt;br&gt;
+Ide pokok paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;penyebab fraktur&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penyebab osteoporosis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;fraktur disebabkan osteoporosis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pengonsumsi alkohol&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penyebab kegemukan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah biografi berikut dengan saksama!&lt;br&gt;&lt;br&gt;
+Terlahir dengan nama Liem Tjoan Hok, di Pandeglang, Jawa Barat, 22 September 1937, Teguh Karya yang oleh rekan terdekatnya akrab dipanggil Om Steve, adalah sutradara film pelanggan Piala Citra. Dia layak disebut suhu teater Indonesia yang banyak melahirkan sineas-sineas terkemuka, la seorang pekerja keras dan selalu bersungguh-sungguh dalam menggarap film maupun drama. Bagi para seniman ia dianggap sebagai bapak, guru, sekaligus teman. Beberapa aktor-aktris film Indonesia Berjaya dan popular setelah membintangi film-film Teguh karya.&lt;br&gt;&lt;br&gt;
+Walaupun lahir dengan nama Liem Tjoan Hok, Teguh lebih merasa sebagai orang Banten. Memasuki bangku SMP, Teguh pindah ke Jakarta, menumpag di rumah Engku-Dek, pamannya. Anak pertama dari lima bersaudara pedagang kelontong ini kemudian mewarisi kegemaran membaca dari sang paman. Teguh boleh mendapat nilai jelek untuk aljabar dan ilmu ukur, tetapi untuk pelajaran sejarah, menggambar, dan bahasa, ia selalu unggul.&lt;br&gt;&lt;br&gt;
+Keteladanan tokoh Teguh Karya dalam kutipan biografi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Beliau punya akrab dipanggil Om Steve rekan dekatnya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ia pekerja keras dan selalu bersungguh-sungguh dalam bekerja.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ia banyak melahirkan sineas-sineas terkemuka.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengangkat aktor dan aktris terkemuka.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Walaupun keturunan Cina, lebih merasa orang Banten.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan saksama!&lt;br&gt;&lt;br&gt;
+Belakangan ini banyak anak Indonesia menjadi juara dalam berbagai perlombaan internasional. Mereka yang menjadi juara itu kebanyakan adalah mereka yang mengikuti pendidikan khusus. Artinya, anak-anak kita banyak yang mempunyai bakat dan kemampuan jika mereka dididik dengan optimal. Sarjana kita ternyata banyak yang mendapat kesempatan mengikuti perlombaan di luar negeri. Jadi, anak-anak yang mendapat pendidikan khusus dan optimal berpeluang menjadi juara dalam berbagai perlombaan internasional.&lt;br&gt;&lt;br&gt;
+Pertanyaan yang sesuai dengan isi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kapankah anak-anak Indonesia dapat menjadi juara internasional di berbagai bidang?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berapa banyak anak Indonesia yang meraih juara perlombaan internasional?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Anak Indonesia yang bagaimana yang dapat meraih juara internasional?&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bakat apa saja yang dimiliki anak-anak Indonesia saat ini?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lomba apa saja yang diraih anak-anak Indonesia belakangan ini?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kutipan cerpen berikut!&lt;br&gt;&lt;br&gt;
+&quot;Bahkan ibu bersedia pergi kepada apa yang disebut orang-orang&lt;br&gt;
+pintar, dari satu pulau ke pulau lain. Padahal ibu begitu benci pada ilmu&lt;br&gt;
+mistik. Ibu tidak percaya pada semua yang tidak masuk akal. Namun,&lt;br&gt;
+banyak yang menasihati ibu harus mencobanya menasihati juga.&lt;br&gt;
+Maklumlah alam Timur penuh dengan hal-hal gaib, termasuk hal-hal yang&lt;br&gt;
+berkaitan dengan mistik. Semua itu ibu lakukan untuk mendapatkan engkau&lt;br&gt;
+Meniek. Betapa Ibu mendambakan kelahiranmu, Nduk.&quot;&lt;br&gt;
+Keterkaitan nilai budaya dengan kehidupan sehari-hari adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Masih banyak masyarakat yang memercayai mistik.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Alam Timur masih penuh dengan hal-hal mistik.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Zaman modern tidak ada lagi yang percaya mistik.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kita boleh saja percaya kepada orang-orang pintar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ilmi mistik termasuk ilmu yang tidak masuk akal.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah penggalan tajuk berikut dengan saksama untuk menjawab soal nomor!&lt;br&gt;&lt;br&gt;
+Disebut jalur khusus karena ia mempersyaratkan kemampuan finansial dalam jumlah tertentu selain proses seleksi akademis itu sendiri. Jalur ini berada di luar mekanisme pintu seleksi regular melalui Seleksi Nasional Mahasiswa Perguruan Tinggi Negeri (SNMPTN). Gejala komersialisasi di tubuh PTN diimperatifkan oleh kecenderungan semakin besarnya kuota penerimaan calon mahasiswa baru dari &quot;jalur khusus&quot; (setiap PTN mempunyai nomenklatur masing-masing untuk jalur seleksi mandiri) ini dibandingkan kuota untuk SNMPTN.&lt;br&gt;&lt;br&gt;
+Dengan memberlakukan Biaya Operasional PTN, lembaga pendidikan tinggi (khusus PTN) diharap mengembalikan hakikatnya. Lembaga pendidikan sudah semestinya tidak membeda-bedakan apa pun, apalagi kemampuan materi. Lembaga pendidikan justru sudah seharusnya berada di barisan terdepan menentang segenap kebijakan dan perlakuan diskriminatif. Dalam hal ini, negaralah yang mesti menjamin akses semua warga negara terhadap pendidikan, lewat pembiayaan pendidikan berbasis anggaran negara.&lt;br&gt;&lt;br&gt;
+Opini penulis tajuk rencana tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Jalur mandiri di PTN merupakan jalur seleksi untuk calon mahasiswa sendiri.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jalur khusus di PTN merupakan jalur seleksi akademik yang diselenggarakan di PTN.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jumlah mahasiswa jalur mandiri di PTN sebanding dengan kuota SNMPTN.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jalur pendidikan tinggi semestinya harus dibeda-bedakan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jalur pendidikan seharusnya terdepan dalam menentang kebijakan dan perlakuan diskriminatif.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah penggalan tajuk berikut dengan saksama untuk menjawab soal nomor!&lt;br&gt;&lt;br&gt;
+Disebut jalur khusus karena ia mempersyaratkan kemampuan finansial dalam jumlah tertentu selain proses seleksi akademis itu sendiri. Jalur ini berada di luar mekanisme pintu seleksi regular melalui Seleksi Nasional Mahasiswa Perguruan Tinggi Negeri (SNMPTN). Gejala komersialisasi di tubuh PTN diimperatifkan oleh kecenderungan semakin besarnya kuota penerimaan calon mahasiswa baru dari &quot;jalur khusus&quot; (setiap PTN mempunyai nomenklatur masing-masing untuk jalur seleksi mandiri) ini dibandingkan kuota untuk SNMPTN.&lt;br&gt;&lt;br&gt;
+Dengan memberlakukan Biaya Operasional PTN, lembaga pendidikan tinggi (khusus PTN) diharap mengembalikan hakikatnya. Lembaga pendidikan sudah semestinya tidak membeda-bedakan apa pun, apalagi kemampuan materi. Lembaga pendidikan justru sudah seharusnya berada di barisan terdepan menentang segenap kebijakan dan perlakuan diskriminatif. Dalam hal ini, negaralah yang mesti menjamin akses semua warga negara terhadap pendidikan, lewat pembiayaan pendidikan berbasis anggaran negara.&lt;br&gt;&lt;br&gt;
+Penulis dalam kutipan tersebut berpihak kepada...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pemerintah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perguruan tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;calon mahasiswa&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lembaga pendidikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;waga negara&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan grafik berikut!&lt;br&gt; PENJUALAN KENDARAAN BERMOTOR RODA EMPAT&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;b222d9_6d8342982b94796d63743a20e559ad65.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Pernyataan yang sesuai dengan grafik tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>b222d9_6d8342982b94796d63743a20e559ad65.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data>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</data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pada tahun 1999 penjualan kendaraan bermotor roda empat naik dibandingkan tahun 1997.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penjualan kendaraan bermotor roda empat, menurun tajam pada tahun 1998.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penjualan kendaraan bermotor roda empat tahun 2000 lebih kecil daripada penjualan tahun 2001.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penjualan kendaraan bermotor roda empat tahun 2002 sama dengan tahun 1997.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penjualan kendaraan bermotor roda empat tahun 2003 lebih besar daripada tahun 2004.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan grafik berikut!&lt;br&gt; PENJUALAN KENDARAAN BERMOTOR RODA EMPAT&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;b222d9_6d8342982b94796d63743a20e559ad65.png&quot; alt=&quot;&quot; width=&quot;376&quot; height=&quot;236&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Simpulan yang tepat dari grafik tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Penjualan kendaraan bermotor roda empat sejak tahun 1997-2004 mengalami naik turun.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penjualan kendaraan bermotor roda empat mengalami kenaikan dari tahun ke tahun.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penjualan kendaraan bermotor roda empat dari tahun 1997-2004 tidak mengalami penurunan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sejak tahun 2000 penjualan kendaraan bermotor roda empat tidak pernah turun.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penjualan kendaraan bermotor roda empat diprediksi akan terus mengalami peningkatan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan berikut dengan cermat untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+&quot;Ya Allah, Gusti Allah, Bude,&quot; Surastri terisak-isak,&quot; Kami semua mengira bude sudah meninggal, ternyata Bude Humaini masih hidup. Alhamdulillah.&quot;&lt;br&gt;
+Para mahasiswa yang kost di rumah sewa itu akhirnya tahu. Ternyata Selama ini Astuti menyimpan bebannya sampai rapat. Tempat mengadunya hanya satu, Tuhan di atas sana. Mengaji membaca Alquran setiap malam yang dilakukan sampai menangis adalah cara yang dipilihnya dalam memohon Tuhan mengembalikan ibunya. Segenap penghuni rumah kost itu terhenyak ketika mereka membayangkan, bagaimana kira-kira yang mereka rasakan jika merekalah yang mengalami peristiwa itu.&lt;br&gt;
+(Ratu Kecantikan, Langit Kresna Hariadi)&lt;br&gt;&lt;br&gt;
+Amanat yang terdapat dalam kutipan tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Berdoa dan memohonlah kepada Tuhan YME.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jangan berprasangka kalau tidak tahu dengan jelas.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jangan mengadu kepada orang lain yang tidak tahu masalah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berempati kepada orang lain lebih baik daripada berprasangka.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memohonlah kepada Tuhan sambil membaca Alquran.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan berikut dengan cermat untuk menjawab soal!&lt;br&gt;&lt;br&gt;
+&quot;Ya Allah, Gusti Allah, Bude,&quot; Surastri terisak-isak,&quot; Kami semua mengira bude sudah meninggal, ternyata Bude Humaini masih hidup. Alhamdulillah.&quot;&lt;br&gt;
+Para mahasiswa yang kost di rumah sewa itu akhirnya tahu. Ternyata Selama ini Astuti menyimpan bebannya sampai rapat. Tempat mengadunya hanya satu, Tuhan di atas sana. Mengaji membaca Alquran setiap malam yang dilakukan sampai menangis adalah cara yang dipilihnya dalam memohon Tuhan mengembalikan ibunya. Segenap penghuni rumah kost itu terhenyak ketika mereka membayangkan, bagaimana kira-kira yang mereka rasakan jika merekalah yang mengalami peristiwa itu.&lt;br&gt;
+(Ratu Kecantikan, Langit Kresna Hariadi)&lt;br&gt;&lt;br&gt;
+Watak Astuti dalam kutipan tersebut adalah .....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pendiam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sabar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lemah hati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mudah berprasangka&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;teguh hati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf deskripsi berikut!&lt;br&gt;&lt;br&gt;
+Kali kecil di depan rumah temanku terlihat sangat kotor. Warna airnya hitam pekat dan berminyak. Di pinggir kali, tampak pula tumpukan sampah yang umumnya berupa kantong plastik dan botol plastik bekas. Kotorankotoran itu terlihat menghambat lajunya air mengalir atau membuat air tergenang...&lt;br&gt;
+Kalimat deskripsi yang tepat untuk melengkapi paragraf tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Dari genangan air itu, tercium bau busuk yang menyengat hidung.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ini kesalahan warga setempat yang membuang sampah sembarangan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kalau dibiarkan tentunya banjir akan melanda wilayah itu di musim hujan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Di sinilah perlunya pengadaan petugas kebersihan yang senantiasa bertugas.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dalam hal ini, bila terjadi banjir, tidak ada yang dapat disalahkan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermatilah kutipan cerpen berikut!&lt;br&gt;&lt;br&gt;
+&quot;Dia bibi saya, Bu&quot; jelas Teja seperti mengerti kebingungan Ratna.&lt;br&gt;
+&quot;Ibu saya menjadi TKW di Arab Saudi sejak saya berusia dua tahun. Sampai sekarang Ibu saya tidak pernah pulang, kirimannya pun sudah terhenti sejak enam tahun yang lalu. Ayah tidak pernah berhasil mencari tahu keberadaan ibu,&quot; jelas Teja. Kemudian dengan suara yang semakin bergetar Teja melanjutkan pembicaraannya.&lt;br&gt;
+&quot;Mungkin ibu tidak betah tinggal dan mengajar di sini. Padahal, kami suka belajar dengan ibu, walaupun susah tetapi kami ingin bisa. Tolong Bu, beri kesempatan pada kami untuk bisa belajar dengan ibu lebih lama lagi!&quot; ucap Teja sambil meneteskan air mata tak kuasa menahan perasaannya.&lt;br&gt;
+&quot;Maafkan ibu juga Ja, tapi ...&quot;&lt;br&gt;
+&quot;Tapi Ibu merasa terkekang di sini. Di sini Ibu tidak bisa mewujudkan cita-cita Ibu, begitu kan?&quot; serobot Teja lagi.&lt;br&gt;
+Ratna tak mengira muridnya punya keberanian untuk bicara seperti itu.&lt;br&gt;&lt;br&gt;
+Kalimat esai yang sesuai dengan kutipan cerpen tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sebagai cerita yang mengisahkan kehidupan guru yang ditempatkan di pedesaan, cerita ini mampu menampilkan konflik batin sang guru. Bahasa yang digunakan lugas dan jelas.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sebagai cerita yang mengisahkan kehidupan di desa, cerita ini mengisahkan seorang guru yang ditugaskan di desa. la hidup di tengah masyarakat desa yang hidup serba kekurangan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tema cerita ini terlalu biasa,yaitu tentang kehidupan di desa yang serba kekurangan. Tentunya dapat dipahami jika di desa serba kekurangan karena tempatnya jauh.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Orang desa memang banyak yang menjadi TKW karena kehidupan di desa serba kekurangan. Jadi hal ini tidak menarik untuk dijadikan bahan cerita.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sosok Teja adalah seorang siswa yang begitu menyayangi gurunya. Karena gurunya mengajar penuh kasih seperti ibunya, la sangat kecewa ketika ia mengetahui bahwa gurunya berniat untuk pindah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermatilah kutipan cerpen berikut!&lt;br&gt;&lt;br&gt;
+Di sebuah hujan yang lebat, ketika kami seperti biasa, bermain sepak bola, juga bermain kristal-kristal lembut di punggung-punggung daun pandan ibu-ibu warga desa. Sebuah peristiwa, telah berhasil membuatku diam bagai batu, tetapi tidak ada air setetes pun yang mengalir di atasku.&lt;br&gt;
+Hujan itu, air berlarian, mengombak di parit-parit depan rumah di pinggir jalan raya. &quot;Agh... Kak..., tolong... to....n Suara Ujo, adik kembarku setengah berteriak. &quot;Ujo...,&quot; ucapku berteriak. Terasa sebongkah kerikil menutup kerongkonganku. Namun, tidak banyak yang dapat aku lakukan. Kakiku gemetar, ...&lt;br&gt;&lt;br&gt;
+(Hujan dan Seikat Seruni, Nurul Hasa, Horison IV/2010)&lt;br&gt;
+Kalimat kritik yang menyatakan kelemahan sesuai dengan kutipan tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kemampuan penulis dalam mempermainkan emosi pembaca lewat latar patut diacungi jempol.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kekuatan bahasa penulis dalam mencari diksi dan menyusun pengandaian terasa menyentuh.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bagian penajaman peristiwa sebab-akibat tampaknya kurang dipikirkan, peristiwa hanyutnya Ujo kurang tragis.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Harumnya bunga seruni merupakan rantai kenangan yang dialami tokoh &quot;aku&quot; akan adiknya yang tenggelam.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rasa bahasa pengarang cukup bagus karena ia mencoba menggunakan bahasa-bahasa metafora.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah silogisme berikut dengan saksama!&lt;br&gt;&lt;br&gt;
+PU : Siswa yang tergolong kurang mampu akan diberikan tunjangan belajar.&lt;br&gt;
+PK : Hadiruddin siswa yang tergolong kurang mampu.&lt;br&gt;
+K : ....&lt;br&gt;&lt;br&gt;
+Simpulan yang tepat untuk melengkapi silogisme tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tunjangan belajar harus diberikan kepada Hadiruddin.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hadiruddin tergolong kurang mampu sehingga patut diberikan tunjangan belajar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hadiruddin akan diberikan tunjangan belajar.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tunjangan belajar bagi yang tidak mampu diberikan kepada Hadiruddin.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hadiruddin akan diberikan tunjangan belajar karena kurang mampu.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermatilah penjelasan karya sastra berikut!&lt;br&gt;&lt;br&gt;
+Judul cerpen : Liubliu&lt;br&gt;
+Pengarang : Aufannuha Ihsani, siswa Mahkamah Internasional&lt;br&gt;
+Pondok Pesantren Krapak Yogyakarta.&lt;br&gt;
+Isi cerpen :&lt;br&gt;
+- Mengisahkan Fadril, siswa pesantren asal Aceh, korban tsunami yang kehilangan rumah dan kedua orang tuanya.&lt;br&gt;
+- Fadril mendapat kesempatan menjadi siswa pertukaran pelajar di AS.&lt;br&gt;
+- Fadril berkenalan dengan Olga, gadis Rusia yang tidak beragama, tetapi percaya adanya Tuhan, dan keduanya saling mencintai.&lt;br&gt;
+- Ayah Olga seorang wartawan, pernah ditahan karena dituduh sebagai mata-mata, dan akhirnya tewas dalam perampokan di New York.&lt;br&gt;
+- Cara pandang hidup Olga menyadarkan Fadril bagaimana harus menghadapi kenyataan di masa depan.&lt;br&gt;&lt;br&gt;
+Kalimat resensi yang menyatakan keunggulan yang sesuai dengan penjelasan tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Cinta tanpa logika dan kematangan tindakan cenderung menjadikan penafsiran yang sesuai dengan selera kita saja.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Cinta dan musibah adalah dua hal yang membakar hati manusia begitu saja tanpa mengenal logika.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Meski usia pengarang masih muda, tetapi caranya memandang kehidupan sangat matang dan peka terhadap pengalaman.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kengerian tsunami yang dialaminya dibiarkan jauh di latar belakang dan ia menggantinya dengan latar cerita di Amerika Serikat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pilihan tokoh utamanya dari Rusia, tetapi tokoh tambahan kebanyakan orang Amerika dan keluarganya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermatilah naskah drama berikut!&lt;br&gt;&lt;br&gt;
+Memey : &quot;Jun, mau dibawa ke mana kura-kura itu?&quot;&lt;br&gt;
+Jun : &quot;Ke sungai.&quot;&lt;br&gt;
+Memey : .....&lt;br&gt;
+Ayah : &quot;Karena kura-kura sebaiknya hidup di alam bebas.&quot;&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi naskah drama tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;&quot;Memang ini hari apa ya?&quot;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&quot;Aku ikut, boleh tidak?&quot;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&quot;Ke sungai mana kau pergi?&quot;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&quot;Lho kok ke sungai sih?&quot;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&quot;Mengapa dibawa ke sungai?&quot;&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati puisi berikut!&lt;br&gt;&lt;br&gt;
+Hujan Bulan Juni&lt;br&gt;
+tak ada yang lebih tabah&lt;br&gt;
+dari hujan bulan Juni&lt;br&gt;
+............&lt;br&gt;
+kepada pohon berbunga itu&lt;br&gt;
+tak ada yang lebih bijak&lt;br&gt;
+dari hujan bulan Juni&lt;br&gt;
+dihapusnya jejak-jejak kakinya&lt;br&gt;
+yang ragu-ragu di jalan itu&lt;br&gt;
+(Sapardi Djoko Damono)&lt;br&gt;&lt;br&gt;
+Larik bermajas yang tepat untuk melengkapi puisi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;rintik hujan mengenai tubuhku&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dikibaskannya tetesan rintik hujan di bahunya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dirahasiakannya rintik rindunya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hujan, rintik-rintik membahasi halaman&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tanah menjadi basah meski hujan rintik-rintik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;&lt;br&gt;
+Ketika saya akan memasuki ruang ujian ini, saya merasa ..... tidak akan dapat mengikuti ujian dengan tenang. Akan tetapi, setelah saya berdoa, perasaan itu menjadi berkurang. Ternyata saya ..... ketakutan. Begitu lembar soal saya buka, saya menarik ..... panjang dan mengucapkan&lt;br&gt;
+nama Tuhan, perasaan saya menjadi tenang sehingga dapat menjawab soal dengan baik.&lt;br&gt;
+Kata baku yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kawatir, hanya, nafas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;khuwatir, hanya, nafas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;khawatir, hanya, napas&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kawatir, cuma, napas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kuatir, cuma, napas&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermatilah topik karya ilmiah berikut!&lt;br&gt;&lt;br&gt;
+Topik : Manfaat olahraga bagi pelajar&lt;br&gt;&lt;br&gt;
+Rumusan masalah berdasarkan topik tersebut yang paling tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Olahraga yang bagaimanakah yang tepat bagi pelajar?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Benarkah pelajar masih harus selalu berolahraga?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bagaimanakah pelajar bisa melakukan olahraga tanpa mengganggu jam pelajaran?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Apakah kurang berolahraga dapat menurunkan prestasi siswa?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Apakah manfaat yang dapat diperoleh pelajar dengan berolahraga?&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;&lt;br&gt;
+Lena sudah berkali-kali ditanya oleh orang tuanya, kapan ia akan&lt;br&gt;
+menikah. Untuk ..... tekanan dari orang tuanya itu, lena akhirnya berterus&lt;br&gt;
+terang bahwa sebenarnya ia ingin ..... diri dengan menjadi biarawati. Akan&lt;br&gt;
+tetapi, orang tuanya ..... pengakuan Lena sebagai upaya Lena menolak&lt;br&gt;
+lamaran Robert.&lt;br&gt;&lt;br&gt;
+Kata berimbuhan yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menghindari, menyucikan, menafsirkan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengindah, mensucikan, menafsirkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menghindar, menyucikan, mentafsirkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mengindar, mensucikan, menterjemahkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menghindari, mensucikan, menterjemahkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati topik berikut!&lt;br&gt;&lt;br&gt;
+Topik: Upaya menanamkan rasa cinta terhadap kesenian tradisional di kalangan remaja.&lt;br&gt;&lt;br&gt;
+Kalimat latar belakang yang sesuai dengan topik tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Berbagai kesenian dan budaya telah masuk ke tanah air dan memperkaya khasanah kesenian kita yang sudah ada sejak zaman nenek moyang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kesenian asing yang masuk ke Indonesia dapat merusak citra budaya kesenian yang sudah ada di tanah air.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Saat ini semakin banyak kesenian kita yang terkontaminasi oleh aliran barat atau asing, khususnya di kalangan remaja.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Banyaknya orang asing yang tinggal di Indonesia untuk mempelajari kesenian dan budaya Indonesia secara mendalam.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Remaja Indonesia banyak yang sudah tidak mengenal lagi seni tradisional Indonesia karena terpengaruh budaya asing yang masuk ke negeri sendiri.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati judul karangan berikut!&lt;br&gt;&lt;br&gt;
+Di toko buku itu aku membeli buku berjudul: kiat menjadi orang sukses dan kaya tanpa modal.&lt;br&gt;&lt;br&gt;
+Penulisan judul karangan buku tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kiat menjadi orang sukses dan Kaya tanpa modal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kiat Menjadi Orang Sukses Dan Kaya Tanpa Modal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kiat menjadi Orang Sukses dan Kaya tanpa Modal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kiat Menjadi orang Sukses dan Kaya tanpa Modal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kiat Menjadi Orang Sukses dan Kaya Tanpa Modal&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat penutup surat lamaran pekerjaan berikut!&lt;br&gt;&lt;br&gt;
+Atas perhatiannya, saya tak lupa berterima kasih terhadap Bapak/Ibu.&lt;br&gt;&lt;br&gt;
+Perbaikan kalimat penutup surat lamaran pekerjaan tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Atas perhatiannya, saya berterima kasih banyak.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Atas perhatiannya, saya mengucapkan terima kasih.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Atas perhatian Bapak/Ibu, saya mengucapkan terima kasih.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Atas perhatian Bapak/Ibu, saya berterima kasih banyak.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Atas perhatiannya, saya ucapkan terima kasih.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati ilustrasi berikut!&lt;br&gt;&lt;br&gt;
+Diharapkan kehadiran pengurus OSIS SMA EKA DARMA pada hari Senin tanggal 30 Juli 2012, pukul 08.00 sampai 16.00 WIB, bertempat di aula SMA EKA DARMA dengan acara perencanaan bakti sosial.&lt;br&gt;&lt;br&gt;
+Penulisan pemerian yang tepat dalam surat undangan sesuai dengan ilustrasi tersebut adalah...&lt;br&gt;
+A. hari, tanggal : Senin, 30 Juli 2012&lt;br&gt;
+pukul : 08.00-16.00 WIB&lt;br&gt;
+tempat : Aula SMA EKA DARMA&lt;br&gt;
+acara : Perencanan bakti sosial&lt;br&gt;
+B. hari/tanggal : senin, 30 Juli 2012&lt;br&gt;
+pukul : 08.00-16.00 WIB&lt;br&gt;
+tempat : Aula SMA EKA DARMA&lt;br&gt;
+acara : Perencanan bakti sosial&lt;br&gt;
+C. hari/tanggal : Senin, 30 Juli 2012&lt;br&gt;
+Pukul : 08.00-16.00 WIB&lt;br&gt;
+tempat : Aula SMA EKA DARMA&lt;br&gt;
+acara : Perencanan bakti sosial&lt;br&gt;
+D. Hari/Tanggal : senin, 30 Juli 2012&lt;br&gt;
+Pukul : pukul 08.00-16.00 WIB&lt;br&gt;
+Tempat : Aula SMA EKA DARMA&lt;br&gt;
+Acara : Perencanan bakti sosial&lt;br&gt;
+E. Hari/tanggal : senin, 30 Juli 2012&lt;br&gt;
+Pukul : pukul 08.00-16.00 WIB&lt;br&gt;
+Tempat : Aula SMA EKA DARMA&lt;br&gt;
+Acara : perencanan bakti sosial&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering></numbering>
+	
+	</question>
+
+		<answer>
+		
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;&lt;br&gt;
+Pusat perbelanjaan akan diserbu oleh masyarakat di hari-hari menjelang Lebaran. Semua ingin tampil agak menarik dan cantik di hari Lebaran. Mereka rela meluangkan waktu, tenaga, serta uang untuk mendapatkan busana dan perlengkapan lain yang lebih diinginkan.&lt;br&gt;&lt;br&gt;
+Frasa yang tepat untuk mengganti frase bercetak miring adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;supaya menarik, paling diinginkannya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;amat menarik, akan diinginkannya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tetap menarik, diinginkan sekali&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lebih menarik, sangat diinginkannya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sangat menarik, sudah diinginkannya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;&lt;br&gt;
+Sudah sekian tahun Pak Ibnu meninggal dunia, tetapi orang masih mengenangnya, la orang yang sangat taat menjalankan ibadah dan sangat dermawan. Walaupun ia kaya raya, namun ia tetap rendah hati. la sangat peduli dengan orang lain terlebih orang-orang yang berada di sekitarnya.&lt;br&gt;&lt;br&gt;
+Peribahasa yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Hancur badan dikandung tanah, budi baik dikenang jua.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Karena nila setitik rusak susu sebelanga.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bunga yang harum itu ada juga durinya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Belakang parang pun kalau diasah pasti tajam juga.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Buruk muka cermin dibelah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;&lt;br&gt;
+Banyak orang yang gugur di ..... saat bangsa kita berjuang merebut kemerdekaan dari tangan penjajah. Mereka mengorbankan harta dan nyawa untuk kemerdekaan bangsa. Walaupun nama mereka tidak tercatat sebagai pahlawan, tetapi jasa-jasa mereka tetap dikenang. Mereka gugur&lt;br&gt;
+sebagai ..... walau tanpa tanda jasa.&lt;br&gt;&lt;br&gt;
+Ungkapan yang tepat untuk melengkapi paragraf rumpang tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;medan perang, bunga negara&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;medan perang, bunga bangsa&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;medan laga, bunga nusa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;medan tempur, anak bangsa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;medan laga, bunga keluarga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;&lt;br&gt;
+Pulang ke rumah ia menatap sekeliling,&quot;Mana anak baru itu?&quot; dalam hati Bu Diba .... Setelah Mbok Warsiyah yang setia menjadi orang sibuk membantu Bu Diba mengurus rumah dan .... yang diasuh Bu Diba, segera ia bertanya,&quot; Mana Yayah, War?&quot;&lt;br&gt;&lt;br&gt;
+Kata ulang yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;berdegup-degup, siswa-siswi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berdebar-debar, hewan-hewan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berpikir-pikir, siswa-siswi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bertanya-tanya, anak-anak&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tertawa-tawa, orang-orang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan cermat!&lt;br&gt;&lt;br&gt;
+Peneliti sudah menemukan obat yang dapat membasmi sel kanker, meskipun diberikan dengan dosis rendah. Kanker prostat yang ... bisa dengan ... dihancurkan oleh senyawa ini,&quot; ungkap DR. Cuthy Cutler, seorang profesor sekaligus penulis penelitian ini. &lt;br&gt;&lt;br&gt;
+Kata serapan yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;agresive, efektif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;agresive, efektive&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;agresiv, efektiv&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;agresif, efektif&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;agresife, efektife&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati teks pidato berikut!&lt;br&gt;&lt;br&gt;
+Hadirin yang berbahagia, HP merupakan alat komunikasi yang sangat penting. Namun, apabila dipergunakan secara tidak tepat mengakibatkan hal yang tidak baik. Untuk itu, ...&lt;br&gt;&lt;br&gt;
+Kalimat imbauan yang tepat untuk melengkapi pidato tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Jangan menggunakan HP karena telepon rumah lebih hemat biaya!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Gunakan HP sehemat mungkin agar tidak menghabiskan pulsa!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Gunakan HP secara bijak sesuai dengan keperluan!&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Matikan HP pada saat tidak diperlukan!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jangan menggunakan HP karena membuat kita lupa waktu!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan saksama!&lt;br&gt;&lt;br&gt;
+Selokan Mataram yang melintasi wilayah Yogyakarta bagian utara dibangun pada masa Sultan Hamengkubuwono IX. Selokan itu mengalirkan air dari Sungai Progo di sisi barat sampai wilayah Prambanan di sisi timur Yogyakarta. Di sepanjang lintasannya dibangun kanal-kanal agar air selokan dapat mengairi sawah sepanjang selokan tersebut. Namun, kenyataannya selokan itu juga dijadikan tempat pembuangan sampah oleh warga yang bermukim di sepanjang selokan tersebut. Tidak ada kesadaran mereka untuk memelihara dan membersihkannya ...&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi paragraf sebab akibat tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sebaiknya warga sekitar selokan diimbau agar tidak mengotori selokan itu.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pemerintah setempat wajib menyadarkan warga sekitar selokan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hargailah jasa orang-orang yang telah membangun selokan tersebut&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Selokan yang kotor merugikan petani yang memanfaatkan air selokan itu.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Selokan itu menjadi kotor, penuh sampah, dan berbau menyengat.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan saksama!&lt;br&gt;&lt;br&gt;
+Kemarin kelas X3 telah melaksanakan ulangan Kimia. Setelah diperiksa guru ternyata ada 10 siswa mendapat nilai 95. Siswa yang mendapat nilai 90 sebanyak 15 orang. Siswa mendapat nilai 85 ada 5 orang. Hanya 2 siswa yang mendapat nilai 80.&lt;br&gt;&lt;br&gt;
+Kalimat simpulan generalisasi yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Hanya ada dua siswa X3 yang agak bodoh.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Siswa kelas X3 pandai dalam pelajaran Kimia.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sebagian besar siswa X3 pandai Kimia.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Siswa kelas X3 berminat kepada pelajaran Kimia.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Guru Kimia di kelas X3 memang hebat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf argumentasi berikut dengan saksama!&lt;br&gt;&lt;br&gt;
+Puncak Gunung Agung itu menyambung dengan punggungan yang menerus hingga kaki gunung ke arah barat daya-selatan itu menjadi semacam benteng alam bagi Pura Besakih. Berdasarkan pengukuran Kusumadinata, Pura Bekasih berada 6,5 kilometer dari kawah. Ini merupakan jarak aman karena berada di luar jari-jari zona rawan bahaya 5 kilometer pada 1963 dan 6 kilometer pada peta kawasan rawan bencana saat ini. Meskipun terlindungi oleh puncak Gunung Agung, lemparan lapili berupa pasir dan kerikil masih sampai di kompleks Pura Besakih...&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pura terbesar ini telah bertahan dari serangkaian aktivitas vulkanik Gunung Agung selama ratusan tahun.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lontaran awan panas terhalang oleh benteng alam Puncak Gunung Agung dan pegunungannya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hal itu dibuktikan dengan adanya endapan kerikil dan pasir di sekitar pura tersebut.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Benteng alam juga terdapat di Gunung Merapi Yogyakarta yang disebut sebagai geger boyo (punggung buaya).&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pura Bekasih aman dari erupsi tahun 1963 karena berada di belakang titik tertinggi Gunung Agung.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat-kalimat berikut!&lt;br&gt;
+1. Pupuk dan binalah rasa percaya diri.&lt;br&gt;
+2. Pelajari sebaik-baiknya bila menghadapi situasi tersebut.&lt;br&gt;
+3. Setelah timbul rasa percaya diri, pertebal keyakinan Anda.&lt;br&gt;
+4. Persipakan diri Anda sebaik-baiknya bila menghadapi situasi atau suasana tertentu.&lt;br&gt;
+5. Untuk menambah rasa percaya diri, kita harus menambah kecakapan atau keahlian melalui latihan atau belajar sungguh-sungguh.&lt;br&gt;&lt;br&gt;
+Langkah yang runtut untuk mengatasi rasa takut yang benar adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (2), (3), (5), dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1), (3). (4), (2), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2), (4), (1), (3), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4), (1), (2), (3), dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4), (2), (1), (3), dan (5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;&lt;br&gt;
+Sepanjang tahun 2011, bank-bank nasional mampu menikmati kenaikan laba cukup besar. Jika, bank-bank asing yang beroperasi di Indonesia malah bernasib beda. Sejumlah bank harus rela memperoleh laba pada tahun 2011 lebih kecil dibandingkan tahun 2010.&lt;br&gt;
+Mengutip laporan keuangan publikasi bank di situs Bank Indonesia (BI), tiga perusahaan mencatat penurunan laba. Laba Citi Bank menurun sehingga melambatnya bisnis perusahaan pascatransaksi BI di divisi konsumen. Pendapatan pun turun, setidaknya beban usaha meningkat.&lt;br&gt;&lt;br&gt;
+Kata penghubung untuk mengganti kata yang bercetak miring pada paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;namun, bahwa, karena&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bahkan, agar, sementara&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;namun, karena, walaupun&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;karena, walaupun, padahal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;namun, karena, sementara&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

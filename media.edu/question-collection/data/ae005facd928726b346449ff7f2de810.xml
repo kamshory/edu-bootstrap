@@ -1,0 +1,2150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt; North Wood Academy&lt;br&gt; Pre - School Open House&lt;br&gt; Saturday, 26 March 2016&lt;br&gt; 9:00 a.m. &amp;mdash; 12:00 noon&lt;br&gt; DISCOVER SOMETHING GREAT&lt;br&gt;&lt;br&gt; Bring your 3 - 4 years old children to our grand opening ceremony.&lt;br&gt; One month free tuition is available.&lt;br&gt; Authorized by Audubon Center of the North Woods&lt;br&gt;&lt;br&gt; For more infonnation, please contact us at:&lt;br&gt; 1000 5th Avenue. SE, Hutchinson, MN 55350&lt;br&gt; Phone : 320 234 6362 (NDMA)&lt;br&gt; Website: info@newdiscoveries.org&lt;br&gt; www.newdiscoveries.org &lt;br&gt;&lt;br&gt; To get further information, the parents can ask by email at...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1000 5th Avenue&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3202346362 (NDMA)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;www.newdiscoveries.org&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;info@newsdiscoveries.org&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+North Wood Academy&lt;br&gt;
+Pre - School Open House&lt;br&gt;
+Saturday, 26 March 2016&lt;br&gt;
+9:00 a.m. &amp;mdash; 12:00 noon&lt;br&gt;
+DISCOVER SOMETHING GREAT&lt;br&gt;&lt;br&gt;
+Bring your 3 - 4 years old children to our grand opening ceremony.&lt;br&gt;
+One month free tuition is available.&lt;br&gt;
+Authorized by Audubon Center of the North Woods&lt;br&gt;&lt;br&gt;
+For more infonnation, please contact us at:&lt;br&gt;
+1000 5th Avenue. SE, Hutchinson, MN 55350&lt;br&gt;
+Phone : 320 234 6362 (NDMA)&lt;br&gt;
+Website: info@newdiscoveries.org&lt;br&gt;
+www.newdiscoveries.org &lt;br&gt;&lt;br&gt;
+What will the students get if they come to the opening of the pre-school?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Information.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Registration form.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Grand opening ceremony.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;One month discount of tuition .&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt; North Wood Academy&lt;br&gt; Pre - School Open House&lt;br&gt; Saturday, 26 March 2016&lt;br&gt; 9:00 a.m. &amp;mdash; 12:00 noon&lt;br&gt; DISCOVER SOMETHING GREAT&lt;br&gt;&lt;br&gt; Bring your 3 - 4 years old children to our grand opening ceremony.&lt;br&gt; One month free tuition is available.&lt;br&gt; Authorized by Audubon Center of the North Woods&lt;br&gt;&lt;br&gt; For more infonnation, please contact us at:&lt;br&gt; 1000 5th Avenue. SE, Hutchinson, MN 55350&lt;br&gt; Phone : 320 234 6362 (NDMA)&lt;br&gt; Website: info@newdiscoveries.org&lt;br&gt; www.newdiscoveries.org &lt;br&gt;&lt;br&gt; &amp;ldquo;One month free &lt;span style=&quot;text-decoration: underline;&quot;&gt;tuition&lt;/span&gt; is available&amp;rdquo;&lt;br&gt; The underlined word is closest in meaning to&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;school fee&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;course fee&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;transfer fee&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;registration fee&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+To : elyas@yahoo.com&lt;br&gt;
+From : andim@gmail.com&lt;br&gt;
+Subject: Re.Visit plan&lt;br&gt;&lt;br&gt;
+Hi Elyas,&lt;br&gt;
+It&amp;rsquo;s great to know that you are coming next week. By the way, did you write the estimated time of arrival (ETA) in your last email? l&amp;rsquo;ll be ready to see you at the airport. Just give me details of your &amp;#64258;ight&lt;br&gt;&lt;br&gt;
+Cheers,&lt;br&gt;
+Andi&lt;br&gt;&lt;br&gt;
+How does Andi feel knowing that Elyas is coming&amp;rsquo;?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sad.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Weak.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Happy.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Serious.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+To : elyas@yahoo.com&lt;br&gt;
+From : andim@gmail.com&lt;br&gt;
+Subject: Re.Visit plan&lt;br&gt;&lt;br&gt;
+Hi Elyas,&lt;br&gt;
+It&amp;rsquo;s great to know that you are coming next week. By the way, did you write the estimated time of arrival (ETA) in your last email? l&amp;rsquo;ll be ready to see you at the airport. Just give me details of your &amp;#64258;ight&lt;br&gt;&lt;br&gt;
+Cheers,&lt;br&gt;
+Andi&lt;br&gt;&lt;br&gt;
+What information can be taken from the text?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Elyas explains about ETA in his email.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Andi plans to inform Elyas about ETA.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Elyas gives Andi details of his &amp;#64258;ight next week.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Andi doesn&amp;rsquo;t know the exact time of Elyas&amp;rsquo; arrival&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Pretty&lt;br&gt;
+08576890987\&lt;br&gt;
+11.00 am.&lt;br&gt;
+I can&amp;rsquo;t accompany you and Allesandra to go window shopping in Malioboro this aftemoon. I have to do some errands for my mother. Maybe some other time will be ok.&lt;br&gt;
+Sorry for that.&lt;br&gt;&lt;br&gt;
+Regards&lt;br&gt;
+Joe&lt;br&gt;&lt;br&gt;
+Who will go window shopping?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Joe and his mother.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Joe and Pretty.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pretty and Allesandra.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Allesandra and her mother.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;&amp;ldquo;I have to do some &lt;span style=&quot;text-decoration: underline;&quot;&gt;errands&lt;/span&gt; for my mother.&quot;&lt;br&gt; The underlined word has similar meaning to...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;tasks&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;works&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;chores&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;joumeys&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+STATE OPEN UNIVERSITY&lt;br&gt;&lt;br&gt;
+Departments:&lt;br&gt;
+- Chemistry&lt;br&gt;
+- Medicine&lt;br&gt;
+- Law&lt;br&gt;
+- Communications&lt;br&gt;&lt;br&gt;
+Free Computer Course&lt;br&gt;
+For New Students&lt;br&gt;
+(6 months, 6 modules)&lt;br&gt;&lt;br&gt;
+Software and Website Development&lt;br&gt;&lt;br&gt;
+How can we get free computer course?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;By joining the course.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;By developing the website.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;By enrolling in the university.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;By registering your name for the course.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;We can conclude from the text that State Open University&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;gives its future students free computer course&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;has a six month computer lecture&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;has more than four majors&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;is located in Jakarta&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Announcement&lt;br&gt;
+To all students of grade Vlll. There will be a school holiday for two weeks. Please do a project of descriptive text in writing. It should be about any animal around your house. You can describe your own pet or your neighbours Don&amp;rsquo;t forget to put the animal&amp;lsquo;s photo in your writing. You have to submit it on the &amp;#64257;rst day of the second semester.&lt;br&gt;&lt;br&gt;
+Mr. Hasan&lt;br&gt;&lt;br&gt;
+What is the announcement about?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Semester holiday.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Neighbour&amp;rsquo;s pet.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Writing project.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Picture description.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Announcement&lt;br&gt;
+To all students of grade Vlll. There will be a school holiday for two weeks. Please do a project of descriptive text in writing. It should be about any animal around your house. You can describe your own pet or your neighbours Don&amp;rsquo;t forget to put the animal&amp;lsquo;s photo in your writing. You have to submit it on the &amp;#64257;rst day of the second semester.&lt;br&gt;&lt;br&gt;
+Mr. Hasan&lt;br&gt;&lt;br&gt;
+What should the student do during their holiday?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Doing project of descriptive text.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Describing the &amp;#64257;rst day of semester.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Being away from school.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Taking pictures of a pet.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt; Announcement&lt;br&gt; To all students of grade Vlll. There will be a school holiday for two weeks. Please do a project of descriptive text in writing. It should be about any animal around your house. You can describe your own pet or your neighbours Don&amp;rsquo;t forget to put the animal&amp;lsquo;s photo in your writing. You have to submit it on the &amp;#64257;rst day of the second semester.&lt;br&gt;&lt;br&gt; Mr. Hasan&lt;br&gt;&lt;br&gt; &amp;ldquo;You have to &lt;span style=&quot;text-decoration: underline;&quot;&gt;submit&lt;/span&gt; it on the &amp;#64257;rst day&quot;.&lt;br&gt; What does the underhned word mean?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Bring.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Collect&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Take.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Send.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Friends and family&lt;br&gt;
+Join us to celebrate&lt;br&gt;
+Casey's 15th Birthday!&lt;br&gt;
+Saturday, 21 May 2016&lt;br&gt;
+5:00 p.m.&lt;br&gt;
+123 Main Street Perth&lt;br&gt;&lt;br&gt;
+Charlotte&lt;br&gt;&lt;br&gt;
+RSVP to Lisa at 123-456-7891&lt;br&gt;&lt;br&gt;
+When will Casey&amp;rsquo;s birthday be held?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;At night.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;In the evening.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;In the morning.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;In the afternoon.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Friends and family&lt;br&gt;
+Join us to celebrate&lt;br&gt;
+Casey's 15th Birthday!&lt;br&gt;
+Saturday, 21 May 2016&lt;br&gt;
+5:00 p.m.&lt;br&gt;
+123 Main Street Perth&lt;br&gt;&lt;br&gt;
+Charlotte&lt;br&gt;&lt;br&gt;
+RSVP to Lisa at 123-456-7891&lt;br&gt;&lt;br&gt;
+What can we conclude from the invitation?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The invitation is written by Lisa.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;For con&amp;#64257;rmation, we can contact Lisa.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Charlotte and Lisa are Casey&amp;rsquo;s cousins.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lisa is the owner of the house at 123 main street Perth&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+To : Mr. Win&amp;#64257;eld&lt;br&gt;
+From : Andrew&lt;br&gt;
+Phone Number : +6242897640&lt;br&gt;&lt;br&gt;
+Message&lt;br&gt;&lt;br&gt;
+The monthly meeting is postponed due to the technical reason.&lt;br&gt;
+Further information will be conveyed soon.&lt;br&gt;
+Call him, when you are back.&lt;br&gt;&lt;br&gt;
+Secretary&lt;br&gt;&lt;br&gt;
+Who delivered the message to Mr. Win&amp;#64257;eld?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Andrew.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mr. Win&amp;#64257;eld.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Andrew&amp;rsquo;s secretary.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The secretary of Mr. Win&amp;#64257;eld.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+To : Mr. Win&amp;#64257;eld&lt;br&gt;
+From : Andrew&lt;br&gt;
+Phone Number : +6242897640&lt;br&gt;&lt;br&gt;
+Message&lt;br&gt;&lt;br&gt;
+The monthly meeting is postponed due to the technical reason.&lt;br&gt;
+Further information will be conveyed soon.&lt;br&gt;
+Call him, when you are back.&lt;br&gt;&lt;br&gt;
+Secretary&lt;br&gt;&lt;br&gt;
+From the text we know that Mr. Win&amp;#64257;eld W111 call Andrew back to of the meetlng&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;ask the place&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&amp;#64257;x the date&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ask information about&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;clarify the postponement&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Last year, I got a chance to join a student exchange program to Bima regency, Nusa Tenggara Barat. I flew there with four other students.&lt;br&gt;&lt;br&gt;
+We arrived at Bima&amp;rsquo;s airport at two in the afternoon. A boy, named Fahriel, had been waiting for us. His father accompanied him. We continued our journey to Sape village where Fahriel and his family live. It was a busy village on the tip of the Island.&lt;br&gt;&lt;br&gt;
+During my visit, I had a lot of activities. In the morning, I came to Fahriel&amp;rsquo;s school and joined his school activities. In the afternoon I did many activities.&lt;br&gt;&lt;br&gt;
+In the &amp;#64257;rst week, I went to the beaches. Bima have many beautiful beaches. They are clean and have white sand.&lt;br&gt;&lt;br&gt;
+In the second Week, I joined camping activities. It was a great fun. Besides having scouting activities, my friends and I also had dancing and singing perfonnance.&lt;br&gt;&lt;br&gt;
+In our last week We spent our time Watching horse race, catching &amp;#64257;sh in karamba, and learning how to weave Bimanese Traditional Cloth.&lt;br&gt;&lt;br&gt;
+Though I just spend a month in Bima, I realized that I have fallen in love with the beauty of its nature and unique custom.&lt;br&gt;&lt;br&gt;
+What is the main idea of paragraph 2?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The writer joined a camping activity.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bima had the most beautiful beaches.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The writer and his friends arrived in Bima.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The writer is activities during the program.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Last year, I got a chance to join a student exchange program to Bima regency, Nusa Tenggara Barat. I flew there with four other students.&lt;br&gt;&lt;br&gt;
+We arrived at Bima&amp;rsquo;s airport at two in the afternoon. A boy, named Fahriel, had been waiting for us. His father accompanied him. We continued our journey to Sape village where Fahriel and his family live. It was a busy village on the tip of the Island.&lt;br&gt;&lt;br&gt;
+During my visit, I had a lot of activities. In the morning, I came to Fahriel&amp;rsquo;s school and joined his school activities. In the afternoon I did many activities.&lt;br&gt;&lt;br&gt;
+In the &amp;#64257;rst week, I went to the beaches. Bima have many beautiful beaches. They are clean and have white sand.&lt;br&gt;&lt;br&gt;
+In the second Week, I joined camping activities. It was a great fun. Besides having scouting activities, my friends and I also had dancing and singing perfonnance.&lt;br&gt;&lt;br&gt;
+In our last week We spent our time Watching horse race, catching &amp;#64257;sh in karamba, and learning how to weave Bimanese Traditional Cloth.&lt;br&gt;&lt;br&gt;
+Though I just spend a month in Bima, I realized that I have fallen in love with the beauty of its nature and unique custom.&lt;br&gt;&lt;br&gt;
+We know from the text that the writer was...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;a teacher&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;a student&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;a dancer&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;a racer&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Last year, I got a chance to join a student exchange program to Bima regency, Nusa Tenggara Barat. I flew there with four other students.&lt;br&gt;&lt;br&gt;
+We arrived at Bima&amp;rsquo;s airport at two in the afternoon. A boy, named Fahriel, had been waiting for us. His father accompanied him. We continued our journey to Sape village where Fahriel and his family live. It was a busy village on the tip of the Island.&lt;br&gt;&lt;br&gt;
+During my visit, I had a lot of activities. In the morning, I came to Fahriel&amp;rsquo;s school and joined his school activities. In the afternoon I did many activities.&lt;br&gt;&lt;br&gt;
+In the &amp;#64257;rst week, I went to the beaches. Bima have many beautiful beaches. They are clean and have white sand.&lt;br&gt;&lt;br&gt;
+In the second Week, I joined camping activities. It was a great fun. Besides having scouting activities, my friends and I also had dancing and singing perfonnance.&lt;br&gt;&lt;br&gt;
+In our last week We spent our time Watching horse race, catching &amp;#64257;sh in karamba, and learning how to weave Bimanese Traditional Cloth.&lt;br&gt;&lt;br&gt;
+Though I just spend a month in Bima, I realized that I have fallen in love with the beauty of its nature and unique custom.&lt;br&gt;&lt;br&gt;
+The second week of the writer&amp;rsquo;s visit was great because of...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;the school activities the writer did.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the unique custom the writer wore.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the camping activities the writer did.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the beautiful beaches the writer went.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text for question.&lt;br&gt;
+Camellia Sinensis is an evergreen tea plant that grows mainly in tropical and subtropical climates. Nevertheless, some varieties can tolerate marine climates as they are cultivated far north in Pembrokeshire of the British mainland and Washington in the United States.&lt;br&gt;&lt;br&gt;
+Tea plants are propagated from seed or by cutting. It takes approximately 4 to 12 years for tea plant to a bear seed, and it needs 3 years before a new plant is ready for harvesting. In a warm climate tea plants require at least 127 cm (50 inches) of rainfall a year. Traditional Chinese Tea Cultivation and Studies believes that high quality tea plants are cultivated at elevations of up to 1,500 meter. At these heights, the plants grow slower.&lt;br&gt;&lt;br&gt;
+The parts of tea plant which is harvested are the top 1-2 inches of the mature plant. These buds and leaves are called flushes. The tea plant will grow a new flush every seven tofteen days during the growing season. Leaves that are slow in development always produce better &amp;#64258;avored teas.&lt;br&gt;&lt;br&gt;
+A tea plant will grow into a tree of up to 16 meter if left undisturbed, but cultivated plants are pruned to waist height for ease plucking.&lt;br&gt;&lt;br&gt;
+What do we call for the parts of tea plant which is harvested?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;seeds&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;leaves&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;flushes&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;buds&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text for question.&lt;br&gt;
+Camellia Sinensis is an evergreen tea plant that grows mainly in tropical and subtropical climates. Nevertheless, some varieties can tolerate marine climates as they are cultivated far north in Pembrokeshire of the British mainland and Washington in the United States.&lt;br&gt;&lt;br&gt;
+Tea plants are propagated from seed or by cutting. It takes approximately 4 to 12 years for tea plant to a bear seed, and it needs 3 years before a new plant is ready for harvesting. In a warm climate tea plants require at least 127 cm (50 inches) of rainfall a year. Traditional Chinese Tea Cultivation and Studies believes that high quality tea plants are cultivated at elevations of up to 1,500 meter. At these heights, the plants grow slower.&lt;br&gt;&lt;br&gt;
+The parts of tea plant which is harvested are the top 1-2 inches of the mature plant. These buds and leaves are called flushes. The tea plant will grow a new flush every seven tofteen days during the growing season. Leaves that are slow in development always produce better &amp;#64258;avored teas.&lt;br&gt;&lt;br&gt;
+A tea plant will grow into a tree of up to 16 meter if left undisturbed, but cultivated plants are pruned to waist height for ease plucking.&lt;br&gt;&lt;br&gt;
+The main idea of the second paragraph is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;tea plant will grow new flush every day&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;only one variety can tolerate marine climates&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;in warm climate tea plants need heavy rainfall&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Camellia Sinensis can be multiplied from seed or by cutting&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text for question.&lt;br&gt; Camellia Sinensis is an evergreen tea plant that grows mainly in tropical and subtropical climates. Nevertheless, some varieties can tolerate marine climates as they are cultivated far north in Pembrokeshire of the British mainland and Washington in the United States.&lt;br&gt;&lt;br&gt; Tea plants are propagated from seed or by cutting. It takes approximately 4 to 12 years for tea plant to a bear seed, and it needs 3 years before a new plant is ready for harvesting. In a warm climate tea plants require at least 127 cm (50 inches) of rainfall a year. Traditional Chinese Tea Cultivation and Studies believes that high quality tea plants are cultivated at elevations of up to 1,500 meter. At these heights, the plants grow slower.&lt;br&gt;&lt;br&gt; The parts of tea plant which is harvested are the top 1-2 inches of the mature plant. These buds and leaves are called flushes. The tea plant will grow a new flush every seven tofteen days during the growing season. Leaves that are slow in development always produce better &amp;#64258;avored teas.&lt;br&gt;&lt;br&gt; A tea plant will grow into a tree of up to 16 meter if left undisturbed, but cultivated plants are pruned to waist height for ease plucking.&lt;br&gt;&lt;br&gt; &amp;ldquo;The parts of tea plant which is harvested is the top 1-2 Inches of the &lt;span style=&quot;text-decoration: underline;&quot;&gt;mature&lt;/span&gt; plant. (Paragraph 3)&lt;br&gt; The underlined word is closest in meaning to...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;fully cooked&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;fully grown&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;high enough&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ripe enough&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text for question.&lt;br&gt;
+Camellia Sinensis is an evergreen tea plant that grows mainly in tropical and subtropical climates. Nevertheless, some varieties can tolerate marine climates as they are cultivated far north in Pembrokeshire of the British mainland and Washington in the United States.&lt;br&gt;&lt;br&gt;
+Tea plants are propagated from seed or by cutting. It takes approximately 4 to 12 years for tea plant to a bear seed, and it needs 3 years before a new plant is ready for harvesting. In a warm climate tea plants require at least 127 cm (50 inches) of rainfall a year. Traditional Chinese Tea Cultivation and Studies believes that high quality tea plants are cultivated at elevations of up to 1,500 meter. At these heights, the plants grow slower.&lt;br&gt;&lt;br&gt;
+The parts of tea plant which is harvested are the top 1-2 inches of the mature plant. These buds and leaves are called flushes. The tea plant will grow a new flush every seven tofteen days during the growing season. Leaves that are slow in development always produce better &amp;#64258;avored teas.&lt;br&gt;&lt;br&gt;
+A tea plant will grow into a tree of up to 16 meter if left undisturbed, but cultivated plants are pruned to waist height for ease plucking.&lt;br&gt;&lt;br&gt;
+We know from the text that Camelia Sinensis&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;has many ways to propagate.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;can be picked anytime.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cannot live in warm climate.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;will grow a new flush in 16 days.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Using a Dictionary&lt;br&gt;
+Here are the steps to consult your dictionary:&lt;br&gt;
+1. Look at the &amp;#64257;rst letter of the word. Dictionaries follow alphabetical order&lt;br&gt;
+2. Open the dictionary.&lt;br&gt;
+3. Find the section of the first letter of the word.&lt;br&gt;
+4. Look at the second letter of the word.&lt;br&gt;
+5. Find the word starting with those two letters.&lt;br&gt;
+6. Look at the words at the top of pages in the dictionary. They tell you what types or words are on the pages.&lt;br&gt;
+7. Notice the word falls between them&lt;br&gt;
+8. Find the word and read the de&amp;#64257;nition&lt;br&gt;&lt;br&gt;
+We have to look at the words at the top of the pages of the dictionary because...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;they follow the alphabetical order.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;we can find the second letter of the words.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;we can find the types of words on those pages.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;we will get the de&amp;#64257;nition of the word we need on them.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Using a Dictionary&lt;br&gt;
+Here are the steps to consult your dictionary:&lt;br&gt;
+1. Look at the &amp;#64257;rst letter of the word. Dictionaries follow alphabetical order&lt;br&gt;
+2. Open the dictionary.&lt;br&gt;
+3. Find the section of the first letter of the word.&lt;br&gt;
+4. Look at the second letter of the word.&lt;br&gt;
+5. Find the word starting with those two letters.&lt;br&gt;
+6. Look at the words at the top of pages in the dictionary. They tell you what types or words are on the pages.&lt;br&gt;
+7. Notice the word falls between them&lt;br&gt;
+8. Find the word and read the de&amp;#64257;nition&lt;br&gt;&lt;br&gt;
+What should we do after opening the section of the &amp;#64257;rst letter of the word?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Opening the Words fall.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Scanning the dictionary.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Looking at the de&amp;#64257;nition.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Looking at the second letter of the word.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt; Using a Dictionary&lt;br&gt; Here are the steps to consult your dictionary:&lt;br&gt; 1. Look at the &amp;#64257;rst letter of the word. Dictionaries follow alphabetical order&lt;br&gt; 2. Open the dictionary.&lt;br&gt; 3. Find the section of the first letter of the word.&lt;br&gt; 4. Look at the second letter of the word.&lt;br&gt; 5. Find the word starting with those two letters.&lt;br&gt; 6. Look at the words at the top of pages in the dictionary. They tell you what types or words are on the pages.&lt;br&gt; 7. Notice the word falls between them&lt;br&gt; 8. Find the word and read the de&amp;#64257;nition&lt;br&gt;&lt;br&gt; &amp;ldquo;... the word falls between &lt;span style=&quot;text-decoration: underline;&quot;&gt;them&lt;/span&gt;&amp;rdquo; (step 7).&lt;br&gt; What does the underlined word refer to?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The letters.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The words.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The pages.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The meanings.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt; Using a Dictionary&lt;br&gt; Here are the steps to consult your dictionary:&lt;br&gt; 1. Look at the &amp;#64257;rst letter of the word. Dictionaries follow alphabetical order&lt;br&gt; 2. Open the dictionary.&lt;br&gt; 3. Find the section of the first letter of the word.&lt;br&gt; 4. Look at the second letter of the word.&lt;br&gt; 5. Find the word starting with those two letters.&lt;br&gt; 6. Look at the words at the top of pages in the dictionary. They tell you what types or words are on the pages.&lt;br&gt; 7. Notice the word falls between them&lt;br&gt; 8. Find the word and read the de&amp;#64257;nition&lt;br&gt;&lt;br&gt; &amp;ldquo;... &amp;#64257;nd the &lt;span style=&quot;text-decoration: underline;&quot;&gt;section&lt;/span&gt; of the &amp;#64257;rst letter...&amp;rdquo; (step 3).&lt;br&gt; The underlined Word is closest in meaning to...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;part&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;area&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;place&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;location&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+One day while a mousedeer was walking in the forest, he saw a big black snake sleeping under the tree. When he saw the snake, the mousedeer was frightened. He wanted to run away from the snake, but suddenly he fell on top of a tiger which was sleeping not far from the snake. The tiger woke up and took hold of the mousedeer. He told the mousedeer that he was going to make him food for his lunch.&lt;br&gt;
+&amp;ldquo;Please don&amp;rsquo;t eat me now&amp;rdquo;, said the mousedeer.&lt;br&gt;
+&amp;rdquo;I have something important to do&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Look&amp;rdquo;, said the mousedeer while pointing at the snake. &amp;ldquo;That is the king&amp;rsquo;s belt. He asked me to stay here and watch over it while he was away in the forest. The tiger looked at the snake and said, &amp;ldquo;That is a beautiful belt. I need a belt like that. Can I wear it?&amp;rdquo; he asked the mousedeer.&lt;br&gt;
+&amp;ldquo;Oh all right&amp;rdquo; said the mousedeer. So he picked up the snake and wound the belt around the tiger. Then the snake woke up and saw the tiger. The snake twisted itself tighter and tighter until the tiger couldn&amp;rsquo;t breathe. The tiger asked the mousedeer to help him. But the mousedeer had ran away into the forest.&lt;br&gt;&lt;br&gt;
+Why did the mousedeer trick the tiger by saying that the snake was a king&amp;rsquo;s belt?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The mousedeer liked to trick other animals.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The mousedeer was a clever animal.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The tiger wanted to eat him.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The tiger liked to wear it.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;he following text is for question.&lt;br&gt;
+One day while a mousedeer was walking in the forest, he saw a big black snake sleeping under the tree. When he saw the snake, the mousedeer was frightened. He wanted to run away from the snake, but suddenly he fell on top of a tiger which was sleeping not far from the snake. The tiger woke up and took hold of the mousedeer. He told the mousedeer that he was going to make him food for his lunch.&lt;br&gt;
+&amp;ldquo;Please don&amp;rsquo;t eat me now&amp;rdquo;, said the mousedeer.&lt;br&gt;
+&amp;rdquo;I have something important to do&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Look&amp;rdquo;, said the mousedeer while pointing at the snake. &amp;ldquo;That is the king&amp;rsquo;s belt. He asked me to stay here and watch over it while he was away in the forest. The tiger looked at the snake and said, &amp;ldquo;That is a beautiful belt. I need a belt like that. Can I wear it?&amp;rdquo; he asked the mousedeer.&lt;br&gt;
+&amp;ldquo;Oh all right&amp;rdquo; said the mousedeer. So he picked up the snake and wound the belt around the tiger. Then the snake woke up and saw the tiger. The snake twisted itself tighter and tighter until the tiger couldn&amp;rsquo;t breathe. The tiger asked the mousedeer to help him. But the mousedeer had ran away into the forest.&lt;br&gt;&lt;br&gt;
+Where was the snake sleeping?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Under the tree.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Near the mousedeer.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;In the middle of the forest.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Next to the mousedeer&amp;rsquo;s house.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;he following text is for question.&lt;br&gt;
+One day while a mousedeer was walking in the forest, he saw a big black snake sleeping under the tree. When he saw the snake, the mousedeer was frightened. He wanted to run away from the snake, but suddenly he fell on top of a tiger which was sleeping not far from the snake. The tiger woke up and took hold of the mousedeer. He told the mousedeer that he was going to make him food for his lunch.&lt;br&gt;
+&amp;ldquo;Please don&amp;rsquo;t eat me now&amp;rdquo;, said the mousedeer.&lt;br&gt;
+&amp;rdquo;I have something important to do&amp;rdquo;&lt;br&gt;
+&amp;rdquo;Look&amp;rdquo;, said the mousedeer while pointing at the snake. &amp;ldquo;That is the king&amp;rsquo;s belt. He asked me to stay here and watch over it while he was away in the forest. The tiger looked at the snake and said, &amp;ldquo;That is a beautiful belt. I need a belt like that. Can I wear it?&amp;rdquo; he asked the mousedeer.&lt;br&gt;
+&amp;ldquo;Oh all right&amp;rdquo; said the mousedeer. So he picked up the snake and wound the belt around the tiger. Then the snake woke up and saw the tiger. The snake twisted itself tighter and tighter until the tiger couldn&amp;rsquo;t breathe. The tiger asked the mousedeer to help him. But the mousedeer had ran away into the forest.&lt;br&gt;&lt;br&gt;
+After reading this story, we can learn that we have to...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;behave like the mousedeer&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;save ourselves from danger&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;learn about dangerous animals&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;be careful with the wild animals&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt; Fireflies are lighting insects that belong to nocturnal members of the family lampyridae. The wings fireflies have distinguish them from other glowing insects of the I same family, glowworms.&lt;/p&gt;
+&lt;p&gt;Fire&amp;#64258;ies produce light through a special organ located under their abdomen, photophoies. This organ consists of several layers of small reflector cells and a single layer of light producing cells, and light producing cells coalain. Lusiferin and adenosine triphosphile are used in the process of producing light. Fireflies use their light to lure prey, discourage predators, and most importantly attract their master.&lt;/p&gt;
+&lt;p&gt;The text mostly tells us about of &amp;#64257;re&amp;#64258;ies...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;the light&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the habitat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the species&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the organs&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt; Fireflies are lighting insects that belong to nocturnal members of the family lampyridae. The wings fireflies have distinguish them from other glowing insects of the I same family, glowworms.&lt;/p&gt;
+&lt;p&gt;Fire&amp;#64258;ies produce light through a special organ located under their abdomen, photophoies. This organ consists of several layers of small reflector cells and a single layer of light producing cells, and light producing cells coalain. Lusiferin and adenosine triphosphile are used in the process of producing light. Fireflies use their light to lure prey, discourage predators, and most importantly attract their master.&lt;/p&gt;
+&lt;p&gt;We can distinguish fireflies from glowworms from...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;the use of light&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;their special organs&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the wing they have&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the colour of light they produce&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt; Fireflies are lighting insects that belong to nocturnal members of the family lampyridae. The wings fireflies have distinguish them from other glowing insects of the I same family, glowworms.&lt;/p&gt;
+&lt;p&gt;Fire&amp;#64258;ies produce light through a special organ located under their abdomen, photophoies. This organ consists of several layers of small reflector cells and a single layer of light producing cells, and light producing cells coalain. Lusiferin and adenosine triphosphile are used in the process of producing light. Fireflies use their light to lure prey, discourage predators, and most importantly attract their master.&lt;/p&gt;
+&lt;p&gt;The two chemicals used in the light-producing process are...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;adenosine triphosphile and photophoies&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lusiferin and adenosine triphosphile&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lampyridae and glowworms&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;photophoies and Lusiferin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt; Fireflies are lighting insects that belong to nocturnal members of the family lampyridae. The wings fireflies have distinguish them from other glowing insects of the I same family, glowworms.&lt;/p&gt;
+&lt;p&gt;Fire&amp;#64258;ies produce light through a special organ located under their abdomen, photophoies. This organ consists of several layers of small reflector cells and a single layer of light producing cells, and light producing cells coalain. Lusiferin and adenosine triphosphile are used in the process of producing light. Fireflies use their light to lure prey, discourage predators, and most importantly attract their master.&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;Fie&amp;#64258;ies are lightning &lt;span style=&quot;text-decoration: underline;&quot;&gt;insects&lt;/span&gt; ...&amp;rdquo; (paragraph 1)&lt;br&gt; The underlined word is closest in meaning to...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;bugs&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;species&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;animals&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;predators&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is forgguestion.&lt;br&gt;
+My Best friend&lt;br&gt;
+Rina is my close friend. She is from Bandung but now she lives in Palembang. She likes staying there, but sometimes complains about the weather. She is cute and pretty. She has a fair complexion with long black hair. She is not that tall.&lt;br&gt;&lt;br&gt;
+Rina&amp;rsquo;s hobby is singing and writing song lyrics. She can play piano very well. She often asks me to &amp;#64257;nd CD of her favourite songs and then we will listen to the music together. Whenever she &amp;#64257;nishes composing a song, she always asks me to listen to her playing with her piano. I think most of her songs are beautiful. I am sure she will be a great song writer someday.&lt;br&gt;&lt;br&gt;
+What is the text about&amp;lsquo;?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Describing the writer&amp;rsquo;s best friend.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Describing the weather.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Describing the writer.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Rinas characters.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is forgguestion.&lt;br&gt; My Best friend&lt;br&gt; Rina is my close friend. She is from Bandung but now she lives in Palembang. She likes staying there, but sometimes complains about the weather. She is cute and pretty. She has a fair complexion with long black hair. She is not that tall.&lt;br&gt;&lt;br&gt; Rina&amp;rsquo;s hobby is singing and writing song lyrics. She can play piano very well. She often asks me to &amp;#64257;nd CD of her favourite songs and then we will listen to the music together. Whenever she &amp;#64257;nishes composing a song, she always asks me to listen to her playing with her piano. I think most of her songs are beautiful. I am sure she will be a great song writer someday.&lt;/p&gt;
+&lt;p&gt;The paragraph two informs about Rina&amp;rsquo;s...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;hobby&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;song&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;character&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;habit&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is forgguestion.&lt;br&gt; My Best friend&lt;br&gt; Rina is my close friend. She is from Bandung but now she lives in Palembang. She likes staying there, but sometimes complains about the weather. She is cute and pretty. She has a fair complexion with long black hair. She is not that tall.&lt;br&gt;&lt;br&gt; Rina&amp;rsquo;s hobby is singing and writing song lyrics. She can play piano very well. She often asks me to &amp;#64257;nd CD of her favourite songs and then we will listen to the music together. Whenever she &amp;#64257;nishes composing a song, she always asks me to listen to her playing with her piano. I think most of her songs are beautiful. I am sure she will be a great song writer someday.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;She has a fair &lt;span style=&quot;text-decoration: underline;&quot;&gt;complexion&lt;/span&gt; with long black hair.&amp;rdquo;&lt;br&gt; The underlined word is closest in meaning to&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dark skin&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;skin colour&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;stretch mark&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;acne problem&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Once upon a time. there was a kingdom in Java that was attacked by another kingdom. The king asked his Queen to save her life. Alas! ln the middle of the jungle, the enemy killed all her guards. However, the Queen was lucky because she changed herself into a golden snail and survived.&lt;br&gt;&lt;br&gt;
+One day, an old woman saw the snail and took it home. She looked after it. Whenever the old woman was not at home, the snail turned into a human being. She cooked and did the household chores. When the old woman got home, the Queen quickly changed into a snail again. It happened several times and made the old woman curious. One day, the old woman peeped and saw What was going on. She broke in, immediately. She asked, &amp;ldquo;Why did you change yourself into a snail?&amp;rdquo;. The Queen told her what happened. The old woman was surprised to know that the snail was a Queen.&lt;br&gt;&lt;br&gt;
+Later, from the head of the village they discovered that the king had won the battle and he was looking for his Wife. Then the village head sent a message to the king telling him that his wife was safe. &lt;br&gt;&lt;br&gt;
+Several days later, the King and his guards came for the queen. They thanked the villagers for their kindness and brought the old women to their palace.&lt;br&gt;&lt;br&gt;
+What happened when the old woman found the snail?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;She reported it to the head of the village.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;She helped it to find the queen&amp;rsquo;s husband.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It helped cleaning and cooking in her house.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;She brought it to her house and took care of it.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Once upon a time. there was a kingdom in Java that was attacked by another kingdom. The king asked his Queen to save her life. Alas! ln the middle of the jungle, the enemy killed all her guards. However, the Queen was lucky because she changed herself into a golden snail and survived.&lt;br&gt;&lt;br&gt;
+One day, an old woman saw the snail and took it home. She looked after it. Whenever the old woman was not at home, the snail turned into a human being. She cooked and did the household chores. When the old woman got home, the Queen quickly changed into a snail again. It happened several times and made the old woman curious. One day, the old woman peeped and saw What was going on. She broke in, immediately. She asked, &amp;ldquo;Why did you change yourself into a snail?&amp;rdquo;. The Queen told her what happened. The old woman was surprised to know that the snail was a Queen.&lt;br&gt;&lt;br&gt;
+Later, from the head of the village they discovered that the king had won the battle and he was looking for his Wife. Then the village head sent a message to the king telling him that his wife was safe. &lt;br&gt;&lt;br&gt;
+Several days later, the King and his guards came for the queen. They thanked the villagers for their kindness and brought the old women to their palace.&lt;br&gt;&lt;br&gt;
+What does the second paragraph tell you about?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The queen lived as a golden snail&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The enemy who attacked the kingdom&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The old woman who looked after a snail&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The king&amp;rsquo;s guards who were killed by enemy&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Once upon a time. there was a kingdom in Java that was attacked by another kingdom. The king asked his Queen to save her life. Alas! ln the middle of the jungle, the enemy killed all her guards. However, the Queen was lucky because she changed herself into a golden snail and survived.&lt;br&gt;&lt;br&gt;
+One day, an old woman saw the snail and took it home. She looked after it. Whenever the old woman was not at home, the snail turned into a human being. She cooked and did the household chores. When the old woman got home, the Queen quickly changed into a snail again. It happened several times and made the old woman curious. One day, the old woman peeped and saw What was going on. She broke in, immediately. She asked, &amp;ldquo;Why did you change yourself into a snail?&amp;rdquo;. The Queen told her what happened. The old woman was surprised to know that the snail was a Queen.&lt;br&gt;&lt;br&gt;
+Later, from the head of the village they discovered that the king had won the battle and he was looking for his Wife. Then the village head sent a message to the king telling him that his wife was safe. &lt;br&gt;&lt;br&gt;
+Several days later, the King and his guards came for the queen. They thanked the villagers for their kindness and brought the old women to their palace.&lt;br&gt;&lt;br&gt;
+In the end of the story, the old woman live in...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;the king&amp;rsquo;s palace&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;a small village&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the village heads&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the middle of the jungle&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Complete the following text with the words provided.&lt;br&gt;&lt;br&gt;
+American Indians&lt;br&gt;&lt;br&gt;
+American Indians were the &amp;#64257;rst people to live in America. They live in (41) ... groups, called tribes. Most Indian tribes live in villages. The village represents a small community.&lt;br&gt;&lt;br&gt;
+Not all Indians tribes are the same. They have different names and different Ways of doing things. Indian tribes use natural resources around them, such as land, trees, and water to ful&amp;#64257;l their basic needs.&lt;br&gt;&lt;br&gt;
+The Seneca tribes live in the woods (42) ... they use the trees and tree bark to build their long houses. The Seneca also plant corns and beans. They (43) ... and fished. They made their clothes from skins of animals. &lt;br&gt;&lt;br&gt;
+The text to fill number 41 is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dense&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;rocky&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;random&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;special&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Complete the following text with the words provided.&lt;br&gt;&lt;br&gt;
+American Indians&lt;br&gt;&lt;br&gt;
+American Indians were the &amp;#64257;rst people to live in America. They live in (41) ... groups, called tribes. Most Indian tribes live in villages. The village represents a small community.&lt;br&gt;&lt;br&gt;
+Not all Indians tribes are the same. They have different names and different Ways of doing things. Indian tribes use natural resources around them, such as land, trees, and water to ful&amp;#64257;l their basic needs.&lt;br&gt;&lt;br&gt;
+The Seneca tribes live in the woods (42) ... they use the trees and tree bark to build their long houses. The Seneca also plant corns and beans. They (43) ... and fished. They made their clothes from skins of animals. &lt;br&gt;&lt;br&gt;
+The text to fill number 42 is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Because&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Unless&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Never&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;So&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Complete the following text with the words provided.&lt;br&gt;&lt;br&gt;
+American Indians&lt;br&gt;&lt;br&gt;
+American Indians were the &amp;#64257;rst people to live in America. They live in (41) ... groups, called tribes. Most Indian tribes live in villages. The village represents a small community.&lt;br&gt;&lt;br&gt;
+Not all Indians tribes are the same. They have different names and different Ways of doing things. Indian tribes use natural resources around them, such as land, trees, and water to ful&amp;#64257;l their basic needs.&lt;br&gt;&lt;br&gt;
+The Seneca tribes live in the woods (42) ... they use the trees and tree bark to build their long houses. The Seneca also plant corns and beans. They (43) ... and fished. They made their clothes from skins of animals. &lt;br&gt;&lt;br&gt;
+The text to fill number 43 is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;cooked&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hunted&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;explored&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;travelled&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Complete the following text with the words provided.&lt;br&gt;
+On Sunday evening, I felt very (44)  after hanging out with my friends all day long at the mall. When I arrived home, I hung my jacket on a hanger and was ready to take a rest. Suddenly, I remembered that I had to call my friend. I looked for my cellphone everywhere but couldn&amp;rsquo;t &amp;#64257;nd (45)...  I got panicky. I asked everyone in the house whether they knew where my cellphone was. But no one knew&amp;rdquo;&lt;br&gt;
+I thought I lost it. Suddenly, I had an idea. I asked my brother to call my cellphone. To my surprise, I heard a ringtone from my (46) ...&lt;br&gt;&lt;br&gt;
+The text to fill number 44 is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;busy&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;panic&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tired&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;true&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Complete the following text with the words provided.&lt;br&gt;
+On Sunday evening, I felt very (44)  after hanging out with my friends all day long at the mall. When I arrived home, I hung my jacket on a hanger and was ready to take a rest. Suddenly, I remembered that I had to call my friend. I looked for my cellphone everywhere but couldn&amp;rsquo;t &amp;#64257;nd (45)...  I got panicky. I asked everyone in the house whether they knew where my cellphone was. But no one knew&amp;rdquo;&lt;br&gt;
+I thought I lost it. Suddenly, I had an idea. I asked my brother to call my cellphone. To my surprise, I heard a ringtone from my (46) ...&lt;br&gt;&lt;br&gt;
+The text to fill number 45 is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;her&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;it&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;their&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;his&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Complete the following text with the words provided.&lt;br&gt;
+On Sunday evening, I felt very (44)  after hanging out with my friends all day long at the mall. When I arrived home, I hung my jacket on a hanger and was ready to take a rest. Suddenly, I remembered that I had to call my friend. I looked for my cellphone everywhere but couldn&amp;rsquo;t &amp;#64257;nd (45)...  I got panicky. I asked everyone in the house whether they knew where my cellphone was. But no one knew&amp;rdquo;&lt;br&gt;
+I thought I lost it. Suddenly, I had an idea. I asked my brother to call my cellphone. To my surprise, I heard a ringtone from my (46) ...&lt;br&gt;&lt;br&gt;
+The text to fill number 46 is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dress&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;jacket&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;towel&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;socks&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;table style=&quot;width: 364px; height: 60px;&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;the&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;was&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;father&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;planting&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;my&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;not&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;seeds&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;1&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;2&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;3&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;4&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;5&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;6&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;7&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;5 - 1 - 2 - 3 - 4 - 6 - 7&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5 - 2 - 4 - 7 - 6 - 3 - 1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5 - 3 - 2 - 6 - 4 - 1 - 7&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5 - 4 - 7 - 1 - 3 - 2 - 6&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;How to keep your food hot.&lt;br&gt;
+1. Replace water that evaporates with warm water if needed.&lt;br&gt;
+2. Put the pan holding the food inside the pan holding the water.&lt;br&gt;
+3. Place the food to be kept warm in a shallow pan with a cover.&lt;br&gt;
+4. Place the pans on a source of steady, low heat.&lt;br&gt;
+5. Place some warm water in the bottom of a slightly larger and deeper pan.&lt;br&gt;
+The best arrangement is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;3 - 2 - 5 - 4 - 1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3 - 5 - 1 - 2 - 4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3 - 2 - 5 - 1 - 4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3 - 5 - 2 - 4 - 1&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;How to boil an egg.&lt;br&gt;
+1. Turn on the store at medium heat level&lt;br&gt;
+2. Put the egg in a pan &amp;#64257;lled with water of room temperature&lt;br&gt;
+3. Wash the egg in running water&lt;br&gt;
+4. Do not put a lid on the pan&lt;br&gt;
+5. Wait for 3 minutes to make half-cooked egg or 5 minutes for well-cooked egg&lt;br&gt;
+6. Put the pan on the stove&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;3 - 2 - 6 - 1 - 4 - 5&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2 - 3 - 1 - 6 - 4 - 5&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1 - 3 - 2 - 6 - 5 - 4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1 - 6 - 2 - 3 - 4 - 5&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;table style=&quot;width: 369px; height: 60px;&quot; border=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;trees&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;in&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;bug&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;much&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;time&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;this&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;its&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;of&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;spends&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;1&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;2&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;3&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;4&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;5&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;6&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;7&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;8&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;9&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;6 - 1 - 2 - 3 - 4 - 8 - 9 - 7 - 5&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;6 - 1 - 3 - 5 - 2 - 7 - 9 - 8 - 4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;6 - 3 - 9 - 4 - 8 - 7 - 7 - 2 - 1&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;6 - 1 - 5 - 9 - 7 - 4 - 3 - 2 - 8&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

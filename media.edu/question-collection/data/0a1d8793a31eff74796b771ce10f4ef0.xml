@@ -1,0 +1,2121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut!&lt;br&gt;&lt;br&gt;
+Trusmi merupakan desa yang d&amp;#307;uluki sentra batik cirebonan. Hampir semua orang mengenal batik, bahkan masyarakat Cina sangat menyukai motif-motif batik dari desa yang satu ini. Batik banyak sekali ditemukan di desa yang berjarak kurang lebih lima kilometer ke arah barat Kota Cirebon ini. Dari produk rumahan sampai produk pabrikan terkenal. Motifnya pun sangat beragam, ada mahkota, mega mendung, dan motif-motif pesisiran lainnya.&lt;br&gt;&lt;br&gt;
+Gagasan utama paragraf tersebut adalah &amp;hellip;.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kegemaran orang Cina akan motif batik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;berbagai motif batik cirebonan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;produk batik rumahan dan pabrikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Trusmi sebagai sentra batik cirebonan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut!&lt;br&gt;&lt;br&gt;
+Minuman beralkohol tidak baik bagi tubuh. Minuman tersebut dapat meningkatkan risiko terserangnya penyakit kanker dan stroke. Minuman beralkohol juga menyebabkan kerusakan pada jantung dan sel-sel otak. Lebih dari itu, zat- zat yang terkandung dalam minuman itu menyebabkan toksin bagi tubuh.&lt;br&gt;&lt;br&gt;
+Gagasan utama paragraf tersebut adalah terletak pada kalimat &amp;hellip;.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pertama&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kedua&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ketiga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;keempat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan teks berita berikut!&lt;br&gt;&lt;br&gt;
+[ Teks Berita I ]&lt;br&gt;
+Pagi yang cerah di Incheon, Korea Selatan, Sabtu (20/9), menyertai Juwita Niza Wasni meraih medali perak dari wushu. Ia meraih medali perak dari nomor jurus nandao (golok) daaquan (pukulan tangan kosong). Sang Merah Putih pun berkibar di arena cabang wushu.&lt;br&gt;&lt;br&gt;
+[ Teks Berita II ]&lt;br&gt;
+Dari cabang angkat besi, tim Merah Putih mendapat perak melalui filter Sri Wahyuni yang turun di kelas 48 kilogram putri. Hasil ini sesuai dengan target yang dibebankan Satuan Pelaksana Program Indonesia Emas.&lt;br&gt;&lt;br&gt;
+Persamaan informasi kedua kutipan berita tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;hasil yang diperoleh&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;waktu pelaksanaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;cabang pertandingan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;target yang diinginkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan teks berita berikut!&lt;br&gt;&lt;br&gt;
+[ Teks Berita I ]&lt;br&gt;
+Kebakaran menghanguskan enam rumah kontrakan di Jalan Galur Sari Raya 9, Utan Kayu Selatan, Matraman, Jakarta Timur, sekitar pukul 19.30 WIB. Dugaan sementara, kebakaran dipicu oleh hubungan arus pendek listrik. Api dengan cepat berkobar dan merembet ke rumah lainnya karena bahan bangunan sebagian besar terbuat dari papan.&lt;br&gt;&lt;br&gt;
+[ Teks Berita II ]&lt;br&gt;
+Setelah hujan deras dan angin kencang yang mengguyur Ibukota Jakarta sejak siang tadi, kebakaran pun melanda Ibukota. Tepatnya di kawasan padat penduduk di Jalan Galur Sari 9 Utan Kayu Selatan, Matraman, Jakarta Timur. Warga yang panik kemudian berusaha memadamkan api dengan alat seadanya.&lt;br&gt;&lt;br&gt;
+Perbedaan penyajian kedua kutipan teks berita tersebut adalah &amp;hellip;.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Teks Berita I diawali dengan unsur berita apa | Teks Berita II diawali dengan unsur berita kapan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Teks Berita I diawali dengan unsur berita kapan | Teks Berita II diawali dengan unsur berita apa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Teks Berita I diakhiri dengan unsur berita bagaimana | Teks Berita II diakhiri dengan unsur berita siapa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Teks Berita I diakhiri dengan unsur berita di mana | Teks Berita II diakhiri dengan unsur berita di mana&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan biografi tokoh berikut!&lt;br&gt;&lt;br&gt;
+Pramudya Ananta Toer menjadi penulis produktif di masa kemerdekaan. Ia menulis&lt;br&gt;
+beberapa novel dan cerita singkat yang mengangkat namanya, seperti Keluarga Gerilya,&lt;br&gt;
+Subuh, Pertjintaan Revolusi, Cerita dari Blora, dan Tjerita dari Djakarta. Belasan buku&lt;br&gt;
+karya Pram telah diterjemahkan ke lebih dari 30 bahasa dunia, termasuk Jerman,&lt;br&gt;
+Jepang, Rusia, dan Inggris. Pernah oleh majalah Time, Pram dinobatkan sebagai salah&lt;br&gt;
+satu Asian Heroes. Sementara Los Angeles Time menjulukinya Albert Camus Indonesia,&lt;br&gt;
+dan termasuk 100 pengarang dunia yang karyanya wajib dibaca sejajar dengan John&lt;br&gt;
+Steinbejk dan Graham Greene.&lt;br&gt;&lt;br&gt;
+Keistimewaan tokoh tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;termasuk 100 pengarang dunia&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penulis novel dan cerita singkat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;seorang pengarang yang produktif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dijuluki Albert Camus Indonesia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan biografi berikut!&lt;br&gt;&lt;br&gt;
+(1)R.M. Padmosantjojo merupakan seorang dokter yang dikenal sebagai pribadi yang sederhana dan tidak mau menonjolkan diri.(2) Anak seorang pegawai tinggi jawatan kereta api zaman Belanda ini lulus Fakultas Kedokteran UI tahun 1963. (3)Ia pernah sebagai dokter pribadi Presiden Soekarno dalam ahli bedah saraf. (4)Padmo dikenal sangat telaten dan sabar dalam menjalankan tugasnya. (5)Kesabaran ini membuahkan prestasi besar ketika ia berhasil memisahkan kembar siam Yuliana dan Yuliani pada 21 Oktober 1987.&lt;br&gt;&lt;br&gt;
+Sikap tokoh R.M. Padmosantjojo yang patut diteladani pada kutipan bacan tersebut terdapat&lt;br&gt;
+pada kalimat nomor ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan iklan berikut!&lt;br&gt;&lt;br&gt;
+(1)Dinamika dunia bisnis sangat membutuhkan talenta berkualitas. (2)Untuk membuat karya bisnis yang bernilai tinggi, diperlukan pengetahuan, keterampilan, dan sikap berbisnis yang baik agar berhasil mengisi dan menciptakan peluang. (3)Dengan bergabung bersama kami, Anda akan mendapat pembelajaran berbisnis yang handal. &lt;br&gt;&lt;br&gt;
+(4)AKADEMI BINTANG GEMINTANG&lt;br&gt;
+Jalan Senopati Utama Raya Nomor 17&lt;br&gt;
+Semarang&lt;br&gt;&lt;br&gt;
+Penjelasan kalimat nomor 3 pada teks iklan tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Bergabungnya kami dengan Akademi Bintang Gemintang, Anda akan mendapat pembelajaran berbisnis yang handal.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penggabungan Anda dan Akademi Bintang Gemintang akan mendapat pembelajaran berbisnis yang handal.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kuliah di Akademi Bintang Gemintang, mahasiswa akan mendapat pembelajaran berbisnis yang handal.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dengan bergabung di Akademi Bintang Gemintang menjadikan Anda pelajar yang handal.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan iklan berikut!&lt;br&gt;&lt;br&gt;&lt;img alt=&quot;&quot; src=&quot;283375_9a6c45_d6210e4d322d88199addda783b72d99f.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Maksud teks iklan tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>283375_9a6c45_d6210e4d322d88199addda783b72d99f.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data></data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Menghindari kejahatan internet dapat dilakukan dengan mewaspadai cyber crime.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dalam internet terdapat tindakan yang perlu dikenali, diwaspadai, dan dihindari.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keberadaan internet tidak bisa dihindari maka perlu kita kenali dan waspadai.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ada kejahatan dalam internet, maka kita harus mengenali, mewaspadai, dan menghindari.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan iklan berikut!&lt;br&gt;&lt;br&gt;
+(1)Para orang tua yang ingin mengajak anak-anaknya berlibur, Mickey Mouse akan hadir di Jakarta. (2)Tokoh populer dari jagat Disney ini hadir dalam acara Disney Live: Mickey's Magic Show. (3)Acara berlangsung di Skenoo Exhibition Hall, Gandaria City. (4)Dalam acara ini Mickey Mouse tak akan tampil sendiri, tapi akan ditemani Minie Mouse, Cinderella, dan Aladdin's.&lt;br&gt;
+Fakta pada iklan tersebut ditandai nomor &amp;hellip;.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan bacaan berikut!&lt;br&gt;&lt;br&gt;
+Pemerintah Indonesia menunjukkan kemarahannya kepada pemerintah Australia&lt;br&gt;
+dengan memanggil pulang duta besarnya di Canberra. Langkah ini merupakan upaya&lt;br&gt;
+Indonesia untuk menurunkan tingkat hubungan diplomatik kedua negara. Hal itu&lt;br&gt;
+merupakan akibat dari ulah intelejen pemerintah Australia yang menyadap penggunaan&lt;br&gt;
+telepon sepuluh pejabat Indonesia.&lt;br&gt;&lt;br&gt;
+Simpulan isi paragraf tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Indonesia menurunkan tingkat hubungan diplomatik karena penyadapan yang dilakukan Australia.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pemerintah Australia marah karena penyadapan yang dilakukan pemerintah Indonesia.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Duta Besar Australia marah karena penyadapan yang dilakukan pemerintah Indonesia.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hubungan diplomatik antara Indonesia dan Australia menurun karena kekurangan intelejen.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan grafik berikut!&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;b995ff_559e60_6bc9734289db99ab53dfc0d673e62749.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Simpulan grafik tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>b995ff_559e60_6bc9734289db99ab53dfc0d673e62749.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data></data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kebutuhan kedelai bulan Agustus mengalami penurunan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kebutuhan kedelai tertinggi terjadi pada bulan November.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kebutuhan kedelai dalam enam bulan terakhir tidak stabil.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jumlah kebutuhan kedelai bulan Agustus sama dengan Oktober.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan tabel berikut!&lt;/p&gt;
+&lt;table style=&quot;width: 285px; height: 201px;&quot; border=&quot;1&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot; rowspan=&quot;2&quot;&gt;&lt;strong&gt;Nama Daerah&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot; colspan=&quot;2&quot;&gt;&lt;strong&gt;Jumlah Penumpang&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;2012&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;2013&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bandung&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;177.350&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;189.550&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bali&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;350.760&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;575.780&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Jakarta&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;189.021&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;197.351&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Padang&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;186.110&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;145.980&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Surabaya&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;195.230&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;250.352&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Yogyakarta&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;225.450&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;350.231&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Pernyataan yang sesuai dengan isi tabel tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Wisatawan yang datang ke Padang mengalami kenaikan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Yogyakarta sebagai daerah wisata kedua terbanyak dikunjungi wisatawan.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Wisatawan yang berkunjung ke Bandung dan Jakarta memiliki jumlah yang sama.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dalan dua tahun terakhir Jakarta sebagai kota yang paling sedikit dikunjungi wisatawan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Struktur Organisasi Karang Taruna Mandiri&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;40c1a0_106899_92435f56d0dba387bc555529d099bfac.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Pertanyaan yang sesuai dengan isi bagan tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>40c1a0_106899_92435f56d0dba387bc555529d099bfac.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data></data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Siapa yang membuat Struktur Organisasi Karang Taruna Mandiri?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kapan Struktur Organisasi Karang Taruna Mandiri tersebut dibuat?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ada berapa seksi dalam Struktur Organisasi Karang Taruna Mandiri?&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bagaimana jika Struktur Organisasi Karang Taruna Mandiri tidak dibuat?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan denah berikut!&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;fa4657_f03499_0cc462182fad842f6d3864b7ed6b7c93.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Arah perjalanan yang paling efektif dari losmen ke lokasi pertandingan adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>fa4657_f03499_0cc462182fad842f6d3864b7ed6b7c93.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data></data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dari Jalan Walet belok kiri ke Jalan Elang lurus ke Jalan Beo belok kiri ke Jalan Pelatuk&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dari Jalan Walet belok kanan ke Jalan Kutilang belok kanan ke Jalan Kakatua belok kanan ke Jalan Merpati&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dari Jalan Walet belok kanan ke Jalan Kutilang belok kiri ke Jalan Cendrawasih belok kanan ke Jalan Pelatuk&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dari Jalan Walet belok kanan ke Jalan Kutilang belok kanan ke Jalan Kakatua belok kiri ke Jalan Cendrawasih&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah puisi berikut dengan saksama!&lt;br&gt;&lt;br&gt;
+Tanah Airku&lt;br&gt;
+Karya : Haris R.N.&lt;br&gt;&lt;br&gt;
+Angin berdesir di pantai&lt;br&gt;
+Burung berkicau dengan merdu&lt;br&gt;
+Embun pagi membasahi rumput-rumput&lt;br&gt;
+Itulah tanah airku&lt;br&gt;
+Sawahnya menghijau&lt;br&gt;
+Gunungnya tinggi menjulang&lt;br&gt;
+Rakyat aman dan makmur Indonesiaku&lt;br&gt;
+Tanah tumpah darahku&lt;br&gt;&lt;br&gt;
+Tema puisi tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sawah hijau&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keindahan gunung&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keindahan alam Indonesia&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keamanan rakyat Indonesia&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kutipan puisi berikut!&lt;br&gt;&lt;br&gt;
+Pohon kamboja berkembang&lt;br&gt;
+Memikat rasa di hati&lt;br&gt;
+Bahagia terasa di dada&lt;br&gt;
+Tak lelah mata menatapmu&lt;br&gt;&lt;br&gt;
+Citraan larik pertama pada kutipan puisi tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;perasaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penglihatan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penciuman&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pendengaran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah puisi berikut dengan saksama!&lt;br&gt;&lt;br&gt;
+Bintang&lt;br&gt;&lt;br&gt;
+Cahayamu begitu indah(1)&lt;br&gt;
+Senyummu sangatlah ayu(2)&lt;br&gt;
+Kautemani malamku yang sendu(3)&lt;br&gt;
+Membuatku, semakin malu(4)&lt;br&gt;
+Dalam kesendirian tidak sepertimu(5)&lt;br&gt;&lt;br&gt;
+Larik bermajas pada kutipan puisi tersebut ditandai nomor ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan cerpen berikut!&lt;br&gt;&lt;br&gt;
+&amp;ldquo;Ika, mari kita sama-sama berjuang. Oma akan berjuang melawan penyakit Oma. Kamu pun berjuang untuk menyesuaikan diri di Jakarta. Datanglah ke sini kapan saja kamu mau bicara dengan Oma!&amp;rdquo; kata Oma Nani. Ika menghapus air matanya. Beban beratnya sudah hilang.&lt;br&gt;
+&amp;ldquo;Isah, tolong dorong kursiku ke depan. Aku mau mengantar Ika ke depan!&amp;rdquo; Oma Nani memanggil pembantunya. Dalam sekejap Isah sudah muncul.&lt;br&gt;
+&amp;ldquo;Wah, kemajuan sekali. Apa Oma mau mengantar Ika sampai ke rumahnya? Sudah lama kita tidak jalan-jalan ke luar!&amp;rdquo; kata Isah.&lt;br&gt;&lt;br&gt;
+Penggambaran watak tokoh Aku pada kutipan cerpen tersebut melalui cara ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dialog antartokoh&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penggambaran fisik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penyebutan langsung&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penceritaan tokoh lain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan cerpen berikut!&lt;br&gt;&lt;br&gt;
+1)Kejengkelanku yang sudah mulai hilang kini muncul kembali. (2)&amp;rsquo;Hebat&amp;rsquo; betul si Siti ini. (3)Mana ada, sih, pembantu yang ngambek kalau diomeli majikan? (4)Kalau begini caranya, lebih baik dipecat saja dia. (5)Nanti kalau ibu pulang akan kulaporkan ulahnya. (6)Akan kubujuk ibu agar memecatnya. (7)Biar tahu rasa dia. (8) Yang mau jadi pembantu pasti masih banyak, tidak usah khawatir mengenai penggantinya.&lt;br&gt;&lt;br&gt;
+Bukti watak tokoh aku suka mengadu terdapat pada nomor ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5) dan (6)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(7) dan (8)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan cerpen berikut!&lt;br&gt;&lt;br&gt;
+Pada suatu pagi, Kakek dan Nenek Chen bersiap-siap berangkat ke hutan. Nenek tak lupa membawa bekal untuk makan siang mereka di hutan. Ketika sudah tiba di hutan, mereka melihat anak burung merpati putih menggelepar di tanah. Rupanya anak burung itu terjatuh dari pohon.&lt;br&gt;
+&amp;ldquo;Aduh, kasihan sekali anak burung ini,&quot; kata Nenek sambil mengangkat merpati itu. Ia meletakkan anak burung itu di bakul makanan dengan hati-hati.&lt;br&gt;
+&quot;Kita rawat saja ya, Kek,&quot; ujar Nenek, Kakek Chen mengangguk setuju.&lt;br&gt;&lt;br&gt;
+Latar tempat pada kutipan cerita tersebut adalah di ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;rumah dan dapur&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;rumah dan hutan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;rumah dan pasar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;rumah dan warung&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan cerita berikut!&lt;br&gt;&lt;br&gt;
+&quot;Aku, sebagai seorang laki-laki!&quot; lanjutnya, &quot;Mungkin tidak terlalu tersiksa seandainya engkau tidak pernah rnemberiku cucu. Tetapi bagaimana dengan ibumu anakku? Kau tentu masih ingat apa pesan terakhirnya ketika dia hendak menghembuskan nafasnya yang terakhir? Dia berpesan agar cucu yang diidam-idamkannya jangan sampai tidak dilahirkan ke dunia ini! Nah, kalau sekarang engkau tiba-tiba saja memutuskan untuk bergabung dengan teman-temanmu yang lain, memusuhi Belanda, sementara engkau belum juga beristri, apa aku tidak berdosa pada mendiang ibumu?&quot;&lt;br&gt;&lt;br&gt;
+Konflik pada kutipan cerpen tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;keinginan orang tua agar anaknya lekas beristri&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;harapan agar cucunya segera terlahir dengan selamat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;keinginan seorang anak untuk berjuang melawan Belanda&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;harapan orang tua agar anaknya tidak berperang melawan Belanda&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kedua kutipan novel berikut!&lt;br&gt;&lt;br&gt;
+[ Novel I ]&lt;br&gt;
+Waktu ia duduk di kelas tiga, genaplah usianya sepuluh tahun. Dari sekolah, ia pun membantu bapaknya bekerja di sawah atau di kebun. Bapaknya pun membiasakan dia sebagai orang tani yang patut. Si ibu yang melihat kelakuan suaminya kepada anaknya, acap kali berkata, &amp;ldquo;Janganlah Kakanda terlalu keras kepada anak kita itu! Umurnya belum berapa dan tulangnya&lt;br&gt;
+belum kuat, tetapi Kakanda selalu menyuruh dia bekerja.&lt;br&gt;&lt;br&gt;
+[ Novel II &lt;br&gt;
+&amp;ldquo;Sekarang tentu belum dapat saya menyatakannya. Pertama sekali saya harus maju dahulu. Tetapi rasanya saya akan meneruskan pelajaran saya menjadi guru.&amp;rdquo;&lt;br&gt;
+&amp;ldquo;Menjadi guru? Baik benar pekerjaan itu mendidik kanak-kanak bangsa kita kekurangan guru dan teristimewa guru yang dengan insaf merasa menanggung jawab atas anak yang terserah kepadanya. Saya mengucapkan selamat kepada Zus memilih pekerjaan itu. ....&amp;rdquo;&lt;br&gt;&lt;br&gt;
+Perbedaan latar sosial pada kedua kutipan novel tersebut adalah...&lt;br&gt;
+Novel I Novel II&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Novel I masyarakat pertanian | Novel II masyarakat perkotaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Novel I lingkungan petani | Novel II lingkungan terpelajar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Novel I lingkungan terpelajar | Novel II lingkungan pedagang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Novel I masyarakat pedagang | Novel II masyarakat petani&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kedua kutipan novel berikut!&lt;br&gt;&lt;br&gt;
+[ Novel I ]&lt;br&gt;
+Tuan De Busse terperanjat, lalu meletakkan koran yang hendak dibacanya, di atas siboannya, sambil memandang sejurus kepada anaknya, seolah-olah hendak diketahuinya sampai ke isi-isi perutnya. Maka bertanyalah ia, &amp;ldquo;Pertanyaanmu itu buat bertanya-tanya sajakah atau adalah mengandung arti?&amp;rdquo; Corrie pun terkejut melihat laku ayahnya, lalu menyahutlah ia tergopoh-gopoh.&lt;br&gt;&lt;br&gt;
+[ Novel II ]&lt;br&gt;
+Pukul tiga siang Ratna dan ayahnya tiba di Stasiun Gambir. Pak Sumaji dengan istri dan anaknya sudah menunggu di sana. Mereka membawakan barang-barang kebutuhan Ratna ke dalam mobil Kijang. &amp;ldquo;Ini gula batu, teh poci, dan tahu kuping kesukaan Om dan Mama,&amp;rdquo; ungkap Ratna kepada Tante Madji. Kamu buat tempat tinggal Ratna sudah disiapkan di lantai atas.&lt;br&gt;&lt;br&gt;
+Perbedaan penggunaan bahasa pada kedua kutipan novel tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;[Novel I]&lt;br&gt;
+- bahasa sastra lama&lt;br&gt;
+- bahasa mudah dipahami&lt;br&gt;&lt;br&gt;
+[Novel II]&lt;br&gt;
+- bahasa sastra lama&lt;br&gt;
+- bahasa sulit dipahami&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;[Novel I]&lt;br&gt;
+- bahasa sastra lama&lt;br&gt;
+- bahasa sulit dipahami&lt;br&gt;&lt;br&gt;
+[Novel II]&lt;br&gt;
+- bahasa modern&lt;br&gt;
+- bahasa mudah dipahami&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;[Novel I]&lt;br&gt;
+- bahasa sulit dipahami&lt;br&gt;
+- bahasa modern&lt;br&gt;&lt;br&gt;
+[Novel II]&lt;br&gt;
+- bahasa mudah dipahami&lt;br&gt;
+- bahasa sastra lama&lt;br&gt;
+D. [Novel I]&lt;br&gt;
+- bahasa sulit dipahami&lt;br&gt;
+- bahasa modern&lt;br&gt;&lt;br&gt;
+[Novel II]&lt;br&gt;
+- bahasa mudah dipahami&lt;br&gt;
+- bahasa sastra lama&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan naskah drama berikut!&lt;br&gt;&lt;br&gt;
+Indah : Interupsi&amp;hellip;. (sambil berdiri dan tatapan mata tajam) Saudara Adi, sekadar mengingatkan dan ruangan ini sebagai saksinya. Bukankah bakti sosial pernah kita laksanakan?&lt;br&gt;
+Adi : Maksud Saudari?&lt;br&gt;
+Indah : Kita kan sudah kumpulkan baju pantas pakai, buku, dan tetek bengek lainnya untuk kita sumbangkan di daerah itu. Mengapa harus ke daerah itu lagi? Bukan begitu Saudara pimpinan rapat?&lt;br&gt;
+Banu : (mengangguk-angguk) Ya, ya...&lt;br&gt;
+Indah : Maksud Saudara?&lt;br&gt;
+Banu : Tidak ada masalah kalau daerah itu kita bantu lagi.&lt;br&gt;&lt;br&gt;
+Latar tempat pada kutipan naskah drama tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;ruang rapat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;wilayah konflik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;posko bencana&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;daerah bencana&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan naskah drama berikut!&lt;br&gt;&lt;br&gt;
+Ibu : Hujan akan segera turun. Nanti dia terjebak hujan. Jemputlah dulu!&lt;br&gt;
+Anak 2 : Bu, saya sudah berumur 19 tahun. Jadi, saya rasa, Kakak juga sudah bukan balita lagi.&lt;br&gt;
+Ayah : Man, jangan kasar kepada ibumu! (Anak 1 mendadak nyelonong masuk dan menghempaskan tubuhnya ke sofa)&lt;br&gt;
+Anak 2 : Tuh, Bu, Putri Cinderela sudah kembali ke istana. Saya pergi dulu!&lt;br&gt;
+Anak 1 : Reseh, lu!&lt;br&gt;
+Ibu : Dari mana kau, Martha?&lt;br&gt;
+Anak 1 : Biasalah, Bu, memperjuangkan keadilan.&lt;br&gt;
+Ayah : Keadilan macam apa?&lt;br&gt;
+Anak 1 : Keadilan bagi rakyat jelata.&lt;br&gt;&lt;br&gt;
+Konflik pada kutipan naskah drama tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;orang tua yang masih menganggap anaknya masih balita&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;orang tua tidak memahami makna keadilan yang tuntut anaknya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;seorang anak yang bentrok dengan polisi karena menuntut keadilan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;orang tua mencemaskan salah seorang anaknya yang belum pulang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah ilustrasi berikut!&lt;br&gt;&lt;br&gt;
+Seminggu setelah ulangan Bahasa Indonesia, Kamis, 11 September 2014, hasil ulangan dibagikan. Bu Ita, guru Bahasa Indonesia, mengumumkan jika Santi mendapatkan nilai tertinggi. Wajah Santi tampak bangga, tetapi ada perasaan malu di hatinya. Ia merasa mengkhianati kepercayaan Bu Ita karena menyontek saat ulangan. Ia juga merasa malu kepada Tuhan yang tahu semua perbuatannya. Ia bertekad untuk tidak akan menyontek lagi.&lt;br&gt;&lt;br&gt;
+Catatan buku harian yang tepat berdasarkan ilustrasi tersebut adalah &amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kamis, 11 September 2014, ulangan Bahasa Indonesia dibagikan. Aku mendapat nilai tertinggi. Aku malu pada diriku sendiri karena menyontek. Maafkan aku telah mengkhianati kepercayaanmu guruku. Aku malu pada-Mu, Tuhan. Janjiku, takkan pernah ada lagi kata &amp;ldquo;menyontek&amp;rdquo; di kamus hidupku.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kamis, 11 September 2014, ulangan Bahasa Indonesia. Aku mendapat nilai tertinggi, tetapi hasil menyontek. Aku malu karena Bu Ita menegurku. Maafkan aku telah mengkhianati kepercayaanmu guruku. Aku malu pada-Mu, Tuhan. Janjiku, aku tidak akan pernah menyontek lagi selama hidupku.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kamis, 11 September 2014, hari yang sangat membanggakan buatku. Ulangan Bahasa Indonesia dibagikan. Aku mendapat nilai tertinggi. Rasa malu pada diriku sendiri begitu dalam. Maafkan aku guruku karena aku menyontek. Aku malu pada-Mu, Tuhan. Aku bertekad takkan lagi menyontek.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kamis, 11 September 2014, ulangan Bahasa Indonesia dibagikan. Santi mendapat nilai tertinggi. Namun, Santi malu pada diri sendiri karena menyontek. Ia pun meminta maaf karena mengkhianati kepercayaan Bu Ita. Ia juga malu kepada Tuhan. Ia berjanji tidak akan menyontek saat ulangan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati ilustrasi berikut!&lt;br&gt;&lt;br&gt;
+Untuk meringankan korban banjir, Pembina OSIS SMP Tunas memerintahkan Ketua OSIS untuk menggalang dana dari seluruh siswa. Batas akhir penyerahan sumbangan tanggal 26 September 2014. Penggalangan dana tersebut agar disosialisasikan mulai tanggal 2 September 2014.&lt;br&gt;&lt;br&gt;
+Pesan singkat yang tepat disampaikan Pembina OSIS kepada Ketua OSIS adalah &amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Buat pengumuman penggalangan dana seluruh siswa bagi korban banjir paling lambat 2 September 2014. Umumkan mulai 26 September 2013.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Galang dana dari seluruh siswa untuk korban banjir. Penyerahan paling lambat 26 September 2014. Sosialisasikan mulai 2 September 2014.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tolong, galang dana dari seluruh siswa bagi korban banjir. Penyerahan paling lambat 26 September 2014. Salurkan mulai 2 September 2014.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Umumkan kepada seluruh siswa agar mengumpulkan sumbangan bagi korban banjir paling lambat 2 September 2014. Bagikan 26 September 2014.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat-kalimat berikut!&lt;br&gt;&lt;br&gt;
+(1) Di sana kami disambut oleh puluhan anak-anak yang bekerja sebagai pemulung dan para pejabat setempat.&lt;br&gt;
+(2) Tepat pukul 08.00 WIB kami bergerak dari sekolah ke permukiman di sekitar pembuangan akhir sampah.&lt;br&gt;
+(3) Suasana haru meliputi kami hingga derai air mata membasahi pipi.&lt;br&gt;
+(4) Setelah dilakukan upacara penyambutan, penyerahan sumbangan dilaksanakan secara sederhana.&lt;br&gt;
+(5) Perjalanan panjang pun dilakukan dan pada pukul 10.00 WIB rombongan tiba di lokasi.&lt;br&gt;&lt;br&gt;
+Susunan paragraf laporan yang padu berdasarkan kalimat-kalimat tersebut adalah &amp;hellip;.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) &amp;ndash; (3) &amp;ndash; (2) &amp;ndash; (5) &amp;ndash; (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) &amp;ndash; (5) &amp;ndash; (1) &amp;ndash; (4) &amp;ndash; (3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) &amp;ndash; (4) &amp;ndash; (1) &amp;ndash; (2) &amp;ndash; (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5) &amp;ndash; (2) &amp;ndash; (1) &amp;ndash; (4) &amp;ndash; (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati ilustrasi kegiatan berikut!&lt;br&gt;&lt;br&gt;
+Pengurus OSIS SMP Bintang ingin mengajak seluruh siswa peduli kepada kerindangan sekolah dengan kegiatan Tanam Pohon Bersama. Seluruh siswa diimbau dapat menyumbang satu tanaman ke sekolah. Kegiatan tersebut akan dilaksanakan tanggal 26 September 2014. Pengurus OSIS merencanakan batas akhir pengumpulan tanaman tanggal 24 September 2014.&lt;br&gt;
+Isi pengumuman yang tepat berdasarkan ilustrasi tersebut adalah &amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kegiatan Tanam Pohon Bersama akan dilaksanakan pada 26 September. Warga sekolah dapat menyumbangkan satu tanaman paling lambat 24 September 2014.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pemberitahuan ditujukan kepada seluruh siswa bahwa sekolah akan mengadakan kegiatan Tanam Pohon Bersama pada tanggal 24 s.d. 26 September 2014.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tanam Pohon Bersama akan dilaksanakan pada 26 September 2014. Diharapkan temanteman dapat menyumbangkan satu tanaman paling lambat 24 September 2014.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Seluruh siswa diimbau dapat menyumbangkan satu tanaman untuk kegiatan Tanam Pohon Bersama di sekolah paling lambat 24 September 2013.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan data buku berikut!&lt;br&gt;&lt;br&gt;
+Judul buku : Optimalkan Peran Otak&lt;br&gt;
+Pengarang : Qaulan Tsaqila&lt;br&gt;
+Tahun terbit : 2012&lt;br&gt;
+Keunggulan buku : Isi buku sangat bermanfaat bagi pelajar&lt;br&gt;
+Kekurangan buku : Tampilan sampul buku seadanya&lt;br&gt;&lt;br&gt;
+Paragraf resensi yang tepat sesuai data buku tersebut adalah &amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Buku Optimalkan Peran Otak karangan Qaulan Tsaqila, diterbitkan pada tahun 2012. Buku ini mempunyai tampilan yang digarap secara baik. Bahasa yang digunakannya sangat komunikatif, sehingga memudahkan pembaca memahaminya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Buku Optimalkan Peran Otak ditulis oleh Qaulan Tsaqila. Buku ini mulai diedarkan tahun 2012. Buku ini sangat bermanfaat karena bisa menjadi pedoman bagi pelajar dalam memaksimalkan potensi otaknya. Bahasanya sangat mudah dipahami, sehingga memudahkan pembaca.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Buku Optimalkan Peran Otak karangan Qaulan Tsaqila ini mempunyai keunggulan karena bisa menjadi pedoman bagi pelajar dalam memaksimalkan potensi otaknya. Sayang bahasanya sangat komunikatif, sehingga memudahkan pembaca memahaminya. Kemudian, ada yang sedikit mengganggu, tampilan sampul buku ini yang terkesan sangat seadanya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Buku Optimalkan Peran Otak ditulis oleh Qaulan Tsaqila. Buku yang mulai diedarkan tahun 2012 ini bisa menjadi pedoman bagi pelajar dalam memaksimalkan potensi otaknya. Bahasa yang digunakannya sangat mudah dipahami, sehingga memudahkan pembaca. Meski sampul buku terkesan seadanya, buku ini tetap layak dibaca.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan surat pribadi berikut!&lt;br&gt;&lt;br&gt;
+Sahabatku Linda,&lt;br&gt;
+[...] Sekali lagi maafkan aku,ya karena baru sempat membalas suratmu. Linda, hampir sebulan tangan kananku sakit karena terkilir saat bermain voli. Itu sebabnya aku tidak bisa membalas langsung surat darimu. Alhamdulillah, sekarang tanganku sudah sembuh.&lt;br&gt;&lt;br&gt;
+Linda, sekalian kusampaikan padamu, aku liburan mendatang akan berjalanjalan ke Bali. Kamu pesan oleh-oleh apa? Bilang saja, ya nanti aku akan belikan khusus untukmu sahabat baikku.&lt;br&gt;&lt;br&gt;
+Bagian pembuka yang tepat untuk melengkapi surat tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Maaf baru membalas suratmu.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Apa kabar? Semoga baik, ya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jangan bosan kirim surat padaku!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Semoga kita dapat bertemu kembali.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kutipan surat berikut!&lt;br&gt;&lt;br&gt;
+Dengan hormat,&lt;br&gt;
+Pentas Seni Siswa akan diselenggararakan pada bulan Oktober 2014. Sehubungan dengan rencana pelaksanaan pentas seni SMP Perintis tahun 2014, kami mengharap kehadiran Ibu pada&lt;br&gt;&lt;br&gt;
+hari, tanggal : Sabtu, 18 Oktober 2014&lt;br&gt;
+pukul : 08.00 s.d. 10.00&lt;br&gt;
+tempat : Ruang Aula SMP Perintis&lt;br&gt;
+acara : Persiapan Pentas Seni&lt;br&gt;
+[...]&lt;br&gt;&lt;br&gt;
+Kalimat penutup yang tepat untuk melengkapi surat tersebut adalah &amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Demikian undangan ini kami sampaikan. Atas perhatiannya, kami ucapkan terima kasih.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Demikian undangan ini kami sampaikan. Atas kerja sama Saudara, diucapkan terima kasih.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Demikian undangan ini kami sampaikan. Atas perhatian Ibu, kami ucapkan terima kasih.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Demikian undangan ini kami sampaikan. Atas perhatian Saudara, diucapkan terima kasih.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah ilustrasi berikut!&lt;br&gt;&lt;br&gt;
+Ketua OSIS SMP Harapan, diminta teman-temannya untuk menyampaikan keluhan kepada Kepala Sekolah tentang lingkungan sekolah yang kurang nyaman. Hal itu berkaitan dengan saluran air di kamar kecil yang sering tersumbat. Ia menulis surat pembaca ditujukan ditujukan kepada Kepala Sekolah.&lt;br&gt;&lt;br&gt;
+Penulisan surat pembaca yang sesuai dengan ilustrasi tersebut adalah &amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Saya sebagai Ketua OSIS SMP Harapan, menyampaikan keluhan teman-teman tentang lingkungan sekolah yang kurang nyaman. Hal itu berkaitan dengan sering tersumbatnya saluran air di kamar kecil. Saya mohon Kepala Sekolah agar segera memberi solusi untuk masalah tersebut.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Saya sebagai Ketua OSIS SMP Harapan, menyampaikan keluhan teman-teman tentang lingkungan sekolah yang kurang nyaman. Hal itu berkaitan dengan sering tersumbatnya saluran air di kamar kecil. Dengan keadaan seperti itu kami merasa kurang nyaman.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kami menyampaikan keluhan teman-teman tentang lingkungan sekolah yang kurang nyaman. Hal itu berkaitan dengan sering tersumbatnya saluran air di kamar kecil. Kami mohon pihak sekolah agar segera memberi solusi untuk masalah tersebut.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Saya sebagai Ketua OSIS SMP Harapan, menyampaikan keluhan teman-teman tentang lingkungan sekolah yang kurang nyaman. Hal itu berkaitan dengan sering tersumbatnya saluran air di kamar kecil. Saya mohon kepada pihak terkait agar segera memberi solusi untuk masalah tersebut.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;&lt;br&gt;
+Melihat gambar porno dapat menimbulkan kecanduan. Bukan menakuti-nakuti, tetapi demikian hasil penelitian Donald L. Hilton Jr., ahli bedah syaraf Amerika. Hal itu disampaikan pada seminar tentang dampak pornografi terhadap kerusakan otak di Jakarta.&lt;br&gt;
+Kecanduan melihat gambar porno akan mengakibatkan otak bagian tengah depan yang disebut Ventral Tegmental Area (VTA) secara fisik mengecil. Penderita pengecilan otak ini akan mengalami keterlambatan dalam menyampaikan sebuah informasi.&lt;br&gt;
+Rangkuman bacaan tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Penderita pengecilan otak akan mengalami keterlambatan dalam menyampaikan sebuah informasi.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Melihat gambar porno dapat menimbulkan kecanduan yang mengakibatkan otak bagian tengah depan secara fisik mengecil.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Melihat gambar porno mengakibatkan kecanduan. Hal itu disampaikan pada seminar tentang dampak pornografi terhadap kerusakan otak.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hasil penelitian ahli bedah syaraf Amerika menyatakan kecanduan melihat gambar porno mengakibatkan penderita mengalami keterlambatan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermatilah ilustrasi berikut!&lt;br&gt;&lt;br&gt;
+(1) Topan Haiyan menerjang Filipina.&lt;br&gt;
+(2) Akibatnya banjir setinggi 4 meter.&lt;br&gt;
+(3) Korban tewas 255 orang dan hampir 630 ribu mengungsi.&lt;br&gt;&lt;br&gt;
+Teks berita yang sesuai dengan fakta tersebut adalah &amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Filipina pernah diterjang topan Haiyan. Topan ini mampu menimbulkan banjir setinggi 4 meter di banyak lokasi, sanggup menewaskan 255 orang, dan membuat hampir 630.000 orang harus mengungsi.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Topan Haiyan dilaporkan telah menerjang Filipina. Topan tersebut mengakibatkan banjir setinggi 4 meter di banyak lokasi. Akibatnya, 255 korban tewas dan hampir 630.000 orang harus mengungsi.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Filipina telah diterjang topan Haiyan. Topan ini telah menimbulkan kerusakan yang luar biasa, yaitu banjir setinggi 4 meter yang ratusan korban tewas.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Filipina diterjang topan Haiyan. Sungguh mengerikan akibat topan ini. Ada 255 korban tewas dan hampir 630.000 orang harus mengungsi. Topan tersebut selain berakibat korban jiwa juga harta.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah ilustrasi berikut!&lt;br&gt;&lt;br&gt;
+OSIS SMP Permata Kasih bermaksud mengadakan lomba kebersihan. Tujuan lomba tersebut membudayakan pola hidup bersih dengan harapan akan membuat pikiran menjadi jernih dalam menerima pelajaran. Ketua OSIS membuat slogan untuk kegiatan tersebut.&lt;br&gt;&lt;br&gt;
+Slogan yang tepat dibuat oleh Ketua OSIS adalah &amp;hellip;.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Hidup sehat, hidup pilihan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hidup bersih, pikiran jernih&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pikiran jernih, bebas pikiran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bersih diri, bersih lingkungan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermatilah ilustrasi berikut!&lt;br&gt;&lt;br&gt;
+Pak H. Syarif mempunyai rumah mewah dengan luas bangunan 400 meter dan luas tanah 500 meter, terdiri atas 2 lantai, 3 kamar tidur, 2 kamar mandi, garasi dan kolam renang. Rumah tersebut berada di Jalan Durian IV Nomor 19 Jakarta. Berhubung beliau butuh uang, rumah dan tanahnya akan dijual melalui iklan dengan harga Rp500 juta rupiah dengan nomor telepon 021.7533304.&lt;br&gt;&lt;br&gt;
+Iklan baris yang sesuai dengan ilustrasi tersebut adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;BU, rmh mwh, LT/LB 400/500, 2 LN, 3 KT, 2 KM, grs. Harga 500 jt. Jkt. Hub.021.7533334.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jual cpt, BU, rmh mwh, LT/LB 400/500, 2 LN, 3 KT, 2 KM, grs, klm rng. Jkt. Hub.021.7533334.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jual cpt, BU, rmh mwh, LT/LB 400/500, 2 LN, 3 KT, 2 KM, grs, klm rng. Harga 500 jt. Jkt. Hub.021.7533304.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;BU, rmh mwh, LT/LB 400/500, 2 LN, 3 KT, 2 KM, grs. Harga 400 jt. Jakarta. Hub.021.7533334&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan petunjuk berikut!&lt;br&gt;&lt;br&gt;
+Petunjuk Pembelian Tiket Kereta Api Secara Online&lt;br&gt;
+(1) Sediakan nomor telepon pusat kereta api.&lt;br&gt;
+(2) Siapkan Kartu Tanda Penduduk (KTP) atau identitas lain.&lt;br&gt;
+(3) [&amp;hellip;]&lt;br&gt;
+(4) Setelah berhasil mendapatkan kode booking dan kode bayar via telepon, bayarlah di Anjungan Tunai Mandiri (ATM) terdekat.&lt;br&gt;
+(5) [&amp;hellip;]&lt;br&gt;
+(6) Anda telah berhasil mendapatkan tiket kereta api jarak jauh.&lt;br&gt;
+Kalimat yang tepat untuk melengkapi petunjuk tersebut adalah &amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(3) Hubungi call center kereta api.&lt;br&gt;
+(5) Tukarkan alat bukti bayar dari ATM ke loket penukaran di stasiun kereta api.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) Catatlah nomor KTP/identitas lain yang Anda miliki.&lt;br&gt;
+(5) Pulanglah ke rumah sambil menunggu keberangkatan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) Bawalah KTP ke stasiun kereta api terdekat.&lt;br&gt;
+(5) Tukarkan alat bukti bayar dari ATM ke loket penukaran di stasiun kereta api.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) Hubungi call center kereta api.&lt;br&gt;
+(5) Bawalah alat bukti bayar dari ATM ke stasiun kereta api untuk siap berangkat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah kalimat-kalimat berikut!&lt;br&gt;&lt;br&gt;
+Langkah-langkah Menulis Cerpen&lt;br&gt;
+(1) Setelah data terkumpul, buatlah garis besar alur, tokoh, dan latar cerita.&lt;br&gt;
+(2) Periksalah ejaan, diksi, dan unsur-unsur kebahasaan lain serta memperbaikinya jika terdapat kekeliruan sebagai langkah penutup.&lt;br&gt;
+(3) Kumpulkan data, keterangan, informasi, dokumen yang terkait dengan peristiwa atau pengalaman yang mendukung tema dan menjadi sumber inspirasi cerita.&lt;br&gt;
+(4) Tentukan tema atau pokok permasalahan cerpen.&lt;br&gt;
+(5) Kembangkan garis besar cerita tersebut menjadi cerita utuh.&lt;br&gt;
+Agar menjadi petunjuk yang runtut, urutan yang tepat adalah &amp;hellip;.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) &amp;ndash; (3) &amp;ndash; (2) &amp;ndash; (5) &amp;ndash; (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) &amp;ndash; (4) &amp;ndash; (1) &amp;ndash; (5) &amp;ndash; (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4) &amp;ndash; (3) &amp;ndash; (1) &amp;ndash; (5) &amp;ndash; (2)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5) &amp;ndash; (2) &amp;ndash; (1) &amp;ndash; (4) &amp;ndash; (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah ilustrasi berikut!&lt;br&gt;&lt;br&gt;
+Sebagai salah satu upaya menghadapi ujian nasional, pihak sekolah mengundang motivator. Tujuan kegiatan itu adalah meningkatkan motivasi belajar siswa, sehingga siswa diharapkan dapat meraih prestasi yang maksimal di ujian nanti. Sebelum sang motivator tampil, Kepala Sekolah memberikan sambutan.&lt;br&gt;&lt;br&gt;
+Pembuka teks pidato yang sesuai dengan ilustrasi tersebut adalah&amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kegiatan ini diadakan agar kalian mempunyai semangat belajar menjelang UN. Dengan semangat belajar yang tinggi, Bapak berharap kalian dapat meraih nilai UN yang tinggi pula.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Demikian sambutan yang dapat Bapak sampaikan. Pesan Bapak, simak baik-baik apa yang nanti disampaikan motivator, sehingga kalian memperoleh manfaat dari kegiatan ini.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ujian Nasional telah kalian laksanakan. Saatnya kita berdoa kepada Tuhan, semoga jawaban yang kalian pilih adalah yang benar, sehingga nilai yang dapat kalian raih maksimal.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Puji syukur kita panjatkan kepada Tuhan Yang Maha Esa yang telah memberikan kesehatan dan kesempatan kepada kita, sehingga kita dapat mengikuti pemberian motivasi ini.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kutipan teks pidato berikut!&lt;br&gt;&lt;br&gt;
+Pada kesempatan yang baik ini, perkenankan saya menyampaikan topik &amp;ldquo;Betapa Pentingnya Pendidikan Karakter di Lingkungan Sekolah&amp;rdquo; di hadapan teman-teman. &lt;br&gt;
+[&amp;hellip;] Nah, dari beberapa contoh tersebut, sesuaikah dengan budaya dan karakter bangsa kita?&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi bagian rumpang pada teks pidato tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Oleh karena itu, ada beberapa hal yang perlu diperhatikan oleh kita sebagai orang tua untuk membantu anak bergaul di dunia luar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Banyak contoh perilaku siswa di sekolah yang kurang baik, seperti tidak menghormati guru, pacaran berlebihan, bullying, dan masih banyak lagi.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mudah-mudahan kita menjadi generasi berkarakter yang akan membawa bangsa dan negara kita ke arah yang lebih baik.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Namun, orang tua harus membuka wawasan terhadap perkembangan karakter si anak yang mestinya dipahami oleh orang tua.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan tema karya ilmiah berikut!&lt;br&gt;&lt;br&gt;
+Meningkatkan prestasi belajar dengan media internet&lt;br&gt;&lt;br&gt;
+Rumusan masalah yang sesuai dengan tema tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Mengapa media internet meningkatkan prestasi belajar siswa?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Apakah dengan media internet prestasi belajar siswa meningkat?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kapankah prestasi belajar dapat meningkat karena media internet?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bagaimanakah media internet dapat meningkatkan prestasi belajar?&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah simpulan karya ilmiah berikut!&lt;br&gt;&lt;br&gt;
+Kelebihan mesin tetas dapat menetaskan telur dalam jumlah yang banyak. Bila ditetaskan dengan cara dierami induk ayam, jumlah telur yang ditetaskan terbatas jumlahnya.&lt;br&gt;&lt;br&gt;
+Saran yang sesuai dengan simpulan tersebut adalah &amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Gunakan penetasan secara tradisional karena hasilnya banyak dan biaya lebih hemat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lebih baik menetaskan telur ayam secara tradisional, meskipun hasilnya terbatas.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bila ingin menetaskan telur ayam dalam jumlah banyak, gunakan mesin penetas.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Cara penetasan telur ayam secara tradisional memiliki risiko gagal sangat kecil.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati data buku berikut!&lt;br&gt;&lt;br&gt; 1. Buku berjudul Argumentasi dan Narasi karangan Gorys Keraf diterbitkan oleh penerbit Gramedia Pustaka Utama pada tahun 2007 di Jakarta.&lt;br&gt; 2. Buku berjudul Kesusasteraan Sekolah karangan Asul Wiyanto diterbikan oleh Grasindo pada tahun 2005 di Jakarta.&lt;br&gt;&lt;br&gt; Penulisan daftar pustaka yang tepat berdasarkan data buku tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Keraf, Gorys. 2007. &lt;em&gt;Argumentasi dan Narasi&lt;/em&gt;. Jakarta: Gramedia. Wiyanto, Asul. 2005. Kesusasteraan Sekolah. Jakarta: Grasindo.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Gorys, Keraf. 2007. &lt;em&gt;Argumentasi dan Narasi&lt;/em&gt;. Jakarta: Gramedia. Asul,Wiyanto. 2005. Kesusasteraan Sekolah. Jakarta: Grasindo.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keraf, Gorys. 2007. &lt;em&gt;Argumentasi dan Narasi&lt;/em&gt;. Gramedia: Jakarta. Wiyanto, Asul. 2005. Kesusasteraan Sekolah. Grasindo: Jakarta.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Keraf, Gorys. &lt;em&gt;Argumentasi dan Narasi&lt;/em&gt;. 2007. Jakarta: Gramedia. Wiyanto, Asul. Kesusasteraan Sekolah. 2005.Jakarta: Grasindo.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermatilah kalimat berikut!&lt;br&gt;
+Listrik saat dewasa ini telah menjadi daerah bagian yang tak terpisahkan dari sejumlah kehidupan warga masyarakat.&lt;br&gt;&lt;br&gt;
+Perbaikan kalimat tersebut agar menjadi kalimat efektif adalah &amp;hellip;&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Listrik dewasa ini telah menjadi bagian yang tak terpisahkan dari kehidupan masyarakat.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Listrik dewasa ini telah menjadi daerah bagian yang tak terpisahkan dari sejumlah kehidupan warga masyarakat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Listrik saat dewasa ini telah menjadi bagian yang tak terpisahkan dari sejumlah kehidupan warga masyarakat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Listrik saat dewasa ini telah menjadi daerah bagian yang tak terpisahkan dari sejumlah kehidupan masyarakat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;&lt;br&gt;
+Setiap peserta ujian harap, menyiapkan pulpen, pensil 2B penghapus, dan rautan.&lt;br&gt;&lt;br&gt;
+Perbaikan penggunaan tanda baca pada kalimat tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Setiap peserta ujian harap menyiapkan: pulpen, pensil 2B penghapus, dan rautan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Setiap peserta ujian harap menyiapkan; pulpen, pensil 2B penghapus dan rautan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Setiap peserta ujian harap menyiapkan pulpen, pensil 2B, penghapus, dan rautan.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Setiap peserta ujian, harap menyiapkan: pulpen, pensil 2B penghapus, dan rautan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kalimat berikut!&lt;br&gt;&lt;br&gt; Untuk menghadapi ujian nasional ini, aku akan menganalisis cara belajarku agar aku menjadi pelajar yang &lt;em&gt;berkuantitas&lt;/em&gt;.(1) Selain itu, aku akan mengurangi gerakanku(2) yang tidak berhubungan dengan belajar. Tidak lupa, aku akan &lt;em&gt;melantunkan&lt;/em&gt;(3) doa kepada Tuhan.&lt;/p&gt;
+&lt;p&gt;Perbaikan pemakaian kata bercetak miring pada paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) berkualitas, (2) aktivitasku, (3) memanjatkan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) bermutu, (2) usahaku, (3) mengatakan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) pandai, (2) kondisiku, (3) mengabulkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) berprestasi, (2) upayaku, (3) menghargai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan pantun berikut!&lt;br&gt;&lt;br&gt;
+Saat ayam jantan berkokok&lt;br&gt;
+Daffa bangun membuka jendela&lt;br&gt;
+[&amp;hellip;] (1)&lt;br&gt;
+[&amp;hellip;] (2)&lt;br&gt;&lt;br&gt;
+Bagian isi yang tepat untuk melengkapi pantun tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) Sadarlah makhluk ciptaan Tuhan&lt;br&gt;
+(2) Jalankan semua perintah kewajiban&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) Jika ingin sukses dalam pergaulan&lt;br&gt;
+(2) Teman susah haruslah kita tolong&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) Ayo, kawan belajar kelompok&lt;br&gt;
+(2) Ujian Nasional di depan mata&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) Jika sikap kita sombong&lt;br&gt;
+(2) Alamat badan akan binasa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kutipan puisi berikut!&lt;br&gt;&lt;br&gt;
+Tuhan&lt;br&gt;
+Mungkin kami yang salah&lt;br&gt;
+Perlakukan alam semena-mena&lt;br&gt;
+[...]&lt;br&gt;
+Meluluhlantakkan semua&lt;br&gt;&lt;br&gt;
+Larik bermajas yang tepat untuk melengkapi puisi tersebut adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Bencana alam pun melanda&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hingga alam tumpahkan murka&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Gunung meletus semburkan lava&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tak bersyukur atas nikmat-Mu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan kutipan naskah drama berikut!&lt;br&gt;&lt;br&gt; Ibu : Amanda, cepat bangun! Hari sudah pagi, nanti terlambat ke sekolah!&lt;br&gt; Amanda : Iya, Bu.(seraya menarik selimut kembali)&lt;br&gt; Ibu : [...] (1)&lt;br&gt; Amanda : Ya Bu, maafkan Amanda&amp;hellip;(beranjak bangun)&lt;br&gt; Ibu : Makanya lain kali jangan tidur larut malam.&lt;br&gt; Amanda : [...] (2)&lt;br&gt; Ibu : Nah...gitu dong...putri Ibu yang cantik!&lt;br&gt;&lt;br&gt; Dialog yang tepat untuk melengkapi naskah drama tersebut adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) Katanya tidak perlu dibangunkan!&lt;br&gt; (2) Ya, Bu. Amanda tidak akan ulangi lagi.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) Maafkan Amanda, Bu.&lt;br&gt; (2) Besuk tidak akan diulangi lagi.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) Segera sarapan pagi, ya!&lt;br&gt; (2) Amanda berangkat dulu ya, Bu!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) Mandi dan segera sarapan!&lt;br&gt; (2) Iya, Ibuku tersayang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

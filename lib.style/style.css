@@ -1,0 +1,80 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+
+/* Chart.js */
+@keyframes chartjs-render-animation {
+    from {
+      opacity: .99
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  .chartjs-render-monitor {
+    animation: chartjs-render-animation 1ms
+  }
+
+  .chartjs-size-monitor,
+  .chartjs-size-monitor-expand,
+  .chartjs-size-monitor-shrink {
+    position: absolute;
+    direction: ltr;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: -1
+  }
+
+  .chartjs-size-monitor-expand>div {
+    position: absolute;
+    width: 1000000px;
+    height: 1000000px;
+    left: 0;
+    top: 0
+  }
+
+  .chartjs-size-monitor-shrink>div {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0
+  }
+  #sidebarMenu{
+    padding-top: 32px;
+
+  }
+  .sidebar-sticky .card{
+    border-radius: 0;
+  }
+  .sidebar-sticky .card a, .sidebar-sticky .card a:hover{
+    text-decoration: none;
+  }
+  .sidebar-sticky .list-group-item{
+    
+  }
+  .sidebar-sticky .list-group-item .fas
+  {
+    margin-left: -5px;
+    margin-right: 5px;
+  }
+  

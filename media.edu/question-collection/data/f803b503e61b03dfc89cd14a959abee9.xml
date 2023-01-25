@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Perhatikan tabel di bawah ini!&lt;/p&gt;
+&lt;table style=&quot;width: 73px; height: 126px;&quot; border=&quot;1&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;P&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Q&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;B&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;B&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;B&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;S&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;S&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;B&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;S&lt;/td&gt;
+&lt;td style=&quot;text-align: center;&quot;&gt;S&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Nilai kebenaran pernyataan p &amp;rArr; ~ q adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;BBBB&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;BSBB&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;BSSS&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;SBBB&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;SBSS&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ingkaran dari pernyaatan &amp;ldquo;Jika Audrey rajin belajar, maka Audrey lulus ujian&amp;rdquo; adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Jika Audrey tidak rajin belajar, maka Audrey tidak lulus ujian.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jika Audrey malas, maka Audrey tidak lulus ujian.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Audrey tidak rajin belajar atau Audrey tidak lulus ujian.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Audrey rajin belajar dan Audrey tidak lulus ujian.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Audrey malas dan Audrey tidak lulus ujian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Diketahui pernyataan&lt;br&gt;
+&amp;ldquo;Jika harga bahan bakar naik, maka ongkos angkutan naik&amp;rdquo;&lt;br&gt;
+&amp;ldquo;Jika harga kebutuhan tidak naik, maka ongkos angkutan tidak naik&amp;rdquo;&lt;br&gt;
+Bila kedua pernyataan itu bernilai benar, maka kesimpulan yang dapat diambil, adalah&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Jika ongkos angkutan naik, maka harga bahan bakar naik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jika harga kebutuhan naik maka harga bahan bakar  naik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jika ongkos angkutan tidaK naik, maka harga kebutuhan pokok tidak naik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jika harga bahan bakar naik, maka harga kebutuhan pokok naik&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jika harga bahan bakar tidak naik, maka harga kebutuhan pokok tidak naik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bentuk sederhana dari 2&amp;radic;8 + &amp;radic;18 + &amp;frac14;&amp;radic;32 + &amp;radic;200&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;14&amp;radic;2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;17&amp;radic;2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;18&amp;radic;2&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;20&amp;radic;2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;21&amp;radic;2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dengan merasionalkan penyebut dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; alt=&quot;\frac{\sqrt{3} - 2}{\sqrt{3} + 2}&quot; data-latex=&quot;\frac{\sqrt{3} - 2}{\sqrt{3} + 2}&quot; src=&quot;67795f_9cb1947c9128d7dbb271ea519b557f6a.png&quot;&gt;, bentuk sederhananya adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>67795f_9cb1947c9128d7dbb271ea519b557f6a.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data>iVBORw0KGgoAAAANSUhEUgAAADIAAAArCAYAAAA65tviAAAB5UlEQVRoge2ZzbWCMBCFvxIogC1b9hZABa8DOqAHe7AGu6AIqrAJ32IyR8mD/JBE1Mc9JwuUkDuZOyG5wD/ECeiBu6e9PSYkkHZvIilogMveJHKgB7q9SeTACFRP1y2SIa2LEclaKdjjXbeMVzOXVQvceNRKjdTPlMLUAXu8xlxfYx/0g19WV15bQwOOFbJDyFTW7yMy60tokPpZ6lcSZ4TXH3TIe+KGEFPUax2QLNyf+rgCaRBpuFqo5hszrvP+3hBTUh0iLRd0AlyaHcz/rjZ4xsHwuhGwguqNmpUL67KyiZZ+q1dIwMEvZM2KS1ZLfUoGUiFcnoPwLi6alZFlWfXIUquZ0uX3vJ2nFxfmclKOXnTIDC/JqkKkNPEo9oFyq9aJxA2qr8gPHDhw4EAyfIbCO7cDH4+exxnko1M9IbvPkG392+JE2d3tyzAgweRCzU6ZHa3rVF+rZ+4N+JDF12qYyyqHrxUTSDZfK0RWsb5WbEZsrHoENTLrelZ/xsT66W+rr5UayKqv1Roi9tnb5cKn+Fpn04r5WvZZPcQu3eJraU0V87VgnpWRMMnE+lpbpBXta2lWdMkLJVYykE2+FqbTWgpz+FqxgWz2tVpkhpdklcPXigkk2dcq+QWq40s+5R34evwCNS3ZabpIJ64AAAAASUVORK5CYII=</data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;-7 - 4&amp;radic;3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;-7 + 4&amp;radic;3&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;-1 + 4/7&amp;radic;3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1 - 4/7&amp;radic;3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1 + 4/7&amp;radic;3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Nilai dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; alt=&quot;\frac{125^{\frac{2}{3}} - (\frac{1}{3})^{-2}}{2^{3}}&quot; data-latex=&quot;\frac{125^{\frac{2}{3}} - (\frac{1}{3})^{-2}}{2^{3}}&quot; src=&quot;2fdd73_8e612f079a2cabe315f80e591ea862a8.png&quot;&gt; adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>2fdd73_8e612f079a2cabe315f80e591ea862a8.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data>iVBORw0KGgoAAAANSUhEUgAAAGMAAAA4CAYAAADpckahAAADEElEQVR4nO2cy7GrMAxATwkUkC1b9imACuiADuiBHqiBLlJEqrhN5C2MBsfBn7wAJkFnxjMkeC5GsiVZci4oiqLkpgBa4A94TNeH4ArcMIP640AD25AKGKbrK+bdD0ELdNN1g1HINzN6Wufpf5nuH44WqHd+ZokRSArXhD6Vp5We/v0bz9+Nnv0VUWNmZZHYv3mzf4wOv5KyMTIPqt/pmTXGV7mIcx0W7sGskE+xFeEzYbvTYhyY3bbmgvFNrnkoMIJpCQt85LNAo2b/dz4sPeEVWBFWRoVR5lrm6rRcMDMx5DRjygBj4n4uDHeX69bLtmPZV9ikKKMB7msMKBd7OecQd+IOsyGusBIzaXaJhgpMRLEUW18wgpXt/H2h35Jjzu2oimkMof2CO94q0rdZbXQersyCXhqMPYgCM4tchxaLSHJQse5sHtl4tdfMjik2MwTJr9h9U5Xh5qa23PjJal0LSXXsQqoyJG7+n5Xh5qa2fLm1ldGyoxNPUUaBGZBrO2vMTL/j9ys24oe+aWWs/feCpCgjxW4WUx9ffC8vdSOssBJ/VtRuPp8QE967YfahlNGTHk1IJOP2b63vGsIvV+DPitrNtzP+2ZXR87wDbQJ9Yd75+syZmDI1UwvITF4STsOraRp5VoYdz4uZyp3PWVt4AxtHU2KXZbY+ps+ilItzz7dBGpid92P6nDt3LyH4WsWcEX+qXYkgKYyUcD2Fs9TsNyMkQKlHy2oOCVp84FqKPSU9ftPyzqkNCTyUD5D8VCiQkIpfKLIbOEYW+usJhdCirFDGQExU7oDkJ7hihB1aHaKUJTp0VaxKz2uRyU5aSuTlUpJ/v/RzSB3GNleyx/JlA8rpezVPG9GSLtyOA57+U5Rz4cvna9unKYpyGt5J+Ckbc9ifaZ2ZlISfsgMpCT/lQ+SXRVLSjVXbQgk/5UPknJYk6uQ8lnu0NJbwUzZATrHYqyOW8FM2Qgo96hcOwIAelzkELaYmoYWezNQ8O3IlE/KfDYQSTXlkoeTVNLWoMrJwY7kWoMpQFEVRFCUf/wCD+VlHxohnnQAAAABJRU5ErkJggg==</data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;8&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;16&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Nilai x yang memenuhi 5&lt;sup&gt;x-1&lt;/sup&gt; = 25&amp;radic;5 adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;-3&amp;frac12;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;-&amp;frac12;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&amp;frac12;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3&amp;frac12;&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4&amp;frac12;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Jika &lt;sup&gt;3&lt;/sup&gt;log5 = p, nilai &lt;sup&gt;9&lt;/sup&gt;log15 = ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;2p + 1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;p + 1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&amp;frac12;p + 1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2 (p + 1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&amp;frac12; (p + 1)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Diketahui log 2 = a dan log 3 = b, maka log 72 = ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;3a &amp;ndash; 2b&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2a &amp;ndash; 3b&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3a + b&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2a + 3b&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3a + 2b&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Himpunan penyelesaian pertidaksamaan x&lt;sup&gt;2&lt;/sup&gt; &amp;ndash; 5x + 4&amp;nbsp;&amp;le; 0 dinyatakan dengan garis bilangan adalah ...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;img alt=&quot;&quot; src=&quot;abe240_b880c8e33a65e05d71e470b0b8e1abd8.png&quot;&gt;</text>
+			<value>1</value>
+			
+			<file>
+			<name>abe240_b880c8e33a65e05d71e470b0b8e1abd8.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAQkAAAAMCAIAAAD+sN80AAABx0lEQVRoge3ZIbfCIBQHcOIicXFxx7Rok2bUSFw0EteIRD6AgWgkGomLRiJxcZG4Fzxvb0+ZO090Hn339wHYPdz9BwPUgcfx3htjhBCHw8Fa++pyPoQxRkqplDqdTnM+F835sM+mtcYYowFKadu2r67rjdV1nabpcEqXy2XTNPM8fSIbzjljzCyVvDcpJQrJssx7/+rq3pLWOjilGGPnXOTgxpjJVSicDWutlLIoCoRQWZaRdXw8a22SJMFGwgTep2maixVjiBASOT7n/PzlYoyNheRXNqy1nPM8z6G1f8IYG+sieJLIf49zNnrBkKBuJBK9oig4uCnLsjleBzCw2WxiWrZarYLDDkOCnHP99ikIsjHpxuoPnmS9Xse0bCwbCKE8zznnzrmfPdVYSGBPNWm32z35TQCX6rqOaRn/vadC35EYnrwH/sUvQgLZmDR2onK2WCwM+KP9fn9jStM0jTz967NxHYnerTPcc0iEEDFF/BOU0mAXkySBS8D7VFU1lo3j8Rg5uFJqLBI9uPt7jLZty7K8/rwZuB26l/f+Oh4YY6XUPAVANh5Ja80YI4RQSoUQcCkezxhTVRUhZLvdcs5nuxTvuu4LsOxyE9koNAYAAAAASUVORK5CYII=</data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;&quot; src=&quot;963d1f_0bff679def3cab86fb2879624eea8c9a.png&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>963d1f_0bff679def3cab86fb2879624eea8c9a.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAQkAAAAhCAIAAABFgsncAAACx0lEQVR4nO3aIYzqMADG8QZFUAtqAoEhQU5OICaR1OFYgkFCgsAhkTMkCAQCcQ4kshKzZJJMzW1yAjG5J5bs8Y6Oy6NjPcr3k5cLbVr+dGOQtFqMMcZYEAQVj6uw8/nMGLtcLrInohpSzTBJkiwWC3JD1/XT6VTN6KparVb1ej1fUk3Tdrud7Emp44c2oig6n8+CYyRJYpom4XEcR/DFP9ZgMOAu6XQ6lT21N+B53o8XL/w2oijabDaWZRFCbNsWnMdyueTuIiGkXq/jYuAJu92uaEkJIYwx2RP87bL3pGEYjuMURfJPG7dJ5MTbuD3377VaLQv+U6PReLCkg8FAcMuU9+3zmhsJSQuSyPX7fSZgu90+2EV4hWazKbJln2A0GnGX7jYSEsfxZDLRdb1ooXVdF/mEMwzjZe8B4KvVaiWdT8pqt9tFq6dpmm3bQRD8vaZijHEjEbymiuP4tW8EuGMYhsiWfYL7e+AsiePxmP8P5178WyTi9xuPj47ZbCb3eH1HvV7vwZIuFgvBLVNe3sZ9ErlH3+EyxiaTifhCe55XdDtumqbgi3+mKIo0TeMuabvdTpJE9gR/O8dxipLIVfTs7+vr634vTdPEA/KnMcbuL4C73a7nebKnpoiK2kjTNIqi5XKZ3QnZtr3ZbCobWlVxHK9Wq36/b1nWcDh0HAcnRomqawPgvaANAD60AcCHNgD40AYAH9oA4EMbAHxoA4APbQDwyWnjer12Oh0pQ6sqDENKqexZKEVOG5RStFGi7Je5vV5P9kSUIqGN9Xo9n8/RRokopfv9Hm2Uq+o2fN/PthBtlMt1XbRRrira8H3fdV3XddM0pZSGYZiiDTG3S5pBG6Wroo3xeJxdDR8Oh06nQymllBJCcO/4tHxJfd/P/oI2SiftO1ycG+VCG6VDG4pwXRfncLnw7A+AD20A8KENAD60AcD3BxZbZEniJYWHAAAAAElFTkSuQmCC</data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;&quot; src=&quot;168c84_d8841d43e68018f35af1764dfb1ee8fe.png&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>168c84_d8841d43e68018f35af1764dfb1ee8fe.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAQkAAAAjCAIAAAAISmjXAAAC/0lEQVR4nO3aIYy6UADH8Rduzmvu5m1GCxvBgJ1NIlGa0Y3CZjEYrtxIzkjhdvEi1y4xdolAoLg5E5FLZzQYjP4Dm/I/HwjyTpT7feJtPN4e7yuIR3aFhWG43W6LjwPAShAExQchZx8ZhqFhGIIgEELCMCw+FQBWCCE8z+u6XiSS3G3Ek9hDG3u+77++vrquu16vy55LRSwWi7e3N8dxVqtVxkPim/PsSLK2QU0CbcQ5jtNqteLLMhwOUUgRvu/zPB9fUlmWsxRC3aV5IznRhud5o9EoKQm0sWcYBnVl2u02voyd5+Pjg7qkjUbj5H5L3648z6uqatv2iUGof/U8r9/v39/fp58DbUSCIKjX60mLo2la2RO8PavV6sdNOE6SpPTDM+7bWq3W6/WSIvmvjbxJQEa4deSVdB/+JdRIyA5J/L6XlxcX8pBluZQrFY+EfH199Xq9Wq1WylT+iE6nI0EezWazrIt1d3fX7XaXy+Xhmcq2bUTyS7K/fISIrusXvkZREu/v7/s5UL6LnxGJZVll34TL9Pz8nLI4giBccFNVhO/7KUv68PDw+fmZckWyb93jJPbS3uFGkTw+Pp48wR9/T7Xb7ZKej+v1+mKxKHt2N0nTtKT9ZllW+rEnd2yz2UxK4jBIllkGQaDr+o9fYdBG3Hq9Ps6j1Wo5jlP21G7VdrsdDofHnzWGYZw8Nmmjttvt8Xic8dMq3/+MJEWCNiKWZY3HY0mSBoPBbDbDj+LFOY7z9PQkSVK/39d1PeNOK5LEYZBz5nsUCdqAq1IkicMgBScRRYL3MHBViiSxV7QNgKpCGwB0aAOADm0A0KENADq0AUCHNgDo0AZ7k8lkPp+XPYtKcV1XUZQLnxRtMDaZTAghaIOhzWbDcZwoihc+L9pgyTTN6XQqiiLaYEhVVdM00UYVoA2GTNOMnlHRRhWgDVa+v7+jrxlooyLQBivRA6qiKKIochynquolz4422EMbzOG+URGKoqANtubzOd7hAlwLtAFAhzYA6NAGAN0/RJfMAgo88uQAAAAASUVORK5CYII=</data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;&quot; src=&quot;00d0ab_e231542b68fec6171fc485ec0cfb0705.png&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>00d0ab_e231542b68fec6171fc485ec0cfb0705.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAQkAAAAjCAIAAAAISmjXAAADN0lEQVR4nO3aL2zyQACH4RML6aYQLJmcGEnl5paFhJOTnJtbEwzJDGJirhKJIamcmGBqZiHICgSmyTLVVHUKZMXEST7RpHRwlP659PjK75EkbW/Xe0dpS1aF+b7POS++HwBZXNctvhOSe0vf94fD4fX1NSHE9/3iQwGQhRCi67ppmkUiydxGPIlIyjaCILBt27Ks+XyeeaQgwjkPp9S2bdVjOSDxxZk7krRtCJNI30YQBIZhxDep1+uvr69ZhwsRzvnLy0t8SjVNGwwGqsd1EISrNGske9qYzWZPT0+7kkjZBudc13XhhqZpphwobKCUCqfUMAzVQ1Mvebnqut7tdieTyZ6dCD+dzWadTuf09DT5GCnb2Pj3Fqdp2tfXV+4pOFqWZSWcjul0qnqAiqVct7Vard1u74rkTxtZk5Ci1+uVMl2Vsut7GPIRRkJWipKIXF1d2ZDF5+enkjN1DOKRkJ+fn3a7XavVVI3m7OyMQhZ3d3eqTtYxODk5ubm5+f7+Xl9TTSYTJZF0Op2SL0gqoF6vl3yaKi9M4v39PZpkwW/xHJGMx+OEa4Dk21y4k5vDxg3xDY+Pj2Vd3x2o9Et3O4lI0j3cMJLz8/O9B0i+T+W6rqZpwg0ppQVXyXFaLpcXFxfCKdV1Ha/w7F2xjUZjVxLrnaQ5kuu6pmkm3BvZ++xvOp1un8v7+/vlcpn+D4a4+Xy+fUZub2+lvEr0v9u1UC8vL/v9fsrHBtneGdkVSZp3RoIgGAwGDw8PlNJ+vz8ejzMdGrZxzofDoWEYlNJer2dZluoRHYoiSax3ku/YG5HgXUM4KEWSWO+k4CDCSHBpBAelSBKRom0AVBXaABBDGwBiaANADG0AiKENADG0ASCmpo3f399ms6nk0FW1WCwYY6pHUSlq2mCMoQ2JbNtutVqtVkv1QCpFQRuj0ej5+RltSMQYe3t7Qxtyld2G53nhKUQbcjmOgzbkKqMNz/Mcx3EcZ7VaMcYWi8UKbRQTn9IQ2pCujDa63W54Nfzx8dFsNhljjDFCCH475hZNqed54SdoQzpl93DxvSEX2pAObVSE4zj4HpYLz/4AxNAGgBjaABBDGwBi/wBhKLzbviIMawAAAABJRU5ErkJggg==</data>
+			</file>
+
+		</option>
+
+		<option>
+			<text>&lt;img alt=&quot;&quot; src=&quot;cadb98_fe23640e5b9dcd43d0d77729f4c3a4eb.png&quot;&gt;</text>
+			<value>0</value>
+			
+			<file>
+			<name>cadb98_fe23640e5b9dcd43d0d77729f4c3a4eb.png</name>
+			<type>image/png</type>
+			<encoding>base64</encoding>
+			<data>iVBORw0KGgoAAAANSUhEUgAAAQkAAAAjCAIAAAAISmjXAAADCUlEQVR4nO3aIWzyQByH4RMLgSnESCoRkFQO34STlT2HJMEsmUE02VwVQWJIJiYmiwJFkBUIDAlBNaibGrJiAtlPkAD7uLbXlRTW/h5/vRv5v8BKiZ8Y53y32yW/DsCluK6b/CLk1ys554PB4PHxkRDCOU9+FIBLIYSoqmpZVpJIYrdxmsSBZBue5zmO8/b2tlgsYp8UcoxzPplMbNuWnPXT4fx1JLJtCJOQb8PzvHa7fbqkXC5/fHzEPS7kzXa71XX9v1mPfG8VTmncSCLamM/nz8/PQUlItrHb7VRVFS60LEvyoJBDnPNyuSycnMlkErIwfFxVVe10OtPpNHx3cRvz+dwwjFKpFL6HZBuvr69BC4vF4mq1inqJIKcopUGToyjKdrsNWig5t4VCodlsBkXyo424SVzE09PThV9RyITVapXaEAojIf6Vkjio1WoOwJmXl5f0p/E0EvL5+dlsNguFQvrn2Lu/v6cAZ2q12lUG8u7urtForNfr43eq6XR6lUgMw0j5wxr+BMdx0pzDfRKj0ehwAMH/4r+IxLbtkA/H8NtcuJMLQp7nKYoSMjnv7+9BIyc/uudJHITdw91HUqlUIjcIv0/lum6xWBQupJQmfAUhw2zbDhq58Fs4kRP78PAQlMTxIjJHdF3Xsqyg3ygi2/B9fzabnb8H6LoechsOwPf9wWBw/sbabrfDH+ELGtRqtdrtdiV/Noj3zEhQJDLPjHie1+/3W60WpbTb7dq2HWtryK391Om6Tim1LMtxnMglSZI4XiTJcQ+R4FlDuClJkjheJOEh9pHgqxHclCRJHCRtAyCr0AaAGNoAEEMbAGJoA0AMbQCIoQ0Aseu08f39Xa/Xr7I1/EWmaS6Xy5Q3vU4bjDG0AZJM0ySE5KKN4XBomibaABnD4bDX62malv02NpuNpmm+76MNkJfZNjabzXK53P9tjLGvry8fbUAcmW2j0+lomqZp2ng8rtfrjDHGGCGEMZbC7pABmW1DCJ8bIA9tAIgxxnLUBsCNQxsAYmgDQAxtAIj9A83/rg4PV681AAAAAElFTkSuQmCC</data>
+			</file>
+
+		</option>
+
+		</answer>
+</item>
+</test>

@@ -1,0 +1,91 @@
+@charset "utf-8";
+body{
+	color:#333333;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+}
+.controler-right{
+	float:right;
+	width:50%;
+	text-align:right;
+}
+.controler-container{
+	padding:4px 0;
+}
+#main-table{
+	border-collapse:collapse;
+	border-color:#DDDDDD;
+}
+#main-table td{
+	position:relative;
+	border-color:#DDDDDD;
+}
+#main-table td input{
+	width:100%;
+	box-sizing:border-box;
+	padding:3px;
+	border:none;
+	color:#333333;
+}
+#main-table thead td input{
+	font-weight:bold;
+}
+#main-table tbody tr > td:first-child input{
+	font-weight:bold;
+}
+.container{
+	padding:10px;
+	position:relative;
+}
+#type{
+	width:100%;
+	box-sizing:border-box;
+	padding:3px;
+	border:1px solid #DDDDDD;
+	color:#333333;
+}
+#chart-title, #axes-x, #axes-y{
+	width:100%;
+	box-sizing:border-box;
+	padding:4px;
+	border:1px solid #DDDDDD;
+	color:#333333;
+}
+#canvas{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	width:500px;
+}
+#canvas-container{
+	width:500px;
+	margin:auto;
+}
+.chart-title-container{
+	padding:2px 0;
+}
+#add-series, #subtract-series, #add-rows, #subtract-rows{
+	width:24px;
+	padding:2px 0px;
+	background-color:#EEEEEE;
+	border:1px solid #DDDDDD;
+}
+#build{
+	padding:2px 14px;
+	background-color:#EEEEEE;
+	border:1px solid #DDDDDD;
+}
+.button-area{
+	padding:4px 0;
+}
+input{
+	margin:0;
+	outline:none;
+}
+#data_panel, #image_panel{
+	overflow:auto;
+	position:relative;
+}
+.panel_wrapper div.current{
+	height:320px !important;
+}

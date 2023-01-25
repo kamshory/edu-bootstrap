@@ -1,0 +1,1551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pentingnya Hutan&lt;br&gt;&lt;br&gt;
+Pada musim hujan sering terjadi banjir. Salah satu penyebab terjadinya banjir adalah rusaknya lingkungan alam. Kerusakan lingkungan alam menjadikan tanah kritis dan tandus sehingga tidak dapat ditanami. Semua itu terjadi karena penebangan hutan secara besar-besaran dengan sistem tebang habis. Kenyataan ini sering dilakukan oleh para investor asing sebagai pemegang Hak Penguasaan Hutan (HPH), yang mestinya menggunakan sistem tebang pilih, agar pepohonan di hutan tidak punah. Akan tetapi, kenyataannya mereka sering melanggar ketentuan pemerintah untuk mendapatkan keuntungan yang besar. Maka, yang terjadi adalah penggundulan hutan yang sewenang-wenang.&lt;br&gt;
+Kerusakan alam yang disebabkan oleh penggundulan hutan dapat menimbulkan bencana banjir. Pohon-pohon di hutan sebenarnya berfungsi sebagai penahan atau pelindung lapisan tanah agartidak terkikis dan terbawa oleh air hujan. Hal ini dapat kita bandingkan dengan tanggul yang dibuat orang di tebing-tebing sungai. Tanggul tersebut berfungsi sebagai pelindung tanah agartidak terkikis oleh air hujan.&lt;br&gt;
+Dengan adanya pepohonan di hutan yang jumlahnya ribuan, bahkan jutaan, air hujan dapat meresap ke dalam lapisan tanah dan tertahan oleh akar-akar pepohonan Ku. Dengan demikian, tumpahan air hujan tidak seluruhnya mengalir ke dataran yang rendah, melainkan sebagian meresap ke dalam tanah. Oleh karena itu, bahaya banjir pun dapat terelakkan. *&lt;br&gt;
+Hutan yang berfungsi sebagai pelindung adanya banjir, erosi, dan sebagainya sangat perlu dilindungi keberadaannya.&lt;br&gt;&lt;br&gt;
+Sumber Ensiklopedi Indonesia&lt;br&gt;&lt;br&gt;
+Fiikiran utama paragraf kedua wacana di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kerusakan alam karena pengundulan hutan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pohon di hutan berfungsi sebagai penahan tanah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pohon di hutan dapat dibandingkan dengan tanggul&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tanggul dibuat orang-orang di tebing-tebing sungai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pentingnya Hutan&lt;br&gt;&lt;br&gt;
+Pada musim hujan sering terjadi banjir. Salah satu penyebab terjadinya banjir adalah rusaknya lingkungan alam. Kerusakan lingkungan alam menjadikan tanah kritis dan tandus sehingga tidak dapat ditanami. Semua itu terjadi karena penebangan hutan secara besar-besaran dengan sistem tebang habis. Kenyataan ini sering dilakukan oleh para investor asing sebagai pemegang Hak Penguasaan Hutan (HPH), yang mestinya menggunakan sistem tebang pilih, agar pepohonan di hutan tidak punah. Akan tetapi, kenyataannya mereka sering melanggar ketentuan pemerintah untuk mendapatkan keuntungan yang besar. Maka, yang terjadi adalah penggundulan hutan yang sewenang-wenang.&lt;br&gt;
+Kerusakan alam yang disebabkan oleh penggundulan hutan dapat menimbulkan bencana banjir. Pohon-pohon di hutan sebenarnya berfungsi sebagai penahan atau pelindung lapisan tanah agartidak terkikis dan terbawa oleh air hujan. Hal ini dapat kita bandingkan dengan tanggul yang dibuat orang di tebing-tebing sungai. Tanggul tersebut berfungsi sebagai pelindung tanah agartidak terkikis oleh air hujan.&lt;br&gt;
+Dengan adanya pepohonan di hutan yang jumlahnya ribuan, bahkan jutaan, air hujan dapat meresap ke dalam lapisan tanah dan tertahan oleh akar-akar pepohonan Ku. Dengan demikian, tumpahan air hujan tidak seluruhnya mengalir ke dataran yang rendah, melainkan sebagian meresap ke dalam tanah. Oleh karena itu, bahaya banjir pun dapat terelakkan. *&lt;br&gt;
+Hutan yang berfungsi sebagai pelindung adanya banjir, erosi, dan sebagainya sangat perlu dilindungi keberadaannya.&lt;br&gt;&lt;br&gt;
+Sumber Ensiklopedi Indonesia&lt;br&gt;&lt;br&gt;
+Kalimat pernyataan yang sesuai dengan isi paragraf kesatu wacana di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kerusakan lingkungan alam disebabkan oleh tanah kritis dan tandus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;.Agar pepohonan di hutan tidak punah, sebaiknya tidak menebang dengan sistem tebang pilih&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penebangan hutan secara besar-besaran dengan sistem tebang habis akan merusak lingkungan alam.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penebangan hutan dengan sistem tebang pilih dilakukan investor secara besar-besaran.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pentingnya Hutan&lt;br&gt;&lt;br&gt;
+Pada musim hujan sering terjadi banjir. Salah satu penyebab terjadinya banjir adalah rusaknya lingkungan alam. Kerusakan lingkungan alam menjadikan tanah kritis dan tandus sehingga tidak dapat ditanami. Semua itu terjadi karena penebangan hutan secara besar-besaran dengan sistem tebang habis. Kenyataan ini sering dilakukan oleh para investor asing sebagai pemegang Hak Penguasaan Hutan (HPH), yang mestinya menggunakan sistem tebang pilih, agar pepohonan di hutan tidak punah. Akan tetapi, kenyataannya mereka sering melanggar ketentuan pemerintah untuk mendapatkan keuntungan yang besar. Maka, yang terjadi adalah penggundulan hutan yang sewenang-wenang.&lt;br&gt;
+Kerusakan alam yang disebabkan oleh penggundulan hutan dapat menimbulkan bencana banjir. Pohon-pohon di hutan sebenarnya berfungsi sebagai penahan atau pelindung lapisan tanah agartidak terkikis dan terbawa oleh air hujan. Hal ini dapat kita bandingkan dengan tanggul yang dibuat orang di tebing-tebing sungai. Tanggul tersebut berfungsi sebagai pelindung tanah agartidak terkikis oleh air hujan.&lt;br&gt;
+Dengan adanya pepohonan di hutan yang jumlahnya ribuan, bahkan jutaan, air hujan dapat meresap ke dalam lapisan tanah dan tertahan oleh akar-akar pepohonan Ku. Dengan demikian, tumpahan air hujan tidak seluruhnya mengalir ke dataran yang rendah, melainkan sebagian meresap ke dalam tanah. Oleh karena itu, bahaya banjir pun dapat terelakkan. *&lt;br&gt;
+Hutan yang berfungsi sebagai pelindung adanya banjir, erosi, dan sebagainya sangat perlu dilindungi keberadaannya.&lt;br&gt;&lt;br&gt;
+Sumber Ensiklopedi Indonesia&lt;br&gt;&lt;br&gt;
+Isi paragraf ketiga wacana di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Adanya pepohonan di hutan maka air hujan akan tertahan oleh akar-akar pepohonan itu&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kerusakan alam yang disebabkan oleh pengundulan hutan dapat menimbulkan banjir&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kerusakan lingkungan alam menjadikan tanah kritis dan tandus sehingga tidak dapat ditanami&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penebangan hutan secara besar-besaran dengan sistem tebang habis mengakibatkan rusaknya alam&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pentingnya Hutan&lt;br&gt;&lt;br&gt;
+Pada musim hujan sering terjadi banjir. Salah satu penyebab terjadinya banjir adalah rusaknya lingkungan alam. Kerusakan lingkungan alam menjadikan tanah kritis dan tandus sehingga tidak dapat ditanami. Semua itu terjadi karena penebangan hutan secara besar-besaran dengan sistem tebang habis. Kenyataan ini sering dilakukan oleh para investor asing sebagai pemegang Hak Penguasaan Hutan (HPH), yang mestinya menggunakan sistem tebang pilih, agar pepohonan di hutan tidak punah. Akan tetapi, kenyataannya mereka sering melanggar ketentuan pemerintah untuk mendapatkan keuntungan yang besar. Maka, yang terjadi adalah penggundulan hutan yang sewenang-wenang.&lt;br&gt;
+Kerusakan alam yang disebabkan oleh penggundulan hutan dapat menimbulkan bencana banjir. Pohon-pohon di hutan sebenarnya berfungsi sebagai penahan atau pelindung lapisan tanah agartidak terkikis dan terbawa oleh air hujan. Hal ini dapat kita bandingkan dengan tanggul yang dibuat orang di tebing-tebing sungai. Tanggul tersebut berfungsi sebagai pelindung tanah agartidak terkikis oleh air hujan.&lt;br&gt;
+Dengan adanya pepohonan di hutan yang jumlahnya ribuan, bahkan jutaan, air hujan dapat meresap ke dalam lapisan tanah dan tertahan oleh akar-akar pepohonan Ku. Dengan demikian, tumpahan air hujan tidak seluruhnya mengalir ke dataran yang rendah, melainkan sebagian meresap ke dalam tanah. Oleh karena itu, bahaya banjir pun dapat terelakkan. *&lt;br&gt;
+Hutan yang berfungsi sebagai pelindung adanya banjir, erosi, dan sebagainya sangat perlu dilindungi keberadaannya.&lt;br&gt;&lt;br&gt;
+Sumber Ensiklopedi Indonesia&lt;br&gt;&lt;br&gt;
+Kesimpulan wacana di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pepohonan tidak dapat menampung air&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hutan perlu dilindungi keberadaannya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pepohonan di hutan jumlahnya jutaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Penggundulan hutan yang sewenang-wenang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Karena rajin dan jujur, pegawai baru itu menjadi tangan kanan atasannya. Arti tangan kanan pada kalimat di atas adalah orang...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dekat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kepercayaan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;yang dihormati&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;selalu disuruh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ibu Feni adalah seorang guru yang berhasil Beliau sangat terkenal. Apalagi setelah mendapat penghargaan dari pemerintah sebagai guru teladan. Akan tetapi, itu semua tidak membuat beliau sombong. Peribahasa yang sesuai dengan ilustrasi di atas adalah....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tong kosong nyaring bunyinya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Duduk sama rendah berdiri sama tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berakit-rakit ke hulu berenang-renang di tepian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bagai ilmu padi, makin tua makin menunduk&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Seperti menegakkan benang basah. Arti peribahasa di atas adalah....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;mengerjakan pekerjaan yang mustahil dapat dilaksanakan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pekerjaan sulit yang dikerjakan dengan penuh kesabaran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;melakukan pekerjaan dengan penuh tanggung jawab&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sesuatu yang sukar dikerjakan karena tidak terbiasa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ketika sedang beristirahat, ayah dan ibu membicarakan pembantunya yang baru. Dia bisa menyesuaikan diri dengan lingkungan rumah. Ungkapan perasaan ayah dan ibu terhadap pembantu barunya itu adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pembantu yang baru datang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bila ditanya dia tidak menjawab&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;syukurlah, dia bisa menyesuaikan diri&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dia ditempatkan di kamar belakang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;pertahankan&lt;br&gt;
+berlatih&lt;br&gt;
+berdagang&lt;br&gt;
+tercantik&lt;br&gt;
+membangun&lt;br&gt;
+dimakan&lt;br&gt;
+pedagang&lt;br&gt;&lt;br&gt;
+Deretan kata di atas yang termasuk kata kerja adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dipertahankan, membangun, berlatih, dimakan, berdagang&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dipertahankan, membangun, berlatih, dimakan, pedagang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membangun, dipertahankan, berlatih, pedagang, berdagang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;mempertahankan, membangun, berlatih, tercantik, berdagang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Istilah kesehatan terdapat pada kalimat....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Masalah pencemaran lingkungan hidup makin terasa di berbagai daerah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pak Medi menebang pohon beringin yang tumbuh di pekarangan rumahnya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dokter Arfi dengan cermat memeriksa dan meneliti tubuh pasien- pasiennya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Surat kabar adalah media komunikasi massa yang diterbitkan secara berkala&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ketika hujan lebat, aku disuruh oleh ibuku untuk mengantarkan tamu sampai mendapatkan angkot di tepi jalan. Waktu itu tamu ibuku memang tidak membawa payung,&lt;br&gt;
+Jumlah kata berimbuhan yang terdapat pada paragraf di atas adalah&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;6&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penulisan kata berimbuhan yang tepat terdapat pada kalimat..&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Kalian tidak boleh menyontoh tulisan yang kurang baiki&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hati-hati kamu mengkonsumsi barang-barang terlarang!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ibu meletakan jahitannya di ruangan paling ujung.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kami diperbolehkan mencontoh hasil pekerjaan orang lain.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sebelum berangkat sekolah, adik (sisir) dulu rambutnya supaya rapi, imbuhan yang tepat untuk melengkapi kata dalam kurung adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;me-&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;di-&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ber-&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ter-&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Korban bencana alam seperti tanah longsor dan banjir sangat memerlukan bantuan. Memang mereka tidak secara langsung meminta bantuan. Akan tetapi, jika kita melihat penderitaan mereka, kita merasa perlu menyisihkan sebagian harta kita untuk meringankan penderitaannya.&lt;br&gt;
+Jumlah kata berimbuhan me-kan pada paragraf di atas adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Memasuki wilayah Sumber Kabupaten Cirebon, pandangan kita akan tertuju pada bentangan jalan lurus. Jalan ini tertata apik dengan dibatasi trotoar bagi pejalan kaki. Di kiri kanannya terdapat pohon pelindung yang tetap dipertahankan sebagai paru-paru kota.&lt;br&gt;&lt;br&gt;
+Jumlah kata berimbuhan rtwpada paragraf di atas adalah....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Gedung itu (hancur) oleh amukan massa.&lt;br&gt;
+Imbuhan yang tepat untuk melengkapi kata dalam kurung adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;di&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;di-kan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ber-kan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;me-kan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bila setiap warga dapat menjaga .... niscaya kota ini akan menjadi bersih. Kata yang tepat untuk melengkapi kalimat di atas adalah....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;imitasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sanitasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;imajinasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;legalisasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pengedar narkoba itu ditangkap ketika sedang melakukan transaksi. Kata transaksi bermakna....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pembelian barang berupa obat terlarang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;persetujuan telah menjual suatu barang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;persetujuan jual beli di antara dua pihak&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penjualan barang kepada orang lain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dengan membaca, seseorang akan bertambah luas wawasannya. Wawasan berarti....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pandangan hidup&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pengamalan dirinya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kebiasaan sehari-hari&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pemahaman membaca&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;1. Saya melihat dia di depan rumah kosong.&lt;br&gt;
+2. Kemarin saya merancang pakaian pesta.&lt;br&gt;
+3. Pembicaraan Ami saat itu meyakinkan.&lt;br&gt;
+4. Saya tidak melihat Aji di tempat kejadian.&lt;br&gt;&lt;br&gt;
+Kalimat berita negatif terdapat pada nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ia... seorang fotografer, melainkan tukang memperbaiki kamera. Kata ingkar yang tepat untuk melengkapi kalimat di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;tak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bukan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tidak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tak bukan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;1. Hati-hati bila kamu akan menyeberang jalan!&lt;br&gt;
+2.Ibu melarang kakak membuang sampah ke sungai.&lt;br&gt;
+3. Bapak menasihati adik agar jangan berkelahi lagi.&lt;br&gt;
+4.Jangan dulu naik Pak, biar aku buatkan kopi dulu! &lt;br&gt;
+Kalimat-larangan terdapat pada nomor....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;1&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;2&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pada suatu hari. Ari diajak temannya memanjat pohon jambu. Karena Ari baru pertama kali memanjat pohon, akhirnya ia jatuh. Ari menangis karena sakit. Ibunya melarang Ari untuk memanjat pohon jambu itu lagi.&lt;br&gt;&lt;br&gt;
+Kalimat larangan ibu yang sesuai dengan ilustrasi di atas adalah ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Ayo, memanjat pohon jambu itu lagi!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kamu tidak boleh memanjat pohon jambu lagi!&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Silakan kamu memanjat pohon jambu lagi!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sebaiknya kamu memanjat pohon jambu lagi!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dokter Nono mengatakan bahwa Gubernur Jawa Barat sudah menganjurkan untuk melakukan &quot;Pekan Penimbangan&quot; agar kasus gizi buruk dapat segera terjaring. Dengan demikian, perencanaan penanganannya akan lebih akurat. Melalui &quot;Pekan Penimbangan&quot;, diharapkan balita se-Jawa Barat bisa ditimbang sehingga dapat diketahui balita yang kurang energi protein (KEP) nyata, kategori sedang, dan berat.&lt;br&gt;&lt;br&gt; Isi berita yang sesuai dengan paragraf di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Melalui &quot;Pekan Penimbangan&quot; kasus gizi buruk tidak dapat terjaring&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Dokter Nono menganjurkan untuk melakukan &amp;ldquo;Pekan Penimbangan&amp;rdquo;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tidak diharapkan balita di Jawa Barat tidak kekurangan energi protein&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pekan Penimbangan untuk mengetahui balita kurang energi protein&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sanitasi, pasien, hipertensi, imunisasi, infeksi, dosis.&lt;br&gt;
+Kata-kata istilah di atas bila disusun secara alfabetis maka susunannya adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;dosis, hipertensi, imunisasi, infeksi, pasien, sanitasi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dosis, hipertensi, infeksi, imunisasi, pasien, sanitasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dosis, infeksi, imunisasi, hipertensi, pasien, sanitasi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sanitasi, pasien, infeksi, imunisasi, hipertensi, dosis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penulisan tempat tanggal surat yang sesuai dengan EYD adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Bandung 10 Oktober 2000&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bandung 10-10 - 2000&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bandung. 10 Oktober 2000&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bandung, 10-Oktober-2000&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bila Anda mengamati bagan surat di samping, salam penutup ditulis pada nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;6&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;7&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pada liburan yang akan datang saya sekeluarga akan berkunjung ke TMI. Saya senang jika kamu ikut serta. Karena itu, kedatanganmu sangat saya tunggu.&lt;br&gt;&lt;br&gt;
+Maksud dari surat di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Merencanakan akan liburan bersama keluarga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Saya sebelumnya senang menghadapi liburan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Saya sekeluarga akan bertamasya ke TMI&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengajak teman bertamasya bersama ke TMI&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Penulisan kata sapaan yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Selamat pagi, bapak!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Silakan dicicipi kuenya, dik!&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sekarang Anda mau makan apa?&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Zainal tidak mempunyai saudara lagi.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Kata sapaan terdapat pada kalimat...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Saudara adik dibelikan ibu baju&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kemarin adik dibelikan ibu baju&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ayah dan ibu kami siap berangkat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Benarkah ibu saudara ayah saya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Andi     : &quot;Selamat siang, Bu&quot;&lt;br&gt;
+Ibu       : &amp;ldquo;Siang. Bagaimana kabarmu, Nak?&quot;&lt;br&gt;
+Andi     : &amp;ldquo;Baik. Saya dengar katanya Reno sakit.&quot;&lt;br&gt;
+Ibu       : &amp;ldquo;Iya. Kemarin sudah ibu bawa ke dokter.&quot;&lt;br&gt;&lt;br&gt;
+Jumlah kata sapaan pada dialog di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;2&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Dono   : &quot;Halo! Di sini Dono.&quot;&lt;br&gt;
+Dana   : &quot;Kebetulan, ...................?&lt;br&gt;
+Dono   : &quot;Jadi dong! Saya tunggu di tempat biasa yal Pukul 15.00.&quot;&lt;br&gt;
+Dana   : &quot;Okey. Sudah dulu ya, saya mau bersiap-siap.&amp;rdquo;&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi percakapan di atas adalah....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;&quot;Kamu harus jadi ikut latihan pianonya.&quot;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&quot;Bagaimana Dono, jadi tidak latihan pianonya?&quot;&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&amp;ldquo;Kamu pasti ragu-ragu ikut bermain piano.&quot;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;&amp;ldquo;Apakah kamu mau ikut latihan bermain piano?&quot;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Misalnya Anda akan menyampaikan informasi kepada guru seni tari bahwa Anda tidak dapat mengikuti latihan tari hari ini karena sakit. Pembicaraan Anda di telepon yang sesuai dengan ilustrasi di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Diberitahukan bahwa saya hari ini tidak latihan tari berhubung ada acara mendadak&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Adik saya sakit, Pak. Kebetulan ibu dan bapak tidak ada di rumah. Saya harus menjaganya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ini saya kelas 1D. Hari n saya tidak bisa latihan karena adik saya kesehatannya terganggu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ini Tiara kelas 1D. Saya mau memberitahukan bahwa hari ini saya tidak bisa mengikuti latihan tari.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pergi ke dunia luas anakku sayang pergi ke hidup bebas Selama angin masih angin buritan dan matahari pagi menyinari daun-daun dalam rimba dan padang hijau.&lt;br&gt;&lt;br&gt; Puisi di atas berisi tentang seorang ibu yang...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menguar anaknya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menasihati anaknya&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kehilangan anaknya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menyuruh anaknya pulang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Pergi ke dunia luas anakku sayang&lt;br&gt;
+pergi ke hidup bebas&lt;br&gt;
+Selama angin masih angin buritan&lt;br&gt;
+dan matahari pagi menyinari daun-daun&lt;br&gt;
+dalam rimba dan padang hijau&lt;br&gt;&lt;br&gt;
+Puisi di atas menggambarkan suasana...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;kekaguman&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kekecewaan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kesenangan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kesedihan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Tuhan sisihkanlah mendung itu&lt;br&gt;
+Jika gerimis sakit ibuku kambuh&lt;br&gt;
+Jalan yang kami tempuh masih jauh&lt;br&gt;
+Puisi di atas mengungkapkan perasaan...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;indah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;senang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sedih&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;gembira&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Setelah keadaan aman, Boni siap membidik. Bak seorang penembak yang tangguh, Boni mengokang senapan anginnya. Dia berjalan membungkuk sambil mengambil posisi yang tepat untuk menembak. Ada tiga ekor burung yang sedang bercengkrama. Dua masih kecil dan satunya sudah besar. Mungkin ibunya.&lt;br&gt;&lt;br&gt;
+Cerita di atas berisi tentang ....&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Boni seorang penembak yang sangat jauh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Boni siap menembak burung yang sedang bercengkrama&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Boni mengokang senapan angin sambil berjalan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Boni menunggu keadaan aman untuk membidik burung&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Sudah ayah bilang, jangan main-main dengan senapan angin. Ini malah digunakan untuk menembak burung-burung gereja. Bon, rasa sakit yang kau derita sama dengan rasa sakit yang diderita burung-burung gereja itu. Lagi pula, burung-burung itu kan mempunyai hak untuk hidup.&lt;br&gt;&lt;br&gt;
+Watak ayah dalam penggalan cerita di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;semangat&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penakluk&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pemberani&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;disiplin&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Ema : &quot;Begitulah Bu, kalau bermenantu dari keluarga kaya baru. Pantang baginya merendahkan diri mendatangi kita. Paling-paling kita disuruhnya untuk menghormati dia.&quot;&lt;br&gt;
+Ibu : &quot;Dasar orang kaya, bagaimana pun ibu tetap tidak mau mengalah. Apalagi kita dari pihak laki-laki.&quot;&lt;br&gt;&lt;br&gt;
+Watak ibu dari penggalan drama di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;keras&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pemarah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pemarah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sombong&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Hendra   : &quot;Rian cepat periksa pintu! Juga jendela, apakah sudah digerendel atau belum?&quot;&lt;br&gt;
+Ibu      : &quot;Aku takut. Kak. Kakak saja yang memenksanya. Masa aku yang paling kecil yang disuruh.&quot;&lt;br&gt;
+Hal yang menarik dari cuplikan drama di atas adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;pintu yang digerendel&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kakak menyuruh adik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;adik kedi yang ketakutan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;adik kedi yang disuruh&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

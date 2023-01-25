@@ -1,0 +1,38 @@
+@charset "utf-8";
+body.mceContentBody{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#222222;
+}
+body.mceContentBody p, body.mceContentBody li{
+	line-height:1.5;
+}
+body.mceContentBody blockquote{
+	background-color:#FBED92;
+	border:1px solid #F7C942;
+	color:#111111;
+	margin:8px 0px;
+	padding:10px 16px;
+}
+
+body.mceContentBody table td{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#222222;
+}
+body.mceContentBody table[border="1"]{
+	border-collapse:collapse;
+}
+body.mceContentBody table[border="1"] td{
+	padding:4px 5px;
+}
+body.mceContentBody table[border="0"] td{
+	padding:4px 0px;
+}
+body.mceContentBody table[border="1"] thead td{
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+body.mceContentBody table[border="1"] tfoot td{
+	background-color:#F8F8F8;
+}

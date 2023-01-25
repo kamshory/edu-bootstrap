@@ -1,0 +1,2667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan saksama!&lt;br&gt;
+(1) Pemerintah Kota Surabaya berencana membangun jalur trem sepanjang 17 km menghubungkan Wonokromo dan Kalimas. (2) Pembangunan trem itu akan menggunakan teknologi modern. (3) Akan tetapi, jalurnya menggunakan jalur trem lama karena lebih dari 80 persen masih bisa digunakan. (4) Jalur trem di Surabaya tak pernah secara resmi dibongkar.(5)  Ia terpendam di bawah aspal, tanah atau material lainnya.&lt;br&gt;&lt;br&gt;
+Kalimat utama paragraf tersebut terdapat pada kalimat nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan saksama!&lt;br&gt;
+Seiring perkembangan kota, Ooster Java Stoomtram Maatschappij (OJS), sebagai  perusahaan pengelola pembangunan trem, terus menambah jalur, terutama di dalam kota. Antara 1913-1916, jalur sisi barat ke pusat kota dibuka. Beberapa persimpangan jalur lalu dibuat untuk menghubungkan wilayah-wilayah yang terpisah, seperti dari Wonokromo dan Boulevard Darmo ke Willemspein (kini Jembatan Merah). &amp;ldquo;Orang sekarang dapat melakukan perjalanan setiap sepuluh menit atau kurang menggunakan trem yang semodern di Belanda,&amp;rdquo; tulis Howard W. Dick dalam Surabaya, City of Work: A Socioeconomic History, 1900-2000.&lt;br&gt;&lt;br&gt;
+Ide pokok paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;perkembangan kota&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penambahan jalur trem&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;trem sebagai penghubung&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perjalanan dengan trem&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pembangunan trem&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;[ Teks 1 ]&lt;br&gt;
+Akhir November atau awal Desember baru mulai hujan. Saat ini semacam transisi dari kemarau ke musim hujan,  Kemarin (Minggu) Bogor dan beberapa wilayah Jabodetabek sempat diguyur hujan, tapi sifatnya hanya spot-spot, belum luas. Ciri-ciri hujan di saat pancaroba yaitu turun dengan intensitas yang deras, namun dengan durasi yang pendek, tak sampai 30 menit. Kalau dilihat dari skala peta, luasan hujannya tidak terlalu luas.&lt;br&gt;&lt;br&gt;
+[ Teks 2 ]&lt;br&gt;
+Kalau sudah masuk musim hujan, hujannya bisa dari siang ke siang lagi. Bisa saja awalnya sangat deras, kemudian mengecil perlahan sampai benar-benar berhenti. Badan Meteorologi, Klimatologi dan Geofisika (BMKG) memperkirakan, puncak musim hujan akan berlangsung sejak bulan Januari hingga Februari. Kepala BMKG mengimbau masyarakat diharapkan tetap waspada meski diperkirakan intensitas curah hujan kali ini lebih rendah ketimbang musim hujan tahun lalu.&lt;br&gt;&lt;br&gt;
+Persamaan ide/topik dari kedua teks artikel tersebut...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;turun hujan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;curah hujan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hujan deras&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pancaroba&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hujan sedang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;[ Teks 1 ]&lt;br&gt; Akhir November atau awal Desember baru mulai hujan. Saat ini semacam transisi dari kemarau ke musim hujan, Kemarin (Minggu) Bogor dan beberapa wilayah Jabodetabek sempat diguyur hujan, tapi sifatnya hanya spot-spot, belum luas. Ciri-ciri hujan di saat pancaroba yaitu turun dengan intensitas yang deras, namun dengan durasi yang pendek, tak sampai 30 menit. Kalau dilihat dari skala peta, luasan hujannya tidak terlalu luas.&lt;br&gt;&lt;br&gt; [ Teks 2 ]&lt;br&gt; Kalau sudah masuk musim hujan, hujannya bisa dari siang ke siang lagi. Bisa saja awalnya sangat deras, kemudian mengecil perlahan sampai benar-benar berhenti. Badan Meteorologi, Klimatologi dan Geofisika (BMKG) memperkirakan, puncak musim hujan akan berlangsung sejak bulan Januari hingga Februari. Kepala BMKG mengimbau masyarakat diharapkan tetap waspada meski diperkirakan intensitas curah hujan kali ini lebih rendah ketimbang musim hujan tahun lalu.&lt;br&gt;&lt;br&gt; Perbedaan aspek pembahasan dari kedua teks tersebut adalah membahas...&lt;/p&gt;
+&lt;table style=&quot;width: 332px; height: 163px;&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;32&quot;&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;246&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;Teks I&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;308&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;Teks II&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;32&quot;&gt;
+&lt;p&gt;A.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;246&quot;&gt;
+&lt;p&gt;musim hujan&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;308&quot;&gt;
+&lt;p&gt;musim pancaroba&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;32&quot;&gt;
+&lt;p&gt;B.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;246&quot;&gt;
+&lt;p&gt;musim pancaroba&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;308&quot;&gt;
+&lt;p&gt;musim hujan&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;32&quot;&gt;
+&lt;p&gt;C.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;246&quot;&gt;
+&lt;p&gt;ciri musim hujan&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;308&quot;&gt;
+&lt;p&gt;ciri musim pancaroba&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;32&quot;&gt;
+&lt;p&gt;D.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;246&quot;&gt;
+&lt;p&gt;ciri hujan pancaroba&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;308&quot;&gt;
+&lt;p&gt;ciri musim hujan&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;32&quot;&gt;
+&lt;p&gt;E.&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;246&quot;&gt;
+&lt;p&gt;ciri hujan deras&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;308&quot;&gt;
+&lt;p&gt;ciri hujan sedang&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;A&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;B&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;C&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;D&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;E&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Warga melintas di Waduk Bade yang mengering, Klego, Boyolali, Jawa Tengah. Volume air Waduk Bade mulai menyusut akibat kemarau panjang sehingga mengancam kebutuhan pengairan untuk ratusan hektar lahan pertanian di wilayah itu. National Oceanic and Atmospheric Administration (NOAA) mengumumkan bahwa periode dari Januari sampai September 2015 merupakan yang terpanas sejak 1880. Selain itu, September 2015 merupakan bulan terpanas dalam catatan sejarah. Jadi, dengan sisa hanya tiga bulan, tahun 2015 kemungkinan besar akan menjadi tahun paling panas.&lt;br&gt;&lt;br&gt;
+Pernyataan yang sesuai dengan isi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tahun 2015 merupakan musim kemarau terpanjang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kemungkinan tahun 2015 akan menjadi tahun terpanas&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ratusan lahan pertanian kering karena musim kemarau&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lahan pertanian tidak terairi sehingga panen gagal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Waduk Bade di Boyolali kering kerontang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Warga melintas di Waduk Bade yang mengering, Klego, Boyolali, Jawa Tengah. Volume air Waduk Bade mulai menyusut akibat kemarau panjang sehingga mengancam kebutuhan pengairan untuk ratusan hektar lahan pertanian di wilayah itu. National Oceanic and Atmospheric Administration (NOAA) mengumumkan bahwa periode dari Januari sampai September 2015 merupakan yang terpanas sejak 1880. Selain itu, September 2015 merupakan bulan terpanas dalam catatan sejarah. Jadi, dengan sisa hanya tiga bulan, tahun 2015 kemungkinan besar akan menjadi tahun paling panas.&lt;br&gt;&lt;br&gt;
+Mengapa waduk Bade mengancam pengairan untuk lahan pertanian di wilayah Boyolali? Karena...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;air Waduk Bade kering kerontang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ratusan lahan pertanian mengering&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;wilayah Boyolali dilanda kekeringan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;musim kemarau sangat panjang&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;volume air Waduk Bade menyusut&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah paragraf berikut dengan saksama!&lt;br&gt;
+(1) CNN menyebutkan kemarau tahun ini diperkirakan merupakan musim kemarau terpanas sejak manusia menyimpan catatan rinci tentang cuaca. (2) Kemungkinan  besar kemarau tahun ini menjadi musim kemarau terpanas dalam 4.000 tahun. (3) Potensi El Nino tahun ini yang menyebabkan terjadinya kenaikan suhu di bumi bukan karena El Nino saja sehingga temperatur bumi melonjak seperti sekarang. (4) Namun, Gas rumah kaca juga mempunyai peran, (5) Kepala BMKG menyebutkan daerah-daerah di Indonesia yang berpotensi terkena dampak El Nino 2015 meliputi Sumatera Selatan, Lampung, Jawa, Bali, Nusa Tenggara, Kalimantan Selatan (Kalsel), dan Sulawesi Selatan (Sulsel).&lt;br&gt;&lt;br&gt;
+Kalimat yang tidak padu dalam paragraf tersebut adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati teks diskusi berikut!&lt;/p&gt;
+&lt;table style=&quot;width: 100%;&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;111&quot;&gt;
+&lt;p&gt;Kepala Sekolah&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;10&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;ldquo;Rencana perayaan hari ulang tahun sekolah sebaiknya diadakan di mana ya?&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;111&quot;&gt;
+&lt;p&gt;Pak Heru&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;10&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;ldquo;Menurut saya, lebih baik kita menyewa gedung yang lebih bagus karena perayaan ulang tahun sekolah merupakan kegiatan istimewa.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;111&quot;&gt;
+&lt;p&gt;Kepala Sekolah&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;10&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;ldquo;Kalau menyewa gedung kita tidak mempunyai anggaran.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;111&quot;&gt;
+&lt;p&gt;Bu Juni&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;10&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;ldquo;Kalau tidak ada anggarannya, menurut saya lebih baik kita manfaatkan halaman sekolah yang luas ini.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;111&quot;&gt;
+&lt;p&gt;Bu Eni&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;10&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;ldquo;Saya setuju dengan Bu Juni, kita tidak perlu di gedung yang bagus, tetapi kita kemas acaranya yang menarik.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;111&quot;&gt;
+&lt;p&gt;Kepala Sekolah&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;10&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;ldquo;Saya juga setuju dengan pendapat Bu Juni dan Bu Eni&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Simpulan diskusi tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Sekolah akan menyewa gedung mewah untuk merayakan ulang tahunnya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kepala sekolah sangat setuju perayaan ulang tahun sekolah di gedung&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perayaan hari ulang tahun sekolah akan diadakan di halaman sekolah&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perayaan ulang tahun sekolah akan dimeriahkan di gedung yang bagus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Acara ulang tahun sekolah akan dikemas dengan bagus dan mewah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati teks dialog berikut!&lt;/p&gt;
+&lt;table style=&quot;width: 100%;&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;60&quot;&gt;
+&lt;p&gt;Ayah&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;2&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;ldquo;Bu,&amp;nbsp; Risa di mana?&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Ibu&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;2&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;ldquo;Sedang belajar di kamarnya.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Ayah&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;2&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;ldquo; Panggil dulu sebentar, Ayah ada perlu.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Ibu&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;2&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;nbsp;&amp;ldquo; Ada perlu apa? Jangan diganggu. Nanti saja setelah belajar.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Ayah&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;2&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;nbsp;&amp;ldquo; Penting sekali, Ayah mau tanya nomor telepon ayah temannya.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Ibu&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;2&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;nbsp;&amp;ldquo; Sabar, Yah, sebentar lagi juga Risa selesai belajarnya.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Ayah&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;2&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&amp;ldquo; Baiklah kalau begitu, Bu.&amp;rdquo;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Simpulan dari dialog tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Ibu memanggil Risa yang sedang belajar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ayah marah-marah terhadap ibu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ayah menunggu Risa sampai selesai belajar&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ayah berkeras agar Risa dipanggil ibu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ibu menolak ayah untuk memanggil Risa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Badan Meteorologi, Klimatologi dan Geofisika (BMKG) menyatakan musim kemarau di beberapa daerah di Indonesia diperkirakan akan berakhir di awal Oktober. Daerah yang musim penghujannya jatuh di awal Oktober, di antaranya Jawa Timur, Nusa Tenggara Timur, Nusa Tenggara Barat, Bali. Untuk daerah lain, musim penghujan diperkirakan jatuh di awal bulan November, mencakup sebagian wilayah Jawa Tengah, Aceh, serta daerah lainnya. Untuk daerah yang saat ini mengalami musim kemarau akan berakhir paling banyak di bulan November karena di bulan itu akan turun hujan.&lt;br&gt;&lt;br&gt;
+Simpulan paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Musim kemarau akan berakhir di awal Oktober&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jawa Timur akan mengalami musim hujan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;November merupakan awal musim kemarau&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Oktober merupakan awal musim kemarau&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;November akan turun hujan dengan deras&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Menciptakan sebuah sekolah yang berkualitas itu tidak mudah. Antara kepala sekolah, guru, karyawan, dan siswa harus bekerja sama. Kepala sekolah harus dapat membuat program yang dapat direalisasikan dengan keadaan sekolah. Guru dan karyawan menjalankan program yang telah disusun kepala sekolah. Siswa mengikuti aturan yang telah tercantum dalam program tersebut. Demikian juga membangun sebuah rumah yang kokoh, diperlukan kerjasa sama antara pembuat gambar rumah, mandor, dan tukang bangunan. Pembuat gambar rumah merancang bentuk bangunan dan bahan-bahan yang diperlukan. Mandor mengawasi para tukang bangunan yang membangun rumah dengan mengikuti gambar yang telah dipersiapkan. Dengan demikian, ...&lt;br&gt;&lt;br&gt;
+Simpulan paragraf analogi tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Menciptaka sekolah yang berkualitas seperti halnya membangun rumah yang kokoh.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Membangun rumah yang berkualitas tidak semudah yang kita duga sebelumnya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Melaksanakan sekolah yang berkualitas dibutuhkan kerja sama yang baik.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kerja sama antara sekolah dan orang tua sangat diperlukan dalam membangun sekolah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Membangun sekolah yang berkualitas seperti menciptakan pendidikan yang baik.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kutipan biografi berikut!&lt;br&gt;
+Ali Sadikin (dilahirkan di Sumedang, 7 Juli 1927 &amp;ndash; meninggal di Singapura, 20 Mei 2008 pada umur 80 tahun) adalah seorang letnan jenderal KKO-AL (Korps Komando Angkatan Laut) yang ditunjuk oleh Presiden Soekarno menjadi Gubernur Jakarta pada tahun 1966  untuk membangun Ibu Kota Republik. Selama menjadi gubernur ia sangat merakyat dan dicintai rakyatnya. Karena itu, ia disapa akrab oleh penduduk kota Jakarta dengan panggilan Bang Ali.  Gubernur DKI Jakarta ini  sangat berjasa dalam mengembangkan Jakarta menjadi sebuah kota metropolitan yang modern. Di bawah kepemimpinannya Jakarta mengalami banyak perubahan karena proyek-proyek pembangunan buah pikiran Bang Ali, seperti Taman Ismail Marzuki, Kebun Binatang Ragunan, Proyek Senen, Taman Impian Jaya Ancol, Taman Ria Monas, Taman Ria Remaja, kota satelit Pluit di Jakarta Utara, dan pelestarian budaya Betawi di kawasan Condet. Bang Ali juga mencetuskan pesta rakyat setiap tahun pada hari jadi kota Jakarta, 22 Juni. Bersamaan dengan itu berbagai aspek budaya Betawi dihidupkan kembali, seperti kerak telor, ondel-ondel, lenong, topeng Betawi, dan sebagainya.&lt;br&gt;&lt;br&gt;
+Keteladanan dari sosok Ali Sadikin sesuai kutipan tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Menciptakan berbagai seni budaya Betawi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Membangun kota Jakarta dengan sukses&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mencetuskan pesta rakyat setiap tahun&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menghidupkan kembali budaya Betawi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Selama menjabat gubernur ia merakyat&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati grafik berikut!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;c10d11_13.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Simpulan isi grafik tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>c10d11_13.gif</name>
+		<type>image/gif</type>
+		<encoding>base64</encoding>
+		<data>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</data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Pengunjung perpustakaan paling banyak tahun 2005&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Setiap bulan pengunjung perpustakaan naik terus&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Tahun 2004 pengunjung perpustakaan paling sedikit&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Setiap bulan pengunjung perpustakaan menurun&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pengunjung perpustakaan setiap bulannya stabil&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kutipan tajuk rencana berikut!&lt;br&gt;
+Tarik-menarik urusan perdesaan Kementerian Dalam Negeri dengan Kementerian Desa, Pembangunan Daerah Tertinggal, dan Transmigrasi mulai picu kekhawatiran. Salah satu bentuk kekhawatiran itu adalah terhambatnya pencairan dana desa yang seharusnya bisa dicairkan pada pertengahan tahun 2015. Kita bersyukur kekhawatiran tersebut ditepis Menteri Sekretaris Negara yang menjamin, pencairan dana desa tidak akan terganggu meskipun masih ada tarik-menarik kewenangan antara Kementerian Dalam Negeri dan Kementerian Desa, Pembangunan Daerah Tertinggal, dan Transmigrasi (Kementerian Desa). Perdebatan  tersebut harus segera dituntaskan presiden sebelum muncul spekulasi bahwa tarik-menarik kewenangan tersebut adalah karena keinginan kementerian mengelola dana desa yang besar. Selain itu,  perlu ada pendampingan terhadap perangkat desa yang akan mengelola dana desa yang berjumlah besar itu. Sistem transparan dan akuntabel yang bisa diakses publik harus dapat dikembangkan. Sistem harus dibangun untuk mencegah terjadinya penyalahgunaan dana desa untuk kepentingan lain yang pada ujungnya niat untuk membangun desa tidak tercapai.&lt;br&gt;&lt;br&gt;
+Masalah yang diungkapkan dalam kutipan tajuk rencana tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;tarik-menarik urusan kedesaan antara kementerian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kewenangan pembangunan desa tertinggal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kekhawatiran terhambatnya pencairan dana desa&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dana pembangunan desa yang tak kunjung cair&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;ketidaktransparanan terhadap dana desa&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kutipan tajuk rencana berikut!&lt;br&gt;
+Tarik-menarik urusan perdesaan Kementerian Dalam Negeri dengan Kementerian Desa, Pembangunan Daerah Tertinggal, dan Transmigrasi mulai picu kekhawatiran. Salah satu bentuk kekhawatiran itu adalah terhambatnya pencairan dana desa yang seharusnya bisa dicairkan pada pertengahan tahun 2015. Kita bersyukur kekhawatiran tersebut ditepis Menteri Sekretaris Negara yang menjamin, pencairan dana desa tidak akan terganggu meskipun masih ada tarik-menarik kewenangan antara Kementerian Dalam Negeri dan Kementerian Desa, Pembangunan Daerah Tertinggal, dan Transmigrasi (Kementerian Desa). Perdebatan  tersebut harus segera dituntaskan presiden sebelum muncul spekulasi bahwa tarik-menarik kewenangan tersebut adalah karena keinginan kementerian mengelola dana desa yang besar. Selain itu,  perlu ada pendampingan terhadap perangkat desa yang akan mengelola dana desa yang berjumlah besar itu. Sistem transparan dan akuntabel yang bisa diakses publik harus dapat dikembangkan. Sistem harus dibangun untuk mencegah terjadinya penyalahgunaan dana desa untuk kepentingan lain yang pada ujungnya niat untuk membangun desa tidak tercapai.&lt;br&gt;&lt;br&gt;
+Opini penulis dalam kutipan tajuk rencana tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tidak perlu ada perdebatan tentang terhambatnya dana desa untuk pembangunan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pengembangan desa tertinggal akan sulit terwujud jika dana belum cair&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Presiden harus tegas dalam menentukan hak kelola dana desa tertinggal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Perlu ada pendampingan terhadap perangkat desa yang akan mengelola dana desa.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Harus ada laporan yang transparan setiap dana desa yang dikeluarkan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+(1) Kabut asap tebal dari kebakaran hutan telah menyelimuti sebagian Kalimantan selama seminggu terakhir. (2) Jumlah titik panas yang ditemukan setiap hari di daerah tersebut dapat berubah karena faktor seperti kecepatan suhu, curah hujan, kelembaban, dan angin. (3) Namun demikian,  kabut itu tidak memiliki dampak signifikan pada operasi di bandara. (4)  Hanya pada hari Selasa kabut itu sangat buruk sehingga beberapa penerbangan ditunda hingga dua jam. (5) Saat suhu tinggi, kelembaban rendah dan angin kencang yang umum, tersedak kabut dari kebakaran hutan dapat menimbulkan masalah kesehatan utama bagi orang-orang di seluruh wilayah itu.&lt;br&gt;&lt;br&gt;
+Kalimat berupa fakta dalam teks tersebut adalah nomor &amp;hellip; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Bacalah teks berikut!&lt;br&gt;
+(1) Kabut asap tebal dari kebakaran hutan telah menyelimuti sebagian Kalimantan selama seminggu terakhir. (2) Jumlah titik panas yang ditemukan setiap hari di daerah tersebut dapat berubah karena faktor seperti kecepatan suhu, curah hujan, kelembaban, dan angin. (3) Namun demikian,  kabut itu tidak memiliki dampak signifikan pada operasi di bandara. (4)  Hanya pada hari Selasa kabut itu sangat buruk sehingga beberapa penerbangan ditunda hingga dua jam. (5) Saat suhu tinggi, kelembaban rendah dan angin kencang yang umum, tersedak kabut dari kebakaran hutan dapat menimbulkan masalah kesehatan utama bagi orang-orang di seluruh wilayah itu.&lt;br&gt;&lt;br&gt;
+Tujuan penulis dalam teks tersebut adalah &amp;hellip; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Mengimbau agar berhati-hati terhadap kabut asap&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menginformasikan dampak kabut asap dari kebakaran&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memberitahukan bahwa beberapa penerbangan ditunda&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Menjelaskan curah hujan sangat kurang ketika kebakaran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengajak agar masyarakat tidak membakar hutan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati judul karya tulis berikut!&lt;br&gt;
+Mengenal lebih dekat air terjun seweru di lereng gunung wilis&lt;br&gt;&lt;br&gt;
+Perbaikan penulisan judul tersebut yang tepat adalah &amp;hellip; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Mengenal lebih Dekat air terjun Seweru di lereng gunung Wilis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengenal lebih dekat air terjun Seweru di lereng Gunung Wilis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengenal lebih Dekat Air Terjun Seweru di Lereng gunung Wilis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengenal Lebih Dekat Air Terjun Seweru di Lereng Gunung Wilis&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengenal Lebih Dekat Air Terjun Seweru Di Lereng Gunung Wilis&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati ilustrasi berikut!&lt;br&gt; Nova Ruliza sarjana ekonomi, dilahirkan di Palembang tg 18 November 1990, agama Islam, tempat tinggal di Jln. Duta Garden No. 15, Kota Tangerang melamar pekerjaan pada perusahaan swaata.&lt;br&gt;&lt;br&gt; Penulisan pemerian identitas pelamar yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;table style=&quot;width: 100%;&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;140&quot;&gt;
+&lt;p&gt;Nama&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;4&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Nova Ruliza, S.E.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Tempat, tanggal lahir&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Palembang, 18 November 1990&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Agama&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Islam&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Alamat&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Jln. Duta Garden No. 15, Kota Tanggerang&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;table style=&quot;width: 100%;&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;140&quot;&gt;
+&lt;p&gt;Nama&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;4&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Nova Ruliza, S.E.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Tempat, tanggal lahir&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Palembang, 18 November 1990&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Agama&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Islam&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Alamat&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Jln. Duta Garden No. 15, Kota Tanggerang&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;table style=&quot;width: 100%;&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;140&quot;&gt;
+&lt;p&gt;Nama&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;4&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Nova Ruliza, S.E.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Tempat, tanggal lahir&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Palembang, 18 November 1990&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Agama&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Islam&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Alamat&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Jalan Duta Garden No. 15, Kota Tanggerang&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;table style=&quot;width: 100%;&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;140&quot;&gt;
+&lt;p&gt;nama&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;4&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Nova Ruliza, S.E.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;tempat, tanggal lahir&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Palembang, 18 November 1990&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;agama&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Islam&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;alamat&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Jalan Duta Garden No. 15, Kota Tanggerang&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;table style=&quot;width: 100%;&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;140&quot;&gt;
+&lt;p&gt;Nama&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;4&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Nova Ruliza, S.E.&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Tempat/tanggal lahir&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Palembang, 18 November 1990&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Agama&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Islam&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Alamat&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;:&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Jln. Duta Garden No. 15, Kota Tanggerang&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati silogisme berikut!&lt;/p&gt;
+&lt;table style=&quot;width: 100%;&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;94&quot;&gt;
+&lt;p&gt;Premis Umum&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot; width=&quot;4&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Semua siswa SMA kelas XII akan mengikuti ujian nasional&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Premis Khusus&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Alia siswa SMA kelas XII&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Kesimpulan&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;p&gt;Alia akan mengikuti ujian nasional&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;Entimem yang sesuai dengan silogisme tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Ujian nasional harus diikuti semua siswa SMA kelas XII&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Alia sebagai siswa SMA kelas XII harus mengikuti ujian nasional&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Alia siswa SMA kela XII karena ia akan mengikuti ujian nasioanal&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ujian Nasional akan diikuti Alia karena ia siswa SMA kelas XII&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Alia akan mengikuti ujian nasional karena ia siswa kelas XII&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Untuk mencegah penularan KLB Hepatitis A, IPB telah melakukan respon cepat dengan melakukan pemeriksaan kesehatan mahasiswa. ... Selain pemeriksaan kesehatan, IPB juga melakukan sosialisasi mengenai gizi seimbang, keamanan pangan, profil kantin IPB, serta tindakan kuratif dan preventif hepatitis.&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi paragraf eksposisi tersebut adalah &amp;hellip; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Hingga kemarin sore, sudah 204 mahasiswa yang memeriksakan kondisi kesehatannya.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hepatitis sebagai tamparan keras buat IPB yang banyak melahirkan ahli pangan dan gizi.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;IPB ini juga sempat menganalisis penyebab hepatitis yang menjangkiti 29 mahasiswa.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mahasiswa yang terjangkit hepatitis dirawat dan satu di antaranya meninggal dunia.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Berita hepatitis dituangkan dalam keterangan persnya sebagai tamparan untuk IPB.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Masyarakat perlu disadarkan akan pentingnya kesehatan lingkungan yang baik jika ingin menciptakan komunitas yang sehat dan bahagia. Apabila mereka mampu menjaga lingkungan dengan baik secara tanggung jawab, munculnya banyak penyakit, yang umumnya dikarenakan adanya lingkungan kotor, dapat dihindari. Saat melakukan proses inisiasi pengenalan kesehatan lingkungan, dibutukan kesadaran segenap elemen masyarakat sehingga tujuan dari terciptanya kesehatan secara menyeluruh dapat dirasakan oleh semua pihak yang nantinya manfaat dari kesehatan lingkungan juga dapat menguntungkan segenap masyarakat. Komitmen kuat dari dalam diri masing-masing orang di satu lingkungan tersebut menjadi proses awal yang harus dibangun. Tanpa adanya kesepakatan dan komitmen bersama, mustahil kesehatan lingkungan dapat tercipta mengingat jika lingkungan satu tidak terjaga kebersihannya.&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi paragraf argumentasi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Lingkungan yang bersih akan tercipta kesehatan yang tinggi.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Hal ini akan memengaruhi buruknya kebersihan daerah lainnya.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Karena itu, semua masyarakat Indonesia harus menjaga lingkungan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lingkungan yang kotor membuat lingkungan kita tidak nyaman.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lingkungan harus selalu kita jaga agar tidak terjangkit penyakit.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Plastik dan segala jenis barang yang dibuat dari plastik sangat sulit untuk didaur ulang. Sampah plastik dan barang dari plastik baru akan terurai atau hancur di dalam tanah dalam jangka waktu kurang lebih 200-1000 tahun kemudian. Apabila dibakar, plastik akan mengahasilkan  kimia yang beracun dan menimbulkan berbagai penyakit seperti menyumbat saluran pernafasan, kanker paru-paru, mengganggu kesuburan, dan sebagainya. &lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi paragraf persuasi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Dengan demikian, berhati-hatilah  dalam memanfaatkan barang-brang berbahan plastik.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Maka, Jauhilah penggunaan barang-barang yang terbuat dari bahan plastik.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Karena itu, setiap plastik yang kita gunakan pasti menimbulkan dampak negatif&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jadi, agar kesehatan kita tetap terjaga, hindarilah penggunaan barang dari plastik&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Oleh karena itu, jangan memakai plastik karena sangat tidak baik bagi kesehatan.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Kamar bernuansa pohon terdapat  di Taman Buah Mekarsari. Kamar bernuansa pohon tersebut terbuat dari kayu dengan beton besar sebagai penyangga yang menyerupai batang pohon. Setiap kamar di tempat itu tampak dilengkapi dengan pendingin AC . ... Di malam hari udara  terasa dingin. Di sekitar taman tertata rapi tempat  duduk dan meja yang terbuat dari kayu. Taman itu dihiasi cahaya lampu warna-warni.&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi paragraf deskripsi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Warna cat rumah singgah itu lembut membuat nyaman.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Vila itu tampak asri dan sejuk dengan pepohonan yang rindang.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Pohon-pohon tumbuh di depan kamar itu membuat udara sejuk.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Taman di depan kamar itu dipenuhi bunga yang sedang mekar.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Kamar terebut cukup luas, bisa memuat hingga empat orang.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Adegan di video ini membuat saya terharu. Seorang ibu dan anaknya sedang makan bersama. ... Betapa sayangnya si ibu kepada anak. Bukan hanya itu, Si ibu sangat sedih melihat perlengkapan sekolah anaknya serbaminim. Sepatu sudah tidak layak pakai. Alat tulis pun hanya satu-satunya. Ketika si anak berangkat sekolah, ibunya melihat pensil anaknya tertinggal di rumah. Si ibu panik. Dia tahu, hari ini anaknya akan melaksanakan ujian. Si ibu pun berjuang keras untuk bisa mengantarkan pensil itu ke sekolah.&lt;br&gt;&lt;br&gt;
+Kalimat yang tepat untuk melengkapi paragraf narasi tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Mereka sangat menikmati makanannya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Si ibu membagi lauk bagiannya untuk anak.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Anaknya tampak makan dengan lahap.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Lauk-pauk yang dihidangkan sedikit.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Nasi dan lauknya hanya untuk berdua&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kutipan teks pidato berikut!&lt;br&gt;
+Selamat pagi, Anak-anak!&lt;br&gt;
+Sebentar lagi kalian akan menghadapi ujian nasional. Walaupun ujian nasional tidak menjadi syarat kelulusan, tetapi sangat berpengaruh terhadap harga diri kalian. Jika kalian mendapat nilai rendah betapa malunya. Yang malu bukan saja diri kalian, tetapi guru dan sekolah pun merasa malu. Karena itu, ...&lt;br&gt;&lt;br&gt;
+Kalimat imbauan yang tepat untuk melengkapi teks  tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;janganlah banyak bermain karena akan mengganggu belajar kalian.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;kalian jangan lagi menonton televisi karena akan mengganggu konsentrasi.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;konsentrasilah setiap kalian belajar agar apa yang dipelajari bisa dipahami.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;belajarlah dengan sungguh-sungguh agar mendapat nilai yang memuaskan.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;banyaklah membaca karena ilmu pengetahuan kalian akan bertambah.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;27.	Cermati kalimat-kalimat berikut!&lt;br&gt;
+(1)	Namun, si pemuda akhirnya gagal melewati gajah-gajah tersebut.&lt;br&gt;
+(2)	Bahkan, motornya pun terjatuh. &lt;br&gt;
+(3)	Seorang pemuda mungkin sedang menguji nyalinya.&lt;br&gt;
+(4)	Beruntung si pemuda selamat. &lt;br&gt;
+(5)	Para gajah pun kemudian mengerubunginya.&lt;br&gt;
+(6)	Ia melewati gerombolan gajah yang sedang melintas dengan menggunakan sepeda motor.&lt;br&gt;&lt;br&gt;
+Urutan kalimat yang tepat sehingga menjadi paragraf  yang baik adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1), (3), (6), (5), (2), (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (1), (6), (1), (4), (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (6), (1), (2), (5), (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3), (6), (2), (1), (5), (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4), (3), (6), (2), (1), (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati dialog berikut!&lt;br&gt; Guru : &amp;ldquo;Adit, kemarin ke mana tidak masuk sekolah?&lt;br&gt; Adit : &amp;ldquo;&lt;em&gt;Ngantar mamaku ke rumah sakit, Bu&lt;/em&gt;&amp;rdquo;&lt;br&gt; Guru : &amp;ldquo;Sakit apa?&amp;rdquo;&lt;br&gt; Adit : &amp;ldquo;Darah tingginya kambuh,Bu.&amp;rdquo;&lt;br&gt; Guru : &amp;ldquo;Sekarang keadaannya bagaimana?&amp;rdquo;&lt;br&gt; Adit : &amp;ldquo;Alhamdulilah, tekanan darahnya sudah normal.&amp;rdquo;&lt;br&gt; Guru : &amp;ldquo;Syukurlah kalau begitu.&amp;rdquo;&lt;br&gt;&lt;br&gt; Perbaikan kalimat yang tercetak miring dalam dialog tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Antar ibuku ke rumah sakit, Bu.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Antar ibu saya ke rumah sakit, Bu.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengantar ibuku ke rumah sakit, Bu.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengantar mama saya ke rumah sakit, Bu&amp;rdquo;&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mengantar ibu saya ke rumah sakit, Bu.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Terciptanya masyarakat sehat yang mandiri dan berkemampuan akan menjadi harapan tersendiri saat mereka berhasil mengaplikasikan kesehatan lingkungan dengan baik. Jika masyarakat sehat, maka  akan menciptakan generasi yang mandiri. Masyarakat memiliki jiwa dan badan yang sehat tentunya akan memberikan semangat tersendiri, serta rasa fokus bagi mereka dalam bekerja. Mereka tidak akan terbebani untuk berobat ke dokter sehingga konsentrasi dalam bekerja akan semakin meningkat. Ketika mereka sudah mandiri secara finansial, maka mereka berkemampuan untuk mengaktulisasikan diri dalam kehidupan masing-masing.&lt;br&gt;&lt;br&gt;
+Perbaikan kalimat yang tercetak miring sehingga menjadi efektif dalam paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Jika masyarakat sehat, akan menciptakan generasi yang mandiri.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Masyarakat sehat, tentu generasi penerus akan sehat pula.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Jika masyarakat sehat, mereka akan tercipta jiwa yang sehat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Generasi yang mandiri, disebabkan karena lingkungan sehat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Masyarakat yang sehat karena tercipta oleh lingkungan sehat.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Saat menggerakkan masyarakat agar sadar pentingnya kebersihan bagi kehidupan, mereka memerlukan contoh konkret yang bisa dilihat dari program pemerintah dalam mendukung kesehatan lingkungan, juga menjadi bentuk dukungan pemerintah agar masyarakatnya tetap berfokus pada  ...  lingkungan yang lebih baik. Pelaksanaan beberapa aktivitas dalam ... kesadaran masyarakat untuk menjaga lingkungannya tetap bersih dapat dilakukan dengan program  ...  masal di daerah yang memungkinkan tempat berkumpulnya sumber penyakit seperti tempat pembuangan sampah akhir, sungai, gorong-gorong, hingga rumah masing-masing warga dapat mewujudkan terbangunnya komunitas pecinta kebersihan.&lt;br&gt;&lt;br&gt;
+Kata berimbuhan yang tepat untuk melengkapi paragraf tersebut adalah &amp;hellip; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menciptakan, penggalangan, membersihkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membersihkan, menciptakan, penggalian&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penciptaan, menggalang, pembersihan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pembersihan, penciptaan, menggali&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membersihkan, diciptakan, dibersihkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Rizki terpilih menjadi ketua kelas. Teman-temannya memilih dia karena Rizki memiliki rasa  ... yang tinggi. Selain itu, ia juga dapat ...  semua tugas diberikan kepadanya. Selain bersikap baik, ia juga memiliki kecerdasan yang sangat tinggi. &lt;br&gt;&lt;br&gt;
+Penulisan kata gabung yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;tanggung-jawab, mempertanggung jawabkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bertanggungjawab, mempertanggung-jawabkan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;tanggung jawab, mempertanggungjawabkan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bertanggung jawab, pertanggungjawaban&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;bertanggung-jawab, pertanggungjawaban&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+(1) Taman Nasional (TN) Gunung Halimun Salak adalah lokasi ekowisata favorit di Jawa Barat. (2) Taman nasional ini merupakan hutan dataran rendah terbesar di Jawa dan merupakan rumah bagi banyak spesies termasuk beberapa spesies flora dan fauna yang dikawatirkan akan terancam punah. (3) Secara geografis, TN Gunung Halimun Salak yang memiliki topografi berbukit-bukit dan bergunung-gunung termasuk ke dalam wilayah tiga kabupaten, yakni Kabupaten Bogor dan Sukabumi di Jawa Barat, dan Lebak di Provinsi Banten. (4) Kekayaan hayati kawasan taman nasional ini menjadi pusat perhatian yang  menarik bagi para peneliti dalam dan luar negeri. (5) Selain itu, pengunjung juga bisa bersantai di air terjun yang berada di kawasan. &lt;br&gt;&lt;br&gt;
+Kalimat tunggal dalam paragraf tersebut adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat majemuk campuran berikut!&lt;br&gt;
+Ornamen  China menambah keindahan yang menjadi keunikan tersendiri bagi arsitektur masjid yang memiliki ukuran sekitar 21 x 11 meter dan bangunan utama sebesar 11 x 9 meter.&lt;br&gt;&lt;br&gt;
+Klausa atasan dalam kalimat majemuk tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Menjadi keunikan tersendiri bagi arsitektur masjid&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ornamen China memiliki keunikan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Memiliki ukuran sekitar 21 x 11 meter&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ornamen China menambah keindahan&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bangunan utama sebesar 11 x 9 meter.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat majemuk campuran berikut!&lt;br&gt;
+Puisi yang digubah anak itu menarik sekali sehingga mendapat nilai tertinggi dari dewan juri.&lt;br&gt;&lt;br&gt;
+Klausa adjektiva dalam kalimat majemuk tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Puisi digubah anak itu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Anak itu mendapat nilai&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Puisi menarik sekali&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Mendapat nilai tertinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Anak itu menarik sekali&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!\&lt;br&gt;
+Dalam program tersebut, pemerintah perlu mendukung dalam memberikan peralatan atau menyediakan segala sesuatu yang terkait dalam mendukung upaya masyarakat terhadap kesehatan lingkungan tersebut sehingga komunikasi dapat terjalin dan sinergi antara masyarakat dengan pemerintah. Pihak terkait  ...  dinas kesehatan juga memiliki kontribusi signifikan dalam memonitor serta memberikan pengarahan kepada masyarakat ...  menciptakan kesehatan lingkungan. Mereka sebaiknya secara berkala melakukan sosialiasi kepada warga mengenai masalah kesehatan apa yang saat ini mungkin dihadapi dalam sebuah lingkungan, sehingga kounitas masyarakat dapat menyumbangkan solusinya.  ... ,  apa yang menjadi tujuan bersama dapat terwujud. Masyarakat jelas sangat dibutuhkan kontribusinya dalam hal ini karena mereka yang sangat memahami kondisi dan lingkungan mereka.&lt;br&gt;&lt;br&gt;
+Kata penghubung yang tepat untuk melengkapi paragraf tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;jika, agar, oleh karena itu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;seperti, untuk, dengan demikian&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;apabila, sampai, demikian juga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;misalnya, agar, demikian juga&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;dan, untuk, oleh sebab itu&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat berikut!&lt;br&gt;
+Ayah meninggikan lantai rumah agar tidak terkena banjir.&lt;br&gt;&lt;br&gt;
+Makna gramatikal kata meninggikan dalam kalimat tersebut adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;menjadi tinggi&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;membuat lebih tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menjadi sangat tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menambah agar tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;menjadi agar tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+(1)Kami mendapat tugas dari Bu Guru. (2) Tugasnya membuat cerpen. (3)Tugas itu harus dikumpulkan hari Senin depan.  (4) Aku memilih tema remaja. (5) Tema remaja merupakan  tema yang sangat mudah untuk dikembangkan.  &lt;br&gt;&lt;br&gt;
+Kalimat majemuk dalam paragraf tersebut adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Urbanisasi merupakan masalah yang cukup serius bagi kita semua. Persebaran penduduk yang tidak merata antara desa dengan kota akan menimbulkan berbagai permasalahan kehidupan sosial kemasyarakatan. Jumlah peningkatan penduduk kota yang signifikan tanpa didukung dan diimbangi dengan jumlah lapangan pekerjaan, fasilitas umum, aparat penegak hukum, perumahan, penyediaan pangan, dan lain sebagainya tentu adalah suatu masalah yang harus segera dicarikan jalan keluarnya.&lt;br&gt;&lt;br&gt;
+Makna istilah &amp;ldquo;urbanisasi&amp;rdquo; dalam paragraf tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;penduduk yang dipindahkan ke daerah kosong&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pencari kerja yang berasal dari daerah&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perpindahan penduduk secara besar-besaran&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;perpindahan penduduk dari desa ke kota&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;penduduk daerah yang bekerja di kota&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+Urbanisasi tidak bisa dicegah dan ditanggulangi selama disparitas pembangunan antardaerah terutama antaraperkotaan dan pedesaan masih terjadi. Karena mengantisipasi dan mengatasi masalah-masalah yang timbul akibat urbanisasi, pemerintah perlu menyusun kebijakan yang orientasinya adalah membangun daerah pedesaan dengan menciptakan lapangan kerja serta perputaran ekonomi yang tinggi di daerah pedesaan agar meratakan pembangunan. Program-program yang dapat diintensifkan kalau Program Nasional Pemberdayaan Masyarakat (PNPM) pedesaan yang diprioritaskan untuk kewirausahaan dan pembangunan ekonomi jangka panjang.&lt;br&gt;&lt;br&gt;
+Perbaikan kata penghubung yang tercetak miring  dalam paragraf tersebut yang tepat  adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;jika, sampai. namun&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;untuk, untuk, seperti&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sebab, untuk, jika&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;karena, untuk, misalnya&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;untuk, hingga, seperti&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat-kalimat berikut!&lt;br&gt;
+(1)	Saya dan bang Makmun suka menabung di Bank.&lt;br&gt;
+(2)	Laki-laki tua itu bisa mengeluarkan bisa ular.&lt;br&gt;
+(3)	Dibacanya halaman demi halaman buku itu di halaman rumahnya.&lt;br&gt;
+(4)	Teras rumahnya dijadikan tempat perkumpulan para pejabat teras.&lt;br&gt;
+(5)	Bulan Desember dipilih oleh pasangan pengantin baru untuk berbulan madu &lt;br&gt;&lt;br&gt;
+Kalimat yang menggunakan kata berhomofon adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat-kalimat berikut!&lt;br&gt;
+(1)	Pasanglah pelampung jika terjadi kebocoran di kapal karena laut sedang pasang.&lt;br&gt;
+(2)	Kakinya tersandung di kaki kursi sehingga bengkak.&lt;br&gt;
+(3)	&amp;ldquo;Serang musuh kita dengan semangat!&amp;rdquo; kata pemimpin regu dari Serang,&lt;br&gt;
+(4)	&amp;ldquo;Tang itu ditemukan di bawah tank baja.&lt;br&gt;
+(5)	Saya baru tahu kalau dia suka tahu goreng.&lt;br&gt;&lt;br&gt;
+Kalimat yang menggunakan kata bermakna polisemi adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat-kalimat berikut!&lt;br&gt;
+(1)	Kolak itu terlalu manis.&lt;br&gt;
+(2)	Terdengar burung berkicau dari pohon besar itu.&lt;br&gt;
+(3)	Terlihat kucing sedang menangkap tikus.&lt;br&gt;
+(4)	Wajahnya manis sekali.&lt;br&gt;
+(5)	Suaranya enak didengar sehingga tidak membosankan.&lt;br&gt;&lt;br&gt;
+Kalimat yang menggunakan kata bermakna sinestesia adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat-kalimat berikut!&lt;br&gt;
+(1)	Kaum wanita zaman sekarang banyak yang menjadi pemimpin.&lt;br&gt;
+(2)	Satpol PP menangkap para pengemis di pinggir jalan.&lt;br&gt;
+(3)	Kepala sekolah tidak masuk karena kepalanya sakit.&lt;br&gt;
+(4)	Aku mempunyai seorang anak laki-laki dan seorang anak perempuan.&lt;br&gt;
+(5)	Putra putrinya sudah lulus sarjana dari universitas terkemuka.&lt;br&gt;&lt;br&gt;
+Kalimat yang menggunakan kata bermakna peyorasi adalah nomor &amp;hellip; .&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (4)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5) dan (1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat-kalimat berikut!&lt;br&gt;
+(1)	Ibuku dokter spesialis jantung.&lt;br&gt;
+(2)	Mereka sedang belajar bahasa Indonesia.&lt;br&gt;
+(3)	Anak itu cerdas sekali.&lt;br&gt;
+(4)	Siswa kelas XI sedang menulis puisi&lt;br&gt;
+(5)	Kakinya menendang bola.&lt;br&gt;&lt;br&gt;
+Kalimat nominal adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) dan (3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat-kalimat berikut!&lt;br&gt;
+(1)	Isi cerpen itu bagus sekali.&lt;br&gt;
+(2)	Siswa sedang membersihkan kelas.&lt;br&gt;
+(3)	Ibuku memasak gulai ikan.&lt;br&gt;
+(4)	Wajahnya sangat menarik.&lt;br&gt;
+(5)	Metode ceramah dalam pembelajaran sangat membosankan.&lt;br&gt;&lt;br&gt;
+Kalimat verbal adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(1) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt;
+(1) Di meja belajarku terdapat pas bunga. (2) Di dalamnya terangkai beberapa jenis bunga. (3) Ada dahlia, bugenvil, dan melati. (4) Rangkaian bunga itu dipadu dengan daun. (5) Warnanya menarik sekali.&lt;br&gt;&lt;br&gt;
+Kalimat yang menggunakan kata khusus dalam paragraf tersebut adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati paragraf berikut!&lt;br&gt; (1) Aku suka memakai baju berbung-bunga. (2) Biasanya kupilih yang warnanya lembut. (3) Misalnya, perpaduan putih dengan abu-abu. (4) Kerudungnya putih atau hitam. (5) Sepatunya pun sebaiknya hitam atau putih.&lt;br&gt;&lt;br&gt; Kalimat yang menggunakan kata umum dalam paragraf tersebut adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1) dan (2)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2) dan (3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3) dan (4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4) dan (5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5) dan (1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;br&gt;
+Cermati kalimat-kalimat berikut!&lt;br&gt;
+(1)	Kemarin saya pergi ke Sukabumi&lt;br&gt;
+(2)	Di warung itu kami makan&lt;br&gt;
+(3)	Pagi tadi kami mengerjakan soal&lt;br&gt;
+(4)	Soalnya sulit sekali&lt;br&gt;
+(5)	Tas kulit itu harganya mahal.&lt;br&gt;&lt;br&gt;
+Kalimat yang menggunakan frasa nominal adalah nomor...</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat-kalimat berikut!&lt;br&gt;
+(1)	Siswa sedang mengerjakan tugas bahasa Indonesia.&lt;br&gt;
+(2)	Bunga plastik itu menarik sekali. &lt;br&gt;
+(3)	Murid-muridku pandai.&lt;br&gt;
+(4)	Awas jalannya licin.&lt;br&gt;
+(5)	Jemuran itu tinggi sekali.&lt;br&gt;&lt;br&gt;
+Kalimat yang menggunakan frasa verbal adalah nomor...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;(1)&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(2)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(3)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(4)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;(5)&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Cermati kalimat penutup surat lamaran berikut!&lt;br&gt;
+Terima kasih banyak kuucapkan atas diterimanya surat lamaran saya.&lt;br&gt;&lt;br&gt;
+Perbaikan kalimat penutup surat lamaran kerja tersebut yang tepat adalah...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Atas perhatiannya kami ucapkan banyak terima kasih.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Saya mengucapkan terima kasih atas kebijaksanaannya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Atas perhatian Ibu dan Bapak saya ucapkan terima kasih.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Saya mengucapkan terima kasih atas diterimanya diri saya.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Atas kebijaksanaan Bapak/Ibu saya mengucapkan terima kasih.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

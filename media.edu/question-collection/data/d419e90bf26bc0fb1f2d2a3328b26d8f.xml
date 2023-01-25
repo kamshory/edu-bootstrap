@@ -1,0 +1,2171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Arrange the following sentences into a good paragraph.&lt;br&gt;
+1) I was very happy when I realized I could ride motorcycle.&lt;br&gt;
+2) Nonetheless, I got nervous when I passed the narrow street.&lt;br&gt;
+3) 1 lost my control and fell to the ditch.&lt;br&gt;
+4) One day, my father bought an old motorcycle.&lt;br&gt;
+5) My father taught me how to ride the motorcycle.&lt;br&gt;
+6) My father was very patient and gave me directions.&lt;br&gt;
+7) In the beginning, everything ran well.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;7 - 3 - 1 - 5 - 2 - 6 - 4&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5 - 4 - 3 - 7 - 6 - 1 - 2&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1 - 2 - 3 - 5 - 4 - 7 - 6&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;4 - 5 - 6 - 7 - 1 - 2 - 3&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+G570 4334DDU Laptop with large screen. The laptop also comes with a spatial experience of the screen and it has advanced function features that work efficiently. It is more user-friendly than ever.&lt;br&gt;
+G570 433DDU 15.6-Inch Laptop Feature:&lt;br&gt;
+&amp;bull; 15.6-Inch Screen; Integrated Intel HD 3000 Graphics&lt;br&gt;
+&amp;bull; Windows 7 Home Premium 64-bit, 4 hours Battery Life&lt;br&gt;
+&amp;bull; 2.5 GHz Intel Core 15-2450M&lt;br&gt;
+&amp;bull; 4 GB DIMM RAM&lt;br&gt;
+&amp;bull; 500 GB 5400 rpm Hard Drive&lt;br&gt;&lt;br&gt;
+Normally, this laptop can be used for... hours.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;two and half&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;four&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;seven&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sixty four&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+G570 4334DDU Laptop with large screen. The laptop also comes with a spatial experience of the screen and it has advanced function features that work efficiently. It is more user-friendly than ever.&lt;br&gt;
+G570 433DDU 15.6-Inch Laptop Feature:&lt;br&gt;
+&amp;bull; 15.6-Inch Screen; Integrated Intel HD 3000 Graphics&lt;br&gt;
+&amp;bull; Windows 7 Home Premium 64-bit, 4 hours Battery Life&lt;br&gt;
+&amp;bull; 2.5 GHz Intel Core 15-2450M&lt;br&gt;
+&amp;bull; 4 GB DIMM RAM&lt;br&gt;
+&amp;bull; 500 GB 5400 rpm Hard Drive&lt;br&gt;&lt;br&gt;
+From the text we know that...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The laptop is as user friendly as the previous edition.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The laptop has advance function features.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The battery can be used for 6 hours.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The screen of the laptop is small.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Choose the suitable words to fill in the blanks.&lt;br&gt;&lt;br&gt;
+Orchid is one of the most beautiful...(4)... on earth. Its trunk is thick and budding. The leaves are long, stiff, and thick. The colour of this plant can be...(5)... by using crossing method. It can be white, purple, yellow or others. People like to use orchid as decorative plant. Orchid usually grows...(6)... on a tree but it is not a parasite. It can only produce flowers not fruit.&lt;br&gt;&lt;br&gt;
+(4)...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;plants&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;leaves&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;flowers&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;trees&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Choose the suitable words to fill in the blanks.&lt;br&gt;&lt;br&gt;
+Orchid is one of the most beautiful...(4)... on earth. Its trunk is thick and budding. The leaves are long, stiff, and thick. The colour of this plant can be...(5)... by using crossing method. It can be white, purple, yellow or others. People like to use orchid as decorative plant. Orchid usually grows...(6)... on a tree but it is not a parasite. It can only produce flowers not fruit.&lt;br&gt;&lt;br&gt;
+(5)...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;similar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;various&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;famous&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;difficult&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Choose the suitable words to fill in the blanks.&lt;br&gt;&lt;br&gt;
+Orchid is one of the most beautiful...(4)... on earth. Its trunk is thick and budding. The leaves are long, stiff, and thick. The colour of this plant can be...(5)... by using crossing method. It can be white, purple, yellow or others. People like to use orchid as decorative plant. Orchid usually grows...(6)... on a tree but it is not a parasite. It can only produce flowers not fruit.&lt;br&gt;&lt;br&gt;
+(6)...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;well&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;slowly&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;fast&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;hard&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for questios.&lt;br&gt;&lt;br&gt;
+Student Organization of SMP 182&lt;br&gt;
+______________________________________________________&lt;br&gt;
+To: All class captains&lt;br&gt;
+Please attend the monthly meeting. It will be held:&lt;br&gt;
+Date : Saturday, May 11, 2013&lt;br&gt;
+Time : After school&lt;br&gt;
+Place : OSIS room&lt;br&gt;
+We will discuss the farewell party for the grade IX students. Your attendance will be highly appreciated OSIS Chairman OSIS Secretary&lt;br&gt;&lt;br&gt;
+The monthly meeting is to...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;request a monthly meeting&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;attend at OSIS room&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;discuss the farewell party&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;appreciate the grade IX students&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for questios.&lt;br&gt;&lt;br&gt; Student Organization of SMP 182&lt;br&gt; ______________________________________________________&lt;br&gt; To: All class captains&lt;br&gt; Please attend the monthly meeting. It will be held:&lt;br&gt; Date : Saturday, May 11, 2013&lt;br&gt; Time : After school&lt;br&gt; Place : OSIS room&lt;br&gt; We will discuss the farewell party for the grade IX students. Your attendance will be highly appreciated OSIS Chairman OSIS Secretary&lt;br&gt;&lt;br&gt; &quot;&lt;span style=&quot;text-decoration: underline;&quot;&gt;We&lt;/span&gt; will discuss the farewell party for the grade IX students&quot;&lt;br&gt; The underlined word refers to...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;all grade IX students&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;OSIS chairman and OSIS secretary&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;all teacher and students of the school&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the OSIS committee and all class captains&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Ojek &quot;motorcycle taxi&quot; began appearing in Jakarta after becak was banned in 1994. Ojek service began as a people's initiative to provide an alternative transportation for people who used becak from main roads into housing complexes.&lt;br&gt;
+There is no government license or control for ojek. By the law, all motorcycle passengers should wear helmet so ojek drivers should have a spare for their passengers to wear. Ojek tends to congregate at t-junctions on main roads and near smaller roads that are not serviced by bus routes.&lt;br&gt;
+Ladies should have a careful position in taking ojek. Also, if the women wear a dress, they have to sit sidewise on the back of the vehicle. You have to bargain before you get on and ask a local people about the usual price.&lt;br&gt;&lt;br&gt;
+What is mainly discussed in the text?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Housing complexes.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Motorcycle taxi.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Alternative transportation.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;People's initiative.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Ojek &quot;motorcycle taxi&quot; began appearing in Jakarta after becak was banned in 1994. Ojek service began as a people's initiative to provide an alternative transportation for people who used becak from main roads into housing complexes.&lt;br&gt;
+There is no government license or control for ojek. By the law, all motorcycle passengers should wear helmet so ojek drivers should have a spare for their passengers to wear. Ojek tends to congregate at t-junctions on main roads and near smaller roads that are not serviced by bus routes.&lt;br&gt;
+Ladies should have a careful position in taking ojek. Also, if the women wear a dress, they have to sit sidewise on the back of the vehicle. You have to bargain before you get on and ask a local people about the usual price.&lt;br&gt;&lt;br&gt;
+Where do ojeks gather?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;In main roads.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;At housing complexes.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;At t-junctions&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;On bus routes.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Ojek &quot;motorcycle taxi&quot; began appearing in Jakarta after becak was banned in 1994. Ojek service began as a people's initiative to provide an alternative transportation for people who used becak from main roads into housing complexes.&lt;br&gt;
+There is no government license or control for ojek. By the law, all motorcycle passengers should wear helmet so ojek drivers should have a spare for their passengers to wear. Ojek tends to congregate at t-junctions on main roads and near smaller roads that are not serviced by bus routes.&lt;br&gt;
+Ladies should have a careful position in taking ojek. Also, if the women wear a dress, they have to sit sidewise on the back of the vehicle. You have to bargain before you get on and ask a local people about the usual price.&lt;br&gt;&lt;br&gt;
+What had started ojek to appear?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The government control over ojek.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bus services that cover smaller road.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Becak were banned in 1994.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;New housing complexes were built.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Ojek &quot;motorcycle taxi&quot; began appearing in Jakarta after becak was banned in 1994. Ojek service began as a people's initiative to provide an alternative transportation for people who used becak from main roads into housing complexes.&lt;br&gt;
+There is no government license or control for ojek. By the law, all motorcycle passengers should wear helmet so ojek drivers should have a spare for their passengers to wear. Ojek tends to congregate at t-junctions on main roads and near smaller roads that are not serviced by bus routes.&lt;br&gt;
+Ladies should have a careful position in taking ojek. Also, if the women wear a dress, they have to sit sidewise on the back of the vehicle. You have to bargain before you get on and ask a local people about the usual price.&lt;br&gt;&lt;br&gt;
+What is the main idea of paragraph three?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Tips for ojek passengers.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Law for motorcycles passengers.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The beginning of ojek service.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ojek service's coverage area.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Ojek &quot;motorcycle taxi&quot; began appearing in Jakarta after becak was banned in 1994. Ojek service began as a people's initiative to provide an alternative transportation for people who used becak from main roads into housing complexes.&lt;br&gt;
+There is no government license or control for ojek. By the law, all motorcycle passengers should wear helmet so ojek drivers should have a spare for their passengers to wear. Ojek tends to congregate at t-junctions on main roads and near smaller roads that are not serviced by bus routes.&lt;br&gt;
+Ladies should have a careful position in taking ojek. Also, if the women wear a dress, they have to sit sidewise on the back of the vehicle. You have to bargain before you get on and ask a local people about the usual price.&lt;br&gt;&lt;br&gt;
+From the text, we know that...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Ojek passengers are mainly women.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ojek has replace becak's function.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ojek only operate in housing complexes&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Ojek has fixed price for its routes&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+In ancient times, the king placed a boulder on a roadway. Then he hid and watched to see if anyone would remove the huge rock. Some of the king's wealthiest merchants and courtiers came by and simply walked around it.&lt;br&gt;
+Many loudly blamed the king for not keeping the roads clear, but none did anything to get the big stone out of the ways. Then a peasant came along, carrying a load of vegetables. On approaching the boulder, the peasant laid down his burden and tried to move the stone to the side of the road. After lots of pushing and straining, he finally succeeded. As the peasant picked up his load of vegetables, he noticed a purse lying on the road where the boulder had been.&lt;br&gt;
+The purse contained a lot of gold coins and a note from the king indicating that the gold was for the person who removed the boulder from the roadway. The peasant learned what many others never understand.&lt;br&gt;&lt;br&gt;
+Why did many people blame the king?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;He did not make good roads for them.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;He loved to hide behind the rock.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;He showed no care on their roads.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;He did not keep the road clear.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+In ancient times, the king placed a boulder on a roadway. Then he hid and watched to see if anyone would remove the huge rock. Some of the king's wealthiest merchants and courtiers came by and simply walked around it.&lt;br&gt;
+Many loudly blamed the king for not keeping the roads clear, but none did anything to get the big stone out of the ways. Then a peasant came along, carrying a load of vegetables. On approaching the boulder, the peasant laid down his burden and tried to move the stone to the side of the road. After lots of pushing and straining, he finally succeeded. As the peasant picked up his load of vegetables, he noticed a purse lying on the road where the boulder had been.&lt;br&gt;
+The purse contained a lot of gold coins and a note from the king indicating that the gold was for the person who removed the boulder from the roadway. The peasant learned what many others never understand.&lt;br&gt;&lt;br&gt;
+What does the last paragraph tell us?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The roads that people built with the king.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The person who liked keeping the roads well.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The purpose of putting the boulder and purse.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The way the peasant removed the boulder on the road.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+In ancient times, the king placed a boulder on a roadway. Then he hid and watched to see if anyone would remove the huge rock. Some of the king's wealthiest merchants and courtiers came by and simply walked around it.&lt;br&gt;
+Many loudly blamed the king for not keeping the roads clear, but none did anything to get the big stone out of the ways. Then a peasant came along, carrying a load of vegetables. On approaching the boulder, the peasant laid down his burden and tried to move the stone to the side of the road. After lots of pushing and straining, he finally succeeded. As the peasant picked up his load of vegetables, he noticed a purse lying on the road where the boulder had been.&lt;br&gt;
+The purse contained a lot of gold coins and a note from the king indicating that the gold was for the person who removed the boulder from the roadway. The peasant learned what many others never understand.&lt;br&gt;&lt;br&gt;
+From the story, we know that...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;many people liked the peasant&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the peasant was a good man&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the boulder was really small&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the king was very stingy&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+In ancient times, the king placed a boulder on a roadway. Then he hid and watched to see if anyone would remove the huge rock. Some of the king's wealthiest merchants and courtiers came by and simply walked around it.&lt;br&gt;
+Many loudly blamed the king for not keeping the roads clear, but none did anything to get the big stone out of the ways. Then a peasant came along, carrying a load of vegetables. On approaching the boulder, the peasant laid down his burden and tried to move the stone to the side of the road. After lots of pushing and straining, he finally succeeded. As the peasant picked up his load of vegetables, he noticed a purse lying on the road where the boulder had been.&lt;br&gt;
+The purse contained a lot of gold coins and a note from the king indicating that the gold was for the person who removed the boulder from the roadway. The peasant learned what many others never understand.&lt;br&gt;&lt;br&gt;
+What can we learn from the story?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;A problem may be a blessing in disguise.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;There are so many problems in life.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;An obstacle may make us stronger.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;We have to avoid any problem in our life.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Read the text and answer question.&lt;br&gt;&lt;br&gt;
+Picasso was one of the most outstanding and important artists of the 1900's. He was best known for his paintings. Almost every style in modern art was represented in Picasso's works.&lt;br&gt;
+Picasso was born in 1881 in Malaga, Spain, as the son of an art teacher. He studied painting with his father and also in Madrid.&lt;br&gt;
+From 1895 to 1901, he painted realistic works in a traditional style. Then he entered what was called the Blue period. During this time, he only used shades of blue in his paintings to show poverty in Barcelona.&lt;br&gt;
+After 1907, he entered the style of cubism. Among his well-known cubist paintings are &quot;The Three Musician&quot; and &quot;The man with a guitar&quot; which depicted the destruction of Spanish town. Picasso died in France in 1973.&lt;br&gt;&lt;br&gt;
+Picasso used shades of blue in his painting during the Blue Period, because...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;he was sad to live in a traditional Barcelona&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the blue was to show poverty in Barcelona&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the blue represented modern art of this paintings&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;blue was Picasso's favorite color in his paintings&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Read the text and answer question.&lt;br&gt;&lt;br&gt;
+Picasso was one of the most outstanding and important artists of the 1900's. He was best known for his paintings. Almost every style in modern art was represented in Picasso's works.&lt;br&gt;
+Picasso was born in 1881 in Malaga, Spain, as the son of an art teacher. He studied painting with his father and also in Madrid.&lt;br&gt;
+From 1895 to 1901, he painted realistic works in a traditional style. Then he entered what was called the Blue period. During this time, he only used shades of blue in his paintings to show poverty in Barcelona.&lt;br&gt;
+After 1907, he entered the style of cubism. Among his well-known cubist paintings are &quot;The Three Musician&quot; and &quot;The man with a guitar&quot; which depicted the destruction of Spanish town. Picasso died in France in 1973.&lt;br&gt;&lt;br&gt;
+What is the main idea of paragraph three?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Picasso used shades of blue in his paintings.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Picasso died in France on 1973.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Picasso was born in Malaga, Spain.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Picasso was taught by his father.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Read the text and answer question.&lt;br&gt;&lt;br&gt; Picasso was one of the most outstanding and important artists of the 1900's. He was best known for his paintings. Almost every style in modern art was represented in Picasso's works.&lt;br&gt; Picasso was born in 1881 in Malaga, Spain, as the son of an art teacher. He studied painting with his father and also in Madrid.&lt;br&gt; From 1895 to 1901, he painted realistic works in a traditional style. Then he entered what was called the Blue period. During this time, he only used shades of blue in his paintings to show poverty in Barcelona.&lt;br&gt; After 1907, he entered the style of cubism. Among his well-known cubist paintings are &quot;The Three Musician&quot; and &quot;The man with a guitar&quot; which depicted the destruction of Spanish town. Picasso died in France in 1973.&lt;br&gt;&lt;br&gt; &quot;... which &lt;span style=&quot;text-decoration: underline;&quot;&gt;depicted&lt;/span&gt; the destruction of Spanish town.&quot; (Paragraph 4).&lt;br&gt; The underlined word has the same meaning as...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;drawed C. painted&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;described D. presented&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Read the text and answer question.&lt;br&gt;&lt;br&gt;
+Picasso was one of the most outstanding and important artists of the 1900's. He was best known for his paintings. Almost every style in modern art was represented in Picasso's works.&lt;br&gt;
+Picasso was born in 1881 in Malaga, Spain, as the son of an art teacher. He studied painting with his father and also in Madrid.&lt;br&gt;
+From 1895 to 1901, he painted realistic works in a traditional style. Then he entered what was called the Blue period. During this time, he only used shades of blue in his paintings to show poverty in Barcelona.&lt;br&gt;
+After 1907, he entered the style of cubism. Among his well-known cubist paintings are &quot;The Three Musician&quot; and &quot;The man with a guitar&quot; which depicted the destruction of Spanish town. Picasso died in France in 1973.&lt;br&gt;&lt;br&gt;
+From the text, we know that...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Picasso used his paintings to describe his environment&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Picasso loved listening to the music and playing guitar&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Picasso was born, raised, and died in Malaga, Spain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Picasso only used blue paint in all his paintings&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;/p&gt;
+&lt;table style=&quot;width: 100%;&quot; border=&quot;1&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;td&gt;Route&lt;/td&gt;
+&lt;td&gt;Fare (Bath)&lt;/td&gt;
+&lt;td&gt;Distance (Km)&lt;/td&gt;
+&lt;td&gt;Time (Hr)&lt;/td&gt;
+&lt;td&gt;From Bangkok&lt;/td&gt;
+&lt;td&gt;To Bangkok&lt;/td&gt;
+&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Chantaburi&lt;/td&gt;
+&lt;td&gt;193&lt;/td&gt;
+&lt;td&gt;249&lt;/td&gt;
+&lt;td&gt;03:30&lt;/td&gt;
+&lt;td&gt;05:00, 07:30, 12:00, 17:00, 20:00&lt;/td&gt;
+&lt;td&gt;07:30, 09:00, 11:45, 17:45, 18:45&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Kamphaeng Phet (Klonglan)&lt;/td&gt;
+&lt;td&gt;274&lt;/td&gt;
+&lt;td&gt;263&lt;/td&gt;
+&lt;td&gt;05:00&lt;/td&gt;
+&lt;td&gt;08:00, 11:30, 20:30&lt;/td&gt;
+&lt;td&gt;07:30, 09:30, 15:30&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Kanchanaburi&lt;/td&gt;
+&lt;td&gt;122&lt;/td&gt;
+&lt;td&gt;149&lt;/td&gt;
+&lt;td&gt;03:00&lt;/td&gt;
+&lt;td&gt;06:30, 11:00, 17:10&lt;/td&gt;
+&lt;td&gt;06:30, 11:00, 16:30&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Kanchanaburi (Dan Jedi Samaok)&lt;/td&gt;
+&lt;td&gt;302&lt;/td&gt;
+&lt;td&gt;384&lt;/td&gt;
+&lt;td&gt;07:00&lt;/td&gt;
+&lt;td&gt;05:00&lt;/td&gt;
+&lt;td&gt;14:00&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Nakhon Nayok&lt;/td&gt;
+&lt;td&gt;207&lt;/td&gt;
+&lt;td&gt;269&lt;/td&gt;
+&lt;td&gt;04:00&lt;/td&gt;
+&lt;td&gt;05:00, 05:30, 06:00, 09:30, 14:30, 16:00&lt;/td&gt;
+&lt;td&gt;06:30, 10:30, 10:30, 13:00, 13:30, 15:00&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Nakhon Nayok (Onkhlauk Thalalonkkleay)&lt;/td&gt;
+&lt;td&gt;212&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;04:00&lt;/td&gt;
+&lt;td&gt;05:00&lt;/td&gt;
+&lt;td&gt;13:30&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Rayong&lt;/td&gt;
+&lt;td&gt;155&lt;/td&gt;
+&lt;td&gt;194&lt;/td&gt;
+&lt;td&gt;03:00&lt;/td&gt;
+&lt;td&gt;06:30, 12:00, 13:00, 15:00, 17:00, 20:00&lt;/td&gt;
+&lt;td&gt;05:30, 06:30, 10:30, 16:00, 17:30, 21:00&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;The route that has the earliest time to Bangkok is...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Bangkok - Chantaburi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bangkok - Rayong&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bangkok - Kanchanaburi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bangkok - Kamphaeng phet.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;/p&gt;
+&lt;table style=&quot;width: 100%;&quot; border=&quot;1&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;td&gt;Route&lt;/td&gt;
+&lt;td&gt;Fare (Bath)&lt;/td&gt;
+&lt;td&gt;Distance (Km)&lt;/td&gt;
+&lt;td&gt;Time (Hr)&lt;/td&gt;
+&lt;td&gt;From Bangkok&lt;/td&gt;
+&lt;td&gt;To Bangkok&lt;/td&gt;
+&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Chantaburi&lt;/td&gt;
+&lt;td&gt;193&lt;/td&gt;
+&lt;td&gt;249&lt;/td&gt;
+&lt;td&gt;03:30&lt;/td&gt;
+&lt;td&gt;05:00, 07:30, 12:00, 17:00, 20:00&lt;/td&gt;
+&lt;td&gt;07:30, 09:00, 11:45, 17:45, 18:45&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Kamphaeng Phet (Klonglan)&lt;/td&gt;
+&lt;td&gt;274&lt;/td&gt;
+&lt;td&gt;263&lt;/td&gt;
+&lt;td&gt;05:00&lt;/td&gt;
+&lt;td&gt;08:00, 11:30, 20:30&lt;/td&gt;
+&lt;td&gt;07:30, 09:30, 15:30&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Kanchanaburi&lt;/td&gt;
+&lt;td&gt;122&lt;/td&gt;
+&lt;td&gt;149&lt;/td&gt;
+&lt;td&gt;03:00&lt;/td&gt;
+&lt;td&gt;06:30, 11:00, 17:10&lt;/td&gt;
+&lt;td&gt;06:30, 11:00, 16:30&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Kanchanaburi (Dan Jedi Samaok)&lt;/td&gt;
+&lt;td&gt;302&lt;/td&gt;
+&lt;td&gt;384&lt;/td&gt;
+&lt;td&gt;07:00&lt;/td&gt;
+&lt;td&gt;05:00&lt;/td&gt;
+&lt;td&gt;14:00&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Nakhon Nayok&lt;/td&gt;
+&lt;td&gt;207&lt;/td&gt;
+&lt;td&gt;269&lt;/td&gt;
+&lt;td&gt;04:00&lt;/td&gt;
+&lt;td&gt;05:00, 05:30, 06:00, 09:30, 14:30, 16:00&lt;/td&gt;
+&lt;td&gt;06:30, 10:30, 10:30, 13:00, 13:30, 15:00&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Nakhon Nayok (Onkhlauk Thalalonkkleay)&lt;/td&gt;
+&lt;td&gt;212&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;04:00&lt;/td&gt;
+&lt;td&gt;05:00&lt;/td&gt;
+&lt;td&gt;13:30&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Bangkok-Rayong&lt;/td&gt;
+&lt;td&gt;155&lt;/td&gt;
+&lt;td&gt;194&lt;/td&gt;
+&lt;td&gt;03:00&lt;/td&gt;
+&lt;td&gt;06:30, 12:00, 13:00, 15:00, 17:00, 20:00&lt;/td&gt;
+&lt;td&gt;05:30, 06:30, 10:30, 16:00, 17:30, 21:00&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;The timetable showed that...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;the route Onkhaluk - Thalalonkkleay has one trip.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;there are eight routes from Bangkok to other cities.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the longest distances is Bangkok - Chantaburi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the cheapest fare is route Bangkok - Rayong&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Jl. Merpati 56 Jakarta&lt;br&gt;
+January 10th, 2013&lt;br&gt;&lt;br&gt;
+Dear Mely,&lt;br&gt;
+I'm sorry, I haven't written for so long. My family and I have just returned from an interesting holiday at Lake Maninjau near Padang. The lake was a crater surrounded by densed forests and rice fields. We swam in the lake, ate fish from the lake, and enjoyed the cool breezes.&lt;br&gt;
+After that, we had a two hour trip to Bukit Tinggi, a small hill top town which was clean, cool, and friendly.&lt;br&gt;
+Our trip around the hill took us to the coffee, clove, and cinnamon plantation. The traditional Minangkabau houses, with the roof shaped like a buffalo's horn can be seen everywhere.&lt;br&gt;
+I really enjoy my vacation. Do come over and have a look sometime.&lt;br&gt;&lt;br&gt;
+Love,&lt;br&gt;
+Tiara&lt;br&gt;&lt;br&gt;
+What does the text tell you about?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Traditional Minangkabau houses.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Traveling guidance for visitors.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The amazing view of West Sumatera.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;A trip throughout West Sumatera.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Jl. Merpati 56 Jakarta&lt;br&gt;
+January 10th, 2013&lt;br&gt;&lt;br&gt;
+Dear Mely,&lt;br&gt;
+I'm sorry, I haven't written for so long. My family and I have just returned from an interesting holiday at Lake Maninjau near Padang. The lake was a crater surrounded by densed forests and rice fields. We swam in the lake, ate fish from the lake, and enjoyed the cool breezes.&lt;br&gt;
+After that, we had a two hour trip to Bukit Tinggi, a small hill top town which was clean, cool, and friendly.&lt;br&gt;
+Our trip around the hill took us to the coffee, clove, and cinnamon plantation. The traditional Minangkabau houses, with the roof shaped like a buffalo's horn can be seen everywhere.&lt;br&gt;
+I really enjoy my vacation. Do come over and have a look sometime.&lt;br&gt;&lt;br&gt;
+Love,&lt;br&gt;
+Tiara&lt;br&gt;&lt;br&gt;
+Where did the writer and his family go after visiting Lake Maninjau?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Country side.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Bukit Tinggi.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;West Sumatra.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;A small hill.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
+Jl. Merpati 56 Jakarta&lt;br&gt;
+January 10th, 2013&lt;br&gt;&lt;br&gt;
+Dear Mely,&lt;br&gt;
+I'm sorry, I haven't written for so long. My family and I have just returned from an interesting holiday at Lake Maninjau near Padang. The lake was a crater surrounded by densed forests and rice fields. We swam in the lake, ate fish from the lake, and enjoyed the cool breezes.&lt;br&gt;
+After that, we had a two hour trip to Bukit Tinggi, a small hill top town which was clean, cool, and friendly.&lt;br&gt;
+Our trip around the hill took us to the coffee, clove, and cinnamon plantation. The traditional Minangkabau houses, with the roof shaped like a buffalo's horn can be seen everywhere.&lt;br&gt;
+I really enjoy my vacation. Do come over and have a look sometime.&lt;br&gt;&lt;br&gt;
+Love,&lt;br&gt;
+Tiara&lt;br&gt;&lt;br&gt;
+From the text, we know that...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;it took 3 hours from Lake Maninjau to Bukit Tinggi&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the journey to Bukit Tinggi could only be done by plane.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Maninjau lake was situated far away from the forests and rice fields&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the writer and his family visited an interesting place during their holiday&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+One of the most interesting places to visit is the Bird Park. It is located in the industrial area in Singapore, called Jurong. The bird park is about twelve kilometers from the centre of the city, and it's easy to get there by bus or by taxi.&lt;br&gt;
+It is one of the largest bird park in the world. The birds are kept in large cages, and there are hundreds of beautiful birds from many different parts of the world, including penguins, parrots, eagles, and ostriches. There is a large lake in the park with a restaurant beside it. There is also a very large cage which you can walk in to get a closer look at the birds.&lt;br&gt;
+It takes about two hours to see all the birds. You can walk around the park or ride on a bus. The best time to visit the park is in the early morning or late afternoon, when it is cooler.&lt;br&gt;&lt;br&gt;
+How far is the park from the city?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;2 km&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;10 km.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;12 km.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;100 km.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+One of the most interesting places to visit is the Bird Park. It is located in the industrial area in Singapore, called Jurong. The bird park is about twelve kilometers from the centre of the city, and it's easy to get there by bus or by taxi.&lt;br&gt;
+It is one of the largest bird park in the world. The birds are kept in large cages, and there are hundreds of beautiful birds from many different parts of the world, including penguins, parrots, eagles, and ostriches. There is a large lake in the park with a restaurant beside it. There is also a very large cage which you can walk in to get a closer look at the birds.&lt;br&gt;
+It takes about two hours to see all the birds. You can walk around the park or ride on a bus. The best time to visit the park is in the early morning or late afternoon, when it is cooler.&lt;br&gt;&lt;br&gt;
+Why do many people like to visit the bird park late in the afternoon?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;They are busy working in the morning.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The weather is not hot in the afternoon.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The birds in the park are caged in the morning.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;They live in many different parts of the world.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+One of the most interesting places to visit is the Bird Park. It is located in the industrial area in Singapore, called Jurong. The bird park is about twelve kilometers from the centre of the city, and it's easy to get there by bus or by taxi.&lt;br&gt;
+It is one of the largest bird park in the world. The birds are kept in large cages, and there are hundreds of beautiful birds from many different parts of the world, including penguins, parrots, eagles, and ostriches. There is a large lake in the park with a restaurant beside it. There is also a very large cage which you can walk in to get a closer look at the birds.&lt;br&gt;
+It takes about two hours to see all the birds. You can walk around the park or ride on a bus. The best time to visit the park is in the early morning or late afternoon, when it is cooler.&lt;br&gt;&lt;br&gt;
+What is the main idea of the second paragraph?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The most interesting place in Singapore is the bird park.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;There is a restaurant next to a large lake in the park.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;There are hundreds of very beautiful birds in the cages.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Singapore Bird Park is the largest bird park in the world.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt; One of the most interesting places to visit is the Bird Park. It is located in the industrial area in Singapore, called Jurong. The bird park is about twelve kilometers from the centre of the city, and it's easy to get there by bus or by taxi.&lt;br&gt; It is one of the largest bird park in the world. The birds are kept in large cages, and there are hundreds of beautiful birds from many different parts of the world, including penguins, parrots, eagles, and ostriches. There is a large lake in the park with a restaurant beside it. There is also a very large cage which you can walk in to get a closer look at the birds.&lt;br&gt; It takes about two hours to see all the birds. You can walk around the park or ride on a bus. The best time to visit the park is in the early morning or late afternoon, when it is cooler.&lt;br&gt;&lt;br&gt; &quot;It is &lt;span style=&quot;text-decoration: underline;&quot;&gt;located&lt;/span&gt; in the industrial area in Singapore.&quot; (paragraph 1)&lt;br&gt; What does the underlined word mean?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Situated.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Held.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Conducted.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Performed.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+A man and his son were going to the market. While they were walking, a country man passed and said, &quot;You fool, what a donkey for but to ride upon?&quot;&lt;br&gt;
+So the man put the boy on the donkey. But soon, some passersby said, &quot;See that lazy, young steer. He lets his father walk while he rides.&quot;&lt;br&gt;
+So the man ordered his boy to get off and got on himself, but the passerby said, &quot;Shame on... that lazy old man, he lets his poor son walk, while he rides.&quot;&lt;br&gt;
+The man did not know what to do. Last, he took his boy on the donkey. Then the passerby said, &quot;Aren't you ashamed of yourself for overloading the poor donkey?&quot;&lt;br&gt;
+The man and the boy got off. They cut down a pole, tied the donkey's feet to it and raised the pole to their shoulders. They arrived to a bridge when the donkey, getting one of its feet loose, kick all out and caused the boy to drop his end of the pole. In the struggle, the donkey fell over the&lt;br&gt;
+bridge and then it was drowned.&lt;br&gt;&lt;br&gt;
+Why did the boy get off from the donkey?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The passerby needed him.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;His father asked him to do that.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The donkey was tired carrying him.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The boy wanted to be with the donkey.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+A man and his son were going to the market. While they were walking, a country man passed and said, &quot;You fool, what a donkey for but to ride upon?&quot;&lt;br&gt;
+So the man put the boy on the donkey. But soon, some passersby said, &quot;See that lazy, young steer. He lets his father walk while he rides.&quot;&lt;br&gt;
+So the man ordered his boy to get off and got on himself, but the passerby said, &quot;Shame on... that lazy old man, he lets his poor son walk, while he rides.&quot;&lt;br&gt;
+The man did not know what to do. Last, he took his boy on the donkey. Then the passerby said, &quot;Aren't you ashamed of yourself for overloading the poor donkey?&quot;&lt;br&gt;
+The man and the boy got off. They cut down a pole, tied the donkey's feet to it and raised the pole to their shoulders. They arrived to a bridge when the donkey, getting one of its feet loose, kick all out and caused the boy to drop his end of the pole. In the struggle, the donkey fell over the&lt;br&gt;
+bridge and then it was drowned.&lt;br&gt;&lt;br&gt;
+What is the main idea of the last paragraph?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The man and his son took a rest near the bridge.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The man and his donkey arrived at the market.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The man's behavior made the donkey alive.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The donkey was carried by its owners.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+A man and his son were going to the market. While they were walking, a country man passed and said, &quot;You fool, what a donkey for but to ride upon?&quot;&lt;br&gt;
+So the man put the boy on the donkey. But soon, some passersby said, &quot;See that lazy, young steer. He lets his father walk while he rides.&quot;&lt;br&gt;
+So the man ordered his boy to get off and got on himself, but the passerby said, &quot;Shame on... that lazy old man, he lets his poor son walk, while he rides.&quot;&lt;br&gt;
+The man did not know what to do. Last, he took his boy on the donkey. Then the passerby said, &quot;Aren't you ashamed of yourself for overloading the poor donkey?&quot;&lt;br&gt;
+The man and the boy got off. They cut down a pole, tied the donkey's feet to it and raised the pole to their shoulders. They arrived to a bridge when the donkey, getting one of its feet loose, kick all out and caused the boy to drop his end of the pole. In the struggle, the donkey fell over the&lt;br&gt;
+bridge and then it was drowned.&lt;br&gt;&lt;br&gt;
+What is the moral value of the text?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;You should believe in yourself.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;You cannot please everyone.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Do what everyone asked you for.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;You must be careful when riding a donkey.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt; A man and his son were going to the market. While they were walking, a country man passed and said, &quot;You fool, what a donkey for but to ride upon?&quot;&lt;br&gt; So the man put the boy on the donkey. But soon, some passersby said, &quot;See that lazy, young steer. He lets his father walk while he rides.&quot;&lt;br&gt; So the man ordered his boy to get off and got on himself, but the passerby said, &quot;Shame on... that lazy old man, he lets his poor son walk, while he rides.&quot;&lt;br&gt; The man did not know what to do. Last, he took his boy on the donkey. Then the passerby said, &quot;Aren't you ashamed of yourself for overloading the poor donkey?&quot;&lt;br&gt; The man and the boy got off. They cut down a pole, tied the donkey's feet to it and raised the pole to their shoulders. They arrived to a bridge when the donkey, getting one of its feet loose, kick all out and caused the boy to drop his end of the pole. In the struggle, the donkey fell over the&lt;br&gt; bridge and then it was drowned.&lt;br&gt;&lt;br&gt; &quot;... tied the donkey's feet to &lt;span style=&quot;text-decoration: underline;&quot;&gt;it&lt;/span&gt;...&quot; (last paragraph).&lt;br&gt; The underlined word refers to...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;the market&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the donkey&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the pole&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the river&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Crispy Hash Brown Recipe&lt;br&gt;&lt;br&gt;
+Ingredients:&lt;br&gt;
+3 tbsp olive oil, canola oil, or grape seed oil 1 lb russel backing potatoes, peeled and grated, salt and pepper.&lt;br&gt;
+Method:&lt;br&gt;
+1. Heat 3 tbsp of oil in a large frying pan on medium heat.&lt;br&gt;
+2. Squeeze out as much moisture as you can from the grated potatoes. It's easier to do this with potatoes ricer. If you don't have it, you can use paper towel to squeeze it.&lt;br&gt;
+3. Add the grated potatoes on the hot frying pan, spread them out along the bottom of the pan. Sprinkle-some salt and pepper on the potatoes. If they have been fried to golden brown, they are ready for a flip. Continue to cook until they are golden brown on the bottom. Put them on&lt;br&gt;
+the serving plate. Serve for 4 people.&lt;br&gt;&lt;br&gt;
+What should we do first to make crispy hash brown?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Peel and grate the fried potatoes.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Heat the oil in the frying pan.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Squeeze the grated potatoes.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Sprinkle some salt and pepper.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Crispy Hash Brown Recipe&lt;br&gt;&lt;br&gt;
+Ingredients:&lt;br&gt;
+3 tbsp olive oil, canola oil, or grape seed oil 1 lb russel backing potatoes, peeled and grated, salt and pepper.&lt;br&gt;
+Method:&lt;br&gt;
+1. Heat 3 tbsp of oil in a large frying pan on medium heat.&lt;br&gt;
+2. Squeeze out as much moisture as you can from the grated potatoes. It's easier to do this with potatoes ricer. If you don't have it, you can use paper towel to squeeze it.&lt;br&gt;
+3. Add the grated potatoes on the hot frying pan, spread them out along the bottom of the pan. Sprinkle-some salt and pepper on the potatoes. If they have been fried to golden brown, they are ready for a flip. Continue to cook until they are golden brown on the bottom. Put them on&lt;br&gt;
+the serving plate. Serve for 4 people.&lt;br&gt;&lt;br&gt;
+How many portions can we serve based on the recipe above?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Three.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Four.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Five.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Six.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Crispy Hash Brown Recipe&lt;br&gt;&lt;br&gt;
+Ingredients:&lt;br&gt;
+3 tbsp olive oil, canola oil, or grape seed oil 1 lb russel backing potatoes, peeled and grated, salt and pepper.&lt;br&gt;
+Method:&lt;br&gt;
+1. Heat 3 tbsp of oil in a large frying pan on medium heat.&lt;br&gt;
+2. Squeeze out as much moisture as you can from the grated potatoes. It's easier to do this with potatoes ricer. If you don't have it, you can use paper towel to squeeze it.&lt;br&gt;
+3. Add the grated potatoes on the hot frying pan, spread them out along the bottom of the pan. Sprinkle-some salt and pepper on the potatoes. If they have been fried to golden brown, they are ready for a flip. Continue to cook until they are golden brown on the bottom. Put them on&lt;br&gt;
+the serving plate. Serve for 4 people.&lt;br&gt;&lt;br&gt;
+&quot;Squeeze out as much moisture as you can.&quot; (step 2).&lt;br&gt;
+The word &quot;moisture&quot; has similar meaning with.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;water&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;lotion&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;splash&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;remain&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt; Crispy Hash Brown Recipe&lt;br&gt;&lt;br&gt; Ingredients:&lt;br&gt; 3 tbsp olive oil, canola oil, or grape seed oil 1 lb russel backing potatoes, peeled and grated, salt and pepper.&lt;br&gt; Method:&lt;br&gt; 1. Heat 3 tbsp of oil in a large frying pan on medium heat.&lt;br&gt; 2. Squeeze out as much moisture as you can from the grated potatoes. It's easier to do this with potatoes ricer. If you don't have it, you can use paper towel to squeeze it.&lt;br&gt; 3. Add the grated potatoes on the hot frying pan, spread them out along the bottom of the pan. Sprinkle-some salt and pepper on the potatoes. If they have been fried to golden brown, they are ready for a flip. Continue to cook until they are golden brown on the bottom. Put them on&lt;br&gt; the serving plate. Serve for 4 people.&lt;br&gt;&lt;br&gt; &quot;If you don't have &lt;span style=&quot;text-decoration: underline;&quot;&gt;it&lt;/span&gt;...&quot; (step 2)&lt;br&gt; What does the underlined word refer to?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;Frying pan&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Paper towel&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Potatoes ricer&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Serving plate&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Gardenia plants are popular for the strong sweet scent of their flowers.&lt;br&gt;
+Gardenia is the national flower in Pakistan. In japan and China, the flower is called Kuchinashi (Japanese) and Thi zi (Chinese).&lt;br&gt;
+Gardenia plants are evergreen shrubs. Their small trees can grow to 1 - 5 meters tall. The leaves are 5 - 50 centimeters long and 3 - 25 centimeters broad, dark green, and glossy with a leathery texture. The flowers are in small groups, white, or pale yellow, with 5 - 12 lobes (petals) from 5 - 12 centimeters diameter. They usually bloom in mid-spring to mid-summer. Many species have strong aroma.&lt;br&gt;
+To cultivate gardenia as a house plant is not easy. This species can be difficult to grow because it originated in warm humid tropical areas. It demands high humidity and bright (not direct) light to thrive. It flourishes in acidic soil with good drainage and thrives on 20&amp;deg; - 23&amp;deg; C during the day and 15&amp;deg; - 16&amp;deg;C in the evening. Potting soils developed specifically for gardenias are available. It grows no larger than 18 inches in height and width when grown indoor. In climates where it can be grown outdoors, it can reach the height of 6 feet. If water hits the flowers, they will turn brown.&lt;br&gt;&lt;br&gt;
+How tall is a gardenia tree?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;3 - 25 cm.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5 - 12 cm.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;5 - 50 cm.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;1 - 5 m.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Gardenia plants are popular for the strong sweet scent of their flowers.&lt;br&gt;
+Gardenia is the national flower in Pakistan. In japan and China, the flower is called Kuchinashi (Japanese) and Thi zi (Chinese).&lt;br&gt;
+Gardenia plants are evergreen shrubs. Their small trees can grow to 1 - 5 meters tall. The leaves are 5 - 50 centimeters long and 3 - 25 centimeters broad, dark green, and glossy with a leathery texture. The flowers are in small groups, white, or pale yellow, with 5 - 12 lobes (petals) from 5 - 12 centimeters diameter. They usually bloom in mid-spring to mid-summer. Many species have strong aroma.&lt;br&gt;
+To cultivate gardenia as a house plant is not easy. This species can be difficult to grow because it originated in warm humid tropical areas. It demands high humidity and bright (not direct) light to thrive. It flourishes in acidic soil with good drainage and thrives on 20&amp;deg; - 23&amp;deg; C during the day and 15&amp;deg; - 16&amp;deg;C in the evening. Potting soils developed specifically for gardenias are available. It grows no larger than 18 inches in height and width when grown indoor. In climates where it can be grown outdoors, it can reach the height of 6 feet. If water hits the flowers, they will turn brown.&lt;br&gt;&lt;br&gt;
+What is the main idea of the last paragraph?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;It is easy to plant a gardenia tree.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;A gardenia plant needs high humidity.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;It's not easy to plant gardenia as a house plant.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;A good drainage is important for gardenia plant.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Gardenia plants are popular for the strong sweet scent of their flowers.&lt;br&gt;
+Gardenia is the national flower in Pakistan. In japan and China, the flower is called Kuchinashi (Japanese) and Thi zi (Chinese).&lt;br&gt;
+Gardenia plants are evergreen shrubs. Their small trees can grow to 1 - 5 meters tall. The leaves are 5 - 50 centimeters long and 3 - 25 centimeters broad, dark green, and glossy with a leathery texture. The flowers are in small groups, white, or pale yellow, with 5 - 12 lobes (petals) from 5 - 12 centimeters diameter. They usually bloom in mid-spring to mid-summer. Many species have strong aroma.&lt;br&gt;
+To cultivate gardenia as a house plant is not easy. This species can be difficult to grow because it originated in warm humid tropical areas. It demands high humidity and bright (not direct) light to thrive. It flourishes in acidic soil with good drainage and thrives on 20&amp;deg; - 23&amp;deg; C during the day and 15&amp;deg; - 16&amp;deg;C in the evening. Potting soils developed specifically for gardenias are available. It grows no larger than 18 inches in height and width when grown indoor. In climates where it can be grown outdoors, it can reach the height of 6 feet. If water hits the flowers, they will turn brown.&lt;br&gt;&lt;br&gt;
+From the text we know that...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;people don't like the strong scent of flower&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Gardenia is widespread in Asia&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the flower is easy to plant&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the flower is expensive&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt; Gardenia plants are popular for the strong sweet scent of their flowers.&lt;br&gt; Gardenia is the national flower in Pakistan. In japan and China, the flower is called Kuchinashi (Japanese) and Thi zi (Chinese).&lt;br&gt; Gardenia plants are evergreen shrubs. Their small trees can grow to 1 - 5 meters tall. The leaves are 5 - 50 centimeters long and 3 - 25 centimeters broad, dark green, and glossy with a leathery texture. The flowers are in small groups, white, or pale yellow, with 5 - 12 lobes (petals) from 5 - 12 centimeters diameter. They usually bloom in mid-spring to mid-summer. Many species have strong aroma.&lt;br&gt; To cultivate gardenia as a house plant is not easy. This species can be difficult to grow because it originated in warm humid tropical areas. It demands high humidity and bright (not direct) light to thrive. It flourishes in acidic soil with good drainage and thrives on 20&amp;deg; - 23&amp;deg; C during the day and 15&amp;deg; - 16&amp;deg;C in the evening. Potting soils developed specifically for gardenias are available. It grows no larger than 18 inches in height and width when grown indoor. In climates where it can be grown outdoors, it can reach the height of 6 feet. If water hits the flowers, they will turn brown.&lt;br&gt;&lt;br&gt; &quot;... because &lt;span style=&quot;text-decoration: underline;&quot;&gt;it&lt;/span&gt; originated in warm ...&quot; (paragraph 3, line 10)&lt;br&gt; The underlined word refers to...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;the flower&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the species&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the soil&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the leaf&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Announcement&lt;br&gt;
+To: teacher and students&lt;br&gt;&lt;br&gt;
+From November 12 to 14, 2013 the library will be closed due to the rearranging of books and seats.&lt;br&gt;&lt;br&gt;
+We are sorry for the inconvenience.&lt;br&gt;&lt;br&gt;
+Hasan Madi&lt;br&gt;
+librarian&lt;br&gt;&lt;br&gt;
+The text tells us about...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;the librarian's books and seats&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the renovation of the library in November&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the temporarily closing of the library&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;the librarian's inconvenience&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt;
+Announcement&lt;br&gt;
+To: teacher and students&lt;br&gt;&lt;br&gt;
+From November 12 to 14, 2013 the library will be closed due to the rearranging of books and seats.&lt;br&gt;&lt;br&gt;
+We are sorry for the inconvenience.&lt;br&gt;&lt;br&gt;
+Hasan Madi&lt;br&gt;
+librarian&lt;br&gt;&lt;br&gt;
+Why is the library closed?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;The librarian will have vacation.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;There have been some inconveniences.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The students will arrange the books.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The books will be rearranged.&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt;&lt;br&gt; Announcement&lt;br&gt; To: teacher and students&lt;br&gt;&lt;br&gt; From November 12 to 14, 2013 the library will be closed due to the rearranging of books and seats.&lt;br&gt;&lt;br&gt; We are sorry for the inconvenience.&lt;br&gt;&lt;br&gt; Hasan Madi&lt;br&gt; librarian&lt;br&gt;&lt;br&gt; &quot;... we are sorry for the &lt;span style=&quot;text-decoration: underline;&quot;&gt;inconvenience&lt;/span&gt;&quot;.&lt;br&gt; The underlined word is similar in meaning to...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;disruption&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;inappropriacy&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;unsuitability&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;difficulty&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Complete the text with the correct word.&lt;br&gt;
+When I was at the 8th grade of Junior High School, my family and I went to Bali for three days. I...(46)... many experiences during the vacation. First day, we visited Sanur Beach in the early morning. We saw the beautiful...(47)... together. On the second day, we spent the day on Tanjung Benoa beach. We spent our last day in Sangeh. We enjoyed the green and shady forest...(48)... In the afternoon, we had to check out from the hotel. We went back home bringing so many amazing memories of Bali.&lt;br&gt;&lt;br&gt;
+(46)...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;had&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;spent&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pulled&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;wanted&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Complete the text with the correct word.&lt;br&gt;
+When I was at the 8th grade of Junior High School, my family and I went to Bali for three days. I...(46)... many experiences during the vacation. First day, we visited Sanur Beach in the early morning. We saw the beautiful...(47)... together. On the second day, we spent the day on Tanjung Benoa beach. We spent our last day in Sangeh. We enjoyed the green and shady forest...(48)... In the afternoon, we had to check out from the hotel. We went back home bringing so many amazing memories of Bali.&lt;br&gt;&lt;br&gt;
+(47)...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;stars&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;moon&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sunrise&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;sunset&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Complete the text with the correct word.&lt;br&gt;
+When I was at the 8th grade of Junior High School, my family and I went to Bali for three days. I...(46)... many experiences during the vacation. First day, we visited Sanur Beach in the early morning. We saw the beautiful...(47)... together. On the second day, we spent the day on Tanjung Benoa beach. We spent our last day in Sangeh. We enjoyed the green and shady forest...(48)... In the afternoon, we had to check out from the hotel. We went back home bringing so many amazing memories of Bali.&lt;br&gt;&lt;br&gt;
+(48)...&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;strangely&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;curiously&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;quickly&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;pleasantly&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;Arrange the sentences bellow into a correct paragraph.&lt;br&gt;
+1. We left our house at about 5 o'clock in the morning. We took a taxi to the railway station.&lt;br&gt;
+2. Finally our train came. All of us rushed to get on the trains.&lt;br&gt;
+3. Last Lebaran, my family and I went hometown. We decided to take a train because it is more comfortable.&lt;br&gt;
+4. It took about 5 to 7 hours to get to our hometown. We enjoyed our journey.&lt;br&gt;
+5. We took the carriage no. 3 according to our tickets.&lt;br&gt;
+6. But without any prior information, our train was late for about fifteen minutes, so we had to wait a bit longer.&lt;br&gt;
+7. After finding our seats we could sit comfortably.&lt;br&gt;
+8. We arrived at the station at six. Our train would leave at 6.40.&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;3 - 8 - 6 - 4 - 5 - 1 - 2 - 7&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3 - 4 - 5 - 8 - 1 - 2 - 6 - 7&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3 - 1 - 8 - 6 - 2 - 5 - 7 - 4&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;3 - 5 - 4 - 2 - 7 - 8 - 1 - 6&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+
+	<item>
+	<question>
+	<text>&lt;p&gt;This text is for the following question.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;fcac1c_4905ff9efcca50cfd923a45cc59e0e55.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;What does the caution above mean?&lt;/p&gt;</text>
+	<random>1</random>
+	<numbering>upper-alpha</numbering>
+	
+		<file>
+		<name>fcac1c_4905ff9efcca50cfd923a45cc59e0e55.png</name>
+		<type>image/png</type>
+		<encoding>base64</encoding>
+		<data>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</data>
+		</file>
+
+	</question>
+
+		<answer>
+		
+		<option>
+			<text>&lt;p&gt;We must be careful because harm algae grow in this water,&lt;/p&gt;</text>
+			<value>1</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Swimming in this water may harm the algae that grow in it.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;The algae cannot cause serious harm to the animals.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		<option>
+			<text>&lt;p&gt;Harmful algae does not grow well in this water.&lt;/p&gt;</text>
+			<value>0</value>
+			
+		</option>
+
+		</answer>
+</item>
+</test>

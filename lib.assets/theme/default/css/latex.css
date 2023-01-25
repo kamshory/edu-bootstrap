@@ -1,0 +1,47 @@
+@charset "utf-8";
+body{
+	margin:0;
+	padding:0;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	background-color:#FBFBFB;
+}
+.main-content{
+	padding:10px 10px 10px 10px;
+	background-color:#FFFFFF;
+}
+.latex-input{
+	width:100%;
+	box-sizing:border-box;
+	height:110px;
+	padding:10px;
+	font-size:16px;
+	font-family:"Times New Roman", Times, serif;
+	font-variant:"Serif";
+	border:1px solid #DDDDDD;
+	resize:none;
+}
+.output-area{
+	padding:10px;
+	border:1px solid #DDDDDD;
+	background-color:#FFFFFF;
+	height:110px;
+	box-sizing:border-box;
+	overflow:auto;
+}
+.label{
+	padding:4px 0;
+}
+select{
+	padding:3px;
+	font-size:12px;
+	font-family:Tahoma, Geneva, sans-serif;
+	border:1px solid #DDDDDD;
+	background-color:#FFFFFF;
+}
+.file-dialog-control{
+	text-align:right;
+	padding-left:10px;
+	padding-right:10px;
+}
+
