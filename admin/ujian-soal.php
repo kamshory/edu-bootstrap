@@ -12,7 +12,7 @@ exit();
 }
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-$cfg->module_title = "Soal Ujian";
+$cfg->page_title = "Soal Ujian";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $time_create = $time_edit = $picoEdu->getLocalDateTime();
 $member_create = $member_edit = $admin_login->admin_id;
@@ -392,7 +392,7 @@ $numbering = 'upper-alpha';
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="160">Kompetensi Dasar</td>
-    <td><input type="text" class="input-text input-text-short" name="basic_competence" id="basic_competence" value="" /></td>
+    <td><input type="text" class="form-control input-text input-text-short" name="basic_competence" id="basic_competence" value="" /></td>
   </tr>
   <tr>
     <td>Tipe Pilihan</td>
@@ -428,7 +428,7 @@ for($i=1;$i<=$data['number_of_option']; $i++)
 {
 ?>
 <div class="option-item" data-index="<?php echo $i-1;?>">
-<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i-1];?></span> | Nilai <input type="number" min="0" max="<?php echo $data['standard_score'];?>" class="input-text input-text-short score" name="score_<?php echo $i;?>" id="score_<?php echo $i;?>" autocomplete="off" /> (Nilai Maksimum <?php echo $data['standard_score'];?>)</div>
+<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i-1];?></span> | Nilai <input type="number" min="0" max="<?php echo $data['standard_score'];?>" class="form-control input-text input-text-short score" name="score_<?php echo $i;?>" id="score_<?php echo $i;?>" autocomplete="off" /> (Nilai Maksimum <?php echo $data['standard_score'];?>)</div>
 <div class="option-editor">
 <textarea spellcheck="false" class="htmleditor" name="option_<?php echo $i;?>" id="option_<?php echo $i;?>" style="width:100%;"></textarea>
 </div>
@@ -439,9 +439,9 @@ for($i=1;$i<=$data['number_of_option']; $i++)
 </fieldset>
 </div>
 <div class="button-area">
-<input type="submit" name="save" id="save" class="com-button" value="Simpan" />
-<input type="button" name="text-mode" id="text-mode" class="com-button" value="Modus Teks" onclick="if(confirm('Apakah Anda akan mengganti modus menjadi teks?')) window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&format=text&test_id=<?php echo $test_id;?>'" />
-<input type="button" name="showall" id="showall" class="com-button" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?test_id=<?php echo $test_id;?>'" />
+<input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" />
+<input type="button" name="text-mode" id="text-mode" class="btn com-button btn-success" value="Modus Teks" onclick="if(confirm('Apakah Anda akan mengganti modus menjadi teks?')) window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&format=text&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="showall" id="showall" class="btn com-button btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?test_id=<?php echo $test_id;?>'" />
 </div>
 
 </form>
@@ -526,7 +526,7 @@ var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$tes
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="160">Kompetensi Dasar</td>
-    <td><input type="text" class="input-text input-text-short" name="basic_competence" id="basic_competence" value="<?php echo $data['basic_competence']; ?>" /></td>
+    <td><input type="text" class="form-control input-text input-text-short" name="basic_competence" id="basic_competence" value="<?php echo $data['basic_competence']; ?>" /></td>
   </tr>
   <tr>
     <td>Tipe Pilihan</td>
@@ -573,7 +573,7 @@ if ($stmt2->rowCount() > 0) {
 	$i++;
 			?>
 <div class="option-item" data-index="<?php echo $i; ?>">
-<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i]; ?></span> | Nilai <input type="number" min="0" max="<?php echo ($data3['standard_score']); ?>" class="input-text input-text-short" name="score_<?php echo $data2['option_id']; ?>" id="score_<?php echo $data2['option_id']; ?>" value="<?php echo $data2['score']; ?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']); ?>)</div>
+<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i]; ?></span> | Nilai <input type="number" min="0" max="<?php echo ($data3['standard_score']); ?>" class="form-control input-text input-text-short" name="score_<?php echo $data2['option_id']; ?>" id="score_<?php echo $data2['option_id']; ?>" value="<?php echo $data2['score']; ?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']); ?>)</div>
 <div class="option-editor">
 <textarea spellcheck="false" class="htmleditor" name="option_<?php echo $data2['option_id']; ?>" id="option_<?php echo $data2['option_id']; ?>" style="width:100%;"><?php echo htmlspecialchars(($data2['content'])); ?></textarea>
 </div>
@@ -588,10 +588,10 @@ if ($stmt2->rowCount() > 0) {
 
 
 <div class="button-area">
-<input type="submit" name="save" id="save" class="com-button" value="Simpan" />
-<input type="button" name="add" id="add" class="com-button" value="Tambah Soal (Teks)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=add&format=text&test_id=<?php echo $test_id; ?>'" />
-<input type="button" name="add" id="add" class="com-button" value="Tambah Soal (HTML)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=add&test_id=<?php echo $test_id; ?>'" />
-<input type="button" name="showall" id="showall" class="com-button" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?test_id=<?php echo $test_id; ?>'" />
+<input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" />
+<input type="button" name="add" id="add" class="btn com-button btn-success" value="Tambah Soal (Teks)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=add&format=text&test_id=<?php echo $test_id; ?>'" />
+<input type="button" name="add" id="add" class="btn com-button btn-success" value="Tambah Soal (HTML)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=add&test_id=<?php echo $test_id; ?>'" />
+<input type="button" name="showall" id="showall" class="btn com-button btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?test_id=<?php echo $test_id; ?>'" />
 </div>
 
 </form>
@@ -668,7 +668,7 @@ $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 ?>
-<table width="100%" border="1" cellspacing="0" cellpadding="0" class="row-table">
+<table width="100%" border="1" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
 <thead>
   <tr>
     <td width="20">No</td>
@@ -815,7 +815,7 @@ else
 </table>
 
 <div class="button-area">
-	<input type="button" class="com-button" name="export" id="export" value="Ekspor" onclick="window.open('ujian-analisa.php?test_id=<?php echo $test_id;?>');" />
+	<input type="button" class="btn com-button btn-success" name="export" id="export" value="Ekspor" onclick="window.open('ujian-analisa.php?test_id=<?php echo $test_id;?>');" />
 </div>
 
 <div class="dialogs" style="display:none;">
@@ -921,17 +921,17 @@ if ($stmt2->rowCount() > 0) {
 
 
 <div class="button-area">
-<input type="button" name="urutkan_soal" id="urutkan_soal" class="com-button" value="Urutkan Soal" onclick="activateSortOrder()" />
-<input type="button" name="distribusi_soal" id="distribusi_soal" class="com-button" value="Distribusi KD" onclick="distribution(<?php echo $test_id;?>)" />
-<input type="button" name="export" id="export" class="com-button" value="Ekspor Soal" onclick="window.location='ujian-ekspor.php?test_id=<?php echo $test_id;?>'" />
-<input type="button" name="import" id="import" class="com-button" value="Impor Soal" onclick="window.location='ujian-impor.php?test_id=<?php echo $test_id;?>'" />
-<input type="button" name="collection" id="collection" class="com-button" value="Bank Soal" onclick="window.location='ujian-bank-soal.php'" />
-<input type="button" name="analys" id="analys" class="com-button" value="Analisa Butir Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=analys&test_id=<?php echo $test_id;?>'" />
-<input type="button" name="add" id="add" class="com-button" value="Tambah Soal (HTML)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&test_id=<?php echo $test_id;?>'" />
-<input type="button" name="add" id="add" class="com-button" value="Tambah Soal (Teks)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&format=text&test_id=<?php echo $test_id;?>'" />
-<input type="button" name="download-word" id="download-word" class="com-button" value="Download Format Word" onclick="downloadInWord()" />
-<input type="button" name="show" id="show" class="com-button" value="Tampilkan Informasi Ujian" onclick="window.location='ujian-daftar.php?option=detail&test_id=<?php echo $test_id;?>'" />
-<input type="button" name="edit" id="edit" class="com-button" value="Ubah Informasi Ujian" onclick="window.location='ujian-daftar.php?option=edit&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="urutkan_soal" id="urutkan_soal" class="btn com-button btn-success" value="Urutkan Soal" onclick="activateSortOrder()" />
+<input type="button" name="distribusi_soal" id="distribusi_soal" class="btn com-button btn-success" value="Distribusi KD" onclick="distribution(<?php echo $test_id;?>)" />
+<input type="button" name="export" id="export" class="btn com-button btn-success" value="Ekspor Soal" onclick="window.location='ujian-ekspor.php?test_id=<?php echo $test_id;?>'" />
+<input type="button" name="import" id="import" class="btn com-button btn-success" value="Impor Soal" onclick="window.location='ujian-impor.php?test_id=<?php echo $test_id;?>'" />
+<input type="button" name="collection" id="collection" class="btn com-button btn-success" value="Bank Soal" onclick="window.location='ujian-bank-soal.php'" />
+<input type="button" name="analys" id="analys" class="btn com-button btn-success" value="Analisa Butir Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=analys&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="add" id="add" class="btn com-button btn-success" value="Tambah Soal (HTML)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="add" id="add" class="btn com-button btn-success" value="Tambah Soal (Teks)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&format=text&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="download-word" id="download-word" class="btn com-button btn-success" value="Download Format Word" onclick="downloadInWord()" />
+<input type="button" name="show" id="show" class="btn com-button btn-success" value="Tampilkan Informasi Ujian" onclick="window.location='ujian-daftar.php?option=detail&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah Informasi Ujian" onclick="window.location='ujian-daftar.php?option=edit&test_id=<?php echo $test_id;?>'" />
 </div>
 <?php
 }
@@ -1058,7 +1058,7 @@ function buildMenu(id)
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
     <span class="search-label">Kelas</span> 
-    <select class="input-select" name="class_id" id="class_id">
+    <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
 	$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";
@@ -1084,9 +1084,9 @@ function buildMenu(id)
 	?>
     </select>
     <span class="search-label">Ujian</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
     "))));?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="com-button" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -1127,12 +1127,7 @@ $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
 $pagination->result = $picoEdu->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
-$pagination->str_result = "";
-foreach($pagination->result as $i=>$obj)
-{
-$cls = ($obj->sel)?" class=\"pagination-selected\"":"";
-$pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
-}
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 ?>
 <?php
 $array_class = $picoEdu->getArrayClass($school_id);
@@ -1161,12 +1156,12 @@ $array_class = $picoEdu->getArrayClass($school_id);
 }
 </style>
 
-<div class="search-pagination search-pagination-top">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-top">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table hide-some-cell">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
       <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></td>
@@ -1207,9 +1202,9 @@ $array_class = $picoEdu->getArrayClass($school_id);
     </tbody>
   </table>
 
-<div class="search-pagination search-pagination-bottom">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-bottom">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
 

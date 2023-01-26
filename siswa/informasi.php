@@ -1,6 +1,6 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
-if(@$school_id == 0)
+if(empty(@$school_id))
 {
 	include_once dirname(__FILE__)."/login-form.php";
 	exit();
@@ -8,7 +8,7 @@ if(@$school_id == 0)
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $cfg->page_title = "Infomasi";
-if(@$school_id == 0)
+if(empty(@$school_id))
 {
 	include_once dirname(__FILE__)."/login-form.php";
 	exit();
@@ -88,7 +88,6 @@ if(isset($_GET['info_id']))
 		$cfg->meta_description = htmlspecialchars(strip_tags($content));
 		include_once dirname(__FILE__)."/lib.inc/header.php";
 		?>
-        <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 		<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/FileSaver.js"></script>
         <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/info.min.js"></script>
         <style type="text/css">
@@ -104,8 +103,8 @@ if(isset($_GET['info_id']))
             <div class="article-time">Dibuat <?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?></div>
             <div class="article-creator">Oleh <?php echo $data['creator'];?></div>
             <div class="article-link">
-            <a href="javascript:;" class="download-word">Download</a>
-            <a href="info.php">Semua</a>
+            <a href="javascript:;" class="btn btn-primary download-word">Download</a>
+            <a href="informasi.php" class="btn btn-success">Semua</a>
             </div>
         </div>
         </div>
@@ -126,9 +125,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
     <span class="search-label">Informasi</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
     "))));?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="com-button" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -236,7 +235,7 @@ if($pagination->total_record_with_limit)
 			<div class="article-title"><h3><?php echo $data['name'];?></h3></div>
 			<div class="article-content"><?php echo $content;?></div>
 			<div class="article-link">
-				<a href="info.php?option=detail&info_id=<?php echo $data['info_id'];?>">Baca</a>
+				<a class="btn btn-primary" href="informasi.php?option=detail&info_id=<?php echo $data['info_id'];?>">Baca</a>
 			</div>
 		</div>
 		<?php
@@ -245,9 +244,9 @@ if($pagination->total_record_with_limit)
     </div>
     </div>
 </div>
-<div class="search-pagination search-pagination-bottom">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-bottom">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 <?php
 }

@@ -1,11 +1,11 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
-if(@$school_id == 0)
+if(empty(@$school_id))
 {
 include_once dirname(__FILE__)."/login-form.php";
 exit();
 }
-
+$cfg->page_title = "Sekolah";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $sql = "SELECT `edu_school`.*,
 (select `country`.`name` from `country` where `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
@@ -26,10 +26,10 @@ $school_name = $data['name'];
 $school_code = $data['school_code'];
 $cfg->page_title = "Tentang ".$school_name;
 ?>
-<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
     <tr>
     <td>Nama Sekolah</td>
-    <td><?php echo $data['name'];?></td>
+    <td><?php echo $data['name'];?> </td>
     </tr>
     <tr>
     <td>Jenjang Sekolah</td>
@@ -41,19 +41,19 @@ $cfg->page_title = "Tentang ".$school_name;
     </tr>
     <tr>
     <td>Kepala Sekolah</td>
-    <td><?php echo $data['principal'];?></td>
+    <td><?php echo $data['principal'];?> </td>
     </tr>
     <tr>
     <td>Alamat Sekolah</td>
-    <td><?php echo $data['address'];?></td>
+    <td><?php echo $data['address'];?> </td>
     </tr>
     <tr>
     <td>Telepon Sekolah</td>
-    <td><?php echo $data['phone'];?></td>
+    <td><?php echo $data['phone'];?> </td>
     </tr>
     <tr>
     <td>Email Sekolah</td>
-    <td><?php echo $data['email'];?></td>
+    <td><?php echo $data['email'];?> </td>
     </tr>
     <tr>
     <td>Bahasa</td>
@@ -61,15 +61,15 @@ $cfg->page_title = "Tentang ".$school_name;
     </tr>
     <tr>
     <td>Negara</td>
-    <td><?php echo $data['country_id'];?></td>
+    <td><?php echo $data['country_id'];?> </td>
     </tr>
     <tr>
     <td>Provinsi</td>
-    <td><?php echo $data['state_id'];?></td>
+    <td><?php echo $data['state_id'];?> </td>
     </tr>
     <tr>
     <td>Kabupaten/Kota</td>
-    <td><?php echo $data['city_id'];?></td>
+    <td><?php echo $data['city_id'];?> </td>
     </tr>
     <tr>
       <td>Jumlah Kelas</td>

@@ -36,7 +36,7 @@ if (@$auth_student_id && @$auth_school_id) {
 				}
 			</style>
 			<div class="test-info">
-				<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+				<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 					<tr>
 						<td>Ujian</td>
 						<td><?php echo $data['name'];?></td>
@@ -191,7 +191,7 @@ if (@$auth_student_id && @$auth_school_id) {
 					}
 				}
 			</style>
-			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table hide-some-cell">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
 				<thead>
 					<tr>
 						<td width="25">No</td>
@@ -253,7 +253,7 @@ if (@$auth_student_id && @$auth_school_id) {
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			$array_class = $picoEdu->getArrayClass($school_id);
 		?>
-			<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td>Nama Ujian</td>
 					<td><?php echo $data['name'];?></td>
@@ -391,8 +391,8 @@ if (@$auth_student_id && @$auth_school_id) {
 				?>
 				<tr>
 					<td></td>
-					<td><input type="button" name="join" id="join" class="com-button" value="Ikuti" onclick="window.location='<?php echo $cfg->base_url; ?>/siswa/ujian/index.php?test_id=<?php echo $data['test_id']; ?>'" />
-						<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='ujian.php'" />
+					<td><input type="button" name="join" id="join" class="btn com-button btn-success" value="Ikuti" onclick="window.location='<?php echo $cfg->base_url; ?>/siswa/ujian/index.php?test_id=<?php echo $data['test_id']; ?>'" />
+						<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='ujian.php'" />
 					</td>
 				</tr>
 			</table>
@@ -505,7 +505,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		<div class="search-control">
 			<form id="searchform" name="form1" method="get" action="">
 				<span class="search-label">Kelas</span>
-				<select class="input-select" name="class_id" id="class_id">
+				<select class="form-control input-select" name="class_id" id="class_id">
 					<option value="">- Pilih Kelas -</option>
 					<?php
 					$sql = "select * from `edu_class` where `school_id` = '$school_id' ";				
@@ -521,9 +521,9 @@ if (@$auth_student_id && @$auth_school_id) {
 					?>
 				</select>
 				<span class="search-label">Ujian</span>
-				<input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
+				<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
     ")))); ?>" />
-				<input type="submit" name="search" id="search" value="Cari" class="com-button" />
+				<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 			</form>
 		</div>
 
@@ -595,12 +595,12 @@ if (@$auth_student_id && @$auth_school_id) {
 					<ul class="menu-control">
 					</ul>
 
-					<div class="search-pagination search-pagination-top">
-						<div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-						<div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+					<div class="d-flex search-pagination search-pagination-top">
+						<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+						<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 					</div>
 
-					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table hide-some-cell">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
 						<thead>
 							<tr>
 								<td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></td>
@@ -633,9 +633,9 @@ if (@$auth_student_id && @$auth_school_id) {
 						</tbody>
 					</table>
 
-					<div class="search-pagination search-pagination-bottom">
-						<div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-						<div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+					<div class="d-flex search-pagination search-pagination-bottom">
+						<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+						<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 					</div>
 
 				</form>
@@ -669,7 +669,7 @@ if (@$auth_student_id && @$auth_school_id) {
 	<div class="search-control">
 		<form id="searchform" name="form1" method="get" action="">
 			<span class="search-label">Kelas</span>
-			<select class="input-select" name="class_id" id="class_id">
+			<select class="form-control input-select" name="class_id" id="class_id">
 				<option value="">- Pilih Kelas -</option>
 				<?php
 				$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";
@@ -695,9 +695,9 @@ if (@$auth_student_id && @$auth_school_id) {
 				?>
 			</select>
 			<span class="search-label">Ujian</span>
-			<input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
+			<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
     ")))); ?>" />
-			<input type="submit" name="search" id="search" value="Cari" class="com-button" />
+			<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 		</form>
 	</div>
 	<div class="search-result">
@@ -764,12 +764,12 @@ $pagination->total_record_with_limit = $stmt->rowCount();
 					}
 				</style>
 
-				<div class="search-pagination search-pagination-top">
-					<div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-					<div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+				<div class="d-flex search-pagination search-pagination-top">
+					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+					<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 				</div>
 
-				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table hide-some-cell">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
 					<thead>
 						<tr>
 							<td width="25">No</td>
@@ -798,9 +798,9 @@ $pagination->total_record_with_limit = $stmt->rowCount();
 					</tbody>
 				</table>
 
-				<div class="search-pagination search-pagination-bottom">
-					<div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-					<div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+				<div class="d-flex search-pagination search-pagination-bottom">
+					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+					<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 				</div>
 
 			</form>
@@ -833,7 +833,7 @@ $pagination->total_record_with_limit = $stmt->rowCount();
 	<div class="search-control">
 		<form id="searchform" name="form1" method="get" action="">
 			<span class="search-label">Kelas</span>
-			<select class="input-select" name="class_id" id="class_id">
+			<select class="form-control input-select" name="class_id" id="class_id">
 				<option value="">- Pilih Kelas -</option>
 				<?php
 				$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";
@@ -859,9 +859,9 @@ $pagination->total_record_with_limit = $stmt->rowCount();
 				?>
 			</select>
 			<span class="search-label">Ujian</span>
-			<input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
+			<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
     ")))); ?>" />
-			<input type="submit" name="search" id="search" value="Cari" class="com-button" />
+			<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 		</form>
 	</div>
 	<div class="search-result">
@@ -927,12 +927,12 @@ $pagination->total_record_with_limit = $stmt->rowCount();
 					}
 				</style>
 
-				<div class="search-pagination search-pagination-top">
-					<div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-					<div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+				<div class="d-flex search-pagination search-pagination-top">
+					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+					<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 				</div>
 
-				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table hide-some-cell">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
 					<thead>
 						<tr>
 							<td width="25">No</td>
@@ -962,9 +962,9 @@ $pagination->total_record_with_limit = $stmt->rowCount();
 					</tbody>
 				</table>
 
-				<div class="search-pagination search-pagination-bottom">
-					<div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-					<div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+				<div class="d-flex search-pagination search-pagination-bottom">
+					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+					<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 				</div>
 
 			</form>

@@ -185,7 +185,7 @@ order by `edu_test`.`test_id` desc
 ";
 $stmt = $database->executeQuery($sql);
 ?>
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
   <thead>
 	<tr>
 	  <td>Ujian</td>

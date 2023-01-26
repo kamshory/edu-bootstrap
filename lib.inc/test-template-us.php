@@ -265,8 +265,8 @@ if($start == '' || $start == '0000-00-00 00:00:00')
 	$_SESSION['session_test'][$student_id][$test_id]['start'] = $start;
 }
 ?>
-<input type="button" name="check" id="check" class="com-button submit-test-button" href="#check-answer" data-rel="popup" value="Periksa Jawaban" />
-<input type="button" name="save" id="save" class="com-button submit-test-button" value="Kirim Jawaban" onclick="submitTest($(this).closest('form'))"/>
+<input type="button" name="check" id="check" class="btn com-button btn-success submit-test-button" href="#check-answer" data-rel="popup" value="Periksa Jawaban" />
+<input type="button" name="save" id="save" class="btn com-button btn-success submit-test-button" value="Kirim Jawaban" onclick="submitTest($(this).closest('form'))"/>
 <input type="hidden" name="submit_test" value="Kirim">
 <input type="hidden" name="time_start" value="<?php echo $start;?>">
 <input type="hidden" name="test_id" value="<?php echo $test_id;?>">

@@ -5,7 +5,7 @@ if(empty(@$school_id))
 include_once dirname(__FILE__)."/bukan-guru.php";
 exit();
 }
-$cfg->module_title = "Profil Sekolah";
+$cfg->page_title = "Profil Sekolah";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $nt = '';
@@ -23,7 +23,7 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_school" action="" method="post" enctype="multipart/form-data">
-	<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama</td>
 		<td><?php echo $data['name'];?></td>

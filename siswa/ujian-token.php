@@ -3,7 +3,7 @@ if(!defined('DB_NAME'))
 {
 	exit();
 }
-if(@$school_id == 0)
+if(empty(@$school_id))
 {
 include_once dirname(__FILE__)."/login-form.php";
 exit();
@@ -163,7 +163,7 @@ else if(isset($_POST['token']))
 	}
 }
 
-$cfg->module_title = "Token Ujian";
+$cfg->page_title = "Token Ujian";
 ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -173,7 +173,7 @@ $cfg->module_title = "Token Ujian";
 <meta name="theme-color" content="#3558BE">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#3558BE">
-<title><?php if(isset($cfg->module_title)) echo ltrim($cfg->module_title.' - ', ' - ');?><?php echo $cfg->app_name;?></title>
+<title><?php if(isset($cfg->page_title)) echo ltrim($cfg->page_title.' - ', ' - ');?><?php echo $cfg->app_name;?></title>
 <link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test-token.css" />
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery/jquery.min.js"></script>
@@ -215,7 +215,7 @@ $cfg->module_title = "Token Ujian";
 		<div class="label-center">
 		Informasi Singkat Ujian
 		</div>
-		  <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+		  <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 			<tr>
 			<td>Nama Ujian</td><td><?php echo $data['name'];?></td>
 			</tr>

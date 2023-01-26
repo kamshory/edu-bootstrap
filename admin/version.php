@@ -1,6 +1,6 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-$cfg->module_title = "Version Program";
+$cfg->page_title = "Version Program";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
 <style type="text/css">

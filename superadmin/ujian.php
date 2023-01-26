@@ -6,7 +6,7 @@ if($admin_login->admin_level != 1)
 	exit();
 }
 $admin_id = $admin_login->admin_id;
-$cfg->module_title = "Ujian";
+$cfg->page_title = "Ujian";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
 <ul class="list-rounded">

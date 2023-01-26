@@ -22,8 +22,8 @@ if(stripos($size['mime'], 'image')===0)
 <div id="image-editor-all">
 <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
   <div class="image-editor-filename-name-area"><input type="text" name="curfilepath" id="curfilepath" value="<?php echo $fileurl;?>" /><input type="hidden" name="curfileurl" id="curfileurl" value="<?php echo htmlspecialchars(stripslashes($url));?>" />
-    <input type="button" name="openimage" id="openimage" value="Open" onClick="editImage($('#curfilepath').val())" class="com-button" />
-    <input type="button" name="closeeditor" id="closeeditor" value="Close" onClick="destroyImageEditor()" class="com-button delete-button" />
+    <input type="button" name="openimage" id="openimage" value="Open" onClick="editImage($('#curfilepath').val())" class="btn com-button btn-success" />
+    <input type="button" name="closeeditor" id="closeeditor" value="Close" onClick="destroyImageEditor()" class="btn com-button btn-success delete-button" />
   </div>
   <div class="image-editor-middle">
 	<div class="image-editor-sidebar">
@@ -75,8 +75,8 @@ if(stripos($size['mime'], 'image')===0)
       	<div class="image-editor-tool-item image-tool-flip-v"><a href="javascript:flipV('<?php echo $fileurl;?>')">Flip Vertical</a></div>
       </div>
       <div class="button-area">
-      <input type="button" name="save" id="save" value="Save" class="com-button" onclick="saveImage()" />
-      <input type="button" name="discharge" id="discharge" value="Close" class="com-button delete-button" onClick="destroyImageEditor()" />
+      <input type="button" name="save" id="save" value="Save" class="btn com-button btn-success" onclick="saveImage()" />
+      <input type="button" name="discharge" id="discharge" value="Close" class="btn com-button btn-success delete-button" onClick="destroyImageEditor()" />
       </div>
       </div>
       <?php
@@ -124,8 +124,8 @@ if(strlen($error_code))
 <div id="image-editor-all">
 <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
 <div class="image-editor-filename-name-area"><input type="text" name="curfilepath" id="curfilepath" value="<?php echo $fileurl;?>" /><input type="hidden" name="curfileurl" id="curfileurl" value="<?php echo htmlspecialchars(stripslashes($url));?>" />
-<input type="button" name="openimage" id="openimage" value="Open" onClick="editImage($('#curfilepath').val())" class="com-button" />
-<input type="button" name="closeeditor" id="closeeditor" value="Close" onClick="destroyImageEditor()" class="com-button delete-button" />
+<input type="button" name="openimage" id="openimage" value="Open" onClick="editImage($('#curfilepath').val())" class="btn com-button btn-success" />
+<input type="button" name="closeeditor" id="closeeditor" value="Close" onClick="destroyImageEditor()" class="btn com-button btn-success delete-button" />
 </div>
 </form>
   <div class="image-editor-middle">

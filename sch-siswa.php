@@ -1,7 +1,7 @@
 <?php
 include_once dirname(__FILE__) . "/lib.inc/functions-pico.php";
 include_once dirname(__FILE__) . "/lib.inc/sessions.php";
-$cfg->module_title = "Siswa";
+$cfg->page_title = "Siswa";
 include_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 if (isset($_GET['school_id'])) {
   $school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
@@ -24,7 +24,7 @@ if (!@$student_id && !@$teacher_id) {
       $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
       <h3>Jumlah Siswa <?php echo $data['name']; ?></h3>
-      <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+      <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
         <tr>
           <td>Laki-Laki</td>
           <td><?php echo $data['M']; ?> orang</td>
@@ -47,7 +47,7 @@ if (!@$student_id && !@$teacher_id) {
 
 if (@$_GET['option'] == 'detail') {
   include_once dirname(__FILE__) . "/lib.inc/header.php";
-  $edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_NUMBER_UINT);
+  $edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_STRING_NEW);
   $nt = '';
   $sql = "select `edu_student`.* ,
 (select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
@@ -64,7 +64,7 @@ and `edu_student`.`student_id` = '$edit_key'
     ?>
     ?>
     <form name="formedu_student" action="" method="post" enctype="multipart/form-data">
-      <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+      <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
         <tr>
           <td>NIS</td>
           <td><?php echo $data['reg_number'];?></td>
@@ -95,7 +95,7 @@ and `edu_student`.`student_id` = '$edit_key'
         </tr>
         <tr>
           <td></td>
-          <td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo 'siswa.php'; ?>'" /></td>
+          <td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo 'siswa.php'; ?>'" /></td>
         </tr>
       </table>
     </form>
@@ -108,12 +108,12 @@ and `edu_student`.`student_id` = '$edit_key'
   include_once dirname(__FILE__) . "/lib.inc/footer.php";
 } else {
   include_once dirname(__FILE__) . "/lib.inc/header.php";
-  $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_NUMBER_UINT);
+  $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
   ?>
   <div class="search-control">
     <form id="searchform" name="form1" method="get" action="">
       <span class="search-label">Kelas</span>
-      <select class="input-select" name="class_id" id="class_id">
+      <select class="form-control input-select" name="class_id" id="class_id">
         <option value=""></option>
         <?php
         $sql2 = "select * from `edu_class` where `active` = '1' and `school_id` = '$school_id' order by `order` asc ";
@@ -141,9 +141,9 @@ and `edu_student`.`student_id` = '$edit_key'
         ?>
       </select>
       <span class="search-label">Nama Siswa</span>
-      <input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
+      <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
  ")))); ?>" />
-      <input type="submit" name="search" id="search" value="Cari" class="com-button" />
+      <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
     </form>
   </div>
   <div class="search-result">
@@ -222,14 +222,14 @@ and `edu_student`.`student_id` = '$edit_key'
         <?php
         if ($class_id == 0) {
         ?>
-          <div class="search-pagination search-pagination-top">
-            <div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-            <div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+          <div class="d-flex search-pagination search-pagination-top">
+            <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+            <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
           </div>
         <?php
         }
         ?>
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table hide-some-cell">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
           <thead>
             <tr>
               <td width="25">No</td>
@@ -265,9 +265,9 @@ and `edu_student`.`student_id` = '$edit_key'
         <?php
         if ($class_id == 0) {
         ?>
-          <div class="search-pagination search-pagination-bottom">
-            <div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-            <div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+          <div class="d-flex search-pagination search-pagination-bottom">
+            <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+            <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
           </div>
         <?php
         }

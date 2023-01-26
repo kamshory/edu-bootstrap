@@ -5,7 +5,7 @@ if(empty(@$school_id))
 include_once dirname(__FILE__)."/bukan-admin.php";
 exit();
 }
-$cfg->module_title = "Profil Sekolah";
+$cfg->page_title = "Profil Sekolah";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['save']) && count(@$_POST))
 {
@@ -217,15 +217,15 @@ $(document).ready(function(e) {
 
 </script>
 <form name="formedu_school" id="formedu_school" action="" method="post" enctype="multipart/form-data">
-	<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama</td>
-		<td><input type="text" class="input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" />
+		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" />
         <input type="hidden" name="school_id2" id="school_id2" value="<?php echo ($data['school_id']);?>" /></td>
 		</tr>
 		<tr>
 		<td>Jenjang</td>
-		<td><select class="input-select" name="school_grade_id" id="school_grade_id">
+		<td><select class="form-control input-select" name="school_grade_id" id="school_grade_id">
 		<option value=""></option>
 		<option value="1"<?php if($data['school_grade_id'] == '1') echo ' selected="selected"';?>>Play Group</option>
 		<option value="2"<?php if($data['school_grade_id'] == '2') echo ' selected="selected"';?>>Taman Kanak-Kanak</option>
@@ -237,7 +237,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Negeri/Swasta</td>
-		<td><select class="input-select" name="public_private" id="public_private">
+		<td><select class="form-control input-select" name="public_private" id="public_private">
 		<option value=""></option>
 		<option value="U"<?php 
 		if ($data['public_private'] == 'U') {
@@ -260,7 +260,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Kepala Sekolah
-		</td><td><input type="text" class="input-text input-text-long" name="principal" id="principal" value="<?php echo $data['principal'];?>" autocomplete="off" /></td>
+		</td><td><input type="text" class="form-control input-text input-text-long" name="principal" id="principal" value="<?php echo $data['principal'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Alamat</td>
@@ -268,11 +268,11 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Telepon
-		</td><td><input type="tel" class="input-text input-text-long" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
+		</td><td><input type="tel" class="form-control input-text input-text-long" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><input type="email" class="input-text input-text-long" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
+		<td><input type="email" class="form-control input-text input-text-long" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
 		</tr>
 		<tr>
 		<td>Bahasa
@@ -285,7 +285,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Negara
-		</td><td><select class="input-select" name="country_id" id="country_id">
+		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
         $sql = "select * from `country` where `active` = '1' order by `order` asc
@@ -306,7 +306,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Provinsi
-		</td><td><select class="input-select" name="state_id" id="state_id">
+		</td><td><select class="form-control input-select" name="state_id" id="state_id">
 		<option value="">- Pilih Provinsi -</option>
 			<?php
             $sql = "select * from `state` where `active` = '1' and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
@@ -328,7 +328,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Kabupaten/Kota
-		</td><td><select class="input-select" name="city_id" id="city_id">
+		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
             $sql = "select * from `city` where `active` = '1' and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
@@ -364,7 +364,7 @@ $(document).ready(function(e) {
 		</td>
 		</tr>
 		<tr><td></td>
-		<td><input type="submit" name="save" id="save" class="com-button" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -402,7 +402,7 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_school" action="" method="post" enctype="multipart/form-data">
-	<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama</td>
 		<td><?php echo $data['name'];?></td>
@@ -558,10 +558,10 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<tr>
 		<td></td>
 		<td>
-        <input type="button" name="edit" id="edit" class="com-button" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit'" />
-        <input type="button" name="switch" id="switch" class="com-button" value="Ganti Sekolah" onclick="window.location='ganti-sekolah.php'" />
-        <input type="button" name="import-data" id="import-data" class="com-button" value="Impor Data" onclick="window.location='impor-data.php'" />
-        <input type="button" name="public" id="public" class="com-button" value="Halaman Umum" onclick="window.open('../<?php echo $data['school_code'];?>')" />
+        <input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit'" />
+        <input type="button" name="switch" id="switch" class="btn com-button btn-success" value="Ganti Sekolah" onclick="window.location='ganti-sekolah.php'" />
+        <input type="button" name="import-data" id="import-data" class="btn com-button btn-success" value="Impor Data" onclick="window.location='impor-data.php'" />
+        <input type="button" name="public" id="public" class="btn com-button btn-success" value="Halaman Umum" onclick="window.open('../<?php echo $data['school_code'];?>')" />
         </td>
 		</tr>
 	</table>

@@ -11,7 +11,7 @@ if(empty($real_school_id))
 	exit();
 }
 
-$cfg->module_title = "Administrator";
+$cfg->page_title = "Administrator";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $my_admin = $admin_create = $admin_edit = $admin_login->admin_id;
 
@@ -183,18 +183,18 @@ if(@$_GET['option']=='add')
 	include_once dirname(__FILE__)."/lib.inc/header.php";
 	?>
 	<form name="formedu_admin" id="formedu_admin" action="" method="post" enctype="multipart/form-data">
-		<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 			<tr>
 			<td>Username</td>
-			<td><input type="text" class="input-text input-text-long" name="username" id="username" autocomplete="off" /></td>
+			<td><input type="text" class="form-control input-text input-text-long" name="username" id="username" autocomplete="off" /></td>
 			</tr>
 			<tr>
 			<td>Nama</td>
-			<td><input type="text" class="input-text input-text-long" name="name" id="name" autocomplete="off" /></td>
+			<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" /></td>
 			</tr>
 			<tr>
 			<td>Jenis Kelamin</td>
-			<td><select class="input-select" name="gender" id="gender">
+			<td><select class="form-control input-select" name="gender" id="gender">
 			<option value=""></option>
 			<option value="M">Laki-Laki</option>
 			<option value="W">Perempuan</option>
@@ -202,23 +202,23 @@ if(@$_GET['option']=='add')
 			</tr>
 			<tr>
 			<td>Tempat Lahir</td>
-			<td><input type="text" class="input-text input-text-long" name="birth_place" id="birth_place" autocomplete="off" /></td>
+			<td><input type="text" class="form-control input-text input-text-long" name="birth_place" id="birth_place" autocomplete="off" /></td>
 			</tr>
 			<tr>
 			<td>Tanggal Lahir</td>
-			<td><input type="date" class="input-text input-text-date" name="birth_day" id="birth_day" autocomplete="off" /></td>
+			<td><input type="date" class="form-control input-text input-text-date" name="birth_day" id="birth_day" autocomplete="off" /></td>
 			</tr>
 			<tr>
 			<td>Email</td>
-			<td><input type="email" class="input-text input-text-long" name="email" id="email" autocomplete="off" data-type="email" /></td>
+			<td><input type="email" class="form-control input-text input-text-long" name="email" id="email" autocomplete="off" data-type="email" /></td>
 			</tr>
 			<tr>
 			<td>Phone</td>
-			<td><input type="tel" class="input-text input-text-long" name="phone" id="phone" autocomplete="off" /></td>
+			<td><input type="tel" class="form-control input-text input-text-long" name="phone" id="phone" autocomplete="off" /></td>
 			</tr>
 			<tr>
 			<td>Password</td>
-			<td><input type="password" class="input-text input-text-long" name="password" id="password" autocomplete="off" /></td>
+			<td><input type="password" class="form-control input-text input-text-long" name="password" id="password" autocomplete="off" /></td>
 			</tr>
 			<tr>
 			<td>Blokir</td>
@@ -232,7 +232,7 @@ if(@$_GET['option']=='add')
 			</tr>
 			<tr>
 			<td></td>
-			<td><input type="submit" name="save" id="save" class="com-button" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+			<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 			</tr>
 		</table>
 	</form>
@@ -260,19 +260,19 @@ if($stmt->rowCount() > 0)
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	?>
 	<form name="formedu_admin" id="formedu_admin" action="" method="post" enctype="multipart/form-data">
-		<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 			<tr>
 			<td>Username</td>
-			<td><input type="text" class="input-text input-text-long" name="username" id="username" value="<?php echo $data['username'];?>" autocomplete="off" />
+			<td><input type="text" class="form-control input-text input-text-long" name="username" id="username" value="<?php echo $data['username'];?>" autocomplete="off" />
 			<input type="hidden" name="admin_id2" id="admin_id2" value="<?php echo $data['admin_id'];?>" /></td>
 			</tr>
 			<tr>
 			<td>Nama</td>
-			<td><input type="text" class="input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /></td>
+			<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /></td>
 			</tr>
 			<tr>
 			<td>Jenis Kelamin</td>
-			<td><select class="input-select" name="gender" id="gender">
+			<td><select class="form-control input-select" name="gender" id="gender">
 			<option value=""></option>
 			<option value="M"<?php if($data['gender'] == 'M') {echo ' selected="selected"';}?>>Laki-Laki</option>
 			<option value="W"<?php if($data['gender'] == 'W') {echo ' selected="selected"';}?>>Perempuan</option>
@@ -280,23 +280,23 @@ if($stmt->rowCount() > 0)
 			</tr>
 			<tr>
 			<td>Tempat Lahir</td>
-			<td><input type="text" class="input-text input-text-long" name="birth_place" id="birth_place" value="<?php echo $data['birth_place'];?>" autocomplete="off" /></td>
+			<td><input type="text" class="form-control input-text input-text-long" name="birth_place" id="birth_place" value="<?php echo $data['birth_place'];?>" autocomplete="off" /></td>
 			</tr>
 			<tr>
 			<td>Tanggal Lahir</td>
-			<td><input type="date" class="input-text input-text-date" name="birth_day" id="birth_day" value="<?php echo $data['birth_day'];?>" autocomplete="off" /> TTTT-BB-HH</td>
+			<td><input type="date" class="form-control input-text input-text-date" name="birth_day" id="birth_day" value="<?php echo $data['birth_day'];?>" autocomplete="off" /> TTTT-BB-HH</td>
 			</tr>
 			<tr>
 			<td>Email</td>
-			<td><input type="email" class="input-text input-text-long" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
+			<td><input type="email" class="form-control input-text input-text-long" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
 			</tr>
 			<tr>
 			<td>Phone</td>
-			<td><input type="tel" class="input-text input-text-long" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
+			<td><input type="tel" class="form-control input-text input-text-long" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
 			</tr>
 			<tr>
 			<td>Password</td>
-			<td><input type="password" class="input-text input-text-long" name="password" id="password" autocomplete="off" /></td>
+			<td><input type="password" class="form-control input-text input-text-long" name="password" id="password" autocomplete="off" /></td>
 			</tr>
 			<tr>
 			<td>Blokir</td>
@@ -311,8 +311,8 @@ if($stmt->rowCount() > 0)
 			</td>
 			</tr>
 			<tr><td></td>
-			<td><input type="submit" name="save" id="save" class="com-button" value="Simpan" /> 
-			<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+			<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> 
+			<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 			</tr>
 		</table>
 	</form>
@@ -345,7 +345,7 @@ else if(@$_GET['option']=='detail')
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	?>
 	<form name="formedu_admin" action="" method="post" enctype="multipart/form-data">
-		<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 			<tr>
 			<td>Username</td>
 			<td><?php echo $data['username'];?></td>
@@ -416,7 +416,7 @@ else if(@$_GET['option']=='detail')
 			</tr>
 			<tr>
 			<td></td>
-			<td><input type="button" name="edit" id="edit" class="com-button" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&admin_id=<?php echo $data['admin_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+			<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&admin_id=<?php echo $data['admin_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 			</tr>
 		</table>
 	</form>
@@ -438,9 +438,9 @@ else
 	<div class="search-control">
 	<form id="searchform" name="form1" method="get" action="">
 	<span class="search-label">Admin</span>
-		<input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
+		<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
 	"))));?>" />
-	<input type="submit" name="search" id="search" value="Cari" class="com-button" />
+	<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 	</form>
 	</div>
 	<div class="search-result">
@@ -499,12 +499,12 @@ else
 		}
 		</style>
 
-		<div class="search-pagination search-pagination-top">
-		<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-		<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+		<div class="d-flex search-pagination search-pagination-top">
+		<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+		<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 		</div>
 
-		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table hide-some-cell">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
 		<thead>
 			<tr>
 			<td width="16"><input type="checkbox" name="control-admin_id" id="control-admin_id" class="checkbox-selector" data-target=".admin_id" value="1"></td>
@@ -543,16 +543,16 @@ else
 			</tbody>
 		</table>
 
-		<div class="search-pagination search-pagination-bottom">
-		<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-		<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+		<div class="d-flex search-pagination search-pagination-bottom">
+		<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+		<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 		</div>
 
 		<div class="button-area">
-		<input type="submit" name="set_active" id="set_active" value="Aktifkan" class="com-button" />
-		<input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="com-button" />
-		<input type="submit" name="delete" id="delete" value="Hapus" class="com-button delete-button" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
-		<input type="button" name="add" id="add" value="Tambah" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
+		<input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn com-button btn-success" />
+		<input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-success" />
+		<input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-success delete-button" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
+		<input type="button" name="add" id="add" value="Tambah" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
 		</div>
 		</form>
 		<?php

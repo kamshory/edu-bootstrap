@@ -5,7 +5,7 @@ if(empty(@$school_id))
 include_once dirname(__FILE__)."/bukan-admin.php";
 exit();
 }
-$cfg->module_title = "Kelas";
+$cfg->page_title = "Kelas";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
 <ul class="list-rounded">

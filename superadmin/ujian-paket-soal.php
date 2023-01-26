@@ -8,7 +8,7 @@ if($admin_login->admin_level != 1)
 $admin_id = $admin_login->admin_id;
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-$cfg->module_title = "Paket Soal";
+$cfg->page_title = "Paket Soal";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $time_create = $time_edit = $picoEdu->getLocalDateTime();
 $member_create = $member_edit = $admin_login->admin_id;
@@ -1074,7 +1074,7 @@ if(isset($data->file))
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="160">Kompetensi Dasar</td>
-    <td><input type="text" class="input-text input-text-short" name="basic_competence" id="basic_competence" value="<?php echo @$data->competence;?>" /></td>
+    <td><input type="text" class="form-control input-text input-text-short" name="basic_competence" id="basic_competence" value="<?php echo @$data->competence;?>" /></td>
   </tr>
   <tr>
     <td>Tipe Pilihan</td>
@@ -1150,7 +1150,7 @@ for($jj = 0; $jj < $count_option; $jj++)
 ?>
 <div class="option-item" data-index="<?php echo $i;?>">
 <div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i];?></span> | Nilai 
-<input type="number" min="0" max="<?php echo ($data3['standard_score']);?>" class="input-text input-text-short" name="score[<?php echo $i;?>]" id="score_<?php echo $i;?>" value="<?php echo $data2->value;?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']);?>)</div>
+<input type="number" min="0" max="<?php echo ($data3['standard_score']);?>" class="form-control input-text input-text-short" name="score[<?php echo $i;?>]" id="score_<?php echo $i;?>" value="<?php echo $data2->value;?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']);?>)</div>
 <div class="option-editor">
 <textarea spellcheck="false" class="htmleditor" name="option[<?php echo $i;?>]" id="option_<?php echo $i;?>" style="width:100%;"><?php echo htmlspecialchars(($data2->text));?></textarea>
 </div>
@@ -1165,8 +1165,8 @@ $i++;
 
 <div class="button-area">
 <input type="hidden" name="test_collection_id" id="test_collection_id" value="<?php echo $test_collection_id;?>" />
-<input type="submit" name="save" id="save" class="com-button" value="Simpan" />
-<input type="button" name="showall" id="showall" class="com-button" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?test_collection_id=<?php echo $test_collection_id;?>'" />
+<input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" />
+<input type="button" name="showall" id="showall" class="btn com-button btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?test_collection_id=<?php echo $test_collection_id;?>'" />
 <input type="hidden" name="number_of_option" value="<?php echo $count_option;?>" />
 </div>
 
@@ -1317,9 +1317,9 @@ if($stmt->rowCount() > 0)
         </div>
         </div>
         <div class="button-area">
-        <input type="button" name="urutkan_soal" id="urutkan_soal" class="com-button" value="Urutkan Soal" onclick="activateSortOrder()" />
-        <input type="button" name="export" id="export" class="com-button" value="Ekspor Soal" onclick="window.location='ujian-paket-soal.php?option=export&test_collection_id=<?php echo $test_collection_id;?>'" />
-        <input type="button" name="add" id="add" class="com-button" value="Tambah Soal" onclick="window.location='ujian-paket-soal.php?option=add&test_collection_id=<?php echo $test_collection_id;?>'" />
+        <input type="button" name="urutkan_soal" id="urutkan_soal" class="btn com-button btn-success" value="Urutkan Soal" onclick="activateSortOrder()" />
+        <input type="button" name="export" id="export" class="btn com-button btn-success" value="Ekspor Soal" onclick="window.location='ujian-paket-soal.php?option=export&test_collection_id=<?php echo $test_collection_id;?>'" />
+        <input type="button" name="add" id="add" class="btn com-button btn-success" value="Tambah Soal" onclick="window.location='ujian-paket-soal.php?option=add&test_collection_id=<?php echo $test_collection_id;?>'" />
         </div>
         <?php
 	}
@@ -1407,16 +1407,16 @@ $(document).ready(function(e) {
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
     <span class="search-label">Tingkat</span>
-    <select class="input-select" name="grade_id" id="grade_id">
+    <select class="form-control input-select" name="grade_id" id="grade_id">
     <option value=""></option>
 	<?php
 	echo $picoEdu->createGradeOption($grade_id);
 	?>
     </select>
     <span class="search-label">Nama</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
  "))));?>" />
-  <input type="submit" name="search" id="search" value="Cari" class="com-button" />
+  <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -1457,12 +1457,7 @@ $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
 $pagination->result = $picoEdu->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
-$pagination->str_result = "";
-foreach($pagination->result as $i=>$obj)
-{
-$cls = ($obj->sel)?" class=\"pagination-selected\"":"";
-$pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
-}
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 ?>
 <style type="text/css">
 @media screen and (max-width:799px)
@@ -1479,12 +1474,12 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 }
 </style>
 <form name="form1" method="post" action="">
-<div class="search-pagination search-pagination-top">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-top">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table hide-some-cell">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
       <td width="16"><input type="checkbox" name="control-test_collection_id" id="control-test_collection_id" class="checkbox-selector" data-target=".test_collection_id" value="1"></td>
@@ -1533,14 +1528,14 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
     </tbody>
   </table>
 
-<div class="search-pagination search-pagination-bottom">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-bottom">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
 <div class="button-area">
-  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="com-button" />
-  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="com-button" />
+  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn com-button btn-success" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-success" />
   </div>
 </form>
 <?php

@@ -224,7 +224,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <div class="label">
 Informasi Singkat Ujian
 </div>
-  <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+  <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
     <tr>
     <td>Nama Ujian</td><td><?php echo $data['name'];?></td>
     </tr>
@@ -272,7 +272,7 @@ include_once dirname(__FILE__) . "/lib.inc/header.php";
 <div class="label">
 Informasi Singkat Ujian
 </div>
-  <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+  <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
     <tr>
     <td>Nama Ujian</td><td><?php echo $data['name'];?></td>
     </tr>

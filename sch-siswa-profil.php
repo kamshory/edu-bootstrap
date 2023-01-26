@@ -1,6 +1,6 @@
 <?php
 include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
-$cfg->module_title = "Siswa";
+$cfg->page_title = "Siswa";
 include_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 
 if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
@@ -53,18 +53,18 @@ if (@$_GET['option'] == 'edit') {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 		<form name="formedu_student" id="formedu_student" action="" method="post" enctype="multipart/form-data">
-			<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td>Nama</td>
-					<td><input type="text" class="input-text input-text-long" name="name" id="name" value="<?php echo $data['name']; ?>" autocomplete="off" /></td>
+					<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name']; ?>" autocomplete="off" /></td>
 				</tr>
 				<tr>
 					<td>NISN</td>
-					<td><input type="text" class="input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo $data['reg_number_national']; ?>" autocomplete="off" /></td>
+					<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo $data['reg_number_national']; ?>" autocomplete="off" /></td>
 				</tr>
 				<tr>
 					<td>Jenis Kelamin</td>
-					<td><select class="input-select" name="gender" id="gender">
+					<td><select class="form-control input-select" name="gender" id="gender">
 							<option value="M" <?php if ($data['gender'] == 'M') {
 													echo ' selected="selected"';
 												} ?>>Laki-Laki</option>
@@ -75,32 +75,32 @@ if (@$_GET['option'] == 'edit') {
 				</tr>
 				<tr>
 					<td>Tempat Lahir</td>
-					<td><input type="text" class="input-text input-text-long" name="birth_place" id="birth_place" value="<?php echo $data['birth_place']; ?>" autocomplete="off" /></td>
+					<td><input type="text" class="form-control input-text input-text-long" name="birth_place" id="birth_place" value="<?php echo $data['birth_place']; ?>" autocomplete="off" /></td>
 				</tr>
 				<tr>
 					<td>Tanggal Lahir</td>
-					<td><input type="date" class="input-text input-text-date" name="birth_day" id="birth_day" value="<?php echo $data['birth_day']; ?>" autocomplete="off" /></td>
+					<td><input type="date" class="form-control input-text input-text-date" name="birth_day" id="birth_day" value="<?php echo $data['birth_day']; ?>" autocomplete="off" /></td>
 				</tr>
 				<tr>
 					<td>Telepon
 					</td>
-					<td><input type="tel" class="input-text input-text-long" name="phone" id="phone" value="<?php echo $data['phone']; ?>" autocomplete="off" /></td>
+					<td><input type="tel" class="form-control input-text input-text-long" name="phone" id="phone" value="<?php echo $data['phone']; ?>" autocomplete="off" /></td>
 				</tr>
 				<tr>
 					<td>Email</td>
-					<td><input type="email" class="input-text input-text-long" name="email" id="email" value="<?php echo $data['email']; ?>" autocomplete="off" data-type="email" /></td>
+					<td><input type="email" class="form-control input-text input-text-long" name="email" id="email" value="<?php echo $data['email']; ?>" autocomplete="off" data-type="email" /></td>
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="password" class="input-text input-text-long" name="password" id="password" autocomplete="off" /></td>
+					<td><input type="password" class="form-control input-text input-text-long" name="password" id="password" autocomplete="off" /></td>
 				</tr>
 				<tr>
 					<td>Alamat</td>
-					<td><textarea name="address" class="input-text input-text-long" id="address" autocomplete="off"><?php echo $data['address']; ?></textarea></td>
+					<td><textarea name="address" class="form-control input-text input-text-long" id="address" autocomplete="off"><?php echo $data['address']; ?></textarea></td>
 				</tr>
 				<tr>
 					<td></td>
-					<td><input type="submit" name="save" id="save" class="com-button" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan" class="com-button" onclick="window.location='profil.php'" /></td>
+					<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan" class="btn com-button btn-success" onclick="window.location='profil.php'" /></td>
 				</tr>
 			</table>
 		</form>
@@ -128,7 +128,7 @@ and `edu_student`.`student_id` = '$student_id'
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	?>
 		<form name="formedu_student" action="" method="post" enctype="multipart/form-data">
-			<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td>Nama</td>
 					<td><?php echo $data['name'];?></td>
@@ -199,12 +199,12 @@ and `edu_student`.`student_id` = '$student_id'
 				<tr>
 					<td></td>
 					<td>
-						<input type="button" name="edit" id="edit" class="com-button" value="Ubah" onclick="window.location='profil.php?option=edit'" />
-						<input type="button" name="selectschool" id="selectschool" class="com-button" value="Pilih Sekolah" onclick="window.location='../siswa/ganti-sekolah.php'" />
+						<input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='profil.php?option=edit'" />
+						<input type="button" name="selectschool" id="selectschool" class="btn com-button btn-success" value="Pilih Sekolah" onclick="window.location='../siswa/ganti-sekolah.php'" />
 						<?php
 						if ($data['school_open'] == '1') {
 						?>
-							<input type="button" name="selectclass" id="selectclass" class="com-button" value="Pilih Kelas" onclick="window.location='../siswa/ganti-kelas.php'" />
+							<input type="button" name="selectclass" id="selectclass" class="btn com-button btn-success" value="Pilih Kelas" onclick="window.location='../siswa/ganti-kelas.php'" />
 						<?php
 						}
 						?>

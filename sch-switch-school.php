@@ -1,7 +1,7 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/functions-pico.php";
 include_once dirname(__FILE__)."/lib.inc/sessions.php";
-$cfg->module_title = "Pilih Sekolah";
+$cfg->page_title = "Pilih Sekolah";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
 <ul class="list-rounded">

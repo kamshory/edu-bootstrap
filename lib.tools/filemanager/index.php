@@ -158,10 +158,10 @@ function selectFileIndex(url){
 <table width="100%" cellpadding="0" cellspacing="0" border="0">
 <tr>
 <td>
-<input type="text" class="input-text address" name="address" id="address" value="<?php echo $dir;?>" autocomplete="off" />
+<input type="text" class="form-control input-text address" name="address" id="address" value="<?php echo $dir;?>" autocomplete="off" />
 </td>
 <td width="64" align="right">
-<input type="submit" name="opendir" id="opendir" class="com-button" value="Open" />
+<input type="submit" name="opendir" id="opendir" class="btn com-button btn-success" value="Open" />
 </td>
 </tr>
 </table>

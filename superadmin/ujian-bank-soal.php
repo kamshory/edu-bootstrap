@@ -6,7 +6,7 @@ if($admin_login->admin_level != 1)
 	exit();
 }
 
-$cfg->module_title = "Bank Soal";
+$cfg->page_title = "Bank Soal";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 

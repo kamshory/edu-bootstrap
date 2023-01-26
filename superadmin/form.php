@@ -380,7 +380,7 @@ if(isset($field))
 $str .= "<"."?php
 include_once dirname(dirname(dirname(__FILE__))).\"/planetbiru/lib.inc/auth.php\";
 
-\$cfg->module_title = \"$module_title\";
+\$cfg->page_title = \"$module_title\";
 include_once dirname(dirname(__FILE__)).\"/lib.inc/cfg.pagination.php\";
 ";
 
@@ -1082,7 +1082,7 @@ function submitForm(frm)
 <input type="hidden" id="data2send" name="data2send" value="" />
 </form>
 <form id="form2" name="form2" method="post" action="" enctype="multipart/form-data" onSubmit="return submitForm(this)">
-<table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
 <thead>
   <tr>
   <td>Field</td>

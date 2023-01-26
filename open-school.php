@@ -1,6 +1,6 @@
 <?php
 include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
-$cfg->module_title = "Pilih Sekolah";
+$cfg->page_title = "Pilih Sekolah";
 include_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 if (@$_GET['option'] == 'select') {
 	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_INT);
@@ -56,7 +56,7 @@ if (@$_GET['option'] == 'detail') {
 		<div class="main-content">
 			<div class="main-content-wrapper">
 				<form name="formedu_school" action="" method="post" enctype="multipart/form-data">
-					<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+					<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 						<tr>
 							<td>Nama Sekolah</td>
 							<td><?php echo $data['name'];?></td>
@@ -144,9 +144,9 @@ if (@$_GET['option'] == 'detail') {
 		<div class="main-content-wrapper">
 			<div class="search-control">
 				<form id="searchform" name="form1" method="get" action="">
-					<input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
+					<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
     ")))); ?>" />
-					<input type="submit" name="search" id="search" value="Cari" class="com-button def-button" />
+					<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success def-button" />
 				</form>
 			</div>
 			<div class="search-result">
@@ -210,12 +210,12 @@ if (@$_GET['option'] == 'detail') {
 					}
 				?>
 					<form name="form1" method="post" action="">
-						<div class="search-pagination search-pagination-top">
-							<div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-							<div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+						<div class="d-flex search-pagination search-pagination-top">
+							<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+							<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 						</div>
 
-						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table bordered hide-some-cell">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm bordered hide-some-cell">
 							<thead>
 								<tr>
 									<td width="20">No</td>
@@ -251,9 +251,9 @@ if (@$_GET['option'] == 'detail') {
 							</tbody>
 						</table>
 
-						<div class="search-pagination search-pagination-bottom">
-							<div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-							<div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+						<div class="d-flex search-pagination search-pagination-bottom">
+							<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+							<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 						</div>
 
 					</form>

@@ -77,7 +77,7 @@ if($stmt->rowCount() > 0)
 		if(@$_GET['option'] == 'compress')
 		{
 		?>
-        <table width="100%" cellpadding="0" cellspacing="0" class="row-table">
+        <table width="100%" cellpadding="0" cellspacing="0" class="table table-striped table-sm">
         <thead>
         <tr>
             <td width="20">No</td>

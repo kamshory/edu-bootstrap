@@ -89,7 +89,7 @@ $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 ?> 
-<table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table tabel-peserta-test">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm tabel-peserta-test">
   <thead>
     <tr>
       <td width="25">No</td>

@@ -121,9 +121,9 @@ else
 				</table>
 					<div class="button-area">
 						<input type="hidden" name="test_id" value="<?php echo $test_id;?>" />
-						<input type="button" class="com-button" id="reload-dialog" value="Muat Ulang" onclick="distribution(<?php echo $test_id;?>)">
-						<input type="submit" class="com-button" id="save-dialog" value="Simpan">
-						<input type="button" class="com-button" id="close-dialog" value="Batal" onclick="closeOverlayDialog()">
+						<input type="button" class="btn com-button btn-success" id="reload-dialog" value="Muat Ulang" onclick="distribution(<?php echo $test_id;?>)">
+						<input type="submit" class="btn com-button btn-success" id="save-dialog" value="Simpan">
+						<input type="button" class="btn com-button btn-success" id="close-dialog" value="Batal" onclick="closeOverlayDialog()">
 					</div>
 				</form>    
 				</div>

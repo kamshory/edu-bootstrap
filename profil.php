@@ -1,6 +1,6 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/auth-admin.php";
-$cfg->module_title = "Profil";
+$cfg->page_title = "Profil";
 if(@$admin_id)
 {
 	$base_dir = 'admin/';

@@ -309,7 +309,7 @@ $school_grade = array(
 				<?php
 				}
 				?>
-                <table width="100%" border="1" cellspacing="0" cellpadding="0" class="row-table">
+                <table width="100%" border="1" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
                 <thead>
                   <tr>
                     <td width="20">No</td>

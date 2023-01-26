@@ -6,7 +6,7 @@ if($admin_login->admin_level != 1)
 	exit();
 }
 $admin_id = $admin_login->admin_id;
-$cfg->module_title = "Hasil Ujian";
+$cfg->page_title = "Hasil Ujian";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(isset($_POST['set_active']) && isset($_POST['answerid']))
@@ -101,7 +101,7 @@ echo '
 <?php
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
-<table width="100%" border="0" class="two-side-table" cellpadding="0" cellspacing="0">
+<table width="100%" border="0" class="table two-side-table" cellpadding="0" cellspacing="0">
   <tr>
     <td colspan="2">Ujian</td>
     <td width="1164"><?php echo $data['name'];?></td>
@@ -211,7 +211,7 @@ if($stmt->rowCount() > 0)
 {
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
-  <table width="100%" border="1" cellspacing="0" cellpadding="0" class="row-table">
+  <table width="100%" border="1" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
   <thead>
     <tr>
       <td width="25">No</td>
@@ -479,7 +479,7 @@ window.onload = function()
 	{
 	?>
     <span class="search-label">Kelas</span> 
-    <select class="input-select" name="class_id" id="class_id">
+    <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
 	$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";
@@ -510,11 +510,11 @@ window.onload = function()
     <input type="hidden" name="option" value="detail" /> 
     <input type="hidden" name="test_id" value="<?php echo $test_id;?>" /> 
     <span class="search-label">Siswa</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode(stripslashes(trim(@$_GET['q']," 	
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode(stripslashes(trim(@$_GET['q']," 	
     "))));?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="com-button" />
-  <input type="button" name="ekspor1" id="ekspor1" value="Ekspor Persiswa" class="com-button" />
-  <input type="button" name="ekspor2" id="ekspor2" value="Ekspor Perujian" class="com-button" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
+  <input type="button" name="ekspor1" id="ekspor1" value="Ekspor Persiswa" class="btn com-button btn-success" />
+  <input type="button" name="ekspor2" id="ekspor2" value="Ekspor Perujian" class="btn com-button btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -633,13 +633,13 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 ?>
 <form name="form1" method="post" action="" enctype="multipart/form-data">
 
-<div class="search-pagination search-pagination-top">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-top">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
   <thead>
     <tr>
       <td width="16"><input type="checkbox" name="control-answerid" data-target=".answerid" class="checkbox-selector" value="1"></td>
@@ -700,19 +700,19 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 	</tbody>
   </table>
 
-<div class="search-pagination search-pagination-bottom">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-bottom">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
 <div class="button-area">
-  <input type="submit" name="set_active" id="set_active" value="Aktif" class="com-button" />
-  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktif" class="com-button" />
-  <input type="submit" name="delete" id="delete" value="Hapus" class="com-button delete-button" onclick="return confirm('Apakah Anda yakin untuk menghapus data ini?');" />
+  <input type="submit" name="set_active" id="set_active" value="Aktif" class="btn com-button btn-success" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktif" class="btn com-button btn-success" />
+  <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-success delete-button" onclick="return confirm('Apakah Anda yakin untuk menghapus data ini?');" />
 	<?php
     if(!isset($_GET['expand'])){
     ?>
-    <input type="button" name="show-all" id="show-all" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo $q1;?>'" />
+    <input type="button" name="show-all" id="show-all" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo $q1;?>'" />
     <?php
     }
     else
@@ -720,13 +720,13 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
     if($assessment_methods == 'N')
     {
     ?>
-    <input type="button" name="show-newest" id="show-newest" value="Tampilkan Nilai Terbaru" class="com-button" onclick="window.location='<?php echo $q2;?>'" />
+    <input type="button" name="show-newest" id="show-newest" value="Tampilkan Nilai Terbaru" class="btn com-button btn-success" onclick="window.location='<?php echo $q2;?>'" />
     <?php
     }
     else
     {
     ?>
-    <input type="button" name="show-highest" id="show-highest" value="Tampilkan Nilai Tertinggi" class="com-button" onclick="window.location='<?php echo $q2;?>'" />
+    <input type="button" name="show-highest" id="show-highest" value="Tampilkan Nilai Tertinggi" class="btn com-button btn-success" onclick="window.location='<?php echo $q2;?>'" />
     <?php
     }
 	}
@@ -761,7 +761,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php";
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
   <span class="search-label">Sekolah</span>
-  <select class="input-select" name="school_id" id="school_id">
+  <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php
     $sql2 = "select * from `edu_school` where 1 order by `school_id` desc ";
@@ -781,7 +781,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php";
     if (@$school_id != 0) {
       ?>
     <span class="search-label">Kelas</span> 
-    <select class="input-select" name="class_id" id="class_id">
+    <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php
         $sql = "select * from `edu_class` where `school_id` = '$school_id' ";
@@ -809,9 +809,9 @@ include_once dirname(__FILE__)."/lib.inc/footer.php";
     }
     ?>
     <span class="search-label">Ujian</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode(stripslashes(trim(@$_GET['q'], " 	
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode(stripslashes(trim(@$_GET['q'], " 	
     ")))); ?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="com-button" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 <script type="text/javascript">
 window.onload = function()
@@ -886,13 +886,13 @@ order by `edu_test`.`test_id` desc
             ?>
 <form name="form1" method="post" action="" enctype="multipart/form-data">
 
-<div class="search-pagination search-pagination-top">
-<div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-<div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+<div class="d-flex search-pagination search-pagination-top">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 </div>
 
 <form name="rowform" method="post" action="">
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
   <thead>
     <tr>
         <td width="16"><img src="lib.tools/images/excel.png" /></td>
@@ -935,9 +935,9 @@ order by `edu_test`.`test_id` desc
 	</tbody>
   </table>
 
-<div class="search-pagination search-pagination-bottom">
-<div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-<div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+<div class="d-flex search-pagination search-pagination-bottom">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 </div>
 
 </form>

@@ -10,7 +10,7 @@ if(empty(@$real_school_id))
 	include_once dirname(__FILE__)."/belum-ada-sekolah.php";
 	exit();
 }
-$cfg->module_title = "Bank Soal";
+$cfg->page_title = "Bank Soal";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $grade_id = kh_filter_input(INPUT_GET, 'grade_id', FILTER_SANITIZE_NUMBER_UINT);
 $array_class = $picoEdu->getArrayClass($school_id);
@@ -96,7 +96,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 				{
 					
 			?>
-              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
               <thead>
                 <tr>
                   <td>Ujian</td>

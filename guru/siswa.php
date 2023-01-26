@@ -5,7 +5,7 @@ if(empty(@$school_id))
 include_once dirname(__FILE__)."/bukan-guru.php";
 exit();
 }
-$cfg->module_title = "Siswa";
+$cfg->page_title = "Siswa";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(@$_GET['option']=='detail')
@@ -28,7 +28,7 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_student" action="" method="post" enctype="multipart/form-data">
-	<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama</td>
 		<td><?php echo $data['name'];?></td>
@@ -134,7 +134,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 	?>
 		<tr>
 		<td></td>
-		<td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -169,7 +169,7 @@ $(document).ready(function(e) {
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
   <span class="search-label">Kelas</span>
-  <select class="input-select" name="class_id" id="class_id">
+  <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
     $sql2 = "select * from `edu_class` where `active` = '1' and `school_id` = '$school_id' order by `order` asc ";
@@ -195,9 +195,9 @@ $(document).ready(function(e) {
     ?>
     </select>
     <span class="search-label">Nama Siswa</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
  "))));?>" />
-  <input type="submit" name="search" id="search" value="Cari" class="com-button" />
+  <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -238,12 +238,7 @@ $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
 $pagination->result = $picoEdu->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
-$pagination->str_result = "";
-foreach($pagination->result as $i=>$obj)
-{
-$cls = ($obj->sel)?" class=\"pagination-selected\"":"";
-$pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
-}
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 ?>
 <form name="form1" method="post" action="">
 <style type="text/css">
@@ -261,12 +256,12 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 }
 </style>
 
-<div class="search-pagination search-pagination-top">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-top">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table hide-some-cell">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
       <td width="25">No</td>
@@ -305,13 +300,13 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
     </tbody>
   </table>
 
-<div class="search-pagination search-pagination-bottom">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-bottom">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
 <div class="button-area">
-  <input type="button" name="print" id="print" value="Cetak Password" class="com-button" onclick="window.open('<?php echo basename($_SERVER['PHP_SELF']);?>?option=print-password<?php echo ($class_id)?("&class_id=$class_id"):"";?>')" />
+  <input type="button" name="print" id="print" value="Cetak Password" class="btn com-button btn-success" onclick="window.open('<?php echo basename($_SERVER['PHP_SELF']);?>?option=print-password<?php echo ($class_id)?("&class_id=$class_id"):"";?>')" />
   </div>
 
 </form>

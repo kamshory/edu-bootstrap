@@ -229,7 +229,7 @@ var classList = <?php echo json_encode($arrc);?>;
 	</script>
 	<form id="articleform" method="post" enctype="multipart/form-data" action="">
 	<div class="input-block">
-	<input type="text" id="title" name="title" class="input-text input-text-full input-text-title" value="<?php echo $data['title'];?>" placeholder="Judul Artikel" autocomplete="off" required="required" />
+	<input type="text" id="title" name="title" class="form-control input-text input-text-full input-text-title" value="<?php echo $data['title'];?>" placeholder="Judul Artikel" autocomplete="off" required="required" />
 	</div>
 	<div class="input-block">
 	<textarea id="content" name="content" style="width:100%; height:300px; box-sizing:border-box;"><?php echo htmlspecialchars($data['content']);?></textarea>
@@ -262,7 +262,7 @@ var classList = <?php echo json_encode($arrc);?>;
 	</script>
 	<form id="articleform" method="post" enctype="multipart/form-data" action="">
 	<div class="input-block">
-	<input type="text" id="title" name="title" class="input-text input-text-full input-text-title" placeholder="Judul Artikel" autocomplete="off" required="required" />
+	<input type="text" id="title" name="title" class="form-control input-text input-text-full input-text-title" placeholder="Judul Artikel" autocomplete="off" required="required" />
 	</div>
 	<div class="input-block">
 	<textarea id="content" name="content" style="width:100%; height:300px; box-sizing:border-box;"></textarea>

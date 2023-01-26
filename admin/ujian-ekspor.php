@@ -13,7 +13,7 @@ exit();
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 
-$cfg->module_title = "Ekspor Soal Ujian";
+$cfg->page_title = "Ekspor Soal Ujian";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(isset($_POST['export']) && isset($_POST['test_id']))
@@ -54,7 +54,7 @@ $stmt = $database->executeQuery($sql);
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
-  <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+  <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
     <tr>
       <td>Nama</td>
       <td><?php echo $data['name'];?></td>
@@ -117,8 +117,8 @@ $array_class = $picoEdu->getArrayClass($school_id);
     </tr>
     <tr>
       <td></td>
-      <td><input type="submit" name="export" id="export" class="com-button" value="Ekspor Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>'" />
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+      <td><input type="submit" name="export" id="export" class="btn com-button btn-success" value="Ekspor Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>'" />
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
     </tr>
   </table>
 </form>
@@ -143,7 +143,7 @@ window.onload = function()
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
     <span class="search-label">Kelas </span>
-    <select class="input-select" name="class_id" id="class_id">
+    <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
 	$sql = "select * from `edu_class` where `school_id` = '$school_id' ";
@@ -169,9 +169,9 @@ window.onload = function()
 	?>
     </select>
     <span class="search-label">Ujian</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
     "))));?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="com-button" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -210,12 +210,7 @@ $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
 $pagination->result = $picoEdu->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
-$pagination->str_result = "";
-foreach($pagination->result as $i=>$obj)
-{
-$cls = ($obj->sel)?" class=\"pagination-selected\"":"";
-$pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
-}
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 ?>
 <?php
 $array_class = $picoEdu->getArrayClass($school_id);
@@ -244,12 +239,12 @@ $array_class = $picoEdu->getArrayClass($school_id);
 }
 </style>
 
-<div class="search-pagination search-pagination-top">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-top">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table hide-some-cell">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
       <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-edit-16" alt="Edit" border="0" /></td>
@@ -288,9 +283,9 @@ $array_class = $picoEdu->getArrayClass($school_id);
     </tbody>
   </table>
 
-<div class="search-pagination search-pagination-bottom">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-bottom">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
 </form>

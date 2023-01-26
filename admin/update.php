@@ -119,7 +119,7 @@ $error_message = "";
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 $cfg->repo_domain = "http://repo.edu.planetbiru.com";
 $program_version = trim($picoEdu->getApplicationVersion());
-$cfg->module_title = "Update Program";
+$cfg->page_title = "Update Program";
 if(isset($_POST['download']) && isset($_POST['version']))
 {
 	$version = trim(@$_POST['version']);
@@ -379,7 +379,7 @@ function getChangeLog(version)
             <input type="button" id="back" value="Kembali" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?step=<?php echo ($step-1);?>'" />
         </div>
     </form>
-	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
 	<thead>
 	  <tr>
 	    <td width="25">No</td>

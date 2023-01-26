@@ -5,7 +5,7 @@ if(empty(@$school_id))
 include_once dirname(__FILE__)."/bukan-guru.php";
 exit();
 }
-$cfg->module_title = "Ujian";
+$cfg->page_title = "Ujian";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST) && isset($_POST['save']))
 {
@@ -366,10 +366,10 @@ input#duration{
 <form name="formedu_test" id="formedu_test" action="" method="post" enctype="multipart/form-data">
   <input type="hidden" name="collection" id="collection" value="<?php echo $collection;?>" />
   <input type="hidden" name="selection" id="selection" value="<?php echo $selection;?>" />
-  <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+  <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama Ujian</td>
-		<td><input type="text" class="input-text input-text-long" name="name" id="name" autocomplete="off" required="required" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>Kelas
@@ -379,15 +379,15 @@ input#duration{
 		</tr>
 		<tr>
 		<td>Mata Pelajaran
-		</td><td><input type="text" class="input-text input-text-long" name="subject" id="subject" autocomplete="off" /></td>
+		</td><td><input type="text" class="form-control input-text input-text-long" name="subject" id="subject" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Keterangan
-		</td><td><textarea name="description" class="input-text input-text-long" id="description" autocomplete="off"></textarea></td>
+		</td><td><textarea name="description" class="form-control input-text input-text-long" id="description" autocomplete="off"></textarea></td>
 		</tr>
 		<tr>
 		<td>Petunjuk
-		</td><td><textarea name="guidance" class="input-text input-text-long" id="guidance" autocomplete="off">Pilihlah jawaban yang paling tepat!</textarea></td>
+		</td><td><textarea name="guidance" class="form-control input-text input-text-long" id="guidance" autocomplete="off">Pilihlah jawaban yang paling tepat!</textarea></td>
 		</tr>
 		<tr>
 		<td>Terbuka
@@ -400,29 +400,29 @@ input#duration{
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_limits" data-show-condition="1" data-hide-condition="0">
 		<td>Batas Percobaan</td>
-		<td><input type="number" class="input-text input-text-medium" name="trial_limits" id="trial_limits" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="trial_limits" id="trial_limits" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Nilai Kelulusan
-		</td><td><input type="number" step="any" class="input-text input-text-medium" name="threshold" id="threshold" autocomplete="off" /></td>
+		</td><td><input type="number" step="any" class="form-control input-text input-text-medium" name="threshold" id="threshold" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Metode Penilaian</td>
-		<td><select class="input-select" name="assessment_methods" id="assessment_methods">
+		<td><select class="form-control input-select" name="assessment_methods" id="assessment_methods">
 		<option value=""></option>
 		<option value="H">Tertinggi</option>
 		<option value="N">Terbaru</option>
 		</select></td>
 		</tr>
 		<tr>
-		<td>Jumlah Soal</td><td><input type="number" class="input-text input-text-medium" name="number_of_question" id="number_of_question" autocomplete="off" /></td>
+		<td>Jumlah Soal</td><td><input type="number" class="form-control input-text input-text-medium" name="number_of_question" id="number_of_question" autocomplete="off" /></td>
 		</tr>
 		<tr>
-		<td>Jumlah Pilihan</td><td><input type="number" class="input-text input-text-medium" name="number_of_option" id="number_of_option" autocomplete="off" /></td>
+		<td>Jumlah Pilihan</td><td><input type="number" class="form-control input-text input-text-medium" name="number_of_option" id="number_of_option" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Soal Perhalaman</td>
-		<td><input type="number" class="input-text input-text-medium" name="question_per_page" id="question_per_page" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="question_per_page" id="question_per_page" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Pengacakan Soal
@@ -430,7 +430,7 @@ input#duration{
 		</tr>
 		<tr>
 		<td>Durasi
-		</td><td><input type="text" data-type="duration" class="input-text input-text-medium" name="duration" id="duration" autocomplete="off" /></td>
+		</td><td><input type="text" data-type="duration" class="form-control input-text input-text-medium" name="duration" id="duration" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Beri Peringatan</td>
@@ -450,7 +450,7 @@ input#duration{
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_alert" data-show-condition="1" data-hide-condition="0">
 		<td>Pesan Peringatan</td>
-		<td><textarea name="alert_message" class="input-text input-text-long" id="alert_message" autocomplete="off">Lihat waktu sisa Anda. Silakan periksa kembali jawaban Anda. Segera kirimkan jawaban sebelum waktunya habis.</textarea></td>
+		<td><textarea name="alert_message" class="form-control input-text input-text-long" id="alert_message" autocomplete="off">Lihat waktu sisa Anda. Silakan periksa kembali jawaban Anda. Segera kirimkan jawaban sebelum waktunya habis.</textarea></td>
 		</tr>
 		<tr>
 		<td>Otomtais Kirim Jawaban</td>
@@ -459,11 +459,11 @@ input#duration{
 		</tr>
 		<tr>
 		<td>Nilai Standard</td>
-		<td><input type="number" step="any" min="0" class="input-text input-text-medium" name="standard_score" id="standard_score" autocomplete="off" /></td>
+		<td><input type="number" step="any" min="0" class="form-control input-text input-text-medium" name="standard_score" id="standard_score" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Penalti
-		</td><td><input type="number" step="any" min="0" class="input-text input-text-medium" name="penalty" id="penalty" autocomplete="off" /></td>
+		</td><td><input type="number" step="any" min="0" class="form-control input-text input-text-medium" name="penalty" id="penalty" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Notifikasi Nilai</td>
@@ -476,11 +476,11 @@ input#duration{
 		</tr>
 		<tr class="toggle-tr" data-toggle="publish_answer" data-show-condition="1" data-hide-condition="0">
 		<td>Pengumuman Kunci Jawaban</td>
-		<td><input type="datetime-local" class="input-text input-text-datetime" name="time_answer_publication" id="time_answer_publication" autocomplete="off" /> </td>
+		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="time_answer_publication" id="time_answer_publication" autocomplete="off" /> </td>
 		</tr>
 		<tr>
 		<td>Ketersediaan Ujian
-		</td><td><select class="input-select" name="test_availability" id="test_availability">
+		</td><td><select class="form-control input-select" name="test_availability" id="test_availability">
 		<option value=""></option>
 		<option value="F">Selamanya</option>
 		<option value="L">Terbatas</option>
@@ -488,11 +488,11 @@ input#duration{
 		</tr>
 		<tr class="toggle-tr" data-toggle="test_availability" data-show-condition="L" data-hide-condition="F">
 		<td>Tersedia Mulai</td>
-		<td><input type="datetime-local" class="input-text input-text-datetime" name="available_from" id="available_from" autocomplete="off" /> </td>
+		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="available_from" id="available_from" autocomplete="off" /> </td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="test_availability" data-show-condition="L" data-hide-condition="F">
 		<td>Tersedia Hingga</td>
-		<td><input type="datetime-local" class="input-text input-text-datetime" name="available_to" id="available_to" autocomplete="off" /> </td>
+		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="available_to" id="available_to" autocomplete="off" /> </td>
 		</tr>
 		<tr>
 		<td>Aktif
@@ -501,7 +501,7 @@ input#duration{
 		</tr>
 		<tr>
 		<td></td>
-		<td><input type="submit" name="save" id="save" class="com-button" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -582,8 +582,8 @@ function selectClass()
 	buildClassOption(classList, val)+
 	'    </div>\r\n'+
 	'    <div class="button-area" style="text-align:center">\r\n'+
-	'    	<input type="button" class="com-button" id="update-class" value="Terapkan" />\r\n'+
-	'    	<input type="button" class="com-button" id="cancel-class" value="Batalkan" />\r\n'+
+	'    	<input type="button" class="btn com-button btn-success" id="update-class" value="Terapkan" />\r\n'+
+	'    	<input type="button" class="btn com-button btn-success" id="cancel-class" value="Batalkan" />\r\n'+
 	'    </div>\r\n'+
 	'</div>\r\n';
 	overlayDialog(html, 400, 360);
@@ -737,8 +737,8 @@ function selectClass()
 	buildClassOption(classList, val)+
 	'    </div>\r\n'+
 	'    <div class="button-area" style="text-align:center">\r\n'+
-	'    	<input type="button" class="com-button" id="update-class" value="Terapkan" />\r\n'+
-	'    	<input type="button" class="com-button" id="cancel-class" value="Batalkan" />\r\n'+
+	'    	<input type="button" class="btn com-button btn-success" id="update-class" value="Terapkan" />\r\n'+
+	'    	<input type="button" class="btn com-button btn-success" id="cancel-class" value="Batalkan" />\r\n'+
 	'    </div>\r\n'+
 	'</div>\r\n';
 	overlayDialog(html, 400, 360);
@@ -776,10 +776,10 @@ $(document).ready(function(e) {
 });
 </script>
 <form name="formedu_test" id="formedu_test" action="" method="post" enctype="multipart/form-data">
-  <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+  <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama Ujian</td>
-		<td><input type="text" class="input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" required="required" />
+		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" required="required" />
 		  <input type="hidden" name="test_id2" id="test_id2" value="<?php echo ($data['test_id']);?>" /></td>
 		</tr>
 		<tr>
@@ -791,15 +791,15 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Mata Pelajaran
-		</td><td><input type="text" class="input-text input-text-long" name="subject" id="subject" value="<?php echo $data['subject'];?>" autocomplete="off" /></td>
+		</td><td><input type="text" class="form-control input-text input-text-long" name="subject" id="subject" value="<?php echo $data['subject'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Keterangan
-		</td><td><textarea name="description" class="input-text input-text-long" id="description" autocomplete="off"><?php echo $data['description'];?></textarea></td>
+		</td><td><textarea name="description" class="form-control input-text input-text-long" id="description" autocomplete="off"><?php echo $data['description'];?></textarea></td>
 		</tr>
 		<tr>
 		<td>Petunjuk
-		</td><td><textarea name="guidance" class="input-text input-text-long" id="guidance" autocomplete="off"><?php echo $data['guidance'];?></textarea></td>
+		</td><td><textarea name="guidance" class="form-control input-text input-text-long" id="guidance" autocomplete="off"><?php echo $data['guidance'];?></textarea></td>
 		</tr>
 		<tr>
 		<td>Terbuka
@@ -812,29 +812,29 @@ $(document).ready(function(e) {
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_limits" data-condition="<?php echo $data['has_limits'];?>" data-show-condition="1" data-hide-condition="0">
 		<td>Batas Percobaan</td>
-		<td><input type="number" class="input-text input-text-medium" name="trial_limits" id="trial_limits" value="<?php echo ($data['trial_limits']);?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="trial_limits" id="trial_limits" value="<?php echo ($data['trial_limits']);?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Nilai Kelulusan
-		</td><td><input type="number" step="any" class="input-text input-text-medium" name="threshold" id="threshold" value="<?php echo ($data['threshold']);?>" autocomplete="off" /></td>
+		</td><td><input type="number" step="any" class="form-control input-text input-text-medium" name="threshold" id="threshold" value="<?php echo ($data['threshold']);?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Metode Penilaian</td>
-		<td><select class="input-select" name="assessment_methods" id="assessment_methods">
+		<td><select class="form-control input-select" name="assessment_methods" id="assessment_methods">
 		<option value=""></option>
 		<option value="H"<?php if($data['assessment_methods'] == 'H') echo ' selected="selected"';?>>Tertinggi</option>
 		<option value="N"<?php if($data['assessment_methods'] == 'N') echo ' selected="selected"';?>>Terbaru</option>
 		</select></td>
 		</tr>
 		<tr>
-		<td>Jumlah Soal</td><td><input type="number" class="input-text input-text-medium" name="number_of_question" id="number_of_question" value="<?php echo $data['number_of_question'];?>" autocomplete="off" /></td>
+		<td>Jumlah Soal</td><td><input type="number" class="form-control input-text input-text-medium" name="number_of_question" id="number_of_question" value="<?php echo $data['number_of_question'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
-		<td>Jumlah Pilihan</td><td><input type="number" class="input-text input-text-medium" name="number_of_option" id="number_of_option" value="<?php echo $data['number_of_option'];?>" autocomplete="off" /></td>
+		<td>Jumlah Pilihan</td><td><input type="number" class="form-control input-text input-text-medium" name="number_of_option" id="number_of_option" value="<?php echo $data['number_of_option'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Soal Perhalaman</td>
-		<td><input type="number" class="input-text input-text-medium" name="question_per_page" id="question_per_page" value="<?php echo $data['question_per_page'];?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="question_per_page" id="question_per_page" value="<?php echo $data['question_per_page'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Pengacakan Soal</td>
@@ -842,7 +842,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Durasi
-		</td><td><input type="text" data-type="duration" class="input-text input-text-medium" name="duration" id="duration" value="<?php echo $data['duration']/60;?>" autocomplete="off" /></td>
+		</td><td><input type="text" data-type="duration" class="form-control input-text input-text-medium" name="duration" id="duration" value="<?php echo $data['duration']/60;?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Beri Peringatan</td>
@@ -861,7 +861,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_alert" data-condition="<?php echo $data['has_alert'];?>" data-show-condition="1" data-hide-condition="0">
 		<td>Pesan Peringatan</td>
-		<td><textarea name="alert_message" class="input-text input-text-long" id="alert_message" autocomplete="off"><?php echo ($data['alert_message']);?></textarea></td>
+		<td><textarea name="alert_message" class="form-control input-text input-text-long" id="alert_message" autocomplete="off"><?php echo ($data['alert_message']);?></textarea></td>
 		</tr>
 		<tr>
 		<td>Otomtais Kirim Jawaban</td>
@@ -870,11 +870,11 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Nilai Standard</td>
-		<td><input type="number" step="any" class="input-text input-text-medium" name="standard_score" id="standard_score" value="<?php echo $data['standard_score'];?>" autocomplete="off" /></td>
+		<td><input type="number" step="any" class="form-control input-text input-text-medium" name="standard_score" id="standard_score" value="<?php echo $data['standard_score'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Penalti</td>
-        <td><input type="number" step="any" class="input-text input-text-medium" name="penalty" id="penalty" value="<?php echo $data['penalty'];?>" autocomplete="off" /></td>
+        <td><input type="number" step="any" class="form-control input-text input-text-medium" name="penalty" id="penalty" value="<?php echo $data['penalty'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Notifikasi Nilai</td>
@@ -887,11 +887,11 @@ $(document).ready(function(e) {
 		</tr>
 		<tr class="toggle-tr" data-toggle="publish_answer" data-condition="<?php echo $data['publish_answer'];?>" data-show-condition="1" data-hide-condition="0">
 		<td>Pengumuman Kunci Jawaban</td>
-		<td><input type="datetime-local" class="input-text input-text-datetime" name="time_answer_publication" id="time_answer_publication" value="<?php echo ($data['time_answer_publication']);?>" autocomplete="off" /> </td>
+		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="time_answer_publication" id="time_answer_publication" value="<?php echo ($data['time_answer_publication']);?>" autocomplete="off" /> </td>
 		</tr>
 		<tr>
 		<td>Ketersediaan Ujian
-		</td><td><select class="input-select" name="test_availability" id="test_availability">
+		</td><td><select class="form-control input-select" name="test_availability" id="test_availability">
 		<option value=""></option>
 		<option value="F"<?php if($data['test_availability'] == 'F') echo ' selected="selected"';?>>Selamanya</option>
 		<option value="L"<?php if($data['test_availability'] == 'L') echo ' selected="selected"';?>>Terbatas</option>
@@ -899,11 +899,11 @@ $(document).ready(function(e) {
 		</tr>
 		<tr class="toggle-tr" data-toggle="test_availability" data-condition="<?php echo $data['test_availability'];?>" data-show-condition="L" data-hide-condition="F">
 		<td>Tersedia Mulai</td>
-		<td><input type="datetime-local" class="input-text input-text-datetime" name="available_from" id="available_from" value="<?php echo ($data['available_from']);?>" autocomplete="off" /> </td>
+		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="available_from" id="available_from" value="<?php echo ($data['available_from']);?>" autocomplete="off" /> </td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="test_availability" data-condition="<?php echo $data['test_availability'];?>" data-show-condition="L" data-hide-condition="F">
 		<td>Tersedia Hingga</td>
-		<td><input type="datetime-local" class="input-text input-text-datetime" name="available_to" id="available_to" value="<?php echo ($data['available_to']);?>" autocomplete="off" /> </td>
+		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="available_to" id="available_to" value="<?php echo ($data['available_to']);?>" autocomplete="off" /> </td>
 		</tr>
 		<tr>
 		<td>Aktif
@@ -911,7 +911,7 @@ $(document).ready(function(e) {
 		</td>
 		</tr>
 		<tr><td></td>
-		<td><input type="submit" name="save" id="save" class="com-button" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -946,7 +946,7 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_test" action="" method="post" enctype="multipart/form-data">
-  <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+  <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama Ujian</td>
 		<td><?php echo $data['name'];?></td>
@@ -1115,7 +1115,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td></td>
-		<td><input type="button" name="edit" id="edit" class="com-button" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -1157,7 +1157,7 @@ window.onload = function()
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
     <span class="search-label">Kelas</span> 
-    <select class="input-select" name="class_id" id="class_id">
+    <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
 	$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";
@@ -1183,9 +1183,9 @@ window.onload = function()
 	?>
     </select>
     <span class="search-label">Ujian</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
     "))));?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="com-button" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -1227,12 +1227,7 @@ $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
 $pagination->result = $picoEdu->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
-$pagination->str_result = "";
-foreach($pagination->result as $i=>$obj)
-{
-$cls = ($obj->sel)?" class=\"pagination-selected\"":"";
-$pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
-}
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 ?>
 <form name="form1" method="post" action="">
 <style type="text/css">
@@ -1251,12 +1246,12 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 }
 </style>
 
-<div class="search-pagination search-pagination-top">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-top">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table hide-some-cell">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
       <td width="16"><input type="checkbox" name="control-test_id" id="control-test_id" class="checkbox-selector" data-target=".test_id" value="1"></td>
@@ -1299,16 +1294,16 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
     </tbody>
   </table>
 
-<div class="search-pagination search-pagination-bottom">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-bottom">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
 <div class="button-area">
-  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="com-button" />
-  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="com-button" />
-  <input type="submit" name="delete" id="delete" value="Hapus" class="com-button delete-button" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
-  <input type="button" name="add" id="add" value="Tambah" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
+  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn com-button btn-success" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-success" />
+  <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-success delete-button" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
+  <input type="button" name="add" id="add" value="Tambah" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
   </div>
 </form>
 <?php

@@ -8,7 +8,7 @@ if($admin_login->admin_level != 1)
 $admin_id = $admin_login->admin_id;
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-$cfg->module_title = "Soal Ujian";
+$cfg->page_title = "Soal Ujian";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $time_create = $time_edit = $picoEdu->getLocalDateTime();
 $member_create = $member_edit = $admin_login->admin_id;
@@ -484,7 +484,7 @@ $rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 foreach ($rows2 as $data2) {
 ?>
 <div class="option-item" data-index="<?php echo $i; ?>">
-<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i]; ?></span> | Nilai <input type="number" min="0" max="<?php echo ($data3['standard_score']); ?>" class="input-text input-text-short" name="score_<?php echo $data2['option_id']; ?>" id="score_<?php echo $data2['option_id']; ?>" value="<?php echo $data2['score']; ?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']); ?>)</div>
+<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i]; ?></span> | Nilai <input type="number" min="0" max="<?php echo ($data3['standard_score']); ?>" class="form-control input-text input-text-short" name="score_<?php echo $data2['option_id']; ?>" id="score_<?php echo $data2['option_id']; ?>" value="<?php echo $data2['score']; ?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']); ?>)</div>
 <div class="option-editor">
 <textarea spellcheck="false" class="htmleditor" name="option_<?php echo $data2['option_id']; ?>" id="option_<?php echo $data2['option_id']; ?>" style="width:100%;"><?php echo htmlspecialchars(($data2['content'])); ?></textarea>
 </div>
@@ -499,8 +499,8 @@ foreach ($rows2 as $data2) {
 
 
 <div class="button-area">
-<input type="submit" name="save" id="save" class="com-button" value="Simpan" />
-<input type="button" name="showall" id="showall" class="com-button" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?test_id=<?php echo $test_id; ?>'" />
+<input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" />
+<input type="button" name="showall" id="showall" class="btn com-button btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?test_id=<?php echo $test_id; ?>'" />
 </div>
 
 </form>
@@ -572,7 +572,7 @@ $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 ?>
-<table width="100%" border="1" cellspacing="0" cellpadding="0" class="row-table">
+<table width="100%" border="1" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
 <thead>
   <tr>
     <td width="20">No</td>
@@ -717,7 +717,7 @@ else
 </table>
 
 <div class="button-area">
-	<input type="button" class="com-button" name="export" id="export" value="Ekspor" onclick="window.open('ujian-analisa.php?test_id=<?php echo $test_id;?>');" />
+	<input type="button" class="btn com-button btn-success" name="export" id="export" value="Ekspor" onclick="window.open('ujian-analisa.php?test_id=<?php echo $test_id;?>');" />
 </div>
 
 <div class="dialogs" style="display:none;">
@@ -868,11 +868,11 @@ echo ($data2['content']);
 ?>
 </ol>
 <div class="button-area">
-<input type="button" name="urutkan_soal" id="urutkan_soal" class="com-button" value="Urutkan Soal" onclick="activateSortOrder()" />
-<input type="button" name="export" id="export" class="com-button" value="Ekspor Soal" onclick="window.location='ujian-ekspor.php?test_id=<?php echo $test_id;?>'" />
-<input type="button" name="analys" id="analys" class="com-button" value="Analisa Butir Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=analys&test_id=<?php echo $test_id;?>'" />
-<input type="button" name="show" id="show" class="com-button" value="Tampilkan Informasi Ujian" onclick="window.location='ujian-daftar.php?option=detail&test_id=<?php echo $test_id;?>'" />
-<input type="button" name="edit" id="edit" class="com-button" value="Ubah Informasi Ujian" onclick="window.location='ujian-daftar.php?option=edit&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="urutkan_soal" id="urutkan_soal" class="btn com-button btn-success" value="Urutkan Soal" onclick="activateSortOrder()" />
+<input type="button" name="export" id="export" class="btn com-button btn-success" value="Ekspor Soal" onclick="window.location='ujian-ekspor.php?test_id=<?php echo $test_id;?>'" />
+<input type="button" name="analys" id="analys" class="btn com-button btn-success" value="Analisa Butir Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=analys&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="show" id="show" class="btn com-button btn-success" value="Tampilkan Informasi Ujian" onclick="window.location='ujian-daftar.php?option=detail&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah Informasi Ujian" onclick="window.location='ujian-daftar.php?option=edit&test_id=<?php echo $test_id;?>'" />
 </div>
 <?php
 }
@@ -995,7 +995,7 @@ function buildMenu(id)
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
   <span class="search-label">Sekolah</span>
-  <select class="input-select" name="school_id" id="school_id">
+  <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php
 			$sql2 = "select * from `edu_school` where 1 order by `school_id` desc ";
@@ -1015,7 +1015,7 @@ function buildMenu(id)
 			if (@$school_id != 0) {
 				?>
     <span class="search-label">Kelas</span> 
-    <select class="input-select" name="class_id" id="class_id">
+    <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php
 					$sql = "select * from `edu_class` where `school_id` = '$school_id' ";
@@ -1043,9 +1043,9 @@ function buildMenu(id)
 			}
 			?>
     <span class="search-label">Ujian</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
     ")))); ?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="com-button" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -1119,12 +1119,12 @@ function buildMenu(id)
 }
 </style>
 
-<div class="search-pagination search-pagination-top">
-<div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-<div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+<div class="d-flex search-pagination search-pagination-top">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 </div>
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table hide-some-cell">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
       <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></td>
@@ -1173,9 +1173,9 @@ function buildMenu(id)
     </tbody>
   </table>
 
-<div class="search-pagination search-pagination-bottom">
-<div class="search-pagination-control"><?php echo $pagination->str_result; ?></div>
-<div class="search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+<div class="d-flex search-pagination search-pagination-bottom">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 </div>
 
 

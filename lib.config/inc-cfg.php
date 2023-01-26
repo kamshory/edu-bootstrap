@@ -66,7 +66,7 @@ $cfg->base_url = 'http://'.$_SERVER['SERVER_NAME'].'/';
 */
 
 $cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
-$cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/pico-pi/html/";
+$cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
 $cfg->base_avatar = "/media.images/";
 $cfg->base_images = "/media.images/";
 $cfg->base_languages = "/lib.languages/";

@@ -9,7 +9,7 @@ if(isset($_GET['school_id']))
 {
 	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
 }
-$cfg->module_title = "Profil";
+$cfg->page_title = "Profil";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
 <?php

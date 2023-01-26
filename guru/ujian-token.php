@@ -1,7 +1,7 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 
-$cfg->module_title = "Token";
+$cfg->page_title = "Token";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST))
 {
@@ -127,10 +127,10 @@ $(document).ready(function(e) {
 });
 </script>
 <form name="formedu_token" id="formedu_token" action="" method="post" enctype="multipart/form-data" onsubmit="return checkForm(this, 'Wajib')">
-  <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+  <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Ujian</td>
-		<td><select class="input-select" name="test_id" id="test_id" required="required">
+		<td><select class="form-control input-select" name="test_id" id="test_id" required="required">
 		<option value=""></option>
 		<?php 
 		$sql = "select * from `edu_test`
@@ -152,7 +152,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Kelas</td>
-		<td><select class="input-select" name="class_id" id="class_id" required="required">
+		<td><select class="form-control input-select" name="class_id" id="class_id" required="required">
 		<option value=""></option>
 		<?php 
 		$sql2 = "select * from `edu_class`
@@ -183,18 +183,18 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Siswa</td>
-		<td><select class="input-select" name="student_id" id="student_id">
+		<td><select class="form-control input-select" name="student_id" id="student_id">
 		<option value="">- Semua Siswa -</option>
 		</select></td>
 		</tr>
 		<tr>
 		<td>Kedaluarsa</td>
-		<td><input type="text" class="input-text input-text-datetime" name="time_expire" id="time_expire" value="<?php echo date('Y-m-d H:i:s', time()+3600);?>" autocomplete="off" required="required" /></td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_expire" id="time_expire" value="<?php echo date('Y-m-d H:i:s', time()+3600);?>" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>&nbsp;</td>
-		<td><input type="submit" name="save" id="save" class="com-button" value="Simpan" onclick="return confirm('Apakah Anda yakin akan membuat token ini?')" /> 
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" onclick="return confirm('Apakah Anda yakin akan membuat token ini?')" /> 
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -224,7 +224,7 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_token" action="" method="post" enctype="multipart/form-data">
-  <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+  <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Token</td>
 		<td><?php echo $data['token'];?></td>
@@ -267,7 +267,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>&nbsp;</td>
-		<td><input type="button" name="edit" id="edit" class="com-button" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&token_id=<?php echo $data['token_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&token_id=<?php echo $data['token_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -382,9 +382,9 @@ function printToken(frm)
 	?>
 </select>
 <span class="search-label">Token</span>
-<input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
+<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
 "))));?>" />
-<input type="submit" name="search" id="search" value="Cari" class="com-button" />
+<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -439,12 +439,7 @@ $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
 $pagination->result = $picoEdu->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
-$pagination->str_result = "";
-foreach($pagination->result as $i=>$obj)
-{
-$cls = ($obj->sel)?" class=\"pagination-selected\"":"";
-$pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
-}
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 }
 ?>
 <form name="form1" method="post" action="">
@@ -472,14 +467,14 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 if($test_id == 0 && $class_id == 0)
 {
 ?>
-<div class="search-pagination search-pagination-top">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-top">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 <?php
 }
 ?>
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
   <thead>
     <tr>
       <td width="16"><input type="checkbox" name="control-token_id" id="control-token_id" class="checkbox-selector" data-target=".token_id" value="1"></td>
@@ -531,18 +526,18 @@ if($test_id == 0 && $class_id == 0)
 if($test_id == 0 && $class_id == 0)
 {
 ?>
-<div class="search-pagination search-pagination-bottom">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-bottom">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 <?php
 }
 ?>
 <div class="button-area">
-  <input type="button" name="print" id="print" value="Cetak" class="com-button" onclick="printToken($(this).closest('form'))" />
-  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="com-button" onclick="return confirm('Apakah Anda akan menonaktifkan token ini?')" />
-  <input type="button" name="add" id="add" value="Tambah" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
-  <input type="submit" name="cleanup" id="cleanup" value="Hapus Token Salah" class="com-button" onclick="return confirm('Apakah Anda akan menghapus semua token salah yang dimasukkan siswa?')" />
+  <input type="button" name="print" id="print" value="Cetak" class="btn com-button btn-success" onclick="printToken($(this).closest('form'))" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-success" onclick="return confirm('Apakah Anda akan menonaktifkan token ini?')" />
+  <input type="button" name="add" id="add" value="Tambah" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
+  <input type="submit" name="cleanup" id="cleanup" value="Hapus Token Salah" class="btn com-button btn-success" onclick="return confirm('Apakah Anda akan menghapus semua token salah yang dimasukkan siswa?')" />
   </div>
 </form>
 <?php

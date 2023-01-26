@@ -6,7 +6,7 @@ if($admin_login->admin_level != 1)
 	exit();
 }
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
-if(@$school_id == 0)
+if(empty(@$school_id))
 {
 exit();
 }

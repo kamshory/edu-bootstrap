@@ -1794,14 +1794,14 @@ function transferFile() {
 		'<table width="100%" border="0" cellspacing="0" cellpadding="0" class="dialog-table">' +
 		'<tr>' +
 		'<td width="30%">URL</td>' +
-		'<td><input type="text" name="source" class="input-text input-text-long" id="source" data-needed="true" autocomplete="off" /></td>' +
+		'<td><input type="text" name="source" class="form-control input-text input-text-long" id="source" data-needed="true" autocomplete="off" /></td>' +
 		'</tr>' +
 		'<tr>' +
 		'<td>Target Location</td>' +
-		'<td><input type="text" name="target" class="input-text input-text-long" id="target" data-needed="true" autocomplete="off" /></td>' +
+		'<td><input type="text" name="target" class="form-control input-text input-text-long" id="target" data-needed="true" autocomplete="off" /></td>' +
 		'</tr>' +
 		'<td>File Name</td>' +
-		'<td><input type="text" name="filename" class="input-text input-text-long" id="filename" data-needed="true" autocomplete="off" /></td>' +
+		'<td><input type="text" name="filename" class="form-control input-text input-text-long" id="filename" data-needed="true" autocomplete="off" /></td>' +
 		'</tr>' +
 		'</table>' +
 		'</form>';
@@ -1985,7 +1985,7 @@ function changePermission(filepath) //NOSONAR
 		filepath = data[0];
 	}
 	initPermissionControl();
-	$('#common-dialog-inner').html('<table width="100%" border="0" cellspacing="1" cellpadding="2" class="row-table file-table permission-table">'
+	$('#common-dialog-inner').html('<table width="100%" border="0" cellspacing="1" cellpadding="2" class="table table-striped table-sm file-table permission-table">'
 		+ '<thead>'
 		+ '  <tr>'
 		+ '    <td>User</td>'
@@ -2015,7 +2015,7 @@ function changePermission(filepath) //NOSONAR
 		+ '  </tr>'
 		+ '  <tr>'
 		+ '    <td>Permission</td>'
-		+ '    <td colspan="3"><input type="text" id="file-permission" name="file-permission" class="input-text input-text-medium" value="0555" readonly="readonly"> <span id="recursive-control"><label><input type="checkbox" class="recursive" value="1" name="recursive"> Recursive to contents</label><span></td>'
+		+ '    <td colspan="3"><input type="text" id="file-permission" name="file-permission" class="form-control input-text input-text-medium" value="0555" readonly="readonly"> <span id="recursive-control"><label><input type="checkbox" class="recursive" value="1" name="recursive"> Recursive to contents</label><span></td>'
 		+ '    </tr>'
 		+ '</tbody>'
 		+ '</table>');
@@ -2640,7 +2640,7 @@ function initEXIF() {
 		let jsdata = eval(decodeURIComponent($(this).attr('data-exif')));
 		let key;
 		let obj = jsdata[0];
-		let html = '<table width="100%" border="0" cellspacing="1" cellpadding="2" class="row-table exif-table">';
+		let html = '<table width="100%" border="0" cellspacing="1" cellpadding="2" class="table table-striped table-sm exif-table">';
 		html += '<tbody>';
 		for (key in obj) {
 			html += '<tr><td width="50%">' + key + '</td><td>' + obj[key] + '</td></tr>';

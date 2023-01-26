@@ -233,88 +233,131 @@ class PicoEdo
 		return false;
 	}
 
-	public function createPagination($module, $totalrecord, $resultperpage = 1, $numberofpage = 1, $offset = 0, $arrayget, $showfirstandlast = true, $first = "First", $last = "Last", $prev = "Prev", $next = "Next")
+	public function createPaginationHtml($pagination)
 	{
-		$result = array();
-		$result[0] = new StdClass();
-		$result[1] = new StdClass();
-		$arg = "";
-		$pg = new StdClass();
-		$pg->text = "";
-		$pg->ref = "";
-		if ($totalrecord <= $resultperpage) {
-			return array();
-		}
-		if (!is_array($arrayget)) {
-			$arrayget = array($arrayget);
-		}
-		foreach ($arrayget as $item) {
-			$arg .= "&$item=" . @$_GET[$item];
-		}
-		$arg = "$module?" . trim($arg, "&");
-		$allpage = ceil($totalrecord / $resultperpage);
-		$curpage = abs(ceil($offset / $resultperpage)) + 1;
-		$startpage = abs(ceil($curpage - floor($numberofpage / 2)));
-		if ($startpage < 1) {
-			$startpage = 1;
-		}
-		$endpage = $startpage + $numberofpage - 1;
-		$lastpage = ceil($totalrecord / $resultperpage);
-
-
-		if ($endpage > $lastpage) {
-			$endpage = $lastpage;
-		}
-		$pg->text = "";
-		$pg->ref = "";
-		$pg->ref_first = 0;
-		$pg->str_first = $first;
-		$pg->str_prev = $prev;
-		$pg->ref_prev = ($curpage - 2) * $resultperpage;
-		if ($pg->ref_prev < 0) {
-			$pg->ref_prev = 0;
-		}
-		$pg->str_next = $next;
-		$pg->ref_next = ($curpage) * $resultperpage;
-		$pg->str_last = $last;
-		$pg->ref_last = floor($totalrecord / $resultperpage) * $resultperpage;
-		if ($pg->ref_last == $totalrecord) {
-			$pg->ref_last = $totalrecord - $resultperpage;
-		}
-
-		$result[0]->text = $pg->str_first;
-		$result[0]->ref = str_replace("?&", "?", $arg . "&offset=" . $pg->ref_first);
-		$result[0]->sel = 0;
-		if ($curpage >= 0) {
-			$result[1]->text = $pg->str_prev;
-			$result[1]->ref = str_replace("?&", "?", $arg . "&offset=" . $pg->ref_prev);
-			$result[1]->sel = 0;
-		}
-		for ($j = 2, $i = $startpage; $i <= ($endpage); $i++, $j++) {
-			$pn = $i;
-			$result[$j] = new StdClass();
-			$result[$j]->text = "$pn";
-			$result[$j]->ref = str_replace("?&", "?", $arg . "&offset=" . (($i - 1) * $resultperpage));
-			if ($curpage == $i) {
-				$result[$j]->sel = 1;
-			} else {
-				$result[$j]->sel = 0;
+		/*
+		<nav aria-label="Page navigation example">
+		<ul class="pagination">
+			<li class="page-item">
+				<a class="page-link" href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+					<span class="sr-only">Previous</span>
+				</a>
+			</li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+				<span class="sr-only">Next</span>
+			</a>
+			</li>
+		</ul>
+		</nav>
+		*/
+		$str_result = "";
+		if(is_array($pagination->result))
+		{
+			$str_result .= '
+			<nav aria-label="Page navigation example">
+			<ul class="pagination">';
+				foreach($pagination->result as $i=>$obj)
+			{
+				$cls = ($obj->sel)?" active":"";
+				$str_result .= '
+				<li class="page-item'.$cls.'"><a class="page-link" href="'.$obj->ref.'">'.$obj->text.'</a></li>';
 			}
+			$str_result .= '
+			</ul>
+			</nav>
+			';
+			return $str_result;
 		}
-		if ($endpage < $lastpage) {
-			$result[$j] = new StdClass();
-			$result[$j]->text = $pg->str_next;
-			$result[$j]->ref = str_replace("?&", "?", $arg . "&offset=" . $pg->ref_next);
-			$result[$j]->sel = 0;
-			$j++;
-		}
-		$result[$j] = new StdClass();
-		$result[$j]->text = $pg->str_last;
-		$result[$j]->ref = str_replace("?&", "?", $arg . "&offset=" . $pg->ref_last);
-		$result[$j]->sel = 0;
-		return $result;
+		return "";
 	}
 
+	public function createPagination($module, $totalrecord, $resultperpage = 1, $numberofpage = 1, $offset = 0, $arrayget, $showfirstandlast = true, $firstCaption = "First", $lastCaption = "Last", $prevCaption = "Prev", $nextCaption = "Next")
+		{
+			$result = array();
+			$result[0] = new StdClass();
+			$result[1] = new StdClass();
+			$arg = "";
+			$paginationObject = new StdClass();
+			$paginationObject->text = "";
+			$paginationObject->ref = "";
+			if ($totalrecord <= $resultperpage) {
+				return array();
+			}
+			if (!is_array($arrayget)) {
+				$arrayget = array($arrayget);
+			}
+			foreach ($arrayget as $item) {
+				$arg .= "&$item=" . @$_GET[$item];
+			}
+			$arg = "$module?" . trim($arg, "&");
+			$curpage = abs(ceil($offset / $resultperpage)) + 1;
+			$startpage = abs(ceil($curpage - floor($numberofpage / 2)));
+			if ($startpage < 1) {
+				$startpage = 1;
+			}
+			$endpage = $startpage + $numberofpage - 1;
+			$lastpage = ceil($totalrecord / $resultperpage);
+	
+	
+			if ($endpage > $lastpage) {
+				$endpage = $lastpage;
+			}
+			$paginationObject->text = "";
+			$paginationObject->ref = "";
+			$paginationObject->ref_first = 0;
+			$paginationObject->str_first = $firstCaption;
+			$paginationObject->str_prev = $prevCaption;
+			$paginationObject->ref_prev = ($curpage - 2) * $resultperpage;
+			if ($paginationObject->ref_prev < 0) {
+				$paginationObject->ref_prev = 0;
+			}
+			$paginationObject->str_next = $nextCaption;
+			$paginationObject->ref_next = ($curpage) * $resultperpage;
+			$paginationObject->str_last = $lastCaption;
+			$paginationObject->ref_last = floor($totalrecord / $resultperpage) * $resultperpage;
+			if ($paginationObject->ref_last == $totalrecord) {
+				$paginationObject->ref_last = $totalrecord - $resultperpage;
+			}
+	
+			$result[0]->text = $paginationObject->str_first;
+			$result[0]->ref = str_replace("?&", "?", $arg . "&offset=" . $paginationObject->ref_first);
+			$result[0]->sel = false;
+			if ($curpage >= 0) {
+				$result[1]->text = $paginationObject->str_prev;
+				$result[1]->ref = str_replace("?&", "?", $arg . "&offset=" . $paginationObject->ref_prev);
+				$result[1]->sel = 0;
+			}
+			for ($j = 2, $i = $startpage; $i <= ($endpage); $i++, $j++) {
+				$pn = $i;
+				$result[$j] = new StdClass();
+				$result[$j]->text = "$pn";
+				$result[$j]->ref = str_replace("?&", "?", $arg . "&offset=" . (($i - 1) * $resultperpage));
+				if ($curpage == $i) {
+					$result[$j]->sel = true;
+				} else {
+					$result[$j]->sel = false;
+				}
+			}
+			if ($endpage < $lastpage) {
+				$result[$j] = new StdClass();
+				$result[$j]->text = $paginationObject->str_next;
+				$result[$j]->ref = str_replace("?&", "?", $arg . "&offset=" . $paginationObject->ref_next);
+				$result[$j]->sel = false;
+				$j++;
+			}
+			$result[$j] = new StdClass();
+			$result[$j]->text = $paginationObject->str_last;
+			$result[$j]->ref = str_replace("?&", "?", $arg . "&offset=" . $paginationObject->ref_last);
+			$result[$j]->sel = false;
+			return $result;
+		}
+	
 	public function getArrayClass($school_id)
 	{
 		$sql = "SELECT `class_id`, `name` from `edu_class` where `school_id` = '$school_id' ";
@@ -1065,5 +1108,10 @@ class PicoEdo
 			'6'=>'Perguruan Tinggi'
 		);
 		return isset($arr[$grade_id]) ? $arr[$grade_id] : '';
+	}
+
+	public function ifMatch($v1, $v2, $out)
+	{
+		return $v1 == $v2 ? $out : '';
 	}
 }

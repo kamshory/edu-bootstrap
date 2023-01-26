@@ -202,8 +202,8 @@ function selectClass()
 	buildClassOption(classList, val)+
 	'    </div>\r\n'+
 	'    <div class="button-area" style="text-align:center">\r\n'+
-	'    	<input type="button" class="com-button" id="update-class" value="Terapkan" />\r\n'+
-	'    	<input type="button" class="com-button" id="cancel-class" value="Batalkan" />\r\n'+
+	'    	<input type="button" class="btn com-button btn-success" id="update-class" value="Terapkan" />\r\n'+
+	'    	<input type="button" class="btn com-button btn-success" id="cancel-class" value="Batalkan" />\r\n'+
 	'    </div>\r\n'+
 	'</div>\r\n';
 	overlayDialog(html, 400, 360);

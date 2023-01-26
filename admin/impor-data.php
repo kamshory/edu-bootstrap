@@ -668,7 +668,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 }
 
 
-$cfg->module_title = "Impor Data";
+$cfg->page_title = "Impor Data";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(@$_GET['option'] == 'success')
@@ -699,7 +699,7 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <form name="formschool" action="" method="post" enctype="multipart/form-data">
-	<table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama</td>
 		<td><?php echo $data['name'];?></td>
@@ -818,7 +818,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td></td>
-		<td><input type="button" name="update" id="update" value="Ubah Data" class="com-button" onclick="window.location='sekolah-profil.php?option=edit'" />		  <input type="button" name="import" id="import" value="Impor Data" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="update" id="update" value="Ubah Data" class="btn com-button btn-success" onclick="window.location='sekolah-profil.php?option=edit'" />		  <input type="button" name="import" id="import" value="Impor Data" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>

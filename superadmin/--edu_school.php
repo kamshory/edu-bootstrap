@@ -1,7 +1,7 @@
 <?php
 include_once dirname(dirname(dirname(__FILE__)))."/planetbiru/lib.inc/auth.php";
 
-$cfg->module_title = "Edu School";
+$cfg->page_title = "Edu School";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST))
 {
@@ -89,34 +89,34 @@ if(@$_GET['option']=='add')
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
 <form name="formedu_school" id="formedu_school" action="" method="post" enctype="multipart/form-data" onsubmit="return checkForm(this, 'Wajib')">
-	<table width="800" border="0" class="two-side-table" cellspacing="0" cellpadding="0">
+	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">School</td>
-		<td><input type="number" class="input-text input-text-medium" name="school_id" id="school_id" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="school_id" id="school_id" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>School Code</td>
-		<td><input type="text" class="input-text input-text-long" name="school_code" id="school_code" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="school_code" id="school_code" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Token School</td>
-		<td><input type="text" class="input-text input-text-long" name="token_school" id="token_school" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="token_school" id="token_school" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Name</td>
-		<td><input type="text" class="input-text input-text-long" name="name" id="name" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Description</td>
-		<td><input type="text" class="input-text input-text-long" name="description" id="description" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="description" id="description" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>School Type</td>
-		<td><input type="text" class="input-text input-text-long" name="school_type_id" id="school_type_id" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="school_type_id" id="school_type_id" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>School Grade</td>
-		<td><select class="input-select" name="school_grade_id" id="school_grade_id">
+		<td><select class="form-control input-select" name="school_grade_id" id="school_grade_id">
 		<option value=""></option>
 		<option value="1">1</option>
 		<option value="2">2</option>
@@ -128,7 +128,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 		</tr>
 		<tr>
 		<td>Public Private</td>
-		<td><select class="input-select" name="public_private" id="public_private">
+		<td><select class="form-control input-select" name="public_private" id="public_private">
 		<option value=""></option>
 		<option value="U">U</option>
 		<option value="I">I</option>
@@ -136,111 +136,111 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 		</tr>
 		<tr>
 		<td>Open</td>
-		<td><input type="number" class="input-text input-text-medium" name="open" id="open" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="open" id="open" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Principal</td>
-		<td><input type="text" class="input-text input-text-long" name="principal" id="principal" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="principal" id="principal" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Address</td>
-		<td><input type="text" class="input-text input-text-long" name="address" id="address" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="address" id="address" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Phone</td>
-		<td><input type="text" class="input-text input-text-long" name="phone" id="phone" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="phone" id="phone" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><input type="text" class="input-text input-text-long" name="email" id="email" autocomplete="off" data-type="email" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="email" id="email" autocomplete="off" data-type="email" /></td>
 		</tr>
 		<tr>
 		<td>Language</td>
-		<td><input type="text" class="input-text input-text-long" name="language" id="language" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="language" id="language" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Country</td>
-		<td><input type="text" class="input-text input-text-long" name="country_id" id="country_id" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="country_id" id="country_id" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>State</td>
-		<td><input type="text" class="input-text input-text-long" name="state_id" id="state_id" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="state_id" id="state_id" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>City</td>
-		<td><input type="text" class="input-text input-text-long" name="city_id" id="city_id" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="city_id" id="city_id" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Student</td>
-		<td><input type="number" class="input-text input-text-medium" name="student" id="student" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="student" id="student" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Prevent Change School</td>
-		<td><input type="number" class="input-text input-text-medium" name="prevent_change_school" id="prevent_change_school" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="prevent_change_school" id="prevent_change_school" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Prevent Resign</td>
-		<td><input type="number" class="input-text input-text-medium" name="prevent_resign" id="prevent_resign" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="prevent_resign" id="prevent_resign" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Use Token</td>
-		<td><input type="number" class="input-text input-text-medium" name="use_token" id="use_token" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="use_token" id="use_token" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Time Import First</td>
-		<td><input type="text" class="input-text input-text-datetime" name="time_import_first" id="time_import_first" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_import_first" id="time_import_first" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
 		</tr>
 		<tr>
 		<td>Time Import Last</td>
-		<td><input type="text" class="input-text input-text-datetime" name="time_import_last" id="time_import_last" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_import_last" id="time_import_last" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
 		</tr>
 		<tr>
 		<td>Admin Import First</td>
-		<td><input type="number" class="input-text input-text-medium" name="admin_import_first" id="admin_import_first" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="admin_import_first" id="admin_import_first" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Admin Import Last</td>
-		<td><input type="number" class="input-text input-text-medium" name="admin_import_last" id="admin_import_last" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="admin_import_last" id="admin_import_last" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Ip Import First</td>
-		<td><input type="text" class="input-text input-text-long" name="ip_import_first" id="ip_import_first" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="ip_import_first" id="ip_import_first" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Ip Import Last</td>
-		<td><input type="text" class="input-text input-text-long" name="ip_import_last" id="ip_import_last" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="ip_import_last" id="ip_import_last" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Time Create</td>
-		<td><input type="text" class="input-text input-text-datetime" name="time_create" id="time_create" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_create" id="time_create" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
 		</tr>
 		<tr>
 		<td>Time Edit</td>
-		<td><input type="text" class="input-text input-text-datetime" name="time_edit" id="time_edit" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_edit" id="time_edit" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
 		</tr>
 		<tr>
 		<td>Admin Create</td>
-		<td><input type="number" class="input-text input-text-medium" name="admin_create" id="admin_create" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="admin_create" id="admin_create" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Admin Edit</td>
-		<td><input type="number" class="input-text input-text-medium" name="admin_edit" id="admin_edit" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="admin_edit" id="admin_edit" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Ip Create</td>
-		<td><input type="text" class="input-text input-text-long" name="ip_create" id="ip_create" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="ip_create" id="ip_create" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Ip Edit</td>
-		<td><input type="text" class="input-text input-text-long" name="ip_edit" id="ip_edit" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="ip_edit" id="ip_edit" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Active</td>
-		<td><input type="number" class="input-text input-text-medium" name="active" id="active" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="active" id="active" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>&nbsp;</td>
-		<td><input type="submit" name="save" id="save" class="com-button" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -264,34 +264,34 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_school" id="formedu_school" action="" method="post" enctype="multipart/form-data" onsubmit="return checkForm(this, 'Wajib')">
-	<table width="800" border="0" class="two-side-table" cellspacing="0" cellpadding="0">
+	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">School</td>
-		<td><input type="number" class="input-text input-text-medium" name="school_id" id="school_id" value="<?php echo ($data['school_id']);?>" autocomplete="off" /><input type="hidden" name="school_id2" id="school_id2" value="<?php echo ($data['school_id']);?>" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="school_id" id="school_id" value="<?php echo ($data['school_id']);?>" autocomplete="off" /><input type="hidden" name="school_id2" id="school_id2" value="<?php echo ($data['school_id']);?>" /></td>
 		</tr>
 		<tr>
 		<td>School Code</td>
-		<td><input type="text" class="input-text input-text-long" name="school_code" id="school_code" value="<?php echo $data['school_code'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="school_code" id="school_code" value="<?php echo $data['school_code'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Token School</td>
-		<td><input type="text" class="input-text input-text-long" name="token_school" id="token_school" value="<?php echo ($data['token_school']);?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="token_school" id="token_school" value="<?php echo ($data['token_school']);?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Name</td>
-		<td><input type="text" class="input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Description</td>
-		<td><input type="text" class="input-text input-text-long" name="description" id="description" value="<?php echo $data['description'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="description" id="description" value="<?php echo $data['description'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>School Type</td>
-		<td><input type="text" class="input-text input-text-long" name="school_type_id" id="school_type_id" value="<?php echo ($data['school_type_id']);?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="school_type_id" id="school_type_id" value="<?php echo ($data['school_type_id']);?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>School Grade</td>
-		<td><select class="input-select" name="school_grade_id" id="school_grade_id">
+		<td><select class="form-control input-select" name="school_grade_id" id="school_grade_id">
 		<option value=""></option>
 		<option value="1"<?php if($data['school_grade_id'] == '1') echo " selected=\"selected\"";?>>1</option>
 		<option value="2"<?php if($data['school_grade_id'] == '2') echo " selected=\"selected\"";?>>2</option>
@@ -303,7 +303,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Public Private</td>
-		<td><select class="input-select" name="public_private" id="public_private">
+		<td><select class="form-control input-select" name="public_private" id="public_private">
 		<option value=""></option>
 		<option value="U"<?php if($data['public_private'] == 'U') echo " selected=\"selected\"";?>>U</option>
 		<option value="I"<?php if($data['public_private'] == 'I') echo " selected=\"selected\"";?>>I</option>
@@ -311,110 +311,110 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Open</td>
-		<td><input type="number" class="input-text input-text-medium" name="open" id="open" value="<?php echo ($data['open']);?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="open" id="open" value="<?php echo ($data['open']);?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Principal</td>
-		<td><input type="text" class="input-text input-text-long" name="principal" id="principal" value="<?php echo $data['principal'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="principal" id="principal" value="<?php echo $data['principal'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Address</td>
-		<td><input type="text" class="input-text input-text-long" name="address" id="address" value="<?php echo $data['address'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="address" id="address" value="<?php echo $data['address'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Phone</td>
-		<td><input type="text" class="input-text input-text-long" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><input type="text" class="input-text input-text-long" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
 		</tr>
 		<tr>
 		<td>Language</td>
-		<td><input type="text" class="input-text input-text-long" name="language" id="language" value="<?php echo ($data['language']);?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="language" id="language" value="<?php echo ($data['language']);?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Country</td>
-		<td><input type="text" class="input-text input-text-long" name="country_id" id="country_id" value="<?php echo $data['country_id'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="country_id" id="country_id" value="<?php echo $data['country_id'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>State</td>
-		<td><input type="text" class="input-text input-text-long" name="state_id" id="state_id" value="<?php echo $data['state_id'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="state_id" id="state_id" value="<?php echo $data['state_id'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>City</td>
-		<td><input type="text" class="input-text input-text-long" name="city_id" id="city_id" value="<?php echo $data['city_id'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="city_id" id="city_id" value="<?php echo $data['city_id'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Student</td>
-		<td><input type="number" class="input-text input-text-medium" name="student" id="student" value="<?php echo ($data['student']);?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="student" id="student" value="<?php echo ($data['student']);?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Prevent Change School</td>
-		<td><input type="number" class="input-text input-text-medium" name="prevent_change_school" id="prevent_change_school" value="<?php echo ($data['prevent_change_school']);?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="prevent_change_school" id="prevent_change_school" value="<?php echo ($data['prevent_change_school']);?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Prevent Resign</td>
-		<td><input type="number" class="input-text input-text-medium" name="prevent_resign" id="prevent_resign" value="<?php echo ($data['prevent_resign']);?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="prevent_resign" id="prevent_resign" value="<?php echo ($data['prevent_resign']);?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Use Token</td>
-		<td><input type="number" class="input-text input-text-medium" name="use_token" id="use_token" value="<?php echo ($data['use_token']);?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="use_token" id="use_token" value="<?php echo ($data['use_token']);?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Time Import First</td>
-		<td><input type="text" class="input-text input-text-datetime" name="time_import_first" id="time_import_first" value="<?php echo ($data['time_import_first']);?>" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_import_first" id="time_import_first" value="<?php echo ($data['time_import_first']);?>" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
 		</tr>
 		<tr>
 		<td>Time Import Last</td>
-		<td><input type="text" class="input-text input-text-datetime" name="time_import_last" id="time_import_last" value="<?php echo ($data['time_import_last']);?>" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_import_last" id="time_import_last" value="<?php echo ($data['time_import_last']);?>" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
 		</tr>
 		<tr>
 		<td>Admin Import First</td>
-		<td><input type="number" class="input-text input-text-medium" name="admin_import_first" id="admin_import_first" value="<?php echo $data['admin_import_first'];?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="admin_import_first" id="admin_import_first" value="<?php echo $data['admin_import_first'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Admin Import Last</td>
-		<td><input type="number" class="input-text input-text-medium" name="admin_import_last" id="admin_import_last" value="<?php echo $data['admin_import_last'];?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="admin_import_last" id="admin_import_last" value="<?php echo $data['admin_import_last'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Ip Import First</td>
-		<td><input type="text" class="input-text input-text-long" name="ip_import_first" id="ip_import_first" value="<?php echo $data['ip_import_first'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="ip_import_first" id="ip_import_first" value="<?php echo $data['ip_import_first'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Ip Import Last</td>
-		<td><input type="text" class="input-text input-text-long" name="ip_import_last" id="ip_import_last" value="<?php echo $data['ip_import_last'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="ip_import_last" id="ip_import_last" value="<?php echo $data['ip_import_last'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Time Create</td>
-		<td><input type="text" class="input-text input-text-datetime" name="time_create" id="time_create" value="<?php echo $data['time_create'];?>" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_create" id="time_create" value="<?php echo $data['time_create'];?>" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
 		</tr>
 		<tr>
 		<td>Time Edit</td>
-		<td><input type="text" class="input-text input-text-datetime" name="time_edit" id="time_edit" value="<?php echo $data['time_edit'];?>" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_edit" id="time_edit" value="<?php echo $data['time_edit'];?>" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
 		</tr>
 		<tr>
 		<td>Admin Create</td>
-		<td><input type="number" class="input-text input-text-medium" name="admin_create" id="admin_create" value="<?php echo $data['admin_create'];?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="admin_create" id="admin_create" value="<?php echo $data['admin_create'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Admin Edit</td>
-		<td><input type="number" class="input-text input-text-medium" name="admin_edit" id="admin_edit" value="<?php echo $data['admin_edit'];?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="admin_edit" id="admin_edit" value="<?php echo $data['admin_edit'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Ip Create</td>
-		<td><input type="text" class="input-text input-text-long" name="ip_create" id="ip_create" value="<?php echo $data['ip_create'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="ip_create" id="ip_create" value="<?php echo $data['ip_create'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Ip Edit</td>
-		<td><input type="text" class="input-text input-text-long" name="ip_edit" id="ip_edit" value="<?php echo $data['ip_edit'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="ip_edit" id="ip_edit" value="<?php echo $data['ip_edit'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Active</td>
-		<td><input type="number" class="input-text input-text-medium" name="active" id="active" value="<?php echo ($data['active']);?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="active" id="active" value="<?php echo ($data['active']);?>" autocomplete="off" /></td>
 		</tr>
 		<tr><td>&nbsp;</td>
-		<td><input type="submit" name="save" id="save" class="com-button" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -445,7 +445,7 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_school" action="" method="post" enctype="multipart/form-data">
-	<table width="800" border="0" class="two-side-table" cellspacing="0" cellpadding="0">
+	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">School</td>
 		<td><?php echo ($data['school_id']);?></td>
@@ -584,7 +584,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>&nbsp;</td>
-		<td><input type="button" name="edit" id="edit" class="com-button" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_id=<?php echo $data['school_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_id=<?php echo $data['school_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -606,9 +606,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
   Edu School
-    <input type="text" name="q" id="q" autocomplete="off" class="input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
  "))));?>" />
-  <input type="submit" name="search" id="search" value="Cari" class="com-button" />
+  <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -643,21 +643,16 @@ $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
 $pagination->result = $picoEdu->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
-$pagination->str_result = "";
-foreach($pagination->result as $i=>$obj)
-{
-$cls = ($obj->sel)?" class=\"pagination-selected\"":"";
-$pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
-}
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 ?>
 <form name="form1" method="post" action="">
 
-<div class="search-pagination search-pagination-top">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label">Baris <?php echo $pagination->start;?> hingga <?php echo $pagination->end;?> dari <?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-top">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label">Baris <?php echo $pagination->start;?> hingga <?php echo $pagination->end;?> dari <?php echo $pagination->total_record;?></div>
 </div>
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="row-table">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
   <thead>
     <tr>
       <td width="16"><input type="checkbox" name="control-school_id" id="control-school_id" class="checkbox-selector" data-target=".school_id" value="1"></td>
@@ -752,16 +747,16 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
     </tbody>
   </table>
 
-<div class="search-pagination search-pagination-bottom">
-<div class="search-pagination-control"><?php echo $pagination->str_result;?></div>
-<div class="search-pagination-label">Baris <?php echo $pagination->start;?> hingga <?php echo $pagination->end;?> dari <?php echo $pagination->total_record;?></div>
+<div class="d-flex search-pagination search-pagination-bottom">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label">Baris <?php echo $pagination->start;?> hingga <?php echo $pagination->end;?> dari <?php echo $pagination->total_record;?></div>
 </div>
 
 <div class="button-area">
-  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="com-button" />
-  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="com-button" />
-  <input type="submit" name="delete" id="delete" value="Hapus" class="com-button delete-button" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
-  <input type="button" name="add" id="add" value="Tambah" class="com-button" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
+  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn com-button btn-success" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-success" />
+  <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-success delete-button" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
+  <input type="button" name="add" id="add" value="Tambah" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
   </div>
 </form>
 <?php
