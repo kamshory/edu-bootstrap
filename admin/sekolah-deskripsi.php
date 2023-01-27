@@ -236,7 +236,7 @@ function pasteHandler(e)
 </div>
 <div class="input-block button-area-responsive">
 <input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> 
-<input type="button" name="showall" id="showall" value="Kembali" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input type="button" name="showall" id="showall" value="Kembali" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
 </div>
 </form>
 <?php

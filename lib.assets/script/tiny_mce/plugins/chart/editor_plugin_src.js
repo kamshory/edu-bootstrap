@@ -29,7 +29,7 @@
             return {
                 longname: "Chart plugin",
                 author: "Kamshory",
-                authorurl: "http://www.kamshory.com",
+                authorurl: "http://www.planetbiru.com",
                 infourl: "http://www.planetbiru.com/kamshory",
                 version: "1.0"
             }

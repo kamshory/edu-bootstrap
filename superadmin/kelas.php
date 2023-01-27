@@ -113,7 +113,7 @@ if (@$_GET['option'] == 'add') {
 	</tr>
 	<tr>
 		<td>Order</td>
-		<td><input type="number" class="form-control input-text input-text-short" name="order" id="order" autocomplete="off" /></td>
+		<td><input type="number" class="input-text input-text-short" name="order" id="order" autocomplete="off" /></td>
 	</tr>
 	<tr>
 		<td>Aktif</td>
@@ -189,7 +189,7 @@ if (@$_GET['option'] == 'add') {
 				</tr>
 				<tr>
 					<td>Order</td>
-					<td><input type="number" class="form-control input-text input-text-short" name="order" id="order" value="<?php echo ($data['order']); ?>" autocomplete="off" /></td>
+					<td><input type="number" class="input-text input-text-short" name="order" id="order" value="<?php echo ($data['order']); ?>" autocomplete="off" /></td>
 				</tr>
 				<tr>
 					<td>Aktif</td>
@@ -388,11 +388,8 @@ $pagination->total_record_with_limit = $stmt->rowCount();
 				$pagination->str_prev,
 				$pagination->str_next
 			);
-			$pagination->str_result = "";
-			foreach ($pagination->result as $i => $obj) {
-				$cls = ($obj->sel) ? " class=\"pagination-selected\"" : "";
-				$pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
-			}
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+
 		?>
 			<form name="form1" method="post" action="">
 				<style type="text/css">

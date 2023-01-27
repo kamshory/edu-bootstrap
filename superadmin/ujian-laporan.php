@@ -876,10 +876,10 @@ order by `edu_test`.`test_id` desc
           );
           $pagination->str_result = "";
 
-          foreach ($pagination->result as $i => $obj) {
-            $cls = (@$obj->sel) ? " class=\"pagination-selected\"" : "";
-            $pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
-          }
+foreach ($pagination->result as $i => $obj) {
+$cls = (@$obj->sel) ? " class=\"pagination-selected\"" : "";
+$pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
+}
           ?>
 <?php
             $array_class = $picoEdu->getArrayClass($school_id);

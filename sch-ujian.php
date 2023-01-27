@@ -572,11 +572,8 @@ if (@$auth_student_id && @$auth_school_id) {
 					$pagination->str_prev,
 					$pagination->str_next
 				);
-				$pagination->str_result = "";
-				foreach ($pagination->result as $i => $obj) {
-					$cls = ($obj->sel) ? " class=\"pagination-selected\"" : "";
-					$pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
-				}
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+
 			?>
 				<form name="form1" method="post" action="">
 					<style type="text/css">
@@ -743,11 +740,8 @@ $pagination->total_record_with_limit = $stmt->rowCount();
 				$pagination->str_prev,
 				$pagination->str_next
 			);
-			$pagination->str_result = "";
-			foreach ($pagination->result as $i => $obj) {
-				$cls = ($obj->sel) ? " class=\"pagination-selected\"" : "";
-				$pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
-			}
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+
 		?>
 			<form name="form1" method="post" action="">
 				<style type="text/css">
@@ -906,11 +900,8 @@ $pagination->total_record_with_limit = $stmt->rowCount();
 				$pagination->str_prev,
 				$pagination->str_next
 			);
-			$pagination->str_result = "";
-			foreach ($pagination->result as $i => $obj) {
-				$cls = ($obj->sel) ? " class=\"pagination-selected\"" : "";
-				$pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
-			}
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+
 		?>
 			<form name="form1" method="post" action="">
 				<style type="text/css">

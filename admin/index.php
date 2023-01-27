@@ -1,6 +1,6 @@
 <?php
 include_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
-$cfg->page_title = "Halaman Depan Siswa";
+$cfg->page_title = "Halaman Depan Administrator";
 
 if(!empty(@$school_id)) {
     include_once dirname(__FILE__) . "/lib.inc/header.php";

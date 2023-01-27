@@ -46,19 +46,37 @@ $structure = array(
         'link'=>'kelas.php',
         'submenu'=>array(
             array(
-                'caption'=>'Daftar Kelas',
-                'link'=>'kelas-daftar.php'                       
+                'caption'=>'Kelas',
+                'link'=>'kelas.php'                       
             ),
             array(
-                'caption'=>'Daftar Jurusan',
-                'link'=>'kelas-deskripsi.php'                       
+                'caption'=>'Jurusan',
+                'link'=>'jurusan.php'                       
             ),
             array(
                 'caption'=>'Perubahan Kelas Siswa',
                 'link'=>'kelas-siswa-ubah.php'                       
             )
         )
-    )
+        ),
+        array(
+            'caption'=>'Ujian',
+            'link'=>'ujian.php',
+            'submenu'=>array(
+                array(
+                    'caption'=>'Ujian',
+                    'link'=>'ujian.php'                       
+                ),
+                array(
+                    'caption'=>'Soal Ujian',
+                    'link'=>'ujian-soal.php'                       
+                ),
+                array(
+                    'caption'=>'Perubahan Kelas Siswa',
+                    'link'=>'kelas-siswa-ubah.php'                       
+                )
+            )
+        )
 
 );
 

@@ -34,7 +34,7 @@
     </div>
 </div>
 <div class="footer">
- &copy; <a href="http://www.kamshory.com">Kamshory Developer</a> 2010-2016. All rights reserved. </div>
+ &copy; <a href="http://www.planetbiru.com">Kamshory Developer</a> 2010-2016. All rights reserved. </div>
 </div>
 </body>
 </html>

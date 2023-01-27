@@ -373,60 +373,57 @@ function printToken(frm)
 </div>
 <div class="search-result">
 <?php
-				$sql_filter = "";
-				$pagination->array_get = array();
-				if ($pagination->query) {
-					$pagination->array_get[] = 'q';
-					$sql_filter .= " and (`edu_token`.`token` like '%" . addslashes($pagination->query) . "%' )";
-				}
-				if ($class_id != 0) {
-					$pagination->array_get[] = 'class_id';
-					$sql_filter .= " and `edu_token`.`class_id` = '$class_id' ";
-				}
-				if ($test_id != 0) {
-					$pagination->array_get[] = 'test_id';
-					$sql_filter .= " and `edu_token`.`test_id` = '$test_id' ";
-				}
-				if ($test_id != 0 || $class_id != 0) {
-					$pagination->limit_sql = "";
-				}
-				$sql_filter .= " and `edu_token`.`active` = '1' ";
-				$nt = '';
+$sql_filter = "";
+$pagination->array_get = array();
+if ($pagination->query) {
+	$pagination->array_get[] = 'q';
+	$sql_filter .= " and (`edu_token`.`token` like '%" . addslashes($pagination->query) . "%' )";
+}
+if ($class_id != 0) {
+	$pagination->array_get[] = 'class_id';
+	$sql_filter .= " and `edu_token`.`class_id` = '$class_id' ";
+}
+if ($test_id != 0) {
+	$pagination->array_get[] = 'test_id';
+	$sql_filter .= " and `edu_token`.`test_id` = '$test_id' ";
+}
+if ($test_id != 0 || $class_id != 0) {
+	$pagination->limit_sql = "";
+}
+$sql_filter .= " and `edu_token`.`active` = '1' ";
+$nt = '';
 
-				$sql = "SELECT `edu_token`.* $nt,
-				(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_token`.`admin_create`) as `admin_create_name`,
-				(select `edu_teacher`.`name` from `edu_teacher` where `edu_teacher`.`teacher_id` = `edu_token`.`teacher_create`) as `teacher_create_name`,
-				(select `edu_student`.`name` from `edu_student` where `edu_student`.`student_id` = `edu_token`.`student_id`) as `student_name`,
-				(select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_token`.`class_id`) as `class_name`,
-				(select `edu_test`.`name` from `edu_test` where `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
-				from `edu_token`
-				where 1 and `school_id` = '$school_id' $sql_filter
-				order by `edu_token`.`token_id` desc
-				";
-								$sql_test = "SELECT `edu_token`.*
-				from `edu_token`
-				where 1 and `school_id` = '$school_id' $sql_filter
-				";
-				$stmt = $database->executeQuery($sql_test);
-				$pagination->total_record = $stmt->rowCount();
-				$stmt = $database->executeQuery($sql . $pagination->limit_sql);
-				$pagination->total_record_with_limit = $stmt->rowCount();
-				if ($pagination->total_record_with_limit) {
-					if ($test_id == 0 && $class_id == 0) {
-						$pagination->start = $pagination->offset + 1;
-						$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
+$sql = "SELECT `edu_token`.* $nt,
+(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_token`.`admin_create`) as `admin_create_name`,
+(select `edu_teacher`.`name` from `edu_teacher` where `edu_teacher`.`teacher_id` = `edu_token`.`teacher_create`) as `teacher_create_name`,
+(select `edu_student`.`name` from `edu_student` where `edu_student`.`student_id` = `edu_token`.`student_id`) as `student_name`,
+(select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_token`.`class_id`) as `class_name`,
+(select `edu_test`.`name` from `edu_test` where `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
+from `edu_token`
+where 1 and `school_id` = '$school_id' $sql_filter
+order by `edu_token`.`token_id` desc
+";
+				$sql_test = "SELECT `edu_token`.*
+from `edu_token`
+where 1 and `school_id` = '$school_id' $sql_filter
+";
+$stmt = $database->executeQuery($sql_test);
+$pagination->total_record = $stmt->rowCount();
+$stmt = $database->executeQuery($sql . $pagination->limit_sql);
+$pagination->total_record_with_limit = $stmt->rowCount();
+if ($pagination->total_record_with_limit) {
+	if ($test_id == 0 && $class_id == 0) {
+		$pagination->start = $pagination->offset + 1;
+		$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
-						$pagination->result = $picoEdu->createPagination(
-							basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page,
-							$pagination->offset, $pagination->array_get,
-							true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next
-						);
-						$pagination->str_result = "";
-						foreach ($pagination->result as $i => $obj) {
-							$cls = ($obj->sel) ? " class=\"pagination-selected\"" : "";
-							$pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
-						}
-					}
+		$pagination->result = $picoEdu->createPagination(
+			basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page,
+			$pagination->offset, $pagination->array_get,
+			true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next
+		);
+		$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+
+	}
 					?>
 <form name="form1" method="post" action="">
 <style type="text/css">

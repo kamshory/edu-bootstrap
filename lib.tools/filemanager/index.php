@@ -148,7 +148,6 @@ function selectFileIndex(url){
     <li><a href="javascript:about()" title="About"><img src="style/images/trans16.gif" class="help" alt="Help" /></a></li>
     <li id="tb-clipboard" class="tb-hide"><a href="javascript:showClipboard()"><img src="style/images/trans16.gif" class="clipboard" alt="Clipboard" title="Show Clipboard" /></a></li>
     <li id="tb-clipboard-empty" class="tb-hide"><a href="javascript:emptyClipboard()"><img src="style/images/trans16.gif" class="cleanup" alt="Empty Clipboard" title="Empty Clipboard" /></a></li>
-    <li id="tb-logout"><a href="logout.php"><img src="style/images/trans16.gif" class="logout" alt="Logout" title="Logout" /></a></li>
   </ul>
 </div>
 </div>

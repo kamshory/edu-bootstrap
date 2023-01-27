@@ -203,11 +203,9 @@ if (@$_GET['option'] == 'detail') {
 						$pagination->str_prev,
 						$pagination->str_next
 					);
-					$pagination->str_result = "";
-					foreach ($pagination->result as $i => $obj) {
-						$cls = ($obj->sel) ? " class=\"pagination-selected\"" : "";
-						$pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
-					}
+$pagination->result = $picoEdu->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
+
+}
 				?>
 					<form name="form1" method="post" action="">
 						<div class="d-flex search-pagination search-pagination-top">

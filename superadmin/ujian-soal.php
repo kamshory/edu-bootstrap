@@ -484,7 +484,7 @@ $rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 foreach ($rows2 as $data2) {
 ?>
 <div class="option-item" data-index="<?php echo $i; ?>">
-<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i]; ?></span> | Nilai <input type="number" min="0" max="<?php echo ($data3['standard_score']); ?>" class="form-control input-text input-text-short" name="score_<?php echo $data2['option_id']; ?>" id="score_<?php echo $data2['option_id']; ?>" value="<?php echo $data2['score']; ?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']); ?>)</div>
+<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i]; ?></span> | Nilai <input type="number" min="0" max="<?php echo ($data3['standard_score']); ?>" class="input-text input-text-short" name="score_<?php echo $data2['option_id']; ?>" id="score_<?php echo $data2['option_id']; ?>" value="<?php echo $data2['score']; ?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']); ?>)</div>
 <div class="option-editor">
 <textarea spellcheck="false" class="htmleditor" name="option_<?php echo $data2['option_id']; ?>" id="option_<?php echo $data2['option_id']; ?>" style="width:100%;"><?php echo htmlspecialchars(($data2['content'])); ?></textarea>
 </div>
@@ -1097,11 +1097,8 @@ function buildMenu(id)
 						$pagination->offset, $pagination->array_get,
 						true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next
 					);
-					$pagination->str_result = "";
-					foreach ($pagination->result as $i => $obj) {
-						$cls = ($obj->sel) ? " class=\"pagination-selected\"" : "";
-						$pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
-					}
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+
 					?>
 <?php
 						$array_class = $picoEdu->getArrayClass($school_id);

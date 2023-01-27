@@ -195,11 +195,8 @@ and `edu_student`.`student_id` = '$edit_key'
           $pagination->str_prev,
           $pagination->str_next
         );
-        $pagination->str_result = "";
-        foreach ($pagination->result as $i => $obj) {
-          $cls = ($obj->sel) ? " class=\"pagination-selected\"" : "";
-          $pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
-        }
+$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+
       }
     ?>
       <form name="form1" method="post" action="">
