@@ -392,7 +392,7 @@ if (@$auth_student_id && @$auth_school_id) {
 				<tr>
 					<td></td>
 					<td><input type="button" name="join" id="join" class="btn com-button btn-success" value="Ikuti" onclick="window.location='<?php echo $cfg->base_url; ?>/siswa/ujian/index.php?test_id=<?php echo $data['test_id']; ?>'" />
-						<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='ujian.php'" />
+						<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='ujian.php'" />
 					</td>
 				</tr>
 			</table>
@@ -781,10 +781,10 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 						?>
 							<tr>
 								<td align="right"><?php echo $no;?> </td>
-								<td><a href="../guru/ujian-daftar.php"><?php echo $data['name']; ?></a></td>
+								<td><a href="../guru/ujian.php"><?php echo $data['name']; ?></a></td>
 								<td><?php $class = $picoEdu->textClass($array_class, $data['class']);
 									$class_sort = $picoEdu->textClass($array_class, $data['class'], 2); ?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class); ?>"><?php echo $class_sort; ?></a></td>
-								<td><a href="../guru/ujian-daftar.php"><?php echo $data['subject']; ?></a></td>
+								<td><a href="../guru/ujian.php"><?php echo $data['subject']; ?></a></td>
 							</tr>
 						<?php
 						}
@@ -805,7 +805,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 		<?php
 		} else {
 		?>
-			<div class="warning">Data tidak ditemukan. <a href="../guru/ujian-daftar.php?option=add">Klik di sini untuk membuat baru.</a></div>
+			<div class="warning">Data tidak ditemukan. <a href="../guru/ujian.php?option=add">Klik di sini untuk membuat baru.</a></div>
 		<?php
 		}
 		?>

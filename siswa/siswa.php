@@ -92,7 +92,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
-		<td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo 'siswa.php';?>'" /></td>
+		<td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo 'siswa.php';?>'" /></td>
 		</tr>
 	</table>
 </form>

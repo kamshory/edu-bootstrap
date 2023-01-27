@@ -238,9 +238,9 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 						$question_id = $database->generateNewId();
 
 						$sql1 = "INSERT INTO `edu_question` 
-						(`content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+						(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
 						`time_create`, `member_create`, `time_edit`, `member_edit`) values
-						('$pertanyaan', '$test_id', '1', '$order', '$random', '$numbering', '$digest', '$competence',
+						('$question_id', '$pertanyaan', '$test_id', '1', '$order', '$random', '$numbering', '$digest', '$competence',
 						'$time_create', '$member_create', '$time_edit', '$member_edit'); 
 						";
 
@@ -279,7 +279,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 								$digest = md5($option);
 								$option = addslashes($option);
 								
-								$order2 = $index_option + 1;
+								$order2 = ((int) $index_option) + 1;
 		
 								$option_id = $database->generateNewId();
 								
@@ -399,7 +399,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     <tr>
       <td></td>
       <td><input type="submit" name="import" id="import" class="btn com-button btn-success" value="Impor Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>'" />
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
     </tr>
   </table>
 </form>
@@ -587,7 +587,7 @@ else if(@$_GET['q'])
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="ujian-daftar.php?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="warning">Data tidak ditemukan. <a href="ujian.php?option=add">Klik di sini untuk membuat baru.</a></div>
 <?php
 }
 ?>

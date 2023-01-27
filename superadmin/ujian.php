@@ -10,7 +10,7 @@ $cfg->page_title = "Ujian";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
 <ul class="list-rounded">
-  <li><a href="ujian-daftar.php">Daftar Ujian</a></li>
+  <li><a href="ujian.php">Daftar Ujian</a></li>
   <li><a href="ujian-soal.php">Soal Ujian</a></li>
   <li><a href="ujian-token.php">Token Ujian</a></li>
   <li><a href="ujian-ekspor.php">Ekspor Soal Ujian</a></li>

@@ -32,7 +32,7 @@ $(document).ready(function(e) {
 		var obj = $(this);
 		var selection = $('.file-preview').attr('data-selection') || '';
 		var id = obj.closest('.collection-preview-container').attr('data-id');
-		window.open('ujian-daftar.php?option=add&import=yes&collection='+id+'&selection='+selection);
+		window.open('ujian.php?option=add&import=yes&collection='+id+'&selection='+selection);
 		e.preventDefault();
 	});
 	

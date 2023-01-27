@@ -247,7 +247,7 @@ $(document).ready(function(e) {
 		<tr>
 		<td></td>
 		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" onclick="return confirm('Apakah Anda yahin akan membuat token ini?')" /> 
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -320,7 +320,7 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td></td>
-		<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&token_id=<?php echo $data['token_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&token_id=<?php echo $data['token_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>

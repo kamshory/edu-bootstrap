@@ -5,6 +5,7 @@ if(empty(@$school_id))
 	include_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
+$cfg->page_title = "Halaman Depan Guru";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 	?>
     <ul class="shortcut-image-80">

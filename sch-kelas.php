@@ -56,7 +56,7 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td></td>
-		<td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo 'kelas.php';?>'" /></td>
+		<td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo 'kelas.php';?>'" /></td>
 		</tr>
 	</table>
 </form>

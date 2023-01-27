@@ -923,7 +923,7 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 	<?php
     if(!isset($_GET['expand'])){
     ?>
-    <input type="button" name="show-all" id="show-all" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo $q1;?>'" />
+    <input type="button" name="show-all" id="show-all" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo $q1;?>'" />
     <?php
     }
     else

@@ -419,7 +419,7 @@ input#duration{
 		<td>Kelas
 		</td>
         <td><input type="hidden" name="classlist" id="classlist" autocomplete="off" />
-        <input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
+        <input class="btn btn-sm btn-primary" type="button" id="select-class" value="Atur Kelas" />
         </td>
 		</tr>
 		<tr>
@@ -521,7 +521,7 @@ input#duration{
 		<tr class="toggle-tr" data-toggle="has_alert" data-show-condition="1" data-hide-condition="0">
 		<td>Waktu Peringatan</td>
 		<td>
-        <select name="alert_time" id="alert_time">
+        <select class="form-control" name="alert_time" id="alert_time">
         	<option value="120">2 menit</option>
         	<option value="300">5 menit</option>
         	<option value="600">10 menit</option>
@@ -582,7 +582,7 @@ input#duration{
 		</tr>
 		<tr>
 		<td></td>
-		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -869,7 +869,7 @@ $(document).ready(function(e) {
 		<td>Kelas
 		</td>
         <td><input type="hidden" name="classlist" id="classlist" value="<?php echo $data['class'];?>" autocomplete="off" />
-        <input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
+        <input class="btn btn-sm btn-primary" type="button" id="select-class" value="Atur Kelas" />
         </td>
 		</tr>
 		<tr>
@@ -1032,7 +1032,7 @@ $(document).ready(function(e) {
 		</td>
 		</tr>
 		<tr><td></td>
-		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -1239,7 +1239,7 @@ if($stmt->rowCount() > 0)
 		</tr>
 		<tr>
 		<td></td>
-		<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>

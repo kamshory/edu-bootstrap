@@ -598,12 +598,13 @@ else if(isset($_GET['test_id']))
 	(select count(distinct `edu_question`.`question_id`) from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id`) as `collection`
 	from `edu_test` where `test_id` = '$test_id' 
 	";
+
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	?>
-		<script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/script/jquery-ui/jquery-ui.min.js"></script>
-		<link rel="stylesheet" href="<?php echo $cfg->base_assets; ?>lib.assets/script/jquery-ui/jquery-ui.min.css">
+		
+		
 		<link rel="stylesheet" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/test.css">
 		<script type="text/javascript">
 		var test_name = '<?php echo addslashes($data['name']); ?>';
@@ -814,8 +815,8 @@ else if(isset($_GET['test_id']))
 	} else {
 	?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/test.css" />
-<script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/script/jquery-ui/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="<?php echo $cfg->base_assets; ?>lib.assets/script/jquery-ui/jquery-ui.min.css">
+
+
 <script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/script/jquery.ui.touch-punch.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/script/FileSaver.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/script/html-docx.js"></script>
@@ -1081,8 +1082,8 @@ echo $data2['content'];
 <input type="button" name="add" id="add" class="btn com-button btn-success" value="Tambah Soal (HTML)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=add&test_id=<?php echo $test_id; ?>'" />
 <input type="button" name="add" id="add" class="btn com-button btn-success" value="Tambah Soal (Teks)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=add&format=text&test_id=<?php echo $test_id; ?>'" />
 <input type="button" name="download-word" id="download-word" class="btn com-button btn-success" value="Download Format Word" onclick="downloadInWord()" />
-<input type="button" name="show" id="show" class="btn com-button btn-success" value="Tampilkan Informasi Ujian" onclick="window.location='ujian-daftar.php?option=detail&test_id=<?php echo $test_id; ?>'" />
-<input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah Informasi Ujian" onclick="window.location='ujian-daftar.php?option=edit&test_id=<?php echo $test_id; ?>'" />
+<input type="button" name="show" id="show" class="btn com-button btn-success" value="Tampilkan Informasi Ujian" onclick="window.location='ujian.php?option=detail&test_id=<?php echo $test_id; ?>'" />
+<input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah Informasi Ujian" onclick="window.location='ujian.php?option=edit&test_id=<?php echo $test_id; ?>'" />
 </div>
 <?php
 				}
@@ -1190,7 +1191,7 @@ function buildMenu(id)
 	'<li><a href="ujian-ekspor.php?test_id='+id+'">Ekspor Soal Ujian</a></li>\r\n'+
 	'<li><a href="ujian-soal.php?option=analys&test_id='+id+'">Analisa Soal Ujian</a></li>\r\n'+
 	'<li><a href="ujian-laporan.php?option=detail&test_id='+id+'">Laporan Hasil Ujian</a></li>\r\n'+
-	'<li><a href="ujian-daftar.php?option=edit&test_id='+id+'">Ubah Informasi Ujian</a></li>\r\n'
+	'<li><a href="ujian.php?option=edit&test_id='+id+'">Ubah Informasi Ujian</a></li>\r\n'
 	;
 	return html;
 }
@@ -1371,7 +1372,7 @@ else if(@$_GET['q'])
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="ujian-daftar.php?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="warning">Data tidak ditemukan. <a href="ujian.php?option=add">Klik di sini untuk membuat baru.</a></div>
 <?php
 }
 ?>

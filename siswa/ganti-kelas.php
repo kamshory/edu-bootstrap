@@ -104,7 +104,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 		<tr>
 		<td></td>
 		<td><input type="button" name="select" id="select" class="btn com-button btn-success" value="Pilih" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=select&class_id=<?php echo $data['class_id'];?>'" /> 
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
