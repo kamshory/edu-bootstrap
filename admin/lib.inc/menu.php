@@ -68,17 +68,39 @@ $structure = array(
                     'link'=>'ujian.php'                       
                 ),
                 array(
-                    'caption'=>'Soal Ujian',
+                    'caption'=>'Soal',
                     'link'=>'ujian-soal.php'                       
                 ),
                 array(
-                    'caption'=>'Perubahan Kelas Siswa',
-                    'link'=>'kelas-siswa-ubah.php'                       
+                    'caption'=>'Impor Soal',
+                    'link'=>'ujian-impor.php'                       
+                ),
+                array(
+                    'caption'=>'Ekspor Soal',
+                    'link'=>'ujian-ekspor.php'                       
+                ),
+                array(
+                    'caption'=>'Bank Soal',
+                    'link'=>'ujian-bank-soal.php'                       
+                ),
+                array(
+                    'caption'=>'Monitoring',
+                    'link'=>'ujian-monitoring.php'                       
+                ),
+                array(
+                    'caption'=>'Riwayat',
+                    'link'=>'ujian-riwayat.php'                       
+                ),
+                array(
+                    'caption'=>'Laporan Hasil',
+                    'link'=>'ujian-laporan.php'                       
                 )
             )
         )
 
 );
+
+
 
 class MainMenu
 {
