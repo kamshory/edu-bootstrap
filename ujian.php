@@ -330,7 +330,7 @@ $school_grade = array(
 					?>
 				 
                   <tr>
-                    <td align="right"><?php echo $no;?></td>
+                    <td align="right"><?php echo $no;?> </td>
                     <td><a href="ujian.php?option=join&register=true&test_id=<?php echo $data['test_id'];?>"><?php echo $data['test_name'];?></a></td>
                     <td><a href="ujian.php?option=join&register=true&test_id=<?php echo $data['test_id'];?>"><?php echo $data['subject'];?></a></td>
                     <td><a href="ujian.php?option=join&register=true&test_id=<?php echo $data['test_id'];?>"><?php if($data['test_availability']=='F') echo 'Selamanya'; if($data['test_availability']=='L') echo 'Terbatas';?></a></td>

@@ -67,11 +67,11 @@ and `edu_student`.`student_id` = '$edit_key'
       <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
         <tr>
           <td>NIS</td>
-          <td><?php echo $data['reg_number'];?></td>
+          <td><?php echo $data['reg_number'];?> </td>
         </tr>
         <tr>
           <td>NISN</td>
-          <td><?php echo $data['reg_number_national'];?></td>
+          <td><?php echo $data['reg_number_national'];?> </td>
         </tr>
         <tr>
           <td>Tingkat</td>
@@ -83,15 +83,15 @@ and `edu_student`.`student_id` = '$edit_key'
         </tr>
         <tr>
           <td>Kelas</td>
-          <td><?php echo $data['class_id'];?></td>
+          <td><?php echo $data['class_id'];?> </td>
         </tr>
         <tr>
           <td>Nama</td>
-          <td><?php echo $data['name'];?></td>
+          <td><?php echo $data['name'];?> </td>
         </tr>
         <tr>
           <td>Jenis Kelamin</td>
-          <td><?php echo $picoEdu->getGenderName($data['gender']);?></td>
+          <td><?php echo $picoEdu->getGenderName($data['gender']);?> </td>
         </tr>
         <tr>
           <td></td>
@@ -246,7 +246,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
               $no++;
             ?>
               <tr<?php echo (@$data['active']) ? " class=\"data-active\"" : " class=\"data-inactive\""; ?>>
-                <td align="right"><?php echo $no;?></td>
+                <td align="right"><?php echo $no;?> </td>
                 <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo $data['reg_number']; ?></a></td>
                 <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo $data['reg_number_national']; ?></a></td>
                 <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo $data['name']; ?></a></td>

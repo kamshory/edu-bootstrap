@@ -101,9 +101,9 @@ else
 				{
 					?>
 					<tr>
-						<td><?php echo $questions[$key]['basic_competence'];?></td>
+						<td><?php echo $questions[$key]['basic_competence'];?> </td>
 						<td><input type="number" class="take" data-basic-competence="<?php echo str_replace('.', '_', $questions[$key]['basic_competence']);?>" name="take_<?php echo str_replace('.', '_', $questions[$key]['basic_competence']);?>" value="<?php echo $questions[$key]['random'];?>" step="1" min="0" max="<?php echo $questions[$key]['colection'];?>"></td>
-						<td><?php echo $questions[$key]['colection'];?></td>
+						<td><?php echo $questions[$key]['colection'];?> </td>
 					</tr>
 					<?php
 					$total_collection += $questions[$key]['colection'];
@@ -115,7 +115,7 @@ else
 					<tr>
 						<td>Total</td>
 						<td><input type="number" class="take_total" step="1" min="0" value="<?php echo $total_random;?>" readonly="readonly"></td>
-						<td><?php echo $total_collection;?></td>
+						<td><?php echo $total_collection;?> </td>
 					</tr>
 				</tfoot>
 				</table>

@@ -249,7 +249,7 @@ $i++;
   <td align="right"></td>
   <td>dir</td>
   <td><span class="permission-info"><?php echo $val['permission'];?></span></td>
-  <td><?php echo $val['filemtime'];?></td>
+  <td><?php echo $val['filemtime'];?> </td>
 </tr>
 <?php
 }
@@ -263,10 +263,10 @@ foreach($arrfile as $k=>$val)
   <td><input type="checkbox" class="input-checkbox fileid" data-isdir="false" data-iszip="<?php echo ($val['type']=='application/zip')?'true':'false';?>" name="fileid[]" id="fileid-<?php echo $i;?>" value="<?php echo $val['path'];?>" /></td>
   <td><img src="style/images/trans16.gif" class="fileicon fileicon-<?php echo $val['extension'];?>" /></td>
   <td><a href="javascript:;" onClick="return selectFile('<?php echo $val['url'];?>')"><?php echo $val['name'];?></a></td>
-  <td align="right"><?php echo $val['size'];?></td>
-  <td><?php if(strlen($val['type'])>18){$val['type'] = '<span title="'.$val['type'].'">'.substr($val['type'],0,18).'&hellip;</span>';} echo ($val['type'])?$val['type']:$val['extension'];?></td>
+  <td align="right"><?php echo $val['size'];?> </td>
+  <td><?php if(strlen($val['type'])>18){$val['type'] = '<span title="'.$val['type'].'">'.substr($val['type'],0,18).'&hellip;</span>';} echo ($val['type'])?$val['type']:$val['extension'];?> </td>
   <td><span class="permission-info"><?php echo $val['permission'];?></span></td>
-  <td><?php echo $val['filemtime'];?></td>
+  <td><?php echo $val['filemtime'];?> </td>
 </tr>
 <?php
 }

@@ -25,15 +25,15 @@ if(file_exists($filename))
   </tr>
   <tr>
     <td>Created</td>
-    <td><?php echo $filectime;?></td>
+    <td><?php echo $filectime;?> </td>
   </tr>
   <tr>
     <td>Last Modified</td>
-    <td><?php echo $filemtime;?></td>
+    <td><?php echo $filemtime;?> </td>
   </tr>
   <tr>
     <td>Last Accessed</td>
-    <td><?php echo $fileatime;?></td>
+    <td><?php echo $fileatime;?> </td>
   </tr>
   <tr>
     <td>Permission</td>
@@ -140,19 +140,19 @@ $url = $cfg->rooturl.'/'.substr(path_encode($filename, $cfg->rootdir),5);
   </tr>
   <tr>
     <td>MIME Type</td>
-    <td><?php echo $ft->mime;?></td>
+    <td><?php echo $ft->mime;?> </td>
   </tr>
   <tr>
     <td>Image Width</td>
-    <td><?php echo $width;?></td>
+    <td><?php echo $width;?> </td>
   </tr>
   <tr>
     <td>Image Height</td>
-    <td><?php echo $height;?></td>
+    <td><?php echo $height;?> </td>
   </tr>
   <tr>
     <td>Time Taken</td>
-    <td><?php echo $time_capture;?></td>
+    <td><?php echo $time_capture;?> </td>
   </tr>
   <tr>
     <td>Camera</td>
@@ -160,35 +160,35 @@ $url = $cfg->rooturl.'/'.substr(path_encode($filename, $cfg->rootdir),5);
   </tr>
   <tr>
     <td>Latitude</td>
-    <td><?php echo $latitude;?></td>
+    <td><?php echo $latitude;?> </td>
   </tr>
   <tr>
     <td>Longitude</td>
-    <td><?php echo $longitude;?></td>
+    <td><?php echo $longitude;?> </td>
   </tr>
   <tr>
     <td>Altitude</td>
-    <td><?php echo $altitude." ".$altref;?></td>
+    <td><?php echo $altitude." ".$altref;?> </td>
   </tr>
   <tr>
     <td>File Size</td>
-    <td><?php echo ($filesize>0)?($filesize.' bytes'):($filesize.' byte');?></td>
+    <td><?php echo ($filesize>0)?($filesize.' bytes'):($filesize.' byte');?> </td>
   </tr>
   <tr>
     <td>MD5</td>
-    <td><?php echo $md5;?></td>
+    <td><?php echo $md5;?> </td>
   </tr>
   <tr>
     <td>Created</td>
-    <td><?php echo $filectime;?></td>
+    <td><?php echo $filectime;?> </td>
   </tr>
   <tr>
     <td>Last Modified</td>
-    <td><?php echo $filemtime;?></td>
+    <td><?php echo $filemtime;?> </td>
   </tr>
   <tr>
     <td>Last Accessed</td>
-    <td><?php echo $fileatime;?></td>
+    <td><?php echo $fileatime;?> </td>
   </tr>
   <tr>
     <td>Permission</td>
@@ -222,23 +222,23 @@ $url = $cfg->rooturl.'/'.substr(path_encode($filename, $cfg->rootdir),5);
   </tr>
   <tr>
     <td>File Size</td>
-    <td><?php echo ($filesize>0)?($filesize.' bytes'):($filesize.' byte');?></td>
+    <td><?php echo ($filesize>0)?($filesize.' bytes'):($filesize.' byte');?> </td>
   </tr>
   <tr>
     <td>MD5</td>
-    <td><?php echo $md5;?></td>
+    <td><?php echo $md5;?> </td>
   </tr>
   <tr>
     <td>Created</td>
-    <td><?php echo $filectime;?></td>
+    <td><?php echo $filectime;?> </td>
   </tr>
   <tr>
     <td>Last Modified</td>
-    <td><?php echo $filemtime;?></td>
+    <td><?php echo $filemtime;?> </td>
   </tr>
   <tr>
     <td>Last Accessed</td>
-    <td><?php echo $fileatime;?></td>
+    <td><?php echo $fileatime;?> </td>
   </tr>
   <tr>
     <td>Permission</td>
@@ -272,23 +272,23 @@ $url = $cfg->rooturl.'/'.substr(path_encode($filename, $cfg->rootdir),5);
   </tr>
   <tr>
     <td>File Size</td>
-    <td><?php echo ($filesize>0)?($filesize.' bytes'):($filesize.' byte');?></td>
+    <td><?php echo ($filesize>0)?($filesize.' bytes'):($filesize.' byte');?> </td>
   </tr>
   <tr>
     <td>MD5</td>
-    <td><?php echo $md5;?></td>
+    <td><?php echo $md5;?> </td>
   </tr>
   <tr>
     <td>Created</td>
-    <td><?php echo $filectime;?></td>
+    <td><?php echo $filectime;?> </td>
   </tr>
   <tr>
     <td>Last Modified</td>
-    <td><?php echo $filemtime;?></td>
+    <td><?php echo $filemtime;?> </td>
   </tr>
   <tr>
     <td>Last Accessed</td>
-    <td><?php echo $fileatime;?></td>
+    <td><?php echo $fileatime;?> </td>
   </tr>
   <tr>
     <td>Permission</td>

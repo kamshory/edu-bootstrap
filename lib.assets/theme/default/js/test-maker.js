@@ -1739,7 +1739,7 @@ function downloadFile()
 function downloadFileHTML()
 {
 	let value = '<!DOCTYPE html>\r\n'+
-	'<html xmlns="http://www.w3.org/1999/xhtml">\r\n'+
+	'<html lang="en">\r\n'+
 	'<head>\r\n'+
 	'<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\r\n'+
 	'<style type="text/css">span.score{display:none;}</style>\r\n'+
@@ -1758,7 +1758,7 @@ function downloadFileHTML()
 function downloadFileWord()
 {
 	let value = '<!DOCTYPE html>\r\n'+
-	'<html xmlns="http://www.w3.org/1999/xhtml">\r\n'+
+	'<html lang="en">\r\n'+
 	'<head>\r\n'+
 	'<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\r\n'+
 	'<style type="text/css">span.score{display:none;} .container{} .container p, .container li{line-height:1.6;}</style>\r\n'+

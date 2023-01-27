@@ -145,15 +145,15 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama</td>
-		<td><?php echo $data['name'];?></td>
+		<td><?php echo $data['name'];?> </td>
 		</tr>
 		<tr>
 		<td>Nomor Induk</td>
-		<td><?php echo $data['reg_number'];?></td>
+		<td><?php echo $data['reg_number'];?> </td>
 		</tr>
 		<tr>
 		<td>NUPTK</td>
-		<td><?php echo $data['reg_number_national'];?></td>
+		<td><?php echo $data['reg_number_national'];?> </td>
 		</tr>
         <?php
 		if($data['school_name'])
@@ -161,50 +161,50 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Sekolah</td>
-		<td><?php echo $data['school_name'];?></td>
+		<td><?php echo $data['school_name'];?> </td>
 		</tr>
         <?php
 		}
 		?>
 		<tr>
 		<td>Jenis Kelamin</td>
-		<td><?php echo $picoEdu->getGenderName($data['gender']);?></td>
+		<td><?php echo $picoEdu->getGenderName($data['gender']);?> </td>
 		</tr>
 		<tr>
 		<td>Tempat Lahir</td>
-		<td><?php echo $data['birth_place'];?></td>
+		<td><?php echo $data['birth_place'];?> </td>
 		</tr>
 		<tr>
 		<td>Tanggal Lahir</td>
-		<td><?php echo translateDate(date('d F Y', strtotime($data['birth_day'])));?></td>
+		<td><?php echo translateDate(date('d F Y', strtotime($data['birth_day'])));?> </td>
 		</tr>
 		<tr>
 		<td>Telepon</td>
-		<td><?php echo $data['phone'];?></td>
+		<td><?php echo $data['phone'];?> </td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><?php echo $data['email'];?></td>
+		<td><?php echo $data['email'];?> </td>
 		</tr>
 		<tr>
 		<td>Alamat
-		</td><td><?php echo $data['address'];?></td>
+		</td><td><?php echo $data['address'];?> </td>
 		</tr>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?></td>
+		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?></td>
+		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>IP Buat
-		</td><td><?php echo $data['ip_create'];?></td>
+		</td><td><?php echo $data['ip_create'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Ubah
-		</td><td><?php echo $data['ip_edit'];?></td>
+		</td><td><?php echo $data['ip_edit'];?> </td>
 		</tr>
 		<tr>
 		<td></td>

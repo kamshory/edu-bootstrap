@@ -10,19 +10,19 @@ if($cfg->authentification_needed && !$userlogin)
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="dialog-table dialog-about">
   <tr>
     <td width="40%">File Upload</td>
-    <td><?php echo ini_get('file_uploads')?'Enabled':'Disabled';?></td>
+    <td><?php echo ini_get('file_uploads')?'Enabled':'Disabled';?> </td>
   </tr>
   <tr>
     <td>Max. File Upload</td>
-    <td><?php echo ini_get('max_file_uploads');?></td>
+    <td><?php echo ini_get('max_file_uploads');?> </td>
   </tr>
   <tr>
     <td>Max. File Upload Size</td>
-    <td><?php echo ini_get('upload_max_filesize');?></td>
+    <td><?php echo ini_get('upload_max_filesize');?> </td>
   </tr>
   <tr>
     <td>Max. Post Size</td>
-    <td><?php echo ini_get('post_max_size');?></td>
+    <td><?php echo ini_get('post_max_size');?> </td>
   </tr>
   <tr>
     <td>PHP-ZIP</td>
@@ -38,7 +38,7 @@ if($cfg->authentification_needed && !$userlogin)
   </tr>
   <tr>
     <td>Authentification</td>
-    <td><?php echo (@$cfg->authentification_needed)?'Needed':'Not Needed';?></td>
+    <td><?php echo (@$cfg->authentification_needed)?'Needed':'Not Needed';?> </td>
   </tr>
   <tr>
     <td>Permission Directory</td>
@@ -46,6 +46,6 @@ if($cfg->authentification_needed && !$userlogin)
   </tr>
   <tr>
     <td>Read Only Mode</td>
-    <td><?php echo (@$cfg->readonly)?'Yes':'No';?></td>
+    <td><?php echo (@$cfg->readonly)?'Yes':'No';?> </td>
   </tr>
 </table>

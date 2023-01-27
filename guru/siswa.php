@@ -31,11 +31,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama</td>
-		<td><?php echo $data['name'];?></td>
+		<td><?php echo $data['name'];?> </td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
-		<td><?php echo $picoEdu->getGenderName($data['gender']);?></td>
+		<td><?php echo $picoEdu->getGenderName($data['gender']);?> </td>
 		</tr>
     <?php
 	if($data['reg_number'] != '')
@@ -43,7 +43,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	?>
 		<tr>
 		<td>NIS</td>
-		<td><?php echo ($data['reg_number']);?></td>
+		<td><?php echo ($data['reg_number']);?> </td>
 		</tr>
 	<?php
 	}
@@ -52,7 +52,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	?>
     	<tr>
 		<td>NISN</td>
-		<td><?php echo ($data['reg_number_national']);?></td>
+		<td><?php echo ($data['reg_number_national']);?> </td>
 		</tr>
 	<?php
 	}
@@ -73,7 +73,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 	?>
 		<tr>
 		<td>Kelas</td>
-		<td><?php echo $data['class_name'];?></td>
+		<td><?php echo $data['class_name'];?> </td>
 		</tr>
 	<?php
 	}
@@ -82,7 +82,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 	?>
 		<tr>
 		<td>Jurusan</td>
-		<td><?php echo ($data['school_program_name']);?></td>
+		<td><?php echo ($data['school_program_name']);?> </td>
 		</tr>
 	<?php
 	}
@@ -91,7 +91,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 	?>
 		<tr>
 		<td>Tempat Lahir</td>
-		<td><?php echo $data['birth_place'];?></td>
+		<td><?php echo $data['birth_place'];?> </td>
 		</tr>
 	<?php
 	}
@@ -100,7 +100,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 	?>
 		<tr>
 		<td>Tanggal Lahir</td>
-		<td><?php echo translateDate(date('d F Y', strtotime($data['birth_day'])));?></td>
+		<td><?php echo translateDate(date('d F Y', strtotime($data['birth_day'])));?> </td>
 		</tr>
 	<?php
 	}
@@ -109,7 +109,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 	?>
 		<tr>
 		<td>Alamat</td>
-		<td><?php echo $data['address'];?></td>
+		<td><?php echo $data['address'];?> </td>
 		</tr>
 	<?php
 	}
@@ -118,7 +118,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 	?>
 		<tr>
 		<td>Telepon</td>
-		<td><?php echo $data['phone'];?></td>
+		<td><?php echo $data['phone'];?> </td>
 		</tr>
 	<?php
 	}
@@ -127,7 +127,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 	?>
 		<tr>
 		<td>Email</td>
-		<td><?php echo $data['email'];?></td>
+		<td><?php echo $data['email'];?> </td>
 		</tr>
 	<?php
 	}
@@ -284,15 +284,15 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	$no++;
 	?>
     <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['reg_number']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['reg_number_national']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['grade_id'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['class_id']);?></a></td>
-      <td><?php if($data['gender']=='M') echo 'L'; if($data['gender']=='W') echo 'P';?></td>
-      <td><?php echo ($data['blocked'])?'Ya':'Tidak';?></td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+      <td><?php if($data['gender']=='M') echo 'L'; if($data['gender']=='W') echo 'P';?> </td>
+      <td><?php echo ($data['blocked'])?'Ya':'Tidak';?> </td>
+      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
      </tr>
     <?php
 	}

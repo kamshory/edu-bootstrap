@@ -118,20 +118,20 @@ if($stmt->rowCount() > 0)
 		}
 ?>
     <tr class="<?php echo $cls;?>">
-      <td align="right"><?php echo $no;?></td>
-      <td><?php echo $data['reg_number'];?></td>
-      <td><?php echo $data['name_student'];?></td>
-      <td><?php echo $data['name_class'];?></td>
-      <td><?php echo translateDate(date('j M Y H:i:s', strtotime($data['time_enter'])));?></td>
-      <td><?php echo $data['ip_enter'];?></td>
+      <td align="right"><?php echo $no;?> </td>
+      <td><?php echo $data['reg_number'];?> </td>
+      <td><?php echo $data['name_student'];?> </td>
+      <td><?php echo $data['name_class'];?> </td>
+      <td><?php echo translateDate(date('j M Y H:i:s', strtotime($data['time_enter'])));?> </td>
+      <td><?php echo $data['ip_enter'];?> </td>
       <td><?php if ($data['time_exit']) {
 		  echo translateDate(date('j M Y H:i:s', strtotime($data['time_exit'])));
-		  }?></td>
-      <td><?php echo $data['ip_exit'];?></td>
-      <td><?php echo $arr_status[$data['status']];?></td>
-      <td><?php echo $data['member_edit'];?></td>
-      <td><?php if($data['status'] == '1'){?><a class="kick-student" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=kick-student&id=<?php echo $data['test_member_id'];?>&test_id=<?php echo $test_id;?>" data-id="<?php echo $data['test_member_id'];?>" data-name-student="<?php echo $data['name_student'];?>">Keluarkan</a><?php }?></td>
-      <td><?php if($data['status'] == '1'){?><a class="block-student" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=kick-student&id=<?php echo $data['test_member_id'];?>&test_id=<?php echo $test_id;?>" data-id="<?php echo $data['test_member_id'];?>" data-name-student="<?php echo $data['name_student'];?>">Blokir</a><?php }?></td>
+		  }?> </td>
+      <td><?php echo $data['ip_exit'];?> </td>
+      <td><?php echo $arr_status[$data['status']];?> </td>
+      <td><?php echo $data['member_edit'];?> </td>
+      <td><?php if($data['status'] == '1'){?><a class="kick-student" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=kick-student&id=<?php echo $data['test_member_id'];?>&test_id=<?php echo $test_id;?>" data-id="<?php echo $data['test_member_id'];?>" data-name-student="<?php echo $data['name_student'];?>">Keluarkan</a><?php }?> </td>
+      <td><?php if($data['status'] == '1'){?><a class="block-student" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=kick-student&id=<?php echo $data['test_member_id'];?>&test_id=<?php echo $test_id;?>" data-id="<?php echo $data['test_member_id'];?>" data-name-student="<?php echo $data['name_student'];?>">Blokir</a><?php }?> </td>
     </tr>
 
 <?php

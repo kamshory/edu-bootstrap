@@ -45,47 +45,47 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama Sekolah</td>
-		<td><?php echo $data['name'];?></td>
+		<td><?php echo $data['name'];?> </td>
 		</tr>
 		<tr>
 		<td>Jenjang</td>
-		<td><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></td>
+		<td><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?> </td>
 		</tr>
 		<tr>
 		<td>Negeri/Swasta</td>
-		<td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?></td>
+		<td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?> </td>
 		</tr>
 		<tr>
 		<td>Kepala Sekolah</td>
-		<td><?php echo $data['principal'];?></td>
+		<td><?php echo $data['principal'];?> </td>
 		</tr>
 		<tr>
 		<td>Alamat</td>
-		<td><?php echo $data['address'];?></td>
+		<td><?php echo $data['address'];?> </td>
 		</tr>
 		<tr>
 		<td>Telepon</td>
-		<td><?php echo $data['phone'];?></td>
+		<td><?php echo $data['phone'];?> </td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><?php echo $data['email'];?></td>
+		<td><?php echo $data['email'];?> </td>
 		</tr>
 		<tr>
 		<td>Bahasa</td>
-		<td><?php if($data['language']=='en') echo 'English'; if($data['language']=='id') echo 'Bahasa Indonesia';?></td>
+		<td><?php if($data['language']=='en') echo 'English'; if($data['language']=='id') echo 'Bahasa Indonesia';?> </td>
 		</tr>
 		<tr>
 		<td>Negara</td>
-		<td><?php echo $data['country_id'];?></td>
+		<td><?php echo $data['country_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Provinsi</td>
-		<td><?php echo $data['state_id'];?></td>
+		<td><?php echo $data['state_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Kabupaten/Kota</td>
-		<td><?php echo $data['city_id'];?></td>
+		<td><?php echo $data['city_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Jumlah Siswa</td>
@@ -93,23 +93,23 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?></td>
+		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?></td>
+		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
-		<td><?php echo $data['admin_create'];?></td>
+		<td><?php echo $data['admin_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Ubah</td>
-		<td><?php echo $data['admin_edit'];?></td>
+		<td><?php echo $data['admin_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -220,7 +220,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	if($data['school_id'] == @$auth_school_id) $cls .= " data-default";
 	?>
     <tr class="<?php echo $cls;?>">
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?></a></td>

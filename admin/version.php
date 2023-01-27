@@ -106,15 +106,15 @@ $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <td class="cell-info"><table width="190" border="1" cellspacing="0" cellpadding="0">
       <tr>
         <td width="45">Versi</td>
-        <td><?php echo $data['version_id'];?></td>
+        <td><?php echo $data['version_id'];?> </td>
       </tr>
       <tr>
         <td>Rilis</td>
-        <td><?php echo translateDate(date('j M Y H:i', strtotime($data['time_release'])));?></td>
+        <td><?php echo translateDate(date('j M Y H:i', strtotime($data['time_release'])));?> </td>
       </tr>
       <tr>
         <td>Update</td>
-        <td><?php echo translateDate(date('j M Y H:i', strtotime($data['time_update'])));?></td>
+        <td><?php echo translateDate(date('j M Y H:i', strtotime($data['time_update'])));?> </td>
       </tr>
     </table></td>
     <td class="cell-log">

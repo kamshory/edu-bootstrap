@@ -17,7 +17,7 @@ from `edu_test` where `test_id` = '$test_id'
 			header("Content-Disposition: attachment; filename=\"" . $data['name'] . ".xls\"");
 			?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Analisa Soal Ujian - <?php echo $cfg->app_name; ?></title>
@@ -47,7 +47,7 @@ if ($stmt->rowCount() > 0) {
     <?php
 							for ($i = 0; $i < $number_of_option; $i++) {
 								?>
-    <td width="20"><?php echo $caption_option[$i]; ?></td>
+    <td width="20"><?php echo $caption_option[$i]; ?> </td>
     <?php
 							}
 							?>
@@ -128,23 +128,23 @@ foreach($rows as $data){
 
 	?>
   <tr>
-    <td align="right"><?php echo $no; ?></td>
+    <td align="right"><?php echo $no; ?> </td>
     <td><?php echo substr($content, 0, 70); ?>...</td>
-    <td><?php echo @$caption_option[$answer]; ?></td>
+    <td><?php echo @$caption_option[$answer]; ?> </td>
     <?php
 	for ($i = 0; $i < $number_of_option; $i++) {
 		?>
-    <td><?php echo @$option[$i]; ?></td>
+    <td><?php echo @$option[$i]; ?> </td>
     <?php
 	}
 	?>
-    <td><?php echo $menjawab; ?></td>
-    <td><?php echo @$option[$answer] + 0; ?></td>
-    <td><?php echo $menjawab - @$option[$answer]; ?></td>
+    <td><?php echo $menjawab; ?> </td>
+    <td><?php echo @$option[$answer] + 0; ?> </td>
+    <td><?php echo $menjawab - @$option[$answer]; ?> </td>
     <td><?php if ($menjawab != 0) {
 	echo $picoEdu->numberFormatTrans(100 * (@$option[$answer] + 0) / $menjawab, true);
 } 
-?></td>
+?> </td>
 </tr>
 <?php
 	$total_menjawab += $menjawab;
@@ -168,10 +168,10 @@ else
 <tfoot>
   <tr>
     <td colspan="<?php echo $number_of_option + 3; ?>">Total</td>
-    <td><?php echo $total_menjawab; ?></td>
-    <td><?php echo $total_benar; ?></td>
-    <td><?php echo $total_salah; ?></td>
-    <td><?php echo $picoEdu->numberFormatTrans($total_persen, true); ?></td>
+    <td><?php echo $total_menjawab; ?> </td>
+    <td><?php echo $total_benar; ?> </td>
+    <td><?php echo $total_salah; ?> </td>
+    <td><?php echo $picoEdu->numberFormatTrans($total_persen, true); ?> </td>
   </tr>
 </tfoot>
 </table>

@@ -766,7 +766,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Token Sekolah</td>
-		<td><?php echo ($data['token_school']);?></td>
+		<td><?php echo ($data['token_school']);?> </td>
 		</tr>
 		<tr>
 		<td>Nama Sekolah</td>
@@ -774,103 +774,103 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Keterangan</td>
-		<td><?php echo $data['description'];?></td>
+		<td><?php echo $data['description'];?> </td>
 		</tr>
 		<tr>
 		<td>Jenjang</td>
-		<td><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></td>
+		<td><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?> </td>
 		</tr>
 		<tr>
 		<td>N/S</td>
-		<td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?></td>
+		<td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?> </td>
 		</tr>
 		<tr>
 		<td>Terbuka</td>
-		<td><?php echo ($data['open'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['open'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td>Kepala Sekolah</td>
-		<td><?php echo $data['principal'];?></td>
+		<td><?php echo $data['principal'];?> </td>
 		</tr>
 		<tr>
 		<td>Address</td>
-		<td><?php echo $data['address'];?></td>
+		<td><?php echo $data['address'];?> </td>
 		</tr>
 		<tr>
 		<td>Phone</td>
-		<td><?php echo $data['phone'];?></td>
+		<td><?php echo $data['phone'];?> </td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><?php echo $data['email'];?></td>
+		<td><?php echo $data['email'];?> </td>
 		</tr>
 		<tr>
 		<td>Bahasa</td>
-		<td><?php if($data['language']=='en') echo 'English'; if($data['language']=='id') echo 'Bahasa Indonesia';?></td>
+		<td><?php if($data['language']=='en') echo 'English'; if($data['language']=='id') echo 'Bahasa Indonesia';?> </td>
 		</tr>
 		<tr>
 		<td>Negara</td>
-		<td><?php echo $data['country_id'];?></td>
+		<td><?php echo $data['country_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Propinsi</td>
-		<td><?php echo $data['state_id'];?></td>
+		<td><?php echo $data['state_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Kabupaten/Kota</td>
-		<td><?php echo $data['city_id'];?></td>
+		<td><?php echo $data['city_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Cegah Siswa Pindah</td>
-		<td><?php echo ($data['prevent_change_school'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['prevent_change_school'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td>Cegah Siswa Keluar</td>
-		<td><?php echo ($data['prevent_resign'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['prevent_resign'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td>Sistem Token</td>
-		<td><?php echo ($data['use_token'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['use_token'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td>Kelas</td>
-		<td><?php echo $data['class'];?></td>
+		<td><?php echo $data['class'];?> </td>
 		</tr>
 		<tr>
 		<td>Siswa</td>
-		<td><?php echo ($data['student']);?></td>
+		<td><?php echo ($data['student']);?> </td>
 		</tr>
 		<tr>
 		<td>Guru</td>
-		<td><?php echo $data['teacher'];?></td>
+		<td><?php echo $data['teacher'];?> </td>
 		</tr>
 		<tr>
 		<td>Waktu Buat</td>
-		<td><?php echo $data['time_create'];?></td>
+		<td><?php echo $data['time_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Waktu Buat</td>
-		<td><?php echo $data['time_edit'];?></td>
+		<td><?php echo $data['time_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
-		<td><?php echo $data['admin_create'];?></td>
+		<td><?php echo $data['admin_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Ubah</td>
-		<td><?php echo $data['admin_edit'];?></td>
+		<td><?php echo $data['admin_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Buat</td>
-		<td><?php echo $data['ip_create'];?></td>
+		<td><?php echo $data['ip_create'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Ubah</td>
-		<td><?php echo $data['ip_edit'];?></td>
+		<td><?php echo $data['ip_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -996,17 +996,17 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
     <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
       <td><input type="checkbox" name="school_id[]" id="school_id" value="<?php echo $data['school_id'];?>" class="school_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_id=<?php echo $data['school_id'];?>"><i class="fas fa-pencil"></i></a></td>
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?></a></td>
-      <td><?php echo ($data['open'])?'Ya':'Tidak';?></td>
+      <td><?php echo ($data['open'])?'Ya':'Tidak';?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['principal'];?></a></td>
-      <td><?php echo $data['state_id'];?></td>
-      <td><?php echo $data['city_id'];?></td>
+      <td><?php echo $data['state_id'];?> </td>
+      <td><?php echo $data['city_id'];?> </td>
       <td><a href="siswa.php?school_id=<?php echo $data['school_id'];?>"><?php echo ($data['student']);?></a></td>
       <td><a href="guru.php?school_id=<?php echo $data['school_id'];?>"><?php echo $data['teacher'];?></a></td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
      </tr>
     <?php
 	}

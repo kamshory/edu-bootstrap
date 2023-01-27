@@ -210,43 +210,43 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">Info</td>
-		<td><?php echo ($data['info_id']);?></td>
+		<td><?php echo ($data['info_id']);?> </td>
 		</tr>
 		<tr>
 		<td>Judul Informasi</td>
-		<td><?php echo $data['name'];?></td>
+		<td><?php echo $data['name'];?> </td>
 		</tr>
 		<tr>
 		<td>Content</td>
-		<td><?php echo $data['content'];?></td>
+		<td><?php echo $data['content'];?> </td>
 		</tr>
 		<tr>
 		<td>Time Create</td>
-		<td><?php echo $data['time_create'];?></td>
+		<td><?php echo $data['time_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo $data['time_edit'];?></td>
+		<td><?php echo $data['time_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Create</td>
-		<td><?php echo $data['admin_create'];?></td>
+		<td><?php echo $data['admin_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin</td>
-		<td><?php echo $data['admin_edit'];?></td>
+		<td><?php echo $data['admin_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Ip Create</td>
-		<td><?php echo $data['ip_create'];?></td>
+		<td><?php echo $data['ip_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Ip Edit</td>
-		<td><?php echo $data['ip_edit'];?></td>
+		<td><?php echo $data['ip_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td>&nbsp;</td>
@@ -341,11 +341,11 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
     <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
       <td><input type="checkbox" name="info_id[]" id="info_id" value="<?php echo $data['info_id'];?>" class="info_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&info_id=<?php echo $data['info_id'];?>"><img src="tools/images/trans.gif" class="icon-16 icon-edit-16" alt="Edit" border="0" /></a></td>
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['time_edit'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['admin_edit'];?></a></td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
      </tr>
     <?php
 	}

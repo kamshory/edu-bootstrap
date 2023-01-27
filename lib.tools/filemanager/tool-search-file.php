@@ -38,7 +38,7 @@ $i++;
   <td><a href="javascript:;" onClick="return openDirSearch('<?php echo str_replace("'", "\'", dirname($val['path']));?>')" title="<?php echo $val['location'];?>"><?php echo basename($val['location']);?></a></td>
   <td align="right"></td>
   <td>dir</td>
-  <td><?php echo $val['filemtime'];?></td>
+  <td><?php echo $val['filemtime'];?> </td>
 </tr>
 <?php
 }
@@ -52,9 +52,9 @@ foreach($arrfile as $k=>$val)
   <td><img src="style/images/trans16.gif" class="fileicon fileicon-<?php echo $val['extension'];?>" /></td>
   <td><a href="javascript:;" onClick="return selectFileSeach('<?php echo $val['url'];?>')"><?php echo $val['name'];?></a></td>
   <td><a href="javascript:;" onClick="return openDirSearch('<?php echo $val['location'];?>')" title="<?php echo $val['location'];?>"><?php echo basename($val['location']);?></a></td>
-  <td align="right"><?php echo $val['size'];?></td>
-  <td><?php if(strlen($val['type'])>18){$val['type'] = '<span title="'.$val['type'].'">'.substr($val['type'],0,18).'&hellip;</span>';} echo ($val['type'])?$val['type']:$val['extension'];?></td>
-  <td><?php echo $val['filemtime'];?></td>
+  <td align="right"><?php echo $val['size'];?> </td>
+  <td><?php if(strlen($val['type'])>18){$val['type'] = '<span title="'.$val['type'].'">'.substr($val['type'],0,18).'&hellip;</span>';} echo ($val['type'])?$val['type']:$val['extension'];?> </td>
+  <td><?php echo $val['filemtime'];?> </td>
 </tr>
 <?php
 }

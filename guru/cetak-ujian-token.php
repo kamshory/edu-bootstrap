@@ -23,7 +23,7 @@ if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?><!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <base href="<?php echo $cfg->base_url;?>">
@@ -121,11 +121,11 @@ while(($data = mysql_fetch_assoc($res)))
     <td width="15%">Kedaluarsa</td>
   </tr>
   <tr>
-    <td><?php echo $data['test_name'];?></td>
-    <td><?php echo $data['reg_number'];?></td>
-    <td><?php echo $data['student_name'];?></td>
-    <td><?php echo $data['token'];?></td>
-    <td><?php echo translateDate(date('d M H:i', strtotime($data['time_expire'])));?></td>
+    <td><?php echo $data['test_name'];?> </td>
+    <td><?php echo $data['reg_number'];?> </td>
+    <td><?php echo $data['student_name'];?> </td>
+    <td><?php echo $data['token'];?> </td>
+    <td><?php echo translateDate(date('d M H:i', strtotime($data['time_expire'])));?> </td>
   </tr>
 </table>
 </div>

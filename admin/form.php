@@ -960,7 +960,7 @@ $str .="</tr>
     <tr<?php echo (@\$data['active'])?\" class=\\\"data-active\\\"\":\" class=\\\"data-inactive\\\"\";?>>
       <td><input type=\"checkbox\" name=\"$edit_key"."[]\" id=\"$edit_key\" value=\"<?php echo \$data"."['$edit_key'];?>\" class=\"$edit_key\" /></td>
       <td><a href=\"<?php echo basename(\$_SERVER['PHP_SELF']);?>?option=edit&$edit_key=<?php echo \$data['$edit_key'];?>\"><img src=\"tools/images/trans.gif\" class=\"icon-16 icon-edit-16\" alt=\"Edit\" border=\"0\" /></a></td>
-      <td align=\"right\"><?php echo \$no;?></td>\r\n";
+      <td align=\"right\"><?php echo \$no;?> </td>\r\n";
 	for($i=0; $i<count($field_row); $i++)
 	{
 		$field2 = $field_row[$i];
@@ -1021,7 +1021,7 @@ file_put_contents(dirname(__FILE__)."/".$_POST['filename'], $str);
 }
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Form</title>

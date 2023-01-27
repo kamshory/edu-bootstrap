@@ -75,19 +75,19 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 <table width="100%" border="0">
   <tr>
     <td width="160">Nama Ujian</td>
-    <td><?php echo $data['name'];?></td>
+    <td><?php echo $data['name'];?> </td>
   </tr>
   <tr>
     <td>Mata Pelajaran</td>
-    <td><?php echo $data['subject'];?></td>
+    <td><?php echo $data['subject'];?> </td>
   </tr>
   <tr>
     <td>Jumlah Soal</td>
-    <td><?php echo $data['number_of_question'];?></td>
+    <td><?php echo $data['number_of_question'];?> </td>
   </tr>
   <tr>
     <td>Jumlah Pilihan</td>
-    <td><?php echo $data['number_of_option'];?></td>
+    <td><?php echo $data['number_of_option'];?> </td>
   </tr>
   <tr>
     <td>Koleksi Soal</td>
@@ -95,15 +95,15 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
   </tr>
     <tr>
     <td>Pengacakan Soal</td>
-    <td><?php echo ($data['random'])?'Diacak':'Tidak Diacak';?></td>
+    <td><?php echo ($data['random'])?'Diacak':'Tidak Diacak';?> </td>
     </tr>
     <tr>
     <td>Durasi Ujian</td>
-    <td><?php echo gmdate('H:i:s', $data['duration']);?></td>
+    <td><?php echo gmdate('H:i:s', $data['duration']);?> </td>
     </tr>
     <tr>
     <td>Otomatis Kirim Jawaban</td>
-    <td><?php echo ($data['autosubmit'])?'Ya':'Tidak';?></td>
+    <td><?php echo ($data['autosubmit'])?'Ya':'Tidak';?> </td>
     </tr>
 </table>
  </div>
@@ -343,15 +343,15 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	$no++;
 	?>
     <tr<?php $rowclass=""; if(@$data['default']==1) $rowclass.=" data-default"; if(isset($data['active'])){if(@$data['active']==1) $rowclass.=" data-active"; if(@$data['active']==0) $rowclass.=" data-inactive";} $rowclass = trim($rowclass); if(strlen($rowclass)){echo " class=\"$rowclass\"";}?>>
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
       <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['subject'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['teacher'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo gmdate('H:i:s', $data['duration']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo ($data['open'])?'Terbuka':'Tertutup';?></a></td>
-      <td><?php if($data['number_of_question']){ ?><a href="data-question-ujian.php?test_id=<?php echo $data['test_id'];?>"><?php echo $data['number_of_question'];?> soal</a><?php } else { echo '-';} ?></td>
-      <td><?php if($data['student']){ ?><a href="data-question-ujian.php?test_id=<?php echo $data['test_id'];?>"><?php echo $data['student'];?> orang</a><?php } else { echo '-';} ?></td>
+      <td><?php if($data['number_of_question']){ ?><a href="data-question-ujian.php?test_id=<?php echo $data['test_id'];?>"><?php echo $data['number_of_question'];?> soal</a><?php } else { echo '-';} ?> </td>
+      <td><?php if($data['student']){ ?><a href="data-question-ujian.php?test_id=<?php echo $data['test_id'];?>"><?php echo $data['student'];?> orang</a><?php } else { echo '-';} ?> </td>
      </tr>
     <?php
 	}

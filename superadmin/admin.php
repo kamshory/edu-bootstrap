@@ -400,79 +400,79 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Sekolah</td>
-		<td><?php echo ($data['school_name']);?></td>
+		<td><?php echo ($data['school_name']);?> </td>
 		</tr>
 		<tr>
 		<td>Username</td>
-		<td><?php echo ($data['username']);?></td>
+		<td><?php echo ($data['username']);?> </td>
 		</tr>
 		<tr>
 		<td>Level Admin</td>
-		<td><?php if($data['admin_level']=='2') echo 'Administrator'; if($data['admin_level']=='1') echo 'Super Administrator';?></td>
+		<td><?php if($data['admin_level']=='2') echo 'Administrator'; if($data['admin_level']=='1') echo 'Super Administrator';?> </td>
 		</tr>
 		<tr>
 		<td>Nama</td>
-		<td><?php echo $data['name'];?></td>
+		<td><?php echo $data['name'];?> </td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
-		<td><?php echo $picoEdu->getGenderName($data['gender']);?></td>
+		<td><?php echo $picoEdu->getGenderName($data['gender']);?> </td>
 		</tr>
 		<tr>
 		<td>Tempat Lahir</td>
-		<td><?php echo $data['birth_place'];?></td>
+		<td><?php echo $data['birth_place'];?> </td>
 		</tr>
 		<tr>
 		<td>Tanggal Lahir</td>
-		<td><?php echo translateDate(date('d F Y', strtotime($data['birth_day'])));?></td>
+		<td><?php echo translateDate(date('d F Y', strtotime($data['birth_day'])));?> </td>
 		</tr>
 		<tr>
 		<td>Token Admin</td>
-		<td><?php echo $data['token_admin'];?></td>
+		<td><?php echo $data['token_admin'];?> </td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><?php echo $data['email'];?></td>
+		<td><?php echo $data['email'];?> </td>
 		</tr>
 		<tr>
 		<td>Phone</td>
-		<td><?php echo $data['phone'];?></td>
+		<td><?php echo $data['phone'];?> </td>
 		</tr>
 		<tr>
 		<td>Password </td>
-		<td><?php echo $data['password_initial'];?></td>
+		<td><?php echo $data['password_initial'];?> </td>
 		</tr>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?></td>
+		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?></td>
+		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
-		<td><?php echo $data['admin_create'];?></td>
+		<td><?php echo $data['admin_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Ubah</td>
-		<td><?php echo $data['admin_edit'];?></td>
+		<td><?php echo $data['admin_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Buat</td>
-		<td><?php echo $data['ip_create'];?></td>
+		<td><?php echo $data['ip_create'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Ubah</td>
-		<td><?php echo $data['ip_edit'];?></td>
+		<td><?php echo $data['ip_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Blokir</td>
-		<td><?php echo ($data['blocked'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['blocked'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -613,14 +613,14 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
     <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
       <td><input type="checkbox" name="admin_id[]" id="admin_id" value="<?php echo $data['admin_id'];?>" class="admin_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&admin_id=<?php echo $data['admin_id'];?>"><i class="fas fa-pencil"></i></a></td>
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo ($data['school_name']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php if($data['gender']=='M') echo 'L'; if($data['gender']=='W') echo 'P';?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['email'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php if($data['admin_level']=='2') echo 'Administrator'; if($data['admin_level']=='1') echo 'Super Administrator';?></a></td>
-      <td><?php echo ($data['blocked'])?'Ya':'Tidak';?></td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+      <td><?php echo ($data['blocked'])?'Ya':'Tidak';?> </td>
+      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
      </tr>
     <?php
 	}

@@ -226,35 +226,35 @@ Informasi Singkat Ujian
 </div>
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
     <tr>
-    <td>Nama Ujian</td><td><?php echo $data['name'];?></td>
+    <td>Nama Ujian</td><td><?php echo $data['name'];?> </td>
     </tr>
     <?php
 	if($data['subject'])
 	{
 	?>
     <tr>
-    <td>Mata Pelajaran</td><td><?php echo $data['subject'];?></td>
+    <td>Mata Pelajaran</td><td><?php echo $data['subject'];?> </td>
     </tr>
     <?php
 	}
 	?>
     <tr>
-    <td>Jumlah Soal</td><td><?php echo $data['number_of_question'];?></td>
+    <td>Jumlah Soal</td><td><?php echo $data['number_of_question'];?> </td>
     </tr>
     <tr>
-    <td>Jumlah Pilihan</td><td><?php echo $data['number_of_option'];?></td>
+    <td>Jumlah Pilihan</td><td><?php echo $data['number_of_option'];?> </td>
     </tr>
     <tr>
     <td>Nilai Standard</td>
-    <td><?php echo $data['standard_score'];?></td>
+    <td><?php echo $data['standard_score'];?> </td>
     </tr>
     <tr>
     <td>Penalti
-    </td><td><?php echo $data['penalty'];?></td>
+    </td><td><?php echo $data['penalty'];?> </td>
     </tr>
     <tr>
     <td>Otomatis Kirim Jawaban</td>
-    <td><?php echo ($data['autosubmit'])?'Ya':'Tidak';?></td>
+    <td><?php echo ($data['autosubmit'])?'Ya':'Tidak';?> </td>
     </tr>
 </table>
 <div class="button-area">
@@ -274,35 +274,35 @@ Informasi Singkat Ujian
 </div>
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
     <tr>
-    <td>Nama Ujian</td><td><?php echo $data['name'];?></td>
+    <td>Nama Ujian</td><td><?php echo $data['name'];?> </td>
     </tr>
     <?php
 	if($data['subject'])
 	{
 	?>
     <tr>
-    <td>Mata Pelajaran</td><td><?php echo $data['subject'];?></td>
+    <td>Mata Pelajaran</td><td><?php echo $data['subject'];?> </td>
     </tr>
     <?php
 	}
 	?>
     <tr>
-    <td>Jumlah Soal</td><td><?php echo $data['number_of_question'];?></td>
+    <td>Jumlah Soal</td><td><?php echo $data['number_of_question'];?> </td>
     </tr>
     <tr>
-    <td>Jumlah Pilihan</td><td><?php echo $data['number_of_option'];?></td>
+    <td>Jumlah Pilihan</td><td><?php echo $data['number_of_option'];?> </td>
     </tr>
     <tr>
     <td>Nilai Standard</td>
-    <td><?php echo $data['standard_score'];?></td>
+    <td><?php echo $data['standard_score'];?> </td>
     </tr>
     <tr>
     <td>Penalti
-    </td><td><?php echo $data['penalty'];?></td>
+    </td><td><?php echo $data['penalty'];?> </td>
     </tr>
     <tr>
     <td>Otomatis Kirim Jawaban</td>
-    <td><?php echo ($data['autosubmit'])?'Ya':'Tidak';?></td>
+    <td><?php echo ($data['autosubmit'])?'Ya':'Tidak';?> </td>
     </tr>
 </table>
 <div class="button-area">

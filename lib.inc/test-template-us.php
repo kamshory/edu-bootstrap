@@ -5,7 +5,7 @@ if(!defined('DB_NAME'))
 }
 $dur_obj = $picoEdu->secondsToTime($data['duration']);
 ?><!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
 <base href="<?php echo rtrim($cfg->base_url, "/");?>/">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -44,7 +44,7 @@ $(document).ready(function(e) {
 	?>
       <tr>
         <td width="48%" align="right">Batas Akhir Ujian</td>
-        <td width="52%">: <?php echo date('j F Y H:i', strtotime($data['available_to']));?></td>
+        <td width="52%">: <?php echo date('j F Y H:i', strtotime($data['available_to']));?> </td>
       </tr>
       <?php
 	}
@@ -55,7 +55,7 @@ $(document).ready(function(e) {
       </tr>
       <tr>
         <td align="right">Durasi Ujian</td>
-        <td>: <?php echo implode(':',$dur_obj);?></td>
+        <td>: <?php echo implode(':',$dur_obj);?> </td>
       </tr>
       <tr>
         <td align="right">Sisa Waktu</td>

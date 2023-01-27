@@ -43,7 +43,7 @@ if($stmt->rowCount() > 0)
 }
 }
 ?><!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <base href="<?php echo $cfg->base_url;?>">
@@ -168,11 +168,11 @@ if ($stmt->rowCount() > 0) {
     <td width="15%">Password</td>
   </tr>
   <tr>
-    <td><?php echo trim($url, "/"); ?></td>
-    <td><?php echo $data['reg_number']; ?></td>
-    <td><?php echo $data['name']; ?></td>
-    <td><?php echo $data['username']; ?></td>
-    <td><?php echo $data['password_initial']; ?></td>
+    <td><?php echo trim($url, "/"); ?> </td>
+    <td><?php echo $data['reg_number']; ?> </td>
+    <td><?php echo $data['name']; ?> </td>
+    <td><?php echo $data['username']; ?> </td>
+    <td><?php echo $data['password_initial']; ?> </td>
   </tr>
 </table>
 </div>

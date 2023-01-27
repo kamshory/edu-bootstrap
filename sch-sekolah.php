@@ -167,22 +167,22 @@ if (@$page_school_id) {
 						<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 							<tr>
 								<td>Nama</td>
-								<td><?php echo $data['name'];?></td>
+								<td><?php echo $data['name'];?> </td>
 							</tr>
 							<tr>
 								<td>NIS</td>
-								<td><?php echo $data['reg_number'];?></td>
+								<td><?php echo $data['reg_number'];?> </td>
 							</tr>
 							<tr>
 								<td>NISN</td>
-								<td><?php echo $data['reg_number_national'];?></td>
+								<td><?php echo $data['reg_number_national'];?> </td>
 							</tr>
 							<?php
 							if ($data['school_name']) {
 							?>
 								<tr>
 									<td>Sekolah</td>
-									<td><?php echo $data['school_name'];?></td>
+									<td><?php echo $data['school_name'];?> </td>
 								</tr>
 							<?php
 							}
@@ -196,40 +196,40 @@ if (@$page_school_id) {
 							</tr>
 							<tr>
 								<td>Kelas</td>
-								<td><?php echo $data['class_id'];?></td>
+								<td><?php echo $data['class_id'];?> </td>
 							</tr>
 							<tr>
 								<td>Jenis Kelamin</td>
-								<td><?php echo $picoEdu->getGenderName($data['gender']);?></td>
+								<td><?php echo $picoEdu->getGenderName($data['gender']);?> </td>
 							</tr>
 							<tr>
 								<td>Tempat Lahir</td>
-								<td><?php echo $data['birth_place'];?></td>
+								<td><?php echo $data['birth_place'];?> </td>
 							</tr>
 							<tr>
 								<td>Tanggal Lahir</td>
-								<td><?php echo translateDate(date('d F Y', strtotime($data['birth_day'])));?></td>
+								<td><?php echo translateDate(date('d F Y', strtotime($data['birth_day'])));?> </td>
 							</tr>
 							<tr>
 								<td>Telepon
 								</td>
-								<td><?php echo $data['phone'];?></td>
+								<td><?php echo $data['phone'];?> </td>
 							</tr>
 							<tr>
 								<td>Email</td>
-								<td><?php echo $data['email'];?></td>
+								<td><?php echo $data['email'];?> </td>
 							</tr>
 							<tr>
 								<td>Alamat</td>
-								<td><?php echo $data['address'];?></td>
+								<td><?php echo $data['address'];?> </td>
 							</tr>
 							<tr>
 								<td>Dibuat</td>
-								<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?></td>
+								<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
 							</tr>
 							<tr>
 								<td>Diubah</td>
-								<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?></td>
+								<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
 							</tr>
 							<tr>
 								<td></td>
@@ -259,7 +259,7 @@ if (@$page_school_id) {
 			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td>Nama Sekolah</td>
-					<td><?php echo $data['name'];?></td>
+					<td><?php echo $data['name'];?> </td>
 				</tr>
 				<tr>
 					<td>Jenjang Sekolah</td>
@@ -268,49 +268,49 @@ if (@$page_school_id) {
 						if ($data['school_grade_id'] == 3) echo 'SD Sederajat';
 						if ($data['school_grade_id'] == 4) echo 'SMP Sederajat';
 						if ($data['school_grade_id'] == 5) echo 'SMA Sederajat';
-						if ($data['school_grade_id'] == 6) echo 'Perguruan Tinggi';?></td>
+						if ($data['school_grade_id'] == 6) echo 'Perguruan Tinggi';?> </td>
 				</tr>
 				<tr>
 					<td>Negeri/Swasta</td>
 					<td><?php if ($data['public_private'] == 'U') echo 'Negeri';
-						if ($data['public_private'] == 'I') echo 'Swasta';?></td>
+						if ($data['public_private'] == 'I') echo 'Swasta';?> </td>
 				</tr>
 				<tr>
 					<td>Kepala Sekolah</td>
-					<td><?php echo ($data['principal']);?></td>
+					<td><?php echo ($data['principal']);?> </td>
 				</tr>
 				<tr>
 					<td>Alamat Sekolah</td>
-					<td><?php echo $data['address'];?></td>
+					<td><?php echo $data['address'];?> </td>
 				</tr>
 				<tr>
 					<td>Telepon Sekolah</td>
-					<td><?php echo $data['phone'];?></td>
+					<td><?php echo $data['phone'];?> </td>
 				</tr>
 				<tr>
 					<td>Email Sekolah</td>
-					<td><?php echo $data['email'];?></td>
+					<td><?php echo $data['email'];?> </td>
 				</tr>
 				<tr>
 					<td>Bahasa</td>
 					<td><?php if ($data['language'] == 'en') echo 'English';
-						if ($data['language'] == 'id') echo 'Bahasa Indonesia';?></td>
+						if ($data['language'] == 'id') echo 'Bahasa Indonesia';?> </td>
 				</tr>
 				<tr>
 					<td>Negara</td>
-					<td><?php echo ($data['country_id']);?></td>
+					<td><?php echo ($data['country_id']);?> </td>
 				</tr>
 				<tr>
 					<td>Provinsi</td>
-					<td><?php echo ($data['state_id']);?></td>
+					<td><?php echo ($data['state_id']);?> </td>
 				</tr>
 				<tr>
 					<td>Kabupaten/Kota</td>
-					<td><?php echo ($data['city_id']);?></td>
+					<td><?php echo ($data['city_id']);?> </td>
 				</tr>
 				<tr>
 					<td>Jumlah Kelas</td>
-					<td><?php echo ($data['num_class']);?></td>
+					<td><?php echo ($data['num_class']);?> </td>
 				</tr>
 				<tr>
 					<td>Jumlah Siswa</td>
@@ -373,11 +373,11 @@ if (@$page_school_id) {
 								$no++;
 							?>
 								<tr>
-									<td align="right"><?php echo $no;?></td>
-									<td><?php echo $data['name'];?></td>
-									<td><?php echo $data['grade_id'];?></td>
-									<td><?php echo $data['school_program_id'];?></td>
-									<td><?php echo $data['num_student'];?></td>
+									<td align="right"><?php echo $no;?> </td>
+									<td><?php echo $data['name'];?> </td>
+									<td><?php echo $data['grade_id'];?> </td>
+									<td><?php echo $data['school_program_id'];?> </td>
+									<td><?php echo $data['num_student'];?> </td>
 								</tr>
 							<?php
 								$numstudent += $data['num_student'];
@@ -390,11 +390,11 @@ if (@$page_school_id) {
 							if ($numstudent2 > $numstudent) {
 							?>
 								<tr>
-									<td align="right"><?php echo $no;?></td>
+									<td align="right"><?php echo $no;?> </td>
 									<td></td>
 									<td></td>
 									<td></td>
-									<td><?php echo ($numstudent2 - $numstudent);?></td>
+									<td><?php echo ($numstudent2 - $numstudent);?> </td>
 								</tr>
 							<?php
 							}
@@ -403,7 +403,7 @@ if (@$page_school_id) {
 						<tfoot>
 							<tr>
 								<td colspan="4">Total</td>
-								<td><?php echo $numstudent2;?></td>
+								<td><?php echo $numstudent2;?> </td>
 							</tr>
 						</tfoot>
 					</table>
@@ -478,8 +478,8 @@ if (@$page_school_id) {
 								$no++;
 							?>
 								<tr>
-									<td align="right"><?php echo $no;?></td>
-									<td><?php echo $data['name'];?></td>
+									<td align="right"><?php echo $no;?> </td>
+									<td><?php echo $data['name'];?> </td>
 									<td><?php 
 									if ($data['gender'] == 'M') {
 										echo 'L';
@@ -487,7 +487,7 @@ if (@$page_school_id) {
 									if ($data['gender'] == 'W') {
 										echo 'P';
 									}
-									?></td>
+									?> </td>
 								</tr>
 							<?php
 							}
@@ -663,11 +663,11 @@ if (@$page_school_id) {
 								$no++;
 							?>
 								<tr>
-									<td align="right"><?php echo $no;?></td>
-									<td><?php echo $data['name'];?></td>
+									<td align="right"><?php echo $no;?> </td>
+									<td><?php echo $data['name'];?> </td>
 									<td><?php $class = $picoEdu->textClass($array_class, $data['class']);
 										$class_sort = $picoEdu->textClass($array_class, $data['class'], 2); ?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class); ?>"><?php echo $class_sort; ?></a></td>
-									<td><?php echo $data['subject'];?></td>
+									<td><?php echo $data['subject'];?> </td>
 								</tr>
 							<?php
 							}

@@ -69,7 +69,7 @@ if(isset($_POST['username']) && isset($_POST['send']))
 		$link = $cfg->base_url."/reset-password.php?username=$username&auth=$auth";
 		
 $message = '<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Reset Password - '.$cfg->app_name.'</title>
@@ -177,7 +177,7 @@ $message = '<!DOCTYPE html>
 }
 
 ?><!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">

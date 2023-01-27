@@ -189,11 +189,11 @@ if (@$_GET['option'] == 'add') {
 				</tr>
 				<tr>
 					<td>Order</td>
-					<td><input type="number" class="input-text input-text-short" name="order" id="order" value="<?php echo ($data['order']); ?>" autocomplete="off" /></td>
+					<td><input type="number" class="input-text input-text-short" name="order" id="order" value="<?php echo $data['order'];?>" autocomplete="off" /></td>
 				</tr>
 				<tr>
 					<td>Aktif</td>
-					<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active" <?php if ($data['active'] == 1) echo ' checked="checked"'; ?>> Aktif</label></td>
+					<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active" <?php echo $picoEdu->ifMatch($data['active'], true, ' checked="checked"');?>> Aktif</label></td>
 				</tr>
 				<tr>
 					<td></td>
@@ -232,11 +232,11 @@ if($stmt->rowCount() > 0)
 			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td>Sekolah</td>
-					<td><?php echo $data['school_name'];?></td>
+					<td><?php echo $data['school_name'];?> </td>
 				</tr>
 				<tr>
 					<td>Kode Kelas</td>
-					<td><?php echo $data['class_code'];?></td>
+					<td><?php echo $data['class_code'];?> </td>
 				</tr>
 				<tr>
 					<td>Tingkat
@@ -248,45 +248,45 @@ if($stmt->rowCount() > 0)
 				</tr>
 				<tr>
 					<td>Jurusan</td>
-					<td><?php echo $data['school_program_id'];?></td>
+					<td><?php echo $data['school_program_id'];?> </td>
 				</tr>
 				<tr>
 					<td>Nama Kelas
 					</td>
-					<td><?php echo $data['name'];?></td>
+					<td><?php echo $data['name'];?> </td>
 				</tr>
 				<tr>
 					<td>Time Create</td>
-					<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?></td>
+					<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
 				</tr>
 				<tr>
 					<td>Time Edit</td>
-					<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?></td>
+					<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
 				</tr>
 				<tr>
 					<td>Admin Create</td>
-					<td><?php echo $data['admin_create'];?></td>
+					<td><?php echo $data['admin_create'];?> </td>
 				</tr>
 				<tr>
 					<td>Admin Edit</td>
-					<td><?php echo ($data['admin_edit']);?></td>
+					<td><?php echo $data['admin_edit'];?> </td>
 				</tr>
 				<tr>
 					<td>IP Create</td>
-					<td><?php echo ($data['ip_create']);?></td>
+					<td><?php echo $data['ip_create'];?> </td>
 				</tr>
 				<tr>
 					<td>IP Edit</td>
-					<td><?php echo ($data['ip_edit']);?></td>
+					<td><?php echo $data['ip_edit'];?> </td>
 				</tr>
 				<tr>
 					<td>Order</td>
-					<td><?php echo $data['order'];?></td>
+					<td><?php echo $data['order'];?> </td>
 				</tr>
 				<tr>
 					<td>Aktif
 					</td>
-					<td><?php echo ($data['active']) ? 'Ya' : 'Tidak';?></td>
+					<td><?php echo ($data['active']) ? 'Ya' : 'Tidak';?> </td>
 				</tr>
 				<tr>
 					<td></td>
@@ -439,14 +439,14 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 								<td><input type="checkbox" name="class_id[]" id="class_id" value="<?php echo $data['class_id']; ?>" class="class_id" /></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=edit&school_id=<?php echo $data['class_id']; ?>&class_id=<?php echo $data['class_id']; ?>"><i class="fas fa-pencil"></i></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=print&school_id=<?php echo $data['school_id']; ?>&class_id=<?php echo $data['class_id']; ?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-print-16" alt="Print" border="0" /></a></td>
-								<td align="right"><?php echo $no;?></td>
+								<td align="right"><?php echo $no;?> </td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['school_name']; ?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['class_code']); ?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['name']; ?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['grade_id']); ?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['school_program_id']); ?></a></td>
 								<td><a href="siswa.php?class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['num_student']); ?></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['order']); ?></a></td>
+								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['order'];?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['active']) ? 'Ya' : 'Tidak'; ?></a></td>
 								</tr>
 							<?php

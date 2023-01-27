@@ -59,7 +59,7 @@ if (@$_GET['option'] == 'detail') {
 					<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 						<tr>
 							<td>Nama Sekolah</td>
-							<td><?php echo $data['name'];?></td>
+							<td><?php echo $data['name'];?> </td>
 						</tr>
 						<tr>
 							<td>Jenjang</td>
@@ -73,45 +73,45 @@ if (@$_GET['option'] == 'detail') {
 							if ($data['school_grade_id'] == 5){
 								echo 'SMA Sederajat';
 							}  
-							?></td>
+							?> </td>
 						</tr>
 						<tr>
 							<td>Negeri/Swasta</td>
 							<td><?php if ($data['public_private'] == 'U') {echo 'Negeri';}
-								if ($data['public_private'] == 'I') {echo 'Swasta';} ?></td>
+								if ($data['public_private'] == 'I') {echo 'Swasta';} ?> </td>
 						</tr>
 						<tr>
 							<td>Kepala Sekolah</td>
-							<td><?php echo $data['principal'];?></td>
+							<td><?php echo $data['principal'];?> </td>
 						</tr>
 						<tr>
 							<td>Alamat</td>
-							<td><?php echo $data['address'];?></td>
+							<td><?php echo $data['address'];?> </td>
 						</tr>
 						<tr>
 							<td>Telepon</td>
-							<td><?php echo $data['phone'];?></td>
+							<td><?php echo $data['phone'];?> </td>
 						</tr>
 						<tr>
 							<td>Email</td>
-							<td><?php echo $data['email'];?></td>
+							<td><?php echo $data['email'];?> </td>
 						</tr>
 						<tr>
 							<td>Bahasa</td>
 							<td><?php if ($data['language'] == 'en') {echo 'English';}
-								if ($data['language'] == 'id') {echo 'Bahasa Indonesia';} ?></td>
+								if ($data['language'] == 'id') {echo 'Bahasa Indonesia';} ?> </td>
 						</tr>
 						<tr>
 							<td>Negara</td>
-							<td><?php echo $data['country_id'];?></td>
+							<td><?php echo $data['country_id'];?> </td>
 						</tr>
 						<tr>
 							<td>Provinsi</td>
-							<td><?php echo $data['state_id'];?></td>
+							<td><?php echo $data['state_id'];?> </td>
 						</tr>
 						<tr>
 							<td>Kabupaten/Kota</td>
-							<td><?php echo $data['city_id'];?></td>
+							<td><?php echo $data['city_id'];?> </td>
 						</tr>
 						<tr>
 							<td>Jumlah Siswa</td>
@@ -119,7 +119,7 @@ if (@$_GET['option'] == 'detail') {
 						</tr>
 						<tr>
 							<td>Dibuat</td>
-							<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?></td>
+							<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
 						</tr>
 					</table>
 					<div class="button-area">
@@ -229,7 +229,7 @@ $pagination->result = $picoEdu->createPagination(basename($_SERVER['PHP_SELF']),
 									$no++;
 								?>
 									<tr<?php echo (@$data['active']) ? " class=\"data-active\"" : " class=\"data-inactive\""; ?>>
-										<td align="right"><?php echo $no;?></td>
+										<td align="right"><?php echo $no;?> </td>
 										<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&school_id=<?php echo $data['school_id']; ?>"><?php echo $data['name']; ?></a></td>
 										<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&school_id=<?php echo $data['school_id']; ?>"><?php 
 										if ($data['school_grade_id'] == 3) {

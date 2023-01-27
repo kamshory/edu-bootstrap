@@ -27,7 +27,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Kode Kelas</td>
-		<td><?php echo $data['class_code'];?></td>
+		<td><?php echo $data['class_code'];?> </td>
 		</tr>
 		<tr>
 		<td>Tingkat
@@ -38,15 +38,15 @@ echo $picoEdu->getGradeName($data['grade_id']);
 		</tr>
 		<tr>
 		<td>Jurusan</td>
-		<td><?php echo $data['school_program_id'];?></td>
+		<td><?php echo $data['school_program_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Nama Kelas
-		</td><td><?php echo $data['name'];?></td>
+		</td><td><?php echo $data['name'];?> </td>
 		</tr>
 		<tr>
 		<td>Order</td>
-		<td><?php echo $data['order'];?></td>
+		<td><?php echo $data['order'];?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -156,7 +156,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	$no++;
 	?>
     <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['class_code'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['grade_id'];?></a></td>

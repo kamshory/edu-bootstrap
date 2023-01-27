@@ -415,11 +415,11 @@ tinyMCE.activeEditor.windowManager.open({url:ajaxfilemanagerurl,width:780,height
 <table width="100%" border="0">
   <tr>
     <td width="160">Nama Ujian</td>
-    <td><?php echo $data3['name']; ?></td>
+    <td><?php echo $data3['name']; ?> </td>
   </tr>
   <tr>
     <td>Mata Pelajaran</td>
-    <td><?php echo $data3['subject']; ?></td>
+    <td><?php echo $data3['subject']; ?> </td>
   </tr>
   <tr>
     <td>Jumlah Soal</td>
@@ -536,11 +536,11 @@ if($stmt->rowCount() > 0)
 <table width="100%" border="0">
   <tr>
     <td width="160">Nama Ujian</td>
-    <td><?php echo $data['name'];?></td>
+    <td><?php echo $data['name'];?> </td>
   </tr>
   <tr>
     <td>Mata Pelajaran</td>
-    <td><?php echo $data['subject'];?></td>
+    <td><?php echo $data['subject'];?> </td>
   </tr>
   <tr>
     <td>Jumlah Soal</td>
@@ -583,7 +583,7 @@ if($stmt->rowCount() > 0)
 	for($i=0;$i<$number_of_option;$i++)
 	{
 	?>
-    <td align="center" width="20"><?php echo $caption_option[$i];?></td>
+    <td align="center" width="20"><?php echo $caption_option[$i];?> </td>
     <?php
 	}
 	?>
@@ -672,22 +672,22 @@ foreach($rows as $data)
 	
 ?>
   <tr>
-    <td align="right"><?php echo $no;?></td>
+    <td align="right"><?php echo $no;?> </td>
     <td><a href="#" class="show-question" data-number="<?php echo $no;?>" data-question-id="<?php echo $question_id;?>">Lihat</a></td>
     <td><?php echo substr($content, 0, 70);?>...</td>
-    <td align="center"><?php echo @$caption_option[$answer];?></td>
+    <td align="center"><?php echo @$caption_option[$answer];?> </td>
     <?php
 	for($i=0;$i<$number_of_option;$i++)
 	{
 	?>
-    <td align="right"><?php echo @$option[$i];?></td>
+    <td align="right"><?php echo @$option[$i];?> </td>
     <?php
 	}
 	?>
-    <td align="right"><?php echo $menjawab;?></td>
-    <td align="right"><?php echo @$option[$answer]+0;?></td>
-    <td align="right"><?php echo $menjawab-@$option[$answer];?></td>
-    <td align="right"><?php if($menjawab != 0) { echo $picoEdu->numberFormatTrans(100*(@$option[$answer]+0)/$menjawab, true);} ?></td>
+    <td align="right"><?php echo $menjawab;?> </td>
+    <td align="right"><?php echo @$option[$answer]+0;?> </td>
+    <td align="right"><?php echo $menjawab-@$option[$answer];?> </td>
+    <td align="right"><?php if($menjawab != 0) { echo $picoEdu->numberFormatTrans(100*(@$option[$answer]+0)/$menjawab, true);} ?> </td>
   </tr>
 <?php
 	$total_menjawab += $menjawab;
@@ -708,10 +708,10 @@ else
 <tfoot>
   <tr>
     <td colspan="<?php echo $number_of_option+4;?>">Total</td>
-    <td align="right"><?php echo $total_menjawab;?></td>
-    <td align="right"><?php echo $total_benar;?></td>
-    <td align="right"><?php echo $total_salah;?></td>
-    <td align="right"><?php echo $picoEdu->numberFormatTrans($total_persen, true);?></td>
+    <td align="right"><?php echo $total_menjawab;?> </td>
+    <td align="right"><?php echo $total_benar;?> </td>
+    <td align="right"><?php echo $total_salah;?> </td>
+    <td align="right"><?php echo $picoEdu->numberFormatTrans($total_persen, true);?> </td>
   </tr>
 </tfoot>
 </table>
@@ -1154,7 +1154,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 								echo " class=\"$rowclass\"";
 							} ?>>
       <td><a class="show-controls" data-test-id="<?php echo $data['test_id']; ?>" href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></a></td>
-      <td align="right"><?php echo $no; ?></td>
+      <td align="right"><?php echo $no; ?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo ($data['school_name']); ?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['name']; ?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['subject']; ?></a></td>
@@ -1162,7 +1162,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 						  $class_sort = $picoEdu->textClass($array_class, $data['class'], 2); ?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class); ?>"><?php echo $class_sort; ?></a></td>
       <td><?php if ($data['number_of_question']) { ?><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?test_id=<?php echo $data['test_id']; ?>"><?php echo $data['number_of_question']; ?> soal</a><?php } else {
 							  echo '-';
-						  } ?></td>
+						  } ?> </td>
       </tr>
     <?php
 					}

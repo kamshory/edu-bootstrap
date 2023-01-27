@@ -280,43 +280,43 @@ $stmt = $database->executeQuery($sql);
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Token</td>
-		<td><?php echo $data['token'];?></td>
+		<td><?php echo $data['token'];?> </td>
 		</tr>
 		<tr>
 		<td>Ujian</td>
-		<td><?php echo $data['test_name'];?></td>
+		<td><?php echo $data['test_name'];?> </td>
 		</tr>
 		<tr>
 		<td>Kelas</td>
-		<td><?php echo $data['class_name'];?></td>
+		<td><?php echo $data['class_name'];?> </td>
 		</tr>
 		<tr>
 		<td>Siswa</td>
-		<td><?php echo $data['student_name'];?></td>
+		<td><?php echo $data['student_name'];?> </td>
 		</tr>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo $data['time_create'];?></td>
+		<td><?php echo $data['time_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo $data['time_edit'];?></td>
+		<td><?php echo $data['time_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Kedaluarsa</td>
-		<td><?php echo $data['time_expire'];?></td>
+		<td><?php echo $data['time_expire'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
-		<td><?php echo $data['creator_name'];?></td>
+		<td><?php echo $data['creator_name'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Ubah</td>
-		<td><?php echo $data['editor_name'];?></td>
+		<td><?php echo $data['editor_name'];?> </td>
 		</tr>
 		<tr>
 		<td>Active</td>
-		<td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -558,7 +558,7 @@ if($test_id == 0 && $class_id == 0)
 	?>
     <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
       <td><input type="checkbox" name="token_id[]" id="token_id" value="<?php echo $data['token_id'];?>" class="token_id" /></td>
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['token'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['test_name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['class_name'];?></a></td>
@@ -574,7 +574,7 @@ if($test_id == 0 && $class_id == 0)
 	  {
 		  ?><a href="admin.php?option=detail&admin_id=<?php echo $data['admin_create'];?>"><?php echo ($data['admin_create_name']);?></a><?php
 	  }
-	  ?></td>
+	  ?> </td>
      </tr>
     <?php
 	}

@@ -244,82 +244,82 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Sekolah</td>
-		<td><?php echo ($data['school_name']);?></td>
+		<td><?php echo ($data['school_name']);?> </td>
 		</tr>
 		<tr>
 		<td>No.Induk</td>
-		<td><?php echo ($data['reg_number']);?></td>
+		<td><?php echo ($data['reg_number']);?> </td>
 		</tr>
 		<tr>
 		<td>NUPTK</td>
-		<td><?php echo ($data['reg_number_national']);?></td>
+		<td><?php echo ($data['reg_number_national']);?> </td>
 		</tr>
 		<tr>
 		<td>Nama</td>
-		<td><?php echo $data['name'];?></td>
+		<td><?php echo $data['name'];?> </td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
-		<td><?php echo $picoEdu->getGenderName($data['gender']);?></td>
+		<td><?php echo $picoEdu->getGenderName($data['gender']);?> </td>
 		</tr>
 		<tr>
 		<td>Tempat Lahir</td>
-		<td><?php echo $data['birth_place'];?></td>
+		<td><?php echo $data['birth_place'];?> </td>
 		</tr>
 		<tr>
 		<td>Tanggal Lahir</td>
-		<td><?php echo translateDate(date('d F Y', strtotime($data['birth_day'])));?></td>
+		<td><?php echo translateDate(date('d F Y', strtotime($data['birth_day'])));?> </td>
 		</tr>
 		<tr>
 		<td>Telepon</td>
-		<td><?php echo $data['phone'];?></td>
+		<td><?php echo $data['phone'];?> </td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><?php echo $data['email'];?></td>
+		<td><?php echo $data['email'];?> </td>
 		</tr>
 		<tr>
 		<td>Password 
-		</td><td><?php echo $data['password_initial'];?></td>
+		</td><td><?php echo $data['password_initial'];?> </td>
 		</tr>
 		<tr>
 		<td>Alamat
-		</td><td><?php echo $data['address'];?></td>
+		</td><td><?php echo $data['address'];?> </td>
 		</tr>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?></td>
+		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?></td>
+		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat
 		</td>
-        <td><?php echo $data['admin_create'];?></td>
+        <td><?php echo $data['admin_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Ubah
 		</td>
-        <td><?php echo $data['admin_edit'];?></td>
+        <td><?php echo $data['admin_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Buat
-		</td><td><?php echo $data['ip_create'];?></td>
+		</td><td><?php echo $data['ip_create'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Ubah
 		</td>
-        <td><?php echo $data['ip_edit'];?></td>
+        <td><?php echo $data['ip_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Blokir</td>
-		<td><?php echo ($data['blocked'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['blocked'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -462,15 +462,15 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
     <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
       <td><input type="checkbox" name="teacher_id[]" id="teacher_id" value="<?php echo $data['teacher_id'];?>" class="teacher_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&teacher_id=<?php echo $data['teacher_id'];?>"><i class="fas fa-pencil"></i></a></td>
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo ($data['school_name']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo ($data['reg_number']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo ($data['reg_number_national']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><?php if($data['gender']=='M') echo 'L'; if($data['gender']=='W') echo 'P';?></td>
-      <td><?php echo $data['phone'];?></td>
-      <td><?php echo ($data['blocked'])?'Ya':'Tidak';?></td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+      <td><?php if($data['gender']=='M') echo 'L'; if($data['gender']=='W') echo 'P';?> </td>
+      <td><?php echo $data['phone'];?> </td>
+      <td><?php echo ($data['blocked'])?'Ya':'Tidak';?> </td>
+      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
      </tr>
     <?php
 	}

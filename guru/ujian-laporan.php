@@ -92,7 +92,7 @@ header("Content-Disposition: attachment; filename=\"".str_replace(" ", "-", strt
 
 echo '
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Hasil Ujian '.$data['name'].'</title>
@@ -121,35 +121,35 @@ $array_class = $picoEdu->getArrayClass($school_id);
 <table width="100%" border="0" class="table two-side-table" cellpadding="0" cellspacing="0">
   <tr>
     <td colspan="2">Ujian</td>
-    <td width="1164"><?php echo $data['name'];?></td>
+    <td width="1164"><?php echo $data['name'];?> </td>
   </tr>
   <tr>
     <td colspan="2">Kelas</td>
-    <td><?php $class = $picoEdu->textClass($array_class, $data['class']);  echo $class;?></td>
+    <td><?php $class = $picoEdu->textClass($array_class, $data['class']);  echo $class;?> </td>
   </tr>
   <tr>
     <td colspan="2">Mata Pelajaran</td>
-    <td><?php echo $data['subject'];?></td>
+    <td><?php echo $data['subject'];?> </td>
   </tr>
   <tr>
     <td colspan="2">Guru</td>
-    <td><?php echo $data['teacher_id'];?></td>
+    <td><?php echo $data['teacher_id'];?> </td>
   </tr>
   <tr>
     <td colspan="2">Metode Penilaian</td>
-    <td><?php if($data['assessment_methods'] == 'H') echo "Nilai Tertinggi"; if($data['assessment_methods'] == 'N') echo "Nilai Terbaru";?></td>
+    <td><?php if($data['assessment_methods'] == 'H') echo "Nilai Tertinggi"; if($data['assessment_methods'] == 'N') echo "Nilai Terbaru";?> </td>
   </tr>
   <tr>
     <td colspan="2">Jumlah Soal</td>
-    <td><?php echo $data['number_of_question'];?></td>
+    <td><?php echo $data['number_of_question'];?> </td>
   </tr>
   <tr>
     <td colspan="2">Nilai Standard</td>
-    <td><?php echo $data['standard_score'];?></td>
+    <td><?php echo $data['standard_score'];?> </td>
   </tr>
   <tr>
     <td colspan="2">Penalti</td>
-    <td><?php echo $data['penalty'];?></td>
+    <td><?php echo $data['penalty'];?> </td>
   </tr>
   <tr>
     <td width="45">&nbsp;</td>
@@ -251,7 +251,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 		  foreach($bc_array as $k=>$v)
 		  {
 			  ?>
-              <td>KD <?php echo $v;?></td>
+              <td>KD <?php echo $v;?> </td>
               <?php
 		  }
 	  }
@@ -277,19 +277,19 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	
 	?>
     <tr class="row-data<?php if($data['lewat']) echo ' data-error';?>">
-      <td align="right"><?php echo $no;?></td>
-      <td><?php echo ($data['reg_number']);?></td>
-      <td><?php echo $data['student_name'];?></td>
+      <td align="right"><?php echo $no;?> </td>
+      <td><?php echo ($data['reg_number']);?> </td>
+      <td><?php echo $data['student_name'];?> </td>
       <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
-      <td align="right"><?php echo $ke[$data['student_id']];?></td>
-      <td nowrap><?php echo date('Y-m-d H:i:s',strtotime($data['start']));?></td>
-      <td nowrap><?php echo $data['timediff'];?></td>
-      <td align="right"><?php echo $data['true'];?></td>
-      <td align="right"><?php echo $data['false'];?></td>
-      <td align="right"><?php echo $picoEdu->numberFormatTrans($data['final_score'], true);?></td>
-      <td align="right"><?php echo $picoEdu->numberFormatTrans($data['percent'], true);?></td>
-      <td align="right"><?php echo $picoEdu->numberFormatTrans($threshold, true);?></td>
-      <td><?php if($data['percent'] >= $threshold) echo 'Ya'; else echo 'Tidak'?></td>
+      <td align="right"><?php echo $ke[$data['student_id']];?> </td>
+      <td nowrap><?php echo date('Y-m-d H:i:s',strtotime($data['start']));?> </td>
+      <td nowrap><?php echo $data['timediff'];?> </td>
+      <td align="right"><?php echo $data['true'];?> </td>
+      <td align="right"><?php echo $data['false'];?> </td>
+      <td align="right"><?php echo $picoEdu->numberFormatTrans($data['final_score'], true);?> </td>
+      <td align="right"><?php echo $picoEdu->numberFormatTrans($data['percent'], true);?> </td>
+      <td align="right"><?php echo $picoEdu->numberFormatTrans($threshold, true);?> </td>
+      <td><?php if($data['percent'] >= $threshold) echo 'Ya'; else echo 'Tidak'?> </td>
       <?php
 	  if($bc_array != null)
 	  {
@@ -318,7 +318,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 				  $score = "";
 			  }
 			  ?>
-              <td><?php echo $score;?></td>
+              <td><?php echo $score;?> </td>
               <?php
 		  }
 	  }
@@ -362,53 +362,53 @@ $array_class = $picoEdu->getArrayClass($school_id);
 <table width="100%" border="0">
   <tr>
     <td>NIS</td>
-    <td><?php echo $info['student_id'];?></td>
+    <td><?php echo $info['student_id'];?> </td>
     <td>Metode Penilaian</td>
-    <td><?php if($info['assessment_methods'] == 'H') echo 'Nilai Tertinggi'; if($info['assessment_methods'] == 'N') echo 'Nilai Terbaru';?></td>
+    <td><?php if($info['assessment_methods'] == 'H') echo 'Nilai Tertinggi'; if($info['assessment_methods'] == 'N') echo 'Nilai Terbaru';?> </td>
     <td>Dibuka</td>
-    <td><?php if($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '') echo translateDate(date('j M Y H:i', strtotime($info['available_from']))); else echo '-';?></td>
+    <td><?php if($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '') echo translateDate(date('j M Y H:i', strtotime($info['available_from']))); else echo '-';?> </td>
     <td>Benar</td>
-    <td><?php echo $info['true'];?></td>
+    <td><?php echo $info['true'];?> </td>
   </tr>
   <tr>
     <td>Nama Siswa</td>
-    <td><?php echo $info['student_name'];?></td>
+    <td><?php echo $info['student_name'];?> </td>
     <td>Jumlah Soal</td>
-    <td><?php echo $info['number_of_question'];?></td>
+    <td><?php echo $info['number_of_question'];?> </td>
     <td>Ditutup</td>
-    <td><?php if($info['available_to'] != '0000-00-00 00:00:00' && $info['available_to'] != '') echo translateDate(date('j M Y H:i', strtotime($info['available_to']))); else echo '-';?></td>
+    <td><?php if($info['available_to'] != '0000-00-00 00:00:00' && $info['available_to'] != '') echo translateDate(date('j M Y H:i', strtotime($info['available_to']))); else echo '-';?> </td>
     <td>Salah</td>
-    <td><?php echo $info['false'];?></td>
+    <td><?php echo $info['false'];?> </td>
   </tr>
   <tr>
     <td>Kelas</td>
     <td><?php $class = $picoEdu->textClass($array_class, $info['class']); $class_sort = $picoEdu->textClass($array_class, $info['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
     <td>Sekor Benar</td>
-    <td><?php echo $info['standard_score'];?></td>
+    <td><?php echo $info['standard_score'];?> </td>
     <td>Pengumuman Hasil</td>
-    <td><?php if($info['publish_answer']) echo translateDate(date('j M Y H:i', strtotime($info['time_answer_publication']))); else echo '-';?></td>
+    <td><?php if($info['publish_answer']) echo translateDate(date('j M Y H:i', strtotime($info['time_answer_publication']))); else echo '-';?> </td>
     <td>Nilai Awal</td>
-    <td><?php echo $info['initial_score'];?></td>
+    <td><?php echo $info['initial_score'];?> </td>
   </tr>
   <tr>
     <td>Ujian</td>
-    <td><?php echo $info['name'];?></td>
+    <td><?php echo $info['name'];?> </td>
     <td>Penalti</td>
-    <td><?php echo $info['penalty'];?></td>
+    <td><?php echo $info['penalty'];?> </td>
     <td>Tanggal Ujian</td>
-    <td><?php echo translateDate(date('j M Y H:i', strtotime($info['start'])));?></td>
+    <td><?php echo translateDate(date('j M Y H:i', strtotime($info['start'])));?> </td>
     <td>Nilai Akhir</td>
-    <td><?php echo $info['final_score'];?></td>
+    <td><?php echo $info['final_score'];?> </td>
   </tr>
   <tr>
     <td>Mata Pelajaran</td>
-    <td><?php echo $info['subject'];?></td>
+    <td><?php echo $info['subject'];?> </td>
     <td>Waktu Tersedia</td>
-    <td><?php echo implode(':', $picoEdu->secondsToTime($info['duration']));?></td>
+    <td><?php echo implode(':', $picoEdu->secondsToTime($info['duration']));?> </td>
     <td>Durasi Pengerjaan</td>
-    <td><?php echo $info['duration_test'];?></td>
+    <td><?php echo $info['duration_test'];?> </td>
     <td>Persen</td>
-    <td><?php echo $picoEdu->numberFormatTrans($info['percent']);?></td>
+    <td><?php echo $picoEdu->numberFormatTrans($info['percent']);?> </td>
   </tr>
 </table>
 </div>
@@ -498,7 +498,7 @@ foreach($bc_score as $key=>$val)
 		foreach($random_distribution as $key=>$value)
 		{
 			?>
-            <td align="right"><?php echo $value[0];?></td>
+            <td align="right"><?php echo $value[0];?> </td>
             <?php
 		}
 		?>
@@ -511,7 +511,7 @@ foreach($bc_score as $key=>$val)
 		foreach($random_distribution as $key=>$value)
 		{
 			?>
-            <td align="right"><?php echo $value[1];?></td>
+            <td align="right"><?php echo $value[1];?> </td>
             <?php
 		}
 		?>
@@ -523,7 +523,7 @@ foreach($bc_score as $key=>$val)
 		{
 			$score = @$bc_score_value[$value[0]] * 1;
 			?>
-            <td align="right"><?php echo $picoEdu->numberFormatTrans($score, true);?></td>
+            <td align="right"><?php echo $picoEdu->numberFormatTrans($score, true);?> </td>
             <?php
 		}
 		?>
@@ -891,21 +891,21 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 	?>
     <tr class="row-data<?php if($data['lewat']) echo ' data-error';?>">
       <td><input type="checkbox" name="answer_id[]" id="answer_id" value="<?php echo $data['answer_id'];?>" class="answer_id" /></td>
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=answerdetail&answer_id=<?php echo $data['answer_id'];?>"><?php echo ($data['reg_number']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=answerdetail&answer_id=<?php echo $data['answer_id'];?>"><?php echo $data['student_name'];?></a></td>
-      <td><?php echo $data['class'];?></td>
-      <td align="right"><?php echo $ke[$data['student_id']];?></td>
-      <td nowrap><?php echo translateDate(date('d M Y H:i:s',strtotime($data['start'])));?></td>
-      <td nowrap><?php echo $data['timediff'];?></td>
-      <td align="right"><?php echo $data['number_of_question'];?></td>
-      <td align="right"><?php echo $data['true'];?></td>
-      <td align="right"><?php echo $data['false'];?></td>
-      <td align="right"><?php echo $data['final_score'];?></td>
-      <td align="right"><?php echo $picoEdu->numberFormatTrans($data['percent']);?></td>
-      <td align="right"><?php echo $picoEdu->numberFormatTrans($threshold);?></td>
-      <td><?php if($data['percent'] >= $threshold) echo 'Ya'; else echo 'Tidak';?></td>
-      <td><?php echo (@$data['active']==1)?'Ya':'Tidak';?></td>
+      <td><?php echo $data['class'];?> </td>
+      <td align="right"><?php echo $ke[$data['student_id']];?> </td>
+      <td nowrap><?php echo translateDate(date('d M Y H:i:s',strtotime($data['start'])));?> </td>
+      <td nowrap><?php echo $data['timediff'];?> </td>
+      <td align="right"><?php echo $data['number_of_question'];?> </td>
+      <td align="right"><?php echo $data['true'];?> </td>
+      <td align="right"><?php echo $data['false'];?> </td>
+      <td align="right"><?php echo $data['final_score'];?> </td>
+      <td align="right"><?php echo $picoEdu->numberFormatTrans($data['percent']);?> </td>
+      <td align="right"><?php echo $picoEdu->numberFormatTrans($threshold);?> </td>
+      <td><?php if($data['percent'] >= $threshold) echo 'Ya'; else echo 'Tidak';?> </td>
+      <td><?php echo (@$data['active']==1)?'Ya':'Tidak';?> </td>
     </tr>
 	<?php
 	}
@@ -1107,13 +1107,13 @@ $array_class = $picoEdu->getArrayClass($school_id);
     <tr class="row-data row<?php echo $j;?>">
         <td width="16"><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=export&test_id=<?php echo $data['test_id'];?>&expand=1"><img src="lib.tools/images/excel.png" /></a></td>
         <td width="16"><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=export&test_id=<?php echo $data['test_id'];?>"><img src="lib.tools/images/excel.png" /></a></td>
-        <td align="right"><?php echo $no;?></td>
+        <td align="right"><?php echo $no;?> </td>
         <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
         <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
-        <td><?php echo translateDate(date('d M Y H:i', strtotime($data['last_test'])));?></td>
-        <td align="right"><?php echo $data['koleksi'];?></td>
-        <td align="right"><?php echo $data['number_of_question'];?></td>
-        <td align="right"><?php echo $data['number_of_student'];?></td>
+        <td><?php echo translateDate(date('d M Y H:i', strtotime($data['last_test'])));?> </td>
+        <td align="right"><?php echo $data['koleksi'];?> </td>
+        <td align="right"><?php echo $data['number_of_question'];?> </td>
+        <td align="right"><?php echo $data['number_of_student'];?> </td>
       </tr>
 	<?php
 	$i++;

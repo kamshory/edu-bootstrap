@@ -702,39 +702,39 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama</td>
-		<td><?php echo $data['name'];?></td>
+		<td><?php echo $data['name'];?> </td>
 		</tr>
 		<tr>
 		<td>Kode Sekolah</td>
-		<td><?php echo $data['school_code'];?></td>
+		<td><?php echo $data['school_code'];?> </td>
 		</tr>
 		<tr>
 		<td>Jenjang Pendidikan</td>
-		<td><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></td>
+		<td><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?> </td>
 		</tr>
 		<tr>
 		<td>Negeri Swasta</td>
-		<td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?></td>
+		<td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?> </td>
 		</tr>
 		<tr>
 		<td>Kepala Sekolah</td>
-		<td><?php echo $data['principal'];?></td>
+		<td><?php echo $data['principal'];?> </td>
 		</tr>
 		<tr>
 		<td>Alamat</td>
-		<td><?php echo $data['address'];?></td>
+		<td><?php echo $data['address'];?> </td>
 		</tr>
 		<tr>
 		<td>Telepon</td>
-		<td><?php echo $data['phone'];?></td>
+		<td><?php echo $data['phone'];?> </td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><?php echo $data['email'];?></td>
+		<td><?php echo $data['email'];?> </td>
 		</tr>
         <tr>
           <td>Jumlah Kelas</td>
-          <td><?php echo ($data['num_class']);?></td>
+          <td><?php echo ($data['num_class']);?> </td>
         </tr>
         <tr>
           <td>Jumlah Siswa</td>
@@ -750,11 +750,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
       </tr>
 		<tr>
 		<td>Cegah Siswa Pindah</td>
-		<td><?php echo ($data['prevent_change_school'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['prevent_change_school'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td>Cegah Siswa Keluar</td>
-		<td><?php echo ($data['prevent_resign'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['prevent_resign'])?'Ya':'Tidak';?> </td>
 		</tr>
 
 		<tr>
@@ -763,15 +763,15 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Waktu</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_import_first'])));?></td>
+		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_import_first'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin</td>
-		<td><?php echo $data['admin_import_first'];?></td>
+		<td><?php echo $data['admin_import_first'];?> </td>
 		</tr>
 		<tr>
 		<td>IP</td>
-		<td><?php echo $data['ip_import_first'];?></td>
+		<td><?php echo $data['ip_import_first'];?> </td>
 		</tr>
 
 		<tr>
@@ -780,41 +780,41 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Waktu</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_import_last'])));?></td>
+		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_import_last'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin</td>
-		<td><?php echo $data['admin_import_last'];?></td>
+		<td><?php echo $data['admin_import_last'];?> </td>
 		</tr>
 		<tr>
 		<td>IP</td>
-		<td><?php echo $data['ip_import_last'];?></td>
+		<td><?php echo $data['ip_import_last'];?> </td>
 		</tr>
 
 
 		<tr>
 		<td>Waktu Buat</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?></td>
+		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Waktu Ubah</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?></td>
+		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
-		<td><?php echo $data['admin_create'];?></td>
+		<td><?php echo $data['admin_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Ubah</td>
-		<td><?php echo $data['admin_edit'];?></td>
+		<td><?php echo $data['admin_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Buat</td>
-		<td><?php echo $data['ip_create'];?></td>
+		<td><?php echo $data['ip_create'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Ubah</td>
-		<td><?php echo $data['ip_edit'];?></td>
+		<td><?php echo $data['ip_edit'];?> </td>
 		</tr>
 		<tr>
 		<td></td>

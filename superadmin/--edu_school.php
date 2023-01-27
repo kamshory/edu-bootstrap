@@ -448,139 +448,139 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">School</td>
-		<td><?php echo ($data['school_id']);?></td>
+		<td><?php echo ($data['school_id']);?> </td>
 		</tr>
 		<tr>
 		<td>School Code</td>
-		<td><?php echo $data['school_code'];?></td>
+		<td><?php echo $data['school_code'];?> </td>
 		</tr>
 		<tr>
 		<td>Token School</td>
-		<td><?php echo ($data['token_school']);?></td>
+		<td><?php echo ($data['token_school']);?> </td>
 		</tr>
 		<tr>
 		<td>Name</td>
-		<td><?php echo $data['name'];?></td>
+		<td><?php echo $data['name'];?> </td>
 		</tr>
 		<tr>
 		<td>Description</td>
-		<td><?php echo $data['description'];?></td>
+		<td><?php echo $data['description'];?> </td>
 		</tr>
 		<tr>
 		<td>School Type</td>
-		<td><?php echo ($data['school_type_id']);?></td>
+		<td><?php echo ($data['school_type_id']);?> </td>
 		</tr>
 		<tr>
 		<td>School Grade</td>
-		<td><?php echo ($data['school_grade_id']);?></td>
+		<td><?php echo ($data['school_grade_id']);?> </td>
 		</tr>
 		<tr>
 		<td>Public Private</td>
-		<td><?php echo ($data['public_private']);?></td>
+		<td><?php echo ($data['public_private']);?> </td>
 		</tr>
 		<tr>
 		<td>Open</td>
-		<td><?php echo ($data['open']);?></td>
+		<td><?php echo ($data['open']);?> </td>
 		</tr>
 		<tr>
 		<td>Principal</td>
-		<td><?php echo $data['principal'];?></td>
+		<td><?php echo $data['principal'];?> </td>
 		</tr>
 		<tr>
 		<td>Address</td>
-		<td><?php echo $data['address'];?></td>
+		<td><?php echo $data['address'];?> </td>
 		</tr>
 		<tr>
 		<td>Phone</td>
-		<td><?php echo $data['phone'];?></td>
+		<td><?php echo $data['phone'];?> </td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><?php echo $data['email'];?></td>
+		<td><?php echo $data['email'];?> </td>
 		</tr>
 		<tr>
 		<td>Language</td>
-		<td><?php echo ($data['language']);?></td>
+		<td><?php echo ($data['language']);?> </td>
 		</tr>
 		<tr>
 		<td>Country</td>
-		<td><?php echo $data['country_id'];?></td>
+		<td><?php echo $data['country_id'];?> </td>
 		</tr>
 		<tr>
 		<td>State</td>
-		<td><?php echo $data['state_id'];?></td>
+		<td><?php echo $data['state_id'];?> </td>
 		</tr>
 		<tr>
 		<td>City</td>
-		<td><?php echo $data['city_id'];?></td>
+		<td><?php echo $data['city_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Student</td>
-		<td><?php echo ($data['student']);?></td>
+		<td><?php echo ($data['student']);?> </td>
 		</tr>
 		<tr>
 		<td>Prevent Change School</td>
-		<td><?php echo ($data['prevent_change_school']);?></td>
+		<td><?php echo ($data['prevent_change_school']);?> </td>
 		</tr>
 		<tr>
 		<td>Prevent Resign</td>
-		<td><?php echo ($data['prevent_resign']);?></td>
+		<td><?php echo ($data['prevent_resign']);?> </td>
 		</tr>
 		<tr>
 		<td>Use Token</td>
-		<td><?php echo ($data['use_token']);?></td>
+		<td><?php echo ($data['use_token']);?> </td>
 		</tr>
 		<tr>
 		<td>Time Import First</td>
-		<td><?php echo ($data['time_import_first']);?></td>
+		<td><?php echo ($data['time_import_first']);?> </td>
 		</tr>
 		<tr>
 		<td>Time Import Last</td>
-		<td><?php echo ($data['time_import_last']);?></td>
+		<td><?php echo ($data['time_import_last']);?> </td>
 		</tr>
 		<tr>
 		<td>Admin Import First</td>
-		<td><?php echo $data['admin_import_first'];?></td>
+		<td><?php echo $data['admin_import_first'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Import Last</td>
-		<td><?php echo $data['admin_import_last'];?></td>
+		<td><?php echo $data['admin_import_last'];?> </td>
 		</tr>
 		<tr>
 		<td>Ip Import First</td>
-		<td><?php echo $data['ip_import_first'];?></td>
+		<td><?php echo $data['ip_import_first'];?> </td>
 		</tr>
 		<tr>
 		<td>Ip Import Last</td>
-		<td><?php echo $data['ip_import_last'];?></td>
+		<td><?php echo $data['ip_import_last'];?> </td>
 		</tr>
 		<tr>
 		<td>Time Create</td>
-		<td><?php echo $data['time_create'];?></td>
+		<td><?php echo $data['time_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Time Edit</td>
-		<td><?php echo $data['time_edit'];?></td>
+		<td><?php echo $data['time_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Create</td>
-		<td><?php echo $data['admin_create'];?></td>
+		<td><?php echo $data['admin_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Edit</td>
-		<td><?php echo $data['admin_edit'];?></td>
+		<td><?php echo $data['admin_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Ip Create</td>
-		<td><?php echo $data['ip_create'];?></td>
+		<td><?php echo $data['ip_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Ip Edit</td>
-		<td><?php echo $data['ip_edit'];?></td>
+		<td><?php echo $data['ip_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Active</td>
-		<td><?php echo ($data['active']);?></td>
+		<td><?php echo ($data['active']);?> </td>
 		</tr>
 		<tr>
 		<td>&nbsp;</td>
@@ -705,7 +705,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
     <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
       <td><input type="checkbox" name="school_id[]" id="school_id" value="<?php echo $data['school_id'];?>" class="school_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_id=<?php echo $data['school_id'];?>"><img src="tools/images/trans.gif" class="icon-16 icon-edit-16" alt="Edit" border="0" /></a></td>
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo ($data['school_id']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['school_code'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo ($data['token_school']);?></a></td>

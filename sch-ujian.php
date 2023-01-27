@@ -39,48 +39,48 @@ if (@$auth_student_id && @$auth_school_id) {
 				<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 					<tr>
 						<td>Ujian</td>
-						<td><?php echo $data['name'];?></td>
+						<td><?php echo $data['name'];?> </td>
 					</tr>
 					<tr>
 						<td>Jumlah Soal</td>
-						<td><?php echo $data['number_of_question'];?></td>
+						<td><?php echo $data['number_of_question'];?> </td>
 					</tr>
 					<tr>
 						<td>Jumlah Pilihan</td>
-						<td><?php echo $data['number_of_option'];?></td>
+						<td><?php echo $data['number_of_option'];?> </td>
 					</tr>
 					<tr>
 						<td>Nilai Standard</td>
-						<td><?php echo $data['standard_score'];?></td>
+						<td><?php echo $data['standard_score'];?> </td>
 					</tr>
 					<tr>
 						<td>Penalti
 						</td>
-						<td><?php echo $data['penalty'];?></td>
+						<td><?php echo $data['penalty'];?> </td>
 					</tr>
 					<tr>
 						<td>Otomatis Kirim Jawaban</td>
-						<td><?php echo $data['autosubmit'] ? 'Ya' : 'Tidak';?></td>
+						<td><?php echo $data['autosubmit'] ? 'Ya' : 'Tidak';?> </td>
 					</tr>
 					<tr>
 						<td>Mulai Ujian
 						</td>
-						<td><?php echo $data['start'];?></td>
+						<td><?php echo $data['start'];?> </td>
 					</tr>
 					<tr>
 						<td>Selesai Ujian
 						</td>
-						<td><?php echo $data['end'];?></td>
+						<td><?php echo $data['end'];?> </td>
 					</tr>
 					<tr>
 						<td>Nilai Akhir
 						</td>
-						<td><?php echo $data['final_score'];?></td>
+						<td><?php echo $data['final_score'];?> </td>
 					</tr>
 					<tr>
 						<td>Persen
 						</td>
-						<td><?php echo $data['percent'];?></td>
+						<td><?php echo $data['percent'];?> </td>
 					</tr>
 				</table>
 			</div>
@@ -215,20 +215,20 @@ if (@$auth_student_id && @$auth_school_id) {
 						$data['number_of_question'] = substr_count($data['answer'], "]");
 					?>
 						<tr>
-							<td align="right"><?php echo $no;?></td>
+							<td align="right"><?php echo $no;?> </td>
 							<td><a href="ujian.php?option=answer&answer_id=<?php echo $data['answer_id']; ?>"><?php echo translateDate(date('d M Y H:i:s', strtotime($data['start']))); ?></a></td>
-							<td><?php echo gmdate('H:i:s', strtotime($data['end']) - strtotime($data['start']));?></td>
+							<td><?php echo gmdate('H:i:s', strtotime($data['end']) - strtotime($data['start']));?> </td>
 							<td><?php if ($data['number_of_question']) {
 									echo $data['number_of_question'];
 								} else {
 									echo '-';
-								} ?></td>
-							<td><?php echo $data['true'];?></td>
-							<td><?php echo $data['false'];?></td>
-							<td><?php echo $data['initial_score'];?></td>
-							<td><?php echo $data['penalty'];?></td>
-							<td><?php echo $data['final_score'];?></td>
-							<td><?php echo $data['percent'];?></td>
+								} ?> </td>
+							<td><?php echo $data['true'];?> </td>
+							<td><?php echo $data['false'];?> </td>
+							<td><?php echo $data['initial_score'];?> </td>
+							<td><?php echo $data['penalty'];?> </td>
+							<td><?php echo $data['final_score'];?> </td>
+							<td><?php echo $data['percent'];?> </td>
 						</tr>
 					<?php
 					}
@@ -256,7 +256,7 @@ if (@$auth_student_id && @$auth_school_id) {
 			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td>Nama Ujian</td>
-					<td><?php echo $data['name'];?></td>
+					<td><?php echo $data['name'];?> </td>
 				</tr>
 				<tr>
 					<td>Kelas
@@ -267,38 +267,38 @@ if (@$auth_student_id && @$auth_school_id) {
 				<tr>
 					<td>Mata Pelajaran
 					</td>
-					<td><?php echo $data['subject'];?></td>
+					<td><?php echo $data['subject'];?> </td>
 				</tr>
 				<tr>
 					<td>Guru
 					</td>
-					<td><?php echo $data['teacher_id'];?></td>
+					<td><?php echo $data['teacher_id'];?> </td>
 				</tr>
 				<tr>
 					<td>Keterangan
 					</td>
-					<td><?php echo $data['description'];?></td>
+					<td><?php echo $data['description'];?> </td>
 				</tr>
 				<tr>
 					<td>Petunjuk
 					</td>
-					<td><?php echo $data['guidance'];?></td>
+					<td><?php echo $data['guidance'];?> </td>
 				</tr>
 				<tr>
 					<td>Terbuka
 					</td>
-					<td><?php echo $data['open'] ? 'Ya' : 'Tidak';?></td>
+					<td><?php echo $data['open'] ? 'Ya' : 'Tidak';?> </td>
 				</tr>
 				<tr>
 					<td>Dibatasi</td>
-					<td><?php echo $data['has_limits'] ? 'Ya' : 'Tidak';?></td>
+					<td><?php echo $data['has_limits'] ? 'Ya' : 'Tidak';?> </td>
 				</tr>
 				<?php
 				if ($data['has_limits']) {
 				?>
 					<tr>
 						<td>Batas Percobaan</td>
-						<td><?php echo $data['trial_limits'];?></td>
+						<td><?php echo $data['trial_limits'];?> </td>
 					</tr>
 				<?php
 				}
@@ -306,7 +306,7 @@ if (@$auth_student_id && @$auth_school_id) {
 				<tr>
 					<td>Nilai Kelulusan
 					</td>
-					<td><?php echo $data['threshold'];?></td>
+					<td><?php echo $data['threshold'];?> </td>
 				</tr>
 				<tr>
 					<td>Metode Penilaian</td>
@@ -316,24 +316,24 @@ if (@$auth_student_id && @$auth_school_id) {
 					}
 					if ($data['assessment_methods'] == 'N') {
 						echo "Nilai Terbaru";
-					} ?></td>
+					} ?> </td>
 				</tr>
 				<tr>
 					<td>Jumlah Soal</td>
-					<td><?php echo $data['number_of_question'];?></td>
+					<td><?php echo $data['number_of_question'];?> </td>
 				</tr>
 				<tr>
 					<td>Jumlah Pilihan</td>
-					<td><?php echo $data['number_of_option'];?></td>
+					<td><?php echo $data['number_of_option'];?> </td>
 				</tr>
 				<tr>
 					<td>Soal Perhalaman</td>
-					<td><?php echo $data['question_per_page'];?></td>
+					<td><?php echo $data['question_per_page'];?> </td>
 				</tr>
 				<tr>
 					<td>Durasi
 					</td>
-					<td><?php echo date('H:i:s', $data['duration']);?></td>
+					<td><?php echo date('H:i:s', $data['duration']);?> </td>
 				</tr>
 				<?php
 				if ($data['has_alert']) {
@@ -343,23 +343,23 @@ if (@$auth_student_id && @$auth_school_id) {
 				?>
 				<tr>
 					<td>Otomatis Kirim Jawaban</td>
-					<td><?php echo $data['autosubmit'] ? 'Ya' : 'Tidak';?></td>
+					<td><?php echo $data['autosubmit'] ? 'Ya' : 'Tidak';?> </td>
 				</tr>
 				<tr>
 					<td>Nilai Standard</td>
-					<td><?php echo $data['standard_score'];?></td>
+					<td><?php echo $data['standard_score'];?> </td>
 				</tr>
 				<tr>
 					<td>Penalti
 					</td>
-					<td><?php echo $data['penalty'];?></td>
+					<td><?php echo $data['penalty'];?> </td>
 				</tr>
 				<?php
 				if ($data['publish_answer']) {
 				?>
 					<tr>
 						<td>Pengumuman Kunci Jawaban</td>
-						<td><?php echo $data['time_answer_publication'];?></td>
+						<td><?php echo $data['time_answer_publication'];?> </td>
 					</tr>
 				<?php
 				}
@@ -373,18 +373,18 @@ if (@$auth_student_id && @$auth_school_id) {
 					}
 					if ($data['test_availability'] == 'L') {
 						echo 'Terbatas';
-					} ?></td>
+					} ?> </td>
 				</tr>
 				<?php
 				if ($data['test_availability'] == 'L') {
 				?>
 					<tr>
 						<td>Tersedia Mulai</td>
-						<td><?php echo $data['available_from'];?></td>
+						<td><?php echo $data['available_from'];?> </td>
 					</tr>
 					<tr>
 						<td>Tersedia Hingga</td>
-						<td><?php echo $data['available_to'];?></td>
+						<td><?php echo $data['available_to'];?> </td>
 					</tr>
 				<?php
 				}
@@ -617,12 +617,12 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 							?>
 								<tr>
 									<td><a class="show-controls" data-test-id="<?php echo $data['test_id']; ?>" href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></a></td>
-									<td align="right"><?php echo $no;?></td>
+									<td align="right"><?php echo $no;?> </td>
 									<td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['name']; ?></a></td>
 									<td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php $class = $picoEdu->textClass($array_class, $data['class']);
 																													$class_sort = $picoEdu->textClass($array_class, $data['class'], 2); ?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class); ?>"><?php echo $class_sort; ?></a></td>
 									<td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['subject']; ?></a></td>
-									<td><?php if ($data['ntest']) { ?><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['ntest']; ?> &times;</a><?php } else echo '-';?></td>
+									<td><?php if ($data['ntest']) { ?><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['ntest']; ?> &times;</a><?php } else echo '-';?> </td>
 								</tr>
 							<?php
 							}
@@ -780,7 +780,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 							$no++;
 						?>
 							<tr>
-								<td align="right"><?php echo $no;?></td>
+								<td align="right"><?php echo $no;?> </td>
 								<td><a href="../guru/ujian-daftar.php"><?php echo $data['name']; ?></a></td>
 								<td><?php $class = $picoEdu->textClass($array_class, $data['class']);
 									$class_sort = $picoEdu->textClass($array_class, $data['class'], 2); ?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class); ?>"><?php echo $class_sort; ?></a></td>
@@ -941,11 +941,11 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 							$no++;
 						?>
 							<tr>
-								<td align="right"><?php echo $no;?></td>
-								<td><?php echo $data['name'];?></td>
+								<td align="right"><?php echo $no;?> </td>
+								<td><?php echo $data['name'];?> </td>
 								<td><?php $class = $picoEdu->textClass($array_class, $data['class']);
 									$class_sort = $picoEdu->textClass($array_class, $data['class'], 2); ?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class); ?>"><?php echo $class_sort; ?></a></td>
-								<td><?php echo $data['subject'];?></td>
+								<td><?php echo $data['subject'];?> </td>
 							</tr>
 						<?php
 						}

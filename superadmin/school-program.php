@@ -195,47 +195,47 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">Sekolah</td>
-		<td><?php echo ($data['school_id']);?></td>
+		<td><?php echo ($data['school_id']);?> </td>
 		</tr>
 		<tr>
 		<td>Nama</td>
-		<td><?php echo $data['name'];?></td>
+		<td><?php echo $data['name'];?> </td>
 		</tr>
 		<tr>
 		<td>Order</td>
-		<td><?php echo $data['order'];?></td>
+		<td><?php echo $data['order'];?> </td>
 		</tr>
 		<tr>
 		<td>Default</td>
-		<td><?php echo ($data['default'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['default'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo $data['time_create'];?></td>
+		<td><?php echo $data['time_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo $data['time_edit'];?></td>
+		<td><?php echo $data['time_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
-		<td><?php echo $data['admin_create'];?></td>
+		<td><?php echo $data['admin_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Admin Ubah</td>
-		<td><?php echo $data['admin_edit'];?></td>
+		<td><?php echo $data['admin_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Buat</td>
-		<td><?php echo $data['ip_create'];?></td>
+		<td><?php echo $data['ip_create'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Ubah</td>
-		<td><?php echo $data['ip_edit'];?></td>
+		<td><?php echo $data['ip_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+		<td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -332,12 +332,12 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
     <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
       <td><input type="checkbox" name="school_program_id[]" id="school_program_id" value="<?php echo $data['school_program_id'];?>" class="school_program_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_program_id=<?php echo $data['school_program_id'];?>"><i class="fas fa-pencil"></i></a></td>
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo ($data['school_id']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['order'];?></a></td>
-      <td><?php echo ($data['default'])?'Ya':'Tidak';?></td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
+      <td><?php echo ($data['default'])?'Ya':'Tidak';?> </td>
+      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
      </tr>
     <?php
 	}

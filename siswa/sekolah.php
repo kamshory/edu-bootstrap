@@ -33,11 +33,11 @@ $cfg->page_title = "Tentang ".$school_name;
     </tr>
     <tr>
     <td>Jenjang Sekolah</td>
-    <td><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></td>
+    <td><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?> </td>
     </tr>
     <tr>
     <td>Negeri/Swasta</td>
-    <td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?></td>
+    <td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?> </td>
     </tr>
     <tr>
     <td>Kepala Sekolah</td>
@@ -57,7 +57,7 @@ $cfg->page_title = "Tentang ".$school_name;
     </tr>
     <tr>
     <td>Bahasa</td>
-    <td><?php if($data['language']=='en') echo 'English'; if($data['language']=='id') echo 'Bahasa Indonesia';?></td>
+    <td><?php if($data['language']=='en') echo 'English'; if($data['language']=='id') echo 'Bahasa Indonesia';?> </td>
     </tr>
     <tr>
     <td>Negara</td>
@@ -73,7 +73,7 @@ $cfg->page_title = "Tentang ".$school_name;
     </tr>
     <tr>
       <td>Jumlah Kelas</td>
-      <td><?php echo ($data['num_class']);?></td>
+      <td><?php echo ($data['num_class']);?> </td>
     </tr>
     <tr>
       <td>Jumlah Siswa</td>

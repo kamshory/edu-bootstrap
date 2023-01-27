@@ -243,7 +243,7 @@ $stmt = $database->executeQuery($sql);
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">Name</td>
-		<td><?php echo $data['name'];?></td>
+		<td><?php echo $data['name'];?> </td>
 		</tr>
 		<tr>
 		<td>Grade</td>
@@ -254,47 +254,47 @@ echo $picoEdu->getGradeName($data['grade_id']);
 		</tr>
 		<tr>
 		<td>File Name</td>
-		<td><?php echo ($data['file_name']);?></td>
+		<td><?php echo ($data['file_name']);?> </td>
 		</tr>
 		<tr>
 		<td>File Path</td>
-		<td><?php echo ($data['file_path']);?></td>
+		<td><?php echo ($data['file_path']);?> </td>
 		</tr>
 		<tr>
 		<td>File Size</td>
-		<td><?php echo ($data['file_size']);?></td>
+		<td><?php echo ($data['file_size']);?> </td>
 		</tr>
 		<tr>
 		<td>File MD5</td>
-		<td><?php echo ($data['file_md5']);?></td>
+		<td><?php echo ($data['file_md5']);?> </td>
 		</tr>
 		<tr>
 		<td>File SHA1</td>
-		<td><?php echo ($data['file_sha1']);?></td>
+		<td><?php echo ($data['file_sha1']);?> </td>
 		</tr>
 		<tr>
 		<td>Time Create</td>
-		<td><?php echo $data['time_create'];?></td>
+		<td><?php echo $data['time_create'];?> </td>
 		</tr>
 		<tr>
 		<td>Time Edit</td>
-		<td><?php echo $data['time_edit'];?></td>
+		<td><?php echo $data['time_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Create</td>
-		<td><?php echo $data['ip_create'];?></td>
+		<td><?php echo $data['ip_create'];?> </td>
 		</tr>
 		<tr>
 		<td>IP Edit</td>
-		<td><?php echo $data['ip_edit'];?></td>
+		<td><?php echo $data['ip_edit'];?> </td>
 		</tr>
 		<tr>
 		<td>Taken</td>
-		<td><?php echo ($data['taken']);?></td>
+		<td><?php echo ($data['taken']);?> </td>
 		</tr>
 		<tr>
 		<td>Active</td>
-		<td><?php echo $data['active']?'Ya':'Tidak';?></td>
+		<td><?php echo $data['active']?'Ya':'Tidak';?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -400,7 +400,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
     <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
       <td><input type="checkbox" name="test_collection_id[]" id="test_collection_id" value="<?php echo $data['test_collection_id'];?>" class="test_collection_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="tools/images/trans.gif" class="icon-16 icon-edit-16" alt="Edit" border="0" /></a></td>
-      <td align="right"><?php echo $no;?></td>
+      <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['grade_id'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo ($data['file_name']);?></a></td>
@@ -413,7 +413,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['ip_create'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['ip_edit'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo ($data['taken']);?></a></td>
-      <td><?php echo $data['active']?'Ya':'Tidak';?></td>
+      <td><?php echo $data['active']?'Ya':'Tidak';?> </td>
      </tr>
     <?php
 	}

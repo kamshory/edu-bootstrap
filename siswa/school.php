@@ -24,51 +24,51 @@ $cfg->page_title = "Tentang ".$school_name;
 <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
     <tr>
     <td>Nama Sekolah</td>
-    <td><?php echo $data['name'];?></td>
+    <td><?php echo $data['name'];?> </td>
     </tr>
     <tr>
     <td>Jenjang Sekolah</td>
-    <td><?php if($data['school_grade_id'] == 3) echo 'SD Sederajat'; if($data['school_grade_id'] == 4) echo 'SMP Sederajat'; if($data['school_grade_id'] == 5) echo 'SMA Sederajat';?></td>
+    <td><?php if($data['school_grade_id'] == 3) echo 'SD Sederajat'; if($data['school_grade_id'] == 4) echo 'SMP Sederajat'; if($data['school_grade_id'] == 5) echo 'SMA Sederajat';?> </td>
     </tr>
     <tr>
     <td>Negeri/Swasta</td>
-    <td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?></td>
+    <td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?> </td>
     </tr>
     <tr>
     <td>Kepala Sekolah</td>
-    <td><?php echo $data['principal'];?></td>
+    <td><?php echo $data['principal'];?> </td>
     </tr>
     <tr>
     <td>Alamat Sekolah</td>
-    <td><?php echo $data['address'];?></td>
+    <td><?php echo $data['address'];?> </td>
     </tr>
     <tr>
     <td>Telepon Sekolah</td>
-    <td><?php echo $data['phone'];?></td>
+    <td><?php echo $data['phone'];?> </td>
     </tr>
     <tr>
     <td>Email Sekolah</td>
-    <td><?php echo $data['email'];?></td>
+    <td><?php echo $data['email'];?> </td>
     </tr>
     <tr>
     <td>Bahasa</td>
-    <td><?php if($data['language']=='en') echo 'English'; if($data['language']=='id') echo 'Bahasa Indonesia';?></td>
+    <td><?php if($data['language']=='en') echo 'English'; if($data['language']=='id') echo 'Bahasa Indonesia';?> </td>
     </tr>
     <tr>
     <td>Negara</td>
-    <td><?php echo $data['country_id'];?></td>
+    <td><?php echo $data['country_id'];?> </td>
     </tr>
     <tr>
     <td>Provinsi</td>
-    <td><?php echo $data['state_id'];?></td>
+    <td><?php echo $data['state_id'];?> </td>
     </tr>
     <tr>
     <td>Kabupaten/Kota</td>
-    <td><?php echo $data['city_id'];?></td>
+    <td><?php echo $data['city_id'];?> </td>
     </tr>
     <tr>
       <td>Jumlah Kelas</td>
-      <td><?php echo ($data['num_class']);?></td>
+      <td><?php echo ($data['num_class']);?> </td>
     </tr>
     <tr>
       <td>Jumlah Siswa</td>

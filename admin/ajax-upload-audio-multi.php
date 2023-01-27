@@ -94,10 +94,10 @@ if($stmt->rowCount() > 0)
 			$filename = $data['filename'];
 		?>
             <tr>
-            <td align="right"><?php echo $no;?></td>
+            <td align="right"><?php echo $no;?> </td>
             <td><span class="select-audio"><a href="<?php echo $filename;?>" title="<?php echo basename($filename);?>" data-name="<?php echo basename($filename);?>"><?php echo $data['basename'];?></a></span></td>
             <td align="right"><span title="Ukuran <?php echo $data['size'];?>"><?php echo ($data['size']>=1048576)?(round($data['size']/1048576,2)."M"):(round($data['size']/1024)."k");?></span></td>
-            <td><?php echo date("d/m/Y H:i", $data['modified']);?></td>
+            <td><?php echo date("d/m/Y H:i", $data['modified']);?> </td>
             <td><a href="javascript:;" class="compress-audio-file" title="Kompres <?php echo basename($filename);?>" data-name="<?php echo basename($filename);?>">Kompres</a></td>
             </tr>
 		<?php
