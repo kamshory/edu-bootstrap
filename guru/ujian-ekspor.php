@@ -2,8 +2,8 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/bukan-guru.php";
-exit();
+  include_once dirname(__FILE__)."/bukan-guru.php";
+  exit();
 }
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
@@ -190,6 +190,10 @@ $sql = "SELECT `edu_test`.* $nt,
 from `edu_test`
 where 1 and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 order by `edu_test`.`test_id` desc
+";
+$sql_test = "SELECT `edu_test`.`test_id`
+from `edu_test`
+where 1 and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

@@ -684,7 +684,7 @@ window.onload = function()
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
     <span class="search-label">Kelas</span> 
-    <select id="class_id" name="class_id">
+    <select class="form-control" id="class_id" name="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
     $sql2 = "select * from `edu_class` where `active` = '1' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' order by `order` asc ";
@@ -977,7 +977,7 @@ $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
     <span class="search-label">Kelas</span> 
-    <select id="class_id" name="class_id">
+    <select class="form-control" id="class_id" name="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
 	$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";

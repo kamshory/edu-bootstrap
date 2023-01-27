@@ -8,7 +8,9 @@
 <meta name="description" content="">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.101.0">
-<title><?php if(isset($cfg->page_title)) echo ltrim($cfg->page_title.' - ', ' - ');?><?php echo $cfg->app_name;?></title>
+<title><?php if (isset($cfg->page_title)) {
+  echo ltrim($cfg->page_title.' - ', ' - ');
+}?><?php echo $cfg->app_name;?></title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
@@ -17,13 +19,13 @@
 <link href="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
 
 <!-- Favicons -->
-<link rel="apple-touch-icon" href="favs/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="favs/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="favs/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="favs/manifest.json">
-<link rel="mask-icon" href="favs/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="favs/favicon.ico">
-<meta name="msapplication-config" content="favs/browserconfig.xml">
+<link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>/avs/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>/avs/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>/avs/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="<?php echo $cfg->base_assets;?>/avs/manifest.json">
+<link rel="mask-icon" href="<?php echo $cfg->base_assets;?>/avs/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>/avs/favicon.ico">
+<meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>/avs/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
 <!-- Custom styles for this template -->
@@ -32,6 +34,19 @@
 <script src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"></script>
 <script src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.bundle.min.js"></script>
 
+<script>
+  $(document).ready(function(){
+    $(document).on('change', 'input[type="checkbox"].checkbox-selector', function(e2){
+      let target = $($(this).attr('data-target'));
+      let checked = $(this)[0].checked;
+      target.each(function(e3){
+        $(this)[0].checked = checked;
+      });
+    });
+  }
+    
+  );
+</script>
 </head>
 
 <body>
@@ -46,23 +61,10 @@
   <div class="container-fluid">
     <div class="row">
       <?php
+	  include_once dirname(__FILE__) . '/menu.php';
       $phpSelf = basename($_SERVER['PHP_SELF']);
+	  
       ?>
-      <nav aria-label="Main Menu" id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-        <div class="sidebar-sticky pt-3">
-        <ul class="nav flex-column">
-          <li class="nav-item"><a class="nav-link<?php echo $picoEdu->ifMatch($phpSelf, 'index.php', ' active');?>" href="./">Depan <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item"><a class="nav-link<?php echo $picoEdu->ifMatch($phpSelf, 'sekolah.php', ' active');?>" href="sekolah.php">Sekolah</a></li>
-          <li class="nav-item"><a class="nav-link<?php echo $picoEdu->ifMatch($phpSelf, 'kelas.php', ' active');?>" href="kelas.php">Kelas</a></li>
-          <li class="nav-item"><a class="nav-link<?php echo $picoEdu->ifMatch($phpSelf, 'guru.php', ' active');?>" href="guru.php">Guru</a></li>
-          <li class="nav-item"><a class="nav-link<?php echo $picoEdu->ifMatch($phpSelf, 'siswa.php', ' active');?>" href="siswa.php">Siswa</a></li>
-          <li class="nav-item"><a class="nav-link<?php echo $picoEdu->ifMatch($phpSelf, 'ujian.php', ' active');?>" href="ujian.php">Ujian</a></li>
-          <li class="nav-item"><a class="nav-link<?php echo $picoEdu->ifMatch($phpSelf, 'artikel.php', ' active');?>" href="artikel.php">Artikel</a></li>
-          <li class="nav-item"><a class="nav-link<?php echo $picoEdu->ifMatch($phpSelf, 'informasi.php', ' active');?>" href="informasi.php">Informasi</a></li>
-          <li class="nav-item"><a class="nav-link<?php echo $picoEdu->ifMatch($phpSelf, 'logout.php', ' active');?>" href="logout.php">Keluar</a></li>
-        </ul>
-        </div>
-      </nav>
 
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
         <div class="chartjs-size-monitor">

@@ -33,3 +33,7 @@ if($teacher_login->teacher_id)
 	$use_token = $teacher_login->use_token;
 }
 
+if(!isset($cfg))
+{
+	$cfg = new stdClass();
+}

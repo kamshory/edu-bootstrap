@@ -267,6 +267,14 @@ where 1 and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = 
 having 1 and `student` > 0
 order by `edu_test`.`test_id` desc
 ";
+
+$sql_test = "SELECT `edu_test`.`test_id`,
+(select count(distinct `edu_test_member`.`student_id`) from `edu_test_member` where `edu_test_member`.`test_id` = `edu_test`.`test_id`) as `student`
+from `edu_test`
+where `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+having `student` > 0
+";
+
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();
 $stmt = $database->executeQuery($sql.$pagination->limit_sql);
