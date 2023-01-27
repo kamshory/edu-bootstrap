@@ -283,3 +283,8 @@ select{
   padding: 3px 4px;
   background-color: #FFFFFF;
 }
+
+.table.two-side-table .btn{
+  padding: .25rem .75rem;
+  font-size: 0.8rem;
+}

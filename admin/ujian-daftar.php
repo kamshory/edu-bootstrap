@@ -164,7 +164,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)
 			{
-				//$database->executeTransaction('start transaction');
+				$database->executeTransaction('start transaction');
 				$sql = "DELETE FROM `edu_answer` where `test_id` = '$test_id' ";
 				$database->executeDelete($sql);
 				$sql = "DELETE FROM `edu_question` where `test_id` = '$test_id' ";
@@ -174,7 +174,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 				$dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
 				$destroyer = new DirectoryDestroyer($dir);
 				$destroyer->destroy();
-				//$database->executeTransaction("commit");
+				$database->executeTransaction("commit");
 			}
 		}
 	}
@@ -258,7 +258,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 						foreach($test_data->item as $index_question => $question)
 						{
 							// petanyaan
-							if(($selection_index[$idx] == 1 || $selection == ""  || $selection == "[]"))
+							if($selection_index[$idx] == 1 || $selection == ""  || $selection == "[]")
 							{
 								$text_pertanyaan = trim(@$question->question->text);
 								$random = trim(@$question->question->random)*1;
@@ -267,7 +267,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 								$order++;
 								$array_search = array();
 								$array_replace = array();
-								if(count(@$question->question->file))
+								if(count(@$question->question->file) > 0)
 								{
 									foreach($question->question->file as $index_file_question => $file)
 									{
@@ -924,11 +924,11 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Terbuka
-		</td><td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php if($data['open']==1) echo ' checked="checked"';?>> Terbuka</label>
+		</td><td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php echo $picoEdu->ifMatch($data['open'], true,  ' checked="checked"');?>> Terbuka</label>
 		</tr>
 		<tr>
 		<td>Dibatasi</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="has_limits" value="1" id="has_limits"<?php if($data['has_limits']==1) echo ' checked="checked"';?>> Dibatasi</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="has_limits" value="1" id="has_limits"<?php echo $picoEdu->ifMatch($data['has_limits'], true,  ' checked="checked"');?>> Dibatasi</label>
 		</td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_limits" data-condition="<?php echo $data['has_limits'];?>" data-show-condition="1" data-hide-condition="0">
@@ -943,8 +943,8 @@ $(document).ready(function(e) {
 		<td>Metode Penilaian</td>
 		<td><select class="form-control input-select" name="assessment_methods" id="assessment_methods">
 		<option value=""></option>
-		<option value="H"<?php if($data['assessment_methods'] == 'H') echo ' selected="selected"';?>>Tertinggi</option>
-		<option value="N"<?php if($data['assessment_methods'] == 'N') echo ' selected="selected"';?>>Terbaru</option>
+		<option value="H"<?php echo $picoEdu->ifMatch($data['assessment_methods'], "H",  ' selected="selected"');?>>Tertinggi</option>
+		<option value="N"<?php echo $picoEdu->ifMatch($data['assessment_methods'], "N",  ' selected="selected"');?>>Terbaru</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -959,7 +959,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Pengacakan Soal</td>
-        <td><label><input type="checkbox" class="input-checkbox" name="random" value="1" id="random"<?php if($data['random']==1) echo ' checked="checked"';?>> Soal Diacak</label></td>
+        <td><label><input type="checkbox" class="input-checkbox" name="random" value="1" id="random"<?php echo $picoEdu->ifMatch($data['random'], true,  ' checked="checked"');?>> Soal Diacak</label></td>
 		</tr>
 		<tr>
 		<td>Durasi
@@ -967,26 +967,26 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Beri Peringatan</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="has_alert" value="1" id="has_alert"<?php if($data['has_alert']==1) echo ' checked="checked"';?>> Beri Peringatan</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="has_alert" value="1" id="has_alert"<?php echo $picoEdu->ifMatch($data['has_alert'], true,  ' checked="checked"');?>> Beri Peringatan</label>
 		</td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_alert" data-condition="<?php echo $data['has_alert'];?>" data-show-condition="1" data-hide-condition="0">
 		<td>Waktu Peringatan</td>
-		<td><select name="alert_time" id="alert_time">
-        	<option value="120"<?php if($data['alert_time'] == 120) echo ' selected="selected"';?>>2 menit</option>
-        	<option value="300"<?php if($data['alert_time'] == 300) echo ' selected="selected"';?>>5 menit</option>
-        	<option value="600"<?php if($data['alert_time'] == 600) echo ' selected="selected"';?>>10 menit</option>
-        	<option value="900"<?php if($data['alert_time'] == 900) echo ' selected="selected"';?>>15 menit</option>
+		<td><select class="form-control" name="alert_time" id="alert_time">
+        	<option value="120"<?php echo $picoEdu->ifMatch($data['alert_time'], 120,  ' selected="selected"');?>>2 menit</option>
+        	<option value="300"<?php echo $picoEdu->ifMatch($data['alert_time'], 300,  ' selected="selected"');?>>5 menit</option>
+        	<option value="600"<?php echo $picoEdu->ifMatch($data['alert_time'], 600,  ' selected="selected"');?>>10 menit</option>
+        	<option value="900"<?php echo $picoEdu->ifMatch($data['alert_time'], 900,  ' selected="selected"');?>>15 menit</option>
         </select>
         </td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_alert" data-condition="<?php echo $data['has_alert'];?>" data-show-condition="1" data-hide-condition="0">
 		<td>Pesan Peringatan</td>
-		<td><textarea name="alert_message" class="form-control input-text input-text-long" id="alert_message" autocomplete="off"><?php echo ($data['alert_message']);?></textarea></td>
+		<td><textarea name="alert_message" class="form-control input-text input-text-long" id="alert_message" autocomplete="off"><?php echo $data['alert_message'];?></textarea></td>
 		</tr>
 		<tr>
 		<td>Otomtais Kirim Jawaban</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="autosubmit" value="1" id="autosubmit"<?php if($data['autosubmit']==1) echo ' checked="checked"';?>> Otomatis</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="autosubmit" value="1" id="autosubmit"<?php echo $picoEdu->ifMatch($data['autosubmit'], true,  ' checked="checked"');?>> Otomatis</label>
 		</td>
 		</tr>
 		<tr>
@@ -1014,8 +1014,8 @@ $(document).ready(function(e) {
 		<td>Ketersediaan Ujian
 		</td><td><select class="form-control input-select" name="test_availability" id="test_availability">
 		<option value=""></option>
-		<option value="F"<?php if($data['test_availability'] == 'F') echo ' selected="selected"';?>>Selamanya</option>
-		<option value="L"<?php if($data['test_availability'] == 'L') echo ' selected="selected"';?>>Terbatas</option>
+		<option value="F"<?php echo $picoEdu->ifMatch($data['test_availability'], 'F', ' selected="selected"');?>>Selamanya</option>
+		<option value="L"<?php echo $picoEdu->ifMatch($data['test_availability'], 'L', ' selected="selected"');?>>Terbatas</option>
 		</select></td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="test_availability" data-condition="<?php echo $data['test_availability'];?>" data-show-condition="L" data-hide-condition="F">
@@ -1028,7 +1028,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Aktif
-		</td><td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php if($data['active']==1) echo ' checked="checked"';?>> Aktif</label>
+		</td><td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true,  ' checked="checked"');?>> Aktif</label>
 		</td>
 		</tr>
 		<tr><td></td>
