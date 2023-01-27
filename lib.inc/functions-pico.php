@@ -699,7 +699,7 @@ $database = new PicoDatabase(
 
 $database->connect();
 
-$picoEdu = new PicoEdo($database);
+$picoEdu = new PicoEdu($database);
 
 
 ?>

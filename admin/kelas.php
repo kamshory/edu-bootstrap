@@ -1,10 +1,10 @@
 <?php
 include_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
-if (!@$school_id) {
+if(empty(@$school_id)) {
 	include_once dirname(__FILE__) . "/bukan-admin.php";
 	exit();
 }
-if (!@$real_school_id) {
+if(empty(@$real_school_id)) {
 	include_once dirname(__FILE__) . "/belum-ada-sekolah.php";
 	exit();
 }

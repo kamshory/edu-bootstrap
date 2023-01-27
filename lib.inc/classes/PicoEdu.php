@@ -854,7 +854,7 @@ class PicoEdu
 			foreach ($inputArray as $name=>$value) {
 				$name = strtolower(trim($name));
 				if (!empty($name)) {
-					$object->$name = PicoEdo::arrayToObject($value);
+					$object->$name = PicoEdu::arrayToObject($value);
 				}
 			}
 		return $object;
