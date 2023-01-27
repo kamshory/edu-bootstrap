@@ -419,7 +419,7 @@ input#duration{
 		<td>Kelas
 		</td>
         <td><input type="hidden" name="classlist" id="classlist" autocomplete="off" />
-        <input type="button" id="select-class" value="Atur Kelas" />
+        <input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
         </td>
 		</tr>
 		<tr>
@@ -868,8 +868,8 @@ $(document).ready(function(e) {
 		<tr>
 		<td>Kelas
 		</td>
-        <td><input type="hidden" name="classlist" id="classlist" value="<?php echo ($data['class']);?>" autocomplete="off" />
-        <input type="button" id="select-class" value="Atur Kelas" />
+        <td><input type="hidden" name="classlist" id="classlist" value="<?php echo $data['class'];?>" autocomplete="off" />
+        <input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
         </td>
 		</tr>
 		<tr>

@@ -319,7 +319,7 @@ $(document).ready(function(e) {
 		<tr>
 		<td>Kelas
 		</td>
-        <td><input type="hidden" name="classlist" id="classlist" value="<?php echo ($data['class']);?>" autocomplete="off" />
+        <td><input type="hidden" name="classlist" id="classlist" value="<?php echo $data['class'];?>" autocomplete="off" />
         <input type="button" id="select-class" value="Atur Kelas" />
         </td>
 		</tr>

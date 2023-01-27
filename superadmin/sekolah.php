@@ -834,7 +834,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Kelas</td>
-		<td><?php echo ($data['class']);?></td>
+		<td><?php echo $data['class'];?></td>
 		</tr>
 		<tr>
 		<td>Siswa</td>
