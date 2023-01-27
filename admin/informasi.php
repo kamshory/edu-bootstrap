@@ -100,7 +100,7 @@ if(isset($_GET['info_id']))
             <div class="article-creator">Oleh <?php echo $data['creator'];?></div>
             <div class="article-link">
             <a href="javascript:;" class="download-word">Download</a>
-            <a href="info.php">Semua</a>
+            <a href="informasi.php">Semua</a>
             </div>
         </div>
         </div>
@@ -232,7 +232,7 @@ if($pagination->total_record_with_limit)
 			<div class="article-title"><h3><?php echo $data['name'];?></h3></div>
 			<div class="article-content"><?php echo $content;?></div>
 			<div class="article-link">
-				<a href="info.php?option=detail&info_id=<?php echo $data['info_id'];?>">Baca</a>
+				<a href="informasi.php?option=detail&info_id=<?php echo $data['info_id'];?>">Baca</a>
 			</div>
 		</div>
 		<?php

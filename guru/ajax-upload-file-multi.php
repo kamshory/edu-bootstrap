@@ -1,6 +1,6 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
-if(@$school_id != 0)
+if(!empty(@$school_id))
 {
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.*, 

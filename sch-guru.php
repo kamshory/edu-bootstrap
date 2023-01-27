@@ -12,7 +12,7 @@ if(isset($_GET['school_id']))
 if(!@$student_id && !@$teacher_id)
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
-if(@$school_id != 0)
+if(!empty(@$school_id))
 {
 $sql = "select `edu_school`.*, 
 (select count(distinct `edu_teacher`.`teacher_id`) from `edu_teacher`

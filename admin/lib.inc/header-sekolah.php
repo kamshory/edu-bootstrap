@@ -69,7 +69,7 @@ var setTimeToken = '<?php echo $setTimeToken;?>';
                     <li><a href="../">Depan</a></li>
                     <li data-selected="<?php if(basename($_SERVER['PHP_SELF'])=='sekolah-profil.php') echo 'true'; else echo 'false';?>"><a href="sekolah-profil.php">Sekolah</a></li>
                     <?php
-                    if(@$school_id != 0)
+                    if(!empty(@$school_id))
                     {
                     ?>
                     <li data-selected="<?php if (basename($_SERVER['PHP_SELF']) == 'sekolah-deskripsi.php') {

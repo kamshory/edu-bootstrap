@@ -48,7 +48,7 @@
       <?php
       $phpSelf = basename($_SERVER['PHP_SELF']);
       ?>
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <nav aria-label="Main Menu" id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
         <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item"><a class="nav-link<?php echo $picoEdu->ifMatch($phpSelf, 'index.php', ' active');?>" href="./">Depan <span class="sr-only">(current)</span></a></li>

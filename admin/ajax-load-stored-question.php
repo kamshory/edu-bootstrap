@@ -1,6 +1,6 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-if(@$school_id != 0)
+if(!empty(@$school_id))
 {
 $basename = "ujian-soal.php";
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);

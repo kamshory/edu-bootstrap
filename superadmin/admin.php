@@ -591,7 +591,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
   <thead>
     <tr>
       <td width="16"><input type="checkbox" name="control-admin_id" id="control-admin_id" class="checkbox-selector" data-target=".admin_id" value="1"></td>
-      <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-edit-16" alt="Edit" border="0" /></td>
+      <td width="16"><i class="fas fa-pencil"></i></td>
       <td width="25">No</td>
       <td>Sekolah</td>
       <td>Nama</td>
@@ -612,7 +612,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	?>
     <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
       <td><input type="checkbox" name="admin_id[]" id="admin_id" value="<?php echo $data['admin_id'];?>" class="admin_id" /></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&admin_id=<?php echo $data['admin_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-edit-16" alt="Edit" border="0" /></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&admin_id=<?php echo $data['admin_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo ($data['school_name']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['name'];?></a></td>

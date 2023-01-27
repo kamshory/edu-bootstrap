@@ -59,7 +59,7 @@ var setTimeToken = '<?php echo $setTimeToken;?>';
     	    <li><a href="./">Depan</a></li>
     	    <li><a href="sekolah.php">Sekolah</a></li>
             <?php
-			if(@$school_id != 0)
+			if(!empty(@$school_id))
 			{
 			?>
 			<li><a href="kelas.php">Kelas</a></li>
@@ -76,7 +76,7 @@ var setTimeToken = '<?php echo $setTimeToken;?>';
     	<div class="menu menu-right">
     	  <ul>
             <?php
-			if(@$school_id != 0)
+			if(!empty(@$school_id))
 			{
 			?>
     	    <li><a href="../usermanual" target="_blank">Panduan</a></li>

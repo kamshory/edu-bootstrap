@@ -264,3 +264,9 @@ body {
   white-space:nowrap;
 } 
 }
+
+
+.button-area-responsive{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

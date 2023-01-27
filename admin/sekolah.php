@@ -1,5 +1,8 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+include_once('lib.inc/menu.php');
+exit();
+
 $cfg->page_title = "Sekolah";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>

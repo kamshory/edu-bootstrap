@@ -1,7 +1,7 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
-if(@$school_id != 0)
+if(!empty(@$school_id))
 {
 	$basename = "ujian-soal.php";
 	if(isset($_POST['question_text']) && isset($_POST['test_id']) && @$_POST['option']=='add')

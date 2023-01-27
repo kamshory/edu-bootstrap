@@ -460,7 +460,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
   <thead>
     <tr>
       <td width="16"><input type="checkbox" name="control-article_id" id="control-article_id" class="checkbox-selector" data-target=".article_id" value="1"></td>
-      <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-edit-16" alt="Ubah" border="0" /></td>
+      <td width="16"><i class="fas fa-pencil"></i></td>
       <td width="25">No</td>
       <td>Judul</td>
       <td width="200" nowrap="nowrap">Ditulis Oleh</td>
@@ -498,7 +498,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	  if($data['member_create'] == $teacher_id)
 	  {
 	  ?>  
-      <a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&article_id=<?php echo $data['article_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-edit-16" alt="Ubah" border="0" /></a>
+      <a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&article_id=<?php echo $data['article_id'];?>"><i class="fas fa-pencil"></i>
       <?php
 	  }
 	  else

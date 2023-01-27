@@ -1,6 +1,6 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
-if(@$school_id != 0)
+if(!empty(@$school_id))
 {
 $question_id = kh_filter_input(INPUT_GET, 'question_id', FILTER_SANITIZE_STRING_NEW);
 $number = kh_filter_input(INPUT_GET, 'number', FILTER_SANITIZE_NUMBER_UINT);

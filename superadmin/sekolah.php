@@ -286,7 +286,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Alamat</td>
-		<td><textarea class="input-textarea" name="address" id="address"></textarea></td>
+		<td><textarea class="form-control input-textarea" name="address" id="address"></textarea></td>
 		</tr>
 		<tr>
 		<td>Telepon
@@ -599,7 +599,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Alamat</td>
-		<td><textarea class="input-textarea" name="address" id="address"><?php echo $data['address'];?></textarea></td>
+		<td><textarea class="form-control input-textarea" name="address" id="address"><?php echo $data['address'];?></textarea></td>
 		</tr>
 		<tr>
 		<td>Telepon
@@ -971,7 +971,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
   <thead>
     <tr>
       <td width="16"><input type="checkbox" name="control-school_id" id="control-school_id" class="checkbox-selector" data-target=".school_id" value="1"></td>
-      <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-edit-16" alt="Edit" border="0" /></td>
+      <td width="16"><i class="fas fa-pencil"></i></td>
       <td width="25">No</td>
       <td>Nama Sekolah</td>
       <td>Jenjang</td>
@@ -995,7 +995,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	?>
     <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
       <td><input type="checkbox" name="school_id[]" id="school_id" value="<?php echo $data['school_id'];?>" class="school_id" /></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_id=<?php echo $data['school_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-edit-16" alt="Edit" border="0" /></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_id=<?php echo $data['school_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></a></td>

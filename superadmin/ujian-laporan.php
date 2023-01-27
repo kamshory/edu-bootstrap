@@ -475,7 +475,7 @@ window.onload = function()
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
     <?php
-	if(@$school_id != 0)
+	if(!empty(@$school_id))
 	{
 	?>
     <span class="search-label">Kelas</span> 

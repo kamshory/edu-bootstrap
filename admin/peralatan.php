@@ -6,6 +6,7 @@ if(!@$admin_id)
 include_once dirname(__FILE__)."/login-form.php";
 exit();
 }
+$cfg->page_title = "Peralatan";
 $dir2 = dirname(__FILE__)."/tmp";
 if(isset($_POST['clear']))
 {
@@ -51,7 +52,7 @@ echo $li;
 </ol>
 <p>Ukuran total <?php echo $totalsize;?></p>
 <form name="clean" action="" method="post">
-<input type="submit" id="clear" name="clear" value="Hapus Semua" />
+<input class="btn btn-danger" type="submit" id="clear" name="clear" value="Hapus Semua" />
 </form>
 <?php
 }

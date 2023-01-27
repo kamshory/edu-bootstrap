@@ -264,7 +264,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Alamat</td>
-		<td><textarea class="input-textarea" name="address" id="address"><?php echo $data['address'];?></textarea></td>
+		<td><textarea class="form-control input-textarea" name="address" id="address"><?php echo $data['address'];?></textarea></td>
 		</tr>
 		<tr>
 		<td>Telepon
@@ -277,7 +277,7 @@ $(document).ready(function(e) {
 		<tr>
 		<td>Bahasa
 		</td><td>
-        <select name="language" id="language" data-full-width="true">
+        <select class="form-control" name="language" id="language" data-full-width="true">
 			<option value="en">English</option>
 			<option value="id">Bahasa Indonesia</option>
         </select>
