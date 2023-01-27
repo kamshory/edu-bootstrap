@@ -371,7 +371,7 @@ if(@$_GET['option']=='add')
 		<table width="100%" border="0" cellpadding="0" cellspacing="0">
 		<tr>
 			<td width="160">Kompetensi Dasar</td>
-			<td><input type="text" class="form-control input-text input-text-short" name="basic_competence" id="basic_competence" value="" /></td>
+			<td><input type="text" class="input-text input-text-short" name="basic_competence" id="basic_competence" value="" /></td>
 		</tr>
 		<tr>
 			<td>Tipe Pilihan</td>
@@ -411,7 +411,7 @@ if(@$_GET['option']=='add')
 		{
 			?>
 			<div class="option-item" data-index="<?php echo $i-1;?>">
-			<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i-1];?></span> | Nilai <input type="number" min="0" max="<?php echo $data['standard_score'];?>" class="form-control input-text input-text-short score" name="score_<?php echo $i;?>" id="score_<?php echo $i;?>" autocomplete="off" /> (Nilai Maksimum <?php echo $data['standard_score'];?>)</div>
+			<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i-1];?></span> | Nilai <input type="number" min="0" max="<?php echo $data['standard_score'];?>" class="input-text input-text-short score" name="score_<?php echo $i;?>" id="score_<?php echo $i;?>" autocomplete="off" /> (Nilai Maksimum <?php echo $data['standard_score'];?>)</div>
 			<div class="option-editor">
 			<textarea spellcheck="false" class="htmleditor" name="option_<?php echo $i;?>" id="option_<?php echo $i;?>" style="width:100%;"></textarea>
 			</div>
@@ -511,7 +511,7 @@ else if(@$_GET['option']=='edit')
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
 			<tr>
 				<td width="160">Kompetensi Dasar</td>
-				<td><input type="text" class="form-control input-text input-text-short" name="basic_competence" id="basic_competence" value="<?php echo $data['basic_competence']; ?>" /></td>
+				<td><input type="text" class="input-text input-text-short" name="basic_competence" id="basic_competence" value="<?php echo $data['basic_competence']; ?>" /></td>
 			</tr>
 			<tr>
 				<td>Tipe Pilihan</td>
@@ -557,7 +557,7 @@ else if(@$_GET['option']=='edit')
 				foreach ($rows2 as $data2) {
 				?>
 				<div class="option-item" data-index="<?php echo $i; ?>">
-				<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i]; ?></span> | Nilai <input type="number" min="0" max="<?php echo ($data3['standard_score']); ?>" class="form-control input-text input-text-short" name="score_<?php echo $data2['option_id']; ?>" id="score_<?php echo $data2['option_id']; ?>" value="<?php echo $data2['score']; ?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']); ?>)</div>
+				<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i]; ?></span> | Nilai <input type="number" min="0" max="<?php echo ($data3['standard_score']); ?>" class="input-text input-text-short" name="score_<?php echo $data2['option_id']; ?>" id="score_<?php echo $data2['option_id']; ?>" value="<?php echo $data2['score']; ?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']); ?>)</div>
 				<div class="option-editor">
 				<textarea spellcheck="false" class="htmleditor" name="option_<?php echo $data2['option_id']; ?>" id="option_<?php echo $data2['option_id']; ?>" style="width:100%;"><?php echo htmlspecialchars(($data2['content'])); ?></textarea>
 				</div>

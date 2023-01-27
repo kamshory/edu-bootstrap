@@ -1074,7 +1074,7 @@ if(isset($data->file))
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="160">Kompetensi Dasar</td>
-    <td><input type="text" class="form-control input-text input-text-short" name="basic_competence" id="basic_competence" value="<?php echo @$data->competence;?>" /></td>
+    <td><input type="text" class="input-text input-text-short" name="basic_competence" id="basic_competence" value="<?php echo @$data->competence;?>" /></td>
   </tr>
   <tr>
     <td>Tipe Pilihan</td>
@@ -1150,7 +1150,7 @@ for($jj = 0; $jj < $count_option; $jj++)
 ?>
 <div class="option-item" data-index="<?php echo $i;?>">
 <div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i];?></span> | Nilai 
-<input type="number" min="0" max="<?php echo ($data3['standard_score']);?>" class="form-control input-text input-text-short" name="score[<?php echo $i;?>]" id="score_<?php echo $i;?>" value="<?php echo $data2->value;?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']);?>)</div>
+<input type="number" min="0" max="<?php echo ($data3['standard_score']);?>" class="input-text input-text-short" name="score[<?php echo $i;?>]" id="score_<?php echo $i;?>" value="<?php echo $data2->value;?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']);?>)</div>
 <div class="option-editor">
 <textarea spellcheck="false" class="htmleditor" name="option[<?php echo $i;?>]" id="option_<?php echo $i;?>" style="width:100%;"><?php echo htmlspecialchars(($data2->text));?></textarea>
 </div>

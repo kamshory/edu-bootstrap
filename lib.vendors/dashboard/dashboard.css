@@ -270,3 +270,16 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.input-text.input-text-short{
+  width:70px;
+  padding:3px 4px;
+}
+.input-text, .input-text:focus{
+  outline:none;
+  box-shadow: 0 0;
+}
+select{
+  padding: 3px 4px;
+  background-color: #FFFFFF;
+}
