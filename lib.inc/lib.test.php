@@ -426,7 +426,7 @@ function exportTest($database, $test_id, $base_dir = "")
 	if ($stmt->rowCount() > 0) {
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		foreach ($rows as $data) {
-			$question = export_question($data['question_id'], $base_dir);
+			$question = export_question($database, $data['question_id'], $base_dir);
 			$html .= "
 	<item>" . $question . "</item>\r\n";
 		}

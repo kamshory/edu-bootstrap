@@ -101,11 +101,11 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 		</tr>
 		<tr>
 		<td>Time Create</td>
-		<td><input type="text" class="form-control input-text input-text-datetime" name="time_create" id="time_create" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_create" id="time_create" autocomplete="off" /><span class="date-format-tip"> TTTT-BB-HH</span> JJ:MM:DD</td>
 		</tr>
 		<tr>
 		<td>Time Edit</td>
-		<td><input type="text" class="form-control input-text input-text-datetime" name="time_edit" id="time_edit" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_edit" id="time_edit" autocomplete="off" /><span class="date-format-tip"> TTTT-BB-HH</span> JJ:MM:DD</td>
 		</tr>
 		<tr>
 		<td>IP Create</td>
@@ -184,11 +184,11 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>Time Create</td>
-		<td><input type="text" class="form-control input-text input-text-datetime" name="time_create" id="time_create" value="<?php echo $data['time_create'];?>" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_create" id="time_create" value="<?php echo $data['time_create'];?>" autocomplete="off" /><span class="date-format-tip"> TTTT-BB-HH</span> JJ:MM:DD</td>
 		</tr>
 		<tr>
 		<td>Time Edit</td>
-		<td><input type="text" class="form-control input-text input-text-datetime" name="time_edit" id="time_edit" value="<?php echo $data['time_edit'];?>" autocomplete="off" /> TTTT-BB-HH JJ:MM:DD</td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_edit" id="time_edit" value="<?php echo $data['time_edit'];?>" autocomplete="off" /><span class="date-format-tip"> TTTT-BB-HH</span> JJ:MM:DD</td>
 		</tr>
 		<tr>
 		<td>IP Create</td>

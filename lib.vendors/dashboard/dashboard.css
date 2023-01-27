@@ -288,3 +288,6 @@ select{
   padding: .25rem .75rem;
   font-size: 0.8rem;
 }
+.date-format-tip{
+  display: none;
+}

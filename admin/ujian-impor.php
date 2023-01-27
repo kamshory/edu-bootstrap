@@ -280,13 +280,15 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 								$digest = md5($option);
 								$option = addslashes($option);
 
-								$order2 = $index_option + 1;
+								$order2 = ((int)$index_option) + 1;
+
+								$option_id = $database->generateNewId();
 
 								$sql2 = "INSERT INTO `edu_option` 
-								(`question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('$question_id', '$option', '$order2', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit'); 
+								(`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('$option_id', '$question_id', '$option', '$order2', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit'); 
+								;
 								";
-
 								$database->executeInsert($sql2);
 							}
 							
@@ -311,7 +313,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 				@rmdir(@$temp_dir);
 			}
 		}
-		header("Location: ujian-soal.php?test_id=$test_id");
+		//header("Location: ujian-soal.php?test_id=$test_id");
 	}
 }
 if(isset($_GET['test_id']))
@@ -394,12 +396,22 @@ $array_class = $picoEdu->getArrayClass($school_id);
     </tr>
     <tr>
       <td>File Ujian</td>
-      <td><input type="file" name="file" id="file" required="required" /> <input type="hidden" name="test_id" value="<?php echo $data['test_id'];?>" /></td>
+      <td>
+	  <div class="input-group">
+  <div class="custom-file">
+    <input type="file" name="file" class="custom-file-input" id="file" aria-describedby="inputGroupFileAddon04">
+    <label class="custom-file-label" for="file">Pilih File</label>
+  </div>
+</div>	
+	 
+	  <input type="hidden" name="test_id" value="<?php echo $data['test_id'];?>" /></td>
     </tr>
+  </table>
+  <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
     <tr>
       <td></td>
       <td><input type="submit" name="import" id="import" class="btn com-button btn-success" value="Impor Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>'" />
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
     </tr>
   </table>
 </form>
@@ -488,6 +500,11 @@ from `edu_test`
 where 1 and `edu_test`.`school_id` = '$school_id' $sql_filter
 order by `edu_test`.`test_id` desc
 ";
+$sql_test = "SELECT `edu_test`.`test_id`
+from `edu_test`
+where 1 and `edu_test`.`school_id` = '$school_id' $sql_filter
+";
+
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();
 $stmt = $database->executeQuery($sql.$pagination->limit_sql);

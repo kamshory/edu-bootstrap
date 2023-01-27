@@ -284,7 +284,7 @@ if($stmt->rowCount() > 0)
 			</tr>
 			<tr>
 			<td>Tanggal Lahir</td>
-			<td><input type="date" class="form-control input-text input-text-date" name="birth_day" id="birth_day" value="<?php echo $data['birth_day'];?>" autocomplete="off" /> TTTT-BB-HH</td>
+			<td><input type="date" class="form-control input-text input-text-date" name="birth_day" id="birth_day" value="<?php echo $data['birth_day'];?>" autocomplete="off" /><span class="date-format-tip"> TTTT-BB-HH</span></td>
 			</tr>
 			<tr>
 			<td>Email</td>

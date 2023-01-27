@@ -8,7 +8,9 @@
 <meta name="description" content="">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.101.0">
-<title><?php if(isset($cfg->page_title)) echo ltrim($cfg->page_title.' - ', ' - ');?><?php echo $cfg->app_name;?></title>
+<title><?php if (isset($cfg->page_title)) {
+  echo ltrim($cfg->page_title.' - ', ' - ');
+}?><?php echo $cfg->app_name;?></title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
@@ -17,13 +19,13 @@
 <link href="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
 
 <!-- Favicons -->
-<link rel="apple-touch-icon" href="favs/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="favs/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="favs/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="favs/manifest.json">
-<link rel="mask-icon" href="favs/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="favs/favicon.ico">
-<meta name="msapplication-config" content="favs/browserconfig.xml">
+<link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>/avs/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>/avs/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>/avs/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="<?php echo $cfg->base_assets;?>/avs/manifest.json">
+<link rel="mask-icon" href="<?php echo $cfg->base_assets;?>/avs/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>/avs/favicon.ico">
+<meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>/avs/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
 <!-- Custom styles for this template -->
@@ -32,6 +34,19 @@
 <script src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"></script>
 <script src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.bundle.min.js"></script>
 
+<script>
+  $(document).ready(function(){
+    $(document).on('change', 'input[type="checkbox"].checkbox-selector', function(e2){
+      let target = $($(this).attr('data-target'));
+      let checked = $(this)[0].checked;
+      target.each(function(e3){
+        $(this)[0].checked = checked;
+      });
+    });
+  }
+    
+  );
+</script>
 </head>
 
 <body>

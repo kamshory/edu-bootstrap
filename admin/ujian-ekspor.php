@@ -24,12 +24,12 @@ if(isset($_POST['export']) && isset($_POST['test_id']))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	  $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		$name = $data['name'];
 		$filename = strtolower(str_replace(' ', '-', $name)).'.xml';
-		header("Content-Type: text/xml");
+		header("Content-Type: application/xml");
 		header("Content-Disposition: attachment; filename=\"$filename\"");
-		echo exportTest($test_id, dirname(dirname(__FILE__))."/");
+		echo exportTest($database, $test_id, dirname(dirname(__FILE__))."/");
 	}
 	exit();	
 }
