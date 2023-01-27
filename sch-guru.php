@@ -202,7 +202,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo 'guru.php';?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo ($data['reg_number']);?></a></td>
       <td><a href="<?php echo 'guru.php';?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo ($data['reg_number_national']);?></a></td>
       <td><a href="<?php echo 'guru.php';?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><a href="<?php echo 'guru.php';?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo ($data['gender']);?></a></td>
+      <td><a href="<?php echo 'guru.php';?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo $data['gender'];?></a></td>
       </tr>
     <?php
 	}

@@ -681,7 +681,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 							'value'=>$class_id
 						),
 						'caption'=>array(
-							'delimiter'=>' &raquo; ',
+							'delimiter'=>PicoEdu::RAQUO,
 							'values'=>array(
 								'name'
 							)
@@ -842,7 +842,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 							'value'=>$class_id
 						),
 						'caption'=>array(
-							'delimiter'=>' &raquo; ',
+							'delimiter'=>PicoEdu::RAQUO,
 							'values'=>array(
 								'name'
 							)

@@ -528,8 +528,8 @@ if($stmt->rowCount() > 0)
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery-ui/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.assets/script/jquery-ui/jquery-ui.min.css">
+
+
 <link rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css">
 <form name="form1" method="post" action="" enctype="multipart/form-data">
 <div class="test-info">
@@ -753,8 +753,8 @@ else
 {
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery-ui/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.assets/script/jquery-ui/jquery-ui.min.css">
+
+
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery.ui.touch-punch.js"></script>
 <script type="text/javascript">
 
@@ -1030,7 +1030,7 @@ function buildMenu(id)
 								'value'=>$class_id
 							),
 							'caption'=>array(
-								'delimiter'=>' &raquo; ',
+								'delimiter'=>PicoEdu::RAQUO,
 								'values'=>array(
 									'name'
 								)

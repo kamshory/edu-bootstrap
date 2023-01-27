@@ -105,7 +105,7 @@ if (@$_GET['option'] == 'add') {
 			<tr>
 				<td>Jurusan</td>
 				<td>
-					<select name="school_program_id" id="school_program_id">
+					<select class="form-control" name="school_program_id" id="school_program_id">
 						<option value=""></option>
 						<?php
 						$sql2 = "SELECT `edu_school_program`.*
@@ -133,12 +133,14 @@ if (@$_GET['option'] == 'add') {
 			</tr>
 			<tr>
 				<td>Order</td>
-				<td><input type="number" class="input-text input-text-short" name="order" id="order" autocomplete="off" /></td>
+				<td><input type="number" class="form-control input-text input-text-long" name="order" id="order" autocomplete="off" /></td>
 			</tr>
 			<tr>
 				<td>Aktif</td>
 				<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"> Aktif</label></td>
 			</tr>
+		</table>
+		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 			<tr>
 				<td></td>
 				<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>'" /></td>
@@ -182,7 +184,7 @@ else if (@$_GET['option'] == 'edit')
 				<tr>
 					<td>Jurusan</td>
 					<td>
-						<select name="school_program_id" id="school_program_id">
+						<select class="form-control" name="school_program_id" id="school_program_id">
 							<option value=""></option>
 							<?php
 							$sql2 = "SELECT `edu_school_program`.*
@@ -211,12 +213,14 @@ else if (@$_GET['option'] == 'edit')
 				</tr>
 				<tr>
 					<td>Order</td>
-					<td><input type="number" class="input-text input-text-short" name="order" id="order" value="<?php echo ($data['order']); ?>" autocomplete="off" /></td>
+					<td><input type="number" class="form-control input-text input-text-long" name="order" id="order" value="<?php echo ($data['order']); ?>" autocomplete="off" /></td>
 				</tr>
 				<tr>
 					<td>Aktif</td>
 					<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active" <?php if ($data['active'] == 1) echo ' checked="checked"'; ?>> Aktif</label></td>
 				</tr>
+			</table>
+			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td></td>
 					<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>'" /></td>
@@ -284,7 +288,7 @@ if($stmt->rowCount() > 0)
 				</tr>
 				<tr>
 					<td>Admin Create</td>
-					<td><?php echo ($data['admin_create']);?></td>
+					<td><?php echo $data['admin_create'];?></td>
 				</tr>
 				<tr>
 					<td>Admin Edit</td>
@@ -307,6 +311,8 @@ if($stmt->rowCount() > 0)
 					</td>
 					<td><?php echo $data['active'] ? 'Ya' : 'Tidak';?></td>
 				</tr>
+			</table>
+			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td></td>
 					<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=edit&class_id=<?php echo $data['class_id']; ?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>'" /></td>

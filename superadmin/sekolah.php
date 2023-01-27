@@ -355,7 +355,7 @@ $(document).ready(function(e) {
 						'value'=>$data['state_id']
 					),
 					'caption'=>array(
-						'delimiter'=>' &raquo; ',
+						'delimiter'=>PicoEdu::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -384,7 +384,7 @@ $(document).ready(function(e) {
 						'value'=>$data['city_id']
 					),
 					'caption'=>array(
-						'delimiter'=>' &raquo; ',
+						'delimiter'=>PicoEdu::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -636,7 +636,7 @@ $(document).ready(function(e) {
 					'value'=>$data['country_id']
 				),
 				'caption'=>array(
-					'delimiter'=>' &raquo; ',
+					'delimiter'=>PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -664,7 +664,7 @@ $(document).ready(function(e) {
 						'value'=>$data['state_id']
 					),
 					'caption'=>array(
-						'delimiter'=>' &raquo; ',
+						'delimiter'=>PicoEdu::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -693,7 +693,7 @@ $(document).ready(function(e) {
 						'value'=>$data['city_id']
 					),
 					'caption'=>array(
-						'delimiter'=>' &raquo; ',
+						'delimiter'=>PicoEdu::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -842,7 +842,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Guru</td>
-		<td><?php echo ($data['teacher']);?></td>
+		<td><?php echo $data['teacher'];?></td>
 		</tr>
 		<tr>
 		<td>Waktu Buat</td>
@@ -1005,7 +1005,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><?php echo $data['state_id'];?></td>
       <td><?php echo $data['city_id'];?></td>
       <td><a href="siswa.php?school_id=<?php echo $data['school_id'];?>"><?php echo ($data['student']);?></a></td>
-      <td><a href="guru.php?school_id=<?php echo $data['school_id'];?>"><?php echo ($data['teacher']);?></a></td>
+      <td><a href="guru.php?school_id=<?php echo $data['school_id'];?>"><?php echo $data['teacher'];?></a></td>
       <td><?php echo ($data['active'])?'Ya':'Tidak';?></td>
      </tr>
     <?php

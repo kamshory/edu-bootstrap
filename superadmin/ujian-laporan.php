@@ -494,7 +494,7 @@ window.onload = function()
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>' &raquo; ',
+				'delimiter'=>PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -796,7 +796,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php";
               'value'=>$class_id
             ),
             'caption'=>array(
-              'delimiter'=>' &raquo; ',
+              'delimiter'=>PicoEdu::RAQUO,
               'values'=>array(
                 'name'
               )

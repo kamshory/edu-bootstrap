@@ -479,7 +479,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Aktif
-		</td><td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php if($data['active']==1) echo ' checked="checked"';?>> Aktif</label>
+		</td><td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, ' checked="checked"');?>> Aktif</label>
 		</td>
 		</tr>
 		<tr><td></td>
@@ -765,7 +765,7 @@ window.onload = function()
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>' &raquo; ',
+				'delimiter'=>PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)

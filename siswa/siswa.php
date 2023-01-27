@@ -138,7 +138,7 @@ $(document).ready(function(e) {
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>' &raquo; ',
+				'delimiter'=>PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -252,9 +252,9 @@ if($class_id == 0)
       <td align="right"><?php echo $no;?></td>
       <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['reg_number']);?></a></td>
       <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['grade_id']);?></a></td>
+      <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['grade_id'];?></a></td>
       <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['class_id']);?></a></td>
-      <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['gender']);?></a></td>
+      <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['gender'];?></a></td>
       </tr>
     <?php
 	}

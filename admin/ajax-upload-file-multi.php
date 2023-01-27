@@ -91,23 +91,20 @@ if($stmt->rowCount() > 0)
 		}
 		exit();
 	}
-	else if(isset($_FILES["images"]))
+	else if(isset($_FILES["images"]) && is_array($_FILES["images"]["error"]))
 	{
-		if(is_array($_FILES["images"]["error"]))
-		{
-			foreach($_FILES["images"]["error"] as $key => $error){
-				if($error == 0) 
+		foreach($_FILES["images"]["error"] as $key => $error){
+			if($error == 0) 
+			{
+				$name = $_FILES["images"]["name"][$key];
+				$name = trim(preg_replace("/\s+/","-",$name));
+				// if exist before, file will not be deleted
+				if(isset($_FILES['images']['tmp_name']))
 				{
-					$name = $_FILES["images"]["name"][$key];
-					$name = trim(preg_replace("/\s+/","-",$name));
-					// if exist before, file will not be deleted
-					if(isset($_FILES['images']['tmp_name']))
-					{
-						if(is_uploaded_file($_FILES['images']['tmp_name'][$key])){
-							copy($_FILES['images']['tmp_name'][$key], $test_dir."/".$name);
-						} 
-						move_uploaded_file($_FILES["images"]["tmp_name"][$key], $test_dir."/".$name);
-					}
+					if(is_uploaded_file($_FILES['images']['tmp_name'][$key])){
+						copy($_FILES['images']['tmp_name'][$key], $test_dir."/".$name);
+					} 
+					move_uploaded_file($_FILES["images"]["tmp_name"][$key], $test_dir."/".$name);
 				}
 			}
 		}

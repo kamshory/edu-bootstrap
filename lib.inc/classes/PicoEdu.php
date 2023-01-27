@@ -1,12 +1,13 @@
 <?php
 
-class PicoEdo 
+class PicoEdu 
 {
 	const SPAN_OPEN = '<span>';
 	const SPAN_CLOSE = '</span>';
 	const SPAN_TITLE = '<span title="';
 	const TRIM_EXTRA_SPACE = "/\s+/";
 	const TRIM_NON_NUMERIC = "/[^0-9]/i";
+	const RAQUO = ' &raquo; ';
 
 	public PicoDatabase $database;
 	public function __construct(PicoDatabase $database)

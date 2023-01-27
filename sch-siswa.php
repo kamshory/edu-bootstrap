@@ -129,7 +129,7 @@ and `edu_student`.`student_id` = '$edit_key'
               'value'=>$class_id
             ),
             'caption'=>array(
-              'delimiter'=>' &raquo; ',
+              'delimiter'=>PicoEdu::RAQUO,
               'values'=>array(
                 'name'
               )

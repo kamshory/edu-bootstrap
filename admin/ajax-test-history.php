@@ -124,7 +124,9 @@ if($stmt->rowCount() > 0)
       <td><?php echo $data['name_class'];?></td>
       <td><?php echo translateDate(date('j M Y H:i:s', strtotime($data['time_enter'])));?></td>
       <td><?php echo $data['ip_enter'];?></td>
-      <td><?php if($data['time_exit']) echo translateDate(date('j M Y H:i:s', strtotime($data['time_exit'])));?></td>
+      <td><?php if ($data['time_exit']) {
+		  echo translateDate(date('j M Y H:i:s', strtotime($data['time_exit'])));
+		  }?></td>
       <td><?php echo $data['ip_exit'];?></td>
       <td><?php echo $arr_status[$data['status']];?></td>
       <td><?php echo $data['member_edit'];?></td>

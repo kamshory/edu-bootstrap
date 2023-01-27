@@ -265,7 +265,7 @@ if($stmt->rowCount() > 0)
 				</tr>
 				<tr>
 					<td>Admin Create</td>
-					<td><?php echo ($data['admin_create']);?></td>
+					<td><?php echo $data['admin_create'];?></td>
 				</tr>
 				<tr>
 					<td>Admin Edit</td>

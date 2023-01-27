@@ -170,7 +170,7 @@ $(document).ready(function(e) {
 					'value'=>$data['class_id']
 				),
 				'caption'=>array(
-					'delimiter'=>' &raquo; ',
+					'delimiter'=>PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -371,7 +371,7 @@ function printToken(frm)
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>' &raquo; ',
+				'delimiter'=>PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)

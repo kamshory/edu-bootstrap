@@ -162,7 +162,7 @@ $(document).ready(function(e) {
 					'value'=>$school_id
 				),
 				'caption'=>array(
-					'delimiter'=>' &raquo; ',
+					'delimiter'=>PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -193,7 +193,7 @@ $(document).ready(function(e) {
 					'value'=>null
 				),
 				'caption'=>array(
-					'delimiter'=>' &raquo; ',
+					'delimiter'=>PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -223,7 +223,7 @@ $(document).ready(function(e) {
 					'value'=>null
 				),
 				'caption'=>array(
-					'delimiter'=>' &raquo; ',
+					'delimiter'=>PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -404,7 +404,7 @@ function printToken(frm)
 				'value'=>$test_id
 			),
 			'caption'=>array(
-				'delimiter'=>' &raquo; ',
+				'delimiter'=>PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -432,7 +432,7 @@ function printToken(frm)
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>' &raquo; ',
+				'delimiter'=>PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
