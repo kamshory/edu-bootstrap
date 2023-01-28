@@ -367,7 +367,7 @@ a.button-gradient{
 }
 .option-area .defaultSkin .mceStatusbar {
     background: #ffedf3;
-	padding:3px 4px;
+	padding:0px 4px;
 }
 .option-area .defaultSkin span, .option-area .defaultSkin a , .option-area .defaultSkin * {
 	color:#d55788;

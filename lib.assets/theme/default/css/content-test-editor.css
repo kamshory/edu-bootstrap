@@ -11,7 +11,7 @@
 	
 body.mceContentBody{
 	font-family:"Roboto", "Times New Roman", Times, serif;
-	font-size:15px;
+	font-size:0.95rem;
 	color:#222222;
 }
 body.mceContentBody p, body.mceContentBody li{

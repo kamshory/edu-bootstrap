@@ -59,10 +59,10 @@ let LatexDialog = {
 	insert : function() {
 		// Insert the contents from the input into the document
 		let ed = tinyMCEPopup.editor;
-		let equgen = document.getElementById('renderer').value;
+		let rendererSelector = document.getElementById('renderer').value;
 		let latex = document.getElementById('latex-input').value;
 		latex = latex.trim();
-		if(equgen == 'server-png')
+		if(rendererSelector == 'server-png')
 		{
 			if(latex.length > 0)
 			{
@@ -87,16 +87,27 @@ let LatexDialog = {
 					img2.setAttribute('data-latex', latex);
 					img2.setAttribute('class', 'latex-image');
 					img2.style.verticalAlign='middle';
-					let html = img2.outerHTML;
-			
-					tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
+					tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
 					tinyMCEPopup.close();
 				}
 				
 				img.src = url;
 			}
 		}
-		else if(equgen == 'browser-mathml')
+		else if(rendererSelector == 'browser-mathjax')
+		{
+			let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
+			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
+			let img2 = document.createElement('img');
+			img2.src = url;
+			img2.setAttribute('alt', latex);
+			img2.setAttribute('data-latex', latex);
+			img2.setAttribute('class', 'latex-image');
+			img2.style.verticalAlign='middle';
+			tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
+			tinyMCEPopup.close();
+		}
+		else if(rendererSelector == 'browser-mathml')
 		{
 			let data = asciimath.latexToSVG(latex, true, true);
 			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
@@ -106,11 +117,8 @@ let LatexDialog = {
 			img2.setAttribute('data-latex', latex);
 			img2.setAttribute('class', 'latex-image');
 			img2.style.verticalAlign='middle';
-			let html = img2.outerHTML;
-	
-			tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
+			tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
 			tinyMCEPopup.close();
-
 		}
 		else
 		{
@@ -118,8 +126,7 @@ let LatexDialog = {
 			let DOMURL = window.URL || window.webkitURL || window;
 			let img = new Image();
 			let svg = new Blob([data], {type: 'image/svg+xml'});
-			let url = DOMURL.createObjectURL(svg);
-			
+			let url = DOMURL.createObjectURL(svg);			
 			let canvas = document.createElement('canvas');
 			let ctx = canvas.getContext('2d');
 			img.onload = function() {
@@ -127,21 +134,16 @@ let LatexDialog = {
 				canvas.setAttribute('height', img.height);
 				ctx.drawImage(img, 0, 0);
 				DOMURL.revokeObjectURL(url);
-
-				let url = canvas.toDataURL('png');
+				let url2 = canvas.toDataURL('png');
 				let img2 = document.createElement('img');
-				img2.src = url;
+				img2.src = url2;
 				img2.setAttribute('alt', latex);
 				img2.setAttribute('data-latex', latex);
 				img2.setAttribute('class', 'latex-image');
 				img2.style.verticalAlign='middle';
-				let html = img2.outerHTML;
-		
-				tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
+				tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
 				tinyMCEPopup.close();
-
-			}
-			
+			}			
 			img.src = url;
 		}
 	}
@@ -198,13 +200,38 @@ function renderLatex(latex){
 	latex = latex.trim();
 	let ed = tinyMCEPopup.editor;
 	let urlPreview = ed.getParam('equation_preview_url') || '../../../../../../cgi-bin/equgen.cgi';
-	let equgen = document.getElementById('renderer').value;
-	if(equgen == 'server-png')
+	let rendererSelector = document.getElementById('renderer').value;
+	if(rendererSelector == 'server-png')
 	{
 		if(latex != '')
 		{
 			let img = document.createElement('img');
 			img.src = urlPreview+latex;
+			img.setAttribute('alt', latex);
+			img.setAttribute('data-latex', latex);
+			img.setAttribute('class', 'latex-image');
+			img.style.verticalAlign='middle';
+			let html = img.outerHTML;
+			document.getElementById('image-container').innerHTML = html;
+		}
+		else
+		{
+			document.getElementById('image-container').innerHTML = '';
+		}
+	}
+	else if(rendererSelector == 'browser-mathjax')
+	{
+		if(latex != '')
+		{
+			let img = document.createElement('img');
+
+			let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
+			console.log(data)
+			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
+			img.src = url;
+
+
+
 			img.setAttribute('alt', latex);
 			img.setAttribute('data-latex', latex);
 			img.setAttribute('class', 'latex-image');

@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>{#equation_dlg.title}</title>
   <script type="text/javascript" src="js/ASCIIMathML.min.js"></script>
+	<script type="text/javascript" src="../../../../../lib.vendors/mathjax/tex-svg.js"></script>
   <script type="text/javascript" src="../../tiny_mce_popup.js"></script>
   <script type="text/javascript" src="../../../jquery/jquery.min.js"></script>
   <script type="text/javascript" src="js/dialog.js"></script>
@@ -368,9 +369,10 @@
     
 	<div class="renderer-area">Renderer 
     <select id="renderer">
-      <option value="server-png">Server (all browser)</option>
-      <option value="browser-png">This browser (PNG)</option>
-      <option value="browser-mathml">Client browser (SVG)</option>
+			<option value="server-png">Server (Latex/PNG)</option>
+			<option value="browser-mathjax">Client browser (MathJax/SVG)</option>
+			<option value="browser-png">This browser (MathML/PNG)</option>
+			<option value="browser-mathml">Client browser (MathML/SVG)</option>
     </select>
     </div>
     <div class="main-editor" style="text-align:left;">
