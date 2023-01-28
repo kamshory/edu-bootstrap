@@ -101,7 +101,7 @@ $structure = array(
                 ),
                 array(
                     'caption'=>'Soal',
-                    'icon'=>'fa-message-question',
+                    'icon'=>'fa-list',
                     'link'=>'ujian-soal.php'                       
                 ),
                 array(
