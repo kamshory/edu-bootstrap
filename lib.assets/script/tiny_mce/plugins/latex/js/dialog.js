@@ -53,7 +53,7 @@ let LatexDialog = {
 		img.setAttribute('class', 'latex-image');
 		img.style.verticalAlign='middle';
 		document.getElementById('latex-input').value = latex;
-		document.getElementById('renderer').value = ed.getParam('equation_renderer_machine') || 'server-png';
+		document.getElementById('renderer').value = ed.getParam('equation_renderer_machine') || 'browser-mathjax';
 	},
 
 	insert : function() {
@@ -211,8 +211,7 @@ function renderLatex(latex){
 			img.setAttribute('data-latex', latex);
 			img.setAttribute('class', 'latex-image');
 			img.style.verticalAlign='middle';
-			let html = img.outerHTML;
-			document.getElementById('image-container').innerHTML = html;
+			document.getElementById('image-container').innerHTML = img.outerHTML;
 		}
 		else
 		{
@@ -224,20 +223,14 @@ function renderLatex(latex){
 		if(latex != '')
 		{
 			let img = document.createElement('img');
-
 			let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
-			console.log(data)
 			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
 			img.src = url;
-
-
-
 			img.setAttribute('alt', latex);
 			img.setAttribute('data-latex', latex);
 			img.setAttribute('class', 'latex-image');
 			img.style.verticalAlign='middle';
-			let html = img.outerHTML;
-			document.getElementById('image-container').innerHTML = html;
+			document.getElementById('image-container').innerHTML = img.outerHTML;
 		}
 		else
 		{
@@ -254,8 +247,7 @@ function renderLatex(latex){
 		img.setAttribute('data-latex', latex);
 		img.setAttribute('class', 'latex-image');
 		img.style.verticalAlign='middle';
-		let html = img.outerHTML;
-		document.getElementById('image-container').innerHTML = html;
+		document.getElementById('image-container').innerHTML = img.outerHTML;
 	}
 }
 function contains(arr, text)

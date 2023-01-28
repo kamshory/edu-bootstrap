@@ -1,5 +1,4 @@
 tinyMCEPopup.requireLangPack();
-
 let generatePNG = true;
 let gHTML = '';
 let gEquation = null;
@@ -23,7 +22,7 @@ let EquationDialog = {
 			$('.main-editor').append(html);
 			equation.updateAll();
 		}
-		document.getElementById('renderer').value = ed.getParam('equation_renderer_machine') || 'server-png';
+		document.getElementById('renderer').value = ed.getParam('equation_renderer_machine') || 'browser-mathjax';
 	},
 
 	insert : function() {
@@ -72,7 +71,6 @@ let EquationDialog = {
 				img2.setAttribute('data-latex', latex);
 				img2.setAttribute('class', 'latex-image');
 				img2.style.verticalAlign='middle';
-				let html = img2.outerHTML;
 				tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
 				tinyMCEPopup.close();
 	
