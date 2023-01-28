@@ -617,14 +617,20 @@ outline:none;
 
 
 
-
+#preview ol li table thead td
+{
+	font-weight: bold;
+}
 #preview ol li table{
 	border-collapse:collapse;
 	margin-top:2px;
 	margin-bottom:2px;
+	border:1px solid #000000;
 }
 #preview ol li table td{
 	padding:3px 5px;
+	border: 1px solid black;
+  	border-collapse: collapse;
 }
 #preview ol li table td table{
 	margin-top:0;

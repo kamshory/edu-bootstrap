@@ -203,9 +203,8 @@ if (@$_GET['option'] == 'detail') {
 						$pagination->str_prev,
 						$pagination->str_next
 					);
-$pagination->result = $picoEdu->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
-
-}
+					$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+					
 				?>
 					<form name="form1" method="post" action="">
 						<div class="d-flex search-pagination search-pagination-top">

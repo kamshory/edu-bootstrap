@@ -367,10 +367,10 @@ if($stmt->rowCount() > 0)
 		from `edu_class`
 		where 1 $sql_filter
 		";
-$stmt = $database->executeQuery($sql_test);
-$pagination->total_record = $stmt->rowCount();
-$stmt = $database->executeQuery($sql.$pagination->limit_sql);
-$pagination->total_record_with_limit = $stmt->rowCount();
+		$stmt = $database->executeQuery($sql_test);
+		$pagination->total_record = $stmt->rowCount();
+		$stmt = $database->executeQuery($sql.$pagination->limit_sql);
+		$pagination->total_record_with_limit = $stmt->rowCount();
 		if ($pagination->total_record_with_limit) {
 			$pagination->start = $pagination->offset + 1;
 			$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
@@ -388,7 +388,7 @@ $pagination->total_record_with_limit = $stmt->rowCount();
 				$pagination->str_prev,
 				$pagination->str_next
 			);
-$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+		$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 
 		?>
 			<form name="form1" method="post" action="">
@@ -415,7 +415,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 						<tr>
 							<td width="16"><input type="checkbox" name="control-class_id" id="control-class_id" class="checkbox-selector" data-target=".class_id" value="1"></td>
 							<td width="16"><i class="fas fa-pencil"></i></td>
-							<td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-print-16" alt="Print" border="0" /></td>
+							<td width="16"><i class="fas fa-print"></i></td>
 							<td width="25">No</td>
 							<td>Sekolah</td>
 							<td>Kode Kelas</td>
@@ -438,7 +438,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 							<tr<?php echo (@$data['active']) ? " class=\"data-active\"" : " class=\"data-inactive\""; ?>>
 								<td><input type="checkbox" name="class_id[]" id="class_id" value="<?php echo $data['class_id']; ?>" class="class_id" /></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=edit&school_id=<?php echo $data['class_id']; ?>&class_id=<?php echo $data['class_id']; ?>"><i class="fas fa-pencil"></i></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=print&school_id=<?php echo $data['school_id']; ?>&class_id=<?php echo $data['class_id']; ?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-print-16" alt="Print" border="0" /></a></td>
+								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=print&school_id=<?php echo $data['school_id']; ?>&class_id=<?php echo $data['class_id']; ?>"><i class="fas fa-print"></i></a></td>
 								<td align="right"><?php echo $no;?> </td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['school_name']; ?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['class_code']); ?></a></td>

@@ -91,7 +91,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Nilai Kelulusan
-		</td><td><?php echo ($data['threshold']);?> </td>
+		</td><td><?php echo $data['threshold'];?> </td>
 		</tr>
 		<tr>
 		<td>Metode Penilaian</td>
@@ -175,11 +175,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Tersedia Mulai</td>
-		<td><?php echo ($data['available_from']);?> </td>
+		<td><?php echo $data['available_from'];?> </td>
 		</tr>
 		<tr>
 		<td>Tersedia Hingga</td>
-		<td><?php echo ($data['available_to']);?> </td>
+		<td><?php echo $data['available_to'];?> </td>
 		</tr>
         <?php
 		}

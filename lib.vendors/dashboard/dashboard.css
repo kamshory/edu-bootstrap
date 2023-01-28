@@ -1,4 +1,3 @@
-
 body {
   font-size: .875rem;
 }
@@ -266,7 +265,7 @@ body {
 }
 
 
-.button-area-responsive{
+.button-area, .button-area-responsive{
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -282,6 +281,10 @@ body {
 select{
   padding: 3px 4px;
   background-color: #FFFFFF;
+}
+
+.form-control.input-text-title{
+  border-radius:0;
 }
 
 /*

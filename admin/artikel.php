@@ -3,13 +3,13 @@ include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/bukan-admin.php";
-exit();
+	include_once dirname(__FILE__)."/bukan-admin.php";
+	exit();
 }
 if(empty(@$real_school_id))
 {
-include_once dirname(__FILE__)."/belum-ada-sekolah.php";
-exit();
+	include_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	exit();
 }
 $school_id = @$school_id . '';
 $cfg->page_title = "Artikel";
@@ -195,12 +195,12 @@ var defaultdir = 'lib.content/media/article/';
 <textarea id="content" name="content" style="width:100%; height:300px; box-sizing:border-box;"></textarea>
 <input type="hidden" name="class" id="classlist" value="" />
 </div>
-<div class="input-block">
-<input type="submit" id="publish" name="publish" value="Publikasikan" />
-<input type="submit" id="draff" name="draff" value="Simpan Konsep" />
-<input type="button" id="select-class" value="Atur Kelas" />
-<input type="hidden" name="option" id="option" value="add" />
-<input type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<div class="input-block button-area">
+<input class="btn btn-success" type="submit" id="publish" name="publish" value="Publikasikan" />
+<input class="btn btn-success" type="submit" id="draff" name="draff" value="Simpan Konsep" />
+<input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
+<input class="btn btn-primary" type="hidden" name="option" id="option" value="add" />
+<input class="btn btn-warning" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
 </div>
 </form>
 <?php
@@ -242,13 +242,13 @@ var defaultdir = 'lib.content/media/article/';
 <textarea id="content" name="content" style="width:100%; height:300px; box-sizing:border-box;"><?php echo $data['content'];?></textarea>
 <input type="hidden" name="class" id="classlist" value="<?php echo $data['class'];?>" />
 </div>
-<div class="input-block">
-<input type="submit" id="publish" name="publish" value="Publikasikan" />
-<input type="submit" id="draff" name="draff" value="Simpan Konsep" />
-<input type="button" id="select-class" value="Atur Kelas" />
-<input type="hidden" name="option" id="option" value="edit" />
-<input type="hidden" name="article_id" id="article_id" value="<?php echo $article_id;?>" />
-<input type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<div class="input-block button-area">
+<input class="btn btn-success" type="submit" id="publish" name="publish" value="Publikasikan" />
+<input class="btn btn-success" type="submit" id="draff" name="draff" value="Simpan Konsep" />
+<input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
+<input class="btn btn-primary" type="hidden" name="option" id="option" value="edit" />
+<input class="btn btn-primary" type="hidden" name="article_id" id="article_id" value="<?php echo $article_id;?>" />
+<input class="btn btn-warning" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
 </div>
 </form>
 <?php

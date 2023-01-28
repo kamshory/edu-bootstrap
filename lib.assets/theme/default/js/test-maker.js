@@ -58,6 +58,19 @@ String.prototype.restoreBR = function() {
 String.prototype.escapeHTMLEntities = function() {
 	return escapeHtmlEntities(this);
 }
+String.prototype.restoreTableEntity = function() {
+	return this
+	.replaceAll('&lt;table&gt;', "<table>")
+	.replaceAll('&lt;/table&gt;', "</table>")
+	.replaceAll('&lt;thead&gt;', "<thead>")
+	.replaceAll('&lt;/thead&gt;', "</thead>")
+	.replaceAll('&lt;tbody&gt;', "<tbody>")
+	.replaceAll('&lt;/tbody&gt;', "</tbody>")
+	.replaceAll('&lt;tr&gt;', "<tr>")
+	.replaceAll('&lt;/tr&gt;', "</tr>")
+	.replaceAll('&lt;td&gt;', "<td>")
+	.replaceAll('&lt;/td&gt;', "</td>")
+}
 if(typeof escapeHtmlEntities == 'undefined') {
 	escapeHtmlEntities = function (text) {
 		return text.replace(/[\u00A0-\u2666<>\&]/g, function(c) {
@@ -535,9 +548,140 @@ function parseQuestion(input) //NOSONAR
 	{
 		options[i].text = options[i].text.replaceAll("\\\\:", ":");
 	}
+	question = detectTable(question);
+
+
 	return {question:question, options:options, numbering:numbering};
 	
 }
+
+function createLineObject(lineNumber, lineContent)
+{
+	let nPipe = lineContent.split('|').length - 1;
+	let x = lineContent.replace(/[^-\|]/gi, '');
+	let x2 = lineContent.replace(/\s/g,'');
+	let hasPipeAndDash = x == x2;
+	return {lineNumber: parseInt(lineNumber), content:lineContent, pipe: nPipe, pipeDash: hasPipeAndDash, startTable:false, inTable:false, endTable:false};
+}
+
+function detectTable(html)
+{
+	var html2 = html;
+	var arr = html2.split("<br />");
+	var arr2 = html2.split("<br />");
+	var lineObj = [];
+	for(let i in arr)
+	{
+		arr2[i] = arr[i].trim();
+		lineObj[i] = createLineObject(i, arr2[i]);
+	}
+	let inTable = false;
+	let tableObj = [];
+	for(let i = 1, j = 0; i<lineObj.length; i++)
+	{
+		if(lineObj[i].pipeDash && lineObj[i-1].pipe > 0)
+		{
+			inTable = true;
+			lineObj[i].inTable = true;
+			lineObj[i-1].startTable = true;
+			tableObj[j] = [];
+			tableObj[j].push(lineObj[i-1]); 
+			tableObj[j].push(lineObj[i]); 
+		}
+		if(inTable && !lineObj[i].pipeDash && lineObj[i].pipe > 0)
+		{
+			lineObj[i].inTable = true;
+			tableObj[j].push(lineObj[i]);
+		}
+		if(inTable && lineObj[i].pipe == 0)
+		{
+			inTable = false;
+			lineObj[i-1].endTable = true;
+			j++;
+		}
+	}
+
+	for(let i in arr)
+	{
+		arr[i] = arr[i] + "<br />";
+	}
+
+	for(let i in tableObj)
+	{
+		let tab = tableObj[i]
+		for(let i in tab)
+		{
+			let content = '';
+			if(tab[i].startTable)
+			{
+				content = createTableHeader(tab[i].content);
+			}
+			else if(tab[i].inTable)
+			{
+				if(tab[i].pipeDash)
+				{
+					console.log('aaaaaaaa')
+					content = '';
+				}
+				else if(tab[i].endTable)
+				{
+					content = createTableContent(tab[i].content)+'</tbody></table>';
+				}
+				else 
+				{
+					console.log(tab[i])
+					content = createTableContent(tab[i].content);
+				}
+			}
+			arr[tab[i].lineNumber] = content;
+		}
+	}
+	return arr.join('');
+}
+
+function createTableHeader(input)
+{
+	input = input.trim();
+	var arr = input.split('|');
+	console.log(arr)
+	let content = '<table><thead><tr>';
+	for(let i = 0; i < arr.length; i++)
+	{
+		if((i == 0 && arr[i] != '') || (i == arr.length -1 && arr[i] != '') || arr[i] != '')
+		{
+			// start with |
+			content += '<td>'+arr[i]+'</td>';
+		}
+	}
+	content += '</tr></thead><tbody>';
+	return content;
+}
+function createTableContent(input)
+{
+	input = input.trim();
+	var arr = input.split('|');
+	let content = '<tr>';
+	for(let i = 0; i < arr.length; i++)
+	{
+		if((i == 0 && arr[i] != '') || (i == arr.length -1 && arr[i] != '') || arr[i] != '')
+		{
+			// start with |
+			content += '<td>'+arr[i]+'</td>';
+		}
+	}
+	content += '</tr>';
+	return content;
+}
+
+function rTrim(line, sub)
+{
+	if(line.indexOf(sub) !== -1 && line.substring(line.length - sub.length) == sub)
+	{
+		return line.substring(0, line.length - sub.length)
+	}
+	return line;
+}
+
 function buldOptionHTML(question, parseImg, baseIMGURL)
 {
 	parseImg = parseImg || false;
@@ -581,9 +725,19 @@ function buildQuestionHTML(inObj, parseImg, baseIMGURL)
 			html += '\r\n<ol class="question-ol">';
 			for(i in inObj)
 			{
-				html += '\r\n\t<li>'+'<span>'+inObj[i].question.escapeHTMLEntities().restoreBR().addImage(parseImg, baseIMGURL)+'</span>'+
-				buldOptionHTML(inObj[i], parseImg, baseIMGURL)
-				+'\r\n\t</li>';
+				let questionHTML = inObj[i]
+				.question
+				.escapeHTMLEntities()
+				.restoreBR()
+				.addImage(parseImg, baseIMGURL);
+
+				questionHTML = questionHTML.restoreTableEntity();
+
+				html += '\r\n\t<li>'+'<span>'+
+				questionHTML
+					+'</span>'+
+					buldOptionHTML(inObj[i], parseImg, baseIMGURL)
+					+'\r\n\t</li>';
 			}
 			html += '\r\n</ol>';
 		}
@@ -2066,208 +2220,7 @@ function handlePasteImage(e) //NOSONAR
 		}
 	}
 }
-window.onload = function(){
-	document.getElementById('input').addEventListener('change', function(e){
-		inputChanged(e);
-		contentModified = true;
-	});
-	document.getElementById('input').addEventListener('keyup', function(e){
-		let event;
-		if(typeof document.createEvent != 'undefined')
-		{
-			event = document.createEvent('KeyboardEvent');
-			event.initEvent("change", true, true);		
-		}
-		else
-		{
-			event = new Event('change');
-		}
-		e.target.dispatchEvent(event);
-	});
-	document.getElementById('input').addEventListener('focus', function(e){
-		let event;
-		if(typeof document.createEvent != 'undefined')
-		{
-			event = document.createEvent('KeyboardEvent');
-			event.initEvent("change", true, true);		
-		}
-		else
-		{
-			event = new Event('change');
-		}
-		e.target.dispatchEvent(event);
-	});
-	document.getElementById('input').addEventListener('keydown', function(e){
-		// Ctrl + S
-		if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey))
-		{
-			e.preventDefault();
-			if(currentFileName != '')
-			{
-				saveFileData(currentFileName, e.target.value);
-				animateSaving();
-			}
-			else
-			{
-				saveFileAs();
-			}
-		}
-		// Ctrl + E	
-		if ((e.keyCode == 69 || e.keyCode == 81)&& (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey))
-		{
-			showLatexDialog();
-			e.preventDefault();
-			e.stopPropagation();
-		}
-		// Ctrl + W
-		// Prevent close window	
-		if (e.keyCode == 87 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey))
-		{
-			e.preventDefault();
-			e.stopPropagation();
-		}	
-	});
-	document.getElementById('input').addEventListener('keypress', function(e){
-		if(
-		((e.keyCode == 13 || e.keyCode == 10) && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey))
-		||
-		((e.keyCode == 13 || e.keyCode == 10) && (navigator.platform.match("Mac") ? e.metaKey : e.shiftKey))
-		)
-		{
-			insertAtCursor(e.target, "\\\\\n");
-			e.preventDefault();
-			e.stopPropagation();
-		}	
-	});
-	document.getElementById('input').addEventListener('paste', function(e){
-		handlePasteImage(e);
-		let event;
-		setTimeout(function(){
-			if(typeof document.createEvent != 'undefined')
-			{
-				event = document.createEvent('KeyboardEvent');
-				event.initEvent("change", true, true);		
-			}
-			else
-			{
-				event = new Event('change');
-			}
-			e.target.dispatchEvent(event);
-		}, 500);
-	});
-	document.getElementById('input').focus();
-	document.getElementById('file').onchange = function(){	
-		let file = this.files[0];	
-		let reader = new FileReader();
-		reader.onload = function(progressEvent)
-		{
-			let lines = this.result;
-			document.getElementById('input').value = lines;
-			document.getElementById('input').focus();
-		};
-		reader.readAsText(file);
-	};	
-	document.getElementById('audio').onchange = function(){	
-		let test_id = testID;
-		let file = this.files[0];
-		let frmdata = new FormData();
-		frmdata.append('audios[]', file);
-		$('.progressbar > div').css({'width':'0%'});
-		$('.progressbar').css({'display':'block'});
-		$.ajax({
-			url:'ajax-upload-audio-multi.php?test_id='+test_id,
-			type:"POST",
-			processData:false,
-			data:frmdata,
-			dataType:"text",
-			contentType:false,
-			success:function(responseText){
-				$('#remote-image-list').empty().append(responseText);
-				$('.progressbar').css({'display':'none'});
-			},
-			xhr: function() {  // custom xhr
-                let myXhr = $.ajaxSettings.xhr();
-                if(myXhr.upload){ // check if upload property exists
-                    myXhr.upload.addEventListener('progress', updateProgress, false); // for handling the progress of the upload
-                }
-                return myXhr;
-            }
-		});
-			
-	};	
-	document.getElementById('audio2').onchange = function(){	
-		let test_id = testID;
-		let file = this.files[0];
-		let frmdata = new FormData();
-		frmdata.append('audios[]', file);
-		$('.progressbar > div').css({'width':'0%'});
-		$('.progressbar').css({'display':'block'});
-		$.ajax({
-			url:'ajax-upload-audio-multi.php?option=compress&test_id='+test_id,
-			type:"POST",
-			processData:false,
-			data:frmdata,
-			dataType:"text",
-			contentType:false,
-			success:function(responseText){
-				$('#remote-image-list').empty().append(responseText);
-				$('.progressbar').css({'display':'none'});
-			},
-			xhr: function() {  // custom xhr
-                let myXhr = $.ajaxSettings.xhr();
-                if(myXhr.upload){ // check if upload property exists
-                    myXhr.upload.addEventListener('progress', updateProgress, false); // for handling the progress of the upload
-                }
-                return myXhr;
-            }
-		});
-			
-	};	
-	$(document).on('change', '#image', function(e){	
-		FileSelectHandler(e);
-	});
-	$(document).on('click', '#remote-image-list .img-li a, #remote-image-list .select-audio a', function(e){
-		let name = $(this).attr('data-name');
-		$('#filename').val(name);
-		e.preventDefault();
-	});
-	$(document).on('change', '#file', function(e){
-	});
-	$(document).on('click', '.compress-audio-file', function(e){
-		let filename = $(this).attr('data-name');
-		let tr = $(this).closest('tr');
-		let no = tr.find('td:first-child').text().toString().trim();
-		let test_id = testID;
-		let object = $(this);
-		
-		
-		pbDialog({
-				modal:true,
-				width:360,
-				height:190,
-				title:'Konfirmasi',
-				content:'<p>Mengompres file akan memperkecil ukuran file dan menurunkan kualitas suara. Pastikan bahwa Anda tidak mengompres file yang sama lebih dari satu kali.<br />Apakah Anda akan mengompres file '+filename+'?</p>',
-				buttons:{
-					'Ya':function(){
-						object.replaceWith('<span class="animation-pressure"><span></span></span>')
-						$.post('ajax-compress-audio-file.php', {filename:filename, no:no, test_id:test_id}, function(answer){
-							tr.replaceWith(answer);
-						});
-						closeDialog();
-					},
-					'Tidak':function(){
-						closeDialog();
-					}
-				}
-			});
-			
-	});
-	$(document).on('click', '#toolbar-info', function(e){
-		let test_id = $(this).attr('data-test-id');
-		showTestInfo(test_id);
-	});
-	contentModified = false;
-}
+
 function updateProgress(evt) {
     if (evt.lengthComputable) {
         let percentComplete = evt.loaded / evt.total;
@@ -2487,4 +2440,207 @@ function FileSelectHandler(e)
 	xhr.addEventListener("abort", abortHandler, false);
 	xhr.send(formData);
 	}
+}
+
+window.onload = function(){
+	document.getElementById('input').addEventListener('change', function(e){
+		inputChanged(e);
+		contentModified = true;
+	});
+	document.getElementById('input').addEventListener('keyup', function(e){
+		let event;
+		if(typeof document.createEvent != 'undefined')
+		{
+			event = document.createEvent('KeyboardEvent');
+			event.initEvent("change", true, true);		
+		}
+		else
+		{
+			event = new Event('change');
+		}
+		e.target.dispatchEvent(event);
+	});
+	document.getElementById('input').addEventListener('focus', function(e){
+		let event;
+		if(typeof document.createEvent != 'undefined')
+		{
+			event = document.createEvent('KeyboardEvent');
+			event.initEvent("change", true, true);		
+		}
+		else
+		{
+			event = new Event('change');
+		}
+		e.target.dispatchEvent(event);
+	});
+	document.getElementById('input').addEventListener('keydown', function(e){
+		// Ctrl + S
+		if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey))
+		{
+			e.preventDefault();
+			if(currentFileName != '')
+			{
+				saveFileData(currentFileName, e.target.value);
+				animateSaving();
+			}
+			else
+			{
+				saveFileAs();
+			}
+		}
+		// Ctrl + E	
+		if ((e.keyCode == 69 || e.keyCode == 81)&& (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey))
+		{
+			showLatexDialog();
+			e.preventDefault();
+			e.stopPropagation();
+		}
+		// Ctrl + W
+		// Prevent close window	
+		if (e.keyCode == 87 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey))
+		{
+			e.preventDefault();
+			e.stopPropagation();
+		}	
+	});
+	document.getElementById('input').addEventListener('keypress', function(e){
+		if(
+		((e.keyCode == 13 || e.keyCode == 10) && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey))
+		||
+		((e.keyCode == 13 || e.keyCode == 10) && (navigator.platform.match("Mac") ? e.metaKey : e.shiftKey))
+		)
+		{
+			insertAtCursor(e.target, "\\\\\n");
+			e.preventDefault();
+			e.stopPropagation();
+		}	
+	});
+	document.getElementById('input').addEventListener('paste', function(e){
+		handlePasteImage(e);
+		let event;
+		setTimeout(function(){
+			if(typeof document.createEvent != 'undefined')
+			{
+				event = document.createEvent('KeyboardEvent');
+				event.initEvent("change", true, true);		
+			}
+			else
+			{
+				event = new Event('change');
+			}
+			e.target.dispatchEvent(event);
+		}, 500);
+	});
+	document.getElementById('input').focus();
+	document.getElementById('file').onchange = function(){	
+		let file = this.files[0];	
+		let reader = new FileReader();
+		reader.onload = function(progressEvent)
+		{
+			let lines = this.result;
+			document.getElementById('input').value = lines;
+			document.getElementById('input').focus();
+		};
+		reader.readAsText(file);
+	};	
+	document.getElementById('audio').onchange = function(){	
+		let test_id = testID;
+		let file = this.files[0];
+		let frmdata = new FormData();
+		frmdata.append('audios[]', file);
+		$('.progressbar > div').css({'width':'0%'});
+		$('.progressbar').css({'display':'block'});
+		$.ajax({
+			url:'ajax-upload-audio-multi.php?test_id='+test_id,
+			type:"POST",
+			processData:false,
+			data:frmdata,
+			dataType:"text",
+			contentType:false,
+			success:function(responseText){
+				$('#remote-image-list').empty().append(responseText);
+				$('.progressbar').css({'display':'none'});
+			},
+			xhr: function() {  // custom xhr
+                let myXhr = $.ajaxSettings.xhr();
+                if(myXhr.upload){ // check if upload property exists
+                    myXhr.upload.addEventListener('progress', updateProgress, false); // for handling the progress of the upload
+                }
+                return myXhr;
+            }
+		});
+			
+	};	
+	document.getElementById('audio2').onchange = function(){	
+		let test_id = testID;
+		let file = this.files[0];
+		let frmdata = new FormData();
+		frmdata.append('audios[]', file);
+		$('.progressbar > div').css({'width':'0%'});
+		$('.progressbar').css({'display':'block'});
+		$.ajax({
+			url:'ajax-upload-audio-multi.php?option=compress&test_id='+test_id,
+			type:"POST",
+			processData:false,
+			data:frmdata,
+			dataType:"text",
+			contentType:false,
+			success:function(responseText){
+				$('#remote-image-list').empty().append(responseText);
+				$('.progressbar').css({'display':'none'});
+			},
+			xhr: function() {  // custom xhr
+                let myXhr = $.ajaxSettings.xhr();
+                if(myXhr.upload){ // check if upload property exists
+                    myXhr.upload.addEventListener('progress', updateProgress, false); // for handling the progress of the upload
+                }
+                return myXhr;
+            }
+		});
+			
+	};	
+	$(document).on('change', '#image', function(e){	
+		FileSelectHandler(e);
+	});
+	$(document).on('click', '#remote-image-list .img-li a, #remote-image-list .select-audio a', function(e){
+		let name = $(this).attr('data-name');
+		$('#filename').val(name);
+		e.preventDefault();
+	});
+	$(document).on('change', '#file', function(e){
+	});
+	$(document).on('click', '.compress-audio-file', function(e){
+		let filename = $(this).attr('data-name');
+		let tr = $(this).closest('tr');
+		let no = tr.find('td:first-child').text().toString().trim();
+		let test_id = testID;
+		let object = $(this);
+		
+		
+		pbDialog({
+				modal:true,
+				width:360,
+				height:190,
+				title:'Konfirmasi',
+				content:'<p>Mengompres file akan memperkecil ukuran file dan menurunkan kualitas suara. Pastikan bahwa Anda tidak mengompres file yang sama lebih dari satu kali.<br />Apakah Anda akan mengompres file '+filename+'?</p>',
+				buttons:{
+					'Ya':function(){
+						object.replaceWith('<span class="animation-pressure"><span></span></span>')
+						$.post('ajax-compress-audio-file.php', {filename:filename, no:no, test_id:test_id}, function(answer){
+							tr.replaceWith(answer);
+						});
+						closeDialog();
+					},
+					'Tidak':function(){
+						closeDialog();
+					}
+				}
+			});
+			
+	});
+	$(document).on('click', '#toolbar-info', function(e){
+		let test_id = $(this).attr('data-test-id');
+		showTestInfo(test_id);
+	});
+	contentModified = false;
 }

@@ -160,6 +160,10 @@ from `edu_test`
 where 1  $sql_filter
 order by `edu_test`.`test_id` desc
 ";
+$sql_test = "SELECT `edu_test`.`test_id`
+from `edu_test`
+where 1  $sql_filter
+";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();
 $stmt = $database->executeQuery($sql.$pagination->limit_sql);
@@ -209,7 +213,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
-      <td width="16"><i class="fas fa-pencil"></i></td>
+      <td width="16"><i class="fas fa-file-export"></i></td>
       <td width="25">No</td>
       <td>Sekolah</td>
       <td>Nama Ujian</td>
@@ -227,9 +231,9 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	$no++;
 	?>
     <tr<?php $rowclass=""; if(@$data['default']==1) $rowclass.=" data-default"; if(isset($data['active'])){if(@$data['active']==1) $rowclass.=" data-active"; if(@$data['active']==0) $rowclass.=" data-inactive";} $rowclass = trim($rowclass); if(strlen($rowclass)){echo " class=\"$rowclass\"";}?>>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-pencil"></i></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-file-export"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo ($data['school']);?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['school'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['subject'];?></a></td>
       <td><a href="data-soal-ujian.php?test_id=<?php echo $data['test_id'];?>"><?php echo $data['number_of_question'];?></a></td>

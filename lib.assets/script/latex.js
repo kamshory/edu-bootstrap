@@ -110,13 +110,24 @@ function decodeLatexFromURI(data)
 	}
 	return data;
 }
+function contains(arr, text)
+{
+	for(let i in arr)
+	{
+		if(arr[i].toLowerCase() == text.toLowerCase())
+		{
+			return true;
+		}
+	}
+	return false;
+}
 
 function handlePasteImage(e) 
 {
-let data = '';
-if (e && e.clipboardData && e.clipboardData.getData) 
+	let data = '';
+	if (e && e.clipboardData && e.clipboardData.getData) 
 	{
-		if(/text\/html/.test(e.clipboardData.types))
+		if(contains(e.clipboardData.types, 'text/html') || contains(e.clipboardData.types, 'text/rtf'))
 		{
 			data = e.clipboardData.getData('text/plain');
 			try{
@@ -126,6 +137,7 @@ if (e && e.clipboardData && e.clipboardData.getData)
 				data = asciimath.reconstructVector(data);
 				e.clipboardData.setData('text/html', data);
 				document.getElementById('latex-input').value = data;
+				renderLatex(data);
 			}
 			catch(e){
 				data = asciimath.reconstructSqrtWord(data);
@@ -156,9 +168,6 @@ if (e && e.clipboardData && e.clipboardData.getData)
 			renderLatex(data);
 		}
 	}
-	else 
-	{
-	}
 }
 let generatePNG = true;
 function insertEquation(includeLatex)
@@ -175,7 +184,6 @@ function insertEquation(includeLatex)
 			latex = asciimath.reconstructMatrix(latex);
 			latex = asciimath.reconstructVector(latex);
 			let urlGenerator = window.parent.equationURLGenerator || '../cgi-bin/equgen.cgi';
-			let urlPreview = window.parent.equationURLPreview || '../cgi-bin/equgen.cgi';
 			let url = urlGenerator+'?'+latex;
 			let img = new Image();
 			let canvas = document.createElement('canvas');

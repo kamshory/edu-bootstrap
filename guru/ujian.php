@@ -843,7 +843,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Nilai Kelulusan
-		</td><td><input type="number" step="any" class="form-control input-text input-text-medium" name="threshold" id="threshold" value="<?php echo ($data['threshold']);?>" autocomplete="off" /></td>
+		</td><td><input type="number" step="any" class="form-control input-text input-text-medium" name="threshold" id="threshold" value="<?php echo $data['threshold'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Metode Penilaian</td>
@@ -879,10 +879,10 @@ $(document).ready(function(e) {
 		<tr class="toggle-tr" data-toggle="has_alert" data-condition="<?php echo $data['has_alert'];?>" data-show-condition="1" data-hide-condition="0">
 		<td>Waktu Peringatan</td>
 		<td><select class="form-control" name="alert_time" id="alert_time">
-        	<option value="120"<?php if($data['alert_time'] == 120) echo ' selected="selected"';?>>2 menit</option>
-        	<option value="300"<?php if($data['alert_time'] == 300) echo ' selected="selected"';?>>5 menit</option>
-        	<option value="600"<?php if($data['alert_time'] == 600) echo ' selected="selected"';?>>10 menit</option>
-        	<option value="900"<?php if($data['alert_time'] == 900) echo ' selected="selected"';?>>15 menit</option>
+        	<option value="120"<?php echo $picoEdu->ifMatch($data['alert_time'], 120,  ' selected="selected"');?>>2 menit</option>
+        	<option value="300"<?php echo $picoEdu->ifMatch($data['alert_time'], 300,  ' selected="selected"');?>>5 menit</option>
+        	<option value="600"<?php echo $picoEdu->ifMatch($data['alert_time'], 600,  ' selected="selected"');?>>10 menit</option>
+        	<option value="900"<?php echo $picoEdu->ifMatch($data['alert_time'], 900,  ' selected="selected"');?>>15 menit</option>
         </select>
         </td>
 		</tr>
@@ -926,11 +926,11 @@ $(document).ready(function(e) {
 		</tr>
 		<tr class="toggle-tr" data-toggle="test_availability" data-condition="<?php echo $data['test_availability'];?>" data-show-condition="L" data-hide-condition="F">
 		<td>Tersedia Mulai</td>
-		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="available_from" id="available_from" value="<?php echo ($data['available_from']);?>" autocomplete="off" /> </td>
+		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="available_from" id="available_from" value="<?php echo $data['available_from'];?>" autocomplete="off" /> </td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="test_availability" data-condition="<?php echo $data['test_availability'];?>" data-show-condition="L" data-hide-condition="F">
 		<td>Tersedia Hingga</td>
-		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="available_to" id="available_to" value="<?php echo ($data['available_to']);?>" autocomplete="off" /> </td>
+		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="available_to" id="available_to" value="<?php echo $data['available_to'];?>" autocomplete="off" /> </td>
 		</tr>
 		<tr>
 		<td>Aktif
@@ -1019,7 +1019,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Nilai Kelulusan
-		</td><td><?php echo ($data['threshold']);?> </td>
+		</td><td><?php echo $data['threshold'];?> </td>
 		</tr>
 		<tr>
 		<td>Metode Penilaian</td>
@@ -1103,11 +1103,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Tersedia Mulai</td>
-		<td><?php echo ($data['available_from']);?> </td>
+		<td><?php echo $data['available_from'];?> </td>
 		</tr>
 		<tr>
 		<td>Tersedia Hingga</td>
-		<td><?php echo ($data['available_to']);?> </td>
+		<td><?php echo $data['available_to'];?> </td>
 		</tr>
         <?php
 		}

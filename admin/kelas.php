@@ -407,7 +407,7 @@ if($stmt->rowCount() > 0)
 						<tr>
 							<td width="16"><input type="checkbox" name="control-class_id" id="control-class_id" class="checkbox-selector" data-target=".class_id" value="1"></td>
 							<td width="16"><i class="fas fa-pencil"></i></td>
-							<td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-print-16" alt="Print" border="0" /></td>
+							<td width="16"><i class="fas fa-print"></i></td>
 							<td width="25">No</td>
 							<td>Kode Kelas</td>
 							<td>Nama Kelas</td>
@@ -429,7 +429,7 @@ if($stmt->rowCount() > 0)
 							<tr<?php echo (@$data['active']) ? " class=\"data-active\"" : " class=\"data-inactive\""; ?>>
 								<td><input type="checkbox" name="class_id[]" id="class_id" value="<?php echo $data['class_id']; ?>" class="class_id" /></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=edit&class_id=<?php echo $data['class_id']; ?>"><i class="fas fa-pencil"></i></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=print&class_id=<?php echo $data['class_id']; ?>" target="_blank"><img src="lib.tools/images/trans.gif" class="icon-16 icon-print-16" alt="Print" border="0" /></a></td>
+								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=print&class_id=<?php echo $data['class_id']; ?>" target="_blank"><i class="fas fa-print"></i></a></td>
 								<td align="right"><?php echo $no;?> </td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['class_code']); ?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['name']; ?></a></td>

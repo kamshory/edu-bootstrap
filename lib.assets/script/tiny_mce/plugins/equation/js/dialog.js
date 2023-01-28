@@ -1,21 +1,20 @@
 tinyMCEPopup.requireLangPack();
 
-var generatePNG = true;
-var gHTML = '';
-var gEquation = null;
-var EquationDialog = {
+let generatePNG = true;
+let gHTML = '';
+let gEquation = null;
+let EquationDialog = {
 	init : function() {
-		var f = document.forms[0];
-		var ed = tinyMCEPopup.editor, 
+		let ed = tinyMCEPopup.editor, 
 			dom = ed.dom, 
 			n = ed.selection.getNode();
-		var data = decodeURIComponent(dom.getAttrib(n, 'data-equation'));
+		let data = decodeURIComponent(dom.getAttrib(n, 'data-equation'));
 		if(data != '')
 		{
-			var obj = JSON.parse(data);
-			var jsonObj = obj.json;
-			var equation = eqEd.Equation.constructFromJsonObj(jsonObj);
-			var html = equation.domObj.value;
+			let obj = JSON.parse(data);
+			let jsonObj = obj.json;
+			let equation = eqEd.Equation.constructFromJsonObj(jsonObj);
+			let html = equation.domObj.value;
 			gHTML = html;
 			gEquation = equation;
 			setTimeout(function(){
@@ -29,16 +28,15 @@ var EquationDialog = {
 
 	insert : function() {
 		// Insert the contents from the input into the document
-		var ed = tinyMCEPopup.editor;
-		var latexURL = ed.getParam('equation_preview_url'); 
-		var jsonObj = $('.eqEdEquation').data('eqObject').buildJsonObj();
-		var latexData = generateLatex(jsonObj.operands.topLevelContainer);
-		var latex = latexData.toString();
-		var jsonData = {latex:latexData, json:jsonObj}
-		var data = asciimath.latexToSVG(latex, true, true);
+		let ed = tinyMCEPopup.editor;
+		let jsonObj = $('.eqEdEquation').data('eqObject').buildJsonObj();
+		let latexData = generateLatex(jsonObj.operands.topLevelContainer);
+		let latex = latexData.toString();
+		let jsonData = {latex:latexData, json:jsonObj}
+		let data = asciimath.latexToSVG(latex, true, true);
 		if(generatePNG)
 		{
-			var equgen = document.getElementById('renderer').value;
+			let equgen = document.getElementById('renderer').value;
 			latex = latex.trim();
 			latex = asciimath.reconstructSqrtWord(latex);
 			latex = asciimath.filterData(latex);
@@ -48,19 +46,18 @@ var EquationDialog = {
 				if(latex.length > 0)
 				{
 	
-					var urlGenerator = ed.getParam('equation_generator_url') || '../../../../../../cgi-bin/equgen.cgi';
-					var urlPreview = ed.getParam('equation_preview_url') || '../../../cgi-bin/equgen.cgi';
-					var url = urlGenerator+''+latex;
+					let urlGenerator = ed.getParam('equation_generator_url') || '../../../../../../cgi-bin/equgen.cgi';
+					let url = urlGenerator+''+latex;
 		
-					var img = new Image();
-					var canvas = document.createElement('canvas');
-					var ctx = canvas.getContext('2d');
+					let img = new Image();
+					let canvas = document.createElement('canvas');
+					let ctx = canvas.getContext('2d');
 					img.onload = function() {
 						canvas.setAttribute('width', img.width);
 						canvas.setAttribute('height', img.height);
 						ctx.drawImage(img, 0, 0);
-						var url = canvas.toDataURL('png');
-						var html = '<img class="equation-image" style="vertical-align:middle" src="'+url+'" alt="'+latex+'" data-equation="'+encodeURIComponent(JSON.stringify(jsonData))+'">';
+						let url = canvas.toDataURL('png');
+						let html = '<img class="equation-image" style="vertical-align:middle" src="'+url+'" alt="'+latex+'" data-equation="'+encodeURIComponent(JSON.stringify(jsonData))+'">';
 						tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
 						tinyMCEPopup.close();
 					}
@@ -70,8 +67,8 @@ var EquationDialog = {
 			}
 			else if(equgen == 'browser-mathml')
 			{
-				var url = 'data:image/svg+xml;base64,'+Base64.encode(data);
-				var html = '<img class="equation-image" style="vertical-align:middle" src="'+url+'" alt="'+latex+'" data-equation="'+encodeURIComponent(JSON.stringify(jsonData))+'">';
+				let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
+				let html = '<img class="equation-image" style="vertical-align:middle" src="'+url+'" alt="'+latex+'" data-equation="'+encodeURIComponent(JSON.stringify(jsonData))+'">';
 				tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
 				tinyMCEPopup.close();
 
@@ -79,13 +76,13 @@ var EquationDialog = {
 			else
 			{
 	
-				var DOMURL = window.URL || window.webkitURL || window;			
-				var img = new Image();
-				var svg = new Blob([data], {type: 'image/svg+xml'});
-				var url = DOMURL.createObjectURL(svg);
+				let DOMURL = window.URL || window.webkitURL || window;			
+				let img = new Image();
+				let svg = new Blob([data], {type: 'image/svg+xml'});
+				let url = DOMURL.createObjectURL(svg);
 				
-				var canvas = document.createElement('canvas');
-				var ctx = canvas.getContext('2d');
+				let canvas = document.createElement('canvas');
+				let ctx = canvas.getContext('2d');
 				
 				img.onload = function() {
 					
@@ -93,9 +90,9 @@ var EquationDialog = {
 					canvas.setAttribute('height', img.height);
 					ctx.drawImage(img, 0, 0);
 					DOMURL.revokeObjectURL(url);
-					var url = canvas.toDataURL('png');
+					let url = canvas.toDataURL('png');
 
-					var html = '<img class="equation-image" style="vertical-align:middle" src="'+url+'" alt="'+latex+'" data-equation="'+encodeURIComponent(JSON.stringify(jsonData))+'">';
+					let html = '<img class="equation-image" style="vertical-align:middle" src="'+url+'" alt="'+latex+'" data-equation="'+encodeURIComponent(JSON.stringify(jsonData))+'">';
 					tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
 					tinyMCEPopup.close();
 				}
@@ -106,9 +103,9 @@ var EquationDialog = {
 		else
 		{
 		
-			var url = 'data:image/svg+xml;base64,'+Base64.encode(data);
+			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
 			
-			var html = '<img class="equation-image" style="vertical-align:middle" src="'+url+'" alt="'+latex+'" data-equation="'+encodeURIComponent(JSON.stringify(data))+'">';
+			let html = '<img class="equation-image" style="vertical-align:middle" src="'+url+'" alt="'+latex+'" data-equation="'+encodeURIComponent(JSON.stringify(data))+'">';
 			tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
 			tinyMCEPopup.close();
 		}

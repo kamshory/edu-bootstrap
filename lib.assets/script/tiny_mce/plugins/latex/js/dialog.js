@@ -1,13 +1,12 @@
 tinyMCEPopup.requireLangPack();
 
-var generatePNG = true;
-var LatexDialog = {
+let generatePNG = true;
+let LatexDialog = {
 	init : function() {
-		var f = document.forms[0];
-		var ed = tinyMCEPopup.editor, 
+		let ed = tinyMCEPopup.editor, 
 			dom = ed.dom, 
 			n = ed.selection.getNode();
-		var latex = decodeURIComponent(dom.getAttrib(n, 'data-latex')) || '';
+		let latex = decodeURIComponent(dom.getAttrib(n, 'data-latex')) || '';
 		if(latex == '')
 		{
 			latex = decodeURIComponent(dom.getAttrib(n, 'alt')) || '';
@@ -15,7 +14,7 @@ var LatexDialog = {
 		latex = latex.trim();
 		if(latex == '')
 		{
-			var obj1, obj2, obj3;
+			let obj1, obj2, obj3;
 			latex = ed.selection.getContent();
 			if(latex.indexOf('<sup') > -1 || latex.indexOf('<sub') > -1)
 			{
@@ -45,24 +44,23 @@ var LatexDialog = {
 		latex = asciimath.filterData(latex);
 		latex = asciimath.reconstructMatrix(latex);
 		latex = asciimath.reconstructVector(latex);
-		var svg = asciimath.latexToSVG(latex);
-		var url = 'data:image/svg+xml;base64,'+Base64.encode(svg);
-		var img = document.createElement('img');
+		let svg = asciimath.latexToSVG(latex);
+		let url = 'data:image/svg+xml;base64,'+Base64.encode(svg);
+		let img = document.createElement('img');
 		img.src = url;
 		img.setAttribute('alt', latex);
 		img.setAttribute('data-latex', latex);
 		img.setAttribute('class', 'latex-image');
 		img.style.verticalAlign='middle';
-		var html = img.outerHTML;
 		document.getElementById('latex-input').value = latex;
 		document.getElementById('renderer').value = ed.getParam('equation_renderer_machine') || 'server-png';
 	},
 
 	insert : function() {
 		// Insert the contents from the input into the document
-		var ed = tinyMCEPopup.editor;
-		var equgen = document.getElementById('renderer').value;
-		var latex = document.getElementById('latex-input').value;
+		let ed = tinyMCEPopup.editor;
+		let equgen = document.getElementById('renderer').value;
+		let latex = document.getElementById('latex-input').value;
 		latex = latex.trim();
 		if(equgen == 'server-png')
 		{
@@ -71,27 +69,25 @@ var LatexDialog = {
 				latex = asciimath.reconstructSqrtWord(latex);
 				latex = asciimath.filterData(latex);
 				latex = asciimath.reconstructMatrix(latex);
-				data = asciimath.reconstructVector(data);
 
-				var urlGenerator = ed.getParam('equation_generator_url') || '../../../../../../cgi-bin/equgen.cgi';
-				var urlPreview = ed.getParam('equation_preview_url') || '../../../cgi-bin/equgen.cgi';
-				var url = urlGenerator+''+latex;
+				let urlGenerator = ed.getParam('equation_generator_url') || '../../../../../../cgi-bin/equgen.cgi';
+				let url = urlGenerator+''+latex;
 	
-				var img = new Image();
-				var canvas = document.createElement('canvas');
-				var ctx = canvas.getContext('2d');
+				let img = new Image();
+				let canvas = document.createElement('canvas');
+				let ctx = canvas.getContext('2d');
 				img.onload = function() {
 					canvas.setAttribute('width', img.width);
 					canvas.setAttribute('height', img.height);
 					ctx.drawImage(img, 0, 0);
-					var dataURL = canvas.toDataURL('png');
-					var img2 = document.createElement('img');
+					let dataURL = canvas.toDataURL('png');
+					let img2 = document.createElement('img');
 					img2.src = dataURL;
 					img2.setAttribute('alt', latex);
 					img2.setAttribute('data-latex', latex);
 					img2.setAttribute('class', 'latex-image');
 					img2.style.verticalAlign='middle';
-					var html = img2.outerHTML;
+					let html = img2.outerHTML;
 			
 					tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
 					tinyMCEPopup.close();
@@ -102,15 +98,15 @@ var LatexDialog = {
 		}
 		else if(equgen == 'browser-mathml')
 		{
-			var data = asciimath.latexToSVG(latex, true, true);
-			var url = 'data:image/svg+xml;base64,'+Base64.encode(data);
-			var img2 = document.createElement('img');
+			let data = asciimath.latexToSVG(latex, true, true);
+			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
+			let img2 = document.createElement('img');
 			img2.src = url;
 			img2.setAttribute('alt', latex);
 			img2.setAttribute('data-latex', latex);
 			img2.setAttribute('class', 'latex-image');
 			img2.style.verticalAlign='middle';
-			var html = img2.outerHTML;
+			let html = img2.outerHTML;
 	
 			tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
 			tinyMCEPopup.close();
@@ -118,28 +114,28 @@ var LatexDialog = {
 		}
 		else
 		{
-			var data = asciimath.latexToSVG(latex, true, true);
-			var DOMURL = window.URL || window.webkitURL || window;
-			var img = new Image();
-			var svg = new Blob([data], {type: 'image/svg+xml'});
-			var url = DOMURL.createObjectURL(svg);
+			let data = asciimath.latexToSVG(latex, true, true);
+			let DOMURL = window.URL || window.webkitURL || window;
+			let img = new Image();
+			let svg = new Blob([data], {type: 'image/svg+xml'});
+			let url = DOMURL.createObjectURL(svg);
 			
-			var canvas = document.createElement('canvas');
-			var ctx = canvas.getContext('2d');
+			let canvas = document.createElement('canvas');
+			let ctx = canvas.getContext('2d');
 			img.onload = function() {
 				canvas.setAttribute('width', img.width);
 				canvas.setAttribute('height', img.height);
 				ctx.drawImage(img, 0, 0);
 				DOMURL.revokeObjectURL(url);
 
-				var url = canvas.toDataURL('png');
-				var img2 = document.createElement('img');
+				let url = canvas.toDataURL('png');
+				let img2 = document.createElement('img');
 				img2.src = url;
 				img2.setAttribute('alt', latex);
 				img2.setAttribute('data-latex', latex);
 				img2.setAttribute('class', 'latex-image');
 				img2.style.verticalAlign='middle';
-				var html = img2.outerHTML;
+				let html = img2.outerHTML;
 		
 				tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
 				tinyMCEPopup.close();
@@ -155,35 +151,35 @@ tinyMCEPopup.onInit.add(LatexDialog.init, LatexDialog);
 window.onload = function(e)
 {
 	document.getElementById('latex-input').addEventListener('change', function(e){
-		var data = e.target.value;
+		let data = e.target.value;
 		data = asciimath.filterData(data);
 		data = asciimath.reconstructMatrix(data);
 		data = asciimath.reconstructVector(data);
 		renderLatex(data);
 	});
 	document.getElementById('latex-input').addEventListener('keyup', function(e){
-		var data = e.target.value;
+		let data = e.target.value;
 		data = asciimath.filterData(data);
 		data = asciimath.reconstructMatrix(data);
 		data = asciimath.reconstructVector(data);
 		renderLatex(data);
 	});
 	document.getElementById('latex-input').addEventListener('blur', function(e){
-		var data = e.target.value;
+		let data = e.target.value;
 		data = asciimath.filterData(data);
 		data = asciimath.reconstructMatrix(data);
 		data = asciimath.reconstructVector(data);
 		renderLatex(data);
 	});
 	document.getElementById('latex-input').addEventListener('focus', function(e){
-		var data = e.target.value;
+		let data = e.target.value;
 		data = asciimath.filterData(data);
 		data = asciimath.reconstructMatrix(data);
 		data = asciimath.reconstructVector(data);
 		renderLatex(data);
 	});
 	document.getElementById('renderer').addEventListener('change', function(e){
-		var data = document.getElementById('latex-input').value;
+		let data = document.getElementById('latex-input').value;
 		data = asciimath.filterData(data);
 		data = asciimath.reconstructMatrix(data);
 		data = asciimath.reconstructVector(data);
@@ -191,8 +187,8 @@ window.onload = function(e)
 	});
 	document.getElementById('latex-input').addEventListener('paste', handlePasteImage);
 	document.getElementById('latex-input').focus();
-	var latex = document.getElementById('latex-input').value;
-	var data = latex;
+	let latex = document.getElementById('latex-input').value;
+	let data = latex;
 	data = asciimath.filterData(data);
 	data = asciimath.reconstructMatrix(data);
 	data = asciimath.reconstructVector(data);
@@ -200,20 +196,20 @@ window.onload = function(e)
 }
 function renderLatex(latex){
 	latex = latex.trim();
-	var ed = tinyMCEPopup.editor;
-	var urlPreview = ed.getParam('equation_preview_url') || '../../../../../../cgi-bin/equgen.cgi';
-	var equgen = document.getElementById('renderer').value;
+	let ed = tinyMCEPopup.editor;
+	let urlPreview = ed.getParam('equation_preview_url') || '../../../../../../cgi-bin/equgen.cgi';
+	let equgen = document.getElementById('renderer').value;
 	if(equgen == 'server-png')
 	{
 		if(latex != '')
 		{
-			var img = document.createElement('img');
+			let img = document.createElement('img');
 			img.src = urlPreview+latex;
 			img.setAttribute('alt', latex);
 			img.setAttribute('data-latex', latex);
 			img.setAttribute('class', 'latex-image');
 			img.style.verticalAlign='middle';
-			var html = img.outerHTML;
+			let html = img.outerHTML;
 			document.getElementById('image-container').innerHTML = html;
 		}
 		else
@@ -223,31 +219,45 @@ function renderLatex(latex){
 	}
 	else
 	{
-		var svg = asciimath.latexToSVG(latex);
-		var url = 'data:image/svg+xml;base64,'+Base64.encode(svg);
-		var img = document.createElement('img');
+		let svg = asciimath.latexToSVG(latex);
+		let url = 'data:image/svg+xml;base64,'+Base64.encode(svg);
+		let img = document.createElement('img');
 		img.src = url;
 		img.setAttribute('alt', latex);
 		img.setAttribute('data-latex', latex);
 		img.setAttribute('class', 'latex-image');
 		img.style.verticalAlign='middle';
-		var html = img.outerHTML;
+		let html = img.outerHTML;
 		document.getElementById('image-container').innerHTML = html;
 	}
+}
+function contains(arr, text)
+{
+	for(let i in arr)
+	{
+		if(arr[i].toLowerCase() == text.toLowerCase())
+		{
+			return true;
+		}
+	}
+	return false;
 }
 function handlePasteImage(e) 
 {
 	if (e && e.clipboardData && e.clipboardData.getData) 
 	{
-		if(/text\/html/.test(e.clipboardData.types))
+		let data;
+		if(contains(e.clipboardData.types, 'text/html') || contains(e.clipboardData.types, 'text/rtf'))
 		{
-			var data = e.clipboardData.getData('text/plain');
+			let data = e.clipboardData.getData('text/plain');
 			try{
 				data = asciimath.reconstructSqrtWord(data);
 				data = asciimath.filterData(data);
 				data = asciimath.reconstructMatrix(data);
 				data = asciimath.reconstructVector(data);
 				e.clipboardData.setData('text/html', data);
+				renderLatex(data);
+				document.getElementById('latex-input').value = data;
 			}
 			catch(e){
 				data = asciimath.reconstructSqrtWord(data);
@@ -277,8 +287,5 @@ function handlePasteImage(e)
 			}, 10);
 			renderLatex(data);
 		}
-	}
-	else 
-	{
 	}
 }

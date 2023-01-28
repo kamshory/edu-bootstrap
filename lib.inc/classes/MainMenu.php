@@ -69,9 +69,10 @@ $html .=
         {
             $captionSubmenu = $submenu['caption'];
             $linkSubmenu = $submenu['link'];
+            $icon = ' ' . trim($submenu['icon']);
             
 $html .= 
-'               <a href="'.$linkSubmenu.'" class="list-group-item list-group-item-action py-2 ripple" aria-current="true"><i class="fas fa-tachometer-alt fa-fw me-3"></i><span>'.$captionSubmenu.'</span></a>
+'               <a href="'.$linkSubmenu.'" class="list-group-item list-group-item-action py-2 ripple" aria-current="true"><i class="fas'.$icon.' fa-fw me-3"></i><span>'.$captionSubmenu.'</span></a>
 ';
         }
 $html .= 

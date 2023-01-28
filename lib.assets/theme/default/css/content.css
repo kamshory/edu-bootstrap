@@ -1,7 +1,19 @@
 @charset "utf-8";
+
+@font-face {
+font-family: 'Roboto';
+src: url('../../../fonts/roboto/Roboto-Light.woff2') format('woff2'),
+	url('../../../fonts/roboto/Roboto-Light.woff') format('woff'),
+	url('../../../fonts/roboto/Roboto-Light.svg#Roboto-Light') format('svg'),
+	url('../../../fonts/roboto/Roboto-Light.eot?#iefix') format('embedded-opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+
 body.mceContentBody{
-	font-family:Verdana, Geneva, sans-serif;
-	font-size:12px;
+	font-family:"Roboto", Verdana, Geneva, sans-serif;
+	font-size:1rem;
 	color:#222222;
 }
 body.mceContentBody p, body.mceContentBody li{
