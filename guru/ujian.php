@@ -191,7 +191,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 		$selection_index = json_decode($selection);
 		include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 		$time_create = $time_edit = $picoEdu->getLocalDateTime();	
-		$member_create = $member_edit = $auth_admin_id;
+		$member_create = $member_edit = $teacher_id;
 		
 		
 		$sql = "select * from `edu_test_collection` where `test_collection_id` = '$id' and `active` = '1' ";
@@ -327,7 +327,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 										$digest = md5($option);
 										$option = addslashes($option);
 										
-										$order = $index_option + 1;
+										$order = ((int)$index_option) + 1;
 										$option_id = $database->generateNewId();
 
 										$sql2 = "INSERT INTO `edu_option` 

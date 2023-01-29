@@ -329,7 +329,7 @@ a.button-gradient{
 }
 .question-area .defaultSkin .mceStatusbar {
     background: #D9F0FF;
-	padding:0px 4px;
+	padding:0px 0px;
 }
 .question-area .defaultSkin span, .question-area .defaultSkin a , .question-area .defaultSkin * {
 	color:#3180B3;
@@ -367,7 +367,7 @@ a.button-gradient{
 }
 .option-area .defaultSkin .mceStatusbar {
     background: #ffedf3;
-	padding:0px 4px;
+	padding:0px 0px;
 }
 .option-area .defaultSkin span, .option-area .defaultSkin a , .option-area .defaultSkin * {
 	color:#d55788;

@@ -1,5 +1,4 @@
 tinyMCEPopup.requireLangPack();
-
 let generatePNG = true;
 let LatexDialog = {
 	init : function() {

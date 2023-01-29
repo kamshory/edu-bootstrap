@@ -1091,7 +1091,6 @@ function loadXmlData($xml_file)
 	foreach ($test_data->item as $question) {
 		// petanyaan
 		$text_pertanyaan = trim(@$question->question->text);
-		$random = trim(@$question->question->random) * 1;
 		$numbering = addslashes(trim(@$question->question->numbering));
 		$competence = addslashes(trim(@$question->question->competence));
 		$order++;
@@ -1105,7 +1104,6 @@ function loadXmlData($xml_file)
 			}
 		}
 		$pertanyaan = $text_pertanyaan;
-		$digest = md5($pertanyaan);
 
 		if (count(@$question->answer->option) > 0) {
 			$options = array();
@@ -1124,7 +1122,7 @@ function loadXmlData($xml_file)
 				$option = $text_option;
 				$digest = md5($option);
 
-				$order = $index_option + 1;
+				$order = ((int)$index_option) + 1;
 				if ($score > 0) {
 					$cs = ' option-circle-selected';
 				} else {

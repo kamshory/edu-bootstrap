@@ -360,7 +360,7 @@ if(@$_GET['option']=='add')
 		var maxScore = '<?php echo $data['standard_score'];?>';
 		var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$test_id/");?>;	
 		</script>
-		<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/test-editor.min.js"></script>
+		<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/test-editor.js"></script>
 		<div class="question-area">
 		<?php
 		$numbering = 'upper-alpha';
@@ -467,7 +467,7 @@ else if(@$_GET['option']=='edit')
 			var test_id = '<?php echo $data['test_id']; ?>';
 			var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$test_id/"); ?>;	
 			</script>
-			<script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/js/test-editor.min.js"></script>
+			<script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/js/test-editor.js"></script>
 
 			<div class="dialogs">
 				<div id="split-dialog">

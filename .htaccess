@@ -33,6 +33,10 @@ RewriteRule ([0-9A-Za-z].*)/lib.assets/(.*) lib.assets/$2
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ([0-9A-Za-z].*)/lib.vendors/(.*) lib.vendors/$2
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ([0-9A-Za-z].*)/lib.ajax/(.*) lib.ajax/$2
 
 RewriteCond %{REQUEST_FILENAME} !-f

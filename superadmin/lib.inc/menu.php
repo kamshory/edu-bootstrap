@@ -7,6 +7,7 @@ $structure = array(
         'submenu'=>array(
             array(
                 'caption'=>'Halaman Depan',
+                'icon'=>'fa-home',
                 'link'=>'index.php'                       
             )
         )
@@ -17,6 +18,7 @@ $structure = array(
         'submenu'=>array(
             array(
                 'caption'=>'Profil Sekolah',
+                'icon'=>'fa-school',
                 'link'=>'sekolah-profil.php'                       
             ),
             array(
@@ -25,6 +27,7 @@ $structure = array(
             ),
             array(
                 'caption'=>'Ganti Sekolah',
+                'icon'=>'fa-right-left',
                 'link'=>'ganti-sekolah.php'                       
             ),
             array(
@@ -47,14 +50,17 @@ $structure = array(
         'submenu'=>array(
             array(
                 'caption'=>'Kelas',
+                'icon'=>'fa-users',
                 'link'=>'kelas.php'                       
             ),
             array(
                 'caption'=>'Jurusan',
+                'icon'=>'fa-users',
                 'link'=>'jurusan.php'                       
             ),
             array(
                 'caption'=>'Perubahan Kelas Siswa',
+                'icon'=>'fa-right-left',
                 'link'=>'kelas-siswa-ubah.php'                       
             )
         )
@@ -65,10 +71,12 @@ $structure = array(
             'submenu'=>array(
                 array(
                     'caption'=>'Siswa',
+                    'icon'=>'fa-user',
                     'link'=>'siswa.php'                       
                 ),
                 array(
                     'caption'=>'Guru',
+                    'icon'=>'fa-user',
                     'link'=>'guru.php',
                 ),
                 array(
@@ -83,18 +91,22 @@ $structure = array(
             'submenu'=>array(
                 array(
                     'caption'=>'Ujian',
+                    'icon'=>'fa-pencil',
                     'link'=>'ujian.php'                       
                 ),
                 array(
                     'caption'=>'Soal',
+                    'icon'=>'fa-list',
                     'link'=>'ujian-soal.php'                       
                 ),
                 array(
                     'caption'=>'Ekspor Soal',
+                    'icon'=>'fa-file-export',
                     'link'=>'ujian-ekspor.php'                       
                 ),
                 array(
                     'caption'=>'Bank Soal',
+                    'icon'=>'fa-box',
                     'link'=>'ujian-bank-soal.php'                       
                 )
             )
@@ -105,10 +117,12 @@ $structure = array(
             'submenu'=>array(
                 array(
                     'caption'=>'Artikel',
+                    'icon'=>'fa-file',
                     'link'=>'artikel.php'                       
                 ),
                 array(
                     'caption'=>'Informasi',
+                    'icon'=>'fa-file',
                     'link'=>'informasi.php'                       
                 )
             )
@@ -119,6 +133,7 @@ $structure = array(
             'submenu'=>array(
                 array(
                     'caption'=>'Keluar',
+                    'icon'=>'fa-right-to-bracket',
                     'link'=>'logout.php'                       
                 )
             )

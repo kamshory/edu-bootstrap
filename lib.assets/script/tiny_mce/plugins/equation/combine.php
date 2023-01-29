@@ -176,4 +176,3 @@ foreach($scripts as $key=>$val)
 	echo "\r\n\r\n/* End $val*/\r\n\r\n";
 }
 
-?>

@@ -7,6 +7,7 @@ $structure = array(
         'submenu'=>array(
             array(
                 'caption'=>'Halaman Depan',
+                'icon'=>'fa-home',
                 'link'=>'index.php'                       
             )
         )
@@ -21,6 +22,7 @@ $structure = array(
             ),
             array(
                 'caption'=>'Ganti Sekolah',
+                'icon'=>'fa-right-left',
                 'link'=>'ganti-sekolah.php'                       
             )
         )
@@ -31,10 +33,12 @@ $structure = array(
         'submenu'=>array(
             array(
                 'caption'=>'Kelas',
+                'icon'=>'fa-users',
                 'link'=>'kelas.php'                       
             ),
             array(
                 'caption'=>'Jurusan',
+                'icon'=>'fa-users',
                 'link'=>'jurusan.php'                       
             )
         )
@@ -45,10 +49,12 @@ $structure = array(
             'submenu'=>array(
                 array(
                     'caption'=>'Siswa',
+                    'icon'=>'fa-user',
                     'link'=>'siswa.php'                       
                 ),
                 array(
                     'caption'=>'Guru',
+                    'icon'=>'fa-user',
                     'link'=>'guru.php',
                 )
             )
@@ -59,14 +65,17 @@ $structure = array(
             'submenu'=>array(
                 array(
                     'caption'=>'Ujian',
+                    'icon'=>'fa-pencil',
                     'link'=>'ujian.php'                       
                 ),
                 array(
                     'caption'=>'Riwayat',
+                    'icon'=>'fa-calendar-days',
                     'link'=>'ujian-riwayat.php'                       
                 ),
                 array(
                     'caption'=>'Laporan Hasil',
+                    'icon'=>'fa-table',
                     'link'=>'ujian-laporan.php'                       
                 )
             )
@@ -77,10 +86,12 @@ $structure = array(
             'submenu'=>array(
                 array(
                     'caption'=>'Artikel',
+                    'icon'=>'fa-file',
                     'link'=>'artikel.php'                       
                 ),
                 array(
                     'caption'=>'Informasi',
+                    'icon'=>'fa-file',
                     'link'=>'informasi.php'                       
                 )
             )
@@ -91,6 +102,7 @@ $structure = array(
             'submenu'=>array(
                 array(
                     'caption'=>'Keluar',
+                    'icon'=>'fa-right-to-bracket',
                     'link'=>'logout.php'                       
                 )
             )

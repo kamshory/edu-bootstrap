@@ -22,7 +22,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	<div class="collection-selector">
     	<div class="grade-selector">
         	<form name="gradefrm" id="gradefrm" method="get" enctype="multipart/form-data">
-            	<select name="grade_id" id="grade_id">
+            	<select class="form-control" name="grade_id" id="grade_id">
                 	<option value="">- Pilih Tingkat -</option>
                 	<option value="1"<?php if($grade_id=='1') echo ' selected="selected"';?>>Kelas 1 SD</option>
                 	<option value="2"<?php if($grade_id=='2') echo ' selected="selected"';?>>Kelas 2 SD</option>
