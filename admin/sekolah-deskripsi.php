@@ -80,6 +80,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
+let ajaxFilemanagerURL = "lib.tools/filemanager/?description=true&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
 </script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/wysiwyg-editor.js"></script>
 <form name="formedu_school" id="formedu_school" action="" method="post" enctype="multipart/form-data">

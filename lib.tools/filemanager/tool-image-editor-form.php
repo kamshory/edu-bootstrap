@@ -2,11 +2,11 @@
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php"; //NOSONAR
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-$filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $cfg->rootdir);
+$filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
 $fileurl = htmlspecialchars(kh_filter_input(INPUT_GET, 'filepath', FILTER_SANITIZE_STRING_NEW));
 
 $error_code = "";
@@ -15,7 +15,7 @@ if(file_exists($filepath))
 if(!is_dir($filepath))
 {
 $size = getimagesize($filepath);
-$url = path_decode_to_url(@$_GET['filepath'], $cfg->rooturl);
+$url = path_decode_to_url(@$_GET['filepath'], $fmanConfig->rooturl);
 if(stripos($size['mime'], 'image')===0)
 {
 ?>

@@ -8,7 +8,7 @@ if(!$userlogin)
 	exit();
 }
 $dir = trim(stripslashes(@$_GET['dir']),"/");
-if(!is_dir(path_decode($dir, $cfg->rootdir))){
+if(!is_dir(path_decode($dir, $fmanConfig->rootdir))){
 	$dir = '';	
 }
 if(empty($dir)) 
@@ -32,7 +32,7 @@ if(empty($dir))
 <script type="text/javascript" src="../../../lib.assets/script/jquery-ui/jquery-ui.datetimepicker.addon.min.js"></script>
 <script type="text/javascript" src="js/overlay-dialog.min.js"></script>
 <script type="text/javascript">
-var vrel = '<?php echo $cfg->rooturl;?>/';
+var vrel = '<?php echo $fmanConfig->rooturl;?>/';
 var vabs = 'base/';
 var videoDimensions = [];
 
@@ -84,7 +84,7 @@ window.onload = function(){
 	{
 		$('#tb-thumbnail').addClass('tb-selected');
 		<?php
-		if(!@$cfg->thumbnail_on_load)
+		if(!@$fmanConfig->thumbnail_on_load)
 		{
 		?>
 		$('.file-table').css('display', 'none');

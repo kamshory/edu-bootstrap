@@ -2,7 +2,7 @@
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php";
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
@@ -14,7 +14,7 @@ if(isset($_POST['postdata']))
 		array_walk_recursive($_GET, 'array_stripslashes');
 	}
 }
-$filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $cfg->rootdir);
+$filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
 $angle = kh_filter_input(INPUT_GET, 'angle', FILTER_SANITIZE_NUMBER_UINT);
 $angle = $angle % 360;
 $fliph = kh_filter_input(INPUT_GET, 'fliph', FILTER_SANITIZE_NUMBER_UINT);
@@ -105,7 +105,7 @@ if($width && $height)
 }
 if(@$_GET['option']=='save2file')
 {
-if($cfg->readonly){
+if($fmanConfig->readonly){
 	die('READONLY');
 }
 if($info['mime']=='image/jpeg')

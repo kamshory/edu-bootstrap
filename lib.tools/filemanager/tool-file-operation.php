@@ -2,19 +2,19 @@
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php";
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-if($cfg->readonly){
+if($fmanConfig->readonly){
 	die('READONLY');
 }
 
 
-$rooturl = $cfg->rootdir;
+$rooturl = $fmanConfig->rootdir;
 if(@$_GET['option']=='compress-audio')
 {
-	$path = path_decode(kh_filter_input(INPUT_POST, 'path'), $cfg->rootdir);
+	$path = path_decode(kh_filter_input(INPUT_POST, 'path'), $fmanConfig->rootdir);
 	if(file_exists($path))
 	{
 		$arr = explode(".", $path);
@@ -41,7 +41,7 @@ if(@$_GET['option']=='compress-audio')
 }
 else if(@$_GET['option']=='createdir')
 {
-$dir2 = path_decode(kh_filter_input(INPUT_POST, 'location'), $cfg->rootdir);
+$dir2 = path_decode(kh_filter_input(INPUT_POST, 'location'), $fmanConfig->rootdir);
 $name = kh_filter_input(INPUT_POST, 'name');
 $name = trim(str_replace(array("../","./","..\\",".\\","\\"),"/",$name),"/\\");
 if(file_exists($dir2))
@@ -64,13 +64,13 @@ if(file_exists($dir2))
 }
 if(@$_GET['option']=='createfile')
 {
-$dir2 = path_decode(kh_filter_input(INPUT_POST, 'location'), $cfg->rootdir);
+$dir2 = path_decode(kh_filter_input(INPUT_POST, 'location'), $fmanConfig->rootdir);
 $name = kh_filter_input(INPUT_POST, 'name');
 $name = trim(str_replace(array("../","./","..\\",".\\","\\"),"/",$name),"/\\");
 if(file_exists($dir2))
 {
 	$tt = getMIMEType($dir2."/".$name);
-	if(in_array($tt->extension, $cfg->forbidden_extension)){
+	if(in_array($tt->extension, $fmanConfig->forbidden_extension)){
 		die('FORBIDDENEXT');
 	}
 	if(!file_exists($dir2."/".$name)){
@@ -102,7 +102,7 @@ if(isset($_POST) && (@get_magic_quotes_runtime()))
 	array_walk_recursive($_POST, 'array_stripslashes');
 }
 
-$targetdir = path_decode(kh_filter_input(INPUT_POST, 'targetdir'), $cfg->rootdir);
+$targetdir = path_decode(kh_filter_input(INPUT_POST, 'targetdir'), $fmanConfig->rootdir);
 
 // prepare dir
 $dir = str_replace("\\","/",$targetdir);
@@ -113,7 +113,7 @@ if(is_array($arr))
 	foreach($arr as $k=>$v)
 	{
 		$d2c .= $v;
-		if(strlen($d2c)>=strlen($cfg->rootdir) && !file_exists($d2c))
+		if(strlen($d2c)>=strlen($fmanConfig->rootdir) && !file_exists($d2c))
 		{
 			mkdir($d2c);
 		}
@@ -129,7 +129,7 @@ if(is_array($files))
 {
 	foreach($files as $k=>$file)
 	{
-		$source = path_decode($file, $cfg->rootdir);
+		$source = path_decode($file, $fmanConfig->rootdir);
 		if(file_exists($source))
 		{
 			if(is_dir($source))
@@ -187,7 +187,7 @@ if(is_array($files))
 {
 	foreach($files as $k=>$file)
 	{
-		$source = path_decode($file, $cfg->rootdir);
+		$source = path_decode($file, $fmanConfig->rootdir);
 		if(is_dir($source))
 		{
 			destroyall($source);
@@ -206,7 +206,7 @@ echo 'FAILED';
 
 if(@$_GET['option']=='renamefile')
 {
-$location = path_decode(kh_filter_input(INPUT_POST, 'location'), $cfg->rootdir);
+$location = path_decode(kh_filter_input(INPUT_POST, 'location'), $fmanConfig->rootdir);
 $oldname = $location."/".trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, 'oldname')),"/\\");
 $newname = $location."/".trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, 'newname')),"/\\");
 if(file_exists($newname))
@@ -216,7 +216,7 @@ if(file_exists($newname))
 else
 {
 	$tt = getMIMEType($newname);
-	if(in_array($tt->extension, $cfg->forbidden_extension)){
+	if(in_array($tt->extension, $fmanConfig->forbidden_extension)){
 		die('FORBIDDENEXT');
 	}
 	if(rename($oldname, $newname))
@@ -237,8 +237,8 @@ if(!class_exists('ZipArchive'))
 {
 	die('NOTSUPPORTED');
 }
-$targetdir = path_decode(kh_filter_input(INPUT_POST, 'targetdir'), $cfg->rootdir);
-$filepath = path_decode(kh_filter_input(INPUT_POST, 'filepath'), $cfg->rootdir);
+$targetdir = path_decode(kh_filter_input(INPUT_POST, 'targetdir'), $fmanConfig->rootdir);
+$filepath = path_decode(kh_filter_input(INPUT_POST, 'filepath'), $fmanConfig->rootdir);
 
 if(file_exists($filepath))
 {
@@ -281,7 +281,7 @@ if(isset($_POST['postdata']))
 		array_walk_recursive($_POST, 'array_stripslashes');
 	}
 }
-$target = path_decode(kh_filter_input(INPUT_POST, 'targetpath'), $cfg->rootdir);
+$target = path_decode(kh_filter_input(INPUT_POST, 'targetpath'), $fmanConfig->rootdir);
 if(file_exists($target))
 {
 	die('CONFLICT');
@@ -297,7 +297,7 @@ if(is_array($arr))
 	foreach($arr as $k=>$v)
 	{
 		$d2c .= $v;
-		if(strlen($d2c)>=strlen($cfg->rootdir) && !file_exists($d2c))
+		if(strlen($d2c)>=strlen($fmanConfig->rootdir) && !file_exists($d2c))
 		{
 			mkdir($d2c);
 		}
@@ -312,7 +312,7 @@ if(is_array($file2compress))
 {
 for($i=0;$i<count($file2compress);$i++)
 {
-$file2compress[$i] = path_decode($file2compress[$i], $cfg->rootdir);
+$file2compress[$i] = path_decode($file2compress[$i], $fmanConfig->rootdir);
 
 if($file2compress[$i] == $target)
 {
@@ -380,7 +380,7 @@ $source = kh_filter_input(INPUT_POST, 'source');
 $location = trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, 'location')),"/\\");
 $name = basename(trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, 'name')),"/\\"));
 
-$target = path_decode(rtrim($location, "\\/")."/".trim($name, "\\/"), $cfg->rootdir);
+$target = path_decode(rtrim($location, "\\/")."/".trim($name, "\\/"), $fmanConfig->rootdir);
 
 $data = @file_get_contents($source);
 if($data === false)
@@ -406,7 +406,7 @@ if(is_array($arr))
 	foreach($arr as $k=>$v)
 	{
 		$d2c .= $v;
-		if(strlen($d2c)>=strlen($cfg->rootdir) && !file_exists($d2c))
+		if(strlen($d2c)>=strlen($fmanConfig->rootdir) && !file_exists($d2c))
 		{
 			mkdir($d2c);
 		}
@@ -426,7 +426,7 @@ else
 
 if(@$_GET['option'] == 'get-perms')
 {
-	$filename = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $cfg->rootdir);
+	$filename = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
 	if(file_exists($filename))
 	{
 		$fileperms = substr(sprintf('%o', fileperms($filename)), -4);
@@ -464,7 +464,7 @@ if(@$_GET['option'] == 'change-perms')
 		$fpa = $_POST['data'];
 		foreach($fpa as $fp)
 		{
-			$filename = path_decode($fp, $cfg->rootdir);
+			$filename = path_decode($fp, $fmanConfig->rootdir);
 			if(file_exists($filename))
 			{
 				if($recursive == '1')

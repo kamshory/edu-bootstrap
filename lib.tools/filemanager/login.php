@@ -10,9 +10,9 @@ if($_POST['username'] && $_POST['password'])
 	$uid = addslashes($_POST['username']);
 	$pas = addslashes($_POST['password']);
 	$userid = "";
-	if(is_array($cfg->users))
+	if(is_array($fmanConfig->users))
 	{
-		foreach($cfg->users as $user)
+		foreach($fmanConfig->users as $user)
 		{
 			$match = matchUser($user, $uid, $pas);
 			if($match)

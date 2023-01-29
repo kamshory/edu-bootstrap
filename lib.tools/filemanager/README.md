@@ -136,40 +136,40 @@ Planetbiru File Manager support drag and drop file for:
 Configuration file is conf.php
 ```php
 <?php
-if(!isset($cfg)) $cfg = new StdClass();
-$cfg->authentification_needed = true;		
+if(!isset($fmanConfig)) $fmanConfig = new StdClass();
+$fmanConfig->authentification_needed = true;		
 /* When Kams File Manager is used on online system, it must be set true.*/
-$cfg->rootdir = dirname((__FILE__))."/content/upload";	 
+$fmanConfig->rootdir = dirname((__FILE__))."/content/upload";	 
 /* Root directory for uploaded file. Use .htaccess file to protect this directory from executing PHP files.*/
-$cfg->hiddendir = array();	 
+$fmanConfig->hiddendir = array();	 
 /* File or directory under root directory to be hidden and forbidden to access it.*/
-$cfg->rooturl = "content/upload";						
+$fmanConfig->rooturl = "content/upload";						
 /* Root url for uploaded file. It can be relative or absoulute.*/
-$cfg->thumbnail = true;						
+$fmanConfig->thumbnail = true;						
 /* Thumbnail for image files.*/
-$cfg->thumbnail_quality = 75;				
+$fmanConfig->thumbnail_quality = 75;				
 /* Quality for thumbnail image.*/
-$cfg->thumbnail_max_size = 5000000; 
+$fmanConfig->thumbnail_max_size = 5000000; 
 /* Maximum file size to show with thumbnail */
-$cfg->readonly = false;						
+$fmanConfig->readonly = false;						
 /* Is user allowed to modify the file or the directory including upload, delete, or extract files.*/
-$cfg->allow_upload_all_file = true;			
+$fmanConfig->allow_upload_all_file = true;			
 /* Is user allowed to upload file beside image.*/
-$cfg->allow_upload_image = true;			
+$fmanConfig->allow_upload_image = true;			
 /* Is user allowed to upload images.*/
 
 
-$cfg->cache_max_age_file = 3600; 			/* Maximum age for file thumbnail cache (in second) */
-$cfg->cache_max_age_dir = 120; 				/* Maximum age for directory thumbnail cache (in second) */
+$fmanConfig->cache_max_age_file = 3600; 			/* Maximum age for file thumbnail cache (in second) */
+$fmanConfig->cache_max_age_dir = 120; 				/* Maximum age for directory thumbnail cache (in second) */
 
 
-$cfg->delete_forbidden_extension = true;	
+$fmanConfig->delete_forbidden_extension = true;	
 /* Delete forbidden files on upload, rename, copy, or extract operation */
-$cfg->forbidden_extension = array();
+$fmanConfig->forbidden_extension = array();
 
 /* Note
    You can permit user to upload images but not other type for security reason.
-   You can add .htaccess file to prevent user executing PHP script but its location is not on {$cfg->rootdir}
+   You can add .htaccess file to prevent user executing PHP script but its location is not on {$fmanConfig->rootdir}
    
    For example:
    Your root document of your system is
@@ -184,19 +184,19 @@ $cfg->forbidden_extension = array();
    
    
 */
-if(strlen(@$cfg->rootdir))
+if(strlen(@$fmanConfig->rootdir))
 {
-	if(strlen(@$cfg->rootdir))
+	if(strlen(@$fmanConfig->rootdir))
 	{
-		if(!file_exists($cfg->rootdir))
+		if(!file_exists($fmanConfig->rootdir))
 		{
-			mkdir($cfg->rootdir);
+			mkdir($fmanConfig->rootdir);
 		}
 	}
 }
 
 
-$cfg->users = array(
+$fmanConfig->users = array(
 	array("admin", "admin", "plain"),
 	array("masroy", "masroy", "plain")
 );

@@ -2,12 +2,12 @@
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php"; //NOSONAR
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
 
-if(@$cfg->thumbnail_on_load)
+if(@$fmanConfig->thumbnail_on_load)
 {
   if(@$_COOKIE['togglethumb']==1)
   {
@@ -16,9 +16,9 @@ if(@$cfg->thumbnail_on_load)
 }
 
 
-$dir2 = path_decode(kh_filter_input(INPUT_GET, 'dir'), $cfg->rootdir);
+$dir2 = path_decode(kh_filter_input(INPUT_GET, 'dir'), $fmanConfig->rootdir);
 if(!is_dir($dir2)){
-	$dir2 = path_decode('base', $cfg->rootdir);	
+	$dir2 = path_decode('base', $fmanConfig->rootdir);	
 }
 $arrfile = array();
 $arrdir = array();
@@ -37,9 +37,9 @@ if(file_exists($dir2) && ($handle = opendir($dir2)))
 		if($filetype=="file")
 		{
 			$ft = getMIMEType($fn);
-			$obj['url'] = $cfg->rooturl.'/'.substr(path_encode($fn, $cfg->rootdir),5);
-			$obj['path'] = path_encode($fn, $cfg->rootdir);
-			$obj['location'] = path_encode(dirname($fn), $cfg->rootdir);
+			$obj['url'] = $fmanConfig->rooturl.'/'.substr(path_encode($fn, $fmanConfig->rootdir),5);
+			$obj['path'] = path_encode($fn, $fmanConfig->rootdir);
+			$obj['location'] = path_encode(dirname($fn), $fmanConfig->rootdir);
 			$obj['name'] = basename($fn);
 			$fs = filesize($fn);
 			$obj['filesize'] = $fs;
@@ -62,7 +62,7 @@ if(file_exists($dir2) && ($handle = opendir($dir2)))
 			$obj['filemtime'] = '<span title="'.date('Y-m-d H:i:s', $fti).'">'.date('y-m-d', $fti).'</span>';
 			$obj['mtime'] = $fti;
 			
-			if((stripos($obj['type'], 'image') !== false || stripos($obj['type'], 'application/x-shockwave-flash') !== false) && $obj['filesize'] <= $cfg->thumbnail_max_size)
+			if((stripos($obj['type'], 'image') !== false || stripos($obj['type'], 'application/x-shockwave-flash') !== false) && $obj['filesize'] <= $fmanConfig->thumbnail_max_size)
 			{
 				try
 				{
@@ -97,8 +97,8 @@ if(file_exists($dir2) && ($handle = opendir($dir2)))
 		}
 		else if($filetype=="dir")
 		{
-			$obj['path'] = path_encode($fn, $cfg->rootdir);
-			$obj['location'] = path_encode(dirname($fn), $cfg->rootdir);
+			$obj['path'] = path_encode($fn, $fmanConfig->rootdir);
+			$obj['location'] = path_encode(dirname($fn), $fmanConfig->rootdir);
 			$obj['name'] = basename($fn);
 			$obj['type'] = 'dir';
 			$obj['permission'] = substr(sprintf('%o', fileperms($fn)), -4);
@@ -171,7 +171,7 @@ if(!empty($arrdir) || !empty($arrfile))
 		?>
         <li class="row-data-dir" data-file-name="<?php echo $val['name'];?>" data-file-location="<?php echo $val['location'];?>" data-file-type="dir">
         <div class="thumbitem thumbdir">
-        <div class="thumbimage" <?php if(@$cfg->thumbnail && @$val['filesize'] <= $cfg->thumbnail_max_size){ ?>style="background-image:url('tool-thumb-image.php?filepath=<?php echo rawurlencode($val['path']);?>&mtime=<?php echo $val['mtime'];?>')" <?php } ?>><div class="thumbimage-inner"><a href="javascript:;" title="<?php echo $val['name'];?>" onClick="return openDir('<?php echo str_replace("'", "\'", $val['path']);?>')"><img id="imageid-<?php echo $i;?>" src="style/images/trans96.gif" /></a></div></div>
+        <div class="thumbimage" <?php if(@$fmanConfig->thumbnail && @$val['filesize'] <= $fmanConfig->thumbnail_max_size){ ?>style="background-image:url('tool-thumb-image.php?filepath=<?php echo rawurlencode($val['path']);?>&mtime=<?php echo $val['mtime'];?>')" <?php } ?>><div class="thumbimage-inner"><a href="javascript:;" title="<?php echo $val['name'];?>" onClick="return openDir('<?php echo str_replace("'", "\'", $val['path']);?>')"><img id="imageid-<?php echo $i;?>" src="style/images/trans96.gif" /></a></div></div>
         <div class="thumbcheck"><input type="checkbox" class="input-checkbox fileid" data-isdir="true" name="fileid[]" id="fileid-<?php echo $i;?>" value="<?php echo $val['path'];?>" /></div>
         <div class="thumbname"><a href="javascript:;" title="<?php echo $val['name'];?>" onClick="return openDir('<?php echo $val['path'];?>')"><?php echo $val['name'];?></a></div>
         </div>
@@ -184,7 +184,7 @@ if(!empty($arrdir) || !empty($arrfile))
 		?>
         <li class="row-data-file row-<?php echo ($i%2)?'odd':'even';?>" data-file-url="<?php echo $val['url'];?>" data-file-name="<?php echo $val['name'];?>" data-file-location="<?php echo $val['location'];?>" data-file-type="<?php echo $val['type'];?>" data-file-size="<?php echo $val['size'];?>" data-image-width="<?php echo $val['image_width'];?>" data-image-height="<?php echo $val['image_height'];?>">
         <div class="thumbitem thumbfile thumbfile-<?php echo $val['extension'];?>">
-        <div class="thumbimage" <?php if($val['image_width'] > 0 && $val['image_height'] > 0 && stripos($val['type'], 'image')===0 && $cfg->thumbnail){ ?> style="background-image:url('tool-thumb-image.php?filepath=<?php echo rawurlencode($val['path']);?>&mtime=<?php echo $val['mtime'];?>')"<?php } ?>><div class="thumbimage-inner"><a href="javascript:;" title="<?php echo $val['name'];?>" onClick="return selectFile('<?php echo $val['url'];?>')"><img id="imageid-<?php echo $i;?>" src="style/images/trans96.gif" /></a></div></div>
+        <div class="thumbimage" <?php if($val['image_width'] > 0 && $val['image_height'] > 0 && stripos($val['type'], 'image')===0 && $fmanConfig->thumbnail){ ?> style="background-image:url('tool-thumb-image.php?filepath=<?php echo rawurlencode($val['path']);?>&mtime=<?php echo $val['mtime'];?>')"<?php } ?>><div class="thumbimage-inner"><a href="javascript:;" title="<?php echo $val['name'];?>" onClick="return selectFile('<?php echo $val['url'];?>')"><img id="imageid-<?php echo $i;?>" src="style/images/trans96.gif" /></a></div></div>
         <div class="thumbcheck"><input type="checkbox" class="input-checkbox fileid" data-isdir="false" data-iszip="<?php echo ($val['type']=='application/zip')?'true':'false';?>" name="fileid[]" id="fileid-<?php echo $i;?>" value="<?php echo $val['path'];?>" /></div>
         <div class="thumbname"><a href="javascript:;" title="<?php echo $val['name'];?>" onClick="return selectFile('<?php echo $val['url'];?>')"><?php echo $val['name'];?></a></div>
         </div>

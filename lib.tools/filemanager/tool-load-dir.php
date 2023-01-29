@@ -2,15 +2,15 @@
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php"; //NOSONAR
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-$rooturl = $cfg->rootdir;
+$rooturl = $fmanConfig->rootdir;
 $seldir = kh_filter_input(INPUT_GET, 'dir', FILTER_SANITIZE_STRING_NEW);
-$dir2 = path_decode(kh_filter_input(INPUT_GET, 'seldir'), $cfg->rootdir);
+$dir2 = path_decode(kh_filter_input(INPUT_GET, 'seldir'), $fmanConfig->rootdir);
 if(!is_dir($dir2)){
-	$dir2 = path_decode('', $cfg->rootdir);	
+	$dir2 = path_decode('', $fmanConfig->rootdir);	
 }
 $arrdir = array();
 if(file_exists($dir2) && ($handle = opendir($dir2)))
@@ -29,8 +29,8 @@ if(file_exists($dir2) && ($handle = opendir($dir2)))
 			unset($obj);
 			if($filetype == "dir")
 			{
-				$obj['path'] = path_encode($fn, $cfg->rootdir);
-				$obj['location'] = path_encode(dirname($fn), $cfg->rootdir);
+				$obj['path'] = path_encode($fn, $fmanConfig->rootdir);
+				$obj['location'] = path_encode(dirname($fn), $fmanConfig->rootdir);
 				$obj['name'] = basename($fn);
 				$arrdir[] = $obj;
 			}
@@ -42,8 +42,8 @@ if(file_exists($dir2) && ($handle = opendir($dir2)))
 				unset($obj);
 				if(is_dir($fn))
 				{
-					$obj['path'] = path_encode($fn, $cfg->rootdir);
-					$obj['location'] = path_encode(dirname($fn), $cfg->rootdir);
+					$obj['path'] = path_encode($fn, $fmanConfig->rootdir);
+					$obj['location'] = path_encode(dirname($fn), $fmanConfig->rootdir);
 					$obj['name'] = basename($fn);
 					$arrdir[] = $obj;
 				}

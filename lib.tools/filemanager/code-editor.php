@@ -2,7 +2,7 @@
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php";
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	include_once dirname(__FILE__)."/tool-login-form.php";
 	exit();
@@ -11,7 +11,7 @@ if(@$_GET['option'] == 'ajax-load')
 {
 	$cnt = "";
 	$path = kh_filter_input(INPUT_GET, 'filepath');
-	$filepath = path_decode($path, $cfg->rootdir);
+	$filepath = path_decode($path, $fmanConfig->rootdir);
 	if(file_exists($filepath))
 	{
 		$cnt = file_get_contents($filepath);
@@ -22,7 +22,7 @@ else
 {
 	$cnt = "";
 	$path = kh_filter_input(INPUT_GET, 'filepath');
-	$filepath = path_decode($path, $cfg->rootdir);
+	$filepath = path_decode($path, $fmanConfig->rootdir);
 	if(file_exists($filepath))
 	{
 		$cnt = file_get_contents($filepath);
@@ -85,7 +85,7 @@ body, html{
 <div class="file">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><input type="text" name="filename" id="filename" value="<?php echo path_encode($filepath, $cfg->rootdir);?>" autocomplete="off" placeholder="File" required></td>
+    <td><input type="text" name="filename" id="filename" value="<?php echo path_encode($filepath, $fmanConfig->rootdir);?>" autocomplete="off" placeholder="File" required></td>
     <td width="60" style="padding-left:4px;"><input type="button" name="open" id="open" value="Open"></td>
     <td width="60" style="padding-left:4px;"><input type="button" name="save" id="save" value="Save"></td>
   </tr>

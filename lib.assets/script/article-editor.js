@@ -1,8 +1,8 @@
 function addslashes(input){
-var searchStr = "\'";
-var replaceStr = "\\'";
-var re = new RegExp(searchStr , "g");
-var output = input.replace(re, replaceStr);
+let searchStr = "\'";
+let replaceStr = "\\'";
+let re = new RegExp(searchStr , "g");
+let output = input.replace(re, replaceStr);
 return output;
 }
 function basename(path){
@@ -18,11 +18,11 @@ function removefileextension(filename){
 return filename.replace(/\.[^/.]+$/,'');
 }
 
-var ascii_svg_server = 'lib.tools/asciisvg/svgimg.php';
-var equation_preview_url = '../../../../../../cgi-bin/equgen.cgi?' ;
-var equation_generator_url = '../../../../../../equgen.php?' ;
-var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'browser-png':'browser-mathjax';
-var quran_server = '../quran';
+let ascii_svg_server = 'lib.tools/asciisvg/svgimg.php';
+let equation_preview_url = '../../../../../../cgi-bin/equgen.cgi?' ;
+let equation_generator_url = '../../../../../../equgen.php?' ;
+let equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'browser-png':'browser-mathjax';
+let quran_server = '../quran';
 $(document).ready(function() {
 	if($('textarea').length)
 	{
@@ -64,9 +64,8 @@ $(document).ready(function() {
 		}
 	});
 	setTimeout(function(){
-		var iframe = document.getElementById('content_ifr');
-		var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-		// innerDoc.addEventListener('paste', pasteHandler);
+		let iframe = document.getElementById('content_ifr');
+		let innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 	}, 2000);
 	}
 	$(document).on('click', '#select-class', function(e){
@@ -87,7 +86,7 @@ function fileBrowserCallBack(field_name, url, type, win)
 	}
 	else
 	{
-		var article_id = $('#articleform').find('#article_id').val();
+		let article_id = $('#articleform').find('#article_id').val();
 		if(url.indexOf('data:') != -1)
 		{
 			url = '';
@@ -98,7 +97,7 @@ function fileBrowserCallBack(field_name, url, type, win)
 		}
 		url = url.substr(21);
 		
-		var ajaxfilemanagerurl = "lib.tools/filemanager/?article_id="+article_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
+		let ajaxFilemanagerURL = "lib.tools/filemanager/?article_id="+article_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
 		switch (type){
 			case "image":break;
 			case "media":break;
@@ -107,12 +106,12 @@ function fileBrowserCallBack(field_name, url, type, win)
 			default:
 			return false;
 		}
-		tinyMCE.activeEditor.windowManager.open({url:ajaxfilemanagerurl,width:800,height:480,resizable:true,maximizable:true,inline:"yes",close_previous:"no"},{window:win,input:field_name});
+		tinyMCE.activeEditor.windowManager.open({url:ajaxFilemanagerURL,width:800,height:480,resizable:true,maximizable:true,inline:"yes",close_previous:"no"},{window:win,input:field_name});
 	}
 }
 function pasteHandler(e)
 {
-	var cbData;
+	let cbData;
 	if(e.clipboardData) 
 	{
 		cbData = e.clipboardData;
@@ -123,12 +122,12 @@ function pasteHandler(e)
 	}
 	if(e.msConvertURL)
 	{
-		var fileList = cbData.files;
+		let fileList = cbData.files;
 		if(fileList.length > 0)
 		{
-			for(var i = 0; i < fileList.length; i++)
+			for(let i = 0; i < fileList.length; i++)
 			{
-				var blob = fileList[i];
+				let blob = fileList[i];
 				readPastedBlob(blob);
 			}
 		}
@@ -139,11 +138,11 @@ function pasteHandler(e)
 		{
 			return;
 		}
-		for(var i = 0; i < cbData.items.length; i++)
+		for(let i = 0; i < cbData.items.length; i++)
 		{
 			if(cbData.items[i].type.indexOf('image') !== -1)
 			{
-				var blob = cbData.items[i].getAsFile();
+				let blob = cbData.items[i].getAsFile();
 				readPastedBlob(blob);
 			}
 		}
@@ -164,16 +163,16 @@ function pasteHandler(e)
 	{
 		if(window.navigator.userAgent.toString().indexOf('Firefox') == -1)
 		{
-			var image = '<img src="' + source + '" data-mce-selected="1"></img>';
+			let image = '<img src="' + source + '" data-mce-selected="1"></img>';
 			window.tinyMCE.execCommand('mceInsertContent', false, image);
 		}
 	}
 }
 function buildClassOption(list, value){
-	var i, j, k;
-	var html = '';
-	var sel = '';
-	var vals = value.split(",");
+	let i, j, k;
+	let html = '';
+	let sel = '';
+	let vals = value.split(",");
 	html += '<ul class="class-list">';
 	
 	for(i in list)
@@ -194,8 +193,8 @@ function buildClassOption(list, value){
 }
 function selectClass()
 {
-	var val = $('#articleform #classlist').val();
-	var html = ''+
+	let val = $('#articleform #classlist').val();
+	let html = ''+
 	'<div class="overlay-dialog-area">\r\n'+
 	'	<h3>Select Class</h3>\r\n'+
 	'    <div class="select-class-area">\r\n'+
@@ -214,7 +213,7 @@ function selectClass()
 		});
     });
 	$('#update-class').on('click', function(e){
-		var arr = [];
+		let arr = [];
 		$('.class-item').each(function(index, element) {
 			if($(this).hasClass('class-item-selected'))
 			{

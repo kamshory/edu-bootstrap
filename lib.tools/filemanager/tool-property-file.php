@@ -2,11 +2,11 @@
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php";
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-$filename = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $cfg->rootdir);
+$filename = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
 $json_exif = "";
 if(@$_GET['type']=='directory')
 {
@@ -131,7 +131,7 @@ if(file_exists($filename))
 	$md5 = md5_file($filename);
 	$filesize = filesize($filename);
 }
-$url = $cfg->rooturl.'/'.substr(path_encode($filename, $cfg->rootdir),5);
+$url = $fmanConfig->rooturl.'/'.substr(path_encode($filename, $fmanConfig->rootdir),5);
 ?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="dialog-table">
   <tr>
@@ -209,7 +209,7 @@ if(file_exists($filename))
 	$md5 = md5_file($filename);
 	$filesize = filesize($filename);
 }
-$url = $cfg->rooturl.'/'.substr(path_encode($filename, $cfg->rootdir),5);
+$url = $fmanConfig->rooturl.'/'.substr(path_encode($filename, $fmanConfig->rootdir),5);
 ?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="dialog-table">
   <tr>
@@ -259,7 +259,7 @@ if(file_exists($filename))
 	$md5 = md5_file($filename);
 	$filesize = filesize($filename);
 }
-$url = $cfg->rooturl.'/'.substr(path_encode($filename, $cfg->rootdir),5);
+$url = $fmanConfig->rooturl.'/'.substr(path_encode($filename, $fmanConfig->rootdir),5);
 ?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="dialog-table">
   <tr>

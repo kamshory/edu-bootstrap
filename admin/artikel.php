@@ -172,16 +172,19 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
+//let ajaxFilemanagerURL = "lib.tools/filemanager/?description=true&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
 </script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
-
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/wysiwyg-editor.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/article-editor.js"></script>
 
 <?php
 $sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = '1' and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
 $stmt = $database->executeQuery($sqlc);
-$arrc = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+		$arrc = array();
+if($stmt->rowCount() > 0)
+{
+	$arrc = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
 <script type="text/javascript">
 var classList = <?php echo json_encode($arrc);?>;
@@ -213,9 +216,10 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
+//let ajaxFilemanagerURL = "lib.tools/filemanager/?description=true&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
 </script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/wysiwyg-editor.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/article-editor.js"></script>
 
 <?php
 $article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
@@ -228,7 +232,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 <?php
 $sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = '1' and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
 $stmt = $database->executeQuery($sqlc);
-$arrc = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$arrc = array();
+if($stmt->rowCount() > 0)
+{
+	$arrc = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
 <script type="text/javascript">
 var classList = <?php echo json_encode($arrc);?>;
@@ -379,7 +387,7 @@ $(document).ready(function(e) {
 
     ?>
     </select>
-    <span class="search-label">Nama Siswa</span>
+    <span class="search-label">Judul Artikel</span>
     <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
  "))));?>" />
   <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />

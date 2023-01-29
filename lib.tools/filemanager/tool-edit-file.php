@@ -2,13 +2,13 @@
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php"; //NOSONAR
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
 if(@$_GET['option']=='openfile')
 {
-$filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $cfg->rootdir);
+$filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
 if(file_exists($filepath))
 {
 	$cnt = file_get_contents($filepath);
@@ -23,7 +23,7 @@ else
 <table width="100%" cellpadding="0" cellspacing="0">
 <tr>
 <td>
-<input type="text" class="input-text" name="filepath" id="filepath" value="<?php echo htmlspecialchars(path_encode($filepath, $cfg->rootdir));?>" autocomplete="off" />
+<input type="text" class="input-text" name="filepath" id="filepath" value="<?php echo htmlspecialchars(path_encode($filepath, $fmanConfig->rootdir));?>" autocomplete="off" />
 </td>
 <td width="64" align="right">
   <input type="button" name="open" id="open" value="Open" class="btn com-button btn-success" onclick="openFile($('#filepath').val())" />
@@ -39,7 +39,7 @@ else
 }
 if(@$_GET['option']=='savefile' && isset($_POST['filepath']))
 {
-	if($cfg->readonly){
+	if($fmanConfig->readonly){
 		die('READONLY');
 	}
 	
@@ -54,7 +54,7 @@ if(@$_GET['option']=='savefile' && isset($_POST['filepath']))
 		foreach($arr as $k=>$v)
 		{
 			$d2c .= $v;
-			if(strlen($d2c)>=strlen($cfg->rootdir) && !file_exists($d2c))
+			if(strlen($d2c)>=strlen($fmanConfig->rootdir) && !file_exists($d2c))
 			{
 				mkdir($d2c);
 			}
@@ -67,7 +67,7 @@ if(@$_GET['option']=='savefile' && isset($_POST['filepath']))
 	$content = str_replace(array("\r\r\n"), array("\r\n"), $content);
 	
 	$tt = getMIMEType($filepath);
-	if(in_array($tt->extension, $cfg->forbidden_extension)){
+	if(in_array($tt->extension, $fmanConfig->forbidden_extension)){
 		die('FORBIDDENEXT');
 	}
 	

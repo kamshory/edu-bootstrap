@@ -2,19 +2,19 @@
 include_once(dirname(__FILE__)."/functions.php");
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php";
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-if(!$cfg->allow_upload_all_file && !$cfg->allow_upload_image)
+if(!$fmanConfig->allow_upload_all_file && !$fmanConfig->allow_upload_image)
 {
 	die('DENIED');
 }
-if($cfg->readonly)
+if($fmanConfig->readonly)
 {
 	die('READONLY');
 }
-$targetdir = path_decode(kh_filter_input(INPUT_GET, 'targetdir'), $cfg->rootdir);
+$targetdir = path_decode(kh_filter_input(INPUT_GET, 'targetdir'), $fmanConfig->rootdir);
 
 
 if(isset($_FILES["images"]))
@@ -44,7 +44,7 @@ foreach($_FILES["images"]["error"] as $key => $error){
 			deleteforbidden($targetdir);
 			if(stripos($info['mime'],'image')!==false)
 			{
-				if(!$cfg->allow_upload_image)
+				if(!$fmanConfig->allow_upload_image)
 				{
 					if($allowdelete)
 					{
@@ -53,7 +53,7 @@ foreach($_FILES["images"]["error"] as $key => $error){
 					die('FORBIDDEN');
 				}
 			}
-			else if(!$cfg->allow_upload_all_file)
+			else if(!$fmanConfig->allow_upload_all_file)
 			{
 				if($allowdelete)
 				{

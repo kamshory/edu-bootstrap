@@ -13,10 +13,7 @@ if(!defined('DB_PREF'))
 define('DB_PREF', '');
 */
 
-if(!isset($cfg))
-{
-	$cfg = new stdClass();
-}
+$cfg = new stdClass();
 $configs = new stdClass();
 
 $configs->db_type = "mysql";

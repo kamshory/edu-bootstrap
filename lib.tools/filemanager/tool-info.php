@@ -2,7 +2,7 @@
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php"; //NOSONAR
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
@@ -38,14 +38,14 @@ if($cfg->authentification_needed && !$userlogin)
   </tr>
   <tr>
     <td>Authentification</td>
-    <td><?php echo (@$cfg->authentification_needed)?'Needed':'Not Needed';?> </td>
+    <td><?php echo (@$fmanConfig->authentification_needed)?'Needed':'Not Needed';?> </td>
   </tr>
   <tr>
     <td>Permission Directory</td>
-    <td><span class="permission-info"><?php echo substr(sprintf('%o', fileperms(@$cfg->rootdir)), -4);?></span></td>
+    <td><span class="permission-info"><?php echo substr(sprintf('%o', fileperms(@$fmanConfig->rootdir)), -4);?></span></td>
   </tr>
   <tr>
     <td>Read Only Mode</td>
-    <td><?php echo (@$cfg->readonly)?'Yes':'No';?> </td>
+    <td><?php echo (@$fmanConfig->readonly)?'Yes':'No';?> </td>
   </tr>
 </table>

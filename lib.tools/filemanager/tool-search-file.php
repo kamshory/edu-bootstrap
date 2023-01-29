@@ -2,11 +2,11 @@
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php";
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-$dir = path_decode(kh_filter_input(INPUT_GET, 'dir'), $cfg->rootdir);
+$dir = path_decode(kh_filter_input(INPUT_GET, 'dir'), $fmanConfig->rootdir);
 $lv2 = new listFile($dir);
 $arrfile = $lv2->result_file;
 $arrdir = $lv2->result_dir;

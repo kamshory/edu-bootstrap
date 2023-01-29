@@ -2,13 +2,13 @@
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php";
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-$dir2 = path_decode(kh_filter_input(INPUT_GET, 'dir'), $cfg->rootdir);
+$dir2 = path_decode(kh_filter_input(INPUT_GET, 'dir'), $fmanConfig->rootdir);
 if(!is_dir($dir2)){
-$dir2 = path_decode('base', $cfg->rootdir);	
+$dir2 = path_decode('base', $fmanConfig->rootdir);	
 }
 $arrfile2 = array();
 $arrfile = array();
@@ -31,7 +31,7 @@ if(file_exists($dir2))
 			if($filetype=="file")
 			{
 				$ft = getMIMEType($fn);
-				$obj['url'] = $cfg->rooturl.'/'.substr(path_encode($fn, $cfg->rootdir),5);
+				$obj['url'] = $fmanConfig->rooturl.'/'.substr(path_encode($fn, $fmanConfig->rootdir),5);
 				$obj['name'] = basename($fn);
 				$fs = filesize($fn);
 				$obj['filesize'] = $fs;
@@ -39,7 +39,7 @@ if(file_exists($dir2))
 				$obj['type'] = $ft->mime;
 				$fti = filemtime($fn);
 				$obj['filemtime'] = date('Y-m-d H:i:s', $fti);
-				if(stripos($obj['type'], 'image') !== false && $obj['filesize'] <= $cfg->thumbnail_max_size)
+				if(stripos($obj['type'], 'image') !== false && $obj['filesize'] <= $fmanConfig->thumbnail_max_size)
 				{
 					try
 					{

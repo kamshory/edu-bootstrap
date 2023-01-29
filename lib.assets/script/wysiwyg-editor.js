@@ -78,7 +78,6 @@ function fileBrowserCallBack(field_name, url, type, win)
     }
     url = url.substr(21);
     
-    let ajaxfilemanagerurl = "lib.tools/filemanager/?description=true&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
     switch (type){
         case "image":break;
         case "media":break;
@@ -87,7 +86,7 @@ function fileBrowserCallBack(field_name, url, type, win)
         default:
         return false;
     }
-    tinyMCE.activeEditor.windowManager.open({url:ajaxfilemanagerurl,width:800,height:480,resizable:true,maximizable:true,inline:"yes",close_previous:"no"},{window:win,input:field_name});
+    tinyMCE.activeEditor.windowManager.open({url:ajaxFilemanagerURL,width:800,height:480,resizable:true,maximizable:true,inline:"yes",close_previous:"no"},{window:win,input:field_name});
 }
 function pasteHandler(e)
 {

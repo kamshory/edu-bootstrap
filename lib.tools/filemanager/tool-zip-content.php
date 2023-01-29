@@ -2,12 +2,12 @@
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php";
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-$filename = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $cfg->rootdir);
-$path = path_encode($filename, $cfg->rootdir);
+$filename = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
+$path = path_encode($filename, $fmanConfig->rootdir);
 $json_exif = "";
 if(file_exists($filename))
 {

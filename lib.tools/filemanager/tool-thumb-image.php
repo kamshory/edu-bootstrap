@@ -2,21 +2,21 @@
 include_once(dirname(__FILE__)."/functions.php");
 include_once dirname(__FILE__)."/auth.php";
 include dirname(__FILE__)."/conf.php";
-if($cfg->authentification_needed && !$userlogin)
+if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-if(!$cfg->thumbnail_quality)
-$cfg->thumbnail_quality=75;
+if(!$fmanConfig->thumbnail_quality)
+$fmanConfig->thumbnail_quality=75;
 
-$filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $cfg->rootdir);
+$filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
 
 function gettumbpict($originalfile, $maxw, $maxh)
 {
-	global $cfg;
+	global $fmanConfig;
 	$image = new StdClass();
 	$filesize = filesize($originalfile);
-	if($filesize > $cfg->thumbnail_max_size)
+	if($filesize > $fmanConfig->thumbnail_max_size)
 	{
 		return false;
 	}
@@ -110,7 +110,7 @@ if(file_exists($filepath))
 	$filetype=filetype($filepath);
 	if($filetype=="file")
 	{
-		$expires = $cfg->cache_max_age_file;
+		$expires = $fmanConfig->cache_max_age_file;
 		header("Pragma: public");
 		header("Cache-Control: maxage=".$expires);
 		header('Expires: ' . gmdate('D, d M Y H:i:s', time()+$expires) . ' GMT');
@@ -125,7 +125,7 @@ if(file_exists($filepath))
 			if($image)
 			{
 				header('Content-Type: image/jpeg');
-				@imagejpeg($image,NULL,$cfg->thumbnail_quality);
+				@imagejpeg($image,NULL,$fmanConfig->thumbnail_quality);
 			}
 			else
 			{	
@@ -145,7 +145,7 @@ if(file_exists($filepath))
 	}
 	if($filetype=="dir")
 	{
-		$expires = $cfg->cache_max_age_dir;
+		$expires = $fmanConfig->cache_max_age_dir;
 		header("Pragma: public");
 		header("Cache-Control: maxage=".$expires);
 		header('Expires: ' . gmdate('D, d M Y H:i:s', time()+$expires) . ' GMT');
@@ -198,7 +198,7 @@ if(file_exists($filepath))
 			}
 
 			header('Content-Type: image/jpeg');
-			@imagejpeg($image, NULL, $cfg->thumbnail_quality);
+			@imagejpeg($image, NULL, $fmanConfig->thumbnail_quality);
 		}
 	}
 }

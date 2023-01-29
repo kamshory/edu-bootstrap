@@ -14,7 +14,7 @@ class listFile
 	}
 	public function findAll($location)
 	{
-		global $cfg;
+		global $fmanConfig;
 		if (file_exists($location) && ($handle = opendir($location))) {
 			$i = 0;
 			while (false !== ($ufile = readdir($handle))) {
@@ -26,9 +26,9 @@ class listFile
 				unset($obj);
 				if ($filetype == "file") {
 					$ft = getMIMEType($fn);
-					$obj['url'] = $cfg->rooturl . '/' . substr(path_encode($fn, $cfg->rootdir), 5);
-					$obj['path'] = path_encode($fn, $cfg->rootdir);
-					$obj['location'] = path_encode(dirname($fn), $cfg->rootdir);
+					$obj['url'] = $fmanConfig->rooturl . '/' . substr(path_encode($fn, $fmanConfig->rootdir), 5);
+					$obj['path'] = path_encode($fn, $fmanConfig->rootdir);
+					$obj['location'] = path_encode(dirname($fn), $fmanConfig->rootdir);
 					$obj['name'] = basename($fn);
 					$fs = filesize($fn);
 					$obj['filesize'] = $fs;
@@ -45,7 +45,7 @@ class listFile
 					$fti = filemtime($fn);
 					$obj['filemtime'] = '<span title="' . date('Y-m-d H:i:s', $fti) . '">' . date('y-m-d', $fti) . '</span>';
 
-					if ((stripos($obj['type'], 'image') !== false || stripos($obj['type'], 'application/x-shockwave-flash') !== false) && $obj['filesize'] <= $cfg->thumbnail_max_size) {
+					if ((stripos($obj['type'], 'image') !== false || stripos($obj['type'], 'application/x-shockwave-flash') !== false) && $obj['filesize'] <= $fmanConfig->thumbnail_max_size) {
 						try {
 							$is = @getimagesize($fn);
 							if ($is) {
@@ -68,8 +68,8 @@ class listFile
 					}
 					$this->result_file[] = $obj;
 				} else if ($filetype == "dir") {
-					$obj['path'] = path_encode($fn, $cfg->rootdir);
-					$obj['location'] = path_encode(dirname($fn), $cfg->rootdir);
+					$obj['path'] = path_encode($fn, $fmanConfig->rootdir);
+					$obj['location'] = path_encode(dirname($fn), $fmanConfig->rootdir);
 					$obj['name'] = basename($fn);
 					$obj['type'] = 'dir';
 					$obj['permission'] = substr(sprintf('%o', fileperms($fn)), -4);
@@ -101,7 +101,7 @@ function cleanforbiddenall($dir)
 }
 function cleanforbidden($dir)
 {
-	global $cfg;
+	global $fmanConfig;
 	$dir = rtrim($dir, "/");
 	$mydir = opendir($dir);
 	while (false !== ($file = readdir($mydir))) {
@@ -113,7 +113,7 @@ function cleanforbidden($dir)
 			} else {
 				$fn = $dir . "/" . $file;
 				$tt = getMIMEType($fn);
-				if (in_array($tt->extension, $cfg->forbidden_extension)) {
+				if (in_array($tt->extension, $fmanConfig->forbidden_extension)) {
 					@unlink($fn);
 				}
 			}
@@ -450,8 +450,8 @@ function getMIMEType($filename)
 function path_encode($dir, $root = null)
 {
 	if ($root === null) {
-		global $cfg;
-		$rootdir = $cfg->rootdir;
+		global $fmanConfig;
+		$rootdir = $fmanConfig->rootdir;
 	} else {
 		$rootdir = $root;
 	}
@@ -467,8 +467,8 @@ function path_decode($dir, $root = null)
 		$dir = "";
 	}
 	if ($root === null) {
-		global $cfg;
-		$rootdir = $cfg->rootdir;
+		global $fmanConfig;
+		$rootdir = $fmanConfig->rootdir;
 	} else {
 		$rootdir = $root;
 	}
@@ -507,8 +507,8 @@ function path_decode_to_url($dir, $rooturl = "")
 function path_encode_trash($dir, $trash = null)
 {
 	if ($trash === null) {
-		global $cfg;
-		$trashdir = $cfg->trashdir;
+		global $fmanConfig;
+		$trashdir = $fmanConfig->trashdir;
 	} else {
 		$trashdir = $trash;
 	}
@@ -522,8 +522,8 @@ function path_decode_trash($dir, $trash = null)
 		$dir = "";
 	}
 	if ($trash === null) {
-		global $cfg;
-		$trashdir = $cfg->trashdir;
+		global $fmanConfig;
+		$trashdir = $fmanConfig->trashdir;
 	} else {
 		$trashdir = $trash;
 	}
@@ -565,8 +565,8 @@ function dir_list($dir)
 
 function deleteforbidden($dir, $containsubdir = false)
 {
-	global $cfg;
-	if ($cfg->delete_forbidden_extension && file_exists($dir) && is_array($cfg->forbidden_extension)) {
+	global $fmanConfig;
+	if ($fmanConfig->delete_forbidden_extension && file_exists($dir) && is_array($fmanConfig->forbidden_extension)) {
 		if ($containsubdir) {
 			cleanforbiddenall($dir);
 		} else {
@@ -580,7 +580,7 @@ function deleteforbidden($dir, $containsubdir = false)
 					$filetype = filetype($fn);
 					if ($filetype == "file") {
 						$tt = getMIMEType($fn);
-						if (in_array($tt->extension, $cfg->forbidden_extension)) {
+						if (in_array($tt->extension, $fmanConfig->forbidden_extension)) {
 							@unlink($fn);
 						}
 					}
@@ -633,8 +633,8 @@ function getfmprofile($name, $authblogid, $default = NULL)
 function compressImageFile($path, $authblogid)
 {
 	if (getfmprofile('compressimageonupload', $authblogid, 0)) {
-		global $cfg;
-		$maxsize = $cfg->thumbnail_max_size;
+		global $fmanConfig;
+		$maxsize = $fmanConfig->thumbnail_max_size;
 		if (filesize($path) <= $maxsize) {
 			// get mime type
 			$info = @getimagesize($path);

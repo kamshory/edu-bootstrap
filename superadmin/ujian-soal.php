@@ -386,7 +386,7 @@ if(url.indexOf('data:') != -1)
 	url = '';
 }
 url = url.substr(baseTestURLLength);
-var ajaxfilemanagerurl = "lib.tools/filemanager/?test_id="+test_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
+var ajaxFilemanagerURL = "lib.tools/filemanager/?test_id="+test_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
 switch (type){
 case "image":break;
 case "media":break;
@@ -395,7 +395,7 @@ case "file":break;
 default:
 return false;
 }
-tinyMCE.activeEditor.windowManager.open({url:ajaxfilemanagerurl,width:780,height:440,resizable:true,maximizable:true,inline:"yes",close_previous:"no"},{window:win,input:field_name});
+tinyMCE.activeEditor.windowManager.open({url:ajaxFilemanagerURL,width:780,height:440,resizable:true,maximizable:true,inline:"yes",close_previous:"no"},{window:win,input:field_name});
 }
 	
 </script>
