@@ -20,7 +20,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 	$admin_create = $admin_edit = $member_id;
 	$ip_create = $ip_edit = addslashes($_SERVER['REMOTE_ADDR']);
 	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
-	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_NUMBER_UINT);
+	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	
 	$sql = "
 	select `edu_test`.*, `edu_test`.`name` as `test_name`, 
@@ -118,7 +118,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 }
 if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['register']))
 {
-	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_NUMBER_UINT);
+	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	if(!@$member_id)
 	{
 		include_once dirname(__FILE__)."/login-form.php";

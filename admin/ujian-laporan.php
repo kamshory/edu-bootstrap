@@ -358,7 +358,7 @@ else if(@$_GET['option']=='answerdetail' && isset($_GET['answer_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $array_class = $picoEdu->getArrayClass($school_id);
-$answer_id = kh_filter_input(INPUT_GET, 'answer_id', FILTER_SANITIZE_NUMBER_UINT);
+$answer_id = kh_filter_input(INPUT_GET, 'answer_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.*, `edu_answer`.*, 
 timediff(`edu_answer`.`end`,`edu_answer`.`start`) as `duration_test` ,
 (select `edu_student`.`name` from `edu_student` where `edu_student`.`student_id` = `edu_answer`.`student_id`) as `student_name`

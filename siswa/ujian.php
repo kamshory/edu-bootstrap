@@ -12,7 +12,7 @@ if(@$auth_student_id && @$auth_school_id)
 {
 if(@$_GET['option'] == 'answer' && isset($_GET['answer_id']))
 {
-$answer_id = kh_filter_input(INPUT_GET, 'answer_id', FILTER_SANITIZE_NUMBER_UINT);
+$answer_id = kh_filter_input(INPUT_GET, 'answer_id', FILTER_SANITIZE_STRING_NEW);
 $now = $picoEdu->getLocalDateTime();
 include_once dirname(__FILE__)."/lib.inc/header.php";
 
@@ -293,7 +293,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php";
 }
 else if(@$_GET['option'] == 'history' && isset($_GET['test_id']))
 {
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_NUMBER_UINT);
+$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 include_once dirname(__FILE__)."/lib.inc/header.php";
 
 $sql = "SELECT `edu_test`.* 
@@ -415,7 +415,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php";
 else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_NUMBER_UINT);
+$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
 (select `edu_teacher`.`name` from `edu_teacher` where `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`

@@ -28,7 +28,9 @@ $html .=
             }
         }
 $html .= 
-'      </nav>' . "\r\n";
+'               </div>
+            </div>
+        </nav>' . "\r\n";
         return $html;
     }
 

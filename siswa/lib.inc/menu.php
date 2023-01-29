@@ -18,6 +18,7 @@ $structure = array(
         'submenu'=>array(
             array(
                 'caption'=>'Sekolah',
+                'icon'=>'fa-school',
                 'link'=>'sekolah.php'                       
             ),
             array(

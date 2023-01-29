@@ -374,9 +374,9 @@ function getChangeLog(version)
 			}
 			?>
             </select> 
-            <input type="submit" name="download" id="download" value="Lanjutkan" />
-            <input type="button" id="changelog" value="Lihat Perubahan" />
-            <input type="button" id="back" value="Kembali" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?step=<?php echo ($step-1);?>'" />
+            <input class="btn btn-success" type="submit" name="download" id="download" value="Lanjutkan" />
+            <input class="btn btn-primary" type="button" id="changelog" value="Lihat Perubahan" />
+            <input class="btn btn-primary" type="button" id="back" value="Kembali" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?step=<?php echo ($step-1);?>'" />
         </div>
     </form>
 	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
@@ -448,8 +448,8 @@ else if($step == 2)
 	<div class="info">File update aplikasi telah berhasil didownload. Silakan ekstrak file tersebut.</div>
     <form name="extractform" id="extractform" action="" method="post" enctype="multipart/form-data">
         <div class="button-area">
-      <input type="submit" name="extract" id="extract" value="Lanjutkan" />
-      <input type="button" id="back" value="Kembali" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?step=<?php echo ($step-1);?>'" />
+      <input class="btn btn-success" type="submit" name="extract" id="extract" value="Lanjutkan" />
+      <input class="btn btn-primary" type="button" id="back" value="Kembali" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?step=<?php echo ($step-1);?>'" />
     	</div>
     </form>
     <?php
@@ -470,8 +470,8 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <h3>Tahap 3 - Update Selesai</h3>
 <div class="info">Program berhasil diperbarui.</div>
 <div class="button-area">
-  <input type="button" id="chengelog" value="Versi Program" onclick="window.location='version.php'" />
-  <input type="button" id="next" value="Selesai" onclick="window.location='index.php'" />
+  <input class="btn btn-primary" type="button" id="chengelog" value="Versi Program" onclick="window.location='version.php'" />
+  <input class="btn btn-primary" type="button" id="next" value="Selesai" onclick="window.location='index.php'" />
 </div>
 <?php
 include_once dirname(__FILE__)."/lib.inc/footer.php";
@@ -484,7 +484,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <h3>Update Aplikasi</h3>
 <p>Update aplikasi diperlukan untuk menambahkan fitur aplikasi agar dapat meyesuaikan dengan kebutuhan dan juga untuk meningkatkan kualitas dan stabilitas sistem. </p>
 <div class="button-area">
-  <input type="button" id="next" value="Lanjutkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?step=<?php echo ($step+1);?>'" />
+  <input class="btn btn-primary" type="button" id="next" value="Lanjutkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?step=<?php echo ($step+1);?>'" />
 </div>
 <?php
 include_once dirname(__FILE__)."/lib.inc/footer.php";
