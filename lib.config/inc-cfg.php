@@ -87,7 +87,4 @@ $cfg->equation_url_generator = "http://".$_SERVER['HTTP_HOST']."/equgen.php";
 $cfg->max_invalid_signin_time = 420;
 $cfg->max_invalid_signin_count = 3;
 
-if(!isset($pagination))
-{
-	$pagination = new stdClass;
-}
+$pagination = new stdClass;
