@@ -84,6 +84,7 @@ let LatexDialog = {
 					img2.src = dataURL;
 					img2.setAttribute('alt', latex);
 					img2.setAttribute('data-latex', latex);
+					img2.setAttribute('data-renderer', rendererSelector);
 					img2.setAttribute('class', 'latex-image');
 					img2.style.verticalAlign='middle';
 					tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
@@ -101,6 +102,7 @@ let LatexDialog = {
 			img2.src = url;
 			img2.setAttribute('alt', latex);
 			img2.setAttribute('data-latex', latex);
+			img2.setAttribute('data-renderer', rendererSelector);
 			img2.setAttribute('class', 'latex-image');
 			img2.style.verticalAlign='middle';
 			tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
@@ -114,6 +116,7 @@ let LatexDialog = {
 			img2.src = url;
 			img2.setAttribute('alt', latex);
 			img2.setAttribute('data-latex', latex);
+			img2.setAttribute('data-renderer', rendererSelector);
 			img2.setAttribute('class', 'latex-image');
 			img2.style.verticalAlign='middle';
 			tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
@@ -138,6 +141,7 @@ let LatexDialog = {
 				img2.src = url2;
 				img2.setAttribute('alt', latex);
 				img2.setAttribute('data-latex', latex);
+				img2.setAttribute('data-renderer', rendererSelector);
 				img2.setAttribute('class', 'latex-image');
 				img2.style.verticalAlign='middle';
 				tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
@@ -207,7 +211,6 @@ function renderLatex(latex){
 			let img = document.createElement('img');
 			img.src = urlPreview+latex;
 			img.setAttribute('alt', latex);
-			img.setAttribute('data-latex', latex);
 			img.setAttribute('class', 'latex-image');
 			img.style.verticalAlign='middle';
 			document.getElementById('image-container').innerHTML = img.outerHTML;
@@ -226,7 +229,6 @@ function renderLatex(latex){
 			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
 			img.src = url;
 			img.setAttribute('alt', latex);
-			img.setAttribute('data-latex', latex);
 			img.setAttribute('class', 'latex-image');
 			img.style.verticalAlign='middle';
 			document.getElementById('image-container').innerHTML = img.outerHTML;
@@ -243,7 +245,6 @@ function renderLatex(latex){
 		let img = document.createElement('img');
 		img.src = url;
 		img.setAttribute('alt', latex);
-		img.setAttribute('data-latex', latex);
 		img.setAttribute('class', 'latex-image');
 		img.style.verticalAlign='middle';
 		document.getElementById('image-container').innerHTML = img.outerHTML;
