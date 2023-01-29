@@ -373,7 +373,7 @@ $stmt = $database->executeQuery($sql);
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />
 <form id="form2" name="form2" method="post" action="" >
-<script type="text/javascript" src="lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
 var numbering = <?php echo json_encode($cfg->numbering);?>;
@@ -475,7 +475,7 @@ else if(@$_GET['option']=='edit')
 
 			?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/test.css" />
-<script type="text/javascript" src="lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets; ?>';
 var numbering = <?php echo json_encode($cfg->numbering); ?>;
@@ -492,7 +492,6 @@ var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$tes
         </div>
     </div>
 </div>
-
 
 <form id="form2" name="form2" method="post" action="">
 <div class="test-info">
@@ -579,7 +578,7 @@ if ($stmt2->rowCount() > 0) {
 </div>
 </div>
 <?php
-						$i++;
+			$i++;
 		}
 	}
 	?>

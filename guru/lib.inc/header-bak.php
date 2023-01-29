@@ -39,7 +39,7 @@ $setTimeToken = $_SESSION['set_time_token'];
 <script type="text/javascript">
 var setTimeToken = '<?php echo $setTimeToken;?>';
 </script>
-<script type="text/javascript" src="lib.assets/script/time-sync.min.js">
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/time-sync.min.js">
 </script>
 <?php
 }

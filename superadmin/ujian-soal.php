@@ -226,7 +226,7 @@ if(@$_GET['option']=='edit')
 
 			?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/test.css" />
-<script type="text/javascript" src="lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets; ?>';
 var numbering = <?php echo json_encode($cfg->numbering); ?>;

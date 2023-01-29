@@ -165,7 +165,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
 </script>
-<script type="text/javascript" src="lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/article-editor.min.js"></script>
 
 <?php
@@ -209,7 +209,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
 </script>
-<script type="text/javascript" src="lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/article-editor.min.js"></script>
 
 <?php
@@ -263,7 +263,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
 </script>
-<script type="text/javascript" src="lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/article-editor.min.js"></script>
 
 <?php

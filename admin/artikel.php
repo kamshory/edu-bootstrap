@@ -173,8 +173,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
 </script>
-<script type="text/javascript" src="lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/article-editor.min.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
+
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/wysiwyg-editor.js"></script>
 
 <?php
 $sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = '1' and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
@@ -192,7 +193,7 @@ var defaultdir = 'lib.content/media/article/';
 <input type="text" id="title" name="title" class="form-control input-text input-text-full input-text-title" placeholder="Judul Artikel" autocomplete="off" required="required" />
 </div>
 <div class="input-block">
-<textarea id="content" name="content" style="width:100%; height:300px; box-sizing:border-box;"></textarea>
+<textarea class="wysiwyg-editor" id="content" name="content" style="width:100%; height:300px; box-sizing:border-box;"></textarea>
 <input type="hidden" name="class" id="classlist" value="" />
 </div>
 <div class="input-block button-area">
@@ -213,8 +214,8 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
 </script>
-<script type="text/javascript" src="lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/article-editor.min.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/wysiwyg-editor.js"></script>
 
 <?php
 $article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
@@ -239,7 +240,7 @@ var defaultdir = 'lib.content/media/article/';
 <input type="text" id="title" name="title" class="form-control input-text input-text-full input-text-title" value="<?php echo $data['title'];?>" placeholder="Judul Artikel" autocomplete="off" required="required" />
 </div>
 <div class="input-block">
-<textarea id="content" name="content" style="width:100%; height:300px; box-sizing:border-box;"><?php echo $data['content'];?></textarea>
+<textarea class="wysiwyg-editor" id="content" name="content" style="width:100%; height:300px; box-sizing:border-box;"><?php echo $data['content'];?></textarea>
 <input type="hidden" name="class" id="classlist" value="<?php echo $data['class'];?>" />
 </div>
 <div class="input-block button-area">

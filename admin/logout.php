@@ -38,8 +38,8 @@ if(isset($_GET['confirm-logout']))
     <form class="form-signin" method="post" action="">
         <img class="mb-4" src="lib.style/images/logo-120.png" alt="" width="90" height="90">
         <h1 class="h3 mb-3 font-weight-normal">Keluar</h1>
-        <a class="btn btn-success" href="logout.php?confirm-logout=yes">Ya</a>
-        <a class="btn btn-primary" href="index.php">Tidak</a>
+        <a class="btn btn-success btn-block" href="logout.php?confirm-logout=yes">Ya</a>
+        <a class="btn btn-primary btn-block" href="index.php">Tidak</a>
         <p class="mt-5 mb-3 text-muted">&copy; 2008-<?php echo date('Y'); ?></p>
     </form>
 </body>
