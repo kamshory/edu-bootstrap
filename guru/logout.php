@@ -3,12 +3,9 @@ include_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
 if(isset($_GET['confirm-logout']))
 {
-include_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
-include_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
-unset($_SESSION['username']);
-unset($_SESSION['password']);
-session_destroy();
-header("Location: index.php");
+    unset($_SESSION['teacher_username']);
+    unset($_SESSION['teacher_password']);
+    header("Location: index.php");
 }
 ?><!doctype html>
 <html lang="en">
@@ -39,7 +36,7 @@ header("Location: index.php");
 
 <body class="text-center">
     <form class="form-signin" method="post" action="">
-        <img class="mb-4" src="../lib.style/images/logo-120.png" alt="" width="90" height="90">
+        <img class="mb-4" src="lib.style/images/logo-120.png" alt="" width="90" height="90">
         <h1 class="h3 mb-3 font-weight-normal">Keluar</h1>
         <a class="btn btn-success" href="logout.php?confirm-logout=yes">Ya</a>
         <a class="btn btn-primary" href="index.php">Tidak</a>

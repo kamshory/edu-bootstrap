@@ -18,6 +18,10 @@ RewriteRule lib.vendors/(.*) ../lib.vendors/$1
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule lib.style/(.*) ../lib.style/$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule media.edu/(.*) ../media.edu/$1
 
 

@@ -3,38 +3,45 @@ include_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
 if(isset($_GET['confirm-logout']))
 {
-include_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
-include_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
-unset($_SESSION['username']);
-unset($_SESSION['password']);
-session_destroy();
-header("Location: index.php");
+    unset($_SESSION['admin_username']);
+    unset($_SESSION['admin_password']);
+    header("Location: index.php");
 }
-?><!DOCTYPE html>
+?><!doctype html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="msapplication-navbutton-color" content="#3558BE">
-<meta name="theme-color" content="#3558BE">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#3558BE">
-<title>Keluar <?php echo $cfg->app_name;?></title>
-<link type="text/css" rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/no-data.css">
-<link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/favicon.png" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Planetbiru">
+    <meta name="generator" content="Planetbiru">
+    <title>Pico Edu</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib.vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="lib.style/signin.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="favs/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="favs/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favs/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="favs/manifest.json">
+    <link rel="mask-icon" href="favs/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="favs/favicon.ico">
+    <meta name="msapplication-config" content="favs/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
 </head>
-<body>
-<div class="all">
-<div class="header">
-<h1><?php echo $cfg->app_name;?></h1>
-</div>
-<div class="content">
-<p>Apakah Anda yakin akan keluar?</p>
-<p>
-<a class="button-gradient" href="logout.php?confirm-logout=yes">Ya</a>
-<a class="button-gradient2" href="index.php">Tidak</a>
-</p>
-</div>
-</div>
+
+<body class="text-center">
+    <form class="form-signin" method="post" action="">
+        <img class="mb-4" src="lib.style/images/logo-120.png" alt="" width="90" height="90">
+        <h1 class="h3 mb-3 font-weight-normal">Keluar</h1>
+        <a class="btn btn-success" href="logout.php?confirm-logout=yes">Ya</a>
+        <a class="btn btn-primary" href="index.php">Tidak</a>
+        <p class="mt-5 mb-3 text-muted">&copy; 2008-<?php echo date('Y'); ?></p>
+    </form>
 </body>
 </html>
+

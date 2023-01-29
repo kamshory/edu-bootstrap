@@ -41,15 +41,10 @@ $structure = array(
                 'caption'=>'Jurusan',
                 'icon'=>'fa-users',
                 'link'=>'jurusan.php'                       
-            ),
-            array(
-                'caption'=>'Perubahan Kelas Siswa',
-                'icon'=>'fa-right-left',
-                'link'=>'kelas-siswa-ubah.php'                       
             )
         )
-        ),
-        array(
+    ),
+    array(
             'caption'=>'Pengguna',
             'link'=>'siswa.php',
             'submenu'=>array(
