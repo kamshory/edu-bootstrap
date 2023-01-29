@@ -1,8 +1,4 @@
 <?php
-if(!defined('DB_NAME'))
-{
-	exit();
-}
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +17,8 @@ from `edu_question`
 where '$question_package' like concat('%[',`edu_question`.`question_id`,']%') 
 order by `order` asc
 ";
-$res = mysql_query($sql);
-$number_of_question = mysql_num_rows($res);;
+$stmt = $database->executeQuery($sql);
+$number_of_question = $stmt->rowCount();
 $no_halaman_awal = 0;
 $no_halaman_akhir = 0;
 
@@ -41,48 +37,48 @@ if($number_of_question)
 	where '$question_package' like concat('%[',`edu_question`.`question_id`,']%') 
 	order by `order`
 	";
-	$res = mysql_query($sql);
+	$stmt1 = $database->executeQuery($sql);
 	$question_set = array();
 	$questions = array();
-	while(($data1 = mysql_fetch_assoc($res)))
-	{
-		$soal = $data1['question_id'];
-		$question_set[] = $soal*1;
-		if($data['random'])
+	if ($stmt1->rowCount() > 0) {
+		$rows1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+		foreach($rows1 as $data1)
 		{
-			$sql2 = "SELECT `edu_option`.* , rand() as `rand`
-			from `edu_option`
-			where `edu_option`.`question_id` = '$soal'
-			order by `rand` asc
-			";
-		}
-		else
-		{
-			$sql2 = "SELECT `edu_option`.* , rand() as `rand`
-			from `edu_option`
-			where `edu_option`.`question_id` = '$soal'
-			order by `order` asc
-			";
-		}
-		$options = array();
-		$stmt2 = $database->executeQuery($sql2);
-		if ($stmt2->rowCount() > 0) {
-			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-			foreach ($rows2 as $data2) {
-				$answer = @$_SESSION['answer_tmp'][$student_id][$test_id]['answer_' . $data2['question_id']];
-				$option = new StdClass();
-				$option->option_id = $data2['option_id'] * 1;
-				$option->text = $data2['content'];
-				$options[] = $option;
+			$soal = $data1['question_id'];
+			$question_set[] = $soal;
+			if ($data['random']) {
+				$sql2 = "SELECT `edu_option`.* , rand() as `rand`
+				from `edu_option`
+				where `edu_option`.`question_id` = '$soal'
+				order by `rand` asc
+				";
+			} else {
+				$sql2 = "SELECT `edu_option`.* , rand() as `rand`
+				from `edu_option`
+				where `edu_option`.`question_id` = '$soal'
+				order by `order` asc
+				";
 			}
+			$options = array();
+			$stmt2 = $database->executeQuery($sql2);
+			if ($stmt2->rowCount() > 0) {
+				$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+				foreach ($rows2 as $data2) {
+					$answer = @$_SESSION['answer_tmp'][$student_id][$test_id]['answer_' . $data2['question_id']];
+					$option = new StdClass();
+					$option->option_id = $data2['option_id'];
+					$option->text = $data2['content'];
+					$options[] = $option;
+				}
+			}
+			$question = new StdClass();
+			$question->question_id = $data1['question_id'];
+			$question->text = $data1['content'];
+			$question->numbering = $data1['numbering'];
+			$question->random = $data1['random'];
+			$question->options = $options;
+			$questions[] = $question;
 		}
-		$question = new StdClass();
-		$question->question_id = $data1['question_id']*1;
-		$question->text = $data1['content'];
-		$question->numbering = $data1['numbering'];
-		$question->random = $data1['random']*1;
-		$question->options = $options;
-		$questions[] = $question;
 	}
 }
 $storage_key = md5($student_id."-".$test_id."|".implode(",",$question_set)); 
@@ -92,7 +88,7 @@ var questionData = <?php echo json_encode($questions);?>;
 var questionSet = <?php echo json_encode($question_set);?>;
 var storageKey = '<?php echo $storage_key;?>'; 
 var alert_time = <?php echo $alert_time;?>;
-var test = <?php echo $test_id;?>;
+var test = '<?php echo $test_id;?>';
 var autosubmit = <?php echo $autosubmit*1;?>;
 var due_time = <?php echo (@$_SESSION['session_test'][$student_id][$test_id]['due_time']-time());?>;
 </script>
