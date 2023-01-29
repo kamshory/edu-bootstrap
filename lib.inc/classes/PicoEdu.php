@@ -1,6 +1,6 @@
 <?php
 
-class PicoEdu 
+class PicoEdu //NOSONAR
 {
 	const SPAN_OPEN = '<span>';
 	const SPAN_CLOSE = '</span>';
@@ -8,6 +8,7 @@ class PicoEdu
 	const TRIM_EXTRA_SPACE = "/\s+/";
 	const TRIM_NON_NUMERIC = "/[^0-9]/i";
 	const RAQUO = ' &raquo; ';
+	const AMPERSAND_OFFSET = '&offset=';
 
 	public PicoDatabase $database;
 	public function __construct(PicoDatabase $database)
@@ -236,27 +237,6 @@ class PicoEdu
 
 	public function createPaginationHtml($pagination)
 	{
-		/*
-		<nav aria-label="Page navigation example">
-		<ul class="pagination">
-			<li class="page-item">
-				<a class="page-link" href="#" aria-label="Previous">
-					<span aria-hidden="true">&laquo;</span>
-					<span class="sr-only">Previous</span>
-				</a>
-			</li>
-			<li class="page-item"><a class="page-link" href="#">1</a></li>
-			<li class="page-item"><a class="page-link" href="#">2</a></li>
-			<li class="page-item"><a class="page-link" href="#">3</a></li>
-			<li class="page-item">
-			<a class="page-link" href="#" aria-label="Next">
-				<span aria-hidden="true">&raquo;</span>
-				<span class="sr-only">Next</span>
-			</a>
-			</li>
-		</ul>
-		</nav>
-		*/
 		$str_result = "";
 		if(is_array($pagination->result))
 		{
@@ -327,18 +307,18 @@ class PicoEdu
 			}
 	
 			$result[0]->text = $paginationObject->str_first;
-			$result[0]->ref = str_replace("?&", "?", $arg . "&offset=" . $paginationObject->ref_first);
+			$result[0]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . $paginationObject->ref_first);
 			$result[0]->sel = false;
 			if ($curpage >= 0) {
 				$result[1]->text = $paginationObject->str_prev;
-				$result[1]->ref = str_replace("?&", "?", $arg . "&offset=" . $paginationObject->ref_prev);
+				$result[1]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . $paginationObject->ref_prev);
 				$result[1]->sel = 0;
 			}
 			for ($j = 2, $i = $startpage; $i <= ($endpage); $i++, $j++) {
 				$pn = $i;
 				$result[$j] = new StdClass();
 				$result[$j]->text = "$pn";
-				$result[$j]->ref = str_replace("?&", "?", $arg . "&offset=" . (($i - 1) * $resultperpage));
+				$result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . (($i - 1) * $resultperpage));
 				if ($curpage == $i) {
 					$result[$j]->sel = true;
 				} else {
@@ -348,13 +328,13 @@ class PicoEdu
 			if ($endpage < $lastpage) {
 				$result[$j] = new StdClass();
 				$result[$j]->text = $paginationObject->str_next;
-				$result[$j]->ref = str_replace("?&", "?", $arg . "&offset=" . $paginationObject->ref_next);
+				$result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . $paginationObject->ref_next);
 				$result[$j]->sel = false;
 				$j++;
 			}
 			$result[$j] = new StdClass();
 			$result[$j]->text = $paginationObject->str_last;
-			$result[$j]->ref = str_replace("?&", "?", $arg . "&offset=" . $paginationObject->ref_last);
+			$result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . $paginationObject->ref_last);
 			$result[$j]->sel = false;
 			return $result;
 		}

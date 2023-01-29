@@ -108,21 +108,30 @@ if (@$_GET['option'] == 'add') {
 					<select class="form-control" name="school_program_id" id="school_program_id">
 						<option value=""></option>
 						<?php
-						$sql2 = "SELECT `edu_school_program`.*
-						from `edu_school_program`
-						where `edu_school_program`.`school_id` = '$school_id' and `active` = '1' 
-						order by `edu_school_program`.`name` asc
-						";
-						$stmt2 = $database->executeQuery($sql2);
-						if ($stmt2->rowCount() > 0) {
-							$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-							foreach ($rows as $data2) {
-								?>
-							<option value="<?php echo $data2['school_program_id']; ?>"><?php echo $data2['name']; ?></option>
-						<?php
-							}
-						}
-						?>
+							$sql2 = "SELECT `edu_school_program`.*
+							from `edu_school_program`
+							where `edu_school_program`.`school_id` = '$school_id' and `active` = '1' 
+							order by `edu_school_program`.`name` asc
+							";
+							echo $picoEdu->createFilterDb(
+								$sql2,
+								array(
+									'attributeList'=>array(
+										array('attribute'=>'value', 'source'=>'school_program_id')
+									),
+									'selectCondition'=>array(
+										'source'=>'school_program_id',
+										'value'=>null
+									),
+									'caption'=>array(
+										'delimiter'=>PicoEdu::RAQUO,
+										'values'=>array(
+											'name'
+										)
+									)
+								)
+							);
+							?>
 					</select>
 				</td>
 			</tr>
@@ -192,16 +201,24 @@ else if (@$_GET['option'] == 'edit')
 							where `edu_school_program`.`school_id` = '$school_id' and `active` = '1' 
 							order by `edu_school_program`.`name` asc
 							";
-							$stmt2 = $database->executeQuery($sql2);
-							if ($stmt2->rowCount() > 0) {
-								$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-								foreach ($rows as $data2) {
-									?>
-								<option value="<?php echo $data2['school_program_id']; ?>" <?php if ($data['school_program_id'] == $data2['school_program_id'])
-									   echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
-							<?php
-								}
-							}
+							echo $picoEdu->createFilterDb(
+								$sql2,
+								array(
+									'attributeList'=>array(
+										array('attribute'=>'value', 'source'=>'school_program_id')
+									),
+									'selectCondition'=>array(
+										'source'=>'school_program_id',
+										'value'=>$data['school_program_id']
+									),
+									'caption'=>array(
+										'delimiter'=>PicoEdu::RAQUO,
+										'values'=>array(
+											'name'
+										)
+									)
+								)
+							);
 							?>
 						</select>
 					</td>
