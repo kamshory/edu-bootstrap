@@ -54,8 +54,16 @@ let EquationDialog = {
 						canvas.setAttribute('height', img.height);
 						ctx.drawImage(img, 0, 0);
 						let url = canvas.toDataURL('png');
-						let html = '<img class="equation-image" style="vertical-align:middle" src="'+url+'" alt="'+latex+'" data-equation="'+encodeURIComponent(JSON.stringify(jsonData))+'">';
-						tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
+
+						let img2 = document.createElement('img');
+						img2.src = url;
+						img2.setAttribute('alt', latex);
+						img2.setAttribute('data-equation', JSON.stringify(jsonData));
+						img2.setAttribute('data-renderer', rendererSelector);
+						img2.setAttribute('class', 'latex-image equation-image');
+						img2.style.verticalAlign='middle';
+						tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
+
 						tinyMCEPopup.close();
 					}				
 					img.src = url;
@@ -68,8 +76,10 @@ let EquationDialog = {
 				let img2 = document.createElement('img');
 				img2.src = url;
 				img2.setAttribute('alt', latex);
+				img2.setAttribute('data-equation', JSON.stringify(jsonData));
 				img2.setAttribute('data-latex', latex);
-				img2.setAttribute('class', 'latex-image');
+				img2.setAttribute('data-renderer', rendererSelector);
+				img2.setAttribute('class', 'latex-image equation-image');
 				img2.style.verticalAlign='middle';
 				tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
 				tinyMCEPopup.close();
@@ -78,8 +88,17 @@ let EquationDialog = {
 			else if(rendererSelector == 'browser-mathml')
 			{
 				let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
-				let html = '<img class="equation-image" style="vertical-align:middle" src="'+url+'" alt="'+latex+'" data-equation="'+encodeURIComponent(JSON.stringify(jsonData))+'">';
-				tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
+
+				let img2 = document.createElement('img');
+				img2.src = url;
+				img2.setAttribute('alt', latex);
+				img2.setAttribute('data-equation', JSON.stringify(jsonData));
+				img2.setAttribute('data-latex', latex);
+				img2.setAttribute('data-renderer', rendererSelector);
+				img2.setAttribute('class', 'latex-image equation-image');
+				img2.style.verticalAlign='middle';
+				tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
+
 				tinyMCEPopup.close();
 			}
 			else
@@ -96,8 +115,17 @@ let EquationDialog = {
 					ctx.drawImage(img, 0, 0);
 					DOMURL.revokeObjectURL(url);
 					let url2 = canvas.toDataURL('png');
-					let html = '<img class="equation-image" style="vertical-align:middle" src="'+url2+'" alt="'+latex+'" data-equation="'+encodeURIComponent(JSON.stringify(jsonData))+'">';
-					tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
+
+					let img2 = document.createElement('img');
+					img2.src = url2;
+					img2.setAttribute('alt', latex);
+					img2.setAttribute('data-equation', JSON.stringify(jsonData));
+					img2.setAttribute('data-latex', latex);
+					img2.setAttribute('data-renderer', rendererSelector);
+					img2.setAttribute('class', 'latex-image equation-image');
+					img2.style.verticalAlign='middle';
+					tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
+
 					tinyMCEPopup.close();
 				}				
 				img.src = url;
@@ -106,8 +134,17 @@ let EquationDialog = {
 		else
 		{		
 			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);	
-			let html = '<img class="equation-image" style="vertical-align:middle" src="'+url+'" alt="'+latex+'" data-equation="'+encodeURIComponent(JSON.stringify(data))+'">';
-			tinyMCEPopup.editor.execCommand('mceInsertContent', false, html);
+
+			let img2 = document.createElement('img');
+			img2.src = url;
+			img2.setAttribute('alt', latex);
+			img2.setAttribute('data-equation', JSON.stringify(jsonData));
+			img2.setAttribute('data-latex', latex);
+			img2.setAttribute('data-renderer', rendererSelector);
+			img2.setAttribute('class', 'latex-image equation-image');
+			img2.style.verticalAlign='middle';
+			tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
+
 			tinyMCEPopup.close();
 		}
 	}
