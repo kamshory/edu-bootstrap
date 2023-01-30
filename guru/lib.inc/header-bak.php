@@ -66,7 +66,7 @@ var setTimeToken = '<?php echo $setTimeToken;?>';
     	    <li><a href="siswa.php">Siswa</a></li>
     	    <li><a href="guru.php">Guru</a></li>
     	    <li><a href="artikel.php">Artikel</a></li>
-    	    <li><a href="info.php">Infomasi</a></li>
+    	    <li><a href="informasi.php">Infomasi</a></li>
     	    <li><a href="ujian.php">Ujian</a></li>
             <?php
 			}

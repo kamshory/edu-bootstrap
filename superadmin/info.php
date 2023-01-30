@@ -458,8 +458,8 @@ else if(isset($_GET['info_id']))
 				var info_id = $(this).attr('data-id');
 				if(confirm('Apakah Anda akan menghapus artikel ini?'))
 				{
-					$.post('ajax-delete-info.php', {info_id:info_id, option:'delete'}, function(asnwer){
-						window.location = 'info.php';
+					$.post('ajax-delete-informasi.php', {info_id:info_id, option:'delete'}, function(asnwer){
+						window.location = 'informasi.php';
 					});
 				}
 				e.preventDefault();
@@ -514,8 +514,8 @@ else if(isset($_GET['info_id']))
 		<div class="article-link">
 			<a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Lihat Semua</a>
 			<a href="javascript:;" class="download-word">Download</a>
-			<a href="info.php?option=edit&info_id=<?php echo $data['info_id'];?>">Ubah</a>
-			<a class="delete-post" data-id="<?php echo $data['info_id'];?>" href="info.php?option=delete&info_id=<?php echo $data['info_id'];?>">Hapus</a>
+			<a href="informasi.php?option=edit&info_id=<?php echo $data['info_id'];?>">Ubah</a>
+			<a class="delete-post" data-id="<?php echo $data['info_id'];?>" href="informasi.php?option=delete&info_id=<?php echo $data['info_id'];?>">Hapus</a>
 		</div>
 		<?php
 	}

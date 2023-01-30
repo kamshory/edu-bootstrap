@@ -146,7 +146,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="siswa/info.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a>
+					<a href="siswa/informasi.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a>
 					</div>
 				</div>
 			</div>
@@ -216,7 +216,7 @@ else
 					<div class="card-body">
 						<h5 class="card-title"><?php echo $data['name'];?></h5>
 						<p class="card-text"><?php echo $content;?></p>
-						<a href="info.php?info_id=<?php echo $data['info_id'];?>" class="btn btn-primary">Baca</a>
+						<a href="informasi.php?info_id=<?php echo $data['info_id'];?>" class="btn btn-primary">Baca</a>
 					</div>
 					</div>
 				</div>
@@ -275,7 +275,7 @@ else
 				<li><a href="guru/siswa.php"><div><img alt="img" src="lib.assets/theme/default/css/images/students-80.png" /></div><div class="menu-label">Siswa</div></a></li>
 				<li><a href="guru/guru.php"><div><img alt="img" src="lib.assets/theme/default/css/images/teachers-80.png" /></div><div class="menu-label">Guru</div></a></li>
 				<li><a href="guru/artikel.php"><div><img alt="img" src="lib.assets/theme/default/css/images/article-80.png" /></div><div class="menu-label">Artikel</div></a></li>
-				<li><a href="guru/info.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a></li>
+				<li><a href="guru/informasi.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a></li>
 				<li><a href="guru/ujian.php"><div><img alt="img" src="lib.assets/theme/default/css/images/exam-80.png" /></div><div class="menu-label">Ujian</div></a></li>
 				<li><a href="guru/profil.php"><div><img alt="img" src="lib.assets/theme/default/css/images/profile-80.png" /></div><div class="menu-label">Profil</div></a></li>
 				<li><a href="guru/logout.php"><div><img alt="img" src="lib.assets/theme/default/css/images/logout-80.png" /></div><div class="menu-label">Logout</div></a></li>
@@ -321,7 +321,7 @@ else
 				<li><a href="admin/siswa.php"><div><img alt="img" src="lib.assets/theme/default/css/images/students-80.png" /></div><div class="menu-label">Siswa</div></a></li>
 				<li><a href="admin/guru.php"><div><img alt="img" src="lib.assets/theme/default/css/images/teachers-80.png" /></div><div class="menu-label">Guru</div></a></li>
 				<li><a href="admin/artikel.php"><div><img alt="img" src="lib.assets/theme/default/css/images/article-80.png" /></div><div class="menu-label">Artikel</div></a></li>
-				<li><a href="admin/info.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a></li>
+				<li><a href="admin/informasi.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a></li>
 				<li><a href="admin/ujian.php"><div><img alt="img" src="lib.assets/theme/default/css/images/exam-80.png" /></div><div class="menu-label">Ujian</div></a></li>
 				<li><a href="admin/profil.php"><div><img alt="img" src="lib.assets/theme/default/css/images/profile-80.png" /></div><div class="menu-label">Profil</div></a></li>
 				<li><a href="admin/logout.php"><div><img alt="img" src="lib.assets/theme/default/css/images/logout-80.png" /></div><div class="menu-label">Logout</div></a></li>

@@ -56,7 +56,7 @@ include_once dirname(__FILE__)."/lib.inc/auth.php";
            {
                 $period = translateDate(date('F Y', strtotime($data['month'].'-01')));
                ?>
-                <li><a href="info.php?option=archive&period=<?php echo $data['month'];?>"><?php echo $period;?> (<?php echo $data['count'];?>)</a></li>
+                <li><a href="informasi.php?option=archive&period=<?php echo $data['month'];?>"><?php echo $period;?> (<?php echo $data['count'];?>)</a></li>
                 <?php
            }
            ?>
@@ -86,7 +86,7 @@ include_once dirname(__FILE__)."/lib.inc/auth.php";
            foreach($rows as $data)
            {
                ?>
-                <li><a href="info.php?info_id=<?php echo $data['info_id'];?>"><?php echo $data['name'];?></a></li>
+                <li><a href="informasi.php?info_id=<?php echo $data['info_id'];?>"><?php echo $data['name'];?></a></li>
                 <?php
            }
            ?>

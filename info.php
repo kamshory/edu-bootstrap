@@ -160,7 +160,7 @@ if(isset($_GET['info_id']))
 					<div class="article-creator">Oleh <?php echo $data['creator'];?></div>
 					<div class="article-link">
 						<button class="btn btn-success download-word">Download</button>
-						<button class="btn btn-primary" onclick="window.location='info.php';">Semua</button>
+						<button class="btn btn-primary" onclick="window.location='informasi.php';">Semua</button>
 					</div>
 				</div>
             </div>
@@ -266,7 +266,7 @@ if($stmt->rowCount() > 0)
 			<div class="article-title"><h3><?php echo $data['name'];?></h3></div>
 			<div class="article-content"><?php echo $content;?></div>
 			<div class="article-link">
-				<a href="info.php?option=detail&info_id=<?php echo $data['info_id'];?>">Baca</a>
+				<a href="informasi.php?option=detail&info_id=<?php echo $data['info_id'];?>">Baca</a>
 			</div>
 		</div>
 		<?php
