@@ -2,8 +2,8 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/login-form.php";
-exit();
+	include_once dirname(__FILE__)."/login-form.php";
+	exit();
 }
 $cfg->page_title = "Ujian";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
@@ -205,9 +205,9 @@ where `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$
 group by `edu_question`.`question_id` 
 order by `pos` asc ";
 
-$result=mysql_query($sql);
+$stmt1 = $database->executeQuery($sql);
 
-if(mysql_num_rows($result))
+if($stmt1->rowCount() > 0)
 {
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />
@@ -215,62 +215,65 @@ if(mysql_num_rows($result))
 <?php
 $i=0;
 $no = $pagination->offset;
-while(($data=mysql_fetch_assoc($result)))
+$rows1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+foreach($rows1 as $data)
 {
-$j=$i%2;
-$no++;
-$qid = $data['question_id'];
-$answer = $data['answer'];
-?>
-<li value="<?php echo $no;?>">
-<div class="kd-ctrl"><a href="javascript:;"><span><?php echo $data['basic_competence'];?></span></a></div>
-<div class="question">
-<?php echo $data['content'];?>
-<?php
-$sql2 = "SELECT `edu_option`.* , '$answer' like concat('%,',`edu_option`.`option_id`,']%') as `my_answer`
-from `edu_option` 
-where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` order by  `edu_option`.`order` asc";
-$result2=mysql_query($sql2);
-if(mysql_num_rows($result2))
-{
-?>
-<div class="option">
-<ol class="listoption" style="list-style-type:<?php echo $data['numbering'];?>">
-<?php
-while(($data2=mysql_fetch_assoc($result2)))
-{
-?>
-<li>
-<?php
-if($data['publish_answer'] && $data['time_answer_publication'] <= $now)
-{
-?>
-<span class="option-circle<?php if($data2['score']) echo ' option-circle-selected';?>"><?php
-echo $data2['score']*1;
-?></span>
-<?php
-}
-?>
-<div class="list-option-item<?php echo ($data2['my_answer'])?' list-option-item-selected':'';?>">
-<div class="option-content">
-<?php
-echo ($data2['content']);
-?>
-</div>
-</div>
-</li>
-<?php
-}
-?>
-</ol>
-</div>
-<?php
-}
-?>
-</div>
-</li>
-<?php
-$i++;
+	$j=$i%2;
+	$no++;
+	$qid = $data['question_id'];
+	$answer = $data['answer'];
+	?>
+	<li value="<?php echo $no;?>">
+	<div class="kd-ctrl"><a href="javascript:;"><span><?php echo $data['basic_competence'];?></span></a></div>
+	<div class="question">
+	<?php echo $data['content'];?>
+	<?php
+	$sql2 = "SELECT `edu_option`.* , '$answer' like concat('%,',`edu_option`.`option_id`,']%') as `my_answer`
+	from `edu_option` 
+	where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` order by  `edu_option`.`order` asc";
+	$stmt2 = $database->executeQuery($sql);
+
+	if($stmt2->rowCount() > 0)
+	{
+	?>
+	<div class="option">
+	<ol class="listoption" style="list-style-type:<?php echo $data['numbering'];?>">
+	<?php
+	$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+	foreach($rows2 as $data2)
+	{
+	?>
+	<li>
+	<?php
+	if($data['publish_answer'] && $data['time_answer_publication'] <= $now)
+	{
+	?>
+	<span class="option-circle<?php if($data2['score']) echo ' option-circle-selected';?>"><?php
+	echo $data2['score']*1;
+	?></span>
+	<?php
+	}
+	?>
+	<div class="list-option-item<?php echo ($data2['my_answer'])?' list-option-item-selected':'';?>">
+	<div class="option-content">
+	<?php
+	echo $data2['content'];
+	?>
+	</div>
+	</div>
+	</li>
+	<?php
+	}
+	?>
+	</ol>
+	</div>
+	<?php
+	}
+	?>
+	</div>
+	</li>
+	<?php
+	$i++;
 }
 ?>
 </ol>
@@ -747,7 +750,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
-      <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></td>
+      <td width="16"><i class="fas fa-pencil"></i></td>
       <td width="25">No</td>
       <td>Ujian</td>
       <td>Kelas</td>
@@ -765,7 +768,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	$no++;
 	?>
     <tr>
-      <td><a class="show-controls" data-test-id="<?php echo $data['test_id'];?>" href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></a></td>
+      <td><a class="show-controls" data-test-id="<?php echo $data['test_id'];?>" href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="ujian.php?option=detail&test_id=<?php echo ($data['test_id']);?>"><?php echo $data['name'];?></a></td>
       <td><a href="ujian.php?option=detail&test_id=<?php echo ($data['test_id']);?>"><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>

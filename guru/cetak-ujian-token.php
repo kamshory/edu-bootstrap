@@ -105,10 +105,11 @@ inner join(`edu_student`) on (`edu_student`.`student_id` = `edu_token`.`student_
 where `edu_token`.`school_id` = '$school_id' 
 and `edu_token`.`token_id` in ($tokens)
 order by `edu_student`.`reg_number` asc ";
-$res = mysql_query($sql);
-while(($data = mysql_fetch_assoc($res)))
-{
-?>
+$stmt = $database->executeQuery($sql);
+    if ($stmt->rowCount() > 0) {
+      $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      foreach ($rows as $data) {
+        ?>
 
 <div class="cut-here"></div>
 <div class="user-item">
@@ -121,16 +122,17 @@ while(($data = mysql_fetch_assoc($res)))
     <td width="15%">Kedaluarsa</td>
   </tr>
   <tr>
-    <td><?php echo $data['test_name'];?> </td>
-    <td><?php echo $data['reg_number'];?> </td>
-    <td><?php echo $data['student_name'];?> </td>
-    <td><?php echo $data['token'];?> </td>
-    <td><?php echo translateDate(date('d M H:i', strtotime($data['time_expire'])));?> </td>
+    <td><?php echo $data['test_name']; ?> </td>
+    <td><?php echo $data['reg_number']; ?> </td>
+    <td><?php echo $data['student_name']; ?> </td>
+    <td><?php echo $data['token']; ?> </td>
+    <td><?php echo translateDate(date('d M H:i', strtotime($data['time_expire']))); ?> </td>
   </tr>
 </table>
 </div>
 <?php
-}
+      }
+    }
 ?>
 </div>
 </div>
