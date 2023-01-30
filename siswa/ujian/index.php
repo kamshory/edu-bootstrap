@@ -1,7 +1,8 @@
 <?php
 include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-siswa.php";
 include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/mobile-detector.php";
-
+$student_id = @$student_id . '';
+$class_id = @$class_id . '';
 $test_id = addslashes((@$_GET['test_id']));
 if(empty($test_id))
 {
@@ -30,117 +31,112 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 	$end = date('Y-m-d H:i:s');
 	
 	$sql = "select * from `edu_test` where `test_id` = '$test_id' ";
-	$stmt = $adatabase->executeQuery($sql);
-	$data = mysql_fetch_assoc($res);
-	$test_id_name = $data['name'];
-	if($data['standard_score'] == 0)
-	{
-		$data['standard_score'] = 1;
-	}
-	foreach($_POST as $key=>$val)
-	{
-		if(stripos($key, 'answer_')===0)
-		{
-			$field = addslashes($key);
-			$value = addslashes($val);
-			$_SESSION['answer_tmp'][$student_id][$test_id][$field] = $value;
+	$stmt = $database->executeQuery($sql);
+	if ($stmt->rowCount() > 0) {
+		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$test_id_name = $data['name'];
+		if ($data['standard_score'] == 0) {
+			$data['standard_score'] = 1;
 		}
-	}
-	
-	// check score dari answer
-	$arr = $_SESSION['answer_tmp'][$student_id][$test_id];
-	$answer_arr = array();
-	
-	$true = 0;
-	$false = 0;
-	$score = 0;
-	$jumlah_soal = 0;
-	
-	foreach($arr as $key=>$value)
-	{
-		$soal = addslashes(substr($key, strlen('answer_')));
-		$answer = addslashes($value);
-		$answer_arr[] = "[".$soal.",".$answer."]";
-		
-		$sql = "select * from `edu_option` where `option_id` = '$answer' ";
-		$res = mysql_query($sql);
-		$dt = mysql_fetch_assoc($res);
-		
-		if($dt['score']>0)
-		{
-			$true++;
-			$score+=$dt['score'];
+
+		foreach ($_POST as $key => $val) {
+			if (stripos($key, 'answer_') === 0) {
+				$field = addslashes($key);
+				$value = addslashes($val);
+				$_SESSION['answer_tmp'][$student_id][$test_id][$field] = $value;
+			}
 		}
-		else
-		{
-			$false++;
+
+		// check score dari answer
+		$arr = $_SESSION['answer_tmp'][$student_id][$test_id];
+		$answer_arr = array();
+
+		$true = 0;
+		$false = 0;
+		$score = 0;
+		$jumlah_soal = 0;
+
+		foreach ($arr as $key => $value) {
+			$soal = addslashes(substr($key, strlen('answer_')));
+			$answer = addslashes($value);
+			$answer_arr[] = "[" . $soal . "," . $answer . "]";
+
+			$sql = "select * from `edu_option` where `option_id` = '$answer' ";
+			$stmt2 = $database->executeQuery($sql);
+			if($stmt2->rowCount() > 0)
+			{
+				$dt = $stmt2->fetch(PDO::FETCH_ASSOC);
+				if ($dt['score'] > 0) {
+					$true++;
+					$score += $dt['score'];
+				} else {
+					$false++;
+				}
+			}
+			else
+			{
+				$false++;
+			}
+
+			
+			$jumlah_soal++;
 		}
-		$jumlah_soal++;
-	}
-	if($jumlah_soal == 0)
-	{
-		$jumlah_soal = 1;
-	}
-	$str_soal = @$_SESSION['session_test'][$student_id][$test_id]['soal'];
-	$str_soal = trim(str_replace(array('[', ']'), array('', ','), $str_soal), ',');
-	//$jumlah_soal = count(explode(',', $str_soal));
-		
-	$penalty = $false*$data['penalty'];
-	$final_score = $score-$penalty;
-	$percent = 100*($final_score/($jumlah_soal*$data['standard_score']));
-	$proses = false;
-	$answer_str = addslashes(implode(",", $answer_arr)); // catatan answer
-	if($data['has_limits'])
-	{
-		$sql = "select * from `edu_answer` where `student_id` = '$student_id' and `test_id` = '$test_id' ";
-		$res = mysql_query($sql);
-		$nujian = mysql_num_rows($res);
-		if($nujian < $data['trial_limits'])
-		{
+		if ($jumlah_soal == 0) {
+			$jumlah_soal = 1;
+		}
+		$str_soal = @$_SESSION['session_test'][$student_id][$test_id]['soal'];
+		$str_soal = trim(str_replace(array('[', ']'), array('', ','), $str_soal), ',');
+
+		$penalty = $false * $data['penalty'];
+		$final_score = $score - $penalty;
+		$percent = 100 * ($final_score / ($jumlah_soal * $data['standard_score']));
+		$proses = false;
+		$answer_str = addslashes(implode(",", $answer_arr)); // catatan answer
+		if ($data['has_limits']) {
+			$sql = "select * from `edu_answer` where `student_id` = '$student_id' and `test_id` = '$test_id' ";
+			$stmt2 = $database->executeQuery($sql);
+			$nujian = $stmt2->rowCount();
+			if ($nujian < $data['trial_limits']) {
+				$proses = true;
+			} else {
+				$proses = false;
+			}
+		} else {
 			$proses = true;
 		}
-		else
-		{
-			$proses = false;
+		$question_set = str_replace(array('[', ']'), array(',', ','), @$_SESSION['session_test'][$student_id][$test_id]['soal']);
+		$question_set = trim(str_replace(",,", ",", $question_set), ",");
+		$storage_key = md5($student_id . "-" . $test_id . "|" . $question_set);
+		$storage_key;
+		if ($proses) {
+			$_SESSION['session_test'][$student_id][$test_id] = null;
+			unset($_SESSION['session_test'][$student_id][$test_id]);
+			$_SESSION['answer_tmp'][$student_id][$test_id] = null;
+			unset($_SESSION['answer_tmp'][$student_id][$test_id]);
+			$_SESSION['session_test'] = array();
+			// simpan di tabel answer
+			$competence_score = addslashes(json_encode($picoEdu->getTextScoreFromString($answer_str, true)));
+			$sql = "insert into `edu_answer` 
+			(`school_id`, `test_id`, `student_id`, `start`, `end`, `answer`, `competence_score`, 
+			`true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) values
+			('$school_id', '$test_id', '$student_id', '$start', '$end', '$answer_str', '$competence_score', 
+			'$true', '$false', '$score', '$penalty', '$final_score', '$percent', '1') ";
+			$stmt = $database->executeInsert($sql);
+			$picoEdu->logoutTest($school_id, $student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
+			include_once dirname(__FILE__) . "/lib.inc/header.php";
+			?>
+			<div class="info">Jawaban berhasil dikirim.</div>
+			<script type="text/javascript">
+			var test = '<?php echo $test_id; ?>';
+			window.localStorage.removeItem('<?php echo $storage_key; ?>-answer-set');
+			window.localStorage.removeItem('<?php echo $storage_key; ?>-current-index');
+			window.localStorage.removeItem('jwb_'+test);
+			window.location = '<?php echo $cfg->base_url . "siswa/ujian/" . basename($_SERVER['PHP_SELF']); ?>?option=sent&test_id=<?php echo $test_id; ?>';
+			</script>
+			<?php
+			include_once dirname(__FILE__) . "/lib.inc/footer.php";
+			exit();
 		}
-	}
-	else
-	{
-		$proses = true;
-	}
-	$question_set = str_replace(array('[', ']'), array(',', ','), @$_SESSION['session_test'][$student_id][$test_id]['soal']);
-	$question_set = trim(str_replace(",,", ",", $question_set), ",");
-	$storage_key = md5($student_id."-".$test_id."|".$question_set); 
-	$storage_key;
-	if($proses)
-	{
-		$_SESSION['session_test'][$student_id][$test_id] = null;
-		unset($_SESSION['session_test'][$student_id][$test_id]);
-		$_SESSION['answer_tmp'][$student_id][$test_id] = null;
-		unset($_SESSION['answer_tmp'][$student_id][$test_id]);
-		$_SESSION['session_test'] = array();
-		// simpan di tabel answer
-		$competence_score = addslashes(json_encode(get_test_score_from_string($answer_str, true)));
-		$sql = "insert into `edu_answer` 
-		(`school_id`, `test_id`, `student_id`, `start`, `end`, `answer`, `competence_score`, 
-		`true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) values
-		('$school_id', '$test_id', '$student_id', '$start', '$end', '$answer_str', '$competence_score', 
-		'$true', '$false', '$score', '$penalty', '$final_score', '$percent', '1') ";
-		$res = mysql_query($sql);
-		logout_test($school_id, $student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
-		include_once dirname(__FILE__)."/lib.inc/header.php";
-		?>
-        <div class="info">Jawaban berhasil dikirim.</div>
-        <script type="text/javascript">
-		var test = '<?php echo $test_id;?>';
-		window.localStorage.removeItem('<?php echo $storage_key;?>-answer-set');
-		window.localStorage.removeItem('<?php echo $storage_key;?>-current-index');
-		window.localStorage.removeItem('jwb_'+test);
-        window.location = '<?php echo $cfg->base_url."siswa/ujian/".basename($_SERVER['PHP_SELF']);?>?option=sent&test_id=<?php echo $test_id;?>';
-        </script>
-        <?php
-		include_once dirname(__FILE__)."/lib.inc/footer.php";
-		exit();
 	}
 }
 
@@ -183,7 +179,7 @@ if($data['test_availability'] != 'F' && ($data['available_from'] > $curtime || $
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
 <blockquote>
-<p>Anda tidak dapat bisa mengikuti test <strong><?php echo ($data['name']);?></strong> karena tidak dalam masa ujian. <a href="../">Klik di sini untuk kembali</a>
+<p>Anda tidak dapat bisa mengikuti test <strong><?php echo $data['name'];?></strong> karena tidak dalam masa ujian. <a href="../">Klik di sini untuk kembali</a>
 </p>
 </blockquote>
 <?php	
@@ -201,12 +197,13 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <div class="info">
 <?php
 $sql = "select * from `edu_answer` where `student_id` = '$student_id' and `test_id` = '$test_id' order by `start` desc ";
-$res = mysql_query($sql);
-$ntest = mysql_num_rows($res);
+$stmt = $database->executeQuery($sql);
+$ntest = $stmt->rowCount();
 if($ntest)
 {
+$data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
-<p>Anda telah mengerjakan ujian <strong><?php echo ($data['name']);?></strong>. <a href="ujian.php?option=history&test_id=<?php echo $test_id;?>">Klik di sini untuk kembali</a>
+<p>Anda telah mengerjakan ujian <strong><?php echo $data['name'];?></strong>. <a href="ujian.php?option=history&test_id=<?php echo $test_id;?>">Klik di sini untuk kembali</a>
 </p>
 <script type="text/javascript">
 window.localStorage.removeItem('jwb_<?php echo $test_id;?>');
@@ -226,7 +223,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php";
 exit();
 }
 
-else if(@$_GET['confirm-login-to-test'] == 'yes')
+else if(@$_GET['confirm-login-to-test'] == 'yes' || @$_GET['option'] == 'login-to-test')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
@@ -235,80 +232,31 @@ Informasi Singkat Ujian
 </div>
   <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
     <tr>
-    <td>Nama Ujian</td><td><?php echo ($data['name']);?></td>
+    <td>Nama Ujian</td><td><?php echo $data['name'];?></td>
     </tr>
     <?php
 	if($data['subject'])
 	{
 	?>
     <tr>
-    <td>Mata Pelajaran</td><td><?php echo ($data['subject']);?></td>
+    <td>Mata Pelajaran</td><td><?php echo $data['subject'];?></td>
     </tr>
     <?php
 	}
 	?>
     <tr>
-    <td>Jumlah Soal</td><td><?php echo ($data['number_of_question']);?></td>
+    <td>Jumlah Soal</td><td><?php echo $data['number_of_question'];?></td>
     </tr>
     <tr>
-    <td>Jumlah Pilihan</td><td><?php echo ($data['number_of_option']);?></td>
-    </tr>
-    <tr>
-    <td>Nilai Standard</td>
-    <td><?php echo ($data['standard_score']);?></td>
-    </tr>
-    <tr>
-    <td>Penalti
-    </td><td><?php echo ($data['penalty']);?></td>
-    </tr>
-    <tr>
-    <td>Otomatis Kirim Jawaban</td>
-    <td><?php echo ($data['autosubmit'])?'Ya':'Tidak';?></td>
-    </tr>
-</table>
-<div class="button-area">
-<input type="button" value="Masuk Ke Ujian" onclick="window.location='<?php echo $cfg->base_url."/siswa/ujian/".basename($_SERVER['PHP_SELF'])."?login-to-test=yes&test_id=".$data['test_id'];?>'">
-<input type="button" value="Batal" onclick="window.location='<?php echo $cfg->base_url."/siswa/ujian.php";?>'">
-</div>
-<?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
-exit();
-}
-
-else if(@$_GET['option'] == 'login-to-test')
-{
-include_once dirname(__FILE__)."/lib.inc/header.php";
-?>
-<div class="label">
-Informasi Singkat Ujian
-</div>
-  <table width="100%" border="0" class="two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
-    <tr>
-    <td>Nama Ujian</td><td><?php echo ($data['name']);?></td>
-    </tr>
-    <?php
-	if($data['subject'])
-	{
-	?>
-    <tr>
-    <td>Mata Pelajaran</td><td><?php echo ($data['subject']);?></td>
-    </tr>
-    <?php
-	}
-	?>
-    <tr>
-    <td>Jumlah Soal</td><td><?php echo ($data['number_of_question']);?></td>
-    </tr>
-    <tr>
-    <td>Jumlah Pilihan</td><td><?php echo ($data['number_of_option']);?></td>
+    <td>Jumlah Pilihan</td><td><?php echo $data['number_of_option'];?></td>
     </tr>
     <tr>
     <td>Nilai Standard</td>
-    <td><?php echo ($data['standard_score']);?></td>
+    <td><?php echo $data['standard_score'];?></td>
     </tr>
     <tr>
     <td>Penalti
-    </td><td><?php echo ($data['penalty']);?></td>
+    </td><td><?php echo $data['penalty'];?></td>
     </tr>
     <tr>
     <td>Otomatis Kirim Jawaban</td>
@@ -348,12 +296,12 @@ else if(@$_GET['login-to-test']=="yes")
 	// Only applied when $use_token is false or 0
 	
 	$auth_test = false;
-	$dur_obj = secondsToTime($data['duration']);
+	$dur_obj = $picoEdu->secondsToTime($data['duration']);
 	if($data['has_limits'])
 	{
 		$sql = "select * from `edu_answer` where `student_id` = '$student_id' and `test_id` = '$test_id' order by `start` desc ";
-		$res = mysql_query($sql);
-		$ntest = mysql_num_rows($res);
+		$stmt = $database->executeQuery($sql);
+		$ntest = $stmt->rowCount();
 		if($ntest < $data['trial_limits'])
 		{
 			$proses = true;
@@ -362,7 +310,7 @@ else if(@$_GET['login-to-test']=="yes")
 		else
 		{
 			$proses = false;
-			$dt = mysql_fetch_assoc($res);
+			$dt = $stmt->fetch(PDO::FETCH_ASSOC);
 			$test_id_terakhir = $dt['start'];
 			header("Location: ".basename($_SERVER['PHP_SELF'])."?option=limited");
 		}
@@ -403,16 +351,19 @@ else if(@$_GET['login-to-test']=="yes")
 					limit 0, $number_of_question
 					";
 				}
-				$res = mysql_query($sql);
+				$stmt = $database->executeQuery($sql);
 				$arr = array();
-				while(($dt = mysql_fetch_assoc($res)))
+				if($stmt->rowCount() > 0)
 				{
-					$arr[] = $dt['question_id'];
+					$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+					foreach($rows as $dt)
+					{
+						$arr[] = $dt['question_id'];
+					}
 				}
 				$question_package = $str = '['.implode('][', $arr).']';
 				$_SESSION['session_test'][$student_id][$test_id]['soal'] = $str;
-				login_test($school_id, $student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
-				saveSessionManual($_SESSION);
+				$picoEdu->loginTest($school_id, $student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
 				header("Location: ".basename($_SERVER['PHP_SELF'])."?test_id=$test_id");
 			}
 			else

@@ -16,12 +16,12 @@ $password = $_SESSION['student_password'];
 
 $student_login = new StudenAuth($database, $username, $password, false);
 
-$student_id = 0;
-$school_id = 0;
-$class_id = 0;
-$auth_student_school_id = 0;
-$auth_school_id = 0;
-$use_token = 0;
+$student_id = '';
+$school_id = '';
+$class_id = '';
+$auth_student_school_id = '';
+$auth_school_id = '';
+$use_token = false;
 if($student_login->student_id)
 {
 	$student_id = $auth_student_id = $student_login->student_id;
