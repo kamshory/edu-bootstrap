@@ -22,7 +22,7 @@ let EquationDialog = {
 			$('.main-editor').append(html);
 			equation.updateAll();
 		}
-		document.getElementById('renderer').value = ed.getParam('equation_renderer_machine') || 'browser-mathjax';
+		document.getElementById('renderer').value = /*ed.getParam('equation_renderer_machine') || */'browser-mathjax';
 	},
 
 	insert : function() {

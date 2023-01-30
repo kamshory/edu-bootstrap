@@ -258,7 +258,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 						foreach($test_data->item as $index_question => $question)
 						{
 							// petanyaan
-							if($selection_index[$idx] == 1 || $selection == ""  || $selection == "[]")
+							if(isset($selection_index) && isset($selection_index[$idx]) && $selection_index[$idx] == 1 || $selection == ""  || $selection == "[]")
 							{
 								$text_pertanyaan = trim(@$question->question->text);
 								$random = trim(@$question->question->random)*1;
@@ -332,7 +332,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 										$digest = md5($option);
 										$option = addslashes($option);
 										
-										$order = $index_option + 1;
+										$order = ((int) $index_option) + 1;
 
 										$option_id = $database->generateNewId();
 										

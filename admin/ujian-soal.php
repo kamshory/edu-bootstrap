@@ -259,7 +259,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	{
 		$dt = $stmt->fetch(PDO::FETCH_ASSOC);
 		$test_id = $dt['test_id'];
-		
+	
 		$direktori = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
 		$prefiks = "media.edu/school/$school_id/test/$test_id";
 	
@@ -286,6 +286,9 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 		$sql = "select * from `edu_option` where `question_id` = '$question_id' ";
 		$stmt2 = $database->executeQuery($sql);
 		if ($stmt2->rowCount() > 0) {
+			
+			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+
 			foreach ($rows2 as $dt) {
 				$id2 = $dt['option_id'];
 

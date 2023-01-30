@@ -76,7 +76,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 		<td>Grade</td>
 		<td><select class="form-control input-select" name="grade_id" id="grade_id">
 		<option value=""></option>
-		<?php echo $picoEdu->selectoption('grade', 'grade_id'); ?>
+		<?php 
+		echo $picoEdu->createGradeOption(null);
+		?>
 		</select></td>
 		</tr>
 		<tr>
@@ -159,7 +161,7 @@ $stmt = $database->executeQuery($sql);
 		<td>Grade</td>
 		<td><select class="form-control input-select" name="grade_id" id="grade_id">
 		<option value=""></option>
-		<?php echo $picoEdu->selectoption('grade', 'grade_id', NULL, $data['grade_id']); ?>
+		<?php echo $picoEdu->createGradeOption($data['grade_id']); ?>
 		</select></td>
 		</tr>
 		<tr>

@@ -11,7 +11,7 @@ $grade_id = kh_filter_input(INPUT_GET, 'grade_id', FILTER_SANITIZE_NUMBER_UINT);
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test-import.css">
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/test-import.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-import.js"></script>
 
 <div class="collection-list">
 	<div class="collection-selector">
@@ -19,19 +19,9 @@ $grade_id = kh_filter_input(INPUT_GET, 'grade_id', FILTER_SANITIZE_NUMBER_UINT);
         	<form name="gradefrm" id="gradefrm" method="get" enctype="multipart/form-data">
             	<select class="form-control" name="grade_id" id="grade_id">
                 	<option value="">- Pilih Tingkat -</option>
-                	<option value="1"<?php if($grade_id=='1') echo ' selected="selected"';?>>Kelas 1 SD</option>
-                	<option value="2"<?php if($grade_id=='2') echo ' selected="selected"';?>>Kelas 2 SD</option>
-                	<option value="3"<?php if($grade_id=='3') echo ' selected="selected"';?>>Kelas 3 SD</option>
-                	<option value="4"<?php if($grade_id=='4') echo ' selected="selected"';?>>Kelas 4 SD</option>
-                	<option value="5"<?php if($grade_id=='5') echo ' selected="selected"';?>>Kelas 5 SD</option>
-                	<option value="6"<?php if($grade_id=='6') echo ' selected="selected"';?>>Kelas 6 SD</option>
-                	<option value="7"<?php if($grade_id=='7') echo ' selected="selected"';?>>Kelas 7 SMP</option>
-                	<option value="8"<?php if($grade_id=='8') echo ' selected="selected"';?>>Kelas 8 SMP</option>
-                	<option value="9"<?php if($grade_id=='9') echo ' selected="selected"';?>>Kelas 9 SMP</option>
-                	<option value="10"<?php if($grade_id=='10') echo ' selected="selected"';?>>Kelas 10 SMA</option>
-                	<option value="11"<?php if($grade_id=='11') echo ' selected="selected"';?>>Kelas 11 SMA</option>
-                	<option value="12"<?php if($grade_id=='12') echo ' selected="selected"';?>>Kelas 12 SMA</option>
-                	<option value="13"<?php if($grade_id=='13') echo ' selected="selected"';?>>Perguruan Tinggi</option>
+					<?php
+					echo $picoEdu->createGradeOption($grade_id);;
+					?>
                 </select>
             </form>
         </div>
