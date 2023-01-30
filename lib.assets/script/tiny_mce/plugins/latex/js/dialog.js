@@ -268,6 +268,7 @@ function handlePasteImage(e)
 		let data;
 		if(contains(e.clipboardData.types, 'text/html') || contains(e.clipboardData.types, 'text/rtf'))
 		{
+			document.getElementById('renderer').value = 'browser-png';
 			let data = e.clipboardData.getData('text/plain');
 			try{
 				data = asciimath.reconstructSqrtWord(data);

@@ -8,8 +8,20 @@ let EquationDialog = {
 			dom = ed.dom, 
 			n = ed.selection.getNode();
 		let data = decodeURIComponent(dom.getAttrib(n, 'data-equation'));
+		
 		if(data != '')
 		{
+			if(data.indexOf('{"') === -1)
+			{
+				try
+				{
+					data = LZString.decompressFromBase64(data);
+				}
+				catch(e)
+				{
+					// Do nothing
+				}
+			}
 			let obj = JSON.parse(data);
 			let jsonObj = obj.json;
 			let equation = eqEd.Equation.constructFromJsonObj(jsonObj);
@@ -22,7 +34,7 @@ let EquationDialog = {
 			$('.main-editor').append(html);
 			equation.updateAll();
 		}
-		document.getElementById('renderer').value = /*ed.getParam('equation_renderer_machine') || */'browser-mathjax';
+		document.getElementById('renderer').value = ed.getParam('equation_renderer_machine') || 'browser-mathjax';
 	},
 
 	insert : function() {
@@ -58,7 +70,7 @@ let EquationDialog = {
 						let img2 = document.createElement('img');
 						img2.src = url;
 						img2.setAttribute('alt', latex);
-						img2.setAttribute('data-equation', JSON.stringify(jsonData));
+						img2.setAttribute('data-equation', LZString.compressToBase64(JSON.stringify(jsonData)));
 						img2.setAttribute('data-renderer', rendererSelector);
 						img2.setAttribute('class', 'latex-image equation-image');
 						img2.style.verticalAlign='middle';
@@ -76,7 +88,7 @@ let EquationDialog = {
 				let img2 = document.createElement('img');
 				img2.src = url;
 				img2.setAttribute('alt', latex);
-				img2.setAttribute('data-equation', JSON.stringify(jsonData));
+				img2.setAttribute('data-equation', LZString.compressToBase64(JSON.stringify(jsonData)));
 				img2.setAttribute('data-latex', latex);
 				img2.setAttribute('data-renderer', rendererSelector);
 				img2.setAttribute('class', 'latex-image equation-image');
@@ -92,7 +104,7 @@ let EquationDialog = {
 				let img2 = document.createElement('img');
 				img2.src = url;
 				img2.setAttribute('alt', latex);
-				img2.setAttribute('data-equation', JSON.stringify(jsonData));
+				img2.setAttribute('data-equation', LZString.compressToBase64(JSON.stringify(jsonData)));
 				img2.setAttribute('data-latex', latex);
 				img2.setAttribute('data-renderer', rendererSelector);
 				img2.setAttribute('class', 'latex-image equation-image');
@@ -119,7 +131,7 @@ let EquationDialog = {
 					let img2 = document.createElement('img');
 					img2.src = url2;
 					img2.setAttribute('alt', latex);
-					img2.setAttribute('data-equation', JSON.stringify(jsonData));
+					img2.setAttribute('data-equation', LZString.compressToBase64(JSON.stringify(jsonData)));
 					img2.setAttribute('data-latex', latex);
 					img2.setAttribute('data-renderer', rendererSelector);
 					img2.setAttribute('class', 'latex-image equation-image');
@@ -138,7 +150,7 @@ let EquationDialog = {
 			let img2 = document.createElement('img');
 			img2.src = url;
 			img2.setAttribute('alt', latex);
-			img2.setAttribute('data-equation', JSON.stringify(jsonData));
+			img2.setAttribute('data-equation', LZString.compressToBase64(JSON.stringify(jsonData)));
 			img2.setAttribute('data-latex', latex);
 			img2.setAttribute('data-renderer', rendererSelector);
 			img2.setAttribute('class', 'latex-image equation-image');

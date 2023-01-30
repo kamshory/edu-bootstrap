@@ -72,6 +72,8 @@ $(document).ready(function() {
     
 function fileBrowserCallBack(field_name, url, type, win)
 {
+    let ajaxFilemanagerURL = "lib.tools/filemanager/?description=true&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
+
     if(url.indexOf('data:') != -1)
     {
         url = '';
