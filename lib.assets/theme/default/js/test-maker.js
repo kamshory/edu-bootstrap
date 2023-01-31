@@ -560,7 +560,7 @@ function createLineObject(lineNumber, lineContent)
 	let nPipe = lineContent.split('|').length - 1;
 	let x = lineContent.replace(/[^-\|]/gi, '');
 	let x2 = lineContent.replace(/\s/g,'');
-	let hasPipeAndDash = x == x2;
+	let hasPipeAndDash = x == x2 && x2.length > 1;
 	return {lineNumber: parseInt(lineNumber), content:lineContent, pipe: nPipe, pipeDash: hasPipeAndDash, startTable:false, inTable:false, endTable:false};
 }
 
@@ -592,6 +592,10 @@ function detectTable(html)
 		{
 			lineObj[i].inTable = true;
 			tableObj[j].push(lineObj[i]);
+			if(i == lineObj.length - 1)
+            {
+                lineObj[i].endTable = true;
+            }
 		}
 		if(inTable && lineObj[i].pipe == 0)
 		{
@@ -620,7 +624,6 @@ function detectTable(html)
 			{
 				if(tab[i].pipeDash)
 				{
-					console.log('aaaaaaaa')
 					content = '';
 				}
 				else if(tab[i].endTable)
@@ -629,7 +632,6 @@ function detectTable(html)
 				}
 				else 
 				{
-					console.log(tab[i])
 					content = createTableContent(tab[i].content);
 				}
 			}
@@ -1326,6 +1328,27 @@ function showLatexDialog()
 	let url = 'latex.html#arg='+encodeURIComponent(textSelected);
 	$('#equation-area').html('<iframe src="'+url+'" frameborder="0" style="padding:0;margin:0;width:100%;height:400px;"></iframe>');
 }
+function showTableDialog()
+{
+	let inputElement = $('#input')[0];
+	let selectedText=getInputSelection(inputElement);
+	let textValue = inputElement.value;
+	let start = selectedText.start;
+	let end = selectedText.end;
+	let textSelected = textValue.substr(start, end-start);
+
+	let html = ''+
+	'<div class="file-dialog" style="width:640px">\r\n'+
+	'	<div class="file-dialog-title"><a class=\"file-dialog-close-icon\" href=\"javascript:closeEquationDialog();\"><span></span></a><span id="file-dialog-title-label">Masukkan Tabel</span></div>\r\n'+
+	'    <div id="equation-area" style="position:relative; height:352px; overflow:hidden;">\r\n'+
+	'    </div>\r\n'+
+	'</div>\r\n';
+	let el = document.getElementById('dialog-area');
+	el.innerHTML = html;
+	el.setAttribute('data-dialog-shown', 'true');
+	let url = 'table.html#'+LZString.compressToBase64(textSelected);
+	$('#equation-area').html('<iframe id="iframetable" src="'+url+'" frameborder="0" style="padding:0;margin:0;width:100%;height:400px;"></iframe>');
+}
 function showSuperscriptDialog()
 {
 	let html = ''+
@@ -1388,6 +1411,15 @@ function insertEquation(latex)
 	renderQuestion(elemInput, elemOutput, elemStatus);
 	closeEquationDialog();
 }
+function insertHTML(html)
+{
+	insertAtCursor(document.getElementById('input'), html);
+	let elemInput = document.getElementById('input');
+	let elemOutput = document.getElementById('preview2');
+	let elemStatus = document.getElementById('status');
+	renderQuestion(elemInput, elemOutput, elemStatus);
+	closeEquationDialog();
+}
 function closeEquationDialog()
 {
 	let el = document.getElementById('dialog-area');
@@ -1397,6 +1429,10 @@ function closeEquationDialog()
 	}, 200);
 }
 function closeChemistryDialog()
+{
+	closeEquationDialog();
+}
+function closeTableDialog()
 {
 	closeEquationDialog();
 }

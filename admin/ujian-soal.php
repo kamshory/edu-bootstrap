@@ -54,8 +54,8 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		$time_create = $picoEdu->getLocalDateTime();
 		$time_edit = $picoEdu->getLocalDateTime();
-		$member_create = $admin_id;
-		$member_edit = $admin_id;
+		$member_create = $admin_id.'';
+		$member_edit = $admin_id.'';
 	
 		$random = $data['random'];
 		$order = $data['order'];
@@ -121,7 +121,11 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 							$content_option = addslashes(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src)))));
 							$content_option = $picoEdu->brToNewLineEncoded($content_option);
 							$order_option = $option_no+1;
-							$score_option = addslashes(@$option['value']*$score_standar); if($score_option == 0) $score_option = addslashes(@$option['score']*$score_standar);
+							$score_option = addslashes(@$option['value']*$score_standar); 
+							if($score_option == 0) 
+							{
+								$score_option = addslashes(@$option['score']*$score_standar);
+							}
 
 							$option_id = $database->generateNewId();
 
@@ -187,8 +191,8 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 	$time_create = $picoEdu->getLocalDateTime();
 	$time_edit = $picoEdu->getLocalDateTime();
 	
-	$member_create = $admin_login->admin_id;
-	$member_edit = $admin_login->admin_id;
+	$member_create = @$admin_login->admin_id.'';
+	$member_edit = @$admin_login->admin_id.'';
 	
 	$digest = md5($question);
 	$sql3 = "select * from `edu_question` where `digest` = '$digest' and `test_id` = '$test_id' ";
@@ -364,7 +368,9 @@ $stmt = $database->executeQuery($sql);
   </tr>
   <tr>
     <td>Koleksi Soal</td>
-    <td><span id="total_collection"><?php echo $data['collection'];?></span> soal <a href="ujian-soal.php?test_id=<?php echo ($data['test_id']);?>">Lihat</a></td>
+    <td><span id="total_collection"><?php echo $data['collection'];?></span> soal 
+	<a href="ujian-soal.php?test_id=<?php echo ($data['test_id']);?>">Lihat</a>
+</td>
   </tr>
     <tr>
     <td>Pengacakan Soal</td>
@@ -650,7 +656,9 @@ var test_name = '<?php echo addslashes($data['name']);?>';
   </tr>
   <tr>
     <td>Koleksi Soal</td>
-    <td><span id="total_collection"><?php echo $data['collection'];?></span> soal <a href="ujian-soal.php?test_id=<?php echo ($data['test_id']);?>">Lihat</a></td>
+    <td><span id="total_collection"><?php echo $data['collection'];?></span> soal 
+	
+</td>
   </tr>
 </table>
  </div>
@@ -895,12 +903,12 @@ if ($stmt2->rowCount() > 0) {
 <li>
 <span class="option-circle<?php if ($data2['score'])
 					echo ' option-circle-selected'; ?>"><?php
-						echo $data2['score'] * 1;
+						echo (int)$data2['score'] * 1;
 						?></span>
 <div class="list-option-item">
 <div class="option-content">
 <?php
-				echo ($data2['content']);
+				echo $data2['content'];
 				?>
 </div>
 </div>

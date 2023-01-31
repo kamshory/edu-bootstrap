@@ -80,7 +80,7 @@ $(document).ready(function(e) {
 var alert_time = <?php echo $alert_time;?>;
 var test = <?php echo $test_id;?>;
 var autosubmit = <?php echo $autosubmit*1;?>;
-var due_time = <?php echo (@$_SESSION['session_test'][$student_id][$test_id]['due_time']-time());?>;
+var due_time = <?php echo @$_SESSION['session_test'][$student_id][$test_id]['due_time']-time();?>;
 </script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/test-us.min.js"></script>
 <?php	
@@ -91,9 +91,9 @@ from `edu_question`
 where '$question_package' like concat('%[',`edu_question`.`question_id`,']%') 
 order by `order`
 ";
-$res = mysql_query($sql);
+$stmt = $database->executeQuery($sql);
 
-$number_of_question = mysql_num_rows($res);;
+$number_of_question = $stmt->rowCount();
 $no_halaman_awal = 0;
 $no_halaman_akhir = 0;
 
@@ -112,8 +112,7 @@ from `edu_question`
 where '$question_package' like concat('%[',`edu_question`.`question_id`,']%') 
 order by `order`
 ";
-$res = mysql_query($sql);
-
+$stmt = $database->executeQuery($sql);
 if($guidance_text)
 {
 ?>
@@ -158,13 +157,20 @@ $segmen = 0;
 $no = $offset;
 $inc = 0;
 $arr_soal = array();
-while(($data = mysql_fetch_assoc($res)))
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+foreach($rows as $data)
 {
 	$soal = $data['question_id'];
 	$no++;
 	$segmen = floor($inc/$question_per_page);
-	if($segmen == 0) $display = "";
-	else $display = "none";
+	if($segmen == 0) 
+	{
+		$display = "";
+	}
+	else 
+	{
+		$display = "none";
+	}
 	$arr_soal[$no] = $soal;
 	?>
     <li data-segmen="<?php echo $segmen;?>" value="<?php echo $no;?>" data-number="<?php echo $no;?>" data-question="<?php echo $soal;?>" style="display:<?php echo $display;?>">
@@ -204,7 +210,7 @@ while(($data = mysql_fetch_assoc($res)))
                 </label>
             </div>
             <div class="option-content">
-            	<?php echo ($data2['content']); ?>
+            	<?php echo $data2['content']; ?>
             </div>
             <div class="clear"></div>
         </div>
@@ -215,7 +221,7 @@ while(($data = mysql_fetch_assoc($res)))
 	?>
     	<div class="option-item">
         	<div class="option-ctrl">
-            	<label><input type="radio" data-test="<?php echo $test_id;?>" data-question="<?php echo $soal;?>" name="answer_<?php echo $data['question_id'];?>" id="answer_<?php echo $data['question_id'];?>" class="radio_answer" value=""<?php if($answer=='') echo ' checked="checked"';?>>
+            	<label><input type="radio" data-test="<?php echo $test_id;?>" data-question="<?php echo $soal;?>" name="answer_<?php echo $data['question_id'];?>" id="answer_<?php echo $data['question_id'];?>" class="radio_answer" value=""<?php echo $picoEdu->ifMatch($answer, '', ' checked="checked"');?>>
                 <?php echo liststyle($data['numbering'], $i);?>
                 </label>
             </div>
