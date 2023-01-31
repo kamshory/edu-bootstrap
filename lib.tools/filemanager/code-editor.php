@@ -267,14 +267,14 @@ function saveFile()
 	}
 	});
 }
-function getfileextension(filename){
+function getfileExtension(filename){
 return (/[.]/.exec(filename))?/[^.]+$/.exec(filename):'';
 }
 
 function change() {
 	var modeInput = document.getElementById('filename');
 	var val = modeInput.value, m, mode, spec;
-	var ext = getfileextension(val);
+	var ext = getfileExtension(val);
 	document.getElementById('filename').setAttribute('class', 'fileicon-'+ext+' filepath');
 	if (m = /.+\.([^.]+)$/.exec(val)) 
 	{

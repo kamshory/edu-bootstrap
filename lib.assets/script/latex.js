@@ -1,6 +1,6 @@
 window.onload = function(e)
 {
-	let equgen = window.parent.equationRenderer || 'browser';
+	let equgen = 'browser-mathjax';
 	document.getElementById('renderer').value = equgen;
 	document.getElementById('renderer').addEventListener('change', function(e){
 		let data = document.getElementById('latex-input').value;
@@ -64,10 +64,10 @@ window.onload = function(e)
 	renderLatex(data);
 }
 function renderLatex(latex){
-	let equgen = document.getElementById('renderer').value;
+	let rendererSelector = document.getElementById('renderer').value;
 	let urlGenerator = window.parent.equationURLGenerator || '../cgi-bin/equgen.cgi';
 	let urlPreview = window.parent.equationURLPreview || '../cgi-bin/equgen.cgi';
-	if(equgen == 'server')
+	if(rendererSelector == 'server-png')
 	{
 		if(latex.length > 0)
 		{
@@ -80,6 +80,24 @@ function renderLatex(latex){
 			img.style.verticalAlign='middle';
 			let html = img.outerHTML;
 			document.getElementById('image-container').innerHTML = html;
+		}
+		else
+		{
+			document.getElementById('image-container').innerHTML = '';
+		}
+	}
+	else if(rendererSelector == 'browser-mathjax')
+	{
+		if(latex != '')
+		{
+			let img = document.createElement('img');
+			let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
+			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
+			img.src = url;
+			img.setAttribute('alt', latex);
+			img.setAttribute('class', 'latex-image');
+			img.style.verticalAlign='middle';
+			document.getElementById('image-container').innerHTML = img.outerHTML;
 		}
 		else
 		{
@@ -122,13 +140,19 @@ function contains(arr, text)
 	return false;
 }
 
+function isContetRTF(types)
+{
+	return contains(types, 'text/html') || contains(types, 'text/rtf');
+}
+
 function handlePasteImage(e) 
 {
 	let data = '';
 	if (e && e.clipboardData && e.clipboardData.getData) 
 	{
-		if(contains(e.clipboardData.types, 'text/html') || contains(e.clipboardData.types, 'text/rtf'))
+		if(isContetRTF(e.clipboardData.types))
 		{
+			document.getElementById('renderer').value = 'browser-png';
 			data = e.clipboardData.getData('text/plain');
 			try{
 				data = asciimath.reconstructSqrtWord(data);
@@ -173,9 +197,9 @@ let generatePNG = true;
 function insertEquation(includeLatex)
 {
 	let latex = document.getElementById('latex-input').value;
-	let equgen = document.getElementById('renderer').value;
+	let rendererSelector = document.getElementById('renderer').value;
 	
-	if(equgen == 'server-png')
+	if(rendererSelector == 'server-png')
 	{
 		if(latex.length > 0)
 		{
@@ -205,7 +229,24 @@ function insertEquation(includeLatex)
 			img.src = url;
 		}
 	}
-	else if(equgen == 'browser-mathml')
+	else if(rendererSelector == 'browser-mathjax')
+	{
+		if(latex != '')
+		{
+			let img = document.createElement('img');
+			let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
+			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
+			if(includeLatex)
+			{
+				window.parent.uploadBase64ImageFromLatex(url, 1, 'svg', 'latex|'+latex);
+			}
+			else
+			{
+				window.parent.uploadBase64ImageFromLatex(url, 1, 'svg');
+			}
+		}
+	}
+	else if(rendererSelector == 'browser-mathml')
 	{
 		let data = asciimath.latexToSVG(latex, true, true);
 		if(includeLatex)

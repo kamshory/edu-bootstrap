@@ -138,7 +138,7 @@ function basename(path) {
 function dirname(path) {
 	return path.replace(/\\/g, '/').replace(/\/[^\/]*$/, '');
 }
-function getfileextension(filename) {
+function getfileExtension(filename) {
 	return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2)
 }
 function removefileextension(filename) {
@@ -851,16 +851,16 @@ function renameFile(filepath, isdir) //NOSONAR
 					let oe;
 					let ne;
 					try {
-						oe = getfileextension(on.trim());
+						oe = getfileExtension(on.trim());
 					}
 					catch (e) {
-						oe = getfileextension(on);
+						oe = getfileExtension(on);
 					}
 					try {
-						ne = getfileextension(nn.trim());
+						ne = getfileExtension(nn.trim());
 					}
 					catch (e) {
-						ne = getfileextension(nn);
+						ne = getfileExtension(nn);
 					}
 					try {
 						nn = nn.trim();

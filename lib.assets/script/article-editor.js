@@ -11,8 +11,8 @@ function basename(path){
 function dirname(path){
 	return path.replace(/\\/g,'/').replace(/\/[^\/]*$/,'');
 }
-function getfileextension(filename){
-	return (/[.]/.exec(filename))?/[^.]+$/.exec(filename):'';
+function getfileExtension(filename){
+	return (/[.]/.exec(filename))?/[^.]+$/.exec(filename):''; 
 }
 function removefileextension(filename){
 	return filename.replace(/\.[^/.]+$/,'');
@@ -134,7 +134,8 @@ function pasteHandler(e)
 	}
 	if(cbData && cbData.items)
 	{
-		if((text = cbData.getData("text/plain")))
+		let text = cbData.getData("text/plain");
+		if(text)
 		{
 			return;
 		}
@@ -151,7 +152,7 @@ function pasteHandler(e)
 	{
 		if(blob)
 		{
-			reader = new FileReader();
+			let reader = new FileReader();
 			reader.onload = function(evt)
 			{
 				pasteImage(evt.target.result);

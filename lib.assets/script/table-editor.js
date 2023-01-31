@@ -1,7 +1,7 @@
 let originalSelection = '';
 $(document).ready(function(e){
     let url = window.location.toString();
-    var data = url.substring(url.indexOf("#")+1);
+    let data = url.substring(url.indexOf("#")+1);
     let data2 = LZString.decompressFromBase64(data);
     originalSelection = data2;
     let data3 = detectTable(data2);

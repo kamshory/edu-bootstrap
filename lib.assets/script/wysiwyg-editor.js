@@ -11,7 +11,7 @@ function basename(path){
 function dirname(path){
     return path.replace(/\\/g,'/').replace(/\/[^\/]*$/,'');
 }
-function getfileextension(filename){
+function getfileExtension(filename){
     return (/[.]/.exec(filename))?/[^.]+$/.exec(filename):'';
 }
 function removefileextension(filename){

@@ -7,30 +7,30 @@
 // http://pieroxy.net/blog/pages/lz-string/testing.html
 //
 // LZ-based compression algorithm, version 1.4.4
-var LZString = (function() {
+let LZString = (function() {
 
     // private property
-    var f = String.fromCharCode;
-    var keyStrBase64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-    var keyStrUriSafe = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-$";
-    var baseReverseDic = {};
+    let f = String.fromCharCode;
+    let keyStrBase64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+    let keyStrUriSafe = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-$";
+    let baseReverseDic = {};
     
     function getBaseValue(alphabet, character) {
       if (!baseReverseDic[alphabet]) {
         baseReverseDic[alphabet] = {};
-        for (var i=0 ; i<alphabet.length ; i++) {
+        for (let i=0 ; i<alphabet.length ; i++) {
           baseReverseDic[alphabet][alphabet.charAt(i)] = i;
         }
       }
       return baseReverseDic[alphabet][character];
     }
     
-    var LZString = {
+    let LZString = {
       compressToBase64 : function (input) {
         if (input == null) return "";
-        var res = LZString._compress(input, 6, function(a){return keyStrBase64.charAt(a);});
+        let res = LZString._compress(input, 6, function(a){return keyStrBase64.charAt(a);});
         switch (res.length % 4) { // To produce valid Base64
-        default: // When could this happen ?
+        default: // NOSONAR When could this happen ?
         case 0 : return res;
         case 1 : return res+"===";
         case 2 : return res+"==";
@@ -57,11 +57,11 @@ var LZString = (function() {
     
       //compress into uint8array (UCS-2 big endian format)
       compressToUint8Array: function (uncompressed) {
-        var compressed = LZString.compress(uncompressed);
-        var buf=new Uint8Array(compressed.length*2); // 2 bytes per character
+        let compressed = LZString.compress(uncompressed);
+        let buf=new Uint8Array(compressed.length*2); // 2 bytes per character
     
-        for (var i=0, TotalLen=compressed.length; i<TotalLen; i++) {
-          var current_value = compressed.charCodeAt(i);
+        for (let i=0, TotalLen=compressed.length; i<TotalLen; i++) {
+          let current_value = compressed.charCodeAt(i);
           buf[i*2] = current_value >>> 8;
           buf[i*2+1] = current_value % 256;
         }
@@ -73,12 +73,12 @@ var LZString = (function() {
         if (compressed===null || compressed===undefined){
             return LZString.decompress(compressed);
         } else {
-            var buf=new Array(compressed.length/2); // 2 bytes per character
-            for (var i=0, TotalLen=buf.length; i<TotalLen; i++) {
+            let buf=new Array(compressed.length/2); // 2 bytes per character
+            for (let i=0, TotalLen=buf.length; i<TotalLen; i++) {
               buf[i]=compressed[i*2]*256+compressed[i*2+1];
             }
     
-            var result = [];
+            let result = [];
             buf.forEach(function (c) {
               result.push(f(c));
             });
@@ -106,9 +106,10 @@ var LZString = (function() {
       compress: function (uncompressed) {
         return LZString._compress(uncompressed, 16, function(a){return f(a);});
       },
-      _compress: function (uncompressed, bitsPerChar, getCharFromInt) {
+      _compress: function (uncompressed, bitsPerChar, getCharFromInt) //NOSONAR
+      {
         if (uncompressed == null) return "";
-        var i, value,
+        let i, value,
             context_dictionary= {},
             context_dictionaryToCreate= {},
             context_c="",
@@ -292,7 +293,7 @@ var LZString = (function() {
           }
           context_enlargeIn--;
           if (context_enlargeIn == 0) {
-            context_enlargeIn = Math.pow(2, context_numBits);
+            context_enlargeIn = Math.pow(2, context_numBits); //NOSONAR
             context_numBits++;
           }
         }
@@ -329,8 +330,9 @@ var LZString = (function() {
         return LZString._decompress(compressed.length, 32768, function(index) { return compressed.charCodeAt(index); });
       },
     
-      _decompress: function (length, resetValue, getNextValue) {
-        var dictionary = [],
+      _decompress: function (length, resetValue, getNextValue) //NOSONAR
+      {
+        let dictionary = [],
             next,
             enlargeIn = 4,
             dictSize = 4,
@@ -360,8 +362,8 @@ var LZString = (function() {
           bits |= (resb>0 ? 1 : 0) * power;
           power <<= 1;
         }
-    
-        switch (next = bits) {
+        next = bits;
+        switch (next) {
           case 0:
               bits = 0;
               maxpower = Math.pow(2,8);
@@ -418,8 +420,9 @@ var LZString = (function() {
             bits |= (resb>0 ? 1 : 0) * power;
             power <<= 1;
           }
-    
-          switch (c = bits) {
+          
+          c = bits;
+          switch (c) {
             case 0:
               bits = 0;
               maxpower = Math.pow(2,8);

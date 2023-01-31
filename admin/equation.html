@@ -3,15 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Equation Editor</title>
-<script type="text/javascript" src="../lib.assets/script/jquery/jquery.min.js"></script>
-<script src="../lib.assets/script/tiny_mce/plugins/equation/eq/js/combined.js"></script>
-<script type="text/javascript" src="../lib.assets/script/tiny_mce/plugins/equation/js/ASCIIMathML.min.js"></script>
-<script type="text/javascript" src="../lib.assets/script/base64.js"></script>
-<script type="text/javascript" src="../lib.assets/script/equation.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../lib.assets/theme/default/css/test-editor.min.css">
-<link href="../lib.assets/script/tiny_mce/plugins/equation/eq/css/equationEditor.css" rel="stylesheet" type="text/css" charset="utf-8" />
-<link rel="stylesheet" type="text/css" href="../lib.assets/theme/default/css/test-editor.css">
-    
+<script type="text/javascript" src="lib.assets/script/jquery/jquery.min.js"></script>
+<script src="lib.assets/script/tiny_mce/plugins/equation/eq/js/combined.js"></script>
+<script type="text/javascript" src="lib.assets/script/tiny_mce/plugins/equation/js/ASCIIMathML.min.js"></script>
+<script type="text/javascript" src="lib.assets/script/base64.js"></script>
+<script type="text/javascript" src="lib.assets/script/equation.js"></script>
+<script type="text/javascript" src="lib.vendors/mathjax/tex-svg.js"></script>
+<link rel="stylesheet" type="text/css" href="lib.assets/theme/default/css/test-editor.min.css" />
+<link rel="stylesheet" type="text/css" href="lib.assets/script/tiny_mce/plugins/equation/eq/css/equationEditor.css" />
+<link rel="stylesheet" type="text/css" href="lib.assets/theme/default/css/test-editor.css">
+<link rel="stylesheet" type="text/css" href="lib.assets/script/tiny_mce/plugins/equation/eq/css/equationEditor.css" />
+<link rel="stylesheet" type="text/css" href="lib.assets/theme/default/css/test-editor.css">
+  
   <style type="text/css">
   .main-editor{
 	  padding:10px;
@@ -60,16 +63,16 @@ select{
      
         <div class="eq-tab-content" id="eq-tab-content-top">
             <div id="common" class="eq-tab outer active">
-                <img alt="" class="menuItem" id="stackedFractionButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/stackedFraction.png">
-                <img alt="" class="menuItem" id="superscriptButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/superscript.png">
-                <img alt="" class="menuItem" id="subscriptButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/subscript.png">
-                <img alt="" class="menuItem" id="superscriptAndSubscriptButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/superscriptAndSubscript.png">
-                <img alt="" class="menuItem" id="squareRootButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/squareRoot.png">
-                <img alt="" class="menuItem" id="nthRootButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/nthRoot.png">
-                <img alt="" class="menuItem" id="limitButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/limit.png">
-                <img alt="" class="menuItem" id="logLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/log_n.png">
-                <img alt="" class="menuItem" id="logButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/log.png">
-                <img alt="" class="menuItem" id="lnButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/ln.png">
+                <img alt="" class="menuItem" id="stackedFractionButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/stackedFraction.png">
+                <img alt="" class="menuItem" id="superscriptButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/superscript.png">
+                <img alt="" class="menuItem" id="subscriptButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/subscript.png">
+                <img alt="" class="menuItem" id="superscriptAndSubscriptButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/superscriptAndSubscript.png">
+                <img alt="" class="menuItem" id="squareRootButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/squareRoot.png">
+                <img alt="" class="menuItem" id="nthRootButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/nthRoot.png">
+                <img alt="" class="menuItem" id="limitButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/limit.png">
+                <img alt="" class="menuItem" id="logLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/log_n.png">
+                <img alt="" class="menuItem" id="logButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/log.png">
+                <img alt="" class="menuItem" id="lnButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/ln.png">
             </div>
      
             <div id="brackets" class="eq-tab outer">
@@ -87,14 +90,14 @@ select{
                     <span class="menuItem MathJax_Main" id="rightCeilBracketButton" style="font-size: 18px;">&#8969;</span>
                   </div>
                   <div id="bracketsPair" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="parenthesesBracketPairButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/parenthesesBracketPair.png">
-                    <img alt="" class="menuItem" id="squareBracketPairButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/squareBracketPair.png">
-                    <img alt="" class="menuItem" id="curlyBracketPairButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/curlyBracketPair.png">
-                    <img alt="" class="menuItem" id="angleBracketPairButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/angleBracketPair.png">
-                    <img alt="" class="menuItem" id="floorBracketPairButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/floorBracketPair.png">
-                    <img alt="" class="menuItem" id="ceilBracketPairButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/ceilBracketPair.png">
-                    <img alt="" class="menuItem" id="absValBracketPairButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/absBracketPair.png">
-                    <img alt="" class="menuItem" id="normBracketPairButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/normBracketPair.png">
+                    <img alt="" class="menuItem" id="parenthesesBracketPairButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/parenthesesBracketPair.png">
+                    <img alt="" class="menuItem" id="squareBracketPairButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/squareBracketPair.png">
+                    <img alt="" class="menuItem" id="curlyBracketPairButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/curlyBracketPair.png">
+                    <img alt="" class="menuItem" id="angleBracketPairButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/angleBracketPair.png">
+                    <img alt="" class="menuItem" id="floorBracketPairButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/floorBracketPair.png">
+                    <img alt="" class="menuItem" id="ceilBracketPairButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/ceilBracketPair.png">
+                    <img alt="" class="menuItem" id="absValBracketPairButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/absBracketPair.png">
+                    <img alt="" class="menuItem" id="normBracketPairButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/normBracketPair.png">
                   </div>
                 </div>
             </div>
@@ -209,150 +212,150 @@ select{
                     <span class="menuItem MathJax_Main" id="minButton" style="font-size: 18px;">min</span>
                     <span class="menuItem MathJax_Main" id="supButton" style="font-size: 18px;">sup</span>
                     <span class="menuItem MathJax_Main" id="infButton" style="font-size: 18px;">inf</span>
-                    <img alt="" class="menuItem" id="maxLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/maxLower.png">
-                    <img alt="" class="menuItem" id="minLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/minLower.png">
+                    <img alt="" class="menuItem" id="maxLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/maxLower.png">
+                    <img alt="" class="menuItem" id="minLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/minLower.png">
                   </div>
                 </div>
             </div>
      
             <div id="largeOperators" class="eq-tab outer">
                 <ul class="inner-eq-tab-links eq-tab-links">
-                    <li class="innerTab active"><a href="#largeOperatorsSum"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/sumSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#largeOperatorsBigCap"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCapSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#largeOperatorsBigCup"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCupSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#largeOperatorsBigSqCap"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCapSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#largeOperatorsBigSqCup"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCupSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#largeOperatorsProd"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/prodSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#largeOperatorsCoProd"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/coProdSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#largeOperatorsBigVee"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigVeeSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#largeOperatorsBigWedge"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigWedgeSymbol.png"></a></li>
+                    <li class="innerTab active"><a href="#largeOperatorsSum"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/sumSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#largeOperatorsBigCap"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCapSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#largeOperatorsBigCup"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCupSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#largeOperatorsBigSqCap"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCapSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#largeOperatorsBigSqCup"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCupSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#largeOperatorsProd"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/prodSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#largeOperatorsCoProd"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/coProdSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#largeOperatorsBigVee"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigVeeSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#largeOperatorsBigWedge"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigWedgeSymbol.png"></a></li>
                 </ul>
                 <div class="eq-tab-content eq-tab-content-nested">
                   <div id="largeOperatorsSum" class="eq-tab inner active">
-                    <img alt="" class="menuItem" id="sumBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/sum.png">
-                    <img alt="" class="menuItem" id="sumBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/sumNoUpper.png">
-                    <img alt="" class="menuItem" id="sumBigOperatorNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/sumNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineSumBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/sumInline.png">
-                    <img alt="" class="menuItem" id="inlineSumBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/sumNoUpperInline.png">
+                    <img alt="" class="menuItem" id="sumBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/sum.png">
+                    <img alt="" class="menuItem" id="sumBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/sumNoUpper.png">
+                    <img alt="" class="menuItem" id="sumBigOperatorNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/sumNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineSumBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/sumInline.png">
+                    <img alt="" class="menuItem" id="inlineSumBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/sumNoUpperInline.png">
                   </div>
                   <div id="largeOperatorsBigCap" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="bigCapBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCap.png">
-                    <img alt="" class="menuItem" id="bigCapBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCapNoUpper.png">
-                    <img alt="" class="menuItem" id="bigCapBigOperatorNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCapNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineBigCapBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCapInline.png">
-                    <img alt="" class="menuItem" id="inlineBigCapBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCapNoUpperInline.png">
+                    <img alt="" class="menuItem" id="bigCapBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCap.png">
+                    <img alt="" class="menuItem" id="bigCapBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCapNoUpper.png">
+                    <img alt="" class="menuItem" id="bigCapBigOperatorNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCapNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineBigCapBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCapInline.png">
+                    <img alt="" class="menuItem" id="inlineBigCapBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCapNoUpperInline.png">
                   </div>
                   <div id="largeOperatorsBigCup" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="bigCupBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCup.png">
-                    <img alt="" class="menuItem" id="bigCupBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCupNoUpper.png">
-                    <img alt="" class="menuItem" id="bigCupBigOperatorNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCupNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineBigCupBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCupInline.png">
-                    <img alt="" class="menuItem" id="inlineBigCupBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCupNoUpperInline.png">
+                    <img alt="" class="menuItem" id="bigCupBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCup.png">
+                    <img alt="" class="menuItem" id="bigCupBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCupNoUpper.png">
+                    <img alt="" class="menuItem" id="bigCupBigOperatorNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCupNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineBigCupBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCupInline.png">
+                    <img alt="" class="menuItem" id="inlineBigCupBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigCupNoUpperInline.png">
                   </div>
                   <div id="largeOperatorsBigSqCap" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="bigSqCapBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCap.png">
-                    <img alt="" class="menuItem" id="bigSqCapBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCapNoUpper.png">
-                    <img alt="" class="menuItem" id="bigSqCapBigOperatorNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCapNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineBigSqCapBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCapInline.png">
-                    <img alt="" class="menuItem" id="inlineBigSqCapBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCapNoUpperInline.png">
+                    <img alt="" class="menuItem" id="bigSqCapBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCap.png">
+                    <img alt="" class="menuItem" id="bigSqCapBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCapNoUpper.png">
+                    <img alt="" class="menuItem" id="bigSqCapBigOperatorNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCapNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineBigSqCapBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCapInline.png">
+                    <img alt="" class="menuItem" id="inlineBigSqCapBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCapNoUpperInline.png">
                   </div>
                   <div id="largeOperatorsBigSqCup" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="bigSqCupBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCup.png">
-                    <img alt="" class="menuItem" id="bigSqCupBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCupNoUpper.png">
-                    <img alt="" class="menuItem" id="bigSqCupBigOperatorNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCupNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineBigSqCupBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCupInline.png">
-                    <img alt="" class="menuItem" id="inlineBigSqCupBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCupNoUpperInline.png">
+                    <img alt="" class="menuItem" id="bigSqCupBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCup.png">
+                    <img alt="" class="menuItem" id="bigSqCupBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCupNoUpper.png">
+                    <img alt="" class="menuItem" id="bigSqCupBigOperatorNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCupNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineBigSqCupBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCupInline.png">
+                    <img alt="" class="menuItem" id="inlineBigSqCupBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigSqCupNoUpperInline.png">
                   </div>
                   <div id="largeOperatorsProd" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="prodBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/prod.png">
-                    <img alt="" class="menuItem" id="prodBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/prodNoUpper.png">
-                    <img alt="" class="menuItem" id="prodBigOperatorNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/prodNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineProdBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/prodInline.png">
-                    <img alt="" class="menuItem" id="inlineProdBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/prodNoUpperInline.png">
+                    <img alt="" class="menuItem" id="prodBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/prod.png">
+                    <img alt="" class="menuItem" id="prodBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/prodNoUpper.png">
+                    <img alt="" class="menuItem" id="prodBigOperatorNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/prodNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineProdBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/prodInline.png">
+                    <img alt="" class="menuItem" id="inlineProdBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/prodNoUpperInline.png">
                   </div>
                   <div id="largeOperatorsCoProd" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="coProdBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/coProd.png">
-                    <img alt="" class="menuItem" id="coProdBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/coProdNoUpper.png">
-                    <img alt="" class="menuItem" id="coProdBigOperatorNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/coProdNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineCoProdBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/coProdInline.png">
-                    <img alt="" class="menuItem" id="inlineCoProdBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/coProdNoUpperInline.png">
+                    <img alt="" class="menuItem" id="coProdBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/coProd.png">
+                    <img alt="" class="menuItem" id="coProdBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/coProdNoUpper.png">
+                    <img alt="" class="menuItem" id="coProdBigOperatorNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/coProdNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineCoProdBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/coProdInline.png">
+                    <img alt="" class="menuItem" id="inlineCoProdBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/coProdNoUpperInline.png">
                   </div>
                   <div id="largeOperatorsBigVee" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="bigVeeBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigVee.png">
-                    <img alt="" class="menuItem" id="bigVeeBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigVeeNoUpper.png">
-                    <img alt="" class="menuItem" id="bigVeeBigOperatorNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigVeeNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineBigVeeBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigVeeInline.png">
-                    <img alt="" class="menuItem" id="inlineBigVeeBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigVeeNoUpperInline.png">
+                    <img alt="" class="menuItem" id="bigVeeBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigVee.png">
+                    <img alt="" class="menuItem" id="bigVeeBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigVeeNoUpper.png">
+                    <img alt="" class="menuItem" id="bigVeeBigOperatorNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigVeeNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineBigVeeBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigVeeInline.png">
+                    <img alt="" class="menuItem" id="inlineBigVeeBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigVeeNoUpperInline.png">
                   </div>
                   <div id="largeOperatorsBigWedge" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="bigWedgeBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigWedge.png">
-                    <img alt="" class="menuItem" id="bigWedgeBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigWedgeNoUpper.png">
-                    <img alt="" class="menuItem" id="bigWedgeBigOperatorNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigWedgeNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineBigWedgeBigOperatorButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigWedgeInline.png">
-                    <img alt="" class="menuItem" id="inlineBigWedgeBigOperatorNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigWedgeNoUpperInline.png">
+                    <img alt="" class="menuItem" id="bigWedgeBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigWedge.png">
+                    <img alt="" class="menuItem" id="bigWedgeBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigWedgeNoUpper.png">
+                    <img alt="" class="menuItem" id="bigWedgeBigOperatorNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigWedgeNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineBigWedgeBigOperatorButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigWedgeInline.png">
+                    <img alt="" class="menuItem" id="inlineBigWedgeBigOperatorNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/bigWedgeNoUpperInline.png">
                   </div>
                 </div>
             </div>
 
             <div id="integrals" class="eq-tab outer">
                 <ul class="inner-eq-tab-links eq-tab-links">
-                    <li class="innerTab active"><a href="#integralsIntegral"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/integralSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#integralsDoubleIntegral"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleIntegralSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#integralsTripleIntegral"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleIntegralSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#integralsContourIntegral"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/contourIntegralSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#integralsContourDoubleIntegral"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleContourIntegralSymbol.png"></a></li>
-                    <li class="innerTab"><a href="#integralsContourTripleIntegral"><img alt="" class="innerTabImg" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleContourIntegralSymbol.png"></a></li>
+                    <li class="innerTab active"><a href="#integralsIntegral"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/integralSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#integralsDoubleIntegral"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleIntegralSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#integralsTripleIntegral"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleIntegralSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#integralsContourIntegral"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/contourIntegralSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#integralsContourDoubleIntegral"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleContourIntegralSymbol.png"></a></li>
+                    <li class="innerTab"><a href="#integralsContourTripleIntegral"><img alt="" class="innerTabImg" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleContourIntegralSymbol.png"></a></li>
                 </ul>
                 <div class="eq-tab-content eq-tab-content-nested">
                   <div id="integralsIntegral" class="eq-tab inner active">
-                    <img alt="" class="menuItem" id="integralButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/integral.png">
-                    <img alt="" class="menuItem" id="integralNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/integralNoUpper.png">
-                    <img alt="" class="menuItem" id="integralNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/integralNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineIntegralButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/integralInline.png">
-                    <img alt="" class="menuItem" id="inlineIntegralNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/integralNoUpperInline.png">
+                    <img alt="" class="menuItem" id="integralButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/integral.png">
+                    <img alt="" class="menuItem" id="integralNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/integralNoUpper.png">
+                    <img alt="" class="menuItem" id="integralNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/integralNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineIntegralButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/integralInline.png">
+                    <img alt="" class="menuItem" id="inlineIntegralNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/integralNoUpperInline.png">
                   </div>
                   <div id="integralsDoubleIntegral" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="doubleIntegralButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleIntegral.png">
-                    <img alt="" class="menuItem" id="doubleIntegralNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleIntegralNoUpper.png">
-                    <img alt="" class="menuItem" id="doubleIntegralNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleIntegralNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineDoubleIntegralButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleIntegralInline.png">
-                    <img alt="" class="menuItem" id="inlineDoubleIntegralNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleIntegralNoUpperInline.png">
+                    <img alt="" class="menuItem" id="doubleIntegralButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleIntegral.png">
+                    <img alt="" class="menuItem" id="doubleIntegralNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleIntegralNoUpper.png">
+                    <img alt="" class="menuItem" id="doubleIntegralNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleIntegralNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineDoubleIntegralButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleIntegralInline.png">
+                    <img alt="" class="menuItem" id="inlineDoubleIntegralNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleIntegralNoUpperInline.png">
                   </div>
                   <div id="integralsTripleIntegral" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="tripleIntegralButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleIntegral.png">
-                    <img alt="" class="menuItem" id="tripleIntegralNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleIntegralNoUpper.png">
-                    <img alt="" class="menuItem" id="tripleIntegralNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleIntegralNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineTripleIntegralButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleIntegralInline.png">
-                    <img alt="" class="menuItem" id="inlineTripleIntegralNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleIntegralNoUpperInline.png">
+                    <img alt="" class="menuItem" id="tripleIntegralButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleIntegral.png">
+                    <img alt="" class="menuItem" id="tripleIntegralNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleIntegralNoUpper.png">
+                    <img alt="" class="menuItem" id="tripleIntegralNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleIntegralNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineTripleIntegralButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleIntegralInline.png">
+                    <img alt="" class="menuItem" id="inlineTripleIntegralNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleIntegralNoUpperInline.png">
                   </div>
                   <div id="integralsContourIntegral" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="contourIntegralButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/contourIntegral.png">
-                    <img alt="" class="menuItem" id="contourIntegralNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/contourIntegralNoUpper.png">
-                    <img alt="" class="menuItem" id="contourIntegralNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/contourIntegralNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineContourIntegralButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/contourIntegralInline.png">
-                    <img alt="" class="menuItem" id="inlineContourIntegralNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/contourIntegralNoUpperInline.png">
+                    <img alt="" class="menuItem" id="contourIntegralButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/contourIntegral.png">
+                    <img alt="" class="menuItem" id="contourIntegralNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/contourIntegralNoUpper.png">
+                    <img alt="" class="menuItem" id="contourIntegralNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/contourIntegralNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineContourIntegralButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/contourIntegralInline.png">
+                    <img alt="" class="menuItem" id="inlineContourIntegralNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/contourIntegralNoUpperInline.png">
                   </div>
                   <div id="integralsContourDoubleIntegral" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="contourDoubleIntegralButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleContourIntegral.png">
-                    <img alt="" class="menuItem" id="contourDoubleIntegralNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleContourIntegralNoUpper.png">
-                    <img alt="" class="menuItem" id="contourDoubleIntegralNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleContourIntegralNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineContourDoubleIntegralButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleContourIntegralInline.png">
-                    <img alt="" class="menuItem" id="inlineContourDoubleIntegralNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleContourIntegralNoUpperInline.png">
+                    <img alt="" class="menuItem" id="contourDoubleIntegralButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleContourIntegral.png">
+                    <img alt="" class="menuItem" id="contourDoubleIntegralNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleContourIntegralNoUpper.png">
+                    <img alt="" class="menuItem" id="contourDoubleIntegralNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleContourIntegralNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineContourDoubleIntegralButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleContourIntegralInline.png">
+                    <img alt="" class="menuItem" id="inlineContourDoubleIntegralNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/doubleContourIntegralNoUpperInline.png">
                   </div>
                   <div id="integralsContourTripleIntegral" class="eq-tab inner">
-                    <img alt="" class="menuItem" id="contourTripleIntegralButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleContourIntegral.png">
-                    <img alt="" class="menuItem" id="contourTripleIntegralNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleContourIntegralNoUpper.png">
-                    <img alt="" class="menuItem" id="contourTripleIntegralNoUpperNoLowerButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleContourIntegralNoUpperNoLower.png">
-                    <img alt="" class="menuItem" id="inlineContourTripleIntegralButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleContourIntegralInline.png">
-                    <img alt="" class="menuItem" id="inlineContourTripleIntegralNoUpperButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleContourIntegralNoUpperInline.png">
+                    <img alt="" class="menuItem" id="contourTripleIntegralButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleContourIntegral.png">
+                    <img alt="" class="menuItem" id="contourTripleIntegralNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleContourIntegralNoUpper.png">
+                    <img alt="" class="menuItem" id="contourTripleIntegralNoUpperNoLowerButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleContourIntegralNoUpperNoLower.png">
+                    <img alt="" class="menuItem" id="inlineContourTripleIntegralButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleContourIntegralInline.png">
+                    <img alt="" class="menuItem" id="inlineContourTripleIntegralNoUpperButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/tripleContourIntegralNoUpperInline.png">
                   </div>
                 </div>
             </div>
             <div id="misc" class="eq-tab outer">
-                <img alt="" class="menuItem" id="dotAccentButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/dotAccent.png">
-                <img alt="" class="menuItem" id="hatAccentButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/hatAccent.png">
-                <img alt="" class="menuItem" id="vectorAccentButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/vectorAccent.png">
-                <img alt="" class="menuItem" id="barAccentButton" src="../lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/barAccent.png">
+                <img alt="" class="menuItem" id="dotAccentButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/dotAccent.png">
+                <img alt="" class="menuItem" id="hatAccentButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/hatAccent.png">
+                <img alt="" class="menuItem" id="vectorAccentButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/vectorAccent.png">
+                <img alt="" class="menuItem" id="barAccentButton" src="lib.assets/script/tiny_mce/plugins/equation/eq/MenuImages/png/barAccent.png">
                 <div style="display: inline-block; width:60px;">
                 	<span style="display:block; padding:0px 0px;">
                     	<span style="display:block; float:left; padding-right:2px; width:30px; text-align:left; font-size:11px; font-family:Arial, Helvetica, sans-serif;">rows</span>
@@ -381,9 +384,10 @@ select{
     <div class="button-area file-dialog-control">
         <span class="label">Renderer 
           <select id="renderer">
-            <option value="server-png">Server (all browser)</option>
-			      <option value="browser-png">This browser (PNG)</option>
-			      <option value="browser-mathml">Client browser (SVG)</option>
+			<option value="server-png">Server (Latex/PNG)</option>
+			<option value="browser-mathjax">Client browser (MathJax/SVG)</option>
+			<option value="browser-png">This browser (MathML/PNG)</option>
+			<option value="browser-mathml">Client browser (MathML/SVG)</option>
           </select>
         </span>
         <input type="button" id="insert0" name="insert" value="Masukkan Persamaan" onClick="insertEquation(false)">

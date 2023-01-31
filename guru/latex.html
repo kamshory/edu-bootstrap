@@ -3,12 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Latex</title>
-<script type="text/javascript" src="../lib.assets/script/tiny_mce/plugins/equation/js/ASCIIMathML.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../lib.assets/theme/default/css/test-editor.min.css">
-<link rel="stylesheet" type="text/css" href="../lib.assets/theme/default/css/latex.css">
-<script type="text/javascript" src="../lib.assets/script/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="../lib.assets/script/base64.js"></script>
-<script type="text/javascript" src="../lib.assets/script/latex.min.js"></script>
+<script type="text/javascript" src="lib.assets/script/tiny_mce/plugins/equation/js/ASCIIMathML.min.js"></script>
+<link rel="stylesheet" type="text/css" href="lib.assets/theme/default/css/test-editor.css">
+<link rel="stylesheet" type="text/css" href="lib.assets/theme/default/css/latex.css">
+<script type="text/javascript" src="lib.assets/script/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib.vendors/mathjax/tex-svg.js"></script>
+<script type="text/javascript" src="lib.assets/script/base64.js"></script>
+<script type="text/javascript" src="lib.assets/script/latex.js"></script>
 </head>
 <body>
 <form action="#">
@@ -19,9 +20,10 @@
     </div>
 	<div class="label">Renderer 
         <select id="renderer">
-            <option value="server-png">Server (all browser)</option>
-            <option value="browser-png">This browser (PNG)</option>
-            <option value="browser-mathml">Client browser (SVG)</option>
+			<option value="server-png">Server (Latex/PNG)</option>
+			<option value="browser-mathjax">Client browser (MathJax/SVG)</option>
+			<option value="browser-png">This browser (MathML/PNG)</option>
+			<option value="browser-mathml">Client browser (MathML/SVG)</option>
         </select>
     </div>
 	<div class="output-area">
@@ -29,8 +31,8 @@
     </div>
     </div>
     <div class="button-area file-dialog-control">
-        <input type="button" id="insert0" name="insert" value="Masukkan Persamaan" onClick="insertEquation(false)">
         <input type="button" id="insert1" name="insert" value="Masukkan Persamaan &amp; Latex" onClick="insertEquation(true)">
+        <input type="button" id="insert0" name="insert" value="Masukkan Persamaan Saja" onClick="insertEquation(false)">
         <input name="cancel" type="button" id="cancel" class="btn com-button btn-success" value="Batalkan" onclick="window.parent.closeEquationDialog()">
     </div>
 </form>

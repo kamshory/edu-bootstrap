@@ -7,18 +7,18 @@ function createLineObject(lineNumber, lineContent)
 	return {lineNumber: parseInt(lineNumber), content:lineContent, pipe: nPipe, pipeDash: hasPipeAndDash, startTable:false, inTable:false, endTable:false};
 }
 
-function detectTable(html)
+function detectTable(html) //NOSONAR
 {
-	var html2 = html;
+	let html2 = html;
     html = html.split('\r\n').join('\n');
     html2 = html2.split('\r\n').join('\n');
-	var arr = html.split("\n");
-	var arr2 = html2.split("\n");
-	var lineObj = [];
+	let arr = html.split("\n");
+	let arr2 = html2.split("\n");
+	let lineObj = [];
 	for(let i in arr)
 	{
 		arr2[i] = arr[i].trim();
-		lineObj[i] = createLineObject(i, arr2[i]);
+		lineObj.push(createLineObject(i, arr2[i]));
 	}
 	let inTable = false;
 	let tableObj = [];
@@ -69,7 +69,7 @@ function detectTable(html)
 			{
 				if(tab[i].pipeDash)
 				{
-					content = '';
+					// Do nothing
 				}
 				else if(tab[i].endTable)
 				{
@@ -89,7 +89,7 @@ function detectTable(html)
 function createTableHeader(input)
 {
 	input = input.trim();
-	var arr = input.split('|');
+	let arr = input.split('|');
 	let content = '<table class="table table-bordered"><thead><tr>';
 	for(let i = 0; i < arr.length; i++)
 	{
@@ -104,7 +104,7 @@ function createTableHeader(input)
 function createTableContent(input)
 {
 	input = input.trim();
-	var arr = input.split('|');
+	let arr = input.split('|');
 	let content = '<tr>';
 	for(let i = 0; i < arr.length; i++)
 	{

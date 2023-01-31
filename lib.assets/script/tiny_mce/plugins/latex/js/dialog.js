@@ -261,12 +261,17 @@ function contains(arr, text)
 	}
 	return false;
 }
+function isContetRTF(types)
+{
+	return contains(types, 'text/html') || contains(types, 'text/rtf');
+}
+
 function handlePasteImage(e) 
 {
 	if (e && e.clipboardData && e.clipboardData.getData) 
 	{
 		let data;
-		if(contains(e.clipboardData.types, 'text/html') || contains(e.clipboardData.types, 'text/rtf'))
+		if(isContetRTF(e.clipboardData.types))
 		{
 			document.getElementById('renderer').value = 'browser-png';
 			let data = e.clipboardData.getData('text/plain');
