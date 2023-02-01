@@ -58,7 +58,7 @@ if(count(@$_POST) && isset($_POST['save']))
 
 }
 
-if(isset($_POST['save']) && @$_GET['option']=='add')
+if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$token_school = md5($name.'-'.time().'-'.mt_rand(111111, 999999));
 	$sql = "INSERT INTO `edu_school` 
@@ -73,7 +73,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 	$database->executeUpdate($sql, true);
 	header("Location:".basename($_SERVER['PHP_SELF'])."?option=detail&school_id=$school_id");
 }
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql1 = "update `edu_student` set `prevent_change_school` = '$prevent_change_school', `prevent_resign` = '$prevent_resign'
 	where `school_id` = '$school_id' 
@@ -108,7 +108,7 @@ if(isset($_POST['set_active']) && isset($_POST['school_id']))
 		foreach($schools as $key=>$val)
 		{
 			$school_id = addslashes($val);
-			$sql = "update `edu_school` set `active` = '1' where `school_id` = '$school_id'  ";
+			$sql = "update `edu_school` set `active` = true where `school_id` = '$school_id'  ";
 			$database->execute($sql);
 		}
 	}
@@ -121,7 +121,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['school_id']))
 		foreach($schools as $key=>$val)
 		{
 			$school_id = addslashes($val);
-			$sql = "update `edu_school` set `active` = '0' where `school_id` = '$school_id'  ";
+			$sql = "update `edu_school` set `active` = false where `school_id` = '$school_id'  ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -140,7 +140,7 @@ if(isset($_POST['delete']) && isset($_POST['school_id']))
 	}
 }
 
-if(@$_GET['option']=='add')
+if(@$_GET['option'] == 'add')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $state_list = array();
@@ -310,7 +310,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql = "select * from `country` where `active` = '1' order by `order` asc
+        $sql = "select * from `country` where `active` = true order by `order` asc
 		";
 
 		echo $picoEdu->createFilterDb(
@@ -342,7 +342,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="state_id" id="state_id">
 		<option value="">- Pilih Provinsi -</option>
 			<?php
-            $sql = "select * from `state` where `active` = '1' and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
+            $sql = "select * from `state` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -371,7 +371,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql = "select * from `city` where `active` = '1' and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
+            $sql = "select * from `city` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -425,7 +425,7 @@ $(document).ready(function(e) {
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='edit')
+else if(@$_GET['option'] == 'edit')
 {
 $school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
 include_once dirname(__FILE__)."/lib.inc/header.php";
@@ -623,7 +623,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql2 = "select * from `country` where `active` = '1' order by `order` asc
+        $sql2 = "select * from `country` where `active` = true order by `order` asc
 		";
 		echo $picoEdu->createFilterDb(
 			$sql2,
@@ -651,7 +651,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="state_id" id="state_id">
 		<option value="">- Pilih Provinsi -</option>
 			<?php
-            $sql2 = "select * from `state` where `active` = '1' and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
+            $sql2 = "select * from `state` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -680,7 +680,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql2 = "select * from `city` where `active` = '1' and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
+            $sql2 = "select * from `city` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -735,7 +735,7 @@ else
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='detail')
+else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);

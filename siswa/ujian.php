@@ -701,12 +701,12 @@ $sql = "SELECT `edu_test`.* $nt,
 (select count(distinct `edu_answer`.`answer_id`) from `edu_answer` 
 where `edu_answer`.`test_id` = `edu_test`.`test_id` and `edu_answer`.`student_id` = '$student_id') as `ntest`
 from `edu_test`
-where `edu_test`.`active` = '1' and `edu_test`.`school_id` = '$school_id' $sql_filter
+where `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
 order by `edu_test`.`test_id` desc
 ";
 $sql_test = "SELECT `edu_test`.*
 from `edu_test`
-where `edu_test`.`active` = '1' and `edu_test`.`school_id` = '$school_id' $sql_filter
+where `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
 ";
 
 $stmt = $database->executeQuery($sql_test);

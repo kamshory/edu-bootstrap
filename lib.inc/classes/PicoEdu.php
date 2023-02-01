@@ -564,7 +564,7 @@ class PicoEdu //NOSONAR
 	}
 	public function getApplicationVersion()
 	{
-		$sql = "SELECT `version_id` from `version` where `active` = '1' and `current_version` = '1' ";
+		$sql = "SELECT `version_id` from `version` where `active` = true and `current_version` = '1' ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -584,7 +584,7 @@ class PicoEdu //NOSONAR
 	{
 		$min = pow(10, $length);
 		$max = ($min * 10) - 1;
-		$sql = "SELECT `token` from `edu_token` where `active` = '1'
+		$sql = "SELECT `token` from `edu_token` where `active` = true
 		";
 		$stmt = $this->database->executeQuery($sql);
 		$active_token = array();

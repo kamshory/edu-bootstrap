@@ -43,7 +43,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 		(`phone` like '$phone' and `phone` != '')
 		) 
 		and `password` like md5('$password')
-		and `active` = '1'
+		and `active` = true
 		and `blocked` = '0'
 	";
 	$stmt = $database->executeQuery($sql);

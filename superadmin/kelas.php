@@ -30,7 +30,7 @@ if (isset($_POST['set_active']) && isset($_POST['class_id'])) {
 	if (isset($classs) && is_array($classs)) {
 		foreach ($classs as $key => $val) {
 			$class_id = addslashes($val);
-			$sql = "update `edu_class` set `active` = '1' where `class_id` = '$class_id'  ";
+			$sql = "update `edu_class` set `active` = true where `class_id` = '$class_id'  ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -40,7 +40,7 @@ if (isset($_POST['set_inactive']) && isset($_POST['class_id'])) {
 	if (isset($classs) && is_array($classs)) {
 		foreach ($classs as $key => $val) {
 			$class_id = addslashes($val);
-			$sql = "update `edu_class` set `active` = '0' where `class_id` = '$class_id'  ";
+			$sql = "update `edu_class` set `active` = false where `class_id` = '$class_id'  ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -90,7 +90,7 @@ if (@$_GET['option'] == 'add') {
 				<?php
 				$sql2 = "SELECT `edu_school_program`.*
 				from `edu_school_program`
-				where `edu_school_program`.`school_id` = '$school_id' and `active` = '1' 
+				where `edu_school_program`.`school_id` = '$school_id' and `active` = true 
 				order by `edu_school_program`.`name` asc
 				";
 				$stmt2 = $database->executeQuery($sql);
@@ -165,7 +165,7 @@ if (@$_GET['option'] == 'add') {
 							<?php
 							$sql2 = "SELECT `edu_school_program`.*
 							from `edu_school_program`
-							where `edu_school_program`.`school_id` = '$school_id' and `active` = '1' 
+							where `edu_school_program`.`school_id` = '$school_id' and `active` = true 
 							order by `edu_school_program`.`name` asc
 							";
 							$stmt2 = $database->executeQuery($sql);

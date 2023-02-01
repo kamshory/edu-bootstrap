@@ -193,7 +193,7 @@ if(isset($_GET['school_id']))
 {
 	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
 }
-$sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = '1' and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
+$sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
 $stmt = $database->executeQuery($sql);
 $arrc = array();
 if($stmt->rowCount())
@@ -296,7 +296,7 @@ else if(isset($_GET['article_id']))
 	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 	from `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
-	where (`edu_article`.`active` = '1' or `edu_article`.`member_create` = '$member_id') $sql_filter_article ";
+	where (`edu_article`.`active` = true or `edu_article`.`member_create` = '$member_id') $sql_filter_article ";
 	include_once dirname(__FILE__)."/lib.inc/header.php";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -355,7 +355,7 @@ else
 	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 	from `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
-	where (`edu_article`.`active` = '1' or `edu_article`.`member_create` = '$member_id') $sql_filter_article 
+	where (`edu_article`.`active` = true or `edu_article`.`member_create` = '$member_id') $sql_filter_article 
 	order by `edu_article`.`article_id` desc
 	";
 	$stmt = $database->executeQuery($sql);

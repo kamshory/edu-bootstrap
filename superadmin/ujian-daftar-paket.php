@@ -64,7 +64,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "update `edu_test_collection` set `active` = '1' where `test_collection_id` = '$test_collection_id' ";
+		$sql = "update `edu_test_collection` set `active` = true where `test_collection_id` = '$test_collection_id' ";
 		$database->execute($sql);
 	}
 	header("Location: ".basename($_SERVER['REQUEST_URI']));
@@ -76,7 +76,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "update `edu_test_collection` set `active` = '0' where `test_collection_id` = '$test_collection_id' ";
+		$sql = "update `edu_test_collection` set `active` = false where `test_collection_id` = '$test_collection_id' ";
 		$database->execute($sql);
 	}
 	header("Location: ".basename($_SERVER['REQUEST_URI']));
@@ -113,7 +113,7 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 }
 
 
-if(isset($_POST['save']) && @$_GET['option']=='add' && isset($_FILES['file']))
+if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 {
 	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data";
 	$dirBase = dirname(dirname(__FILE__));
@@ -178,7 +178,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add' && isset($_FILES['file']))
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_collection_id=$id");
 	}
 }
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data";
 	$dirBase = dirname(dirname(__FILE__));
@@ -198,7 +198,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	$database->execute($sql);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_collection_id=$test_collection_id");
 }
-if(@$_GET['option']=='add')
+if(@$_GET['option'] == 'add')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
@@ -238,7 +238,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='edit')
+else if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
@@ -290,7 +290,7 @@ else
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='detail')
+else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);

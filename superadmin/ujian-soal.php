@@ -13,7 +13,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $time_create = $time_edit = $picoEdu->getLocalDateTime();
 $member_create = $member_edit = $admin_login->admin_id;
 
-if(@$_GET['option']=='delete')
+if(@$_GET['option'] == 'delete')
 {
 	$question_id = kh_filter_input(INPUT_GET, 'question_id', FILTER_SANITIZE_NUMBER_UINT);
 	$digest = kh_filter_input(INPUT_GET, 'digest', FILTER_SANITIZE_STRING_NEW_BASE64);
@@ -32,7 +32,7 @@ if(@$_GET['option']=='delete')
 	}
 }
 
-if(isset($_POST['savetext']) && @$_GET['option']=='add')
+if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 {
 	// Format Plain
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
@@ -131,7 +131,7 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 }
 
 
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$question_id = kh_filter_input(INPUT_POST, 'question_id', FILTER_SANITIZE_NUMBER_UINT);
 	$numbering = kh_filter_input(INPUT_POST, 'numbering', FILTER_SANITIZE_STRING_NEW);
@@ -195,7 +195,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 
 
-if(@$_GET['option']=='edit')
+if(@$_GET['option'] == 'edit')
 {
 	include_once dirname(__FILE__)."/lib.inc/header.php";
 	$question_id = kh_filter_input(INPUT_GET, 'question_id', FILTER_SANITIZE_STRING_NEW);

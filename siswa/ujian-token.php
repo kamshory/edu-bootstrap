@@ -21,7 +21,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 	from `edu_token`
 	inner join(`edu_test`) on(`edu_test`.`test_id` = `edu_token`.`test_id`)
 	where `edu_token`.`student_id` = '$student_id'
-	and `edu_token`.`token` = '$token' and `edu_token`.`active` = '1' and `edu_token`.`time_expire` > '$now'
+	and `edu_token`.`token` = '$token' and `edu_token`.`active` = true and `edu_token`.`time_expire` > '$now'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -102,14 +102,14 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 				$_SESSION['session_test'][$student_id][$test_id]['soal'] = $str;
 				$picoEdu->loginTest($school_id, $student_id, $test_id, session_id(), $picoEdu->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
 
-				$sql = "update `edu_token` set `active` = '0' 
+				$sql = "update `edu_token` set `active` = false 
 				where `edu_token`.`student_id` = '$student_id' and `edu_token`.`token` = '$token' ";
 				$database->execute($sql);
 				header("Location: ujian/index.php?test_id=$test_id");
 			}
 			else
 			{
-				$sql = "update `edu_token` set `active` = '0' 
+				$sql = "update `edu_token` set `active` = false 
 				where `edu_token`.`student_id` = '$student_id' and `edu_token`.`token` = '$token' ";
 				$database->execute($sql);
 				header("Location: ujian/index.php?test_id=$test_id");
@@ -134,7 +134,7 @@ else if(isset($_POST['token']))
 		$now = $picoEdu->getLocalDateTime();
 		$sql = "select * from `edu_token`
 		where `student_id` = '$student_id'
-		and `token` = '$token' and `active` = '1' and `time_expire` > '$now'
+		and `token` = '$token' and `active` = true and `time_expire` > '$now'
 		";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)

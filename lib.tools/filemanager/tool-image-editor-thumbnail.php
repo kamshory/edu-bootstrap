@@ -103,7 +103,7 @@ if($width && $height)
 		$img = $tmp;
 	}
 }
-if(@$_GET['option']=='save2file')
+if(@$_GET['option'] == 'save2file')
 {
 if($fmanConfig->readonly){
 	die('READONLY');

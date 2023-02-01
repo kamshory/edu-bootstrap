@@ -151,7 +151,7 @@ $now = $picoEdu->getLocalDateTime();
 
 $sql = "SELECT `edu_test`.*  
 from `edu_test` 
-where `edu_test`.`active` = '1'
+where `edu_test`.`active` = true
 and `edu_test`.`test_id` = '$test_id' 
 and (`edu_test`.`test_availability` = 'F' or `edu_test`.`available_to` >= '$now')
 and `edu_test`.`school_id` = '$school_id'
@@ -187,7 +187,7 @@ else
 $guidance_text = $data['guidance'];
 $test = $data['test_id'];
 
-if(@$_GET['option']=='sent')
+if(@$_GET['option'] == 'sent')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>

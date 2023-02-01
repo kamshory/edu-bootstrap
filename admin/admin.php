@@ -47,7 +47,7 @@ if(isset($_POST['set_active']) && isset($_POST['admin_id']))
 		$val = addslashes($val);
 		if($val != $admin_login->admin_id)
 		{
-			$sql = "update `edu_admin` set `active` = '1' where `admin_id` = '$val' and `school_id` = '$school_id'";
+			$sql = "update `edu_admin` set `active` = true where `admin_id` = '$val' and `school_id` = '$school_id'";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -61,7 +61,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['admin_id']))
 		$val = addslashes($val);
 		if($val != $admin_login->admin_id)
 		{
-			$sql = "update `edu_admin` set `active` = '0' where `admin_id` = '$val' and `school_id` = '$school_id'";
+			$sql = "update `edu_admin` set `active` = false where `admin_id` = '$val' and `school_id` = '$school_id'";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -84,7 +84,7 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 }
 
 
-if(isset($_POST['save']) && @$_GET['option']=='add')
+if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$sql = "SELECT * from `edu_school` where `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
@@ -141,7 +141,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 
 }
 
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "update `edu_admin` set 
 	`name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', 
@@ -178,7 +178,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 
 
 
-if(@$_GET['option']=='add')
+if(@$_GET['option'] == 'add')
 {
 	include_once dirname(__FILE__)."/lib.inc/header.php";
 	?>
@@ -242,7 +242,7 @@ if(@$_GET['option']=='add')
 }
 
 
-else if(@$_GET['option']=='edit')
+else if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);
@@ -327,7 +327,7 @@ if($stmt->rowCount() > 0)
 	include_once dirname(__FILE__)."/lib.inc/footer.php";
 }
 
-else if(@$_GET['option']=='detail')
+else if(@$_GET['option'] == 'detail')
 {
 	include_once dirname(__FILE__)."/lib.inc/header.php";
 	$edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);

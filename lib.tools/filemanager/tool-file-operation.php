@@ -12,7 +12,7 @@ if($fmanConfig->readonly){
 
 
 $rooturl = $fmanConfig->rootdir;
-if(@$_GET['option']=='compress-audio')
+if(@$_GET['option'] == 'compress-audio')
 {
 	$path = path_decode(kh_filter_input(INPUT_POST, 'path'), $fmanConfig->rootdir);
 	if(file_exists($path))
@@ -39,7 +39,7 @@ if(@$_GET['option']=='compress-audio')
 		}
 	}
 }
-else if(@$_GET['option']=='createdir')
+else if(@$_GET['option'] == 'createdir')
 {
 $dir2 = path_decode(kh_filter_input(INPUT_POST, 'location'), $fmanConfig->rootdir);
 $name = kh_filter_input(INPUT_POST, 'name');
@@ -62,7 +62,7 @@ if(file_exists($dir2))
 	}
 }
 }
-if(@$_GET['option']=='createfile')
+if(@$_GET['option'] == 'createfile')
 {
 $dir2 = path_decode(kh_filter_input(INPUT_POST, 'location'), $fmanConfig->rootdir);
 $name = kh_filter_input(INPUT_POST, 'name');
@@ -93,7 +93,7 @@ if(file_exists($dir2))
 deleteForbidden($dir2, $fileSync);
 }
 
-if(@$_GET['option']=='copyfile')
+if(@$_GET['option'] == 'copyfile')
 {
 	
 parse_str(@$_POST['postdata'], $_POST);
@@ -175,7 +175,7 @@ if(isset($_GET['deletesource']))
 deleteForbidden($targetdir, $fileSync, true);
 }
 
-if(@$_GET['option']=='deletefile')
+if(@$_GET['option'] == 'deletefile')
 {
 parse_str(@$_POST['postdata'], $_POST);
 if(isset($_POST) && (@get_magic_quotes_runtime())) //NOSONAR
@@ -204,7 +204,7 @@ echo 'FAILED';
 }
 }
 
-if(@$_GET['option']=='renamefile')
+if(@$_GET['option'] == 'renamefile')
 {
 $location = path_decode(kh_filter_input(INPUT_POST, 'location'), $fmanConfig->rootdir);
 $oldname = $location."/".trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, 'oldname')),"/\\");
@@ -231,7 +231,7 @@ else
 deleteForbidden(dirname($newname), $fileSync);
 }
 
-if(@$_GET['option']=='extractfile')
+if(@$_GET['option'] == 'extractfile')
 {
 if(!class_exists('ZipArchive'))
 {
@@ -265,7 +265,7 @@ if(file_exists($filepath))
 }
 
 
-if(@$_GET['option']=='compressfile')
+if(@$_GET['option'] == 'compressfile')
 {
 
 if(!class_exists('ZipArchive'))

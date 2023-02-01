@@ -8,7 +8,7 @@ exit();
 $cfg->page_title = "Siswa";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$reg_number_national = kh_filter_input(INPUT_POST, 'reg_number_national', FILTER_SANITIZE_SPECIAL_CHARS);
 	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -43,7 +43,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF']));
 }
-if(@$_GET['option']=='edit')
+if(@$_GET['option'] == 'edit')
 {
 include_once dirname((__FILE__))."/lib.inc/header.php";
 if(@!$mobile_browser)

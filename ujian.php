@@ -37,9 +37,9 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 	left join(`edu_member_school`) on(`edu_member_school`.`school_id` = `edu_test`.`school_id` and `edu_member_school`.`member_id` = '$member_id' and `edu_member_school`.`role` = 'S')
 	where `edu_test`.`test_id` = '$test_id' 
 	and `edu_test`.`open` = '1' 
-	and `edu_test`.`active` = '1'
+	and `edu_test`.`active` = true
 	and `edu_school`.`open` = '1' 
-	and `edu_school`.`active` = '1'
+	and `edu_school`.`active` = true
 	";
 	$stmt = $database->executeQuery($sql);
 
@@ -143,8 +143,8 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 		left join(`edu_student`) on(`edu_student`.`school_id` = `edu_test`.`school_id` and `edu_student`.`student_id` = '$member_id')
 		left join(`edu_member_school`) on(`edu_member_school`.`school_id` = `edu_test`.`school_id` and `edu_member_school`.`member_id` = '$member_id' and `edu_member_school`.`role` = 'S')
 		where `edu_test`.`test_id` = '$test_id' 
-		and `edu_test`.`open` = '1' and `edu_test`.`active` = '1'
-		and `edu_school`.`open` = '1' and `edu_school`.`active` = '1'
+		and `edu_test`.`open` = '1' and `edu_test`.`active` = true
+		and `edu_school`.`open` = '1' and `edu_school`.`active` = true
 		";
 		$stmt = $database->executeQuery($sql);
 
@@ -281,8 +281,8 @@ $school_grade = array(
 		from `edu_test`
 		inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
 		where 1 
-		and `edu_test`.`open` = '1' and `edu_test`.`active` = '1'
-		and `edu_school`.`open` = '1' and `edu_school`.`active` = '1'
+		and `edu_test`.`open` = '1' and `edu_test`.`active` = true
+		and `edu_school`.`open` = '1' and `edu_school`.`active` = true
 		order by `edu_school`.`school_grade_id` asc, `edu_test`.`subject` asc, `edu_test`.`name` asc
 		";
 		$stmt = $database->executeQuery($sql);

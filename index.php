@@ -24,7 +24,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 		(`phone` like '$phone' and `phone` != '')
 		) 
 		and `password` like md5('$password')
-		and `active` = '1'
+		and `active` = true
 		and `blocked` = '0'
 	";
 	$stmt = $database->executeQuery($sql);
@@ -184,7 +184,7 @@ else
 
 			$sql = "SELECT `edu_info`.* 
 			from `edu_info` 
-			where `edu_info`.`active` = '1'
+			where `edu_info`.`active` = true
 			order by `edu_info`.`info_id` desc
 			limit 0, 2
 			";

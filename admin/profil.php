@@ -22,7 +22,7 @@ if(count(@$_POST))
 }
 
 
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "update `edu_admin` set 
 	`name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day',  
@@ -51,7 +51,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 
 	header("Location: profil.php");
 }
-if(@$_GET['option']=='edit')
+if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);

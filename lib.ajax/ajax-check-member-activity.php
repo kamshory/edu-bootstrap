@@ -5,7 +5,7 @@ $member_id = kh_filter_input(INPUT_GET, 'member_id', FILTER_SANITIZE_NUMBER_UINT
 $sql = "SELECT `last_seen_time`, `last_activity_time`
 from `member`
 where `member_id` = '$member_id'
-and `active` = '1'
+and `active` = true
 ";
 
 $stmt = $database->executeQuery($sql);

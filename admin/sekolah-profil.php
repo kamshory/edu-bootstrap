@@ -82,7 +82,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['school_id']))
 }
 
 
-if(@$_GET['option']=='edit')
+if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 
@@ -288,7 +288,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql = "select * from `country` where `active` = '1' order by `order` asc
+        $sql = "select * from `country` where `active` = true order by `order` asc
 		";
 		$stmt = $database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
@@ -309,7 +309,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="state_id" id="state_id">
 		<option value="">- Pilih Provinsi -</option>
 			<?php
-            $sql = "select * from `state` where `active` = '1' and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
+            $sql = "select * from `state` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
             ";
             $stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
@@ -331,7 +331,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql = "select * from `city` where `active` = '1' and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
+            $sql = "select * from `city` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
             ";
             $stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {

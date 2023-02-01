@@ -17,7 +17,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	$member_create = $member_edit = $auth_teacher_id;
 	
 	
-	$sql = "select * from `edu_test_collection` where `test_collection_id` = '$id' and `active` = '1' ";
+	$sql = "select * from `edu_test_collection` where `test_collection_id` = '$id' and `active` = true ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{

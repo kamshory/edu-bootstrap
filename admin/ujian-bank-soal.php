@@ -42,7 +42,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 					$filter = "";
 				}
 				$sql = "SELECT `edu_test_collection`.* from `edu_test_collection` 
-				where `edu_test_collection`.`active` = '1' $filter
+				where `edu_test_collection`.`active` = true $filter
 				order by `test_collection_id` desc
 				";
 				$stmt = $database->executeQuery($sql);

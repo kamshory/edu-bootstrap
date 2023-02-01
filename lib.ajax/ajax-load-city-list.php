@@ -18,7 +18,7 @@ if($state_id == 0 && $state_name != '')
 $sql = "SELECT `city`.`city_id` as `v`, `city`.`name` as `l`
 from `city` where `city`.`country_id` = '$country_id' 
 and (`city`.`state_id` = '$state_id' or `city`.`state_id` = '' or `city`.`state_id` is null or '$state_id' = '0') 
-and `city`.`active` = '1' and `city`.`verify` = '1'
+and `city`.`active` = true and `city`.`verify` = '1'
 order by `city`.`type` asc, `city`.`name` asc
 ";
 $city_list = array();

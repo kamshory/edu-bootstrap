@@ -24,7 +24,7 @@ if(isset($_POST['set_active']) && isset($_POST['answer_id']))
 			foreach($answer_id as $key=>$val)
 			{
 				$answer_id = addslashes($val);
-				$sql = "update `edu_answer` set `active` = '1' where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
+				$sql = "update `edu_answer` set `active` = true where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
 				$database->executeUpdate($sql, true);
 			}
 		}
@@ -41,7 +41,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['answer_id']))
 			foreach($answer_id as $key=>$val)
 			{
 				$answer_id = addslashes($val);
-				$sql = "update `edu_answer` set `active` = '0' where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
+				$sql = "update `edu_answer` set `active` = false where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
 				$database->executeUpdate($sql, true);
 			}
 		}
@@ -86,7 +86,7 @@ if(isset($_POST['recalculation']) && isset($_POST['answer_id']))
 	header("Location: ".$_SERVER['REQUEST_URI']);
 }
 
-if(@$_GET['option']=='export' && isset($_GET['test_id']))
+if(@$_GET['option'] == 'export' && isset($_GET['test_id']))
 {
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	$bc_array = $picoEdu->getBasicCompetence($test_id);
@@ -354,7 +354,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 echo '</body>
 </html>';
 }
-else if(@$_GET['option']=='answerdetail' && isset($_GET['answer_id']))
+else if(@$_GET['option'] == 'answerdetail' && isset($_GET['answer_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $array_class = $picoEdu->getArrayClass($school_id);
@@ -629,7 +629,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 }
 }
-else if(@$_GET['option']=='detail' && isset($_GET['test_id']))
+else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
@@ -672,7 +672,7 @@ window.onload = function()
     <select class="form-control" id="class_id" name="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "SELECT * from `edu_class` where `active` = '1' and `school_id` = '$school_id' order by `order` asc ";
+    $sql2 = "SELECT * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -712,7 +712,7 @@ $q2 = basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id";
 $nt ='';
 $sql = "SELECT `edu_test`.* $nt
 from `edu_test` 
-where (`edu_test`.`active` = '1' or `edu_test`.`active` = '0')
+where (`edu_test`.`active` = true or `edu_test`.`active` = false)
 and `edu_test`.`test_id` = '$test_id'
 ";
 $threshold = 0;

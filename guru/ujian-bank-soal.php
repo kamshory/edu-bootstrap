@@ -37,7 +37,7 @@ $grade_id = kh_filter_input(INPUT_GET, 'grade_id', FILTER_SANITIZE_NUMBER_UINT);
 					$filter = "";
 				}
 				$sql = "SELECT `edu_test_collection`.* from `edu_test_collection` 
-				where `edu_test_collection`.`active` = '1' $filter
+				where `edu_test_collection`.`active` = true $filter
 				order by `test_collection_id` desc
 				";
 				$stmt2 = $database->executeQuery($sql);

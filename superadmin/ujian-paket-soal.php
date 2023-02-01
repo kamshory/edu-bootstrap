@@ -13,7 +13,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $time_create = $time_edit = $picoEdu->getLocalDateTime();
 $member_create = $member_edit = $admin_login->admin_id;
 
-if(@$_GET['option']=='export')
+if(@$_GET['option'] == 'export')
 {
 	$test_collection_id = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
 	$sql = "select * from `edu_test_collection` where `test_collection_id` = '$test_collection_id' ";
@@ -32,7 +32,7 @@ if(@$_GET['option']=='export')
 }
 /*
 Commented
-if(@$_GET['option']=='delete')
+if(@$_GET['option'] == 'delete')
 {
 	$test_collection_id = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
 	$question_index = kh_filter_input(INPUT_GET, 'question_index', FILTER_SANITIZE_NUMBER_UINT);
@@ -377,7 +377,7 @@ if(isset($_POST['sort']))
 
 	exit();
 }
-if(@$_GET['option']=='delete')
+if(@$_GET['option'] == 'delete')
 {
 	$test_collection_id = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
 	$question_index = kh_filter_input(INPUT_GET, 'question_index', FILTER_SANITIZE_NUMBER_UINT);
@@ -494,7 +494,7 @@ if(@$_GET['option']=='delete')
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&test_collection_id=$test_collection_id");
 	exit();
 }
-if(isset($_POST['save']) && (@$_GET['option']=='edit' || @$_GET['option']=='add'))
+if(isset($_POST['save']) && (@$_GET['option'] == 'edit' || @$_GET['option'] == 'add'))
 {
 	
 	$test_collection_id = kh_filter_input(INPUT_POST, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
@@ -642,7 +642,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "update `edu_test_collection` set `active` = '1' where `test_collection_id` = '$test_collection_id' ";
+		$sql = "update `edu_test_collection` set `active` = true where `test_collection_id` = '$test_collection_id' ";
 		$database->execute($sql);
 	}
 	header("Location: ".basename($_SERVER['REQUEST_URI']));
@@ -654,7 +654,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "update `edu_test_collection` set `active` = '0' where `test_collection_id` = '$test_collection_id' ";
+		$sql = "update `edu_test_collection` set `active` = false where `test_collection_id` = '$test_collection_id' ";
 		$database->execute($sql);
 	}
 	header("Location: ".basename($_SERVER['REQUEST_URI']));
@@ -664,9 +664,9 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 
-if(@$_GET['option']=='edit' || @$_GET['option']=='add')
+if(@$_GET['option'] == 'edit' || @$_GET['option'] == 'add')
 {
-if(isset($_GET['test_collection_id']) && (@$_GET['option']=='add' || isset($_GET['question_index'])))
+if(isset($_GET['test_collection_id']) && (@$_GET['option'] == 'add' || isset($_GET['question_index'])))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $test_collection_id = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_STRING_NEW);
@@ -819,7 +819,7 @@ foreach($test_data['item'] as $index_question => $question)
 	$nquestion++;
 }
 */
-if($question_index >= $nquestion || @$_GET['option']=='add')
+if($question_index >= $nquestion || @$_GET['option'] == 'add')
 {
 	$question_index = $nquestion; 
 }

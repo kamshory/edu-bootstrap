@@ -8,7 +8,7 @@ exit();
 $cfg->page_title = "Siswa";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
-if(@$_GET['option']=='detail')
+if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_STRING_NEW);
@@ -149,7 +149,7 @@ else
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='print-password')
+else if(@$_GET['option'] == 'print-password')
 {
 include_once dirname(__FILE__)."/cetak-login-siswa.php";
 }
@@ -172,7 +172,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "select * from `edu_class` where `active` = '1' and `school_id` = '$school_id' order by `order` asc ";
+    $sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -220,12 +220,12 @@ $nt = '';
 $sql = "SELECT `edu_student`.* , `edu_class`.`name` as `class_id`, `edu_class`.`order` as `order`
 from `edu_student`
 left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
-where `edu_student`.`active` = '1' and `edu_student`.`school_id` = '$school_id' $sql_filter
+where `edu_student`.`active` = true and `edu_student`.`school_id` = '$school_id' $sql_filter
 order by `order` asc, `edu_student`.`name` asc
 ";
 $sql_test = "SELECT `edu_student`.*
 from `edu_student`
-where `edu_student`.`active` = '1' and `edu_student`.`school_id` = '$school_id' $sql_filter
+where `edu_student`.`active` = true and `edu_student`.`school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

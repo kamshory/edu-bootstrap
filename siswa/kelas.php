@@ -8,7 +8,7 @@ exit();
 $cfg->page_title = "Kelas";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
-if(@$_GET['option']=='detail')
+if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);

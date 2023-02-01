@@ -95,7 +95,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_id']))
 		foreach($tests as $key=>$val)
 		{
 			$test_id = addslashes($val);
-			$sql = "update `edu_test` set `active` = '1' where `test_id` = '$test_id' ";
+			$sql = "update `edu_test` set `active` = true where `test_id` = '$test_id' ";
 			$database->execute($sql);
 		}
 	}
@@ -108,7 +108,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_id']))
 		foreach($tests as $key=>$val)
 		{
 			$test_id = addslashes($val);
-			$sql = "update `edu_test` set `active` = '0' where `test_id` = '$test_id' ";
+			$sql = "update `edu_test` set `active` = false where `test_id` = '$test_id' ";
 			$database->execute($sql);
 		}
 	}
@@ -140,7 +140,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 }
 
 
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "update `edu_test` set 
 	`name` = '$name', `class` = '$class', `subject` = '$subject', `teacher_id` = '$teacher_id', `description` = '$description', 
@@ -157,7 +157,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id");
 }
-if(@$_GET['option']=='edit')
+if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
@@ -171,7 +171,7 @@ if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 $school_id = $data['school_id'];
-$sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = '1' and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
+$sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
 $stmtc = $database->executeQuery($sqlc);
 $arrc = array();
 if($stmtc->rowCount() > 0)
@@ -494,7 +494,7 @@ else
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='detail')
+else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $array_class = $picoEdu->getArrayClass($school_id);

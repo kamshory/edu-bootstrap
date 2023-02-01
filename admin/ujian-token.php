@@ -29,21 +29,21 @@ if(isset($_POST['set_inactive']) && isset($_POST['token_id']))
 		foreach($tokens as $key=>$val)
 		{
 			$token_id = addslashes($val);
-			$sql = "update `edu_token` set `active` = '0' where `token_id` = '$token_id' and `school_id` = '$school_id' ";
+			$sql = "update `edu_token` set `active` = false where `token_id` = '$token_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
 }
 
 
-if(isset($_POST['save']) && @$_GET['option']=='add')
+if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$now = $picoEdu->getLocalDateTime();
 	$oneday = date('Y-m-d H:i:s', time()-86400);
 	$sql = "DELETE FROM `edu_token` where `time_expire` < '$oneday'
 	";
 	$database->executeDelete($sql, true);
-	$sql = "update `edu_token` set `active` = '0' where `time_expire` < '$now'
+	$sql = "update `edu_token` set `active` = false where `time_expire` < '$now'
 	";
 	$database->executeUpdate($sql, true);
 	if($class_id)
@@ -51,7 +51,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 		if($student_id == 0)
 		{
 			// membuat token untuk semua siswa
-			$sql = "SELECT `student_id` from `edu_student` where `class_id` = '$class_id' and `active` = '1'
+			$sql = "SELECT `student_id` from `edu_student` where `class_id` = '$class_id' and `active` = true
 			";
 			$students = array();
 			$stmt = $database->executeQuery($sql);
@@ -91,7 +91,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 		}
 	}
 }
-if(@$_GET['option']=='print')
+if(@$_GET['option'] == 'print')
 {
 include_once dirname(__FILE__)."/cetak-ujian-token.php";
 } else if (@$_GET['option'] == 'add') {
@@ -148,7 +148,7 @@ $(document).ready(function(e) {
 		<option value=""></option>
 		<?php
 		$sql2 = "SELECT * from `edu_class`
-		where `active` = '1' and `school_id` = '$school_id'
+		where `active` = true and `school_id` = '$school_id'
 		order by `order` asc
 		";
 		echo $picoEdu->createFilterDb(
@@ -338,7 +338,7 @@ function printToken(frm)
 	<option value=""></option>
     <?php
 		$sql2 = "SELECT * from `edu_class`
-		where `active` = '1' and `school_id` = '$school_id'
+		where `active` = true and `school_id` = '$school_id'
 		order by `order` asc
 		";
 		echo $picoEdu->createFilterDb(
@@ -387,7 +387,7 @@ if ($test_id != 0) {
 if ($test_id != 0 || $class_id != 0) {
 	$pagination->limit_sql = "";
 }
-$sql_filter .= " and `edu_token`.`active` = '1' ";
+$sql_filter .= " and `edu_token`.`active` = true ";
 $nt = '';
 
 $sql = "SELECT `edu_token`.* $nt,

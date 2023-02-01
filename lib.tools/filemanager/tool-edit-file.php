@@ -6,7 +6,7 @@ if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-if(@$_GET['option']=='openfile')
+if(@$_GET['option'] == 'openfile')
 {
 $filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
 if(file_exists($filepath))
@@ -37,7 +37,7 @@ else
 </form>
 <?php
 }
-if(@$_GET['option']=='savefile' && isset($_POST['filepath']))
+if(@$_GET['option'] == 'savefile' && isset($_POST['filepath']))
 {
 	if($fmanConfig->readonly){
 		die('READONLY');

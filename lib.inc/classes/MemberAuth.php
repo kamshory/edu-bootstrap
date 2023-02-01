@@ -35,7 +35,7 @@ class MemberAuth
 		`autoplay_360`, `autorotate_360`, `img_360_compress`, `picture_hash`, `background`, `language`, `country_id`, `state_id`, `city_id`, `circle_avatar`
 		from `member` 
 		where `username` = '$username' and `password` = md5('$password') 
-		and `active` = '1'
+		and `active` = true
 		and `blocked` = '0'
 		";
 		$stmt = $database->executeQuery($sql);

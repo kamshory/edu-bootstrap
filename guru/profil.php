@@ -17,7 +17,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 }
 
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "update `edu_teacher` set 
 	`reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', 
@@ -46,7 +46,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	}
 	header("Location: profil.php");
 }
-if(@$_GET['option']=='edit')
+if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $sql = "SELECT `edu_teacher`.* , `edu_school`.`name` as `school_name`

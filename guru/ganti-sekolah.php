@@ -2,7 +2,7 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 $cfg->page_title = "Pilih Sekolah";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-if(@$_GET['option']=='select')
+if(@$_GET['option'] == 'select')
 {
 	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_school`.* 
@@ -20,7 +20,7 @@ if(@$_GET['option']=='select')
 	}
 
 }
-if(@$_GET['option']=='detail')
+if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);

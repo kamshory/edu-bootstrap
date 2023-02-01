@@ -37,7 +37,7 @@ if(isset($_POST['save']))
 		
 }
 
-if(@$_GET['option']=='edit')
+if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 

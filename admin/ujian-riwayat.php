@@ -219,7 +219,7 @@ window.onload = function()
     <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-	$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' and `active` = '1'";
+	$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' and `active` = true";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -245,7 +245,7 @@ window.onload = function()
     <select class="form-control input-select" name="teacher_id" id="teacher_id">
     <option value="">- Pilih Guru -</option>
     <?php 
-	$sql = "SELECT * from `edu_teacher` where `school_id` = '$school_id' and `active` = '1'";
+	$sql = "SELECT * from `edu_teacher` where `school_id` = '$school_id' and `active` = true";
 	$stmt2 = $database->executeQuery($sql);
 	if ($stmt2->rowCount() > 0) {
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

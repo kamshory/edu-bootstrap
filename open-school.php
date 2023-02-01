@@ -18,7 +18,7 @@ if (@$_GET['option'] == 'select') {
 	select `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
 	`edu_school2`.`principal`, `edu_school2`.`active`, `edu_school2`.`open`
 	from `edu_school` as `edu_school2`
-	where `edu_school2`.`open` = '1' and `edu_school2`.`active` = '1' 
+	where `edu_school2`.`open` = '1' and `edu_school2`.`active` = true 
 	) as `edu_school3`
 	where 1 and `edu_school3`.`school_id` = '$school_id'
 	order by `edu_school3`.`open` asc, `edu_school3`.`name` asc
@@ -175,7 +175,7 @@ if (@$_GET['option'] == 'detail') {
 				select `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
 				`edu_school2`.`principal`, `edu_school2`.`active`, `edu_school2`.`open`
 				from `edu_school` as `edu_school2`
-				where `edu_school2`.`open` = '1' and `edu_school2`.`active` = '1' 
+				where `edu_school2`.`open` = '1' and `edu_school2`.`active` = true 
 				) as `edu_school3`
 				where 1 $sql_filter
 				order by `edu_school3`.`open` asc, `edu_school3`.`name` asc

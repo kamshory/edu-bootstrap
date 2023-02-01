@@ -45,7 +45,7 @@ if(isset($_POST['set_active']) && isset($_POST['teacher_id']))
 		foreach($teachers as $key=>$val)
 		{
 			$teacher_id = addslashes($val);
-			$sql = "update `edu_teacher` set `active` = '1' where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+			$sql = "update `edu_teacher` set `active` = true where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -58,7 +58,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['teacher_id']))
 		foreach($teachers as $key=>$val)
 		{
 			$teacher_id = addslashes($val);
-			$sql = "update `edu_teacher` set `active` = '0' where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+			$sql = "update `edu_teacher` set `active` = false where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -79,7 +79,7 @@ if(isset($_POST['delete']) && isset($_POST['teacher_id']))
 	}
 }
 
-if(isset($_POST['save']) && @$_GET['option']=='add')
+if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$sql = "select * from `edu_school` where `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
@@ -151,7 +151,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 		}
 	}
 }
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "update `edu_teacher` set 
 	`reg_number` = '$reg_number', `reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', 
@@ -184,7 +184,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	header("Location:".basename($_SERVER['PHP_SELF'])."?option=detail&teacher_id=$teacher_id");
 }
 
-if(@$_GET['option']=='add')
+if(@$_GET['option'] == 'add')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
@@ -255,7 +255,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='edit')
+else if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'teacher_id', FILTER_SANITIZE_STRING_NEW);
@@ -341,11 +341,11 @@ else
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='print-password')
+else if(@$_GET['option'] == 'print-password')
 {
 include_once dirname(__FILE__)."/cetak-login-guru.php";
 }
-else if(@$_GET['option']=='detail')
+else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'teacher_id', FILTER_SANITIZE_STRING_NEW);

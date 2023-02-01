@@ -40,7 +40,7 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 }
 
 
-if(isset($_POST['save']) && @$_GET['option']=='add')
+if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$test_collection_id = $database->generateNewId();
 	$sql = "INSERT INTO `edu_test_collection` 
@@ -54,7 +54,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_collection_id=$test_collection_id");
 }
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "update `edu_test_collection` set 
 	`name` = '$name', `grade_id` = '$grade_id', `file_name` = '$file_name', `file_path` = '$file_path', `file_size` = '$file_size', `file_md5` = '$file_md5', `file_sha1` = '$file_sha1', `time_create` = '$time_create', `time_edit` = '$time_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `taken` = '$taken', `active` = '$active'
@@ -62,7 +62,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_collection_id=$test_collection_id");
 }
-if(@$_GET['option']=='add')
+if(@$_GET['option'] == 'add')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
@@ -137,7 +137,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='edit')
+else if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
@@ -225,7 +225,7 @@ else
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='detail')
+else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);

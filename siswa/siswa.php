@@ -9,7 +9,7 @@ $cfg->page_title = "Siswa";
 
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
-if(@$_GET['option']=='detail')
+if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_STRING_NEW);
@@ -126,7 +126,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id" id="class_id">
     <option value=""></option>
     <?php 
-    $sql2 = "select * from `edu_class` where `active` = '1' and `school_id` = '$school_id' order by `order` asc ";
+    $sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(

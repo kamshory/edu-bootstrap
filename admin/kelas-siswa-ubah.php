@@ -85,7 +85,7 @@ if(isset($_POST['set_active']) && isset($_POST['student_id']))
 		foreach($students as $key=>$val)
 		{
 			$student_id = addslashes($val);
-			$sql = "update `edu_student` set `active` = '1' where `student_id` = '$student_id' and `school_id` = '$school_id' ";
+			$sql = "update `edu_student` set `active` = true where `student_id` = '$student_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -98,7 +98,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['student_id']))
 		foreach($students as $key=>$val)
 		{
 			$student_id = addslashes($val);
-			$sql = "update `edu_student` set `active` = '0' where `student_id` = '$student_id' and `school_id` = '$school_id' ";
+			$sql = "update `edu_student` set `active` = false where `student_id` = '$student_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -117,7 +117,7 @@ if(isset($_POST['delete']) && isset($_POST['student_id']))
 	}
 }
 
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "update `edu_student` set 
 	`reg_number` = '$reg_number', `reg_number_national` = '$reg_number_national', `grade_id` = '$grade_id', `class_id` = '$class_id', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
@@ -139,7 +139,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&student_id=$student_id2");
 }
-if(@$_GET['option']=='edit')
+if(@$_GET['option'] == 'edit')
 {
 	include_once dirname(__FILE__)."/lib.inc/header.php";
 	$edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_STRING_NEW);
@@ -177,7 +177,7 @@ if(@$_GET['option']=='edit')
 		<td><select class="form-control input-select" name="class_id" id="class_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "select * from `edu_class` where `active` = '1' and `school_id` = '$school_id' order by `order` asc ";
+		$sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(
@@ -262,7 +262,7 @@ else
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='detail')
+else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_STRING_NEW);
@@ -431,7 +431,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "select * from `edu_class` where `active` = '1' and `school_id` = '$school_id' order by `order` asc ";
+    $sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -509,7 +509,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
             	<select class="form-control input-select" name="class_id" id="class_id" style="width:100%; box-sizing:border-box;" required="required">
                 <option value="">- Pilih Kelas Baru -</option>
                 <?php 
-                $sql2 = "select * from `edu_class` where `active` = '1' and `school_id` = '$school_id' order by `order` asc ";
+                $sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
                 echo $picoEdu->createFilterDb(
 					$sql2,
 					array(

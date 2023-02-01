@@ -49,7 +49,7 @@ if(isset($_POST['set_active']) && isset($_POST['student_id']))
 		foreach($students as $key=>$val)
 		{
 			$student_id = addslashes($val);
-			$sql = "update `edu_student` set `active` = '1' where `student_id` = '$student_id' and `school_id` = '$school_id' ";
+			$sql = "update `edu_student` set `active` = true where `student_id` = '$student_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -62,7 +62,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['student_id']))
 		foreach($students as $key=>$val)
 		{
 			$student_id = addslashes($val);
-			$sql = "update `edu_student` set `active` = '0' where `student_id` = '$student_id' and `school_id` = '$school_id' ";
+			$sql = "update `edu_student` set `active` = false where `student_id` = '$student_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -84,7 +84,7 @@ if(isset($_POST['delete']) && isset($_POST['student_id']))
 }
 
 
-if(isset($_POST['save']) && @$_GET['option']=='add')
+if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$sql = "select * from `edu_school` where `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
@@ -135,7 +135,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&student_id=$student_id");
 	}
 }
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "update `edu_student` set 
 	`reg_number` = '$reg_number', `reg_number_national` = '$reg_number_national', `grade_id` = '$grade_id', 
@@ -160,7 +160,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&student_id=$student_id2");
 }
-if(@$_GET['option']=='add')
+if(@$_GET['option'] == 'add')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
@@ -188,7 +188,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 		<td><select class="form-control input-select" name="class_id" id="class_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "select * from `edu_class` where `active` = '1' and `school_id` = '$school_id' order by `order` asc ";
+		$sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(
@@ -268,7 +268,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='edit')
+else if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_STRING_NEW);
@@ -306,7 +306,7 @@ if($stmt->rowCount() > 0)
 		<td><select class="form-control input-select" name="class_id" id="class_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "select * from `edu_class` where `active` = '1' and `school_id` = '$school_id' order by `order` asc ";
+		$sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(
@@ -391,11 +391,11 @@ else
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='print-password')
+else if(@$_GET['option'] == 'print-password')
 {
 include_once dirname(__FILE__)."/cetak-login-siswa.php";
 }
-else if(@$_GET['option']=='detail')
+else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_STRING_NEW);
@@ -533,7 +533,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "select * from `edu_class` where `active` = '1' and `school_id` = '$school_id' order by `order` asc ";
+    $sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(

@@ -121,7 +121,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_id']))
 			foreach($tests as $key=>$val)
 			{
 				$test_id = addslashes($val);
-				$sql = "update `edu_test` set `active` = '1' where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
+				$sql = "update `edu_test` set `active` = true where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
 				$database->executeUpdate($sql, true);
 			}
 		}
@@ -135,7 +135,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_id']))
 		foreach($tests as $key=>$val)
 		{
 			$test_id = addslashes($val);
-			$sql = "update `edu_test` set `active` = '0' where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
+			$sql = "update `edu_test` set `active` = false where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -169,7 +169,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 }
 
 
-if(isset($_POST['save']) && @$_GET['option']=='add')
+if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$test_id = $database->generateNewId();
 	$sql = "INSERT INTO `edu_test` 
@@ -187,7 +187,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 		$member_create = $member_edit = $teacher_id;
 		
 		
-		$sql = "select * from `edu_test_collection` where `test_collection_id` = '$id' and `active` = '1' ";
+		$sql = "select * from `edu_test_collection` where `test_collection_id` = '$id' and `active` = true ";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
@@ -330,7 +330,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 	header("Location: ujian-soal.php?option=detail&test_id=$test_id");
 	exit();
 }
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "update `edu_test` set 
 	`name` = '$name', `class` = '$class', `subject` = '$subject', `teacher_id` = '$teacher_id', `description` = '$description', 
@@ -347,12 +347,12 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id");
 }
-if(@$_GET['option']=='add')
+if(@$_GET['option'] == 'add')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $collection = kh_filter_input(INPUT_GET, 'collection', FILTER_SANITIZE_NUMBER_UINT);
 $selection = kh_filter_input(INPUT_GET, 'selection', FILTER_SANITIZE_STRING_NEW);
-$sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = '1' and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
+$sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
 $stmtc = $database->executeQuery($sqlc);
 $arrc = array();
 if($stmtc->rowCount() > 0)
@@ -636,7 +636,7 @@ $(document).ready(function(e) {
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='edit')
+else if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
@@ -649,7 +649,7 @@ $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
-$sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = '1' and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
+$sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
 $stmtc = $database->executeQuery($sqlc);
 $arrc = array();
 if($stmtc->rowCount() > 0)
@@ -933,7 +933,7 @@ else
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 
 }
-else if(@$_GET['option']=='detail')
+else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $array_class = $picoEdu->getArrayClass($school_id);

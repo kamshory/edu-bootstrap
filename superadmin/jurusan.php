@@ -34,7 +34,7 @@ if(isset($_POST['set_active']) && isset($_POST['school_program_id']))
 		foreach($school_program as $key=>$val)
 		{
 			$school_program_id = addslashes($val);
-			$sql = "update `edu_school_program` set `active` = '1' where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
+			$sql = "update `edu_school_program` set `active` = true where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -47,7 +47,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['school_program_id']))
 		foreach($school_program as $key=>$val)
 		{
 			$school_program_id = addslashes($val);
-			$sql = "update `edu_school_program` set `active` = '0' where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
+			$sql = "update `edu_school_program` set `active` = false where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -66,7 +66,7 @@ if(isset($_POST['delete']) && isset($_POST['school_program_id']))
 	}
 }
 
-if(isset($_POST['save']) && @$_GET['option']=='edit')
+if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "update `edu_school_program` set 
 	`name` = '$name', `order` = '$order', `default` = '$default', `time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
@@ -74,7 +74,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	$database->execute($sql);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&school_program_id=$school_program_id");
 }
-if(@$_GET['option']=='edit')
+if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'school_program_id', FILTER_SANITIZE_STRING_NEW);
@@ -124,7 +124,7 @@ else
 }
 include_once dirname(__FILE__)."/lib.inc/footer.php";
 }
-else if(@$_GET['option']=='detail')
+else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'school_program_id', FILTER_SANITIZE_STRING_NEW);

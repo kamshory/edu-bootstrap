@@ -330,7 +330,7 @@ if (@$page_school_id) {
 				(select `edu_school_program`.`name` from `edu_school_program` where `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
 				(select count(distinct `edu_student`.`student_id`) from `edu_student` where `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
 				from `edu_class`
-				where `edu_class`.`active` = '1' and `edu_class`.`school_id` = '$page_school_id'
+				where `edu_class`.`active` = true and `edu_class`.`school_id` = '$page_school_id'
 				order by `edu_class`.`grade_id` asc, `edu_class`.`order` asc
 				";
 			$stmt = $database->executeQuery($sql);
@@ -451,7 +451,7 @@ if (@$page_school_id) {
 			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
 			$sql = "SELECT `edu_teacher`.*
 				from `edu_teacher`
-				where `edu_teacher`.`active` = '1' and `edu_teacher`.`school_id` = '$page_school_id'
+				where `edu_teacher`.`active` = true and `edu_teacher`.`school_id` = '$page_school_id'
 				order by `edu_teacher`.`name` asc
 				";
 			$stmt = $database->executeQuery($sql);
@@ -507,7 +507,7 @@ if (@$page_school_id) {
 				$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 					from `edu_article` 
 					left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
-					where `edu_article`.`article_id` = '$article_id' and `edu_article`.`school_id` = '$page_school_id' and `edu_article`.`active` = '1' ";
+					where `edu_article`.`article_id` = '$article_id' and `edu_article`.`school_id` = '$page_school_id' and `edu_article`.`active` = true ";
 					$stmt = $database->executeQuery($sql);
 					if ($stmt->rowCount() > 0) {
 						$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -538,7 +538,7 @@ if (@$page_school_id) {
 				$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 					from `edu_article` 
 					left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
-					where `edu_article`.`active` = '1' and `edu_article`.`school_id` = '$page_school_id'
+					where `edu_article`.`active` = true and `edu_article`.`school_id` = '$page_school_id'
 					order by `edu_article`.`article_id` desc
 					";
 				$stmt = $database->executeQuery($sql);
@@ -626,7 +626,7 @@ if (@$page_school_id) {
 
 			$sql = "SELECT `edu_test`.*
 				from `edu_test`
-				where `edu_test`.`active` = '1' and `edu_test`.`school_id` = '$page_school_id' 
+				where `edu_test`.`active` = true and `edu_test`.`school_id` = '$page_school_id' 
 				order by `edu_test`.`test_id` desc
 				";
 			$stmt = $database->executeQuery($sql);

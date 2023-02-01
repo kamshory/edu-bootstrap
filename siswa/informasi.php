@@ -22,7 +22,7 @@ if(isset($_GET['info_id']))
 	$sql = "SELECT `edu_info`.*, `member`.`name` as `creator`
 	from `edu_info` 
 	left join(`member`) on(`member`.`member_id` = `edu_info`.`admin_create`) 
-	where `edu_info`.`active` = '1' $sql_filter_info ";
+	where `edu_info`.`active` = true $sql_filter_info ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
