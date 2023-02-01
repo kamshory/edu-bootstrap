@@ -72,9 +72,9 @@ class PicoDatabase
 		}
 	}
 
-	public function executeInsert($sql, $appendToSyncFile = false)
+	public function executeInsert($sql, $sync = false)
 	{
-		if($appendToSyncFile)
+		if($sync)
 		{
 			
 		}
@@ -88,7 +88,7 @@ class PicoDatabase
 		}
 		return $stmt;
 	}
-	public function executeUpdate($sql, $appendToSyncFile = false)
+	public function executeUpdate($sql, $sync = false)
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -100,7 +100,7 @@ class PicoDatabase
 		}
 		return $stmt;
 	}
-	public function executeDelete($sql, $appendToSyncFile = false)
+	public function executeDelete($sql, $sync = false)
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -112,7 +112,7 @@ class PicoDatabase
 		}
 		return $stmt;
 	}
-	public function executeTransaction($sql, $appendToSyncFile = false)
+	public function executeTransaction($sql, $sync = false)
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -123,6 +123,15 @@ class PicoDatabase
 			echo $e->getMessage()."\r\nERROR &raquo; $sql";
 		}
 		return $stmt;
+	}
+
+	public function createSync($sql)
+	{
+		$syncPath = $this->syncDatabaseDir . "/" . "database.txt";
+		$fp = fopen($syncPath, 'a');
+		fwrite($fp, $this->delimiter."\r\n");  
+		fwrite($fp, $sql.";".self::NEW_LINE);  
+		fclose($fp);  
 	}
 
 	/**
