@@ -321,7 +321,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	{
 	$no++;
 	?>
-    <tr<?php $rowclass=""; if(@$data['default']==1) $rowclass.=" data-default"; if(isset($data['active'])){if(@$data['active']==1) $rowclass.=" data-active"; if(@$data['active']==0) $rowclass.=" data-inactive";} $rowclass = trim($rowclass); if(strlen($rowclass)){echo " class=\"$rowclass\"";}?>>
+    <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
       <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>

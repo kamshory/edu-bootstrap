@@ -1095,4 +1095,29 @@ class PicoEdu //NOSONAR
 	{
 		return $v1 == $v2 ? $out : '';
 	}
+
+	public function getRowClass($data)
+	{
+		if(!isset($data) || empty($data))
+		{
+			return "";
+		}
+		$rowclass = array(); 
+		if(isset($data['default']) && $data['default']==1) 
+		{
+			$rowclass[] = "data-default"; 
+		}
+		if(isset($data['active']))
+		{
+			if($data['active']==1) 
+			{
+				$rowclass[] = "data-active"; 
+			}
+			else if($data['active']==0) 
+			{
+				$rowclass[] = "data-inactive";
+			}
+		}
+		return trim(implode(' ', $rowclass)); 
+	}
 }

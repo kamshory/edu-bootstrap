@@ -415,11 +415,11 @@ class DirectoryDestroyer
 	public function destroy()
 	{
 		$dir = $this->directory;
-		@chmod(dirname($dir), 0777);
-		@chmod($dir, 0777);
+		chmod(dirname($dir), 0777);
+		chmod($dir, 0777);
 		$this->remove_dir($dir);
-		@rmdir($dir);
-		@chmod(dirname($dir), 0755);
+		rmdir($dir);
+		chmod(dirname($dir), 0755);
 	}
 	private function remove_dir($dir)
 	{
@@ -427,13 +427,13 @@ class DirectoryDestroyer
 		$mydir = opendir($dir);
 		while (false !== ($file = readdir($mydir))) {
 			if ($file != "." && $file != "..") {
-				@chmod($dir . "/" . $file, 0777);
+				chmod($dir . "/" . $file, 0777);
 				if (is_dir($dir . "/" . $file)) {
 					chdir('.');
 					destroy($dir . "/" . $file);
 					rmdir($dir . "/" . $file);
 				} else {
-					@unlink($dir . "/" . $file);
+					unlink($dir . "/" . $file);
 				}
 			}
 		}

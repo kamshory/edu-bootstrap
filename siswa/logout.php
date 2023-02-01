@@ -31,8 +31,8 @@ header("Location: index.php");
 <div class="content">
 <p>Apakah Anda yakin akan keluar?</p>
 <p>
-<a class="button-gradient" href="logout.php?confirm-logout=yes">Ya</a>
-<a class="button-gradient2" href="index.php">Tidak</a>
+<a class="btn btn-primary" href="logout.php?confirm-logout=yes">Ya</a>
+<a class="btn btn-primary2" href="index.php">Tidak</a>
 </p>
 </div>
 </div>

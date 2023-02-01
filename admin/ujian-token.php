@@ -24,16 +24,13 @@ if(count(@$_POST) && isset($_POST['save']))
 if(isset($_POST['set_inactive']) && isset($_POST['token_id']))
 {
 	$tokens = @$_POST['token_id'];
-	if(isset($tokens))
+	if(isset($tokens) && is_array($tokens))
 	{
-		if(is_array($tokens))
+		foreach($tokens as $key=>$val)
 		{
-			foreach($tokens as $key=>$val)
-			{
-				$token_id = addslashes($val);
-				$sql = "update `edu_token` set `active` = '0' where `token_id` = '$token_id' and `school_id` = '$school_id' ";
-				$database->executeUpdate($sql);
-			}
+			$token_id = addslashes($val);
+			$sql = "update `edu_token` set `active` = '0' where `token_id` = '$token_id' and `school_id` = '$school_id' ";
+			$database->executeUpdate($sql);
 		}
 	}
 }

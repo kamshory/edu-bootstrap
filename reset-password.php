@@ -205,7 +205,7 @@ $message = '<!DOCTYPE html>
 	<div class="input-label">Ulangi</div>
 	<div class="input-label"><input data-full-width="true" type="password" name="password2" id="password2" class="input-login" autocomplete="off" required /></div>
     <div data-role="button-set">
-    <input class="button-gradient" type="submit" name="reset-password" id="reset-password" value="Simpan Password" />
+    <input class="btn btn-primary" type="submit" name="reset-password" id="reset-password" value="Simpan Password" />
     </div>
     </form>
 	<?php
@@ -253,8 +253,8 @@ else
         <div class="input-label">Username</div>
         <div class="input-control"><input type="text" name="username" id="username" placeholder="Username" data-full-width="true" /></div>
         <div class="input-control"><input type="hidden" name="ref" value="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']);?>">
-        <input class="button-gradient" type="submit" name="send" id="send" value="Kirim" /></td>
-        <input class="button-gradient2" type="button" name="login" id="login" value="Masuk" onclick="window.location='login.php'" />
+        <input class="btn btn-primary" type="submit" name="send" id="send" value="Kirim" /></td>
+        <input class="btn btn-primary2" type="button" name="login" id="login" value="Masuk" onclick="window.location='login.php'" />
         </div>
         </form>
 	<?php

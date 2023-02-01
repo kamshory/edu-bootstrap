@@ -40,11 +40,9 @@ if (isset($_POST['set_active']) && isset($_POST['class_id'])) {
 if (isset($_POST['set_inactive']) && isset($_POST['class_id'])) {
 	$classs = @$_POST['class_id'];
 	if (isset($classs) && is_array($classs)) {
-		if (is_array($classs)) {
-			$class_id = addslashes($val);
-			$sql = "update `edu_class` set `active` = '0' where `class_id` = '$class_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
-		}
+		$class_id = addslashes($val);
+		$sql = "update `edu_class` set `active` = '0' where `class_id` = '$class_id' and `school_id` = '$school_id' ";
+		$database->executeUpdate($sql);
 	}
 }
 if (isset($_POST['delete']) && isset($_POST['class_id'])) {
@@ -54,8 +52,7 @@ if (isset($_POST['delete']) && isset($_POST['class_id'])) {
 			$class_id = addslashes($val);
 			$sql = "DELETE FROM `edu_class` where `class_id` = '$class_id' and `school_id` = '$school_id' ";
 			$database->executeDelete($sql);
-		}
-	
+		}	
 	}
 }
 

@@ -70,7 +70,7 @@ class PicoDatabase
 		}
 	}
 
-	public function executeInsert($sql)
+	public function executeInsert($sql, $appendToSyncFile)
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -82,7 +82,7 @@ class PicoDatabase
 		}
 		return $stmt;
 	}
-	public function executeUpdate($sql)
+	public function executeUpdate($sql, $appendToSyncFile)
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -94,7 +94,7 @@ class PicoDatabase
 		}
 		return $stmt;
 	}
-	public function executeDelete($sql)
+	public function executeDelete($sql, $appendToSyncFile)
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -106,7 +106,7 @@ class PicoDatabase
 		}
 		return $stmt;
 	}
-	public function executeTransaction($sql)
+	public function executeTransaction($sql, $appendToSyncFile)
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {

@@ -103,8 +103,8 @@ else
   <div class="input-label">Password Saat Ini</div> 
   <div class="input-control"><input type="password" name="password" id="password"></div>
   <div class="input-control">
-  	<input class="button-gradient" type="submit" name="sync" id="sync" value="Sinkronisasi">
-  	<input class="button-gradient2" type="button" name="reset" id="reset" value="Reset Password" onclick="window.location='../reset-password.php'">
+  	<input class="btn btn-primary" type="submit" name="sync" id="sync" value="Sinkronisasi">
+  	<input class="btn btn-primary2" type="button" name="reset" id="reset" value="Reset Password" onclick="window.location='../reset-password.php'">
   </div>
   <input type="hidden" name="id" value="<?php echo $data['teacher_id'];?>">
   <input type="hidden" name="email" value="<?php echo $data['email'];?>">

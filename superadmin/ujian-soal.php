@@ -822,8 +822,8 @@ foreach($rows as $data){
 ?>
 <li data-question-id="<?php echo $data['question_id']; ?>">
 <div class="question-edit-ctrl">
-<a class="button-gradient" href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=edit&question_id=<?php echo $data['question_id']; ?>&ref=<?php echo base64_encode($_SERVER['REQUEST_URI']); ?>">Ubah Soal</a> 
-<a class="button-gradient deletequestion" href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=delete&question_id=<?php echo $data['question_id']; ?>&digest=<?php echo $data['digest']; ?>">Hapus Soal</a> </div>
+<a class="btn btn-primary" href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=edit&question_id=<?php echo $data['question_id']; ?>&ref=<?php echo base64_encode($_SERVER['REQUEST_URI']); ?>">Ubah Soal</a> 
+<a class="btn btn-danger deletequestion" href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=delete&question_id=<?php echo $data['question_id']; ?>&digest=<?php echo $data['digest']; ?>">Hapus Soal</a> </div>
 <div class="question">
 <?php
 echo $data['content'];

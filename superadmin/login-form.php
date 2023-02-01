@@ -27,7 +27,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
   <div class="input-label">Password</div> 
   <div class="input-control"><input type="password" name="password" id="password" required></div>
   <div class="input-control">
-  	<input class="button-gradient" type="submit" name="login" id="login" value="Login">
+  	<input class="btn btn-primary" type="submit" name="login" id="login" value="Login">
   </div>
 </form>
 <p><a href="../">Kembali ke depan</a></p>

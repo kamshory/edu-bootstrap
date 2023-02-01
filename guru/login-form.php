@@ -43,7 +43,7 @@ var setTimeToken = '<?php echo $setTimeToken;?>';
   <div class="input-control"><input type="text" name="username" id="username" placeholder="Username" required></div>
   <div class="input-control"><input type="password" name="password" id="password" placeholder="Password" required></div>
   <div class="input-control">
-  	<input class="button-gradient" type="submit" name="login" id="login" value="Login">
+  	<input class="btn btn-primary" type="submit" name="login" id="login" value="Login">
   </div>
 </form>
 </div>

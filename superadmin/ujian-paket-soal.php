@@ -1262,8 +1262,8 @@ if($stmt->rowCount() > 0)
 			$('.test-question > li').each(function(index, element) {
               	$(this).prepend('\r\n'+  
 				'<div class="question-edit-ctrl">\r\n'+ 
-				'<a class="button-gradient editquestion" href="#">Ubah Soal</a>\r\n'+ 
-				'<a class="button-gradient deletequestion" href="#">Hapus Soal</a>\r\n'+ 
+				'<a class="btn btn-primary editquestion" href="#">Ubah Soal</a>\r\n'+ 
+				'<a class="btn btn-danger deletequestion" href="#">Hapus Soal</a>\r\n'+ 
 				'</div>\r\n');
             });
 			$(document).on('click', '.editquestion', function(e){
