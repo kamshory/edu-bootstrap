@@ -26,7 +26,7 @@ if(@$_GET['option'] == 'select')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$sql = "update `edu_student` set `school_id` = '$school_id' where `student_id` = '$student_id' ";
+		$sql = "UPDATE `edu_student` set `school_id` = '$school_id' where `student_id` = '$student_id' ";
 		$database->executeUpdate($sql, true);
 		header('Location: index.php');
 		exit();

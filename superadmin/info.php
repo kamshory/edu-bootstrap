@@ -16,7 +16,7 @@ if(isset($_POST['set_active']) && isset($_POST['info_id']))
 		foreach($infos as $key=>$val)
 		{
 			$info_id = addslashes($val);
-			$sql = "update `edu_info` set `active` = true where `info_id` = '$info_id'  ";
+			$sql = "UPDATE `edu_info` set `active` = true where `info_id` = '$info_id'  ";
 			$database->execute($sql);
 		}
 	}
@@ -29,7 +29,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['info_id']))
 		foreach($infos as $key=>$val)
 		{
 			$info_id = addslashes($val);
-			$sql = "update `edu_info` set `active` = false where `info_id` = '$info_id'  ";
+			$sql = "UPDATE `edu_info` set `active` = false where `info_id` = '$info_id'  ";
 			$database->execute($sql);
 		}
 	}
@@ -42,7 +42,7 @@ if(isset($_POST['delete']) && isset($_POST['info_id']))
 		foreach($infos as $key=>$val)
 		{
 			$info_id = addslashes($val);
-			$sql = "update `edu_info` set `school_id` = '0' where `info_id` = '$info_id'  ";
+			$sql = "UPDATE `edu_info` set `school_id` = '0' where `info_id` = '$info_id'  ";
 			$database->execute($sql);
 		}
 	}
@@ -92,7 +92,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 			$content = extractImageData($content, $base_dir, $base_src);
 			$content = addslashes(UTF8ToEntities($content));
 
-			$sql = "update `edu_info` set
+			$sql = "UPDATE `edu_info` set
 			`content` = '$content'
 			where `info_id` = '$info_id'
 			";
@@ -117,7 +117,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 		$content = addslashes(UTF8ToEntities($content));
 
-		$sql = "update `edu_info` set
+		$sql = "UPDATE `edu_info` set
 		`name` = '$name', `content` = '$content', 
 		`time_edit` = '$time', `admin_edit` = '$admin_id', `ip_edit` =  '$ip', `active` = '$active'
 		where `info_id` = '$info_id'

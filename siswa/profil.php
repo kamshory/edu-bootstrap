@@ -22,20 +22,20 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$religion_id = kh_filter_input(INPUT_POST, 'religion_id', FILTER_SANITIZE_SPECIAL_CHARS);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
-	$sql = "update `edu_student` set 
+	$sql = "UPDATE `edu_student` set 
 	`reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `ip_edit` = '$ip_edit'
 	where `student_id` = '$student_id' and `school_id` = '$school_id' ";
 	$database->execute($sql);
 	if($email != '')
 	{
-		$sql = "update `edu_student` set 
+		$sql = "UPDATE `edu_student` set 
 		`email` = '$email'
 		where `student_id` = '$student_id' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
-		$sql = "update `edu_student` set 
+		$sql = "UPDATE `edu_student` set 
 		`password` = md5(md5('$password')), `password_initial` = ''
 		where `student_id` = '$student_id' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);

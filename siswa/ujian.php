@@ -133,7 +133,7 @@ else
 	$bc_score = $picoEdu->getTextScore($answer_id, true);
 	if(isset($data['answer_id']) && isset($data['student_id']))
 	{
-		$sql = "update `edu_answer` 
+		$sql = "UPDATE `edu_answer` 
 		set `competence_score` = '".addslashes(json_encode($bc_score))."' 
 		where `answer_id` = '".$data['answer_id']."' and `student_id` = '".$data['student_id']."' 
 		";

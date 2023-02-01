@@ -43,7 +43,7 @@ if(isset($_POST['set_active']) && isset($_POST['teacher_id']))
 		foreach($teachers as $key=>$val)
 		{
 			$teacher_id = addslashes($val);
-			$sql = "update `edu_teacher` set `active` = true where `teacher_id` = '$teacher_id'  ";
+			$sql = "UPDATE `edu_teacher` set `active` = true where `teacher_id` = '$teacher_id'  ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -56,7 +56,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['teacher_id']))
 		foreach($teachers as $key=>$val)
 		{
 			$teacher_id = addslashes($val);
-			$sql = "update `edu_teacher` set `active` = false where `teacher_id` = '$teacher_id'  ";
+			$sql = "UPDATE `edu_teacher` set `active` = false where `teacher_id` = '$teacher_id'  ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -71,7 +71,7 @@ if(isset($_POST['delete']) && isset($_POST['teacher_id']))
 			$teacher_id = addslashes($val);
 			$sql = "DELETE FROM `edu_member_school` where `member_id` = '$teacher_id' and `role` = 'T'  ";
 			$database->executeDelete($sql, true);
-			$sql = "update `edu_teacher` set `school_id` = '0' where `teacher_id` = '$teacher_id'  ";
+			$sql = "UPDATE `edu_teacher` set `school_id` = '0' where `teacher_id` = '$teacher_id'  ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -85,7 +85,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		$initial = $data['school_id'];
 
-		$sql = "update `edu_teacher` set 
+		$sql = "UPDATE `edu_teacher` set 
 			`school_id` = '$school_id', `reg_number` = '$reg_number', `reg_number_national` = '$reg_number_national', `name` = '$name', 
 			`gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', 
 			`time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
@@ -93,13 +93,13 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$database->executeUpdate($sql, true);
 
 		if ($email != '') {
-			$sql = "update `edu_teacher` set 
+			$sql = "UPDATE `edu_teacher` set 
 			`email` = '$email'
 			where `teacher_id` = '$teacher_id2'  ";
 			$database->executeUpdate($sql, true);
 		}
 		if ($password != '') {
-			$sql = "update `edu_teacher` set 
+			$sql = "UPDATE `edu_teacher` set 
 				`password` = md5(md5('$password')), `password_initial` = '$password'
 				where `teacher_id` = '$teacher_id2'  ";
 			$database->executeUpdate($sql, true);

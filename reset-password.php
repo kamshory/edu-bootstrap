@@ -24,7 +24,7 @@ if(isset($_GET['username']) && isset($_GET['auth']))
 			if($password == $password2 && strlen($password)>3)
 			{
 				$newauth = md5(mt_rand(111111,999999));
-				$sql = "update `member`
+				$sql = "UPDATE `member`
 				set `password` = md5(md5('$password')),
 				`auth` = '$newauth'
 				where (`username` like '$un' and `auth` like '$auth') 
@@ -49,7 +49,7 @@ if(isset($_POST['username']) && isset($_POST['send']))
 	$password = md5(kh_filter_input(INPUT_POST, 'password', FILTER_SANITIZE_PASSWORD));
 	
 	$auth = md5($_SERVER['REMOTE_ADDR'].date('Y-m-d'));
-	$sql = "update `member` set `auth` = '$auth'
+	$sql = "UPDATE `member` set `auth` = '$auth'
 	where ((`email` like '$email' and '$email' != '') or `username` like '$username' or (`phone` like '$phone' and '$phone' != '')) 
 	";
 	$database->execute($sql);

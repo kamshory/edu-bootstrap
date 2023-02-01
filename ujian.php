@@ -63,7 +63,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 
 		if($stmt->rowCount() > 0)
 		{
-			$sql2 = "update `edu_member_school` set `class_id` = '$class_id' 
+			$sql2 = "UPDATE `edu_member_school` set `class_id` = '$class_id' 
 			where `student_id` = '$student_id' and `role` = 'S' ";
 			$database->execute($sql2);
 		}
@@ -102,7 +102,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 		";
 		$database->execute($sql);
 		
-		$sql = "update `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id' where `student_id` = '$student_id' ";
+		$sql = "UPDATE `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id' where `student_id` = '$student_id' ";
 		$database->execute($sql);
 		
 		if($ref == '')
@@ -190,7 +190,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 				{
 					// siswa pernah terdaftar di sekolah ybs
 					// ubah sekolah
-					$sql = "update `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id'
+					$sql = "UPDATE `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id'
 					where `student_id` = '$student_id' ";
 					$database->execute($sql);
 					$ref = "$school_code/test/?option=login&test_id=$test_id";
@@ -230,7 +230,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 					$database->execute($sql2);
 	
 					// ubah sekolah
-					$sql = "update `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id'
+					$sql = "UPDATE `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id'
 					where `student_id` = '$student_id' ";
 					$database->execute($sql);
 					$ref = "$school_code/test/?option=login&test_id=$test_id";

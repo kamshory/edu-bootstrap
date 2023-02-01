@@ -66,36 +66,36 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	('$school_code', '$token_school', '$name', '$description', '$school_type_id', '$school_grade_id', '$public_private', '$open', '$principal', '$address', '$phone', '$email', '$language', '$country_id', '$prevent_change_school', '$prevent_resign', '$use_token', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
 	$school_id = $database->getDatabaseConnection()->lastInsertId();
-	$sql = "update `edu_school` set `state_id` = state_name_to_id('$state_id', `country_id`) where `school_id` = '$school_id' ";
+	$sql = "UPDATE `edu_school` set `state_id` = state_name_to_id('$state_id', `country_id`) where `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	
-	$sql = "update `edu_school` set `city_id` = city_name_to_id('$city_id', `state_id`, `country_id`) where `school_id` = '$school_id' ";
+	$sql = "UPDATE `edu_school` set `city_id` = city_name_to_id('$city_id', `state_id`, `country_id`) where `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	header("Location:".basename($_SERVER['PHP_SELF'])."?option=detail&school_id=$school_id");
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql1 = "update `edu_student` set `prevent_change_school` = '$prevent_change_school', `prevent_resign` = '$prevent_resign'
+	$sql1 = "UPDATE `edu_student` set `prevent_change_school` = '$prevent_change_school', `prevent_resign` = '$prevent_resign'
 	where `school_id` = '$school_id' 
 	";
 	$database->executeUpdate($sql1);
 
-	$sql2 = "update `edu_school` set `prevent_change_school` = '$prevent_change_school', `prevent_resign` = '$prevent_resign'
+	$sql2 = "UPDATE `edu_school` set `prevent_change_school` = '$prevent_change_school', `prevent_resign` = '$prevent_resign'
 	where `school_id` = '$school_id' 
 	";
 	$database->executeUpdate($sql2);
 
-	$sql = "update `edu_school` set
+	$sql = "UPDATE `edu_school` set
 	`school_code` = '$school_code', `name` = '$name', `school_grade_id` = '$school_grade_id', `public_private` = '$public_private', 
 	`open` = '$open', `principal` = '$principal', `address` = '$address', `phone` = '$phone', `email` = '$email', `country_id` = '$country_id',
 	`use_token` = '$use_token'
 	where `school_id` = '$school_id'
 	";
 	$database->executeUpdate($sql, true);
-	$sql = "update `edu_school` set `state_id` = state_name_to_id('$state_id', `country_id`) where `school_id` = '$school_id' ";
+	$sql = "UPDATE `edu_school` set `state_id` = state_name_to_id('$state_id', `country_id`) where `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	
-	$sql = "update `edu_school` set `city_id` = city_name_to_id('$city_id', `state_id`, `country_id`) where `school_id` = '$school_id' ";
+	$sql = "UPDATE `edu_school` set `city_id` = city_name_to_id('$city_id', `state_id`, `country_id`) where `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&school_id=$school_id");
 }
@@ -108,7 +108,7 @@ if(isset($_POST['set_active']) && isset($_POST['school_id']))
 		foreach($schools as $key=>$val)
 		{
 			$school_id = addslashes($val);
-			$sql = "update `edu_school` set `active` = true where `school_id` = '$school_id'  ";
+			$sql = "UPDATE `edu_school` set `active` = true where `school_id` = '$school_id'  ";
 			$database->execute($sql);
 		}
 	}
@@ -121,7 +121,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['school_id']))
 		foreach($schools as $key=>$val)
 		{
 			$school_id = addslashes($val);
-			$sql = "update `edu_school` set `active` = false where `school_id` = '$school_id'  ";
+			$sql = "UPDATE `edu_school` set `active` = false where `school_id` = '$school_id'  ";
 			$database->executeUpdate($sql, true);
 		}
 	}

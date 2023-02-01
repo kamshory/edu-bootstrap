@@ -121,7 +121,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_id']))
 			foreach($tests as $key=>$val)
 			{
 				$test_id = addslashes($val);
-				$sql = "update `edu_test` set `active` = true where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
+				$sql = "UPDATE `edu_test` set `active` = true where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
 				$database->executeUpdate($sql, true);
 			}
 		}
@@ -135,7 +135,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_id']))
 		foreach($tests as $key=>$val)
 		{
 			$test_id = addslashes($val);
-			$sql = "update `edu_test` set `active` = false where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
+			$sql = "UPDATE `edu_test` set `active` = false where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -332,7 +332,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "update `edu_test` set 
+	$sql = "UPDATE `edu_test` set 
 	`name` = '$name', `class` = '$class', `subject` = '$subject', `teacher_id` = '$teacher_id', `description` = '$description', 
 	`guidance` = '$guidance', `open` = '$open', `has_limits` = '$has_limits', `trial_limits` = '$trial_limits', `threshold` = '$threshold', 
 	`assessment_methods` = '$assessment_methods', `number_of_question` = '$number_of_question', `number_of_option` = '$number_of_option', 

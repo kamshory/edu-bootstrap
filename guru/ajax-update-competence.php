@@ -10,7 +10,7 @@ if(isset($_POST['save']) && isset($_POST['question_id']))
 	$basic_competence = trim(kh_filter_input(INPUT_POST, 'value', FILTER_SANITIZE_STRING_NEW));
 	$basic_competence = preg_replace("/[^0-9]/i", ".", $basic_competence); //NOSONAR
 	$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
-	$sql = "update `edu_question` set `basic_competence` = '$basic_competence' 
+	$sql = "UPDATE `edu_question` set `basic_competence` = '$basic_competence' 
 	where `question_id` = '$question_id' 
 	";
 	$database->executeUpdate($sql, true);

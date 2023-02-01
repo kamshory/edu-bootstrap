@@ -29,7 +29,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['token_id']))
 		foreach($tokens as $key=>$val)
 		{
 			$token_id = addslashes($val);
-			$sql = "update `edu_token` set `active` = false where `token_id` = '$token_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_token` set `active` = false where `token_id` = '$token_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -43,7 +43,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$sql = "DELETE FROM `edu_token` where `time_expire` < '$oneday'
 	";
 	$database->executeDelete($sql, true);
-	$sql = "update `edu_token` set `active` = false where `time_expire` < '$now'
+	$sql = "UPDATE `edu_token` set `active` = false where `time_expire` < '$now'
 	";
 	$database->executeUpdate($sql, true);
 	if($class_id)

@@ -61,7 +61,7 @@ class AdminAuth
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
 					$now = $picoEdu->getLocalDateTime();
-					$sql = "update `edu_admin` set `ip_last_activity` = '$ip', `time_last_activity` = '$now' where `admin_id` = '" . $this->admin_id . "'";
+					$sql = "UPDATE `edu_admin` set `ip_last_activity` = '$ip', `time_last_activity` = '$now' where `admin_id` = '" . $this->admin_id . "'";
 					$database->execute($sql);
 				}
 

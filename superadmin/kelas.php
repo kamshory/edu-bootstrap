@@ -30,7 +30,7 @@ if (isset($_POST['set_active']) && isset($_POST['class_id'])) {
 	if (isset($classs) && is_array($classs)) {
 		foreach ($classs as $key => $val) {
 			$class_id = addslashes($val);
-			$sql = "update `edu_class` set `active` = true where `class_id` = '$class_id'  ";
+			$sql = "UPDATE `edu_class` set `active` = true where `class_id` = '$class_id'  ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -40,7 +40,7 @@ if (isset($_POST['set_inactive']) && isset($_POST['class_id'])) {
 	if (isset($classs) && is_array($classs)) {
 		foreach ($classs as $key => $val) {
 			$class_id = addslashes($val);
-			$sql = "update `edu_class` set `active` = false where `class_id` = '$class_id'  ";
+			$sql = "UPDATE `edu_class` set `active` = false where `class_id` = '$class_id'  ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -58,7 +58,7 @@ if (isset($_POST['delete']) && isset($_POST['class_id'])) {
 
 
 if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
-	$sql = "update `edu_class` set 
+	$sql = "UPDATE `edu_class` set 
 	`class_code` = '$class_code', `grade_id` = '$grade_id', `school_program_id` = '$school_program_id', `name` = '$name', `time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `order` = '$sort_order', `active` = '$active'
 	where `class_id` = '$class_id2'  ";
 	$database->execute($sql);

@@ -25,7 +25,7 @@ if (@$_GET['option'] == 'select') {
 	";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
-		$sql = "update `edu_student` set `school_id` = '$school_id' where `student_id` = '$member_id' ";
+		$sql = "UPDATE `edu_student` set `school_id` = '$school_id' where `student_id` = '$member_id' ";
 		$database->execute($sql);
 		header('Location: index.php');
 		exit();
@@ -227,7 +227,7 @@ if (@$_GET['option'] == 'detail') {
 								foreach($rows as $data) {
 									$no++;
 								?>
-									<tr<?php echo (@$data['active']) ? " class=\"data-active\"" : " class=\"data-inactive\""; ?>>
+									<tr class="<?php echo $picoEdu->getRowClass($data);?>">
 										<td align="right"><?php echo $no;?> </td>
 										<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&school_id=<?php echo $data['school_id']; ?>"><?php echo $data['name']; ?></a></td>
 										<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&school_id=<?php echo $data['school_id']; ?>"><?php 

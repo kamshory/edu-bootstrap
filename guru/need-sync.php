@@ -21,7 +21,7 @@ if(isset($_POST['sync']))
 			if(!mysql_num_rows($res))
 			{
 			
-				$sql = "update `member` set `email` = '$email', `password` = md5(md5('$password')), `active` = true, `blocked` = '0' 
+				$sql = "UPDATE `member` set `email` = '$email', `password` = md5(md5('$password')), `active` = true, `blocked` = '0' 
 				where `member_id` = '$teacher_id' ";
 				mysql_query($sql);
 				$sql = "SELECT `username`, `member_id`

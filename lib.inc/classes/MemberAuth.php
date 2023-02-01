@@ -72,7 +72,7 @@ class MemberAuth
 			if ($createlog) {
 				$ip = addslashes($_SERVER['REMOTE_ADDR']);
 				$now = $picoEdu->getLocalDateTime();
-				$sql = "update `member` set `last_seen_ip` = '$ip', `last_seen_time` = '$now' where `member_id` = '" . $this->member_id . "'";
+				$sql = "UPDATE `member` set `last_seen_ip` = '$ip', `last_seen_time` = '$now' where `member_id` = '" . $this->member_id . "'";
 				$database->executeUpdate($sql, false);
 			}
 		}

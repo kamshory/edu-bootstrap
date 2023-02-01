@@ -537,7 +537,7 @@ class PicoEdu //NOSONAR
 		$sql = "select * from `profile` where `name` = '$name' and `school_id` = '$school' ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
-			$sql = "update `profile` set `value` = '$value' where `name` = '$name' and `school_id` = '$school'";
+			$sql = "UPDATE `profile` set `value` = '$value' where `name` = '$name' and `school_id` = '$school'";
 		} else {
 			$profil_id = $this->database->generateNewId();
 			$sql = "INSERT INTO `profile` 
@@ -762,7 +762,7 @@ class PicoEdu //NOSONAR
 	}
 	public function logoutTest($school_id, $student_id, $test_id, $sessions_id, $time, $ip)
 	{
-		$sql = "update `edu_test_member` set `time_exit` = '$time', `ip_exit` = '$ip', `status` = '2'
+		$sql = "UPDATE `edu_test_member` set `time_exit` = '$time', `ip_exit` = '$ip', `status` = '2'
 		where `school_id` = '$school_id' and `student_id` = '$student_id' and `test_id` = '$test_id' and `sessions_id` = '$sessions_id'
 		";
 		$this->database->executeUpdate($sql, true);
@@ -895,7 +895,7 @@ class PicoEdu //NOSONAR
 		}
 		$sort_order = 1;
 		foreach ($ret as $question_id) {
-			$sql = "update `edu_question` set `order` = '$sort_order' where `question_id` = '$question_id' ";
+			$sql = "UPDATE `edu_question` set `order` = '$sort_order' where `question_id` = '$question_id' ";
 			$this->database->executeUpdate($sql, true);
 			$sort_order++;
 		}

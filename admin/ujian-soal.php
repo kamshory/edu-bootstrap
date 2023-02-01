@@ -259,7 +259,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 		$question = $picoEdu->brToNewLineEncoded($question);
 		
-		$sql = "update `edu_question` 
+		$sql = "UPDATE `edu_question` 
 		set `content` = '$question', 
 		`random` = '$random', 
 		`numbering` = '$numbering', 
@@ -268,7 +268,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$stmt5 = $database->executeQuery($sql);
 		if($stmt5->rowCount() > 0)
 		{
-			$sql = "update `edu_question` 
+			$sql = "UPDATE `edu_question` 
 			set `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
 			where `question_id` = '$question_id'";
 			$database->executeUpdate($sql, true);			

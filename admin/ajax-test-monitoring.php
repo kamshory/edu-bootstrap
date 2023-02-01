@@ -29,7 +29,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 		$sessions_id = $data['sessions_id'];
 		$sql = "DELETE FROM `sessions` where `id` = '$sessions_id' ";
 		$database->executeDelete($sql, true);
-		$sql = "update `edu_test_member` set `time_exit` = '$waktu', `ip_exit` = '$ip', `member_edit` = '$admin_id', `status` = '3' where `test_member_id` = '$id'";	
+		$sql = "UPDATE `edu_test_member` set `time_exit` = '$waktu', `ip_exit` = '$ip', `member_edit` = '$admin_id', `status` = '3' where `test_member_id` = '$id'";	
 		$database->executeUpdate($sql, true);
 	}
 }
@@ -49,9 +49,9 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 		$student_id = $data['student_id'];
 		$sql = "DELETE FROM `sessions` where `id` = '$sessions_id' ";
 		$database->executeDelete($sql, true);
-		$sql = "update `edu_test_member` set `time_exit` = '$waktu', `ip_exit` = '$ip', `member_edit` = '$admin_id', `status` = '4' where `test_member_id` = '$id'";	
+		$sql = "UPDATE `edu_test_member` set `time_exit` = '$waktu', `ip_exit` = '$ip', `member_edit` = '$admin_id', `status` = '4' where `test_member_id` = '$id'";	
 		$database->executeUpdate($sql, true);
-		$sql = "update `edu_student` set `blocked` = '1' where `edu_student_id` = '$student_id' and `school_id` = '$school_id' ";
+		$sql = "UPDATE `edu_student` set `blocked` = '1' where `edu_student_id` = '$student_id' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 }
@@ -85,7 +85,8 @@ from `edu_test_member`
 inner join(`edu_student`) on(`edu_student`.`student_id` = `edu_test_member`.`student_id`)
 where `edu_test_member`.`test_id` = '$test_id' $filter
 group by `edu_test_member`.`test_member_id`
-order by `edu_test_member`.`time_enter` asc";
+order by `edu_test_member`.`time_enter` asc
+";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {

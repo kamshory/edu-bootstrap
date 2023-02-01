@@ -45,7 +45,7 @@ if(isset($_POST['set_active']) && isset($_POST['teacher_id']))
 		foreach($teachers as $key=>$val)
 		{
 			$teacher_id = addslashes($val);
-			$sql = "update `edu_teacher` set `active` = true where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_teacher` set `active` = true where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -58,7 +58,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['teacher_id']))
 		foreach($teachers as $key=>$val)
 		{
 			$teacher_id = addslashes($val);
-			$sql = "update `edu_teacher` set `active` = false where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_teacher` set `active` = false where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -73,7 +73,7 @@ if(isset($_POST['delete']) && isset($_POST['teacher_id']))
 			$teacher_id = addslashes($val);
 			$sql = "DELETE FROM `edu_member_school` where `member_id` = '$teacher_id' and `role` = 'T' and `school_id` = '$school_id' ";
 			$database->executeDelete($sql, true);
-			$sql = "update `edu_teacher` set `school_id` = '0' where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_teacher` set `school_id` = '0' where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -142,7 +142,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				";
 				$database->executeInsert($sql2);
 
-				$sql3 = "update `edu_teacher` set `school_id` = '$school_id' where `teacher_id` = '$teacher_id' 
+				$sql3 = "UPDATE `edu_teacher` set `school_id` = '$school_id' where `teacher_id` = '$teacher_id' 
 				and (`school_id` = '0' or `school_id` is null)
 				";
 				$database->executeUpdate($sql3);
@@ -153,7 +153,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "update `edu_teacher` set 
+	$sql = "UPDATE `edu_teacher` set 
 	`reg_number` = '$reg_number', `reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', 
 	`birth_place` = '$birth_place', `birth_day` = '$birth_day', `address` = '$address', `time_edit` = '$time_edit', 
 	`admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
@@ -162,21 +162,21 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	
 	if($phone != '')
 	{
-		$sql = "update `edu_teacher` set 
+		$sql = "UPDATE `edu_teacher` set 
 		`phone` = '$phone'
 		where `teacher_id` = '$teacher_id2' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	if($email != '')
 	{
-		$sql = "update `edu_teacher` set 
+		$sql = "UPDATE `edu_teacher` set 
 		`email` = '$email'
 		where `teacher_id` = '$teacher_id2' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
-		$sql = "update `edu_teacher` set 
+		$sql = "UPDATE `edu_teacher` set 
 		`password` = md5(md5('$password')), `password_initial` = '$password'
 		where `teacher_id` = '$teacher_id2' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
@@ -546,7 +546,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	{
 	$no++;
 	?>
-    <tr<?php echo (@$data['active'] && !@$data['blocked'])?" class=\"data-a<tr class="<?php echo $picoEdu->getRowClass($data);?>">
+    <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="teacher_id[]" id="teacher_id" value="<?php echo $data['teacher_id'];?>" class="teacher_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&teacher_id=<?php echo $data['teacher_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>

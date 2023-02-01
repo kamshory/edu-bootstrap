@@ -16,7 +16,7 @@ if(isset($_POST['save']) && isset($_POST['test_id']) && isset($_POST['data']))
 		{
 			$data = json_encode($try);
 			$data = addslashes($data);
-			$sql = "update `edu_test` set `random_distribution` = '$data'
+			$sql = "UPDATE `edu_test` set `random_distribution` = '$data'
 			where `test_id` = '$test_id' and `teacher_id` = '$teacher_id'
 			";
 			$database->executeUpdate($sql, true);

@@ -151,11 +151,11 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$question = UTF8ToEntities($question);
 		$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 		
-		$sql = "update `edu_question` set `content` = '$question' , `random` = '$random', `numbering` = '$numbering' where `question_id` = '$question_id' ";
+		$sql = "UPDATE `edu_question` set `content` = '$question' , `random` = '$random', `numbering` = '$numbering' where `question_id` = '$question_id' ";
 		$stmt2 = $database->executeUpdate($sql, true);
 		if($stmt2->rowCount())
 		{
-			$sql = "update `edu_question` set `time_edit` = '$time_edit', `member_edit` = '$member_edit' where `question_id` = '$question_id' ";
+			$sql = "UPDATE `edu_question` set `time_edit` = '$time_edit', `member_edit` = '$member_edit' where `question_id` = '$question_id' ";
 			$database->executeUpdate($sql, true);			
 		}
 		

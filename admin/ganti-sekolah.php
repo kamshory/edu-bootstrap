@@ -43,11 +43,11 @@ if(@$_GET['option'] == 'select')
 		";
 		$database->executeInsert($sql, true);
 		
-		$sql = "update `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id' where `student_id` = '$student_id' ";
+		$sql = "UPDATE `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id' where `student_id` = '$student_id' ";
 		$database->executeUpdate($sql, true);
 
 
-		$sql = "update `edu_admin` set `school_id` = '$school_id' where `admin_id` = '$admin_id' ";
+		$sql = "UPDATE `edu_admin` set `school_id` = '$school_id' where `admin_id` = '$admin_id' ";
 		$database->executeUpdate($sql, true);
 		header("Location: index.php");
 	}

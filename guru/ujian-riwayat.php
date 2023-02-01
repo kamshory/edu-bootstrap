@@ -23,7 +23,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 		$sessions_id = $data['sessions_id'];
 		$sql = "DELETE FROM `sessions` where `id` = '$sessions_id' ";
 		$database->executeDelete($sql, true);
-		$sql = "update `edu_peserta_test` set `waktu_keluar` = '$waktu', `ip_keluar` = '$ip', `login_edit` = '$admin_id', `status` = '3' where `id` = '$id'";	
+		$sql = "UPDATE `edu_peserta_test` set `waktu_keluar` = '$waktu', `ip_keluar` = '$ip', `login_edit` = '$admin_id', `status` = '3' where `id` = '$id'";	
 		$database->executeUpdate($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id");
 	}
@@ -44,9 +44,9 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 		$siswa_id = $data['siswa_id'];
 		$sql = "DELETE FROM `sessions` where `id` = '$sessions_id' ";
 		$database->executeDelete($sql, true);
-		$sql = "update `edu_peserta_test` set `waktu_keluar` = '$waktu', `ip_keluar` = '$ip', `login_edit` = '$admin_id', `status` = '4' where `id` = '$id'";	
+		$sql = "UPDATE `edu_peserta_test` set `waktu_keluar` = '$waktu', `ip_keluar` = '$ip', `login_edit` = '$admin_id', `status` = '4' where `id` = '$id'";	
 		$database->executeUpdate($sql, true);
-		$sql = "update `siswa` set `blokir` = '1' where `siswa_id` = '$siswa_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
+		$sql = "UPDATE `siswa` set `blokir` = '1' where `siswa_id` = '$siswa_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
 		$database->executeUpdate($sql, true);
 	}
 }

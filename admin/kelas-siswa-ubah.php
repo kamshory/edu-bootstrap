@@ -21,7 +21,7 @@ if(isset($_POST['setclass']) && isset($_POST['students']))
 		foreach($students as $key=>$val)
 		{
 			$student_id = addslashes($val);
-			$sql = "update `edu_student` set `class_id` = '$class_id', 
+			$sql = "UPDATE `edu_student` set `class_id` = '$class_id', 
 			`grade_id` = (select `edu_class`.`grade_id` from `edu_class` where `edu_class`.`class_id` = '$class_id')
 			where `student_id` = '$student_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
@@ -69,7 +69,7 @@ if(isset($_POST['setclass']) && isset($_POST['students']) && isset($_POST['class
 			if (is_array($students)) {
 				foreach ($students as $key => $val) {
 					$student_id = addslashes($val);
-					$sql = "update `edu_student` set `class_id` = '$class_id', `grade_id` = '$grade_id' 
+					$sql = "UPDATE `edu_student` set `class_id` = '$class_id', `grade_id` = '$grade_id' 
 					where `student_id` = '$student_id' and `school_id` = '$school_id' ";
 					$database->executeUpdate($sql, true);
 				}
@@ -85,7 +85,7 @@ if(isset($_POST['set_active']) && isset($_POST['student_id']))
 		foreach($students as $key=>$val)
 		{
 			$student_id = addslashes($val);
-			$sql = "update `edu_student` set `active` = true where `student_id` = '$student_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_student` set `active` = true where `student_id` = '$student_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -98,7 +98,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['student_id']))
 		foreach($students as $key=>$val)
 		{
 			$student_id = addslashes($val);
-			$sql = "update `edu_student` set `active` = false where `student_id` = '$student_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_student` set `active` = false where `student_id` = '$student_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -119,20 +119,20 @@ if(isset($_POST['delete']) && isset($_POST['student_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "update `edu_student` set 
+	$sql = "UPDATE `edu_student` set 
 	`reg_number` = '$reg_number', `reg_number_national` = '$reg_number_national', `grade_id` = '$grade_id', `class_id` = '$class_id', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
 	where `student_id` = '$student_id2' and `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	if($email != '')
 	{
-		$sql = "update `edu_student` set 
+		$sql = "UPDATE `edu_student` set 
 		`email` = '$email'
 		where `student_id` = '$student_id2' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
-		$sql = "update `edu_student` set 
+		$sql = "UPDATE `edu_student` set 
 		`password` = md5(md5('$password')), `password_initial` = '$password'
 		where `student_id` = '$student_id2' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);

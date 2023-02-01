@@ -178,7 +178,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	else if($option == 'edit')
 	{
 		$article_id = kh_filter_input(INPUT_POST, 'article_id');
-		$sql = "update `edu_article` set
+		$sql = "UPDATE `edu_article` set
 		`title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
 		`time_edit` = '$time', `member_edit` = '$admin_id', `role_edit` = 'T', `ip_edit` =  '$ip', `active` = '$active'
 		where `article_id` = '$article_id' and `school_id` = '$school_id' and `member_create` = '$admin_id'

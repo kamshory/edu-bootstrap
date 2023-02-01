@@ -16,7 +16,7 @@ if(isset($_POST['save']) && isset($_POST['test_id']) && isset($_POST['data']))
 		{
 			$data = json_encode($try);
 			$data = addslashes($data);
-			$sql = "update `edu_test` set `random_distribution` = '$data'
+			$sql = "UPDATE `edu_test` set `random_distribution` = '$data'
 			where `test_id` = '$test_id'
 			";
 			$database->executeUpdate($sql, true);
@@ -40,7 +40,7 @@ else
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			$saveddata = $data['random_distribution'];
 			$randobj = array();
 			if($saveddata != '')

@@ -365,7 +365,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 						}
 						// import data class
 						// selesai
-						$sql = "update `edu_school_program` set 
+						$sql = "UPDATE `edu_school_program` set 
 						`time_create` = '$time_create', `time_edit` = '$time_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', 
 						`admin_create` = '$admin_create', `admin_edit` = '$admin_edit'
 						where `school_id` = '$school_id'; 
@@ -477,7 +477,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 									$database->executeInsert($sql2, true);
 
-									$sql3 = "update `edu_student` set `school_id` = '$school_id' where `student_id` = '$student_id' 
+									$sql3 = "UPDATE `edu_student` set `school_id` = '$school_id' where `student_id` = '$student_id' 
 									and (`school_id` = '0' or `school_id` is null)
 									";
 
@@ -488,7 +488,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								}
 							}
 
-							$sql = "update `edu_student` 
+							$sql = "UPDATE `edu_student` 
 							set `edu_student`.`grade_id` = (select `edu_class`.`grade_id` from `edu_class` 
 							where `edu_class`.`class_id` = `edu_student`.`class_id`),
 							`prevent_change_school` = '1', `prevent_resign` = '1' 
@@ -496,7 +496,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 							$database->executeUpdate($sql, true);
 
 
-							$sql1 = "update `edu_school` set `prevent_change_school` = '1', `prevent_resign` = '1'
+							$sql1 = "UPDATE `edu_school` set `prevent_change_school` = '1', `prevent_resign` = '1'
 							where `school_id` = '$school_id' 
 							";
 
@@ -602,7 +602,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									";
 									$database->executeInsert($sql2, true);
 
-									$sql3 = "update `edu_teacher` 
+									$sql3 = "UPDATE `edu_teacher` 
 									set `school_id` = '$school_id' 
 									where `teacher_id` = '$teacher_id' 
 									and (`school_id` = '0' or `school_id` is null)
@@ -616,7 +616,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 						} catch (Exception $e) {
 							// Do nothing
 						}
-						$sql3 = "update `edu_school` set
+						$sql3 = "UPDATE `edu_school` set
 						`time_import_last` = '$time_edit',
 						`admin_import_last` = '$admin_edit',
 						`ip_import_last` = '$ip_edit'

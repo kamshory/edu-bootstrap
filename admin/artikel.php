@@ -58,7 +58,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 			
 		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 		$content = addslashes(UTF8ToEntities($content));
-		$sql = "update `edu_article` set `content` = '$content' where `article_id` = '$article_id' ";
+		$sql = "UPDATE `edu_article` set `content` = '$content' where `article_id` = '$article_id' ";
 		$database->executeUpdate($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&article_id=$article_id");
 	}
@@ -77,7 +77,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 
 		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 		$content = addslashes($content);
-		$sql = "update `edu_article` set
+		$sql = "UPDATE `edu_article` set
 		`title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
 		`time_edit` = '$time', `member_edit` = '$admin_id', `role_edit` = 'A', `ip_edit` =  '$ip', `active` = '$active'
 		where `article_id` = '$article_id' and `school_id` = '$school_id'
@@ -95,7 +95,7 @@ if(isset($_POST['set_active']) && isset($_POST['article_id']))
 		foreach($articles as $article_id)
 		{
 			$article_id = addslashes($article_id);
-			$sql = "update `edu_article` set `active` = true where `article_id` = '$article_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_article` set `active` = true where `article_id` = '$article_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -108,7 +108,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['article_id']))
 		foreach($articles as $article_id)
 		{
 			$article_id = addslashes($article_id);
-			$sql = "update `edu_article` set `active` = false where `article_id` = '$article_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_article` set `active` = false where `article_id` = '$article_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -446,7 +446,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	{
 	$no++;
 	?>
-    <tr<?php echo (@$data['active'] && !@$data['blocked'])?" class=\"data-a<tr class="<?php echo $picoEdu->getRowClass($data);?>">
+    <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="article_id[]" id="article_id" value="<?php echo $data['article_id'];?>" class="article_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&article_id=<?php echo $data['article_id'];?>"><i class="fas fa-pencil"></i></td>
       <td align="right"><?php echo $no;?> </td>

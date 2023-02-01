@@ -102,14 +102,14 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 				$_SESSION['session_test'][$student_id][$test_id]['soal'] = $str;
 				$picoEdu->loginTest($school_id, $student_id, $test_id, session_id(), $picoEdu->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
 
-				$sql = "update `edu_token` set `active` = false 
+				$sql = "UPDATE `edu_token` set `active` = false 
 				where `edu_token`.`student_id` = '$student_id' and `edu_token`.`token` = '$token' ";
 				$database->execute($sql);
 				header("Location: ujian/index.php?test_id=$test_id");
 			}
 			else
 			{
-				$sql = "update `edu_token` set `active` = false 
+				$sql = "UPDATE `edu_token` set `active` = false 
 				where `edu_token`.`student_id` = '$student_id' and `edu_token`.`token` = '$token' ";
 				$database->execute($sql);
 				header("Location: ujian/index.php?test_id=$test_id");
@@ -152,7 +152,7 @@ else if(isset($_POST['token']))
 			if(!$picoEdu->logInvalidLogin($student_id, 'T', $picoEdu->getLocalDateTime(), $cfg->max_invalid_signin_time, $cfg->max_invalid_signin_count))
 			{
 				$account_blocked = 1;
-				$sql = "update `edu_student` set `blocked` = '1' where `student_id` = '$student_id' ";
+				$sql = "UPDATE `edu_student` set `blocked` = '1' where `student_id` = '$student_id' ";
 				$database->execute($sql);
 			}
 		}

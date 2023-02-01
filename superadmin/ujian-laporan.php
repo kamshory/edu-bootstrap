@@ -17,7 +17,7 @@ if(isset($_POST['set_active']) && isset($_POST['answerid']))
     foreach($answerid as $key=>$val)
     {
       $answer_id = addslashes($val);
-      $sql = "update `edu_answer` set `active` = true where `answer_id` = '$answer_id' ";
+      $sql = "UPDATE `edu_answer` set `active` = true where `answer_id` = '$answer_id' ";
       $database->executeUpdate($sql, true);
 		}
 	}
@@ -31,7 +31,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['answerid']))
     foreach($answerid as $key=>$val)
     {
       $answer_id = addslashes($val);
-      $sql = "update `edu_answer` set `active` = false where `answer_id` = '$answer_id'  ";
+      $sql = "UPDATE `edu_answer` set `active` = false where `answer_id` = '$answer_id'  ";
       $database->executeUpdate($sql, true);
     }
 	}

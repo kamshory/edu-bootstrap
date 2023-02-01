@@ -642,7 +642,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "update `edu_test_collection` set `active` = true where `test_collection_id` = '$test_collection_id' ";
+		$sql = "UPDATE `edu_test_collection` set `active` = true where `test_collection_id` = '$test_collection_id' ";
 		$database->execute($sql);
 	}
 	header("Location: ".basename($_SERVER['REQUEST_URI']));
@@ -654,7 +654,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "update `edu_test_collection` set `active` = false where `test_collection_id` = '$test_collection_id' ";
+		$sql = "UPDATE `edu_test_collection` set `active` = false where `test_collection_id` = '$test_collection_id' ";
 		$database->execute($sql);
 	}
 	header("Location: ".basename($_SERVER['REQUEST_URI']));

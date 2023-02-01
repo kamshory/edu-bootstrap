@@ -20,26 +20,26 @@ if(count(@$_POST) && isset($_POST['save']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "update `edu_teacher` set 
+	$sql = "UPDATE `edu_teacher` set 
 	`reg_number` = '$reg_number', `reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit'
 	where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
 	$database->execute($sql);
 	
 	if($email != '')
 	{
-		$sql = "update `edu_teacher` set 
+		$sql = "UPDATE `edu_teacher` set 
 		`email` = '$email'
 		where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
 		$database->execute($sql);
 	}
 	if($password != '')
 	{
-		$sql = "update `edu_teacher` set 
+		$sql = "UPDATE `edu_teacher` set 
 		`password` = md5(md5('$password')), `password_initial` = ''
 		where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
 		$database->execute($sql);
 		
-		$sql = "update `member` set 
+		$sql = "UPDATE `member` set 
 		`password` = md5(md5('$password'))
 		where `member_id` = '$teacher_id'  ";
 		$database->execute($sql);

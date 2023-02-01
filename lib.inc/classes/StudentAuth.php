@@ -57,7 +57,7 @@ class StudenAuth
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
 					$now = $picoEdu->getLocalDateTime();
-					$sql = "update `edu_student` set `ip_last_activity` = '$ip', `time_last_activity` = '$now' where `student_id` = '" . $this->student_id . "'";
+					$sql = "UPDATE `edu_student` set `ip_last_activity` = '$ip', `time_last_activity` = '$now' where `student_id` = '" . $this->student_id . "'";
 					$database->execute($sql);
 				}
 			}

@@ -24,7 +24,7 @@ if(isset($_POST['set_active']) && isset($_POST['answer_id']))
 			foreach($answer_id as $key=>$val)
 			{
 				$answer_id = addslashes($val);
-				$sql = "update `edu_answer` set `active` = true where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
+				$sql = "UPDATE `edu_answer` set `active` = true where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
 				$database->executeUpdate($sql, true);
 			}
 		}
@@ -41,7 +41,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['answer_id']))
 			foreach($answer_id as $key=>$val)
 			{
 				$answer_id = addslashes($val);
-				$sql = "update `edu_answer` set `active` = false where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
+				$sql = "UPDATE `edu_answer` set `active` = false where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
 				$database->executeUpdate($sql, true);
 			}
 		}
@@ -78,7 +78,7 @@ if(isset($_POST['recalculation']) && isset($_POST['answer_id']))
 				$answer_id = addslashes($val);
 				$score = $picoEdu->getTextScore($answer_id, true);
 				$score_str = addslashes(json_encode($score));
-				$sql = "update `edu_answer` set `competence_score` = '$score_str' where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
+				$sql = "UPDATE `edu_answer` set `competence_score` = '$score_str' where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
 				$database->executeUpdate($sql, true);
 			}
 		}
@@ -319,7 +319,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 			else
 			{
 				$bc_score = $picoEdu->getTextScore($data['answer_id'], true);
-				$sql = "update `edu_answer` 
+				$sql = "UPDATE `edu_answer` 
 				set `competence_score` = '".addslashes(json_encode($bc_score))."' 
 				where `answer_id` = '".$data['answer_id']."' and `student_id` = '".$data['student_id']."' 
 				";
@@ -486,7 +486,7 @@ else
 	$bc_score = $picoEdu->getTextScore($answer_id, true);
 	if(isset($data['answer_id']) && isset($data['student_id']))
 	{
-		$sql = "update `edu_answer` 
+		$sql = "UPDATE `edu_answer` 
 		set `competence_score` = '".addslashes(json_encode($bc_score))."' 
 		where `answer_id` = '".$data['answer_id']."' and `student_id` = '".$data['student_id']."' 
 		";
