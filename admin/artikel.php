@@ -446,7 +446,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	{
 	$no++;
 	?>
-    <tr<?php echo (@$data['active'] && !@$data['blocked'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
+    <tr<?php echo (@$data['active'] && !@$data['blocked'])?" class=\"data-a<tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="article_id[]" id="article_id" value="<?php echo $data['article_id'];?>" class="article_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&article_id=<?php echo $data['article_id'];?>"><i class="fas fa-pencil"></i></td>
       <td align="right"><?php echo $no;?> </td>

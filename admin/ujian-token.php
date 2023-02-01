@@ -474,7 +474,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($rows as $data) {
 $no++;
 ?>
-<tr<?php echo (@$data['active']) ? " class=\"data-active\"" : " class=\"data-inactive\""; ?>>
+<tr class="<?php echo $picoEdu->getRowClass($data);?>">
 <td><input type="checkbox" name="token_id[]" id="token_id" value="<?php echo $data['token_id']; ?>" class="token_id" /></td>
 <td align="right"><?php echo $no; ?> </td>
 <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&token_id=<?php echo $data['token_id']; ?>"><?php echo $data['token']; ?></a></td>

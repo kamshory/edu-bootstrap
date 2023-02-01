@@ -1122,6 +1122,10 @@ class PicoEdu //NOSONAR
 		{
 			$rowclass[] = "data-default"; 
 		}
+		if(isset($data['blocked']) && $data['blocked']==1) 
+		{
+			$rowclass[] = "data-blocked"; 
+		}
 		if(isset($data['active']))
 		{
 			if($data['active']==1) 

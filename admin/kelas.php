@@ -440,7 +440,7 @@ if($stmt->rowCount() > 0)
 						foreach($rows as $data) {
 							$no++;
 						?>
-							<tr<?php echo (@$data['active']) ? " class=\"data-active\"" : " class=\"data-inactive\""; ?>>
+							<tr class="<?php echo $picoEdu->getRowClass($data);?>">
 								<td><input type="checkbox" name="class_id[]" id="class_id" value="<?php echo $data['class_id']; ?>" class="class_id" /></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=edit&class_id=<?php echo $data['class_id']; ?>"><i class="fas fa-pencil"></i></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=print&class_id=<?php echo $data['class_id']; ?>" target="_blank"><i class="fas fa-print"></i></a></td>

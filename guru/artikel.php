@@ -451,7 +451,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	{
 	$no++;
 	?>
-    <tr<?php echo (@$data['active'] && !@$data['blocked'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
+    <tr<?php echo (@$data['active'] && !@$data['blocked'])?" class=\"data-a<tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td>
       <?php
 	  if($data['member_create'] == $teacher_id)
