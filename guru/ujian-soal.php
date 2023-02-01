@@ -124,11 +124,11 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 		}
 		if($oke)
 		{
-			$database->executeTransaction('commit');
+			$database->executeTransaction('commit', true);
 		}
 		else
 		{
-			$database->executeTransaction('rollback');
+			$database->executeTransaction('rollback', true);
 		}
 		header("Location: ".$_SERVER['REQUEST_URI']);
 	}
@@ -180,7 +180,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 			$database->executeInsert($sql, true);
 			$order = 0;
 			$oke = 1;
-			for($i=1;$i<=$number_of_option;$i++)
+			for($i=1; $i <= $number_of_option; $i++)
 			{
 				$order++;
 				$id2 = $i;
@@ -207,11 +207,11 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 			}
 			if($oke)
 			{
-				$database->executeTransaction('commit');
+				$database->executeTransaction('commit', true);
 			}
 			else
 			{
-				$database->executeTransaction('rollback');
+				$database->executeTransaction('rollback', true);
 			}
 		}
 	}

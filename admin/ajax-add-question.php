@@ -2,7 +2,7 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if(empty(@$school_id))
 {
-exit();
+	exit();
 }
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
@@ -56,7 +56,7 @@ if(isset($_POST['question']))
 
 		$order = 0;
 		$oke = 1;
-		for($i=1;$i<=$number_of_option;$i++)
+		for($i=1; $i <= $number_of_option; $i++)
 		{
 			$order++;
 			$id2 = $i;
@@ -86,11 +86,11 @@ if(isset($_POST['question']))
 		$ret['duplicated'] = 0;
 		if($oke)
 		{
-			$database->executeTransaction('commit');
+			$database->executeTransaction('commit', true);
 		}
 		else
 		{
-			$database->executeTransaction('rollback');
+			$database->executeTransaction('rollback', true);
 		}
 	}
 	else

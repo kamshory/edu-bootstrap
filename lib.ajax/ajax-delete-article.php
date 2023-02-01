@@ -2,7 +2,7 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 if(empty(@$school_id))
 {
-exit();
+	exit();
 }
 $article_id = kh_filter_input(INPUT_POST, 'article_id', FILTER_SANITIZE_STRING_NEW);
 if(@$_POST['option'] == 'delete')

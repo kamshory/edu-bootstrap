@@ -97,9 +97,9 @@ if (@$school_id != 0 && isset($_POST['question_text']) && isset($_POST['test_id'
 				}
 			}
 			if ($oke) {
-				$database->executeTransaction('commit');
+				$database->executeTransaction('commit', true);
 			} else {
-				$database->executeTransaction('rollback');
+				$database->executeTransaction('rollback', true);
 			}
 
 		}

@@ -9,7 +9,7 @@ if(isset($_GET['school_id']))
 {
 	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
 }
-if(!@$student_id && !@$teacher_id)
+if(empty(@$student_id) && empty(@$teacher_id))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 if(!empty(@$school_id))

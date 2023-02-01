@@ -47,7 +47,6 @@ include_once dirname(__FILE__) . "/lib.inc/sessions.php";
 </head>
 
 <body class="text-center">
-    
     <form class="form-signin" method="post" action="">
         <img class="mb-4" src="lib.style/images/logo-120.png" alt="" width="90" height="90">
         <h1 class="h3 mb-3 font-weight-normal">Masuk Sebagai Siswa</h1>

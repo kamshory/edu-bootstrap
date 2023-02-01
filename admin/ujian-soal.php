@@ -198,7 +198,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 		
 
 		$oke = 1;
-		for($i=1;$i<=$number_of_option;$i++)
+		for($i=1; $i <= $number_of_option; $i++)
 		{
 			$order++;
 			$id2 = $i;

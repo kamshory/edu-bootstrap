@@ -120,11 +120,11 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 		}
 		if($oke)
 		{
-			$database->executeTransaction('commit');
+			$database->executeTransaction('commit', true);
 		}
 		else
 		{
-			$database->executeTransaction('rollback');
+			$database->executeTransaction('rollback', true);
 		}
 		header("Location: ".$_SERVER['REQUEST_URI']);
 	}

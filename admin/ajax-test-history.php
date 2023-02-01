@@ -2,7 +2,7 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if(empty(@$school_id))
 {
-exit();
+	exit();
 }
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $test_status = kh_filter_input(INPUT_GET, 'status', FILTER_SANITIZE_NUMBER_UINT);

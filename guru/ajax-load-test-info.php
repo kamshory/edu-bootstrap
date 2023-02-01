@@ -2,7 +2,7 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 if(empty(@$school_id))
 {
-exit();
+	exit();
 }
 ?>
 <style type="text/css">

@@ -176,11 +176,11 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 				}
 				if($oke)
 				{
-					$database->executeTransaction('commit');
+					$database->executeTransaction('commit', true);
 				}
 				else
 				{
-					$database->executeTransaction('rollback');
+					$database->executeTransaction('rollback', true);
 				}
 			}
 			else
