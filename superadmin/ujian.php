@@ -125,7 +125,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)
 			{
-				$database->executeTransaction('start transaction');
+				$database->executeTransaction("start transaction", true);
 				$sql = "DELETE FROM `edu_answer` where `test_id` = '$test_id' ";
 				$database->executeDelete($sql, true);
 				$sql = "DELETE FROM `edu_question` where `test_id` = '$test_id' ";
@@ -133,7 +133,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 				$sql = "DELETE FROM `edu_test` where `test_id` = '$test_id' ";
 				$database->executeDelete($sql, true);
 				// destroy all test file
-				$database->executeTransaction("commit");
+				$database->executeTransaction("commit", true);
 			}
 		}
 	}

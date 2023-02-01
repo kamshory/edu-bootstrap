@@ -72,7 +72,7 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 		$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 		
 		$base_src = "media.edu/school/$school_id/test/$test_id";
-		$database->executeTransaction('start transaction', true);
+		$database->executeTransaction("start transaction", true);
 		$oke = 1;
 		
 		foreach($clear_data as $question_no=>$question)
@@ -134,11 +134,11 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 		}
 		if($oke)
 		{
-			$database->executeTransaction('commit', true);
+			$database->executeTransaction("commit", true);
 		}
 		else
 		{
-			$database->executeTransaction('rollback', true);
+			$database->executeTransaction("rollback", true);
 		}
 		header("Location: ".$_SERVER['REQUEST_URI']);
 	}
@@ -226,11 +226,11 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 		}
 		if($oke)
 		{
-			$database->executeTransaction('commit', true);
+			$database->executeTransaction("commit", true);
 		}
 		else
 		{
-			$database->executeTransaction('rollback', true);
+			$database->executeTransaction("rollback", true);
 		}
 	}
 }

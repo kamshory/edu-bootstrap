@@ -44,7 +44,7 @@ if(isset($_POST['question']))
 
 	if($stmt->rowCount() == 0)
 	{
-		$database->executeTransaction('start transaction');
+		$database->executeTransaction("start transaction", true);
 		$question_id = $database->generateNewId();
 		$sql = "INSERT INTO `edu_question` 
 		(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
@@ -81,11 +81,11 @@ if(isset($_POST['question']))
 		$ret['duplicated'] = 0;
 		if($oke)
 		{
-			$database->executeTransaction('commit', true);
+			$database->executeTransaction("commit", true);
 		}
 		else
 		{
-			$database->executeTransaction('rollback', true);
+			$database->executeTransaction("rollback", true);
 		}
 	}
 	else

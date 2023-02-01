@@ -756,9 +756,9 @@ foreach($test_data['item'] as $index_question => $question)
 		{
 			$file = $question['question']['file'][$xx];
 			print_r($file);
-			$name_file = trim(@$file['name'], " \r\n\t ");
-			$type_file = trim(@$file['type'], " \r\n\t ");
-			$encoding_file = trim(@$file['encoding'], " \r\n\t ");
+			$name_file = $picoEdu->trimWhitespace(@$file['name']);
+			$type_file = $picoEdu->trimWhitespace(@$file['type']);
+			$encoding_file = $picoEdu->trimWhitespace(@$file['encoding']);
 			$data_file = trim(@$file['data'], " \r\n\t ");
 			$files1[$xx] = array('name'=>$name_file,'type'=>$type_file, 'encoding'=>$encoding_file, 'data'=>$data_file);
 		}
@@ -794,9 +794,9 @@ foreach($test_data['item'] as $index_question => $question)
 				}
 				foreach($option['file'] as $index_file_option => $file)
 				{
-					$name_file = trim(@$file['name'], " \r\n\t ");
-					$type_file = trim(@$file['type'], " \r\n\t ");
-					$encoding_file = trim(@$file['encoding'], " \r\n\t ");
+					$name_file = $picoEdu->trimWhitespace(@$file['name']);
+					$type_file = $picoEdu->trimWhitespace(@$file['type']);
+					$encoding_file = $picoEdu->trimWhitespace(@$file['encoding']);
 					$data_file = trim(@$file['data'], " \r\n\t ");
 					$files2[$index_file_option] = array('name'=>$name_file,'type'=>$type_file, 'encoding'=>$encoding_file, 'data'=>$data_file);
 				}

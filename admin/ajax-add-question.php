@@ -43,7 +43,7 @@ if(isset($_POST['question']))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() == 0)
 	{
-		$database->executeTransaction('start transaction');
+		$database->executeTransaction("start transaction", true);
 
 		$question_id = $database->generateNewId();
 
@@ -86,11 +86,11 @@ if(isset($_POST['question']))
 		$ret['duplicated'] = 0;
 		if($oke)
 		{
-			$database->executeTransaction('commit', true);
+			$database->executeTransaction("commit", true);
 		}
 		else
 		{
-			$database->executeTransaction('rollback', true);
+			$database->executeTransaction("rollback", true);
 		}
 	}
 	else

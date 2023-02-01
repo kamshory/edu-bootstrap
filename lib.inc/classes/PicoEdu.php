@@ -11,6 +11,7 @@ class PicoEdu //NOSONAR
 	const AMPERSAND_OFFSET = '&offset=';
 
 	public PicoDatabase $database;
+
 	public function __construct(PicoDatabase $database)
 	{
 		$this->database = $database;
@@ -864,6 +865,11 @@ class PicoEdu //NOSONAR
 	public function trimPunctuation($value)
 	{
 		return trim($value, " ._-/\\ ");
+	}
+
+	public function trimWhitespace($value)
+	{
+		return trim($value, " \r\n\t ");
 	}
 
 	

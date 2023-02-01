@@ -164,7 +164,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)
 			{
-				$database->executeTransaction('start transaction');
+				$database->executeTransaction("start transaction", true);
 				$sql = "DELETE FROM `edu_answer` where `test_id` = '$test_id' ";
 				$database->executeDelete($sql, true);
 				$sql = "DELETE FROM `edu_question` where `test_id` = '$test_id' ";
@@ -174,7 +174,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 				$dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
 				$destroyer = new DirectoryDestroyer($fileSync);
 				$destroyer->destroy($dir, true);
-				$database->executeTransaction("commit");
+				$database->executeTransaction("commit", true);
 			}
 		}
 	}
@@ -257,10 +257,10 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 								{
 									foreach($question->question->file as $index_file_question => $file)
 									{
-										$name_file = trim(@$file->name, " \r\n\t ");
-										$type_file = trim(@$file->type, " \r\n\t ");
-										$encoding_file = trim(@$file->encoding, " \r\n\t ");
-										$data_file = trim(@$file->data, " \r\n\t ");
+										$name_file = $picoEdu->trimWhitespace(@$file->name);
+										$type_file = $picoEdu->trimWhitespace(@$file->type);
+										$encoding_file = $picoEdu->trimWhitespace(@$file->encoding);
+										$data_file = $picoEdu->trimWhitespace(@$file->data);
 										if(stripos($encoding_file, "base64") !== false)
 										{
 											$data_file = base64_decode($data_file);
@@ -298,10 +298,10 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 										{
 											foreach($option->file as $index_file_question => $file)
 											{
-												$name_file = trim(@$file->name, " \r\n\t ");
-												$type_file = trim(@$file->type, " \r\n\t ");
-												$encoding_file = trim(@$file->encoding, " \r\n\t ");
-												$data_file = trim(@$file->data, " \r\n\t ");
+												$name_file = $picoEdu->trimWhitespace(@$file->name);
+												$type_file = $picoEdu->trimWhitespace(@$file->type);
+												$encoding_file = $picoEdu->trimWhitespace(@$file->encoding);
+												$data_file = $picoEdu->trimWhitespace(@$file->data);
 												
 												if(stripos($encoding_file, "base64") !== false)
 												{

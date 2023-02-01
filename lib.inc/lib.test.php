@@ -1106,10 +1106,10 @@ function loadXmlData($xml_file)
 		$order++;
 		if (count(@$question->question->file)) {
 			foreach ($question->question->file as $file) {
-				$name_file = trim(@$file->name, " \r\n\t ");
-				$type_file = trim(@$file->type, " \r\n\t ");
-				$encoding_file = trim(@$file->encoding, " \r\n\t ");
-				$data_file = trim(@$file->data, " \r\n\t ");
+				$name_file = $picoEdu->trimWhitespace(@$file->name);
+				$type_file = $picoEdu->trimWhitespace(@$file->type);
+				$encoding_file = $picoEdu->trimWhitespace(@$file->encoding);
+				$data_file = $picoEdu->trimWhitespace(@$file->data);
 				$files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
 			}
 		}
@@ -1122,10 +1122,10 @@ function loadXmlData($xml_file)
 				$score = trim(@$option->value) * 1;
 				if (count(@$option->file)) {
 					foreach ($option->file as $file) {
-						$name_file = trim(@$file->name, " \r\n\t ");
-						$type_file = trim(@$file->type, " \r\n\t ");
-						$encoding_file = trim(@$file->encoding, " \r\n\t ");
-						$data_file = trim(@$file->data, " \r\n\t ");
+						$name_file = $picoEdu->trimWhitespace(@$file->name);
+						$type_file = $picoEdu->trimWhitespace(@$file->type);
+						$encoding_file = $picoEdu->trimWhitespace(@$file->encoding);
+						$data_file = $picoEdu->trimWhitespace(@$file->data);
 						$files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
 					}
 				}
@@ -1179,10 +1179,10 @@ function loadXmlData_word($xml_file, $key = 0)
 		$order++;
 		if (count(@$question->question->file)) {
 			foreach ($question->question->file as $index_file_question => $file) {
-				$name_file = trim(@$file->name, " \r\n\t ");
-				$type_file = trim(@$file->type, " \r\n\t ");
-				$encoding_file = trim(@$file->encoding, " \r\n\t ");
-				$data_file = trim(@$file->data, " \r\n\t ");
+				$name_file = $picoEdu->trimWhitespace(@$file->name);
+				$type_file = $picoEdu->trimWhitespace(@$file->type);
+				$encoding_file = $picoEdu->trimWhitespace(@$file->encoding);
+				$data_file = $picoEdu->trimWhitespace(@$file->data);
 				$files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
 			}
 		}
@@ -1198,10 +1198,10 @@ function loadXmlData_word($xml_file, $key = 0)
 				$score = trim(@$option->value) * 1;
 				if (count(@$option->file)) {
 					foreach ($option->file as $index_file_question => $file) {
-						$name_file = trim(@$file->name, " \r\n\t ");
-						$type_file = trim(@$file->type, " \r\n\t ");
-						$encoding_file = trim(@$file->encoding, " \r\n\t ");
-						$data_file = trim(@$file->data, " \r\n\t ");
+						$name_file = $picoEdu->trimWhitespace(@$file->name);
+						$type_file = $picoEdu->trimWhitespace(@$file->type);
+						$encoding_file = $picoEdu->trimWhitespace(@$file->encoding);
+						$data_file = $picoEdu->trimWhitespace(@$file->data);
 						$files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
 					}
 				}
