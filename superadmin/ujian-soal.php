@@ -1131,7 +1131,7 @@ function buildMenu(id)
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><a class="show-controls" data-test-id="<?php echo $data['test_id']; ?>" href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></a></td>
       <td align="right"><?php echo $no; ?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo ($data['school_name']); ?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['school_name']; ?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['name']; ?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['subject']; ?></a></td>
       <td><?php $class = $picoEdu->textClass($array_class, $data['class']);

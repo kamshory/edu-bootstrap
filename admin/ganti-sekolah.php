@@ -2,8 +2,8 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/login-form.php";
-exit();
+	include_once dirname(__FILE__)."/login-form.php";
+	exit();
 }
 $cfg->page_title = "Pilih Sekolah";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
@@ -43,10 +43,6 @@ if(@$_GET['option'] == 'select')
 		";
 		$database->executeInsert($sql, true);
 		
-		$sql = "UPDATE `edu_student` SET `school_id` = '$school_id', `class_id` = '$class_id' WHERE `student_id` = '$student_id' ";
-		$database->executeUpdate($sql, true);
-
-
 		$sql = "UPDATE `edu_admin` SET `school_id` = '$school_id' WHERE `admin_id` = '$admin_id' ";
 		$database->executeUpdate($sql, true);
 		header("Location: index.php");
@@ -113,7 +109,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Bahasa</td>
-		<td><?php if($data['language']=='en') echo 'English'; if($data['language']=='id') echo 'Bahasa Indonesia';?> </td>
+		<td><?php echo $picoEdu->selectFromMap($data['language'], array('en'=>'English', 'id'=>'Bahasa Indonesia'));?> </td>
 		</tr>
 		<tr>
 		<td>Negara</td>

@@ -400,7 +400,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Sekolah</td>
-		<td><?php echo ($data['school_name']);?> </td>
+		<td><?php echo $data['school_name'];?> </td>
 		</tr>
 		<tr>
 		<td>Username</td>
@@ -625,7 +625,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><input type="checkbox" name="admin_id[]" id="admin_id" value="<?php echo $data['admin_id'];?>" class="admin_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&admin_id=<?php echo $data['admin_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo ($data['school_name']);?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['school_name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $picoEdu->selectFromMap($data['gender'], array('M'=>'L', 'W'=>'P'));?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['email'];?></a></td>

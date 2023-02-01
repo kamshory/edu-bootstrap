@@ -144,7 +144,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
   </tr>
   <tr>
     <td colspan="2">Kelas</td>
-    <td><?php $class = $picoEdu->textClass($array_class, $data['class']);  echo $class;?> </td>
+    <td><?php echo $picoEdu->textClass($array_class, $data['class']);  ?> </td>
   </tr>
   <tr>
     <td colspan="2">Mata Pelajaran</td>
@@ -156,7 +156,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
   </tr>
   <tr>
     <td colspan="2">Metode Penilaian</td>
-    <td><?php if($data['assessment_methods'] == 'H') echo "Nilai Tertinggi"; if($data['assessment_methods'] == 'N') echo "Nilai Terbaru";?> </td>
+    <td><?php echo $picoEdu->selectFromMap($data['assessment_methods'], array('H'=>"Nilai Tertinggi", 'N'=>"Nilai Terbaru"));?> </td>
   </tr>
   <tr>
     <td colspan="2">Jumlah Soal</td>
@@ -378,7 +378,7 @@ $info = $stmt->fetch(PDO::FETCH_ASSOC);
     <td width="10%">NIS</td>
     <td width="15%"><?php echo $info['student_id'];?> </td>
     <td width="10%">Metode Penilaian</td>
-    <td width="15%"><?php if($info['assessment_methods'] == 'H') echo 'Nilai Tertinggi'; if($info['assessment_methods'] == 'N') echo 'Nilai Terbaru';?> </td>
+    <td width="15%"><?php echo $picoEdu->selectFromMap($info['assessment_methods'], array('H'=>"Nilai Tertinggi", 'N'=>"Nilai Terbaru"));?> </td>
     <td width="10%">Dibuka</td>
     <td width="15%"><?php if($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '') echo translateDate(date('j M Y H:i', strtotime($info['available_from']))); else echo '-';?> </td>
     <td width="10%">Benar</td>

@@ -311,7 +311,7 @@ else
 			$school_code = $admin_login->school_code;
 			$use_token = $admin_login->use_token;
 		}
-		if(@$admin_id)
+		if(!empty(@$admin_id))
 		{
 			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
 			?>

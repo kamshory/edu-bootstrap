@@ -68,12 +68,12 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Nomor Induk</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" value="<?php echo ($data['reg_number']);?>" autocomplete="off" readonly="readonly" />
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" value="<?php echo $data['reg_number'];?>" autocomplete="off" readonly="readonly" />
         <input type="hidden" name="teacher_id2" id="teacher_id2" value="<?php echo $data['teacher_id'];?>" /></td>
 		</tr>
 		<tr>
 		<td>NUPTK</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo ($data['reg_number_national']);?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo $data['reg_number_national'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
@@ -147,11 +147,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Nomor Induk</td>
-		<td><?php echo ($data['reg_number']);?> </td>
+		<td><?php echo $data['reg_number'];?> </td>
 		</tr>
 		<tr>
 		<td>NUPTK</td>
-		<td><?php echo ($data['reg_number_national']);?> </td>
+		<td><?php echo $data['reg_number_national'];?> </td>
 		</tr>
         <?php
 		if($data['school_name'])
@@ -159,7 +159,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Sekolah</td>
-		<td><?php echo ($data['school_name']);?> </td>
+		<td><?php echo $data['school_name'];?> </td>
 		</tr>
         <?php
 		}

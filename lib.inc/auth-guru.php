@@ -17,13 +17,13 @@ $password = $_SESSION['teacher_password'];
 
 $teacher_login = new TeacherAuth($database, $username, $password, false);
 
-$teacher_id = 0;
-$school_id = 0;
-$auth_teacher_id = 0;
-$auth_school_id = 0;
-$auth_teacher_school_id = 0;
+$teacher_id = '';
+$school_id = '';
+$auth_teacher_id = '';
+$auth_school_id = '';
+$auth_teacher_school_id = '';
 $school_code = '';
-$use_token = 0;
+$use_token = false;
 if($teacher_login->teacher_id)
 {
 	$teacher_id = $auth_teacher_id = $teacher_login->teacher_id;

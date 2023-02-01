@@ -5,8 +5,8 @@ if(!defined('DB_NAME'))
 }
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/login-form.php";
-exit();
+	include_once dirname(__FILE__)."/login-form.php";
+	exit();
 }
 $token_valid = 0;
 $account_blocked = 0;

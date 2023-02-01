@@ -120,11 +120,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>NIS</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" value="<?php echo ($data['reg_number']);?>" autocomplete="off" /><input type="hidden" name="student_id2" id="student_id2" value="<?php echo $data['student_id'];?>" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" value="<?php echo $data['reg_number'];?>" autocomplete="off" /><input type="hidden" name="student_id2" id="student_id2" value="<?php echo $data['student_id'];?>" /></td>
 		</tr>
 		<tr>
 		<td>NISN</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo ($data['reg_number_national']);?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo $data['reg_number_national'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Tingkat</td>
@@ -251,15 +251,15 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Sekolah</td>
-		<td><?php echo ($data['school_name']);?> </td>
+		<td><?php echo $data['school_name'];?> </td>
 		</tr>
 		<tr>
 		<td>NIS</td>
-		<td><?php echo ($data['reg_number']);?> </td>
+		<td><?php echo $data['reg_number'];?> </td>
 		</tr>
 		<tr>
 		<td>NISN</td>
-		<td><?php echo ($data['reg_number_national']);?> </td>
+		<td><?php echo $data['reg_number_national'];?> </td>
 		</tr>
 		<tr>
 		<td>Tingkat</td>
@@ -270,7 +270,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Kelas</td>
-		<td><?php echo ($data['class_id']);?> </td>
+		<td><?php echo $data['class_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Nama</td>
@@ -534,12 +534,12 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><input type="checkbox" name="student_id[]" id="student_id" value="<?php echo $data['student_id'];?>" class="student_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&student_id=<?php echo $data['student_id'];?>"><i class="fas fa-pencil"></i></td>
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['school_name']);?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['reg_number']);?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['reg_number_national']);?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['school_name'];?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['reg_number'];?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['reg_number_national'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['grade_id'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['class_id']);?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['class_id'];?></a></td>
       <td><?php echo $picoEdu->selectFromMap($data['gender'], array('M'=>'L', 'W'=>'P'));?> </td>
       <td><?php echo $picoEdu->trueFalse($data['blocked'], 'Ya', 'Tidak');?> </td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>

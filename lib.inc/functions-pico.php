@@ -831,3 +831,6 @@ class FileSynchronizer
 
 }
 $fileSync = new FileSynchronizer(dirname(dirname(__FILE__))."/lib.sync");
+
+$ip_create = $_SERVER['REMOTE_ADDR'];
+$ip_edit = $ip_create;

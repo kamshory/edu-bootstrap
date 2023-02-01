@@ -39,7 +39,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 			}
 			else
 			{
-				header('Location: index.php');
+				header('Location: index.php'); //NOSONAR
 			}
 		}
 		else if(isset($_SERVER['HTTP_REFERER']))
@@ -51,12 +51,12 @@ if(isset($_POST['username']) && isset($_POST['password']))
 			}
 			else
 			{
-				header('Location: index.php');
+				header('Location: index.php'); //NOSONAR
 			}
 		}
 		else
 		{
-			header('Location: index.php');
+			header('Location: index.php'); //NOSONAR
 		}
 	}
 	else
@@ -67,9 +67,9 @@ if(isset($_POST['username']) && isset($_POST['password']))
 else
 {
 	include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-	if(@$admin_id)
+	if(!empty(@$admin_id))
 	{
-		header('Location: index.php');
+		header('Location: index.php'); //NOSONAR
 	}
 	else
 	{

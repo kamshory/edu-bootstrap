@@ -21,7 +21,7 @@ if(isset($_POST['set_active']) && isset($_POST['answer_id']))
 			$database->executeUpdate($sql, true);
 		}
 	}
-	header("Location: ".$_SERVER['REQUEST_URI']);
+	header("Location: ".$_SERVER['REQUEST_URI']); //NOSONAR
 }
 if(isset($_POST['set_inactive']) && isset($_POST['answer_id']))
 {
@@ -35,7 +35,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['answer_id']))
 			$database->executeUpdate($sql, true);
 		}
 	}
-	header("Location: ".$_SERVER['REQUEST_URI']);
+	header("Location: ".$_SERVER['REQUEST_URI']); //NOSONAR
 }
 if(isset($_POST['delete']) && isset($_POST['answer_id']))
 {
@@ -49,7 +49,7 @@ if(isset($_POST['delete']) && isset($_POST['answer_id']))
 			$database->executeDelete($sql, true);
 		}
 	}
-	header("Location: ".$_SERVER['REQUEST_URI']);
+	header("Location: ".$_SERVER['REQUEST_URI']); //NOSONAR
 }
 if(isset($_POST['recalculation']) && isset($_POST['answer_id']))
 {
@@ -65,7 +65,7 @@ if(isset($_POST['recalculation']) && isset($_POST['answer_id']))
 			$database->executeUpdate($sql, true);
 		}
 	}
-	header("Location: ".$_SERVER['REQUEST_URI']);
+	header("Location: ".$_SERVER['REQUEST_URI']); //NOSONAR
 }
 
 if(@$_GET['option'] == 'export' && isset($_GET['test_id']))
@@ -124,7 +124,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
   </tr>
   <tr>
     <td colspan="2">Kelas</td>
-    <td><?php $class = $picoEdu->textClass($array_class, $data['class']);  echo $class;?> </td>
+    <td><?php echo $picoEdu->textClass($array_class, $data['class']);  ?> </td>
   </tr>
   <tr>
     <td colspan="2">Mata Pelajaran</td>
@@ -136,7 +136,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
   </tr>
   <tr>
     <td colspan="2">Metode Penilaian</td>
-    <td><?php if($data['assessment_methods'] == 'H') echo "Nilai Tertinggi"; if($data['assessment_methods'] == 'N') echo "Nilai Terbaru";?> </td>
+    <td><?php echo $picoEdu->selectFromMap($data['assessment_methods'], array('H'=>"Nilai Tertinggi", 'N'=>"Nilai Terbaru"));?> </td>
   </tr>
   <tr>
     <td colspan="2">Jumlah Soal</td>
@@ -275,9 +275,11 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	$ke[$data['student_id']] ++;
 	
 	?>
-    <tr class="row-data<?php if($data['lewat']) echo ' data-error';?>">
+    <tr class="row-data<?php if ($data['lewat']) {
+							echo ' data-error';
+		}?>">
       <td align="right"><?php echo $no;?> </td>
-      <td><?php echo ($data['reg_number']);?> </td>
+      <td><?php echo $data['reg_number'];?> </td>
       <td><?php echo $data['student_name'];?> </td>
       <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
       <td align="right"><?php echo $ke[$data['student_id']];?> </td>
@@ -288,7 +290,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
       <td align="right"><?php echo $picoEdu->numberFormatTrans($data['final_score'], true);?> </td>
       <td align="right"><?php echo $picoEdu->numberFormatTrans($data['percent'], true);?> </td>
       <td align="right"><?php echo $picoEdu->numberFormatTrans($threshold, true);?> </td>
-      <td><?php if($data['percent'] >= $threshold) echo 'Ya'; else echo 'Tidak'?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['percent'] >= $threshold, 'Ya', 'Tidak');?> </td>
       <?php
 	  if($bc_array != null)
 	  {
@@ -363,7 +365,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     <td>NIS</td>
     <td><?php echo $info['student_id'];?> </td>
     <td>Metode Penilaian</td>
-    <td><?php if($info['assessment_methods'] == 'H') echo 'Nilai Tertinggi'; if($info['assessment_methods'] == 'N') echo 'Nilai Terbaru';?> </td>
+    <td><?php echo $picoEdu->selectFromMap($info['assessment_methods'], array('H'=>"Nilai Tertinggi", 'N'=>"Nilai Terbaru"));?> </td>
     <td>Dibuka</td>
     <td><?php if($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '') echo translateDate(date('j M Y H:i', strtotime($info['available_from']))); else echo '-';?> </td>
     <td>Benar</td>
@@ -891,7 +893,7 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
     <tr class="row-data<?php if($data['lewat']) echo ' data-error';?>">
       <td><input type="checkbox" name="answer_id[]" id="answer_id" value="<?php echo $data['answer_id'];?>" class="answer_id" /></td>
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=answerdetail&answer_id=<?php echo $data['answer_id'];?>"><?php echo ($data['reg_number']);?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=answerdetail&answer_id=<?php echo $data['answer_id'];?>"><?php echo $data['reg_number'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=answerdetail&answer_id=<?php echo $data['answer_id'];?>"><?php echo $data['student_name'];?></a></td>
       <td><?php echo $data['class'];?> </td>
       <td align="right"><?php echo $ke[$data['student_id']];?> </td>

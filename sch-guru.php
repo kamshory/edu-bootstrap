@@ -66,11 +66,11 @@ $stmt = $database->executeQuery($sql);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>No.Induk</td>
-		<td><?php echo ($data['reg_number']);?> </td>
+		<td><?php echo $data['reg_number'];?> </td>
 		</tr>
 		<tr>
 		<td>NUPTK</td>
-		<td><?php echo ($data['reg_number_national']);?> </td>
+		<td><?php echo $data['reg_number_national'];?> </td>
 		</tr>
 		<tr>
 		<td>Nama</td>
@@ -198,8 +198,8 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo 'guru.php';?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo ($data['reg_number']);?></a></td>
-      <td><a href="<?php echo 'guru.php';?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo ($data['reg_number_national']);?></a></td>
+      <td><a href="<?php echo 'guru.php';?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo $data['reg_number'];?></a></td>
+      <td><a href="<?php echo 'guru.php';?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo $data['reg_number_national'];?></a></td>
       <td><a href="<?php echo 'guru.php';?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo 'guru.php';?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo $data['gender'];?></a></td>
       </tr>

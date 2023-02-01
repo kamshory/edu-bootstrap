@@ -114,10 +114,10 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 <div style="padding-bottom:5px;">
 Status <select name="status" id="status">
 	<option value="">Semua</option>
-	<option value="1"<?php if($status == '1') echo ' selected="selected"';?>>Ujian</option>
-	<option value="2"<?php if($status == '2') echo ' selected="selected"';?>>Selesai</option>
-	<option value="3"<?php if($status == '3') echo ' selected="selected"';?>>Dikeluarkan</option>
-	<option value="4"<?php if($status == '4') echo ' selected="selected"';?>>Diblokir</option>
+	<option value="1"<?php echo $picoEdu->ifMatch($status, '1', ' selected="selected"');?>>Ujian</option>
+	<option value="2"<?php echo $picoEdu->ifMatch($status, '2', ' selected="selected"');?>>Selesai</option>
+	<option value="3"<?php echo $picoEdu->ifMatch($status, '3', ' selected="selected"');?>>Dikeluarkan</option>
+	<option value="4"<?php echo $picoEdu->ifMatch($status, '4', ' selected="selected"');?>>Diblokir</option>
 </select>
 <input type="submit" id="show" class="btn com-button btn-success" value="Tampilkan" />
 </div>

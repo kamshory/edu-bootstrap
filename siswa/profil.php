@@ -2,8 +2,8 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/login-form.php";
-exit();
+	include_once dirname(__FILE__)."/login-form.php";
+	exit();
 }
 $cfg->page_title = "Siswa";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
@@ -73,7 +73,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>NISN</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo ($data['reg_number_national']);?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo $data['reg_number_national'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
@@ -148,11 +148,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>NIS</td>
-		<td><?php echo ($data['reg_number']);?> </td>
+		<td><?php echo $data['reg_number'];?> </td>
 		</tr>
 		<tr>
 		<td>NISN</td>
-		<td><?php echo ($data['reg_number_national']);?> </td>
+		<td><?php echo $data['reg_number_national'];?> </td>
 		</tr>
         <?php
 		if($data['school_name'])
@@ -160,7 +160,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Sekolah</td>
-		<td><?php echo ($data['school_name']);?> </td>
+		<td><?php echo $data['school_name'];?> </td>
 		</tr>
         <?php
 		}
@@ -174,7 +174,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 		</tr>
 		<tr>
 		<td>Kelas</td>
-		<td><?php echo ($data['class_id']);?> </td>
+		<td><?php echo $data['class_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>

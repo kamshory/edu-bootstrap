@@ -2,8 +2,8 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/login-form.php";
-exit();
+	include_once dirname(__FILE__)."/login-form.php";
+	exit();
 }
 $cfg->page_title = "Siswa";
 
@@ -43,7 +43,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	?>
 		<tr>
 		<td>NIS</td>
-		<td><?php echo ($data['reg_number']);?> </td>
+		<td><?php echo $data['reg_number'];?> </td>
 		</tr>
 	<?php
 	}
@@ -52,7 +52,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	?>
     	<tr>
 		<td>NISN</td>
-		<td><?php echo ($data['reg_number_national']);?> </td>
+		<td><?php echo $data['reg_number_national'];?> </td>
 		</tr>
 	<?php
 	}
@@ -82,7 +82,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	?>
 		<tr>
 		<td>Jurusan</td>
-		<td><?php echo ($data['school_program_name']);?> </td>
+		<td><?php echo $data['school_program_name'];?> </td>
 		</tr>
 	<?php
 	}
@@ -249,10 +249,10 @@ if($class_id == 0)
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['reg_number']);?></a></td>
+      <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['reg_number'];?></a></td>
       <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['grade_id'];?></a></td>
-      <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['class_id']);?></a></td>
+      <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['class_id'];?></a></td>
       <td><a href="<?php echo 'siswa.php';?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['gender'];?></a></td>
       </tr>
     <?php

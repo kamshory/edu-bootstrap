@@ -2,8 +2,8 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/login-form.php";
-exit();
+	include_once dirname(__FILE__)."/login-form.php";
+	exit();
 }
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
@@ -75,7 +75,10 @@ if(isset($_GET['info_id']))
 			if($pos===false){
 			$pos = stripos($content, " ", $maxlen);
 			}
-			if($pos===false) $pos = $maxlen;
+			if($pos===false) 
+			{
+				$pos = $maxlen;
+			}
 			$content = substr($content, 0, $pos+1);
 			$content = tidyHTML($content);
 		}
@@ -88,7 +91,7 @@ if(isset($_GET['info_id']))
         <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/info.min.js"></script>
         <style type="text/css">
 		.article-title h1{
-			font-family:Roboto;
+			font-family: "Roboto";
 			font-size:28px;
 		}
 		</style>
@@ -222,7 +225,10 @@ if($pagination->total_record_with_limit)
 			if($pos===false){
 			$pos = stripos($content, " ", $maxlen);
 			}
-			if($pos===false) $pos = $maxlen;
+			if($pos===false) 
+			{
+				$pos = $maxlen;
+			}
 			$content = substr($content, 0, $pos+1);
 			$content = tidyHTML($content);
 		}

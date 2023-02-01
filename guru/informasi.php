@@ -2,8 +2,8 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/login-form.php";
-exit();
+	include_once dirname(__FILE__)."/login-form.php";
+	exit();
 }
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";

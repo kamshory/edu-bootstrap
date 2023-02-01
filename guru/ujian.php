@@ -114,16 +114,13 @@ if(count(@$_POST) && isset($_POST['save']))
 if(isset($_POST['set_active']) && isset($_POST['test_id']))
 {
 	$tests = @$_POST['test_id'];
-	if(isset($tests))
+	if(isset($tests) && is_array($tests))
 	{
-		if(is_array($tests))
+		foreach($tests as $key=>$val)
 		{
-			foreach($tests as $key=>$val)
-			{
-				$test_id = addslashes($val);
-				$sql = "UPDATE `edu_test` SET `active` = true WHERE `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
-				$database->executeUpdate($sql, true);
-			}
+			$test_id = addslashes($val);
+			$sql = "UPDATE `edu_test` SET `active` = true WHERE `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -234,7 +231,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 						foreach($test_data->item as $index_question => $question)
 						{
 							// petanyaan
-							if(($selection_index[$idx] == 1 || $selection == ""  || $selection == "[]"))
+							if($selection_index[$idx] == 1 || $selection == ""  || $selection == "[]")
 							{
 								$text_pertanyaan = trim(@$question->question->text);
 								$random = trim(@$question->question->random)*1;
@@ -1001,7 +998,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Metode Penilaian</td>
-		<td><?php if($data['assessment_methods'] == 'H') echo "Nilai Tertinggi"; if($data['assessment_methods'] == 'N') echo "Nilai Terbaru";?> </td>
+		<td><?php echo $picoEdu->selectFromMap($data['assessment_methods'], array('H'=>"Nilai Tertinggi", 'N'=>"Nilai Terbaru"));?> </td>
 		</tr>
 		<tr>
 		<td>Jumlah Soal</td><td><?php echo $data['number_of_question'];?> </td>

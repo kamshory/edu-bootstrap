@@ -32,9 +32,9 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<tr>
 		<td>Tingkat
 		</td><td><?php 
-echo $picoEdu->getGradeName($data['grade_id']);
-?>
-<td>
+		echo $picoEdu->getGradeName($data['grade_id']);
+		?>
+		<td>
 		</tr>
 		<tr>
 		<td>Jurusan</td>
