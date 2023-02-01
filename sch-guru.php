@@ -15,11 +15,11 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 if(!empty(@$school_id))
 {
 $sql = "SELECT `edu_school`.*, 
-(select count(distinct `edu_teacher`.`teacher_id`) from `edu_teacher`
+(select count(distinct `edu_teacher`.`teacher_id`) FROM `edu_teacher`
 WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` and `edu_teacher`.`gender` = 'M') as `M`,
-(select count(distinct `edu_teacher`.`teacher_id`) from `edu_teacher`
+(select count(distinct `edu_teacher`.`teacher_id`) FROM `edu_teacher`
 WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` and `edu_teacher`.`gender` = 'W') as `W`
-from `edu_school`
+FROM `edu_school`
 WHERE `edu_school`.`school_id` = '$school_id' 
 ";
 $stmt = $database->executeQuery($sql);
@@ -54,9 +54,8 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'teacher_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_teacher`.* $nt
-from `edu_teacher` 
-where 1
-and `edu_teacher`.`teacher_id` = '$edit_key'
+FROM `edu_teacher` 
+WHERE `edu_teacher`.`teacher_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -143,12 +142,12 @@ $sql_filter .= " and (`edu_teacher`.`name` like '%".addslashes($pagination->quer
 $nt = '';
 
 $sql = "SELECT `edu_teacher`.* $nt
-from `edu_teacher`
+FROM `edu_teacher`
 where 1 $sql_filter
-order by `edu_teacher`.`teacher_id` asc
+ORDER BY `edu_teacher`.`teacher_id` asc
 ";
 $sql_test = "SELECT `edu_teacher`.*
-from `edu_teacher`
+FROM `edu_teacher`
 where 1 $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);

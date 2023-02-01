@@ -18,7 +18,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 {
 	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `edu_test_member`.* from `edu_test_member` WHERE `test_member_id` = '$id' and `status` = '1'
+	$sql = "SELECT `edu_test_member`.* FROM `edu_test_member` WHERE `test_member_id` = '$id' and `status` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -37,7 +37,7 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 {
 	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `edu_test_member`.* from `edu_test_member` WHERE `test_member_id` = '$id' and `status` = '1'
+	$sql = "SELECT `edu_test_member`.* FROM `edu_test_member` WHERE `test_member_id` = '$id' and `status` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -75,14 +75,14 @@ else if($test_status == '4')
 }
 
 $sql = "SELECT `edu_test_member`.* , `edu_student`.`reg_number`,
-(select count(distinct `u`.`student_id`) from `edu_test_member` as `u` WHERE `u`.`student_id` = `edu_test_member`.`student_id` and `u`.`school_id` = `edu_test_member`.`school_id` and `u`.`test_id` = `edu_test_member`.`test_id` and `u`.`test_member_id` != `edu_test_member`.`test_member_id` and `u`.`status` = '1' and `edu_test_member`.`status` = '1' and left(`u`.`time_enter`, 10) = left(`edu_test_member`.`time_enter`, 10)) as `duplikat_login`,
+(select count(distinct `u`.`student_id`) FROM `edu_test_member` as `u` WHERE `u`.`student_id` = `edu_test_member`.`student_id` and `u`.`school_id` = `edu_test_member`.`school_id` and `u`.`test_id` = `edu_test_member`.`test_id` and `u`.`test_member_id` != `edu_test_member`.`test_member_id` and `u`.`status` = '1' and `edu_test_member`.`status` = '1' and left(`u`.`time_enter`, 10) = left(`edu_test_member`.`time_enter`, 10)) as `duplikat_login`,
 `edu_student`.`name` as `name_student`,
-(select `edu_class`.`name` from `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` and `edu_class`.`school_id` = `edu_test_member`.`school_id`) as `name_class`
-from `edu_test_member` 
+(select `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` and `edu_class`.`school_id` = `edu_test_member`.`school_id`) as `name_class`
+FROM `edu_test_member` 
 inner join(`edu_student`) on(`edu_student`.`student_id` = `edu_test_member`.`student_id`)
 WHERE `edu_test_member`.`test_id` = '$test_id' $filter
 group by `edu_test_member`.`test_member_id`
-order by `edu_test_member`.`time_enter` asc";
+ORDER BY `edu_test_member`.`time_enter` asc";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {

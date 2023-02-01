@@ -13,7 +13,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	$_SESSION['student_password'] = $password;
 									 
 	$sql = "SELECT `username`, `student_id`
-	from `edu_student`
+	FROM `edu_student`
 	where (
 		(`email` like '$email' and `email` != '')
 		or 
@@ -183,9 +183,9 @@ else
 			<?php
 
 			$sql = "SELECT `edu_info`.* 
-			from `edu_info` 
+			FROM `edu_info` 
 			WHERE `edu_info`.`active` = true
-			order by `edu_info`.`info_id` desc
+			ORDER BY `edu_info`.`info_id` desc
 			limit 0, 2
 			";
 			$stmt = $database->executeQuery($sql);

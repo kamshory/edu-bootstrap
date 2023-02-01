@@ -34,7 +34,7 @@ else
 	{
 		$randobj = array();
 		$sql = "SELECT `edu_test`.`random_distribution`
-		from `edu_test`
+		FROM `edu_test`
 		WHERE `edu_test`.`test_id` = '$test_id' and `edu_test`.`teacher_id` = '$teacher_id'
 		";
 		$stmt = $database->executeQuery($sql);
@@ -55,10 +55,10 @@ else
 				}
 			}
 			$sql = "SELECT `edu_question`.`basic_competence` , count(distinct `edu_question`.`question_id`) as `colection`
-			from `edu_question`
+			FROM `edu_question`
 			WHERE `edu_question`.`test_id` = '$test_id'
 			group by `edu_question`.`basic_competence`
-			order by `edu_question`.`basic_competence` asc
+			ORDER BY `edu_question`.`basic_competence` asc
 			";
 			$stmt2 = $database->executeQuery($sql);
 			$questions = array();

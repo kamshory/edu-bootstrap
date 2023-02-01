@@ -17,7 +17,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	$member_create = $member_edit = $auth_teacher_id;
 	
 	
-	$sql = "SELECT * from `edu_test_collection` WHERE `test_collection_id` = '$id' and `active` = true ";
+	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' and `active` = true ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -28,8 +28,8 @@ if(isset($_POST['from']) && isset($_POST['to']))
 		{
 
 			$sql = "SELECT `edu_test`.*, 
-			(select `edu_question`.`order` from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` order by `order` desc limit 0,1) as `order`
-			from `edu_test`
+			(select `edu_question`.`order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `order` desc limit 0,1) as `order`
+			FROM `edu_test`
 			WHERE `edu_test`.`test_id` = '$test_id' and `edu_test`.`teacher_id` = '$auth_teacher_id'
 			";
 			$stmt = $database->executeQuery($sql);
@@ -146,11 +146,11 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	}
 }
 $sql = "SELECT `edu_test`.*,
-(select `edu_teacher`.`name` from `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
-(select count(distinct `edu_question`.`question_id`) from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `question`
-from `edu_test`
+(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
+(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `question`
+FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id'
-order by `edu_test`.`test_id` desc
+ORDER BY `edu_test`.`test_id` desc
 ";
 $stmt = $database->executeQuery($sql);
 ?>

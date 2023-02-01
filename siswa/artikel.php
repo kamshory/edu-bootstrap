@@ -16,7 +16,7 @@ if(isset($_GET['article_id']))
 	$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
 
 	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
-	from `edu_article` 
+	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 	WHERE `edu_article`.`article_id` = '$article_id' and `edu_article`.`active` = true ";
 	include_once dirname(__FILE__)."/lib.inc/header.php";
@@ -44,10 +44,10 @@ else
 {
 	include_once dirname(__FILE__)."/lib.inc/header.php";
 	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
-	from `edu_article` 
+	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 	WHERE `edu_article`.`school_id` = '$school_id' and `edu_article`.`active` = true
-	order by `edu_article`.`article_id` desc
+	ORDER BY `edu_article`.`article_id` desc
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)

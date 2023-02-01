@@ -56,7 +56,7 @@ if(@!$mobile_browser)
 <?php
 }
 $sql = "SELECT `edu_student`.* 
-from `edu_student` 
+FROM `edu_student` 
 WHERE `edu_student`.`school_id` = '$school_id'
 and `edu_student`.`student_id` = '$student_id'
 ";
@@ -127,10 +127,10 @@ else
 include_once dirname((__FILE__))."/lib.inc/header.php";
 $nt = '';
 $sql = "SELECT `edu_student`.* , `edu_school`.`name` as `school_name`, `edu_school`.`open` as `school_open`,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
-(select `edu_class`.`name` from `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
-from `edu_student` 
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
+(select `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
+FROM `edu_student` 
 left join(`edu_school`) on(`edu_school`.`school_id` = `edu_student`.`school_id`)
 WHERE `edu_student`.`school_id` = '$school_id'
 and `edu_student`.`student_id` = '$student_id'

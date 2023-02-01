@@ -4,12 +4,12 @@ if(!empty(@$school_id))
 {
 $basename = "ujian-soal.php";
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-$sql = "SELECT * from `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
+$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 $edit_mode = kh_filter_input(INPUT_GET, 'edit_mode', FILTER_SANITIZE_NUMBER_UINT);
-$sql = "SELECT * from `edu_question` WHERE `test_id` = '$test_id' ";
+$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ";
 $stmt = $database->executeQuery($sql);
 ?>
 <ol class="question-ol">
@@ -23,7 +23,7 @@ $question_id = $data['question_id'];
 <li><span><?php echo $data['content'];?><?php if($edit_mode){?><span class="edit-question-ctrl"><a href="<?php echo $basename;?>?option=edit&question_id=<?php echo $question_id;?>" target="_blank"><span></span></a></span><?php }?></span>
     <ol class="option-ol" style="list-style-type:<?php echo $data['numbering'];?>">
         <?php
-        $sql2 = "SELECT * from `edu_option` WHERE `question_id` = '$question_id' ";
+        $sql2 = "SELECT * FROM `edu_option` WHERE `question_id` = '$question_id' ";
         $stmt2 = $database->executeQuery($sql2);
         if($stmt2->rowCount() > 0)
         {

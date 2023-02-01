@@ -8,7 +8,7 @@ if(isset($_GET['username']) && isset($_GET['auth']))
 	$username = kh_filter_input(INPUT_GET, 'username', FILTER_SANITIZE_ALPHANUMERICPUNC);
 	$auth = kh_filter_input(INPUT_GET, 'auth', FILTER_SANITIZE_ALPHANUMERICPUNC);
 	$sql = "SELECT `username`, `member_id`, `email`, `auth`
-	from `member`
+	FROM `member`
 	where (`username` like '$username' and `auth` like '$auth') 
 	";
 	$stmt = $database->executeQuery($sql);
@@ -55,7 +55,7 @@ if(isset($_POST['username']) && isset($_POST['send']))
 	$database->execute($sql);
 	
 	$sql = "SELECT `username`, `member_id`, `email`, `auth`, `name`
-	from `member`
+	FROM `member`
 	where ((`email` like '$email' and '$email' != '') or `username` like '$username' or (`phone` like '$phone' and '$phone' != '')) 
 	";
 	$stmt = $database->executeQuery($sql);

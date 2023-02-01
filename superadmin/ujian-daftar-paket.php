@@ -19,7 +19,7 @@ if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "SELECT * from `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
+		$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 		$nquestion = 0;
 		$noption = 0;
 		$stmt = $database->executeQuery($sql);
@@ -93,7 +93,7 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "SELECT * from `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
+		$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
@@ -243,9 +243,8 @@ else if(@$_GET['option'] == 'edit')
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
 $sql = "SELECT `edu_test_collection`.* 
-from `edu_test_collection` 
-where 1
-and `edu_test_collection`.`test_collection_id` = '$edit_key'
+FROM `edu_test_collection` 
+WHERE `edu_test_collection`.`test_collection_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -296,9 +295,8 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
 $nt = '';
 $sql = "SELECT `edu_test_collection`.* $nt
-from `edu_test_collection` 
-where 1
-and `edu_test_collection`.`test_collection_id` = '$edit_key'
+FROM `edu_test_collection` 
+WHERE `edu_test_collection`.`test_collection_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -489,12 +487,12 @@ $nt = '';
 
 
 $sql = "SELECT `edu_test_collection`.* $nt
-from `edu_test_collection`
+FROM `edu_test_collection`
 where 1 $sql_filter
-order by `edu_test_collection`.`test_collection_id` desc
+ORDER BY `edu_test_collection`.`test_collection_id` desc
 ";
 $sql_test = "SELECT `edu_test_collection`.*
-from `edu_test_collection`
+FROM `edu_test_collection`
 where 1 $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);

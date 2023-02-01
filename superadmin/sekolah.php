@@ -310,7 +310,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql = "SELECT * from `country` WHERE `active` = true order by `order` asc
+        $sql = "SELECT * FROM `country` WHERE `active` = true ORDER BY `order` asc
 		";
 
 		echo $picoEdu->createFilterDb(
@@ -342,7 +342,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="state_id" id="state_id">
 		<option value="">- Pilih Provinsi -</option>
 			<?php
-            $sql = "SELECT * from `state` WHERE `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
+            $sql = "SELECT * FROM `state` WHERE `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' ORDER BY `type` asc, `name` asc
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -371,7 +371,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql = "SELECT * from `city` WHERE `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
+            $sql = "SELECT * FROM `city` WHERE `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) ORDER BY `type` asc, `name` asc 
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -433,9 +433,8 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $state_list = array();
 $city_list = array();
 $sql = "SELECT `edu_school`.* 
-from `edu_school` 
-where 1
-and `edu_school`.`school_id` = '$school_id'
+FROM `edu_school` 
+WHERE `edu_school`.`school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -443,14 +442,14 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
 $sql = "SELECT `state`.`state_id` as `v`, `state`.`name` as `l`
-from `state` WHERE `state`.`country_id` = '".$data['country_id']."' 
+FROM `state` WHERE `state`.`country_id` = '".$data['country_id']."' 
 ";
 $stmtx = $database->executeQuery($sql);
 if ($stmtx->rowCount() > 0) {
 	$state_list = $stmtx->fetchAll(PDO::FETCH_ASSOC);
 }
 $sql = "SELECT `city`.`city_id` as `v`, `city`.`name` as `l`
-from `city` WHERE `city`.`country_id` = '".$data['country_id']."' 
+FROM `city` WHERE `city`.`country_id` = '".$data['country_id']."' 
 and (`city`.`state_id` = '".$data['state_id']."' or `city`.`state_id` = '' or `city`.`state_id` is null) 
 ";
 $stmtx = $database->executeQuery($sql);
@@ -623,7 +622,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql2 = "SELECT * from `country` WHERE `active` = true order by `order` asc
+        $sql2 = "SELECT * FROM `country` WHERE `active` = true ORDER BY `order` asc
 		";
 		echo $picoEdu->createFilterDb(
 			$sql2,
@@ -651,7 +650,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="state_id" id="state_id">
 		<option value="">- Pilih Provinsi -</option>
 			<?php
-            $sql2 = "SELECT * from `state` WHERE `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
+            $sql2 = "SELECT * FROM `state` WHERE `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' ORDER BY `type` asc, `name` asc
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -680,7 +679,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql2 = "SELECT * from `city` WHERE `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
+            $sql2 = "SELECT * FROM `city` WHERE `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) ORDER BY `type` asc, `name` asc 
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -741,17 +740,16 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
-(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
-(select count(distinct `edu_class`.`class_id`) from `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id`) as `class`,
-(select count(distinct `edu_teacher`.`teacher_id`) from `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id`) as `teacher`,
-(select `country`.`name` from `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
-(select `state`.`name` from `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
-(select `city`.`name` from `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
-from `edu_school` 
-where 1
-and `edu_school`.`school_id` = '$school_id'
+(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
+(select count(distinct `edu_class`.`class_id`) FROM `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id`) as `class`,
+(select count(distinct `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id`) as `teacher`,
+(select `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
+(select `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
+(select `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
+FROM `edu_school` 
+WHERE `edu_school`.`school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -915,16 +913,16 @@ $nt = '';
 
 
 $sql = "SELECT `edu_school`.* $nt,
-(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
-(select count(distinct `edu_teacher`.`teacher_id`) from `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id`) as `teacher`,
-(select `state`.`name` from `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
-(select `city`.`name` from `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`
-from `edu_school`
+(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
+(select count(distinct `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id`) as `teacher`,
+(select `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
+(select `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`
+FROM `edu_school`
 where 1 $sql_filter
-order by `edu_school`.`school_id` desc
+ORDER BY `edu_school`.`school_id` desc
 ";
 $sql_test = "SELECT `edu_school`.*
-from `edu_school`
+FROM `edu_school`
 where 1 $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);

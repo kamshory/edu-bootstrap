@@ -8,13 +8,13 @@ if (@$page_school_id) {
 	include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
 
 	$sql = "SELECT `edu_school`.*,
-	(select `country`.`name` from `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
-	(select `state`.`name` from `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
-	(select `city`.`name` from `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
-	(select count(distinct `edu_class`.`class_id`) from `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id` group by `edu_class`.`school_id` limit 0,1) as `num_class`,
-	(select count(distinct `edu_teacher`.`teacher_id`) from `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` group by `edu_teacher`.`school_id` limit 0,1) as `num_teacher`,
-	(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id` group by `edu_student`.`school_id` limit 0,1) as `num_student`
-	from `edu_school` 
+	(select `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
+	(select `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
+	(select `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
+	(select count(distinct `edu_class`.`class_id`) FROM `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id` group by `edu_class`.`school_id` limit 0,1) as `num_class`,
+	(select count(distinct `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` group by `edu_teacher`.`school_id` limit 0,1) as `num_teacher`,
+	(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id` group by `edu_student`.`school_id` limit 0,1) as `num_student`
+	FROM `edu_school` 
 	where 1
 	and `edu_school`.`school_id` = '$page_school_id'
 	";
@@ -83,7 +83,7 @@ if (@$page_school_id) {
 			if (@$_GET['option'] == 'edit') {
 				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
 				$sql = "SELECT `edu_student`.* 
-					from `edu_student` 
+					FROM `edu_student` 
 					WHERE `edu_student`.`school_id` = '$school_id'
 					and `edu_student`.`student_id` = '$student_id'
 					";
@@ -151,10 +151,10 @@ if (@$page_school_id) {
 				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
 				$nt = '';
 				$sql = "SELECT `edu_student`.* , `edu_school`.`name` as `school_name`, `edu_school`.`open` as `school_open`,
-					(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
-					(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
-					(select `edu_class`.`name` from `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
-					from `edu_student` 
+					(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
+					(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
+					(select `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
+					FROM `edu_student` 
 					left join(`edu_school`) on(`edu_school`.`school_id` = `edu_student`.`school_id`)
 					WHERE `edu_student`.`school_id` = '$school_id'
 					and `edu_student`.`student_id` = '$student_id'
@@ -327,11 +327,11 @@ if (@$page_school_id) {
 			$cfg->page_title = "Siswa " . $school_name;
 			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
 			$sql = "SELECT `edu_class`.*,
-				(select `edu_school_program`.`name` from `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
-				(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
-				from `edu_class`
+				(select `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
+				(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
+				FROM `edu_class`
 				WHERE `edu_class`.`active` = true and `edu_class`.`school_id` = '$page_school_id'
-				order by `edu_class`.`grade_id` asc, `edu_class`.`order` asc
+				ORDER BY `edu_class`.`grade_id` asc, `edu_class`.`order` asc
 				";
 			$stmt = $database->executeQuery($sql);
 			
@@ -383,7 +383,7 @@ if (@$page_school_id) {
 								$numstudent += $data['num_student'];
 							}
 							$sql = "SELECT *
-								from `edu_student` WHERE `edu_student`.`school_id` = '$page_school_id' 
+								FROM `edu_student` WHERE `edu_student`.`school_id` = '$page_school_id' 
 								";
 							$tsmt2 = $database->executeQuery($sql);
 							$numstudent2 = $stmt2->rowCount();
@@ -412,11 +412,11 @@ if (@$page_school_id) {
 				<?php
 			} else {
 				$sql = "SELECT `edu_school`.*, 
-					(select count(distinct `edu_student`.`student_id`) from `edu_student`
+					(select count(distinct `edu_student`.`student_id`) FROM `edu_student`
 					WHERE `edu_student`.`school_id` = `edu_school`.`school_id` and `edu_student`.`gender` = 'M') as `M`,
-					(select count(distinct `edu_student`.`student_id`) from `edu_student`
+					(select count(distinct `edu_student`.`student_id`) FROM `edu_student`
 					WHERE `edu_student`.`school_id` = `edu_school`.`school_id` and `edu_student`.`gender` = 'W') as `W`
-					from `edu_school`
+					FROM `edu_school`
 					WHERE `edu_school`.`school_id` = '$page_school_id' 
 					";
 					$stmt = $database->executeQuery($sql);
@@ -450,9 +450,9 @@ if (@$page_school_id) {
 			$cfg->page_title = "Guru " . $school_name;
 			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
 			$sql = "SELECT `edu_teacher`.*
-				from `edu_teacher`
+				FROM `edu_teacher`
 				WHERE `edu_teacher`.`active` = true and `edu_teacher`.`school_id` = '$page_school_id'
-				order by `edu_teacher`.`name` asc
+				ORDER BY `edu_teacher`.`name` asc
 				";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
@@ -505,7 +505,7 @@ if (@$page_school_id) {
 			$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
 			if ($article_id) {
 				$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
-					from `edu_article` 
+					FROM `edu_article` 
 					left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 					WHERE `edu_article`.`article_id` = '$article_id' and `edu_article`.`school_id` = '$page_school_id' and `edu_article`.`active` = true ";
 					$stmt = $database->executeQuery($sql);
@@ -536,10 +536,10 @@ if (@$page_school_id) {
 				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
 				$sql_filter_article = "";
 				$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
-					from `edu_article` 
+					FROM `edu_article` 
 					left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 					WHERE `edu_article`.`active` = true and `edu_article`.`school_id` = '$page_school_id'
-					order by `edu_article`.`article_id` desc
+					ORDER BY `edu_article`.`article_id` desc
 					";
 				$stmt = $database->executeQuery($sql);
 				if ($stmt->rowCount() > 0) {
@@ -625,9 +625,9 @@ if (@$page_school_id) {
 			$nt = '';
 
 			$sql = "SELECT `edu_test`.*
-				from `edu_test`
+				FROM `edu_test`
 				WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$page_school_id' 
-				order by `edu_test`.`test_id` desc
+				ORDER BY `edu_test`.`test_id` desc
 				";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {

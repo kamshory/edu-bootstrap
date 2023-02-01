@@ -160,7 +160,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 		foreach($tests as $key=>$val)
 		{
 			$test_id = addslashes($val);
-			$sql = "SELECT * from `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
+			$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)
 			{
@@ -197,7 +197,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 		$time_create = $time_edit = $picoEdu->getLocalDateTime();		
 		
-		$sql = "SELECT * from `edu_test_collection` WHERE `test_collection_id` = '$id' and `active` = true ";
+		$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' and `active` = true ";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
@@ -208,8 +208,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			{
 	
 				$sql = "SELECT `edu_test`.*, 
-				(select `edu_question`.`order` from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` order by `order` desc limit 0,1) as `order`
-				from `edu_test`
+				(select `edu_question`.`order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `order` desc limit 0,1) as `order`
+				FROM `edu_test`
 				WHERE `edu_test`.`test_id` = '$test_id' and `edu_test`.`school_id` = '$school_id'
 				";
 				$stmt = $database->executeQuery($sql);
@@ -368,7 +368,7 @@ $selection = kh_filter_input(INPUT_GET, 'selection', FILTER_SANITIZE_STRING_NEW)
 $name = "";
 if($collection)
 {
-	$sql = "SELECT * from `edu_test_collection` WHERE `test_collection_id` = '$collection' ";
+	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$collection' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -376,7 +376,7 @@ if($collection)
 	}
 }
 
-$sqlc = "SELECT `class_id`, `name` from `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' ORDER BY `order` asc ";
 $stmt = $database->executeQuery($sqlc);
 if($stmt->rowCount() > 0)
 {
@@ -413,7 +413,7 @@ input#duration{
         <td><select class="form-control input-select" name="school_program_id" id="school_program_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT `edu_school_program`.* from `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' order by `name` asc ";
+		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` asc ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -435,7 +435,7 @@ input#duration{
 		</td><td><select class="form-control input-select" name="teacher_id" id="teacher_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT `edu_teacher`.* from `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' order by `name` asc ";
+		$sql2 = "SELECT `edu_teacher`.* FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' ORDER BY `name` asc ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -703,16 +703,15 @@ else if(@$_GET['option'] == 'edit')
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* 
-from `edu_test` 
-where 1
-and `edu_test`.`test_id` = '$edit_key' and `edu_test`.`school_id` = '$school_id'
+FROM `edu_test` 
+WHERE `edu_test`.`test_id` = '$edit_key' and `edu_test`.`school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$sqlc = "SELECT `class_id`, `name` from `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' ORDER BY `order` asc ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -863,7 +862,7 @@ $(document).ready(function(e) {
         <td><select class="form-control input-select" name="school_program_id" id="school_program_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT `edu_school_program`.* from `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' order by `name` asc ";
+		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` asc ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -886,7 +885,7 @@ $(document).ready(function(e) {
         <td><select class="form-control input-select" name="teacher_id" id="teacher_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT `edu_teacher`.* from `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' order by `name` asc ";
+		$sql2 = "SELECT `edu_teacher`.* FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' ORDER BY `name` asc ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -1040,12 +1039,11 @@ $array_class = $picoEdu->getArrayClass($school_id);
 $edit_key = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
-(select `edu_teacher`.`name` from `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
-(select `member`.`name` from `member` WHERE `member`.`member_id` = `edu_test`.`member_create`) as `member_create`,
-(select `member`.`name` from `member` WHERE `member`.`member_id` = `edu_test`.`member_edit`) as `member_edit`
-from `edu_test` 
-where 1
-and `edu_test`.`test_id` = '$edit_key' and `edu_test`.`school_id` = '$school_id'
+(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
+(select `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_create`) as `member_create`,
+(select `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_edit`) as `member_edit`
+FROM `edu_test` 
+WHERE `edu_test`.`test_id` = '$edit_key' and `edu_test`.`school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -1272,7 +1270,7 @@ window.onload = function()
     
 	<option value="">- Pilih Kelas -</option>
     <?php 
-	$sql2 = "SELECT * from `edu_class` WHERE `school_id` = '$school_id' ";
+	$sql2 = "SELECT * FROM `edu_class` WHERE `school_id` = '$school_id' ";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -1298,7 +1296,7 @@ window.onload = function()
     <select class="form-control input-select" name="teacher_id" id="teacher_id">
     <option value="">- Pilih Guru -</option>
     <?php 
-	$sql2 = "SELECT * from `edu_teacher` WHERE `school_id` = '$school_id' and `active` = true order by `name` asc ";	
+	$sql2 = "SELECT * FROM `edu_teacher` WHERE `school_id` = '$school_id' and `active` = true ORDER BY `name` asc ";	
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -1350,13 +1348,13 @@ $nt = '';
 
 
 $sql = "SELECT `edu_test`.* $nt,
-(select `edu_teacher`.`name` from `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`
-from `edu_test`
+(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`
+FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
-order by `edu_test`.`test_id` desc
+ORDER BY `edu_test`.`test_id` desc
 ";
 $sql_test = "SELECT `edu_test`.*
-from `edu_test`
+FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
 ";
 

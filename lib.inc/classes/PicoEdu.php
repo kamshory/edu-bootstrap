@@ -121,7 +121,7 @@ class PicoEdu //NOSONAR
 	}
 	public function get_country_name($country_id)
 	{
-		$sql = "SELECT `name` from `country` WHERE `country_id` = '$country_id' ";
+		$sql = "SELECT `name` FROM `country` WHERE `country_id` = '$country_id' ";
 		$stmt = $this->database->executeQuery($sql);
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		return @$data['name'];
@@ -184,7 +184,7 @@ class PicoEdu //NOSONAR
 		}
 		$username = addslashes($username);
 		$sql = "SELECT `member`.* 
-			from `member` 
+			FROM `member` 
 			WHERE `name` like '$name' and `birth_day` like '$birth_day' 
 			";
 		$this->log(__LINE__." ".$sql);
@@ -224,7 +224,7 @@ class PicoEdu //NOSONAR
 		$username = $this->getValidUsername($name);
 		if ($username != '') {
 			$sql = "SELECT `member_id`, `email`, `username`
-			from `member`
+			FROM `member`
 			WHERE `username` like '$username'
 			";
 			$stmt = $this->database->executeQuery($sql);
@@ -342,7 +342,7 @@ class PicoEdu //NOSONAR
 	
 	public function getArrayClass($school_id)
 	{
-		$sql = "SELECT `class_id`, `name` from `edu_class` WHERE `school_id` = '$school_id' ";
+		$sql = "SELECT `class_id`, `name` FROM `edu_class` WHERE `school_id` = '$school_id' ";
 		$stmt = $this->database->executeQuery($sql);
 		$ret = array();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -413,10 +413,10 @@ class PicoEdu //NOSONAR
 				$option_id = $question[1] * 1;
 				$sql2 = "SELECT `edu_option`.`question_id`, `edu_option`.`option_id`, 
 				(select `edu_question`.`basic_competence` 
-					from `edu_question` 
+					FROM `edu_question` 
 					WHERE `edu_question`.`question_id` = `edu_option`.`question_id`) as `basic_competence`,
 				`edu_option`.`score`
-				from `edu_option`
+				FROM `edu_option`
 				WHERE `edu_option`.`question_id` = '$question_id' and `edu_option`.`option_id` = '$option_id';
 				";
 				$stmt = $this->database->executeQuery($sql2);
@@ -475,7 +475,7 @@ class PicoEdu //NOSONAR
 	}
 	public function getBasicCompetence($test_id)
 	{
-		$sql = "SELECT `basic_competence` from `edu_question` WHERE `test_id` = '$test_id' group by `basic_competence` ";
+		$sql = "SELECT `basic_competence` FROM `edu_question` WHERE `test_id` = '$test_id' group by `basic_competence` ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
 			$result = array();
@@ -534,7 +534,7 @@ class PicoEdu //NOSONAR
 	}
 	public function writeprofile($school, $name, $value)
 	{
-		$sql = "SELECT * from `profile` WHERE `name` = '$name' and `school_id` = '$school' ";
+		$sql = "SELECT * FROM `profile` WHERE `name` = '$name' and `school_id` = '$school' ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
 			$sql = "UPDATE `profile` SET `value` = '$value' WHERE `name` = '$name' and `school_id` = '$school'";
@@ -548,7 +548,7 @@ class PicoEdu //NOSONAR
 	}
 	public function getProfile($school, $name, $default = "")
 	{
-		$sql = "SELECT * from `profile` WHERE `name` = '$name' and `school_id` = '$school' ";
+		$sql = "SELECT * FROM `profile` WHERE `name` = '$name' and `school_id` = '$school' ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -564,7 +564,7 @@ class PicoEdu //NOSONAR
 	}
 	public function getApplicationVersion()
 	{
-		$sql = "SELECT `version_id` from `version` WHERE `active` = true and `current_version` = '1' ";
+		$sql = "SELECT `version_id` FROM `version` WHERE `active` = true and `current_version` = '1' ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -584,7 +584,7 @@ class PicoEdu //NOSONAR
 	{
 		$min = pow(10, $length);
 		$max = ($min * 10) - 1;
-		$sql = "SELECT `token` from `edu_token` WHERE `active` = true
+		$sql = "SELECT `token` FROM `edu_token` WHERE `active` = true
 		";
 		$stmt = $this->database->executeQuery($sql);
 		$active_token = array();
@@ -621,7 +621,7 @@ class PicoEdu //NOSONAR
 		$this->database->executeInsert($sql, true);
 
 		$sql = "SELECT * 
-		from `edu_invalid_signin` 
+		FROM `edu_invalid_signin` 
 		WHERE `member_id` = '$member_id' and `signin_type` = '$signin_type' and `signin_time` >= '$start_time'
 		";
 		$stmt = $this->database->executeQuery($sql);
@@ -651,7 +651,7 @@ class PicoEdu //NOSONAR
 	}
 	public function checkStudent($school_id, $reg_number, $reg_number_national, $name) //NOSONAR
 	{
-		$sql = "SELECT * from `edu_student` 
+		$sql = "SELECT * FROM `edu_student` 
 		WHERE `school_id` = '$school_id' 
 		and (`reg_number` like '$reg_number' and `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
@@ -659,7 +659,7 @@ class PicoEdu //NOSONAR
 	}
 	public function checkTeacher($school_id, $reg_number, $reg_number_national, $name) //NOSONAR
 	{
-		$sql = "SELECT * from `edu_teacher` 
+		$sql = "SELECT * FROM `edu_teacher` 
 		WHERE `school_id` = '$school_id' 
 		and (`reg_number` like '$reg_number' and `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
@@ -668,7 +668,7 @@ class PicoEdu //NOSONAR
 
 	public function getTextScore($answer_id, $compress = false) //NOSONAR
 	{
-		$sql = "SELECT `edu_answer`.`answer` from `edu_answer` WHERE `edu_answer`.`answer_id` = '$answer_id' ";
+		$sql = "SELECT `edu_answer`.`answer` FROM `edu_answer` WHERE `edu_answer`.`answer_id` = '$answer_id' ";
 		$stmt = $this->database->executeQuery($sql);
 		$result = array();
 		if ($stmt->rowCount() > 0) {
@@ -682,10 +682,10 @@ class PicoEdu //NOSONAR
 					$option_id = $question[1] * 1;
 					$sql2 = "SELECT `edu_option`.`question_id`, `edu_option`.`option_id`, 
 					(select `edu_question`.`basic_competence` 
-						from `edu_question` 
+						FROM `edu_question` 
 						WHERE `edu_question`.`question_id` = `edu_option`.`question_id`) as `basic_competence`,
 					`edu_option`.`score`
-					from `edu_option`
+					FROM `edu_option`
 					WHERE `edu_option`.`question_id` = '$question_id' and `edu_option`.`option_id` = '$option_id';
 					";
 					$stmt2 = $this->database->executeQuery($sql2);
@@ -886,7 +886,7 @@ class PicoEdu //NOSONAR
 
 	public function sortQuestion($test_id)
 	{
-		$sql = "SELECT `question_id` from `edu_question` WHERE `test_id` = '$test_id' order by `order` asc ";
+		$sql = "SELECT `question_id` FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `order` asc ";
 		$stmt = $this->database->executeQuery($sql);
 		$ret = array();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -1025,7 +1025,7 @@ class PicoEdu //NOSONAR
 		$school_id = addslashes($school_id);
 
 		$sql = "SELECT `edu_school_program`.`school_program_id` 
-		from `edu_school_program`
+		FROM `edu_school_program`
 		WHERE `edu_school_program`.`name` like '$school_program'
 		and `edu_school_program`.`school_id` = '$school_id'
 		limit 0, 1";
@@ -1060,7 +1060,7 @@ class PicoEdu //NOSONAR
 		$school_id = addslashes($school_id);
 
 		$sql = "SELECT `edu_class`.`class_id` 
-		from `edu_class`
+		FROM `edu_class`
 		WHERE `edu_class`.`name` like '$class'
 		and `edu_class`.`school_id` = '$school_id'
 		limit 0, 1";

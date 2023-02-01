@@ -28,7 +28,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 	}
 	$end = $picoEdu->getLocalDateTime();
 	
-	$sql = "SELECT * from `edu_test` WHERE `test_id` = '$test_id' ";
+	$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' ";
 
 	$data = $database->executeQuery($sql)->fetch(PDO::FETCH_ASSOC);
 	$test_name = $data['name'];
@@ -61,7 +61,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 		$answer = addslashes($value);
 		$answer_arr[] = "[".$soal.",".$answer."]";
 		
-		$sql = "SELECT * from `edu_option` WHERE `option_id` = '$answer' ";
+		$sql = "SELECT * FROM `edu_option` WHERE `option_id` = '$answer' ";
 		$dt = $database->executeQuery($sql)->fetch(PDO::FETCH_ASSOC);
 		
 		if($dt['score']>0)
@@ -89,7 +89,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 	$answer_str = addslashes(implode(",", $answer_arr)); // catatan answer
 	if($data['has_limits'])
 	{
-		$sql = "SELECT * from `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' ";
+		$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' ";
 		$nujian = $database->executeQuery($sql)->rowCount();
 		if($nujian < $data['trial_limits'])
 		{
@@ -150,7 +150,7 @@ $sql_filter .= "
 $now = $picoEdu->getLocalDateTime();
 
 $sql = "SELECT `edu_test`.*  
-from `edu_test` 
+FROM `edu_test` 
 WHERE `edu_test`.`active` = true
 and `edu_test`.`test_id` = '$test_id' 
 and (`edu_test`.`test_availability` = 'F' or `edu_test`.`available_to` >= '$now')
@@ -193,7 +193,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 ?>
 <div class="info">
 <?php
-$sql = "SELECT * from `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' order by `start` desc ";
+$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' ORDER BY `start` desc ";
 $stmt = $database->executeQuery($sql);
 $ntest = $stmt->rowCount();
 if($ntest > 0)
@@ -222,7 +222,7 @@ else if(@$_GET['login-to-test'])
 $dur_obj = $picoEdu->secondsToTime($data['duration']);
 if($data['has_limits'])
 {
-	$sql = "SELECT * from `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' order by `start` desc ";
+	$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' ORDER BY `start` desc ";
 	$stmt = $database->executeQuery($sql);
 	$ntest = $stmt->rowCount();
 	if($ntest < $data['trial_limits'])
@@ -256,16 +256,16 @@ if(empty($question_package))
 	if($data['random'])
 	{	
 		$sql = "SELECT `question_id` , rand() as `rand`
-		from `edu_question` WHERE `test_id` = '$test'
-		order by `rand` asc
+		FROM `edu_question` WHERE `test_id` = '$test'
+		ORDER BY `rand` asc
 		limit 0, $number_of_question
 		";
 	}
 	else
 	{
 		$sql = "SELECT `question_id` , `order`
-		from `edu_question` WHERE `test_id` = '$test'
-		order by `order` asc, `question_id` asc
+		FROM `edu_question` WHERE `test_id` = '$test'
+		ORDER BY `order` asc, `question_id` asc
 		limit 0, $number_of_question
 		";
 	}
@@ -290,7 +290,7 @@ if(isset($_SESSION['session_test'][$student_id][$test]))
 	$arr = explode('"start"', $str);
 	$key_test = rot13("i:$test;".$arr[0].'"start";s:19:"');
 	
-	$sql = "SELECT * from `sessions` WHERE `xdata` like '%$key_username%' and `xdata` like '%$key_test%' and `id` != '$session_id' ";
+	$sql = "SELECT * FROM `sessions` WHERE `xdata` like '%$key_username%' and `xdata` like '%$key_test%' and `id` != '$session_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{

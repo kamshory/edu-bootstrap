@@ -81,9 +81,9 @@ h3{
 <div class="main">
 <?php
     $sql = "SELECT `edu_teacher`.* 
-    from `edu_teacher` 
+    FROM `edu_teacher` 
     WHERE `edu_teacher`.`active` = true
-    order by `edu_teacher`.`name` asc 
+    ORDER BY `edu_teacher`.`name` asc 
     ";
     $stmt = $database->executeQuery($sql);
     if ($stmt->rowCount() > 0) {

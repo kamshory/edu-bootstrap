@@ -89,9 +89,8 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $state_list = array();
 $city_list = array();
 $sql = "SELECT `edu_school`.* 
-from `edu_school` 
-where 1
-and `edu_school`.`school_id` = '$school_id'
+FROM `edu_school` 
+WHERE `edu_school`.`school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -99,13 +98,13 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
 $sql = "SELECT `state`.`state_id` as `v`, `state`.`name` as `l`
-from `state` WHERE `state`.`country_id` = '".$data['country_id']."' 
+FROM `state` WHERE `state`.`country_id` = '".$data['country_id']."' 
 ";
 $stmt = $database->executeQuery($sql);
 $state_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $sql = "SELECT `city`.`city_id` as `v`, `city`.`name` as `l`
-from `city` WHERE `city`.`country_id` = '".$data['country_id']."' 
+FROM `city` WHERE `city`.`country_id` = '".$data['country_id']."' 
 and (`city`.`state_id` = '".$data['state_id']."' or `city`.`state_id` = '' or `city`.`state_id` is null) 
 ";
 $stmt = $database->executeQuery($sql);
@@ -288,7 +287,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql = "SELECT * from `country` WHERE `active` = true order by `order` asc
+        $sql = "SELECT * FROM `country` WHERE `active` = true ORDER BY `order` asc
 		";
 		$stmt = $database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
@@ -309,7 +308,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="state_id" id="state_id">
 		<option value="">- Pilih Provinsi -</option>
 			<?php
-            $sql = "SELECT * from `state` WHERE `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
+            $sql = "SELECT * FROM `state` WHERE `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' ORDER BY `type` asc, `name` asc
             ";
             $stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
@@ -331,7 +330,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql = "SELECT * from `city` WHERE `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
+            $sql = "SELECT * FROM `city` WHERE `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) ORDER BY `type` asc, `name` asc 
             ";
             $stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
@@ -384,17 +383,16 @@ else
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
-(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
-(select `country`.`name` from `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
-(select `state`.`name` from `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
-(select `city`.`name` from `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`,
-(select `edu_admin3`.`name` from `edu_admin` as `edu_admin3` WHERE `edu_admin3`.`admin_id` = `edu_school`.`admin_import_first` limit 0,1) as `admin_import_first`,
-(select `edu_admin4`.`name` from `edu_admin` as `edu_admin4` WHERE `edu_admin4`.`admin_id` = `edu_school`.`admin_import_last` limit 0,1) as `admin_import_last`
-from `edu_school` 
-where 1
-and `edu_school`.`school_id` = '$school_id'
+(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
+(select `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
+(select `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
+(select `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`,
+(select `edu_admin3`.`name` FROM `edu_admin` as `edu_admin3` WHERE `edu_admin3`.`admin_id` = `edu_school`.`admin_import_first` limit 0,1) as `admin_import_first`,
+(select `edu_admin4`.`name` FROM `edu_admin` as `edu_admin4` WHERE `edu_admin4`.`admin_id` = `edu_school`.`admin_import_last` limit 0,1) as `admin_import_last`
+FROM `edu_school` 
+WHERE `edu_school`.`school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

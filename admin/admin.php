@@ -86,7 +86,7 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
-	$sql = "SELECT * from `edu_school` WHERE `school_id` = '$school_id' ";
+	$sql = "SELECT * FROM `edu_school` WHERE `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$country_id = $data['country_id'];
@@ -247,7 +247,7 @@ else if(@$_GET['option'] == 'edit')
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_admin`.* 
-from `edu_admin` 
+FROM `edu_admin` 
 where 1=1 
 and `edu_admin`.`school_id` = '$school_id' 
 and `edu_admin`.`admin_id` = '$edit_key' 
@@ -333,9 +333,9 @@ else if(@$_GET['option'] == 'detail')
 	$edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);
 	$nt = '';
 	$sql = "SELECT `edu_admin`.* $nt,
-	(select `edu_admin1`.`name` from `edu_admin` as `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) as `admin_create`,
-	(select `edu_admin2`.`name` from `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
-	from `edu_admin` 
+	(select `edu_admin1`.`name` FROM `edu_admin` as `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) as `admin_create`,
+	(select `edu_admin2`.`name` FROM `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
+	FROM `edu_admin` 
 	WHERE `edu_admin`.`school_id` = '$school_id' 
 	and `edu_admin`.`admin_id` = '$edit_key' and (`admin_level` != '1' or `admin_id` = '$my_admin') 
 	";
@@ -457,12 +457,12 @@ else
 	$nt = '';
 
 	$sql = "SELECT `edu_admin`.* $nt
-	from `edu_admin`
+	FROM `edu_admin`
 	WHERE `edu_admin`.`school_id` = '$school_id' $sql_filter
-	order by `edu_admin`.`admin_id` asc
+	ORDER BY `edu_admin`.`admin_id` asc
 	";
 	$sql_test = "SELECT `edu_admin`.*
-	from `edu_admin`
+	FROM `edu_admin`
 	WHERE `edu_admin`.`school_id` = '$school_id' $sql_filter
 	";
 	$stmt = $database->executeQuery($sql_test);

@@ -15,13 +15,13 @@ if(@$_GET['option'] == 'select')
 	
 	select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 	`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`, `edu_member_school`.`role`
-	from `edu_member_school`
+	FROM `edu_member_school`
 	inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 	WHERE `edu_member_school`.`member_id` = '$student_id' and `edu_member_school`.`role` = 'S'
 	) as `edu_school3`
 	WHERE `edu_school3`.`school_id` = '$school_id'
 	having `edu_school3`.`role` = 'S'
-	order by `edu_school3`.`open` asc, `edu_school3`.`name` asc
+	ORDER BY `edu_school3`.`open` asc, `edu_school3`.`name` asc
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -41,15 +41,14 @@ include_once dirname((__FILE__))."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_INT);
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
-(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
-(select `country`.`name` from `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
-(select `state`.`name` from `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
-(select `city`.`name` from `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
-from `edu_school` 
-where 1
-and `edu_school`.`school_id` = '$edit_key'
+(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
+(select `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
+(select `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
+(select `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
+FROM `edu_school` 
+WHERE `edu_school`.`school_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -175,13 +174,13 @@ select `edu_school3`.* from(
 
 select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 `edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`, `edu_member_school`.`role`
-from `edu_member_school`
+FROM `edu_member_school`
 inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 WHERE `edu_member_school`.`member_id` = '$student_id' and `edu_member_school`.`role` = 'S'
 ) as `edu_school3`
 where 1 $sql_filter
 having `edu_school3`.`role` = 'S' and `edu_school3`.`open` = '1'
-order by `edu_school3`.`name` asc
+ORDER BY `edu_school3`.`name` asc
 ";
 $sql_test = $sql;
 $stmt = $database->executeQuery($sql_test);

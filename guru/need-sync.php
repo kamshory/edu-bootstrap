@@ -11,12 +11,12 @@ if(isset($_POST['sync']))
 	if($password != '')
 	{
 		$sql = "SELECT `edu_teacher`.*
-		from `edu_teacher` 
+		FROM `edu_teacher` 
 		WHERE `edu_teacher`.`teacher_id` = '$teacher_id' and `edu_teacher`.`email` like '$email' and `edu_teacher`.`auth` like '$auth' ";
 		$res = mysql_query($sql);
 		if(mysql_num_rows($res))
 		{
-			$sql = "SELECT * from `member` WHERE `email` like '$email' and `member_id` != '$teacher_id' ";
+			$sql = "SELECT * FROM `member` WHERE `email` like '$email' and `member_id` != '$teacher_id' ";
 			$res = mysql_query($sql);
 			if(!mysql_num_rows($res))
 			{
@@ -25,7 +25,7 @@ if(isset($_POST['sync']))
 				WHERE `member_id` = '$teacher_id' ";
 				mysql_query($sql);
 				$sql = "SELECT `username`, `member_id`
-				from `member`
+				FROM `member`
 				WHERE `email` like '$email' and `password` like md5(md5('$password'))
 				";
 				$res = mysql_query($sql);
@@ -51,7 +51,7 @@ $email = kh_filter_input(INPUT_GET, 'email', FILTER_SANITIZE_EMAIL);
 $auth = kh_filter_input(INPUT_GET, 'auth', FILTER_SANITIZE_STRING_NEW);
 
 $sql = "SELECT `edu_teacher`.*
-from `edu_teacher` 
+FROM `edu_teacher` 
 WHERE `edu_teacher`.`teacher_id` = '$teacher_id' and `edu_teacher`.`email` like '$email' and `edu_teacher`.`auth` like '$auth' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

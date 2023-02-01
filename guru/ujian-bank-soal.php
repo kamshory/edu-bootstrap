@@ -36,9 +36,9 @@ $grade_id = kh_filter_input(INPUT_GET, 'grade_id', FILTER_SANITIZE_NUMBER_UINT);
 				{
 					$filter = "";
 				}
-				$sql = "SELECT `edu_test_collection`.* from `edu_test_collection` 
+				$sql = "SELECT `edu_test_collection`.* FROM `edu_test_collection` 
 				WHERE `edu_test_collection`.`active` = true $filter
-				order by `test_collection_id` desc
+				ORDER BY `test_collection_id` desc
 				";
 				$stmt2 = $database->executeQuery($sql);
 				if($stmt2->rowCount() > 0)
@@ -68,11 +68,11 @@ $grade_id = kh_filter_input(INPUT_GET, 'grade_id', FILTER_SANITIZE_NUMBER_UINT);
         	<?php
 
 			$sql = "SELECT `edu_test`.*,
-			(select `edu_teacher`.`name` from `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
-			(select count(distinct `edu_question`.`question_id`) from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `question`
-			from `edu_test`
+			(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
+			(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `question`
+			FROM `edu_test`
 			WHERE `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id'
-			order by `edu_test`.`test_id` desc
+			ORDER BY `edu_test`.`test_id` desc
 			";
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)

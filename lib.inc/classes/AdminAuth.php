@@ -32,7 +32,7 @@ class AdminAuth
 		`edu_school`.`name` as `school_name`, `edu_school`.`school_code` as `school_code`, 
 		`edu_school`.`school_id` as `real_school_id`, `edu_school`.`use_token`, `edu_admin`.`admin_level`,
 		`edu_school`.`use_token`
-		from `edu_admin` 
+		FROM `edu_admin` 
 		left join(`edu_school`) on(`edu_school`.`school_id` = `edu_admin`.`school_id`)
 		WHERE `edu_admin`.`username` like '$username' and `edu_admin`.`password` = md5('$password') 
 		and `edu_admin`.`active` = true

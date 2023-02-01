@@ -12,7 +12,7 @@ if(isset($_POST['username']))
 	if($username != '')
 	{
 		$sql = "SELECT `member_id`, `email`, `username`
-		from `member`
+		FROM `member`
 		WHERE `username` like '$username'
 		and `member_id` != '$mlid'
 		";

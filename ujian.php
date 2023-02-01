@@ -30,8 +30,8 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 	`edu_school`.`active` as `school_active`,
 	`edu_student`.`student_id` as `student_id`,
 	`edu_member_school`.`member_id` as `student_in_school_id`,
-	(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`student_id` = '$member_id' and `edu_member_school`.`role` = 'S') as `student_registered`
-	from `edu_test` 
+	(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`student_id` = '$member_id' and `edu_member_school`.`role` = 'S') as `student_registered`
+	FROM `edu_test` 
 	inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
 	left join(`edu_student`) on(`edu_student`.`school_id` = `edu_test`.`school_id` and `edu_student`.`student_id` = '$member_id')
 	left join(`edu_member_school`) on(`edu_member_school`.`school_id` = `edu_test`.`school_id` and `edu_member_school`.`member_id` = '$member_id' and `edu_member_school`.`role` = 'S')
@@ -54,7 +54,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 		$ref = "$school_code/test/?option=login&test_id=$test_id";
 	
 		$sql = "SELECT `edu_member_school`.*
-		from `edu_member_school`
+		FROM `edu_member_school`
 		WHERE `edu_member_school`.`member_id` = '$member_id' 
 		and `edu_member_school`.`school_id` = '$school_id' 
 		and `edu_member_school`.`role` = 'S'
@@ -79,7 +79,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 		$reg_number = '';
 		$reg_number_national = '';
 
-		$sql = "SELECT * from `member` WHERE `member_id` = '$member_id' ";
+		$sql = "SELECT * FROM `member` WHERE `member_id` = '$member_id' ";
 
 		$stmt = $database->executeQuery($sql);
 
@@ -137,8 +137,8 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 		`edu_school`.`active` as `school_active`,
 		`edu_student`.`student_id` as `student_id`,
 		`edu_member_school`.`member_id` as `student_in_school_id`,
-		(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`student_id` = '$member_id' and `edu_member_school`.`role` = 'S') as `student_registered`
-		from `edu_test` 
+		(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`student_id` = '$member_id' and `edu_member_school`.`role` = 'S') as `student_registered`
+		FROM `edu_test` 
 		inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
 		left join(`edu_student`) on(`edu_student`.`school_id` = `edu_test`.`school_id` and `edu_student`.`student_id` = '$member_id')
 		left join(`edu_member_school`) on(`edu_member_school`.`school_id` = `edu_test`.`school_id` and `edu_member_school`.`member_id` = '$member_id' and `edu_member_school`.`role` = 'S')
@@ -168,7 +168,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 			{
 
 				$sqlx = "SELECT `edu_student`.*
-				from `edu_student`
+				FROM `edu_student`
 				WHERE `student_id` = '$student_id' and `prevent_change_school` = '1'
 				";
 				if($database->executeQuery($sqlx)->rowCount() > 0)
@@ -200,7 +200,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 			else if($data['student_registered'])
 			{
 				$sqlx = "SELECT `edu_student`.*
-				from `edu_student`
+				FROM `edu_student`
 				WHERE `student_id` = '$student_id' and `prevent_change_school` = '1'
 				";
 				if($database->executeQuery($sqlx)->rowCount() > 0)
@@ -278,12 +278,12 @@ $school_grade = array(
         <?php
 		$school_data = array();
 		$sql = "SELECT `edu_test`.*, `edu_test`.`name` as `test_name`, `edu_school`.`name` as `school_name`, `edu_school`.`school_grade_id`
-		from `edu_test`
+		FROM `edu_test`
 		inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
 		where 1 
 		and `edu_test`.`open` = '1' and `edu_test`.`active` = true
 		and `edu_school`.`open` = '1' and `edu_school`.`active` = true
-		order by `edu_school`.`school_grade_id` asc, `edu_test`.`subject` asc, `edu_test`.`name` asc
+		ORDER BY `edu_school`.`school_grade_id` asc, `edu_test`.`subject` asc, `edu_test`.`name` asc
 		";
 		$stmt = $database->executeQuery($sql);
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

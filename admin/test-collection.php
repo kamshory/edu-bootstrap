@@ -142,9 +142,8 @@ else if(@$_GET['option'] == 'edit')
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
 $sql = "SELECT `edu_test_collection`.* 
-from `edu_test_collection` 
-where 1
-and `edu_test_collection`.`test_collection_id` = '$edit_key'
+FROM `edu_test_collection` 
+WHERE `edu_test_collection`.`test_collection_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -232,9 +231,8 @@ $edit_key = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUM
 $nt = '';
 $nt = $picoEdu->createSubSelect('edu_test_collection', array('grade_id'=>'grade_id'));
 $sql = "SELECT `edu_test_collection`.* $nt
-from `edu_test_collection` 
-where 1
-and `edu_test_collection`.`test_collection_id` = '$edit_key'
+FROM `edu_test_collection` 
+WHERE `edu_test_collection`.`test_collection_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -342,12 +340,12 @@ $nt = '';
 $nt = $picoEdu->createSubSelect('edu_test_collection', array('grade_id'=>'grade_id'));
 
 $sql = "SELECT `edu_test_collection`.* $nt
-from `edu_test_collection`
+FROM `edu_test_collection`
 where 1 $sql_filter
-order by `edu_test_collection`.`test_collection_id` asc
+ORDER BY `edu_test_collection`.`test_collection_id` asc
 ";
 $sql_test = "SELECT `edu_test_collection`.*
-from `edu_test_collection`
+FROM `edu_test_collection`
 where 1 $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);

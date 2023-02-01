@@ -27,8 +27,8 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 	$picoEdu->sortQuestion($test_id);
 	
 	$sql = "SELECT `edu_test`.*, 
-	(select `edu_question`.`order` from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` order by `order` desc limit 0,1) as `order`
-	from `edu_test`
+	(select `edu_question`.`order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `order` desc limit 0,1) as `order`
+	FROM `edu_test`
 	WHERE `edu_test`.`test_id` = '$test_id'
 	";
 	$stmt = $database->executeQuery($sql);
@@ -310,11 +310,10 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
-(select `edu_teacher`.`name` from `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
-(select count(distinct `edu_question`.`question_id`) from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `koleksi_question`
-from `edu_test` 
-where 1
-and `edu_test`.`test_id` = '$edit_key' and `school_id` = '$school_id'
+(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
+(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `koleksi_question`
+FROM `edu_test` 
+WHERE `edu_test`.`test_id` = '$edit_key' and `school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -434,7 +433,7 @@ window.onload = function()
     <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-	$sql2 = "SELECT * from `edu_class` WHERE `school_id` = '$school_id' ";
+	$sql2 = "SELECT * FROM `edu_class` WHERE `school_id` = '$school_id' ";
 
 	echo $picoEdu->createFilterDb(
 		$sql2,
@@ -482,14 +481,14 @@ $nt = '';
 
 
 $sql = "SELECT `edu_test`.* $nt,
-(select `edu_teacher`.`name` from `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
-(select count(distinct `edu_question`.`question_id`) from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
-from `edu_test`
+(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
+(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
+FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
-order by `edu_test`.`test_id` desc
+ORDER BY `edu_test`.`test_id` desc
 ";
 $sql_test = "SELECT `edu_test`.`test_id`
-from `edu_test`
+FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
 ";
 

@@ -148,7 +148,7 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/article-editor.js"></script>
 
 <?php
-$sqlc = "SELECT `class_id`, `name` from `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' ORDER BY `order` asc ";
 $stmt = $database->executeQuery($sqlc);
 		$arrc = array();
 if($stmt->rowCount() > 0)
@@ -193,14 +193,14 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 
 <?php
 $article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
-$sql = "SELECT * from `edu_article` WHERE `article_id` = '$article_id' and `school_id` = '$school_id' ";
+$sql = "SELECT * FROM `edu_article` WHERE `article_id` = '$article_id' and `school_id` = '$school_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <?php
-$sqlc = "SELECT `class_id`, `name` from `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' ORDER BY `order` asc ";
 $stmt = $database->executeQuery($sqlc);
 $arrc = array();
 if($stmt->rowCount() > 0)
@@ -245,7 +245,7 @@ if(isset($school_id))
 	$sql_filter_article .= " and `edu_article`.`school_id` = '$school_id' ";
 }
 $sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
-from `edu_article` 
+FROM `edu_article` 
 left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 where (`edu_article`.`school_id` = '$school_id') $sql_filter_article ";
 include_once dirname(__FILE__)."/lib.inc/header.php";
@@ -335,7 +335,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "SELECT * from `edu_class` WHERE `active` = true and `school_id` = '$school_id' order by `order` asc ";
+    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' ORDER BY `order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -381,16 +381,16 @@ $sql_filter .= " and (`edu_article`.`school_id` = '$school_id' )";
 $nt = '';
 
 $sql = "SELECT `edu_article`.* , `edu_teacher`.`name` as `teacher_create`, `edu_admin`.`name` as `admin_create`
-from `edu_article` 
+FROM `edu_article` 
 left join(`edu_teacher`) on(`edu_teacher`.`teacher_id` = `edu_article`.`member_create`) 
 left join(`edu_admin`) on(`edu_admin`.`admin_id` = `edu_article`.`member_create`) 
 where 1 $sql_filter 
-order by `edu_article`.`article_id` desc
+ORDER BY `edu_article`.`article_id` desc
 ";
 $sql_test = "SELECT `edu_article`.`article_id` 
-from `edu_article` 
+FROM `edu_article` 
 where 1 $sql_filter 
-order by `edu_article`.`article_id` desc
+ORDER BY `edu_article`.`article_id` desc
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

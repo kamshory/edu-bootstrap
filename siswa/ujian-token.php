@@ -18,7 +18,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 	$token = addslashes(@$_SESSION['vtoken']);
 	$now = $picoEdu->getLocalDateTime();
 	$sql = "SELECT `edu_token`.* , `edu_test`.*
-	from `edu_token`
+	FROM `edu_token`
 	inner join(`edu_test`) on(`edu_test`.`test_id` = `edu_token`.`test_id`)
 	WHERE `edu_token`.`student_id` = '$student_id'
 	and `edu_token`.`token` = '$token' and `edu_token`.`active` = true and `edu_token`.`time_expire` > '$now'
@@ -40,7 +40,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 		$dur_obj = $picoEdu->secondsToTime($data['duration']);
 		if($data['has_limits'])
 		{
-			$sql = "SELECT * from `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' order by `start` desc ";
+			$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' ORDER BY `start` desc ";
 			$stmt = $database->executeQuery($sql);
 			$ntest = $stmt->rowCount();
 			if($ntest < $data['trial_limits'])
@@ -77,16 +77,16 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 				if($data['random'])
 				{	
 					$sql = "SELECT `question_id` , rand() as `rand`
-					from `edu_question` WHERE `test_id` = '$test_id'
-					order by `rand` asc
+					FROM `edu_question` WHERE `test_id` = '$test_id'
+					ORDER BY `rand` asc
 					limit 0, $number_of_question
 					";
 				}
 				else
 				{
 					$sql = "SELECT `question_id` , `order`
-					from `edu_question` WHERE `test_id` = '$test_id'
-					order by `order` asc, `question_id` asc
+					FROM `edu_question` WHERE `test_id` = '$test_id'
+					ORDER BY `order` asc, `question_id` asc
 					limit 0, $number_of_question
 					";
 				}
@@ -132,7 +132,7 @@ else if(isset($_POST['token']))
 	if($token != 0)
 	{
 		$now = $picoEdu->getLocalDateTime();
-		$sql = "SELECT * from `edu_token`
+		$sql = "SELECT * FROM `edu_token`
 		WHERE `student_id` = '$student_id'
 		and `token` = '$token' and `active` = true and `time_expire` > '$now'
 		";
@@ -205,7 +205,7 @@ $cfg->page_title = "Token Ujian";
         <div class="test-info">
         <?php
 		$token = abs(@$_SESSION['vtoken']);
-		$sql = "SELECT * from `edu_test` WHERE `test_id` = '$test_id' ";
+		$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' ";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{

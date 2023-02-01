@@ -51,7 +51,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		if($student_id == 0)
 		{
 			// membuat token untuk semua siswa
-			$sql = "SELECT `student_id` from `edu_student` WHERE `class_id` = '$class_id' and `active` = true
+			$sql = "SELECT `student_id` FROM `edu_student` WHERE `class_id` = '$class_id' and `active` = true
 			";
 			$students = array();
 			$stmt = $database->executeQuery($sql);
@@ -125,10 +125,10 @@ $(document).ready(function(e) {
 		<td><select class="form-control input-select" name="test_id" id="test_id" required="required">
 		<option value=""></option>
 		<?php
-		$sql = "SELECT * from `edu_test`
+		$sql = "SELECT * FROM `edu_test`
 		WHERE `school_id` = '$school_id'
 		and (`test_availability` = 'F' or `available_to` > '$now')
-		order by `test_id` desc
+		ORDER BY `test_id` desc
 		";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
@@ -147,9 +147,9 @@ $(document).ready(function(e) {
 		<td><select class="form-control input-select" name="class_id" id="class_id" required="required">
 		<option value=""></option>
 		<?php
-		$sql2 = "SELECT * from `edu_class`
+		$sql2 = "SELECT * FROM `edu_class`
 		WHERE `active` = true and `school_id` = '$school_id'
-		order by `order` asc
+		ORDER BY `order` asc
 		";
 		echo $picoEdu->createFilterDb(
 			$sql2,
@@ -199,12 +199,12 @@ $(document).ready(function(e) {
 			$edit_key = kh_filter_input(INPUT_GET, 'token_id', FILTER_SANITIZE_NUMBER_INT);
 			$nt = '';
 			$sql = "SELECT `edu_token`.* $nt,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_create`) as `creator_name`,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_edit`) as `editor_name`,
-(select `edu_student`.`name` from `edu_student` WHERE `edu_student`.`student_id` = `edu_token`.`student_id`) as `student_name`,
-(select `edu_class`.`name` from `edu_class` WHERE `edu_class`.`class_id` = `edu_token`.`class_id`) as `class_name`,
-(select `edu_test`.`name` from `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
-from `edu_token` 
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_create`) as `creator_name`,
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_edit`) as `editor_name`,
+(select `edu_student`.`name` FROM `edu_student` WHERE `edu_student`.`student_id` = `edu_token`.`student_id`) as `student_name`,
+(select `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_token`.`class_id`) as `class_name`,
+(select `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
+FROM `edu_token` 
 WHERE `school_id` = '$school_id'
 and `edu_token`.`token_id` = '$edit_key'
 ";
@@ -316,10 +316,10 @@ function printToken(frm)
 <select name="test_id" id="test_id">
 	<option value=""></option>
     <?php
-	$sql = "SELECT * from `edu_test`
+	$sql = "SELECT * FROM `edu_test`
 	WHERE `school_id` = '$school_id'
 	and (`test_availability` = 'F' or `available_to` > '$now')
-	order by `test_id` desc
+	ORDER BY `test_id` desc
 	";
 	$stmt2 = $database->executeQuery($sql);
 	if ($stmt2->rowCount() > 0) {
@@ -337,9 +337,9 @@ function printToken(frm)
 <select name="class_id" id="class_id">
 	<option value=""></option>
     <?php
-		$sql2 = "SELECT * from `edu_class`
+		$sql2 = "SELECT * FROM `edu_class`
 		WHERE `active` = true and `school_id` = '$school_id'
-		order by `order` asc
+		ORDER BY `order` asc
 		";
 		echo $picoEdu->createFilterDb(
 			$sql2,
@@ -391,17 +391,17 @@ $sql_filter .= " and `edu_token`.`active` = true ";
 $nt = '';
 
 $sql = "SELECT `edu_token`.* $nt,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_create`) as `admin_create_name`,
-(select `edu_teacher`.`name` from `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_token`.`teacher_create`) as `teacher_create_name`,
-(select `edu_student`.`name` from `edu_student` WHERE `edu_student`.`student_id` = `edu_token`.`student_id`) as `student_name`,
-(select `edu_class`.`name` from `edu_class` WHERE `edu_class`.`class_id` = `edu_token`.`class_id`) as `class_name`,
-(select `edu_test`.`name` from `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
-from `edu_token`
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_create`) as `admin_create_name`,
+(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_token`.`teacher_create`) as `teacher_create_name`,
+(select `edu_student`.`name` FROM `edu_student` WHERE `edu_student`.`student_id` = `edu_token`.`student_id`) as `student_name`,
+(select `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_token`.`class_id`) as `class_name`,
+(select `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
+FROM `edu_token`
 WHERE `school_id` = '$school_id' $sql_filter
-order by `edu_token`.`token_id` desc
+ORDER BY `edu_token`.`token_id` desc
 ";
 				$sql_test = "SELECT `edu_token`.*
-from `edu_token`
+FROM `edu_token`
 WHERE `school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);

@@ -82,7 +82,7 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
-	$sql = "SELECT * from `edu_school` WHERE `school_id` = '$school_id' ";
+	$sql = "SELECT * FROM `edu_school` WHERE `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -140,8 +140,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "SELECT `school_id` from `edu_admin` WHERE `admin_id` = '$admin_id2'  ";
-	$sql = "SELECT * from `edu_school` WHERE `school_id` = '$school_id' ";
+	$sql = "SELECT `school_id` FROM `edu_admin` WHERE `admin_id` = '$admin_id2'  ";
+	$sql = "SELECT * FROM `edu_school` WHERE `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -196,7 +196,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 		<td><select class="form-control input-select" name="school_id" id="school_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT * from `edu_school` WHERE `active` = true order by `school_grade_id` asc ";
+		$sql2 = "SELECT * FROM `edu_school` WHERE `active` = true ORDER BY `school_grade_id` asc ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -278,7 +278,7 @@ else if(@$_GET['option'] == 'edit')
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_admin`.* 
-from `edu_admin` 
+FROM `edu_admin` 
 WHERE `edu_admin`.`admin_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
@@ -293,7 +293,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td><select class="form-control input-select" name="school_id" id="school_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT * from `edu_school` WHERE `active` = true order by `school_grade_id` asc ";
+		$sql2 = "SELECT * FROM `edu_school` WHERE `active` = true ORDER BY `school_grade_id` asc ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -384,10 +384,10 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_admin`.* $nt,
-(select `edu_school`.`name` from `edu_school` WHERE `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) as `school_name`,
-(select `edu_admin1`.`name` from `edu_admin` as `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) as `admin_create`,
-(select `edu_admin2`.`name` from `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
-from `edu_admin` 
+(select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) as `school_name`,
+(select `edu_admin1`.`name` FROM `edu_admin` as `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) as `admin_create`,
+(select `edu_admin2`.`name` FROM `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
+FROM `edu_admin` 
 where 1 
 and `edu_admin`.`admin_id` = '$edit_key'
 ";
@@ -468,7 +468,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Blokir</td>
-		<td><?php echo ($data['blocked'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['blocked'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
@@ -509,7 +509,7 @@ $(document).ready(function(e) {
     <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "SELECT * from `edu_school` where 1 order by `school_id` desc ";
+    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `school_id` desc ";
 	$stmt2 = $database->executeQuery($sql2);
 	if ($stmt2->rowCount() > 0) {
 		$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -544,13 +544,13 @@ $sql_filter .= " and (`edu_admin`.`school_id` = '$school_id' )";
 $nt = '';
 
 $sql = "SELECT `edu_admin`.* $nt,
-(select `edu_school`.`name` from `edu_school` WHERE `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) as `school_name`
-from `edu_admin`
+(select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) as `school_name`
+FROM `edu_admin`
 where 1 $sql_filter
-order by `edu_admin`.`school_id` desc, `edu_admin`.`name` asc
+ORDER BY `edu_admin`.`school_id` desc, `edu_admin`.`name` asc
 ";
 $sql_test = "SELECT `edu_admin`.*
-from `edu_admin`
+FROM `edu_admin`
 where 1 $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
@@ -619,7 +619,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php if($data['gender']=='M') echo 'L'; if($data['gender']=='W') echo 'P';?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['email'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php if($data['admin_level']=='2') echo 'Administrator'; if($data['admin_level']=='1') echo 'Super Administrator';?></a></td>
-      <td><?php echo ($data['blocked'])?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['blocked'], 'Ya', 'Tidak');?> </td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php

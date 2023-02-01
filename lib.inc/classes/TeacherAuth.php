@@ -29,7 +29,7 @@ class TeacherAuth
 				`edu_teacher`.`birth_place`, `edu_teacher`.`birth_day`, `edu_teacher`.`email`, `edu_teacher`.`phone`, 
 				`edu_teacher`.`country_id`, `edu_teacher`.`state_id`, `edu_teacher`.`city_id`, `edu_teacher`.`school_id`, 
 				`edu_school`.`name` as `school_name`, `edu_school`.`school_code` as `school_code`, `edu_school`.`use_token`
-				from `edu_teacher` 
+				FROM `edu_teacher` 
 				left join(`edu_school`) on(`edu_school`.`school_id` = `edu_teacher`.`school_id`)
 				WHERE `edu_teacher`.`username` like '$username' 
 				and `edu_teacher`.`password` = md5('$password') 

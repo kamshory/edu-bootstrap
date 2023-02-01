@@ -120,7 +120,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 			
 			if(empty($school_id))
 			{
-				$sql = "SELECT `school_id` from `edu_school` WHERE `name` like '$name_school' ";
+				$sql = "SELECT `school_id` FROM `edu_school` WHERE `name` like '$name_school' ";
 				$stmt = $database->executeQuery($sql);
 				$data_school = $stmt->fetch(PDO::FETCH_ASSOC);
 				$school_id = $data_school['school_id'];
@@ -129,7 +129,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 			if(!$myschool)
 			{
 				$sql = "SELECT `edu_school`.*
-				from `edu_school`
+				FROM `edu_school`
 				left join(`edu_member_school`) on(`edu_member_school`.`school_id` = `edu_school`.`school_id` and `edu_member_school`.`role` = 'A')
 				WHERE `edu_school`.`school_id` = '$school_id' and `edu_member_school`.`member_id` = '$admin_id' 
 				";
@@ -145,7 +145,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 			if($errors == 0)
 			{
 				// add me first
-				$sql = "SELECT * from `member` WHERE `member_id` = '$admin_id' ";
+				$sql = "SELECT * FROM `member` WHERE `member_id` = '$admin_id' ";
 				$stmt2 = $database->executeQuery($sql);
 
 
@@ -343,7 +343,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								}
 								$sort_order = $o[$grade_id];
 								if ($name != '') {
-									$sql = "SELECT * from `edu_class` WHERE `class_code` = '$class_code' and `school_id` = '$school_id' ";
+									$sql = "SELECT * FROM `edu_class` WHERE `class_code` = '$class_code' and `school_id` = '$school_id' ";
 									$stmt3 = $database->executeQuery($sql);
 									if ($stmt3->rowCount() == 0) {
 
@@ -489,7 +489,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 							}
 
 							$sql = "UPDATE `edu_student` 
-							set `edu_student`.`grade_id` = (select `edu_class`.`grade_id` from `edu_class` 
+							set `edu_student`.`grade_id` = (select `edu_class`.`grade_id` FROM `edu_class` 
 							WHERE `edu_class`.`class_id` = `edu_student`.`class_id`),
 							`prevent_change_school` = '1', `prevent_resign` = '1' 
 							WHERE `edu_student`.`school_id` = '$school_id' ";
@@ -660,17 +660,16 @@ $nt = '';
 $nt = '';
 
 $sql = "SELECT `edu_school`.* $nt,
-(select `edu_admin1`.`name` from `edu_admin` as `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_school`.`admin_create` limit 0,1) as `admin_create`,
-(select `edu_admin2`.`name` from `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_school`.`admin_edit` limit 0,1) as `admin_edit`,
-(select `edu_admin3`.`name` from `edu_admin` as `edu_admin3` WHERE `edu_admin3`.`admin_id` = `edu_school`.`admin_import_first` limit 0,1) as `admin_import_first`,
-(select `edu_admin4`.`name` from `edu_admin` as `edu_admin4` WHERE `edu_admin4`.`admin_id` = `edu_school`.`admin_import_last` limit 0,1) as `admin_import_last`,
-(select count(distinct `edu_admin`.`admin_id`) from `edu_admin` WHERE `edu_admin`.`school_id` = `edu_school`.`school_id` group by `edu_admin`.`school_id` limit 0,1) as `num_admin`,
-(select count(distinct `edu_class`.`class_id`) from `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id` group by `edu_class`.`school_id` limit 0,1) as `num_class`,
-(select count(distinct `edu_teacher`.`teacher_id`) from `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` group by `edu_teacher`.`school_id` limit 0,1) as `num_teacher`,
-(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id` group by `edu_student`.`school_id` limit 0,1) as `num_student`
-from `edu_school` 
-where 1
-and `edu_school`.`school_id` = '$edit_key'
+(select `edu_admin1`.`name` FROM `edu_admin` as `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_school`.`admin_create` limit 0,1) as `admin_create`,
+(select `edu_admin2`.`name` FROM `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_school`.`admin_edit` limit 0,1) as `admin_edit`,
+(select `edu_admin3`.`name` FROM `edu_admin` as `edu_admin3` WHERE `edu_admin3`.`admin_id` = `edu_school`.`admin_import_first` limit 0,1) as `admin_import_first`,
+(select `edu_admin4`.`name` FROM `edu_admin` as `edu_admin4` WHERE `edu_admin4`.`admin_id` = `edu_school`.`admin_import_last` limit 0,1) as `admin_import_last`,
+(select count(distinct `edu_admin`.`admin_id`) FROM `edu_admin` WHERE `edu_admin`.`school_id` = `edu_school`.`school_id` group by `edu_admin`.`school_id` limit 0,1) as `num_admin`,
+(select count(distinct `edu_class`.`class_id`) FROM `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id` group by `edu_class`.`school_id` limit 0,1) as `num_class`,
+(select count(distinct `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` group by `edu_teacher`.`school_id` limit 0,1) as `num_teacher`,
+(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id` group by `edu_student`.`school_id` limit 0,1) as `num_student`
+FROM `edu_school` 
+WHERE `edu_school`.`school_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

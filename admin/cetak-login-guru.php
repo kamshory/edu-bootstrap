@@ -8,7 +8,7 @@ exit();
 $edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school`.*, `edu_school`.`name` as `school_name`
-from `edu_school` 
+FROM `edu_school` 
 WHERE `edu_school`.`school_id` = '$school_id'
 ";
 
@@ -91,9 +91,9 @@ h3{
 <div class="main">
 <?php
     $sql = "SELECT `edu_teacher`.* 
-    from `edu_teacher` 
+    FROM `edu_teacher` 
     WHERE `edu_teacher`.`school_id` = '$school_id' 
-    order by `edu_teacher`.`name` asc 
+    ORDER BY `edu_teacher`.`name` asc 
     ";
     $stmt = $database->executeQuery($sql);
     if ($stmt->rowCount() > 0) {

@@ -76,7 +76,7 @@ exit();
 
 function createEnumOption($database, $table, $field, $defaultValue=null)
 {
-	$sql = "show columns from `$table` WHERE `Field` like '$field' ";
+	$sql = "show columns FROM `$table` WHERE `Field` like '$field' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -653,9 +653,8 @@ $str .= "else if(@\$_GET"."['option']"."=='edit')
 $str .= "include_once dirname(__FILE__).\"/lib.inc/header.php\";
 \$edit_key = kh_filter_input(INPUT_GET, '$edit_key', $edit_key_type);
 \$sql = \"SELECT `\".DB_PREFIX.\"$table"."`.* 
-from `\".DB_PREFIX.\"$table"."` 
-where 1
-and `\".DB_PREFIX.\"$table"."`.`$edit_key` = '\$edit_key'
+FROM `\".DB_PREFIX.\"$table"."` 
+WHERE `\".DB_PREFIX.\"$table"."`.`$edit_key` = '\$edit_key'
 \";
 \$res = mysql_query(\$sql);
 if(mysql_num_rows(\$res))
@@ -808,9 +807,8 @@ $str .= "\$nt = createSubSelect(DB_PREFIX.'$table', array(".implode(",",$arr_nor
 ";
 }
 $str .= "\$sql = \"SELECT `\".DB_PREFIX.\"$table"."`.* \$nt
-from `\".DB_PREFIX.\"$table"."` 
-where 1
-and `\".DB_PREFIX.\"$table"."`.`$edit_key` = '\$edit_key'
+FROM `\".DB_PREFIX.\"$table"."` 
+WHERE `\".DB_PREFIX.\"$table"."`.`$edit_key` = '\$edit_key'
 \";
 \$res = mysql_query(\$sql);
 if(mysql_num_rows(\$res))
@@ -900,12 +898,12 @@ $str .= "
 }
 $str .= "
 \$sql = \"SELECT `\".DB_PREFIX.\"$table"."`.* \$nt
-from `\".DB_PREFIX.\"$table"."`
+FROM `\".DB_PREFIX.\"$table"."`
 where 1 \$sql_filter
-order by `\".DB_PREFIX.\"$table"."`.`$edit_key` asc
+ORDER BY `\".DB_PREFIX.\"$table"."`.`$edit_key` asc
 \";
 \$sql_test = \"SELECT `\".DB_PREFIX.\"$table"."`.*
-from `\".DB_PREFIX.\"$table"."`
+FROM `\".DB_PREFIX.\"$table"."`
 where 1 \$sql_filter
 \";
 \$res = mysql_query(\$sql_test);
@@ -1065,7 +1063,7 @@ body{
 if(@$_POST['show'])
 {
 	$table = trim($_POST['table']);
-	$sql = "show columns from `$table` ";
+	$sql = "show columns FROM `$table` ";
 	$res = mysql_query($sql);
 ?>
 <script type="text/javascript" src="script/jquery/jquery.min.js"></script>

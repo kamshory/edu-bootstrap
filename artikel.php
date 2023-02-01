@@ -17,7 +17,7 @@ if(isset($_GET['article_id']))
 	{
 		$sql_filter_article .= " and `edu_article`.`school_id` = '$school_id' ";
 	}
-	$sql = "SELECT * from `edu_article` WHERE `edu_article`.`active` = true $sql_filter_article ";
+	$sql = "SELECT * FROM `edu_article` WHERE `edu_article`.`active` = true $sql_filter_article ";
 }
 else
 {
@@ -26,5 +26,5 @@ else
 	{
 		$sql_filter_article .= " and `edu_article`.`school_id` = '$school_id' ";
 	}
-	$sql = "SELECT * from `edu_article` WHERE `edu_article`.`active` = true $sql_filter_article ";
+	$sql = "SELECT * FROM `edu_article` WHERE `edu_article`.`active` = true $sql_filter_article ";
 }

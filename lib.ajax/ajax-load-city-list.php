@@ -6,7 +6,7 @@ $country_id = trim(kh_filter_input(INPUT_GET, 'country_id', FILTER_SANITIZE_STRI
 
 if($state_id == 0 && $state_name != '')
 {
-	$sql = "SELECT `state_id` from `state` WHERE `name` like '$state_name' and `country_id` = '$country_id' ";
+	$sql = "SELECT `state_id` FROM `state` WHERE `name` like '$state_name' and `country_id` = '$country_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -16,10 +16,10 @@ if($state_id == 0 && $state_name != '')
 }
 
 $sql = "SELECT `city`.`city_id` as `v`, `city`.`name` as `l`
-from `city` WHERE `city`.`country_id` = '$country_id' 
+FROM `city` WHERE `city`.`country_id` = '$country_id' 
 and (`city`.`state_id` = '$state_id' or `city`.`state_id` = '' or `city`.`state_id` is null or '$state_id' = '0') 
 and `city`.`active` = true and `city`.`verify` = '1'
-order by `city`.`type` asc, `city`.`name` asc
+ORDER BY `city`.`type` asc, `city`.`name` asc
 ";
 $city_list = array();
 $stmt = $database->executeQuery($sql);

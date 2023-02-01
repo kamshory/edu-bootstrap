@@ -16,11 +16,10 @@ $edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_STRING_NEW)
 $nt = '';
 $sql = "SELECT `edu_student`.* , `edu_school_program`.`name` as `school_program_name`,
 `edu_class`.`name` as `class_name`
-from `edu_student` 
+FROM `edu_student` 
 left join (`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
 left join (`edu_school_program`) on(`edu_school_program`.`school_program_id` = `edu_class`.`school_program_id`)
-where 1
-and `edu_student`.`student_id` = '$edit_key' and `edu_student`.`school_id` = '$school_id'
+WHERE `edu_student`.`student_id` = '$edit_key' and `edu_student`.`school_id` = '$school_id'
 group by `edu_student`.`student_id`
 ";
 $stmt = $database->executeQuery($sql);
@@ -126,7 +125,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id" id="class_id">
     <option value=""></option>
     <?php 
-    $sql2 = "SELECT * from `edu_class` WHERE `active` = true and `school_id` = '$school_id' order by `order` asc ";
+    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' ORDER BY `order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -175,14 +174,14 @@ $nt = '';
 
 
 $sql = "SELECT `edu_student`.* , `edu_class`.`name` as `class_id`, `edu_class`.`order` as `order`
-from `edu_student`
+FROM `edu_student`
 left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
 WHERE `edu_student`.`school_id` = '$school_id' $sql_filter
-order by `order` asc, `edu_student`.`name` asc
+ORDER BY `order` asc, `edu_student`.`name` asc
 ";
 
 $sql_test = "SELECT `edu_student`.`student_id`
-from `edu_student`
+FROM `edu_student`
 left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
 WHERE `edu_student`.`school_id` = '$school_id' $sql_filter
 ";

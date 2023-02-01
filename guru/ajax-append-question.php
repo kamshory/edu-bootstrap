@@ -9,15 +9,15 @@ if(!empty(@$school_id))
 	{
 		$test_id = kh_filter_input(INPUT_POST, 'test_id', FILTER_SANITIZE_STRING_NEW);
 		$edit_mode = kh_filter_input(INPUT_POST, 'edit_mode', FILTER_SANITIZE_NUMBER_UINT);
-		$sql = "SELECT * from `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$teacher_id' ";
+		$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$teacher_id' ";
 		$stmt0 = $database->executeQuery($sql);
 		if($stmt0->rowCount() > 0)
 		{
 			// Format Plain
 			$picoEdu->sortQuestion($test_id);
 			$sql = "SELECT `edu_test`.*, 
-			(select `edu_question`.`order` from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` order by `order` desc limit 0,1) as `order`
-			from `edu_test`
+			(select `edu_question`.`order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `order` desc limit 0,1) as `order`
+			FROM `edu_test`
 			WHERE `edu_test`.`test_id` = '$test_id'
 			";
 			$stmt = $database->executeQuery($sql);
@@ -103,7 +103,7 @@ if(!empty(@$school_id))
 				{
 					$database->executeQuery('rollback');
 				}
-				$sql = "SELECT * from `edu_question` WHERE `test_id` = '$test_id' ";
+				$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ";
 				$stmt = $database->executeQuery($sql);
 				if($stmt->rowCount() > 0)
 				{
@@ -118,7 +118,7 @@ if(!empty(@$school_id))
 				<li><span><?php echo $data['content'];?><?php if($edit_mode){?><span class="edit-question-ctrl"><a href="<?php echo $basename;?>?option=edit&question_id=<?php echo $question_id;?>" target="_blank"><span></span></a></span><?php }?></span>
 					<ol class="option-ol" style="list-style-type:<?php echo $data['numbering'];?>">
 						<?php
-						$sql2 = "SELECT * from `edu_option` WHERE `question_id` = '$question_id' ";
+						$sql2 = "SELECT * FROM `edu_option` WHERE `question_id` = '$question_id' ";
 						$stmt2 = $database->executeQuery($sql2);
 						if($stmt2->rowCount() > 0)
 						{

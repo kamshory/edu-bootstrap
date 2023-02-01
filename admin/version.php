@@ -92,9 +92,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <tbody>
 <?php
 $sql = "SELECT `version`.*
-from `version`
+FROM `version`
 WHERE `change_log` != '' and `change_log` is not null
-order by `time_release` desc
+ORDER BY `time_release` desc
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

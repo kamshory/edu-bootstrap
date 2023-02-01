@@ -242,7 +242,7 @@ function scrap($url)
 
 	function getDefaultValues($database, $table, $fields)
 	{
-		$sql = "show columns from `$table` ";
+		$sql = "show columns FROM `$table` ";
 		$stmt = $database->executeQuery($sql);
 		$arr = array();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

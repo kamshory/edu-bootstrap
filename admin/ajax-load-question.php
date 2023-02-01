@@ -4,7 +4,7 @@ if(!empty(@$school_id))
 {
 $question_id = kh_filter_input(INPUT_GET, 'question_id', FILTER_SANITIZE_STRING_NEW);
 $number = kh_filter_input(INPUT_GET, 'number', FILTER_SANITIZE_NUMBER_UINT);
-$sql = "SELECT * from `edu_question` WHERE `question_id` = '$question_id' ";
+$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -17,7 +17,7 @@ $question_id = $data['question_id'];
     	<?php echo $data['content'];?>
         <ul style="list-style-type:<?php echo $data['numbering'];?>">
         	<?php
-			$sql2 = "SELECT * from `edu_option` WHERE `question_id` = '$question_id' ";
+			$sql2 = "SELECT * FROM `edu_option` WHERE `question_id` = '$question_id' ";
 			$stmt2 = $database->executeQuery($sql2);
 			if($stmt2->rowCount() > 0)
 			{

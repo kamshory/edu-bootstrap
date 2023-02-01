@@ -18,7 +18,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		include_once dirname(__FILE__) . "/lib.inc/header.php";
 
 		$sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, `edu_answer`.`start`, `edu_answer`.`end`
-		from `edu_answer`
+		FROM `edu_answer`
 		inner join (`edu_test`) on (`edu_test`.`test_id` = `edu_answer`.`test_id`)
 		WHERE `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$student_id'
 		";
@@ -87,12 +87,12 @@ if (@$auth_student_id && @$auth_school_id) {
 			<?php
 			$sql = "SELECT `edu_question`.* , `edu_answer`.`answer` as `answer` , instr(`edu_answer`.`answer`,`edu_question`.`question_id`) as `pos`,
 			`edu_test`.`publish_answer`, `edu_test`.`time_answer_publication`
-			from `edu_question` 
+			FROM `edu_question` 
 			left join (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
 			left join (`edu_test`) on (`edu_test`.`test_id` = `edu_question`.`test_id`)
 			WHERE `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$student_id'
 			group by `edu_question`.`question_id` 
-			order by `pos` asc ";
+			ORDER BY `pos` asc ";
 			$stmt = $database->executeQuery($sql);
 
 			if ($stmt->rowCount() > 0) {
@@ -113,7 +113,7 @@ if (@$auth_student_id && @$auth_school_id) {
 								<?php echo $data['content']; ?>
 								<?php
 								$sql2 = "SELECT `edu_option`.* , '$answer' like concat('%,',`edu_option`.`option_id`,']%') as `my_answer`
-								from `edu_option` 
+								FROM `edu_option` 
 								where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` order by  `edu_option`.`order` asc";
 								$stmt2 = $database->executeQuery($sql2);
 								if ($stmt2->rowCount() > 0) 
@@ -170,9 +170,9 @@ if (@$auth_student_id && @$auth_school_id) {
 		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 		include_once dirname(__FILE__) . "/lib.inc/header.php";
 		$sql = "SELECT `edu_answer`.*
-		from `edu_answer`
+		FROM `edu_answer`
 		WHERE `edu_answer`.`student_id` = '$student_id' and `edu_answer`.`test_id` = '$test_id' 
-		order by `edu_answer`.`start` asc
+		ORDER BY `edu_answer`.`start` asc
 		";
 		$stmt = $database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) 
@@ -243,8 +243,8 @@ if (@$auth_student_id && @$auth_school_id) {
 		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 		$nt = '';
 		$sql = "SELECT `edu_test`.* $nt,
-		(select `edu_teacher`.`name` from `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`
-		from `edu_test` 
+		(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`
+		FROM `edu_test` 
 		where 1
 		and `edu_test`.`test_id` = '$test_id' and `edu_test`.`school_id` = '$school_id'
 		";
@@ -508,7 +508,7 @@ if (@$auth_student_id && @$auth_school_id) {
 				<select class="form-control input-select" name="class_id" id="class_id">
 					<option value="">- Pilih Kelas -</option>
 					<?php
-					$sql = "SELECT * from `edu_class` WHERE `school_id` = '$school_id' ";				
+					$sql = "SELECT * FROM `edu_class` WHERE `school_id` = '$school_id' ";				
 					$stmt2 = $database->executeQuery($sql);
 					if ($stmt2->rowCount() > 0) {
 						foreach($rows2 as $data2) {
@@ -540,14 +540,14 @@ if (@$auth_student_id && @$auth_school_id) {
 			$nt = '';
 
 			$sql = "SELECT `edu_test`.* $nt,
-			(select count(distinct `edu_answer`.`answer_id`) from `edu_answer` 
+			(select count(distinct `edu_answer`.`answer_id`) FROM `edu_answer` 
 			WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` and `edu_answer`.`student_id` = '$student_id') as `ntest`
-			from `edu_test`
+			FROM `edu_test`
 			WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
-			order by `edu_test`.`test_id` desc
+			ORDER BY `edu_test`.`test_id` desc
 			";
 			$sql_test = "SELECT `edu_test`.*
-			from `edu_test`
+			FROM `edu_test`
 			WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
 			";
 
@@ -669,7 +669,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 			<select class="form-control input-select" name="class_id" id="class_id">
 				<option value="">- Pilih Kelas -</option>
 				<?php
-				$sql2 = "SELECT * from `edu_class` WHERE `school_id` = '$school_id' ";
+				$sql2 = "SELECT * FROM `edu_class` WHERE `school_id` = '$school_id' ";
 				echo $picoEdu->createFilterDb(
 					$sql2,
 					array(
@@ -710,12 +710,12 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 		$nt = '';
 
 		$sql = "SELECT `edu_test`.* $nt
-from `edu_test`
+FROM `edu_test`
 WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
-order by `edu_test`.`test_id` desc
+ORDER BY `edu_test`.`test_id` desc
 ";
 		$sql_test = "SELECT `edu_test`.*
-from `edu_test`
+FROM `edu_test`
 WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 ";
 
@@ -830,7 +830,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 			<select class="form-control input-select" name="class_id" id="class_id">
 				<option value="">- Pilih Kelas -</option>
 				<?php
-				$sql2 = "SELECT * from `edu_class` WHERE `school_id` = '$school_id' ";
+				$sql2 = "SELECT * FROM `edu_class` WHERE `school_id` = '$school_id' ";
 				echo $picoEdu->createFilterDb(
 					$sql2,
 					array(
@@ -871,12 +871,12 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 		$nt = '';
 
 		$sql = "SELECT `edu_test`.* $nt
-		from `edu_test`
+		FROM `edu_test`
 		WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
-		order by `edu_test`.`test_id` desc
+		ORDER BY `edu_test`.`test_id` desc
 		";
 		$sql_test = "SELECT `edu_test`.*
-		from `edu_test`
+		FROM `edu_test`
 		WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
 		";
 $stmt = $database->executeQuery($sql_test);

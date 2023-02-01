@@ -6,7 +6,7 @@ if(empty(@$school_id))
 	exit();
 }
 $id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
-$sql = "SELECT * from `edu_test_collection` WHERE `test_collection_id` = '$id' and `active` = true ";
+$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' and `active` = true ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {

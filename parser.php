@@ -68,7 +68,7 @@ if(file_exists(dirname(__FILE__)."/sch-".$modul_name))
 		$sql_filter .= " and `school_code` = '$school_code' "; 
 	}
 	$sql = "SELECT `edu_school`.*
-	from `edu_school`
+	FROM `edu_school`
 	WHERE `edu_school`.`active` = true $sql_filter
 	";
 	$stmt = $database->executeQuery($sql);

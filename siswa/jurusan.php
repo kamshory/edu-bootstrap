@@ -14,10 +14,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'school_program_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school_program`.* ,
-(select `edu_school`.`name` from `edu_school` WHERE `edu_school`.`school_id` = `edu_school_program`.`school_id`) as `school_id`
-from `edu_school_program` 
-where 1
-and `edu_school_program`.`school_program_id` = '$edit_key' and `school_id` = '$school_id'
+(select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_school_program`.`school_id`) as `school_id`
+FROM `edu_school_program` 
+WHERE `edu_school_program`.`school_program_id` = '$edit_key' and `school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -112,12 +111,12 @@ $sql_filter .= " and (`edu_school_program`.`name` like '%".addslashes($paginatio
 $nt = '';
 
 $sql = "SELECT `edu_school_program`.*
-from `edu_school_program`
+FROM `edu_school_program`
 WHERE `school_id` = '$school_id' $sql_filter
-order by `edu_school_program`.`school_program_id` asc
+ORDER BY `edu_school_program`.`school_program_id` asc
 ";
 $sql_test = "SELECT `edu_school_program`.*
-from `edu_school_program`
+FROM `edu_school_program`
 WHERE `school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);

@@ -6,10 +6,10 @@ if(@$_GET['option'] == 'select')
 {
 	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_school`.* 
-	from `edu_member_school`
+	FROM `edu_member_school`
 	inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
 	WHERE `edu_member_school`.`member_id` = '$teacher_id' and `edu_member_school`.`role` = 'T' 
-	order by `edu_school`.`school_id` asc
+	ORDER BY `edu_school`.`school_id` asc
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -26,15 +26,14 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
-(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
-(select `country`.`name` from `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
-(select `state`.`name` from `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
-(select `city`.`name` from `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
-from `edu_school` 
-where 1
-and `edu_school`.`school_id` = '$edit_key'
+(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
+(select `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
+(select `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
+(select `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
+FROM `edu_school` 
+WHERE `edu_school`.`school_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -153,13 +152,13 @@ $sql_filter .= " and (`edu_school`.`name` like '%".addslashes($pagination->query
 $nt = '';
 
 $sql = "SELECT `edu_school`.* $nt
-from `edu_member_school`
+FROM `edu_member_school`
 inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
 WHERE `edu_member_school`.`member_id` = '$teacher_id' and `edu_member_school`.`role` = 'T' $sql_filter
-order by `edu_school`.`school_id` asc
+ORDER BY `edu_school`.`school_id` asc
 ";
 $sql_test = "SELECT `edu_school`.*
-from `edu_member_school`
+FROM `edu_member_school`
 inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
 WHERE `edu_member_school`.`member_id` = '$teacher_id' and `edu_member_school`.`role` = 'T' $sql_filter
 ";

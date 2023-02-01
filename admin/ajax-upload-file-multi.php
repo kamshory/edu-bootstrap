@@ -4,8 +4,8 @@ if(!empty(@$school_id))
 {
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.*, 
-(select `edu_question`.`order` from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` order by `order` desc limit 0,1) as `order`
-from `edu_test`
+(select `edu_question`.`order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `order` desc limit 0,1) as `order`
+FROM `edu_test`
 WHERE `edu_test`.`test_id` = '$test_id'
 ";
 $stmt = $database->executeQuery($sql);

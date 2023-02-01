@@ -81,7 +81,7 @@ if(isset($_POST['delete']) && isset($_POST['teacher_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
-	$sql = "SELECT * from `edu_school` WHERE `school_id` = '$school_id' ";
+	$sql = "SELECT * FROM `edu_school` WHERE `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$country_id = $data['country_id'];
@@ -260,7 +260,7 @@ else if(@$_GET['option'] == 'edit')
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'teacher_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_teacher`.* 
-from `edu_teacher` 
+FROM `edu_teacher` 
 WHERE `edu_teacher`.`school_id` = '$school_id'
 and `edu_teacher`.`teacher_id` = '$edit_key'
 ";
@@ -351,9 +351,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'teacher_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_teacher`.* $nt,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_teacher`.`admin_create`) as `admin_create`,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_teacher`.`admin_edit`) as `admin_edit`
-from `edu_teacher` 
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_teacher`.`admin_create`) as `admin_create`,
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_teacher`.`admin_edit`) as `admin_edit`
+FROM `edu_teacher` 
 WHERE `edu_teacher`.`school_id` = '$school_id'
 and `edu_teacher`.`teacher_id` = '$edit_key'
 ";
@@ -480,12 +480,12 @@ $sql_filter .= " and (`edu_teacher`.`name` like '%".addslashes($pagination->quer
 $nt = '';
 
 $sql = "SELECT `edu_teacher`.* $nt
-from `edu_teacher`
+FROM `edu_teacher`
 WHERE `edu_teacher`.`school_id` = '$school_id' $sql_filter
-order by `edu_teacher`.`teacher_id` asc
+ORDER BY `edu_teacher`.`teacher_id` asc
 ";
 $sql_test = "SELECT `edu_teacher`.*
-from `edu_teacher`
+FROM `edu_teacher`
 WHERE `edu_teacher`.`school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);

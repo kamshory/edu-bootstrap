@@ -48,7 +48,7 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `city_id_to_name` (`in_city_id` BIGIN
 
 
 declare `out_name` varchar(100) default null;
-select `city`.`name` into `out_name` from `city` WHERE `city`.`city_id` = `in_city_id`;
+select `city`.`name` into `out_name` FROM `city` WHERE `city`.`city_id` = `in_city_id`;
 return `out_name`;
 
 
@@ -66,7 +66,7 @@ end if;
 
 
 select `city`.`city_id` into `out_city_id`
-from `city` WHERE `city`.`name` like `in_name` and (`city`.`state_id` = `in_state_id` or `in_state_id` = '' or `in_state_id` = 0 or `in_state_id` is null) and `city`.`country_id` = `in_country_id` limit 0,1;
+FROM `city` WHERE `city`.`name` like `in_name` and (`city`.`state_id` = `in_state_id` or `in_state_id` = '' or `in_state_id` = 0 or `in_state_id` is null) and `city`.`country_id` = `in_country_id` limit 0,1;
 
 
 if `out_city_id` is null or `out_city_id` = 0 then
@@ -84,14 +84,14 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `country_id_to_name` (`cid` VARCHAR(5
 declare `cname` varchar(100);
 
 
-select `country`.`name` into `cname` from `country` WHERE `country`.`country_id` like `cid` limit 0,1;
+select `country`.`name` into `cname` FROM `country` WHERE `country`.`country_id` like `cid` limit 0,1;
 return `cname`;
 end$$
 
 CREATE DEFINER=`root`@`localhost` FUNCTION `get_class_id_from_name` (`in_class` VARCHAR(100), `in_school` BIGINT) RETURNS BIGINT(20) NO SQL begin
 declare `out_id` bigint default null;
 select `edu_class`.`class_id` into `out_id`
-from `edu_class`
+FROM `edu_class`
 WHERE `edu_class`.`name` like `in_class`
 and `edu_class`.`school_id` = `in_school`
 limit 0, 1;
@@ -112,7 +112,7 @@ end$$
 
 CREATE DEFINER=`root`@`localhost` FUNCTION `get_last_order_image` (`id` BIGINT) RETURNS INT(11) NO SQL begin
 declare `last_order` int(11) default 0;
-SELECT `post_attachment`.`order` into `last_order` FROM `post_attachment` WHERE `post_attachment`.`post_id` = `id` order by `post_attachment`.`order` desc limit 0,1 ;
+SELECT `post_attachment`.`order` into `last_order` FROM `post_attachment` WHERE `post_attachment`.`post_id` = `id` ORDER BY `post_attachment`.`order` desc limit 0,1 ;
 if `last_order` is null then
 set `last_order` = 0;
 end if;
@@ -122,7 +122,7 @@ end$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `get_school_id_from_name` (`in_school` VARCHAR(100)) RETURNS BIGINT(20) NO SQL begin
 declare `out_id` bigint default null;
 select `edu_school`.`school_id` into `out_id`
-from `edu_school`
+FROM `edu_school`
 WHERE `edu_school`.`name` like `in_school`
 limit 0, 1;
 return `out_id`;
@@ -131,7 +131,7 @@ end$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `get_school_program_id_from_name` (`in_school_program` VARCHAR(100), `in_school` BIGINT) RETURNS BIGINT(20) NO SQL begin
 declare `out_id` bigint default null;
 select `edu_school_program`.`school_program_id` into `out_id`
-from `edu_school_program`
+FROM `edu_school_program`
 WHERE `edu_school_program`.`name` like `in_school_program`
 and `edu_school_program`.`school_id` = `in_school`
 limit 0, 1;
@@ -154,7 +154,7 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `state_id_to_name` (`in_state_id` BIG
 
 
 declare `out_name` varchar(100) default null;
-select `state`.`name` into `out_name` from `state` WHERE `state`.`state_id` = `in_state_id`;
+select `state`.`name` into `out_name` FROM `state` WHERE `state`.`state_id` = `in_state_id`;
 return `out_name`;
 
 
@@ -172,7 +172,7 @@ end if;
 
 
 select `state`.`state_id` into `out_state_id`
-from `state` WHERE `state`.`name` like `in_name` and `state`.`country_id` = `in_country_id` limit 0,1;
+FROM `state` WHERE `state`.`name` like `in_name` and `state`.`country_id` = `in_country_id` limit 0,1;
 
 
 if `out_state_id` > 0 then

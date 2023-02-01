@@ -278,7 +278,7 @@ else if(@$_GET['option'] == 'edit' && isset($_GET['info_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $info_id = kh_filter_input(INPUT_GET, 'info_id', FILTER_SANITIZE_STRING_NEW);
-$sql = "SELECT * from `edu_info` WHERE `info_id` = '$info_id'";
+$sql = "SELECT * FROM `edu_info` WHERE `info_id` = '$info_id'";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -435,7 +435,7 @@ else if(isset($_GET['info_id']))
 	$sql_filter_info = " and `edu_info`.`info_id` = '$info_id' ";
 
 	$sql = "SELECT `edu_info`.*, `member`.`name` as `creator`
-	from `edu_info` 
+	FROM `edu_info` 
 	left join(`member`) on(`member`.`member_id` = `edu_info`.`admin_create`) 
 	where 1 $sql_filter_info ";
 	$stmt = $database->executeQuery($sql);
@@ -537,13 +537,13 @@ $sql_filter .= " and (`edu_info`.`name` like '%".addslashes($pagination->query).
 $nt = '';
 
 $sql = "SELECT `edu_info`.*,
-(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_info`.`admin_edit`) as `admin_edit_name` 
-from `edu_info`
+(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_info`.`admin_edit`) as `admin_edit_name` 
+FROM `edu_info`
 where 1 $sql_filter
-order by `edu_info`.`info_id` desc
+ORDER BY `edu_info`.`info_id` desc
 ";
 $sql_test = "SELECT `edu_info`.*
-from `edu_info`
+FROM `edu_info`
 where 1 $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);

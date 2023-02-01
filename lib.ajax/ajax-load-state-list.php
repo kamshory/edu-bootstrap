@@ -3,9 +3,9 @@ include_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
 $country_id = trim(kh_filter_input(INPUT_GET, 'country_id', FILTER_SANITIZE_STRING_NEW));
 
 $sql = "SELECT `state`.`state_id` as `v`, `state`.`name` as `l`
-from `state` WHERE `state`.`country_id` = '$country_id' 
+FROM `state` WHERE `state`.`country_id` = '$country_id' 
 and `state`.`active` = true and `state`.`verify` = '1'
-order by `state`.`type` asc, `state`.`name` asc
+ORDER BY `state`.`type` asc, `state`.`name` asc
 ";
 $list = array();
 $stmt = $database->executeQuery($sql);
