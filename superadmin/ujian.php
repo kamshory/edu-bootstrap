@@ -726,7 +726,7 @@ window.onload = function()
   <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `school_id` desc ";
+    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc ";
     $stmt2 = $database->executeQuery($sql2);
 	if ($stmt2->rowCount() > 0) {
 		$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -804,12 +804,12 @@ $sql = "SELECT `edu_test`.* $nt,
 (select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_test`.`school_id` limit 0,1) as `school_name`,
 (select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`
 FROM `edu_test`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 ORDER BY `edu_test`.`test_id` desc
 ";
 $sql_test = "SELECT `edu_test`.*
 FROM `edu_test`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 ";
 
 $stmt = $database->executeQuery($sql_test);

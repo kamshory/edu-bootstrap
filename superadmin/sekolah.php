@@ -918,12 +918,12 @@ $sql = "SELECT `edu_school`.* $nt,
 (select `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
 (select `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`
 FROM `edu_school`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 ORDER BY `edu_school`.`school_id` desc
 ";
 $sql_test = "SELECT `edu_school`.*
 FROM `edu_school`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

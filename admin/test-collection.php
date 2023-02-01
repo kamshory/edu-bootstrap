@@ -341,12 +341,12 @@ $nt = $picoEdu->createSubSelect('edu_test_collection', array('grade_id'=>'grade_
 
 $sql = "SELECT `edu_test_collection`.* $nt
 FROM `edu_test_collection`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 ORDER BY `edu_test_collection`.`test_collection_id` asc
 ";
 $sql_test = "SELECT `edu_test_collection`.*
 FROM `edu_test_collection`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

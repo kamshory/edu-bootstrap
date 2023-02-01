@@ -763,7 +763,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php";
   <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `school_id` desc ";
+    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc ";
     $stmt2 = $database->executeQuery($sql);
     if ($stmt2->rowCount() > 0) {
       $rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -846,14 +846,14 @@ window.onload = function()
 (select count(distinct `edu_answer`.`student_id`) FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id`) as `number_of_student`,
 (select `edu_answer`.`start` FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` ORDER BY `edu_answer`.`start` desc limit 0,1) as `last_test`
 FROM `edu_test`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 having 1 and `number_of_student` > 0
 ORDER BY `last_test` desc, `edu_test`.`test_id` desc
 ";
         $sql_test = "SELECT `edu_test`.*,
 (select count(distinct `edu_answer`.`student_id`) FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id`) as `number_of_student`
 FROM `edu_test`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 having 1 and `number_of_student` > 0
 ORDER BY `edu_test`.`test_id` desc
 ";

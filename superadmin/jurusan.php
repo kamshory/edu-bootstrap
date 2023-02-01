@@ -219,7 +219,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `school_id` desc ";
+    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc ";
     $stmt2 = $database->executeQuery($sql2);
 	if ($stmt2->rowCount() > 0) {
 		$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -257,12 +257,12 @@ $nt = '';
 $sql = "SELECT `edu_school_program`.*,
 (select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_school_program`.`school_id`) as `school_id`
 FROM `edu_school_program`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 ORDER BY `edu_school_program`.`school_id` desc, `edu_school_program`.`school_program_id` asc, `edu_school_program`.`name` asc
 ";
 $sql_test = "SELECT `edu_school_program`.*
 FROM `edu_school_program`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

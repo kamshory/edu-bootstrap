@@ -164,7 +164,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
     $sql = "SELECT `edu_student`.* , `edu_class`.`name` as `class_id`, `edu_class`.`order` as `order`
     FROM `edu_student`
     left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
-    where 1 $sql_filter
+    WHERE 1 $sql_filter
     ORDER BY `order` asc, `edu_student`.`name` asc
     ";
 

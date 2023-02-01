@@ -144,12 +144,12 @@ $nt = '';
 $sql = "SELECT `edu_info`.*,
 (select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_info`.`admin_edit`) as `admin_edit_name` 
 FROM `edu_info`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 ORDER BY `edu_info`.`info_id` desc
 ";
 $sql_test = "SELECT `edu_info`.*
 FROM `edu_info`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

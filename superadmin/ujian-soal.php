@@ -986,7 +986,7 @@ function buildMenu(id)
   <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php
-			$sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `school_id` desc ";
+			$sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc ";
 			$stmt2 = $database->executeQuery($sql);
 			if ($stmt2->rowCount() > 0) {
 				$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -1062,13 +1062,13 @@ function buildMenu(id)
 				(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
 				(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
 				FROM `edu_test`
-				where 1 $sql_filter
+				WHERE 1 $sql_filter
 				ORDER BY `edu_test`.`test_id` desc
 				";
 
 				$sql_test = "SELECT `edu_test`.`test_id`
 				FROM `edu_test`
-				where 1 $sql_filter
+				WHERE 1 $sql_filter
 				";
 
 				$stmt = $database->executeQuery($sql_test);

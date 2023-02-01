@@ -99,12 +99,12 @@ $sql = "SELECT `edu_class`.* $nt,
 (select `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
 (select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
 FROM `edu_class`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 ORDER BY `edu_class`.`order` asc
 ";
 $sql_test = "SELECT `edu_class`.*
 FROM `edu_class`
-where 1 $sql_filter
+WHERE 1 $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

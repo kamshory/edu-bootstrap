@@ -384,12 +384,12 @@ $sql = "SELECT `edu_article`.* , `edu_teacher`.`name` as `teacher_create`, `edu_
 FROM `edu_article` 
 left join(`edu_teacher`) on(`edu_teacher`.`teacher_id` = `edu_article`.`member_create`) 
 left join(`edu_admin`) on(`edu_admin`.`admin_id` = `edu_article`.`member_create`) 
-where 1 $sql_filter 
+WHERE 1 $sql_filter 
 ORDER BY `edu_article`.`article_id` desc
 ";
 $sql_test = "SELECT `edu_article`.`article_id` 
 FROM `edu_article` 
-where 1 $sql_filter 
+WHERE 1 $sql_filter 
 ORDER BY `edu_article`.`article_id` desc
 ";
 $stmt = $database->executeQuery($sql_test);
