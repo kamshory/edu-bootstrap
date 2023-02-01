@@ -19,22 +19,22 @@ if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
 	$admin_create = $admin_edit = $admin_id;
 	$sql = "UPDATE `edu_student` set 
 	`reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit'
-	where `student_id` = '$student_id' and `school_id` = '$school_id' ";
+	WHERE `student_id` = '$student_id' and `school_id` = '$school_id' ";
 	$database->execute($sql);
 	if ($email != '') {
 		$sql = "UPDATE `edu_student` set 
 		`email` = '$email'
-		where `student_id` = '$student_id' and `school_id` = '$school_id' ";
+		WHERE `student_id` = '$student_id' and `school_id` = '$school_id' ";
 		$database->execute($sql);
 	}
 	if ($password != '') {
 		$sql = "UPDATE `edu_student` set 
 		`password` = md5(md5('$password')), `password_initial` = ''
-		where `student_id` = '$student_id' and `school_id` = '$school_id' ";
+		WHERE `student_id` = '$student_id' and `school_id` = '$school_id' ";
 		$database->execute($sql);
 		$sql = "UPDATE `member` set 
 		`password` = md5(md5('$password'))
-		where `member_id` = '$student_id'  ";
+		WHERE `member_id` = '$student_id'  ";
 		$database->execute($sql);
 		$_SESSION['password'] = md5($password);
 		$ksession->forcesave();
@@ -45,7 +45,7 @@ if (@$_GET['option'] == 'edit') {
 	include_once dirname(__FILE__) . "/lib.inc/header.php";
 	$sql = "SELECT `edu_student`.* 
 	from `edu_student` 
-	where `edu_student`.`school_id` = '$school_id'
+	WHERE `edu_student`.`school_id` = '$school_id'
 	and `edu_student`.`student_id` = '$student_id'
 	";
 	$stmt = $database->executeQuery($sql);
@@ -115,12 +115,12 @@ if (@$_GET['option'] == 'edit') {
 	include_once dirname(__FILE__) . "/lib.inc/header.php";
 	$nt = '';
 	$sql = "SELECT `edu_student`.* , `edu_school`.`name` as `school_name`, `edu_school`.`open` as `school_open`,
-(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
-(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
-(select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
+(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
+(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
+(select `edu_class`.`name` from `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
 from `edu_student` 
 left join(`edu_school`) on(`edu_school`.`school_id` = `edu_student`.`school_id`)
-where `edu_student`.`school_id` = '$school_id'
+WHERE `edu_student`.`school_id` = '$school_id'
 and `edu_student`.`student_id` = '$student_id'
 ";
 	$stmt = $database->executeQuery($sql);

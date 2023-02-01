@@ -34,7 +34,7 @@ class AdminAuth
 		`edu_school`.`use_token`
 		from `edu_admin` 
 		left join(`edu_school`) on(`edu_school`.`school_id` = `edu_admin`.`school_id`)
-		where `edu_admin`.`username` like '$username' and `edu_admin`.`password` = md5('$password') 
+		WHERE `edu_admin`.`username` like '$username' and `edu_admin`.`password` = md5('$password') 
 		and `edu_admin`.`active` = true
 		and `edu_admin`.`blocked` = '0'
 		";
@@ -61,7 +61,7 @@ class AdminAuth
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
 					$now = $picoEdu->getLocalDateTime();
-					$sql = "UPDATE `edu_admin` set `ip_last_activity` = '$ip', `time_last_activity` = '$now' where `admin_id` = '" . $this->admin_id . "'";
+					$sql = "UPDATE `edu_admin` SET `ip_last_activity` = '$ip', `time_last_activity` = '$now' WHERE `admin_id` = '" . $this->admin_id . "'";
 					$database->execute($sql);
 				}
 

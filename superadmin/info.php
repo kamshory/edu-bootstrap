@@ -16,7 +16,7 @@ if(isset($_POST['set_active']) && isset($_POST['info_id']))
 		foreach($infos as $key=>$val)
 		{
 			$info_id = addslashes($val);
-			$sql = "UPDATE `edu_info` set `active` = true where `info_id` = '$info_id'  ";
+			$sql = "UPDATE `edu_info` SET `active` = true WHERE `info_id` = '$info_id'  ";
 			$database->execute($sql);
 		}
 	}
@@ -29,7 +29,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['info_id']))
 		foreach($infos as $key=>$val)
 		{
 			$info_id = addslashes($val);
-			$sql = "UPDATE `edu_info` set `active` = false where `info_id` = '$info_id'  ";
+			$sql = "UPDATE `edu_info` SET `active` = false WHERE `info_id` = '$info_id'  ";
 			$database->execute($sql);
 		}
 	}
@@ -42,7 +42,7 @@ if(isset($_POST['delete']) && isset($_POST['info_id']))
 		foreach($infos as $key=>$val)
 		{
 			$info_id = addslashes($val);
-			$sql = "UPDATE `edu_info` set `school_id` = '0' where `info_id` = '$info_id'  ";
+			$sql = "UPDATE `edu_info` SET `school_id` = '0' WHERE `info_id` = '$info_id'  ";
 			$database->execute($sql);
 		}
 	}
@@ -94,7 +94,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 
 			$sql = "UPDATE `edu_info` set
 			`content` = '$content'
-			where `info_id` = '$info_id'
+			WHERE `info_id` = '$info_id'
 			";
 			$database->executeUpdate($sql, true);
 		}
@@ -120,7 +120,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$sql = "UPDATE `edu_info` set
 		`name` = '$name', `content` = '$content', 
 		`time_edit` = '$time', `admin_edit` = '$admin_id', `ip_edit` =  '$ip', `active` = '$active'
-		where `info_id` = '$info_id'
+		WHERE `info_id` = '$info_id'
 		";
 		$database->executeUpdate($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&info_id=$info_id");
@@ -278,7 +278,7 @@ else if(@$_GET['option'] == 'edit' && isset($_GET['info_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $info_id = kh_filter_input(INPUT_GET, 'info_id', FILTER_SANITIZE_STRING_NEW);
-$sql = "SELECT * from `edu_info` where `info_id` = '$info_id'";
+$sql = "SELECT * from `edu_info` WHERE `info_id` = '$info_id'";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -537,7 +537,7 @@ $sql_filter .= " and (`edu_info`.`name` like '%".addslashes($pagination->query).
 $nt = '';
 
 $sql = "SELECT `edu_info`.*,
-(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_info`.`admin_edit`) as `admin_edit_name` 
+(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_info`.`admin_edit`) as `admin_edit_name` 
 from `edu_info`
 where 1 $sql_filter
 order by `edu_info`.`info_id` desc

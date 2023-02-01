@@ -30,12 +30,12 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 	`edu_school`.`active` as `school_active`,
 	`edu_student`.`student_id` as `student_id`,
 	`edu_member_school`.`member_id` as `student_in_school_id`,
-	(select count(distinct `edu_student`.`student_id`) from `edu_student` where `edu_student`.`student_id` = '$member_id' and `edu_member_school`.`role` = 'S') as `student_registered`
+	(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`student_id` = '$member_id' and `edu_member_school`.`role` = 'S') as `student_registered`
 	from `edu_test` 
 	inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
 	left join(`edu_student`) on(`edu_student`.`school_id` = `edu_test`.`school_id` and `edu_student`.`student_id` = '$member_id')
 	left join(`edu_member_school`) on(`edu_member_school`.`school_id` = `edu_test`.`school_id` and `edu_member_school`.`member_id` = '$member_id' and `edu_member_school`.`role` = 'S')
-	where `edu_test`.`test_id` = '$test_id' 
+	WHERE `edu_test`.`test_id` = '$test_id' 
 	and `edu_test`.`open` = '1' 
 	and `edu_test`.`active` = true
 	and `edu_school`.`open` = '1' 
@@ -55,7 +55,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 	
 		$sql = "SELECT `edu_member_school`.*
 		from `edu_member_school`
-		where `edu_member_school`.`member_id` = '$member_id' 
+		WHERE `edu_member_school`.`member_id` = '$member_id' 
 		and `edu_member_school`.`school_id` = '$school_id' 
 		and `edu_member_school`.`role` = 'S'
 		";
@@ -63,8 +63,8 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 
 		if($stmt->rowCount() > 0)
 		{
-			$sql2 = "UPDATE `edu_member_school` set `class_id` = '$class_id' 
-			where `student_id` = '$student_id' and `role` = 'S' ";
+			$sql2 = "UPDATE `edu_member_school` SET `class_id` = '$class_id' 
+			WHERE `student_id` = '$student_id' and `role` = 'S' ";
 			$database->execute($sql2);
 		}
 		else
@@ -79,7 +79,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 		$reg_number = '';
 		$reg_number_national = '';
 
-		$sql = "SELECT * from `member` where `member_id` = '$member_id' ";
+		$sql = "SELECT * from `member` WHERE `member_id` = '$member_id' ";
 
 		$stmt = $database->executeQuery($sql);
 
@@ -102,7 +102,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 		";
 		$database->execute($sql);
 		
-		$sql = "UPDATE `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id' where `student_id` = '$student_id' ";
+		$sql = "UPDATE `edu_student` SET `school_id` = '$school_id', `class_id` = '$class_id' WHERE `student_id` = '$student_id' ";
 		$database->execute($sql);
 		
 		if($ref == '')
@@ -137,12 +137,12 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 		`edu_school`.`active` as `school_active`,
 		`edu_student`.`student_id` as `student_id`,
 		`edu_member_school`.`member_id` as `student_in_school_id`,
-		(select count(distinct `edu_student`.`student_id`) from `edu_student` where `edu_student`.`student_id` = '$member_id' and `edu_member_school`.`role` = 'S') as `student_registered`
+		(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`student_id` = '$member_id' and `edu_member_school`.`role` = 'S') as `student_registered`
 		from `edu_test` 
 		inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
 		left join(`edu_student`) on(`edu_student`.`school_id` = `edu_test`.`school_id` and `edu_student`.`student_id` = '$member_id')
 		left join(`edu_member_school`) on(`edu_member_school`.`school_id` = `edu_test`.`school_id` and `edu_member_school`.`member_id` = '$member_id' and `edu_member_school`.`role` = 'S')
-		where `edu_test`.`test_id` = '$test_id' 
+		WHERE `edu_test`.`test_id` = '$test_id' 
 		and `edu_test`.`open` = '1' and `edu_test`.`active` = true
 		and `edu_school`.`open` = '1' and `edu_school`.`active` = true
 		";
@@ -169,7 +169,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 
 				$sqlx = "SELECT `edu_student`.*
 				from `edu_student`
-				where `student_id` = '$student_id' and `prevent_change_school` = '1'
+				WHERE `student_id` = '$student_id' and `prevent_change_school` = '1'
 				";
 				if($database->executeQuery($sqlx)->rowCount() > 0)
 				{
@@ -190,8 +190,8 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 				{
 					// siswa pernah terdaftar di sekolah ybs
 					// ubah sekolah
-					$sql = "UPDATE `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id'
-					where `student_id` = '$student_id' ";
+					$sql = "UPDATE `edu_student` SET `school_id` = '$school_id', `class_id` = '$class_id'
+					WHERE `student_id` = '$student_id' ";
 					$database->execute($sql);
 					$ref = "$school_code/test/?option=login&test_id=$test_id";
 					header("Location: $ref");
@@ -201,7 +201,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 			{
 				$sqlx = "SELECT `edu_student`.*
 				from `edu_student`
-				where `student_id` = '$student_id' and `prevent_change_school` = '1'
+				WHERE `student_id` = '$student_id' and `prevent_change_school` = '1'
 				";
 				if($database->executeQuery($sqlx)->rowCount() > 0)
 				{
@@ -230,8 +230,8 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 					$database->execute($sql2);
 	
 					// ubah sekolah
-					$sql = "UPDATE `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id'
-					where `student_id` = '$student_id' ";
+					$sql = "UPDATE `edu_student` SET `school_id` = '$school_id', `class_id` = '$class_id'
+					WHERE `student_id` = '$student_id' ";
 					$database->execute($sql);
 					$ref = "$school_code/test/?option=login&test_id=$test_id";
 					header("Location: $ref");

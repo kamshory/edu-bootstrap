@@ -58,7 +58,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 			
 		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 		$content = addslashes(UTF8ToEntities($content));
-		$sql = "UPDATE `edu_article` set `content` = '$content' where `article_id` = '$article_id' ";
+		$sql = "UPDATE `edu_article` SET `content` = '$content' WHERE `article_id` = '$article_id' ";
 		$database->executeUpdate($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&article_id=$article_id");
 	}
@@ -80,7 +80,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$sql = "UPDATE `edu_article` set
 		`title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
 		`time_edit` = '$time', `member_edit` = '$admin_id', `role_edit` = 'A', `ip_edit` =  '$ip', `active` = '$active'
-		where `article_id` = '$article_id' and `school_id` = '$school_id'
+		WHERE `article_id` = '$article_id' and `school_id` = '$school_id'
 		";
 		$database->executeUpdate($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&article_id=$article_id");
@@ -95,7 +95,7 @@ if(isset($_POST['set_active']) && isset($_POST['article_id']))
 		foreach($articles as $article_id)
 		{
 			$article_id = addslashes($article_id);
-			$sql = "UPDATE `edu_article` set `active` = true where `article_id` = '$article_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_article` SET `active` = true WHERE `article_id` = '$article_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -108,7 +108,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['article_id']))
 		foreach($articles as $article_id)
 		{
 			$article_id = addslashes($article_id);
-			$sql = "UPDATE `edu_article` set `active` = false where `article_id` = '$article_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_article` SET `active` = false WHERE `article_id` = '$article_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -121,7 +121,7 @@ if(isset($_POST['delete']) && isset($_POST['article_id']))
 		foreach($articles as $article_id)
 		{
 			$article_id = addslashes($article_id);
-			$sql = "DELETE FROM `edu_article` where `article_id` = '$article_id' and `school_id` = '$school_id' ";
+			$sql = "DELETE FROM `edu_article` WHERE `article_id` = '$article_id' and `school_id` = '$school_id' ";
 			$stmt = $database->executeDelete($sql, true);
 			if($stmt->rowCount() > 0)
 			{
@@ -148,7 +148,7 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/article-editor.js"></script>
 
 <?php
-$sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
+$sqlc = "SELECT `class_id`, `name` from `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
 $stmt = $database->executeQuery($sqlc);
 		$arrc = array();
 if($stmt->rowCount() > 0)
@@ -193,14 +193,14 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 
 <?php
 $article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
-$sql = "SELECT * from `edu_article` where `article_id` = '$article_id' and `school_id` = '$school_id' ";
+$sql = "SELECT * from `edu_article` WHERE `article_id` = '$article_id' and `school_id` = '$school_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <?php
-$sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
+$sqlc = "SELECT `class_id`, `name` from `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
 $stmt = $database->executeQuery($sqlc);
 $arrc = array();
 if($stmt->rowCount() > 0)
@@ -335,7 +335,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "SELECT * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
+    $sql2 = "SELECT * from `edu_class` WHERE `active` = true and `school_id` = '$school_id' order by `order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(

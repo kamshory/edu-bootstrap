@@ -82,7 +82,7 @@ h3{
 <?php
     $sql = "SELECT `edu_teacher`.* 
     from `edu_teacher` 
-    where `edu_teacher`.`active` = true
+    WHERE `edu_teacher`.`active` = true
     order by `edu_teacher`.`name` asc 
     ";
     $stmt = $database->executeQuery($sql);

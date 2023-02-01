@@ -16,11 +16,11 @@ if(!empty(@$school_id))
 {
 $sql = "SELECT `edu_school`.*, 
 (select count(distinct `edu_teacher`.`teacher_id`) from `edu_teacher`
-where `edu_teacher`.`school_id` = `edu_school`.`school_id` and `edu_teacher`.`gender` = 'M') as `M`,
+WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` and `edu_teacher`.`gender` = 'M') as `M`,
 (select count(distinct `edu_teacher`.`teacher_id`) from `edu_teacher`
-where `edu_teacher`.`school_id` = `edu_school`.`school_id` and `edu_teacher`.`gender` = 'W') as `W`
+WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` and `edu_teacher`.`gender` = 'W') as `W`
 from `edu_school`
-where `edu_school`.`school_id` = '$school_id' 
+WHERE `edu_school`.`school_id` = '$school_id' 
 ";
 $stmt = $database->executeQuery($sql);
 if ($stmt->rowCount() > 0) {

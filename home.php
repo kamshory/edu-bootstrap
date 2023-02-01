@@ -40,7 +40,7 @@ include_once dirname(__FILE__)."/lib.inc/auth.php";
 			<?php
             $sql = "SELECT `edu_info`.`time_create` , left(`edu_info`.`time_create`, 7) as `month`, count(*) as `count`
             from `edu_info` 
-            where `edu_info`.`active` = true
+            WHERE `edu_info`.`active` = true
             group by `month`
             order by `edu_info`.`info_id` desc
             ";
@@ -71,7 +71,7 @@ include_once dirname(__FILE__)."/lib.inc/auth.php";
 			<?php
             $sql = "SELECT `edu_info`.* 
             from `edu_info` 
-            where `edu_info`.`active` = true
+            WHERE `edu_info`.`active` = true
             order by `edu_info`.`info_id` desc
             limit 0, 10
             ";

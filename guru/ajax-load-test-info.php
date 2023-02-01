@@ -32,9 +32,9 @@ $array_class = $picoEdu->getArrayClass($school_id);
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
-(select `edu_teacher`.`name` from `edu_teacher` where `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
-(select `member`.`name` from `member` where `member`.`member_id` = `edu_test`.`member_create`) as `member_create`,
-(select `member`.`name` from `member` where `member`.`member_id` = `edu_test`.`member_edit`) as `member_edit`
+(select `edu_teacher`.`name` from `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
+(select `member`.`name` from `member` WHERE `member`.`member_id` = `edu_test`.`member_create`) as `member_create`,
+(select `member`.`name` from `member` WHERE `member`.`member_id` = `edu_test`.`member_edit`) as `member_edit`
 from `edu_test` 
 where 1
 and `edu_test`.`test_id` = '$test_id' and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id'

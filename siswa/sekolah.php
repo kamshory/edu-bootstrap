@@ -8,12 +8,12 @@ exit();
 $cfg->page_title = "Sekolah";
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $sql = "SELECT `edu_school`.*,
-(select `country`.`name` from `country` where `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
-(select `state`.`name` from `state` where `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
-(select `city`.`name` from `city` where `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
-(select count(distinct `edu_class`.`class_id`) from `edu_class` where `edu_class`.`school_id` = `edu_school`.`school_id` group by `edu_class`.`school_id` limit 0,1) as `num_class`,
-(select count(distinct `edu_teacher`.`teacher_id`) from `edu_teacher` where `edu_teacher`.`school_id` = `edu_school`.`school_id` group by `edu_teacher`.`school_id` limit 0,1) as `num_teacher`,
-(select count(distinct `edu_student`.`student_id`) from `edu_student` where `edu_student`.`school_id` = `edu_school`.`school_id` group by `edu_student`.`school_id` limit 0,1) as `num_student`
+(select `country`.`name` from `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
+(select `state`.`name` from `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
+(select `city`.`name` from `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
+(select count(distinct `edu_class`.`class_id`) from `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id` group by `edu_class`.`school_id` limit 0,1) as `num_class`,
+(select count(distinct `edu_teacher`.`teacher_id`) from `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` group by `edu_teacher`.`school_id` limit 0,1) as `num_teacher`,
+(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id` group by `edu_student`.`school_id` limit 0,1) as `num_student`
 from `edu_school` 
 where 1
 and `edu_school`.`school_id` = '$school_id'

@@ -775,7 +775,7 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `city_id_to_name` (`in_city_id` BIGIN
 
 
 declare `out_name` varchar(100) default null;
-select `city`.`name` into `out_name` from `city` where `city`.`city_id` = `in_city_id`;
+select `city`.`name` into `out_name` from `city` WHERE `city`.`city_id` = `in_city_id`;
 return `out_name`;
 
 
@@ -801,7 +801,7 @@ end if;
 
 
 select `city`.`city_id` into `out_city_id`
-from `city` where `city`.`name` like `in_name` and (`city`.`state_id` = `in_state_id` or `in_state_id` = '' or `in_state_id` = 0 or `in_state_id` is null) and `city`.`country_id` = `in_country_id` limit 0,1;
+from `city` WHERE `city`.`name` like `in_name` and (`city`.`state_id` = `in_state_id` or `in_state_id` = '' or `in_state_id` = 0 or `in_state_id` is null) and `city`.`country_id` = `in_country_id` limit 0,1;
 
 
 if `out_city_id` is null or `out_city_id` = 0 then
@@ -827,7 +827,7 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `country_id_to_name` (`cid` VARCHAR(5
 declare `cname` varchar(100);
 
 
-select `country`.`name` into `cname` from `country` where `country`.`country_id` like `cid` limit 0,1;
+select `country`.`name` into `cname` from `country` WHERE `country`.`country_id` like `cid` limit 0,1;
 return `cname`;
 end$$
 
@@ -843,7 +843,7 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `get_class_id_from_name` (`in_class` 
 declare `out_id` bigint default null;
 select `edu_class`.`class_id` into `out_id`
 from `edu_class`
-where `edu_class`.`name` like `in_class`
+WHERE `edu_class`.`name` like `in_class`
 and `edu_class`.`school_id` = `in_school`
 limit 0, 1;
 
@@ -873,7 +873,7 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `get_school_id_from_name` (`in_school
 declare `out_id` bigint default null;
 select `edu_school`.`school_id` into `out_id`
 from `edu_school`
-where `edu_school`.`name` like `in_school`
+WHERE `edu_school`.`name` like `in_school`
 limit 0, 1;
 return `out_id`;
 end$$
@@ -890,7 +890,7 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `get_school_program_id_from_name` (`i
 declare `out_id` bigint default null;
 select `edu_school_program`.`school_program_id` into `out_id`
 from `edu_school_program`
-where `edu_school_program`.`name` like `in_school_program`
+WHERE `edu_school_program`.`name` like `in_school_program`
 and `edu_school_program`.`school_id` = `in_school`
 limit 0, 1;
 
@@ -920,7 +920,7 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `state_id_to_name` (`in_state_id` BIG
 
 
 declare `out_name` varchar(100) default null;
-select `state`.`name` into `out_name` from `state` where `state`.`state_id` = `in_state_id`;
+select `state`.`name` into `out_name` from `state` WHERE `state`.`state_id` = `in_state_id`;
 return `out_name`;
 
 
@@ -946,7 +946,7 @@ end if;
 
 
 select `state`.`state_id` into `out_state_id`
-from `state` where `state`.`name` like `in_name` and `state`.`country_id` = `in_country_id` limit 0,1;
+from `state` WHERE `state`.`name` like `in_name` and `state`.`country_id` = `in_country_id` limit 0,1;
 
 
 if `out_state_id` > 0 then
@@ -971,33 +971,33 @@ USE `mini_picopi`;
 DELIMITER $$
 USE `mini_picopi`$$
 CREATE TRIGGER `after_delete_edu_admin` AFTER DELETE ON `edu_admin` FOR EACH ROW begin
-DELETE FROM `edu_member_school` where `role` = 'A' and `member_id` = OLD.`admin_id`;
+DELETE FROM `edu_member_school` WHERE `role` = 'A' and `member_id` = OLD.`admin_id`;
 end$$
 
 USE `mini_picopi`$$
 CREATE TRIGGER `after_delete_edu_student` AFTER DELETE ON `edu_student` FOR EACH ROW begin
-DELETE FROM `edu_member_school` where `role` = 'S' and `member_id` = OLD.`student_id`;
+DELETE FROM `edu_member_school` WHERE `role` = 'S' and `member_id` = OLD.`student_id`;
 end$$
 
 USE `mini_picopi`$$
 CREATE TRIGGER `after_delete_edu_teacher` AFTER DELETE ON `edu_teacher` FOR EACH ROW begin
-DELETE FROM `edu_member_school` where `role` = 'T' and `member_id` = OLD.`teacher_id`;
+DELETE FROM `edu_member_school` WHERE `role` = 'T' and `member_id` = OLD.`teacher_id`;
 end$$
 
 USE `mini_picopi`$$
 CREATE TRIGGER `after_delete_edu_test` AFTER DELETE ON `edu_test` FOR EACH ROW begin
-DELETE FROM `edu_question` where `edu_question`.`test_id` = OLD.`test_id`;
+DELETE FROM `edu_question` WHERE `edu_question`.`test_id` = OLD.`test_id`;
 
 
-DELETE FROM `edu_answer` where `edu_answer`.`test_id` = OLD.`test_id`;
+DELETE FROM `edu_answer` WHERE `edu_answer`.`test_id` = OLD.`test_id`;
 
 
-DELETE FROM `edu_test_member` where `edu_test_member`.`test_id` = OLD.`test_id`;
+DELETE FROM `edu_test_member` WHERE `edu_test_member`.`test_id` = OLD.`test_id`;
 end$$
 
 USE `mini_picopi`$$
 CREATE TRIGGER `after_delete_edu_question` AFTER DELETE ON `edu_question` FOR EACH ROW begin
-DELETE FROM `edu_option` where `edu_option`.`question_id` = OLD.`question_id`;
+DELETE FROM `edu_option` WHERE `edu_option`.`question_id` = OLD.`question_id`;
 end$$
 
 

@@ -4,7 +4,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/auth.php";
 $member_id = kh_filter_input(INPUT_GET, 'member_id', FILTER_SANITIZE_NUMBER_UINT);
 $sql = "SELECT `last_seen_time`, `last_activity_time`
 from `member`
-where `member_id` = '$member_id'
+WHERE `member_id` = '$member_id'
 and `active` = true
 ";
 

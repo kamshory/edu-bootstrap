@@ -49,7 +49,7 @@ if(isset($_POST['username']) && isset($_POST['send']))
 	$password = md5(kh_filter_input(INPUT_POST, 'password', FILTER_SANITIZE_PASSWORD));
 	
 	$auth = md5($_SERVER['REMOTE_ADDR'].date('Y-m-d'));
-	$sql = "UPDATE `member` set `auth` = '$auth'
+	$sql = "UPDATE `member` SET `auth` = '$auth'
 	where ((`email` like '$email' and '$email' != '') or `username` like '$username' or (`phone` like '$phone' and '$phone' != '')) 
 	";
 	$database->execute($sql);

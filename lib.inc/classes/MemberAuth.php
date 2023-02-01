@@ -34,7 +34,7 @@ class MemberAuth
 		$sql = "SELECT `member_id`, `username`, `name`, `gender`, `birth_place`, `birth_day`, `email`, `phone`, `url`, `show_compass`,
 		`autoplay_360`, `autorotate_360`, `img_360_compress`, `picture_hash`, `background`, `language`, `country_id`, `state_id`, `city_id`, `circle_avatar`
 		from `member` 
-		where `username` = '$username' and `password` = md5('$password') 
+		WHERE `username` = '$username' and `password` = md5('$password') 
 		and `active` = true
 		and `blocked` = '0'
 		";
@@ -72,7 +72,7 @@ class MemberAuth
 			if ($createlog) {
 				$ip = addslashes($_SERVER['REMOTE_ADDR']);
 				$now = $picoEdu->getLocalDateTime();
-				$sql = "UPDATE `member` set `last_seen_ip` = '$ip', `last_seen_time` = '$now' where `member_id` = '" . $this->member_id . "'";
+				$sql = "UPDATE `member` SET `last_seen_ip` = '$ip', `last_seen_time` = '$now' WHERE `member_id` = '" . $this->member_id . "'";
 				$database->executeUpdate($sql, false);
 			}
 		}

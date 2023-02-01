@@ -184,7 +184,7 @@ else
 
 			$sql = "SELECT `edu_info`.* 
 			from `edu_info` 
-			where `edu_info`.`active` = true
+			WHERE `edu_info`.`active` = true
 			order by `edu_info`.`info_id` desc
 			limit 0, 2
 			";

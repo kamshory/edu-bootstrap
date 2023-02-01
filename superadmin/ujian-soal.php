@@ -17,16 +17,16 @@ if(@$_GET['option'] == 'delete')
 {
 	$question_id = kh_filter_input(INPUT_GET, 'question_id', FILTER_SANITIZE_NUMBER_UINT);
 	$digest = kh_filter_input(INPUT_GET, 'digest', FILTER_SANITIZE_STRING_NEW_BASE64);
-	$sql = "SELECT * from `edu_question` where `question_id` = '$question_id' and `digest` = '$digest' ";
+	$sql = "SELECT * from `edu_question` WHERE `question_id` = '$question_id' and `digest` = '$digest' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		$id = $data['question_id'];
 		$test_id = $data['test_id'];
-		$sql = "DELETE FROM `edu_option` where `question_id` = '$id' ";
+		$sql = "DELETE FROM `edu_option` WHERE `question_id` = '$id' ";
 		$database->executeDelete($sql, true);
-		$sql = "DELETE FROM `edu_question` where `question_id` = '$id' ";
+		$sql = "DELETE FROM `edu_question` WHERE `question_id` = '$id' ";
 		$database->executeDelete($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?test_id=$test_id");
 	}
@@ -38,9 +38,9 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	$picoEdu->sortQuestion($test_id);
 	$sql = "SELECT `edu_test`.*, 
-	(select `edu_question`.`order` from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id` order by `order` desc limit 0,1) as `order`
+	(select `edu_question`.`order` from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` order by `order` desc limit 0,1) as `order`
 	from `edu_test`
-	where `edu_test`.`test_id` = '$test_id'
+	WHERE `edu_test`.`test_id` = '$test_id'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -137,7 +137,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$numbering = kh_filter_input(INPUT_POST, 'numbering', FILTER_SANITIZE_STRING_NEW);
 	$random = kh_filter_input(INPUT_POST, 'random', FILTER_SANITIZE_NUMBER_UINT);
 
-	$sql = "SELECT `test_id` from `edu_question` where `question_id` = '$question_id' ";
+	$sql = "SELECT `test_id` from `edu_question` WHERE `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -151,15 +151,15 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$question = UTF8ToEntities($question);
 		$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 		
-		$sql = "UPDATE `edu_question` set `content` = '$question' , `random` = '$random', `numbering` = '$numbering' where `question_id` = '$question_id' ";
+		$sql = "UPDATE `edu_question` SET `content` = '$question' , `random` = '$random', `numbering` = '$numbering' WHERE `question_id` = '$question_id' ";
 		$stmt2 = $database->executeUpdate($sql, true);
 		if($stmt2->rowCount())
 		{
-			$sql = "UPDATE `edu_question` set `time_edit` = '$time_edit', `member_edit` = '$member_edit' where `question_id` = '$question_id' ";
+			$sql = "UPDATE `edu_question` SET `time_edit` = '$time_edit', `member_edit` = '$member_edit' WHERE `question_id` = '$question_id' ";
 			$database->executeUpdate($sql, true);			
 		}
 		
-		$sql = "SELECT * from `edu_option` where `question_id` = '$question_id' ";
+		$sql = "SELECT * from `edu_option` WHERE `question_id` = '$question_id' ";
 		$stmtx = $database->executeQuery($sql);
 		if ($stmtx->rowCount() > 0) {
 			$rowsx = $stmtx->fetchAll(PDO::FETCH_ASSOC);
@@ -171,11 +171,11 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 				$option = addslashes(removeparagraphtag(extractImageData($option, $direktori, $prefiks, $fileSync)));
 
 				$score = kh_filter_input(INPUT_POST, 'score_' . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
-				$sql = "UPDATE `edu_option` set `content` = '$option', `score` = '$score' where `question_id` = '$question_id' and `option_id` = '$id2' ";
+				$sql = "UPDATE `edu_option` SET `content` = '$option', `score` = '$score' WHERE `question_id` = '$question_id' and `option_id` = '$id2' ";
 				$stmt4 = $database->executeUpdate($sql, true);
 				if ($stmt4->rowCount() > 0) {
-					$sql = "UPDATE `edu_option` set `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
-					where `question_id` = '$question_id' and `option_id` = '$id2' ";
+					$sql = "UPDATE `edu_option` SET `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
+					WHERE `question_id` = '$question_id' and `option_id` = '$id2' ";
 					$database->executeUpdate($sql, true);
 				}
 			}
@@ -199,15 +199,15 @@ if(@$_GET['option'] == 'edit')
 {
 	include_once dirname(__FILE__)."/lib.inc/header.php";
 	$question_id = kh_filter_input(INPUT_GET, 'question_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT * from `edu_question` where `question_id` = '$question_id' ";
+	$sql = "SELECT * from `edu_question` WHERE `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		$test_id = $data['test_id'];
 
 		$sql = "SELECT `edu_test`.* ,
-		(select count(distinct `edu_question`.`question_id`) from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id`) as `collection`
-		from `edu_test` where `test_id` = '$test_id' ";
+		(select count(distinct `edu_question`.`question_id`) from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `collection`
+		from `edu_test` WHERE `test_id` = '$test_id' ";
 		$stmt3 = $database->executeQuery($sql);
 		if ($stmt3->rowCount() > 0) {
 			$data3 = $stmt3->fetch(PDO::FETCH_ASSOC);
@@ -464,7 +464,7 @@ tinyMCE.activeEditor.windowManager.open({url:ajaxFilemanagerURL,width:780,height
 
 <?php
 $numbering = $data['numbering'];
-$sql = "SELECT * from `edu_option` where `question_id` = '$question_id' ";
+$sql = "SELECT * from `edu_option` WHERE `question_id` = '$question_id' ";
 $i = 0;
 $stmt2 = $database->executeQuery($sql);
 if ($stmt2->rowCount() > 0) {
@@ -507,8 +507,8 @@ else if(isset($_GET['test_id']))
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* ,
-(select count(distinct `edu_question`.`question_id`) from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id`) as `collection`
-from `edu_test` where `test_id` = '$test_id' 
+(select count(distinct `edu_question`.`question_id`) from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `collection`
+from `edu_test` WHERE `test_id` = '$test_id' 
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -555,7 +555,7 @@ for($i=0;$i<$number_of_option;$i++)
 
 if(@$_GET['option'] == 'analys')
 {
-$sql = "SELECT * from `edu_question` where `test_id` = '$test_id' order by `order` asc ";
+$sql = "SELECT * from `edu_question` WHERE `test_id` = '$test_id' order by `order` asc ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -633,12 +633,12 @@ foreach($rows as $data)
 	$sql2 = "SELECT `edu_option`.*,
 	(select count(distinct `edu_answer`.`answer_id`) 
 		from `edu_answer` 
-		where `edu_answer`.`answer` like concat('%,',`edu_option`.`option_id`,']%')
+		WHERE `edu_answer`.`answer` like concat('%,',`edu_option`.`option_id`,']%')
 		group by `edu_answer`.`test_id`
 		limit 0,1
 		) as `pilih`
 	from `edu_option`
-	where `edu_option`.`question_id` = '$question_id' ";
+	WHERE `edu_option`.`question_id` = '$question_id' ";
 	$answer = '';
 	$option = array();
 	$j = 0;
@@ -800,7 +800,7 @@ window.onload=function(){
 <ol id="sortable" class="test-question">
 <?php
 $sql = "SELECT * 
-from `edu_question` where `test_id` = '$test_id' 
+from `edu_question` WHERE `test_id` = '$test_id' 
 order by `order` asc, `question_id` asc
 ";
 $stmt = $database->executeQuery($sql);
@@ -820,7 +820,7 @@ echo $data['content'];
 <ol class="listoption" style="list-style-type:<?php echo $data['numbering']; ?>">
 <?php
 $question_id = $data['question_id'];
-$sql2 = "SELECT * from `edu_option` where `question_id` = '$question_id' ";
+$sql2 = "SELECT * from `edu_option` WHERE `question_id` = '$question_id' ";
 $stmt2 = $database->executeQuery($sql2);
 if ($stmt2->rowCount() > 0) 
 {
@@ -1006,7 +1006,7 @@ function buildMenu(id)
     <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php
-					$sql = "SELECT * from `edu_class` where `school_id` = '$school_id' ";
+					$sql = "SELECT * from `edu_class` WHERE `school_id` = '$school_id' ";
 					echo $picoEdu->createFilterDb(
 						$sql2,
 						array(
@@ -1058,9 +1058,9 @@ function buildMenu(id)
 
 
 				$sql = "SELECT `edu_test`.* $nt,
-				(select `edu_school`.`name` from `edu_school` where `edu_school`.`school_id` = `edu_test`.`school_id` limit 0,1) as `school_name`,
-				(select `edu_teacher`.`name` from `edu_teacher` where `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
-				(select count(distinct `edu_question`.`question_id`) from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
+				(select `edu_school`.`name` from `edu_school` WHERE `edu_school`.`school_id` = `edu_test`.`school_id` limit 0,1) as `school_name`,
+				(select `edu_teacher`.`name` from `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
+				(select count(distinct `edu_question`.`question_id`) from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
 				from `edu_test`
 				where 1 $sql_filter
 				order by `edu_test`.`test_id` desc

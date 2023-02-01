@@ -18,7 +18,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 {
 	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `edu_test_member`.* from `edu_test_member` where `test_member_id` = '$id' and `status` = '1'
+	$sql = "SELECT `edu_test_member`.* from `edu_test_member` WHERE `test_member_id` = '$id' and `status` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -27,9 +27,9 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 		$waktu = $picoEdu->getLocalDateTime();
 		$ip = addslashes($_SERVER['REMOTE_ADDR']);
 		$sessions_id = $data['sessions_id'];
-		$sql = "DELETE FROM `sessions` where `id` = '$sessions_id' ";
+		$sql = "DELETE FROM `sessions` WHERE `id` = '$sessions_id' ";
 		$database->executeDelete($sql, true);
-		$sql = "UPDATE `edu_test_member` set `time_exit` = '$waktu', `ip_exit` = '$ip', `member_edit` = '$admin_id', `status` = '3' where `test_member_id` = '$id'";	
+		$sql = "UPDATE `edu_test_member` SET `time_exit` = '$waktu', `ip_exit` = '$ip', `member_edit` = '$admin_id', `status` = '3' WHERE `test_member_id` = '$id'";	
 		$database->executeUpdate($sql, true);
 	}
 }
@@ -37,7 +37,7 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 {
 	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `edu_test_member`.* from `edu_test_member` where `test_member_id` = '$id' and `status` = '1'
+	$sql = "SELECT `edu_test_member`.* from `edu_test_member` WHERE `test_member_id` = '$id' and `status` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -47,11 +47,11 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 		$ip = addslashes($_SERVER['REMOTE_ADDR']);
 		$sessions_id = $data['sessions_id'];
 		$student_id = $data['student_id'];
-		$sql = "DELETE FROM `sessions` where `id` = '$sessions_id' ";
+		$sql = "DELETE FROM `sessions` WHERE `id` = '$sessions_id' ";
 		$database->executeDelete($sql, true);
-		$sql = "UPDATE `edu_test_member` set `time_exit` = '$waktu', `ip_exit` = '$ip', `member_edit` = '$admin_id', `status` = '4' where `test_member_id` = '$id'";	
+		$sql = "UPDATE `edu_test_member` SET `time_exit` = '$waktu', `ip_exit` = '$ip', `member_edit` = '$admin_id', `status` = '4' WHERE `test_member_id` = '$id'";	
 		$database->executeUpdate($sql, true);
-		$sql = "UPDATE `edu_student` set `blocked` = '1' where `edu_student_id` = '$student_id' and `school_id` = '$school_id' ";
+		$sql = "UPDATE `edu_student` SET `blocked` = '1' WHERE `edu_student_id` = '$student_id' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 }
@@ -78,12 +78,12 @@ else if($test_status == '4')
 $tanggal_sekarang = date('Y-m-d');
 $filter .= " and `time_enter` like '$tanggal_sekarang%' ";
 $sql = "SELECT `edu_test_member`.* , `edu_student`.`reg_number`,
-(select count(distinct `u`.`student_id`) from `edu_test_member` as `u` where `u`.`student_id` = `edu_test_member`.`student_id` and `u`.`school_id` = `edu_test_member`.`school_id` and `u`.`test_id` = `edu_test_member`.`test_id` and `u`.`test_member_id` != `edu_test_member`.`test_member_id` and `u`.`status` = '1' and `edu_test_member`.`status` = '1' and left(`u`.`time_enter`, 10) = left(`edu_test_member`.`time_enter`, 10)) as `duplikat_login`,
+(select count(distinct `u`.`student_id`) from `edu_test_member` as `u` WHERE `u`.`student_id` = `edu_test_member`.`student_id` and `u`.`school_id` = `edu_test_member`.`school_id` and `u`.`test_id` = `edu_test_member`.`test_id` and `u`.`test_member_id` != `edu_test_member`.`test_member_id` and `u`.`status` = '1' and `edu_test_member`.`status` = '1' and left(`u`.`time_enter`, 10) = left(`edu_test_member`.`time_enter`, 10)) as `duplikat_login`,
 `edu_student`.`name` as `name_student`,
-(select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_student`.`class_id` and `edu_class`.`school_id` = `edu_test_member`.`school_id`) as `name_class`
+(select `edu_class`.`name` from `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` and `edu_class`.`school_id` = `edu_test_member`.`school_id`) as `name_class`
 from `edu_test_member` 
 inner join(`edu_student`) on(`edu_student`.`student_id` = `edu_test_member`.`student_id`)
-where `edu_test_member`.`test_id` = '$test_id' $filter
+WHERE `edu_test_member`.`test_id` = '$test_id' $filter
 group by `edu_test_member`.`test_member_id`
 order by `edu_test_member`.`time_enter` asc
 ";

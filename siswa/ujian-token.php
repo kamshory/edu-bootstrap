@@ -20,7 +20,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 	$sql = "SELECT `edu_token`.* , `edu_test`.*
 	from `edu_token`
 	inner join(`edu_test`) on(`edu_test`.`test_id` = `edu_token`.`test_id`)
-	where `edu_token`.`student_id` = '$student_id'
+	WHERE `edu_token`.`student_id` = '$student_id'
 	and `edu_token`.`token` = '$token' and `edu_token`.`active` = true and `edu_token`.`time_expire` > '$now'
 	";
 	$stmt = $database->executeQuery($sql);
@@ -40,7 +40,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 		$dur_obj = $picoEdu->secondsToTime($data['duration']);
 		if($data['has_limits'])
 		{
-			$sql = "SELECT * from `edu_answer` where `student_id` = '$student_id' and `test_id` = '$test_id' order by `start` desc ";
+			$sql = "SELECT * from `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' order by `start` desc ";
 			$stmt = $database->executeQuery($sql);
 			$ntest = $stmt->rowCount();
 			if($ntest < $data['trial_limits'])
@@ -77,7 +77,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 				if($data['random'])
 				{	
 					$sql = "SELECT `question_id` , rand() as `rand`
-					from `edu_question` where `test_id` = '$test_id'
+					from `edu_question` WHERE `test_id` = '$test_id'
 					order by `rand` asc
 					limit 0, $number_of_question
 					";
@@ -85,7 +85,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 				else
 				{
 					$sql = "SELECT `question_id` , `order`
-					from `edu_question` where `test_id` = '$test_id'
+					from `edu_question` WHERE `test_id` = '$test_id'
 					order by `order` asc, `question_id` asc
 					limit 0, $number_of_question
 					";
@@ -102,15 +102,15 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 				$_SESSION['session_test'][$student_id][$test_id]['soal'] = $str;
 				$picoEdu->loginTest($school_id, $student_id, $test_id, session_id(), $picoEdu->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
 
-				$sql = "UPDATE `edu_token` set `active` = false 
-				where `edu_token`.`student_id` = '$student_id' and `edu_token`.`token` = '$token' ";
+				$sql = "UPDATE `edu_token` SET `active` = false 
+				WHERE `edu_token`.`student_id` = '$student_id' and `edu_token`.`token` = '$token' ";
 				$database->execute($sql);
 				header("Location: ujian/index.php?test_id=$test_id");
 			}
 			else
 			{
-				$sql = "UPDATE `edu_token` set `active` = false 
-				where `edu_token`.`student_id` = '$student_id' and `edu_token`.`token` = '$token' ";
+				$sql = "UPDATE `edu_token` SET `active` = false 
+				WHERE `edu_token`.`student_id` = '$student_id' and `edu_token`.`token` = '$token' ";
 				$database->execute($sql);
 				header("Location: ujian/index.php?test_id=$test_id");
 			}
@@ -133,7 +133,7 @@ else if(isset($_POST['token']))
 	{
 		$now = $picoEdu->getLocalDateTime();
 		$sql = "SELECT * from `edu_token`
-		where `student_id` = '$student_id'
+		WHERE `student_id` = '$student_id'
 		and `token` = '$token' and `active` = true and `time_expire` > '$now'
 		";
 		$stmt = $database->executeQuery($sql);
@@ -152,7 +152,7 @@ else if(isset($_POST['token']))
 			if(!$picoEdu->logInvalidLogin($student_id, 'T', $picoEdu->getLocalDateTime(), $cfg->max_invalid_signin_time, $cfg->max_invalid_signin_count))
 			{
 				$account_blocked = 1;
-				$sql = "UPDATE `edu_student` set `blocked` = '1' where `student_id` = '$student_id' ";
+				$sql = "UPDATE `edu_student` SET `blocked` = '1' WHERE `student_id` = '$student_id' ";
 				$database->execute($sql);
 			}
 		}
@@ -205,7 +205,7 @@ $cfg->page_title = "Token Ujian";
         <div class="test-info">
         <?php
 		$token = abs(@$_SESSION['vtoken']);
-		$sql = "SELECT * from `edu_test` where `test_id` = '$test_id' ";
+		$sql = "SELECT * from `edu_test` WHERE `test_id` = '$test_id' ";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{

@@ -14,14 +14,14 @@ if(@$_GET['option'] == 'select')
 	from `edu_school`
 	inner join(`edu_student`) on(`edu_student`.`school_id` = `edu_school`.`school_id`)
 	inner join(`edu_class`) on(`edu_class`.`school_id` = `edu_school`.`school_id`)
-	where `edu_student`.`student_id` = '$auth_student_id' 
+	WHERE `edu_student`.`student_id` = '$auth_student_id' 
 	and `edu_class`.`class_id` = '$class_id'
 	and `edu_school`.`open` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$sql = "UPDATE `edu_student` set `class_id` = '$class_id' where `student_id` = '$student_id' ";
+		$sql = "UPDATE `edu_student` SET `class_id` = '$class_id' WHERE `student_id` = '$student_id' ";
 		$database->executeUpdate($sql, true);
 		header('Location: index.php');
 		exit();
@@ -36,11 +36,11 @@ include_once dirname(dirname(__FILE__))."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_class`.* $nt,
-(select `edu_school_program`.`name` from `edu_school_program` where `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
-(select `edu_admin1`.`name` from `edu_admin` as `edu_admin1` where `edu_admin1`.`admin_id` = `edu_class`.`admin_create` limit 0,1) as `admin_create`,
-(select `edu_admin2`.`name` from `edu_admin` as `edu_admin2` where `edu_admin2`.`admin_id` = `edu_class`.`admin_edit` limit 0,1) as `admin_edit`
+(select `edu_school_program`.`name` from `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
+(select `edu_admin1`.`name` from `edu_admin` as `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_class`.`admin_create` limit 0,1) as `admin_create`,
+(select `edu_admin2`.`name` from `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_class`.`admin_edit` limit 0,1) as `admin_edit`
 from `edu_class` 
-where `edu_class`.`school_id` = '$school_id'
+WHERE `edu_class`.`school_id` = '$school_id'
 and `edu_class`.`class_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
@@ -146,8 +146,8 @@ $nt = '';
 
 
 $sql = "SELECT `edu_class`.* $nt,
-(select `edu_school_program`.`name` from `edu_school_program` where `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
-(select count(distinct `edu_student`.`student_id`) from `edu_student` where `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
+(select `edu_school_program`.`name` from `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
+(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
 from `edu_class`
 where 1 $sql_filter
 order by `edu_class`.`order` asc

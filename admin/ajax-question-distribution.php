@@ -16,8 +16,8 @@ if(isset($_POST['save']) && isset($_POST['test_id']) && isset($_POST['data']))
 		{
 			$data = json_encode($try);
 			$data = addslashes($data);
-			$sql = "UPDATE `edu_test` set `random_distribution` = '$data'
-			where `test_id` = '$test_id'
+			$sql = "UPDATE `edu_test` SET `random_distribution` = '$data'
+			WHERE `test_id` = '$test_id'
 			";
 			$database->executeUpdate($sql, true);
 		}
@@ -35,7 +35,7 @@ else
 		$randobj = array();
 		$sql = "SELECT `edu_test`.`random_distribution`
 		from `edu_test`
-		where `edu_test`.`test_id` = '$test_id'
+		WHERE `edu_test`.`test_id` = '$test_id'
 		";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
@@ -57,7 +57,7 @@ else
 			
 			$sql = "SELECT `edu_question`.`basic_competence` , count(distinct `edu_question`.`question_id`) as `colection`
 			from `edu_question`
-			where `edu_question`.`test_id` = '$test_id'
+			WHERE `edu_question`.`test_id` = '$test_id'
 			group by `edu_question`.`basic_competence`
 			order by `edu_question`.`basic_competence` asc
 			";

@@ -13,9 +13,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_class`.* $nt,
-(select `edu_school_program`.`name` from `edu_school_program` where `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`
+(select `edu_school_program`.`name` from `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`
 from `edu_class` 
-where `edu_class`.`active` = true and `edu_class`.`school_id` = '$school_id'
+WHERE `edu_class`.`active` = true and `edu_class`.`school_id` = '$school_id'
 and `edu_class`.`class_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
@@ -91,15 +91,15 @@ $nt = '';
 
 
 $sql = "SELECT `edu_class`.* $nt,
-(select `edu_school_program`.`name` from `edu_school_program` where `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
-(select count(distinct `edu_student`.`student_id`) from `edu_student` where `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
+(select `edu_school_program`.`name` from `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
+(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
 from `edu_class`
-where `edu_class`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_class`.`school_id` = '$school_id' $sql_filter
 order by `edu_class`.`order` asc
 ";
 $sql_test = "SELECT `edu_class`.*
 from `edu_class`
-where `edu_class`.`active` = true and `edu_class`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_class`.`active` = true and `edu_class`.`school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

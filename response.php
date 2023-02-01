@@ -6,7 +6,7 @@ include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
 
 $sql = "SELECT `edu_school_response`.* 
 from `edu_school_response` 
-where `edu_school_response`.`active` = true 
+WHERE `edu_school_response`.`active` = true 
 order by `edu_school_response`.`time` desc
 ";
 

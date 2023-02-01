@@ -265,9 +265,9 @@ if(isset($_POST['extract']))
 		";
 		$database->executeReplace($sql);
 		
-		$sql = "UPDATE `version` set `current_version` = 0;";
+		$sql = "UPDATE `version` SET `current_version` = 0;";
 		$database->executeUpdate($sql, true);
-		$sql = "UPDATE `version` set `current_version` = 1 where `version_id` = '$version_id';";
+		$sql = "UPDATE `version` SET `current_version` = 1 WHERE `version_id` = '$version_id';";
 		$database->executeUpdate($sql, true);
 		
 		$sql = "commit;";

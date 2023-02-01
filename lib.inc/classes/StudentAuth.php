@@ -31,7 +31,7 @@ class StudenAuth
 			`edu_school`.`name` as `school_name`, `edu_school`.`school_code` as `school_code`, `edu_school`.`use_token`
 			from `edu_student` 
 			left join(`edu_school`) on(`edu_school`.`school_id` = `edu_student`.`school_id`)
-			where `edu_student`.`username` like '$username' and `edu_student`.`password` = md5('$password') 
+			WHERE `edu_student`.`username` like '$username' and `edu_student`.`password` = md5('$password') 
 			and `edu_student`.`active` = true
 			and `edu_student`.`blocked` = '0'
 			";
@@ -57,7 +57,7 @@ class StudenAuth
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
 					$now = $picoEdu->getLocalDateTime();
-					$sql = "UPDATE `edu_student` set `ip_last_activity` = '$ip', `time_last_activity` = '$now' where `student_id` = '" . $this->student_id . "'";
+					$sql = "UPDATE `edu_student` SET `ip_last_activity` = '$ip', `time_last_activity` = '$now' WHERE `student_id` = '" . $this->student_id . "'";
 					$database->execute($sql);
 				}
 			}

@@ -19,7 +19,7 @@ if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "SELECT * from `edu_test_collection` where `test_collection_id` = '$test_collection_id' ";
+		$sql = "SELECT * from `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 		$nquestion = 0;
 		$noption = 0;
 		$stmt = $database->executeQuery($sql);
@@ -51,7 +51,7 @@ if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 			}
 			$sql = "UPDATE `edu_test_collection` 
 			set `number_of_question` = '$nquestion', `number_of_option` = '$noption', `file_md5` = '$md5', `file_sha1` = '$sha1'
-			where `test_collection_id` = '$test_collection_id' ";
+			WHERE `test_collection_id` = '$test_collection_id' ";
 			$database->execute($sql);
 		}
 	}
@@ -64,7 +64,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "UPDATE `edu_test_collection` set `active` = true where `test_collection_id` = '$test_collection_id' ";
+		$sql = "UPDATE `edu_test_collection` SET `active` = true WHERE `test_collection_id` = '$test_collection_id' ";
 		$database->execute($sql);
 	}
 	header("Location: ".basename($_SERVER['REQUEST_URI']));
@@ -76,7 +76,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "UPDATE `edu_test_collection` set `active` = false where `test_collection_id` = '$test_collection_id' ";
+		$sql = "UPDATE `edu_test_collection` SET `active` = false WHERE `test_collection_id` = '$test_collection_id' ";
 		$database->execute($sql);
 	}
 	header("Location: ".basename($_SERVER['REQUEST_URI']));
@@ -93,13 +93,13 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "SELECT * from `edu_test_collection` where `test_collection_id` = '$test_collection_id' ";
+		$sql = "SELECT * from `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			$file_path = $data['file_path'];
-			$sql = "DELETE FROM `edu_test_collection` where `test_collection_id` = '$test_collection_id' ";
+			$sql = "DELETE FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 			$database->execute($sql);
 			$real_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$file_path;
 			if(file_exists($real_path))
@@ -194,7 +194,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 
 	$sql = "UPDATE `edu_test_collection` set 
 	`name` = '$name', `grade_id` = '$grade_id', `time_edit` = '$time_edit', `ip_edit` = '$ip_edit', `active` = '$active'
-	where `test_collection_id` = '$test_collection_id'";
+	WHERE `test_collection_id` = '$test_collection_id'";
 	$database->execute($sql);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_collection_id=$test_collection_id");
 }

@@ -38,7 +38,7 @@ if(isset($_POST['set_active']) && isset($_POST['school_program_id']))
 		foreach($school_program as $key=>$val)
 		{
 			$school_program_id = addslashes($val);
-			$sql = "UPDATE `edu_school_program` set `active` = true where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_school_program` SET `active` = true WHERE `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -51,7 +51,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['school_program_id']))
 		foreach($school_program as $key=>$val)
 		{
 			$school_program_id = addslashes($val);
-			$sql = "UPDATE `edu_school_program` set `active` = false where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_school_program` SET `active` = false WHERE `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -64,7 +64,7 @@ if(isset($_POST['delete']) && isset($_POST['school_program_id']))
 		foreach($school_program as $key=>$val)
 		{
 			$school_program_id = addslashes($val);
-			$sql = "DELETE FROM `edu_school_program` where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
+			$sql = "DELETE FROM `edu_school_program` WHERE `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
 			$database->executeDelete($sql, true);
 		}
 	}
@@ -89,7 +89,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "UPDATE `edu_school_program` set 
 	`name` = '$name', `order` = '$sort_order', `default` = '$default', `time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
-	where `school_program_id` = '$school_program_id2'";
+	WHERE `school_program_id` = '$school_program_id2'";
 	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&school_program_id=$school_program_id");
 }
@@ -185,7 +185,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'school_program_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school_program`.* ,
-(select `edu_school`.`name` from `edu_school` where `edu_school`.`school_id` = `edu_school_program`.`school_id`) as `school_id`
+(select `edu_school`.`name` from `edu_school` WHERE `edu_school`.`school_id` = `edu_school_program`.`school_id`) as `school_id`
 from `edu_school_program` 
 where 1
 and `edu_school_program`.`school_program_id` = '$edit_key' and `school_id` = '$school_id'
@@ -284,12 +284,12 @@ $nt = '';
 
 $sql = "SELECT `edu_school_program`.*
 from `edu_school_program`
-where `school_id` = '$school_id' $sql_filter
+WHERE `school_id` = '$school_id' $sql_filter
 order by `edu_school_program`.`school_program_id` asc
 ";
 $sql_test = "SELECT `edu_school_program`.*
 from `edu_school_program`
-where `school_id` = '$school_id' $sql_filter
+WHERE `school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

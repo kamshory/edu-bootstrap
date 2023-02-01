@@ -13,7 +13,7 @@ if(isset($_POST['sort']))
 	{
 		$sort_order = $key+1;
 		$val = addslashes($val);
-		$sql = "UPDATE `edu_question` set `order` = '$sort_order' where `question_id` = '$val'";// and `school_id` = '$school_id'; ";
+		$sql = "UPDATE `edu_question` SET `order` = '$sort_order' WHERE `question_id` = '$val'";// and `school_id` = '$school_id'; ";
 		$database->executeUpdate($sql, true);
 	}
 }

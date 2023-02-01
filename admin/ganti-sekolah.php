@@ -13,7 +13,7 @@ if(@$_GET['option'] == 'select')
 	$sql = "SELECT `edu_school`.* 
 	from `edu_member_school`
 	inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
-	where `edu_member_school`.`member_id` = '$admin_id' and `edu_member_school`.`role` = 'A' 
+	WHERE `edu_member_school`.`member_id` = '$admin_id' and `edu_member_school`.`role` = 'A' 
 	order by `edu_school`.`school_id` asc
 	";
 	$stmt = $database->executeQuery($sql);
@@ -21,7 +21,7 @@ if(@$_GET['option'] == 'select')
 	if($stmt->rowCount() > 0)
 	{
 
-		$sql = "SELECT * from `member` where `member_id` = '$admin_id' ";
+		$sql = "SELECT * from `member` WHERE `member_id` = '$admin_id' ";
 		$stmt2 = $database->executeQuery($sql);
 		$member_data = $stmt2->fetch(PDO::FETCH_ASSOC);
 		
@@ -43,11 +43,11 @@ if(@$_GET['option'] == 'select')
 		";
 		$database->executeInsert($sql, true);
 		
-		$sql = "UPDATE `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id' where `student_id` = '$student_id' ";
+		$sql = "UPDATE `edu_student` SET `school_id` = '$school_id', `class_id` = '$class_id' WHERE `student_id` = '$student_id' ";
 		$database->executeUpdate($sql, true);
 
 
-		$sql = "UPDATE `edu_admin` set `school_id` = '$school_id' where `admin_id` = '$admin_id' ";
+		$sql = "UPDATE `edu_admin` SET `school_id` = '$school_id' WHERE `admin_id` = '$admin_id' ";
 		$database->executeUpdate($sql, true);
 		header("Location: index.php");
 	}
@@ -59,12 +59,12 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
-(select count(distinct `edu_student`.`student_id`) from `edu_student` where `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
-(select `country`.`name` from `country` where `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
-(select `state`.`name` from `state` where `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
-(select `city`.`name` from `city` where `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
-(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
-(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
+(select count(distinct `edu_student`.`student_id`) from `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
+(select `country`.`name` from `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
+(select `state`.`name` from `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
+(select `city`.`name` from `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
+(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
+(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
 from `edu_school` 
 where 1
 and `edu_school`.`school_id` = '$edit_key'
@@ -202,17 +202,17 @@ $sql_filter .= " and (`edu_school`.`name` like '%".addslashes($pagination->query
 $nt = '';
 
 $sql = "SELECT `edu_school`.* $nt,
-(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
-(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
+(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
+(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
 from `edu_member_school`
 inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
-where `edu_member_school`.`member_id` = '$admin_id' and `edu_member_school`.`role` = 'A' $sql_filter
+WHERE `edu_member_school`.`member_id` = '$admin_id' and `edu_member_school`.`role` = 'A' $sql_filter
 order by `edu_school`.`school_id` asc
 ";
 $sql_test = "SELECT `edu_school`.*
 from `edu_member_school`
 inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
-where `edu_member_school`.`member_id` = '$admin_id' and `edu_member_school`.`role` = 'A' $sql_filter
+WHERE `edu_member_school`.`member_id` = '$admin_id' and `edu_member_school`.`role` = 'A' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

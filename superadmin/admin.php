@@ -46,7 +46,7 @@ if(isset($_POST['set_active']) && isset($_POST['admin_id']))
 		$admin_id = addslashes($val);
 		if($val != $admin_login->admin_id)
 		{
-			$sql = "UPDATE `edu_admin` set `active` = true where `admin_id` = '$admin_id' and `school_id` = '$school_id'";
+			$sql = "UPDATE `edu_admin` SET `active` = true WHERE `admin_id` = '$admin_id' and `school_id` = '$school_id'";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -59,7 +59,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['admin_id']))
 		$admin_id = addslashes($val);
 		if($val != $admin_login->admin_id)
 		{
-			$sql = "UPDATE `edu_admin` set `active` = false where `admin_id` = '$admin_id' ";
+			$sql = "UPDATE `edu_admin` SET `active` = false WHERE `admin_id` = '$admin_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -72,9 +72,9 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 		$admin_id = addslashes($val);
 		if($val != $admin_login->admin_id)
 		{
-			$sql = "DELETE FROM `edu_member_school` where `member_id` = '$admin_id' and `role` = 'A' ";
+			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$admin_id' and `role` = 'A' ";
 			$database->executeDelete($sql, true);
-			$sql = "UPDATE `edu_admin` set `school_id` = '0' where `admin_id` = '$admin_id' ";
+			$sql = "UPDATE `edu_admin` SET `school_id` = '0' WHERE `admin_id` = '$admin_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -82,7 +82,7 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
-	$sql = "SELECT * from `edu_school` where `school_id` = '$school_id' ";
+	$sql = "SELECT * from `edu_school` WHERE `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -140,8 +140,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "SELECT `school_id` from `edu_admin` where `admin_id` = '$admin_id2'  ";
-	$sql = "SELECT * from `edu_school` where `school_id` = '$school_id' ";
+	$sql = "SELECT `school_id` from `edu_admin` WHERE `admin_id` = '$admin_id2'  ";
+	$sql = "SELECT * from `edu_school` WHERE `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -151,28 +151,28 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		`name` = '$name', `admin_level` = '$admin_level', `gender` = '$gender', `birth_place` = '$birth_place', 
 		`birth_day` = '$birth_day', `school_id` = '$school_id', `time_edit` = '$time_edit', `admin_edit` = '$admin_edit', 
 		`ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
-		where `admin_id` = '$admin_id2'  ";
+		WHERE `admin_id` = '$admin_id2'  ";
 		$database->executeUpdate($sql, true);
 
 		$sql = "UPDATE `edu_admin` set 
-		`email` = '$email' where `admin_id` = '$admin_id2' ";
+		`email` = '$email' WHERE `admin_id` = '$admin_id2' ";
 		$database->executeUpdate($sql, true);
 
 		$sql = "UPDATE `edu_admin` set 
-		`phone` = '$phone' where `admin_id` = '$admin_id2' ";
+		`phone` = '$phone' WHERE `admin_id` = '$admin_id2' ";
 		$database->executeUpdate($sql, true);
 
 		if ($username != '') {
 			$sql = "UPDATE `edu_admin` set 
 			`username` = '$username'
-			where `admin_id` = '$admin_id2' ";
+			WHERE `admin_id` = '$admin_id2' ";
 			$database->executeUpdate($sql, true);
 		}
 
 		if ($password != '') {
 			$sql = "UPDATE `edu_admin` set 
 			`password` = md5(md5('$password'))
-			where `admin_id` = '$admin_id2' ";
+			WHERE `admin_id` = '$admin_id2' ";
 			$database->executeUpdate($sql, true);
 		}
 		if ($initial != $school_id) {
@@ -196,7 +196,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 		<td><select class="form-control input-select" name="school_id" id="school_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT * from `edu_school` where `active` = true order by `school_grade_id` asc ";
+		$sql2 = "SELECT * from `edu_school` WHERE `active` = true order by `school_grade_id` asc ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -279,7 +279,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_admin`.* 
 from `edu_admin` 
-where `edu_admin`.`admin_id` = '$edit_key'
+WHERE `edu_admin`.`admin_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -293,7 +293,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td><select class="form-control input-select" name="school_id" id="school_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT * from `edu_school` where `active` = true order by `school_grade_id` asc ";
+		$sql2 = "SELECT * from `edu_school` WHERE `active` = true order by `school_grade_id` asc ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -384,9 +384,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_admin`.* $nt,
-(select `edu_school`.`name` from `edu_school` where `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) as `school_name`,
-(select `edu_admin1`.`name` from `edu_admin` as `edu_admin1` where `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) as `admin_create`,
-(select `edu_admin2`.`name` from `edu_admin` as `edu_admin2` where `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
+(select `edu_school`.`name` from `edu_school` WHERE `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) as `school_name`,
+(select `edu_admin1`.`name` from `edu_admin` as `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) as `admin_create`,
+(select `edu_admin2`.`name` from `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
 from `edu_admin` 
 where 1 
 and `edu_admin`.`admin_id` = '$edit_key'
@@ -544,7 +544,7 @@ $sql_filter .= " and (`edu_admin`.`school_id` = '$school_id' )";
 $nt = '';
 
 $sql = "SELECT `edu_admin`.* $nt,
-(select `edu_school`.`name` from `edu_school` where `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) as `school_name`
+(select `edu_school`.`name` from `edu_school` WHERE `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) as `school_name`
 from `edu_admin`
 where 1 $sql_filter
 order by `edu_admin`.`school_id` desc, `edu_admin`.`name` asc

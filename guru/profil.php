@@ -23,24 +23,24 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	`reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', 
 	`birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', 
 	`time_edit` = '$time_edit', `ip_edit` = '$ip_edit'
-	where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+	WHERE `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	if($email != '')
 	{
 		$sql = "UPDATE `edu_teacher` set 
 		`email` = '$email'
-		where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+		WHERE `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
 		$sql = "UPDATE `edu_teacher` set 
 		`password` = md5(md5('$password')), `password_initial` = ''
-		where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+		WHERE `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 		$sql = "UPDATE `member` set 
 		`password` = md5(md5('$password'))
-		where `member_id` = '$teacher_id'  ";
+		WHERE `member_id` = '$teacher_id'  ";
 		$database->executeUpdate($sql, true);
 		$_SESSION['password'] = md5($password);
 	}
@@ -52,7 +52,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $sql = "SELECT `edu_teacher`.* , `edu_school`.`name` as `school_name`
 from `edu_teacher` 
 left join(`edu_school`) on(`edu_school`.`school_id` = `edu_teacher`.`school_id`)
-where `edu_teacher`.`school_id` = '$school_id'
+WHERE `edu_teacher`.`school_id` = '$school_id'
 and `edu_teacher`.`teacher_id` = '$teacher_id'
 ";
 $stmt = $database->executeQuery($sql);
@@ -131,7 +131,7 @@ $nt = '';
 $sql = "SELECT `edu_teacher`.* , `edu_school`.`name` as `school_name`
 from `edu_teacher` 
 left join(`edu_school`) on(`edu_school`.`school_id` = `edu_teacher`.`school_id`)
-where `edu_teacher`.`school_id` = '$school_id'
+WHERE `edu_teacher`.`school_id` = '$school_id'
 and `edu_teacher`.`teacher_id` = '$teacher_id'
 ";
 $stmt = $database->executeQuery($sql);

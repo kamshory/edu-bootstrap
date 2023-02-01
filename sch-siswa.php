@@ -11,11 +11,11 @@ if (!@$student_id && !@$teacher_id) {
   if(!empty(@$school_id)) {
     $sql = "SELECT `edu_school`.*, 
     (select count(distinct `edu_student`.`student_id`) from `edu_student`
-    where `edu_student`.`school_id` = `edu_school`.`school_id` and `edu_student`.`gender` = 'M') as `M`,
+    WHERE `edu_student`.`school_id` = `edu_school`.`school_id` and `edu_student`.`gender` = 'M') as `M`,
     (select count(distinct `edu_student`.`student_id`) from `edu_student`
-    where `edu_student`.`school_id` = `edu_school`.`school_id` and `edu_student`.`gender` = 'W') as `W`
+    WHERE `edu_student`.`school_id` = `edu_school`.`school_id` and `edu_student`.`gender` = 'W') as `W`
     from `edu_school`
-    where `edu_school`.`school_id` = '$school_id' 
+    WHERE `edu_school`.`school_id` = '$school_id' 
     ";
 
 
@@ -50,9 +50,9 @@ if (@$_GET['option'] == 'detail') {
   $edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_STRING_NEW);
   $nt = '';
   $sql = "SELECT `edu_student`.* ,
-(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
-(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
-(select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
+(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
+(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
+(select `edu_class`.`name` from `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
 from `edu_student` 
 where 1
 and `edu_student`.`student_id` = '$edit_key'
@@ -116,7 +116,7 @@ and `edu_student`.`student_id` = '$edit_key'
       <select class="form-control input-select" name="class_id" id="class_id">
         <option value=""></option>
         <?php
-        $sql2 = "SELECT * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
+        $sql2 = "SELECT * from `edu_class` WHERE `active` = true and `school_id` = '$school_id' order by `order` asc ";
         
         echo $picoEdu->createFilterDb(
           $sql2,

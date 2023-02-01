@@ -10,7 +10,7 @@ if(isset($_POST['email']))
 $email = kh_filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $sql = "SELECT `member_id`, `email`, `username`
 from `member`
-where `email` like '$email'
+WHERE `email` like '$email'
 and `member_id` != '$mlid'
 ";
 $stmt = $database->executeQuery($sql);

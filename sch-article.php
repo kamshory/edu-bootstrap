@@ -181,7 +181,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$sql = "UPDATE `edu_article` set
 		`title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
 		`time_edit` = '$time', `member_edit` = '$admin_id', `role_edit` = 'T', `ip_edit` =  '$ip', `active` = '$active'
-		where `article_id` = '$article_id' and `school_id` = '$school_id' and `member_create` = '$admin_id'
+		WHERE `article_id` = '$article_id' and `school_id` = '$school_id' and `member_create` = '$admin_id'
 		";
 		$database->execute($sql);
 		header("Location: artikel.php?option=detail&article_id=$article_id");
@@ -193,7 +193,7 @@ if(isset($_GET['school_id']))
 {
 	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
 }
-$sqlc = "SELECT `class_id`, `name` from `edu_class` where `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
+$sqlc = "SELECT `class_id`, `name` from `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' order by `order` asc ";
 $stmt = $database->executeQuery($sql);
 $arrc = array();
 if($stmt->rowCount())
@@ -217,7 +217,7 @@ var classList = <?php echo json_encode($arrc);?>;
 	{
 	$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
 	$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT * from `edu_article` where `article_id` = '$article_id' and `school_id` = '$school_id' and `member_create` = '$auth_teacher_id' ";
+	$sql = "SELECT * from `edu_article` WHERE `article_id` = '$article_id' and `school_id` = '$school_id' and `member_create` = '$auth_teacher_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{

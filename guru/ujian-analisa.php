@@ -8,8 +8,8 @@ if (!empty(@$school_id))
 	{
 		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 		$sql = "SELECT `edu_test`.* ,
-		(select count(distinct `edu_question`.`question_id`) from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id`) as `koleksi`
-		from `edu_test` where `test_id` = '$test_id' 
+		(select count(distinct `edu_question`.`question_id`) from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `koleksi`
+		from `edu_test` WHERE `test_id` = '$test_id' 
 		";
 		$stmt = $database->executeQuery($sql); 
 		if($stmt->rowCount() > 0)
@@ -34,7 +34,7 @@ if (!empty(@$school_id))
 		$caption_option[$i] = chr(65 + $i);
 	}
 
-	$sql = "SELECT * from `edu_question` where `test_id` = '$test_id' order by `order` asc ";
+	$sql = "SELECT * from `edu_question` WHERE `test_id` = '$test_id' order by `order` asc ";
 	$stmt2 = $database->executeQuery($sql);
 	if ($stmt2->rowCount() > 0) 
 	{
@@ -103,12 +103,12 @@ foreach($rows as $data){
 	$sql2 = "SELECT `edu_option`.*,
 	(select count(distinct `edu_answer`.`answer_id`) 
 		from `edu_answer` 
-		where `edu_answer`.`answer` like concat('%,',`edu_option`.`option_id`,']%')
+		WHERE `edu_answer`.`answer` like concat('%,',`edu_option`.`option_id`,']%')
 		group by `edu_answer`.`test_id`
 		limit 0,1
 		) as `pilih`
 	from `edu_option`
-	where `edu_option`.`question_id` = '$question_id' ";
+	WHERE `edu_option`.`question_id` = '$question_id' ";
 	$stmt2 = $database->executeQuery($sql2);
 	$answer = '';
 	$option = array();

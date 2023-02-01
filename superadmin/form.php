@@ -76,7 +76,7 @@ exit();
 
 function createEnumOption($database, $table, $field, $defaultValue=null)
 {
-	$sql = "show columns from `$table` where `Field` like '$field' ";
+	$sql = "show columns from `$table` WHERE `Field` like '$field' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -524,7 +524,7 @@ foreach($field_edit as $k=>$field2)
 }
 $str = rtrim($str, " , ");
 $str .= "
-\twhere `$edit_key` = '$$edit_key"."2'\";\r\n";
+\tWHERE `$edit_key` = '$$edit_key"."2'\";\r\n";
 $str .= "\tmysql_query(\$sql);
 \theader(\"Location:\".basename(\$_SERVER"."['PHP_SELF']".").\"?option=detail&$edit_key=$$edit_key\");
 }

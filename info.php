@@ -11,7 +11,7 @@ if(isset($_GET['info_id']))
 	$sql = "SELECT `edu_info`.*, `member`.`name` as `creator`
 	from `edu_info` 
 	left join(`member`) on(`member`.`member_id` = `edu_info`.`admin_create`) 
-	where `edu_info`.`active` = true $sql_filter_info ";
+	WHERE `edu_info`.`active` = true $sql_filter_info ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -220,7 +220,7 @@ if(isset($_GET['period']))
 $period = kh_filter_input(INPUT_GET, 'period', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_info`.* 
 from `edu_info` 
-where `edu_info`.`active` = true and `edu_info`.`time_create` like '$period%' $sql_filter_info 
+WHERE `edu_info`.`active` = true and `edu_info`.`time_create` like '$period%' $sql_filter_info 
 order by `edu_info`.`info_id` desc
 ";
 }
@@ -228,7 +228,7 @@ else
 {
 $sql = "SELECT `edu_info`.* 
 from `edu_info` 
-where `edu_info`.`active` = true $sql_filter_info 
+WHERE `edu_info`.`active` = true $sql_filter_info 
 order by `edu_info`.`info_id` desc
 limit 0,20
 ";

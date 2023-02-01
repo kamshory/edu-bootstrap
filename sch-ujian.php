@@ -20,7 +20,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		$sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, `edu_answer`.`start`, `edu_answer`.`end`
 		from `edu_answer`
 		inner join (`edu_test`) on (`edu_test`.`test_id` = `edu_answer`.`test_id`)
-		where `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$student_id'
+		WHERE `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$student_id'
 		";
 		$stmt = $database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
@@ -90,7 +90,7 @@ if (@$auth_student_id && @$auth_school_id) {
 			from `edu_question` 
 			left join (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
 			left join (`edu_test`) on (`edu_test`.`test_id` = `edu_question`.`test_id`)
-			where `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$student_id'
+			WHERE `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$student_id'
 			group by `edu_question`.`question_id` 
 			order by `pos` asc ";
 			$stmt = $database->executeQuery($sql);
@@ -171,7 +171,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		include_once dirname(__FILE__) . "/lib.inc/header.php";
 		$sql = "SELECT `edu_answer`.*
 		from `edu_answer`
-		where `edu_answer`.`student_id` = '$student_id' and `edu_answer`.`test_id` = '$test_id' 
+		WHERE `edu_answer`.`student_id` = '$student_id' and `edu_answer`.`test_id` = '$test_id' 
 		order by `edu_answer`.`start` asc
 		";
 		$stmt = $database->executeQuery($sql);
@@ -243,7 +243,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 		$nt = '';
 		$sql = "SELECT `edu_test`.* $nt,
-		(select `edu_teacher`.`name` from `edu_teacher` where `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`
+		(select `edu_teacher`.`name` from `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`
 		from `edu_test` 
 		where 1
 		and `edu_test`.`test_id` = '$test_id' and `edu_test`.`school_id` = '$school_id'
@@ -508,7 +508,7 @@ if (@$auth_student_id && @$auth_school_id) {
 				<select class="form-control input-select" name="class_id" id="class_id">
 					<option value="">- Pilih Kelas -</option>
 					<?php
-					$sql = "SELECT * from `edu_class` where `school_id` = '$school_id' ";				
+					$sql = "SELECT * from `edu_class` WHERE `school_id` = '$school_id' ";				
 					$stmt2 = $database->executeQuery($sql);
 					if ($stmt2->rowCount() > 0) {
 						foreach($rows2 as $data2) {
@@ -541,14 +541,14 @@ if (@$auth_student_id && @$auth_school_id) {
 
 			$sql = "SELECT `edu_test`.* $nt,
 			(select count(distinct `edu_answer`.`answer_id`) from `edu_answer` 
-			where `edu_answer`.`test_id` = `edu_test`.`test_id` and `edu_answer`.`student_id` = '$student_id') as `ntest`
+			WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` and `edu_answer`.`student_id` = '$student_id') as `ntest`
 			from `edu_test`
-			where `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
+			WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
 			order by `edu_test`.`test_id` desc
 			";
 			$sql_test = "SELECT `edu_test`.*
 			from `edu_test`
-			where `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
+			WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
 			";
 
 			$stmt = $database->executeQuery($sql_test);
@@ -669,7 +669,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 			<select class="form-control input-select" name="class_id" id="class_id">
 				<option value="">- Pilih Kelas -</option>
 				<?php
-				$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' ";
+				$sql2 = "SELECT * from `edu_class` WHERE `school_id` = '$school_id' ";
 				echo $picoEdu->createFilterDb(
 					$sql2,
 					array(
@@ -711,12 +711,12 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 
 		$sql = "SELECT `edu_test`.* $nt
 from `edu_test`
-where `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 order by `edu_test`.`test_id` desc
 ";
 		$sql_test = "SELECT `edu_test`.*
 from `edu_test`
-where `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 ";
 
 $stmt = $database->executeQuery($sql_test);
@@ -830,7 +830,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 			<select class="form-control input-select" name="class_id" id="class_id">
 				<option value="">- Pilih Kelas -</option>
 				<?php
-				$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' ";
+				$sql2 = "SELECT * from `edu_class` WHERE `school_id` = '$school_id' ";
 				echo $picoEdu->createFilterDb(
 					$sql2,
 					array(
@@ -872,12 +872,12 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 
 		$sql = "SELECT `edu_test`.* $nt
 		from `edu_test`
-		where `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
+		WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
 		order by `edu_test`.`test_id` desc
 		";
 		$sql_test = "SELECT `edu_test`.*
 		from `edu_test`
-		where `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
+		WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
 		";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

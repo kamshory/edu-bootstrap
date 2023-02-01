@@ -9,7 +9,7 @@ $fmanConfig->authentification_needed = true;
 if(@$_GET['test_id']!='')
 {
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `test_id` from `edu_test` where `test_id` = '$test_id' and `school_id` = '$school_id' ";
+	$sql = "SELECT `test_id` from `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() == 0)
 	{
@@ -23,7 +23,7 @@ if(@$_GET['test_id']!='')
 else if(@$_GET['article_id']!='')
 {
 	$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `article_id` from `edu_article` where `article_id` = '$article_id' and `school_id` = '$school_id' ";
+	$sql = "SELECT `article_id` from `edu_article` WHERE `article_id` = '$article_id' and `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() == 0)
 	{

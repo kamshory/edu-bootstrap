@@ -327,7 +327,7 @@ $arr_files = array();
 function export_question($database, $question_id, $base_dir = "")
 {
 	global $arr_files;
-	$sql = "SELECT * from `edu_question` where `question_id` = '$question_id' ";
+	$sql = "SELECT * from `edu_question` WHERE `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$content = $data['content'];
@@ -370,7 +370,7 @@ function export_question($database, $question_id, $base_dir = "")
 	</question>\r\n";
 
 
-	$sql = "SELECT * from `edu_option` where `question_id` = '$question_id' order by `order` asc";
+	$sql = "SELECT * from `edu_option` WHERE `question_id` = '$question_id' order by `order` asc";
 	$stmt = $database->executeQuery($sql);
 	$html_option .= "
 		<answer>
@@ -421,7 +421,7 @@ function exportTest($database, $test_id, $base_dir = "")
 	$html = "<" . "?xml version=\"1.0\" encoding=\"utf-8\"?" . ">
 <test>
 ";
-	$sql = "SELECT `question_id` from `edu_question` where `test_id` = '$test_id' order by `order` asc, `question_id` asc";
+	$sql = "SELECT `question_id` from `edu_question` WHERE `test_id` = '$test_id' order by `order` asc, `question_id` asc";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

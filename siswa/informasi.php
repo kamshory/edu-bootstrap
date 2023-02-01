@@ -22,7 +22,7 @@ if(isset($_GET['info_id']))
 	$sql = "SELECT `edu_info`.*, `member`.`name` as `creator`
 	from `edu_info` 
 	left join(`member`) on(`member`.`member_id` = `edu_info`.`admin_create`) 
-	where `edu_info`.`active` = true $sql_filter_info ";
+	WHERE `edu_info`.`active` = true $sql_filter_info ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -142,7 +142,7 @@ if($pagination->query){
 $nt = '';
 
 $sql = "SELECT `edu_info`.*,
-(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_info`.`admin_edit`) as `admin_edit_name` 
+(select `edu_admin`.`name` from `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_info`.`admin_edit`) as `admin_edit_name` 
 from `edu_info`
 where 1 $sql_filter
 order by `edu_info`.`info_id` desc

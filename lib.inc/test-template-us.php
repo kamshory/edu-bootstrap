@@ -180,7 +180,7 @@ foreach($rows as $data)
 	{
 	$sql2 = "SELECT `edu_option`.* , rand() as `rand`
 	from `edu_option`
-	where `edu_option`.`question_id` = '$soal'
+	WHERE `edu_option`.`question_id` = '$soal'
 	order by `rand` asc
 	";
 	}
@@ -188,7 +188,7 @@ foreach($rows as $data)
 	{
 	$sql2 = "SELECT `edu_option`.* , rand() as `rand`
 	from `edu_option`
-	where `edu_option`.`question_id` = '$soal'
+	WHERE `edu_option`.`question_id` = '$soal'
 	order by `order` asc
 	";
 	}

@@ -126,7 +126,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id" id="class_id">
     <option value=""></option>
     <?php 
-    $sql2 = "SELECT * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
+    $sql2 = "SELECT * from `edu_class` WHERE `active` = true and `school_id` = '$school_id' order by `order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -177,14 +177,14 @@ $nt = '';
 $sql = "SELECT `edu_student`.* , `edu_class`.`name` as `class_id`, `edu_class`.`order` as `order`
 from `edu_student`
 left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
-where `edu_student`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_student`.`school_id` = '$school_id' $sql_filter
 order by `order` asc, `edu_student`.`name` asc
 ";
 
 $sql_test = "SELECT `edu_student`.`student_id`
 from `edu_student`
 left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
-where `edu_student`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_student`.`school_id` = '$school_id' $sql_filter
 ";
 
 $stmt = $database->executeQuery($sql_test);

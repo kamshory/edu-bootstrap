@@ -93,7 +93,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 <?php
 $sql = "SELECT `version`.*
 from `version`
-where `change_log` != '' and `change_log` is not null
+WHERE `change_log` != '' and `change_log` is not null
 order by `time_release` desc
 ";
 $stmt = $database->executeQuery($sql);

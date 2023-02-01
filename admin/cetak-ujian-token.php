@@ -16,7 +16,7 @@ $edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school`.*, `edu_school`.`name` as `school_name`
 from `edu_school` 
-where `edu_school`.`school_id` = '$school_id'
+WHERE `edu_school`.`school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 if ($stmt->rowCount() > 0) {
@@ -98,10 +98,10 @@ h3{
 <?php
     $tokens = implode(",", $arr);
     $sql = "SELECT `edu_token`.* , `edu_student`.`name` as `student_name`, `edu_student`.`reg_number` as `reg_number`, 
-(select `edu_test`.`name` from `edu_test` where `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
+(select `edu_test`.`name` from `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
 from `edu_token` 
 inner join(`edu_student`) on (`edu_student`.`student_id` = `edu_token`.`student_id`)
-where `edu_token`.`school_id` = '$school_id' 
+WHERE `edu_token`.`school_id` = '$school_id' 
 and `edu_token`.`token_id` in ($tokens)
 order by `edu_student`.`reg_number` asc ";
     $stmt = $database->executeQuery($sql);

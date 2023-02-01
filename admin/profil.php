@@ -27,24 +27,24 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$sql = "UPDATE `edu_admin` set 
 	`name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day',  
 	`time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit'
-	where `admin_id` = '$admin_id'";
+	WHERE `admin_id` = '$admin_id'";
 	$database->executeUpdate($sql, true);
 
 	$sql = "UPDATE `edu_admin` set 
 	`email` = '$email'
-	where `admin_id` = '$admin_id'";
+	WHERE `admin_id` = '$admin_id'";
 	$database->executeUpdate($sql, true);
 
 	$sql = "UPDATE `edu_admin` set 
 	`phone` = '$phone'
-	where `admin_id` = '$admin_id'";
+	WHERE `admin_id` = '$admin_id'";
 	$database->executeUpdate($sql, true);
 
 	if($password != '')
 	{
 		$sql = "UPDATE `edu_admin` set 
 		`password` = md5(md5('$password'))
-		where `admint_id` = '$admin_id' and `school_id` = '$school_id' ";
+		WHERE `admint_id` = '$admin_id' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 		$_SESSION['password'] = md5($password);
 	}
@@ -122,8 +122,8 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_admin`.* $nt,
-(select `edu_admin1`.`name` from `edu_admin` as `edu_admin1` where `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) as `admin_create`,
-(select `edu_admin2`.`name` from `edu_admin` as `edu_admin2` where `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
+(select `edu_admin1`.`name` from `edu_admin` as `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) as `admin_create`,
+(select `edu_admin2`.`name` from `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
 from `edu_admin` 
 where 1
 and `edu_admin`.`admin_id` = '$admin_id'

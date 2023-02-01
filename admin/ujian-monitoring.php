@@ -17,7 +17,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 {
 	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `edu_peserta_test`.* from `edu_peserta_test` where `id` = '$id' and `status` = '1'
+	$sql = "SELECT `edu_peserta_test`.* from `edu_peserta_test` WHERE `id` = '$id' and `status` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -26,9 +26,9 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 		$waktu = $picoEdu->getLocalDateTime();
 		$ip = addslashes($_SERVER['REMOTE_ADDR']);
 		$sessions_id = $data['sessions_id'];
-		$sql = "DELETE FROM `sessions` where `id` = '$sessions_id' ";
+		$sql = "DELETE FROM `sessions` WHERE `id` = '$sessions_id' ";
 		$database->executeDelete($sql, true);
-		$sql = "UPDATE `edu_peserta_test` set `waktu_keluar` = '$waktu', `ip_keluar` = '$ip', `login_edit` = '$admin_id', `status` = '3' where `id` = '$id'";	
+		$sql = "UPDATE `edu_peserta_test` SET `waktu_keluar` = '$waktu', `ip_keluar` = '$ip', `login_edit` = '$admin_id', `status` = '3' WHERE `id` = '$id'";	
 		$database->executeUpdate($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id");
 	}
@@ -37,7 +37,7 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 {
 	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `edu_peserta_test`.* from `edu_peserta_test` where `id` = '$id' and `status` = '1'
+	$sql = "SELECT `edu_peserta_test`.* from `edu_peserta_test` WHERE `id` = '$id' and `status` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -47,11 +47,11 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 		$ip = addslashes($_SERVER['REMOTE_ADDR']);
 		$sessions_id = $data['sessions_id'];
 		$siswa_id = $data['siswa_id'];
-		$sql = "DELETE FROM `sessions` where `id` = '$sessions_id' ";
+		$sql = "DELETE FROM `sessions` WHERE `id` = '$sessions_id' ";
 		$database->executeDelete($sql, true);
-		$sql = "UPDATE `edu_peserta_test` set `waktu_keluar` = '$waktu', `ip_keluar` = '$ip', `login_edit` = '$admin_id', `status` = '4' where `id` = '$id'";	
+		$sql = "UPDATE `edu_peserta_test` SET `waktu_keluar` = '$waktu', `ip_keluar` = '$ip', `login_edit` = '$admin_id', `status` = '4' WHERE `id` = '$id'";	
 		$database->executeUpdate($sql, true);
-		$sql = "UPDATE `siswa` set `blokir` = '1' where `siswa_id` = '$siswa_id' and `school_id` = '$school_id' ";
+		$sql = "UPDATE `siswa` SET `blokir` = '1' WHERE `siswa_id` = '$siswa_id' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 }
@@ -63,8 +63,8 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $status = kh_filter_input(INPUT_GET, 'status', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* ,
-(select count(distinct `edu_question`.`question_id`) from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id`) as `number_of_real_question`
-from `edu_test` where `test_id` = '$test_id' ";
+(select count(distinct `edu_question`.`question_id`) from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `number_of_real_question`
+from `edu_test` WHERE `test_id` = '$test_id' ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -217,7 +217,7 @@ window.onload = function()
     <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-	$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' ";
+	$sql2 = "SELECT * from `edu_class` WHERE `school_id` = '$school_id' ";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -264,17 +264,17 @@ $nt = '';
 
 
 $sql = "SELECT `edu_test`.* $nt,
-(select count(distinct `edu_test_member`.`student_id`) from `edu_test_member` where `edu_test_member`.`test_id` = `edu_test`.`test_id`) as `student`,
-(select count(distinct `edu_question`.`question_id`) from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
+(select count(distinct `edu_test_member`.`student_id`) from `edu_test_member` WHERE `edu_test_member`.`test_id` = `edu_test`.`test_id`) as `student`,
+(select count(distinct `edu_question`.`question_id`) from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
 from `edu_test`
-where `edu_test`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
 having `student` > 0
 order by `edu_test`.`test_id` desc
 ";
 $sql_test = "SELECT `edu_test`.`test_id`,
-(select count(distinct `edu_test_member`.`student_id`) from `edu_test_member` where `edu_test_member`.`test_id` = `edu_test`.`test_id`) as `student`
+(select count(distinct `edu_test_member`.`student_id`) from `edu_test_member` WHERE `edu_test_member`.`test_id` = `edu_test`.`test_id`) as `student`
 from `edu_test`
-where `edu_test`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
 having `student` > 0
 ";
 $stmt = $database->executeQuery($sql_test);

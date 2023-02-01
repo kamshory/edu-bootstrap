@@ -17,7 +17,7 @@ if(isset($_POST['set_active']) && isset($_POST['answer_id']))
 		foreach($answer_id as $key=>$val)
 		{
 			$answer_id = addslashes($val);
-			$sql = "UPDATE `edu_answer` set `active` = true where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_answer` SET `active` = true WHERE `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -31,7 +31,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['answer_id']))
 		foreach($answer_id as $key=>$val)
 		{
 			$answer_id = addslashes($val);
-			$sql = "UPDATE `edu_answer` set `active` = false where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_answer` SET `active` = false WHERE `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -45,7 +45,7 @@ if(isset($_POST['delete']) && isset($_POST['answer_id']))
 		foreach($answer_id as $key=>$val)
 		{
 			$answer_id = addslashes($val);
-			$sql = "DELETE FROM `edu_answer` where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
+			$sql = "DELETE FROM `edu_answer` WHERE `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
 			$database->executeDelete($sql, true);
 		}
 	}
@@ -61,7 +61,7 @@ if(isset($_POST['recalculation']) && isset($_POST['answer_id']))
 			$answer_id = addslashes($val);
 			$score = $picoEdu->getTextScore($answer_id, true);
 			$score_str = addslashes(json_encode($score));
-			$sql = "UPDATE `edu_answer` set `competence_score` = '$score_str' where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_answer` SET `competence_score` = '$score_str' WHERE `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -75,8 +75,8 @@ $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 $bc_array = $picoEdu->getBasicCompetence($test_id);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt, 
-(select `edu_teacher`.`name` from `edu_teacher` where `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
-(select count(distinct `edu_question`.`question_id`) from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `koleksi_question`
+(select `edu_teacher`.`name` from `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
+(select count(distinct `edu_question`.`question_id`) from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `koleksi_question`
 from `edu_test` 
 where 1
 and `edu_test`.`test_id` = '$test_id' and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id'
@@ -171,9 +171,9 @@ if(isset($_GET['expand']))
 {
 	$sql = "SELECT `edu_answer`.* , `edu_answer`.`student_id` as `student_id`, `edu_student`.`reg_number`,
 	timediff(`edu_answer`.`end`,`edu_answer`.`start`) as `timediff` ,
-	(select `edu_test`.`number_of_question` from `edu_test` where `edu_test`.`test_id` = `edu_question`.`test_id`) as `number_of_question`,
-	((select `edu_test`.`duration` from `edu_test` where `edu_test`.`test_id` = `edu_answer`.`test_id`) - (UNIX_TIMESTAMP(`edu_answer`.`end`)-UNIX_TIMESTAMP(`edu_answer`.`start`))<0) as `lewat`,
-	(select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_student`.`class_id` and `edu_class`.`school_id` = `edu_student`.`school_id`) as `class`,
+	(select `edu_test`.`number_of_question` from `edu_test` WHERE `edu_test`.`test_id` = `edu_question`.`test_id`) as `number_of_question`,
+	((select `edu_test`.`duration` from `edu_test` WHERE `edu_test`.`test_id` = `edu_answer`.`test_id`) - (UNIX_TIMESTAMP(`edu_answer`.`end`)-UNIX_TIMESTAMP(`edu_answer`.`start`))<0) as `lewat`,
+	(select `edu_class`.`name` from `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` and `edu_class`.`school_id` = `edu_student`.`school_id`) as `class`,
 	`edu_student`.`name` as `student_name`, `edu_student`.`class_id`
 
 	from `edu_answer` 
@@ -209,10 +209,10 @@ else
 	`edu_answer`.`percent` ,
 	`edu_answer`.`competence_score`,
 	timediff(`edu_answer`.`end`,`edu_answer`.`start`) as `timediff` , `edu_student`.`reg_number`,
-	(select `edu_test`.`number_of_question` from `edu_test` where `edu_test`.`test_id` = `edu_question`.`test_id`) as `number_of_question`,
-	(select `edu_test`.`duration` from `edu_test` where `edu_test`.`test_id` = `edu_question`.`test_id`) as `waktu_tersedia`,
-	((select `edu_test`.`duration` from `edu_test` where `edu_test`.`test_id` = `edu_answer`.`test_id`) - (UNIX_TIMESTAMP(`edu_answer`.`end`)-UNIX_TIMESTAMP(`edu_answer`.`start`))<0) as `lewat`,
-	(select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_student`.`class_id` and `edu_class`.`school_id` = `edu_student`.`school_id`) as `class`,
+	(select `edu_test`.`number_of_question` from `edu_test` WHERE `edu_test`.`test_id` = `edu_question`.`test_id`) as `number_of_question`,
+	(select `edu_test`.`duration` from `edu_test` WHERE `edu_test`.`test_id` = `edu_question`.`test_id`) as `waktu_tersedia`,
+	((select `edu_test`.`duration` from `edu_test` WHERE `edu_test`.`test_id` = `edu_answer`.`test_id`) - (UNIX_TIMESTAMP(`edu_answer`.`end`)-UNIX_TIMESTAMP(`edu_answer`.`start`))<0) as `lewat`,
+	(select `edu_class`.`name` from `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` and `edu_class`.`school_id` = `edu_student`.`school_id`) as `class`,
 	`edu_student`.`name` as `student_name`, `edu_student`.`class_id`
 	from `edu_answer` 
 	left join(`edu_student`) on(`edu_student`.`student_id` = `edu_answer`.`student_id`)
@@ -302,7 +302,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 				$bc_score = $picoEdu->getTextScore($data['answer_id'], true);
 				$sql = "UPDATE `edu_answer` 
 				set `competence_score` = '".addslashes(json_encode($bc_score))."' 
-				where `answer_id` = '".$data['answer_id']."' and `student_id` = '".$data['student_id']."' 
+				WHERE `answer_id` = '".$data['answer_id']."' and `student_id` = '".$data['student_id']."' 
 				";
 				$bc_score = $picoEdu->changeIndexScore($bc_score);
 				$database->executeUpdate($sql, true);
@@ -341,10 +341,10 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 $answer_id = kh_filter_input(INPUT_GET, 'answer_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.*, `edu_answer`.*, 
 timediff(`edu_answer`.`end`,`edu_answer`.`start`) as `duration_test` ,
-(select `edu_student`.`name` from `edu_student` where `edu_student`.`student_id` = `edu_answer`.`student_id`) as `student_name`
+(select `edu_student`.`name` from `edu_student` WHERE `edu_student`.`student_id` = `edu_answer`.`student_id`) as `student_name`
 from `edu_test`
 left join (`edu_answer`) on (`edu_answer`.`test_id` = `edu_test`.`test_id`)
-where `edu_answer`.`answer_id` = '$answer_id' ";
+WHERE `edu_answer`.`answer_id` = '$answer_id' ";
 
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -439,7 +439,7 @@ else
 	$bc_array = array();
 	$sql = "SELECT `edu_question`.`basic_competence`, count(distinct `edu_question`.`question_id`) as `num_question`
 	from `edu_question`
-	where `edu_question`.`test_id` = '$test_id' 
+	WHERE `edu_question`.`test_id` = '$test_id' 
 	group by `edu_question`.`basic_competence`
 	";
 	$stmtx = $database->executeQuery($sql);
@@ -476,7 +476,7 @@ else
 	{
 		$sql = "UPDATE `edu_answer` 
 		set `competence_score` = '".addslashes(json_encode($bc_score))."' 
-		where `answer_id` = '".$data['answer_id']."' and `student_id` = '".$data['student_id']."' 
+		WHERE `answer_id` = '".$data['answer_id']."' and `student_id` = '".$data['student_id']."' 
 		";
 		$database->executeUpdate($sql, true);
 	}
@@ -566,7 +566,7 @@ $sql = "SELECT `edu_question`.* , `edu_answer`.`answer` as `answer` , instr(`edu
 from `edu_question` 
 left join (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
 left join (`edu_test`) on (`edu_test`.`test_id` = `edu_question`.`test_id`)
-where `edu_answer`.`answer_id` = '$answer_id' 
+WHERE `edu_answer`.`answer_id` = '$answer_id' 
 group by `edu_question`.`question_id` 
 order by `pos` asc ";
 
@@ -687,7 +687,7 @@ window.onload = function()
     <select class="form-control" id="class_id" name="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "SELECT * from `edu_class` where `active` = true and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' order by `order` asc ";
+    $sql2 = "SELECT * from `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' order by `order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -772,9 +772,9 @@ if(isset($_GET['expand']))
 {
 	$sql = "SELECT `edu_answer`.* , `edu_answer`.`student_id` as `student_id`, `edu_student`.`reg_number`,
 	timediff(`edu_answer`.`end`,`edu_answer`.`start`) as `timediff` ,
-	(select `edu_test`.`number_of_question` from `edu_test` where `edu_test`.`test_id` = `edu_question`.`test_id`) as `number_of_question`,
-	((select `edu_test`.`duration` from `edu_test` where `edu_test`.`test_id` = `edu_answer`.`test_id`) - (UNIX_TIMESTAMP(`edu_answer`.`end`)-UNIX_TIMESTAMP(`edu_answer`.`start`))<0) as `lewat`,
-	(select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_student`.`class_id` and `edu_class`.`school_id` = `edu_student`.`school_id`) as `class`,
+	(select `edu_test`.`number_of_question` from `edu_test` WHERE `edu_test`.`test_id` = `edu_question`.`test_id`) as `number_of_question`,
+	((select `edu_test`.`duration` from `edu_test` WHERE `edu_test`.`test_id` = `edu_answer`.`test_id`) - (UNIX_TIMESTAMP(`edu_answer`.`end`)-UNIX_TIMESTAMP(`edu_answer`.`start`))<0) as `lewat`,
+	(select `edu_class`.`name` from `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` and `edu_class`.`school_id` = `edu_student`.`school_id`) as `class`,
 	`edu_student`.`name` as `student_name`, `edu_student`.`class_id` 
 
 	from `edu_answer` 
@@ -810,10 +810,10 @@ else
 	`edu_answer`.`percent` ,
 	`edu_answer`.`active` ,
 	timediff(`edu_answer`.`end`,`edu_answer`.`start`) as `timediff` , `edu_student`.`reg_number`,
-	(select `edu_test`.`number_of_question` from `edu_test` where `edu_test`.`test_id` = `edu_question`.`test_id`) as `number_of_question`,
-	(select `edu_test`.`duration` from `edu_test` where `edu_test`.`test_id` = `edu_question`.`test_id`) as `waktu_tersedia`,
-	((select `edu_test`.`duration` from `edu_test` where `edu_test`.`test_id` = `edu_answer`.`test_id`) - (UNIX_TIMESTAMP(`edu_answer`.`end`)-UNIX_TIMESTAMP(`edu_answer`.`start`))<0) as `lewat`,
-	(select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_student`.`class_id` and `edu_class`.`school_id` = `edu_student`.`school_id`) as `class`,
+	(select `edu_test`.`number_of_question` from `edu_test` WHERE `edu_test`.`test_id` = `edu_question`.`test_id`) as `number_of_question`,
+	(select `edu_test`.`duration` from `edu_test` WHERE `edu_test`.`test_id` = `edu_question`.`test_id`) as `waktu_tersedia`,
+	((select `edu_test`.`duration` from `edu_test` WHERE `edu_test`.`test_id` = `edu_answer`.`test_id`) - (UNIX_TIMESTAMP(`edu_answer`.`end`)-UNIX_TIMESTAMP(`edu_answer`.`start`))<0) as `lewat`,
+	(select `edu_class`.`name` from `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` and `edu_class`.`school_id` = `edu_student`.`school_id`) as `class`,
 	`edu_student`.`name` as `student_name`, `edu_student`.`class_id` as `class_id`, `edu_student`.`time_edit` as `time_edit`
 	from `edu_answer` 
 	left join(`edu_student`) on(`edu_student`.`student_id` = `edu_answer`.`student_id`)
@@ -980,7 +980,7 @@ $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
     <select class="form-control" id="class_id" name="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-	$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' ";
+	$sql2 = "SELECT * from `edu_class` WHERE `school_id` = '$school_id' ";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -1032,18 +1032,18 @@ $sql_filter .= " and (`edu_test`.`name` like '%".addslashes($pagination->query).
 }
 
 $sql = "SELECT `edu_test`.*,
-(select count(distinct `edu_answer`.`student_id`) from `edu_answer` where `edu_answer`.`test_id` = `edu_test`.`test_id`) as `number_of_student`,
-(select count(distinct `edu_question`.`question_id`) from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id`) as `koleksi`,
-(select `edu_answer`.`start` from `edu_answer` where `edu_answer`.`test_id` = `edu_test`.`test_id` order by `edu_answer`.`start` desc limit 0,1) as `last_test`
+(select count(distinct `edu_answer`.`student_id`) from `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id`) as `number_of_student`,
+(select count(distinct `edu_question`.`question_id`) from `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `koleksi`,
+(select `edu_answer`.`start` from `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` order by `edu_answer`.`start` desc limit 0,1) as `last_test`
 from `edu_test`
-where `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+WHERE `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 having 1 and `number_of_student` > 0
 order by `last_test` desc, `edu_test`.`test_id` desc
 ";
 $sql_test = "SELECT `edu_test`.*,
-(select count(distinct `edu_answer`.`student_id`) from `edu_answer` where `edu_answer`.`test_id` = `edu_test`.`test_id`) as `number_of_student`
+(select count(distinct `edu_answer`.`student_id`) from `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id`) as `number_of_student`
 from `edu_test`
-where `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+WHERE `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 having 1 and `number_of_student` > 0
 order by `edu_test`.`test_id` desc
 ";

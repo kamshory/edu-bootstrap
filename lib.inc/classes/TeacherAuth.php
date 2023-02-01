@@ -31,7 +31,7 @@ class TeacherAuth
 				`edu_school`.`name` as `school_name`, `edu_school`.`school_code` as `school_code`, `edu_school`.`use_token`
 				from `edu_teacher` 
 				left join(`edu_school`) on(`edu_school`.`school_id` = `edu_teacher`.`school_id`)
-				where `edu_teacher`.`username` like '$username' 
+				WHERE `edu_teacher`.`username` like '$username' 
 				and `edu_teacher`.`password` = md5('$password') 
 				and `edu_teacher`.`active` = true
 				and `edu_teacher`.`blocked` = '0'
@@ -60,7 +60,7 @@ class TeacherAuth
 					$sql = "UPDATE `edu_teacher` set 
 						`ip_last_activity` = '$ip', 
 						`time_last_activity` = '$now' 
-						where `teacher_id` = '" . $this->teacher_id . "'";
+						WHERE `teacher_id` = '" . $this->teacher_id . "'";
 					$database->execute($sql);
 				}
 			}

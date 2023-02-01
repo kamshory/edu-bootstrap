@@ -9,7 +9,7 @@ $edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school`.*, `edu_school`.`name` as `school_name`
 from `edu_school` 
-where `edu_school`.`school_id` = '$school_id'
+WHERE `edu_school`.`school_id` = '$school_id'
 ";
 
 $stmt = $database->executeQuery($sql);
@@ -92,7 +92,7 @@ h3{
 <?php
     $sql = "SELECT `edu_teacher`.* 
     from `edu_teacher` 
-    where `edu_teacher`.`school_id` = '$school_id' 
+    WHERE `edu_teacher`.`school_id` = '$school_id' 
     order by `edu_teacher`.`name` asc 
     ";
     $stmt = $database->executeQuery($sql);
