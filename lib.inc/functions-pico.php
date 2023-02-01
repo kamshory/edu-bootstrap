@@ -404,16 +404,16 @@ class DirectoryDestroyer
 	{
 		$this->directory = $directory;
 	}
-	public function destroy()
+	public function destroy($fileSync)
 	{
 		$dir = $this->directory;
 		chmod(dirname($dir), 0777);
 		chmod($dir, 0777);
-		$this->remove_dir($dir);
-		rmdir($dir);
+		$this->remove_dir($dir, $fileSync);
+		$fileSync->deleteDirecory($dir, true);
 		chmod(dirname($dir), 0755);
 	}
-	private function remove_dir($dir)
+	private function remove_dir($dir, $fileSync)
 	{
 		$dir = rtrim($dir, "/");
 		$mydir = opendir($dir);
@@ -422,8 +422,8 @@ class DirectoryDestroyer
 				chmod($dir . "/" . $file, 0777);
 				if (is_dir($dir . "/" . $file)) {
 					chdir('.');
-					destroy($dir . "/" . $file);
-					rmdir($dir . "/" . $file);
+					destroy($dir . "/" . $file, $fileSync);
+					$fileSync->deleteDirecory($dir . "/" . $file, true);
 				} else {
 					unlink($dir . "/" . $file);
 				}
@@ -715,7 +715,7 @@ class FileSynchronizer
 			$syncPath = $this->basePath . "/" . "file.txt";
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[CREATE] \"".$path."\"".self::NEW_LINE);  
+			fwrite($fp, "[CREATEFILE] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return file_put_contents($path, $content);
@@ -727,7 +727,7 @@ class FileSynchronizer
 			$syncPath = $this->basePath . "/" . "file.txt";
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[CREATE] \"".$path."\"".self::NEW_LINE);  
+			fwrite($fp, "[CREATEFILE] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 	}
@@ -738,7 +738,7 @@ class FileSynchronizer
 			$syncPath = $this->basePath . "/" . "file.txt";
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[DELETE] \"".$path."\"".self::NEW_LINE);  
+			fwrite($fp, "[DELETEFILE] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @unlink($path);
@@ -750,12 +750,12 @@ class FileSynchronizer
 			$syncPath = $this->basePath . "/" . "file.txt";
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[RENAME] \"".$oldPath."\" [TO] \"".$newPath."\"".self::NEW_LINE);  
+			fwrite($fp, "[RENAMEFILE] <<".$oldPath.">> [TO] <<".$newPath.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @rename($oldPath, $newPath);
 	}
-	public function prepareDirecory($dir2prepared, $dirBase, $permission, $sync= false)
+	public function prepareDirecory($dir2prepared, $dirBase, $permission, $sync = false)
 	{
 		$dir = str_replace("\\", "/", $dir2prepared);
 		$base = str_replace("\\", "/", $dirBase);
@@ -768,10 +768,36 @@ class FileSynchronizer
 			$dir2created .= $val;
 			if(stripos($base, $dir2created) !== 0 && !file_exists($dir2created))
 			{
-				@mkdir($dir2created, $permission);
+				$this->createDirecory($dir2created, $permission, $sync);
 			}
 			$dir2created .= "/";
 		}
 	}
+	public function createDirecory($path, $permission, $sync)
+	{
+		if($sync)
+		{
+			$syncPath = $this->basePath . "/" . "file.txt";
+			$fp = fopen($syncPath, 'a');
+			fwrite($fp, $this->delimiter."\r\n");  
+			fwrite($fp, "[CREATEDIR] <<".$path.">>".self::NEW_LINE);  
+			fclose($fp);  
+		}
+		return @mkdir($path, $permission);
+	}
+
+	public function deleteDirecory($path, $sync)
+	{
+		if($sync)
+		{
+			$syncPath = $this->basePath . "/" . "file.txt";
+			$fp = fopen($syncPath, 'a');
+			fwrite($fp, $this->delimiter."\r\n");  
+			fwrite($fp, "[DELETEDIR] <<".$path.">>".self::NEW_LINE);  
+			fclose($fp);  
+		}
+		return @rmdir($path);
+	}
+
 }
-$fileSync = new FileSynchronizer(dirname(dirname(__FILE__)."/lib.sync"));
+$fileSync = new FileSynchronizer(dirname(dirname(__FILE__))."/lib.sync");

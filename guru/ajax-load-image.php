@@ -13,26 +13,12 @@ where `edu_test`.`test_id` = '$test_id'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-	$test_dir = dirname(dirname(__FILE__))."/media.edu/school";
-	if(!file_exists($test_dir))
-	{
-		@mkdir($test_dir);
-	}
-	$test_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id";
-	if(!file_exists($test_dir))
-	{
-		@mkdir($test_dir);
-	}
-	$test_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test";
-	if(!file_exists($test_dir))
-	{
-		@mkdir($test_dir);
-	}
+	
 	$test_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
-	if(!file_exists($test_dir))
-	{
-		@mkdir($test_dir);
-	}
+	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+	$dirBase = dirname(dirname(__FILE__));
+	$permission = 0755;
+	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 
 	if($dh = opendir($test_dir))
 	{

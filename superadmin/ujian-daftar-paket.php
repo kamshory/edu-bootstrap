@@ -10,18 +10,11 @@ $cfg->page_title = "Daftar Paket";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 {
-	if(!file_exists(dirname(dirname(__FILE__))."/media.edu"))
-	{
-		@mkdir(dirname(dirname(__FILE__))."/media.edu");
-	}
-	if(!file_exists(dirname(dirname(__FILE__))."/media.edu/question-collection"))
-	{
-		@mkdir(dirname(dirname(__FILE__))."/media.edu/question-collection");
-	}
-	if(!file_exists(dirname(dirname(__FILE__))."/media.edu/question-collection/data"))
-	{
-		@mkdir(dirname(dirname(__FILE__))."/media.edu/question-collection/data");
-	}
+	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data";
+	$dirBase = dirname(dirname(__FILE__));
+	$permission = 0755;
+	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
+
 	$test_id = $_POST['test_collection_id'];
 	foreach($test_id as $key=>$val)
 	{
@@ -92,18 +85,11 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 {
 	$test_id = $_POST['test_collection_id'];
-	if(!file_exists(dirname(dirname(__FILE__))."/media.edu"))
-	{
-		@mkdir(dirname(dirname(__FILE__))."/media.edu");
-	}
-	if(!file_exists(dirname(dirname(__FILE__))."/media.edu/question-collection"))
-	{
-		@mkdir(dirname(dirname(__FILE__))."/media.edu/question-collection");
-	}
-	if(!file_exists(dirname(dirname(__FILE__))."/media.edu/question-collection/data"))
-	{
-		@mkdir(dirname(dirname(__FILE__))."/media.edu/question-collection/data");
-	}
+	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data";
+	$dirBase = dirname(dirname(__FILE__));
+	$permission = 0755;
+	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
+
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
@@ -129,18 +115,11 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 
 if(isset($_POST['save']) && @$_GET['option']=='add' && isset($_FILES['file']))
 {
-	if(!file_exists(dirname(dirname(__FILE__))."/media.edu"))
-	{
-		@mkdir(dirname(dirname(__FILE__))."/media.edu");
-	}
-	if(!file_exists(dirname(dirname(__FILE__))."/media.edu/question-collection"))
-	{
-		@mkdir(dirname(dirname(__FILE__))."/media.edu/question-collection");
-	}
-	if(!file_exists(dirname(dirname(__FILE__))."/media.edu/question-collection/data"))
-	{
-		@mkdir(dirname(dirname(__FILE__))."/media.edu/question-collection/data");
-	}
+	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data";
+	$dirBase = dirname(dirname(__FILE__));
+	$permission = 0755;
+	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
+
 	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
 	$grade_id = kh_filter_input(INPUT_POST, 'grade_id', FILTER_SANITIZE_NUMBER_INT);
 	$target_dir = dirname(dirname(__FILE__))."/media.edu/question-collection/data";
@@ -201,18 +180,11 @@ if(isset($_POST['save']) && @$_GET['option']=='add' && isset($_FILES['file']))
 }
 if(isset($_POST['save']) && @$_GET['option']=='edit')
 {
-	if(!file_exists(dirname(dirname(__FILE__))."/media.edu"))
-	{
-		@mkdir(dirname(dirname(__FILE__))."/media.edu");
-	}
-	if(!file_exists(dirname(dirname(__FILE__))."/media.edu/question-collection"))
-	{
-		@mkdir(dirname(dirname(__FILE__))."/media.edu/question-collection");
-	}
-	if(!file_exists(dirname(dirname(__FILE__))."/media.edu/question-collection/data"))
-	{
-		@mkdir(dirname(dirname(__FILE__))."/media.edu/question-collection/data");
-	}
+	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data";
+	$dirBase = dirname(dirname(__FILE__));
+	$permission = 0755;
+	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
+
 	$test_collection_id = kh_filter_input(INPUT_POST, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
 	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
 	$grade_id = kh_filter_input(INPUT_POST, 'grade_id', FILTER_SANITIZE_NUMBER_INT);

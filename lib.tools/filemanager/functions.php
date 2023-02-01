@@ -127,7 +127,7 @@ function destroyAll($dir, $fileSync)
 	@chmod(dirname($dir), 0777);
 	@chmod($dir, 0777);
 	destroy($dir, $fileSync);
-	@rmdir($dir);
+	$fileSync->deleteDirecory($dir, true);
 	@chmod(dirname($dir), 0755);
 }
 function destroy($dir, $fileSync)
@@ -140,7 +140,7 @@ function destroy($dir, $fileSync)
 			if (is_dir($dir . "/" . $file)) {
 				chdir('.');
 				destroy($dir . "/" . $file, $fileSync);
-				rmdir($dir . "/" . $file);
+				$fileSync->deleteDirecory($dir . "/" . $file);
 			} else {
 				$fileSync->deleteFile($dir . "/" . $file);
 			}
@@ -152,8 +152,9 @@ function destroy($dir, $fileSync)
 // copy all files and folders in directory to specified directory
 function cp($wf, $wto)
 {
+	global $fileSync;
 	if (!file_exists($wto)) {
-		@mkdir($wto, 0755);
+		$fileSync->createDirecory($wto, 0755, true);
 	}
 	$arr = ls_a($wf);
 	foreach ($arr as $fn) {
@@ -164,6 +165,7 @@ function cp($wf, $wto)
 				cp($fl, $flto);
 			} else {
 				@copy($fl, $flto);
+				$fileSync->createFile($flto, true);
 			}
 		}
 	}

@@ -37,21 +37,11 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 
 			$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
 			$base_src = "media.edu/school/$school_id/article/$article_id";
-			if (!file_exists($base_dir = dirname(dirname(__FILE__)) . "/media.edu")) {
-				@mkdir(dirname(dirname(__FILE__)) . "/media.edu", 0755);
-			}
-			if (!file_exists($base_dir = dirname(dirname(__FILE__)) . "/media.edu/school")) {
-				@mkdir(dirname(dirname(__FILE__)) . "/media.edu/school", 0755);
-			}
-			if (!file_exists($base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id")) {
-				@mkdir(dirname(dirname(__FILE__)) . "/media.edu/school/$school_id", 0755);
-			}
-			if (!file_exists($base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article")) {
-				@mkdir(dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article", 0755);
-			}
-			if (!file_exists($base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id")) {
-				@mkdir(dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id", 0755);
-			}
+
+			$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
+			$dirBase = dirname(dirname(__FILE__));
+			$permission = 0755;
+			$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 
 			$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 			$content = addslashes($content);
@@ -134,7 +124,7 @@ if(isset($_POST['delete']) && isset($_POST['article_id']))
 					// destroy directory
 					$dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id";
 					$destroyer = new DirectoryDestroyer($dir);
-					$destroyer->destroy();
+					$destroyer->destroy($fileSync);
 				}
 			}
 		}

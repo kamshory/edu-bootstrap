@@ -168,7 +168,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 				$database->executeDelete($sql, true);
 				$dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
 				$destroyer = new DirectoryDestroyer($dir);
-				$destroyer->destroy();
+				$destroyer->destroy($fileSync);
 				$database->executeTransaction("commit");
 			}
 		}
@@ -218,26 +218,13 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 					$order = $data['order'];
 					$score_standar = $data['standard_score'];
 	
-					$test_dir = dirname(dirname(__FILE__))."/media.edu/school";
-					if(!file_exists($test_dir))
-					{
-						mkdir($test_dir);
-					}
-					$test_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id";
-					if(!file_exists($test_dir))
-					{
-						mkdir($test_dir);
-					}
-					$test_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test";
-					if(!file_exists($test_dir))
-					{
-						mkdir($test_dir);
-					}
+					
 					$test_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
-					if(!file_exists($test_dir))
-					{
-						mkdir($test_dir);
-					}
+					$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+					$dirBase = dirname(dirname(__FILE__));
+					$permission = 0755;
+					$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
+					
 					$base_src = "media.edu/school/$school_id/test/$test_id";
 					
 					$temp_dir = $test_dir;

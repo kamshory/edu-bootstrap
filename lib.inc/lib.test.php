@@ -538,10 +538,10 @@ function delTree($dir, $fileSync)
 		if (@is_dir("$dir/$file")) {
 			delTree("$dir/$file", $fileSync);
 		} else {
-			$fileSync->deleteFile("$dir/$file");
+			$fileSync->deleteFile("$dir/$file", true);
 		}
 	}
-	return rmdir($dir);
+	return $fileSync->deleteDirecory($dir, true);
 }
 function parseRawQuestion($raw_text)
 {

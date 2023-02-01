@@ -47,7 +47,7 @@ $name = trim(str_replace(array("../","./","..\\",".\\","\\"),"/",$name),"/\\");
 if(file_exists($dir2))
 {
 	if(!file_exists($dir2."/".$name)){
-		if(mkdir($dir2."/".$name))
+		if($fileSync->createDirecory($dir2."/".$name, 0755, true))
 		{
 			echo 'SUCCESS';
 		}
@@ -115,7 +115,7 @@ if(is_array($arr))
 		$d2c .= $v;
 		if(strlen($d2c)>=strlen($fmanConfig->rootdir) && !file_exists($d2c))
 		{
-			mkdir($d2c);
+			$fileSync->createDirecory($d2c, 0755, true);
 		}
 		$d2c .= "/";
 	}
@@ -299,7 +299,7 @@ if(is_array($arr))
 		$d2c .= $v;
 		if(strlen($d2c)>=strlen($fmanConfig->rootdir) && !file_exists($d2c))
 		{
-			mkdir($d2c);
+			$fileSync->createDirecory($d2c, 0755, true);
 		}
 		$d2c .= "/";
 	}
@@ -408,7 +408,7 @@ if(is_array($arr))
 		$d2c .= $v;
 		if(strlen($d2c)>=strlen($fmanConfig->rootdir) && !file_exists($d2c))
 		{
-			mkdir($d2c);
+			$fileSync->createDirecory($d2c, 0755, true);
 		}
 		$d2c .= "/";
 	}

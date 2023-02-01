@@ -810,8 +810,7 @@ function extractImageData($data, $directory, $prefix, $fileSync) //NOSONAR
 				$image = @imagecreatefromstring(base64_decode($data));
 				if ($image) {
 					if (!file_exists($directory)) {
-						mkdir($directory);
-						chmod($directory, 0755);
+						$fileSync->createDirecory($directory, 0755, true);
 					}
 					switch ($type) {
 						case "png":

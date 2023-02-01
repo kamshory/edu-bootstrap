@@ -40,26 +40,13 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 		$order = $data['order'];
 		$score_standar = $data['standard_score'];
 
-		$test_dir = dirname(dirname(__FILE__))."/media.edu/school";
-		if(!file_exists($test_dir))
-		{
-			mkdir($test_dir);
-		}
-		$test_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id";
-		if(!file_exists($test_dir))
-		{
-			mkdir($test_dir);
-		}
-		$test_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test";
-		if(!file_exists($test_dir))
-		{
-			mkdir($test_dir);
-		}
+		
 		$test_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
-		if(!file_exists($test_dir))
-		{
-			mkdir($test_dir);
-		}
+		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+		$dirBase = dirname(dirname(__FILE__));
+		$permission = 0755;
+		$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
+		
 		$base_src = "media.edu/school/$school_id/test/$test_id";
 		
 		$temp_dir = $test_dir;
@@ -314,7 +301,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 				@rmdir(@$temp_dir);
 			}
 		}
-		//header("Location: ujian-soal.php?test_id=$test_id");
+		header("Location: ujian-soal.php?test_id=$test_id");
 	}
 }
 if(isset($_GET['test_id']))

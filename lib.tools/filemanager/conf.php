@@ -102,7 +102,7 @@ foreach($chkdir as $k=>$v)
 	$dir2create .= "/".$v;
 	if(!file_exists($dir2create))
 	{
-		mkdir($dir2create, 0755);
+		$fileSync->createDirecory($dir2create, 0755, true);
 	}
 }
 

@@ -56,7 +56,7 @@ if(@$_GET['option']=='savefile' && isset($_POST['filepath']))
 			$d2c .= $v;
 			if(strlen($d2c)>=strlen($fmanConfig->rootdir) && !file_exists($d2c))
 			{
-				mkdir($d2c);
+				$fileSync->createDirecory($d2c, 0755, true);
 			}
 			$d2c .= "/";
 		}

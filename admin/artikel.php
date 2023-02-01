@@ -128,7 +128,7 @@ if(isset($_POST['delete']) && isset($_POST['article_id']))
 				// destroy directory
 				$dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id";
 				$destroyer = new DirectoryDestroyer($dir);
-				$destroyer->destroy();
+				$destroyer->destroy($fileSync);
 			}
 		}
 	}

@@ -29,22 +29,14 @@ if (@$school_id != 0 && isset($_POST['question_text']) && isset($_POST['test_id'
 			$score_standar = $data['standard_score'];
 			$xml_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
 			$clear_data = parseRawQuestion($xml_data);
-			$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school";
-			if (!file_exists($base_dir)) {
-				mkdir($base_dir);
-			}
-			$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id";
-			if (!file_exists($base_dir)) {
-				mkdir($base_dir);
-			}
-			$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test";
-			if (!file_exists($base_dir)) {
-				mkdir($base_dir);
-			}
+			
+			
 			$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-			if (!file_exists($base_dir)) {
-				mkdir($base_dir);
-			}
+			$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+			$dirBase = dirname(dirname(__FILE__));
+			$permission = 0755;
+			$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
+
 			$base_src = "media.edu/school/$school_id/test/$test_id";
 			$database->executeTransaction('start transaction');
 			$oke = 1;

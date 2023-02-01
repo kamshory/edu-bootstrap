@@ -1,0 +1,20 @@
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATE] "D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/7ef302b2b843294bc4e64d9dab202e18.svg"
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATE] "D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/e8780e467729ebdd732688dcb7ecd02d.png"
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETE] "D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/e8780e467729ebdd732688dcb7ecd02d.png"
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETE] "D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/7b6f51ecd5d5c91ed473cd79017c36ec.svg"
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETE] "D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/7ef302b2b843294bc4e64d9dab202e18.svg"
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETE] "D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/8d2ef093a9a489ec92e59eca3735e800.svg"
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/new-directory>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/new-directory>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/new-directory/new-directory>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/new-directory/new-directory-2>>
