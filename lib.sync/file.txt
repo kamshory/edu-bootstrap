@@ -434,3 +434,7 @@
 [DELETEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063da2f4fa245561d8c1/fb33c4de19aa6d7ced7e7bd6464aa1c6.svg>>
 --------------ruihwuiethwiughweighiwehgiwe
 [DELETEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063da2f4fa245561d8c1>>
+--------------ruihwuiethwiughweighiwehgiwe
+[RENAMEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/description/12807079b972554d81cc49ab789b9862.svg>> [TO] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/description/5.svg>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/description/5.svg>>

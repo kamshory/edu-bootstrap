@@ -219,7 +219,7 @@ else
 	if(in_array($tt->extension, $fmanConfig->forbidden_extension)){
 		die('FORBIDDENEXT');
 	}
-	if(rename($oldname, $newname))
+	if($fileSync->renameFile($oldname, $newname, true))
 	{
 		echo 'SUCCESS';
 	}
