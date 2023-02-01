@@ -309,8 +309,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Username</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="username" id="username" value="<?php echo ($data['username']);?>" autocomplete="off" />
-		  <input type="hidden" name="admin_id2" id="admin_id2" value="<?php echo ($data['admin_id']);?>" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="username" id="username" value="<?php echo $data['username'];?>" autocomplete="off" />
+		  <input type="hidden" name="admin_id2" id="admin_id2" value="<?php echo $data['admin_id'];?>" /></td>
 		</tr>
 		<tr>
 		<td>Level Admin</td>
@@ -404,7 +404,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Username</td>
-		<td><?php echo ($data['username']);?> </td>
+		<td><?php echo $data['username'];?> </td>
 		</tr>
 		<tr>
 		<td>Level Admin</td>
