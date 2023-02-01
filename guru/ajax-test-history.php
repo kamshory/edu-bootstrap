@@ -51,7 +51,7 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 		$database->executeDelete($sql, true);
 		$sql = "UPDATE `edu_test_member` SET `time_exit` = '$waktu', `ip_exit` = '$ip', `member_edit` = '$admin_id', `status` = '4' WHERE `test_member_id` = '$id'";	
 		$database->executeUpdate($sql, true);
-		$sql = "UPDATE `edu_student` SET `blocked` = '1' WHERE `edu_student_id` = '$student_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
+		$sql = "UPDATE `edu_student` SET `blocked` = true WHERE `edu_student_id` = '$student_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
 		$database->executeUpdate($sql, true);
 	}
 }

@@ -21,7 +21,7 @@ if(isset($_POST['sync']))
 			if($stmt2->rowCount() == 0)
 			{
 			
-				$sql = "UPDATE `member` SET `email` = '$email', `password` = md5(md5('$password')), `active` = true, `blocked` = '0' 
+				$sql = "UPDATE `member` SET `email` = '$email', `password` = md5(md5('$password')), `active` = true, `blocked` = false 
 				WHERE `member_id` = '$student_id' ";
 				$database->executeUpdate($sql, true);
 				$sql = "SELECT `username`, `member_id`

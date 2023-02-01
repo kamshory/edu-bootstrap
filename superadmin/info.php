@@ -42,7 +42,7 @@ if(isset($_POST['delete']) && isset($_POST['info_id']))
 		foreach($infos as $key=>$val)
 		{
 			$info_id = addslashes($val);
-			$sql = "UPDATE `edu_info` SET `school_id` = '0' WHERE `info_id` = '$info_id'  ";
+			$sql = "UPDATE `edu_info` SET `school_id` = '' WHERE `info_id` = '$info_id'  ";
 			$database->execute($sql);
 		}
 	}

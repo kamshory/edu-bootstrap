@@ -152,7 +152,7 @@ else if(isset($_POST['token']))
 			if(!$picoEdu->logInvalidLogin($student_id, 'T', $picoEdu->getLocalDateTime(), $cfg->max_invalid_signin_time, $cfg->max_invalid_signin_count))
 			{
 				$account_blocked = 1;
-				$sql = "UPDATE `edu_student` SET `blocked` = '1' WHERE `student_id` = '$student_id' ";
+				$sql = "UPDATE `edu_student` SET `blocked` = true WHERE `student_id` = '$student_id' ";
 				$database->execute($sql);
 			}
 		}

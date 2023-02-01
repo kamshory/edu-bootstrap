@@ -36,7 +36,7 @@ class MemberAuth
 		from `member` 
 		WHERE `username` = '$username' and `password` = md5('$password') 
 		and `active` = true
-		and `blocked` = '0'
+		and `blocked` = false
 		";
 		$stmt = $database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {

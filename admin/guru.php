@@ -73,7 +73,7 @@ if(isset($_POST['delete']) && isset($_POST['teacher_id']))
 			$teacher_id = addslashes($val);
 			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$teacher_id' and `role` = 'T' and `school_id` = '$school_id' ";
 			$database->executeDelete($sql, true);
-			$sql = "UPDATE `edu_teacher` SET `school_id` = '0' WHERE `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_teacher` SET `school_id` = '' WHERE `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -143,7 +143,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				$database->executeInsert($sql2);
 
 				$sql3 = "UPDATE `edu_teacher` SET `school_id` = '$school_id' WHERE `teacher_id` = '$teacher_id' 
-				and (`school_id` = '0' or `school_id` is null)
+				and (`school_id` = '' or `school_id` is null)
 				";
 				$database->executeUpdate($sql3);
 				header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&teacher_id=$teacher_id");

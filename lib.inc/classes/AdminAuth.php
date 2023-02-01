@@ -36,7 +36,7 @@ class AdminAuth
 		left join(`edu_school`) on(`edu_school`.`school_id` = `edu_admin`.`school_id`)
 		WHERE `edu_admin`.`username` like '$username' and `edu_admin`.`password` = md5('$password') 
 		and `edu_admin`.`active` = true
-		and `edu_admin`.`blocked` = '0'
+		and `edu_admin`.`blocked` = false
 		";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount()) {

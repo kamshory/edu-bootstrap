@@ -74,7 +74,7 @@ if(isset($_POST['delete']) && isset($_POST['student_id']))
 			$student_id = addslashes($val);
 			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$student_id' and `role` = 'S'  ";
 			$database->executeDelete($sql, true);
-			$sql = "UPDATE `edu_student` SET `school_id` = '0' WHERE `student_id` = '$student_id'  ";
+			$sql = "UPDATE `edu_student` SET `school_id` = '' WHERE `student_id` = '$student_id'  ";
 			$database->executeUpdate($sql, true);
 		}
 	}

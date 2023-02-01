@@ -21,7 +21,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 		) 
 		and `password` like md5('$password')
 		and `active` = true
-		and `blocked` = '0'
+		and `blocked` = false
 	";
 	$stmt = $database->executeQuery($sql);
 

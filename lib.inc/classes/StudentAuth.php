@@ -33,7 +33,7 @@ class StudenAuth
 			left join(`edu_school`) on(`edu_school`.`school_id` = `edu_student`.`school_id`)
 			WHERE `edu_student`.`username` like '$username' and `edu_student`.`password` = md5('$password') 
 			and `edu_student`.`active` = true
-			and `edu_student`.`blocked` = '0'
+			and `edu_student`.`blocked` = false
 			";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {

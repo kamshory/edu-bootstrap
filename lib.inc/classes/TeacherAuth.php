@@ -34,7 +34,7 @@ class TeacherAuth
 				WHERE `edu_teacher`.`username` like '$username' 
 				and `edu_teacher`.`password` = md5('$password') 
 				and `edu_teacher`.`active` = true
-				and `edu_teacher`.`blocked` = '0'
+				and `edu_teacher`.`blocked` = false
 				";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {

@@ -478,7 +478,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									$database->executeInsert($sql2, true);
 
 									$sql3 = "UPDATE `edu_student` SET `school_id` = '$school_id' WHERE `student_id` = '$student_id' 
-									and (`school_id` = '0' or `school_id` is null)
+									and (`school_id` = '' or `school_id` is null)
 									";
 
 
@@ -605,7 +605,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									$sql3 = "UPDATE `edu_teacher` 
 									set `school_id` = '$school_id' 
 									WHERE `teacher_id` = '$teacher_id' 
-									and (`school_id` = '0' or `school_id` is null)
+									and (`school_id` = '' or `school_id` is null)
 									";
 									$database->executeUpdate($sql3, true);
 								} else {
