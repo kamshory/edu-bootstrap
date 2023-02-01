@@ -123,7 +123,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 			'$true', '$false', '$score', '$penalty', '$final_score', '$percent', '1') ";
 			$stmt = $database->executeInsert($sql, true);
 			$picoEdu->logoutTest($school_id, $student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
-			include_once dirname(__FILE__) . "/lib.inc/header.php";
+			include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 			?>
 			<div class="info">Jawaban berhasil dikirim.</div>
 			<script type="text/javascript">
@@ -134,7 +134,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 			window.location = '<?php echo $cfg->base_url . "siswa/ujian/" . basename($_SERVER['PHP_SELF']); ?>?option=sent&test_id=<?php echo $test_id; ?>';
 			</script>
 			<?php
-			include_once dirname(__FILE__) . "/lib.inc/footer.php";
+			include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 			exit();
 		}
 	}

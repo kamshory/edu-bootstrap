@@ -15,7 +15,7 @@ if (@$auth_student_id && @$auth_school_id) {
 	if (@$_GET['option'] == 'answer' && isset($_GET['answer_id'])) {
 		$answer_id = kh_filter_input(INPUT_GET, 'answer_id', FILTER_SANITIZE_STRING_NEW);
 		$now = $picoEdu->getLocalDateTime();
-		include_once dirname(__FILE__) . "/lib.inc/header.php";
+		include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 
 		$sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, `edu_answer`.`start`, `edu_answer`.`end`
 		FROM `edu_answer`
@@ -165,10 +165,10 @@ if (@$auth_student_id && @$auth_school_id) {
 			<div class="warning">Ujian tidak ditemukan.</div>
 		<?php
 		}
-		include_once dirname(__FILE__) . "/lib.inc/footer.php";
+		include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 	} else if (@$_GET['option'] == 'history' && isset($_GET['test_id'])) {
 		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-		include_once dirname(__FILE__) . "/lib.inc/header.php";
+		include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 		$sql = "SELECT `edu_answer`.*
 		FROM `edu_answer`
 		WHERE `edu_answer`.`student_id` = '$student_id' and `edu_answer`.`test_id` = '$test_id' 
@@ -237,9 +237,9 @@ if (@$auth_student_id && @$auth_school_id) {
 			</table>
 		<?php
 		}
-		include_once dirname(__FILE__) . "/lib.inc/footer.php";
+		include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 	} else if (@$_GET['option'] == 'detail' && isset($_GET['test_id'])) {
-		include_once dirname(__FILE__) . "/lib.inc/header.php";
+		include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 		$nt = '';
 		$sql = "SELECT `edu_test`.* $nt,
@@ -398,9 +398,9 @@ if (@$auth_student_id && @$auth_school_id) {
 			</table>
 		<?php
 		}
-		include_once dirname(__FILE__) . "/lib.inc/footer.php";
+		include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 	} else {
-		include_once dirname(__FILE__) . "/lib.inc/header.php";
+		include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 		$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 		$array_class = $picoEdu->getArrayClass($school_id);
 		?>
@@ -649,10 +649,10 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 			?>
 		</div>
 	<?php
-		include_once dirname(__FILE__) . "/lib.inc/footer.php";
+		include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 	}
 } else if (@$auth_teacher_id && @$auth_school_id) {
-	include_once dirname(__FILE__) . "/lib.inc/header.php";
+	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 	$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 	$array_class = $picoEdu->getArrayClass($school_id);
 	?>
@@ -811,9 +811,9 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 		?>
 	</div>
 <?php
-	include_once dirname(__FILE__) . "/lib.inc/footer.php";
+	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else {
-	include_once dirname(__FILE__) . "/lib.inc/header.php";
+	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 	$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 	$array_class = $picoEdu->$picoEdu->getArrayClass($school_id);
 ?>
@@ -972,6 +972,6 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 		?>
 	</div>
 <?php
-	include_once dirname(__FILE__) . "/lib.inc/footer.php";
+	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 }
 ?>

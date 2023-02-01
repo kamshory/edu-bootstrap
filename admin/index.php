@@ -3,7 +3,7 @@ include_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
 $cfg->page_title = "Halaman Depan Administrator";
 
 if(!empty(@$school_id)) {
-    include_once dirname(__FILE__) . "/lib.inc/header.php";
+    include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 ?>
     <h1>Administrator Sekolah</h1>
     <?php
@@ -16,15 +16,15 @@ if(!empty(@$school_id)) {
     <p>Ini merupakan halaman Administrator yang dapat Anda gunakan untuk mengelola data sekolah.</p>
     <p>Mohon untuk menjaga kerahasiaan akun Anda. Jangan meninggalkan komputer atau gadget dalam kondisi login di akun andministrator <?php echo $cfg->app_name; ?>.</p>
 <?php
-    include_once dirname(__FILE__) . "/lib.inc/footer.php";
+    include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else if ($admin_id) {
-    include_once dirname(__FILE__) . "/lib.inc/header.php";
+    include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 ?>
     <h1>Administrator Sekolah</h1>
     <p>Ini merupakan halaman Administrator yang dapat Anda gunakan untuk mengelola data sekolah.</p>
     <p>Anda pernah terdaftar sebagai administrator sekolah namun saat ini Anda tidak sedang mengelola sebuah sekolah. Silakan <a href="ganti-sekolah.php">pilih sekolah</a> atau <a href="impor-data.php">buat sebuah akun baru untuk sekolah Anda</a>.</p>
 <?php
-    include_once dirname(__FILE__) . "/lib.inc/footer.php";
+    include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else {
     include_once dirname(__FILE__) . "/login-form.php";
 }

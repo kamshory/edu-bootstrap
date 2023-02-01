@@ -2,14 +2,15 @@
 include_once dirname(dirname(__FILE__)) . "/lib.config/inc-cfg.php";
 
 mb_regex_encoding('UTF-8');
-function mb_replace($search, $replace, $subject, &$count = 0)
+function mb_replace($search, $replace, $subject, &$count = 0) //NOSONAR
 {
 	if (!is_array($search) && is_array($replace)) {
 		return false;
 	}
 	if (is_array($subject)) {
 		// call mb_replace for each single string in $subject
-		foreach ($subject as &$string) {
+		foreach ($subject as &$string) //NOSONAR
+		{
 			$string = &mb_replace($search, $replace, $string, $c);
 			$count += $c;
 		}
@@ -309,9 +310,10 @@ function scrap($url)
 		return date('Y-m-d', (24141 + $int) * 86400);
 	}
 	
-	function liststyle($style, $index = 1)
+	function liststyle($style, $index = 1) //NOSONAR
 	{
-		switch ($style) {
+		switch ($style) //NOSONAR
+		{
 			case "armenian":
 				break;
 			case "circle":
@@ -460,9 +462,10 @@ class DirectoryDestroyer
 
 
 
-function kh_filter_input($type, $variable_name, $filter = FILTER_DEFAULT, $options = null)
+function kh_filter_input($type, $variable_name, $filter = FILTER_DEFAULT, $options = null) //NOSONAR
 {
-	switch ($type) {
+	switch ($type) //NOSONAR
+	{
 		case INPUT_GET:
 			$var = $_GET;
 			break;
@@ -485,7 +488,8 @@ function kh_filter_input($type, $variable_name, $filter = FILTER_DEFAULT, $optio
 		// ignore
 	}
 
-	if (@get_magic_quotes_runtime()) {
+	if (@get_magic_quotes_runtime()) //NOSONAR
+	{
 		$val = my_stripslashes($val);
 	}
 
@@ -628,7 +632,8 @@ function kh_filter_input_search_get($var = 'q')
 	}
 	$val = trim(strip_tags($val), "\r\n\t ");
 	$val = str_replace(array('<', '>', '"'), array('&lt;', '&gt;', '&quot;'), $val);
-	if (@get_magic_quotes_runtime()) {
+	if (@get_magic_quotes_runtime()) //NOSONAR
+	{
 		$val = my_stripslashes($val);
 	}
 	return $val;

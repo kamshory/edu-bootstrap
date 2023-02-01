@@ -42,7 +42,7 @@ if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
 	header("Location: profil.php");
 }
 if (@$_GET['option'] == 'edit') {
-	include_once dirname(__FILE__) . "/lib.inc/header.php";
+	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 	$sql = "SELECT `edu_student`.* 
 	FROM `edu_student` 
 	WHERE `edu_student`.`school_id` = '$school_id'
@@ -106,9 +106,9 @@ if (@$_GET['option'] == 'edit') {
 		<div class="warning">Data tidak ditemukan. <a href="profil.php">Klik di sini untuk kembali.</a></div>
 	<?php
 	}
-	include_once dirname(__FILE__) . "/lib.inc/footer.php";
+	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else {
-	include_once dirname(__FILE__) . "/lib.inc/header.php";
+	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 	$nt = '';
 	$sql = "SELECT `edu_student`.* , `edu_school`.`name` as `school_name`, `edu_school`.`open` as `school_open`,
 (select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
@@ -214,6 +214,6 @@ and `edu_student`.`student_id` = '$student_id'
 		<div class="warning">Data tidak ditemukan. <a href="profil.php">Klik di sini untuk kembali.</a></div>
 <?php
 	}
-	include_once dirname(__FILE__) . "/lib.inc/footer.php";
+	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 }
 ?>

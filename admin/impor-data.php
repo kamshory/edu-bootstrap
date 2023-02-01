@@ -692,7 +692,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Negeri Swasta</td>
-		<td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?> </td>
+		<td><?php echo $picoEdu->selectFromMap($data['public_private'], array('U'=>'Negeri', 'I'=>'Swasta'));?> </td>
 		</tr>
 		<tr>
 		<td>Kepala Sekolah</td>
@@ -712,27 +712,27 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
         <tr>
           <td>Jumlah Kelas</td>
-          <td><?php echo ($data['num_class']);?> </td>
+          <td><?php echo $data['num_class'];?> </td>
         </tr>
         <tr>
           <td>Jumlah Siswa</td>
-          <td><?php echo ($data['num_student']);?> orang</td>
+          <td><?php echo $data['num_student'];?> orang</td>
         </tr>
         <tr>
           <td>Jumlah Guru</td>
-          <td><?php echo ($data['num_teacher']);?> orang</td>
+          <td><?php echo $data['num_teacher'];?> orang</td>
         </tr>
 		<tr>
 		  <td>Jumlah Admin</td>
-		  <td><?php echo ($data['num_admin']);?> orang</td>
+		  <td><?php echo $data['num_admin'];?> orang</td>
       </tr>
 		<tr>
 		<td>Cegah Siswa Pindah</td>
-		<td><?php echo ($data['prevent_change_school'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['prevent_change_school'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td>Cegah Siswa Keluar</td>
-		<td><?php echo ($data['prevent_resign'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['prevent_resign'], 'Ya', 'Tidak');?> </td>
 		</tr>
 
 		<tr>
@@ -837,8 +837,6 @@ Modul ini digunakan untuk mengimpor data sekolah, kelas, siswa, dan guru. Contoh
 input[type="button"].input-file-button{
 	width:50px;
 	border-width:0 1px 0 0;
-}
-.input-file-button{
 }
 .input-file-label{
 	display: inline-block;

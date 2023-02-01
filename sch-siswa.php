@@ -7,7 +7,7 @@ if (isset($_GET['school_id'])) {
   $school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
 }
 if (!@$student_id && !@$teacher_id) {
-  include_once dirname(__FILE__) . "/lib.inc/header.php";
+  include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
   if(!empty(@$school_id)) {
     $sql = "SELECT `edu_school`.*, 
     (select count(distinct `edu_student`.`student_id`) FROM `edu_student`
@@ -41,12 +41,12 @@ if (!@$student_id && !@$teacher_id) {
     <?php
     }
   }
-  include_once dirname(__FILE__) . "/lib.inc/footer.php";
+  include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
   exit();
 }
 
 if (@$_GET['option'] == 'detail') {
-  include_once dirname(__FILE__) . "/lib.inc/header.php";
+  include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
   $edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_STRING_NEW);
   $nt = '';
   $sql = "SELECT `edu_student`.* ,
@@ -104,9 +104,9 @@ WHERE `edu_student`.`student_id` = '$edit_key'
     <div class="warning">Data tidak ditemukan. <a href="<?php echo 'siswa.php'; ?>">Klik di sini untuk kembali.</a></div>
   <?php
   }
-  include_once dirname(__FILE__) . "/lib.inc/footer.php";
+  include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else {
-  include_once dirname(__FILE__) . "/lib.inc/header.php";
+  include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
   $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
   ?>
   <div class="search-control">
@@ -249,7 +249,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
                 <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo $data['reg_number']; ?></a></td>
                 <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo $data['reg_number_national']; ?></a></td>
                 <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo $data['name']; ?></a></td>
-                <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo ($data['grade_id']); ?></a></td>
+                <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo $data['grade_id']; ?></a></td>
                 <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo $data['class_id']; ?></a></td>
                 <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo ($data['gender']); ?></a></td>
                 </tr>
@@ -283,6 +283,6 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
   </div>
 
 <?php
-  include_once dirname(__FILE__) . "/lib.inc/footer.php";
+  include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 }
 ?>

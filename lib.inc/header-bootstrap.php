@@ -30,8 +30,6 @@
     <meta name="msapplication-config" content="favs/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
 
-
-
 </head>
 
 <body>

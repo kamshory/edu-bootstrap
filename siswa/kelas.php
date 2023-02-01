@@ -157,7 +157,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo 'kelas.php';?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo 'kelas.php';?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['grade_id'];?></a></td>
       <td><a href="<?php echo 'kelas.php';?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['school_program_id'];?></a></td>
-      <td><a href="<?php echo 'kelas.php';?>?option=detail&amp;class_id=<?php echo $data['class_id'];?>"><?php echo ($data['num_student']);?></a></td>
+      <td><a href="<?php echo 'kelas.php';?>?option=detail&amp;class_id=<?php echo $data['class_id'];?>"><?php echo $data['num_student'];?></a></td>
       </tr>
     <?php
 	}

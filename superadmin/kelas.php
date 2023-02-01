@@ -65,7 +65,7 @@ if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
 	header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&class_id=$class_id");
 }
 if (@$_GET['option'] == 'add') {
-	include_once dirname(__FILE__) . "/lib.inc/header.php";
+	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 ?>
 <form name="formedu_class" id="formedu_class" action="" method="post" enctype="multipart/form-data">
 <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -127,9 +127,9 @@ if (@$_GET['option'] == 'add') {
 	</form>
 	<?php getDefaultValues($database, 'edu_class', array('active')); ?>
 	<?php
-	include_once dirname(__FILE__) . "/lib.inc/footer.php";
+	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else if (@$_GET['option'] == 'edit') {
-	include_once dirname(__FILE__) . "/lib.inc/header.php";
+	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 	$edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_class`.* 
 	FROM `edu_class` 
@@ -145,7 +145,7 @@ if (@$_GET['option'] == 'add') {
 			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td>Kode Kelas</td>
-					<td><input type="text" class="form-control input-text input-text-long" name="class_code" id="class_code" value="<?php echo ($data['class_code']); ?>" autocomplete="off" /><input type="hidden" name="class_id2" id="class_id2" value="<?php echo $data['class_id']; ?>" /></td>
+					<td><input type="text" class="form-control input-text input-text-long" name="class_code" id="class_code" value="<?php echo $data['class_code']; ?>" autocomplete="off" /><input type="hidden" name="class_id2" id="class_id2" value="<?php echo $data['class_id']; ?>" /></td>
 				</tr>
 				<tr>
 					<td>Tingkat
@@ -207,11 +207,11 @@ if (@$_GET['option'] == 'add') {
 		<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']); ?>">Klik di sini untuk kembali.</a></div>
 	<?php
 	}
-	include_once dirname(__FILE__) . "/lib.inc/footer.php";
+	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else if (@$_GET['option'] == 'print') {
 	include_once dirname(__FILE__) . "/cetak-login-siswa.php";
 } else if (@$_GET['option'] == 'detail') {
-	include_once dirname(__FILE__) . "/lib.inc/header.php";
+	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 	$edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 	$nt = '';
 	$sql = "SELECT `edu_class`.* $nt,
@@ -299,9 +299,9 @@ if($stmt->rowCount() > 0)
 		<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']); ?>">Klik di sini untuk kembali.</a></div>
 	<?php
 	}
-	include_once dirname(__FILE__) . "/lib.inc/footer.php";
+	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else {
-	include_once dirname(__FILE__) . "/lib.inc/header.php";
+	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
 	?>
 	<script type="text/javascript">
@@ -440,11 +440,11 @@ if($stmt->rowCount() > 0)
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=print&school_id=<?php echo $data['school_id']; ?>&class_id=<?php echo $data['class_id']; ?>"><i class="fas fa-print"></i></a></td>
 								<td align="right"><?php echo $no;?> </td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['school_name']; ?></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['class_code']); ?></a></td>
+								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['class_code']; ?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['name']; ?></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['grade_id']); ?></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['school_program_id']); ?></a></td>
-								<td><a href="siswa.php?class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['num_student']); ?></a></td>
+								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['grade_id']; ?></a></td>
+								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['school_program_id']; ?></a></td>
+								<td><a href="siswa.php?class_id=<?php echo $data['class_id']; ?>"><?php echo $data['num_student']; ?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['order'];?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['active']) ? 'Ya' : 'Tidak'; ?></a></td>
 								</tr>
@@ -479,6 +479,6 @@ if($stmt->rowCount() > 0)
 	</div>
 
 <?php
-	include_once dirname(__FILE__) . "/lib.inc/footer.php";
+	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 }
 ?>

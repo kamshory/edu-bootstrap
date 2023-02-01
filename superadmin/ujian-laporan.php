@@ -752,7 +752,7 @@ else
 <?php
 include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 } else {
-    include_once dirname(__FILE__) . "/lib.inc/header.php";
+    include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
     $school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
     $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 

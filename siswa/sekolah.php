@@ -36,7 +36,7 @@ $cfg->page_title = "Tentang ".$school_name;
     </tr>
     <tr>
     <td>Negeri/Swasta</td>
-    <td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?> </td>
+    <td><?php echo $picoEdu->selectFromMap($data['public_private'], array('U'=>'Negeri', 'I'=>'Swasta'));?> </td>
     </tr>
     <tr>
     <td>Kepala Sekolah</td>
@@ -72,15 +72,15 @@ $cfg->page_title = "Tentang ".$school_name;
     </tr>
     <tr>
       <td>Jumlah Kelas</td>
-      <td><?php echo ($data['num_class']);?> </td>
+      <td><?php echo $data['num_class'];?> </td>
     </tr>
     <tr>
       <td>Jumlah Siswa</td>
-      <td><?php echo ($data['num_student']);?> orang</td>
+      <td><?php echo $data['num_student'];?> orang</td>
     </tr>
     <tr>
       <td>Jumlah Guru</td>
-      <td><?php echo ($data['num_teacher']);?> orang</td>
+      <td><?php echo $data['num_teacher'];?> orang</td>
     </tr>
 </table>
 <?php

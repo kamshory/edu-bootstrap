@@ -310,15 +310,15 @@ if (@$page_school_id) {
 				</tr>
 				<tr>
 					<td>Jumlah Kelas</td>
-					<td><?php echo ($data['num_class']);?> </td>
+					<td><?php echo $data['num_class'];?> </td>
 				</tr>
 				<tr>
 					<td>Jumlah Siswa</td>
-					<td><?php echo ($data['num_student']); ?> orang</td>
+					<td><?php echo $data['num_student']; ?> orang</td>
 				</tr>
 				<tr>
 					<td>Jumlah Guru</td>
-					<td><?php echo ($data['num_teacher']); ?> orang</td>
+					<td><?php echo $data['num_teacher']; ?> orang</td>
 				</tr>
 			</table>
 			<?php

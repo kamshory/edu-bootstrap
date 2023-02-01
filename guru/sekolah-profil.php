@@ -37,7 +37,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Negeri/Swasta</td>
-		<td><?php if($data['public_private']=='U') echo 'Negeri'; if($data['public_private']=='I') echo 'Swasta';?> </td>
+		<td><?php echo $picoEdu->selectFromMap($data['public_private'], array('U'=>'Negeri', 'I'=>'Swasta'));?> </td>
 		</tr>
 		<tr>
 		<td>Kepala Sekolah</td>
