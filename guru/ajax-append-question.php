@@ -57,7 +57,7 @@ if(!empty(@$school_id))
 						(`content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
 						('$content', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
-						'$time_create', '$member_create', '$time_edit', '$member_edit', '1');
+						'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 						";
 						$stmt1 = $database->executeInsert($sql1, true);
 						if($stmt1->rowCount())
@@ -83,7 +83,7 @@ if(!empty(@$school_id))
 									(`question_id`, `content`, `order`, `score`, 
 									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
 									('$question_id', '$content_option', '$order_option', '$score_option', 
-									'$time_create', '$member_create', '$time_edit', '$member_edit', '1');
+									'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 									";
 									$stmt2 = $database->executeInsert($sql2);
 									if($stmt2->rowCount() == 0)

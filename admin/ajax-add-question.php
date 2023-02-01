@@ -51,7 +51,7 @@ if(isset($_POST['question']))
 		(`question_id`, `content`, `basic_competence`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 		`time_create`, `member_create`, `time_edit`, `member_edit`) values
 		('$question_id', '$question', '$basic_competence', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
-		'$time_create', '$member_create', '$time_edit', '$member_edit'); ";
+		'$time_create', '$member_create', '$time_edit', '$member_edit') ";
 		$database->executeInsert($sql, true);
 
 		$order = 0;

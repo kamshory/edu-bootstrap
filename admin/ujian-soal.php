@@ -92,7 +92,7 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 				(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 				`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
 				('$question_id', '$content', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
-				'$time_create', '$member_create', '$time_edit', '$member_edit', '1');
+				'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 				";
 				$stmt1 = $database->executeInsert($sql1, true);
 				if($stmt->rowCount() == 0)
@@ -120,7 +120,7 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 							(`option_id`, `question_id`, `content`, `order`, `score`, 
 							`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
 							('$option_id', '$question_id', '$content_option', '$order_option', '$score_option', 
-							'$time_create', '$member_create', '$time_edit', '$member_edit', '1');
+							'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 							";
 							$stmt2 = $database->executeInsert($sql2, true);
 							if($stmt2->rowCount() == 0)
@@ -289,13 +289,13 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 				$option = $picoEdu->brToNewLineEncoded($option);
 
 				$score = kh_filter_input(INPUT_POST, 'score_' . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
-				$sql = "update `edu_option` 
+				$sql = "UPDATE `edu_option` 
 				set `content` = '$option', `score` = '$score' 
 				where `question_id` = '$question_id' and `option_id` = '$id2'";
 				$stmt3 = $database->executeQuery($sql);
 				if ($stmt3->rowCount() > 0) 
 				{
-					$sql = "update `edu_option` 
+					$sql = "UPDATE `edu_option` 
 					set `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
 					where `question_id` = '$question_id' and `option_id` = '$id2'";
 					$database->executeUpdate($sql, true);
