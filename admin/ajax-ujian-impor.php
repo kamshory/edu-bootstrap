@@ -6,6 +6,7 @@ if(empty(@$school_id))
 }
 if(isset($_POST['from']) && isset($_POST['to']))
 {
+	$school_id = @$school_id . '';
 	include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 	include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 	$id = kh_filter_input(INPUT_POST, 'from', FILTER_SANITIZE_NUMBER_UINT);
@@ -17,7 +18,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	$member_create = $member_edit = $admin_id;
 	
 	
-	$sql = "select * from `edu_test_collection` where `test_collection_id` = '$id' and `active` = '1' ";
+	$sql = "SELECT * from `edu_test_collection` where `test_collection_id` = '$id' and `active` = '1' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -121,15 +122,15 @@ if(isset($_POST['from']) && isset($_POST['to']))
 							('$question_id', '$pertanyaan', '$test_id', '1', '$order', '$random', '$numbering', '$digest', '$competence',
 							'$time_create', '$member_create', '$time_edit', '$member_edit'); 
 							";
-							$stmt = $database->executeQuery($sql1);
+							$stmt = $database->executeInsert($sql1, true);;
 							
 							if($stmt->rowCount() > 0 && count(@$question->answer->option) > 0)
 							{
 								foreach($question->answer->option as $index_option => $option)
 								{
 									$text_option = trim(@$option->text);
-									$score = trim(@$option->value)*1;
-									if(count(@$option->file))
+									$score = ((int) (@$option->value));
+									if(count(@$option->file) > 0)
 									{
 										foreach($option->file as $index_file_question => $file)
 										{
@@ -168,7 +169,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 									('$option_id', '$question_id', '$option', '$order2', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit'); 
 									";
 									
-									$database->executeInsert($sql2);
+									$database->executeInsert($sql2, true);
 								}
 							}
 						}

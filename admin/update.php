@@ -210,7 +210,7 @@ if(isset($_POST['extract']))
 					{
 						$sql = $val['query'];
 						$delimiter = $val['delimiter'];
-						$stmt = $database->executeUpdate($sql);
+						$stmt = $database->executeUpdate($sql, true);
 						if($stmt->rowCount() == 0)
 						{
 							$oke2 = $oke2 * 0;
@@ -266,9 +266,9 @@ if(isset($_POST['extract']))
 		$database->executeReplace($sql);
 		
 		$sql = "UPDATE `version` set `current_version` = 0;";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 		$sql = "UPDATE `version` set `current_version` = 1 where `version_id` = '$version_id';";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 		
 		$sql = "commit;";
 		$database->executeTransaction($sql);

@@ -67,7 +67,7 @@ if(file_exists(dirname(__FILE__)."/sch-".$modul_name))
 		$school_code = addslashes($school_code);
 		$sql_filter .= " and `school_code` = '$school_code' "; 
 	}
-	$sql = "select `edu_school`.*
+	$sql = "SELECT `edu_school`.*
 	from `edu_school`
 	where `edu_school`.`active` = '1' $sql_filter
 	";

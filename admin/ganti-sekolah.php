@@ -41,14 +41,14 @@ if(@$_GET['option']=='select')
 		('$admin_id', '$token_admin', '$school_id', '$name', '$gender', '$birth_place', '$birth_day', '$phone', '$email', '$password',  
 		'$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', 0, 1)
 		";
-		$database->executeInsert($sql);
+		$database->executeInsert($sql, true);
 		
 		$sql = "update `edu_student` set `school_id` = '$school_id', `class_id` = '$class_id' where `student_id` = '$student_id' ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 
 
 		$sql = "update `edu_admin` set `school_id` = '$school_id' where `admin_id` = '$admin_id' ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 		header("Location: index.php");
 	}
 

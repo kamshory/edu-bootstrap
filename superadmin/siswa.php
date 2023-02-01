@@ -47,7 +47,7 @@ if(isset($_POST['set_active']) && isset($_POST['student_id']))
 		{
 			$student_id = addslashes($val);
 			$sql = "update `edu_student` set `active` = '1' where `student_id` = '$student_id'  ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -60,7 +60,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['student_id']))
 		{
 			$student_id = addslashes($val);
 			$sql = "update `edu_student` set `active` = '0' where `student_id` = '$student_id'  ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -73,9 +73,9 @@ if(isset($_POST['delete']) && isset($_POST['student_id']))
 		{
 			$student_id = addslashes($val);
 			$sql = "DELETE FROM `edu_member_school` where `member_id` = '$student_id' and `role` = 'S'  ";
-			$database->executeDelete($sql);
+			$database->executeDelete($sql, true);
 			$sql = "update `edu_student` set `school_id` = '0' where `student_id` = '$student_id'  ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -86,20 +86,20 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	$sql = "update `edu_student` set 
 	`reg_number` = '$reg_number', `reg_number_national` = '$reg_number_national', `grade_id` = '$grade_id', `class_id` = '$class_id', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
 	where `student_id` = '$student_id2'  ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	if($email != '')
 	{
 		$sql = "update `edu_student` set 
 		`email` = '$email'
 		where `student_id` = '$student_id2'  ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
 		$sql = "update `edu_student` set 
 		`password` = md5(md5('$password')), `password_initial` = '$password'
 		where `student_id` = '$student_id2'  ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&student_id=$student_id2");
 }

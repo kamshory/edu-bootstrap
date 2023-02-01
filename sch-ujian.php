@@ -17,7 +17,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		$now = $picoEdu->getLocalDateTime();
 		include_once dirname(__FILE__) . "/lib.inc/header.php";
 
-		$sql = "select `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, `edu_answer`.`start`, `edu_answer`.`end`
+		$sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, `edu_answer`.`start`, `edu_answer`.`end`
 		from `edu_answer`
 		inner join (`edu_test`) on (`edu_test`.`test_id` = `edu_answer`.`test_id`)
 		where `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$student_id'
@@ -85,7 +85,7 @@ if (@$auth_student_id && @$auth_school_id) {
 				</table>
 			</div>
 			<?php
-			$sql = "select `edu_question`.* , `edu_answer`.`answer` as `answer` , instr(`edu_answer`.`answer`,`edu_question`.`question_id`) as `pos`,
+			$sql = "SELECT `edu_question`.* , `edu_answer`.`answer` as `answer` , instr(`edu_answer`.`answer`,`edu_question`.`question_id`) as `pos`,
 			`edu_test`.`publish_answer`, `edu_test`.`time_answer_publication`
 			from `edu_question` 
 			left join (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
@@ -112,7 +112,7 @@ if (@$auth_student_id && @$auth_school_id) {
 							<div class="question">
 								<?php echo $data['content']; ?>
 								<?php
-								$sql2 = "select `edu_option`.* , '$answer' like concat('%,',`edu_option`.`option_id`,']%') as `my_answer`
+								$sql2 = "SELECT `edu_option`.* , '$answer' like concat('%,',`edu_option`.`option_id`,']%') as `my_answer`
 								from `edu_option` 
 								where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` order by  `edu_option`.`order` asc";
 								$stmt2 = $database->executeQuery($sql2);
@@ -169,7 +169,7 @@ if (@$auth_student_id && @$auth_school_id) {
 	} else if (@$_GET['option'] == 'history' && isset($_GET['test_id'])) {
 		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 		include_once dirname(__FILE__) . "/lib.inc/header.php";
-		$sql = "select `edu_answer`.*
+		$sql = "SELECT `edu_answer`.*
 		from `edu_answer`
 		where `edu_answer`.`student_id` = '$student_id' and `edu_answer`.`test_id` = '$test_id' 
 		order by `edu_answer`.`start` asc
@@ -242,7 +242,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		include_once dirname(__FILE__) . "/lib.inc/header.php";
 		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 		$nt = '';
-		$sql = "select `edu_test`.* $nt,
+		$sql = "SELECT `edu_test`.* $nt,
 		(select `edu_teacher`.`name` from `edu_teacher` where `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`
 		from `edu_test` 
 		where 1
@@ -539,14 +539,14 @@ if (@$auth_student_id && @$auth_school_id) {
 
 			$nt = '';
 
-			$sql = "select `edu_test`.* $nt,
+			$sql = "SELECT `edu_test`.* $nt,
 			(select count(distinct `edu_answer`.`answer_id`) from `edu_answer` 
 			where `edu_answer`.`test_id` = `edu_test`.`test_id` and `edu_answer`.`student_id` = '$student_id') as `ntest`
 			from `edu_test`
 			where `edu_test`.`active` = '1' and `edu_test`.`school_id` = '$school_id' $sql_filter
 			order by `edu_test`.`test_id` desc
 			";
-			$sql_test = "select `edu_test`.*
+			$sql_test = "SELECT `edu_test`.*
 			from `edu_test`
 			where `edu_test`.`active` = '1' and `edu_test`.`school_id` = '$school_id' $sql_filter
 			";
@@ -709,12 +709,12 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 
 		$nt = '';
 
-		$sql = "select `edu_test`.* $nt
+		$sql = "SELECT `edu_test`.* $nt
 from `edu_test`
 where `edu_test`.`active` = '1' and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 order by `edu_test`.`test_id` desc
 ";
-		$sql_test = "select `edu_test`.*
+		$sql_test = "SELECT `edu_test`.*
 from `edu_test`
 where `edu_test`.`active` = '1' and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 ";
@@ -870,12 +870,12 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 
 		$nt = '';
 
-		$sql = "select `edu_test`.* $nt
+		$sql = "SELECT `edu_test`.* $nt
 		from `edu_test`
 		where `edu_test`.`active` = '1' and `edu_test`.`school_id` = '$school_id' $sql_filter
 		order by `edu_test`.`test_id` desc
 		";
-		$sql_test = "select `edu_test`.*
+		$sql_test = "SELECT `edu_test`.*
 		from `edu_test`
 		where `edu_test`.`active` = '1' and `edu_test`.`school_id` = '$school_id' $sql_filter
 		";

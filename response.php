@@ -4,7 +4,7 @@ include_once dirname(__FILE__)."/lib.inc/sessions.php";
 $cfg->page_title = "Tanggapan Sekolah";
 include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
 
-$sql = "select `edu_school_response`.* 
+$sql = "SELECT `edu_school_response`.* 
 from `edu_school_response` 
 where `edu_school_response`.`active` = '1' 
 order by `edu_school_response`.`time` desc

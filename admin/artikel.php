@@ -46,7 +46,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		('$article_id', '$school_id', '$title', '$open', '$class', '$time', '$time', '$admin_id', 'A', '$admin_id', 
 		'A', '$ip', '$ip', '$active')
 		";
-		$database->executeInsert($sql);
+		$database->executeInsert($sql, true);
 
 		$base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id";
 		$base_src = "media.edu/school/$school_id/article/$article_id";
@@ -74,7 +74,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$content = extractImageData($content, $base_dir, $base_src);
 		$content = addslashes(UTF8ToEntities($content));
 		$sql = "update `edu_article` set `content` = '$content' where `article_id` = '$article_id' ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&article_id=$article_id");
 	}
 	else if($option == 'edit')
@@ -112,7 +112,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		`time_edit` = '$time', `member_edit` = '$admin_id', `role_edit` = 'A', `ip_edit` =  '$ip', `active` = '$active'
 		where `article_id` = '$article_id' and `school_id` = '$school_id'
 		";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&article_id=$article_id");
 	}
 }
@@ -126,7 +126,7 @@ if(isset($_POST['set_active']) && isset($_POST['article_id']))
 		{
 			$article_id = addslashes($article_id);
 			$sql = "update `edu_article` set `active` = '1' where `article_id` = '$article_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -139,7 +139,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['article_id']))
 		{
 			$article_id = addslashes($article_id);
 			$sql = "update `edu_article` set `active` = '0' where `article_id` = '$article_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -152,7 +152,7 @@ if(isset($_POST['delete']) && isset($_POST['article_id']))
 		{
 			$article_id = addslashes($article_id);
 			$sql = "DELETE FROM `edu_article` where `article_id` = '$article_id' and `school_id` = '$school_id' ";
-			$stmt = $database->executeDelete($sql);
+			$stmt = $database->executeDelete($sql, true);
 			if($stmt->rowCount() > 0)
 			{
 				// destroy directory

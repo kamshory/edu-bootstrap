@@ -12,7 +12,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	$_SESSION['student_username'] = $username;
 	$_SESSION['student_password'] = $password;
 									 
-	$sql = "select `username`, `student_id`
+	$sql = "SELECT `username`, `student_id`
 	from `edu_student`
 	where (
 		(`email` like '$email' and `email` != '')
@@ -182,7 +182,7 @@ else
 		<div class="card-container row container container-fluid d-flex justify-content-between">
 			<?php
 
-			$sql = "select `edu_info`.* 
+			$sql = "SELECT `edu_info`.* 
 			from `edu_info` 
 			where `edu_info`.`active` = '1'
 			order by `edu_info`.`info_id` desc

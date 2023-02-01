@@ -119,7 +119,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 							('$pertanyaan', '$test_id', '1', '$order', '$random', '$numbering', '$digest', '$competence',
 							'$time_create', '$member_create', '$time_edit', '$member_edit'); 
 							";
-							$database->executeInsert($sql1);
+							$database->executeInsert($sql1, true);
 							$id_question = $database->getDatabaseConnection()->lastInsertId();		
 							
 							if(count(@$question->answer->option) > 0)

@@ -49,10 +49,10 @@ function uploadImage(data)
 <body>
 <?php
 
-$sql = "select `edu_option`.*, (select `edu_question`.`test_id` from `edu_question` where `edu_question`.`question_id` = `edu_option`.`question_id`) as `test_id` 
+$sql = "SELECT `edu_option`.*, (select `edu_question`.`test_id` from `edu_question` where `edu_question`.`question_id` = `edu_option`.`question_id`) as `test_id` 
 from `edu_option` where `content` like '%codecogs%' order by `option_id` asc limit 0,100 ";
 
-$sql = "select `edu_question`.* 
+$sql = "SELECT `edu_question`.* 
 from `edu_question` where `content` like '%codecogs%'  ";
 
 $stmt = $database->executeQuery($sql);

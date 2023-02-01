@@ -21,7 +21,7 @@ if(@$_GET['option']=='delete')
 {
 	$question_id = kh_filter_input(INPUT_GET, 'question_id', FILTER_SANITIZE_STRING_NEW);
 	$digest = kh_filter_input(INPUT_GET, 'digest', FILTER_SANITIZE_STRING_NEW_BASE64);
-	$sql = "select * from `edu_question`
+	$sql = "SELECT * from `edu_question`
 	inner join(`edu_test`) on(`edu_test`.`test_id` = `edu_question`.`test_id` and `edu_test`.`school_id` = '$school_id')
 	where `question_id` = '$question_id' and `digest` = '$digest' ";
 	$stmt = $database->executeQuery($sql);
@@ -31,9 +31,9 @@ if(@$_GET['option']=='delete')
 		$id = $dt['question_id'];
 		$test_id = $dt['test_id'];
 		$sql = "DELETE FROM `edu_option` where `question_id` = '$id' ";
-		$database->executeDelete($sql);
+		$database->executeDelete($sql, true);
 		$sql = "DELETE FROM `edu_question` where `question_id` = '$id' ";
-		$database->executeDelete($sql);
+		$database->executeDelete($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?test_id=$test_id");
 	}
 }
@@ -85,7 +85,7 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 			mkdir($base_dir);
 		}
 		$base_src = "media.edu/school/$school_id/test/$test_id";
-		$database->executeTransaction('start transaction');
+		$database->executeTransaction('start transaction', true);
 		$oke = 1;
 		
 		foreach($clear_data as $question_no=>$question)
@@ -107,7 +107,7 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 				('$question_id', '$content', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
 				'$time_create', '$member_create', '$time_edit', '$member_edit', '1');
 				";
-				$stmt1 = $database->executeInsert($sql1);
+				$stmt1 = $database->executeInsert($sql1, true);
 				if($stmt->rowCount() == 0)
 				{
 					$oke = $oke * 0;
@@ -135,7 +135,7 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 							('$option_id', '$question_id', '$content_option', '$order_option', '$score_option', 
 							'$time_create', '$member_create', '$time_edit', '$member_edit', '1');
 							";
-							$stmt2 = $database->executeInsert($sql2);
+							$stmt2 = $database->executeInsert($sql2, true);
 							if($stmt2->rowCount() == 0)
 							{
 								$oke = $oke * 0;
@@ -147,11 +147,11 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 		}
 		if($oke)
 		{
-			$database->executeTransaction('commit');
+			$database->executeTransaction('commit', true);
 		}
 		else
 		{
-			$database->executeTransaction('rollback');
+			$database->executeTransaction('rollback', true);
 		}
 		header("Location: ".$_SERVER['REQUEST_URI']);
 	}
@@ -195,7 +195,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 	$member_edit = @$admin_login->admin_id.'';
 	
 	$digest = md5($question);
-	$sql3 = "select * from `edu_question` where `digest` = '$digest' and `test_id` = '$test_id' ";
+	$sql3 = "SELECT * from `edu_question` where `digest` = '$digest' and `test_id` = '$test_id' ";
 	$stmt3 = $database->executeQuery($sql3);
 	if($stmt3->rowCount() == 0)
 	{
@@ -207,7 +207,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 		`time_create`, `member_create`, `time_edit`, `member_edit`) values
 		('$question_id', '$question', '$test_id', '1', '$random', '$numbering', '$digest', '$order',
 		'$time_create', '$member_create', '$time_edit', '$member_edit'); ";
-		$database->executeInsert($sql);
+		$database->executeInsert($sql, true);
 		
 
 		$oke = 1;
@@ -227,7 +227,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 			$sql = "INSERT INTO `edu_option` 
 			(`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
 			('$option_id', '$question_id', '$option', '$order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit'); ";
-			$stmt4 = $database->executeInsert($sql);
+			$stmt4 = $database->executeInsert($sql, true);
 			if($stmt4->rowCount() > 0)
 			{
 				$oke = $oke*1;
@@ -239,11 +239,11 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 		}
 		if($oke)
 		{
-			$database->executeTransaction('commit');
+			$database->executeTransaction('commit', true);
 		}
 		else
 		{
-			$database->executeTransaction('rollback');
+			$database->executeTransaction('rollback', true);
 		}
 	}
 }
@@ -284,10 +284,10 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 			$sql = "update `edu_question` 
 			set `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
 			where `question_id` = '$question_id'";
-			$database->executeUpdate($sql);			
+			$database->executeUpdate($sql, true);			
 		}
 		
-		$sql = "select * from `edu_option` where `question_id` = '$question_id' ";
+		$sql = "SELECT * from `edu_option` where `question_id` = '$question_id' ";
 		$stmt2 = $database->executeQuery($sql);
 		if ($stmt2->rowCount() > 0) {
 			
@@ -311,7 +311,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 					$sql = "update `edu_option` 
 					set `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
 					where `question_id` = '$question_id' and `option_id` = '$id2'";
-					$database->executeUpdate($sql);
+					$database->executeUpdate($sql, true);
 				}
 			}
 		}
@@ -468,7 +468,7 @@ else if(@$_GET['option']=='edit')
 {
 	include_once dirname(__FILE__)."/lib.inc/header.php";
 	$question_id = kh_filter_input(INPUT_GET, 'question_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "select * from `edu_question` where `question_id` = '$question_id' ";
+	$sql = "SELECT * from `edu_question` where `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -572,7 +572,7 @@ var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$tes
 
 <?php
 $numbering = $data['numbering'];
-$sql = "select * from `edu_option` where `question_id` = '$question_id' ";
+$sql = "SELECT * from `edu_option` where `question_id` = '$question_id' ";
 $stmt2 = $database->executeQuery($sql);
 $i = 0;
 if ($stmt2->rowCount() > 0) {
@@ -673,7 +673,7 @@ for($i=0;$i<$number_of_option;$i++)
 
 if(@$_GET['option'] == 'analys')
 {
-$sql = "select * from `edu_question` where `test_id` = '$test_id' order by `order` asc ";
+$sql = "SELECT * from `edu_question` where `test_id` = '$test_id' order by `order` asc ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -871,7 +871,7 @@ else
 
 <ol id="sortable" class="test-question">
 <?php
-$sql = "select * 
+$sql = "SELECT * 
 from `edu_question` where `test_id` = '$test_id' 
 order by `order` asc, `question_id` asc
 ";
@@ -894,7 +894,7 @@ echo $data['content'];
 <ol class="listoption" style="list-style-type:<?php echo $data['numbering']; ?>">
 <?php
 $question_id = $data['question_id'];
-$sql = "select * from `edu_option` where `question_id` = '$question_id' ";
+$sql = "SELECT * from `edu_option` where `question_id` = '$question_id' ";
 $stmt2 = $database->executeQuery($sql);
 if ($stmt2->rowCount() > 0) {
 	$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -1071,7 +1071,7 @@ function buildMenu(id)
     <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-	$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";
+	$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' ";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(

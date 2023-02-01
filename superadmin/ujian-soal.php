@@ -25,9 +25,9 @@ if(@$_GET['option']=='delete')
 		$id = $data['question_id'];
 		$test_id = $data['test_id'];
 		$sql = "DELETE FROM `edu_option` where `question_id` = '$id' ";
-		$database->executeDelete($sql);
+		$database->executeDelete($sql, true);
 		$sql = "DELETE FROM `edu_question` where `question_id` = '$id' ";
-		$database->executeDelete($sql);
+		$database->executeDelete($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?test_id=$test_id");
 	}
 }
@@ -98,7 +98,7 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 				('$question_id', '$content', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
 				'$time_create', '$member_create', '$time_edit', '$member_edit', '1');
 				";
-				$stmt1 = $database->executeInsert($sql1);
+				$stmt1 = $database->executeInsert($sql1, true);
 				if($stmt1->rowCount() == 0)
 				{
 					$oke = $oke * 0;
@@ -164,11 +164,11 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 		$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks))); 	
 		
 		$sql = "update `edu_question` set `content` = '$question' , `random` = '$random', `numbering` = '$numbering' where `question_id` = '$question_id' ";
-		$stmt2 = $database->executeUpdate($sql);
+		$stmt2 = $database->executeUpdate($sql, true);
 		if($stmt2->rowCount())
 		{
 			$sql = "update `edu_question` set `time_edit` = '$time_edit', `member_edit` = '$member_edit' where `question_id` = '$question_id' ";
-			$database->executeUpdate($sql);			
+			$database->executeUpdate($sql, true);			
 		}
 		
 		$sql = "select * from `edu_option` where `question_id` = '$question_id' ";
@@ -184,11 +184,11 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 
 				$score = kh_filter_input(INPUT_POST, 'score_' . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
 				$sql = "update `edu_option` set `content` = '$option', `score` = '$score' where `question_id` = '$question_id' and `option_id` = '$id2' ";
-				$stmt4 = $database->executeUpdate($sql);
+				$stmt4 = $database->executeUpdate($sql, true);
 				if ($stmt4->rowCount() > 0) {
 					$sql = "update `edu_option` set `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
 					where `question_id` = '$question_id' and `option_id` = '$id2' ";
-					$database->executeUpdate($sql);
+					$database->executeUpdate($sql, true);
 				}
 			}
 		}

@@ -44,7 +44,7 @@ if(isset($_POST['set_active']) && isset($_POST['teacher_id']))
 		{
 			$teacher_id = addslashes($val);
 			$sql = "update `edu_teacher` set `active` = '1' where `teacher_id` = '$teacher_id'  ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -57,7 +57,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['teacher_id']))
 		{
 			$teacher_id = addslashes($val);
 			$sql = "update `edu_teacher` set `active` = '0' where `teacher_id` = '$teacher_id'  ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -70,9 +70,9 @@ if(isset($_POST['delete']) && isset($_POST['teacher_id']))
 		{
 			$teacher_id = addslashes($val);
 			$sql = "DELETE FROM `edu_member_school` where `member_id` = '$teacher_id' and `role` = 'T'  ";
-			$database->executeDelete($sql);
+			$database->executeDelete($sql, true);
 			$sql = "update `edu_teacher` set `school_id` = '0' where `teacher_id` = '$teacher_id'  ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -90,19 +90,19 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 			`gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', 
 			`time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
 			where `teacher_id` = '$teacher_id2'  ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 
 		if ($email != '') {
 			$sql = "update `edu_teacher` set 
 			`email` = '$email'
 			where `teacher_id` = '$teacher_id2'  ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 		if ($password != '') {
 			$sql = "update `edu_teacher` set 
 				`password` = md5(md5('$password')), `password_initial` = '$password'
 				where `teacher_id` = '$teacher_id2'  ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 		if ($initial != $school_id) {
 			$sql2 = "INSERT INTO `edu_member_school` 

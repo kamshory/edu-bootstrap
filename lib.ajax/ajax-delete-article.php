@@ -12,5 +12,5 @@ if(@$_POST['option'] == 'delete')
 	and `school_id` = '$school_id' 
 	and `member_create` = '$auth_teacher_id' 
 	";
-	$database->executeDelete($sql);
+	$database->executeDelete($sql, true);
 }

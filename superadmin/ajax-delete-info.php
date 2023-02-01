@@ -9,5 +9,5 @@ $info_id = kh_filter_input(INPUT_POST, 'info_id', FILTER_SANITIZE_STRING_NEW);
 if(@$_POST['option'] == 'delete')
 {
 	$sql = "DELETE FROM `edu_info` where `info_id` = '$info_id' ";
-	$database->executeDelete($sql);
+	$database->executeDelete($sql, true);
 }

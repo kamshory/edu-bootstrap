@@ -31,7 +31,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	$_SESSION['student_username'] = $username;
 	$_SESSION['student_password'] = $password;
 									 
-	$sql = "select `username`, `student_id`
+	$sql = "SELECT `username`, `student_id`
 	from `edu_student`
 	where (
 		(`email` like '$email' and `email` != '')

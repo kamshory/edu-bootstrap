@@ -37,7 +37,7 @@ if (@$_GET['option'] == 'detail') {
 	include_once dirname(__FILE__) . "/lib.assets/theme/default/header-home.php";
 	$edit_key = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_INT);
 	$nt = '';
-	$sql = "select `edu_school`.* $nt,
+	$sql = "SELECT `edu_school`.* $nt,
 	(select count(distinct `edu_student`.`student_id`) from `edu_student` where `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
 	(select `country`.`name` from `country` where `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
 	(select `state`.`name` from `state` where `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,

@@ -48,7 +48,7 @@ if(isset($_POST['set_active']) && isset($_POST['admin_id']))
 		if($val != $admin_login->admin_id)
 		{
 			$sql = "update `edu_admin` set `active` = '1' where `admin_id` = '$val' and `school_id` = '$school_id'";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -62,7 +62,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['admin_id']))
 		if($val != $admin_login->admin_id)
 		{
 			$sql = "update `edu_admin` set `active` = '0' where `admin_id` = '$val' and `school_id` = '$school_id'";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -76,9 +76,9 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 		if($val != $admin_login->admin_id)
 		{
 			$sql = "DELETE FROM `edu_member_school` where `member_id` = '$val' and `role` = 'A' and `school_id` = '$school_id' ";
-			$database->executeDelete($sql);
+			$database->executeDelete($sql, true);
 			$sql = "update `edu_admin` set `school_id` = '0' where `admin_id` = '$val' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -86,7 +86,7 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 
 if(isset($_POST['save']) && @$_GET['option']=='add')
 {
-	$sql = "select * from `edu_school` where `school_id` = '$school_id' ";
+	$sql = "SELECT * from `edu_school` where `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$country_id = $data['country_id'];
@@ -129,13 +129,13 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 		'$password', '$gender', '$birth_day', '$time_create', '$time_edit', '$admin_create', '$admin_edit', 
 		'$ip_create', '$ip_edit', '0', '1');
 		";
-		$database->executeInsert($sql);
+		$database->executeInsert($sql, true);
 		
 		$sql2 = "INSERT INTO `edu_member_school` 
 		(`member_id`, `school_id`, `role`, `time_create`, `active`) values
 		('$admin_id', '$school_id', 'A', '$time_create', '1')
 		";
-		$database->executeInsert($sql2);
+		$database->executeInsert($sql2, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&admin_id=$admin_id");
 	}
 
@@ -147,22 +147,22 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	`name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', 
 	`time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
 	where `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	
 	$sql = "update `edu_admin` set 
 	`email` = '$email' where `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	
 	$sql = "update `edu_admin` set 
 	`phone` = '$phone' where `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 
 	if($username != '')
 	{
 		$sql = "update `edu_admin` set 
 		`username` = '$username'
 		where `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 	}
 	
 	if($password != '')
@@ -170,7 +170,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 		$sql = "update `edu_admin` set 
 		`password` = md5(md5('$password'))
 		where `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 	}
 	
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&admin_id=$admin_id");

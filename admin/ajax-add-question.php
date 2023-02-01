@@ -52,7 +52,7 @@ if(isset($_POST['question']))
 		`time_create`, `member_create`, `time_edit`, `member_edit`) values
 		('$question_id', '$question', '$basic_competence', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
 		'$time_create', '$member_create', '$time_edit', '$member_edit'); ";
-		$database->executeInsert($sql);
+		$database->executeInsert($sql, true);
 
 		$order = 0;
 		$oke = 1;
@@ -73,7 +73,7 @@ if(isset($_POST['question']))
 			$sql = "INSERT INTO `edu_option` 
 			(`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
 			('$option_id', '$question_id', '$option', '$order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit'); ";
-			$stmt = $database->executeInsert($sql);
+			$stmt = $database->executeInsert($sql, true);
 			if($stmt->rowCount() > 0)
 			{
 				$oke = $oke*1;

@@ -50,7 +50,7 @@ if(isset($_POST['set_active']) && isset($_POST['student_id']))
 		{
 			$student_id = addslashes($val);
 			$sql = "update `edu_student` set `active` = '1' where `student_id` = '$student_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -63,7 +63,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['student_id']))
 		{
 			$student_id = addslashes($val);
 			$sql = "update `edu_student` set `active` = '0' where `student_id` = '$student_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -76,9 +76,9 @@ if(isset($_POST['delete']) && isset($_POST['student_id']))
 		{
 			$student_id = addslashes($val);
 			$sql = "DELETE FROM `edu_member_school` where `member_id` = '$student_id' and `role` = 'S' and `school_id` = '$school_id' ";
-			$database->executeDelete($sql);
+			$database->executeDelete($sql, true);
 			$sql = "update `edu_student` set `school_id` = '0' where `student_id` = '$student_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -124,7 +124,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 		'$name', '$gender', '$birth_place', '$birth_day', '$phone', '$email', md5(md5('$password')), '$password', 
 		'$address', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', 0, 1)
 		";
-		$database->executeInsert($sql);
+		$database->executeInsert($sql, true);
 
 
 		$sql2 = "INSERT INTO `edu_member_school` 
@@ -143,20 +143,20 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	`birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', 
 	`admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
 	where `student_id` = '$student_id2' and `school_id` = '$school_id' ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	if($email != '')
 	{
 		$sql = "update `edu_student` set 
 		`email` = '$email'
 		where `student_id` = '$student_id2' and `school_id` = '$school_id' ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
 		$sql = "update `edu_student` set 
 		`password` = md5(md5('$password')), `password_initial` = '$password'
 		where `student_id` = '$student_id2' and `school_id` = '$school_id' ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&student_id=$student_id2");
 }

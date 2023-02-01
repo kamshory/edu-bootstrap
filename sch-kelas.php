@@ -13,7 +13,7 @@ if(@$_GET['option']=='detail')
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
-$sql = "select `edu_class`.* $nt,
+$sql = "SELECT `edu_class`.* $nt,
 (select `edu_school_program`.`name` from `edu_school_program` where `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`
 from `edu_class` 
 where 1
@@ -96,14 +96,14 @@ $sql_filter .= " and `edu_class`.`school_id` = '$school_id' ";
 $nt = '';
 
 
-$sql = "select `edu_class`.* $nt,
+$sql = "SELECT `edu_class`.* $nt,
 (select `edu_school_program`.`name` from `edu_school_program` where `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
 (select count(distinct `edu_student`.`student_id`) from `edu_student` where `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
 from `edu_class`
 where 1 $sql_filter
 order by `edu_class`.`order` asc
 ";
-$sql_test = "select `edu_class`.*
+$sql_test = "SELECT `edu_class`.*
 from `edu_class`
 where 1 $sql_filter
 ";

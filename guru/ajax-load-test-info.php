@@ -129,7 +129,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Pesan Peringatan</td>
-		<td><?php echo ($data['alert_message']);?> </td>
+		<td><?php echo $data['alert_message'];?> </td>
 		</tr>
         <?php
 		}

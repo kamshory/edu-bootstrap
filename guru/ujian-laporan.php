@@ -18,7 +18,7 @@ if(isset($_POST['set_active']) && isset($_POST['answer_id']))
 		{
 			$answer_id = addslashes($val);
 			$sql = "update `edu_answer` set `active` = '1' where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 	header("Location: ".$_SERVER['REQUEST_URI']);
@@ -32,7 +32,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['answer_id']))
 		{
 			$answer_id = addslashes($val);
 			$sql = "update `edu_answer` set `active` = '0' where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 	header("Location: ".$_SERVER['REQUEST_URI']);
@@ -46,7 +46,7 @@ if(isset($_POST['delete']) && isset($_POST['answer_id']))
 		{
 			$answer_id = addslashes($val);
 			$sql = "DELETE FROM `edu_answer` where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
-			$database->executeDelete($sql);
+			$database->executeDelete($sql, true);
 		}
 	}
 	header("Location: ".$_SERVER['REQUEST_URI']);
@@ -62,7 +62,7 @@ if(isset($_POST['recalculation']) && isset($_POST['answer_id']))
 			$score = $picoEdu->getTextScore($answer_id, true);
 			$score_str = addslashes(json_encode($score));
 			$sql = "update `edu_answer` set `competence_score` = '$score_str' where `answer_id` = '$answer_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 	header("Location: ".$_SERVER['REQUEST_URI']);
@@ -305,7 +305,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 				where `answer_id` = '".$data['answer_id']."' and `student_id` = '".$data['student_id']."' 
 				";
 				$bc_score = $picoEdu->changeIndexScore($bc_score);
-				$database->executeUpdate($sql);
+				$database->executeUpdate($sql, true);
 			}
 		  foreach($bc_array as $k=>$v)
 		  {
@@ -478,7 +478,7 @@ else
 		set `competence_score` = '".addslashes(json_encode($bc_score))."' 
 		where `answer_id` = '".$data['answer_id']."' and `student_id` = '".$data['student_id']."' 
 		";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 	}
 }
 if(count($bc_score))

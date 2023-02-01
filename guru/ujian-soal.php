@@ -24,9 +24,9 @@ if(@$_GET['option']=='delete')
 		$id = $dt['question_id'];
 		$test_id = $dt['test_id'];
 		$sql = "DELETE FROM `edu_option` where `question_id` = '$id' ";
-		$database->executeDelete($sql);
+		$database->executeDelete($sql, true);
 		$sql = "DELETE FROM `edu_question` where `question_id` = '$id' ";
-		$database->executeDelete($sql);
+		$database->executeDelete($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?test_id=$test_id");
 	}
 }
@@ -98,7 +98,7 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 				('$content', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
 				'$time_create', '$member_create', '$time_edit', '$member_edit', '1');
 				";
-				$stmt1 = $database->executeInsert($sql1);
+				$stmt1 = $database->executeInsert($sql1, true);
 				if($stmt1->rowCount() == 0)
 				{
 					$oke = $oke * 0;
@@ -190,7 +190,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 			`time_create`, `member_create`, `time_edit`, `member_edit`) values
 			('$question_id', '$question', '$test_id', '1', '$random', '$numbering', '$digest', '$order',
 			'$time_create', '$member_create', '$time_edit', '$member_edit'); ";
-			$database->executeInsert($sql);
+			$database->executeInsert($sql, true);
 			$order = 0;
 			$oke = 1;
 			for($i=1;$i<=$number_of_option;$i++)
@@ -208,7 +208,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 				$sql = "INSERT INTO `edu_option` 
 				(`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
 				('$option_id', '$question_id', '$option', '$order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit');";
-				$stmt3 = $database->executeInsert($sql);
+				$stmt3 = $database->executeInsert($sql, true);
 				if($stmt3->rowCount() > 0)
 				{
 					$oke = $oke*1;
@@ -261,7 +261,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 		if($stmt2->rowCount() > 0)
 		{
 			$sql = "update `edu_question` set `time_edit` = '$time_edit', `member_edit` = '$member_edit' where `question_id` = '$question_id'";
-			$database->executeUpdate($sql);			
+			$database->executeUpdate($sql, true);			
 		}
 		
 		$sql3 = "select * from `edu_option` where `question_id` = '$question_id' ";
@@ -283,7 +283,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 				{
 					$sql = "update `edu_option` set `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
 					where `question_id` = '$question_id' and `option_id` = '$id2'";
-					$database->executeUpdate($sql);
+					$database->executeUpdate($sql, true);
 				}
 			}
 		}

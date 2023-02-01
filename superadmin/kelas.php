@@ -31,7 +31,7 @@ if (isset($_POST['set_active']) && isset($_POST['class_id'])) {
 		foreach ($classs as $key => $val) {
 			$class_id = addslashes($val);
 			$sql = "update `edu_class` set `active` = '1' where `class_id` = '$class_id'  ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -41,7 +41,7 @@ if (isset($_POST['set_inactive']) && isset($_POST['class_id'])) {
 		foreach ($classs as $key => $val) {
 			$class_id = addslashes($val);
 			$sql = "update `edu_class` set `active` = '0' where `class_id` = '$class_id'  ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -51,7 +51,7 @@ if (isset($_POST['delete']) && isset($_POST['class_id'])) {
 		foreach ($classs as $key => $val) {
 			$class_id = addslashes($val);
 			$sql = "DELETE FROM `edu_class` where `class_id` = '$class_id'  ";
-			$database->executeDelete($sql);
+			$database->executeDelete($sql, true);
 		}
 	}
 }

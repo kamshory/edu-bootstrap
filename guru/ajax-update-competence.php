@@ -13,5 +13,5 @@ if(isset($_POST['save']) && isset($_POST['question_id']))
 	$sql = "update `edu_question` set `basic_competence` = '$basic_competence' 
 	where `question_id` = '$question_id' 
 	";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 }

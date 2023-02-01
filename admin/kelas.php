@@ -33,7 +33,7 @@ if (isset($_POST['set_active']) && isset($_POST['class_id'])) {
 		foreach ($classs as $key => $val) {
 			$class_id = addslashes($val);
 			$sql = "update `edu_class` set `active` = '1' where `class_id` = '$class_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -42,7 +42,7 @@ if (isset($_POST['set_inactive']) && isset($_POST['class_id'])) {
 	if (isset($classs) && is_array($classs)) {
 		$class_id = addslashes($val);
 		$sql = "update `edu_class` set `active` = '0' where `class_id` = '$class_id' and `school_id` = '$school_id' ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 	}
 }
 if (isset($_POST['delete']) && isset($_POST['class_id'])) {
@@ -51,7 +51,7 @@ if (isset($_POST['delete']) && isset($_POST['class_id'])) {
 		foreach ($classs as $key => $val) {
 			$class_id = addslashes($val);
 			$sql = "DELETE FROM `edu_class` where `class_id` = '$class_id' and `school_id` = '$school_id' ";
-			$database->executeDelete($sql);
+			$database->executeDelete($sql, true);
 		}	
 	}
 }
@@ -64,7 +64,7 @@ if (isset($_POST['save']) && @$_GET['option'] == 'add') {
 	`admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `order`, `active`) values
 	('$class_id', '$school_id', '$class_code', '$token_class', '$grade_id', '$school_program_id', '$name', '$time_create', '$time_edit', 
 	'$admin_create', '$admin_edit', '$ip_create', '$ip_edit', '$order', '$active')";
-	$database->executeInsert($sql);
+	$database->executeInsert($sql, true);
 	$id = $database->getDatabaseConnection()->lastInsertId();
 	if ($id == 0) {
 		$id = kh_filter_input(INPUT_POST, "class_id", FILTER_SANITIZE_NUMBER_UINT);
@@ -77,7 +77,7 @@ if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
 	`time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', 
 	`ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `order` = '$order', `active` = '$active'
 	where `class_id` = '$class_id2' and `school_id` = '$school_id' ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&class_id=$class_id");
 }
 if (@$_GET['option'] == 'add') {

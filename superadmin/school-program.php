@@ -35,7 +35,7 @@ if(isset($_POST['set_active']) && isset($_POST['school_program_id']))
 		{
 			$school_program_id = addslashes($val);
 			$sql = "update `edu_school_program` set `active` = '1' where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -48,7 +48,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['school_program_id']))
 		{
 			$school_program_id = addslashes($val);
 			$sql = "update `edu_school_program` set `active` = '0' where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -61,7 +61,7 @@ if(isset($_POST['delete']) && isset($_POST['school_program_id']))
 		{
 			$school_program_id = addslashes($val);
 			$sql = "DELETE FROM `edu_school_program` where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
-			$database->executeDelete($sql);
+			$database->executeDelete($sql, true);
 		}
 	}
 }
@@ -73,7 +73,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 	$sql = "INSERT INTO `edu_school_program` 
 	(`school_program_id`, `school_id`, `name`, `order`, `default`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) values
 	('$school_program_id', '$school_id', '$name', '$order', '$default', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', '$active')";
-	$database->executeInsert($sql);
+	$database->executeInsert($sql, true);
 	if(empty($school_program_id))
 	{
 		$school_program_id = kh_filter_input(INPUT_POST, "school_program_id", FILTER_SANITIZE_STRING_NEW);
@@ -85,7 +85,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	$sql = "update `edu_school_program` set 
 	`name` = '$name', `order` = '$order', `default` = '$default', `time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
 	where `school_program_id` = '$school_program_id2'";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	header("Location:".basename($_SERVER['PHP_SELF'])."?option=detail&school_program_id=$school_program_id2");
 }
 if(@$_GET['option']=='add')

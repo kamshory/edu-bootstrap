@@ -31,14 +31,14 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 		$sql = "update `edu_student` set 
 		`email` = '$email'
 		where `student_id` = '$student_id' and `school_id` = '$school_id' ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
 		$sql = "update `edu_student` set 
 		`password` = md5(md5('$password')), `password_initial` = ''
 		where `student_id` = '$student_id' and `school_id` = '$school_id' ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 		$_SESSION['student_password'] = md5($password);
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF']));

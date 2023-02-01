@@ -3,6 +3,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 if(!empty(@$school_id))
 {
+	$school_id = @$school_id . '';
 	$basename = "ujian-soal.php";
 	if(isset($_POST['question_text']) && isset($_POST['test_id']) && @$_POST['option']=='add')
 	{
@@ -71,7 +72,7 @@ if(!empty(@$school_id))
 						('$content', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
 						'$time_create', '$member_create', '$time_edit', '$member_edit', '1');
 						";
-						$stmt1 = $database->executeInsert($sql1);
+						$stmt1 = $database->executeInsert($sql1, true);
 						if($stmt1->rowCount())
 						{
 							$oke = $oke * 0;
@@ -101,8 +102,7 @@ if(!empty(@$school_id))
 									if($stmt2->rowCount() == 0)
 									{
 										$oke = $oke * 0;
-									}
-				
+									}			
 								}
 							}
 						}

@@ -18,7 +18,7 @@ if(isset($_POST['set_active']) && isset($_POST['answerid']))
     {
       $answer_id = addslashes($val);
       $sql = "update `edu_answer` set `active` = '1' where `answer_id` = '$answer_id' ";
-      $database->executeUpdate($sql);
+      $database->executeUpdate($sql, true);
 		}
 	}
 	header("Location: ".$_SERVER['REQUEST_URI']);
@@ -32,7 +32,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['answerid']))
     {
       $answer_id = addslashes($val);
       $sql = "update `edu_answer` set `active` = '0' where `answer_id` = '$answer_id'  ";
-      $database->executeUpdate($sql);
+      $database->executeUpdate($sql, true);
     }
 	}
 	header("Location: ".$_SERVER['REQUEST_URI']);
@@ -46,7 +46,7 @@ if(isset($_POST['delete']) && isset($_POST['answerid']))
     {
       $answer_id = addslashes($val);
       $sql = "DELETE FROM `edu_answer` where `answer_id` = '$answer_id'  ";
-      $database->executeDelete($sql);
+      $database->executeDelete($sql, true);
     }
 	}
 	header("Location: ".$_SERVER['REQUEST_URI']);

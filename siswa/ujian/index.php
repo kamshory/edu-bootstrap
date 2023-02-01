@@ -121,7 +121,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 			`true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) values
 			('$school_id', '$test_id', '$student_id', '$start', '$end', '$answer_str', '$competence_score', 
 			'$true', '$false', '$score', '$penalty', '$final_score', '$percent', '1') ";
-			$stmt = $database->executeInsert($sql);
+			$stmt = $database->executeInsert($sql, true);
 			$picoEdu->logoutTest($school_id, $student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
 			include_once dirname(__FILE__) . "/lib.inc/header.php";
 			?>
@@ -152,7 +152,7 @@ $sql_filter .= "
 
 $now = date('Y-m-d H:i:s');
 
-$sql = "select `edu_test`.*  
+$sql = "SELECT `edu_test`.*  
 from `edu_test` 
 where `edu_test`.`active` = '1'
 and `edu_test`.`test_id` = '$test_id' 
@@ -337,7 +337,7 @@ else if(@$_GET['login-to-test']=="yes")
 				
 				if($data['random'])
 				{	
-					$sql = "select `question_id` , rand() as `rand`
+					$sql = "SELECT `question_id` , rand() as `rand`
 					from `edu_question` where `test_id` = '$test_id'
 					order by `rand` asc
 					limit 0, $number_of_question
@@ -345,7 +345,7 @@ else if(@$_GET['login-to-test']=="yes")
 				}
 				else
 				{
-					$sql = "select `question_id` , `order`
+					$sql = "SELECT `question_id` , `order`
 					from `edu_question` where `test_id` = '$test_id'
 					order by `order` asc, `question_id` asc
 					limit 0, $number_of_question

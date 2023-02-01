@@ -180,14 +180,6 @@ if (!defined('FILTER_SANITIZE_NUMERIC')) {
 	define('FILTER_SANITIZE_NUMERIC', 530);
 }
 
-require_once dirname(__FILE__) . "/classes/PicoDatabase.php";
-require_once dirname(__FILE__) . "/classes/PicoEdu.php";
-require_once dirname(__FILE__) . "/classes/MemberPage.php";
-require_once dirname(__FILE__) . "/classes/MemberAuth.php";
-require_once dirname(__FILE__) . "/classes/AdminAuth.php";
-require_once dirname(__FILE__) . "/classes/TeacherAuth.php";
-require_once dirname(__FILE__) . "/classes/StudentAuth.php";
-
 function userImageURL100($member_id, $member_gender, $picture_hash)
 {
 	global $cfg;
@@ -605,11 +597,9 @@ function kh_filter_input($type, $variable_name, $filter = FILTER_DEFAULT, $optio
 function kh_filter_input_search_get($var = 'q')
 {
 	$val = (isset($_GET[$var])) ? $_GET[$var] : "";
-	if ($val != "") {
-		if (is_array($val)) {
-			unset($val);
-			$val = "";
-		}
+	if ($val != "" && is_array($val)) {
+		unset($val);
+		$val = "";
 	}
 	$val = trim(strip_tags($val), "\r\n\t ");
 	$val = str_replace(array('<', '>', '"'), array('&lt;', '&gt;', '&quot;'), $val);
@@ -685,6 +675,14 @@ function strip_only_tags($str, $tags, $stripContent = false)
 	return $str;
 }
 
+
+require_once dirname(__FILE__) . "/classes/PicoDatabase.php";
+require_once dirname(__FILE__) . "/classes/PicoEdu.php";
+require_once dirname(__FILE__) . "/classes/MemberPage.php";
+require_once dirname(__FILE__) . "/classes/MemberAuth.php";
+require_once dirname(__FILE__) . "/classes/AdminAuth.php";
+require_once dirname(__FILE__) . "/classes/TeacherAuth.php";
+require_once dirname(__FILE__) . "/classes/StudentAuth.php";
 
 
 $database = new PicoDatabase(

@@ -30,7 +30,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['token_id']))
 		{
 			$token_id = addslashes($val);
 			$sql = "update `edu_token` set `active` = '0' where `token_id` = '$token_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -42,10 +42,10 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 	$oneday = date('Y-m-d H:i:s', time()-86400);
 	$sql = "DELETE FROM `edu_token` where `time_expire` < '$oneday'
 	";
-	$database->executeDelete($sql);
+	$database->executeDelete($sql, true);
 	$sql = "update `edu_token` set `active` = '0' where `time_expire` < '$now'
 	";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	if($class_id)
 	{
 		if($student_id == 0)
@@ -71,7 +71,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 				`admin_create`, `admin_edit`, `active`) values
 				('$token_id', '$token', '$school_id', '$class_id', '$student_id', '$test_id', '$time_create', '$time_edit', '$time_expire', 
 				'$admin_create', '$admin_edit', '$active')";
-				$database->executeInsert($sql);
+				$database->executeInsert($sql, true);
 			}
 			header("Location: ".basename($_SERVER['PHP_SELF'])."?class_id=$class_id&test_id=$test_id");
 		}
@@ -86,7 +86,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 			`admin_create`, `admin_edit`, `active`) values
 			('$token', '$school_id', '$class_id', '$student_id', '$test_id', '$time_create', '$time_edit', '$time_expire', 
 			'$admin_create', '$admin_edit', '$active')";
-			$database->executeInsert($sql);
+			$database->executeInsert($sql, true);
 			header("Location: ".basename($_SERVER['PHP_SELF'])."?class_id=$class_id&test_id=$test_id");
 		}
 	}
@@ -125,7 +125,7 @@ $(document).ready(function(e) {
 		<td><select class="form-control input-select" name="test_id" id="test_id" required="required">
 		<option value=""></option>
 		<?php
-		$sql = "select * from `edu_test`
+		$sql = "SELECT * from `edu_test`
 		where 1 and `school_id` = '$school_id'
 		and (`test_availability` = 'F' or `available_to` > '$now')
 		order by `test_id` desc
@@ -147,7 +147,7 @@ $(document).ready(function(e) {
 		<td><select class="form-control input-select" name="class_id" id="class_id" required="required">
 		<option value=""></option>
 		<?php
-		$sql2 = "select * from `edu_class`
+		$sql2 = "SELECT * from `edu_class`
 		where `active` = '1' and `school_id` = '$school_id'
 		order by `order` asc
 		";
@@ -276,7 +276,7 @@ and `edu_token`.`token_id` = '$edit_key'
 			include_once dirname(__FILE__) . "/lib.inc/header.php";
 			if (isset($_POST['cleanup'])) {
 				$sql = "DELETE FROM `edu_invalid_signin` where `signin_type` = 'T' ";
-				$stmt = $database->executeDelete($sql);
+				$stmt = $database->executeDelete($sql, true);
 				$num_deleted = $stmt->rowCount();
 				if ($num_deleted) {
 					?>
@@ -316,7 +316,7 @@ function printToken(frm)
 <select name="test_id" id="test_id">
 	<option value=""></option>
     <?php
-	$sql = "select * from `edu_test`
+	$sql = "SELECT * from `edu_test`
 	where 1 and `school_id` = '$school_id'
 	and (`test_availability` = 'F' or `available_to` > '$now')
 	order by `test_id` desc
@@ -337,7 +337,7 @@ function printToken(frm)
 <select name="class_id" id="class_id">
 	<option value=""></option>
     <?php
-		$sql2 = "select * from `edu_class`
+		$sql2 = "SELECT * from `edu_class`
 		where `active` = '1' and `school_id` = '$school_id'
 		order by `order` asc
 		";

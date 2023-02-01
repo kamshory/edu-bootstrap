@@ -73,7 +73,7 @@ if (@$school_id != 0 && isset($_POST['question_text']) && isset($_POST['test_id'
 					'$time_create', '$member_create', '$time_edit', '$member_edit', '1');
 					";
 					$picoEdu->log($sql1);
-					$stmt = $database->executeInsert($sql1);
+					$stmt = $database->executeInsert($sql1, true);
 					if ($stmt->rowCount() == 0) {
 						$oke = $oke * 0;
 					} else {

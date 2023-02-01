@@ -96,7 +96,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 			`content` = '$content'
 			where `info_id` = '$info_id'
 			";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 		
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&info_id=$info_id");
@@ -130,7 +130,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		`time_edit` = '$time', `admin_edit` = '$admin_id', `ip_edit` =  '$ip', `active` = '$active'
 		where `info_id` = '$info_id'
 		";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&info_id=$info_id");
 	}
 }

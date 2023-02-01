@@ -27,9 +27,9 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 		$ip = addslashes($_SERVER['REMOTE_ADDR']);
 		$sessions_id = $data['sessions_id'];
 		$sql = "DELETE FROM `sessions` where `id` = '$sessions_id' ";
-		$database->executeDelete($sql);
+		$database->executeDelete($sql, true);
 		$sql = "update `edu_peserta_test` set `waktu_keluar` = '$waktu', `ip_keluar` = '$ip', `login_edit` = '$admin_id', `status` = '3' where `id` = '$id'";	
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id");
 	}
 }
@@ -49,11 +49,11 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 		$sessions_id = $data['sessions_id'];
 		$siswa_id = $data['siswa_id'];
 		$sql = "DELETE FROM `sessions` where `id` = '$sessions_id' ";
-		$database->executeDelete($sql);
+		$database->executeDelete($sql, true);
 		$sql = "update `edu_peserta_test` set `waktu_keluar` = '$waktu', `ip_keluar` = '$ip', `login_edit` = '$admin_id', `status` = '4' where `id` = '$id'";	
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 		$sql = "update `siswa` set `blokir` = '1' where `siswa_id` = '$siswa_id' and `school_id` = '$school_id' ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 	}
 }
 
@@ -219,7 +219,7 @@ window.onload = function()
     <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-	$sql2 = "select * from `edu_class` where `school_id` = '$school_id' and `active` = '1'";
+	$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' and `active` = '1'";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -245,7 +245,7 @@ window.onload = function()
     <select class="form-control input-select" name="teacher_id" id="teacher_id">
     <option value="">- Pilih Guru -</option>
     <?php 
-	$sql = "select * from `edu_teacher` where `school_id` = '$school_id' and `active` = '1'";
+	$sql = "SELECT * from `edu_teacher` where `school_id` = '$school_id' and `active` = '1'";
 	$stmt2 = $database->executeQuery($sql);
 	if ($stmt2->rowCount() > 0) {
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

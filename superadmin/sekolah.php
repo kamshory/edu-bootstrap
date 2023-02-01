@@ -64,13 +64,13 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 	$sql = "INSERT INTO `edu_school` 
 	(`school_code`, `token_school`, `name`, `description`, `school_type_id`, `school_grade_id`, `public_private`, `open`, `principal`, `address`, `phone`, `email`, `language`, `country_id`, `prevent_change_school`, `prevent_resign`, `use_token`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) values
 	('$school_code', '$token_school', '$name', '$description', '$school_type_id', '$school_grade_id', '$public_private', '$open', '$principal', '$address', '$phone', '$email', '$language', '$country_id', '$prevent_change_school', '$prevent_resign', '$use_token', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', '$active')";
-	$database->executeInsert($sql);
+	$database->executeInsert($sql, true);
 	$school_id = $database->getDatabaseConnection()->lastInsertId();
 	$sql = "update `edu_school` set `state_id` = state_name_to_id('$state_id', `country_id`) where `school_id` = '$school_id' ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	
 	$sql = "update `edu_school` set `city_id` = city_name_to_id('$city_id', `state_id`, `country_id`) where `school_id` = '$school_id' ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	header("Location:".basename($_SERVER['PHP_SELF'])."?option=detail&school_id=$school_id");
 }
 if(isset($_POST['save']) && @$_GET['option']=='edit')
@@ -91,12 +91,12 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	`use_token` = '$use_token'
 	where `school_id` = '$school_id'
 	";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	$sql = "update `edu_school` set `state_id` = state_name_to_id('$state_id', `country_id`) where `school_id` = '$school_id' ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	
 	$sql = "update `edu_school` set `city_id` = city_name_to_id('$city_id', `state_id`, `country_id`) where `school_id` = '$school_id' ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&school_id=$school_id");
 }
 
@@ -122,7 +122,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['school_id']))
 		{
 			$school_id = addslashes($val);
 			$sql = "update `edu_school` set `active` = '0' where `school_id` = '$school_id'  ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -135,7 +135,7 @@ if(isset($_POST['delete']) && isset($_POST['school_id']))
 		{
 			$school_id = addslashes($val);
 			$sql = "DELETE FROM `edu_school` where `school_id` = '$school_id'  ";
-			$database->executeDelete($sql);
+			$database->executeDelete($sql, true);
 		}
 	}
 }

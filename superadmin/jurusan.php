@@ -35,7 +35,7 @@ if(isset($_POST['set_active']) && isset($_POST['school_program_id']))
 		{
 			$school_program_id = addslashes($val);
 			$sql = "update `edu_school_program` set `active` = '1' where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -48,7 +48,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['school_program_id']))
 		{
 			$school_program_id = addslashes($val);
 			$sql = "update `edu_school_program` set `active` = '0' where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -61,7 +61,7 @@ if(isset($_POST['delete']) && isset($_POST['school_program_id']))
 		{
 			$school_program_id = addslashes($val);
 			$sql = "DELETE FROM `edu_school_program` where `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }

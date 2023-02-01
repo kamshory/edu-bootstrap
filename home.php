@@ -38,7 +38,7 @@ include_once dirname(__FILE__)."/lib.inc/auth.php";
         <div class="article">
             <h3>Artikel</h3>
 			<?php
-            $sql = "select `edu_info`.`time_create` , left(`edu_info`.`time_create`, 7) as `month`, count(*) as `count`
+            $sql = "SELECT `edu_info`.`time_create` , left(`edu_info`.`time_create`, 7) as `month`, count(*) as `count`
             from `edu_info` 
             where `edu_info`.`active` = '1'
             group by `month`
@@ -69,7 +69,7 @@ include_once dirname(__FILE__)."/lib.inc/auth.php";
             <h3>Informasi</h3>
 
 			<?php
-            $sql = "select `edu_info`.* 
+            $sql = "SELECT `edu_info`.* 
             from `edu_info` 
             where `edu_info`.`active` = '1'
             order by `edu_info`.`info_id` desc

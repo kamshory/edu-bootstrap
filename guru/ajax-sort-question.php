@@ -9,6 +9,6 @@ if(isset($_POST['sort']))
 		$order = $key+1;
 		$val = addslashes($val);
 		$sql = "update `edu_question` set `order` = '$order' where `question_id` = '$val'";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 	}
 }

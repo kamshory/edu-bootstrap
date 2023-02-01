@@ -127,11 +127,11 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 			{
 				$database->executeTransaction('start transaction');
 				$sql = "DELETE FROM `edu_answer` where `test_id` = '$test_id' ";
-				$database->executeDelete($sql);
+				$database->executeDelete($sql, true);
 				$sql = "DELETE FROM `edu_question` where `test_id` = '$test_id' ";
-				$database->executeDelete($sql);
+				$database->executeDelete($sql, true);
 				$sql = "DELETE FROM `edu_test` where `test_id` = '$test_id' ";
-				$database->executeDelete($sql);
+				$database->executeDelete($sql, true);
 				// destroy all test file
 				$database->executeTransaction("commit");
 			}
@@ -154,7 +154,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	`member_create` = '$member_create', `role_create` = '$role_create', `member_edit` = '$member_edit', `role_edit` = '$role_edit', 
 	`ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
 	where `test_id` = '$test_id2' ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id");
 }
 if(@$_GET['option']=='edit')
@@ -429,7 +429,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_alert" data-condition="<?php echo $data['has_alert'];?>" data-show-condition="1" data-hide-condition="0">
 		<td>Pesan Peringatan</td>
-		<td><textarea name="alert_message" class="form-control input-text input-text-long" id="alert_message" autocomplete="off"><?php echo ($data['alert_message']);?></textarea></td>
+		<td><textarea name="alert_message" class="form-control input-text input-text-long" id="alert_message" autocomplete="off"><?php echo $data['alert_message'];?></textarea></td>
 		</tr>
 		<tr>
 		<td>Otomatis Kirim Jawaban</td>
@@ -598,7 +598,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Pesan Peringatan</td>
-		<td><?php echo ($data['alert_message']);?> </td>
+		<td><?php echo $data['alert_message'];?> </td>
 		</tr>
         <?php
 		}

@@ -13,8 +13,8 @@ if(!defined('DB_PREF'))
 define('DB_PREF', '');
 */
 
-$cfg = new stdClass();
-$configs = new stdClass();
+$cfg = new stdClass;
+$configs = new stdClass;
 
 $configs->db_type = "mysql";
 $configs->db_host = "localhost";

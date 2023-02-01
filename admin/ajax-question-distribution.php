@@ -19,7 +19,7 @@ if(isset($_POST['save']) && isset($_POST['test_id']) && isset($_POST['data']))
 			$sql = "update `edu_test` set `random_distribution` = '$data'
 			where `test_id` = '$test_id'
 			";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 	catch(Exception $e)

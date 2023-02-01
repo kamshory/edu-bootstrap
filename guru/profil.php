@@ -24,24 +24,24 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	`birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', 
 	`time_edit` = '$time_edit', `ip_edit` = '$ip_edit'
 	where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	if($email != '')
 	{
 		$sql = "update `edu_teacher` set 
 		`email` = '$email'
 		where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
 		$sql = "update `edu_teacher` set 
 		`password` = md5(md5('$password')), `password_initial` = ''
 		where `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 		$sql = "update `member` set 
 		`password` = md5(md5('$password'))
 		where `member_id` = '$teacher_id'  ";
-		$database->executeUpdate($sql);
+		$database->executeUpdate($sql, true);
 		$_SESSION['password'] = md5($password);
 	}
 	header("Location: profil.php");

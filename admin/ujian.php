@@ -135,7 +135,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_id']))
 		{
 			$test_id = addslashes($val);
 			$sql = "update `edu_test` set `active` = '1' where `test_id` = '$test_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -148,7 +148,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_id']))
 		{
 			$test_id = addslashes($val);
 			$sql = "update `edu_test` set `active` = '0' where `test_id` = '$test_id' and `school_id` = '$school_id' ";
-			$database->executeUpdate($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -166,11 +166,11 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 			{
 				$database->executeTransaction('start transaction');
 				$sql = "DELETE FROM `edu_answer` where `test_id` = '$test_id' ";
-				$database->executeDelete($sql);
+				$database->executeDelete($sql, true);
 				$sql = "DELETE FROM `edu_question` where `test_id` = '$test_id' ";
-				$database->executeDelete($sql);
+				$database->executeDelete($sql, true);
 				$sql = "DELETE FROM `edu_test` where `test_id` = '$test_id' and `school_id` = '$school_id' ";
-				$database->executeDelete($sql);
+				$database->executeDelete($sql, true);
 				$dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
 				$destroyer = new DirectoryDestroyer($dir);
 				$destroyer->destroy();
@@ -187,8 +187,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 	$sql = "INSERT INTO `edu_test` 
 	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values
 	('$test_id', '$school_id', '$name', '$class', '$school_program_id', '$subject', '$teacher_id', '$description', '$guidance', '$open', '$has_limits', '$trial_limits', '$threshold', '$assessment_methods', '$number_of_question', '$number_of_option', '$question_per_page', '$random', '$duration', '$has_alert', '$alert_time', '$alert_message', '$autosubmit', '$standard_score', '$penalty', '$order', '$score_notification', '$publish_answer', $time_answer_publication, '$test_availability', $available_from, $available_to, '$time_create', '$time_edit', '$member_create', '$role_create', '$member_edit', '$role_edit', '$ip_create', '$ip_edit', '$active')";
-	$database->executeInsert($sql);
-
+	$database->executeInsert($sql, true);
 
 	$id = kh_filter_input(INPUT_POST, 'collection', FILTER_SANITIZE_STRING_NEW);
 	if(!empty($id))
@@ -298,7 +297,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 								('$question_id', '$pertanyaan', '$test_id', '1', '$order', '$random', '$numbering', '$digest', '$competence',
 								'$time_create', '$member_create', '$time_edit', '$member_edit'); 
 								";
-								$database->executeInsert($sql1);
+								$database->executeInsert($sql1, true);
 								
 								if(count(@$question->answer->option) > 0)
 								{
@@ -370,7 +369,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	`time_create` = '$time_create', `time_edit` = '$time_edit', `member_create` = '$member_create', `role_create` = '$role_create', 
 	`member_edit` = '$member_edit', `role_edit` = '$role_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
 	where `test_id` = '$test_id2' and `school_id` = '$school_id'";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id");
 }
 if(@$_GET['option']=='add')
@@ -1154,7 +1153,7 @@ if($stmt->rowCount() > 0)
 		</tr>
 		<tr>
 		<td>Pesan Peringatan</td>
-		<td><?php echo ($data['alert_message']);?> </td>
+		<td><?php echo $data['alert_message'];?> </td>
 		</tr>
         <?php
 		}

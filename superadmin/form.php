@@ -652,7 +652,7 @@ $str .= "else if(@\$_GET"."['option']"."=='edit')
 ";
 $str .= "include_once dirname(__FILE__).\"/lib.inc/header.php\";
 \$edit_key = kh_filter_input(INPUT_GET, '$edit_key', $edit_key_type);
-\$sql = \"select `\".DB_PREFIX.\"$table"."`.* 
+\$sql = \"SELECT `\".DB_PREFIX.\"$table"."`.* 
 from `\".DB_PREFIX.\"$table"."` 
 where 1
 and `\".DB_PREFIX.\"$table"."`.`$edit_key` = '\$edit_key'
@@ -807,7 +807,7 @@ foreach($field_normalization as $k=>$val)
 $str .= "\$nt = createSubSelect(DB_PREFIX.'$table', array(".implode(",",$arr_norm)."));
 ";
 }
-$str .= "\$sql = \"select `\".DB_PREFIX.\"$table"."`.* \$nt
+$str .= "\$sql = \"SELECT `\".DB_PREFIX.\"$table"."`.* \$nt
 from `\".DB_PREFIX.\"$table"."` 
 where 1
 and `\".DB_PREFIX.\"$table"."`.`$edit_key` = '\$edit_key'
@@ -899,12 +899,12 @@ $str .= "
 ";
 }
 $str .= "
-\$sql = \"select `\".DB_PREFIX.\"$table"."`.* \$nt
+\$sql = \"SELECT `\".DB_PREFIX.\"$table"."`.* \$nt
 from `\".DB_PREFIX.\"$table"."`
 where 1 \$sql_filter
 order by `\".DB_PREFIX.\"$table"."`.`$edit_key` asc
 \";
-\$sql_test = \"select `\".DB_PREFIX.\"$table"."`.*
+\$sql_test = \"SELECT `\".DB_PREFIX.\"$table"."`.*
 from `\".DB_PREFIX.\"$table"."`
 where 1 \$sql_filter
 \";

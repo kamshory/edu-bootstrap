@@ -218,7 +218,7 @@ $sql_filter_info = "";
 if(isset($_GET['period']))
 {
 $period = kh_filter_input(INPUT_GET, 'period', FILTER_SANITIZE_STRING_NEW);
-$sql = "select `edu_info`.* 
+$sql = "SELECT `edu_info`.* 
 from `edu_info` 
 where `edu_info`.`active` = '1' and `edu_info`.`time_create` like '$period%' $sql_filter_info 
 order by `edu_info`.`info_id` desc
@@ -226,7 +226,7 @@ order by `edu_info`.`info_id` desc
 }
 else
 {
-$sql = "select `edu_info`.* 
+$sql = "SELECT `edu_info`.* 
 from `edu_info` 
 where `edu_info`.`active` = '1' $sql_filter_info 
 order by `edu_info`.`info_id` desc

@@ -149,7 +149,7 @@ $sql_filter .= "
 
 $now = $picoEdu->getLocalDateTime();
 
-$sql = "select `edu_test`.*  
+$sql = "SELECT `edu_test`.*  
 from `edu_test` 
 where `edu_test`.`active` = '1'
 and `edu_test`.`test_id` = '$test_id' 
@@ -255,7 +255,7 @@ if(empty($question_package))
 	
 	if($data['random'])
 	{	
-		$sql = "select `question_id` , rand() as `rand`
+		$sql = "SELECT `question_id` , rand() as `rand`
 		from `edu_question` where `test_id` = '$test'
 		order by `rand` asc
 		limit 0, $number_of_question
@@ -263,7 +263,7 @@ if(empty($question_package))
 	}
 	else
 	{
-		$sql = "select `question_id` , `order`
+		$sql = "SELECT `question_id` , `order`
 		from `edu_question` where `test_id` = '$test'
 		order by `order` asc, `question_id` asc
 		limit 0, $number_of_question

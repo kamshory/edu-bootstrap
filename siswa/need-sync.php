@@ -23,7 +23,7 @@ if(isset($_POST['sync']))
 			
 				$sql = "update `member` set `email` = '$email', `password` = md5(md5('$password')), `active` = '1', `blocked` = '0' 
 				where `member_id` = '$student_id' ";
-				$database->executeUpdate($sql);
+				$database->executeUpdate($sql, true);
 				$sql = "SELECT `username`, `member_id`
 				from `member`
 				where `email` like '$email' and `password` like md5(md5('$password'))

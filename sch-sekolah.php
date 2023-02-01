@@ -7,7 +7,7 @@ if (isset($_GET['school_id'])) {
 if (@$page_school_id) {
 	include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
 
-	$sql = "select `edu_school`.*,
+	$sql = "SELECT `edu_school`.*,
 	(select `country`.`name` from `country` where `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
 	(select `state`.`name` from `state` where `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
 	(select `city`.`name` from `city` where `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
@@ -82,7 +82,7 @@ if (@$page_school_id) {
 
 			if (@$_GET['option'] == 'edit') {
 				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
-				$sql = "select `edu_student`.* 
+				$sql = "SELECT `edu_student`.* 
 					from `edu_student` 
 					where `edu_student`.`school_id` = '$school_id'
 					and `edu_student`.`student_id` = '$student_id'
@@ -150,7 +150,7 @@ if (@$page_school_id) {
 			} else {
 				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
 				$nt = '';
-				$sql = "select `edu_student`.* , `edu_school`.`name` as `school_name`, `edu_school`.`open` as `school_open`,
+				$sql = "SELECT `edu_student`.* , `edu_school`.`name` as `school_name`, `edu_school`.`open` as `school_open`,
 					(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
 					(select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
 					(select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
@@ -326,7 +326,7 @@ if (@$page_school_id) {
 		} else if ($page_tab == 'student') {
 			$cfg->page_title = "Siswa " . $school_name;
 			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
-			$sql = "select `edu_class`.*,
+			$sql = "SELECT `edu_class`.*,
 				(select `edu_school_program`.`name` from `edu_school_program` where `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
 				(select count(distinct `edu_student`.`student_id`) from `edu_student` where `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
 				from `edu_class`
@@ -411,7 +411,7 @@ if (@$page_school_id) {
 				</form>
 				<?php
 			} else {
-				$sql = "select `edu_school`.*, 
+				$sql = "SELECT `edu_school`.*, 
 					(select count(distinct `edu_student`.`student_id`) from `edu_student`
 					where `edu_student`.`school_id` = `edu_school`.`school_id` and `edu_student`.`gender` = 'M') as `M`,
 					(select count(distinct `edu_student`.`student_id`) from `edu_student`
@@ -449,7 +449,7 @@ if (@$page_school_id) {
 		} else if ($page_tab == 'teacher') {
 			$cfg->page_title = "Guru " . $school_name;
 			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
-			$sql = "select `edu_teacher`.*
+			$sql = "SELECT `edu_teacher`.*
 				from `edu_teacher`
 				where `edu_teacher`.`active` = '1' and `edu_teacher`.`school_id` = '$page_school_id'
 				order by `edu_teacher`.`name` asc
@@ -504,7 +504,7 @@ if (@$page_school_id) {
 			include_once dirname(__FILE__) . "/lib.inc/dom.php";
 			$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
 			if ($article_id) {
-				$sql = "select `edu_article`.*, `member`.`name` as `creator`
+				$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 					from `edu_article` 
 					left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 					where `edu_article`.`article_id` = '$article_id' and `edu_article`.`school_id` = '$page_school_id' and `edu_article`.`active` = '1' ";
@@ -535,7 +535,7 @@ if (@$page_school_id) {
 			} else {
 				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
 				$sql_filter_article = "";
-				$sql = "select `edu_article`.*, `member`.`name` as `creator`
+				$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 					from `edu_article` 
 					left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 					where `edu_article`.`active` = '1' and `edu_article`.`school_id` = '$page_school_id'
@@ -624,7 +624,7 @@ if (@$page_school_id) {
 			$array_class = $picoEdu->getArrayClass($page_school_id);
 			$nt = '';
 
-			$sql = "select `edu_test`.*
+			$sql = "SELECT `edu_test`.*
 				from `edu_test`
 				where `edu_test`.`active` = '1' and `edu_test`.`school_id` = '$page_school_id' 
 				order by `edu_test`.`test_id` desc

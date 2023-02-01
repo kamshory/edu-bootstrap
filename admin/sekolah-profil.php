@@ -62,12 +62,12 @@ if(isset($_POST['save']) && count(@$_POST))
 	`use_token` = '$use_token'
 	where `school_id` = '$school_id'
 	";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	$sql = "update `edu_school` set `state_id` = state_name_to_id('$state_id', `country_id`) where `school_id` = '$school_id' ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	
 	$sql = "update `edu_school` set `city_id` = city_name_to_id('$city_id', `state_id`, `country_id`) where `school_id` = '$school_id' ";
-	$database->executeUpdate($sql);
+	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF']));
 		
 }

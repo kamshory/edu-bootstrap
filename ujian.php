@@ -53,7 +53,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 	
 		$ref = "$school_code/test/?option=login&test_id=$test_id";
 	
-		$sql = "select `edu_member_school`.*
+		$sql = "SELECT `edu_member_school`.*
 		from `edu_member_school`
 		where `edu_member_school`.`member_id` = '$member_id' 
 		and `edu_member_school`.`school_id` = '$school_id' 
@@ -130,7 +130,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 		$time_create = $time_edit = $picoEdu->getLocalDateTime();
 		$admin_create = $admin_edit = $member_id;
 		$ip_create = $ip_edit = addslashes($_SERVER['REMOTE_ADDR']);
-		$sql = "select `edu_test`.*, `edu_test`.`name` as `test_name`, 
+		$sql = "SELECT `edu_test`.*, `edu_test`.`name` as `test_name`, 
 		`edu_school`.`school_code` as `school_code`,
 		`edu_school`.`name` as `school_name`,
 		`edu_school`.`open` as `school_open`, 
@@ -167,7 +167,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 			else if($data['student_in_school_id'] == $member_id)
 			{
 
-				$sqlx = "select `edu_student`.*
+				$sqlx = "SELECT `edu_student`.*
 				from `edu_student`
 				where `student_id` = '$student_id' and `prevent_change_school` = '1'
 				";
@@ -199,7 +199,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 			}
 			else if($data['student_registered'])
 			{
-				$sqlx = "select `edu_student`.*
+				$sqlx = "SELECT `edu_student`.*
 				from `edu_student`
 				where `student_id` = '$student_id' and `prevent_change_school` = '1'
 				";
@@ -277,7 +277,7 @@ $school_grade = array(
         <p>Anda dapat mengikuti ujian online berikut ini secara gratis dan tidak perlu membayar. Silakan pilih ujian online yang akan Anda ikuti sesuai dengan jenjang pendidikan Anda. Ujian ini terbuka bagi siapa saja tanpa ada pengecualian.</p>
         <?php
 		$school_data = array();
-		$sql = "select `edu_test`.*, `edu_test`.`name` as `test_name`, `edu_school`.`name` as `school_name`, `edu_school`.`school_grade_id`
+		$sql = "SELECT `edu_test`.*, `edu_test`.`name` as `test_name`, `edu_school`.`name` as `school_name`, `edu_school`.`school_grade_id`
 		from `edu_test`
 		inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
 		where 1 
