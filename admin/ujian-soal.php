@@ -57,8 +57,8 @@ if(isset($_POST['savetext']) && @$_GET['option']=='add')
 		$member_create = $admin_id.'';
 		$member_edit = $admin_id.'';
 	
-		$random = $data['random'];
-		$order = $data['order'];
+		$random = ((int) $data['random']);
+		$order = ((int) $data['order']);
 		$score_standar = $data['standard_score'];
 		
 		$xml_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);

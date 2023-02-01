@@ -30,8 +30,8 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-		$random = $data['random'];
-		$order = $data['order'];
+		$random = ((int) $data['random']);
+		$order = ((int) $data['order']);
 		$score_standar = $data['standard_score'];
 
 		

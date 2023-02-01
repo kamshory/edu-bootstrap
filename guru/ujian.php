@@ -207,8 +207,8 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 				{
 					$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			
-					$random = $data['random'];
-					$order = $data['order'];
+					$random = ((int) $data['random']);
+					$order = ((int) $data['order']);
 					$score_standar = $data['standard_score'];
 	
 					

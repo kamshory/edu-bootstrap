@@ -332,7 +332,7 @@ function export_question($database, $question_id, $base_dir = "")
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$content = $data['content'];
 	$numbering = $data['numbering'];
-	$random = $data['random'];
+	$random = ((int) $data['random']);
 	$competence = trim($data['basic_competence']);
 
 	$html_question = "";

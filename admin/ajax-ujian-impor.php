@@ -38,8 +38,8 @@ if(isset($_POST['from']) && isset($_POST['to']))
 			if($stmt->rowCount() > 0)
 			{
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);		
-				$random = $data['random'];
-				$order = $data['order'];
+				$random = ((int) $data['random']);
+				$order = ((int) $data['order']);
 				$score_standar = $data['standard_score'];
 
 				
@@ -68,7 +68,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 						if($selection_index[$idx] == 1 || $selection == ""  || $selection == "[]")
 						{
 							$text_pertanyaan = trim(@$question->question->text);
-							$random = trim(@$question->question->random)*1;
+							$random = ((int) @$question->question->random);
 							$numbering = addslashes(trim(@$question->question->numbering));
 							$competence = addslashes(trim(@$question->question->competence));
 							$order++;
