@@ -317,17 +317,25 @@ if($stmt->rowCount() > 0)
 			<select class="form-control input-select" name="school_id" id="school_id">
 				<option value="">- Pilih Sekolah -</option>
 				<?php
-				$sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc ";
-				$stmt2 = $database->executeQuery($sql);
-				if ($stmt2->rowCount() > 0) {
-					$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-					foreach ($rows2 as $data2) {
-						?>
-					<option value="<?php echo $data2['school_id']; ?>" <?php if ($school_id == $data2['school_id'])
-						   echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
-				<?php
-					}
-				}
+				$sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc";
+				echo $picoEdu->createFilterDb(
+					$sql2,
+					array(
+						'attributeList'=>array(
+							array('attribute'=>'value', 'source'=>'school_id')
+						),
+						'selectCondition'=>array(
+							'source'=>'school_id',
+							'value'=>$school_id
+						),
+						'caption'=>array(
+							'delimiter'=>PicoEdu::RAQUO,
+							'values'=>array(
+								'name'
+							)
+						)
+					)
+				);
 				?>
 			</select>
 			<span class="search-label">Nama Kelas</span>

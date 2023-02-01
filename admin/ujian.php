@@ -1176,7 +1176,7 @@ if($stmt->rowCount() > 0)
 		?>
 		<tr>
 		<td>Ketersediaan Ujian
-		</td><td><?php if($data['test_availability'] == 'F') echo 'Selamanya'; if($data['test_availability'] == 'L') echo 'Terbatas';?> </td>
+		</td><td><?php echo $picoEdu->selectFromMap($data['test_availability'], array('F'=>'Selamanya', 'L'=>'Terbatas'));?> </td>
 		</tr>
         <?php
 		if($data['test_availability'] == 'L')

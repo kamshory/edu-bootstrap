@@ -99,7 +99,11 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 						{
 							$isi_option = addslashes(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src)))));
 							$order_option = $option_no+1;
-							$score_option = addslashes(@$option['value']*$score_standar); if($score_option == 0) $score_option = addslashes(@$option['score']*$score_standar);
+							$score_option = addslashes(@$option['value']*$score_standar); 
+							if($score_option == 0) 
+							{
+								$score_option = addslashes(@$option['score']*$score_standar);
+							}
 							
 							$option_id = $database->generateNewId();
 							$sql2 = "INSERT INTO `edu_option` 
@@ -448,7 +452,9 @@ tinyMCE.activeEditor.windowManager.open({url:ajaxFilemanagerURL,width:780,height
   <tr>
     <td>Pengacakan Pilihan</td>
     <td><label><input type="checkbox" name="random" id="random" value="1"<?php if ($data['random'])
-						echo ' checked="checked"'; ?> /> Diacak</label></td>
+						{
+							echo ' checked="checked"';
+						} ?> /> Diacak</label></td>
   </tr>
 </table>
 </div>
@@ -828,14 +834,17 @@ $rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 foreach ($rows2 as $data2) {
 ?>
 <li>
-<span class="option-circle<?php if ($data2['score'])
-echo ' option-circle-selected'; ?>"><?php
+<span class="option-circle<?php 
+if ($data2['score'])
+{
+	echo ' option-circle-selected';
+} ?>"><?php
 echo $data2['score'] * 1;
 ?></span>
 <div class="list-option-item">
 <div class="option-content">
 <?php
-echo ($data2['content']);
+echo $data2['content'];
 ?>
 </div>
 </div>
@@ -986,17 +995,25 @@ function buildMenu(id)
   <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php
-			$sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc ";
-			$stmt2 = $database->executeQuery($sql);
-			if ($stmt2->rowCount() > 0) {
-				$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-				foreach ($rows2 as $data2) {
-					?>
-        <option value="<?php echo $data2['school_id']; ?>"<?php if ($school_id == $data2['school_id'])
-						 echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
-        <?php
-				}
-			}
+			$sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc";
+			echo $picoEdu->createFilterDb(
+				$sql2,
+				array(
+					'attributeList'=>array(
+						array('attribute'=>'value', 'source'=>'school_id')
+					),
+					'selectCondition'=>array(
+						'source'=>'school_id',
+						'value'=>$school_id
+					),
+					'caption'=>array(
+						'delimiter'=>PicoEdu::RAQUO,
+						'values'=>array(
+							'name'
+						)
+					)
+				)
+			);
 			?>
     </select>
     <?php

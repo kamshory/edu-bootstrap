@@ -21,7 +21,7 @@ if(isset($_POST['set_active']) && isset($_POST['answerid']))
       $database->executeUpdate($sql, true);
 		}
 	}
-	header("Location: ".$_SERVER['REQUEST_URI']);
+	header("Location: ".$_SERVER['REQUEST_URI']); //NOSONAR
 }
 if(isset($_POST['set_inactive']) && isset($_POST['answerid']))
 {
@@ -35,7 +35,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['answerid']))
       $database->executeUpdate($sql, true);
     }
 	}
-	header("Location: ".$_SERVER['REQUEST_URI']);
+	header("Location: ".$_SERVER['REQUEST_URI']); //NOSONAR
 }
 if(isset($_POST['delete']) && isset($_POST['answerid']))
 {
@@ -49,7 +49,7 @@ if(isset($_POST['delete']) && isset($_POST['answerid']))
       $database->executeDelete($sql, true);
     }
 	}
-	header("Location: ".$_SERVER['REQUEST_URI']);
+	header("Location: ".$_SERVER['REQUEST_URI']); //NOSONAR
 }
 
 if(@$_GET['option'] == 'export' && isset($_GET['test_id']))
@@ -246,7 +246,9 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	$ke[$data['student_id']] ++;
 	
 	?>
-    <tr class="row-data<?php if($data['lewat']) echo ' data-error';?>">
+    <tr class="row-data<?php if ($data['lewat']) {
+            echo ' data-error';
+            }?>">
       <td align="right"><?php echo $no;?> </td>
       <td><?php echo $data['reg_number'];?> </td>
       <td><?php echo $data['student_name'];?> </td>
@@ -259,7 +261,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
       <td align="right"><?php echo number_format($data['final_score'], 2);?> </td>
       <td align="right"><?php echo number_format($data['percent'], 2);?> </td>
       <td align="right"><?php echo number_format($threshold, 2);?> </td>
-      <td><?php if($data['percent'] >= $threshold) echo 'Ya'; else echo 'Tidak'?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['percent'] >= $threshold, 'Ya', 'Tidak');?> </td>
       </tr>
 	<?php
 	}
@@ -392,7 +394,7 @@ foreach($rows2 as $data2)
 <div class="list-option-item<?php echo ($data2['my_answer'])?' list-option-item-selected':'';?>">
 <div class="option-content">
 <?php
-echo ($data2['content']);
+echo $data2['content'];
 ?>
 </div>
 </div>
@@ -690,8 +692,8 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
       <td align="right"><?php echo $data['final_score'];?> </td>
       <td align="right"><?php echo number_format($data['percent']);?> </td>
       <td align="right"><?php echo number_format($threshold);?> </td>
-      <td><?php if($data['percent'] >= $threshold) echo 'Ya'; else echo 'Tidak';?> </td>
-      <td><?php echo (@$data['active']==1)?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['percent'] >= $threshold, 'Ya', 'Tidak');?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
     </tr>
 	<?php
 	}
@@ -763,17 +765,25 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
   <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc ";
-    $stmt2 = $database->executeQuery($sql);
-    if ($stmt2->rowCount() > 0) {
-      $rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-      foreach ($rows2 as $data2) {
-        ?>
-        <option value="<?php echo $data2['school_id']; ?>"<?php if ($school_id == $data2['school_id'])
-             echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
-        <?php
-      }
-    }
+    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc";
+    echo $picoEdu->createFilterDb(
+      $sql2,
+      array(
+        'attributeList'=>array(
+          array('attribute'=>'value', 'source'=>'school_id')
+        ),
+        'selectCondition'=>array(
+          'source'=>'school_id',
+          'value'=>$school_id
+        ),
+        'caption'=>array(
+          'delimiter'=>PicoEdu::RAQUO,
+          'values'=>array(
+            'name'
+          )
+        )
+      )
+    );
     ?>
     </select>
     <?php

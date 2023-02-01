@@ -634,7 +634,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Ketersediaan Ujian
-		</td><td><?php if($data['test_availability'] == 'F') echo 'Selamanya'; if($data['test_availability'] == 'L') echo 'Terbatas';?> </td>
+		</td><td><?php echo $picoEdu->selectFromMap($data['test_availability'], array('F'=>'Selamanya', 'L'=>'Terbatas'));?> </td>
 		</tr>
         <?php
 		if($data['test_availability'] == 'L')
@@ -726,7 +726,7 @@ window.onload = function()
   <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc ";
+    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
