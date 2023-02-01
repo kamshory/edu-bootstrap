@@ -373,20 +373,28 @@ $(document).ready(function(e) {
     <option value="">- Pilih Sekolah -</option>
     <?php 
     $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc ";
-    $stmt2 = $database->executeQuery($sql2);
-	if ($stmt2->rowCount() > 0) {
-		$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-		foreach ($rows2 as $data2) {
-			?>
-        <option value="<?php echo $data2['school_id']; ?>"<?php if ($school_id == $data2['school_id'])
-				  echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
-        <?php
-		}
-	}
+    echo $picoEdu->createFilterDb(
+		$sql2,
+		array(
+			'attributeList'=>array(
+				array('attribute'=>'value', 'source'=>'school_id')
+			),
+			'selectCondition'=>array(
+				'source'=>'school_id',
+				'value'=>$school_id
+			),
+			'caption'=>array(
+				'delimiter'=>PicoEdu::RAQUO,
+				'values'=>array(
+					'name'
+				)
+			)
+		)
+	);
     ?>
     </select>
     <?php
-	if($school_id != 0)
+	if(!empty($school_id))
 	{
 	?>
     <span class="search-label">Kelas</span>
@@ -432,7 +440,7 @@ if($pagination->query){
 $pagination->array_get[] = 'q';
 $sql_filter .= " and (`edu_student`.`name` like '%".addslashes($pagination->query)."%' )";
 }
-if($school_id != 0){
+if(!empty($school_id)){
 $pagination->array_get[] = 'school_id';
 $sql_filter .= " and (`edu_student`.`school_id` = '$school_id' )";
 }
@@ -552,7 +560,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
   <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-success" />
   <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-success delete-button" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
   <?php 
-  if($school_id != 0)
+  if(!empty($school_id))
   {
   ?>
   <input type="button" name="print" id="print" value="Cetak Password" class="btn com-button btn-success" onclick="window.open('<?php echo basename($_SERVER['PHP_SELF']);?>?option=print-password&school_id=<?php echo $school_id;?>')" />
