@@ -2,13 +2,13 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/bukan-admin.php";
-exit();
+	include_once dirname(__FILE__)."/bukan-admin.php";
+	exit();
 }
 if(empty(@$real_school_id))
 {
-include_once dirname(__FILE__)."/belum-ada-sekolah.php";
-exit();
+	include_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	exit();
 }
 $cfg->page_title = "Perubahan Kelas Siswa";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
@@ -208,8 +208,8 @@ if(@$_GET['option'] == 'edit')
 		<td>Jenis Kelamin</td>
 		<td><select class="form-control input-select" name="gender" id="gender">
 		<option value=""></option>
-		<option value="M"<?php if($data['gender'] == 'M') {echo ' selected="selected"';}?>>Laki-Laki</option>
-		<option value="W"<?php if($data['gender'] == 'W') {echo ' selected="selected"';}?>>Perempuan</option>
+		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', ' selected="selected"');?>>Laki-Laki</option>
+		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', ' selected="selected"');?>>Perempuan</option>
 		</select></td>
 		</tr>
 		<tr>

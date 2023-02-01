@@ -27,12 +27,3 @@ if(!empty($admin_login->admin_id))
 	$school_code = $admin_login->school_code;
 	$use_token = $admin_login->use_token;
 }
-
-if(!isset($pagination))
-{
-	$pagination = new stdClass();
-}
-if(!isset($cfg))
-{
-	$cfg = new stdClass();
-}

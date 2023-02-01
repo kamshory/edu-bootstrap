@@ -163,8 +163,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td>Jenis Kelamin</td>
 		<td><select class="form-control input-select" name="gender" id="gender">
 		<option value=""></option>
-		<option value="M"<?php if($data['gender'] == 'M') {echo ' selected="selected"';}?>>Laki-Laki</option>
-		<option value="W"<?php if($data['gender'] == 'W') {echo ' selected="selected"';}?>>Perempuan</option>
+		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', ' selected="selected"');?>>Laki-Laki</option>
+		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', ' selected="selected"');?>>Perempuan</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -473,7 +473,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo ($data['reg_number']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo ($data['reg_number_national']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><?php if($data['gender']=='M') echo 'L'; if($data['gender']=='W') echo 'P';?> </td>
+      <td><?php echo $picoEdu->selectFromMap($data['gender'], array('M'=>'L', 'W'=>'P'));?> </td>
       <td><?php echo $data['phone'];?> </td>
       <td><?php echo $picoEdu->trueFalse($data['blocked'], 'Ya', 'Tidak');?> </td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>

@@ -258,8 +258,8 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$user_data['language'] = $language;
 								if ($name != '' && $email != '') {
 									$chk = $picoEdu->getExistsingUser($user_data);
-									$admin_id = $chk['member_id'];
-									$username = $chk['username'];
+									$admin_id = addslashes($chk['member_id']);
+									$username = addslashes($chk['username']);
 
 									$db_fixed = 'NULL';
 									if(!empty($birth_day))
@@ -446,8 +446,8 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 										continue;
 									}
 									$chk = $picoEdu->getExistsingUser($user_data);
-									$student_id = $chk['member_id'];
-									$username = $chk['username'];
+									$student_id = addslashes($chk['member_id']);
+									$username = addslashes($chk['username']);
 
 									$db_fixed = 'NULL';
 									if(!empty($birth_day))
@@ -574,8 +574,8 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$user_data['language'] = $language;
 								if ($name != '' && $email != '') {
 									$chk = $picoEdu->getExistsingUser($user_data);
-									$teacher_id = $chk['member_id'];
-									$username = $chk['username'];
+									$teacher_id = addslashes($chk['member_id']);
+									$username = addslashes($chk['username']);
 									if ($picoEdu->checkTeacher($school_id, $reg_number, $reg_number_national, $name)) {
 										continue;
 									}

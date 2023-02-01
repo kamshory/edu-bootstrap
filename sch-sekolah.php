@@ -105,8 +105,8 @@ if (@$page_school_id) {
 								<td>Jenis Kelamin</td>
 								<td><select class="form-control input-select" name="gender" id="gender">
 										<option value=""></option>
-										<option value="M" <?php if ($data['gender'] == 'M') echo ' selected="selected"'; ?>>Laki-Laki</option>
-										<option value="W" <?php if ($data['gender'] == 'W') echo ' selected="selected"'; ?>>Perempuan</option>
+										<option value="M" <?php echo $picoEdu->ifMatch($data['gender'], 'M', ' selected="selected"'); ?>>Laki-Laki</option>
+										<option value="W" <?php echo $picoEdu->ifMatch($data['gender'], 'W', ' selected="selected"'); ?>>Perempuan</option>
 									</select></td>
 							</tr>
 							<tr>
@@ -480,14 +480,7 @@ if (@$page_school_id) {
 								<tr>
 									<td align="right"><?php echo $no;?> </td>
 									<td><?php echo $data['name'];?> </td>
-									<td><?php 
-									if ($data['gender'] == 'M') {
-										echo 'L';
-									}
-									if ($data['gender'] == 'W') {
-										echo 'P';
-									}
-									?> </td>
+									<td><?php echo $picoEdu->selectFromMap($data['gender'], array('M'=>'L', 'W'=>'P'));?> </td>
 								</tr>
 							<?php
 							}

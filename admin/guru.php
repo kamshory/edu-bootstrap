@@ -2,13 +2,13 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/bukan-admin.php";
-exit();
+	include_once dirname(__FILE__)."/bukan-admin.php";
+	exit();
 }
 if(empty(@$real_school_id))
 {
-include_once dirname(__FILE__)."/belum-ada-sekolah.php";
-exit();
+	include_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	exit();
 }
 $cfg->page_title = "Guru";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
@@ -121,8 +121,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$user_data['language'] = $language;
 		if ($name != '' && $email != '') {
 			$chk = $picoEdu->getExistsingUser($user_data);
-			$teacher_id = $chk['member_id'];
-			$username = $chk['username'];
+			$teacher_id = addslashes($chk['member_id']);
+			$username = addslashes($chk['username']);
 			if ($picoEdu->checkTeacher($school_id, $reg_number, $reg_number_national, $name)) {
 				// Do nothing
 			} else {
@@ -287,8 +287,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td>Jenis Kelamin</td>
 		<td><select class="form-control input-select" name="gender" id="gender">
 		<option value=""></option>
-		<option value="M"<?php if($data['gender'] == 'M') {echo ' selected="selected"';}?>>Laki-Laki</option>
-		<option value="W"<?php if($data['gender'] == 'W') {echo ' selected="selected"';}?>>Perempuan</option>
+		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', ' selected="selected"');?>>Laki-Laki</option>
+		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', ' selected="selected"');?>>Perempuan</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -553,7 +553,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo $data['reg_number'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo $data['reg_number_national'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&teacher_id=<?php echo $data['teacher_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><?php if($data['gender']=='M') echo 'L'; if($data['gender']=='W') echo 'P';?> </td>
+      <td><?php echo $picoEdu->selectFromMap($data['gender'], array('M'=>'L', 'W'=>'P'));?> </td>
       <td><?php echo $data['phone'];?> </td>
       <td><?php echo $data['email'];?> </td>
       <td><?php echo $data['blocked']?'Ya':'Tidak';?> </td>

@@ -15,7 +15,6 @@ $cfg->page_title = "Administrator";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $my_admin = $admin_create = $admin_edit = $admin_login->admin_id;
 
-
 if(count(@$_POST) && isset($_POST['save']))
 {
 	$admin_id = $admin_id2 = kh_filter_input(INPUT_POST, 'admin_id2', FILTER_SANITIZE_STRING_NEW);
@@ -58,9 +57,9 @@ if(isset($_POST['set_inactive']) && isset($_POST['admin_id']))
 	$admin_arr = $_POST['admin_id'];
 	foreach($admin_arr as $key=>$val)
 	{
-		$val = addslashes($val);
 		if($val != $admin_login->admin_id)
 		{
+			$val = addslashes($val);
 			$sql = "UPDATE `edu_admin` SET `active` = false WHERE `admin_id` = '$val' and `school_id` = '$school_id'";
 			$database->executeUpdate($sql, true);
 		}
@@ -72,9 +71,9 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 	$admin_arr = $_POST['admin_id'];
 	foreach($admin_arr as $key=>$val)
 	{
-		$val = addslashes($val);
 		if($val != $admin_login->admin_id)
 		{
+			$val = addslashes($val);
 			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$val' and `role` = 'A' and `school_id` = '$school_id' ";
 			$database->executeDelete($sql, true);
 			$sql = "UPDATE `edu_admin` SET `school_id` = '' WHERE `admin_id` = '$val' and `school_id` = '$school_id' ";
@@ -118,8 +117,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	if($name != '' && $username != '')
 	{
 		$chk = $picoEdu->getExistsingUser($user_data);
-		$admin_id = $chk['member_id'];
-		$username = $chk['username'];
+		$admin_id = addslashes($chk['member_id']);
+		$username = addslashes($chk['username']);
 		
 		$sql = "INSERT INTO `edu_admin` 
 		(`admin_id`, `school_id`, `username`, `name`, `token_admin`, `email`, `phone`, `password`, 
@@ -274,8 +273,8 @@ if($stmt->rowCount() > 0)
 			<td>Jenis Kelamin</td>
 			<td><select class="form-control input-select" name="gender" id="gender">
 			<option value=""></option>
-			<option value="M"<?php if($data['gender'] == 'M') {echo ' selected="selected"';}?>>Laki-Laki</option>
-			<option value="W"<?php if($data['gender'] == 'W') {echo ' selected="selected"';}?>>Perempuan</option>
+			<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', ' selected="selected"');?>>Laki-Laki</option>
+			<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', ' selected="selected"');?>>Perempuan</option>
 			</select></td>
 			</tr>
 			<tr>

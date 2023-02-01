@@ -113,8 +113,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 		if ($name != '' && $username != '') {
 			$chk = $picoEdu->getExistsingUser($user_data);
-			$admin_id = $chk['member_id'];
-			$username = $chk['username'];
+			$admin_id = addslashes($chk['member_id']);
+			$username = addslashes($chk['username']);
 
 			$sql = "INSERT INTO `edu_admin` 
 			(`admin_id`, `school_id`, `username`, `admin_level`, `name`, `token_admin`, `email`, `phone`, `password`, 
@@ -327,8 +327,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td>Jenis Kelamin</td>
 		<td><select class="form-control input-select" name="gender" id="gender">
 		<option value=""></option>
-		<option value="M"<?php if($data['gender'] == 'M') {echo ' selected="selected"';}?>>Laki-Laki</option>
-		<option value="W"<?php if($data['gender'] == 'W') {echo ' selected="selected"';}?>>Perempuan</option>
+		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', ' selected="selected"');?>>Laki-Laki</option>
+		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', ' selected="selected"');?>>Perempuan</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -627,7 +627,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo ($data['school_name']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php if($data['gender']=='M') echo 'L'; if($data['gender']=='W') echo 'P';?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $picoEdu->selectFromMap($data['gender'], array('M'=>'L', 'W'=>'P'));?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['email'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php if($data['admin_level']=='2') echo 'Administrator'; if($data['admin_level']=='1') echo 'Super Administrator';?></a></td>
       <td><?php echo $picoEdu->trueFalse($data['blocked'], 'Ya', 'Tidak');?> </td>

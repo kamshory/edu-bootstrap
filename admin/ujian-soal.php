@@ -7,8 +7,8 @@ if(empty(@$school_id))
 }
 if(empty(@$real_school_id))
 {
-include_once dirname(__FILE__)."/belum-ada-sekolah.php";
-exit();
+	include_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	exit();
 }
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";

@@ -4,7 +4,7 @@
 
 class AdminAuth
 {
-	public $admin_id = '';
+	public String $admin_id = '';
 	public $admin_level = 0;
 	public $username = '';
 	public $name = '';

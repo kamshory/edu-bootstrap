@@ -1111,6 +1111,18 @@ class PicoEdu //NOSONAR
 	{
 		return $val ? $trueVal : $falseVal;
 	}
+	public function selectFromMap($value, $map)
+	{
+		if($value == null || $map == null || !is_array($value))
+		{
+			return "";
+		}
+		if(isset($map[$value]))
+		{
+			return $map[$value];
+		}
+		return "";
+	}
 	public function getRowClass($data)
 	{
 		if(!isset($data) || empty($data))

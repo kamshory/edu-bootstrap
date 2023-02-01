@@ -2,8 +2,8 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/bukan-admin.php";
-exit();
+	include_once dirname(__FILE__)."/bukan-admin.php";
+	exit();
 }
 
 $cfg->page_title = "Edu School Program";
