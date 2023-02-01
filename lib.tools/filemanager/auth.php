@@ -1,6 +1,6 @@
 <?php
 include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-admin.php";
-if(@$member_login->member_id == 0)
+if(empty(@$member_login->member_id))
 {
 	if(empty(@$school_id))
 	{

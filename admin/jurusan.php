@@ -155,7 +155,7 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>Default</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="default" value="1" id="default"<?php if($data['default']==1) echo ' checked="checked"';?>> Default</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="default" value="1" id="default"<?php echo $picoEdu->ifMatch($data['default'], true, ' checked="checked"');?>> Default</label>
 		</td>
 		</tr>
 		<tr>
@@ -199,7 +199,7 @@ $stmt = $database->executeQuery($sql);
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Sekolah</td>
-		<td><?php echo ($data['school_id']);?> </td>
+		<td><?php echo $data['school_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Nama</td>

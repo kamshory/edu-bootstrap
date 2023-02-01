@@ -1,6 +1,3 @@
-<?php
-if(!defined('DB_NAME')) exit();
-?>
     <!-- content end -->
     </div>
     

@@ -28,7 +28,7 @@ $stmt = $database->executeQuery($sql);
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Sekolah</td>
-		<td><?php echo ($data['school_id']);?> </td>
+		<td><?php echo $data['school_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Nama</td>

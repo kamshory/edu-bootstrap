@@ -117,7 +117,7 @@ function replaceImageData($html, $base_dir)
 	return $obj;
 }
 
-function extract_image($html, $base_dir)
+function extract_image($html, $base_dir) //NOSONAR
 {
 	global $cfg;
 	$files = array();
@@ -531,11 +531,15 @@ function getNumberingType($s1, $s2)
 
 	return $ret;
 }
-function delTree($dir)
+function delTree($dir, $fileSync)
 {
 	$files = array_diff(scandir($dir), array('.', '..'));
 	foreach ($files as $file) {
-		(@is_dir("$dir/$file")) ? delTree("$dir/$file") : @unlink("$dir/$file");
+		if (@is_dir("$dir/$file")) {
+			delTree("$dir/$file", $fileSync);
+		} else {
+			$fileSync->deleteFile("$dir/$file");
+		}
 	}
 	return rmdir($dir);
 }
@@ -971,8 +975,14 @@ class DocxConversion
 		if (!$zip || is_numeric($zip)) return false;
 
 		while ($zip_entry = zip_read($zip)) {
-			if (zip_entry_open($zip, $zip_entry) == FALSE) continue;
-			if (zip_entry_name($zip_entry) != "word/document.xml") continue;
+			if (zip_entry_open($zip, $zip_entry) == false) 
+			{
+				continue;
+			}
+			if (zip_entry_name($zip_entry) != "word/document.xml") 
+			{
+				continue;
+			}
 			$content .= zip_entry_read($zip_entry, zip_entry_filesize($zip_entry));
 			zip_entry_close($zip_entry);
 		} // end while

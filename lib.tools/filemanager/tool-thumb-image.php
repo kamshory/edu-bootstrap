@@ -1,13 +1,15 @@
 <?php
-include_once(dirname(__FILE__)."/functions.php");
+include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
-include dirname(__FILE__)."/conf.php";
+include dirname(__FILE__)."/conf.php"; //NOSONAR
 if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
 if(!$fmanConfig->thumbnail_quality)
-$fmanConfig->thumbnail_quality=75;
+{
+	$fmanConfig->thumbnail_quality=75;
+}
 
 $filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
 
@@ -99,7 +101,9 @@ function gettumbpict($originalfile, $maxw, $maxh)
 	$white = imagecolorallocate($im1, 255, 255, 255);
 	$black = imagecolorallocate($im1, 0, 0, 0);
 	if(!$im)
-	return false;
+	{
+		return false;
+	}
 	imagefilledrectangle($im1, 0, 0, $newwidth ,$newheight, $white);
 	imagecopyresized($im1,$im,0,0,0,0,$newwidth ,$newheight,$image->width,$image->height);
 	return $im1;
@@ -129,7 +133,7 @@ if(file_exists($filepath))
 			}
 			else
 			{	
-				$ft=getfiletype(basename($filepath));
+				$ft = getfiletype(basename($filepath));
 				if(file_exists(dirname(__FILE__)."/style/images/common/$ft.png"))
 				{
 					$image=imagecreatefrompng(dirname(__FILE__)."/style/images/common/$ft.png");
@@ -179,13 +183,21 @@ if(file_exists($filepath))
 
 							$y1=floor((40-$height)/2);
 							if($i<2)
+							{
 								$y=8;
+							}
 							else
+							{
 								$y=52;
-							if(!($i%2))
+							}
+							if($i%2 == 0)
+							{
 								$x=6;
+							}
 							else
+							{
 								$x=50;
+							}
 							@imagecopy($image,$img2[$i],$x+$x1,$y+$y1,0,0,$width,$height);
 							$i++;
 						}
@@ -198,7 +210,7 @@ if(file_exists($filepath))
 			}
 
 			header('Content-Type: image/jpeg');
-			@imagejpeg($image, NULL, $fmanConfig->thumbnail_quality);
+			@imagejpeg($image, null, $fmanConfig->thumbnail_quality);
 		}
 	}
 }

@@ -40,7 +40,7 @@ if($stmt->rowCount() > 0)
 		$data = file_get_contents($url);
 		if(strlen($data))
 		{
-			file_put_contents($test_dir."/".$basename, $data);
+			$fileSync->createFileWithContent($test_dir."/".$basename, $data, true);
 		}
 	}
 	else if(@$_GET['option'] == 'uploadbase64image')
@@ -62,7 +62,7 @@ if($stmt->rowCount() > 0)
 			$basename = md5($data).".".$ext;
 			if(strlen($data))
 			{
-				file_put_contents($test_dir."/".$basename, $data);
+				$fileSync->createFileWithContent($test_dir."/".$basename, $data, true);
 				echo $basename;
 			}
 		}
@@ -80,7 +80,7 @@ if($stmt->rowCount() > 0)
 		{
 			if(strlen($data))
 			{
-				file_put_contents($test_dir."/".$basename, $data);
+				$fileSync->createFileWithContent($test_dir."/".$basename, $data, true);
 				echo $basename;
 			}
 		}

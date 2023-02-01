@@ -1,5 +1,3 @@
-<?php
-?>
     <!-- content end -->
     </div> 
     

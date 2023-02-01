@@ -243,7 +243,7 @@ class PicoEdu //NOSONAR
 			$str_result .= '
 			<nav aria-label="Page navigation example">
 			<ul class="pagination">';
-				foreach($pagination->result as $i=>$obj)
+				foreach($pagination->result as $obj)
 			{
 				$cls = ($obj->sel)?" active":"";
 				$str_result .= '
@@ -597,7 +597,7 @@ class PicoEdu //NOSONAR
 		for ($i = 0; $i < $count; $i++) {
 			$token = mt_rand($min, $max);
 			if (in_array($token, $temporary_token)) {
-				$i--;
+				$i--; //NOSONAR
 			}
 			$new_token[] = $token;
 			$temporary_token[] = $token;
@@ -858,6 +858,11 @@ class PicoEdu //NOSONAR
 	{
 		$value = addslashes($value);
 		$value = trim(preg_replace(self::TRIM_EXTRA_SPACE, " ", $value));
+		return $this->trimPunctuation($value);
+	}
+
+	public function trimPunctuation($value)
+	{
 		return trim($value, " ._-/\\ ");
 	}
 

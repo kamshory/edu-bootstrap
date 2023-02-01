@@ -11,7 +11,6 @@ where `edu_test`.`test_id` = '$test_id'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-
 	error_reporting(0);
 	$test_dir = dirname(dirname(__FILE__))."/media.edu/school";
 	if(!file_exists($test_dir))
@@ -41,7 +40,7 @@ if($stmt->rowCount() > 0)
 		$data = file_get_contents($url);
 		if(strlen($data))
 		{
-			file_put_contents($test_dir."/".$basename, $data);
+			$fileSync->createFileWithContent($test_dir."/".$basename, $data, true);
 		}
 	}
 	else if(@$_GET['option'] == 'uploadbase64image')
@@ -63,7 +62,7 @@ if($stmt->rowCount() > 0)
 			$basename = md5($data).".".$ext;
 			if(strlen($data))
 			{
-				file_put_contents($test_dir."/".$basename, $data);
+				$fileSync->createFileWithContent($test_dir."/".$basename, $data, true);
 				echo $basename;
 			}
 		}
@@ -81,7 +80,7 @@ if($stmt->rowCount() > 0)
 		{
 			if(strlen($data))
 			{
-				file_put_contents($test_dir."/".$basename, $data);
+				$fileSync->createFileWithContent($test_dir."/".$basename, $data, true);
 				echo $basename;
 			}
 		}

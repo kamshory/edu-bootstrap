@@ -10,10 +10,11 @@ class PicoDatabase
 	public $password = "";
 	public $database = "";
 	public $timezone = "00:00";
+	public $syncDatabaseDir = "";
 
 	private $conn = null;
 
-	public function __construct($driver, $host, $port, $username, $password, $database, $timezone)
+	public function __construct($driver, $host, $port, $username, $password, $database, $timezone, $syncDatabaseDir = null) //NOSONAR
 	{
 		$this->driver = $driver;
 		$this->host = $host;
@@ -22,6 +23,7 @@ class PicoDatabase
 		$this->password = $password;
 		$this->database = $database;
 		$this->timezone = $timezone;
+		$this->syncDatabaseDir = $syncDatabaseDir;
 	}
 
 	public function connect()
@@ -72,6 +74,10 @@ class PicoDatabase
 
 	public function executeInsert($sql, $appendToSyncFile = false)
 	{
+		if($appendToSyncFile)
+		{
+			
+		}
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();

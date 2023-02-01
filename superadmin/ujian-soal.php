@@ -161,7 +161,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 	
 		$question = kh_filter_input(INPUT_POST, 'question');
 		$question = UTF8ToEntities($question);
-		$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks))); 	
+		$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 		
 		$sql = "update `edu_question` set `content` = '$question' , `random` = '$random', `numbering` = '$numbering' where `question_id` = '$question_id' ";
 		$stmt2 = $database->executeUpdate($sql, true);
@@ -180,7 +180,7 @@ if(isset($_POST['save']) && @$_GET['option']=='edit')
 
 				$option = kh_filter_input(INPUT_POST, 'option_' . $id2);
 				$option = UTF8ToEntities($option);
-				$option = addslashes(removeparagraphtag(extractImageData($option, $direktori, $prefiks)));
+				$option = addslashes(removeparagraphtag(extractImageData($option, $direktori, $prefiks, $fileSync)));
 
 				$score = kh_filter_input(INPUT_POST, 'score_' . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
 				$sql = "update `edu_option` set `content` = '$option', `score` = '$score' where `question_id` = '$question_id' and `option_id` = '$id2' ";
@@ -1097,62 +1097,50 @@ function buildMenu(id)
 						$pagination->offset, $pagination->array_get,
 						true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next
 					);
-$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+					$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 
-					?>
-<?php
-						$array_class = $picoEdu->getArrayClass($school_id);
-						?>
-<form name="form1" method="post" action="">
-<style type="text/css">
-@media screen and (max-width:800px)
-{
-}
-@media screen and (max-width:599px)
-{
-}
-@media screen and (max-width:399px)
-{
-}
-</style>
+										?>
+					<?php
+											$array_class = $picoEdu->getArrayClass($school_id);
+											?>
+					<form name="form1" method="post" action="">
+					<style type="text/css">
+					@media screen and (max-width:800px)
+					{
+					}
+					@media screen and (max-width:599px)
+					{
+					}
+					@media screen and (max-width:399px)
+					{
+					}
+					</style>
 
-<div class="d-flex search-pagination search-pagination-top">
-<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
-<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
-</div>
+					<div class="d-flex search-pagination search-pagination-top">
+					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+					<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+					</div>
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
-  <thead>
-    <tr>
-      <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></td>
-      <td width="25">No</td>
-      <td>Sekolah</td>
-      <td>Nama Ujian</td>
-      <td>Pelajaran</td>
-      <td>Kelas</td>
-      <td>Soal</td>
-      </tr>
-    </thead>
-    <tbody>
-    <?php
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
+					<thead>
+						<tr>
+						<td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></td>
+						<td width="25">No</td>
+						<td>Sekolah</td>
+						<td>Nama Ujian</td>
+						<td>Pelajaran</td>
+						<td>Kelas</td>
+						<td>Soal</td>
+						</tr>
+						</thead>
+						<tbody>
+						<?php
 					$no = $pagination->offset;
 					$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 					foreach ($rows as $data) {
 						$no++;
 						?>
-    <tr<?php $rowclass = "";
-							if (@$data['default'] == 1)
-								$rowclass .= " data-default";
-							if (isset($data['active'])) {
-								if (@$data['active'] == 1)
-									$rowclass .= " data-active";
-								if (@$data['active'] == 0)
-									$rowclass .= " data-inactive";
-							}
-							$rowclass = trim($rowclass);
-							if (strlen($rowclass)) {
-								echo " class=\"$rowclass\"";
-							} ?>>
+    <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><a class="show-controls" data-test-id="<?php echo $data['test_id']; ?>" href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></a></td>
       <td align="right"><?php echo $no; ?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo ($data['school_name']); ?></a></td>

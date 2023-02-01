@@ -17,7 +17,8 @@ $dir2 = dirname(__FILE__);
 $scale = 1;
 if(file_exists($dir2))
 {
-	if($handle = opendir($dir2))
+	$handle = opendir($dir2);
+	if($handle)
 	{
 		$i=0;
 		while (false !== ($ufile = readdir($handle))) 
@@ -37,11 +38,7 @@ if(file_exists($dir2))
 				$dst_height = round(imagesy($img)*$scale);
 				$newimage = resizePng($img, $dst_width, $dst_height);
 				imagepng($newimage, $fn);
-				//imagepng($img, $fn);
 			}
 		}
 	}
 }
-
-
-?>

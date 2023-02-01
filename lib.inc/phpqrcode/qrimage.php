@@ -54,9 +54,9 @@
             
             if ($filename === false) {
                 Header("Content-type: image/jpeg");
-                ImageJpeg($image, null, $q);
+                imagejpeg($image, null, $q);
             } else {
-                ImageJpeg($image, $filename, $q);            
+                imagejpeg($image, $filename, $q);            
             }
             
             ImageDestroy($image);

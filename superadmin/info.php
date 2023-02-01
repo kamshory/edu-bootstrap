@@ -107,22 +107,14 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		
 		$base_dir = dirname(dirname(__FILE__))."/media.edu/info/$info_id";
 		$base_src = "media.edu/info/$info_id";
-		
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu"))
-		{
-			mkdir(dirname(dirname(__FILE__))."/media.edu", 0755);
-		}
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu/info"))
-		{
-			mkdir(dirname(dirname(__FILE__))."/media.edu/info", 0755);
-		}
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu/info/$info_id"))
-		{
-			mkdir(dirname(dirname(__FILE__))."/media.edu/info/$info_id", 0755);
-		}
+
+		$dir2prepared = dirname(dirname(__FILE__))."/media.edu/info/$info_id";
+		$dirBase = dirname(dirname(__FILE__));
+		$permission = 0755;
+		$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 		
 		$content = kh_filter_input(INPUT_POST, 'content');
-		$content = extractImageData($content, $base_dir, $base_src);
+		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 		$content = addslashes(UTF8ToEntities($content));
 
 		$sql = "update `edu_info` set

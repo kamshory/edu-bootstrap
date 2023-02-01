@@ -151,7 +151,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Default</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="default" value="1" id="default"<?php if($data['default']==1) echo ' checked="checked"';?>> Default</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="default" value="1" id="default"<?php echo $picoEdu->ifMatch($data['default'], true, ' checked="checked"');?>> Default</label>
 		</td>
 		</tr>
 		<tr>
@@ -195,7 +195,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">Sekolah</td>
-		<td><?php echo ($data['school_id']);?> </td>
+		<td><?php echo $data['school_id'];?> </td>
 		</tr>
 		<tr>
 		<td>Nama</td>
@@ -333,7 +333,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><input type="checkbox" name="school_program_id[]" id="school_program_id" value="<?php echo $data['school_program_id'];?>" class="school_program_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_program_id=<?php echo $data['school_program_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo ($data['school_id']);?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['school_id'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['order'];?></a></td>
       <td><?php echo ($data['default'])?'Ya':'Tidak';?> </td>

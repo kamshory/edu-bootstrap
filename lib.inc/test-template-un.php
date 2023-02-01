@@ -90,7 +90,7 @@ var storageKey = '<?php echo $storage_key;?>';
 var alert_time = <?php echo $alert_time;?>;
 var test = '<?php echo $test_id;?>';
 var autosubmit = <?php echo $autosubmit*1;?>;
-var due_time = <?php echo (@$_SESSION['session_test'][$student_id][$test_id]['due_time']-time());?>;
+var due_time = <?php echo @$_SESSION['session_test'][$student_id][$test_id]['due_time']-time();?>;
 </script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/test-un.min.js"></script>
 <div class="all">

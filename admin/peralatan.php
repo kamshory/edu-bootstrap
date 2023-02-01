@@ -15,7 +15,7 @@ if(isset($_POST['clear']))
 		$i=0;
 		while (false !== ($ufile = readdir($handle))) 
 		{
-			@unlink("$dir2/$ufile");
+			$fileSync->deleteFile("$dir2/$ufile", true);
 		}
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF']));

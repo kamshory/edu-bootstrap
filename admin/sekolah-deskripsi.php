@@ -14,20 +14,13 @@ if(isset($_POST['save']))
 	
 	$base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/description";
 	$base_src = "media.edu/school/$school_id/description";
-	if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu"))
-	{
-		mkdir(dirname(dirname(__FILE__))."/media.edu/school", 0755);
-	}
-	if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu/$school_id"))
-	{
-		mkdir(dirname(dirname(__FILE__))."/media.edu/school/$school_id", 0755);
-	}
-	if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/description"))
-	{
-		mkdir(dirname(dirname(__FILE__))."/media.edu/school/$school_id/description", 0755);
-	}
-		
-	$description = extractImageData($description, $base_dir, $base_src);
+
+	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/school/$school_id/description";
+	$dirBase = dirname(dirname(__FILE__));
+	$permission = 0755;
+	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
+
+	$description = extractImageData($description, $base_dir, $base_src, $fileSync);
 	
 	$description = addslashes(UTF8ToEntities($description));
 	

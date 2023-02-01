@@ -1,7 +1,7 @@
 <?php
 include_once(dirname(__FILE__)."/functions.php");
 include_once dirname(__FILE__)."/auth.php";
-include dirname(__FILE__)."/conf.php";
+include dirname(__FILE__)."/conf.php"; //NOSONAR
 if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
@@ -41,14 +41,14 @@ foreach($_FILES["images"]["error"] as $key => $error){
 			move_uploaded_file($_FILES["images"]["tmp_name"][$key], $targetdir."/".$name);
 			$info = getimagesize($targetdir."/".$name);
 			compressImageFile($targetdir."/".$name, $authblogid);
-			deleteforbidden($targetdir);
+			deleteForbidden($targetdir, $fileSync);
 			if($info !== false && is_array($info) && isset($info['mime']) && stripos($info['mime'], 'image')!==false)
 			{
 				if(!$fmanConfig->allow_upload_image)
 				{
 					if($allowdelete)
 					{
-						@unlink($targetdir."/".$name);
+						$fileSync->deleteFile($targetdir."/".$name, true);
 					}
 					die('FORBIDDEN');
 				}
@@ -57,7 +57,7 @@ foreach($_FILES["images"]["error"] as $key => $error){
 			{
 				if($allowdelete)
 				{
-					@unlink($targetdir."/".$name);
+					$fileSync->deleteFile($targetdir."/".$name, true);
 				}
 				die('FORBIDDEN');
 			}
@@ -82,7 +82,7 @@ else
 		copy($_FILES['file']['tmp_name'], $targetdir."/".$name);
 		} 
 		move_uploaded_file( $_FILES["file"]["tmp_name"], $targetdir."/".$name);
-		deleteforbidden($targetdir);
+		deleteForbidden($targetdir, $fileSync);
 		$info = getimagesize($targetdir."/".$name);
 		compressImageFile($targetdir."/".$name, $authblogid);
 		if(stripos($info['mime'],'image')!==false)
@@ -91,7 +91,7 @@ else
 			{
 				if($allowdelete)
 				{
-				@unlink($targetdir."/".$name);
+				$fileSync->deleteFile($targetdir."/".$name, true);
 				}
 				die('FORBIDDEN');
 			}
@@ -100,7 +100,7 @@ else
 		{
 			if($allowdelete)
 			{
-			@unlink($targetdir."/".$name);
+			$fileSync->deleteFile($targetdir."/".$name, true);
 			}
 			die('FORBIDDEN');
 		}

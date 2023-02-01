@@ -136,7 +136,7 @@ if(@$_GET['option']=='delete')
 
 		}
 		$xml_data_str = "<"."?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<test>".implode("\r\n", $xml_question)."</test>";
-		file_put_contents($file_path, $xml_data_str);
+		$fileSync->createFileWithContent($file_path, $xml_data_str, true);
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&test_collection_id=$test_collection_id");
 	exit();
@@ -254,7 +254,7 @@ if(isset($_POST['sort']))
 	
 		}
 		$xml_data_str = "<"."?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<test>".implode("\r\n", $xml_question)."</test>";
-		file_put_contents($file_path, $xml_data_str);
+		$fileSync->createFileWithContent($file_path, $xml_data_str, true);
 		exit();
 	}
 }
@@ -372,7 +372,7 @@ if(isset($_POST['sort']))
 		// Stringify end
 		
 		$xml_data_str = "<"."?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<test>".implode("\r\n", $xml_question)."</test>";
-		file_put_contents($file_path, $xml_data_str);
+		$fileSync->createFileWithContent($file_path, $xml_data_str, true);
 	}
 
 	exit();
@@ -489,7 +489,7 @@ if(@$_GET['option']=='delete')
 		// Stringify end
 		
 		$xml_data_str = "<"."?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<test>".implode("\r\n", $xml_question)."</test>";
-		file_put_contents($file_path, $xml_data_str);
+		$fileSync->createFileWithContent($file_path, $xml_data_str, true);
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&test_collection_id=$test_collection_id");
 	exit();
@@ -630,7 +630,7 @@ if(isset($_POST['save']) && (@$_GET['option']=='edit' || @$_GET['option']=='add'
 		// Stringify end
 		
 		$xml_data_str = "<"."?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<test>".implode("\r\n", $xml_question)."</test>";
-		file_put_contents($file_path, $xml_data_str);
+		$fileSync->createFileWithContent($file_path, $xml_data_str, true);
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&test_collection_id=$test_collection_id");
 	exit();

@@ -1,40 +1,40 @@
 <?php
 // sox suara.wav -b 32 -c 1 -r 10 -t raw - | od -t u1 -v - | cut -c 9- | sed -e 's/\  / /g' -e 's/   / /g' -e 's/ /,/g' | tr '\n' ','
 class WaveToPNG{
-	var $input_file = "";
-	var $bit_depth = 32; // -b
-	var $sample_rate = 200; // -r
-	var $number_of_channel = 1; // -c
-	var $image_width = 480;
-	var $image_height = 140;
-	function __construct($input = NULL)
+	public $input_file = "";
+	public $bit_depth = 32; // -b
+	public $sample_rate = 200; // -r
+	public $number_of_channel = 1; // -c
+	public $image_width = 480;
+	public $image_height = 140;
+	public function __construct($input = null)
 	{
-		if($input !== NULL)
+		if($input !== null)
 		{
 			$this->input_file = $input;
 		}
 	}
-	function set_sample_rate($sample_rate)
+	public function set_sample_rate($sample_rate)
 	{
 		$this->sample_rate = $sample_rate;
 	}
-	function set_bit_depth($bit_depth)
+	public function set_bit_depth($bit_depth)
 	{
 		$this->bit_depth = $bit_depth;
 	}
-	function set_number_of_channel($number_of_channel)
+	public function set_number_of_channel($number_of_channel)
 	{
 		$this->number_of_channel = $number_of_channel;
 	}
-	function set_image_width($image_width)
+	public function set_image_width($image_width)
 	{
 		$this->image_width = $image_width;
 	}
-	function set_image_height($image_height)
+	public function set_image_height($image_height)
 	{
 		$this->image_height = $image_height;
 	}
-	function normalization_data($data1)
+	public function normalization_data($data1)
 	{
 		$data2 = $data1;
 		$ndata = count($data1);
@@ -51,7 +51,7 @@ class WaveToPNG{
 		}
 		return $data2;
 	}
-	function generate_html()
+	public function generate_html()
 	{
 		$data = shell_exec("sox $this->input_file -b $this->bit_depth -c $this->number_of_channel -r $this->sample_rate -t raw - | od -t u1 -v - | cut -c 9- | sed -e 's/\ / /g' -e 's/ / /g' -e 's/ /,/g' | tr '\n' ','");
 		$data = str_replace(",,", ",0,", $data); 
@@ -60,7 +60,7 @@ class WaveToPNG{
 		$data = str_replace(",,", ",0,", $data); 
 		$data = trim($data, ",");
 		$wave = explode(",", $data);
-		$wave = normalization_data($wave);
+		$wave = $this->normalization_data($wave);
 		$number_of_sample = count($wave);
 		$factor = $number_of_sample/$this->image_width; // float
 		$samples = array();
@@ -94,13 +94,13 @@ class WaveToPNG{
 		imagecolortransparent($image, $white);
 		return $image;
 	}
-	function generate_png($width = NULL, $height = NULL)
+	public function generate_png($width = null, $height = null)
 	{
-		if($width !== NULL && $width > 0)
+		if($width !== null && $width > 0)
 		{
 			$this->image_height = $width;
 		}
-		if($height !== NULL && $height > 0)
+		if($height !== null && $height > 0)
 		{
 			$this->image_height = $height;
 		}
@@ -147,5 +147,3 @@ $wave2png = new WaveToPNG("Number-7.wav");
 $image = $wave2png->generate_png();
 header("Content-Type: image/png");
 imagepng($image);
-
-?>

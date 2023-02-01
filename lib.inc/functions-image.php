@@ -5,13 +5,14 @@ if(!function_exists("exif_read_data"))
 }
 function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace=false, $type = 'jpeg', $quality = 80)
 {
+	global $fileSync;
 	$imageinfo = getimagesize($source);
 	$image = new StdClass();
     if (empty($imageinfo)) 
 	{
         if (file_exists($source)) 
 		{
-            unlink($source);
+            $fileSync->deleteFile($source, true);
         }
         return false;
     }
@@ -27,7 +28,7 @@ function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace
             } 
 			else 
 			{
-                unlink($source);
+                $fileSync->deleteFile($source, true);
                 return false;
             }
             break;
@@ -38,7 +39,7 @@ function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace
             } 
 			else 
 			{
-                unlink($source);
+                $fileSync->deleteFile($source, true);
                 return false;
             }
             break;
@@ -49,12 +50,12 @@ function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace
             } 
 			else 
 			{
-                unlink($source);
+                $fileSync->deleteFile($source, true);
                 return false;
             }
             break;
         default:
-            unlink($source);
+            $fileSync->deleteFile($source, true);
             return false;
     }
 	if(!$im)
@@ -87,7 +88,7 @@ function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace
 	imagecopyresampled($im2,$im,0,0,0,0,$currentwidth,$currentheight,$image->width,$image->height);
 	if (file_exists($source)) 
 	{
-		unlink($source);
+		$fileSync->deleteFile($source, true);
 	}
 	if($interlace)
 	{
@@ -199,9 +200,6 @@ function pack_exif_data($exif)
 		);
 		return $exifdata;
 	}
-	else
-	{
-	}
 	return null;
 }
 
@@ -286,12 +284,13 @@ function flip_vertical($im)
 
 function create_thumb_image($originalfile, $destination, $dwidth, $dheight, $interlace=false, $quality=80) 
 {
+	global $fileSync;
 	$image = new StdClass();
     $imageinfo = getimagesize($originalfile);
     if (empty($imageinfo)) 
 	{
         if (file_exists($originalfile)) {
-            unlink($originalfile);
+            $fileSync->deleteFile($originalfile, true);
         }
         return false;
     }
@@ -307,7 +306,7 @@ function create_thumb_image($originalfile, $destination, $dwidth, $dheight, $int
 			else 
 			{
                 //notice('GIF not supported on this server');
-                unlink($originalfile);
+                $fileSync->deleteFile($originalfile, true);
                 return false;
             }
             break;
@@ -319,7 +318,7 @@ function create_thumb_image($originalfile, $destination, $dwidth, $dheight, $int
 			else 
 			{
                 //notice('JPEG not supported on this server');
-                unlink($originalfile);
+                $fileSync->deleteFile($originalfile, true);
                 return false;
             }
             break;
@@ -331,12 +330,12 @@ function create_thumb_image($originalfile, $destination, $dwidth, $dheight, $int
 			else 
 			{
                 //notice('PNG not supported on this server');
-                unlink($originalfile);
+                $fileSync->deleteFile($originalfile, true);
                 return false;
             }
             break;
         default:
-            unlink($originalfile);
+            $fileSync->deleteFile($originalfile, true);
             return false;
     }
     //if (function_exists('imagecreatetruecolor') and $CFG->gdversion >= 2) 
@@ -370,11 +369,11 @@ function create_thumb_image($originalfile, $destination, $dwidth, $dheight, $int
 		imageinterlace($im1, true);
 	}
 		
-    if (function_exists('ImageJpeg')) 
+    if (function_exists('imagejpeg')) 
 	{
         @touch($destination);  // Helps in Safe mode
         if (
-		ImageJpeg($im1, $destination, $quality)
+		imagejpeg($im1, $destination, $quality)
 		) 
 		{
             @chmod($destination, 0666);

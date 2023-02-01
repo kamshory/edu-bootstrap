@@ -566,7 +566,7 @@ $(document).ready(function(e) {
 		<tr>
 		<td>Nama</td>
 		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" />
-        <input type="hidden" name="school_id2" id="school_id2" value="<?php echo ($data['school_id']);?>" /></td>
+        <input type="hidden" name="school_id2" id="school_id2" value="<?php echo $data['school_id'];?>" /></td>
 		</tr>
 		<tr>
 		<td>Jenjang</td>

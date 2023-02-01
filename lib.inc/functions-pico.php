@@ -382,7 +382,7 @@ function scrap($url)
 			array('no' => 4, 'lin' => ' ', 'num' => 'IV'),
 			array('no' => 1, 'lin' => ' ', 'num' => 'I'),
 		);
-		foreach ($rom as $k => $v) {
+		foreach ($rom as $v) {
 			while ($ar >= $v['no']) {
 				$ar = $ar - $v['no'];
 				$lin .= $v['lin'];
@@ -678,7 +678,6 @@ function strip_only_tags($str, $tags, $stripContent = false)
 
 require_once dirname(__FILE__) . "/classes/PicoDatabase.php";
 require_once dirname(__FILE__) . "/classes/PicoEdu.php";
-require_once dirname(__FILE__) . "/classes/MemberPage.php";
 require_once dirname(__FILE__) . "/classes/MemberAuth.php";
 require_once dirname(__FILE__) . "/classes/AdminAuth.php";
 require_once dirname(__FILE__) . "/classes/TeacherAuth.php";
@@ -692,12 +691,76 @@ $database = new PicoDatabase(
 	$configs->db_user,
 	$configs->db_pass,
 	$configs->db_name,
-	$configs->db_time_zone
+	$configs->db_time_zone,
+	$configs->sync_database_dir
 );
 
 $database->connect();
 
 $picoEdu = new PicoEdu($database);
 
-
-?>
+class FileSynchronizer
+{
+	const NEW_LINE = "\r\n";
+	public $basePath = '';
+	public $delimiter = '--------------ruihwuiethwiughweighiwehgiwe';
+	public function __construct($basePath)
+	{
+		$this->basePath = $basePath;
+	}
+	public function createFile($path, $content, $sync)
+	{
+		if($sync)
+		{
+			$syncPath = $this->basePath . "/" . "file.txt";
+			$fp = fopen($syncPath, 'a');
+			fwrite($fp, $this->delimiter."\r\n");  
+			fwrite($fp, "[CREATE] \"".$path."\"".self::NEW_LINE);  
+			fclose($fp);  
+		}
+		return file_put_contents($path, $content);
+	}
+	public function deleteFile($path, $sync)
+	{
+		if($sync)
+		{
+			$syncPath = $this->basePath . "/" . "file.txt";
+			$fp = fopen($syncPath, 'a');
+			fwrite($fp, $this->delimiter."\r\n");  
+			fwrite($fp, "[DELETE] \"".$path."\"".self::NEW_LINE);  
+			fclose($fp);  
+		}
+		return @unlink($path);
+	}
+	public function renameFile($oldPath, $newPath, $sync)
+	{
+		if($sync)
+		{
+			$syncPath = $this->basePath . "/" . "file.txt";
+			$fp = fopen($syncPath, 'a');
+			fwrite($fp, $this->delimiter."\r\n");  
+			fwrite($fp, "[RENAME] \"".$oldPath."\" [TO] \"".$newPath."\"".self::NEW_LINE);  
+			fclose($fp);  
+		}
+		return @rename($oldPath, $newPath);
+	}
+	public function prepareDirecory($dir2prepared, $dirBase, $permission, $sync= false)
+	{
+		$dir = str_replace("\\", "/", $dir2prepared);
+		$base = str_replace("\\", "/", $dirBase);
+		$arrDir = explode("/", $dir);
+		$arrBase = explode("/", $base);
+		$base = implode("/", $arrBase);
+		$dir2created = "";
+		foreach($arrDir as $val)
+		{
+			$dir2created .= $val;
+			if(stripos($base, $dir2created) !== 0 && !file_exists($dir2created))
+			{
+				@mkdir($dir2created, $permission);
+			}
+			$dir2created .= "/";
+		}
+	}
+}
+$fileSync = new FileSynchronizer(dirname(dirname(__FILE__)."/lib.sync"));

@@ -32,7 +32,7 @@ if(isset($_POST['question']))
 
 	$question = kh_filter_input(INPUT_POST, 'question');
 	$question = UTF8ToEntities($question);
-	$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks))); 	
+	$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 
 	$question = $picoEdu->brToNewLineEncoded($question);
 	
@@ -59,7 +59,7 @@ if(isset($_POST['question']))
 			
 			$option = kh_filter_input(INPUT_POST, 'option_'.$id2);
 			$option = UTF8ToEntities($option);
-			$option = addslashes(removeparagraphtag(extractImageData($option, $direktori, $prefiks)));
+			$option = addslashes(removeparagraphtag(extractImageData($option, $direktori, $prefiks, $fileSync)));
 
 			$option = $picoEdu->brToNewLineEncoded($option);
 			 	

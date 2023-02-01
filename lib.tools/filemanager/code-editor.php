@@ -1,7 +1,7 @@
 <?php
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
-include dirname(__FILE__)."/conf.php";
+include dirname(__FILE__)."/conf.php"; //NOSONAR
 if($fmanConfig->authentification_needed && !$userlogin)
 {
 	include_once dirname(__FILE__)."/tool-login-form.php";

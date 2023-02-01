@@ -1,7 +1,7 @@
 <?php
 include_once dirname(__FILE__)."/functions.php";
 include_once dirname(__FILE__)."/auth.php";
-include dirname(__FILE__)."/conf.php";
+include dirname(__FILE__)."/conf.php"; //NOSONAR
 if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
@@ -24,8 +24,8 @@ if(@$_GET['option']=='compress-audio')
 			shell_exec("lame -b 32 $path $path-$rand");
 			if(file_exists($path."-".$rand))
 			{
-				@unlink($path);
-				@rename($path."-".$rand, $path);
+				$fileSync->deleteFile($path, true);
+				$fileSync->renameFile($path."-".$rand, $path, true);
 				echo "SUCCESS";
 			}
 			else
@@ -90,14 +90,14 @@ if(file_exists($dir2))
 		echo 'EXIST';
 	}
 }
-deleteforbidden($dir2);
+deleteForbidden($dir2, $fileSync);
 }
 
 if(@$_GET['option']=='copyfile')
 {
 	
 parse_str(@$_POST['postdata'], $_POST);
-if(isset($_POST) && (@get_magic_quotes_runtime()))
+if(isset($_POST) && (@get_magic_quotes_runtime())) //NOSONAR
 {
 	array_walk_recursive($_POST, 'array_stripslashes');
 }
@@ -165,20 +165,20 @@ if(isset($_GET['deletesource']))
 {
 	foreach($dirmoved as $k=>$path)
 	{
-		destroyall($path);
+		destroyAll($path, $fileSync);
 	}
 	foreach($filemoved as $k=>$path)
 	{
-		@unlink($path);
+		$fileSync->deleteFile($path, $fileSync, true);
 	}
 }
-deleteforbidden($targetdir, true);
+deleteForbidden($targetdir, $fileSync, true);
 }
 
 if(@$_GET['option']=='deletefile')
 {
 parse_str(@$_POST['postdata'], $_POST);
-if(isset($_POST) && (@get_magic_quotes_runtime()))
+if(isset($_POST) && (@get_magic_quotes_runtime())) //NOSONAR
 {
 	array_walk_recursive($_POST, 'array_stripslashes');
 }
@@ -190,11 +190,11 @@ if(is_array($files))
 		$source = path_decode($file, $fmanConfig->rootdir);
 		if(is_dir($source))
 		{
-			destroyall($source);
+			destroyAll($source, $fileSync);
 		}
 		else
 		{
-			@unlink($source);
+			$fileSync->deleteFile($source, true);
 		}
 	}
 	echo 'SUCCESS';
@@ -228,7 +228,7 @@ else
 		echo 'FAILED';
 	}
 }
-deleteforbidden(dirname($newname));
+deleteForbidden(dirname($newname), $fileSync);
 }
 
 if(@$_GET['option']=='extractfile')
@@ -253,7 +253,7 @@ if(file_exists($filepath))
 		{
 			$zip->extractTo($targetdir.'/');
 			$zip->close();
-			deleteforbidden($targetdir, true);
+			deleteForbidden($targetdir, $fileSync, true);
 			echo 'SUCCESS';
 		}
 		else
@@ -276,7 +276,7 @@ if(!class_exists('ZipArchive'))
 if(isset($_POST['postdata']))
 {
 	parse_str(@$_POST['postdata'], $_POST);
-	if(isset($_POST) && (@get_magic_quotes_runtime()))
+	if(isset($_POST) && (@get_magic_quotes_runtime())) //NOSONAR
 	{
 		array_walk_recursive($_POST, 'array_stripslashes');
 	}
@@ -413,7 +413,7 @@ if(is_array($arr))
 		$d2c .= "/";
 	}
 }
-if(!file_put_contents($target, $data))
+if(!$fileSync->createFileWithContent($target, $data, true))
 {
 	echo "FAILED";
 }

@@ -21,8 +21,8 @@ if(@$school_id != 0 && isset($_POST['filename']) && isset($_POST['test_id']))
 			shell_exec("lame -b 32 $path $path-$rand");
 			if(file_exists($path."-".$rand))
 			{
-				@unlink($path);
-				@rename($path."-".$rand, $path);
+				$fileSync->deleteFile($path, true);
+				$fileSync->renameFile($path."-".$rand, $path, true);
 			}
 			$data = array(
 				'filename'=>$filename,

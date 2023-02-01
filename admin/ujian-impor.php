@@ -132,7 +132,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 					closedir($dh);
 				}
 			}
-			unlink($path);
+			$fileSync->deleteFile($path, true);
 
 			if(stripos($xml_data, '<?xml') === false)
 			{
@@ -234,7 +234,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 								$name_file_repaired = str_replace(".svg+xml", ".svg", $name_file);
 								$array_search[] = $name_file;
 								$array_replace[] = $name_file_repaired;
-								file_put_contents($test_dir."/".$name_file_repaired, $data_file);
+								$fileSync->createFileWithContent($test_dir."/".$name_file_repaired, $data_file, true);
 							}
 						}
 						$pertanyaan = htmlspecialchars_decode(replaceBase($text_pertanyaan, $base_src."/"));
@@ -268,11 +268,11 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 										if (stripos($encoding_file, "base64") !== false) {
 											$data_file = base64_decode($data_file);
 										}
-										file_put_contents($test_dir . "/" . $name_file, $data_file);
+										$fileSync->createFileWithContent($test_dir . "/" . $name_file, $data_file, true);
 										$name_file_repaired = str_replace(".svg+xml", ".svg", $name_file);
 										$array_search[] = $name_file;
 										$array_replace[] = $name_file_repaired;
-										file_put_contents($test_dir . "/" . $name_file_repaired, $data_file);
+										$fileSync->createFileWithContent($test_dir . "/" . $name_file_repaired, $data_file, true);
 									}
 								}
 								$option = htmlspecialchars_decode(replaceBase($text_option, $base_src . "/"));
@@ -307,7 +307,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 					closedir($dh);
 					foreach($file_list as $file)
 					{
-						@unlink($file);
+						$fileSync->deleteFile($file, true);
 					}
 				}
 				@rmdir(@$temp_dir);

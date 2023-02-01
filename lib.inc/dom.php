@@ -767,7 +767,7 @@ function addFirstParagraphClass($data)
 }
 
 
-function extractImageData($data, $directory, $prefix) //NOSONAR
+function extractImageData($data, $directory, $prefix, $fileSync) //NOSONAR
 {
 	$dom = new DOMDocument("1.0", "UTF-8");
 	$data = UTF8ToEntities($data);
@@ -803,7 +803,7 @@ function extractImageData($data, $directory, $prefix) //NOSONAR
 			if (stripos($type, 'svg') !== false) {
 				$path = $directory . "/" . $fn . ".svg";
 				$filename = $prefix . "/" . $fn . ".svg";
-				file_put_contents($path, base64_decode($data));
+				$fileSync->createFileWithContent($path, base64_decode($data), true);
 				$src->removeAttribute('src');
 				$src->setAttribute("src", $filename);
 			} else {
@@ -817,17 +817,17 @@ function extractImageData($data, $directory, $prefix) //NOSONAR
 						case "png":
 							$path = $directory . "/" . $fn . ".png";
 							$filename = $prefix . "/" . $fn . ".png";
-							file_put_contents($path, base64_decode($data));
+							$fileSync->createFileWithContent($path, base64_decode($data), true);
 							break;
 						case "gif":
 							$path = $directory . "/" . $fn . ".gif";
 							$filename = $prefix . "/" . $fn . ".gif";
-							file_put_contents($path, base64_decode($data));
+							$fileSync->createFileWithContent($path, base64_decode($data), true);
 							break;
 						default:
 							$path = $directory . "/" . $fn . ".jpeg";
 							$filename = $prefix . "/" . $fn . ".jpeg";
-							file_put_contents($path, base64_decode($data));
+							$fileSync->createFileWithContent($path, base64_decode($data), true);
 							break;
 					}
 					$src->removeAttribute('src');

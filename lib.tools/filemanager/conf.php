@@ -1,6 +1,6 @@
 <?php
 include_once dirname(__FILE__)."/auth.php";
-$fmanConfig = new StdClass();
+$fmanConfig = new stdClass;
 $fmanConfig->authentification_needed = true;		
 
 

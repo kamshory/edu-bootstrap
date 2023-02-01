@@ -281,7 +281,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 										$name_file_repaired = str_replace(".svg+xml", ".svg", $name_file);
 										$array_search[] = $name_file;
 										$array_replace[] = $name_file_repaired;
-										file_put_contents($test_dir."/".$name_file_repaired, $data_file);
+										$fileSync->createFileWithContent($test_dir."/".$name_file_repaired, $data_file, true);
 									}
 								}
 								$pertanyaan = htmlspecialchars_decode(htmlentities(replaceBase($text_pertanyaan, $base_src."/"), ENT_QUOTES, "UTF-8"), ENT_QUOTES);
@@ -323,7 +323,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 												$name_file_repaired = str_replace(".svg+xml", ".svg", $name_file);
 												$array_search[] = $name_file;
 												$array_replace[] = $name_file_repaired;
-												file_put_contents($test_dir."/".$name_file_repaired, $data_file);
+												$fileSync->createFileWithContent($test_dir."/".$name_file_repaired, $data_file, true);
 											}
 										}
 										$option = htmlspecialchars_decode(htmlentities(replaceBase($text_option, $base_src."/"), ENT_QUOTES, "UTF-8"), ENT_QUOTES);

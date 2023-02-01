@@ -419,8 +419,8 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$password = md5(md5($password_initial));
 
 
-								$phone = trim($phone, " ._-/\\ ");
-								$email = trim($email, " ._-/\\ ");
+								$phone = $picoEdu->trimPunctuation($phone);
+								$email = $picoEdu->trimPunctuation($email);
 								$email = $picoEdu->filterEmailAddress($email);
 
 								if ($name == '') {
@@ -551,8 +551,8 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$password = md5(md5($password_initial));
 
 
-								$phone = trim($phone, " ._-/\\ ");
-								$email = trim($email, " ._-/\\ ");
+								$phone = $picoEdu->trimPunctuation($phone);
+								$email = $picoEdu->trimPunctuation($email);
 
 								if ($name == '') {
 									continue;
@@ -629,16 +629,16 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 				}
 				
 				
-				@unlink($path);
+				$fileSync->deleteFile($path, true);
 				header("Location: ".basename($_SERVER['PHP_SELF'])."?option=success&school_id=$school_id");
 			}
 			else
 			{
-				@unlink($path);
+				$fileSync->deleteFile($path, true);
 				// delete file
 				header("Location: ".basename($_SERVER['PHP_SELF'])."?option=duplicated");
 			}
-			@unlink($path);
+			$fileSync->deleteFile($path, true);
 			// delete file
 		}
 	}

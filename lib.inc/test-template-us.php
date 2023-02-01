@@ -1,8 +1,4 @@
 <?php
-if(!defined('DB_NAME'))
-{
-	exit();
-}
 $dur_obj = $picoEdu->secondsToTime($data['duration']);
 ?><!DOCTYPE html>
 <html lang="en">

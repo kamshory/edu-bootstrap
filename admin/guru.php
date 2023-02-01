@@ -97,11 +97,11 @@ if(isset($_POST['save']) && @$_GET['option']=='add')
 	$password_initial = substr($token_teacher, 5, 6);
 	$password = md5(md5($password_initial));
 
-	$name = trim($name, " ._-/\\ ");
-	$reg_number = trim($reg_number, " ._-/\\ ");
-	$reg_number_national = trim($reg_number_national, " ._-/\\ ");
-	$phone = trim($phone, " ._-/\\ ");
-	$email = trim($email, " ._-/\\ ");
+	$name = $picoEdu->trimPunctuation($name);
+	$reg_number = $picoEdu->trimPunctuation($reg_number);
+	$reg_number_national = $picoEdu->trimPunctuation($reg_number_national);
+	$phone = $picoEdu->trimPunctuation($phone);
+	$email = $picoEdu->trimPunctuation($email);
 
 	if ($name != '') {
 

@@ -50,28 +50,13 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 
 		$base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id";
 		$base_src = "media.edu/school/$school_id/article/$article_id";
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu"))
-		{
-			@mkdir(dirname(dirname(__FILE__))."/media.edu", 0755);
-		}
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu/school"))
-		{
-			@mkdir(dirname(dirname(__FILE__))."/media.edu/school", 0755);
-		}
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id"))
-		{
-			@mkdir(dirname(dirname(__FILE__))."/media.edu/school/$school_id", 0755);
-		}
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article"))
-		{
-			@mkdir(dirname(dirname(__FILE__))."/media.edu/school/$school_id/article", 0755);
-		}
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id"))
-		{
-			@mkdir(dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id", 0755);
-		}
+
+		$dir2prepared = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id";
+		$dirBase = dirname(dirname(__FILE__));
+		$permission = 0755;
+		$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 			
-		$content = extractImageData($content, $base_dir, $base_src);
+		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 		$content = addslashes(UTF8ToEntities($content));
 		$sql = "update `edu_article` set `content` = '$content' where `article_id` = '$article_id' ";
 		$database->executeUpdate($sql, true);
@@ -84,28 +69,13 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 
 		$base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id";
 		$base_src = "media.edu/school/$school_id/article/$article_id";
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu"))
-		{
-			@mkdir(dirname(dirname(__FILE__))."/media.edu", 0755);
-		}
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu/school"))
-		{
-			@mkdir(dirname(dirname(__FILE__))."/media.edu/school", 0755);
-		}
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id"))
-		{
-			@mkdir(dirname(dirname(__FILE__))."/media.edu/school/$school_id", 0755);
-		}
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article"))
-		{
-			@mkdir(dirname(dirname(__FILE__))."/media.edu/school/$school_id/article", 0755);
-		}
-		if(!file_exists($base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id"))
-		{
-			@mkdir(dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id", 0755);
-		}
 
-		$content = extractImageData($content, $base_dir, $base_src);
+		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
+		$dirBase = dirname(dirname(__FILE__));
+		$permission = 0755;
+		$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
+
+		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 		$content = addslashes($content);
 		$sql = "update `edu_article` set
 		`title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 

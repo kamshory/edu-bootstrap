@@ -92,14 +92,14 @@ class listFile
 	}
 }
 
-function cleanforbiddenall($dir)
+function cleanForbiddenAll($dir, $fileSync)
 {
 	@chmod(dirname($dir), 0777);
 	@chmod($dir, 0777);
-	cleanforbidden($dir);
+	cleanForbidden($dir, $fileSync);
 	@chmod(dirname($dir), 0755);
 }
-function cleanforbidden($dir)
+function cleanForbidden($dir, $fileSync)
 {
 	global $fmanConfig;
 	$dir = rtrim($dir, "/");
@@ -109,12 +109,12 @@ function cleanforbidden($dir)
 			@chmod($dir . "/" . $file, 0777);
 			if (@is_dir($dir . "/" . $file)) {
 				chdir('.');
-				cleanforbidden($dir . "/" . $file);
+				cleanForbidden($dir . "/" . $file, $fileSync);
 			} else {
 				$fn = $dir . "/" . $file;
 				$tt = getMIMEType($fn);
 				if (in_array($tt->extension, $fmanConfig->forbidden_extension)) {
-					@unlink($fn);
+					$fileSync->deleteFile($fn, true);
 				}
 			}
 		}
@@ -122,15 +122,15 @@ function cleanforbidden($dir)
 	closedir($mydir);
 }
 
-function destroyall($dir)
+function destroyAll($dir, $fileSync)
 {
 	@chmod(dirname($dir), 0777);
 	@chmod($dir, 0777);
-	destroy($dir);
+	destroy($dir, $fileSync);
 	@rmdir($dir);
 	@chmod(dirname($dir), 0755);
 }
-function destroy($dir)
+function destroy($dir, $fileSync)
 {
 	$dir = rtrim($dir, "/");
 	$mydir = opendir($dir);
@@ -139,10 +139,10 @@ function destroy($dir)
 			@chmod($dir . "/" . $file, 0777);
 			if (is_dir($dir . "/" . $file)) {
 				chdir('.');
-				destroy($dir . "/" . $file);
+				destroy($dir . "/" . $file, $fileSync);
 				rmdir($dir . "/" . $file);
 			} else {
-				@unlink($dir . "/" . $file);
+				$fileSync->deleteFile($dir . "/" . $file);
 			}
 		}
 	}
@@ -563,12 +563,12 @@ function dir_list($dir)
 	}
 }
 
-function deleteforbidden($dir, $containsubdir = false)
+function deleteForbidden($dir, $fileSync, $containsubdir = false)
 {
 	global $fmanConfig;
 	if ($fmanConfig->delete_forbidden_extension && file_exists($dir) && is_array($fmanConfig->forbidden_extension)) {
 		if ($containsubdir) {
-			cleanforbiddenall($dir);
+			cleanForbiddenAll($dir, $fileSync);
 		} else {
 			$dh = opendir($dir);
 			if ($dh) {
@@ -581,7 +581,7 @@ function deleteforbidden($dir, $containsubdir = false)
 					if ($filetype == "file") {
 						$tt = getMIMEType($fn);
 						if (in_array($tt->extension, $fmanConfig->forbidden_extension)) {
-							@unlink($fn);
+							$fileSync->deleteFile($fn, $fileSync);
 						}
 					}
 				}
@@ -663,10 +663,11 @@ function compressImageFile($path, $authblogid)
 function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace = false, $quality = 80)
 {
 	$image = new StdClass();
+	global $fileSync;
 	$imageinfo = getimagesize($source);
 	if (empty($imageinfo)) {
 		if (file_exists($source)) {
-			unlink($source);
+			$fileSync->deleteFile($source, true);
 		}
 		return false;
 	}
@@ -678,7 +679,7 @@ function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace
 			if (function_exists('ImageCreateFromGIF')) {
 				$im = @ImageCreateFromGIF($source);
 			} else {
-				unlink($source);
+				$fileSync->deleteFile($source, true);
 				return false;
 			}
 			break;
@@ -686,7 +687,7 @@ function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace
 			if (function_exists('ImageCreateFromJPEG')) {
 				$im = @ImageCreateFromJPEG($source);
 			} else {
-				unlink($source);
+				$fileSync->deleteFile($source, true);
 				return false;
 			}
 			break;
@@ -694,12 +695,12 @@ function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace
 			if (function_exists('ImageCreateFromPNG')) {
 				$im = @ImageCreateFromPNG($source);
 			} else {
-				unlink($source);
+				$fileSync->deleteFile($source, true);
 				return false;
 			}
 			break;
 		default:
-			unlink($source);
+			$fileSync->deleteFile($source, true);
 			return false;
 	}
 	if (!$im) {
@@ -728,7 +729,7 @@ function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace
 	imagefilledrectangle($im2, 0, 0, $currentwidth, $currentheight, $white);
 	imagecopyresampled($im2, $im, 0, 0, 0, 0, $currentwidth, $currentheight, $image->width, $image->height);
 	if (file_exists($source)) {
-		unlink($source);
+		$fileSync->deleteFile($source, true);
 	}
 	if ($interlace) {
 		imageinterlace($im2, true);

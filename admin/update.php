@@ -142,7 +142,7 @@ if(isset($_POST['download']) && isset($_POST['version']))
 			)
 		);
 	$server_output = curl_exec($ch);
-	file_put_contents($filename, $server_output);
+	$fileSync->createFileWithContent($filename, $server_output, true);
 	// download database end	
 
 	// download program begin
@@ -161,7 +161,7 @@ if(isset($_POST['download']) && isset($_POST['version']))
 			)
 		);
 	$server_output = curl_exec($ch);
-	file_put_contents($filename, $server_output);
+	$fileSync->createFileWithContent($filename, $server_output, true);
 	// download program end	
 	
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?step=2");
@@ -186,7 +186,7 @@ if(isset($_POST['extract']))
 				$oke = $oke * 0;
 			}
 		}
-		@unlink($filename);
+		$fileSync->deleteFile($filename, true);
 	}
 	$filename = dirname(dirname(__FILE__))."/74594b6204df3e1683455de22c68aa22.zip";
 	if(file_exists($filename))
@@ -216,7 +216,7 @@ if(isset($_POST['extract']))
 							$oke2 = $oke2 * 0;
 						}
 					}
-					@unlink($path);
+					$fileSync->deleteFile($path, true);
 				}
 			} 
 			else 
@@ -224,7 +224,7 @@ if(isset($_POST['extract']))
 				$oke = $oke * 0;
 			}
 		}
-		@unlink($filename);
+		$fileSync->deleteFile($filename, true);
 	}
 	if($oke)
 	{
