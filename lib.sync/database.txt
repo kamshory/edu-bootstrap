@@ -746,3 +746,9 @@ update `edu_option`
 update `edu_option` 
 					set `time_edit` = '2023-02-01 16:24:29', `member_edit` = 'aaaaaaaaaaaaa' 
 					where `question_id` = '063da2f4fa5dd89203bb' and `option_id` = '063da2f4faa15992295c';
+--------------ruihwuiethwiughweighiwehgiwe
+DELETE FROM `edu_answer` where `test_id` = '063da2f4fa245561d8c1' ;
+--------------ruihwuiethwiughweighiwehgiwe
+DELETE FROM `edu_question` where `test_id` = '063da2f4fa245561d8c1' ;
+--------------ruihwuiethwiughweighiwehgiwe
+DELETE FROM `edu_test` where `test_id` = '063da2f4fa245561d8c1' and `school_id` = '063ce682801be89951aa' ;
