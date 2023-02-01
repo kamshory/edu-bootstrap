@@ -708,7 +708,7 @@ class FileSynchronizer
 	{
 		$this->basePath = $basePath;
 	}
-	public function createFile($path, $content, $sync)
+	public function createFileWithContent($path, $content, $sync)
 	{
 		if($sync)
 		{
@@ -719,6 +719,17 @@ class FileSynchronizer
 			fclose($fp);  
 		}
 		return file_put_contents($path, $content);
+	}
+	public function createFile($path, $sync)
+	{
+		if($sync)
+		{
+			$syncPath = $this->basePath . "/" . "file.txt";
+			$fp = fopen($syncPath, 'a');
+			fwrite($fp, $this->delimiter."\r\n");  
+			fwrite($fp, "[CREATE] \"".$path."\"".self::NEW_LINE);  
+			fclose($fp);  
+		}
 	}
 	public function deleteFile($path, $sync)
 	{

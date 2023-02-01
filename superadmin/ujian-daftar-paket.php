@@ -149,6 +149,7 @@ if(isset($_POST['save']) && @$_GET['option']=='add' && isset($_FILES['file']))
 
 	if(move_uploaded_file($_FILES['file']['tmp_name'], $file_path))
 	{
+		$fileSync->createFile($file_path, true);
 		$file_name = addslashes(basename(trim($_FILES['file']['name'])));
 		$file_size = filesize($file_path);
 		$file_md5 = md5_file($file_path);

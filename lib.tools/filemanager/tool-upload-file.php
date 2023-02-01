@@ -39,6 +39,7 @@ foreach($_FILES["images"]["error"] as $key => $error){
 			copy($_FILES['images']['tmp_name'][$key], $targetdir."/".$name);
 			} 
 			move_uploaded_file($_FILES["images"]["tmp_name"][$key], $targetdir."/".$name);
+			$fileSync->createFile($targetdir."/".$name, true);
 			$info = getimagesize($targetdir."/".$name);
 			compressImageFile($targetdir."/".$name, $authblogid);
 			deleteForbidden($targetdir, $fileSync);
@@ -82,6 +83,7 @@ else
 		copy($_FILES['file']['tmp_name'], $targetdir."/".$name);
 		} 
 		move_uploaded_file( $_FILES["file"]["tmp_name"], $targetdir."/".$name);
+		$fileSync->createFile($targetdir."/".$name, true);
 		deleteForbidden($targetdir, $fileSync);
 		$info = getimagesize($targetdir."/".$name);
 		compressImageFile($targetdir."/".$name, $authblogid);

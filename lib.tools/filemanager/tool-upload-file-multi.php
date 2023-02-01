@@ -39,6 +39,7 @@ foreach($_FILES["images"]["error"] as $key => $error){
 			copy($_FILES['images']['tmp_name'][$key], $targetdir."/".$name);
 			} 
 			move_uploaded_file($_FILES["images"]["tmp_name"][$key], $targetdir."/".$name);
+			$fileSync->createFile($targetdir."/".$name, true);
 			$info = getimagesize($targetdir."/".$name);
 			compressImageFile($targetdir."/".$name, $authblogid);
 			deleteForbidden($targetdir, $fileSync);

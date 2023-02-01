@@ -104,6 +104,7 @@ if($stmt->rowCount() > 0)
 						copy($_FILES['images']['tmp_name'][$key], $test_dir."/".$name);
 					} 
 					move_uploaded_file($_FILES["images"]["tmp_name"][$key], $test_dir."/".$name);
+					$fileSync->createFile($test_dir . "/" . $name, true);
 				}
 			}
 		}

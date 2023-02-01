@@ -29,6 +29,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 		$path = dirname(__FILE__)."/tmp/$ip-".mt_rand(1000000, 9000000).".xlsx";
 		$success = move_uploaded_file($_FILES['file']['tmp_name'], $path);
+		$fileSync->createFile($path, true);
 		$errors = 0;
 		if($success && file_exists($path))
 		{

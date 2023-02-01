@@ -62,6 +62,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 		$path = $temp_dir."/$basename.xml";
 		
 		$success = move_uploaded_file($_FILES['file']['tmp_name'], $path);
+		$fileSync->createFile($path, true);
 		$xml_data = '';
 		$is_zip = false;
 
@@ -70,7 +71,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 			$zip = new ZipArchive();
 			$res = $zip->open($path, ZipArchive::CHECKCONS);
 			$err = false;
-			if ($res !== TRUE)
+			if ($res !== true)
 			{
 				switch($res)
 				{
