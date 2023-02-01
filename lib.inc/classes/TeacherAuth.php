@@ -57,7 +57,7 @@ class TeacherAuth
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
 					$now = $picoEdu->getLocalDateTime();
-					$sql = "UPDATE `edu_teacher` set 
+					$sql = "UPDATE `edu_teacher` SET 
 						`ip_last_activity` = '$ip', 
 						`time_last_activity` = '$now' 
 						WHERE `teacher_id` = '" . $this->teacher_id . "'";

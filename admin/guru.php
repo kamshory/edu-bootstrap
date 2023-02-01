@@ -138,7 +138,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 				$sql2 = "INSERT INTO `edu_member_school` 
 				(`member_id`, `school_id`, `role`, `time_create`, `active`) values
-				('$teacher_id', '$school_id', 'T', '$time_create', '1')
+				('$teacher_id', '$school_id', 'T', '$time_create', true)
 				";
 				$database->executeInsert($sql2);
 
@@ -153,7 +153,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "UPDATE `edu_teacher` set 
+	$sql = "UPDATE `edu_teacher` SET 
 	`reg_number` = '$reg_number', `reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', 
 	`birth_place` = '$birth_place', `birth_day` = '$birth_day', `address` = '$address', `time_edit` = '$time_edit', 
 	`admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
@@ -162,21 +162,21 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	
 	if($phone != '')
 	{
-		$sql = "UPDATE `edu_teacher` set 
+		$sql = "UPDATE `edu_teacher` SET 
 		`phone` = '$phone'
 		WHERE `teacher_id` = '$teacher_id2' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	if($email != '')
 	{
-		$sql = "UPDATE `edu_teacher` set 
+		$sql = "UPDATE `edu_teacher` SET 
 		`email` = '$email'
 		WHERE `teacher_id` = '$teacher_id2' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
-		$sql = "UPDATE `edu_teacher` set 
+		$sql = "UPDATE `edu_teacher` SET 
 		`password` = md5(md5('$password')), `password_initial` = '$password'
 		WHERE `teacher_id` = '$teacher_id2' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);

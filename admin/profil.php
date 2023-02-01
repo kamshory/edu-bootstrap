@@ -24,25 +24,25 @@ if(count(@$_POST))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "UPDATE `edu_admin` set 
+	$sql = "UPDATE `edu_admin` SET 
 	`name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day',  
 	`time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit'
 	WHERE `admin_id` = '$admin_id'";
 	$database->executeUpdate($sql, true);
 
-	$sql = "UPDATE `edu_admin` set 
+	$sql = "UPDATE `edu_admin` SET 
 	`email` = '$email'
 	WHERE `admin_id` = '$admin_id'";
 	$database->executeUpdate($sql, true);
 
-	$sql = "UPDATE `edu_admin` set 
+	$sql = "UPDATE `edu_admin` SET 
 	`phone` = '$phone'
 	WHERE `admin_id` = '$admin_id'";
 	$database->executeUpdate($sql, true);
 
 	if($password != '')
 	{
-		$sql = "UPDATE `edu_admin` set 
+		$sql = "UPDATE `edu_admin` SET 
 		`password` = md5(md5('$password'))
 		WHERE `admint_id` = '$admin_id' and `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);

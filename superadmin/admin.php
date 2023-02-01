@@ -128,7 +128,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 			$sql2 = "INSERT INTO `edu_member_school` 
 			(`member_id`, `school_id`, `role`, `time_create`, `active`) values
-			('$admin_id', '$school_id', 'A', '$time_create', '1')
+			('$admin_id', '$school_id', 'A', '$time_create', true)
 			";
 			$res2 = $database->executeInsert($sql2);
 			header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&admin_id=$admin_id");
@@ -147,30 +147,30 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		$initial = $data['school_id'];
 
-		$sql = "UPDATE `edu_admin` set 
+		$sql = "UPDATE `edu_admin` SET 
 		`name` = '$name', `admin_level` = '$admin_level', `gender` = '$gender', `birth_place` = '$birth_place', 
 		`birth_day` = '$birth_day', `school_id` = '$school_id', `time_edit` = '$time_edit', `admin_edit` = '$admin_edit', 
 		`ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
 		WHERE `admin_id` = '$admin_id2'  ";
 		$database->executeUpdate($sql, true);
 
-		$sql = "UPDATE `edu_admin` set 
+		$sql = "UPDATE `edu_admin` SET 
 		`email` = '$email' WHERE `admin_id` = '$admin_id2' ";
 		$database->executeUpdate($sql, true);
 
-		$sql = "UPDATE `edu_admin` set 
+		$sql = "UPDATE `edu_admin` SET 
 		`phone` = '$phone' WHERE `admin_id` = '$admin_id2' ";
 		$database->executeUpdate($sql, true);
 
 		if ($username != '') {
-			$sql = "UPDATE `edu_admin` set 
+			$sql = "UPDATE `edu_admin` SET 
 			`username` = '$username'
 			WHERE `admin_id` = '$admin_id2' ";
 			$database->executeUpdate($sql, true);
 		}
 
 		if ($password != '') {
-			$sql = "UPDATE `edu_admin` set 
+			$sql = "UPDATE `edu_admin` SET 
 			`password` = md5(md5('$password'))
 			WHERE `admin_id` = '$admin_id2' ";
 			$database->executeUpdate($sql, true);
@@ -178,7 +178,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		if ($initial != $school_id) {
 			$sql2 = "INSERT INTO `edu_member_school` 
 			(`member_id`, `school_id`, `role`, `time_create`, `active`) values
-			('$admin_id', '$school_id', 'A', '$time_create', '1')
+			('$admin_id', '$school_id', 'A', '$time_create', true)
 			";
 			$database->executeInsert($sql2);
 		}

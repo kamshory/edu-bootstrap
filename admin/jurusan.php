@@ -87,7 +87,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "UPDATE `edu_school_program` set 
+	$sql = "UPDATE `edu_school_program` SET 
 	`name` = '$name', `order` = '$sort_order', `default` = '$default', `time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
 	WHERE `school_program_id` = '$school_program_id2'";
 	$database->executeUpdate($sql, true);

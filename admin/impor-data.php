@@ -190,7 +190,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 							$sql2 = "INSERT INTO `edu_member_school` 
 							(`member_id`, `school_id`, `role`, `time_create`, `active`) values
-							('$admin_id', '$school_id', 'A', '$time_create', '1')
+							('$admin_id', '$school_id', 'A', '$time_create', true)
 							";
 							try {
 								$database->executeInsert($sql2, true);
@@ -280,7 +280,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 									$sql2 = "INSERT INTO `edu_member_school` 
 									(`member_id`, `school_id`, `role`, `time_create`, `active`) values
-									('$admin_id', '$school_id', 'A', '$time_create', '1')
+									('$admin_id', '$school_id', 'A', '$time_create', true)
 									";
 									$database->executeInsert($sql2, true);
 								} else {
@@ -365,7 +365,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 						}
 						// import data class
 						// selesai
-						$sql = "UPDATE `edu_school_program` set 
+						$sql = "UPDATE `edu_school_program` SET 
 						`time_create` = '$time_create', `time_edit` = '$time_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', 
 						`admin_create` = '$admin_create', `admin_edit` = '$admin_edit'
 						WHERE `school_id` = '$school_id'; 
@@ -472,7 +472,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 									$sql2 = "INSERT INTO `edu_member_school` 
 									(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) values
-									('$student_id', '$school_id', 'S', '$class_id', '$time_create', '1')
+									('$student_id', '$school_id', 'S', '$class_id', '$time_create', true)
 									";
 
 									$database->executeInsert($sql2, true);
@@ -598,7 +598,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 									$sql2 = "INSERT INTO `edu_member_school` 
 									(`member_id`, `school_id`, `role`, `time_create`, `active`) values
-									('$teacher_id', '$school_id', 'T', '$time_create', '1')
+									('$teacher_id', '$school_id', 'T', '$time_create', true)
 									";
 									$database->executeInsert($sql2, true);
 

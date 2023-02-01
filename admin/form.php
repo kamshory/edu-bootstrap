@@ -519,7 +519,7 @@ $str .= "\tmysql_query(\$sql);
 $str .= "if(isset(\$_POST"."['save']".") && @\$_GET"."['option']"."=='edit')
 {
 ";
-$str .= "\t\$sql = \"UPDATE `\".DB_PREFIX.\"$table` set 
+$str .= "\t\$sql = \"UPDATE `\".DB_PREFIX.\"$table` SET 
 \t";
 foreach($field_edit as $k=>$field2)
 {

@@ -142,7 +142,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "UPDATE `edu_test` set 
+	$sql = "UPDATE `edu_test` SET 
 	`name` = '$name', `class` = '$class', `subject` = '$subject', `teacher_id` = '$teacher_id', `description` = '$description', 
 	`guidance` = '$guidance', `open` = '$open', `has_limits` = '$has_limits', `trial_limits` = '$trial_limits', `threshold` = '$threshold', 
 	`assessment_methods` = '$assessment_methods', `number_of_question` = '$number_of_question', `number_of_option` = '$number_of_option', 

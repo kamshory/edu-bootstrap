@@ -192,7 +192,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$ip_create = $ip_edit = addslashes($_SERVER['REMOTE_ADDR']);
 	$active = kh_filter_input(INPUT_POST, 'active', FILTER_SANITIZE_NUMBER_UINT);
 
-	$sql = "UPDATE `edu_test_collection` set 
+	$sql = "UPDATE `edu_test_collection` SET 
 	`name` = '$name', `grade_id` = '$grade_id', `time_edit` = '$time_edit', `ip_edit` = '$ip_edit', `active` = '$active'
 	WHERE `test_collection_id` = '$test_collection_id'";
 	$database->execute($sql);

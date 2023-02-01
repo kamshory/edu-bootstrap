@@ -56,7 +56,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "UPDATE `edu_test_collection` set 
+	$sql = "UPDATE `edu_test_collection` SET 
 	`name` = '$name', `grade_id` = '$grade_id', `file_name` = '$file_name', `file_path` = '$file_path', `file_size` = '$file_size', `file_md5` = '$file_md5', `file_sha1` = '$file_sha1', `time_create` = '$time_create', `time_edit` = '$time_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `taken` = '$taken', `active` = '$active'
 	WHERE `test_collection_id` = '$test_collection_id2'";
 	$database->executeUpdate($sql, true);

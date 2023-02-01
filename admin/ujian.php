@@ -344,7 +344,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "UPDATE `edu_test` set 
+	$sql = "UPDATE `edu_test` SET 
 	`name` = '$name', `class` = '$class', `school_program_id` = '$school_program_id', `subject` = '$subject', `teacher_id` = '$teacher_id', 
 	`description` = '$description', `guidance` = '$guidance', `open` = '$open', `has_limits` = '$has_limits', `trial_limits` = '$trial_limits', 
 	`threshold` = '$threshold', `assessment_methods` = '$assessment_methods', `number_of_question` = '$number_of_question', 

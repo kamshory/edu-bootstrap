@@ -133,7 +133,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		
 		$sql2 = "INSERT INTO `edu_member_school` 
 		(`member_id`, `school_id`, `role`, `time_create`, `active`) values
-		('$admin_id', '$school_id', 'A', '$time_create', '1')
+		('$admin_id', '$school_id', 'A', '$time_create', true)
 		";
 		$database->executeInsert($sql2, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&admin_id=$admin_id");
@@ -143,23 +143,23 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$sql = "UPDATE `edu_admin` set 
+	$sql = "UPDATE `edu_admin` SET 
 	`name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', 
 	`time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
 	WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
 	$database->executeUpdate($sql, true);
 	
-	$sql = "UPDATE `edu_admin` set 
+	$sql = "UPDATE `edu_admin` SET 
 	`email` = '$email' WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
 	$database->executeUpdate($sql, true);
 	
-	$sql = "UPDATE `edu_admin` set 
+	$sql = "UPDATE `edu_admin` SET 
 	`phone` = '$phone' WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
 	$database->executeUpdate($sql, true);
 
 	if($username != '')
 	{
-		$sql = "UPDATE `edu_admin` set 
+		$sql = "UPDATE `edu_admin` SET 
 		`username` = '$username'
 		WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
 		$database->executeUpdate($sql, true);
@@ -167,7 +167,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	
 	if($password != '')
 	{
-		$sql = "UPDATE `edu_admin` set 
+		$sql = "UPDATE `edu_admin` SET 
 		`password` = md5(md5('$password'))
 		WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
 		$database->executeUpdate($sql, true);
