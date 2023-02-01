@@ -861,3 +861,24 @@ UPDATE `edu_school` set
 <p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/5609f347bd9a4caf9041c10cee456caf.svg\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\"></p>'
 	WHERE `school_id` = '063ce682801be89951aa'
 	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"latex-image equation-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/72fd8b31eb1d1ef815ff1ee7fee44afc.svg\" alt=\"\\lim _{x \\to 1}\\frac{x+1}{x-1}\" data-equation=\"N4IgNghgLgpgHiAXCAOisBLAtgAgPrBw5pQD2OAjAL5oBmAThAMaEDU1hAtNSADQgArAM6kAdklBQAngAcYSEAFEAjgFdoGMXxAA3CGFXzEo1WDD9ScxqIAmQiSDIyAMjB0wwAYTFQIGUTD0SADakrJGIM7YGFDaegZGJmYWVhC29oigYDC0sYihjuEKAMpSWABGpGBx+oYKCCmBaXZISWBUALr89BgA5gAWeQXSciVlldX88XXIFNqWTemtpu0dVFS8YaPIxb5MANYwNgBijExQmuJTtYkrjdYtmSAmWE1kQflbEaUVVTUJ9XmqSWxhWGy+CgA8ql3v8ZiBWEDFo82uDCtsQD8JnCInN7s0MqiuiAbDBRKQsP5oKQPsMijtxn9rgDkA0QAsHoSwZt0RFoW8aTiFIAkIiRnOWZjRI2+jMmuhuCjx7OBKLBa066yoQA==\" data-latex=\"\\lim _{x \\to 1}\\frac{x+1}{x-1}\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/6a03bdccd5aecb75550880e2557a257b.svg\" alt=\"f(x)=a_0+\\sum_{n=1}^{&infin;} (a_n  \\cos (n&pi;\\frac{x}{L})+b_n  \\sin (n&pi;\\frac{x}{L}) )\" data-latex=\"f(x)=a_0+\\sum_{n=1}^{&infin;} (a_n  \\cos (n&pi;\\frac{x}{L})+b_n  \\sin (n&pi;\\frac{x}{L}) )\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/5609f347bd9a4caf9041c10cee456caf.svg\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/d0d9594b6a44c4f8329d5f8b4189d3d0.svg\" alt=\"(x+a)^n=\\sum_(k=0)^n ((n&brvbar;k) x^k a^(n-k) )\" data-latex=\"(x+a)^n=\\sum_(k=0)^n ((n&brvbar;k) x^k a^(n-k) )\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/88ca6723f2bf2244b64e1b2115772c02.svg\" alt=\"\\cos &alpha;+\\cos &beta;=2 \\cos (\\frac{1}{2} (&alpha;+&beta;))  \\cos (\\frac{1}{2} (&alpha;-&beta;))\" data-latex=\"\\cos &alpha;+\\cos &beta;=2 \\cos (\\frac{1}{2} (&alpha;+&beta;))  \\cos (\\frac{1}{2} (&alpha;-&beta;))\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/05da460ee23785bfd35c5435b749a4eb.svg\" alt=\"\\int_{x=0}^{9} \\sin(x) dx\" data-latex=\"\\int_{x=0}^{9} \\sin(x) dx\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/5609f347bd9a4caf9041c10cee456caf.svg\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_article`
+		(`article_id`, `school_id`, `title`, `open`, `class`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, 
+		`role_edit`, `ip_create`, `ip_edit`, `active`) values	
+		('063da67d0dcf5af0f05e', '063ce682801be89951aa', 'jajshfiuhife', '0', '', '2023-02-01 20:23:28', '2023-02-01 20:23:28', 'aaaaaaaaaaaaa', 'A', 'aaaaaaaaaaaaa', 
+		'A', '127.0.0.1', '127.0.0.1', '1')
+		;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_article` SET `content` = '<p>d,vfbkhwehgw</p>
+<p><sup><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"\\sin(x)\" data-latex=\"\\sin(x)\" data-renderer=\"browser-mathml\" src=\"media.edu/school/063ce682801be89951aa/article/063da67d0dcf5af0f05e/43a3a9094fb72c6b6cc2f4f5fcfcf640.svg\"></sup></p>' WHERE `article_id` = '063da67d0dcf5af0f05e' ;
