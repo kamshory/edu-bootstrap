@@ -77,10 +77,6 @@ class PicoDatabase
 
 	public function executeInsert($sql, $sync = false)
 	{
-		if($sync)
-		{
-			$this->createSync($sql);
-		}
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
@@ -88,15 +84,15 @@ class PicoDatabase
 		catch(PDOException $e)
 		{
 			echo $e->getMessage()."\r\nERROR &raquo; $sql";
+		}
+		if($sync)
+		{
+			$this->createSync($sql);
 		}
 		return $stmt;
 	}
 	public function executeUpdate($sql, $sync = false)
 	{
-		if($sync)
-		{
-			$this->createSync($sql);
-		}
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
@@ -104,15 +100,15 @@ class PicoDatabase
 		catch(PDOException $e)
 		{
 			echo $e->getMessage()."\r\nERROR &raquo; $sql";
+		}
+		if($sync)
+		{
+			$this->createSync($sql);
 		}
 		return $stmt;
 	}
 	public function executeDelete($sql, $sync = false)
 	{
-		if($sync)
-		{
-			$this->createSync($sql);
-		}
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
@@ -120,15 +116,15 @@ class PicoDatabase
 		catch(PDOException $e)
 		{
 			echo $e->getMessage()."\r\nERROR &raquo; $sql";
+		}
+		if($sync)
+		{
+			$this->createSync($sql);
 		}
 		return $stmt;
 	}
 	public function executeTransaction($sql, $sync = false)
 	{
-		if($sync)
-		{
-			$this->createSync($sql);
-		}
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
@@ -136,6 +132,10 @@ class PicoDatabase
 		catch(PDOException $e)
 		{
 			echo $e->getMessage()."\r\nERROR &raquo; $sql";
+		}
+		if($sync)
+		{
+			$this->createSync($sql);
 		}
 		return $stmt;
 	}
