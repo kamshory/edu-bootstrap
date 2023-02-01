@@ -59,7 +59,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 					$data = array();
 					for ($col = 0; $col < $highestColumnIndex; ++$col) 
 					{
-						$data[$fieldArray[$col]] = trim($objWorksheet->getCellByColumnAndRow($col, $row)->getValue(), " \r\n\t ");
+						$data[$fieldArray[$col]] = $picoEdu->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
 					}
 					$name = $picoEdu->filterSanitizeName(@$data['name'], true);
 					
@@ -222,7 +222,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 							for ($row = 2; $row <= $highestRow; ++$row) {
 								$data = array();
 								for ($col = 0; $col < $highestColumnIndex; ++$col) {
-									$data[$fieldArray[$col]] = trim($objWorksheet->getCellByColumnAndRow($col, $row)->getValue(), " \r\n\t ");
+									$data[$fieldArray[$col]] = $picoEdu->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
 								}
 
 								$name = $picoEdu->filterSanitizeName(@$data['name']);
@@ -314,7 +314,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 							for ($row = 2; $row <= $highestRow; ++$row) {
 								$data = array();
 								for ($col = 0; $col < $highestColumnIndex; ++$col) {
-									$data[$fieldArray[$col]] = trim($objWorksheet->getCellByColumnAndRow($col, $row)->getValue(), " \r\n\t ");
+									$data[$fieldArray[$col]] = $picoEdu->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
 								}
 
 								$name = $picoEdu->filterSanitizeName(@$data['name']);
@@ -393,7 +393,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 							for ($row = 2; $row <= $highestRow + 3; ++$row) {
 								$data = array();
 								for ($col = 0; $col < $highestColumnIndex; ++$col) {
-									$data[$fieldArray[$col]] = trim($objWorksheet->getCellByColumnAndRow($col, $row)->getValue(), " \r\n\t ");
+									$data[$fieldArray[$col]] = $picoEdu->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
 								}
 								$reg_number = $picoEdu->filterSanitizeDoubleSpace(@$data['reg_number']);
 								$reg_number_national = $picoEdu->filterSanitizeDoubleSpace(@$data['reg_number_national']);
@@ -527,7 +527,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 							for ($row = 2; $row <= $highestRow; ++$row) {
 								$data = array();
 								for ($col = 0; $col < $highestColumnIndex; ++$col) {
-									$data[$fieldArray[$col]] = trim($objWorksheet->getCellByColumnAndRow($col, $row)->getValue(), " \r\n\t ");
+									$data[$fieldArray[$col]] = $picoEdu->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
 								}
 
 								$reg_number = $picoEdu->filterSanitizeDoubleSpace(@$data['reg_number']);

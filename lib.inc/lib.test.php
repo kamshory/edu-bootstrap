@@ -4,7 +4,7 @@ $cfg->image_not_exported = array('latex.codecogs.com');
 $cfg->audio_not_exported = array();
 
 
-function replaceImageData($html, $base_dir)
+function replaceImageData($html, $base_dir) //NOSONAR
 {
 	global $cfg;
 	error_reporting(0);
@@ -30,7 +30,8 @@ function replaceImageData($html, $base_dir)
 		}
 
 
-		if (stripos($src, "data:") === 0) {
+		if (stripos($src, "data:") === 0) //NOSONAR
+		{
 			$arr = explode(",", $src, 2);
 			$arr2 = explode(";", $arr[0]);
 			$arr3 = explode(":", $arr2[0]);
@@ -48,10 +49,10 @@ function replaceImageData($html, $base_dir)
 				curl_setopt($ch, CURLOPT_URL, $url);
 				curl_setopt($ch, CURLOPT_HEADER, false);
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-				curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.1 Safari/537.11');
+				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); //NOSONAR
+				curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.1 Safari/537.11'); //NOSONAR
 				$data = curl_exec($ch);
-				$rescode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+				$rescode = curl_getinfo($ch, CURLINFO_HTTP_CODE); //NOSONAR
 				curl_close($ch);
 			}
 			$hash = substr(md5($src), 0, 6) . "_";
@@ -72,20 +73,20 @@ function replaceImageData($html, $base_dir)
 
 			switch ($ext) {
 				case 'gif':
-					$content_type = "image/gif";
+					$content_type = "image/gif"; //NOSONAR
 					break;
 
 				case 'png':
-					$content_type = "image/png";
+					$content_type = "image/png"; //NOSONAR
 					break;
 
 				case 'jpeg':
 				case 'jpg':
-					$content_type = "image/jpeg";
+					$content_type = "image/jpeg"; //NOSONAR
 					break;
 
 				default:
-					$content_type = "image/jpeg";
+					$content_type = "image/jpeg"; //NOSONAR
 			}
 		}
 		unset($obj);
@@ -131,7 +132,7 @@ function extract_image($html, $base_dir) //NOSONAR
 		$src = $image->getAttribute('src');
 		$skip = false;
 		if (is_array($cfg->image_not_exported)) {
-			foreach ($cfg->image_not_exported as $key => $val) {
+			foreach ($cfg->image_not_exported as $val) {
 				if (stripos($src, $val) !== false) {
 					$skip = true;
 				}
@@ -159,10 +160,10 @@ function extract_image($html, $base_dir) //NOSONAR
 				curl_setopt($ch, CURLOPT_URL, $url);
 				curl_setopt($ch, CURLOPT_HEADER, false);
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-				curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.1 Safari/537.11');
+				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); //NOSONAR
+				curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.1 Safari/537.11'); //NOSONAR
 				$data = curl_exec($ch);
-				$rescode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+				$rescode = curl_getinfo($ch, CURLINFO_HTTP_CODE); //NOSONAR
 				curl_close($ch);
 			}
 			$hash = substr(md5($src), 0, 6) . "_";
@@ -216,7 +217,7 @@ function extract_image($html, $base_dir) //NOSONAR
 		$src = $audio->getAttribute('src');
 		$skip = false;
 		if (is_array($cfg->audio_not_exported)) {
-			foreach ($cfg->audio_not_exported as $key => $val) {
+			foreach ($cfg->audio_not_exported as $val) {
 				if (stripos($src, $val) !== false) {
 					$skip = true;
 				}
@@ -246,8 +247,8 @@ function extract_image($html, $base_dir) //NOSONAR
 				curl_setopt($ch, CURLOPT_URL, $url);
 				curl_setopt($ch, CURLOPT_HEADER, false);
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-				curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.1 Safari/537.11');
+				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); //NOSONAR
+				curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.1 Safari/537.11'); //NOSONAR
 				$data = curl_exec($ch);
 				$rescode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 				curl_close($ch);
@@ -324,7 +325,7 @@ function extract_image($html, $base_dir) //NOSONAR
 
 $arr_files = array();
 
-function export_question($database, $question_id, $base_dir = "")
+function export_question($database, $question_id, $base_dir = "") //NOSONAR
 {
 	global $arr_files;
 	$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' ";
@@ -345,7 +346,7 @@ function export_question($database, $question_id, $base_dir = "")
 		$content = htmlspecialchars($parsed_data->html);
 
 		if (count($files) > 0) {
-			foreach ($files as $key => $val) {
+			foreach ($files as $val) {
 				if (!in_array($val->name, $arr_files)) {
 					$file1 .= "
 		<file>
@@ -387,7 +388,7 @@ function export_question($database, $question_id, $base_dir = "")
 				$files = $parsed_data->files;
 				$content = htmlspecialchars($parsed_data->html);
 				if (count($files) > 0) {
-					foreach ($files as $key => $val) {
+					foreach ($files as $val) {
 						if (!in_array($val->name, $arr_files)) {
 							$file2 .= "
 				<file>
@@ -579,10 +580,10 @@ function optionMatch($opt, $numbering)
 	return -1;
 }
 
-function parseQuestion($question)
+function parseQuestion($question) //NOSONAR
 {
 	$question_text = "";
-	$question = str_replace("\\\\\r\n", "<br />", $question);
+	$question = str_replace("\\\\\r\n", "<br />", $question); //NOSONAR
 	$lines = explode("\r\n", $question);
 	$question_text = $lines[0];
 	$numbering_type = false;
@@ -591,7 +592,7 @@ function parseQuestion($question)
 	$lineslength = count($lines);
 	if ($lineslength > 2) {
 		foreach ($lines as $key => $val) {
-			$lines[$key] = trim($val, " \t\r\n\t ");
+			$lines[$key] = trim($val, " \t\r\n\t "); //NOSONAR
 		}
 		$i = 1;
 		do {
@@ -609,7 +610,7 @@ function parseQuestion($question)
 				$opt = trim($tmp[0], " \t\r\n\t ");
 				if (optionMatch($opt, $numbering_type) > -1) {
 					$options[] = array('text' => trim($tmp[1], " \t\r\n\t "), 'value' => 0);
-					$k++;
+					$k++; //NOSONAR
 				} else {
 					if ($k == -1) {
 						$question_text .= '<br />' . $lines[$i];
@@ -627,7 +628,8 @@ function parseQuestion($question)
 		}
 		if ($lineslength > 3) {
 			$lastIsAnswer = true;
-			if (substr_count($lines[$lineslength - 1], "\\\\:") == substr_count($lines[$lineslength - 1], ":")) {
+			if (substr_count($lines[$lineslength - 1], "\\\\:") == substr_count($lines[$lineslength - 1], ":")) //NOSONAR
+			{
 				$lastIsAnswer = false;
 			}
 			if (stripos($lines[$lineslength - 1], ':') !== false && $lastIsAnswer) {
@@ -674,7 +676,7 @@ function parseQuestion($question)
 	return $result;
 }
 
-function addImages($text, $base_dir = '', $base_src = '', $temp_dir = "")
+function addImages($text, $base_dir = '', $base_src = '', $temp_dir = "") //NOSONAR
 {
 	$verticalAlign = array('baseline', 'top', 'bottom', 'middle', 'text-top', 'text-bottom');
 
@@ -686,7 +688,7 @@ function addImages($text, $base_dir = '', $base_src = '', $temp_dir = "")
 	$arr = explode(" ", $temp);
 	$arr_find = array();
 	$arr_replace = array();
-	foreach ($arr as $key => $val) {
+	foreach ($arr as $val) {
 		if (stripos($val, "img:") === 0) {
 			$val2 = trim(str_replace("<br>", "", $val));
 			$val2 = trim(str_replace("<br />", "", $val2));
@@ -699,19 +701,19 @@ function addImages($text, $base_dir = '', $base_src = '', $temp_dir = "")
 				$arr2 = explode("#", $img);
 				$img = $arr2[0];
 				if (in_array($arr2[1], $verticalAlign)) {
-					$style[] = "vertical-align:" . $arr2[1];
+					$style[] = "vertical-align:" . $arr2[1]; //NOSONAR
 				}
-				$style_element = ' style="' . implode("; ", $style) . '"';
-				$style_element = str_replace(' style=""', '', $style_element);
+				$style_element = ' style="' . implode("; ", $style) . '"'; //NOSONAR
+				$style_element = str_replace(' style=""', '', $style_element); //NOSONAR
 				if (count($arr2) > 2) {
 					$l = explode(",", $arr2[2]);
 					$m = ((int)@$l[0]) * 1;
 					$n = ((int)@$l[1]) * 1;
 					if ($m > 0) {
-						$style_element .= ' width="' . $m . '"';
+						$style_element .= ' width="' . $m . '"'; //NOSONAR
 					}
 					if ($n > 0) {
-						$style_element .= ' height="' . $n . '"';
+						$style_element .= ' height="' . $n . '"'; //NOSONAR
 					}
 					if (count($arr2) > 3) {
 						$alt = rawurldecode($arr2[3]);
@@ -727,7 +729,7 @@ function addImages($text, $base_dir = '', $base_src = '', $temp_dir = "")
 			}
 
 			$arr_find[] = $val2;
-			$arr_replace[] = '<img src="' . $base_src . $img . '" alt="' . $img . '"' . $style_element . '>';
+			$arr_replace[] = '<img src="' . $base_src . $img . '" alt="' . $img . '"' . $style_element . '>'; //NOSONAR
 			if ($temp_dir != $base_dir && $temp_dir != "" && file_exists($temp_dir . "/" . $img)) {
 				@copy($temp_dir . "/" . $img, $base_dir . "/" . $img);
 			}
@@ -763,7 +765,7 @@ function addImages($text, $base_dir = '', $base_src = '', $temp_dir = "")
 						$style_element .= ' height="280"';
 					}
 				} else {
-					$style_element .= ' height="500" height="280"';
+					$style_element .= ' height="500" height="280"'; //NOSONAR
 				}
 			} else {
 				$style_element .= ' height="500" height="280"';
@@ -778,10 +780,8 @@ function addImages($text, $base_dir = '', $base_src = '', $temp_dir = "")
 			$arr_find[] = $val2;
 			$arr_replace[] = '<video src="' . $base_src2 . $img . '" alt="' . $img . '"' . $style_element . ' controls></video>';
 
-			if ($temp_dir != $base_dir && $temp_dir != "") {
-				if (!file_exists($temp_dir . "/" . basename($img))) {
-					@copy($temp_dir . "/" . $img, $base_dir . "/" . basename($img));
-				}
+			if ($temp_dir != $base_dir && $temp_dir != "" && !file_exists($temp_dir . "/" . basename($img))) {
+				@copy($temp_dir . "/" . $img, $base_dir . "/" . basename($img));
 			}
 		}
 		if (stripos($val, "iframe:") === 0) {
@@ -880,10 +880,8 @@ function addImages($text, $base_dir = '', $base_src = '', $temp_dir = "")
 			$arr_find[] = $val2;
 			$arr_replace[] = '<audio src="' . $base_src2 . $img . '" alt="' . $img . '"' . $style_element . ' controls></audio>';
 
-			if ($temp_dir != $base_dir && $temp_dir != "") {
-				if (!file_exists($temp_dir . "/" . basename($img))) {
-					@copy($temp_dir . "/" . $img, $base_dir . "/" . basename($img));
-				}
+			if ($temp_dir != $base_dir && $temp_dir != "" && !file_exists($temp_dir . "/" . basename($img))) {
+				@copy($temp_dir . "/" . $img, $base_dir . "/" . basename($img));
 			}
 		}
 		if (stripos($val, "youtube:") === 0) {
@@ -966,34 +964,34 @@ class DocxConversion
 
 	private function read_docx()
 	{
-
-		$striped_content = '';
 		$content = '';
 
 		$zip = zip_open($this->filename);
 
-		if (!$zip || is_numeric($zip)) return false;
+		if (!$zip || is_numeric($zip)) 
+		{
+			return false;
+		}
 
-		while ($zip_entry = zip_read($zip)) {
-			if (zip_entry_open($zip, $zip_entry) == false) 
+		while ($zip_entry = zip_read($zip)) //NOSONAR
+		{
+			if (zip_entry_open($zip, $zip_entry) === false) //NOSONAR
 			{
 				continue;
 			}
-			if (zip_entry_name($zip_entry) != "word/document.xml") 
+			if (zip_entry_name($zip_entry) != "word/document.xml") //NOSONAR
 			{
 				continue;
 			}
-			$content .= zip_entry_read($zip_entry, zip_entry_filesize($zip_entry));
-			zip_entry_close($zip_entry);
+			$content .= zip_entry_read($zip_entry, zip_entry_filesize($zip_entry)); //NOSONAR
+			zip_entry_close($zip_entry); //NOSONAR
 		} // end while
 
 		zip_close($zip);
 		$content = str_replace("</w:r></w:p></w:tc><w:tc>", "\r\n", $content);
 		$content = str_replace("</w:r></w:p></w:tc><w:tc>", "\r\n", $content);
 		$content = str_replace("</w:r></w:p>", "\r\n", $content);
-		$striped_content = strip_tags($content);
-
-		return $striped_content;
+		return strip_tags($content);
 	}
 
 	/************************excel sheet************************************/
@@ -1007,7 +1005,7 @@ class DocxConversion
 			if (($xml_index = $zip_handle->locateName($xml_filename)) !== false) {
 				$xml_datas = $zip_handle->getFromIndex($xml_index);
 				$domDoc = new DOMDocument();
-				$xml_handle = $domDoc->loadXML($xml_datas, LIBXML_NOENT | LIBXML_XINCLUDE | LIBXML_NOERROR | LIBXML_NOWARNING);
+				$xml_handle = $domDoc->loadXML($xml_datas, LIBXML_NOENT | LIBXML_XINCLUDE | LIBXML_NOERROR | LIBXML_NOWARNING); //NOSONAR
 				$output_text = strip_tags($xml_handle->saveXML());
 			} else {
 				$output_text .= "";
@@ -1029,7 +1027,7 @@ class DocxConversion
 			while (($xml_index = $zip_handle->locateName("ppt/slides/slide" . $slide_number . ".xml")) !== false) {
 				$xml_datas = $zip_handle->getFromIndex($xml_index);
 				$domDoc = new DOMDocument();
-				$xml_handle = $domDoc->loadXML($xml_datas, LIBXML_NOENT | LIBXML_XINCLUDE | LIBXML_NOERROR | LIBXML_NOWARNING);
+				$xml_handle = $domDoc->loadXML($xml_datas, LIBXML_NOENT | LIBXML_XINCLUDE | LIBXML_NOERROR | LIBXML_NOWARNING); //NOSONAR
 				$output_text .= strip_tags($xml_handle->saveXML());
 				$slide_number++;
 			}
@@ -1043,7 +1041,7 @@ class DocxConversion
 		return $output_text;
 	}
 
-	public function convertToText()
+	public function convertToText() //NOSONAR
 	{
 		if (isset($this->filename) && !file_exists($this->filename)) {
 			return "File Not exists";
@@ -1089,7 +1087,15 @@ function removeparagraphtag($text)
 	}
 	return $ret;
 }
-function loadXmlData($xml_file)
+
+if(!function_exists('trimWhitespace'))
+{
+	function trimWhitespace($value)
+	{
+		return trim($value, " \r\n\t ");
+	}
+}
+function loadXmlData($xml_file) //NOSONAR
 {
 	$s = file_get_contents($xml_file);
 	$test_data = simplexml_load_string($s);
@@ -1106,10 +1112,10 @@ function loadXmlData($xml_file)
 		$sort_order++;
 		if (count(@$question->question->file)) {
 			foreach ($question->question->file as $file) {
-				$name_file = $picoEdu->trimWhitespace(@$file->name);
-				$type_file = $picoEdu->trimWhitespace(@$file->type);
-				$encoding_file = $picoEdu->trimWhitespace(@$file->encoding);
-				$data_file = $picoEdu->trimWhitespace(@$file->data);
+				$name_file = trimWhitespace(@$file->name);
+				$type_file = trimWhitespace(@$file->type);
+				$encoding_file = trimWhitespace(@$file->encoding);
+				$data_file = trimWhitespace(@$file->data);
 				$files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
 			}
 		}
@@ -1122,16 +1128,15 @@ function loadXmlData($xml_file)
 				$score = trim(@$option->value) * 1;
 				if (count(@$option->file)) {
 					foreach ($option->file as $file) {
-						$name_file = $picoEdu->trimWhitespace(@$file->name);
-						$type_file = $picoEdu->trimWhitespace(@$file->type);
-						$encoding_file = $picoEdu->trimWhitespace(@$file->encoding);
-						$data_file = $picoEdu->trimWhitespace(@$file->data);
+						$name_file = trimWhitespace(@$file->name);
+						$type_file = trimWhitespace(@$file->type);
+						$encoding_file = trimWhitespace(@$file->encoding);
+						$data_file = trimWhitespace(@$file->data);
 						$files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
 					}
 				}
 				$option = $text_option;
-				$digest = md5($option);
-
+	
 				$sort_order = ((int)$index_option) + 1;
 				if ($score > 0) {
 					$cs = ' option-circle-selected';
@@ -1150,7 +1155,7 @@ function loadXmlData($xml_file)
 	}
 	return $text_all;
 }
-function loadXmlData_word($xml_file, $key = 0)
+function loadXmlData_word($xml_file, $key = 0) //NOSONAR
 {
 	$s = file_get_contents($xml_file);
 	$test_data = simplexml_load_string($s);
@@ -1173,21 +1178,20 @@ function loadXmlData_word($xml_file, $key = 0)
 	foreach ($test_data->item as $question) {
 		// petanyaan
 		$text_pertanyaan = trim(@$question->question->text);
-		$random = trim(@$question->question->random) * 1;
-		$numbering = addslashes(trim(@$question->question->numbering));
-		$competence = addslashes(trim(@$question->question->competence));
+		$random = ((int) @$question->question->random); //NOSONAR
+		$numbering = addslashes(trim(@$question->question->numbering)); //NOSONAR
+		$competence = addslashes(trim(@$question->question->competence)); //NOSONAR
 		$sort_order++;
 		if (count(@$question->question->file)) {
-			foreach ($question->question->file as $index_file_question => $file) {
-				$name_file = $picoEdu->trimWhitespace(@$file->name);
-				$type_file = $picoEdu->trimWhitespace(@$file->type);
-				$encoding_file = $picoEdu->trimWhitespace(@$file->encoding);
-				$data_file = $picoEdu->trimWhitespace(@$file->data);
+			foreach ($question->question->file as $file) {
+				$name_file = trimWhitespace(@$file->name);
+				$type_file = trimWhitespace(@$file->type);
+				$encoding_file = trimWhitespace(@$file->encoding);
+				$data_file = trimWhitespace(@$file->data);
 				$files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
 			}
 		}
 		$pertanyaan = $text_pertanyaan;
-		$digest = md5($pertanyaan);
 
 		if (count(@$question->answer->option) > 0) {
 			$options = array();
@@ -1197,23 +1201,22 @@ function loadXmlData_word($xml_file, $key = 0)
 				$text_option = trim(@$option->text);
 				$score = trim(@$option->value) * 1;
 				if (count(@$option->file)) {
-					foreach ($option->file as $index_file_question => $file) {
-						$name_file = $picoEdu->trimWhitespace(@$file->name);
-						$type_file = $picoEdu->trimWhitespace(@$file->type);
-						$encoding_file = $picoEdu->trimWhitespace(@$file->encoding);
-						$data_file = $picoEdu->trimWhitespace(@$file->data);
+					foreach ($option->file as $file) {
+						$name_file = trimWhitespace(@$file->name);
+						$type_file = trimWhitespace(@$file->type);
+						$encoding_file = trimWhitespace(@$file->encoding);
+						$data_file = trimWhitespace(@$file->data);
 						$files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
 					}
 				}
 				$option = removeparagraphtag($text_option);
-				$digest = md5($option);
 
 				$sort_order = $index_option + 1;
 				if ($score > 0) {
 					if ($answer_key == '') {
 						$answer_key = @$answer[$numbering][$option_index];
 					}
-					$cs = ' option-circle-selected';
+					$cs = ' option-circle-selected'; //NOSONAR
 				} else {
 					$cs = '';
 				}

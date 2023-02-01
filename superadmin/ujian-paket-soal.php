@@ -1104,7 +1104,7 @@ if(isset($data->file))
 <legend>Pilihan Jawaban</legend>
 
 <?php
-$numbering = trim($data->numbering, " \r\n\t ");
+$numbering = $picoEdu->trimWhitespace($data->numbering);
 $i = 0;
 $count_option = count($data_options);
 
