@@ -148,7 +148,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 		foreach($tests as $key=>$val)
 		{
 			$test_id = addslashes($val);
-			$sql = "select * from `edu_test` where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
+			$sql = "SELECT * from `edu_test` where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)
 			{
@@ -187,7 +187,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$member_create = $member_edit = $teacher_id;
 		
 		
-		$sql = "select * from `edu_test_collection` where `test_collection_id` = '$id' and `active` = true ";
+		$sql = "SELECT * from `edu_test_collection` where `test_collection_id` = '$id' and `active` = true ";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
@@ -1167,7 +1167,7 @@ window.onload = function()
     <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-	$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";
+	$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' ";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(

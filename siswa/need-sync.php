@@ -16,7 +16,7 @@ if(isset($_POST['sync']))
 		$stmt1 = $database->executeQuery($sql);
 		if($stmt1->rowCount() > 0)
 		{
-			$sql = "select * from `member` where `email` like '$email' and `member_id` != '$student_id' ";
+			$sql = "SELECT * from `member` where `email` like '$email' and `member_id` != '$student_id' ";
 			$stmt2 = $database->executeQuery($sql);
 			if($stmt2->rowCount() == 0)
 			{

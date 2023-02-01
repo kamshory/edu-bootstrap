@@ -116,7 +116,7 @@ and `edu_student`.`student_id` = '$edit_key'
       <select class="form-control input-select" name="class_id" id="class_id">
         <option value=""></option>
         <?php
-        $sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
+        $sql2 = "SELECT * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
         
         echo $picoEdu->createFilterDb(
           $sql2,

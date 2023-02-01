@@ -33,7 +33,7 @@ for ($i = 0; $i < $number_of_option; $i++) {
 	$caption_option[$i] = chr(65 + $i);
 }
 
-$sql = "select * from `edu_question` where `test_id` = '$test_id' order by `order` asc ";
+$sql = "SELECT * from `edu_question` where `test_id` = '$test_id' order by `order` asc ";
 $stmt = $database->executeQuery($sql);
 if ($stmt->rowCount() > 0) {
 {

@@ -195,7 +195,7 @@ else
 	}
 
 
-	$sql = "select * from (select 
+	$sql = "SELECT * from (select 
 	`edu_answer`.`answer_id`,
 	`edu_answer`.`student_id`,
 	`edu_answer`.`test_id` ,
@@ -687,7 +687,7 @@ window.onload = function()
     <select class="form-control" id="class_id" name="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' order by `order` asc ";
+    $sql2 = "SELECT * from `edu_class` where `active` = true and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' order by `order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -796,7 +796,7 @@ else
 	}
 
 
-	$sql = "select * from (select 
+	$sql = "SELECT * from (select 
 	`edu_answer`.`answer_id`,
 	`edu_answer`.`student_id`,
 	`edu_answer`.`test_id` ,
@@ -980,7 +980,7 @@ $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
     <select class="form-control" id="class_id" name="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-	$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";
+	$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' ";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(

@@ -382,7 +382,7 @@ if (@$page_school_id) {
 							<?php
 								$numstudent += $data['num_student'];
 							}
-							$sql = "select *
+							$sql = "SELECT *
 								from `edu_student` where `edu_student`.`school_id` = '$page_school_id' 
 								";
 							$tsmt2 = $database->executeQuery($sql);

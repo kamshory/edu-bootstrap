@@ -19,7 +19,7 @@ if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "select * from `edu_test_collection` where `test_collection_id` = '$test_collection_id' ";
+		$sql = "SELECT * from `edu_test_collection` where `test_collection_id` = '$test_collection_id' ";
 		$nquestion = 0;
 		$noption = 0;
 		$stmt = $database->executeQuery($sql);
@@ -93,7 +93,7 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 	foreach($test_id as $key=>$val)
 	{
 		$test_collection_id = addslashes($val);
-		$sql = "select * from `edu_test_collection` where `test_collection_id` = '$test_collection_id' ";
+		$sql = "SELECT * from `edu_test_collection` where `test_collection_id` = '$test_collection_id' ";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{

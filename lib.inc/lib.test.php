@@ -327,7 +327,7 @@ $arr_files = array();
 function export_question($database, $question_id, $base_dir = "")
 {
 	global $arr_files;
-	$sql = "select * from `edu_question` where `question_id` = '$question_id' ";
+	$sql = "SELECT * from `edu_question` where `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$content = $data['content'];
@@ -370,7 +370,7 @@ function export_question($database, $question_id, $base_dir = "")
 	</question>\r\n";
 
 
-	$sql = "select * from `edu_option` where `question_id` = '$question_id' order by `order` asc";
+	$sql = "SELECT * from `edu_option` where `question_id` = '$question_id' order by `order` asc";
 	$stmt = $database->executeQuery($sql);
 	$html_option .= "
 		<answer>

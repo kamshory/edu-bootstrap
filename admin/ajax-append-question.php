@@ -7,7 +7,7 @@ $edit_mode = '';
 if (!empty(@$school_id) && isset($_POST['question_text']) && isset($_POST['test_id']) && @$_POST['option'] == 'add') {
 	$test_id = kh_filter_input(INPUT_POST, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	$edit_mode = kh_filter_input(INPUT_POST, 'edit_mode', FILTER_SANITIZE_NUMBER_UINT);
-	$sql = "select * from `edu_test` where `test_id` = '$test_id' and `school_id` = '$school_id' ";
+	$sql = "SELECT * from `edu_test` where `test_id` = '$test_id' and `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		// Format Plain
@@ -111,7 +111,7 @@ if (!empty(@$school_id)) {
 		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	}
 
-	$sql = "select * from `edu_question` where `test_id` = '$test_id' ";
+	$sql = "SELECT * from `edu_question` where `test_id` = '$test_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 	?>
@@ -126,7 +126,7 @@ if (!empty(@$school_id)) {
 	<ol class="option-ol" style="list-style-type:<?php 
 	echo $data['numbering']; ?>">
 	<?php
-		$sql2 = "select * from `edu_option` where `question_id` = '$question_id' ";
+		$sql2 = "SELECT * from `edu_option` where `question_id` = '$question_id' ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);

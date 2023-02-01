@@ -16,7 +16,7 @@ if(@$_GET['option'] == 'delete')
 {
 	$question_id = kh_filter_input(INPUT_GET, 'question_id', FILTER_SANITIZE_STRING_NEW);
 	$digest = kh_filter_input(INPUT_GET, 'digest', FILTER_SANITIZE_STRING_NEW_BASE64);
-	$sql = "select * from `edu_question` where `question_id` = '$question_id' and `digest` = '$digest' ";
+	$sql = "SELECT * from `edu_question` where `question_id` = '$question_id' and `digest` = '$digest' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -164,7 +164,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$time_edit = $picoEdu->getLocalDateTime();
 		
 		$digest = md5($question);
-		$sql = "select * from `edu_question` where `digest` = '$digest' and `test_id` = '$test_id' ";
+		$sql = "SELECT * from `edu_question` where `digest` = '$digest' and `test_id` = '$test_id' ";
 		$stmt2 = $database->executeQuery($sql);
 		if($stmt2->rowCount() == 0)
 		{
@@ -251,7 +251,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 			$database->executeUpdate($sql, true);			
 		}
 		
-		$sql3 = "select * from `edu_option` where `question_id` = '$question_id' ";
+		$sql3 = "SELECT * from `edu_option` where `question_id` = '$question_id' ";
 		$stmt3 = $database->executeQuery($sql3);
 		if ($stmt3->rowCount() > 0) {
 			$rows3 = $stmt3->fetchAll(PDO::FETCH_ASSOC);
@@ -429,7 +429,7 @@ else if(@$_GET['option'] == 'edit')
 {
 	include_once dirname(__FILE__)."/lib.inc/header.php";
 	$question_id = kh_filter_input(INPUT_GET, 'question_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "select * from `edu_question` where `question_id` = '$question_id' ";
+	$sql = "SELECT * from `edu_question` where `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) 
 	{
@@ -536,7 +536,7 @@ else if(@$_GET['option'] == 'edit')
 
 			<?php
 			$numbering = $data['numbering'];
-			$sql2 = "select * from `edu_option` where `question_id` = '$question_id' ";
+			$sql2 = "SELECT * from `edu_option` where `question_id` = '$question_id' ";
 			$i = 0;
 			$stmt2 = $database->executeQuery($sql2);
 			if ($stmt2->rowCount() > 0) {
@@ -630,7 +630,7 @@ else if(isset($_GET['test_id']))
 		}
 
 		if (@$_GET['option'] == 'analys') {
-			$sql = "select * from `edu_question` where `test_id` = '$test_id' order by `order` asc ";
+			$sql = "SELECT * from `edu_question` where `test_id` = '$test_id' order by `order` asc ";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
 				?>
@@ -991,7 +991,7 @@ function distribution(test_id)
 
 </style>
 <?php
-$sql = "select * 
+$sql = "SELECT * 
 from `edu_question` where `test_id` = '$test_id' 
 order by `order` asc, `question_id` asc
 ";
@@ -1019,7 +1019,7 @@ echo $data['content'];
 <ol class="listoption" style="list-style-type:<?php echo $data['numbering']; ?>">
 <?php
 $question_id = $data['question_id'];
-$sql = "select * from `edu_option` where `question_id` = '$question_id' ";
+$sql = "SELECT * from `edu_option` where `question_id` = '$question_id' ";
 $stmt2 = $database->executeQuery($sql);
 if ($stmt2->rowCount() > 0) {
 $rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -1193,7 +1193,7 @@ function buildMenu(id)
     <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-	$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";
+	$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' ";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(

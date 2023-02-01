@@ -81,7 +81,7 @@ if(isset($_POST['delete']) && isset($_POST['teacher_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
-	$sql = "select * from `edu_school` where `school_id` = '$school_id' ";
+	$sql = "SELECT * from `edu_school` where `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$country_id = $data['country_id'];

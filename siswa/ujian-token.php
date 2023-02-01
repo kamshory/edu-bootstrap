@@ -40,7 +40,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 		$dur_obj = $picoEdu->secondsToTime($data['duration']);
 		if($data['has_limits'])
 		{
-			$sql = "select * from `edu_answer` where `student_id` = '$student_id' and `test_id` = '$test_id' order by `start` desc ";
+			$sql = "SELECT * from `edu_answer` where `student_id` = '$student_id' and `test_id` = '$test_id' order by `start` desc ";
 			$stmt = $database->executeQuery($sql);
 			$ntest = $stmt->rowCount();
 			if($ntest < $data['trial_limits'])
@@ -132,7 +132,7 @@ else if(isset($_POST['token']))
 	if($token != 0)
 	{
 		$now = $picoEdu->getLocalDateTime();
-		$sql = "select * from `edu_token`
+		$sql = "SELECT * from `edu_token`
 		where `student_id` = '$student_id'
 		and `token` = '$token' and `active` = true and `time_expire` > '$now'
 		";
@@ -205,7 +205,7 @@ $cfg->page_title = "Token Ujian";
         <div class="test-info">
         <?php
 		$token = abs(@$_SESSION['vtoken']);
-		$sql = "select * from `edu_test` where `test_id` = '$test_id' ";
+		$sql = "SELECT * from `edu_test` where `test_id` = '$test_id' ";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{

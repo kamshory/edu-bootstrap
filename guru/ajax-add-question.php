@@ -18,7 +18,7 @@ if(isset($_POST['question']))
 {
 	$test_id = kh_filter_input(INPUT_POST, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	$picoEdu->sortQuestion($test_id);
-	$sql = "select * from `edu_question` where `test_id` = '$test_id' order by `order` desc";
+	$sql = "SELECT * from `edu_question` where `test_id` = '$test_id' order by `order` desc";
 	
 	$data = $database->executeQuery($sql)->fetch(PDO::FETCH_ASSOC);
 
@@ -38,7 +38,7 @@ if(isset($_POST['question']))
 	
 	$digest = md5($question);
 	
-	$sql = "select * from `edu_question` where `digest` = '$digest' and `test_id` = '$test_id' ";
+	$sql = "SELECT * from `edu_question` where `digest` = '$digest' and `test_id` = '$test_id' ";
 
 	$stmt = $database->executeQuery($sql);
 
@@ -92,7 +92,7 @@ if(isset($_POST['question']))
 	{
 		$ret['duplicated'] = 1;
 	}
-	$sql = "select * from `edu_question` where `test_id` = '$test_id' ";
+	$sql = "SELECT * from `edu_question` where `test_id` = '$test_id' ";
 	$stmt = $database->executeQuery($sql);
 	$collection = $stmt->rowCount();
 	$ret['collection'] = $collection;

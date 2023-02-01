@@ -167,7 +167,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	}
 	if($option == 'add')
 	{
-		$sql = "insert into `edu_article`
+		$sql = "INSERT INTO `edu_article`
 		(`school_id`, `title`, `content`, `open`, `class`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values	
 		('$school_id', '$title', '$content', '$open', '$class', '$time', '$time', '$admin_id', 'T', '$admin_id', 'T', '$ip', '$ip', '$active')
 		";
@@ -217,7 +217,7 @@ var classList = <?php echo json_encode($arrc);?>;
 	{
 	$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
 	$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
-	$sql = "select * from `edu_article` where `article_id` = '$article_id' and `school_id` = '$school_id' and `member_create` = '$auth_teacher_id' ";
+	$sql = "SELECT * from `edu_article` where `article_id` = '$article_id' and `school_id` = '$school_id' and `member_create` = '$auth_teacher_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{

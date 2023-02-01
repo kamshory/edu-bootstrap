@@ -193,7 +193,7 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 
 <?php
 $article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
-$sql = "select * from `edu_article` where `article_id` = '$article_id' and `school_id` = '$school_id' ";
+$sql = "SELECT * from `edu_article` where `article_id` = '$article_id' and `school_id` = '$school_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -335,7 +335,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
+    $sql2 = "SELECT * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(

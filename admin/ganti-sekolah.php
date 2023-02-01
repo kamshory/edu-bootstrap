@@ -21,7 +21,7 @@ if(@$_GET['option'] == 'select')
 	if($stmt->rowCount() > 0)
 	{
 
-		$sql = "select * from `member` where `member_id` = '$admin_id' ";
+		$sql = "SELECT * from `member` where `member_id` = '$admin_id' ";
 		$stmt2 = $database->executeQuery($sql);
 		$member_data = $stmt2->fetch(PDO::FETCH_ASSOC);
 		

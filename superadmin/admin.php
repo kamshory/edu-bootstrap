@@ -82,7 +82,7 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
-	$sql = "select * from `edu_school` where `school_id` = '$school_id' ";
+	$sql = "SELECT * from `edu_school` where `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -141,7 +141,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "SELECT `school_id` from `edu_admin` where `admin_id` = '$admin_id2'  ";
-	$sql = "select * from `edu_school` where `school_id` = '$school_id' ";
+	$sql = "SELECT * from `edu_school` where `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -196,7 +196,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 		<td><select class="form-control input-select" name="school_id" id="school_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "select * from `edu_school` where `active` = true order by `school_grade_id` asc ";
+		$sql2 = "SELECT * from `edu_school` where `active` = true order by `school_grade_id` asc ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -293,7 +293,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td><select class="form-control input-select" name="school_id" id="school_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "select * from `edu_school` where `active` = true order by `school_grade_id` asc ";
+		$sql2 = "SELECT * from `edu_school` where `active` = true order by `school_grade_id` asc ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -509,7 +509,7 @@ $(document).ready(function(e) {
     <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "select * from `edu_school` where 1 order by `school_id` desc ";
+    $sql2 = "SELECT * from `edu_school` where 1 order by `school_id` desc ";
 	$stmt2 = $database->executeQuery($sql2);
 	if ($stmt2->rowCount() > 0) {
 		$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);

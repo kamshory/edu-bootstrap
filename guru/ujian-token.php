@@ -133,7 +133,7 @@ $(document).ready(function(e) {
 		<td><select class="form-control input-select" name="test_id" id="test_id" required="required">
 		<option value=""></option>
 		<?php 
-		$sql = "select * from `edu_test`
+		$sql = "SELECT * from `edu_test`
 		where `school_id` = '$school_id' and `teacher_id` = '$teacher_id'
 		and (`test_availability` = 'F' or `available_to` > '$now')
 		order by `test_id` desc
@@ -155,7 +155,7 @@ $(document).ready(function(e) {
 		<td><select class="form-control input-select" name="class_id" id="class_id" required="required">
 		<option value=""></option>
 		<?php 
-		$sql2 = "select * from `edu_class`
+		$sql2 = "SELECT * from `edu_class`
 		where `active` = true and `school_id` = '$school_id'
 		order by `order` asc
 		";
@@ -335,7 +335,7 @@ function printToken(frm)
 <select name="test_id" id="test_id">
 	<option value=""></option>
     <?php
-	$sql = "select * from `edu_test`
+	$sql = "SELECT * from `edu_test`
 	where `school_id` = '$school_id' and `teacher_id` = '$teacher_id'
 	and (`test_availability` = 'F' or `available_to` > '$now')
 	order by `test_id` desc
@@ -356,7 +356,7 @@ function printToken(frm)
 <select name="class_id" id="class_id">
 	<option value=""></option>
     <?php
-	$sql2 = "select * from `edu_class`
+	$sql2 = "SELECT * from `edu_class`
 	where `active` = true and `school_id` = '$school_id'
 	order by `order` asc
 	";

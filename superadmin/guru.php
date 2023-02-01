@@ -135,7 +135,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td><select class="form-control input-select" name="school_id" id="school_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "select * from `edu_school` where `active` = true order by `school_grade_id` asc ";
+		$sql2 = "SELECT * from `edu_school` where `active` = true order by `school_grade_id` asc ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -356,7 +356,7 @@ $(document).ready(function(e) {
     <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "select * from `edu_school` where 1 order by `school_id` desc ";
+    $sql2 = "SELECT * from `edu_school` where 1 order by `school_id` desc ";
     $stmt2 = $database->executeQuery($sql2);
 	if ($stmt2->rowCount() > 0) {
 		$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);

@@ -534,7 +534,7 @@ class PicoEdu //NOSONAR
 	}
 	public function writeprofile($school, $name, $value)
 	{
-		$sql = "select * from `profile` where `name` = '$name' and `school_id` = '$school' ";
+		$sql = "SELECT * from `profile` where `name` = '$name' and `school_id` = '$school' ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
 			$sql = "UPDATE `profile` set `value` = '$value' where `name` = '$name' and `school_id` = '$school'";
@@ -548,7 +548,7 @@ class PicoEdu //NOSONAR
 	}
 	public function getProfile($school, $name, $default = "")
 	{
-		$sql = "select * from `profile` where `name` = '$name' and `school_id` = '$school' ";
+		$sql = "SELECT * from `profile` where `name` = '$name' and `school_id` = '$school' ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -620,7 +620,7 @@ class PicoEdu //NOSONAR
 		";
 		$this->database->executeInsert($sql, true);
 
-		$sql = "select * 
+		$sql = "SELECT * 
 		from `edu_invalid_signin` 
 		where `member_id` = '$member_id' and `signin_type` = '$signin_type' and `signin_time` >= '$start_time'
 		";
@@ -651,7 +651,7 @@ class PicoEdu //NOSONAR
 	}
 	public function checkStudent($school_id, $reg_number, $reg_number_national, $name) //NOSONAR
 	{
-		$sql = "select * from `edu_student` 
+		$sql = "SELECT * from `edu_student` 
 		where `school_id` = '$school_id' 
 		and (`reg_number` like '$reg_number' and `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
@@ -659,7 +659,7 @@ class PicoEdu //NOSONAR
 	}
 	public function checkTeacher($school_id, $reg_number, $reg_number_national, $name) //NOSONAR
 	{
-		$sql = "select * from `edu_teacher` 
+		$sql = "SELECT * from `edu_teacher` 
 		where `school_id` = '$school_id' 
 		and (`reg_number` like '$reg_number' and `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
@@ -970,7 +970,7 @@ class PicoEdu //NOSONAR
 	}
 	public function generateCreateMmeberFromAdmin($admin_id)
 	{
-		$sql = "select * from edu_admin where admin_id = '$admin_id' ";
+		$sql = "SELECT * from edu_admin where admin_id = '$admin_id' ";
 		$stmt = $this->database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{

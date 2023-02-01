@@ -508,7 +508,7 @@ if (@$auth_student_id && @$auth_school_id) {
 				<select class="form-control input-select" name="class_id" id="class_id">
 					<option value="">- Pilih Kelas -</option>
 					<?php
-					$sql = "select * from `edu_class` where `school_id` = '$school_id' ";				
+					$sql = "SELECT * from `edu_class` where `school_id` = '$school_id' ";				
 					$stmt2 = $database->executeQuery($sql);
 					if ($stmt2->rowCount() > 0) {
 						foreach($rows2 as $data2) {
@@ -669,7 +669,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 			<select class="form-control input-select" name="class_id" id="class_id">
 				<option value="">- Pilih Kelas -</option>
 				<?php
-				$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";
+				$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' ";
 				echo $picoEdu->createFilterDb(
 					$sql2,
 					array(
@@ -830,7 +830,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 			<select class="form-control input-select" name="class_id" id="class_id">
 				<option value="">- Pilih Kelas -</option>
 				<?php
-				$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";
+				$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' ";
 				echo $picoEdu->createFilterDb(
 					$sql2,
 					array(

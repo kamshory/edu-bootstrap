@@ -34,7 +34,7 @@ if (!empty(@$school_id))
 		$caption_option[$i] = chr(65 + $i);
 	}
 
-	$sql = "select * from `edu_question` where `test_id` = '$test_id' order by `order` asc ";
+	$sql = "SELECT * from `edu_question` where `test_id` = '$test_id' order by `order` asc ";
 	$stmt2 = $database->executeQuery($sql);
 	if ($stmt2->rowCount() > 0) 
 	{

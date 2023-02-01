@@ -86,7 +86,7 @@ if(isset($_POST['delete']) && isset($_POST['student_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
-	$sql = "select * from `edu_school` where `school_id` = '$school_id' ";
+	$sql = "SELECT * from `edu_school` where `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$country_id = $data['country_id'];
@@ -188,7 +188,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 		<td><select class="form-control input-select" name="class_id" id="class_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
+		$sql2 = "SELECT * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(
@@ -306,7 +306,7 @@ if($stmt->rowCount() > 0)
 		<td><select class="form-control input-select" name="class_id" id="class_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
+		$sql2 = "SELECT * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(
@@ -533,7 +533,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "select * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
+    $sql2 = "SELECT * from `edu_class` where `active` = true and `school_id` = '$school_id' order by `order` asc ";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(

@@ -16,7 +16,7 @@ if(isset($_POST['sync']))
 		$res = mysql_query($sql);
 		if(mysql_num_rows($res))
 		{
-			$sql = "select * from `member` where `email` like '$email' and `member_id` != '$teacher_id' ";
+			$sql = "SELECT * from `member` where `email` like '$email' and `member_id` != '$teacher_id' ";
 			$res = mysql_query($sql);
 			if(!mysql_num_rows($res))
 			{

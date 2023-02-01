@@ -278,7 +278,7 @@ else if(@$_GET['option'] == 'edit' && isset($_GET['info_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php";
 $info_id = kh_filter_input(INPUT_GET, 'info_id', FILTER_SANITIZE_STRING_NEW);
-$sql = "select * from `edu_info` where `info_id` = '$info_id'";
+$sql = "SELECT * from `edu_info` where `info_id` = '$info_id'";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {

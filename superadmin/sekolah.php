@@ -310,7 +310,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql = "select * from `country` where `active` = true order by `order` asc
+        $sql = "SELECT * from `country` where `active` = true order by `order` asc
 		";
 
 		echo $picoEdu->createFilterDb(
@@ -342,7 +342,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="state_id" id="state_id">
 		<option value="">- Pilih Provinsi -</option>
 			<?php
-            $sql = "select * from `state` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
+            $sql = "SELECT * from `state` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -371,7 +371,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql = "select * from `city` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
+            $sql = "SELECT * from `city` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -623,7 +623,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql2 = "select * from `country` where `active` = true order by `order` asc
+        $sql2 = "SELECT * from `country` where `active` = true order by `order` asc
 		";
 		echo $picoEdu->createFilterDb(
 			$sql2,
@@ -651,7 +651,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="state_id" id="state_id">
 		<option value="">- Pilih Provinsi -</option>
 			<?php
-            $sql2 = "select * from `state` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
+            $sql2 = "SELECT * from `state` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' order by `type` asc, `name` asc
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -680,7 +680,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql2 = "select * from `city` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
+            $sql2 = "SELECT * from `city` where `active` = true and `verify` = '1' and `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' or `state_id` = '' or `state_id` is null) order by `type` asc, `name` asc 
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,

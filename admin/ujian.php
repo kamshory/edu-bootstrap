@@ -160,7 +160,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 		foreach($tests as $key=>$val)
 		{
 			$test_id = addslashes($val);
-			$sql = "select * from `edu_test` where `test_id` = '$test_id' and `school_id` = '$school_id' ";
+			$sql = "SELECT * from `edu_test` where `test_id` = '$test_id' and `school_id` = '$school_id' ";
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)
 			{
@@ -197,7 +197,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 		$time_create = $time_edit = $picoEdu->getLocalDateTime();		
 		
-		$sql = "select * from `edu_test_collection` where `test_collection_id` = '$id' and `active` = true ";
+		$sql = "SELECT * from `edu_test_collection` where `test_collection_id` = '$id' and `active` = true ";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
@@ -368,7 +368,7 @@ $selection = kh_filter_input(INPUT_GET, 'selection', FILTER_SANITIZE_STRING_NEW)
 $name = "";
 if($collection)
 {
-	$sql = "select * from `edu_test_collection` where `test_collection_id` = '$collection' ";
+	$sql = "SELECT * from `edu_test_collection` where `test_collection_id` = '$collection' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -1272,7 +1272,7 @@ window.onload = function()
     
 	<option value="">- Pilih Kelas -</option>
     <?php 
-	$sql2 = "select * from `edu_class` where `school_id` = '$school_id' ";
+	$sql2 = "SELECT * from `edu_class` where `school_id` = '$school_id' ";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -1298,7 +1298,7 @@ window.onload = function()
     <select class="form-control input-select" name="teacher_id" id="teacher_id">
     <option value="">- Pilih Guru -</option>
     <?php 
-	$sql2 = "select * from `edu_teacher` where `school_id` = '$school_id' and `active` = true order by `name` asc ";	
+	$sql2 = "SELECT * from `edu_teacher` where `school_id` = '$school_id' and `active` = true order by `name` asc ";	
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
