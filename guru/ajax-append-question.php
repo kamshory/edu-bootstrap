@@ -29,7 +29,7 @@ if(!empty(@$school_id))
 				$member_create = $teacher_id;
 				$member_edit = $teacher_id;
 				$random = ((int) $data['random']);
-				$order = ((int) $data['order']);
+				$sort_order = ((int) $data['order']);
 				$score_standar = $data['standard_score'];
 				$xml_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
 				$clear_data = parseRawQuestion($xml_data);
@@ -52,11 +52,11 @@ if(!empty(@$school_id))
 						$content = $picoEdu->brToNewLineEncoded($content);
 						$numbering = addslashes($object['numbering']);
 						$digest = md5($object['question']);
-						$order++;
+						$sort_order++;
 						$sql1 = "INSERT INTO `edu_question` 
 						(`content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
-						('$content', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
+						('$content', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
 						'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 						";
 						$stmt1 = $database->executeInsert($sql1, true);

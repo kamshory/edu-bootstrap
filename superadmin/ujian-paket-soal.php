@@ -691,7 +691,7 @@ $data3['collection'] = count($test_data['item']);
 $data3['standard_score'] = 0;
 $data3['number_of_option'] = 0;
 
-$order = 0;
+$sort_order = 0;
 $nquestion = 0;
 $noption = 0;
 $question_count = $nquestion = count($test_data->item);

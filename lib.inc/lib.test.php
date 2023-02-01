@@ -1096,14 +1096,14 @@ function loadXmlData($xml_file)
 	$files = array();
 	$questions = array();
 	$options = array();
-	$order = 0;
+	$sort_order = 0;
 	$index = 0;
 	foreach ($test_data->item as $question) {
 		// petanyaan
 		$text_pertanyaan = trim(@$question->question->text);
 		$numbering = addslashes(trim(@$question->question->numbering));
 		$competence = addslashes(trim(@$question->question->competence));
-		$order++;
+		$sort_order++;
 		if (count(@$question->question->file)) {
 			foreach ($question->question->file as $file) {
 				$name_file = $picoEdu->trimWhitespace(@$file->name);
@@ -1132,7 +1132,7 @@ function loadXmlData($xml_file)
 				$option = $text_option;
 				$digest = md5($option);
 
-				$order = ((int)$index_option) + 1;
+				$sort_order = ((int)$index_option) + 1;
 				if ($score > 0) {
 					$cs = ' option-circle-selected';
 				} else {
@@ -1157,7 +1157,7 @@ function loadXmlData_word($xml_file, $key = 0)
 	$files = array();
 	$questions = array();
 	$options = array();
-	$order = 0;
+	$sort_order = 0;
 	$index = 0;
 	$answer_key = '';
 
@@ -1176,7 +1176,7 @@ function loadXmlData_word($xml_file, $key = 0)
 		$random = trim(@$question->question->random) * 1;
 		$numbering = addslashes(trim(@$question->question->numbering));
 		$competence = addslashes(trim(@$question->question->competence));
-		$order++;
+		$sort_order++;
 		if (count(@$question->question->file)) {
 			foreach ($question->question->file as $index_file_question => $file) {
 				$name_file = $picoEdu->trimWhitespace(@$file->name);
@@ -1208,7 +1208,7 @@ function loadXmlData_word($xml_file, $key = 0)
 				$option = removeparagraphtag($text_option);
 				$digest = md5($option);
 
-				$order = $index_option + 1;
+				$sort_order = $index_option + 1;
 				if ($score > 0) {
 					if ($answer_key == '') {
 						$answer_key = @$answer[$numbering][$option_index];

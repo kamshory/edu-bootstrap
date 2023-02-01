@@ -52,7 +52,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$member_edit = $admin_id;
 	
 		$random = ((int) $data['random']);
-		$order = ((int) $data['order']);
+		$sort_order = ((int) $data['order']);
 		$score_standar = $data['standard_score'];
 		
 		$xml_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
@@ -78,12 +78,12 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 				$content = addslashes(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $base_dir, $base_src)))));
 				$numbering = addslashes($object['numbering']);
 				$digest = md5($object['question']);
-				$order++;
+				$sort_order++;
 				$question_id = $database->generateNewId();
 				$sql1 = "INSERT INTO `edu_question` 
 				(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 				`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
-				('$question_id', '$content', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
+				('$question_id', '$content', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
 				'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 				";
 				$stmt1 = $database->executeInsert($sql1, true);

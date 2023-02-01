@@ -141,7 +141,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 		$files = array();
 		$questions = array();
 		$options = array();
-		$order = 0;
+		$sort_order = 0;
 		foreach($test_data->item as $index_question => $question)
 		{
 			// petanyaan

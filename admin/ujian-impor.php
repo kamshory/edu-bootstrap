@@ -37,7 +37,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		$random = ((int) $data['random']);
-		$order = ((int) $data['order']);
+		$sort_order = ((int) $data['order']);
 		$score_standar = $data['standard_score'];
 
 		
@@ -137,14 +137,14 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 						$content = addslashes(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $test_dir, $base_src, $temp_dir)))));
 						$numbering = addslashes($object['numbering']);
 						$digest = md5($object['question']);
-						$order++;
+						$sort_order++;
 
 						$question_id = $database->generateNewId();
 						
 						$sql1 = "INSERT INTO `edu_question` 
 						(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
-						('$question_id', '$content', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
+						('$question_id', '$content', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
 						'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 						";
 				
@@ -204,7 +204,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 						$random = trim(@$question->question->random)*1;
 						$numbering = addslashes(trim(@$question->question->numbering));
 						$competence = addslashes(trim(@$question->question->competence));
-						$order++;
+						$sort_order++;
 						$array_search = array();
 						$array_replace = array();
 						if(count(@$question->question->file))
@@ -235,7 +235,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 						$sql1 = "INSERT INTO `edu_question` 
 						(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
 						`time_create`, `member_create`, `time_edit`, `member_edit`) values
-						('$question_id', '$pertanyaan', '$test_id', '1', '$order', '$random', '$numbering', '$digest', '$competence',
+						('$question_id', '$pertanyaan', '$test_id', '1', '$sort_order', '$random', '$numbering', '$digest', '$competence',
 						'$time_create', '$member_create', '$time_edit', '$member_edit') 
 						";
 						$stmt1 = $database->executeQuery($sql1);

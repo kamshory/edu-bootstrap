@@ -51,7 +51,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$member_edit = $teacher_id;
 	
 		$random = ((int) $data['random']);
-		$order = ((int) $data['order']);
+		$sort_order = ((int) $data['order']);
 		$score_standar = $data['standard_score'];
 		
 		$xml_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
@@ -77,12 +77,12 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 				$content = $picoEdu->brToNewLineEncoded($content);
 				$numbering = addslashes($object['numbering']);
 				$digest = md5($object['question']);
-				$order++;
+				$sort_order++;
 				
 				$sql1 = "INSERT INTO `edu_question` 
 				(`content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 				`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
-				('$content', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
+				('$content', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
 				'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 				";
 				$stmt1 = $database->executeInsert($sql1, true);
@@ -159,7 +159,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	if($stmt1->rowCount() > 0)
 	{
 		$data1 = $stmt1->fetch(PDO::FETCH_ASSOC);
-		$order = $data1['order'] + 1;
+		$sort_order = $data1['order'] + 1;
 		$time_create = $picoEdu->getLocalDateTime();
 		$time_edit = $picoEdu->getLocalDateTime();
 		
@@ -175,14 +175,14 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			$sql = "INSERT INTO `edu_question` 
 			(`question_id`, `content`, `test_id`, `multiple_choice`, `random`, `numbering`, `digest`, `order`,
 			`time_create`, `member_create`, `time_edit`, `member_edit`) values
-			('$question_id', '$question', '$test_id', '1', '$random', '$numbering', '$digest', '$order',
+			('$question_id', '$question', '$test_id', '1', '$random', '$numbering', '$digest', '$sort_order',
 			'$time_create', '$member_create', '$time_edit', '$member_edit'); ";
 			$database->executeInsert($sql, true);
-			$order = 0;
+			$sort_order = 0;
 			$oke = 1;
 			for($i=1; $i <= $number_of_option; $i++)
 			{
-				$order++;
+				$sort_order++;
 				$id2 = $i;
 					
 				$option = kh_filter_input(INPUT_POST, 'option_'.$id2);
@@ -194,7 +194,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				$option_id = $database->generateNewId();
 				$sql = "INSERT INTO `edu_option` 
 				(`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-				('$option_id', '$question_id', '$option', '$order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit');";
+				('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit');";
 				$stmt3 = $database->executeInsert($sql, true);
 				if($stmt3->rowCount() > 0)
 				{

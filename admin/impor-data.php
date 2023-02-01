@@ -341,7 +341,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								} else {
 									$o[$grade_id]++;
 								}
-								$order = $o[$grade_id];
+								$sort_order = $o[$grade_id];
 								if ($name != '') {
 									$sql = "SELECT * from `edu_class` where `class_code` = '$class_code' and `school_id` = '$school_id' ";
 									$stmt3 = $database->executeQuery($sql);
@@ -354,7 +354,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 										(`class_id`, `token_class`, `school_id`, `class_code`, `grade_id`, `school_program_id`, `name`, 
 										`time_create`, `time_edit`, `ip_create`, `ip_edit`, `admin_create`, `admin_edit`, `order`, `default`, `active`) VALUES
 										('$class_id', '$token_class', '$school_id', '$class_code', '$grade_id', '$school_program_id', '$name', 
-										'$time_create', '$time_edit', '$ip_create', '$ip_edit', '$admin_create', '$admin_edit', '$order', 0, 1)
+										'$time_create', '$time_edit', '$ip_create', '$ip_edit', '$admin_create', '$admin_edit', '$sort_order', 0, 1)
 										";
 										$database->executeInsert($sql, true);
 									}

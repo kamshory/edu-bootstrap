@@ -39,7 +39,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 			{
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);		
 				$random = ((int) $data['random']);
-				$order = ((int) $data['order']);
+				$sort_order = ((int) $data['order']);
 				$score_standar = $data['standard_score'];
 
 				
@@ -71,7 +71,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 							$random = ((int) @$question->question->random);
 							$numbering = addslashes(trim(@$question->question->numbering));
 							$competence = addslashes(trim(@$question->question->competence));
-							$order++;
+							$sort_order++;
 							if(count(@$question->question->file))
 							{
 								foreach($question->question->file as $index_file_question => $file)
@@ -97,7 +97,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 							$sql1 = "INSERT INTO `edu_question` 
 							(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
 							`time_create`, `member_create`, `time_edit`, `member_edit`) values
-							('$question_id', '$pertanyaan', '$test_id', '1', '$order', '$random', '$numbering', '$digest', '$competence',
+							('$question_id', '$pertanyaan', '$test_id', '1', '$sort_order', '$random', '$numbering', '$digest', '$competence',
 							'$time_create', '$member_create', '$time_edit', '$member_edit'); 
 							";
 							$stmt = $database->executeInsert($sql1, true);;

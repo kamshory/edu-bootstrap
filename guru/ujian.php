@@ -36,7 +36,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$autosubmit = kh_filter_input(INPUT_POST, 'autosubmit', FILTER_SANITIZE_NUMBER_UINT);
 		
 	
-	$order = 0;
+	$sort_order = 0;
 	$has_alert = kh_filter_input(INPUT_POST, 'has_alert', FILTER_SANITIZE_NUMBER_UINT);
 	$alert_message = kh_filter_input(INPUT_POST, 'alert_message', FILTER_SANITIZE_SPECIAL_CHARS);
 	$standard_score = kh_filter_input(INPUT_POST, 'standard_score', FILTER_SANITIZE_NUMBER_FLOAT);
@@ -174,7 +174,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$test_id = $database->generateNewId();
 	$sql = "INSERT INTO `edu_test` 
 	(`test_id`, `school_id`, `name`, `class`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values
-	('$test_id', '$school_id', '$name', '$class', '$subject', '$teacher_id', '$description', '$guidance', '$open', '$has_limits', '$trial_limits', '$threshold', '$assessment_methods', '$number_of_question', '$number_of_option', '$question_per_page', '$random', '$duration', '$has_alert', '$alert_time', '$alert_message', '$autosubmit', '$standard_score', '$penalty', '$order', '$score_notification', '$publish_answer', $time_answer_publication, '$test_availability', $available_from, $available_to, '$time_create', '$time_edit', '$member_create', '$role_create', '$member_edit', '$role_edit', '$ip_create', '$ip_edit', '$active')";
+	('$test_id', '$school_id', '$name', '$class', '$subject', '$teacher_id', '$description', '$guidance', '$open', '$has_limits', '$trial_limits', '$threshold', '$assessment_methods', '$number_of_question', '$number_of_option', '$question_per_page', '$random', '$duration', '$has_alert', '$alert_time', '$alert_message', '$autosubmit', '$standard_score', '$penalty', '$sort_order', '$score_notification', '$publish_answer', $time_answer_publication, '$test_availability', $available_from, $available_to, '$time_create', '$time_edit', '$member_create', '$role_create', '$member_edit', '$role_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
   
 	$id = kh_filter_input(INPUT_POST, 'collection', FILTER_SANITIZE_NUMBER_UINT);
@@ -208,7 +208,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 					$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			
 					$random = ((int) $data['random']);
-					$order = ((int) $data['order']);
+					$sort_order = ((int) $data['order']);
 					$score_standar = $data['standard_score'];
 	
 					
@@ -240,7 +240,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 								$random = trim(@$question->question->random)*1;
 								$numbering = addslashes(trim(@$question->question->numbering));
 								$competence = addslashes(trim(@$question->question->competence));
-								$order++;
+								$sort_order++;
 								$array_search = array();
 								$array_replace = array();
 								if(count(@$question->question->file))
@@ -270,7 +270,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 								$sql1 = "INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`, 
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('$question_id', '$pertanyaan', '$test_id', '1', '$order', '$random', '$numbering', '$digest', '$competence',
+								('$question_id', '$pertanyaan', '$test_id', '1', '$sort_order', '$random', '$numbering', '$digest', '$competence',
 								'$time_create', '$member_create', '$time_edit', '$member_edit'); 
 								";
 								$res1 = $database->executeInsert($sql1, true);
@@ -307,12 +307,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 										$digest = md5($option);
 										$option = addslashes($option);
 										
-										$order = ((int)$index_option) + 1;
+										$sort_order = ((int)$index_option) + 1;
 										$option_id = $database->generateNewId();
 
 										$sql2 = "INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('$option_id', '$question_id', '$option', '$order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit'); 
+										('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit'); 
 										";
 										
 										$res2 = $database->executeInsert($sql2);

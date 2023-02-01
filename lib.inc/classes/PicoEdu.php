@@ -893,11 +893,11 @@ class PicoEdu //NOSONAR
 		foreach ($rows as $data) {
 			$ret[] = $data['question_id'];
 		}
-		$order = 1;
+		$sort_order = 1;
 		foreach ($ret as $question_id) {
-			$sql = "update `edu_question` set `order` = '$order' where `question_id` = '$question_id' ";
+			$sql = "update `edu_question` set `order` = '$sort_order' where `question_id` = '$question_id' ";
 			$this->database->executeUpdate($sql, true);
-			$order++;
+			$sort_order++;
 		}
 	}
 

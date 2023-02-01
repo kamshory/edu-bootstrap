@@ -39,7 +39,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$autosubmit = kh_filter_input(INPUT_POST, 'autosubmit', FILTER_SANITIZE_NUMBER_UINT);
 		
 	
-	$order = 0;
+	$sort_order = 0;
 	$has_alert = kh_filter_input(INPUT_POST, 'has_alert', FILTER_SANITIZE_NUMBER_UINT);
 	$alert_message = kh_filter_input(INPUT_POST, 'alert_message', FILTER_SANITIZE_SPECIAL_CHARS);
 	$standard_score = kh_filter_input(INPUT_POST, 'standard_score', FILTER_SANITIZE_NUMBER_FLOAT);

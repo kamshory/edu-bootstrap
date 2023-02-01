@@ -25,7 +25,7 @@ if (@$school_id != 0 && isset($_POST['question_text']) && isset($_POST['test_id'
 			$member_edit = $admin_id;
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			$random = ((int) $data['random']);
-			$order = ((int) $data['order']);
+			$sort_order = ((int) $data['order']);
 			$score_standar = $data['standard_score'];
 			$xml_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
 			$clear_data = parseRawQuestion($xml_data);
@@ -54,14 +54,14 @@ if (@$school_id != 0 && isset($_POST['question_text']) && isset($_POST['test_id'
 
 
 
-					$order++;
+					$sort_order++;
 
 					$question_id = $database->generateNewId();
 
 					$sql1 = "INSERT INTO `edu_question` 
 					(`question_id`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
-					('$question_id', '$content', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
+					('$question_id', '$content', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
 					'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 					";
 					$picoEdu->log($sql1);

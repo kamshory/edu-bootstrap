@@ -21,7 +21,7 @@ if(isset($_POST['question']))
 	$sql = "select * from `edu_question` where `test_id` = '$test_id' order by `order` desc";
 	$stmt = $database->executeQuery($sql);
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
-	$order = (@$data['order'])+1;
+	$sort_order = (@$data['order'])+1;
 	$number_of_option = kh_filter_input(INPUT_POST, 'number_of_option', FILTER_SANITIZE_NUMBER_UINT);
 	$numbering = kh_filter_input(INPUT_POST, 'numbering', FILTER_SANITIZE_STRING_NEW);
 	$basic_competence = trim(kh_filter_input(INPUT_POST, 'basic_competence', FILTER_SANITIZE_STRING_NEW));
@@ -50,15 +50,15 @@ if(isset($_POST['question']))
 		$sql = "INSERT INTO `edu_question` 
 		(`question_id`, `content`, `basic_competence`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 		`time_create`, `member_create`, `time_edit`, `member_edit`) values
-		('$question_id', '$question', '$basic_competence', '$test_id', '$order', '1', '$random', '$numbering', '$digest', 
+		('$question_id', '$question', '$basic_competence', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
 		'$time_create', '$member_create', '$time_edit', '$member_edit') ";
 		$database->executeInsert($sql, true);
 
-		$order = 0;
+		$sort_order = 0;
 		$oke = 1;
 		for($i=1; $i <= $number_of_option; $i++)
 		{
-			$order++;
+			$sort_order++;
 			$id2 = $i;
 			
 			$option = kh_filter_input(INPUT_POST, 'option_'.$id2);
@@ -72,7 +72,7 @@ if(isset($_POST['question']))
 
 			$sql = "INSERT INTO `edu_option` 
 			(`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-			('$option_id', '$question_id', '$option', '$order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit'); ";
+			('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit'); ";
 			$stmt = $database->executeInsert($sql, true);
 			if($stmt->rowCount() > 0)
 			{

@@ -11,9 +11,9 @@ if(isset($_POST['sort']))
 	$arr = explode(",", trim($array_question, " , "));
 	foreach($arr as $key=>$val)
 	{
-		$order = $key+1;
+		$sort_order = $key+1;
 		$val = addslashes($val);
-		$sql = "update `edu_question` set `order` = '$order' where `question_id` = '$val'";// and `school_id` = '$school_id'; ";
+		$sql = "update `edu_question` set `order` = '$sort_order' where `question_id` = '$val'";// and `school_id` = '$school_id'; ";
 		$database->executeUpdate($sql, true);
 	}
 }

@@ -22,7 +22,7 @@ if(count(@$_POST))
 		$school_program_id = $school_program_id2;
 	}
 	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-	$order = kh_filter_input(INPUT_POST, 'order', FILTER_SANITIZE_NUMBER_INT);
+	$sort_order = kh_filter_input(INPUT_POST, 'order', FILTER_SANITIZE_NUMBER_INT);
 	$default = kh_filter_input(INPUT_POST, 'default', FILTER_SANITIZE_NUMBER_UINT);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$admin_create = $admin_edit = $admin_login->admin_id;
@@ -76,7 +76,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$school_program_id = $database->generateNewId();
 	$sql = "INSERT INTO `edu_school_program` 
 	(`school_program_id`, `school_id`, `name`, `order`, `default`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) values
-	('$school_program_id', '$school_id', '$name', '$order', '$default', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', '$active')";
+	('$school_program_id', '$school_id', '$name', '$sort_order', '$default', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
 	$id = $database->getDatabaseConnection()->lastInsertId();
 	if($id == 0)
@@ -88,7 +88,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "update `edu_school_program` set 
-	`name` = '$name', `order` = '$order', `default` = '$default', `time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
+	`name` = '$name', `order` = '$sort_order', `default` = '$default', `time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
 	where `school_program_id` = '$school_program_id2'";
 	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&school_program_id=$school_program_id");
