@@ -1,0 +1,4 @@
+--------------ruihwuiethwiughweighiwehgiwe
+update `edu_question` 
+			set `time_edit` = '2023-02-01 15:01:26', `member_edit` = 'aaaaaaaaaaaaa' 
+			where `question_id` = '063d354559d642b2c4d1';

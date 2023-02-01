@@ -12,6 +12,9 @@ class PicoDatabase
 	public $timezone = "00:00";
 	public $syncDatabaseDir = "";
 
+	public $delimiter = '--------------ruihwuiethwiughweighiwehgiwe';
+	const NEW_LINE = "\r\n";
+
 	private $conn = null;
 
 	public function __construct($driver, $host, $port, $username, $password, $database, $timezone, $syncDatabaseDir = null) //NOSONAR
@@ -76,7 +79,7 @@ class PicoDatabase
 	{
 		if($sync)
 		{
-			
+			$this->createSync($sql);
 		}
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -90,6 +93,10 @@ class PicoDatabase
 	}
 	public function executeUpdate($sql, $sync = false)
 	{
+		if($sync)
+		{
+			$this->createSync($sql);
+		}
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
@@ -102,6 +109,10 @@ class PicoDatabase
 	}
 	public function executeDelete($sql, $sync = false)
 	{
+		if($sync)
+		{
+			$this->createSync($sql);
+		}
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
@@ -114,6 +125,10 @@ class PicoDatabase
 	}
 	public function executeTransaction($sql, $sync = false)
 	{
+		if($sync)
+		{
+			$this->createSync($sql);
+		}
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
