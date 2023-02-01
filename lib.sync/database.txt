@@ -374,3 +374,9 @@ INSERT INTO `edu_question`
 								('063da2e34c0767452228', '<p>Simpangan rata &ndash; rata dari data 8, 4, 5, 6, 7, 5, 8, 5 adalah...</p>', '063da2e346eecf205bb0', '1', '2', '1', 'upper-alpha', '36fbd9df9680e8aada353b57762ed105', '',
 								'2023-02-01 16:17:40', 'aaaaaaaaaaaaa', '2023-02-01 16:17:40', 'aaaaaaaaaaaaa'); 
 								;
+--------------ruihwuiethwiughweighiwehgiwe
+DELETE FROM `edu_answer` where `test_id` = '063da2e346eecf205bb0' ;
+--------------ruihwuiethwiughweighiwehgiwe
+DELETE FROM `edu_question` where `test_id` = '063da2e346eecf205bb0' ;
+--------------ruihwuiethwiughweighiwehgiwe
+DELETE FROM `edu_test` where `test_id` = '063da2e346eecf205bb0' and `school_id` = '063ce682801be89951aa' ;
