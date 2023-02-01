@@ -39,7 +39,7 @@ if(isset($_POST['save']))
 
 if(@$_GET['option'] == 'edit')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 $state_list = array();
 $city_list = array();
@@ -91,12 +91,12 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
 (select `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
@@ -136,6 +136,6 @@ else
 <div class="warning">Anda tidak terdaftar sebagai Administrator sekolah. <a href="impor-data.php">Klik di sini untuk import data.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

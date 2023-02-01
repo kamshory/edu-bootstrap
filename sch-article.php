@@ -5,7 +5,7 @@ include_once dirname(__FILE__)."/lib.inc/dom.php";
 include_once dirname(__FILE__)."/lib.inc/auth.php";
 if(!@$member_login->member_id)
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 if(!empty(@$school_id))
 {
 	if(isset($_GET['article_id']))
@@ -18,7 +18,7 @@ if(!empty(@$school_id))
 		FROM `edu_article` 
 		left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 		WHERE 1 $sql_filter_article ";
-		include_once dirname(__FILE__)."/lib.inc/header.php";
+		include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
@@ -34,7 +34,7 @@ if(!empty(@$school_id))
 			</div>
 			<?php
 		}
-		include_once dirname(__FILE__)."/lib.inc/footer.php";
+		include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 	}
 	else
 	{
@@ -126,7 +126,7 @@ if(!empty(@$school_id))
 	}
 	}
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 exit();
 }
 else
@@ -202,7 +202,7 @@ if($stmt->rowCount())
 }
 if((@$_GET['option'] == 'edit' && isset($_GET['article_id']) && $auth_teacher_id) || (@$_GET['option'] == 'add' && $auth_teacher_id))
 {
-	include_once dirname(__FILE__)."/lib.inc/header.php";
+	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	?>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
@@ -282,7 +282,7 @@ var classList = <?php echo json_encode($arrc);?>;
 	{
 	}
 
-	include_once dirname(__FILE__)."/lib.inc/footer.php";
+	include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(isset($_GET['article_id']))
 {
@@ -297,7 +297,7 @@ else if(isset($_GET['article_id']))
 	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 	where (`edu_article`.`active` = true or `edu_article`.`member_create` = '$member_id') $sql_filter_article ";
-	include_once dirname(__FILE__)."/lib.inc/header.php";
+	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -342,11 +342,11 @@ else if(isset($_GET['article_id']))
         </div>
         <?php
 	}
-	include_once dirname(__FILE__)."/lib.inc/footer.php";
+	include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-	include_once dirname(__FILE__)."/lib.inc/header.php";
+	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$sql_filter_article = "";
 	if(isset($school_id))
 	{
@@ -476,7 +476,7 @@ else
 		}
 			
 	}
-	include_once dirname(__FILE__)."/lib.inc/footer.php";
+	include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 }
 

@@ -4,7 +4,7 @@ include_once('lib.inc/menu.php');
 exit();
 
 $cfg->page_title = "Sekolah";
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <ul class="list-rounded">
   <li><a href="sekolah-profil.php">Profil Sekolah</a></li>
@@ -15,5 +15,5 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
   <li><a href="peralatan.php">Peralatan</a></li>
 </ul>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 ?>

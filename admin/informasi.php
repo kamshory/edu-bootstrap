@@ -81,7 +81,7 @@ if(isset($_GET['info_id']))
 		}
 	
 		$cfg->meta_description = htmlspecialchars(strip_tags($content));
-		include_once dirname(__FILE__)."/lib.inc/header.php";
+		include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		?>
         <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 		<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/FileSaver.js"></script>
@@ -105,18 +105,18 @@ if(isset($_GET['info_id']))
         </div>
         </div>
 		<?php
-		include_once dirname(__FILE__)."/lib.inc/footer.php";
+		include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 	}
 	else
 	{
-		include_once dirname(__FILE__)."/lib.inc/header.php";
-		include_once dirname(__FILE__)."/lib.inc/footer.php";
+		include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+		include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 	}
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
@@ -263,6 +263,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

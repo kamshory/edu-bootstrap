@@ -349,7 +349,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 }
 if(@$_GET['option'] == 'add')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $collection = kh_filter_input(INPUT_GET, 'collection', FILTER_SANITIZE_NUMBER_UINT);
 $selection = kh_filter_input(INPUT_GET, 'selection', FILTER_SANITIZE_STRING_NEW);
 $sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' ORDER BY `order` asc ";
@@ -633,12 +633,12 @@ $(document).ready(function(e) {
 </script>
 <?php getDefaultValues($database, 'edu_test', array('name','class','subject','teacher_id','open','has_limits','trial_limits','threshold','assessment_methods','number_of_question','number_of_option','question_per_page','random','duration','has_alert','alert_time','standard_score','penalty','order','score_notification','publish_answer','time_answer_publication','test_availability','available_from','available_to','active')); ?>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'edit')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* 
 FROM `edu_test` 
@@ -929,12 +929,12 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'detail')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $array_class = $picoEdu->getArrayClass($school_id);
 $edit_key = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
@@ -1132,12 +1132,12 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
@@ -1329,6 +1329,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

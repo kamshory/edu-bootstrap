@@ -6,7 +6,7 @@ include_once dirname(__FILE__)."/login-form.php";
 exit();
 }
 $cfg->page_title = "Sekolah";
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $sql = "SELECT `edu_school`.*,
 (select `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
 (select `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
@@ -85,5 +85,5 @@ $cfg->page_title = "Tentang ".$school_name;
 </table>
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 ?>

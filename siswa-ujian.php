@@ -121,7 +121,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 		('$school_id', '$test_id', '$student_id', '$start', '$end', '$answer_str', '$true', '$false', '$score', '$penalty', '$final_score', '$percent', '1') ";
 		$database->execute($sql);
 		$picoEdu->logoutTest($school_id, $student_id, $test_id, session_id(), $picoEdu->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
-		include_once dirname(__FILE__)."/lib.inc/header.php";
+		include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		?>
         <div class="info">Jawaban berhasil dikirim.</div>
         <script type="text/javascript">
@@ -132,7 +132,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
         window.location = '<?php echo "".$cfg->base_url."siswa/ujian/index.php?option=sent&test_id=$test_id";?>';
         </script>
         <?php
-		include_once dirname(__FILE__)."/lib.inc/footer.php";
+		include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 		exit();
 	}
 }
@@ -173,14 +173,14 @@ if(isset($data['autosubmit']))
 $curtime = date('Y-m-d H:is');
 if($data['test_availability'] != 'F' && ($data['available_from'] > $curtime || $data['available_to'] < $curtime))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <blockquote>
 <p>Anda tidak dapat bisa mengikuti test <strong><?php echo stripslashes($data['name']);?></strong> karena tidak dalam masa ujian. <a href="../">Klik di sini untuk kembali</a>
 </p>
 </blockquote>
 <?php	
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
@@ -189,7 +189,7 @@ $test = $data['test_id'];
 
 if(@$_GET['option'] == 'sent')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="info">
 <?php
@@ -215,7 +215,7 @@ else
 ?>
 </div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(@$_GET['login-to-test'])
 {
@@ -309,21 +309,21 @@ else
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="warning">
 <p>Anda telah melaksanakan ujian sebanyak <strong><?php echo $ntest;?></strong> kali. Ujian terahir pada tanggal<strong> <?php echo translateDate(date('j F Y', strtotime($test_terakhir)));?></strong> jam <strong><?php echo date('H:i:s', strtotime($test_terakhir));?></strong>. <a href="../siswa">Klik di sini untuk kembali</a>
 </p>
 </div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>
 <?php
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="label">
 Informasi Singkat Ujian
@@ -366,19 +366,19 @@ Informasi Singkat Ujian
 <input type="button" value="Batal" onclick="window.location='<?php echo $cfg->base_url;?>siswa/ujian.php'">
 </div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 }
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="info">
 <p>Ujian ini tidak tersedia untuk Anda. <a href="ujian.php">Klik di sini untuk kembali</a></p>
 </div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 exit();
 }

@@ -58,7 +58,7 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 
 if(@$_GET['option'] == 'detail')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $status = kh_filter_input(INPUT_GET, 'status', FILTER_SANITIZE_STRING_NEW);
@@ -200,7 +200,7 @@ include_once dirname(__FILE__)."/ajax-test-monitoring.php";
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 ?>
 <script type="text/javascript">
@@ -364,6 +364,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

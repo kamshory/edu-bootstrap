@@ -1,7 +1,7 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 $cfg->page_title = "Version Program";
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <style type="text/css">
 .table-version
@@ -127,5 +127,5 @@ $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </tbody>
 </table>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 ?>

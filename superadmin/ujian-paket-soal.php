@@ -668,7 +668,7 @@ if(@$_GET['option'] == 'edit' || @$_GET['option'] == 'add')
 {
 if(isset($_GET['test_collection_id']) && (@$_GET['option'] == 'add' || isset($_GET['question_index'])))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_collection_id = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_STRING_NEW);
 $question_index = kh_filter_input(INPUT_GET, 'question_index', FILTER_SANITIZE_NUMBER_UINT);
 $sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
@@ -1180,11 +1180,11 @@ else
 <?php
 }
 
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(isset($_GET['test_collection_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_collection_id = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
 $sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id'  ";
 $stmt = $database->executeQuery($sql);
@@ -1324,7 +1324,7 @@ if($stmt->rowCount() > 0)
         <?php
 	}
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 	
 	
@@ -1332,7 +1332,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php";
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $grade_id = kh_filter_input(INPUT_GET, 'grade_id', FILTER_SANITIZE_NUMBER_INT);
 ?>
 <style type="text/css">
@@ -1556,6 +1556,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

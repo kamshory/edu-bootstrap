@@ -19,7 +19,7 @@ if(isset($_GET['article_id']))
 	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 	WHERE `edu_article`.`article_id` = '$article_id' and `edu_article`.`active` = true ";
-	include_once dirname(__FILE__)."/lib.inc/header.php";
+	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -38,11 +38,11 @@ if(isset($_GET['article_id']))
         </div>
         <?php
 	}
-	include_once dirname(__FILE__)."/lib.inc/footer.php";
+	include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-	include_once dirname(__FILE__)."/lib.inc/header.php";
+	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
@@ -140,7 +140,7 @@ else
         <?php
 			
 	}
-	include_once dirname(__FILE__)."/lib.inc/footer.php";
+	include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 
 ?>

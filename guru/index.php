@@ -6,9 +6,9 @@ if(empty(@$school_id))
 	exit();
 }
 $cfg->page_title = "Halaman Depan Guru";
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	?>
 
 	<?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 ?>

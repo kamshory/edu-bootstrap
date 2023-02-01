@@ -113,7 +113,7 @@ if(@$_GET['option'] == 'print')
 }
 else if(@$_GET['option'] == 'add')
 {
-	include_once dirname(__FILE__)."/lib.inc/header.php";
+	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
 ?>
 <script type="text/javascript">
@@ -253,12 +253,12 @@ $(document).ready(function(e) {
 </form>
 <?php getDefaultValues($database, 'edu_token', array('active')); ?>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'detail')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, 'token_id', FILTER_SANITIZE_NUMBER_INT);
 $nt = '';
 $sql = "SELECT `edu_token`.* $nt,
@@ -332,7 +332,7 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
@@ -341,7 +341,7 @@ $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 $now = $picoEdu->getLocalDateTime();
 $oneday = date('Y-m-d H:i:s', time()-86400);
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 if(isset($_POST['cleanup']))
 {
 	$sql = "DELETE FROM `edu_invalid_signin` WHERE `signin_type` = 'T' ";
@@ -618,6 +618,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

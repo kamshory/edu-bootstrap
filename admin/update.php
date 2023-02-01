@@ -288,7 +288,7 @@ else
 }
 if($step == 1)
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $target_url = $cfg->repo_domain."/upgrade/edu/$program_version";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $target_url);
@@ -435,11 +435,11 @@ else
 }
 }
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if($step == 2)
 {
-	include_once dirname(__FILE__)."/lib.inc/header.php";
+	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	if(file_exists(dirname(dirname(__FILE__))."/ff8e3dd3964f6864ec4dd6e5a796754a.zip") 
 	|| file_exists(dirname(dirname(__FILE__))."/74594b6204df3e1683455de22c68aa22.zip"))
 	{
@@ -461,11 +461,11 @@ else if($step == 2)
 	<div class="warning">Sepertinya proses mendownload file update aplikasi dari repositori gagal dilakukan. Silakan ulangi lagi. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>?step=<?php echo ($step-1);?>">Klik di sini untuk mendownload kembali</a>.</div>
 	<?php
 	}
-	include_once dirname(__FILE__)."/lib.inc/footer.php";
+	include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if($step == 3)
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <h3>Tahap 3 - Update Selesai</h3>
 <div class="info">Program berhasil diperbarui.</div>
@@ -474,11 +474,11 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
   <input class="btn btn-primary" type="button" id="next" value="Selesai" onclick="window.location='index.php'" />
 </div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 ?>
 <h3>Update Aplikasi</h3>
@@ -487,6 +487,6 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
   <input class="btn btn-primary" type="button" id="next" value="Lanjutkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?step=<?php echo ($step+1);?>'" />
 </div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

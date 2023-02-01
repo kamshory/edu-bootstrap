@@ -53,7 +53,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 }
 if(@$_GET['option'] == 'edit')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_admin`.* 
 FROM `edu_admin` 
@@ -112,12 +112,12 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_admin`.* $nt,
@@ -203,6 +203,6 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

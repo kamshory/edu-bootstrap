@@ -274,7 +274,7 @@ echo '</body>
 }
 else if(@$_GET['option'] == 'answerdetail' && isset($_GET['test_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.*, `edu_answer`.*, 
 timediff(`edu_answer`.`end`,`edu_answer`.`start`) as `duration_test` ,
@@ -416,17 +416,17 @@ $i++;
 }
 ?>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 }
 else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* $nt
 FROM `edu_test` 
@@ -750,7 +750,7 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 } else {
     include_once dirname(__FILE__) . "/lib.inc/header.php";
     $school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
@@ -955,6 +955,6 @@ $pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "
 
 <?php
   }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

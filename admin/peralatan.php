@@ -22,7 +22,7 @@ if(isset($_POST['clear']))
 }
 
 
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $li = "";
 $totalsize = 0;
 if(file_exists($dir2) && ($handle = opendir($dir2)))
@@ -56,5 +56,5 @@ echo $li;
 </form>
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 ?>

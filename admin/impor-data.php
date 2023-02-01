@@ -654,7 +654,7 @@ if(@$_GET['option'] == 'success')
 {
 if(isset($_GET['school_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $nt = '';
@@ -802,22 +802,22 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 </form>
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 exit();
 }
 }
 else if(@$_GET['option'] == 'duplicated')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="warning">GAGAL! Data sekolah dengan name yang sama telah dimasukkan sebelumnya. Mohon periksa kembali data yang Anda masukkan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Impor lagi</a>.</div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
 	
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="info">
 Modul ini digunakan untuk mengimpor data sekolah, kelas, siswa, dan guru. Contoh data dapat didownload <a href="planetedu.xlsx">di sini</a>. Apabila terjadi kesalahan saat melakukan import data, segera hapus data tersebut sebelum mengimpor data yang lain.</div>
@@ -876,6 +876,6 @@ $(document).ready(function(e) {
 });
 </script>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

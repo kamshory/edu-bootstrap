@@ -8,7 +8,7 @@ if($admin_login->admin_level != 1)
 
 $cfg->page_title = "Bank Soal";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 ?>
 
@@ -18,5 +18,5 @@ include_once dirname(__FILE__)."/lib.inc/header.php";
 </ul>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 ?>

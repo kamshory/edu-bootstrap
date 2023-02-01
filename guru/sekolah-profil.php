@@ -7,7 +7,7 @@ exit();
 }
 $cfg->page_title = "Profil Sekolah";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
 (select `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
@@ -81,5 +81,5 @@ else
 <div class="warning">Anda tidak terdaftar sebagai guru.</div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 ?>

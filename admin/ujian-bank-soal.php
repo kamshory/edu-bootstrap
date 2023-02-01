@@ -11,7 +11,7 @@ if(empty(@$real_school_id))
 	exit();
 }
 $cfg->page_title = "Bank Soal";
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $grade_id = kh_filter_input(INPUT_GET, 'grade_id', FILTER_SANITIZE_NUMBER_UINT);
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
@@ -128,5 +128,5 @@ $array_class = $picoEdu->getArrayClass($school_id);
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 ?>

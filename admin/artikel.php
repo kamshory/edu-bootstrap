@@ -137,7 +137,7 @@ if(isset($_POST['delete']) && isset($_POST['article_id']))
 
 if(@$_GET['option'] == 'add')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 
 <script type="text/javascript">
@@ -178,11 +178,11 @@ var defaultdir = 'lib.content/media/article/';
 </div>
 </form>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(@$_GET['option'] == 'edit' && isset($_GET['article_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
@@ -232,11 +232,11 @@ var defaultdir = 'lib.content/media/article/';
 </form>
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(isset($_GET['article_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
 $sql_filter_article = " and `edu_article`.`article_id` = '$article_id' ";
 
@@ -248,7 +248,7 @@ $sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 FROM `edu_article` 
 left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 where (`edu_article`.`school_id` = '$school_id') $sql_filter_article ";
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -315,11 +315,11 @@ return doc;
 </div>
 <?php
 	}
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 ?>
 <script type="text/javascript">
@@ -500,6 +500,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

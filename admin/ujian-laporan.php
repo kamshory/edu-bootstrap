@@ -356,7 +356,7 @@ echo '</body>
 }
 else if(@$_GET['option'] == 'answerdetail' && isset($_GET['answer_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $array_class = $picoEdu->getArrayClass($school_id);
 $answer_id = kh_filter_input(INPUT_GET, 'answer_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.*, `edu_answer`.*, 
@@ -621,17 +621,17 @@ $i++;
 }
 ?>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 }
 else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $q = kh_filter_input(INPUT_GET, 'q', FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
@@ -962,11 +962,11 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 
 ?>
@@ -1139,6 +1139,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

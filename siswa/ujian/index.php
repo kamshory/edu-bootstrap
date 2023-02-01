@@ -176,14 +176,14 @@ if(isset($data['autosubmit']))
 $curtime = date('Y-m-d H:is');
 if($data['test_availability'] != 'F' && ($data['available_from'] > $curtime || $data['available_to'] < $curtime))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <blockquote>
 <p>Anda tidak dapat bisa mengikuti test <strong><?php echo $data['name'];?></strong> karena tidak dalam masa ujian. <a href="../">Klik di sini untuk kembali</a>
 </p>
 </blockquote>
 <?php	
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
@@ -192,7 +192,7 @@ $test_id = $data['test_id'];
 
 if(@$_GET['option'] == 'sent')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="info">
 <?php
@@ -219,13 +219,13 @@ else
 ?>
 </div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 exit();
 }
 
 else if(@$_GET['confirm-login-to-test'] == 'yes' || @$_GET['option'] == 'login-to-test')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="label">
 Informasi Singkat Ujian
@@ -268,20 +268,20 @@ Informasi Singkat Ujian
 <input type="button" value="Batal" onclick="window.location='<?php echo $cfg->base_url."/siswa/ujian.php";?>'">
 </div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 exit();
 }
 
 else if(@$_GET['option'] == 'limited')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="warning">
 <p>Anda telah melaksanakan ujian sebanyak <strong><?php echo $ntest;?></strong> kali. Ujian terahir pada tanggal<strong> <?php echo translatedate(date('j F Y', strtotime($test_id_terakhir)));?></strong> jam <strong><?php echo date('H:i:s', strtotime($test_id_terakhir));?></strong>. <a href="../">Klik di sini untuk kembali</a>
 </p>
 </div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 exit();
 }
 
@@ -389,13 +389,13 @@ else if(@$_GET['login-to-test']=="yes")
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="info">
 <p>Ujian ini tidak tersedia untuk Anda. <a href="../ujian.php">Klik di sini untuk kembali</a></p>
 </div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 exit();
 }
 

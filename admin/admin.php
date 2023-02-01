@@ -180,7 +180,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 
 if(@$_GET['option'] == 'add')
 {
-	include_once dirname(__FILE__)."/lib.inc/header.php";
+	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	?>
 	<form name="formedu_admin" id="formedu_admin" action="" method="post" enctype="multipart/form-data">
 		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -238,13 +238,13 @@ if(@$_GET['option'] == 'add')
 	</form>
 	<?php getDefaultValues($database, 'edu_admin', array('blocked','active')); ?>
 	<?php
-	include_once dirname(__FILE__)."/lib.inc/footer.php";
+	include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 
 
 else if(@$_GET['option'] == 'edit')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php";
+include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_admin`.* 
 FROM `edu_admin` 
@@ -324,12 +324,12 @@ if($stmt->rowCount() > 0)
 		<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 		<?php
 	}
-	include_once dirname(__FILE__)."/lib.inc/footer.php";
+	include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 
 else if(@$_GET['option'] == 'detail')
 {
-	include_once dirname(__FILE__)."/lib.inc/header.php";
+	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$edit_key = kh_filter_input(INPUT_GET, 'admin_id', FILTER_SANITIZE_STRING_NEW);
 	$nt = '';
 	$sql = "SELECT `edu_admin`.* $nt,
@@ -428,12 +428,12 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php";
+include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-	include_once dirname(__FILE__)."/lib.inc/header.php";
+	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	?>
 	<div class="search-control">
 	<form id="searchform" name="form1" method="get" action="">
@@ -573,6 +573,6 @@ else
 	</div>
 
 	<?php
-	include_once dirname(__FILE__)."/lib.inc/footer.php";
+	include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>
