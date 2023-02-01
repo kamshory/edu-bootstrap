@@ -98,7 +98,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 							(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
 							`time_create`, `member_create`, `time_edit`, `member_edit`) values
 							('$question_id', '$pertanyaan', '$test_id', '1', '$sort_order', '$random', '$numbering', '$digest', '$competence',
-							'$time_create', '$member_create', '$time_edit', '$member_edit'); 
+							'$time_create', '$member_create', '$time_edit', '$member_edit')
 							";
 							$stmt = $database->executeInsert($sql1, true);;
 							
@@ -135,7 +135,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 									
 									$sql2 = "INSERT INTO `edu_option` 
 									(`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-									('$option_id', '$question_id', '$option', '$order2', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit'); 
+									('$option_id', '$question_id', '$option', '$order2', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')
 									";
 									
 									$database->executeInsert($sql2, true);
@@ -156,7 +156,7 @@ $sql = "SELECT `edu_test`.*,
 (select `edu_teacher`.`name` from `edu_teacher` where `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
 (select count(distinct `edu_question`.`question_id`) from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id`) as `question`
 from `edu_test`
-where 1 and `edu_test`.`school_id` = '$school_id' 
+where `edu_test`.`school_id` = '$school_id' 
 order by `edu_test`.`test_id` desc
 ";
 $stmt = $database->executeQuery($sql);

@@ -336,7 +336,7 @@ else if(@$_GET['option'] == 'detail')
 	(select `edu_admin1`.`name` from `edu_admin` as `edu_admin1` where `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) as `admin_create`,
 	(select `edu_admin2`.`name` from `edu_admin` as `edu_admin2` where `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
 	from `edu_admin` 
-	where 1 and `edu_admin`.`school_id` = '$school_id' 
+	where `edu_admin`.`school_id` = '$school_id' 
 	and `edu_admin`.`admin_id` = '$edit_key' and (`admin_level` != '1' or `admin_id` = '$my_admin') 
 	";
 	$stmt = $database->executeQuery($sql);
@@ -458,12 +458,12 @@ else
 
 	$sql = "SELECT `edu_admin`.* $nt
 	from `edu_admin`
-	where 1 and `edu_admin`.`school_id` = '$school_id' $sql_filter
+	where `edu_admin`.`school_id` = '$school_id' $sql_filter
 	order by `edu_admin`.`admin_id` asc
 	";
 	$sql_test = "SELECT `edu_admin`.*
 	from `edu_admin`
-	where 1 and `edu_admin`.`school_id` = '$school_id' $sql_filter
+	where `edu_admin`.`school_id` = '$school_id' $sql_filter
 	";
 	$stmt = $database->executeQuery($sql_test);
 	$pagination->total_record = $stmt->rowCount();

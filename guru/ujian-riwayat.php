@@ -10,7 +10,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET['id']))
 {
-	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_UINT);
+	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_peserta_test`.* from `edu_peserta_test` where `id` = '$id' and `status` = '1'
 	";
@@ -30,7 +30,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 }
 if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET['id']))
 {
-	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_UINT);
+	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_peserta_test`.* from `edu_peserta_test` where `id` = '$id' and `status` = '1'
 	";
@@ -263,7 +263,7 @@ $sql = "SELECT `edu_test`.* $nt,
 (select `edu_teacher`.`name` from `edu_teacher` where `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
 (select count(distinct `edu_question`.`question_id`) from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
 from `edu_test`
-where 1 and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+where `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 having 1 and `student` > 0
 order by `edu_test`.`test_id` desc
 ";

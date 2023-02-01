@@ -126,7 +126,7 @@ $(document).ready(function(e) {
 		<option value=""></option>
 		<?php
 		$sql = "SELECT * from `edu_test`
-		where 1 and `school_id` = '$school_id'
+		where `school_id` = '$school_id'
 		and (`test_availability` = 'F' or `available_to` > '$now')
 		order by `test_id` desc
 		";
@@ -205,7 +205,7 @@ $(document).ready(function(e) {
 (select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_token`.`class_id`) as `class_name`,
 (select `edu_test`.`name` from `edu_test` where `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
 from `edu_token` 
-where 1 and `school_id` = '$school_id'
+where `school_id` = '$school_id'
 and `edu_token`.`token_id` = '$edit_key'
 ";
 			$stmt = $database->executeQuery($sql);
@@ -317,7 +317,7 @@ function printToken(frm)
 	<option value=""></option>
     <?php
 	$sql = "SELECT * from `edu_test`
-	where 1 and `school_id` = '$school_id'
+	where `school_id` = '$school_id'
 	and (`test_availability` = 'F' or `available_to` > '$now')
 	order by `test_id` desc
 	";
@@ -397,12 +397,12 @@ $sql = "SELECT `edu_token`.* $nt,
 (select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_token`.`class_id`) as `class_name`,
 (select `edu_test`.`name` from `edu_test` where `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
 from `edu_token`
-where 1 and `school_id` = '$school_id' $sql_filter
+where `school_id` = '$school_id' $sql_filter
 order by `edu_token`.`token_id` desc
 ";
 				$sql_test = "SELECT `edu_token`.*
 from `edu_token`
-where 1 and `school_id` = '$school_id' $sql_filter
+where `school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

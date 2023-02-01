@@ -778,7 +778,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php";
     ?>
     </select>
     <?php
-    if (@$school_id != 0) {
+    if (!empty(@$school_id)) {
       ?>
     <span class="search-label">Kelas</span> 
     <select class="form-control input-select" name="class_id" id="class_id">

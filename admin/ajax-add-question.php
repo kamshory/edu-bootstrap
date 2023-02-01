@@ -72,7 +72,7 @@ if(isset($_POST['question']))
 
 			$sql = "INSERT INTO `edu_option` 
 			(`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-			('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit'); ";
+			('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')";
 			$stmt = $database->executeInsert($sql, true);
 			if($stmt->rowCount() > 0)
 			{

@@ -271,7 +271,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`, 
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
 								('$question_id', '$pertanyaan', '$test_id', '1', '$sort_order', '$random', '$numbering', '$digest', '$competence',
-								'$time_create', '$member_create', '$time_edit', '$member_edit'); 
+								'$time_create', '$member_create', '$time_edit', '$member_edit')
 								";
 								$res1 = $database->executeInsert($sql1, true);
 								
@@ -312,7 +312,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 										$sql2 = "INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit'); 
+										('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')
 										";
 										
 										$res2 = $database->executeInsert($sql2);
@@ -1216,12 +1216,12 @@ $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
 (select `edu_teacher`.`name` from `edu_teacher` where `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`
 from `edu_test`
-where 1 and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+where `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 order by `edu_test`.`test_id` desc
 ";
 $sql_test = "SELECT `edu_test`.*
 from `edu_test`
-where 1 and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+where `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

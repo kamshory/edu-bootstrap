@@ -4,7 +4,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 $basename = "ujian-soal.php";
 $test_id = 0;
 $edit_mode = '';
-if (@$school_id != 0 && isset($_POST['question_text']) && isset($_POST['test_id']) && @$_POST['option'] == 'add') {
+if (!empty(@$school_id) && isset($_POST['question_text']) && isset($_POST['test_id']) && @$_POST['option'] == 'add') {
 	$test_id = kh_filter_input(INPUT_POST, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	$edit_mode = kh_filter_input(INPUT_POST, 'edit_mode', FILTER_SANITIZE_NUMBER_UINT);
 	$sql = "select * from `edu_test` where `test_id` = '$test_id' and `school_id` = '$school_id' ";
@@ -106,7 +106,7 @@ if (@$school_id != 0 && isset($_POST['question_text']) && isset($_POST['test_id'
 	}
 }
 
-if (@$school_id != 0) {
+if (!empty(@$school_id)) {
 	if ($test_id == 0) {
 		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	}

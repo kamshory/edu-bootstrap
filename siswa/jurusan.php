@@ -113,12 +113,12 @@ $nt = '';
 
 $sql = "SELECT `edu_school_program`.*
 from `edu_school_program`
-where 1 and `school_id` = '$school_id' $sql_filter
+where `school_id` = '$school_id' $sql_filter
 order by `edu_school_program`.`school_program_id` asc
 ";
 $sql_test = "SELECT `edu_school_program`.*
 from `edu_school_program`
-where 1 and `school_id` = '$school_id' $sql_filter
+where `school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

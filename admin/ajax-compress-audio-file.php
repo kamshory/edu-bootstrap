@@ -1,6 +1,6 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-if(@$school_id != 0 && isset($_POST['filename']) && isset($_POST['test_id']))
+if(!empty(@$school_id) && isset($_POST['filename']) && isset($_POST['test_id']))
 {
 	$absolute_dir = dirname(dirname(__FILE__));
 	$filename = trim(@$_POST['filename']);

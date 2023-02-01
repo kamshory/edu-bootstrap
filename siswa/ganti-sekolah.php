@@ -19,7 +19,7 @@ if(@$_GET['option'] == 'select')
 	inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 	where `edu_member_school`.`member_id` = '$student_id' and `edu_member_school`.`role` = 'S'
 	) as `edu_school3`
-	where 1 and `edu_school3`.`school_id` = '$school_id'
+	where `edu_school3`.`school_id` = '$school_id'
 	having `edu_school3`.`role` = 'S'
 	order by `edu_school3`.`open` asc, `edu_school3`.`name` asc
 	";

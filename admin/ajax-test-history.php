@@ -16,7 +16,7 @@ $arr_status = array(
 
 if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET['id']))
 {
-	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_UINT);
+	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_test_member`.* from `edu_test_member` where `test_member_id` = '$id' and `status` = '1'
 	";
@@ -34,7 +34,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 }
 if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET['id']))
 {
-	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_UINT);
+	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_test_member`.* from `edu_test_member` where `test_member_id` = '$id' and `status` = '1'
 	";

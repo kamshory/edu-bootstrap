@@ -144,7 +144,7 @@ $filter = "";
 }
 $sql = "SELECT `edu_student`.* 
 from `edu_student` 
-where 1 and `edu_student`.`school_id` = '$school_id' and `edu_student`.`active` = true $filter
+where `edu_student`.`school_id` = '$school_id' and `edu_student`.`active` = true $filter
 order by `edu_student`.`name` asc ";
 $stmt = $database->executeQuery($sql);
 

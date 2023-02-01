@@ -16,7 +16,7 @@ $edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school`.*, `edu_school`.`name` as `school_name`
 from `edu_school` 
-where 1 and `edu_school`.`school_id` = '$school_id'
+where `edu_school`.`school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

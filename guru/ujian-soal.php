@@ -176,7 +176,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			(`question_id`, `content`, `test_id`, `multiple_choice`, `random`, `numbering`, `digest`, `order`,
 			`time_create`, `member_create`, `time_edit`, `member_edit`) values
 			('$question_id', '$question', '$test_id', '1', '$random', '$numbering', '$digest', '$sort_order',
-			'$time_create', '$member_create', '$time_edit', '$member_edit'); ";
+			'$time_create', '$member_create', '$time_edit', '$member_edit')";
 			$database->executeInsert($sql, true);
 			$sort_order = 0;
 			$oke = 1;
@@ -1243,12 +1243,12 @@ $sql = "SELECT `edu_test`.* $nt,
 (select `edu_teacher`.`name` from `edu_teacher` where `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
 (select count(distinct `edu_question`.`question_id`) from `edu_question` where `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
 from `edu_test`
-where 1 and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+where `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 order by `edu_test`.`test_id` desc
 ";
 $sql_test = "SELECT `edu_test`.`test_id`
 from `edu_test`
-where 1 and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+where `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 ";
 
 $stmt = $database->executeQuery($sql_test);

@@ -145,7 +145,7 @@ if(@$_GET['option'] == 'edit')
 	$edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_student`.* 
 	from `edu_student` 
-	where 1 and `edu_student`.`school_id` = '$school_id' 
+	where `edu_student`.`school_id` = '$school_id' 
 	and `edu_student`.`student_id` = '$edit_key'
 	";
 	$stmt = $database->executeQuery($sql);
@@ -272,7 +272,7 @@ $sql = "SELECT `edu_student`.* ,
 (select `edu_admin`.`name` from `edu_admin` where `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
 (select `edu_class`.`name` from `edu_class` where `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
 from `edu_student` 
-where 1 and `edu_student`.`school_id` = '$school_id' 
+where `edu_student`.`school_id` = '$school_id' 
 and `edu_student`.`student_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
@@ -479,12 +479,12 @@ $nt = '';
 $sql = "SELECT `edu_student`.* , `edu_class`.`name` as `class_id`, `edu_class`.`order` as `order`
 from `edu_student`
 left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
-where 1 and `edu_student`.`school_id` = '$school_id' $sql_filter
+where `edu_student`.`school_id` = '$school_id' $sql_filter
 order by `order` asc, `edu_student`.`name` asc
 ";
 $sql_test = "SELECT `edu_student`.*
 from `edu_student`
-where 1 and `edu_student`.`school_id` = '$school_id' $sql_filter
+where `edu_student`.`school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

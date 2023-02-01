@@ -20,7 +20,7 @@ if (@$_GET['option'] == 'select') {
 	from `edu_school` as `edu_school2`
 	where `edu_school2`.`open` = '1' and `edu_school2`.`active` = true 
 	) as `edu_school3`
-	where 1 and `edu_school3`.`school_id` = '$school_id'
+	where `edu_school3`.`school_id` = '$school_id'
 	order by `edu_school3`.`open` asc, `edu_school3`.`name` asc
 	";
 	$stmt = $database->executeQuery($sql);
