@@ -84,7 +84,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Batas Percobaan</td>
-		<td><?php echo ($data['trial_limits']);?> </td>
+		<td><?php echo $data['trial_limits'];?> </td>
 		</tr>
         <?php
 		}
@@ -160,7 +160,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Pengumuman Kunci Jawaban</td>
-		<td><?php echo ($data['time_answer_publication']);?> </td>
+		<td><?php echo $data['time_answer_publication'];?> </td>
 		</tr>
         <?php
 		}
@@ -194,11 +194,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
-		<td><?php echo ($data['member_create']);?> (<?php echo ($data['role_create']);?>)</td>
+		<td><?php echo $data['member_create'];?> (<?php echo ($data['role_create']);?>)</td>
 		</tr>
 		<tr>
 		<td>Admin Ubah</td>
-		<td><?php echo ($data['member_edit']);?> (<?php echo ($data['role_edit']);?>)</td>
+		<td><?php echo $data['member_edit'];?> (<?php echo ($data['role_edit']);?>)</td>
 		</tr>
 		<tr>
 		<td>IP Buat</td>
@@ -210,7 +210,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Aktif
-		</td><td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
+		</td><td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
 	</table>
 </form>

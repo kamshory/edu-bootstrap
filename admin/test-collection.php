@@ -296,7 +296,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 		</tr>
 		<tr>
 		<td>Active</td>
-		<td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -399,7 +399,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	{
 	$no++;
 	?>
-    <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
+    <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="test_collection_id[]" id="test_collection_id" value="<?php echo $data['test_collection_id'];?>" class="test_collection_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="tools/images/trans.gif" class="icon-16 icon-edit-16" alt="Edit" border="0" /></a></td>
       <td align="right"><?php echo $no;?> </td>
@@ -415,7 +415,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['ip_create'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['ip_edit'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo ($data['taken']);?></a></td>
-      <td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

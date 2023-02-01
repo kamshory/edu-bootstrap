@@ -1331,7 +1331,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['teacher'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo ($data['open'])?'Terbuka':'Tertutup';?></a></td>
       <td><?php if($data['number_of_question']){ ?><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?test_id=<?php echo $data['test_id'];?>"><?php echo $data['number_of_question'];?> soal</a><?php } else { echo '-';} ?> </td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

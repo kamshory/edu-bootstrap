@@ -1101,6 +1101,10 @@ class PicoEdu //NOSONAR
 		return $v1 == $v2 ? $out : '';
 	}
 
+	public function trueFalse($val, $trueVal, $falseVal)
+	{
+		return $val ? $trueVal : $falseVal;
+	}
 	public function getRowClass($data)
 	{
 		if(!isset($data) || empty($data))

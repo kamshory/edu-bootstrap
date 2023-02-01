@@ -590,7 +590,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Terbuka</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php if($data['open']==1) echo ' checked="checked"';?>> Terbuka</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php echo $picoEdu->ifMatch($data['open'], 1, ' checked="checked"');?>> Terbuka</label>
 		</td>
 		</tr>
 		<tr>
@@ -870,7 +870,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -993,7 +993,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	{
 	$no++;
 	?>
-    <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
+    <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="school_id[]" id="school_id" value="<?php echo $data['school_id'];?>" class="school_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_id=<?php echo $data['school_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
@@ -1006,7 +1006,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><?php echo $data['city_id'];?> </td>
       <td><a href="siswa.php?school_id=<?php echo $data['school_id'];?>"><?php echo ($data['student']);?></a></td>
       <td><a href="guru.php?school_id=<?php echo $data['school_id'];?>"><?php echo $data['teacher'];?></a></td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

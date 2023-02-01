@@ -496,7 +496,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -657,7 +657,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo $data['class_id'];?></a></td>
       <td><?php if($data['gender']=='M') echo 'L'; if($data['gender']=='W') echo 'P';?> </td>
       <td><?php echo $data['blocked']?'Ya':'Tidak';?> </td>
-      <td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

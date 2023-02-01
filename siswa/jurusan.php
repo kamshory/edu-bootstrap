@@ -68,7 +68,7 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -158,12 +158,12 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	{
 	$no++;
 	?>
-    <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
+    <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['order'];?></a></td>
       <td><?php echo ($data['default'])?'Ya':'Tidak';?> </td>
-      <td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

@@ -336,7 +336,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -524,7 +524,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	{
 	$no++;
 	?>
-    <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
+    <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="student_id[]" id="student_id" value="<?php echo $data['student_id'];?>" class="student_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&student_id=<?php echo $data['student_id'];?>"><i class="fas fa-pencil"></i></td>
       <td align="right"><?php echo $no;?> </td>
@@ -536,7 +536,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&student_id=<?php echo $data['student_id'];?>"><?php echo ($data['class_id']);?></a></td>
       <td><?php if($data['gender']=='M') echo 'L'; if($data['gender']=='W') echo 'P';?> </td>
       <td><?php echo ($data['blocked'])?'Ya':'Tidak';?> </td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

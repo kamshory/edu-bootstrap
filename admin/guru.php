@@ -437,7 +437,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -557,7 +557,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><?php echo $data['phone'];?> </td>
       <td><?php echo $data['email'];?> </td>
       <td><?php echo $data['blocked']?'Ya':'Tidak';?> </td>
-      <td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

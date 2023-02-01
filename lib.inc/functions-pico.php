@@ -399,21 +399,46 @@ function scrap($url)
 
 class DirectoryDestroyer
 {
-	public $directory = '';
-	public function __construct($directory)
+	public $fileSync = null;
+	public function __construct($fileSync)
 	{
-		$this->directory = $directory;
+		$this->fileSync = $fileSync;
 	}
+
+	public function destroy($dir, $sync) {
+		if (is_dir($dir)) {
+		  $objects = scandir($dir);
+		  foreach ($objects as $object) 
+		  {
+			if ($object != "." && $object != "..") 
+			{
+			  if (filetype($dir."/".$object) == "dir") 
+				{
+					$this->destroy($dir."/".$object, $sync); 
+				}
+			  else 
+			  {
+				$this->fileSync->deleteFile($dir."/".$object, $sync);
+			  }
+			}
+		  }
+		  reset($objects);
+		  $this->fileSync->deleteDirecory($dir, $sync);
+		}
+	}
+	
+	/*
+	Old code
 	public function destroy($fileSync)
 	{
 		$dir = $this->directory;
 		chmod(dirname($dir), 0777);
 		chmod($dir, 0777);
-		$this->remove_dir($dir, $fileSync);
+		$this->removeDirectory($dir, $fileSync);
 		$fileSync->deleteDirecory($dir, true);
 		chmod(dirname($dir), 0755);
 	}
-	private function remove_dir($dir, $fileSync)
+	private function removeDirectory($dir, $fileSync)
 	{
 		$dir = rtrim($dir, "/");
 		$mydir = opendir($dir);
@@ -422,15 +447,15 @@ class DirectoryDestroyer
 				chmod($dir . "/" . $file, 0777);
 				if (is_dir($dir . "/" . $file)) {
 					chdir('.');
-					destroy($dir . "/" . $file, $fileSync);
-					$fileSync->deleteDirecory($dir . "/" . $file, true);
+					$this->removeDirectory($dir . "/" . $file, $fileSync);
 				} else {
-					unlink($dir . "/" . $file);
+					$fileSync->deleteFile($dir . "/" . $file, false);
 				}
 			}
 		}
 		closedir($mydir);
 	}
+	*/
 }
 
 

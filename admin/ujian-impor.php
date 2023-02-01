@@ -380,7 +380,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     </tr>
     <tr>
       <td>Aktif</td>
-      <td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
     </tr>
     <tr>
       <td>File Ujian</td>
@@ -570,7 +570,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['teacher'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo ($data['open'])?'Terbuka':'Tertutup';?></a></td>
       <td><a href="ujian-soal.php?test_id=<?php echo $data['test_id'];?>"><?php echo $data['number_of_question'];?></a></td>
-      <td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

@@ -127,8 +127,8 @@ if(isset($_POST['delete']) && isset($_POST['article_id']))
 			{
 				// destroy directory
 				$dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id";
-				$destroyer = new DirectoryDestroyer($dir);
-				$destroyer->destroy($fileSync);
+				$destroyer = new DirectoryDestroyer($fileSync);
+				$destroyer->destroy($dir, true);
 			}
 		}
 	}
@@ -462,7 +462,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	  }
 	  ?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&article_id=<?php echo $data['article_id'];?>"><?php echo translateDate(date('d M Y H:i', strtotime($data['time_create'])));?></a></td>
-      <td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

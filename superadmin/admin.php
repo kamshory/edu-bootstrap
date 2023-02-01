@@ -472,7 +472,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -610,7 +610,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	{
 	$no++;
 	?>
-    <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
+    <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="admin_id[]" id="admin_id" value="<?php echo $data['admin_id'];?>" class="admin_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&admin_id=<?php echo $data['admin_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
@@ -620,7 +620,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['email'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php if($data['admin_level']=='2') echo 'Administrator'; if($data['admin_level']=='1') echo 'Super Administrator';?></a></td>
       <td><?php echo ($data['blocked'])?'Ya':'Tidak';?> </td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

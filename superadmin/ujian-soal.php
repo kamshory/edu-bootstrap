@@ -540,7 +540,7 @@ if($stmt->rowCount() > 0)
   </tr>
   <tr>
     <td>Koleksi Soal</td>
-    <td><span id="total_collection"><?php echo $data['collection'];?></span> soal <a href="ujian-soal.php?test_id=<?php echo ($data['test_id']);?>">Lihat</a></td>
+    <td><span id="total_collection"><?php echo $data['collection'];?></span> soal <a href="ujian-soal.php?test_id=<?php echo $data['test_id'];?>">Lihat</a></td>
   </tr>
 </table>
  </div>

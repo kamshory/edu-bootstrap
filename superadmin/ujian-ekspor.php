@@ -106,7 +106,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     </tr>
     <tr>
       <td>Aktif</td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?>
       <input type="hidden" name="test_id" value="<?php echo $data['test_id'];?>" /></td>
     </tr>
     <tr>
@@ -237,7 +237,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['subject'];?></a></td>
       <td><a href="data-soal-ujian.php?test_id=<?php echo $data['test_id'];?>"><?php echo $data['number_of_question'];?></a></td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

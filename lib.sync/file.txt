@@ -18,3 +18,47 @@
 [CREATEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/new-directory/new-directory>>
 --------------ruihwuiethwiughweighiwehgiwe
 [CREATEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/new-directory/new-directory-2>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/article/063d1096c5c453929eed>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/article/063ce69a26992ae2884b/35310254dca906659d2a9f8d4c3074f9.png>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/article/063ce69a26992ae2884b/5609f347bd9a4caf9041c10cee456caf.svg>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/article/063ce69a26992ae2884b/863f1bd705c2d96260b64b6927427dd2.png>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/article/063ce69a26992ae2884b/9b3f088611b0724f69d05143dbf9e4b2.png>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/article/063ce69a26992ae2884b/ac8aa38d429ac6e801df4254f1f51243.png>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/article/063ce69a26992ae2884b/d0798a8648e9a79d2bca9d5a8f5d1952.png>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/article/063ce69a26992ae2884b>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/new-directory/new-directory>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/new-directory/new-directory-2>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f/new-directory>>
+--------------ruihwuiethwiughweighiwehgiwe
+[DELETEDIR] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063d38a4923737110e6f>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEDIR] <<D:/xampp/htdocs/edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063da2e346eecf205bb0>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063da2e346eecf205bb0/4127d5_f440353eb6e20018c9dc92e70fe48ef6.png>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063da2e346eecf205bb0/dba42b_54029ca4eb06cd3d33da2182cf2ab013.png>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063da2e346eecf205bb0/1df3b8_4079f53414596cc6379cd35a6f4e3d1f.png>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063da2e346eecf205bb0/fb4b2d_8cd273a2c92be3992d487a9e76d6452e.png>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063da2e346eecf205bb0/4ad95f_74a3360814bf53720d81e22e7ad7a627.png>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063da2e346eecf205bb0/f6bb90_05d891c4bab204879f9b1d3412d17d8b.png>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063da2e346eecf205bb0/93ec0b_87bd0b59f74c17e80223dd4351296e3a.png>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063da2e346eecf205bb0/3f639a_36.gif>>
+--------------ruihwuiethwiughweighiwehgiwe
+[CREATEFILE] <<D:\xampp\htdocs\edu-bootstrap/media.edu/school/063ce682801be89951aa/test/063da2e346eecf205bb0/276f10_38.gif>>

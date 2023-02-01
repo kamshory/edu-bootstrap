@@ -595,14 +595,14 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	{
 	$no++;
 	?>
-    <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
+    <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="info_id[]" id="info_id" value="<?php echo $data['info_id'];?>" class="info_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&info_id=<?php echo $data['info_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo ($data['admin_edit_name']);?></a></td>
       <td nowrap="nowrap"><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['time_edit'];?></a></td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

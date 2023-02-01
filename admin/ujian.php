@@ -172,8 +172,8 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 				$sql = "DELETE FROM `edu_test` where `test_id` = '$test_id' and `school_id` = '$school_id' ";
 				$database->executeDelete($sql, true);
 				$dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
-				$destroyer = new DirectoryDestroyer($dir);
-				$destroyer->destroy($fileSync);
+				$destroyer = new DirectoryDestroyer($fileSync);
+				$destroyer->destroy($dir, true);
 				$database->executeTransaction("commit");
 			}
 		}
@@ -849,7 +849,7 @@ $(document).ready(function(e) {
 		<tr>
 		<td>Nama Ujian</td>
 		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" required="required" />
-		  <input type="hidden" name="test_id2" id="test_id2" value="<?php echo ($data['test_id']);?>" /></td>
+		  <input type="hidden" name="test_id2" id="test_id2" value="<?php echo $data['test_id'];?>" /></td>
 		</tr>
 		<tr>
 		<td>Kelas
@@ -985,11 +985,11 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Notifikasi Nilai</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="score_notification" value="1" id="score_notification"<?php if($data['score_notification']==1) echo ' checked="checked"';?>> Notifikasi Nilai</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="score_notification" value="1" id="score_notification"<?php echo $picoEdu->ifMatch($data['score_notification'], 1, ' checked="checked"');?>> Notifikasi Nilai</label>
 		</tr>
 		<tr>
 		<td>Umumkan Kunci Jawaban</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="publish_answer" value="1" id="publish_answer"<?php if($data['publish_answer']==1) echo ' checked="checked"';?>> Umumkan Kunci Jawaban</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="publish_answer" value="1" id="publish_answer"<?php echo $picoEdu->ifMatch($data['publish_answer'], 1, ' checked="checked"');?>> Umumkan Kunci Jawaban</label>
 		</td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="publish_answer" data-condition="<?php echo $data['publish_answer'];?>" data-show-condition="1" data-hide-condition="0">
@@ -1221,7 +1221,7 @@ if($stmt->rowCount() > 0)
 		</tr>
 		<tr>
 		<td>Aktif
-		</td><td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+		</td><td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -1419,7 +1419,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	{
 	$no++;
 	?>
-    <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
+    <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="test_id[]" id="test_id" value="<?php echo $data['test_id'];?>" class="test_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
@@ -1430,7 +1430,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo ($data['open'])?'Ya':'Tidak';?></a></td>
       <td><a href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['number_of_question'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>" data-availability="<?php echo $data['test_availability'];?>" data-from="<?php echo $data['available_from'];?>" data-to="<?php echo $data['available_to'];?>"><?php if($data['test_availability']=='F') echo 'Selamanya'; if($data['test_availability']=='L') echo 'Terbatas';?></a></td>
-      <td><?php echo $data['active']?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}

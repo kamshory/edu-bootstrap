@@ -104,11 +104,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	if(stripos($alert_time, ":") !== false)
 	{
 		$arr = explode(":", $alert_time);
-		if(count($arr) == 2)
-		{
-			$alert_time = (3600*@ltrim($arr[0], '0')) + (60*@ltrim($arr[1], '0'));
-		}
-		else if(count($arr) == 3)
+		if(count($arr) == 2 || count($arr) == 3)
 		{
 			$alert_time = (3600*@ltrim($arr[0], '0')) + (60*@ltrim($arr[1], '0'));
 		}
@@ -134,16 +130,13 @@ if(isset($_POST['set_active']) && isset($_POST['test_id']))
 if(isset($_POST['set_inactive']) && isset($_POST['test_id']))
 {
 	$tests = @$_POST['test_id'];
-	if(isset($tests))
+	if(isset($tests) && is_array($tests))
 	{
-		if(is_array($tests))
+		foreach($tests as $key=>$val)
 		{
-			foreach($tests as $key=>$val)
-			{
-				$test_id = addslashes($val);
-				$sql = "update `edu_test` set `active` = '0' where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
-				$database->executeUpdate($sql, true);
-			}
+			$test_id = addslashes($val);
+			$sql = "update `edu_test` set `active` = '0' where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -167,8 +160,8 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 				$sql = "DELETE FROM `edu_test` where `test_id` = '$test_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id'";
 				$database->executeDelete($sql, true);
 				$dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
-				$destroyer = new DirectoryDestroyer($dir);
-				$destroyer->destroy($fileSync);
+				$destroyer = new DirectoryDestroyer($fileSync);
+				$destroyer->destroy($dir, true);
 				$database->executeTransaction("commit");
 			}
 		}
@@ -794,7 +787,7 @@ $(document).ready(function(e) {
 		<tr>
 		<td>Nama Ujian</td>
 		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" required="required" />
-		  <input type="hidden" name="test_id2" id="test_id2" value="<?php echo ($data['test_id']);?>" /></td>
+		  <input type="hidden" name="test_id2" id="test_id2" value="<?php echo $data['test_id'];?>" /></td>
 		</tr>
 		<tr>
 		<td>Kelas
@@ -817,16 +810,16 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Terbuka
-		</td><td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php if($data['open']==1) echo ' checked="checked"';?>> Terbuka</label>
+		</td><td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php echo $picoEdu->ifMatch($data['open'], 1, ' checked="checked"');?>> Terbuka</label>
 		</tr>
 		<tr>
 		<td>Dibatasi</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="has_limits" value="1" id="has_limits"<?php if($data['has_limits']==1) echo ' checked="checked"';?>> Dibatasi</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="has_limits" value="1" id="has_limits"<?php echo $picoEdu->ifMatch($data['has_limits'], 1, ' checked="checked"');?>> Dibatasi</label>
 		</td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_limits" data-condition="<?php echo $data['has_limits'];?>" data-show-condition="1" data-hide-condition="0">
 		<td>Batas Percobaan</td>
-		<td><input type="number" class="form-control input-text input-text-medium" name="trial_limits" id="trial_limits" value="<?php echo ($data['trial_limits']);?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="trial_limits" id="trial_limits" value="<?php echo $data['trial_limits'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Nilai Kelulusan
@@ -836,8 +829,8 @@ $(document).ready(function(e) {
 		<td>Metode Penilaian</td>
 		<td><select class="form-control input-select" name="assessment_methods" id="assessment_methods">
 		<option value=""></option>
-		<option value="H"<?php if($data['assessment_methods'] == 'H') echo ' selected="selected"';?>>Tertinggi</option>
-		<option value="N"<?php if($data['assessment_methods'] == 'N') echo ' selected="selected"';?>>Terbaru</option>
+		<option value="H"<?php echo $picoEdu->ifMatch($data['assessment_methods'], 'H', ' selected="selected"');?>>Tertinggi</option>
+		<option value="N"<?php echo $picoEdu->ifMatch($data['assessment_methods'], 'N', ' selected="selected"');?>>Terbaru</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -879,7 +872,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Otomtais Kirim Jawaban</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="autosubmit" value="1" id="autosubmit"<?php if($data['autosubmit']==1) echo ' checked="checked"';?>> Otomatis</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="autosubmit" value="1" id="autosubmit"<?php echo $picoEdu->ifMatch($data['autosubmit'], 1, ' checked="checked"');?>> Otomatis</label>
 		</td>
 		</tr>
 		<tr>
@@ -892,23 +885,23 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Notifikasi Nilai</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="score_notification" value="1" id="score_notification"<?php if($data['score_notification']==1) echo ' checked="checked"';?>> Notifikasi Nilai</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="score_notification" value="1" id="score_notification"<?php echo $picoEdu->ifMatch($data['score_notification'], 1, ' checked="checked"');?>> Notifikasi Nilai</label>
 		</tr>
 		<tr>
 		<td>Umumkan Kunci Jawaban</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="publish_answer" value="1" id="publish_answer"<?php if($data['publish_answer']==1) echo ' checked="checked"';?>> Umumkan Kunci Jawaban</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="publish_answer" value="1" id="publish_answer"<?php echo $picoEdu->ifMatch($data['publish_answer'], 1, ' checked="checked"');?>> Umumkan Kunci Jawaban</label>
 		</td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="publish_answer" data-condition="<?php echo $data['publish_answer'];?>" data-show-condition="1" data-hide-condition="0">
 		<td>Pengumuman Kunci Jawaban</td>
-		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="time_answer_publication" id="time_answer_publication" value="<?php echo ($data['time_answer_publication']);?>" autocomplete="off" /> </td>
+		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="time_answer_publication" id="time_answer_publication" value="<?php echo $data['time_answer_publication'];?>" autocomplete="off" /> </td>
 		</tr>
 		<tr>
 		<td>Ketersediaan Ujian
 		</td><td><select class="form-control input-select" name="test_availability" id="test_availability">
 		<option value=""></option>
-		<option value="F"<?php if($data['test_availability'] == 'F') echo ' selected="selected"';?>>Selamanya</option>
-		<option value="L"<?php if($data['test_availability'] == 'L') echo ' selected="selected"';?>>Terbatas</option>
+		<option value="F"<?php echo $picoEdu->ifMatch($data['test_availability'], 'F', ' selected="selected"');?>>Selamanya</option>
+		<option value="L"<?php echo $picoEdu->ifMatch($data['test_availability'], 'L', ' selected="selected"');?>>Terbatas</option>
 		</select></td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="test_availability" data-condition="<?php echo $data['test_availability'];?>" data-show-condition="L" data-hide-condition="F">
@@ -999,7 +992,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Batas Percobaan</td>
-		<td><?php echo ($data['trial_limits']);?> </td>
+		<td><?php echo $data['trial_limits'];?> </td>
 		</tr>
         <?php
 		}
@@ -1075,7 +1068,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Pengumuman Kunci Jawaban</td>
-		<td><?php echo ($data['time_answer_publication']);?> </td>
+		<td><?php echo $data['time_answer_publication'];?> </td>
 		</tr>
         <?php
 		}
@@ -1109,11 +1102,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
-		<td><?php echo ($data['member_create']);?> (<?php echo ($data['role_create']);?>)</td>
+		<td><?php echo $data['member_create'];?> (<?php echo ($data['role_create']);?>)</td>
 		</tr>
 		<tr>
 		<td>Admin Ubah</td>
-		<td><?php echo ($data['member_edit']);?> (<?php echo ($data['role_edit']);?>)</td>
+		<td><?php echo $data['member_edit'];?> (<?php echo ($data['role_edit']);?>)</td>
 		</tr>
 		<tr>
 		<td>IP Buat</td>
@@ -1125,7 +1118,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Aktif
-		</td><td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
+		</td><td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -1289,7 +1282,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	{
 	$no++;
 	?>
-    <tr<?php echo (@$data['active'])?" class=\"data-active\"":" class=\"data-inactive\"";?>>
+    <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="test_id[]" id="test_id" value="<?php echo $data['test_id'];?>" class="test_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
@@ -1300,7 +1293,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo ($data['open'])?'Ya':'Tidak';?></a></td>
       <td><a href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['number_of_question'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>" data-availability="<?php echo $data['test_availability'];?>" data-from="<?php echo $data['available_from'];?>" data-to="<?php echo $data['available_to'];?>"><?php if($data['test_availability']=='F') echo 'Selamanya'; if($data['test_availability']=='L') echo 'Terbatas';?></a></td>
-      <td><?php echo ($data['active'])?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
 	}
