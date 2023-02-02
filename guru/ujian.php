@@ -267,7 +267,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 								$sql1 = "INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`, 
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('$question_id', '$pertanyaan', '$test_id', '1', '$sort_order', '$random', '$numbering', '$digest', '$competence',
+								('$question_id', '$pertanyaan', '$test_id', true, '$sort_order', '$random', '$numbering', '$digest', '$competence',
 								'$time_create', '$member_create', '$time_edit', '$member_edit')
 								";
 								$res1 = $database->executeInsert($sql1, true);

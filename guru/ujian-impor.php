@@ -138,7 +138,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 						$sql1 = "INSERT INTO `edu_question` 
 						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
-						('$question_id', '$content', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
+						('$question_id', '$content', '$test_id', '$sort_order', true, '$random', '$numbering', '$digest', 
 						'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 						";
 				
@@ -233,7 +233,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 						$sql1 = "INSERT INTO `edu_question` 
 						(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 						`time_create`, `member_create`, `time_edit`, `member_edit`) values
-						('$question_id', '$pertanyaan', '$test_id', '1', '$sort_order', '$random', '$numbering', '$digest', '$competence',
+						('$question_id', '$pertanyaan', '$test_id', true, '$sort_order', '$random', '$numbering', '$digest', '$competence',
 						'$time_create', '$member_create', '$time_edit', '$member_edit')
 						";
 

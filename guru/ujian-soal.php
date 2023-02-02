@@ -80,7 +80,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 				$sql1 = "INSERT INTO `edu_question` 
 				(`content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 				`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
-				('$content', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
+				('$content', '$test_id', '$sort_order', true, '$random', '$numbering', '$digest', 
 				'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 				";
 				$stmt1 = $database->executeInsert($sql1, true);
@@ -173,7 +173,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			$sql = "INSERT INTO `edu_question` 
 			(`question_id`, `content`, `test_id`, `multiple_choice`, `random`, `numbering`, `digest`, `sort_order`,
 			`time_create`, `member_create`, `time_edit`, `member_edit`) values
-			('$question_id', '$question', '$test_id', '1', '$random', '$numbering', '$digest', '$sort_order',
+			('$question_id', '$question', '$test_id', true, '$random', '$numbering', '$digest', '$sort_order',
 			'$time_create', '$member_create', '$time_edit', '$member_edit')";
 			$database->executeInsert($sql, true);
 			$sort_order = 0;
