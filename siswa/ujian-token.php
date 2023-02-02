@@ -84,9 +84,9 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 				}
 				else
 				{
-					$sql = "SELECT `question_id` , `order`
+					$sql = "SELECT `question_id` , `sort_order`
 					FROM `edu_question` WHERE `test_id` = '$test_id'
-					ORDER BY `order` asc, `question_id` asc
+					ORDER BY `sort_order` asc, `question_id` asc
 					limit 0, $number_of_question
 					";
 				}

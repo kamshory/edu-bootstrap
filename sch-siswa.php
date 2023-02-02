@@ -115,7 +115,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
       <select class="form-control input-select" name="class_id" id="class_id">
         <option value=""></option>
         <?php
-        $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' ORDER BY `order` asc ";
+        $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' ORDER BY `sort_order` asc ";
         
         echo $picoEdu->createFilterDb(
           $sql2,
@@ -161,11 +161,11 @@ WHERE `edu_student`.`student_id` = '$edit_key'
     $nt = '';
 
 
-    $sql = "SELECT `edu_student`.* , `edu_class`.`name` as `class_id`, `edu_class`.`order` as `order`
+    $sql = "SELECT `edu_student`.* , `edu_class`.`name` as `class_id`, `edu_class`.`sort_order` as `sort_order`
     FROM `edu_student`
     left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
     WHERE 1 $sql_filter
-    ORDER BY `order` asc, `edu_student`.`name` asc
+    ORDER BY `sort_order` asc, `edu_student`.`name` asc
     ";
 
     $stmt = $database->executeQuery($sql);

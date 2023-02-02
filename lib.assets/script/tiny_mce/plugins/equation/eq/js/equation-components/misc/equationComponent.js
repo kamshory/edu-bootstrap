@@ -63,7 +63,7 @@ eqEd.EquationComponent = function() {
     eqEd.EquationComponent.prototype.buildDomObj = function() {};
     // update() will recursively call compute() on
     // nested objects while making sure all depencencies
-    // are resolved in the correct order. Requires the
+    // are resolved in the correct sort_order. Requires the
     // Property class. Also takes care of updating Dom
     // objects that correspond to properties being
     // computed.

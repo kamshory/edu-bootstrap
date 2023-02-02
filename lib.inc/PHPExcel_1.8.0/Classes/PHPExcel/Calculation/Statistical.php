@@ -2696,8 +2696,8 @@ class PHPExcel_Calculation_Statistical {
 	 *
 	 * Returns the number of permutations for a given number of objects that can be
 	 *		selected from number objects. A permutation is any set or subset of objects or
-	 *		events where internal order is significant. Permutations are different from
-	 *		combinations, for which the internal order is not significant. Use this function
+	 *		events where internal sort_order is significant. Permutations are different from
+	 *		combinations, for which the internal sort_order is not significant. Use this function
 	 *		for lottery-style probability calculations.
 	 *
 	 * @param	int		$numObjs	Number of different objects
@@ -2797,10 +2797,10 @@ class PHPExcel_Calculation_Statistical {
 	 * @param	mixed				Order to sort the values in the value set
 	 * @return	float
 	 */
-	public static function RANK($value,$valueSet,$order=0) {
+	public static function RANK($value,$valueSet,$sort_order=0) {
 		$value = PHPExcel_Calculation_Functions::flattenSingleValue($value);
 		$valueSet = PHPExcel_Calculation_Functions::flattenArray($valueSet);
-		$order	= (is_null($order))	? 0 :	(integer) PHPExcel_Calculation_Functions::flattenSingleValue($order);
+		$sort_order	= (is_null($sort_order))	? 0 :	(integer) PHPExcel_Calculation_Functions::flattenSingleValue($sort_order);
 
 		foreach($valueSet as $key => $valueEntry) {
 			if (!is_numeric($valueEntry)) {
@@ -2808,7 +2808,7 @@ class PHPExcel_Calculation_Statistical {
 			}
 		}
 
-		if ($order == 0) {
+		if ($sort_order == 0) {
 			rsort($valueSet,SORT_NUMERIC);
 		} else {
 			sort($valueSet,SORT_NUMERIC);

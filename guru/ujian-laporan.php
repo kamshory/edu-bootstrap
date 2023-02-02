@@ -593,7 +593,7 @@ $answer = $data['answer'];
 <?php
 $sql2 = "SELECT `edu_option`.* , '$answer' like concat('%,',`edu_option`.`option_id`,']%') as `my_answer`
 FROM `edu_option` 
-where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` order by  `edu_option`.`order` asc";
+where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` sort_order by  `edu_option`.`sort_order` asc";
 $stmt2 = $database->executeQuery($sql2);
 if($stmt2->rowCount() > 0)
 {
@@ -687,7 +687,7 @@ window.onload = function()
     <select class="form-control" id="class_id" name="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ORDER BY `order` asc ";
+    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ORDER BY `sort_order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(

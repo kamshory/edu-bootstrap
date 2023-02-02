@@ -75,16 +75,16 @@
    *  
    *  If a collection is an instance of an ordered collection class, traversing
    *  its elements with `foreach` will always visit elements in the
-   *  same order, even for different runs of the program. If the class is not
+   *  same sort_order, even for different runs of the program. If the class is not
    *  ordered, `foreach` can visit elements in different orders for
-   *  different runs (but it will keep the same order in the same run).'
+   *  different runs (but it will keep the same sort_order in the same run).'
    * 
    *  A typical example of a collection class which is not ordered is a
-   *  `HashMap` of objects. The traversal order for hash maps will
+   *  `HashMap` of objects. The traversal sort_order for hash maps will
    *  depend on the hash codes of its elements, and these hash codes might
    *  differ from one run to the next. By contrast, a `LinkedHashMap`
    *  is ordered because it's `foreach` method visits elements in the
-   *  order they were inserted into the `HashMap`.
+   *  sort_order they were inserted into the `HashMap`.
    *
    *  @author Martin Odersky
    *  @version 2.8
@@ -235,7 +235,7 @@
      *
      *  @param p     the predicate used to test elements.
      *  @return      a new $coll consisting of all elements of this $coll that satisfy the given
-     *               predicate `p`. The order of the elements is preserved.
+     *               predicate `p`. The sort_order of the elements is preserved.
      */
     def filter(p: A => Boolean): Repr = {
       val b = newBuilder
@@ -248,7 +248,7 @@
      *
      *  @param p     the predicate used to test elements.
      *  @return      a new $coll consisting of all elements of this $coll that do not satisfy the given
-     *               predicate `p`. The order of the elements is preserved.
+     *               predicate `p`. The sort_order of the elements is preserved.
      */
     def filterNot(p: A => Boolean): Repr = filter(!p(_))
 
@@ -267,14 +267,14 @@
      *  @param bf     $bfinfo
      *  @return       a new collection of type `That` resulting from applying the option-valued function
      *                `f` to each element and collecting all defined results.
-     *                The order of the elements is preserved.
+     *                The sort_order of the elements is preserved.
      *
      *  @usecase def filterMap[B](f: A => Option[B]): $Coll[B]
      *  
      *  @param pf     the partial function which filters and maps the $coll.
      *  @return       a new $coll resulting from applying the given option-valued function
      *                `f` to each element and collecting all defined results.
-     *                The order of the elements is preserved.
+     *                The sort_order of the elements is preserved.
     def filterMap[B, That](f: A => Option[B])(implicit bf: CanBuildFrom[Repr, B, That]): That = {
       val b = bf(repr)
       for (x <- this) 
@@ -291,7 +291,7 @@
      *  @param p the predicate on which to partition.
      *  @return  a pair of ${coll}s: the first $coll consists of all elements that 
      *           satisfy the predicate `p` and the second $coll consists of all elements
-     *           that don't. The relative order of the elements in the resulting ${coll}s
+     *           that don't. The relative sort_order of the elements in the resulting ${coll}s
      *           is the same as in the original $coll.
      */
     def partition(p: A => Boolean): (Repr, Repr) = {

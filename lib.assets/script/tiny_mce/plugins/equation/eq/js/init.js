@@ -73,7 +73,7 @@ jQuery.fn.insertAt = function(index, element) {
 $.getCSS = function(fromClass, prop) {
 
     var $inspector = $("<div>").css('display', 'none').addClass(fromClass);
-    $("body").append($inspector); // add to DOM, in order to read the CSS property
+    $("body").append($inspector); // add to DOM, in sort_order to read the CSS property
     try {
         return $inspector.css(prop);
     } finally {

@@ -371,7 +371,7 @@ function export_question($database, $question_id, $base_dir = "") //NOSONAR
 	</question>\r\n";
 
 
-	$sql = "SELECT * FROM `edu_option` WHERE `question_id` = '$question_id' ORDER BY `order` asc";
+	$sql = "SELECT * FROM `edu_option` WHERE `question_id` = '$question_id' ORDER BY `sort_order` asc";
 	$stmt = $database->executeQuery($sql);
 	$html_option .= "
 		<answer>
@@ -422,7 +422,7 @@ function exportTest($database, $test_id, $base_dir = "")
 	$html = "<" . "?xml version=\"1.0\" encoding=\"utf-8\"?" . ">
 <test>
 ";
-	$sql = "SELECT `question_id` FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `order` asc, `question_id` asc";
+	$sql = "SELECT `question_id` FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` asc, `question_id` asc";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -140,7 +140,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td><select class="form-control input-select" name="class_id" id="class_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT * FROM `edu_class` WHERE `active` = true  ORDER BY `order` asc ";
+		$sql2 = "SELECT * FROM `edu_class` WHERE `active` = true  ORDER BY `sort_order` asc ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(
@@ -401,7 +401,7 @@ $(document).ready(function(e) {
     <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' ORDER BY `order` asc ";
+    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' ORDER BY `sort_order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -455,7 +455,7 @@ $nt = '';
 
 $sql = "SELECT `edu_student`.* , 
 (select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_student`.`school_id` limit 0,1) as `school_name`,
-`edu_class`.`name` as `class_id`, `edu_class`.`order` as `order`
+`edu_class`.`name` as `class_id`, `edu_class`.`sort_order` as `sort_order`
 FROM `edu_student`
 left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
 WHERE 1 $sql_filter

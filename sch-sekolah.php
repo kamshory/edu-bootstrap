@@ -331,7 +331,7 @@ if (@$page_school_id) {
 				(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
 				FROM `edu_class`
 				WHERE `edu_class`.`active` = true and `edu_class`.`school_id` = '$page_school_id'
-				ORDER BY `edu_class`.`grade_id` asc, `edu_class`.`order` asc
+				ORDER BY `edu_class`.`grade_id` asc, `edu_class`.`sort_order` asc
 				";
 			$stmt = $database->executeQuery($sql);
 			

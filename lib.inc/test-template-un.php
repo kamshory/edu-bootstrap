@@ -12,10 +12,10 @@
 <body>
 <?php
 $question_package = addslashes($question_package);
-$sql = "SELECT `edu_question`.* , instr('$question_package', `edu_question`.`question_id`) as `order`
+$sql = "SELECT `edu_question`.* , instr('$question_package', `edu_question`.`question_id`) as `sort_order`
 FROM `edu_question`
 where '$question_package' like concat('%[',`edu_question`.`question_id`,']%') 
-ORDER BY `order` asc
+ORDER BY `sort_order` asc
 ";
 $stmt = $database->executeQuery($sql);
 $number_of_question = $stmt->rowCount();
@@ -32,10 +32,10 @@ if($number_of_question)
 	}
 	$question_per_page = $question_per_page * 1;
 	
-	$sql = "SELECT `edu_question`.* , instr('$question_package', `edu_question`.`question_id`) as `order`
+	$sql = "SELECT `edu_question`.* , instr('$question_package', `edu_question`.`question_id`) as `sort_order`
 	FROM `edu_question`
 	where '$question_package' like concat('%[',`edu_question`.`question_id`,']%') 
-	ORDER BY `order`
+	ORDER BY `sort_order`
 	";
 	$stmt1 = $database->executeQuery($sql);
 	$question_set = array();
@@ -56,7 +56,7 @@ if($number_of_question)
 				$sql2 = "SELECT `edu_option`.* , rand() as `rand`
 				FROM `edu_option`
 				WHERE `edu_option`.`question_id` = '$soal'
-				ORDER BY `order` asc
+				ORDER BY `sort_order` asc
 				";
 			}
 			$options = array();

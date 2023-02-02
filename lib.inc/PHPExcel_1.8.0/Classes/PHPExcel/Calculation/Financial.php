@@ -2156,7 +2156,7 @@ class PHPExcel_Calculation_Financial {
 	 *
 	 * @param	float			$rate		The discount rate to apply to the cash flows.
 	 * @param	array of float	$values		A series of cash flows that corresponds to a schedule of payments in dates. The first payment is optional and corresponds to a cost or payment that occurs at the beginning of the investment. If the first value is a cost or payment, it must be a negative value. All succeeding payments are discounted based on a 365-day year. The series of values must contain at least one positive value and one negative value.
-	 * @param	array of mixed	$dates		A schedule of payment dates that corresponds to the cash flow payments. The first payment date indicates the beginning of the schedule of payments. All other dates must be later than this date, but they may occur in any order.
+	 * @param	array of mixed	$dates		A schedule of payment dates that corresponds to the cash flow payments. The first payment date indicates the beginning of the schedule of payments. All other dates must be later than this date, but they may occur in any sort_order.
 	 * @return	float
 	 */
 	public static function XNPV($rate, $values, $dates) {

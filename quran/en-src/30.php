@@ -38,9 +38,9 @@ case 35:{?>Or have We revealed unto them any warrant which speaketh of that whic
 case 36:{?>And when We cause mankind to taste of mercy they rejoice therein; but if an evil thing befall them as the consequence of their own deeds, lo! they are in despair!<?php break;}
 case 37:{?>See they not that Allah enlargeth the provision for whom He will, and straiteneth ( it for whom He will ). Lo! herein indeed are portents for folk who believe.<?php break;}
 case 38:{?>So give to the kinsman his due, and to the needy, and to the wayfarer. That is best for those who seek Allah ' s countenance. And such are they who are successful.<?php break;}
-case 39:{?>That which ye give in usury in order that it may increase on ( other ) people ' s property hath no increase with Allah; but that which ye give in charity, seeking Allah ' s countenance, hath increase manifold.<?php break;}
+case 39:{?>That which ye give in usury in sort_order that it may increase on ( other ) people ' s property hath no increase with Allah; but that which ye give in charity, seeking Allah ' s countenance, hath increase manifold.<?php break;}
 case 40:{?>Allah is He Who created you and then sustained you, then causeth you to die, then giveth life to you again. Is there any of your ( so called ) partners ( of Allah ) that doeth aught of that? Praised and exalted be He above what they associate ( with Him )!<?php break;}
-case 41:{?>Corruption doth appear on land and sea because of ( the evil ) which men ' s hands have done, that He may make them taste a part of that which they have done, in order that they may return.<?php break;}
+case 41:{?>Corruption doth appear on land and sea because of ( the evil ) which men ' s hands have done, that He may make them taste a part of that which they have done, in sort_order that they may return.<?php break;}
 case 42:{?>Say ( O Muhammad, to the disbelievers ) : Travel in the land, and see the nature of the consequence for those who were before you! Most of them were idolaters.<?php break;}
 case 43:{?>So set thy purpose resolutely for the right religion, before the inevitable day cometh from Allah. On that day mankind will be sundered<?php break;}
 case 44:{?>Whoso disbelieveth must ( then ) bear the consequences of his disbelief, while those who do right make provision for themselves<?php break;}

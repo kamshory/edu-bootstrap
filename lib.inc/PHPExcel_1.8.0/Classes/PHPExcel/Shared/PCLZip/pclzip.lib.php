@@ -251,9 +251,9 @@
   //                 a string containing a list of filenames and/or directory
   //                 names separated by spaces.
   //   $p_add_dir : A path to add before the real path of the archived file,
-  //                in order to have it memorized in the archive.
+  //                in sort_order to have it memorized in the archive.
   //   $p_remove_dir : A path to remove from the real path of the file to archive,
-  //                   in order to have a shorter path memorized in the archive.
+  //                   in sort_order to have a shorter path memorized in the archive.
   //                   When $p_add_dir and $p_remove_dir are set, $p_remove_dir
   //                   is removed first, before $p_add_dir is added.
   // Options :
@@ -432,9 +432,9 @@
   //                 a string containing a list of filenames and/or directory
   //                 names separated by spaces.
   //   $p_add_dir : A path to add before the real path of the archived file,
-  //                in order to have it memorized in the archive.
+  //                in sort_order to have it memorized in the archive.
   //   $p_remove_dir : A path to remove from the real path of the file to archive,
-  //                   in order to have a shorter path memorized in the archive.
+  //                   in sort_order to have a shorter path memorized in the archive.
   //                   When $p_add_dir and $p_remove_dir are set, $p_remove_dir
   //                   is removed first, before $p_add_dir is added.
   // Options :
@@ -1696,7 +1696,7 @@
 
                   // ----- TBC : An automatic sort should be writen ...
                   // ----- Error log
-                  PclZip::privErrorLog(PCLZIP_ERR_INVALID_OPTION_VALUE, "Invalid order of index range for option '".PclZipUtilOptionText($p_options_list[$i])."'");
+                  PclZip::privErrorLog(PCLZIP_ERR_INVALID_OPTION_VALUE, "Invalid sort_order of index range for option '".PclZipUtilOptionText($p_options_list[$i])."'");
 
                   // ----- Return
                   return PclZip::errorCode();
@@ -2223,7 +2223,7 @@
     }
 
     // ----- Swap the file descriptor
-    // Here is a trick : I swap the temporary fd with the zip fd, in order to use
+    // Here is a trick : I swap the temporary fd with the zip fd, in sort_order to use
     // the following methods on the temporary fil and not the real archive
     $v_swap = $this->zip_fd;
     $this->zip_fd = $v_zip_temp_fd;
@@ -4579,7 +4579,7 @@
         return PclZip::errorCode();
       }
 
-      // ----- Read byte per byte in order to find the signature
+      // ----- Read byte per byte in sort_order to find the signature
       $v_pos = ftell($this->zip_fd);
       $v_bytes = 0x00000000;
       while ($v_pos < $v_size)
@@ -5176,7 +5176,7 @@
     $v_size = @ftell($v_zip_temp_fd)-$v_offset;
 
     // ----- Swap the file descriptor
-    // Here is a trick : I swap the temporary fd with the zip fd, in order to use
+    // Here is a trick : I swap the temporary fd with the zip fd, in sort_order to use
     // the following methods on the temporary fil and not the real archive fd
     $v_swap = $this->zip_fd;
     $this->zip_fd = $v_zip_temp_fd;

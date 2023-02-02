@@ -369,7 +369,7 @@
   });
 
   // Use a comparator function to figure out the smallest index at which
-  // an object should be inserted so as to maintain order. Uses binary search.
+  // an object should be inserted so as to maintain sort_order. Uses binary search.
   _.sortedIndex = function(array, obj, iterator, context) {
     iterator = lookupIterator(iterator);
     var value = iterator.call(context, obj);
@@ -549,7 +549,7 @@
   // we need this function. Return the position of the first occurrence of an
   // item in an array, or -1 if the item is not included in the array.
   // Delegates to **ECMAScript 5**'s native `indexOf` if available.
-  // If the array is large and already in sort order, pass `true`
+  // If the array is large and already in sort sort_order, pass `true`
   // for **isSorted** to use binary search.
   _.indexOf = function(array, item, isSorted) {
     if (array == null) return -1;
@@ -896,7 +896,7 @@
 
   // Invokes interceptor with the obj, and then returns obj.
   // The primary purpose of this method is to "tap into" a method chain, in
-  // order to perform operations on intermediate results within the chain.
+  // sort_order to perform operations on intermediate results within the chain.
   _.tap = function(obj, interceptor) {
     interceptor(obj);
     return obj;
@@ -1572,7 +1572,7 @@ jQuery.fn.insertAt = function(index, element) {
 $.getCSS = function(fromClass, prop) {
 
     var $inspector = $("<div>").css('display', 'none').addClass(fromClass);
-    $("body").append($inspector); // add to DOM, in order to read the CSS property
+    $("body").append($inspector); // add to DOM, in sort_order to read the CSS property
     try {
         return $inspector.css(prop);
     } finally {
@@ -1949,7 +1949,7 @@ eqEd.EquationComponent = function() {
     eqEd.EquationComponent.prototype.buildDomObj = function() {};
     // update() will recursively call compute() on
     // nested objects while making sure all depencencies
-    // are resolved in the correct order. Requires the
+    // are resolved in the correct sort_order. Requires the
     // Property class. Also takes care of updating Dom
     // objects that correspond to properties being
     // computed.
@@ -2226,7 +2226,7 @@ eqEd.Container = function(parent) {
   
   // The wrappers property defines the wrapper objects
   // that are within this container object. Wrapper
-  // objects will be formatted in the order that they
+  // objects will be formatted in the sort_order that they
   // exist in this array.
   this.wrappers = [];
 

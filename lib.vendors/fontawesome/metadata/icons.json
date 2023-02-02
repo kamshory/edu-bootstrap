@@ -30155,7 +30155,7 @@
       "brands"
     ]
   },
-  "first-order": {
+  "first-sort_order": {
     "changes": [
       "4.6.0",
       "5.0.0"
@@ -30189,7 +30189,7 @@
       "brands"
     ]
   },
-  "first-order-alt": {
+  "first-sort_order-alt": {
     "changes": [
       "5.0.12"
     ],
@@ -41117,7 +41117,7 @@
       "solid"
     ]
   },
-  "jedi-order": {
+  "jedi-sort_order": {
     "changes": [
       "5.0.12",
       "5.7.0"

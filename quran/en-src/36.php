@@ -73,7 +73,7 @@ case 70:{?>To warn whosoever liveth, and that the word may be fulfilled against 
 case 71:{?>Have they not seen how We have created for them of Our handiwork the cattle, so that they are their owners,<?php break;}
 case 72:{?>And have subdued them unto them, so that some of them they have for riding, some for food?<?php break;}
 case 73:{?>Benefits and ( divers ) drinks have they from them. Will they not then give thanks?<?php break;}
-case 74:{?>And they have taken ( other ) gods beside Allah, in order that they may be helped.<?php break;}
+case 74:{?>And they have taken ( other ) gods beside Allah, in sort_order that they may be helped.<?php break;}
 case 75:{?>It is not in their power to help them; but they ( the worshippers ) are unto them a host in arms.<?php break;}
 case 76:{?>So let not their speech grieve thee ( O Muhammad ). Lo! We know what they conceal and what proclaim.<?php break;}
 case 77:{?>Hath not man seen that We have created him from a drop of seed? Yet lo! he is an open opponent.<?php break;}

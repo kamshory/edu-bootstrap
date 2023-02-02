@@ -352,7 +352,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 										$sql = "INSERT INTO `edu_class` 
 										(`class_id`, `token_class`, `school_id`, `class_code`, `grade_id`, `school_program_id`, `name`, 
-										`time_create`, `time_edit`, `ip_create`, `ip_edit`, `admin_create`, `admin_edit`, `order`, `default`, `active`) VALUES
+										`time_create`, `time_edit`, `ip_create`, `ip_edit`, `admin_create`, `admin_edit`, `sort_order`, `default`, `active`) VALUES
 										('$class_id', '$token_class', '$school_id', '$class_code', '$grade_id', '$school_program_id', '$name', 
 										'$time_create', '$time_edit', '$ip_create', '$ip_edit', '$admin_create', '$admin_edit', '$sort_order', 0, 1)
 										";

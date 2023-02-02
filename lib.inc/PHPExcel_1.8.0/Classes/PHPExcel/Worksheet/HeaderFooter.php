@@ -40,7 +40,7 @@
  * 		&CCenter &"-,Bold"Bold&"-,Regular"Header_x000A_&D
  *
  * General Rules:
- * There is no required order in which these codes must appear.
+ * There is no required sort_order in which these codes must appear.
  *
  * The first occurrence of the following codes turns the formatting ON, the second occurrence turns it OFF again:
  * - strikethrough
@@ -50,7 +50,7 @@
  * while the first is ON.
  * &L - code for "left section" (there are three header / footer locations, "left", "center", and "right"). When
  * two or more occurrences of this section marker exist, the contents from all markers are concatenated, in the
- * order of appearance, and placed into the left section.
+ * sort_order of appearance, and placed into the left section.
  * &P - code for "current page #"
  * &N - code for "total pages"
  * &font size - code for "text font size", where font size is a font size in points.
@@ -62,7 +62,7 @@
  * &X - code for "text super script" on / off
  * &Y - code for "text subscript" on / off
  * &C - code for "center section". When two or more occurrences of this section marker exist, the contents
- * from all markers are concatenated, in the order of appearance, and placed into the center section.
+ * from all markers are concatenated, in the sort_order of appearance, and placed into the center section.
  *
  * &D - code for "date"
  * &T - code for "time"
@@ -70,7 +70,7 @@
  * &U - code for "text single underline"
  * &E - code for "double underline"
  * &R - code for "right section". When two or more occurrences of this section marker exist, the contents
- * from all markers are concatenated, in the order of appearance, and placed into the right section.
+ * from all markers are concatenated, in the sort_order of appearance, and placed into the right section.
  * &Z - code for "this workbook's file path"
  * &F - code for "this workbook's file name"
  * &A - code for "sheet tab name"

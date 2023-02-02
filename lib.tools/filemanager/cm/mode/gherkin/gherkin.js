@@ -13,7 +13,7 @@ Report bugs/issues here: https://github.com/codemirror/CodeMirror/issues
 //};
 
 //var regex = {
-//  keywords: /(Feature| {2}(Scenario|In order to|As|I)| {4}(Given|When|Then|And))/
+//  keywords: /(Feature| {2}(Scenario|In sort_order to|As|I)| {4}(Given|When|Then|And))/
 //};
 
 (function(mod) {

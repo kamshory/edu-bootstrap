@@ -22,7 +22,7 @@ if(count(@$_POST))
 		$school_program_id = $school_program_id2;
 	}
 	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-	$sort_order = kh_filter_input(INPUT_POST, 'order', FILTER_SANITIZE_NUMBER_INT);
+	$sort_order = kh_filter_input(INPUT_POST, 'sort_order', FILTER_SANITIZE_NUMBER_INT);
 	$default = kh_filter_input(INPUT_POST, 'default', FILTER_SANITIZE_NUMBER_UINT);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$admin_create = $admin_edit = $admin_login->admin_id;
@@ -75,7 +75,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$school_program_id = $database->generateNewId();
 	$sql = "INSERT INTO `edu_school_program` 
-	(`school_program_id`, `school_id`, `name`, `order`, `default`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) values
+	(`school_program_id`, `school_id`, `name`, `sort_order`, `default`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) values
 	('$school_program_id', '$school_id', '$name', '$sort_order', '$default', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
 	$id = $database->getDatabaseConnection()->lastInsertId();
@@ -88,7 +88,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "UPDATE `edu_school_program` SET 
-	`name` = '$name', `order` = '$sort_order', `default` = '$default', `time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
+	`name` = '$name', `sort_order` = '$sort_order', `default` = '$default', `time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
 	WHERE `school_program_id` = '$school_program_id2'";
 	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&school_program_id=$school_program_id");
@@ -105,7 +105,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>Order</td>
-		<td><input type="number" class="form-control input-text input-text-medium" name="order" id="order" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="sort_order" id="sort_order" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Default</td>
@@ -123,7 +123,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 	</table>
 </form>
-<?php getDefaultValues($database, 'edu_school_program', array('name','order','default','active')); ?>
+<?php getDefaultValues($database, 'edu_school_program', array('name','sort_order','default','active')); ?>
 <?php
 include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
@@ -150,7 +150,7 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>Order</td>
-		<td><input type="number" class="form-control input-text input-text-medium" name="order" id="order" value="<?php echo $data['order'];?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="sort_order" id="sort_order" value="<?php echo $data['sort_order'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Default</td>
@@ -205,7 +205,7 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>Order</td>
-		<td><?php echo $data['order'];?> </td>
+		<td><?php echo $data['sort_order'];?> </td>
 		</tr>
 		<tr>
 		<td>Default</td>
@@ -334,7 +334,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_program_id=<?php echo $data['school_program_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['order'];?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['sort_order'];?></a></td>
       <td><?php echo ($data['default'])?'Ya':'Tidak';?> </td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>

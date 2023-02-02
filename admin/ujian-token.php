@@ -149,7 +149,7 @@ $(document).ready(function(e) {
 		<?php
 		$sql2 = "SELECT * FROM `edu_class`
 		WHERE `active` = true and `school_id` = '$school_id'
-		ORDER BY `order` asc
+		ORDER BY `sort_order` asc
 		";
 		echo $picoEdu->createFilterDb(
 			$sql2,
@@ -347,7 +347,7 @@ function printToken(frm)
     <?php
 		$sql2 = "SELECT * FROM `edu_class`
 		WHERE `active` = true and `school_id` = '$school_id'
-		ORDER BY `order` asc
+		ORDER BY `sort_order` asc
 		";
 		echo $picoEdu->createFilterDb(
 			$sql2,

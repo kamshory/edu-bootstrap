@@ -37,7 +37,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	$picoEdu->sortQuestion($test_id);
 	$sql = "SELECT `edu_test`.*, 
-	(select `edu_question`.`order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `order` desc limit 0,1) as `order`
+	(select `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` desc limit 0,1) as `sort_order`
 	FROM `edu_test`
 	WHERE `edu_test`.`test_id` = '$test_id'
 	";
@@ -49,7 +49,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$time_edit = $picoEdu->getLocalDateTime();
 	
 		$random = ((int) $data['random']);
-		$sort_order = ((int) $data['order']);
+		$sort_order = ((int) $data['sort_order']);
 		$score_standar = $data['standard_score'];
 		
 		$xml_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
@@ -78,7 +78,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 				$sort_order++;
 				
 				$sql1 = "INSERT INTO `edu_question` 
-				(`content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+				(`content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 				`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
 				('$content', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
 				'$time_create', '$member_create', '$time_edit', '$member_edit', true)
@@ -105,7 +105,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 							}
 							
 							$sql2 = "INSERT INTO `edu_option` 
-							(`question_id`, `content`, `order`, `score`, 
+							(`question_id`, `content`, `sort_order`, `score`, 
 							`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
 							('$question_id', '$content_option', '$order_option', '$score_option', 
 							'$time_create', '$member_create', '$time_edit', '$member_edit', true)
@@ -148,7 +148,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$question = $picoEdu->brToNewLineEncoded($question);
 	$picoEdu->sortQuestion($test_id);
 	$sql1 = "SELECT `edu_test`.*, 
-	(select `edu_question`.`order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `order` desc limit 0,1) as `order`
+	(select `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` desc limit 0,1) as `sort_order`
 	FROM `edu_test`
 	WHERE `edu_test`.`test_id` = '$test_id'
 	";
@@ -157,7 +157,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	if($stmt1->rowCount() > 0)
 	{
 		$data1 = $stmt1->fetch(PDO::FETCH_ASSOC);
-		$sort_order = $data1['order'] + 1;
+		$sort_order = $data1['sort_order'] + 1;
 		$time_create = $picoEdu->getLocalDateTime();
 		$time_edit = $picoEdu->getLocalDateTime();
 		
@@ -171,7 +171,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			$question_id = $database->generateNewId();
 
 			$sql = "INSERT INTO `edu_question` 
-			(`question_id`, `content`, `test_id`, `multiple_choice`, `random`, `numbering`, `digest`, `order`,
+			(`question_id`, `content`, `test_id`, `multiple_choice`, `random`, `numbering`, `digest`, `sort_order`,
 			`time_create`, `member_create`, `time_edit`, `member_edit`) values
 			('$question_id', '$question', '$test_id', '1', '$random', '$numbering', '$digest', '$sort_order',
 			'$time_create', '$member_create', '$time_edit', '$member_edit')";
@@ -191,7 +191,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				$score = kh_filter_input(INPUT_POST, 'score_'.$id2, FILTER_SANITIZE_NUMBER_FLOAT);
 				$option_id = $database->generateNewId();
 				$sql = "INSERT INTO `edu_option` 
-				(`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+				(`option_id`, `question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
 				('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit');";
 				$stmt3 = $database->executeInsert($sql, true);
 				if($stmt3->rowCount() > 0)
@@ -628,7 +628,7 @@ else if(isset($_GET['test_id']))
 		}
 
 		if (@$_GET['option'] == 'analys') {
-			$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `order` asc ";
+			$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` asc ";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
 				?>
@@ -991,7 +991,7 @@ function distribution(test_id)
 <?php
 $sql = "SELECT * 
 FROM `edu_question` WHERE `test_id` = '$test_id' 
-ORDER BY `order` asc, `question_id` asc
+ORDER BY `sort_order` asc, `question_id` asc
 ";
 
 $stmt = $database->executeQuery($sql);

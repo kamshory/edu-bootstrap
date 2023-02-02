@@ -112,7 +112,7 @@ end$$
 
 CREATE DEFINER=`root`@`localhost` FUNCTION `get_last_order_image` (`id` BIGINT) RETURNS INT(11) NO SQL begin
 declare `last_order` int(11) default 0;
-SELECT `post_attachment`.`order` into `last_order` FROM `post_attachment` WHERE `post_attachment`.`post_id` = `id` ORDER BY `post_attachment`.`order` desc limit 0,1 ;
+SELECT `post_attachment`.`sort_order` into `last_order` FROM `post_attachment` WHERE `post_attachment`.`post_id` = `id` ORDER BY `post_attachment`.`sort_order` desc limit 0,1 ;
 if `last_order` is null then
 set `last_order` = 0;
 end if;
@@ -947,7 +947,7 @@ CREATE TABLE `country` (
   `iso_code_3` varchar(3) DEFAULT NULL,
   `name` varchar(70) DEFAULT NULL,
   `phone_code` varchar(10) DEFAULT NULL,
-  `order` int(11) DEFAULT NULL,
+  `sort_order` int(11) DEFAULT NULL,
   `default` tinyint(1) DEFAULT 0,
   `active` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -956,7 +956,7 @@ CREATE TABLE `country` (
 -- Dumping data for table `country`
 --
 
-INSERT INTO `country` (`country_id`, `iso_code_2`, `iso_code_3`, `name`, `phone_code`, `order`, `default`, `active`) VALUES
+INSERT INTO `country` (`country_id`, `iso_code_2`, `iso_code_3`, `name`, `phone_code`, `sort_order`, `default`, `active`) VALUES
 ('AD', 'AD', 'AND', 'Andorra', '+376', 6, 0, 1),
 ('AE', 'AE', 'ARE', 'United Arab Emirates', '+971', 233, 0, 1),
 ('AF', 'AF', 'AFG', 'Afghanistan', '+93', 2, 0, 1),
@@ -1330,7 +1330,7 @@ CREATE TABLE `edu_class` (
   `admin_edit` bigint(20) DEFAULT NULL,
   `ip_create` varchar(45) DEFAULT NULL,
   `ip_edit` varchar(45) DEFAULT NULL,
-  `order` int(11) DEFAULT NULL,
+  `sort_order` int(11) DEFAULT NULL,
   `default` tinyint(1) DEFAULT 0,
   `active` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1339,7 +1339,7 @@ CREATE TABLE `edu_class` (
 -- Dumping data for table `edu_class`
 --
 
-INSERT INTO `edu_class` (`class_id`, `token_class`, `school_id`, `class_code`, `grade_id`, `school_program_id`, `name`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `order`, `default`, `active`) VALUES
+INSERT INTO `edu_class` (`class_id`, `token_class`, `school_id`, `class_code`, `grade_id`, `school_program_id`, `name`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `sort_order`, `default`, `active`) VALUES
 (1, 'a69a4af30c8fa7485a968839ce55f993', 1, 'X.IPA1', 10, 1, 'X.IPA1', '2023-01-20 08:52:42', '2023-01-20 08:52:42', 1, 1, '127.0.0.1', '127.0.0.1', 1012, 0, 1),
 (2, '22e02080bb40392714797532aa36e79c', 1, 'X.IPA2', 10, 1, 'X.IPA2', '2023-01-20 08:52:42', '2023-01-20 08:52:42', 1, 1, '127.0.0.1', '127.0.0.1', 1013, 0, 1),
 (3, 'cf9d10ed833c1835ca040c14e6c1def3', 1, 'X.IPA3', 10, 1, 'X.IPA3', '2023-01-20 08:52:42', '2023-01-20 08:52:42', 1, 1, '127.0.0.1', '127.0.0.1', 1014, 0, 1),
@@ -1508,7 +1508,7 @@ CREATE TABLE `edu_option` (
   `option_id` bigint(20) NOT NULL,
   `question_id` bigint(20) DEFAULT NULL,
   `content` longtext DEFAULT NULL,
-  `order` int(11) DEFAULT NULL,
+  `sort_order` int(11) DEFAULT NULL,
   `score` double DEFAULT NULL,
   `time_create` datetime DEFAULT NULL,
   `member_create` varchar(20) DEFAULT NULL,
@@ -1521,7 +1521,7 @@ CREATE TABLE `edu_option` (
 -- Dumping data for table `edu_option`
 --
 
-INSERT INTO `edu_option` (`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+INSERT INTO `edu_option` (`option_id`, `question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
 (1, 1, 'qwfqwf', 1, 0, '2023-01-22 11:04:24', '1', '2023-01-22 11:04:24', '1', 1),
 (2, 1, 'wefewf', 2, 0, '2023-01-22 11:04:24', '1', '2023-01-22 11:04:24', '1', 1),
 (3, 1, 'qwgqiwur', 3, 1, '2023-01-22 11:04:24', '1', '2023-01-22 11:04:24', '1', 1),
@@ -1558,7 +1558,7 @@ CREATE TABLE `edu_question` (
   `basic_competence` varchar(20) DEFAULT NULL,
   `content` longtext DEFAULT NULL,
   `test_id` bigint(20) DEFAULT NULL,
-  `order` int(11) DEFAULT NULL,
+  `sort_order` int(11) DEFAULT NULL,
   `multiple_choice` tinyint(1) DEFAULT 0,
   `random` tinyint(1) DEFAULT 0,
   `numbering` varchar(50) DEFAULT 'upper-alpha',
@@ -1574,7 +1574,7 @@ CREATE TABLE `edu_question` (
 -- Dumping data for table `edu_question`
 --
 
-INSERT INTO `edu_question` (`question_id`, `basic_competence`, `content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, `time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+INSERT INTO `edu_question` (`question_id`, `basic_competence`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, `time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
 (1, '3.9', '<p>sin(x/2) + cos(4x)</p>\r\n<p><img class=\"ascii-svg\" src=\"lib.tools/asciisvg/svgimg.php?sscr=-10%2C10%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C500%2C200%2Cfunc%2Csin(2x)%20%2B%20cos(3.4x)%2Cnull%2C0%2C0%2C-12%2C12%2Cblue%2C1%2C5%202\" style=\"width: 500px; height: 200px; vertical-align: middle; float: none;\" data-sscr=\"-10%2C10%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C500%2C200%2Cfunc%2Csin(2x)%20%2B%20cos(3.4x)%2Cnull%2C0%2C0%2C-12%2C12%2Cblue%2C1%2C5%202\"></p>', 1, 1, 1, 1, 'upper-alpha', '0059fc751be50aba19064bf74010d545', '2023-01-22 11:04:24', '1', '2023-01-22 14:06:31', '1', 1),
 (2, '', 'ehfuihefhihfiwef', 1, 2, 1, 1, 'upper-alpha', '539c3edbc9a66a154df7814205b0f6dc', '2023-01-22 11:04:24', '1', '2023-01-22 11:04:24', '1', 1),
 (3, '6.9', '<p>Perhatikan Persamaan berikut:<br> Disediakan persamaan egfiuwef wefuwegfugweuifweufwuegfuwgefuweufwuef<br> <img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" src=\"media.edu/school/1/test/1/35310254dca906659d2a9f8d4c3074f9.png\"></p>\r\n<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" src=\"media.edu/school/1/test/1/35310254dca906659d2a9f8d4c3074f9.png\"></p>\r\n<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"\\sin &alpha;&plusmn;\\sin &beta;=2 \\sin (1/2 (&alpha;&plusmn;&beta;))  \\cos (1/2 (&alpha;&#8723;&beta;))\" data-latex=\"\\sin &alpha;&plusmn;\\sin &beta;=2 \\sin (1/2 (&alpha;&plusmn;&beta;))  \\cos (1/2 (&alpha;&#8723;&beta;))\" src=\"media.edu/school/1/test/1/2cd73b7c7fb616ad84734ca592c4e928.png\"><br> Nilai x pada persamaan berikut adalah:</p>', 1, 3, 1, 1, 'upper-alpha', '1d9f61dcd376cf2c21a8c70bce18493e', '2023-01-22 11:04:24', '1', '2023-01-22 14:12:52', '1', 1),
@@ -1652,7 +1652,7 @@ CREATE TABLE `edu_school_program` (
   `school_program_id` bigint(20) NOT NULL,
   `school_id` bigint(20) DEFAULT NULL,
   `name` varchar(100) DEFAULT NULL,
-  `order` int(11) DEFAULT NULL,
+  `sort_order` int(11) DEFAULT NULL,
   `default` bigint(20) DEFAULT 0,
   `time_create` datetime DEFAULT NULL,
   `time_edit` datetime DEFAULT NULL,
@@ -1667,7 +1667,7 @@ CREATE TABLE `edu_school_program` (
 -- Dumping data for table `edu_school_program`
 --
 
-INSERT INTO `edu_school_program` (`school_program_id`, `school_id`, `name`, `order`, `default`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES
+INSERT INTO `edu_school_program` (`school_program_id`, `school_id`, `name`, `sort_order`, `default`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 (1, 1, 'IPA', NULL, 0, '2023-01-20 08:52:42', '2023-01-20 08:52:42', 1, 1, '127.0.0.1', '127.0.0.1', 1),
 (2, 1, 'IPS', NULL, 0, '2023-01-20 08:52:42', '2023-01-20 08:52:42', 1, 1, '127.0.0.1', '127.0.0.1', 1);
 
@@ -1883,7 +1883,7 @@ CREATE TABLE `edu_test` (
   `alert_message` text DEFAULT NULL,
   `standard_score` double DEFAULT 1,
   `penalty` double DEFAULT 0,
-  `order` int(11) DEFAULT NULL,
+  `sort_order` int(11) DEFAULT NULL,
   `score_notification` tinyint(1) DEFAULT 0,
   `publish_answer` tinyint(1) DEFAULT 0,
   `time_answer_publication` datetime DEFAULT NULL,
@@ -1906,7 +1906,7 @@ CREATE TABLE `edu_test` (
 -- Dumping data for table `edu_test`
 --
 
-INSERT INTO `edu_test` (`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `standard_score`, `penalty`, `order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `autosubmit`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
+INSERT INTO `edu_test` (`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `autosubmit`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 (1, 1, 'Test2', '', 0, '', '', '', 'Pilihlah jawaban yang paling tepat!', 0, 1, 1, 75, 'H', 10, 5, 10, 1, 3600, 1, 300, 'Lihat waktu sisa Anda. Silakan periksa kembali jawaban Anda. Segera kirimkan jawaban sebelum waktunya habis.', 1, 0, 0, 0, 0, NULL, 'F', NULL, NULL, 0, '2023-01-20 14:33:57', '2023-01-20 14:33:57', 1, 'A', 1, 'A', '127.0.0.1', '127.0.0.1', 1);
 
 --

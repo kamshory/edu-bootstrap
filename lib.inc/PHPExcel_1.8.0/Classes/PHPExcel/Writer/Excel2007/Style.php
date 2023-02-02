@@ -278,7 +278,7 @@ class PHPExcel_Writer_Excel2007_Style extends PHPExcel_Writer_Excel2007_WriterPa
 	{
 		// font
 		$objWriter->startElement('font');
-			//	Weird! The order of these elements actually makes a difference when opening Excel2007
+			//	Weird! The sort_order of these elements actually makes a difference when opening Excel2007
 			//		files in Excel2003 with the compatibility pack. It's not documented behaviour,
 			//		and makes for a real WTF!
 

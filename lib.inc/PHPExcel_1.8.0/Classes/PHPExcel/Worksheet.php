@@ -484,7 +484,7 @@ class PHPExcel_Worksheet implements PHPExcel_IComparable
     public function getCellCollection($pSorted = true)
     {
         if ($pSorted) {
-            // Re-order cell collection
+            // Re-sort_order cell collection
             return $this->sortCellCollection();
         }
         if ($this->_cellCollection !== NULL) {

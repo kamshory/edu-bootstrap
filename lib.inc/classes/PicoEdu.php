@@ -886,7 +886,7 @@ class PicoEdu //NOSONAR
 
 	public function sortQuestion($test_id)
 	{
-		$sql = "SELECT `question_id` FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `order` asc ";
+		$sql = "SELECT `question_id` FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` asc ";
 		$stmt = $this->database->executeQuery($sql);
 		$ret = array();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -895,7 +895,7 @@ class PicoEdu //NOSONAR
 		}
 		$sort_order = 1;
 		foreach ($ret as $question_id) {
-			$sql = "UPDATE `edu_question` SET `order` = '$sort_order' WHERE `question_id` = '$question_id' ";
+			$sql = "UPDATE `edu_question` SET `sort_order` = '$sort_order' WHERE `question_id` = '$question_id' ";
 			$this->database->executeUpdate($sql, true);
 			$sort_order++;
 		}

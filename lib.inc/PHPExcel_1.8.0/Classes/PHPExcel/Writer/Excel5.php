@@ -562,7 +562,7 @@ class PHPExcel_Writer_Excel5 extends PHPExcel_Writer_Abstract implements PHPExce
 	 */
 	private function _writeDocumentSummaryInformation(){
 
-		// offset: 0; size: 2; must be 0xFE 0xFF (UTF-16 LE byte order mark)
+		// offset: 0; size: 2; must be 0xFE 0xFF (UTF-16 LE byte sort_order mark)
 		$data = pack('v', 0xFFFE);
 		// offset: 2; size: 2;
 		$data .= pack('v', 0x0000);
@@ -762,7 +762,7 @@ class PHPExcel_Writer_Excel5 extends PHPExcel_Writer_Abstract implements PHPExce
 	 * @return string
 	 */
 	private function _writeSummaryInformation(){
-		// offset: 0; size: 2; must be 0xFE 0xFF (UTF-16 LE byte order mark)
+		// offset: 0; size: 2; must be 0xFE 0xFF (UTF-16 LE byte sort_order mark)
 		$data = pack('v', 0xFFFE);
 		// offset: 2; size: 2;
 		$data .= pack('v', 0x0000);

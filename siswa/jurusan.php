@@ -35,7 +35,7 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>Order</td>
-		<td><?php echo $data['order'];?> </td>
+		<td><?php echo $data['sort_order'];?> </td>
 		</tr>
 		<tr>
 		<td>Default</td>
@@ -160,7 +160,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['order'];?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_program_id=<?php echo $data['school_program_id'];?>"><?php echo $data['sort_order'];?></a></td>
       <td><?php echo ($data['default'])?'Ya':'Tidak';?> </td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>

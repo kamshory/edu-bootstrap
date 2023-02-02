@@ -166,7 +166,7 @@ class SingularValueDecomposition  {
 			}
 		}
 
-		// Set up the final bidiagonal matrix or order p.
+		// Set up the final bidiagonal matrix or sort_order p.
 		$p = min($this->n, $this->m + 1);
 		if ($nct < $this->n) {
 			$this->s[$nct] = $A[$nct][$nct];

@@ -268,7 +268,7 @@ _.sortBy = (obj, iterator, context) ->
 
 
 # Use a comparator function to figure out at what index an object should
-# be inserted so as to maintain order. Uses binary search.
+# be inserted so as to maintain sort_order. Uses binary search.
 _.sortedIndex = (array, obj, iterator) ->
   iterator ||= _.identity
   low = 0
@@ -494,7 +494,7 @@ _.clone = (obj) ->
 
 # Invokes interceptor with the obj, and then returns obj.
 # The primary purpose of this method is to "tap into" a method chain,
-# in order to perform operations on intermediate results within
+# in sort_order to perform operations on intermediate results within
  the chain.
 _.tap = (obj, interceptor) ->
   interceptor obj

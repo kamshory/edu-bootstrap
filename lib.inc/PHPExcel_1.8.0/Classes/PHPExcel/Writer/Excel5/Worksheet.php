@@ -267,7 +267,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
 	}
 
 	/**
-	 * Add data to the beginning of the workbook (note the reverse order)
+	 * Add data to the beginning of the workbook (note the reverse sort_order)
 	 * and to the end of the workbook.
 	 *
 	 * @access public

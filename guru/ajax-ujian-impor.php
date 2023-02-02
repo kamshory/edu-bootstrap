@@ -28,7 +28,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 		{
 
 			$sql = "SELECT `edu_test`.*, 
-			(select `edu_question`.`order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `order` desc limit 0,1) as `order`
+			(select `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` desc limit 0,1) as `sort_order`
 			FROM `edu_test`
 			WHERE `edu_test`.`test_id` = '$test_id' and `edu_test`.`teacher_id` = '$auth_teacher_id'
 			";
@@ -38,7 +38,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);
 				
 				$random = ((int) $data['random']);
-				$sort_order = ((int) $data['order']);
+				$sort_order = ((int) $data['sort_order']);
 				$score_standar = $data['standard_score'];
 
 				
@@ -92,7 +92,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 							$pertanyaan = addslashes($pertanyaan);
 							
 							$sql1 = "INSERT INTO `edu_question` 
-							(`content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+							(`content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 							`time_create`, `member_create`, `time_edit`, `member_edit`) values
 							('$pertanyaan', '$test_id', '1', '$sort_order', '$random', '$numbering', '$digest', '$competence',
 							'$time_create', '$member_create', '$time_edit', '$member_edit')
@@ -130,7 +130,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 									$order2 = $index_option + 1;
 									
 									$sql2 = "INSERT INTO `edu_option` 
-									(`question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+									(`question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
 									('$id_question', '$option', '$order2', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')
 									";
 									

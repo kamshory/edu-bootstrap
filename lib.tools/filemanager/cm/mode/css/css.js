@@ -498,7 +498,7 @@ CodeMirror.defineMode("css", function(config, parserConfig) {
     "marquee-play-count", "marquee-speed", "marquee-style", "max-height",
     "max-width", "min-height", "min-width", "move-to", "nav-down", "nav-index",
     "nav-left", "nav-right", "nav-up", "object-fit", "object-position",
-    "opacity", "order", "orphans", "outline",
+    "opacity", "sort_order", "orphans", "outline",
     "outline-color", "outline-offset", "outline-style", "outline-width",
     "overflow", "overflow-style", "overflow-wrap", "overflow-x", "overflow-y",
     "padding", "padding-bottom", "padding-left", "padding-right", "padding-top",

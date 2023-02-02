@@ -218,7 +218,7 @@ class PHPExcel_Writer_CSV extends PHPExcel_Writer_Abstract implements PHPExcel_W
 	/**
 	 * Set whether BOM should be used
 	 *
-	 * @param	boolean	$pValue		Use UTF-8 byte-order mark? Defaults to false
+	 * @param	boolean	$pValue		Use UTF-8 byte-sort_order mark? Defaults to false
 	 * @return PHPExcel_Writer_CSV
 	 */
 	public function setUseBOM($pValue = false) {

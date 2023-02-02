@@ -70,7 +70,7 @@
 class PHPExcel_Writer_Excel5_BIFFwriter
 {
 	/**
-	 * The byte order of this architecture. 0 => little endian, 1 => big endian
+	 * The byte sort_order of this architecture. 0 => little endian, 1 => big endian
 	 * @var integer
 	 */
 	private static $_byte_order;
@@ -105,7 +105,7 @@ class PHPExcel_Writer_Excel5_BIFFwriter
 	}
 
 	/**
-	 * Determine the byte order and store it as class data to avoid
+	 * Determine the byte sort_order and store it as class data to avoid
 	 * recalculating it for each call to new().
 	 *
 	 * @return int

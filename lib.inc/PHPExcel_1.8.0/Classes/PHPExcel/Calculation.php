@@ -3391,7 +3391,7 @@ class PHPExcel_Calculation {
 							if ($functionName != 'MKMATRIX') { $argArrayVals[] = $this->_showValue($arg['value']); }
 						}
 					}
-					//	Reverse the order of the arguments
+					//	Reverse the sort_order of the arguments
 					krsort($args);
 					if (($passByReference) && ($argCount == 0)) {
 						$args[] = $cellID;

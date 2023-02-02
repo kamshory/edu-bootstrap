@@ -13726,7 +13726,7 @@ firefox-browser:
   label: Firefox Browser
   unicode: e007
   voted: false
-first-order:
+first-sort_order:
   changes:
     - 4.6.0
     - 5.0.0
@@ -13740,7 +13740,7 @@ first-order:
   label: First Order
   unicode: f2b0
   voted: false
-first-order-alt:
+first-sort_order-alt:
   changes:
     - 5.0.12
   familyStylesByLicense:
@@ -18656,7 +18656,7 @@ jedi:
   label: Jedi
   unicode: f669
   voted: false
-jedi-order:
+jedi-sort_order:
   changes:
     - 5.0.12
     - 5.7.0

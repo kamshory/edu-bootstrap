@@ -85,7 +85,7 @@ function mathphp($st, $varlist) //NOSONAR
 
   $st = preg_replace("/\)([\(0-9a-zA-Z])/", ")*$1", $st);
 
-  //fix PHP's 1/-2*5 order of ops bug
+  //fix PHP's 1/-2*5 sort_order of ops bug
   $st = preg_replace('/\/(\-[\d\.E]+)(\*|\/)/', "/($1)$2", $st);
 
   while ($i = strpos($st, "^")) {

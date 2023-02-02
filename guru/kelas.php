@@ -46,7 +46,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Order</td>
-		<td><?php echo $data['order'];?> </td>
+		<td><?php echo $data['sort_order'];?> </td>
 		</tr>
 		<tr>
 		<td></td>
@@ -95,7 +95,7 @@ $sql = "SELECT `edu_class`.* $nt,
 (select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
 FROM `edu_class`
 WHERE `edu_class`.`school_id` = '$school_id' $sql_filter
-ORDER BY `edu_class`.`order` asc
+ORDER BY `edu_class`.`sort_order` asc
 ";
 $sql_test = "SELECT `edu_class`.*
 FROM `edu_class`
@@ -162,7 +162,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['grade_id'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['school_program_id'];?></a></td>
       <td><a href="siswa.php?class_id=<?php echo $data['class_id'];?>"><?php echo $data['num_student'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['order'];?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['sort_order'];?></a></td>
       </tr>
     <?php
 	}

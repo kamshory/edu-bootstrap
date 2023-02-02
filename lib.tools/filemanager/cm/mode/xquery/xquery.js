@@ -43,7 +43,7 @@ CodeMirror.defineMode("xquery", function() {
     'by','case','cast','child','comment','declare','default','define','descendant','descendant-or-self',
     'descending','document','document-node','element','else','eq','every','except','external','following',
     'following-sibling','follows','for','function','if','import','in','instance','intersect','item',
-    'let','module','namespace','node','node','of','only','or','order','parent','precedes','preceding',
+    'let','module','namespace','node','node','of','only','or','sort_order','parent','precedes','preceding',
     'preceding-sibling','processing-instruction','ref','return','returns','satisfies','schema','schema-element',
     'self','some','sortby','stable','text','then','to','treat','typeswitch','union','variable','version','where',
     'xquery', 'empty-sequence'];

@@ -114,7 +114,7 @@ if (@$auth_student_id && @$auth_school_id) {
 								<?php
 								$sql2 = "SELECT `edu_option`.* , '$answer' like concat('%,',`edu_option`.`option_id`,']%') as `my_answer`
 								FROM `edu_option` 
-								where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` order by  `edu_option`.`order` asc";
+								where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` sort_order by  `edu_option`.`sort_order` asc";
 								$stmt2 = $database->executeQuery($sql2);
 								if ($stmt2->rowCount() > 0) 
 								{

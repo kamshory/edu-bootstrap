@@ -85,7 +85,7 @@ class PHPExcel_Calculation_MathTrig {
 	 *		point with coordinates (xCoordinate, yCoordinate). The angle is given in radians between
 	 *		-pi and pi, excluding -pi.
 	 *
-	 * Note that the Excel ATAN2() function accepts its arguments in the reverse order to the standard
+	 * Note that the Excel ATAN2() function accepts its arguments in the reverse sort_order to the standard
 	 *		PHP atan2() function, so we need to reverse them here before calling the PHP atan() function.
 	 *
 	 * Excel Function:

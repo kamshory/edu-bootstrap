@@ -786,7 +786,7 @@ class PHPExcel_Calculation_Engineering {
 	 *	@category Engineering Functions
 	 *	@param	float		$x		The value at which to evaluate the function.
 	 *								If x is nonnumeric, BESSELI returns the #VALUE! error value.
-	 *	@param	integer		$ord	The order of the Bessel function.
+	 *	@param	integer		$ord	The sort_order of the Bessel function.
 	 *								If ord is not an integer, it is truncated.
 	 *								If $ord is nonnumeric, BESSELI returns the #VALUE! error value.
 	 *								If $ord < 0, BESSELI returns the #NUM! error value.
@@ -839,7 +839,7 @@ class PHPExcel_Calculation_Engineering {
 	 *	@category Engineering Functions
 	 *	@param	float		$x		The value at which to evaluate the function.
 	 *								If x is nonnumeric, BESSELJ returns the #VALUE! error value.
-	 *	@param	integer		$ord	The order of the Bessel function. If n is not an integer, it is truncated.
+	 *	@param	integer		$ord	The sort_order of the Bessel function. If n is not an integer, it is truncated.
 	 *								If $ord is nonnumeric, BESSELJ returns the #VALUE! error value.
 	 *								If $ord < 0, BESSELJ returns the #NUM! error value.
 	 *	@return	float
@@ -928,7 +928,7 @@ class PHPExcel_Calculation_Engineering {
 	 *	@category Engineering Functions
 	 *	@param	float		$x		The value at which to evaluate the function.
 	 *								If x is nonnumeric, BESSELK returns the #VALUE! error value.
-	 *	@param	integer		$ord	The order of the Bessel function. If n is not an integer, it is truncated.
+	 *	@param	integer		$ord	The sort_order of the Bessel function. If n is not an integer, it is truncated.
 	 *								If $ord is nonnumeric, BESSELK returns the #VALUE! error value.
 	 *								If $ord < 0, BESSELK returns the #NUM! error value.
 	 *	@return	float
@@ -1008,7 +1008,7 @@ class PHPExcel_Calculation_Engineering {
 	 *	@category Engineering Functions
 	 *	@param	float		$x		The value at which to evaluate the function.
 	 *								If x is nonnumeric, BESSELK returns the #VALUE! error value.
-	 *	@param	integer		$ord	The order of the Bessel function. If n is not an integer, it is truncated.
+	 *	@param	integer		$ord	The sort_order of the Bessel function. If n is not an integer, it is truncated.
 	 *								If $ord is nonnumeric, BESSELK returns the #VALUE! error value.
 	 *								If $ord < 0, BESSELK returns the #NUM! error value.
 	 *

@@ -1067,7 +1067,7 @@ function mobileUI(resources, opt)
 				col = arrc[i];
 				obj = that.find('thead tr td:nth-child('+col+')');
 				obj.find('.sort-control').remove();
-				obj.attr('data-col', col).attr('data-sort-order', 'ascending').addClass('sort-trigger-tabel');
+				obj.attr('data-col', col).attr('data-sort-sort_order', 'ascending').addClass('sort-trigger-tabel');
 				obj.append(' <span class="sort-control icon caret-up"></span>');
 				obj.on('click', function(e){
 					var that2 = $(this);
@@ -1078,26 +1078,26 @@ function mobileUI(resources, opt)
 					var df = that2.attr('data-number-format') || '.,';
 					if(that2.attr('data-ordered') == 'true')
 					{
-						if(that2.attr('data-sort-order') == 'ascending')
+						if(that2.attr('data-sort-sort_order') == 'ascending')
 						{
 							// desc
-							thisPlugin.sortTabelData(that, col2, {order:'descending', caseSensitive:cs, dataType:dt, numberFormat:df});
-							that2.attr('data-sort-order', 'descending');
+							thisPlugin.sortTabelData(that, col2, {sort_order:'descending', caseSensitive:cs, dataType:dt, numberFormat:df});
+							that2.attr('data-sort-sort_order', 'descending');
 							that2.find('.sort-control').removeClass('caret-up').addClass('caret-down');
 						}
 						else
 						{
 							// asc
-							thisPlugin.sortTabelData(that, col2, {order:'ascending', caseSensitive:cs, dataType:dt, numberFormat:df});
-							that2.attr('data-sort-order', 'ascending');
+							thisPlugin.sortTabelData(that, col2, {sort_order:'ascending', caseSensitive:cs, dataType:dt, numberFormat:df});
+							that2.attr('data-sort-sort_order', 'ascending');
 							that2.find('.sort-control').removeClass('caret-down').addClass('caret-up');
 						}
 					}
 					else
 					{
 						// asc
-						thisPlugin.sortTabelData(that, col2, {order:'ascending', caseSensitive:cs, dataType:dt, numberFormat:df});
-						that2.attr({'data-sort-order':'ascending', 'data-ordered':'true'});
+						thisPlugin.sortTabelData(that, col2, {sort_order:'ascending', caseSensitive:cs, dataType:dt, numberFormat:df});
+						that2.attr({'data-sort-sort_order':'ascending', 'data-ordered':'true'});
 						that2.find('.sort-control').removeClass('caret-down').addClass('caret-up');
 					}
 				});
@@ -1172,7 +1172,7 @@ function mobileUI(resources, opt)
 	};
 	this.sortTabelData = function(that, col, args){
 		args = args || {};
-		args.order = args.order || 'ascending';
+		args.sort_order = args.sort_order || 'ascending';
 		args.caseSensitive = args.caseSensitive || false;
 		args.dataType = args.dataType || 'text';
 		args.numberFormat = args.numberFormat || '.,';
@@ -1288,7 +1288,7 @@ function mobileUI(resources, opt)
 				}
 			}
 		});
-		if(args.order == 'descending')
+		if(args.sort_order == 'descending')
 		{
 			for(var i=(store.length-1); i>=0; i--){
 				tbl.appendChild(store[i][1]);

@@ -16,7 +16,7 @@ case 13:{?>But when Our tokens came unto them, plain to see, they said : This is
 case 14:{?>And they denied them, though their souls acknowledged them, for spite and arrogance. Then see the nature of the consequence for the wrong doers!<?php break;}
 case 15:{?>And We verily gave knowledge unto David and Solomon, and they said : Praise be to Allah, Who hath preferred us above many of His believing slaves!<?php break;}
 case 16:{?>And Solomon was David ' s heir. And he said : O mankind! Lo! we have been taught the language of birds, and have been given ( abundance ) of all things. This surely is evident favor.<?php break;}
-case 17:{?>And there were gathered together unto Solomon his armies of the jinn and humankind, and of the birds, and they were set in battle order;<?php break;}
+case 17:{?>And there were gathered together unto Solomon his armies of the jinn and humankind, and of the birds, and they were set in battle sort_order;<?php break;}
 case 18:{?>Till, when they reached the Valley of the Ants, an ant exclaimed : O ants! Enter your dwellings lest Solomon and his armies crush you, unperceiving.<?php break;}
 case 19:{?>And ( Solomon ) smiled, laughing at her speech, and said : My Lord, arouse me to be thankful for Thy favor wherewith Thou hast favored me and my parents, and to do good that shall be pleasing unto Thee, and include me in ( the number of ) Thy righteous staves.<?php break;}
 case 20:{?>And he sought among the birds and said : How is it that I see not the hoopoe, or is he among the absent?<?php break;}

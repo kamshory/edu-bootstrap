@@ -18,10 +18,10 @@ if(isset($_POST['question']))
 {
 	$test_id = kh_filter_input(INPUT_POST, 'test_id', FILTER_SANITIZE_STRING_NEW);
 	$picoEdu->sortQuestion($test_id);
-	$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `order` desc";
+	$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` desc";
 	$stmt = $database->executeQuery($sql);
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
-	$sort_order = (@$data['order'])+1;
+	$sort_order = (@$data['sort_order'])+1;
 	$number_of_option = kh_filter_input(INPUT_POST, 'number_of_option', FILTER_SANITIZE_NUMBER_UINT);
 	$numbering = kh_filter_input(INPUT_POST, 'numbering', FILTER_SANITIZE_STRING_NEW);
 	$basic_competence = trim(kh_filter_input(INPUT_POST, 'basic_competence', FILTER_SANITIZE_STRING_NEW));
@@ -48,7 +48,7 @@ if(isset($_POST['question']))
 		$question_id = $database->generateNewId();
 
 		$sql = "INSERT INTO `edu_question` 
-		(`question_id`, `content`, `basic_competence`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+		(`question_id`, `content`, `basic_competence`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 		`time_create`, `member_create`, `time_edit`, `member_edit`) values
 		('$question_id', '$question', '$basic_competence', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
 		'$time_create', '$member_create', '$time_edit', '$member_edit') ";
@@ -71,7 +71,7 @@ if(isset($_POST['question']))
 			$option_id = $database->generateNewId();
 
 			$sql = "INSERT INTO `edu_option` 
-			(`option_id`, `question_id`, `content`, `order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+			(`option_id`, `question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
 			('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')";
 			$stmt = $database->executeInsert($sql, true);
 			if($stmt->rowCount() > 0)

@@ -143,7 +143,7 @@
     - Check is a file is encrypted or not. Returns status 'unsupported_encryption' and/or
       error code PCLZIP_ERR_UNSUPPORTED_ENCRYPTION.
     - Corrected : Bad "version need to extract" field in local file header
-    - Add private method privCheckFileHeaders() in order to check local and central
+    - Add private method privCheckFileHeaders() in sort_order to check local and central
       file headers. PclZip is now supporting purpose bit flag bit 3. Purpose bit flag bit 3 gives
       the ability to have a local file header without size, compressed size and crc filled.
     - Add a generic status 'error' for file status
@@ -214,7 +214,7 @@
     - Corrected bug : When the archive file already exists with size=0, the add() method
       fails. Corrected in 2.0.
     - Remove the use of OS_WINDOWS constant. Use php_uname() function rather.
-    - Control the order of index ranges in extract by index feature.
+    - Control the sort_order of index ranges in extract by index feature.
     - Change the internal management of folders (better handling of internal flag).
 
 

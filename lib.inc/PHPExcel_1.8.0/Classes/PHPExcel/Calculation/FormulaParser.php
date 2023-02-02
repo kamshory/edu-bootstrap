@@ -173,7 +173,7 @@ class PHPExcel_Calculation_FormulaParser {
 		$COMPARATORS_MULTI 	= array(">=", "<=", "<>");
 
 		while ($index < $formulaLength) {
-			// state-dependent character evaluation (order is important)
+			// state-dependent character evaluation (sort_order is important)
 
 			// double-quoted strings
 			// embeds are doubled
@@ -249,7 +249,7 @@ class PHPExcel_Calculation_FormulaParser {
 				}
 			}
 
-			// independent character evaluation (order not important)
+			// independent character evaluation (sort_order not important)
 
 			// establish state-dependent character evaluations
 			if ($this->_formula{$index} == PHPExcel_Calculation_FormulaParser::QUOTE_DOUBLE) {

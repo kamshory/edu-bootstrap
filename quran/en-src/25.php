@@ -31,7 +31,7 @@ case 28:{?>Alas for me! Ah, would that I had never taken such an one for friend!
 case 29:{?>He verily led me astray from the Reminder after it had reached me. Satan was ever man ' s deserter in the hour of need.<?php break;}
 case 30:{?>And the messenger saith : O my Lord! Lo! mine own folk make this Quran of no account.<?php break;}
 case 31:{?>Even so have We appointed unto every Prophet an opportent from among the guilty; but Allah sufficeth for a Guide and Helper.<?php break;}
-case 32:{?>And those who disbelieve say : Why is the Quran not revealed unto him all at once? ( It is revealed ) thus that We may strengthen thy heart therewith; and We have arranged it in right order.<?php break;}
+case 32:{?>And those who disbelieve say : Why is the Quran not revealed unto him all at once? ( It is revealed ) thus that We may strengthen thy heart therewith; and We have arranged it in right sort_order.<?php break;}
 case 33:{?>And they bring thee no similitude but We bring thee the Truth ( as against it ), and better ( than their similitude ) as argument.<?php break;}
 case 34:{?>Those who will be gathered on their faces unto Hell : such are worse in plight and further from the right road.<?php break;}
 case 35:{?>We verify gave Moses the Scripture and placed with him his brother Aaron as henchman.<?php break;}

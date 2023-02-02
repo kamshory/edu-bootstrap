@@ -89,10 +89,10 @@ case 86:{?>Then Moses went back unto his folk, angry and sad He said : O my peop
 case 87:{?>They said : We broke not tryst with thee of our own will, but we were laden with burdens of ornaments of the folk, then cast them ( in the fire ), for thus As-Samiri proposed<?php break;}
 case 88:{?>Then he produced for them a calf, of saffron hue, which gave forth a lowing sound. And they cried : This is your God and the God of Moses, but he hath forgotten.<?php break;}
 case 89:{?>See they not, then, that it returneth no saying unto them and possesseth for them neither hurt nor use?<?php break;}
-case 90:{?>And Aaron indeed had told them beforehand : O my people! Ye are but being seduced therewith, for lo! your Lord is the Beneficent, so follow me and obey my order.<?php break;}
+case 90:{?>And Aaron indeed had told them beforehand : O my people! Ye are but being seduced therewith, for lo! your Lord is the Beneficent, so follow me and obey my sort_order.<?php break;}
 case 91:{?>They said : We shall by no means cease to be its votaries till Moses return unto us.<?php break;}
 case 92:{?>He ( Moses ) said : O Aaron! What held thee back when thou didst see them gone astray,<?php break;}
-case 93:{?>That thou followedst me not? Hast thou then disobeyed my order?<?php break;}
+case 93:{?>That thou followedst me not? Hast thou then disobeyed my sort_order?<?php break;}
 case 94:{?>He said : O son of my mother! Clutch not my beard nor my head! I feared lest thou shouldst say : Thou hast caused division among the Children of Israel, and hast not waited for my word.<?php break;}
 case 95:{?>( Moses ) said : And what has thou to say, O Samiri?<?php break;}
 case 96:{?>He said : I perceived what they perceive not, so I seized a handful from the footsteps of the messenger, and then threw it in. Thus my soul commended to me.<?php break;}

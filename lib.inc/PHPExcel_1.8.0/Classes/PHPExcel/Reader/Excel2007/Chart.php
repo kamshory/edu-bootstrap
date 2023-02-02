@@ -262,7 +262,7 @@ class PHPExcel_Reader_Excel2007_Chart
 							case "idx":
 								$seriesIndex = self::_getAttribute($seriesDetail, 'val', 'integer');
 								break;
-							case "order":
+							case "sort_order":
 								$seriesOrder = self::_getAttribute($seriesDetail, 'val', 'integer');
 								$plotOrder[$seriesIndex] = $seriesOrder;
 								break;

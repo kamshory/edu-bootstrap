@@ -16,7 +16,7 @@ if(!empty(@$school_id))
 			// Format Plain
 			$picoEdu->sortQuestion($test_id);
 			$sql = "SELECT `edu_test`.*, 
-			(select `edu_question`.`order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `order` desc limit 0,1) as `order`
+			(select `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` desc limit 0,1) as `sort_order`
 			FROM `edu_test`
 			WHERE `edu_test`.`test_id` = '$test_id'
 			";
@@ -29,7 +29,7 @@ if(!empty(@$school_id))
 				$member_create = $teacher_id;
 				$member_edit = $teacher_id;
 				$random = ((int) $data['random']);
-				$sort_order = ((int) $data['order']);
+				$sort_order = ((int) $data['sort_order']);
 				$score_standar = $data['standard_score'];
 				$xml_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
 				$clear_data = parseRawQuestion($xml_data);
@@ -54,7 +54,7 @@ if(!empty(@$school_id))
 						$digest = md5($object['question']);
 						$sort_order++;
 						$sql1 = "INSERT INTO `edu_question` 
-						(`content`, `test_id`, `order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						(`content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
 						('$content', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
 						'$time_create', '$member_create', '$time_edit', '$member_edit', true)
@@ -80,7 +80,7 @@ if(!empty(@$school_id))
 										$score_option = addslashes(@$option['score']*$score_standar);
 									}
 									$sql2 = "INSERT INTO `edu_option` 
-									(`question_id`, `content`, `order`, `score`, 
+									(`question_id`, `content`, `sort_order`, `score`, 
 									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
 									('$question_id', '$content_option', '$order_option', '$score_option', 
 									'$time_create', '$member_create', '$time_edit', '$member_edit', true)

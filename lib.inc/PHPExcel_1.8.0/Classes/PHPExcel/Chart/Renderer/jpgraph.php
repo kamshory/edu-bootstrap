@@ -372,7 +372,7 @@ class PHPExcel_Chart_Renderer_jpgraph
 				++$testCurrentIndex;
 			}
 
-			//	Reverse the $dataValues order for bar rather than column chart
+			//	Reverse the $dataValues sort_order for bar rather than column chart
 			if ($rotation == 'bar') {
 				$dataValues = array_reverse($dataValues);
 			}
@@ -391,7 +391,7 @@ class PHPExcel_Chart_Renderer_jpgraph
 
 			$seriesPlots[] = $seriesPlot;
 		}
-		//	Reverse the plot order for bar rather than column chart
+		//	Reverse the plot sort_order for bar rather than column chart
 		if (($rotation == 'bar') && (!($grouping == 'percentStacked'))) {
 			$seriesPlots = array_reverse($seriesPlots);
 		}

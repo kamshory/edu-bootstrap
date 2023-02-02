@@ -1185,7 +1185,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 			return;
 		}
 
-		// offset: 0; size: 2; must be 0xFE 0xFF (UTF-16 LE byte order mark)
+		// offset: 0; size: 2; must be 0xFE 0xFF (UTF-16 LE byte sort_order mark)
 		// offset: 2; size: 2;
 		// offset: 4; size: 2; OS version
 		// offset: 6; size: 2; OS indicator
@@ -1345,7 +1345,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 			return;
 		}
 
-		//	offset: 0;	size: 2;	must be 0xFE 0xFF (UTF-16 LE byte order mark)
+		//	offset: 0;	size: 2;	must be 0xFE 0xFF (UTF-16 LE byte sort_order mark)
 		//	offset: 2;	size: 2;
 		//	offset: 4;	size: 2;	OS version
 		//	offset: 6;	size: 2;	OS indicator

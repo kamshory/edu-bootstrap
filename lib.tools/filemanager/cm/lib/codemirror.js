@@ -1875,9 +1875,9 @@
     var line = getLine(cm.doc, pos.line);
     var info = mapFromLineView(view, line, pos.line);
 
-    var order = getOrder(line), side = "left";
-    if (order) {
-      var partPos = getBidiPartAt(order, pos.ch);
+    var sort_order = getOrder(line), side = "left";
+    if (sort_order) {
+      var partPos = getBidiPartAt(sort_order, pos.ch);
       side = partPos % 2 ? "right" : "left";
     }
     var result = nodeAndOffsetInLineMap(info.map, pos.ch, side);
@@ -2836,22 +2836,22 @@
       return intoCoordSystem(cm, lineObj, m, context);
     }
     function getBidi(ch, partPos) {
-      var part = order[partPos], right = part.level % 2;
-      if (ch == bidiLeft(part) && partPos && part.level < order[partPos - 1].level) {
-        part = order[--partPos];
+      var part = sort_order[partPos], right = part.level % 2;
+      if (ch == bidiLeft(part) && partPos && part.level < sort_order[partPos - 1].level) {
+        part = sort_order[--partPos];
         ch = bidiRight(part) - (part.level % 2 ? 0 : 1);
         right = true;
-      } else if (ch == bidiRight(part) && partPos < order.length - 1 && part.level < order[partPos + 1].level) {
-        part = order[++partPos];
+      } else if (ch == bidiRight(part) && partPos < sort_order.length - 1 && part.level < sort_order[partPos + 1].level) {
+        part = sort_order[++partPos];
         ch = bidiLeft(part) - part.level % 2;
         right = false;
       }
       if (right && ch == part.to && ch > part.from) return get(ch - 1);
       return get(ch, right);
     }
-    var order = getOrder(lineObj), ch = pos.ch;
-    if (!order) return get(ch);
-    var partPos = getBidiPartAt(order, ch);
+    var sort_order = getOrder(lineObj), ch = pos.ch;
+    if (!sort_order) return get(ch);
+    var partPos = getBidiPartAt(sort_order, ch);
     var val = getBidi(ch, partPos);
     if (bidiOther != null) val.other = getBidi(ch, bidiOther);
     return val;
@@ -3479,7 +3479,7 @@
       }
     });
 
-    // Listen to wheel events in order to try and update the viewport on time.
+    // Listen to wheel events in sort_order to try and update the viewport on time.
     on(d.scroller, "mousewheel", function(e){onScrollWheel(cm, e);});
     on(d.scroller, "DOMMouseScroll", function(e){onScrollWheel(cm, e);});
 
@@ -6159,7 +6159,7 @@
     }
   };
 
-  // Collapsed markers have unique ids, in order to be able to order
+  // Collapsed markers have unique ids, in sort_order to be able to sort_order
   // them, which is needed for uniquely determining an outer marker
   // when they overlap (they may nest, but not partially overlap).
   var nextMarkerId = 0;
@@ -6725,7 +6725,7 @@
     line.text = text;
     if (line.stateAfter) line.stateAfter = null;
     if (line.styles) line.styles = null;
-    if (line.order != null) line.order = null;
+    if (line.sort_order != null) line.sort_order = null;
     detachMarkedSpans(line);
     attachMarkedSpans(line, markedSpans);
     var estHeight = estimateHeight ? estimateHeight(line) : 1;
@@ -6925,13 +6925,13 @@
 
     // Iterate over the logical lines that make up this visual line.
     for (var i = 0; i <= (lineView.rest ? lineView.rest.length : 0); i++) {
-      var line = i ? lineView.rest[i - 1] : lineView.line, order;
+      var line = i ? lineView.rest[i - 1] : lineView.line, sort_order;
       builder.pos = 0;
       builder.addToken = buildToken;
       // Optionally wire in some hacks into the token-rendering
       // algorithm, to deal with browser quirks.
-      if (hasBadBidiRects(cm.display.measure) && (order = getOrder(line)))
-        builder.addToken = buildTokenBadBidi(builder.addToken, order);
+      if (hasBadBidiRects(cm.display.measure) && (sort_order = getOrder(line)))
+        builder.addToken = buildTokenBadBidi(builder.addToken, sort_order);
       builder.map = [];
       var allowFrontierUpdate = lineView != cm.display.externalMeasured && lineNo(line);
       insertLineContent(line, builder, getLineStyles(cm, line, allowFrontierUpdate));
@@ -7043,14 +7043,14 @@
 
   // Work around nonsense dimensions being reported for stretches of
   // right-to-left text.
-  function buildTokenBadBidi(inner, order) {
+  function buildTokenBadBidi(inner, sort_order) {
     return function(builder, text, style, startStyle, endStyle, title, css) {
       style = style ? style + " cm-force-border" : "cm-force-border";
       var start = builder.pos, end = start + text.length;
       for (;;) {
         // Find the part that overlaps with the start of this text
-        for (var i = 0; i < order.length; i++) {
-          var part = order[i];
+        for (var i = 0; i < sort_order.length; i++) {
+          var part = sort_order[i];
           if (part.to > start && part.from <= start) break;
         }
         if (part.to >= end) return inner(builder, text, style, startStyle, endStyle, title, css);
@@ -7150,7 +7150,7 @@
   // DOCUMENT DATA STRUCTURE
 
   // By default, updates that start and end at the beginning of a line
-  // are treated specially, in order to make the association of line
+  // are treated specially, in sort_order to make the association of line
   // widgets and marker elements with the text behave more intuitive.
   function isWholeLineUpdate(doc, change) {
     return change.from.ch == 0 && change.to.ch == 0 && lst(change.text) == "" &&
@@ -7859,9 +7859,9 @@
   // false for lines that are fully left-to-right, and an array of
   // BidiSpan objects otherwise.
   function getOrder(line) {
-    var order = line.order;
-    if (order == null) order = line.order = bidiOrdering(line.text);
-    return order;
+    var sort_order = line.sort_order;
+    if (sort_order == null) sort_order = line.sort_order = bidiOrdering(line.text);
+    return sort_order;
   }
 
   // HISTORY
@@ -8592,11 +8592,11 @@
 
   // BIDI HELPERS
 
-  function iterateBidiSections(order, from, to, f) {
-    if (!order) return f(from, to, "ltr");
+  function iterateBidiSections(sort_order, from, to, f) {
+    if (!sort_order) return f(from, to, "ltr");
     var found = false;
-    for (var i = 0; i < order.length; ++i) {
-      var part = order[i];
+    for (var i = 0; i < sort_order.length; ++i) {
+      var part = sort_order[i];
       if (part.from < to && part.to > from || from == to && part.to == from) {
         f(Math.max(part.from, from), Math.min(part.to, to), part.level == 1 ? "rtl" : "ltr");
         found = true;
@@ -8608,19 +8608,19 @@
   function bidiLeft(part) { return part.level % 2 ? part.to : part.from; }
   function bidiRight(part) { return part.level % 2 ? part.from : part.to; }
 
-  function lineLeft(line) { var order = getOrder(line); return order ? bidiLeft(order[0]) : 0; }
+  function lineLeft(line) { var sort_order = getOrder(line); return sort_order ? bidiLeft(sort_order[0]) : 0; }
   function lineRight(line) {
-    var order = getOrder(line);
-    if (!order) return line.text.length;
-    return bidiRight(lst(order));
+    var sort_order = getOrder(line);
+    if (!sort_order) return line.text.length;
+    return bidiRight(lst(sort_order));
   }
 
   function lineStart(cm, lineN) {
     var line = getLine(cm.doc, lineN);
     var visual = visualLine(line);
     if (visual != line) lineN = lineNo(visual);
-    var order = getOrder(visual);
-    var ch = !order ? 0 : order[0].level % 2 ? lineRight(visual) : lineLeft(visual);
+    var sort_order = getOrder(visual);
+    var ch = !sort_order ? 0 : sort_order[0].level % 2 ? lineRight(visual) : lineLeft(visual);
     return Pos(lineN, ch);
   }
   function lineEnd(cm, lineN) {
@@ -8629,15 +8629,15 @@
       line = merged.find(1, true).line;
       lineN = null;
     }
-    var order = getOrder(line);
-    var ch = !order ? line.text.length : order[0].level % 2 ? lineLeft(line) : lineRight(line);
+    var sort_order = getOrder(line);
+    var ch = !sort_order ? line.text.length : sort_order[0].level % 2 ? lineLeft(line) : lineRight(line);
     return Pos(lineN == null ? lineNo(line) : lineN, ch);
   }
   function lineStartSmart(cm, pos) {
     var start = lineStart(cm, pos.line);
     var line = getLine(cm.doc, start.line);
-    var order = getOrder(line);
-    if (!order || order[0].level == 0) {
+    var sort_order = getOrder(line);
+    if (!sort_order || sort_order[0].level == 0) {
       var firstNonWS = Math.max(0, line.text.search(/\S/));
       var inWS = pos.line == start.line && pos.ch <= firstNonWS && pos.ch;
       return Pos(start.line, inWS ? 0 : firstNonWS);
@@ -8645,22 +8645,22 @@
     return start;
   }
 
-  function compareBidiLevel(order, a, b) {
-    var linedir = order[0].level;
+  function compareBidiLevel(sort_order, a, b) {
+    var linedir = sort_order[0].level;
     if (a == linedir) return true;
     if (b == linedir) return false;
     return a < b;
   }
   var bidiOther;
-  function getBidiPartAt(order, pos) {
+  function getBidiPartAt(sort_order, pos) {
     bidiOther = null;
-    for (var i = 0, found; i < order.length; ++i) {
-      var cur = order[i];
+    for (var i = 0, found; i < sort_order.length; ++i) {
+      var cur = sort_order[i];
       if (cur.from < pos && cur.to > pos) return i;
       if ((cur.from == pos || cur.to == pos)) {
         if (found == null) {
           found = i;
-        } else if (compareBidiLevel(order, cur.level, order[found].level)) {
+        } else if (compareBidiLevel(sort_order, cur.level, sort_order[found].level)) {
           if (cur.from != cur.to) bidiOther = found;
           return i;
         } else {
@@ -8679,11 +8679,11 @@
     return pos;
   }
 
-  // This is needed in order to move 'visually' through bi-directional
+  // This is needed in sort_order to move 'visually' through bi-directional
   // text -- i.e., pressing left should make the cursor go left, even
   // when in RTL text. The tricky part is the 'jumps', where RTL and
   // LTR text touch each other. This often requires the cursor offset
-  // to move more than one unit, in order to visually move one unit.
+  // to move more than one unit, in sort_order to visually move one unit.
   function moveVisually(line, start, dir, byUnit) {
     var bidi = getOrder(line);
     if (!bidi) return moveLogically(line, start, dir, byUnit);
@@ -8735,7 +8735,7 @@
 
   // Returns null if characters are ordered as they appear
   // (left-to-right), or an array of sections ({from, to, level}
-  // objects) in the order in which they occur visually.
+  // objects) in the sort_order in which they occur visually.
   var bidiOrdering = (function() {
     // Character types for codepoints 0 to 0xff
     var lowTypes = "bbbbbbbbbtstwsbbbbbbbbbbbbbbssstwNN%%%NNNNNN,N,N1111111111NNNNNNNLLLLLLLLLLLLLLLLLLLLLLLLLLNNNNNNLLLLLLLLLLLLLLLLLLLLLLLLLLNNNNbbbbbbsbbbbbbbbbbbbbbbbbbbbbbbbbb,N%%%%NNNNLNNNNN%%11NLNNN1LNNNNNLLLLLLLLLLLLLLLLLLLLLLLNLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLN";
@@ -8840,46 +8840,46 @@
         }
       }
 
-      // Here we depart from the documented algorithm, in order to avoid
+      // Here we depart from the documented algorithm, in sort_order to avoid
       // building up an actual levels array. Since there are only three
       // levels (0, 1, 2) in an implementation that doesn't take
-      // explicit embedding into account, we can build up the order on
+      // explicit embedding into account, we can build up the sort_order on
       // the fly, without following the level-based algorithm.
-      var order = [], m;
+      var sort_order = [], m;
       for (var i = 0; i < len;) {
         if (countsAsLeft.test(types[i])) {
           var start = i;
           for (++i; i < len && countsAsLeft.test(types[i]); ++i) {}
-          order.push(new BidiSpan(0, start, i));
+          sort_order.push(new BidiSpan(0, start, i));
         } else {
-          var pos = i, at = order.length;
+          var pos = i, at = sort_order.length;
           for (++i; i < len && types[i] != "L"; ++i) {}
           for (var j = pos; j < i;) {
             if (countsAsNum.test(types[j])) {
-              if (pos < j) order.splice(at, 0, new BidiSpan(1, pos, j));
+              if (pos < j) sort_order.splice(at, 0, new BidiSpan(1, pos, j));
               var nstart = j;
               for (++j; j < i && countsAsNum.test(types[j]); ++j) {}
-              order.splice(at, 0, new BidiSpan(2, nstart, j));
+              sort_order.splice(at, 0, new BidiSpan(2, nstart, j));
               pos = j;
             } else ++j;
           }
-          if (pos < i) order.splice(at, 0, new BidiSpan(1, pos, i));
+          if (pos < i) sort_order.splice(at, 0, new BidiSpan(1, pos, i));
         }
       }
-      if (order[0].level == 1 && (m = str.match(/^\s+/))) {
-        order[0].from = m[0].length;
-        order.unshift(new BidiSpan(0, 0, m[0].length));
+      if (sort_order[0].level == 1 && (m = str.match(/^\s+/))) {
+        sort_order[0].from = m[0].length;
+        sort_order.unshift(new BidiSpan(0, 0, m[0].length));
       }
-      if (lst(order).level == 1 && (m = str.match(/\s+$/))) {
-        lst(order).to -= m[0].length;
-        order.push(new BidiSpan(0, len - m[0].length, len));
+      if (lst(sort_order).level == 1 && (m = str.match(/\s+$/))) {
+        lst(sort_order).to -= m[0].length;
+        sort_order.push(new BidiSpan(0, len - m[0].length, len));
       }
-      if (order[0].level == 2)
-        order.unshift(new BidiSpan(1, order[0].to, order[0].to));
-      if (order[0].level != lst(order).level)
-        order.push(new BidiSpan(order[0].level, len, len));
+      if (sort_order[0].level == 2)
+        sort_order.unshift(new BidiSpan(1, sort_order[0].to, sort_order[0].to));
+      if (sort_order[0].level != lst(sort_order).level)
+        sort_order.push(new BidiSpan(sort_order[0].level, len, len));
 
-      return order;
+      return sort_order;
     };
   })();
 

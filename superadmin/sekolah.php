@@ -310,7 +310,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql = "SELECT * FROM `country` WHERE `active` = true ORDER BY `order` asc
+        $sql = "SELECT * FROM `country` WHERE `active` = true ORDER BY `sort_order` asc
 		";
 
 		echo $picoEdu->createFilterDb(
@@ -622,7 +622,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql2 = "SELECT * FROM `country` WHERE `active` = true ORDER BY `order` asc
+        $sql2 = "SELECT * FROM `country` WHERE `active` = true ORDER BY `sort_order` asc
 		";
 		echo $picoEdu->createFilterDb(
 			$sql2,

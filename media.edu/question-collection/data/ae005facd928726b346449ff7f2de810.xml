@@ -989,7 +989,7 @@ We know from the text that Camelia Sinensis&lt;/p&gt;</text>
 	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
 Using a Dictionary&lt;br&gt;
 Here are the steps to consult your dictionary:&lt;br&gt;
-1. Look at the &amp;#64257;rst letter of the word. Dictionaries follow alphabetical order&lt;br&gt;
+1. Look at the &amp;#64257;rst letter of the word. Dictionaries follow alphabetical sort_order&lt;br&gt;
 2. Open the dictionary.&lt;br&gt;
 3. Find the section of the first letter of the word.&lt;br&gt;
 4. Look at the second letter of the word.&lt;br&gt;
@@ -1006,7 +1006,7 @@ We have to look at the words at the top of the pages of the dictionary because..
 		<answer>
 		
 		<option>
-			<text>&lt;p&gt;they follow the alphabetical order.&lt;/p&gt;</text>
+			<text>&lt;p&gt;they follow the alphabetical sort_order.&lt;/p&gt;</text>
 			<value>0</value>
 			
 		</option>
@@ -1037,7 +1037,7 @@ We have to look at the words at the top of the pages of the dictionary because..
 	<text>&lt;p&gt;The following text is for question.&lt;br&gt;
 Using a Dictionary&lt;br&gt;
 Here are the steps to consult your dictionary:&lt;br&gt;
-1. Look at the &amp;#64257;rst letter of the word. Dictionaries follow alphabetical order&lt;br&gt;
+1. Look at the &amp;#64257;rst letter of the word. Dictionaries follow alphabetical sort_order&lt;br&gt;
 2. Open the dictionary.&lt;br&gt;
 3. Find the section of the first letter of the word.&lt;br&gt;
 4. Look at the second letter of the word.&lt;br&gt;
@@ -1082,7 +1082,7 @@ What should we do after opening the section of the &amp;#64257;rst letter of the
 
 	<item>
 	<question>
-	<text>&lt;p&gt;The following text is for question.&lt;br&gt; Using a Dictionary&lt;br&gt; Here are the steps to consult your dictionary:&lt;br&gt; 1. Look at the &amp;#64257;rst letter of the word. Dictionaries follow alphabetical order&lt;br&gt; 2. Open the dictionary.&lt;br&gt; 3. Find the section of the first letter of the word.&lt;br&gt; 4. Look at the second letter of the word.&lt;br&gt; 5. Find the word starting with those two letters.&lt;br&gt; 6. Look at the words at the top of pages in the dictionary. They tell you what types or words are on the pages.&lt;br&gt; 7. Notice the word falls between them&lt;br&gt; 8. Find the word and read the de&amp;#64257;nition&lt;br&gt;&lt;br&gt; &amp;ldquo;... the word falls between &lt;span style=&quot;text-decoration: underline;&quot;&gt;them&lt;/span&gt;&amp;rdquo; (step 7).&lt;br&gt; What does the underlined word refer to?&lt;/p&gt;</text>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt; Using a Dictionary&lt;br&gt; Here are the steps to consult your dictionary:&lt;br&gt; 1. Look at the &amp;#64257;rst letter of the word. Dictionaries follow alphabetical sort_order&lt;br&gt; 2. Open the dictionary.&lt;br&gt; 3. Find the section of the first letter of the word.&lt;br&gt; 4. Look at the second letter of the word.&lt;br&gt; 5. Find the word starting with those two letters.&lt;br&gt; 6. Look at the words at the top of pages in the dictionary. They tell you what types or words are on the pages.&lt;br&gt; 7. Notice the word falls between them&lt;br&gt; 8. Find the word and read the de&amp;#64257;nition&lt;br&gt;&lt;br&gt; &amp;ldquo;... the word falls between &lt;span style=&quot;text-decoration: underline;&quot;&gt;them&lt;/span&gt;&amp;rdquo; (step 7).&lt;br&gt; What does the underlined word refer to?&lt;/p&gt;</text>
 	<random>1</random>
 	<numbering>upper-alpha</numbering>
 	
@@ -1119,7 +1119,7 @@ What should we do after opening the section of the &amp;#64257;rst letter of the
 
 	<item>
 	<question>
-	<text>&lt;p&gt;The following text is for question.&lt;br&gt; Using a Dictionary&lt;br&gt; Here are the steps to consult your dictionary:&lt;br&gt; 1. Look at the &amp;#64257;rst letter of the word. Dictionaries follow alphabetical order&lt;br&gt; 2. Open the dictionary.&lt;br&gt; 3. Find the section of the first letter of the word.&lt;br&gt; 4. Look at the second letter of the word.&lt;br&gt; 5. Find the word starting with those two letters.&lt;br&gt; 6. Look at the words at the top of pages in the dictionary. They tell you what types or words are on the pages.&lt;br&gt; 7. Notice the word falls between them&lt;br&gt; 8. Find the word and read the de&amp;#64257;nition&lt;br&gt;&lt;br&gt; &amp;ldquo;... &amp;#64257;nd the &lt;span style=&quot;text-decoration: underline;&quot;&gt;section&lt;/span&gt; of the &amp;#64257;rst letter...&amp;rdquo; (step 3).&lt;br&gt; The underlined Word is closest in meaning to...&lt;/p&gt;</text>
+	<text>&lt;p&gt;The following text is for question.&lt;br&gt; Using a Dictionary&lt;br&gt; Here are the steps to consult your dictionary:&lt;br&gt; 1. Look at the &amp;#64257;rst letter of the word. Dictionaries follow alphabetical sort_order&lt;br&gt; 2. Open the dictionary.&lt;br&gt; 3. Find the section of the first letter of the word.&lt;br&gt; 4. Look at the second letter of the word.&lt;br&gt; 5. Find the word starting with those two letters.&lt;br&gt; 6. Look at the words at the top of pages in the dictionary. They tell you what types or words are on the pages.&lt;br&gt; 7. Notice the word falls between them&lt;br&gt; 8. Find the word and read the de&amp;#64257;nition&lt;br&gt;&lt;br&gt; &amp;ldquo;... &amp;#64257;nd the &lt;span style=&quot;text-decoration: underline;&quot;&gt;section&lt;/span&gt; of the &amp;#64257;rst letter...&amp;rdquo; (step 3).&lt;br&gt; The underlined Word is closest in meaning to...&lt;/p&gt;</text>
 	<random>1</random>
 	<numbering>upper-alpha</numbering>
 	

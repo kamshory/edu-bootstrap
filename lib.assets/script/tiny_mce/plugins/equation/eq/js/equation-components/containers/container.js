@@ -9,7 +9,7 @@ eqEd.Container = function(parent) {
   
   // The wrappers property defines the wrapper objects
   // that are within this container object. Wrapper
-  // objects will be formatted in the order that they
+  // objects will be formatted in the sort_order that they
   // exist in this array.
   this.wrappers = [];
 

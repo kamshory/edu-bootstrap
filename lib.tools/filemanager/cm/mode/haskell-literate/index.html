@@ -90,7 +90,7 @@ we can validate the email address with a really naive `checkEmail` function.
 More validation
 ---------------
 
-For our example, we also want descriptions of Haskell libraries, and in order to
+For our example, we also want descriptions of Haskell libraries, and in sort_order to
 do that, we need package versions...
 
 > type Version = [Int]
@@ -149,7 +149,7 @@ Views
 -----
 
 As mentioned before, one of the advantages of using digestive-functors is
-separation of forms and their actual HTML layout. In order to do this, we have
+separation of forms and their actual HTML layout. In sort_order to do this, we have
 another type, `View`.
 
 We can get a `View` from a `Form` by supplying input. A `View` contains more
@@ -181,7 +181,7 @@ errors for the `"mail"` field.
 >     H.br
 
 Like forms, views are also composable: let's illustrate that by adding a view
-for the `releaseForm`, in which we reuse `userView`. In order to do this, we
+for the `releaseForm`, in which we reuse `userView`. In sort_order to do this, we
 take only the parts relevant to the author from the view by using `subView`. We
 can then pass the resulting view to our own `userView`.
 We have no special view code for `Package`, so we can just add that to

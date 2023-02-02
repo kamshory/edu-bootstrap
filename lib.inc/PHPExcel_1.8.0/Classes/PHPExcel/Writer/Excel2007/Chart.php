@@ -755,7 +755,7 @@ class PHPExcel_Writer_Excel2007_Chart extends PHPExcel_Writer_Excel2007_WriterPa
 					$objWriter->writeAttribute('val', $this->_seriesIndex + $plotSeriesIdx);
 				$objWriter->endElement();
 
-				$objWriter->startElement('c:order');
+				$objWriter->startElement('c:sort_order');
 					$objWriter->writeAttribute('val', $this->_seriesIndex + $plotSeriesRef);
 				$objWriter->endElement();
 

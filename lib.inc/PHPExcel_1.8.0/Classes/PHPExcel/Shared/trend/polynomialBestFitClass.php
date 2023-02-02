@@ -48,7 +48,7 @@ class PHPExcel_Polynomial_Best_Fit extends PHPExcel_Best_Fit
 	protected $_bestFitType		= 'polynomial';
 
 	/**
-	 * Polynomial order
+	 * Polynomial sort_order
 	 *
 	 * @protected
 	 * @var	int
@@ -57,7 +57,7 @@ class PHPExcel_Polynomial_Best_Fit extends PHPExcel_Best_Fit
 
 
 	/**
-	 * Return the order of this polynomial
+	 * Return the sort_order of this polynomial
 	 *
 	 * @return	 int
 	 **/
@@ -144,12 +144,12 @@ class PHPExcel_Polynomial_Best_Fit extends PHPExcel_Best_Fit
 	/**
 	 * Execute the regression and calculate the goodness of fit for a set of X and Y data values
 	 *
-	 * @param	int			$order		Order of Polynomial for this regression
+	 * @param	int			$sort_order		Order of Polynomial for this regression
 	 * @param	float[]		$yValues	The set of Y-values for this regression
 	 * @param	float[]		$xValues	The set of X-values for this regression
 	 * @param	boolean		$const
 	 */
-	private function _polynomial_regression($order, $yValues, $xValues, $const) {
+	private function _polynomial_regression($sort_order, $yValues, $xValues, $const) {
 		// calculate sums
 		$x_sum = array_sum($xValues);
 		$y_sum = array_sum($yValues);
@@ -163,12 +163,12 @@ class PHPExcel_Polynomial_Best_Fit extends PHPExcel_Best_Fit
 		 *	This routine uses logic from the PHP port of polyfit version 0.1
 		 *	written by Michael Bommarito and Paul Meagher
 		 *
-		 *	The function fits a polynomial function of order $order through
+		 *	The function fits a polynomial function of sort_order $sort_order through
 		 *	a series of x-y data points using least squares.
 		 *
 		 */
 		for ($i = 0; $i < $this->_valueCount; ++$i) {
-			for ($j = 0; $j <= $order; ++$j) {
+			for ($j = 0; $j <= $sort_order; ++$j) {
 				$A[$i][$j] = pow($xValues[$i], $j);
 			}
 		}
@@ -201,17 +201,17 @@ class PHPExcel_Polynomial_Best_Fit extends PHPExcel_Best_Fit
 	/**
 	 * Define the regression and calculate the goodness of fit for a set of X and Y data values
 	 *
-	 * @param	int			$order		Order of Polynomial for this regression
+	 * @param	int			$sort_order		Order of Polynomial for this regression
 	 * @param	float[]		$yValues	The set of Y-values for this regression
 	 * @param	float[]		$xValues	The set of X-values for this regression
 	 * @param	boolean		$const
 	 */
-	function __construct($order, $yValues, $xValues=array(), $const=True) {
+	function __construct($sort_order, $yValues, $xValues=array(), $const=True) {
 		if (parent::__construct($yValues, $xValues) !== False) {
-			if ($order < $this->_valueCount) {
-				$this->_bestFitType .= '_'.$order;
-				$this->_order = $order;
-				$this->_polynomial_regression($order, $yValues, $xValues, $const);
+			if ($sort_order < $this->_valueCount) {
+				$this->_bestFitType .= '_'.$sort_order;
+				$this->_order = $sort_order;
+				$this->_polynomial_regression($sort_order, $yValues, $xValues, $const);
 				if (($this->getGoodnessOfFit() < 0.0) || ($this->getGoodnessOfFit() > 1.0)) {
 					$this->_error = True;
 				}
