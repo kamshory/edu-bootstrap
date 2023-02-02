@@ -284,18 +284,8 @@ if(empty($question_package))
 if(isset($_SESSION['session_test'][$student_id][$test]))
 {
 	$session_id = session_id();
-	$key_username = rot13('s:'.strlen('student_username').':"student_username";s:'.strlen($student_id).':"'.$student_id.'";');
-
 	$str = (serialize($_SESSION['session_test'][$student_id][$test]));
 	$arr = explode('"start"', $str);
-	$key_test = rot13("i:$test;".$arr[0].'"start";s:19:"');
-	
-	$sql = "SELECT * FROM `sessions` WHERE `xdata` like '%$key_username%' and `xdata` like '%$key_test%' and `id` != '$session_id' ";
-	$stmt = $database->executeQuery($sql);
-	if($stmt->rowCount() > 0)
-	{
-		// Do nothing
-	}
 }
 
 if(@!$mobile_browser)

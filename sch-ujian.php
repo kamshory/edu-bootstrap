@@ -509,15 +509,24 @@ if (@$auth_student_id && @$auth_school_id) {
 					<option value="">- Pilih Kelas -</option>
 					<?php
 					$sql = "SELECT * FROM `edu_class` WHERE `school_id` = '$school_id' ";				
-					$stmt2 = $database->executeQuery($sql);
-					if ($stmt2->rowCount() > 0) {
-						foreach($rows2 as $data2) {
-							?>
-						<option value="<?php $data2['class_id']; ?>" <?php if ($data2['class_id'] == $class_id)
-							   echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
-					<?php
-						}
-					}
+					echo $picoEdu->createFilterDb(
+						$sql2,
+						array(
+							'attributeList'=>array(
+								array('attribute'=>'value', 'source'=>'class_id')
+							),
+							'selectCondition'=>array(
+								'source'=>'class_id',
+								'value'=>$class_id
+							),
+							'caption'=>array(
+								'delimiter'=>PicoEdu::RAQUO,
+								'values'=>array(
+									'name'
+								)
+							)
+						)
+					);
 					?>
 				</select>
 				<span class="search-label">Ujian</span>
