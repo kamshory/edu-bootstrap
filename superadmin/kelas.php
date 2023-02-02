@@ -21,7 +21,7 @@ if (count(@$_POST) && isset($_POST['save'])) {
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$admin_create = $admin_edit = $admin_login->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
-	$sort_order = kh_filter_input(INPUT_POST, 'order', FILTER_SANITIZE_NUMBER_INT);
+	$sort_order = kh_filter_input(INPUT_POST, 'sort_order', FILTER_SANITIZE_NUMBER_INT);
 	$active = kh_filter_input(INPUT_POST, 'active', FILTER_SANITIZE_NUMBER_INT);
 }
 
@@ -59,7 +59,7 @@ if (isset($_POST['delete']) && isset($_POST['class_id'])) {
 
 if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
 	$sql = "UPDATE `edu_class` SET 
-	`class_code` = '$class_code', `grade_id` = '$grade_id', `school_program_id` = '$school_program_id', `name` = '$name', `time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `order` = '$sort_order', `active` = '$active'
+	`class_code` = '$class_code', `grade_id` = '$grade_id', `school_program_id` = '$school_program_id', `name` = '$name', `time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `sort_order` = '$sort_order', `active` = '$active'
 	WHERE `class_id` = '$class_id2'  ";
 	$database->execute($sql);
 	header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&class_id=$class_id");
@@ -113,7 +113,7 @@ if (@$_GET['option'] == 'add') {
 	</tr>
 	<tr>
 		<td>Order</td>
-		<td><input type="number" class="input-text input-text-short" name="order" id="order" autocomplete="off" /></td>
+		<td><input type="number" class="input-text input-text-short" name="sort_order" id="sort_order" autocomplete="off" /></td>
 	</tr>
 	<tr>
 		<td>Aktif</td>
@@ -198,7 +198,7 @@ if (@$_GET['option'] == 'add') {
 				</tr>
 				<tr>
 					<td>Order</td>
-					<td><input type="number" class="input-text input-text-short" name="order" id="order" value="<?php echo $data['order'];?>" autocomplete="off" /></td>
+					<td><input type="number" class="input-text input-text-short" name="sort_order" id="sort_order" value="<?php echo $data['sort_order'];?>" autocomplete="off" /></td>
 				</tr>
 				<tr>
 					<td>Aktif</td>
@@ -289,7 +289,7 @@ if($stmt->rowCount() > 0)
 				</tr>
 				<tr>
 					<td>Order</td>
-					<td><?php echo $data['order'];?> </td>
+					<td><?php echo $data['sort_order'];?> </td>
 				</tr>
 				<tr>
 					<td>Aktif
@@ -377,7 +377,7 @@ if($stmt->rowCount() > 0)
 		(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
 		FROM `edu_class`
 		WHERE 1 $sql_filter
-		ORDER BY `edu_class`.`school_id` desc, `edu_class`.`order` asc
+		ORDER BY `edu_class`.`school_id` desc, `edu_class`.`sort_order` asc
 		";
 				$sql_test = "SELECT `edu_class`.*
 		FROM `edu_class`
@@ -462,7 +462,7 @@ if($stmt->rowCount() > 0)
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['grade_id']; ?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['school_program_id']; ?></a></td>
 								<td><a href="siswa.php?class_id=<?php echo $data['class_id']; ?>"><?php echo $data['num_student']; ?></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['order'];?></a></td>
+								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['sort_order'];?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['active']) ? 'Ya' : 'Tidak'; ?></a></td>
 								</tr>
 							<?php
