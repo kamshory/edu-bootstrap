@@ -1839,3 +1839,14 @@ UPDATE `edu_option`
 UPDATE `edu_question` 
 			set `time_edit` = '2023-02-02 22:26:30', `member_edit` = '' 
 			WHERE `question_id` = '063dbd50d5bb3cb5a31a';
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '
+'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/57c9fd1e4002a2226baea345faca3a12.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
