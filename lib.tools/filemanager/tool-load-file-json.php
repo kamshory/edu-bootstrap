@@ -15,7 +15,8 @@ $arrfile = array();
 $arrdir = array();
 if(file_exists($dir2))
 {
-	if($handle = opendir($dir2))
+	$handle = opendir($dir2);
+	if($handle)
 	{
 		$i=0;
 		while (false !== ($ufile = readdir($handle))) 
@@ -96,7 +97,8 @@ if($sortorder == '')
 
 
 $_order = array();
-foreach ($arrdir as &$row){
+foreach ($arrdir as &$row)//NOSONAR
+{
 $_order[] = &$row['name'];
 }
 array_multisort($_order, SORT_ASC, SORT_STRING, $arrdir);

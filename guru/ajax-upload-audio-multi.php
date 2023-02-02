@@ -19,24 +19,21 @@ if($stmt->rowCount() > 0)
 	$permission = 0755;
 	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 	
-	if(isset($_FILES["audios"]))
+	if(isset($_FILES["audios"]) && is_array($_FILES["audios"]["error"]))
 	{
-		if(is_array($_FILES["audios"]["error"]))
+		foreach($_FILES["audios"]["error"] as $key => $error)
 		{
-			foreach($_FILES["audios"]["error"] as $key => $error)
-			{
-				if($error == 0) 
-				{					$name = $_FILES["audios"]["name"][$key];
-					$name = trim(preg_replace("/\s+/","-",$name));
-					$name = trim(str_replace(array("(", ")", "{","}", "[", "]", "'", '"'),"-",$name));
-					if(isset($_FILES['audios']['tmp_name']))
-					{
-						if(is_uploaded_file($_FILES['audios']['tmp_name'][$key])){
-							copy($_FILES['audios']['tmp_name'][$key], $test_dir."/".$name);
-						} 
-						move_uploaded_file($_FILES["audios"]["tmp_name"][$key], $test_dir."/".$name);
-						$fileSync->createFile($test_dir."/".$name, true);
-					}
+			if($error == 0) 
+			{					$name = $_FILES["audios"]["name"][$key];
+				$name = trim(preg_replace("/\s+/","-",$name));
+				$name = trim(str_replace(array("(", ")", "{","}", "[", "]", "'", '"'),"-",$name));
+				if(isset($_FILES['audios']['tmp_name']))
+				{
+					if(is_uploaded_file($_FILES['audios']['tmp_name'][$key])){
+						copy($_FILES['audios']['tmp_name'][$key], $test_dir."/".$name);
+					} 
+					move_uploaded_file($_FILES["audios"]["tmp_name"][$key], $test_dir."/".$name);
+					$fileSync->createFile($test_dir."/".$name, true);
 				}
 			}
 		}

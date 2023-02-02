@@ -568,11 +568,11 @@ if($test_id == 0 && $class_id == 0)
       <td><?php
       if($data['teacher_create'])
 	  {
-		  ?><a href="guru.php?option=detail&teacher_id=<?php echo $data['teacher_create'];?>"><?php echo ($data['teacher_create_name']);?></a><?php
+		  ?><a href="guru.php?option=detail&teacher_id=<?php echo $data['teacher_create'];?>"><?php echo $data['teacher_create_name'];?></a><?php
 	  }
 	  else
 	  {
-		  ?><a href="admin.php?option=detail&admin_id=<?php echo $data['admin_create'];?>"><?php echo ($data['admin_create_name']);?></a><?php
+		  ?><a href="admin.php?option=detail&admin_id=<?php echo $data['admin_create'];?>"><?php echo $data['admin_create_name'];?></a><?php
 	  }
 	  ?> </td>
      </tr>

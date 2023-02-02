@@ -42,7 +42,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 			}
 			else
 			{
-				header('Location: index.php');
+				header('Location: index.php'); //NOSONAR
 			}
 		}
 		else if(isset($_SERVER['HTTP_REFERER']))
@@ -54,12 +54,12 @@ if(isset($_POST['username']) && isset($_POST['password']))
 			}
 			else
 			{
-				header('Location: index.php');
+				header('Location: index.php'); //NOSONAR
 			}
 		}
 		else
 		{
-			header('Location: index.php');
+			header('Location: index.php'); //NOSONAR
 		}
 	}
 	else
@@ -72,7 +72,7 @@ else
 	include_once dirname(dirname(__FILE__))."/lib.inc/guru-auth.php";
 	if(@$teacher_id)
 	{
-		header('Location: index.php');
+		header('Location: index.php'); //NOSONAR
 	}
 	else
 	{

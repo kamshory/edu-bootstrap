@@ -88,7 +88,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Jumlah Siswa</td>
-		<td><?php echo ($data['student']);?> siswa</td>
+		<td><?php echo $data['student'];?> siswa</td>
 		</tr>
 		<tr>
 		<td>Dibuat</td>

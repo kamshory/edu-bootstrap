@@ -28,7 +28,7 @@ if($stmt->rowCount() > 0)
 			if(strtolower(end($arr)) == 'jpg' || strtolower(end($arr)) == 'jpeg' || strtolower(end($arr)) == 'png' || strtolower(end($arr)) == 'gif')
 			{
 				?>
-                <div class="img-li"><a href="<?php echo $filename;?>" title="<?php echo basename($filename);?>" data-name="<?php echo basename($filename);?>"><img src="<?php echo $filename;?>" /></a></div>
+                <div class="img-li"><a href="<?php echo $filename;?>" title="<?php echo basename($filename);?>" data-name="<?php echo basename($filename);?>"><img alt="" src="<?php echo $filename;?>" /></a></div>
                 <?php
 			}
 		}

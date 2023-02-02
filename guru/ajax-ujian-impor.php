@@ -64,7 +64,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 					foreach($test_data->item as $index_question => $question)
 					{
 						// petanyaan
-						if(($selection_index[$idx] == 1 || $selection == ""  || $selection == "[]"))
+						if($selection_index[$idx] == 1 || $selection == ""  || $selection == "[]")
 						{
 							$text_pertanyaan = trim(@$question->question->text);
 							$random = trim(@$question->question->random)*1;

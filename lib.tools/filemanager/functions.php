@@ -205,7 +205,7 @@ function chmoddir($dir, $perms)
 	}
 }
 
-function getMIMEType($filename)
+function getMIMEType($filename) //NOSONAR
 {
 	$obj = new StdClass();
 	$arr = array(
@@ -565,7 +565,7 @@ function dir_list($dir)
 	}
 }
 
-function deleteForbidden($dir, $fileSync, $containsubdir = false)
+function deleteForbidden($dir, $fileSync, $containsubdir = false) //NOSONAR
 {
 	global $fmanConfig;
 	if ($fmanConfig->delete_forbidden_extension && file_exists($dir) && is_array($fmanConfig->forbidden_extension)) {
@@ -622,7 +622,7 @@ function builddirtree($dir)
 	return $ret;
 }
 
-function getfmprofile($name, $authblogid, $default = NULL)
+function getfmprofile($name, $authblogid, $default = null) //NOSONAR
 {
 	global $settings;
 	if (isset($settings[$name])) {
@@ -648,13 +648,13 @@ function compressImageFile($path, $authblogid)
 				$maxheight = getfmprofile('maximageheight', $authblogid, 800);
 				if (@stripos($info['mime'], 'jpeg') !== false) {
 					// jpeg
-					$imagelocation = imageresizemax($path, $path, $maxwidth, $maxheight, $interlace, $quality);
+					$imagelocation = imageresizemax($path, $path, $maxwidth, $maxheight, $interlace, $quality); //NOSONAR
 				} else if (@stripos($info['mime'], 'png') !== false) {
 					// png
-					$imagelocation = imageresizemax($path, $path, $maxwidth, $maxheight, $interlace);
+					$imagelocation = imageresizemax($path, $path, $maxwidth, $maxheight, $interlace); //NOSONAR
 				} else if (@stripos($info['mime'], 'gif') !== false) {
 					// gif
-					$imagelocation = imageresizemax($path, $path, $maxwidth, $maxheight, $interlace);
+					$imagelocation = imageresizemax($path, $path, $maxwidth, $maxheight, $interlace); //NOSONAR
 				}
 			}
 		}
@@ -662,7 +662,7 @@ function compressImageFile($path, $authblogid)
 }
 
 
-function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace = false, $quality = 80)
+function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace = false, $quality = 80)  //NOSONAR
 {
 	$image = new StdClass();
 	global $fileSync;

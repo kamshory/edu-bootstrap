@@ -64,7 +64,10 @@ if(isset($_GET['info_id']))
 			if($pos===false){
 			$pos = stripos($content, " ", $maxlen);
 			}
-			if($pos===false) $pos = $maxlen;
+			if($pos===false) 
+			{
+				$pos = $maxlen;
+			}
 			$content = substr($content, 0, $pos+1);
 			$content = tidyHTML($content);
 		}

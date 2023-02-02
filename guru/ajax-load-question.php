@@ -25,7 +25,7 @@ $stmt = $database->executeQuery($sql);
 				{
 					?>
                     <li>
-                    <span class="option-circle<?php if($data2['score']) echo ' option-circle-selected';?>"><?php
+                    <span class="option-circle<?php echo $picoEdu->ifMatch($data2['score'] > 0, ' option-circle-selected', '');?>"><?php
                         echo $data2['score']*1;
                         ?></span>
                     <div class="item-pilihan">

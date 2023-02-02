@@ -24,21 +24,18 @@ if($test_id != 0 && $xml_data!= '')
         <p><?php echo $isi;?></p>
         <ol class="option-ol">
         <?php
-		if(@is_array($object['option']))
-		{
-		if(count($object['option']))
+		if(@is_array($object['option']) && count($object['option']) > 0)
 		{
 		foreach($object['option'] as $option_no=>$option)
 		{
 			?><li style="list-style-type:<?php echo $object['numbering'];?>" class="option-li">
-            <span class="option-circle<?php if($option['value']) echo ' option-circle-selected';?>"></span>
+            <span class="option-circle<?php echo $picoEdu->ifMatch($option['value'] > 0, ' option-circle-selected', '');?>"></span>
             <?php
 			$isi_pilihan = nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src))));
 			echo $isi_pilihan;
 			?>
             </li>
             <?php
-		}
 		}
 		}
 		?>

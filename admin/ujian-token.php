@@ -316,21 +316,29 @@ function printToken(frm)
 <select name="test_id" id="test_id">
 	<option value=""></option>
     <?php
-	$sql = "SELECT * FROM `edu_test`
+	$sql2 = "SELECT * FROM `edu_test`
 	WHERE `school_id` = '$school_id'
 	and (`test_availability` = 'F' or `available_to` > '$now')
 	ORDER BY `test_id` desc
 	";
-	$stmt2 = $database->executeQuery($sql);
-	if ($stmt2->rowCount() > 0) {
-		$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-		foreach ($rows2 as $data2) {
-		?>
-        <option value="<?php echo $data2['test_id']; ?>"<?php if ($test_id == $data2['test_id'])
-						  echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
-        <?php
-		}
-	}
+	echo $picoEdu->createFilterDb(
+		$sql2,
+		array(
+			'attributeList'=>array(
+				array('attribute'=>'value', 'source'=>'test_id')
+			),
+			'selectCondition'=>array(
+				'source'=>'test_id',
+				'value'=>$class_id
+			),
+			'caption'=>array(
+				'delimiter'=>PicoEdu::RAQUO,
+				'values'=>array(
+					'name'
+				)
+			)
+		)
+	);
 	?>
 </select>
 <span class="search-label">Kelas</span>
@@ -485,9 +493,9 @@ $no++;
 <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&token_id=<?php echo $data['token_id']; ?>"><?php echo $data['time_expire']; ?></a></td>
 <td><?php
 	if ($data['teacher_create']) {
-		?><a href="guru.php?option=detail&teacher_id=<?php echo $data['teacher_create']; ?>"><?php echo ($data['teacher_create_name']); ?></a><?php
+		?><a href="guru.php?option=detail&teacher_id=<?php echo $data['teacher_create']; ?>"><?php echo $data['teacher_create_name']; ?></a><?php
 	} else {
-		?><a href="admin.php?option=detail&admin_id=<?php echo $data['admin_create']; ?>"><?php echo ($data['admin_create_name']); ?></a><?php
+		?><a href="admin.php?option=detail&admin_id=<?php echo $data['admin_create']; ?>"><?php echo $data['admin_create_name']; ?></a><?php
 	}
 	?> </td>
 </tr>

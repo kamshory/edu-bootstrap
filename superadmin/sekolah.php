@@ -836,7 +836,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Siswa</td>
-		<td><?php echo ($data['student']);?> </td>
+		<td><?php echo $data['student'];?> </td>
 		</tr>
 		<tr>
 		<td>Guru</td>
@@ -1002,7 +1002,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['principal'];?></a></td>
       <td><?php echo $data['state_id'];?> </td>
       <td><?php echo $data['city_id'];?> </td>
-      <td><a href="siswa.php?school_id=<?php echo $data['school_id'];?>"><?php echo ($data['student']);?></a></td>
+      <td><a href="siswa.php?school_id=<?php echo $data['school_id'];?>"><?php echo $data['student'];?></a></td>
       <td><a href="guru.php?school_id=<?php echo $data['school_id'];?>"><?php echo $data['teacher'];?></a></td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>

@@ -20,7 +20,7 @@ $grade_id = kh_filter_input(INPUT_GET, 'grade_id', FILTER_SANITIZE_NUMBER_UINT);
             	<select class="form-control" name="grade_id" id="grade_id">
                 	<option value="">- Pilih Tingkat -</option>
 					<?php
-					echo $picoEdu->createGradeOption($grade_id);;
+					echo $picoEdu->createGradeOption($grade_id);
 					?>
                 </select>
             </form>
