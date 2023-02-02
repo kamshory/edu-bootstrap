@@ -882,3 +882,335 @@ INSERT INTO `edu_article`
 --------------ruihwuiethwiughweighiwehgiwe
 UPDATE `edu_article` SET `content` = '<p>d,vfbkhwehgw</p>
 <p><sup><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"\\sin(x)\" data-latex=\"\\sin(x)\" data-renderer=\"browser-mathml\" src=\"media.edu/school/063ce682801be89951aa/article/063da67d0dcf5af0f05e/43a3a9094fb72c6b6cc2f4f5fcfcf640.svg\"></sup></p>' WHERE `article_id` = '063da67d0dcf5af0f05e' ;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_test` 
+	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values
+	('063db55d23c2b6856f5c', '063ce682801be89951aa', 'Try Out Ujian Nasional Matematika (IPA) Paket 02', '', '', '', '', '', 'Pilihlah jawaban yang paling tepat!', '0', '1', '1', '75', 'H', '10', '5', '10', '1', '3600', '1', '300', 'Lihat waktu sisa Anda. Silakan periksa kembali jawaban Anda. Segera kirimkan jawaban sebelum waktunya habis.', '0', '1', '0', '0', '0', '0', null, 'F', null, null, '2023-02-02 13:18:58', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa', 'A', 'aaaaaaaaaaaaa', 'A', '127.0.0.1', '127.0.0.1', '0');
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d23eeca505653', '<p>Supaya fungsi f(x) = px<sup>2</sup> - (2p + 3)x + p + 6 selalu bernilai positif, maka nilai p adalah...</p>', '063db55d23c2b6856f5c', '1', '1', '1', 'upper-alpha', 'bd1e500cf584d1a7edd200634d5eb20d', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d240acd6b7a6d', '<p>Agar persamaan kuadrat x<sup>2</sup> + (p - 2)x + 4 = 0 mempunyai akar kembar, maka nilai p yang memenuhi adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'f2804745f3e04c9b6ca10edc35f690e1', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d2421fd1f3a80', '<p>Persamaan lingkaran berdiameter 10 dan berpusat di titik (-5,5) adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'c621cfb026afc11eef0b63ea7d4df4a2', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d243a8de23b2d', '<p>Lima tahun yang akan datang, jumlah umur kakak dan adik adalah 6 kali selisihnya. Sekarang umur kakak 6 tahun lebih dari umur adik. Umur kakak sekarang adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '2f3789ec3bf616c6bbc37e0c81d9e0b1', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d244fef90c1f0', '<p>Akar-akar persamaan x<sup>2</sup> + (a - 1)x + 2 = 0 adalah &alpha; dan &beta;.<br> Jika &alpha; = 2&beta; dan a &gt; 0, maka nilai a = ...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '48a109e847b46766f19e59f0763cec0a', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d246d469504c3', '<p>Bentuk sederhana dari&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\frac{2\\sqrt{3}+2\\sqrt{2}}{\\sqrt{3}-\\sqrt{2}}\" width=\"68\" height=\"35\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cfrac%7B2%5C%5Csqrt%7B3%7D%2B2%5C%5Csqrt%7B2%7D%7D%7B%5C%5Csqrt%7B3%7D-%5C%5Csqrt%7B2%7D%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/3048cbe34e067b516f30cc565656e1a0.svg\"> adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'aaecc53600d0c229ce6acb12247fef80', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d2485916b0eca', '<p>Diketahui <sup>2</sup>log 5 = p dan <sup>5</sup>log 3 = q.<br> Bentuk <sup>3</sup>log 10 dinyatakan dalam p dan q adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '8d2b9f1dc0d8b7ec58ba5073e096e4e0', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d24be9ecdb619', '<p>Diberikan premis-premis sebagai berikut.<br>
+Premis 1: Jika siswa ingin belajar, maka siswa akan mendapat nilai yang baik.<br>
+Premis 2: Jika siswa mendapat nilai baik, maka siswa tidak mengikuti kegiatan remedial.<br>
+Premis 3: Siswa rajin belajar.<br>
+Kesimpulan dari ketiga premis tersebut adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'e347794c9b286f569cd2d55ec9d8af90', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d24d48ae60599', '<p>Pernyataan yang setara dengan \"Jika Budin sarapan pagi, maka ia tidak mengantuk di kelas\" adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '6a0d352f61e7013127471e6c0dc76ca8', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d24ec17b4a07d', '<p>Diketahui vektor-vektor a = 2i + 3j - k, b = 3i + j - 2k dan c = 4i - 2j + 3k.<br>
+Hasil dari 2a + 3b - c = ...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '1a5f67d9a28abc272ebe7e000fac15b7', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d250c0fb883cf', '<p>Diketahui vektor-vektor</p>
+<p><img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\vec {u}=\\left(\\begin{array}{ccc}1 \\\\
+0 \\\\
+1 \\\\
+\\end{array}\\right)\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cvec%20%7Bu%7D%3D%5C%5Cleft(%5C%5Cbegin%7Barray%7D%7Bccc%7D1%20%5C%5C%5C%5C%5Cr%5Cn0%20%5C%5C%5C%5C%5Cr%5Cn1%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright)%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Accent%22%2C%22value%22%3A%22%E2%83%97%22%2C%22operands%22%3A%7B%22accentedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22u%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%3D%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/9ce070b7dbbf0353d509b55f3c08a5b6.svg\">dan <img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\vec {v}=\\left(\\begin{array}{ccc}1 \\\\
+-1 \\\\
+0 \\\\
+\\end{array}\\right)\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cvec%20%7Bv%7D%3D%5C%5Cleft(%5C%5Cbegin%7Barray%7D%7Bccc%7D1%20%5C%5C%5C%5C%5Cr%5Cn-1%20%5C%5C%5C%5C%5Cr%5Cn0%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright)%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Accent%22%2C%22value%22%3A%22%E2%83%97%22%2C%22operands%22%3A%7B%22accentedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22v%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%3D%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/6fa8fd82c3604876a8c9eb0105f6a777.svg\"><br> Nilai sinus sudut antara vektor u dan v adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '865af18952d156adbc0423b5e8f32fa2', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d25372404da3e', '<p>Diketahui vektor</p>
+<p><img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\vec {u}=\\left(\\begin{array}{ccc}0 \\\\
+2 \\\\
+2 \\\\
+\\end{array}\\right)\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cvec%20%7Bu%7D%3D%5C%5Cleft(%5C%5Cbegin%7Barray%7D%7Bccc%7D0%20%5C%5C%5C%5C%5Cr%5Cn2%20%5C%5C%5C%5C%5Cr%5Cn2%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright)%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Accent%22%2C%22value%22%3A%22%E2%83%97%22%2C%22operands%22%3A%7B%22accentedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22u%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%3D%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/5f1115b162fbd127575c29e006b75b14.svg\"> dan <img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\vec {v}=\\left(\\begin{array}{ccc}-2 \\\\
+0 \\\\
+2 \\\\
+\\end{array}\\right)\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cvec%20%7Bv%7D%3D%5C%5Cleft(%5C%5Cbegin%7Barray%7D%7Bccc%7D-2%20%5C%5C%5C%5C%5Cr%5Cn0%20%5C%5C%5C%5C%5Cr%5Cn2%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright)%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Accent%22%2C%22value%22%3A%22%E2%83%97%22%2C%22operands%22%3A%7B%22accentedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22v%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%3D%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/cb16425f7715c19386c9bbcd6643e6db.svg\"></p>
+<p>Proyeksi vektor orthogonal u pada v adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '144f697c214b21f9e48ac910ffa90e9c', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d254f0037224b', '<p>Luas daerah parkir 1.760 m<sup>2</sup>. Luas rata-rata untuk mobil kecil 4 m<sup>2</sup> dan mobil besar 20 m<sup>2</sup>. Daya tampung maksimum hanya 200 kendaraan. Biaya parkir mobil kecil Rp 1.000,00/jam dan mobil besar Rp 2.000,00/jam. Jika dalam satu jam terisi penuh dan tidak ada kendaraan yang pergi dan datang, penghasilan maksimum tempat parkir adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '5f26a27f163293d7c08887bca3d4aa1d', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d2565f8fdc8bb', '<p>Diketahui (x + 2) adalah faktor banyak f (x) = 2x<sup>3</sup> - 3x<sup>2</sup> - 11x + p.<br> Salah satu faktor linear lainnya dari suku banyak tersebut adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'b45084581622e39eebb23eeb54a657fa', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d257e4eadd6f3', '<p>Diketahui fungsi f(x) = 2x - 1 dan g(x) = 3x<sup>2</sup> - x + 5.<br> Fungsi komposisi (g o f)(x) = ...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'dbafd9fc5efcfa2e499b09b503240fb9', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d259952a1aac0', '<p>Diketahui fungsi <img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"gleft(xright)=frac{3x-2}{4x-3},xneq frac{1}{4}\" width=\"155\" height=\"38\" data-equation=\"%7B%22latex%22%3A%22g%5C%5Cleft(x%5C%5Cright)%3D%5C%5Cfrac%7B3x-2%7D%7B4x-3%7D%2Cx%5C%5Cneq%20%5C%5Cfrac%7B1%7D%7B4%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22g%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%3D%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2C%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%89%A0%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/579c190590e7046b27e29aede5ae9441.svg\"><br> Invers fungsi g(x) adalah g<sup>-1</sup>(x) = ...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'd428f32a5c3ff05fda2d7dcf807acf68', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d25d8428e77c7', '<p>Diketahui suku ke-3 dan suku ke-8 suatu barisan aritmetika berturut-turut adalah 2 dan -13. Jumlah 20 suku pertama deret tersebut adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'af8b246b35b809198ab4336a4f7bc4b0', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d25ee0e842e74', '<p>Seutas tali dipotong menjadi 9 bagian. Panjang masing-masing potongan tersebut mengikuti barisan geometri. Potongan tali yang paling pendek 4 cm dan potongan tali yang paling panjang 1.024 cm. Panjang tali semula adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '0f7bc683969d7b4a8a9e86792e105eec', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d261013329e96', '<p>Diketahui matriks</p>
+<p><img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"A=\\left[\\begin{array}{ccc}-2 &amp; x \\\\
+6 &amp; 3 \\\\
+\\end{array}\\right]\" data-equation=\"%7B%22latex%22%3A%22A%3D%5C%5Cleft%5B%5C%5Cbegin%7Barray%7D%7Bccc%7D-2%20%26%20x%20%5C%5C%5C%5C%5Cr%5Cn6%20%26%203%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright%5D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22A%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%3D%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22squareBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/515765_ce51000893119427a34aed044e6c5def.png\">, <img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"B=\\left[\\begin{array}{ccc}-5 &amp; 14 \\\\
+y &amp; -2 \\\\
+\\end{array}\\right]\" data-equation=\"%7B%22latex%22%3A%22B%3D%5C%5Cleft%5B%5C%5Cbegin%7Barray%7D%7Bccc%7D-5%20%26%2014%20%5C%5C%5C%5C%5Cr%5Cny%20%26%20-2%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright%5D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%3D%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22squareBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22y%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/eb621f_cc8f2416d8e6cb47ba463f46e7f69fb3.png\">, dan <img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"C=\\left[\\begin{array}{ccc}z &amp; -1 \\\\
+1 &amp; 5 \\\\
+\\end{array}\\right]\" data-equation=\"%7B%22latex%22%3A%22C%3D%5C%5Cleft%5B%5C%5Cbegin%7Barray%7D%7Bccc%7Dz%20%26%20-1%20%5C%5C%5C%5C%5Cr%5Cn1%20%26%205%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright%5D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%3D%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22squareBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22z%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/f66af7_ad93908fa74efe327e73c6524be2d46a.png\"><br> Jika A - B = C, maka x + y + z = ...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '5ee44edf90b21f59fed8c1bb64f0b009', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d262717f29e8a', '<p>Koordinat bayangan titik A(-1,3) jika dicerminkan terhadap garis x = 4 dan dilanjutkan pencerminan terhadap sumbu Y adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'a28c668846e9557e7ac100a11e7874d9', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d2640539a6d9b', '<p>Persamaan grafik fungsi seperti tampak pada gambar adalah...<br><img alt=\"21.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/7aef3d_21.gif\"></p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'd079065c5b5e766fe022f3d127af9154', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d2655e360e402', '<p>Himpunan penyelesaian pertidaksamaan <sup>2</sup>log x + <sup>2</sup>log (x - 3) &lt; 2 adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '44913a2f90e3b926a149c76f39dca1f5', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d2669ec3425bc', '<p>Diketahui segi-12 beraturan dengan sisi s cm dan jari-jari lingkaran luarnya r cm. Keliling segi-12 tersebut adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'ad8b28ce99804ea3d0c0edd949eae798', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d269d3ee69471', '<p>Himpunan penyelesaian persamaan cos 2x + 3 cos x + 2 = 0 untuk 0&deg; &le; x &le; 360&deg; adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'd59287c286459acb20d4d2de0902caf0', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d26b9dd9d4adc', '<p>Nilai dari <img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\frac{\\sin\\left(78\\circ \\right)-\\sin\\left(12\\circ \\right)}{\\cos\\left(168\\circ \\right)-\\cos\\left(102\\circ \\right)}\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cfrac%7B%5C%5Csin%5C%5Cleft(78%5C%5Ccirc%20%5C%5Cright)-%5C%5Csin%5C%5Cleft(12%5C%5Ccirc%20%5C%5Cright)%7D%7B%5C%5Ccos%5C%5Cleft(168%5C%5Ccirc%20%5C%5Cright)-%5C%5Ccos%5C%5Cleft(102%5C%5Ccirc%20%5C%5Cright)%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22sin%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%97%A6%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22sin%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%97%A6%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22cos%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%97%A6%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22cos%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%97%A6%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/ae409e27ac61718ec09de66fbd2d54e1.svg\"> = ...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '8bd3d43f166e27a199299af89b4e7d1d', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d26ccccf20e82', '<p>Diketahui kubus ABCD.EFGH memiliki panjang rusuk 4 cm.<br>
+Jarak titik A ke diagonal FH adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '85bf580c1ebf8bc351e4e3a94f0a7770', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d26e098bd3f3e', '<p>Nilai cosinus sudut antara bidang BDE dan bidang BDG seperti terlihat pada gambar prisma segi-4 ABCD.EFGH beraturan berikut adalah...<br><img alt=\"27.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/e76855_27.gif\"></p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '821d786144a682e78e246be28a7215d9', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d26f9fcc82123', '<p>Diketahui persegi panjang PQRS seperti pada gambar dengan panjang 5 cm dan lebar 3 cm.<br><img alt=\"28.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/03a93b_28.gif\"><br> Agar luas ABCD mencapai nilai minimum, luas daerah yang diarsir adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '4cd54c2f4bd34b9b901c77b76fac57a0', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d27107ed1d3b2', '<p>Nilai&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"lim _{x to propto }left(sqrt{4x^{2}+3x+4}-2x+1right)\" data-equation=\"%7B%22latex%22%3A%22%5C%5Clim%20_%7Bx%20%5C%5Cto%20%5C%5Cpropto%20%7D%5C%5Cleft(%5C%5Csqrt%7B4x%5E%7B2%7D%2B3x%2B4%7D-2x%2B1%5C%5Cright)%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Limit%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22left%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%2C%22right%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%9D%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/c843a6d7ed0125e8e095ac74f9552372.svg\"> = ...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '211b5039c2595dce664eb71d346b141e', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d27419870effb', '<p>Nilai&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\lim _{x \\to 2}\\frac{\\left(2x+1\\right)\\times \\tan\\left(x-2\\right)}{\\left(x^{2}-4\\right)}\" data-equation=\"%7B%22latex%22%3A%22%5C%5Clim%20_%7Bx%20%5C%5Cto%202%7D%5C%5Cfrac%7B%5C%5Cleft(2x%2B1%5C%5Cright)%5C%5Ctimes%20%5C%5Ctan%5C%5Cleft(x-2%5C%5Cright)%7D%7B%5C%5Cleft(x%5E%7B2%7D-4%5C%5Cright)%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Limit%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22left%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%2C%22right%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%C3%97%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22tan%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/bf357251e3603214dc3b9e65d94e9feb.svg\"> = ...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '74fd4a01245273af642771cd6608035a', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d275e72040a65', '<p>Hasil dari&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\int _{0}^{2}x\\left(x+1\\right)\\left(x-6\\right)dx\" width=\"170\" height=\"44\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cint%20_%7B0%7D%5E%7B2%7Dx%5C%5Cleft(x%2B1%5C%5Cright)%5C%5Cleft(x-6%5C%5Cright)dx%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Integral%22%2C%22value%22%3A%22single%22%2C%22operands%22%3A%7B%22lowerLimit%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%2C%22upperLimit%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22d%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/d3f22eeeda32f903bfa140e6125939fb.svg\"> = ...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '2be0b32283cecbb0aa2bbf27cbcb6666', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d277a1c62667d', '<p>Hasil dari&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\int \\left(3x+1\\right)\\sqrt{3x^{2}+2x-4}dx\" width=\"215\" height=\"40\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cint%20%5C%5Cleft(3x%2B1%5C%5Cright)%5C%5Csqrt%7B3x%5E%7B2%7D%2B2x-4%7Ddx%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Integral%22%2C%22value%22%3A%22single%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22d%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/55da8cb4674cc82acdf630bf5c15fa8f.svg\"> = ...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '5e108cb900946c3f58ae539826553ac9', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d27c0d43cdace', '<p>Nilai dari&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\int _{0}^{\\frac{\\pi }{2}}\\sin^{3}\\left(x\\right)dx\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cint%20_%7B0%7D%5E%7B%5C%5Cfrac%7B%5C%5Cpi%20%7D%7B2%7D%7D%5C%5Csin%5E%7B3%7D%5C%5Cleft(x%5C%5Cright)dx%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Integral%22%2C%22value%22%3A%22single%22%2C%22operands%22%3A%7B%22lowerLimit%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%2C%22upperLimit%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22%CF%80%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%2C%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22sin%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22d%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/adacaa91c5f42c90a4dbe1a9a5aae1c8.svg\"> = ...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '3a5a51be48b8fc269088de35baaccf8b', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d27d3434b5363', '<p>Volume daerah yang dibatasi kurva y = 2x<sup>2</sup> dan y = 4x bila diputar mengelilingi sumbu X sejauh 360&deg; adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '745b90023d541190a2ddea6e371762dc', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d280bb1102143', '<p>Luas daerah yang diarsir pada gambar berikut dapat dinyatakan dengan rumus...<br><img alt=\"35.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/d0c2b4_35.gif\"></p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '5cc26d6c668074ee68d752e5467c7058', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d2847bbec69dd', '<p>Dari angka 1, 2, 3, dan 4 akan dibentuk bilangan genap yang terdiri dari tiga angka berbeda. Banyak blangan genap yang terbentuk adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'ce8aaf450d28fcd8ca92bd2131cea148', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d285995ae8521', '<p>Pada musyawarah karang taruna akan dipilih pengurus organisasi yang baru, terdiri dari ketua, sekretaris, bendahara, dan koordinator olahraga.<br>
+Dari hasil seleksi lolos 6 orang calon pengurus. Banyak susunan pengurus yang dapat dibentuk adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', 'bb97a3291260357e0fa3f6667c6ca273', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d286b60d88d60', '<p>Tabel berikut menyajikan data berat badan sekelompok siswa.</p>
+<table style=\"width: 236px; height: 201px;\" border=\"1\"><tbody><tr><td style=\"text-align: center;\"><strong>Berat Badan (kg)</strong></td>
+<td style=\"text-align: center;\"><strong>Frekuensi</strong></td>
+</tr><tr><td style=\"text-align: center;\">45-49</td>
+<td style=\"text-align: center;\">3</td>
+</tr><tr><td style=\"text-align: center;\">50-54</td>
+<td style=\"text-align: center;\">6</td>
+</tr><tr><td style=\"text-align: center;\">55-59</td>
+<td style=\"text-align: center;\">10</td>
+</tr><tr><td style=\"text-align: center;\">60-64</td>
+<td style=\"text-align: center;\">12</td>
+</tr><tr><td style=\"text-align: center;\">65-69</td>
+<td style=\"text-align: center;\">15</td>
+</tr><tr><td style=\"text-align: center;\">70-74</td>
+<td style=\"text-align: center;\">6</td>
+</tr><tr><td style=\"text-align: center;\">75-79</td>
+<td style=\"text-align: center;\">4</td>
+</tr></tbody></table><p>Kuartil atas data dalam tabel tersebut adalah...</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '2cf75a2f938420c2caf997469ac2bf29', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d289f5f0ecafc', '<p>Erik suka sekali main skateboard. Dia mengunjungi sebuah toko bersama SKATERS untuk mengetahui beberapa model. Di toko ini dia dapat membeli skateboard yang lengkap. Atau, ia dapat membeli sebuah papan, satu set roda yang terdiri 4 roda, satu set sumbu yang terdiri dari dua sumbu, dan satu set perlengkapan kecil untuk dapat merakit skateboard sendiri. Daftar barang dan model/jenis skateboard di toko ini sebagai berikut.<br><img alt=\"39.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063db55d23c2b6856f5c/3f5ce0_39.gif\"><br>
+Toko itu menawarkan tiga macam papan, dua macam set roda, dan dua macam set perlengkapan kecil. Hanya ada satu macam sumbu. Berapa banyak skateboard berbeda yang dapat dibuat oleh Erik?</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '839f63b85a61cbdc2a119e4280f1cac7', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063db55d28b3bb5e46fc', '<p>Sebuah film dokumenter menayangkan perihal gempa bumi dan seberapa sering gempa bumi terjadi. Film itu mencakup diskusi tentang keterkiraan gempa bumi. Seorang ahli geologi menyatakan: \"Dalam dua puluh tahun ke depan, peluang bahwa sebuah gempa bumi akan terjadi di kota Zadia adalah dua per tiga.\"<br>
+Manakah di bawah ini yang paling mencerminkan maksud pernyataan ahli geologi tersebut?</p>', '063db55d23c2b6856f5c', '1', '2', '1', 'upper-alpha', '53668ab340cc855037fef6639fd9eb59', '',
+								'2023-02-02 13:18:58', 'aaaaaaaaaaaaa', '2023-02-02 13:18:58', 'aaaaaaaaaaaaa')
+								;
