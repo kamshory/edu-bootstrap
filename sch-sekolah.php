@@ -134,6 +134,8 @@ if (@$page_school_id) {
 								<td>Alamat</td>
 								<td><textarea name="address" class="form-control input-text input-text-long" id="address" autocomplete="off"><?php echo $data['address']; ?></textarea></td>
 							</tr>
+							</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 							<tr>
 								<td></td>
 								<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan" class="btn com-button btn-success" onclick="window.location='profil.php'" /></td>
@@ -231,6 +233,8 @@ if (@$page_school_id) {
 								<td>Diubah</td>
 								<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 							</tr>
+							</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 							<tr>
 								<td></td>
 								<td>

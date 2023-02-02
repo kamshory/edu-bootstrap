@@ -794,6 +794,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td>IP Ubah</td>
 		<td><?php echo $data['ip_edit'];?> </td>
 		</tr>
+		</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
 		<td><input type="button" name="update" id="update" value="Ubah Data" class="btn com-button btn-success" onclick="window.location='sekolah-profil.php?option=edit'" />		  <input type="button" name="import" id="import" value="Impor Data" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>

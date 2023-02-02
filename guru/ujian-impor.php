@@ -388,6 +388,8 @@ $array_class = $picoEdu->getArrayClass($school_id);
       <td>File Ujian</td>
       <td><input type="file" name="file" id="file" required="required" /> <input type="hidden" name="test_id" value="<?php echo $data['test_id'];?>" /></td>
     </tr>
+	</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
     <tr>
       <td></td>
       <td><input type="submit" name="import" id="import" class="btn com-button btn-success" value="Impor Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>'" />

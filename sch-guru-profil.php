@@ -109,6 +109,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td>Alamat
 		</td><td><textarea name="address" class="form-control input-text input-text-long" id="address" autocomplete="off"><?php echo $data['address'];?></textarea></td>
 		</tr>
+</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">	
 		<tr><td></td>
 		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> 
         <input type="button" name="showall" id="showall" value="Tampilkan" class="btn com-button btn-success" onclick="window.location='profil.php'" /></td>
@@ -206,6 +208,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td>IP Ubah
 		</td><td><?php echo $data['ip_edit'];?> </td>
 		</tr>
+		</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
 		<td>

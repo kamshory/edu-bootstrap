@@ -122,10 +122,15 @@ if (@$_GET['option'] == 'detail') {
 							<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 						</tr>
 					</table>
-					<div class="button-area">
+					</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+							<tr>
+								<td></td>
+								<td>
 						<input type="button" name="select" id="select" class="def-button" value="Pilih" onClick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=select&school_id=<?php echo $data['school_id']; ?>'" />
-						<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="def-button" onClick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>'" /> </td>
-					</div>
+						<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="def-button" onClick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>'" /> 
+					</td>
+						</table>
 				</form>
 			</div>
 		</div>

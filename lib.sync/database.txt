@@ -882,3 +882,24 @@ INSERT INTO `edu_article`
 --------------ruihwuiethwiughweighiwehgiwe
 UPDATE `edu_article` SET `content` = '<p>d,vfbkhwehgw</p>
 <p><sup><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"\\sin(x)\" data-latex=\"\\sin(x)\" data-renderer=\"browser-mathml\" src=\"media.edu/school/063ce682801be89951aa/article/063da67d0dcf5af0f05e/43a3a9094fb72c6b6cc2f4f5fcfcf640.svg\"></sup></p>' WHERE `article_id` = '063da67d0dcf5af0f05e' ;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_admin` 
+		(`admin_id`, `token_admin`, `school_id`, `name`, `gender`, `birth_place`, `birth_day`, `phone`, `email`, `password`, 
+		`time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `blocked`, `active`) VALUES
+		('aaaaaaaaaaaaa', '434e99d8bad6b9a9228b81e7c100df5e', '063ce682801be89951aa', 'admin', 'M', 'Jambi', '', '081266612126', 'admin@planetbiru.com', 'c3284d0f94606de1fd2af172aba15bf3',  
+		'', '', 'aaaaaaaaaaaaa', 'aaaaaaaaaaaaa', '127.0.0.1', '127.0.0.1', 0, 1)
+		;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_admin` SET `school_id` = '063ce682801be89951aa' WHERE `admin_id` = 'aaaaaaaaaaaaa' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school_program` SET 
+	`name` = 'IPA', `sort_order` = '0', `default` = '0', `time_create` = '2023-02-02 22:03:06', `time_edit` = '2023-02-02 22:03:06', `admin_create` = 'aaaaaaaaaaaaa', `admin_edit` = 'aaaaaaaaaaaaa', `ip_create` = '127.0.0.1', `ip_edit` = '127.0.0.1', `active` = '1'
+	WHERE `school_program_id` = '063ce68281203e741899';
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school_program` SET 
+	`name` = 'IPS', `sort_order` = '2', `default` = '0', `time_create` = '2023-02-02 22:03:14', `time_edit` = '2023-02-02 22:03:14', `admin_create` = 'aaaaaaaaaaaaa', `admin_edit` = 'aaaaaaaaaaaaa', `ip_create` = '127.0.0.1', `ip_edit` = '127.0.0.1', `active` = '1'
+	WHERE `school_program_id` = '063ce682814a79eca723';
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school_program` SET 
+	`name` = 'IPA', `sort_order` = '3', `default` = '0', `time_create` = '2023-02-02 22:03:20', `time_edit` = '2023-02-02 22:03:20', `admin_create` = 'aaaaaaaaaaaaa', `admin_edit` = 'aaaaaaaaaaaaa', `ip_create` = '127.0.0.1', `ip_edit` = '127.0.0.1', `active` = '1'
+	WHERE `school_program_id` = '063ce68281203e741899';

@@ -244,6 +244,8 @@ $(document).ready(function(e) {
 		<td>Kedaluarsa</td>
 		<td><input type="text" class="form-control input-text input-text-datetime" name="time_expire" id="time_expire" value="<?php echo date(PicoConst::DATE_TIME_MYSQL, time()+3600);?>" autocomplete="off" required="required" /></td>
 		</tr>
+		</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
 		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" onclick="return confirm('Apakah Anda yahin akan membuat token ini?')" /> 
@@ -318,6 +320,8 @@ $stmt = $database->executeQuery($sql);
 		<td>Active</td>
 		<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
+		</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
 		<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&token_id=<?php echo $data['token_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>

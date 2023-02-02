@@ -108,6 +108,8 @@ $array_class = $picoEdu->getArrayClass($school_id);
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?>
       <input type="hidden" name="test_id" value="<?php echo $data['test_id'];?>" /></td>
     </tr>
+    </table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
     <tr>
       <td></td>
       <td><input type="submit" name="export" id="export" class="btn com-button btn-success" value="Ekspor Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>'" />

@@ -546,6 +546,8 @@ $array_class = $picoEdu->getArrayClass($school_id);
         <?php
 		}
 		?>
+		</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
 		<td>

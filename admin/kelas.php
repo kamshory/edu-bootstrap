@@ -363,15 +363,17 @@ if($stmt->rowCount() > 0)
 
 		$nt = '';
 
-
 		$sql = "SELECT `edu_class`.* $nt,
-		(select `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
-		(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
+		(select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_class`.`school_id` limit 0,1) as `school_name`,
+		(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`,
+		`edu_school_program`.`name` as `school_program`
 		FROM `edu_class`
+		LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = `edu_class`.`school_program_id`) 
 		WHERE `edu_class`.`school_id` = '$school_id' $sql_filter
-		ORDER BY `edu_class`.`sort_order` asc
+		ORDER BY `edu_class`.`school_id` desc, `edu_school_program`.`sort_order` asc, `edu_class`.`sort_order` asc
 		";
-				$sql_test = "SELECT `edu_class`.*
+
+		$sql_test = "SELECT `edu_class`.*
 		FROM `edu_class`
 		WHERE `edu_class`.`school_id` = '$school_id' $sql_filter
 		";
@@ -448,7 +450,7 @@ if($stmt->rowCount() > 0)
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['class_code']; ?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['name']; ?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['grade_id']; ?></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['school_program_id']; ?></a></td>
+								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['school_program']; ?></a></td>
 								<td><a href="siswa.php?class_id=<?php echo $data['class_id']; ?>"><?php echo $data['num_student']; ?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['sort_order'];?></a></td>
 								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['active'] ? 'Ya' : 'Tidak'; ?></a></td>

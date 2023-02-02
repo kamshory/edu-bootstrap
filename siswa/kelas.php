@@ -53,6 +53,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td>Diubah</td>
 		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 		</tr>
+		</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
 		<td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo 'kelas.php';?>'" /></td>
@@ -96,12 +98,15 @@ $nt = '';
 
 
 $sql = "SELECT `edu_class`.* $nt,
-(select `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
-(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
+(select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_class`.`school_id` limit 0,1) as `school_name`,
+(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`,
+`edu_school_program`.`name` as `school_program`
 FROM `edu_class`
-WHERE 1 $sql_filter
-ORDER BY `edu_class`.`sort_order` asc
+LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = `edu_class`.`school_program_id`) 
+WHERE `edu_class`.`school_id` = '$school_id' $sql_filter
+ORDER BY `edu_class`.`school_id` desc, `edu_school_program`.`sort_order` asc, `edu_class`.`sort_order` asc
 ";
+
 $sql_test = "SELECT `edu_class`.*
 FROM `edu_class`
 WHERE 1 $sql_filter
@@ -156,7 +161,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo 'kelas.php';?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo 'kelas.php';?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['grade_id'];?></a></td>
-      <td><a href="<?php echo 'kelas.php';?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['school_program_id'];?></a></td>
+      <td><a href="<?php echo 'kelas.php';?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['school_program'];?></a></td>
       <td><a href="<?php echo 'kelas.php';?>?option=detail&amp;class_id=<?php echo $data['class_id'];?>"><?php echo $data['num_student'];?></a></td>
       </tr>
     <?php

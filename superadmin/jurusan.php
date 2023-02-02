@@ -108,6 +108,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
 		</td>
 		</tr>
+		</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr><td></td>
 		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
@@ -185,6 +187,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
+		</table>
+<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<td></td>
 		<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_program_id=<?php echo $data['school_program_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
@@ -266,7 +270,7 @@ $sql = "SELECT `edu_school_program`.*,
 (select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_school_program`.`school_id`) as `school_id`
 FROM `edu_school_program`
 WHERE 1 $sql_filter
-ORDER BY `edu_school_program`.`school_id` desc, `edu_school_program`.`school_program_id` asc, `edu_school_program`.`name` asc
+ORDER BY `edu_school_program`.`school_id` desc, `edu_school_program`.`sort_order` asc
 ";
 $sql_test = "SELECT `edu_school_program`.*
 FROM `edu_school_program`
