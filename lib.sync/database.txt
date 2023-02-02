@@ -1850,3 +1850,49 @@ UPDATE `edu_school` set
 	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/57c9fd1e4002a2226baea345faca3a12.svg\"></p>'
 	WHERE `school_id` = '063ce682801be89951aa'
 	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/b6e7a9c43a6b092a1478b4d329ae221f.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/b6e7a9c43a6b092a1478b4d329ae221f.svg\" alt=\"\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/6324dbc156b1edfd4016ddaddb276f69.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/2d38460fec189164599e5f3be72dfef8.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/b276c65a4bfa108f9739fe8920a87501.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/a76ed906a3d4828221e433c1fd650a9c.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/3034ad7d9ad70beb3b2dfb1ab6400a3c.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/8565a9b2bea66bcc4b9155efb425ad03.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/1bc85e639646b730ff4b7b29e19a6531.svg\"></p>
+<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/882ddd445e668edf8e8123bcc2d5cb62.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
