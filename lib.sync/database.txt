@@ -1811,3 +1811,31 @@ INSERT INTO `edu_question`
 Manakah di bawah ini yang paling mencerminkan maksud pernyataan ahli geologi tersebut?</p>', '063dbd50d51ae8326e8d', true, '2', '1', 'upper-alpha', '53668ab340cc855037fef6639fd9eb59', '',
 								'2023-02-02 22:21:49', 'aaaaaaaaaaaaa', '2023-02-02 22:21:49', 'aaaaaaaaaaaaa')
 								;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` 
+			set `time_edit` = '2023-02-02 22:26:01', `member_edit` = '' 
+			WHERE `question_id` = '063dbd50d5bb3cb5a31a';
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-02 22:26:01', `member_edit` = '' 
+					WHERE `question_id` = '063dbd50d5bb3cb5a31a' and `option_id` = '063dbd50d5c12fcfc299';
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-02 22:26:01', `member_edit` = '' 
+					WHERE `question_id` = '063dbd50d5bb3cb5a31a' and `option_id` = '063dbd50d5c5c8dbecbc';
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-02 22:26:01', `member_edit` = '' 
+					WHERE `question_id` = '063dbd50d5bb3cb5a31a' and `option_id` = '063dbd50d5c95dada860';
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-02 22:26:01', `member_edit` = '' 
+					WHERE `question_id` = '063dbd50d5bb3cb5a31a' and `option_id` = '063dbd50d5ccbc9e1c65';
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-02 22:26:01', `member_edit` = '' 
+					WHERE `question_id` = '063dbd50d5bb3cb5a31a' and `option_id` = '063dbd50d5d030291f0c';
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` 
+			set `time_edit` = '2023-02-02 22:26:30', `member_edit` = '' 
+			WHERE `question_id` = '063dbd50d5bb3cb5a31a';
