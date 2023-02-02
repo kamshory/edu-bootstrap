@@ -154,7 +154,7 @@ $stmt = $database->executeQuery($sql);
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">Name</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /><input type="hidden" name="test_collection_id2" id="test_collection_id2" value="<?php echo ($data['test_collection_id']);?>" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /><input type="hidden" name="test_collection_id2" id="test_collection_id2" value="<?php echo $data['test_collection_id'];?>" /></td>
 		</tr>
 		<tr>
 		<td>Grade</td>
@@ -165,23 +165,23 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>File Name</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="file_name" id="file_name" value="<?php echo ($data['file_name']);?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="file_name" id="file_name" value="<?php echo $data['file_name'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>File Path</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="file_path" id="file_path" value="<?php echo ($data['file_path']);?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="file_path" id="file_path" value="<?php echo $data['file_path'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>File Size</td>
-		<td><input type="number" class="form-control input-text input-text-medium" name="file_size" id="file_size" value="<?php echo ($data['file_size']);?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="file_size" id="file_size" value="<?php echo $data['file_size'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>File MD5</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="file_md5" id="file_md5" value="<?php echo ($data['file_md5']);?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="file_md5" id="file_md5" value="<?php echo $data['file_md5'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>File SHA1</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="file_sha1" id="file_sha1" value="<?php echo ($data['file_sha1']);?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="file_sha1" id="file_sha1" value="<?php echo $data['file_sha1'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Time Create</td>
@@ -201,7 +201,7 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>Taken</td>
-		<td><input type="number" class="form-control input-text input-text-medium" name="taken" id="taken" value="<?php echo ($data['taken']);?>" autocomplete="off" /></td>
+		<td><input type="number" class="form-control input-text input-text-medium" name="taken" id="taken" value="<?php echo $data['taken'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Active</td>
@@ -254,23 +254,23 @@ echo $picoEdu->getGradeName($data['grade_id']);
 		</tr>
 		<tr>
 		<td>File Name</td>
-		<td><?php echo ($data['file_name']);?> </td>
+		<td><?php echo $data['file_name'];?> </td>
 		</tr>
 		<tr>
 		<td>File Path</td>
-		<td><?php echo ($data['file_path']);?> </td>
+		<td><?php echo $data['file_path'];?> </td>
 		</tr>
 		<tr>
 		<td>File Size</td>
-		<td><?php echo ($data['file_size']);?> </td>
+		<td><?php echo $data['file_size'];?> </td>
 		</tr>
 		<tr>
 		<td>File MD5</td>
-		<td><?php echo ($data['file_md5']);?> </td>
+		<td><?php echo $data['file_md5'];?> </td>
 		</tr>
 		<tr>
 		<td>File SHA1</td>
-		<td><?php echo ($data['file_sha1']);?> </td>
+		<td><?php echo $data['file_sha1'];?> </td>
 		</tr>
 		<tr>
 		<td>Time Create</td>
@@ -290,7 +290,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 		</tr>
 		<tr>
 		<td>Taken</td>
-		<td><?php echo ($data['taken']);?> </td>
+		<td><?php echo $data['taken'];?> </td>
 		</tr>
 		<tr>
 		<td>Active</td>
@@ -403,16 +403,16 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['grade_id'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo ($data['file_name']);?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo ($data['file_path']);?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo ($data['file_size']);?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo ($data['file_md5']);?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo ($data['file_sha1']);?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['file_name'];?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['file_path'];?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['file_size'];?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['file_md5'];?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['file_sha1'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['time_create'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['time_edit'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['ip_create'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['ip_edit'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo ($data['taken']);?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['taken'];?></a></td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php

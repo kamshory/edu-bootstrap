@@ -15,7 +15,7 @@ if(isset($_SESSION['teacher_password']))
 $password = $_SESSION['teacher_password'];
 }
 
-$teacher_login = new TeacherAuth($database, $username, $password, false);
+$teacher_login = new \TeacherAuth($database, $username, $password, false);
 
 $teacher_id = '';
 $school_id = '';

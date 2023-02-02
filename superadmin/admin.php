@@ -294,16 +294,24 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<option value=""></option>
 		<?php 
 		$sql2 = "SELECT * FROM `edu_school` WHERE `active` = true ORDER BY `school_grade_id` asc ";
-		$stmt2 = $database->executeQuery($sql2);
-		if ($stmt2->rowCount() > 0) {
-			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-			foreach ($rows2 as $data2) {
-				?>
-            <option value="<?php echo $data2['school_id']; ?>"<?php if ($data['school_id'] == $data2['school_id'])
-					  echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
-            <?php
-			}
-		}
+		echo $picoEdu->createFilterDb(
+			$sql2,
+			array(
+				'attributeList'=>array(
+					array('attribute'=>'value', 'source'=>'school_id')
+				),
+				'selectCondition'=>array(
+					'source'=>'school_id',
+					'value'=>$data['school_id']
+				),
+				'caption'=>array(
+					'delimiter'=>PicoEdu::RAQUO,
+					'values'=>array(
+						'name'
+					)
+				)
+			)
+		);
 		?>
 		</select></td>
 		</tr>

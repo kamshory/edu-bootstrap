@@ -842,3 +842,4 @@ class PicoConst{
 	const SELECT_OPTION_SELECTED = ' selected="selected"';
 	const INPUT_CHECKBOX_CHECKED = ' checked="checked"';
 }
+

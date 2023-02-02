@@ -89,3 +89,12 @@ $cfg->max_invalid_signin_time = 420;
 $cfg->max_invalid_signin_count = 3;
 
 
+$cfg->dec_precision = 2;// Old code getProfile('dec_precision', $cfg->dec_precision);
+$cfg->dec_separator = ".";// Old code getProfile('dec_separator', $cfg->dec_separator);
+$cfg->dec_thousands_separator = ",";// Old code getProfile('dec_thousands_separator', $cfg->dec_thousands_separator);
+
+$cfg->dec_precision = 2;
+$cfg->dec_separator = ".";
+$cfg->dec_thousands_separator = ",";
+
+

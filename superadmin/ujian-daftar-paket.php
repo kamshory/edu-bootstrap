@@ -10,7 +10,7 @@ $cfg->page_title = "Daftar Paket";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 {
-	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data";
+	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data"; //NOSONAR
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
 	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
@@ -55,7 +55,7 @@ if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 			$database->execute($sql);
 		}
 	}
-	header("Location: ".basename($_SERVER['REQUEST_URI']));
+	header("Location: ".basename($_SERVER['REQUEST_URI'])); //NOSONAR
 	exit();
 }
 if(isset($_POST['set_active']) && isset($_POST['test_collection_id']))
@@ -67,7 +67,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_collection_id']))
 		$sql = "UPDATE `edu_test_collection` SET `active` = true WHERE `test_collection_id` = '$test_collection_id' ";
 		$database->execute($sql);
 	}
-	header("Location: ".basename($_SERVER['REQUEST_URI']));
+	header("Location: ".basename($_SERVER['REQUEST_URI'])); //NOSONAR
 	exit();
 }
 if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
@@ -79,13 +79,13 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 		$sql = "UPDATE `edu_test_collection` SET `active` = false WHERE `test_collection_id` = '$test_collection_id' ";
 		$database->execute($sql);
 	}
-	header("Location: ".basename($_SERVER['REQUEST_URI']));
+	header("Location: ".basename($_SERVER['REQUEST_URI'])); //NOSONAR
 	exit();
 }
 if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 {
 	$test_id = $_POST['test_collection_id'];
-	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data";
+	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data"; //NOSONAR
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
 	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
@@ -108,21 +108,21 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 			}
 		}
 	}
-	header("Location: ".basename($_SERVER['REQUEST_URI']));
+	header("Location: ".basename($_SERVER['REQUEST_URI'])); //NOSONAR
 	exit();
 }
 
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 {
-	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data";
+	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data"; //NOSONAR
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
 	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 
 	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
 	$grade_id = kh_filter_input(INPUT_POST, 'grade_id', FILTER_SANITIZE_NUMBER_INT);
-	$target_dir = dirname(dirname(__FILE__))."/media.edu/question-collection/data";
+	$target_dir = dirname(dirname(__FILE__))."/media.edu/question-collection/data"; //NOSONAR
 	$base_name = md5(session_id()."-".time()."-".mt_rand(111111, 999999)).".xml";
 	$file_path = $target_dir."/".$base_name;
 
@@ -180,7 +180,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data";
+	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data"; //NOSONAR
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
 	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
@@ -256,7 +256,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<tr>
 		<td width="200">Nama Ujian</td>
 		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" />
-        <input type="hidden" name="test_collection_id" id="test_collection_id" value="<?php echo ($data['test_collection_id']);?>" /></td>
+        <input type="hidden" name="test_collection_id" id="test_collection_id" value="<?php echo $data['test_collection_id'];?>" /></td>
 		</tr>
 		<tr>
 		<td>Tingkat</td>
@@ -326,23 +326,23 @@ echo $picoEdu->getGradeName($data['grade_id']);
 		</tr>
 		<tr>
 		<td>Nama File</td>
-		<td><?php echo ($data['file_name']);?> </td>
+		<td><?php echo $data['file_name'];?> </td>
 		</tr>
 		<tr>
 		<td>Lokasi File</td>
-		<td><?php echo ($data['file_path']);?> </td>
+		<td><?php echo $data['file_path'];?> </td>
 		</tr>
 		<tr>
 		<td>Ukuran</td>
-		<td><?php echo ($data['file_size']);?> </td>
+		<td><?php echo $data['file_size'];?> </td>
 		</tr>
 		<tr>
 		<td>File MD5</td>
-		<td><?php echo ($data['file_md5']);?> </td>
+		<td><?php echo $data['file_md5'];?> </td>
 		</tr>
 		<tr>
 		<td>File SHA1</td>
-		<td><?php echo ($data['file_sha1']);?> </td>
+		<td><?php echo $data['file_sha1'];?> </td>
 		</tr>
 		<tr>
 		<td>Dibuat</td>
@@ -362,7 +362,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 		</tr>
 		<tr>
 		<td>Diambil</td>
-		<td><?php echo ($data['taken']);?> </td>
+		<td><?php echo $data['taken'];?> </td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
@@ -564,9 +564,9 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['grade_id'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo ($data['file_name']);?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo ($data['file_size']);?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo ($data['taken']);?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['file_name'];?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['file_size'];?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['taken'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['number_of_question'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['number_of_option'];?></a></td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>

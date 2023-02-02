@@ -52,7 +52,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$available_to = kh_filter_input(INPUT_POST, 'available_to', FILTER_SANITIZE_STRING_NEW);
 
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
-	$member_create = $member_edit = $admin_login->admin_id;
+	
 	$role_create = $role_edit = 'A';
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 
@@ -324,16 +324,24 @@ $(document).ready(function(e) {
 		<option value=""></option>
 		<?php 
 		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` asc ";
-		$stmt2 = $database->executeQuery($sql2);
-		if ($stmt2->rowCount() > 0) {
-			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-			foreach ($rows2 as $data2) {
-				?>
-          <option value="<?php echo $data2['school_program_id']; ?>"<?php if ($data2['school_program_id'] == $data['school_program_id'])
-						echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
-            <?php
-			}
-		}
+		echo $picoEdu->createFilterDb(
+			$sql2,
+			array(
+				'attributeList'=>array(
+					array('attribute'=>'value', 'source'=>'school_program_id')
+				),
+				'selectCondition'=>array(
+					'source'=>'school_program_id',
+					'value'=>$data['school_program_id']
+				),
+				'caption'=>array(
+					'delimiter'=>PicoEdu::RAQUO,
+					'values'=>array(
+						'name'
+					)
+				)
+			)
+		);
 		?>
 		</select></td>
 		</tr>
@@ -347,16 +355,25 @@ $(document).ready(function(e) {
 		<option value=""></option>
 		<?php 
 		$sql2 = "SELECT `edu_teacher`.* FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' ORDER BY `name` asc ";
-		$stmt2 = $database->executeQuery($sql2);
-		if ($stmt2->rowCount() > 0) {
-			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-			foreach ($rows2 as $data2) {
-				?>
-          <option value="<?php echo $data2['teacher_id']; ?>"<?php if ($data2['teacher_id'] == $data['teacher_id'])
-						echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
-            <?php
-			}
-		}
+		echo $picoEdu->createFilterDb(
+			$sql2,
+			array(
+				'attributeList'=>array(
+					array('attribute'=>'value', 'source'=>'teacher_id')
+				),
+				'selectCondition'=>array(
+					'source'=>'teacher_id',
+					'value'=>$data['teacher_id']
+				),
+				'caption'=>array(
+					'delimiter'=>PicoEdu::RAQUO,
+					'values'=>array(
+						'reg_number',
+						'name'
+					)
+				)
+			)
+		);
 		?>
 		</select></td>
 		</tr>
@@ -405,7 +422,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Pengacakan Soal</td>
-        <td><label><input type="checkbox" class="input-checkbox" name="random" value="1" id="random"<?php if($data['random']==1) echo PicoConst::INPUT_CHECKBOX_CHECKED;?>> Soal Diacak</label></td>
+        <td><label><input type="checkbox" class="input-checkbox" name="random" value="1" id="random"<?php echo $picoEdu->trueFalse($data['random']==1, PicoConst::INPUT_CHECKBOX_CHECKED, '');?>> Soal Diacak</label></td>
 		</tr>
 		<tr>
 		<td>Durasi
@@ -413,7 +430,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Beri Peringatan</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="has_alert" value="1" id="has_alert"<?php if($data['has_alert']==1) echo PicoConst::INPUT_CHECKBOX_CHECKED;?>> Beri Peringatan</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="has_alert" value="1" id="has_alert"<?php echo $picoEdu->trueFalse($data['has_alert']==1, PicoConst::INPUT_CHECKBOX_CHECKED, '');?>> Beri Peringatan</label>
 		</td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_alert" data-condition="<?php echo $data['has_alert'];?>" data-show-condition="1" data-hide-condition="0">

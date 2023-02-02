@@ -63,7 +63,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$available_to = kh_filter_input(INPUT_POST, 'available_to', FILTER_SANITIZE_STRING_NEW);
 
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
-	$member_create = $member_edit = $admin_login->admin_id;
+	
 	$role_create = $role_edit = 'A';
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 

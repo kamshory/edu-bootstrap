@@ -168,16 +168,25 @@ if (@$_GET['option'] == 'add') {
 							WHERE `edu_school_program`.`school_id` = '$school_id' and `active` = true 
 							ORDER BY `edu_school_program`.`name` asc
 							";
-							$stmt2 = $database->executeQuery($sql);
-							if ($stmt2->rowCount() > 0) {
-								$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-								foreach ($rows2 as $data2) {
-									?>
-								<option value="<?php echo $data2['school_program_id']; ?>" <?php if ($data['school_program_id'] == $data2['school_program_id'])
-									   echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
-							<?php
-								}
-							}
+							echo $picoEdu->createFilterDb(
+								$sql2,
+								array(
+									'attributeList'=>array(
+										array('attribute'=>'value', 'source'=>'school_program_id')
+									),
+									'selectCondition'=>array(
+										'source'=>'school_program_id',
+										'value'=>$data['school_program_id']
+									),
+									'caption'=>array(
+										'delimiter'=>PicoEdu::RAQUO,
+										'values'=>array(
+											'name'
+										)
+									)
+								)
+							);
+						
 							?>
 						</select>
 					</td>

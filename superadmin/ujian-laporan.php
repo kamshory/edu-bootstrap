@@ -298,7 +298,7 @@ $info = $stmt->fetch(PDO::FETCH_ASSOC);
     <td>Metode Penilaian</td>
     <td><?php echo $picoEdu->selectFromMap($info['assessment_methods'], array('H'=>"Nilai Tertinggi", 'N'=>"Nilai Terbaru"));?> </td>
     <td>Dibuka</td>
-    <td><?php if($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '') echo translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_from']))); else echo '-';?> </td>
+    <td><?php echo $picoEdu->trueFalse($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '', translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_from']))), '-');?> </td>
     <td>Benar</td>
     <td><?php echo $info['true'];?> </td>
   </tr>
@@ -308,7 +308,7 @@ $info = $stmt->fetch(PDO::FETCH_ASSOC);
     <td>Jumlah Soal</td>
     <td><?php echo $info['number_of_question'];?> </td>
     <td>Ditutup</td>
-    <td><?php if($info['available_to'] != '0000-00-00 00:00:00' && $info['available_to'] != '') echo translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_to']))); else echo '-';?> </td>
+    <td><?php echo $picoEdu->trueFalse($info['available_to'] != '0000-00-00 00:00:00' && $info['available_to'] != '', translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_to']))), '-');?> </td>
     <td>Salah</td>
     <td><?php echo $info['false'];?> </td>
   </tr>
@@ -318,7 +318,7 @@ $info = $stmt->fetch(PDO::FETCH_ASSOC);
     <td>Sekor Benar</td>
     <td><?php echo $info['standard_score'];?> </td>
     <td>Pengumuman Hasil</td>
-    <td><?php if($info['publish_answer']) echo translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['time_answer_publication']))); else echo '-';?> </td>
+    <td><?php echo $picoEdu->trueFalse($info['publish_answer'], translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['time_answer_publication']))), '-');?> </td>
     <td>Nilai Awal</td>
     <td><?php echo $info['initial_score'];?> </td>
   </tr>
@@ -388,10 +388,10 @@ foreach($rows2 as $data2)
 {
 ?>
 <li>
-<span class="option-circle<?php if($data2['score']) echo ' option-circle-selected';?>"><?php
+<span class="option-circle<?php echo $picoEdu->trueFalse($data2['score'] > 0, ' option-circle-selected', '');?>"><?php
         echo $data2['score']*1;
         ?></span>
-<div class="list-option-item<?php echo ($data2['my_answer'])?' list-option-item-selected':'';?>">
+<div class="list-option-item<?php echo $picoEdu->trueFalse($data2['my_answer'], ' list-option-item-selected', '');?>">
 <div class="option-content">
 <?php
 echo $data2['content'];
@@ -677,7 +677,7 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 	}
 	$ke[$data['student_id']] ++;
 	?>
-    <tr class="row-data<?php if($data['lewat']) echo ' data-error';?>">
+    <tr class="row-data<?php echo $picoEdu->trueFalse($data['lewat'] > 0, ' data-error', '');?>">
       <td><input type="checkbox" name="answerid[]" id="answerid" value="<?php echo $data['answer_id'];?>" class="answerid" /></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=answerdetail&test_id=<?php echo $data['answer_id'];?>"><?php echo $data['reg_number'];?></a></td>
@@ -904,8 +904,8 @@ $pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
   <thead>
     <tr>
-        <td width="16"><img src="lib.tools/images/excel.png" /></td>
-        <td width="16"><img src="lib.tools/images/excel.png" /></td>
+        <td width="16"><img alt="Excel" src="lib.tools/images/excel.png" /></td>
+        <td width="16"><img alt="Excel" src="lib.tools/images/excel.png" /></td>
         <td width="25">No</td>
         <td>Sekolah</td>
         <td>Ujian</td>
@@ -926,8 +926,8 @@ $pagination->str_result .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "
             $no++;
             ?>
     <tr class="row-data row<?php echo $j; ?>">
-        <td width="16"><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=export&test_id=<?php echo $data['test_id']; ?>&expand=1"><img src="lib.tools/images/excel.png" /></a></td>
-        <td width="16"><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=export&test_id=<?php echo $data['test_id']; ?>"><img src="lib.tools/images/excel.png" /></a></td>
+        <td width="16"><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=export&test_id=<?php echo $data['test_id']; ?>&expand=1"><img alt="Excel" src="lib.tools/images/excel.png" /></a></td>
+        <td width="16"><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=export&test_id=<?php echo $data['test_id']; ?>"><img alt="Excel" src="lib.tools/images/excel.png" /></a></td>
         <td align="right"><?php echo $no; ?> </td>
         <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['school_name']; ?></a></td>
         <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['name']; ?></a></td>

@@ -611,7 +611,7 @@ $(document).ready(function(e) {
 		<tr>
 		<td>Bahasa
 		</td><td>
-        <select name="language" id="language" data-full-width="true">
+        <select class="form-control" name="language" id="language" data-full-width="true">
 			<option value="en">English</option>
 			<option value="id">Bahasa Indonesia</option>
         </select>
