@@ -174,7 +174,7 @@ if (@$_GET['option'] == 'add') {
 								foreach ($rows2 as $data2) {
 									?>
 								<option value="<?php echo $data2['school_program_id']; ?>" <?php if ($data['school_program_id'] == $data2['school_program_id'])
-									   echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
+									   echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
 							<?php
 								}
 							}
@@ -193,7 +193,7 @@ if (@$_GET['option'] == 'add') {
 				</tr>
 				<tr>
 					<td>Aktif</td>
-					<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active" <?php echo $picoEdu->ifMatch($data['active'], true, ' checked="checked"');?>> Aktif</label></td>
+					<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active" <?php echo $picoEdu->ifMatch($data['active'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label></td>
 				</tr>
 				<tr>
 					<td></td>
@@ -256,11 +256,11 @@ if($stmt->rowCount() > 0)
 				</tr>
 				<tr>
 					<td>Time Create</td>
-					<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
+					<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 				</tr>
 				<tr>
 					<td>Time Edit</td>
-					<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
+					<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 				</tr>
 				<tr>
 					<td>Admin Create</td>

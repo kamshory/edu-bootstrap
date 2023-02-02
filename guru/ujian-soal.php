@@ -27,7 +27,7 @@ if(@$_GET['option'] == 'delete')
 		$database->executeDelete($sql, true);
 		$sql = "DELETE FROM `edu_question` WHERE `question_id` = '$id' ";
 		$database->executeDelete($sql, true);
-		header("Location: ".basename($_SERVER['PHP_SELF'])."?test_id=$test_id");
+		header("Location: ".basename($_SERVER['PHP_SELF'])."?test_id=$test_id"); //NOSONAR
 	}
 }
 
@@ -47,8 +47,6 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		$time_create = $picoEdu->getLocalDateTime();
 		$time_edit = $picoEdu->getLocalDateTime();
-		$member_create = $teacher_id;
-		$member_edit = $teacher_id;
 	
 		$random = ((int) $data['random']);
 		$sort_order = ((int) $data['order']);
@@ -223,7 +221,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$numbering = kh_filter_input(INPUT_POST, 'numbering', FILTER_SANITIZE_STRING_NEW);
 	$random = kh_filter_input(INPUT_POST, 'random', FILTER_SANITIZE_NUMBER_UINT);
 	$basic_competence = trim(kh_filter_input(INPUT_POST, 'basic_competence', FILTER_SANITIZE_STRING_NEW));
-	$basic_competence = preg_replace("/[^0-9]/i", ".", $basic_competence);
+	$basic_competence = preg_replace("/[^0-9]/i", ".", $basic_competence); // NOSONAR
 	$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
 
 	$sql = "SELECT `test_id` FROM `edu_question` WHERE `question_id` = '$question_id' ";
@@ -375,7 +373,7 @@ if(@$_GET['option'] == 'add')
 			<td>Pengacakan Pilihan</td>
 			<td><label><input type="checkbox" name="random" id="random" value="1"<?php
 			if ($data['random']) {
-				echo ' checked="checked"';
+				echo PicoConst::INPUT_CHECKBOX_CHECKED;
 			}
 			?> /> Diacak</label></td>
 		</tr>
@@ -504,28 +502,28 @@ else if(@$_GET['option'] == 'edit')
 				<td>Tipe Pilihan</td>
 				<td><select name="numbering" id="numbering" data-required="true" required="required">
 				<option value="upper-alpha"<?php if ($data['numbering'] == 'upper-alpha')
-								echo ' selected="selected"'; ?>>A, B, C, D, ...</option>
+								echo PicoConst::SELECT_OPTION_SELECTED; ?>>A, B, C, D, ...</option>
 				<option value="lower-alpha"<?php if ($data['numbering'] == 'lower-alpha')
-								echo ' selected="selected"'; ?>>a, b, c, d, ...</option>
+								echo PicoConst::SELECT_OPTION_SELECTED; ?>>a, b, c, d, ...</option>
 				<option value="upper-roman"<?php if ($data['numbering'] == 'upper-roman')
-								echo ' selected="selected"'; ?>>I, II, III, IV, ...</option>
+								echo PicoConst::SELECT_OPTION_SELECTED; ?>>I, II, III, IV, ...</option>
 				<option value="lower-roman"<?php if ($data['numbering'] == 'lower-roman')
-								echo ' selected="selected"'; ?>>i, ii, iii, iv, ...</option>
+								echo PicoConst::SELECT_OPTION_SELECTED; ?>>i, ii, iii, iv, ...</option>
 				<option value="decimal"<?php if ($data['numbering'] == 'decimal')
-								echo ' selected="selected"'; ?>>1, 2, 3, 4, ...</option>
+								echo PicoConst::SELECT_OPTION_SELECTED; ?>>1, 2, 3, 4, ...</option>
 				<option value="decimal-leading-zero"<?php if ($data['numbering'] == 'decimal-leading-zero')
-								echo ' selected="selected"'; ?>>01, 02, 03, 04, ...</option>
+								echo PicoConst::SELECT_OPTION_SELECTED; ?>>01, 02, 03, 04, ...</option>
 				</select></td>
 			</tr>
 			<tr>
 				<td>Pengacakan Pilihan</td>
-				<td><label><input type="checkbox" name="random" id="random" value="1"<?php if ($data['random'])
-									echo ' checked="checked"'; ?> /> Diacak</label></td>
+				<td><label><input type="checkbox" name="random" id="random" value="1"<?php echo $picoEdu->ifMatch($data['random'], 1, PicoConst::INPUT_CHECKBOX_CHECKED); ?> /> Diacak</label></td>
 			</tr>
 			</table>
 			</div>
 			<div class="question-editor">
-			<textarea spellcheck="false" class="htmleditor" name="question" id="question" style="width:100%;"><?php echo htmlspecialchars(($data['content'])); ?></textarea><input type="hidden" name="question_id" id="question_id" value="<?php echo $question_id; ?>" />
+			<textarea spellcheck="false" class="htmleditor" name="question" id="question" style="width:100%;"><?php echo htmlspecialchars(($data['content'])); ?></textarea>
+			<input type="hidden" name="question_id" id="question_id" value="<?php echo $question_id; ?>" />
 			</div>
 			</fieldset>
 			</div>
@@ -544,7 +542,7 @@ else if(@$_GET['option'] == 'edit')
 				foreach ($rows2 as $data2) {
 				?>
 				<div class="option-item" data-index="<?php echo $i; ?>">
-				<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i]; ?></span> | Nilai <input type="number" min="0" max="<?php echo ($data3['standard_score']); ?>" class="input-text input-text-short" name="score_<?php echo $data2['option_id']; ?>" id="score_<?php echo $data2['option_id']; ?>" value="<?php echo $data2['score']; ?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']); ?>)</div>
+				<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i]; ?></span> | Nilai <input type="number" min="0" max="<?php echo $data3['standard_score']; ?>" class="input-text input-text-short" name="score_<?php echo $data2['option_id']; ?>" id="score_<?php echo $data2['option_id']; ?>" value="<?php echo $data2['score']; ?>" autocomplete="off" /> (Nilai Maksimum <?php echo $data3['standard_score']; ?>)</div>
 				<div class="option-editor">
 				<textarea spellcheck="false" class="htmleditor" name="option_<?php echo $data2['option_id']; ?>" id="option_<?php echo $data2['option_id']; ?>" style="width:100%;"><?php echo htmlspecialchars(($data2['content'])); ?></textarea>
 				</div>
@@ -617,7 +615,7 @@ else if(isset($_GET['test_id']))
 		</tr>
 		<tr>
 			<td>Koleksi Soal</td>
-			<td><span id="total_collection"><?php echo $data['collection']; ?></span> soal <a href="ujian-soal.php?test_id=<?php echo ($data['test_id']); ?>">Lihat</a></td>
+			<td><span id="total_collection"><?php echo $data['collection']; ?></span> soal <a href="ujian-soal.php?test_id=<?php echo $data['test_id']; ?>">Lihat</a></td>
 		</tr>
 		</table>
 		</div>

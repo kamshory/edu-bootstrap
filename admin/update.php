@@ -407,7 +407,7 @@ if(isset($version_list))
 	  <tr class="<?php echo $class;?>">
 	    <td align="right"><?php echo $no;?> </td>
 	    <td><?php echo $val['version'];?> </td>
-	    <td><?php echo translateDate(date('j F Y H:i:s', strtotime($val['time'])));?> </td>
+	    <td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($val['time'])));?> </td>
 	    <td><?php echo number_format($val['program_size'], 0, ',', '.');?> byte</td>
 	    <td><span title="<?php echo $val['program_md5'];?>"><?php echo substr($val['program_md5'], 0, 12);?>&hellip;</span></td>
 	    <td><?php echo number_format($val['database_size'], 0, ',', '.');?> byte</td>

@@ -61,7 +61,7 @@ function parseHtmlData($data, $base = "")
 	}
 
 	// get paragraphs
-	$par = @$xpath->evaluate("/html/body//p");
+	$par = @$xpath->evaluate("/html/body//p"); //NOSONAR
 	$j = 0;
 	for ($i = 0; $i < $par->length; $i++) {
 		$p = trim(UTF8ToEntities(htmlspecialchars($par->item($i)->nodeValue)), " \r\n ");
@@ -744,7 +744,7 @@ function addFirstParagraphClass($data)
 	$data = UTF8ToEntities($data);
 	@$dom->loadHTML(mb_convert_encoding($data, 'HTML-ENTITIES', 'UTF-8'));
 	$xpath = new DOMXPath($dom);
-	$blockclasses = @$xpath->evaluate("/html/body//p");
+	$blockclasses = @$xpath->evaluate("/html/body//p"); //NOSONAR
 	if ($blockclasses->length > 0) {
 		$blockclass = $blockclasses->item(0);
 		$class = $blockclass->getAttribute('class');
@@ -888,7 +888,7 @@ function extractParagraph($data)
 	$doc->xmlEncoding = "UTF-8";
 	$xpath = new DOMXPath($dom);
 	// a tag
-	$hrefs = @$xpath->evaluate("/html/body//p"); //NOSONAR
+	$hrefs = @$xpath->evaluate("/html/body//p"); //NOSONAR //NOSONAR
 	for ($i = 0; $i < $hrefs->length; $i++) {
 		$par = $hrefs->item($i);
         $result[$i] = $par->textContent;

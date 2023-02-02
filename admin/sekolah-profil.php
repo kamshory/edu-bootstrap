@@ -226,12 +226,12 @@ $(document).ready(function(e) {
 		<td>Jenjang</td>
 		<td><select class="form-control input-select" name="school_grade_id" id="school_grade_id">
 		<option value=""></option>
-		<option value="1"<?php if($data['school_grade_id'] == '1') echo ' selected="selected"';?>>Play Group</option>
-		<option value="2"<?php if($data['school_grade_id'] == '2') echo ' selected="selected"';?>>Taman Kanak-Kanak</option>
-		<option value="3"<?php if($data['school_grade_id'] == '3') echo ' selected="selected"';?>>Sekolah Dasar</option>
-		<option value="4"<?php if($data['school_grade_id'] == '4') echo ' selected="selected"';?>>Sekolah Menengah Pertama</option>
-		<option value="5"<?php if($data['school_grade_id'] == '5') echo ' selected="selected"';?>>Sekolah Menengah Atas</option>
-		<option value="6"<?php if($data['school_grade_id'] == '6') echo ' selected="selected"';?>>Perguruan Tinggi</option>
+		<option value="1"<?php if($data['school_grade_id'] == '1') echo PicoConst::SELECT_OPTION_SELECTED;?>>Play Group</option>
+		<option value="2"<?php if($data['school_grade_id'] == '2') echo PicoConst::SELECT_OPTION_SELECTED;?>>Taman Kanak-Kanak</option>
+		<option value="3"<?php if($data['school_grade_id'] == '3') echo PicoConst::SELECT_OPTION_SELECTED;?>>Sekolah Dasar</option>
+		<option value="4"<?php if($data['school_grade_id'] == '4') echo PicoConst::SELECT_OPTION_SELECTED;?>>Sekolah Menengah Pertama</option>
+		<option value="5"<?php if($data['school_grade_id'] == '5') echo PicoConst::SELECT_OPTION_SELECTED;?>>Sekolah Menengah Atas</option>
+		<option value="6"<?php if($data['school_grade_id'] == '6') echo PicoConst::SELECT_OPTION_SELECTED;?>>Perguruan Tinggi</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -240,11 +240,11 @@ $(document).ready(function(e) {
 		<option value=""></option>
 		<option value="U"<?php 
 		if ($data['public_private'] == 'U') {
-			echo ' selected="selected"';
+			echo PicoConst::SELECT_OPTION_SELECTED;
 		}
 		?>>Negeri</option>
 		<option value="I"<?php if ($data['public_private'] == 'I') {
-			echo ' selected="selected"';
+			echo PicoConst::SELECT_OPTION_SELECTED;
 		}
 		?>>Swasta</option>
 		</select></td>
@@ -252,7 +252,7 @@ $(document).ready(function(e) {
 		<tr>
 		<td>Terbuka</td>
 		<td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php if ($data['open'] == 1) {
-		echo ' checked="checked"';
+		echo PicoConst::INPUT_CHECKBOX_CHECKED;
 		}
 		?>> Terbuka</label>
 		</td>
@@ -296,7 +296,7 @@ $(document).ready(function(e) {
 			foreach($rows2 as $data2) {
 				?>
             <option data-code="<?php echo $data2['phone_code']; ?>" value="<?php echo $data2['country_id']; ?>"<?php if ($data2['country_id'] == $data['country_id'])
-					echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
+					echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
             <?php
 			}
 		}
@@ -317,7 +317,7 @@ $(document).ready(function(e) {
 				foreach ($rows2 as $data2) {
 					?>
                 <option value="<?php echo $data2['name']; ?>"<?php if ($data2['state_id'] == $data['state_id'])
-					  echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
+					  echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
                 <?php
 				}
 			}
@@ -339,7 +339,7 @@ $(document).ready(function(e) {
 				foreach ($rows2 as $data2) {
 					?>
                 <option value="<?php echo $data2['name']; ?>"<?php if ($data2['city_id'] == $data['city_id'])
-					  echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
+					  echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
                 <?php
 				}
 			}
@@ -349,17 +349,17 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Cegah Siswa Pindah</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="prevent_change_school" value="1" id="prevent_change_school"<?php if($data['prevent_change_school']==1) echo ' checked="checked"';?>> Ya</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="prevent_change_school" value="1" id="prevent_change_school"<?php if($data['prevent_change_school']==1) echo PicoConst::INPUT_CHECKBOX_CHECKED;?>> Ya</label>
 		</td>
 		</tr>
 		<tr>
 		<td>Cegah Siswa Keluar</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="prevent_resign" value="1" id="prevent_resign"<?php if($data['prevent_resign']==1) echo ' checked="checked"';?>> Ya</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="prevent_resign" value="1" id="prevent_resign"<?php if($data['prevent_resign']==1) echo PicoConst::INPUT_CHECKBOX_CHECKED;?>> Ya</label>
 		</td>
 		</tr>
 		<tr>
 		<td>Sistem Token</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="use_token" value="1" id="use_token"<?php if($data['use_token']==1) echo ' checked="checked"';?>> Ya</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="use_token" value="1" id="use_token"<?php if($data['use_token']==1) echo PicoConst::INPUT_CHECKBOX_CHECKED;?>> Ya</label>
 		</td>
 		</tr>
 		<tr><td></td>
@@ -443,7 +443,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Terbuka</td>
-		<td><?php echo ($data['open'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['open'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td>Kepala Sekolah</td>
@@ -497,11 +497,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
+		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
+		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
@@ -526,7 +526,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Waktu</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_import_first'])));?> </td>
+		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_import_first'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin</td>
@@ -543,7 +543,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Waktu</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_import_last'])));?> </td>
+		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_import_last'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin</td>

@@ -100,12 +100,12 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Default</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="default" value="1" id="default"<?php echo $picoEdu->ifMatch($data['default'], true, ' checked="checked"');?>> Default</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="default" value="1" id="default"<?php echo $picoEdu->ifMatch($data['default'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Default</label>
 		</td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, ' checked="checked"');?>> Aktif</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
 		</td>
 		</tr>
 		<tr><td></td>

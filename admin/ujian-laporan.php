@@ -95,7 +95,7 @@ if(@$_GET['option'] == 'export' && isset($_GET['test_id']))
 	$nt = '';
 	$sql = "SELECT `edu_test`.* $nt, 
 	(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
-	(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `koleksi_question`
+	(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `collection_of_question`
 	FROM `edu_test` 
 	where 1
 	and `edu_test`.`test_id` = '$test_id' and `edu_test`.`school_id` = '$school_id'
@@ -301,7 +301,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
       <td><?php echo $data['student_name'];?> </td>
       <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
       <td align="right"><?php echo $ke[$data['student_id']];?> </td>
-      <td nowrap><?php echo date('Y-m-d H:i:s',strtotime($data['start']));?> </td>
+      <td nowrap><?php echo date(PicoConst::DATE_TIME_MYSQL, strtotime($data['start']));?> </td>
       <td nowrap><?php echo $data['timediff'];?> </td>
       <td align="right"><?php echo $data['true'];?> </td>
       <td align="right"><?php echo $data['false'];?> </td>
@@ -380,7 +380,7 @@ $info = $stmt->fetch(PDO::FETCH_ASSOC);
     <td width="10%">Metode Penilaian</td>
     <td width="15%"><?php echo $picoEdu->selectFromMap($info['assessment_methods'], array('H'=>"Nilai Tertinggi", 'N'=>"Nilai Terbaru"));?> </td>
     <td width="10%">Dibuka</td>
-    <td width="15%"><?php if($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '') echo translateDate(date('j M Y H:i', strtotime($info['available_from']))); else echo '-';?> </td>
+    <td width="15%"><?php if($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '') echo translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_from']))); else echo '-';?> </td>
     <td width="10%">Benar</td>
     <td width="15%"><?php echo $info['true'];?> </td>
   </tr>
@@ -390,7 +390,7 @@ $info = $stmt->fetch(PDO::FETCH_ASSOC);
     <td>Jumlah Soal</td>
     <td><?php echo $info['number_of_question'];?> </td>
     <td>Ditutup</td>
-    <td><?php if($info['available_to'] != '0000-00-00 00:00:00' && $info['available_to'] != '') echo translateDate(date('j M Y H:i', strtotime($info['available_to']))); else echo '-';?> </td>
+    <td><?php if($info['available_to'] != '0000-00-00 00:00:00' && $info['available_to'] != '') echo translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_to']))); else echo '-';?> </td>
     <td>Salah</td>
     <td><?php echo $info['false'];?> </td>
   </tr>
@@ -400,7 +400,7 @@ $info = $stmt->fetch(PDO::FETCH_ASSOC);
     <td>Sekor Benar</td>
     <td><?php echo $info['standard_score'];?> </td>
     <td>Pengumuman Hasil</td>
-    <td><?php if($info['publish_answer']) echo translateDate(date('j M Y H:i', strtotime($info['time_answer_publication']))); else echo '-';?> </td>
+    <td><?php if($info['publish_answer']) echo translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['time_answer_publication']))); else echo '-';?> </td>
     <td>Nilai Awal</td>
     <td><?php echo $info['initial_score'];?> </td>
   </tr>
@@ -410,7 +410,7 @@ $info = $stmt->fetch(PDO::FETCH_ASSOC);
     <td>Penalti</td>
     <td><?php echo $info['penalty'];?> </td>
     <td>Tanggal Ujian</td>
-    <td><?php echo translateDate(date('j M Y H:i', strtotime($info['start'])));?> </td>
+    <td><?php echo translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['start'])));?> </td>
     <td>Nilai Akhir</td>
     <td><?php echo $info['final_score'];?> </td>
   </tr>

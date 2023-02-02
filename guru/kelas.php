@@ -2,8 +2,8 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/bukan-guru.php";
-exit();
+	include_once dirname(__FILE__)."/bukan-guru.php";
+	exit();
 }
 $cfg->page_title = "Kelas";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";

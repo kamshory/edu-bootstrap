@@ -571,25 +571,25 @@ $(document).ready(function(e) {
 		<td>Jenjang</td>
 		<td><select class="form-control input-select" name="school_grade_id" id="school_grade_id">
 		<option value=""></option>
-		<option value="1"<?php if($data['school_grade_id'] == '1') echo ' selected="selected"';?>>Play Group</option>
-		<option value="2"<?php if($data['school_grade_id'] == '2') echo ' selected="selected"';?>>Taman Kanak-Kanak</option>
-		<option value="3"<?php if($data['school_grade_id'] == '3') echo ' selected="selected"';?>>Sekolah Dasar</option>
-		<option value="4"<?php if($data['school_grade_id'] == '4') echo ' selected="selected"';?>>Sekolah Menengah Pertama</option>
-		<option value="5"<?php if($data['school_grade_id'] == '5') echo ' selected="selected"';?>>Sekolah Menengah Atas</option>
-		<option value="6"<?php if($data['school_grade_id'] == '6') echo ' selected="selected"';?>>Perguruan Tinggi</option>
+		<option value="1"<?php if($data['school_grade_id'] == '1') echo PicoConst::SELECT_OPTION_SELECTED;?>>Play Group</option>
+		<option value="2"<?php if($data['school_grade_id'] == '2') echo PicoConst::SELECT_OPTION_SELECTED;?>>Taman Kanak-Kanak</option>
+		<option value="3"<?php if($data['school_grade_id'] == '3') echo PicoConst::SELECT_OPTION_SELECTED;?>>Sekolah Dasar</option>
+		<option value="4"<?php if($data['school_grade_id'] == '4') echo PicoConst::SELECT_OPTION_SELECTED;?>>Sekolah Menengah Pertama</option>
+		<option value="5"<?php if($data['school_grade_id'] == '5') echo PicoConst::SELECT_OPTION_SELECTED;?>>Sekolah Menengah Atas</option>
+		<option value="6"<?php if($data['school_grade_id'] == '6') echo PicoConst::SELECT_OPTION_SELECTED;?>>Perguruan Tinggi</option>
 		</select></td>
 		</tr>
 		<tr>
 		<td>Negeri/Swasta</td>
 		<td><select class="form-control input-select" name="public_private" id="public_private">
 		<option value=""></option>
-		<option value="U"<?php if($data['public_private'] == 'U') echo ' selected="selected"';?>>Negeri</option>
-		<option value="I"<?php if($data['public_private'] == 'I') echo ' selected="selected"';?>>Swasta</option>
+		<option value="U"<?php if($data['public_private'] == 'U') echo PicoConst::SELECT_OPTION_SELECTED;?>>Negeri</option>
+		<option value="I"<?php if($data['public_private'] == 'I') echo PicoConst::SELECT_OPTION_SELECTED;?>>Swasta</option>
 		</select></td>
 		</tr>
 		<tr>
 		<td>Terbuka</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php echo $picoEdu->ifMatch($data['open'], 1, ' checked="checked"');?>> Terbuka</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php echo $picoEdu->ifMatch($data['open'], 1, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Terbuka</label>
 		</td>
 		</tr>
 		<tr>
@@ -705,17 +705,17 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Cegah Siswa Pindah</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="prevent_change_school" value="1" id="prevent_change_school"<?php if($data['prevent_change_school']==1) echo ' checked="checked"';?>> Ya</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="prevent_change_school" value="1" id="prevent_change_school"<?php if($data['prevent_change_school']==1) echo PicoConst::INPUT_CHECKBOX_CHECKED;?>> Ya</label>
 		</td>
 		</tr>
 		<tr>
 		<td>Cegah Siswa Keluar</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="prevent_resign" value="1" id="prevent_resign"<?php if($data['prevent_resign']==1) echo ' checked="checked"';?>> Ya</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="prevent_resign" value="1" id="prevent_resign"<?php if($data['prevent_resign']==1) echo PicoConst::INPUT_CHECKBOX_CHECKED;?>> Ya</label>
 		</td>
 		</tr>
 		<tr>
 		<td>Sistem Token</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="use_token" value="1" id="use_token"<?php if($data['use_token']==1) echo ' checked="checked"';?>> Ya</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="use_token" value="1" id="use_token"<?php if($data['use_token']==1) echo PicoConst::INPUT_CHECKBOX_CHECKED;?>> Ya</label>
 		</td>
 		</tr>
 		<tr><td></td>
@@ -784,7 +784,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Terbuka</td>
-		<td><?php echo ($data['open'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['open'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td>Kepala Sekolah</td>
@@ -998,7 +998,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->selectFromMap($data['public_private'], array('U'=>'Negeri', 'I'=>'Swasta'));?></a></td>
-      <td><?php echo ($data['open'])?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['open'], 'Ya', 'Tidak');?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['principal'];?></a></td>
       <td><?php echo $data['state_id'];?> </td>
       <td><?php echo $data['city_id'];?> </td>

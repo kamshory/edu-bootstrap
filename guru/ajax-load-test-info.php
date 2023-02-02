@@ -71,11 +71,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Terbuka
-		</td><td><?php echo ($data['open'])?'Ya':'Tidak';?> </td>
+		</td><td><?php echo $picoEdu->trueFalse($data['open'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td>Dibatasi</td>
-		<td><?php echo ($data['has_limits'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['has_limits'], 'Ya', 'Tidak');?> </td>
 		</tr>
         <?php
 		if($data['has_limits'])
@@ -108,7 +108,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Acak
-		</td><td><?php echo ($data['random'])?"Ya":"Tidak";?> </td>
+		</td><td><?php echo $picoEdu->trueFalse($data['random'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td>Durasi
@@ -116,7 +116,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Beri Peringatan</td>
-		<td><?php echo ($data['has_alert'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['has_alert'], 'Ya', 'Tidak');?> </td>
 		</tr>
         <?php
 		if($data['has_alert'])
@@ -124,7 +124,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Waktu Peringatan</td>
-		<td><?php echo ($data['alert_time']/60);?> menit</td>
+		<td><?php echo (int) ($data['alert_time']/60);?> menit</td>
 		</tr>
 		<tr>
 		<td>Pesan Peringatan</td>
@@ -135,7 +135,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Otomatis Kirim Jawaban</td>
-		<td><?php echo ($data['autosubmit'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['autosubmit'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td>Nilai Standard</td>
@@ -185,19 +185,19 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
+		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
+		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
-		<td><?php echo $data['member_create'];?> (<?php echo ($data['role_create']);?>)</td>
+		<td><?php echo $data['member_create'];?> (<?php echo $data['role_create'];?>)</td>
 		</tr>
 		<tr>
 		<td>Admin Ubah</td>
-		<td><?php echo $data['member_edit'];?> (<?php echo ($data['role_edit']);?>)</td>
+		<td><?php echo $data['member_edit'];?> (<?php echo $data['role_edit'];?>)</td>
 		</tr>
 		<tr>
 		<td>IP Buat</td>

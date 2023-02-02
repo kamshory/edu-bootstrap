@@ -129,11 +129,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
+		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
+		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>

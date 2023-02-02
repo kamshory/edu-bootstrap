@@ -2,8 +2,8 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/bukan-guru.php";
-exit();
+	include_once dirname(__FILE__)."/bukan-guru.php";
+	exit();
 }
 
 $cfg->page_title = "Hasil Ujian";
@@ -76,7 +76,7 @@ $bc_array = $picoEdu->getBasicCompetence($test_id);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt, 
 (select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
-(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `koleksi_question`
+(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `collection_of_question`
 FROM `edu_test` 
 WHERE `edu_test`.`test_id` = '$test_id' and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id'
 ";
@@ -275,15 +275,13 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	$ke[$data['student_id']] ++;
 	
 	?>
-    <tr class="row-data<?php if ($data['lewat']) {
-							echo ' data-error';
-		}?>">
+    <tr class="row-data<?php echo $picoEdu->ifMatch($data['lewat'] > 0, ' data-error', '');?>">
       <td align="right"><?php echo $no;?> </td>
       <td><?php echo $data['reg_number'];?> </td>
       <td><?php echo $data['student_name'];?> </td>
       <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
       <td align="right"><?php echo $ke[$data['student_id']];?> </td>
-      <td nowrap><?php echo date('Y-m-d H:i:s',strtotime($data['start']));?> </td>
+      <td nowrap><?php echo date(PicoConst::DATE_TIME_MYSQL, strtotime($data['start']));?> </td>
       <td nowrap><?php echo $data['timediff'];?> </td>
       <td align="right"><?php echo $data['true'];?> </td>
       <td align="right"><?php echo $data['false'];?> </td>
@@ -351,6 +349,7 @@ $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 $info = $stmt->fetch(PDO::FETCH_ASSOC);
+$test_id = $info['test_id'];
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <style type="text/css">
@@ -367,7 +366,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     <td>Metode Penilaian</td>
     <td><?php echo $picoEdu->selectFromMap($info['assessment_methods'], array('H'=>"Nilai Tertinggi", 'N'=>"Nilai Terbaru"));?> </td>
     <td>Dibuka</td>
-    <td><?php if($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '') echo translateDate(date('j M Y H:i', strtotime($info['available_from']))); else echo '-';?> </td>
+    <td><?php echo $picoEdu->ifMatch($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '', translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_from']))), '-');?> </td>
     <td>Benar</td>
     <td><?php echo $info['true'];?> </td>
   </tr>
@@ -377,7 +376,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     <td>Jumlah Soal</td>
     <td><?php echo $info['number_of_question'];?> </td>
     <td>Ditutup</td>
-    <td><?php if($info['available_to'] != '0000-00-00 00:00:00' && $info['available_to'] != '') echo translateDate(date('j M Y H:i', strtotime($info['available_to']))); else echo '-';?> </td>
+    <td><?php echo $picoEdu->ifMatch($info['available_to'] != '0000-00-00 00:00:00' && $info['available_to'] != '', translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_to']))), '-');?> </td>
     <td>Salah</td>
     <td><?php echo $info['false'];?> </td>
   </tr>
@@ -387,7 +386,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     <td>Sekor Benar</td>
     <td><?php echo $info['standard_score'];?> </td>
     <td>Pengumuman Hasil</td>
-    <td><?php if($info['publish_answer']) echo translateDate(date('j M Y H:i', strtotime($info['time_answer_publication']))); else echo '-';?> </td>
+    <td><?php echo $picoEdu->ifMatch($info['publish_answer'], translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['time_answer_publication']))), '-');?> </td>
     <td>Nilai Awal</td>
     <td><?php echo $info['initial_score'];?> </td>
   </tr>
@@ -397,7 +396,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     <td>Penalti</td>
     <td><?php echo $info['penalty'];?> </td>
     <td>Tanggal Ujian</td>
-    <td><?php echo translateDate(date('j M Y H:i', strtotime($info['start'])));?> </td>
+    <td><?php echo translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['start'])));?> </td>
     <td>Nilai Akhir</td>
     <td><?php echo $info['final_score'];?> </td>
   </tr>
@@ -607,10 +606,10 @@ foreach($rows2 as $data2)
 {
 ?>
 <li>
-<span class="option-circle<?php if($data2['score']) echo ' option-circle-selected';?>"><?php
+<span class="option-circle<?php echo $picoEdu->trueFalse($data2['score'] > 0, ' option-circle-selected', '');?>"><?php
 	echo $data2['score']*1;
 	?></span>
-<div class="list-option-item<?php echo ($data2['my_answer'])?' list-option-item-selected':'';?>">
+<div class="list-option-item<?php echo $picoEdu->trueFalse($data2['my_answer'] > 0, ' list-option-item-selected', '');?>">
 <div class="option-content">
 <?php
 echo $data2['content'];
@@ -890,7 +889,7 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 	}
 	$ke[$data['student_id']] ++;
 	?>
-    <tr class="row-data<?php if($data['lewat']) echo ' data-error';?>">
+    <tr class="row-data<?php echo $picoEdu->trueFalse($data['lewat'] > 0, ' data-error', '');?>">
       <td><input type="checkbox" name="answer_id[]" id="answer_id" value="<?php echo $data['answer_id'];?>" class="answer_id" /></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=answerdetail&answer_id=<?php echo $data['answer_id'];?>"><?php echo $data['reg_number'];?></a></td>
@@ -905,8 +904,8 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
       <td align="right"><?php echo $data['final_score'];?> </td>
       <td align="right"><?php echo $picoEdu->numberFormatTrans($data['percent']);?> </td>
       <td align="right"><?php echo $picoEdu->numberFormatTrans($threshold);?> </td>
-      <td><?php if($data['percent'] >= $threshold) echo 'Ya'; else echo 'Tidak';?> </td>
-      <td><?php echo (@$data['active']==1)?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['percent'] >= $threshold, 'Ya', 'Tidak');?> </td>
+      <td><?php echo $picoEdu->trueFalse(@$data['active'] ==1, 'Ya', 'Tidak');?> </td>
     </tr>
 	<?php
 	}
@@ -1105,9 +1104,9 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	$j=$i%2;
 	$no++;
 	?>
-    <tr class="row-data row<?php echo $j;?>">
-        <td width="16"><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=export&test_id=<?php echo $data['test_id'];?>&expand=1"><img src="lib.tools/images/excel.png" /></a></td>
-        <td width="16"><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=export&test_id=<?php echo $data['test_id'];?>"><img src="lib.tools/images/excel.png" /></a></td>
+    <tr>
+        <td width="16"><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=export&test_id=<?php echo $data['test_id'];?>&expand=1"><img alt="Excel" src="lib.tools/images/excel.png" /></a></td>
+        <td width="16"><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=export&test_id=<?php echo $data['test_id'];?>"><img alt="Excel" src="lib.tools/images/excel.png" /></a></td>
         <td align="right"><?php echo $no;?> </td>
         <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
         <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>

@@ -110,11 +110,11 @@ $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </tr>
       <tr>
         <td>Rilis</td>
-        <td><?php echo translateDate(date('j M Y H:i', strtotime($data['time_release'])));?> </td>
+        <td><?php echo translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_release'])));?> </td>
       </tr>
       <tr>
         <td>Update</td>
-        <td><?php echo translateDate(date('j M Y H:i', strtotime($data['time_update'])));?> </td>
+        <td><?php echo translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_update'])));?> </td>
       </tr>
     </table></td>
     <td class="cell-log">

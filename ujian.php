@@ -333,7 +333,7 @@ $school_grade = array(
                     <td align="right"><?php echo $no;?> </td>
                     <td><a href="ujian.php?option=join&register=true&test_id=<?php echo $data['test_id'];?>"><?php echo $data['test_name'];?></a></td>
                     <td><a href="ujian.php?option=join&register=true&test_id=<?php echo $data['test_id'];?>"><?php echo $data['subject'];?></a></td>
-                    <td><a href="ujian.php?option=join&register=true&test_id=<?php echo $data['test_id'];?>"><?php if($data['test_availability']=='F') echo 'Selamanya'; if($data['test_availability']=='L') echo 'Terbatas';?></a></td>
+                    <td><a href="ujian.php?option=join&register=true&test_id=<?php echo $data['test_id'];?>"><?php echo $picoEdu->selectFromMap($data['test_availability'], array('F'=>'Selamanya', 'L'=>'Terbatas'));?></a></td>
                     <td><a href="ujian.php?option=join&register=true&test_id=<?php echo $data['test_id'];?>"><?php echo $data['number_of_question'];?></a></td>
                   </tr>
 					<?php

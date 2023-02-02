@@ -300,7 +300,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 			foreach ($rows2 as $data2) {
 				?>
             <option value="<?php echo $data2['school_id']; ?>"<?php if ($data['school_id'] == $data2['school_id'])
-					  echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
+					  echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
             <?php
 			}
 		}
@@ -315,8 +315,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<tr>
 		<td>Level Admin</td>
 		<td><select class="form-control input-select" name="admin_level" id="admin_level">
-		<option value="2"<?php if($data['admin_level'] == '2') echo ' selected="selected"';?>>Administrator</option>
-		<option value="1"<?php if($data['admin_level'] == '1') echo ' selected="selected"';?>>Super Administrator</option>
+		<option value="2"<?php if($data['admin_level'] == '2') echo PicoConst::SELECT_OPTION_SELECTED;?>>Administrator</option>
+		<option value="1"<?php if($data['admin_level'] == '1') echo PicoConst::SELECT_OPTION_SELECTED;?>>Super Administrator</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -327,8 +327,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td>Jenis Kelamin</td>
 		<td><select class="form-control input-select" name="gender" id="gender">
 		<option value=""></option>
-		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', ' selected="selected"');?>>Laki-Laki</option>
-		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', ' selected="selected"');?>>Perempuan</option>
+		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', PicoConst::SELECT_OPTION_SELECTED);?>>Laki-Laki</option>
+		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', PicoConst::SELECT_OPTION_SELECTED);?>>Perempuan</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -353,12 +353,12 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Blokir</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="blocked" value="1" id="blocked"<?php echo $picoEdu->ifMatch($data['blocked'], true, ' checked="checked"');?>> Blokir</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="blocked" value="1" id="blocked"<?php echo $picoEdu->ifMatch($data['blocked'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Blokir</label>
 		</td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, ' checked="checked"');?>> Aktif</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
 		</td>
 		</tr>
 		<tr><td></td>
@@ -444,11 +444,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
+		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
+		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>

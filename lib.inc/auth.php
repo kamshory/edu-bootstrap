@@ -22,5 +22,6 @@ if(@$member_login->member_id)
 }
 if($member_login->member_id)
 {
+	// Do nothing
 }
 

@@ -103,7 +103,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
     </tr>
     <tr>
     <td>Otomatis Kirim Jawaban</td>
-    <td><?php echo ($data['autosubmit'])?'Ya':'Tidak';?> </td>
+    <td><?php echo $picoEdu->trueFalse($data['autosubmit'], 'Ya', 'Tidak');?> </td>
     </tr>
 </table>
  </div>
@@ -114,10 +114,10 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 <div style="padding-bottom:5px;">
 Status <select name="status" id="status">
 	<option value="">Semua</option>
-	<option value="1"<?php echo $picoEdu->ifMatch($status, '1', ' selected="selected"');?>>Ujian</option>
-	<option value="2"<?php echo $picoEdu->ifMatch($status, '2', ' selected="selected"');?>>Selesai</option>
-	<option value="3"<?php echo $picoEdu->ifMatch($status, '3', ' selected="selected"');?>>Dikeluarkan</option>
-	<option value="4"<?php echo $picoEdu->ifMatch($status, '4', ' selected="selected"');?>>Diblokir</option>
+	<option value="1"<?php echo $picoEdu->ifMatch($status, '1', PicoConst::SELECT_OPTION_SELECTED);?>>Ujian</option>
+	<option value="2"<?php echo $picoEdu->ifMatch($status, '2', PicoConst::SELECT_OPTION_SELECTED);?>>Selesai</option>
+	<option value="3"<?php echo $picoEdu->ifMatch($status, '3', PicoConst::SELECT_OPTION_SELECTED);?>>Dikeluarkan</option>
+	<option value="4"<?php echo $picoEdu->ifMatch($status, '4', PicoConst::SELECT_OPTION_SELECTED);?>>Diblokir</option>
 </select>
 <input type="submit" id="show" class="btn com-button btn-success" value="Tampilkan" />
 </div>
@@ -252,7 +252,7 @@ window.onload = function()
 		foreach ($rows2 as $data2) {
 			?>
         <option value="<?php echo $data2['teacher_id']; ?>"<?php if ($data2['teacher_id'] == $teacher_id)
-				  echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
+				  echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
         <?php
 		}
 	}

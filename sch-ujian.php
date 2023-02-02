@@ -514,7 +514,7 @@ if (@$auth_student_id && @$auth_school_id) {
 						foreach($rows2 as $data2) {
 							?>
 						<option value="<?php $data2['class_id']; ?>" <?php if ($data2['class_id'] == $class_id)
-							   echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
+							   echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
 					<?php
 						}
 					}

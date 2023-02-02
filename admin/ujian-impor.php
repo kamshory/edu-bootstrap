@@ -311,7 +311,7 @@ $edit_key = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
 (select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
-(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `koleksi_question`
+(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `collection_of_question`
 FROM `edu_test` 
 WHERE `edu_test`.`test_id` = '$edit_key' and `school_id` = '$school_id'
 ";
@@ -359,7 +359,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     </tr>
     <tr>
       <td>Koleksi Soal</td>
-      <td><?php echo ($data['koleksi_question']);?> </td>
+      <td><?php echo $data['collection_of_question'];?> </td>
     </tr>
     <tr>
       <td>Jumlah Pilihan</td>

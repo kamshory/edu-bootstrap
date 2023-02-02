@@ -188,7 +188,7 @@ foreach($array as $k=>$v)
 {
 	if($v == $st)
 	{
-		$sel = ' selected="selected"';
+		$sel = PicoConst::SELECT_OPTION_SELECTED;
 	}
 	else
 	{
@@ -296,7 +296,7 @@ foreach($array as $k=>$v)
 {
 	if($v == $st)
 	{
-		$sel = ' selected="selected"';
+		$sel = PicoConst::SELECT_OPTION_SELECTED;
 	}
 	else
 	{

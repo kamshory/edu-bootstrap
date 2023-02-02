@@ -2,8 +2,8 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 if(empty(@$school_id))
 {
-include_once dirname(__FILE__)."/bukan-guru.php";
-exit();
+	include_once dirname(__FILE__)."/bukan-guru.php";
+	exit();
 }
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
@@ -62,16 +62,17 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 			{
 				switch($res)
 				{
-					case ZipArchive::ER_NOZIP:
+				case ZipArchive::ER_NOZIP:
 					$err = true;
 					break;
-					case ZipArchive::ER_INCONS :
+				case ZipArchive::ER_INCONS:
 					$err = true;
 					break;
-					case ZipArchive::ER_CRC :
-					default:
-					$err = true;
-					break;
+				case ZipArchive::ER_OPEN:
+					$err = $false;
+						break;
+				case ZipArchive::ER_CRC:
+				default:
 					$err = true;
 					break;
 				}
@@ -154,7 +155,11 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 								{
 									$isi_option = addslashes(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $test_dir, $base_src, $temp_dir)))));
 									$order_option = $option_no+1;
-									$score_option = addslashes(@$option['value']*$score_standar); if($score_option == 0) $score_option = addslashes(@$option['score']*$score_standar);
+									$score_option = addslashes(@$option['value']*$score_standar); 
+									if($score_option == 0) 
+									{
+										$score_option = addslashes(@$option['score']*$score_standar);
+									}
 
 									$option_id = $database->generateNewId();
 									
@@ -309,7 +314,7 @@ $edit_key = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
 (select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
-(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `koleksi_question`
+(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `collection_of_question`
 FROM `edu_test` 
 WHERE `edu_test`.`test_id` = '$edit_key' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id'
 ";
@@ -357,7 +362,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     </tr>
     <tr>
       <td>Koleksi Soal</td>
-      <td><?php echo ($data['koleksi_question']);?> </td>
+      <td><?php echo $data['collection_of_question'];?> </td>
     </tr>
     <tr>
       <td>Jumlah Pilihan</td>

@@ -76,7 +76,7 @@ class PicoEdu //NOSONAR
 		global $language_res;
 		global $language_id;
 		$text = '';
-		$fulltime = date('j F Y H:i:s', time() - $tm);
+		$fulltime = date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, time() - $tm);
 		if ($tm < 1) {
 			$text = self::SPAN_OPEN . $language_res[$language_id]['txt_left_now'] . self::SPAN_CLOSE;
 		} else if ($tm >= 1 && $tm < 60) {
@@ -607,7 +607,7 @@ class PicoEdu //NOSONAR
 	}
 	public function logInvalidLogin($member_id, $signin_type, $time, $time_limit, $count_limit)
 	{
-		$start_time = date('Y-m-d H:i:s', strtotime($time) - $time_limit);
+		$start_time = date(PicoConst::DATE_TIME_MYSQL, strtotime($time) - $time_limit);
 
 		$sql = "DELETE FROM `edu_invalid_signin` 
 		WHERE `member_id` = '$member_id' and `signin_type` = '$signin_type' and `signin_time` < '$start_time'
@@ -800,7 +800,7 @@ class PicoEdu //NOSONAR
 		$arr = array();
 		for($i = 1; $i<=12; $i++)
 		{
-			$sel = $i == $grade ? ' selected="selected"' : '';
+			$sel = $i == $grade ? PicoConst::SELECT_OPTION_SELECTED : '';
 			$arr[] = '<option value="'.$i.'" '.$sel.'>Tingkat '.$i.'</option>';
 		}
 

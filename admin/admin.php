@@ -273,8 +273,8 @@ if($stmt->rowCount() > 0)
 			<td>Jenis Kelamin</td>
 			<td><select class="form-control input-select" name="gender" id="gender">
 			<option value=""></option>
-			<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', ' selected="selected"');?>>Laki-Laki</option>
-			<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', ' selected="selected"');?>>Perempuan</option>
+			<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', PicoConst::SELECT_OPTION_SELECTED);?>>Laki-Laki</option>
+			<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', PicoConst::SELECT_OPTION_SELECTED);?>>Perempuan</option>
 			</select></td>
 			</tr>
 			<tr>
@@ -299,13 +299,13 @@ if($stmt->rowCount() > 0)
 			</tr>
 			<tr>
 			<td>Blokir</td>
-			<td><label><input type="checkbox" class="input-checkbox" name="blocked" value="1" id="blocked"<?php if($data['blocked']==1) {echo ' checked="checked"';}?>> Blokir</label>
+			<td><label><input type="checkbox" class="input-checkbox" name="blocked" value="1" id="blocked"<?php if($data['blocked']==1) {echo PicoConst::INPUT_CHECKBOX_CHECKED;}?>> Blokir</label>
 			</td>
 			</tr>
 			<tr>
 			<td>Aktif</td>
 			<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php if ($data['active'] == 1) {
-				echo ' checked="checked"';
+				echo PicoConst::INPUT_CHECKBOX_CHECKED;
 			}?>> Aktif</label>
 			</td>
 			</tr>
@@ -383,11 +383,11 @@ else if(@$_GET['option'] == 'detail')
 			</tr>
 			<tr>
 			<td>Dibuat</td>
-			<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
+			<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 			</tr>
 			<tr>
 			<td>Diubah</td>
-			<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_edit'])));?> </td>
+			<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 			</tr>
 			<tr>
 			<td>Admin Buat</td>

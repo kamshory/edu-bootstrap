@@ -57,11 +57,11 @@ $test_id = $data['test_id'];
         </tr>
         <tr>
         <td>Mulai Ujian
-        </td><td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['start'])));?> </td>
+        </td><td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['start'])));?> </td>
         </tr>
         <tr>
         <td>Selesai Ujian
-        </td><td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['end'])));?> </td>
+        </td><td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['end'])));?> </td>
         </tr>
         <tr>
         <td>Nilai Akhir
@@ -338,7 +338,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
         </tr>
 		<tr>
 		<td>Otomatis Kirim Jawaban</td>
-		<td><?php echo ($data['autosubmit'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['autosubmit'], 'Ya', 'Tidak');?> </td>
 		</tr>
     </table>
 </div>
@@ -458,11 +458,11 @@ $array_class = $picoEdu->getArrayClass($school_id);
 		</tr>
 		<tr>
 		<td>Terbuka
-		</td><td><?php echo ($data['open'])?'Ya':'Tidak';?> </td>
+		</td><td><?php echo $picoEdu->trueFalse($data['open'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td>Dibatasi</td>
-		<td><?php echo ($data['has_limits'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['has_limits'], 'Ya', 'Tidak');?> </td>
 		</tr>
         <?php
 		if($data['has_limits'])
@@ -506,7 +506,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 		?>
 		<tr>
 		<td>Otomatis Kirim Jawaban</td>
-		<td><?php echo ($data['autosubmit'])?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['autosubmit'], 'Ya', 'Tidak');?> </td>
 		</tr>
 		<tr>
 		<td>Nilai Standard</td>

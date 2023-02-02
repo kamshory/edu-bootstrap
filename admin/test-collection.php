@@ -205,7 +205,7 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>Active</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, ' checked="checked"');?>> Aktif</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
 		</td>
 		</tr>
 		<tr><td></td>

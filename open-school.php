@@ -119,7 +119,7 @@ if (@$_GET['option'] == 'detail') {
 						</tr>
 						<tr>
 							<td>Dibuat</td>
-							<td><?php echo translateDate(date('j F Y H:i:s', strtotime($data['time_create'])));?> </td>
+							<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 						</tr>
 					</table>
 					<div class="button-area">

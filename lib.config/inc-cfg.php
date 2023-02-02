@@ -13,8 +13,8 @@ if(!defined('DB_PREF'))
 define('DB_PREF', '');
 */
 
-$cfg = new stdClass;
-$configs = new stdClass;
+$cfg = new \stdClass;
+$configs = new \stdClass;
 
 $configs->db_type = "mysql";
 $configs->db_host = "localhost";
@@ -88,4 +88,4 @@ $cfg->equation_url_generator = "http://".$_SERVER['HTTP_HOST']."/equgen.php";
 $cfg->max_invalid_signin_time = 420;
 $cfg->max_invalid_signin_count = 3;
 
-$pagination = new stdClass;
+

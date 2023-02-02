@@ -175,7 +175,7 @@ $stmt = $database->executeQuery($sql);
 	  <td><a class="import-question" data-test-id="<?php echo $data['test_id'];?>" href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
 	  <td><a class="import-question" data-test-id="<?php echo $data['test_id'];?>" href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['class'];?></a></td>
 	  <td><a class="import-question" data-test-id="<?php echo $data['test_id'];?>" href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['subject'];?></a></td>
-	  <td><a target="_blank" href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo ($data['question']);?></a></td>
+	  <td><a target="_blank" href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['question'];?></a></td>
 	 </tr>
 	<?php
 	}

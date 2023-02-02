@@ -260,7 +260,7 @@ Informasi Singkat Ujian
     </tr>
     <tr>
     <td>Otomatis Kirim Jawaban</td>
-    <td><?php echo ($data['autosubmit'])?'Ya':'Tidak';?></td>
+    <td><?php echo $picoEdu->trueFalse($data['autosubmit'], 'Ya', 'Tidak');?></td>
     </tr>
 </table>
 <div class="button-area">

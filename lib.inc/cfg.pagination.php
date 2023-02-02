@@ -1,5 +1,5 @@
 <?php
-$pagination = new StdClass();
+$pagination = new \StdClass;
 $pagination->query = trim(kh_filter_input(INPUT_GET, 'q', FILTER_SANITIZE_SPECIAL_CHARS));
 $pagination->query_edit = kh_filter_input(INPUT_GET, 'q');
 $pagination->query_edit = trim(htmlspecialchars($pagination->query_edit));
@@ -25,9 +25,9 @@ $pagination->str_of = 'dari';//$lang_pack['pagination_of'];
 $pagination->limit_sql = " limit ".$pagination->offset.",".$pagination->limit;
 $pagination->str_result = "";
 
-$cfg->dec_precision = 2;//getProfile('dec_precision', $cfg->dec_precision);
-$cfg->dec_separator = ".";//getProfile('dec_separator', $cfg->dec_separator);
-$cfg->dec_thousands_separator = ",";//getProfile('dec_thousands_separator', $cfg->dec_thousands_separator);
+$cfg->dec_precision = 2;// Old code getProfile('dec_precision', $cfg->dec_precision);
+$cfg->dec_separator = ".";// Old code getProfile('dec_separator', $cfg->dec_separator);
+$cfg->dec_thousands_separator = ",";// Old code getProfile('dec_thousands_separator', $cfg->dec_thousands_separator);
 
 
 $pagination->array_get = array();

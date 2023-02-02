@@ -50,7 +50,7 @@ $html .=
         return false;
     }
 
-    public function createSubmenu($index, $menu, $expanded, $selectedMenu)
+    public function createSubmenu($index, $menu, $expanded, $selectedMenu) //NOSONAR
     {
         $cls1 = $expanded ? ' show' : '';
         if(!isset($menu['submenu']))

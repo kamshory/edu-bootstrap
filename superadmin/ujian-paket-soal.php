@@ -1079,17 +1079,17 @@ if(isset($data->file))
   <tr>
     <td>Tipe Pilihan</td>
     <td><select name="numbering" id="numbering" data-required="true" required="required">
-      <option value="upper-alpha"<?php if($data->numbering=='upper-alpha') echo ' selected="selected"';?>>A, B, C, D, ...</option>
-      <option value="lower-alpha"<?php if($data->numbering=='lower-alpha') echo ' selected="selected"';?>>a, b, c, d, ...</option>
-      <option value="upper-roman"<?php if($data->numbering=='upper-roman') echo ' selected="selected"';?>>I, II, III, IV, ...</option>
-      <option value="lower-roman"<?php if($data->numbering=='lower-roman') echo ' selected="selected"';?>>i, ii, iii, iv, ...</option>
-      <option value="decimal"<?php if($data->numbering=='decimal') echo ' selected="selected"';?>>1, 2, 3, 4, ...</option>
-      <option value="decimal-leading-zero"<?php if($data->numbering=='decimal-leading-zero') echo ' selected="selected"';?>>01, 02, 03, 04, ...</option>
+      <option value="upper-alpha"<?php if($data->numbering=='upper-alpha') echo PicoConst::SELECT_OPTION_SELECTED;?>>A, B, C, D, ...</option>
+      <option value="lower-alpha"<?php if($data->numbering=='lower-alpha') echo PicoConst::SELECT_OPTION_SELECTED;?>>a, b, c, d, ...</option>
+      <option value="upper-roman"<?php if($data->numbering=='upper-roman') echo PicoConst::SELECT_OPTION_SELECTED;?>>I, II, III, IV, ...</option>
+      <option value="lower-roman"<?php if($data->numbering=='lower-roman') echo PicoConst::SELECT_OPTION_SELECTED;?>>i, ii, iii, iv, ...</option>
+      <option value="decimal"<?php if($data->numbering=='decimal') echo PicoConst::SELECT_OPTION_SELECTED;?>>1, 2, 3, 4, ...</option>
+      <option value="decimal-leading-zero"<?php if($data->numbering=='decimal-leading-zero') echo PicoConst::SELECT_OPTION_SELECTED;?>>01, 02, 03, 04, ...</option>
     </select></td>
   </tr>
   <tr>
     <td>Pengacakan Pilihan</td>
-    <td><label><input type="checkbox" name="random" id="random" value="1"<?php if($data->random) echo ' checked="checked"';?> /> Diacak</label></td>
+    <td><label><input type="checkbox" name="random" id="random" value="1"<?php if($data->random) echo PicoConst::INPUT_CHECKBOX_CHECKED;?> /> Diacak</label></td>
   </tr>
 </table>
 </div>
@@ -1150,7 +1150,7 @@ for($jj = 0; $jj < $count_option; $jj++)
 ?>
 <div class="option-item" data-index="<?php echo $i;?>">
 <div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i];?></span> | Nilai 
-<input type="number" min="0" max="<?php echo ($data3['standard_score']);?>" class="input-text input-text-short" name="score[<?php echo $i;?>]" id="score_<?php echo $i;?>" value="<?php echo $data2->value;?>" autocomplete="off" /> (Nilai Maksimum <?php echo ($data3['standard_score']);?>)</div>
+<input type="number" min="0" max="<?php echo $data3['standard_score'];?>" class="input-text input-text-short" name="score[<?php echo $i;?>]" id="score_<?php echo $i;?>" value="<?php echo $data2->value;?>" autocomplete="off" /> (Nilai Maksimum <?php echo $data3['standard_score'];?>)</div>
 <div class="option-editor">
 <textarea spellcheck="false" class="htmleditor" name="option[<?php echo $i;?>]" id="option_<?php echo $i;?>" style="width:100%;"><?php echo htmlspecialchars(($data2->text));?></textarea>
 </div>

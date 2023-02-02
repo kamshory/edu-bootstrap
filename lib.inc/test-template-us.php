@@ -217,7 +217,7 @@ foreach($rows as $data)
 	?>
     	<div class="option-item">
         	<div class="option-ctrl">
-            	<label><input type="radio" data-test="<?php echo $test_id;?>" data-question="<?php echo $soal;?>" name="answer_<?php echo $data['question_id'];?>" id="answer_<?php echo $data['question_id'];?>" class="radio_answer" value=""<?php echo $picoEdu->ifMatch($answer, '', ' checked="checked"');?>>
+            	<label><input type="radio" data-test="<?php echo $test_id;?>" data-question="<?php echo $soal;?>" name="answer_<?php echo $data['question_id'];?>" id="answer_<?php echo $data['question_id'];?>" class="radio_answer" value=""<?php echo $picoEdu->ifMatch($answer, '', PicoConst::INPUT_CHECKBOX_CHECKED);?>>
                 <?php echo liststyle($data['numbering'], $i);?>
                 </label>
             </div>

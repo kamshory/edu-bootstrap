@@ -39,7 +39,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['token_id']))
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$now = $picoEdu->getLocalDateTime();
-	$oneday = date('Y-m-d H:i:s', time()-86400);
+	$oneday = date(PicoConst::DATE_TIME_MYSQL, time()-86400);
 	$sql = "DELETE FROM `edu_token` WHERE `time_expire` < '$oneday'
 	";
 	$database->executeDelete($sql, true);
@@ -181,7 +181,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Kedaluarsa</td>
-		<td><input type="text" class="form-control input-text input-text-datetime" name="time_expire" id="time_expire" value="<?php echo date('Y-m-d H:i:s', time() + 3600); ?>" autocomplete="off" required="required" /></td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_expire" id="time_expire" value="<?php echo date(PicoConst::DATE_TIME_MYSQL, time() + 3600); ?>" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td></td>
@@ -272,7 +272,7 @@ and `edu_token`.`token_id` = '$edit_key'
 			$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
 			$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
 			$now = $picoEdu->getLocalDateTime();
-			$oneday = date('Y-m-d H:i:s', time() - 86400);
+			$oneday = date(PicoConst::DATE_TIME_MYSQL, time() - 86400);
 			include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 			if (isset($_POST['cleanup'])) {
 				$sql = "DELETE FROM `edu_invalid_signin` WHERE `signin_type` = 'T' ";
@@ -327,7 +327,7 @@ function printToken(frm)
 		foreach ($rows2 as $data2) {
 		?>
         <option value="<?php echo $data2['test_id']; ?>"<?php if ($test_id == $data2['test_id'])
-						  echo ' selected="selected"'; ?>><?php echo $data2['name']; ?></option>
+						  echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
         <?php
 		}
 	}

@@ -106,7 +106,7 @@ class RichText{
 		$souce = htmlspecialchars_decode($s);
 		$arr = explode("://", $s, 2);
 		$protocol1 = $arr[0];
-		$protocol2 = ltrim(preg_replace("/[^A-Za-z\d]/i", "", $protocol1), "0123456789");
+		$protocol2 = ltrim(preg_replace("/[^A-Za-z\d]/i", "", $protocol1), "0123456789"); //NOSONAR
 		if ($protocol1 != $protocol2) {
 			$url = $protocol2 . "://" . $arr[1];
 		} else {
