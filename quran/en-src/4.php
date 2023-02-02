@@ -37,7 +37,7 @@ case 34:{?>Men are in charge of women, because Allah hath men the one of them to
 case 35:{?>And if ye fear a breech between them twain ( the man and wife ), appoint an arbiter from his folk and an arbiter from her folk. If they desire amendment Allah will make them of one mind. Lo! Allah is ever Knower, Aware.<?php break;}
 case 36:{?>And serve Allah. Ascribe no thing as partner unto Him. ( Show ) kindness unto parents, and unto near kindred, and orphans, and the needy, and into the neighbor who is of kin ( unto you ) and the neighbor who is not of kin and the fellow traveller and the wayfarer and ( the slaves ) whom your right hands possess. Lo! Allah loveth not such as are proud and boastful,<?php break;}
 case 37:{?>Who hoard their wealth and enjoin avarice on others, and hide that which Allah hath bestowed upon them of His bounty. For disbelievers We prepare a shameful doom;<?php break;}
-case 38:{?>And ( also ) those who spend their wealth in sort_order to be seen of men, and believe not in Allah nor the Last Day. Whoso taketh Satan for a comrade, a bad comrade hath he.<?php break;}
+case 38:{?>And ( also ) those who spend their wealth in order to be seen of men, and believe not in Allah nor the Last Day. Whoso taketh Satan for a comrade, a bad comrade hath he.<?php break;}
 case 39:{?>What have they ( to fear ) if they believe in Allah and the Last Day and spend ( aright ) of that which Allah hath bestowed upon them, when Allah is ever Aware of them ( and all they do )?<?php break;}
 case 40:{?>Lo! Allah wrongeth not even of the weight of an ant; and if there is a good deed, He will double it and will give ( the doer ) from His presence an immense reward.<?php break;}
 case 41:{?>But how ( will it be with them ) when we bring of every people a witness, and We bring thee ( O Muhammad ) a witness against these?<?php break;}
@@ -164,7 +164,7 @@ case 161:{?>And of their taking usury when they were forbidden it, and of their 
 case 162:{?>But those of them who are firm in knowledge and the believers believe in that which is revealed unto thee, and that which was revealed before thee, especially the diligent in prayer and those who pay the poor due, the believers in Allah and the Last Day. Upon these We shall bestow immense reward.<?php break;}
 case 163:{?>Lo! We inspire thee as We inspired Noah and the prophets after him, as We inspired Abraham and Ishmael and Isaac and Jacob and the tribes, and Jesus and Job and Jonah and Aaron and Solomon, and as we imparted unto David the Psalms;<?php break;}
 case 164:{?>And messengers We have mentioned unto thee before and messengers We have not mentioned unto thee; and Allah spake directly unto Moses;<?php break;}
-case 165:{?>Messengers of good cheer and off warning, in sort_order that mankind might have no argument against Allah after the messengers. Allah was ever Mighty, Wise.<?php break;}
+case 165:{?>Messengers of good cheer and off warning, in order that mankind might have no argument against Allah after the messengers. Allah was ever Mighty, Wise.<?php break;}
 case 166:{?>But Allah ( Himself ) testifieth concerning that which He hath revealed unto thee; in His knowledge hath He revealed it; and the Angels also testify. And Allah is sufficient witness.<?php break;}
 case 167:{?>Lo! those who disbelieve and hinder ( others ) from the way of Allah, they verily have wandered far astray.<?php break;}
 case 168:{?>Lo! those who disbelieve and deal in wrong, Allah will never forgive them, neither will He guide them unto a road.<?php break;}

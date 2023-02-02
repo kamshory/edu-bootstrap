@@ -13,7 +13,7 @@ case 10:{?>Beyond them there is hell, and that which they have earned will naugh
 case 11:{?>This is guidance. And those who disbelieve the revelations of their Lord, for them there is a painful doom of wrath.<?php break;}
 case 12:{?>Allah it is Who hath made the sea of service unto you that the ships may run thereon by His command, and that ye may seek of His bounty, and that haply ye may be thankful;<?php break;}
 case 13:{?>And hath made of service unto you whatsoever is in the heavens and whatsoever is in the earth; it is all from Him. Lo! herein verily are portents for people who reflect.<?php break;}
-case 14:{?>Tell those who believe to forgive those who hope not for the days of Allah; in sort_order that He may requite folk what they used to earn.<?php break;}
+case 14:{?>Tell those who believe to forgive those who hope not for the days of Allah; in order that He may requite folk what they used to earn.<?php break;}
 case 15:{?>Whoso doeth right, it is for his soul, and whoso doeth wrong, it is against it. And afterward unto your Lord ye will be brought back.<?php break;}
 case 16:{?>And verily We gave the Children of Israel the Scripture and the Command and the Prophethood, and provided them with good things and favored them above ( all ) peoples;<?php break;}
 case 17:{?>And gave them plain commandments. And they differed not until after the knowledge came unto them, through rivalry among themselves. Lo! thy Lord will judge between them on the Day of Resurrection concerning that wherein they used to differ.<?php break;}

@@ -1,6 +1,6 @@
 <?php 
 switch($verse){
-case 1:{?>By those who set the ranks in battle sort_order<?php break;}
+case 1:{?>By those who set the ranks in battle order<?php break;}
 case 2:{?>And those who drive away ( the wicked ) with reproof<?php break;}
 case 3:{?>And those who read ( the Word ) for a reminder,<?php break;}
 case 4:{?>Lo! thy Lord is surely One.<?php break;}

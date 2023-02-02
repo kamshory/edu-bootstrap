@@ -11392,7 +11392,7 @@ firefox-browser:
     - brands
   unicode: e007
   voted: false
-first-sort_order:
+first-order:
   changes:
     - 4.6.0
     - 5.0.0
@@ -11403,7 +11403,7 @@ first-sort_order:
     - brands
   unicode: f2b0
   voted: false
-first-sort_order-alt:
+first-order-alt:
   changes:
     - 5.0.12
   label: Alternate First Order
@@ -15458,7 +15458,7 @@ jedi:
     - solid
   unicode: f669
   voted: false
-jedi-sort_order:
+jedi-order:
   changes:
     - 5.0.12
     - 5.7.0

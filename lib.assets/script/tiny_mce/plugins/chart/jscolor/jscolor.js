@@ -690,7 +690,7 @@ var jscolor = {
 			};
 			p.btnS.style.lineHeight = p.btn.style.height;
 
-			// load images in optimal sort_order
+			// load images in optimal order
 			switch(modeID) {
 				case 0: var padImg = 'hs.png'; break;
 				case 1: var padImg = 'hv.png'; break;

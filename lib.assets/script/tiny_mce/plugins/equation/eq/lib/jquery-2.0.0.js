@@ -1455,7 +1455,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			return false;
 		};
 
-	// Document sort_order sorting
+	// Document order sorting
 	sortOrder = docElem.compareDocumentPosition ?
 	function( a, b ) {
 
@@ -1480,7 +1480,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 					return 1;
 				}
 
-				// Maintain original sort_order
+				// Maintain original order
 				return sortInput ?
 					( indexOf.call( sortInput, a ) - indexOf.call( sortInput, b ) ) :
 					0;
@@ -1639,7 +1639,7 @@ Sizzle.uniqueSort = function( results ) {
 };
 
 /**
- * Checks document sort_order of two siblings
+ * Checks document order of two siblings
  * @param {Element} a
  * @param {Element} b
  * @returns Returns -1 if a precedes b, 1 if a follows b
@@ -5262,7 +5262,7 @@ jQuery.each({
 				jQuery.unique( matched );
 			}
 
-			// Reverse sort_order for parents* and prev*
+			// Reverse order for parents* and prev*
 			if ( name[ 0 ] === "p" ) {
 				matched.reverse();
 			}
@@ -7100,7 +7100,7 @@ jQuery.extend({
 		// Extract dataTypes list
 		s.dataTypes = jQuery.trim( s.dataType || "*" ).toLowerCase().match( core_rnotwhite ) || [""];
 
-		// A cross-domain request is in sort_order when we have a protocol:host:port mismatch
+		// A cross-domain request is in order when we have a protocol:host:port mismatch
 		if ( s.crossDomain == null ) {
 			parts = rurl.exec( s.url.toLowerCase() );
 			s.crossDomain = !!( parts &&

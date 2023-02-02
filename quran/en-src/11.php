@@ -119,7 +119,7 @@ case 116:{?>If only there had been among the generations before you men possessi
 case 117:{?>In truth thy Lord destroyed not the townships tyrannously while their folk were doing right.<?php break;}
 case 118:{?>And if thy Lord had willed, He verily would have made mankind one nation, yet they cease not differing,<?php break;}
 case 119:{?>Save him on whom thy Lord hath mercy; and for that He did create them. And the Word of thy Lord hath been fulfilled : Verily I shall fill hell with the jinn and mankind together.<?php break;}
-case 120:{?>And all that We relate unto thee of the story of the messengers is in sort_order that thereby We may make firm thy heart. And herein hath come unto thee the Truth and an exhortation and a reminder for believers.<?php break;}
+case 120:{?>And all that We relate unto thee of the story of the messengers is in order that thereby We may make firm thy heart. And herein hath come unto thee the Truth and an exhortation and a reminder for believers.<?php break;}
 case 121:{?>And say unto those who believe not : Act according to your power. Lo! we ( too ) are acting.<?php break;}
 case 122:{?>And wait! Lo! we ( too ) are waiting.<?php break;}
 case 123:{?>And Allah ' s is the Invisible of the heavens and the earth, and unto Him the whole matter will be returned. So worship Him and put thy trust in Him. Lo! thy Lord is not unaware of what ye ( mortals ) do.<?php break;}

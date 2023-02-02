@@ -24,7 +24,7 @@ case 21:{?>They all come forth unto their Lord. Then those who were despised say
 case 22:{?>And Satan saith, when the matter hath been decided : Lo! Allah promised you a promise of truth; and I promised you, then failed you. And I had no power over you save that I called unto you and ye obeyed me. So blame me not, but blame yourselves. I cannot help you, nor can ye help me. Lo! I disbelieved in that which ye before ascribed to me. Lo! for wrong doers is a painful doom.<?php break;}
 case 23:{?>And those who believed and did good works are made to enter Gardens underneath which rivers flow, therein abiding by permission of their Lord, their greeting therein : Peace!<?php break;}
 case 24:{?>Seest thou not how Allah coineth a similitude : A goodly saying, as a goodly tree, its root set firm, its branches reaching into heaven,<?php break;}
-case 25:{?>Giving its fruit at every season by permission of its Lord? Allah coineth the similitudes for mankind in sort_order that they may reflect.<?php break;}
+case 25:{?>Giving its fruit at every season by permission of its Lord? Allah coineth the similitudes for mankind in order that they may reflect.<?php break;}
 case 26:{?>And the similitude of a bad saying is as a bad tree, uprooted from upon the earth, possessing no stability.<?php break;}
 case 27:{?>Allah confirmeth those who believe by a firm saying in the life of the world and in the Hereafter, and Allah sendeth wrongdoers astray. And Allah doeth what He will.<?php break;}
 case 28:{?>Hast thou not seen those who gave the grace of Allah in exchange for thanklessness and led their people down to the Abode of Loss,<?php break;}
@@ -36,7 +36,7 @@ case 33:{?>And maketh the sun and the moon, constant in their courses, to be of 
 case 34:{?>And He giveth you of all ye ask of Him, and if ye would count the bounty of Allah ye cannot reckon it. Lo! man is verily a wrong doer, an ingrate.<?php break;}
 case 35:{?>And when Abraham said : My Lord! Make safe this territory, and preserve me and my sons from serving idols.<?php break;}
 case 36:{?>My Lord! Lo! they have led many of mankind astray. But whoso followeth me, he verity is of me. And whoso disobeyeth me, still Thou art Forgiving, Merciful.<?php break;}
-case 37:{?>Our Lord! Lo! I have settled some of my posterity in an uncultivable valley near unto Thy holy House, our Lord! that they may establish proper worship; so incline some hearts of men that they may yearn toward them, and provide Thou them with fruits in sort_order that they may be thankful.<?php break;}
+case 37:{?>Our Lord! Lo! I have settled some of my posterity in an uncultivable valley near unto Thy holy House, our Lord! that they may establish proper worship; so incline some hearts of men that they may yearn toward them, and provide Thou them with fruits in order that they may be thankful.<?php break;}
 case 38:{?>Our Lord! Lo! Thou knowest that which we hide and that which we proclaim. Nothing in the earth or in the heaven is hidden from Allah.<?php break;}
 case 39:{?>Praise be to Allah Who hath given me, in my old age, Ishmael and Isaac! Lo! my Lord is indeed the Nearer of Prayer.<?php break;}
 case 40:{?>My Lord! Make me to establish proper worship, and some of my posterity ( also ); our Lord! and accept the prayer.<?php break;}
@@ -51,5 +51,5 @@ case 48:{?>On the day when the earth will be changed to other than the earth, an
 case 49:{?>Thou wilt see the guilty on that day linked together in chains.<?php break;}
 case 50:{?>Their raiment of pitch, and the Fire covering their faces.<?php break;}
 case 51:{?>That Allah may repay each soul what it hath earned. Lo! Allah is swift at reckoning.<?php break;}
-case 52:{?>This is a clear message for mankind in sort_order that they may be warned thereby, and that they may know that He is only One God, and that men of understanding may take heed.<?php break;}
+case 52:{?>This is a clear message for mankind in order that they may be warned thereby, and that they may know that He is only One God, and that men of understanding may take heed.<?php break;}
 }?>

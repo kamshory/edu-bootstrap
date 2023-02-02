@@ -37,7 +37,7 @@ case 34:{?>My brother Aaron is more eloquent then me in speech. Therefor send hi
 case 35:{?>He said : We will strengthen thine arm with thy brother, and We will give unto you both power so that they cannot reach you for Our portents. Ye twain, and those who follow you, will be the winners.<?php break;}
 case 36:{?>But when Moses came unto them with Our clear tokens, they said : This is naught but invented magic. We never heard of this among our fathers of old.<?php break;}
 case 37:{?>And Moses said : My Lord is best aware of him who bringeth guidance from His presence, and whose will be the sequel of the Home ( of bliss ). Lo! wrong doers will not be successful.<?php break;}
-case 38:{?>And Pharaoh said : O chiefs! I know not that ye have a god other than me, so kindle for me ( a fire ), O Haman, to bake the mud; and set up for me a lofty tower in sort_order that I may survey the god of Moses; and lo! I deem him of the liars.<?php break;}
+case 38:{?>And Pharaoh said : O chiefs! I know not that ye have a god other than me, so kindle for me ( a fire ), O Haman, to bake the mud; and set up for me a lofty tower in order that I may survey the god of Moses; and lo! I deem him of the liars.<?php break;}
 case 39:{?>And he and his hosts were haughty in the land without right, and deemed that they would never be brought back to Us.<?php break;}
 case 40:{?>Therefor We seized him and his hosts, and abandoned them unto the sea. Behold the nature of the consequence for evil doers!<?php break;}
 case 41:{?>And We made them patterns that invite unto the Fire, and on the Day of Resurrection they will not be helped.<?php break;}
