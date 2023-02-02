@@ -1,6 +1,5 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 if(empty(@$school_id))
 {
 	include_once dirname(__FILE__)."/bukan-admin.php";
@@ -18,6 +17,7 @@ $member_create = @$admin_login->admin_id . '';
 $member_edit = @$admin_login->admin_id . '';
 
 $cfg->page_title = "Ujian";
+include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST) && isset($_POST['save']))
 {

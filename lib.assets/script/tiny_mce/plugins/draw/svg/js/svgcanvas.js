@@ -5919,8 +5919,8 @@ this.setSvgString = function(xmlString) {
     if(attrs.height <= 0) attrs.height = 200;
     
     content.attr(attrs);
-    this.contentW = attrs['width'];
-    this.contentH = attrs['height'];
+    this.contentW = attrs['width'] || 400;
+    this.contentH = attrs['height'] || 300;
     
     $("#canvas_width").val(this.contentW)
     $("#canvas_height").val(this.contentH)
@@ -6693,8 +6693,8 @@ this.setResolution = function(x, y) {
       batchCmd = new BatchCommand("Change Image Dimensions");
     }
 
-    x = convertToNum('width', x);
-    y = convertToNum('height', y);
+    x = convertToNum('width', x) || 400;
+    y = convertToNum('height', y) || 300;
     
     svgcontent.setAttribute('width', x);
     svgcontent.setAttribute('height', y);
@@ -8701,17 +8701,21 @@ this.updateCanvas = function(w, h) {
   svgroot.setAttribute("width", w);
   svgroot.setAttribute("height", h);
   var bg = $('#canvasBackground')[0];
-  var old_x = svgcontent.getAttribute('x');
-  var old_y = svgcontent.getAttribute('y');
-  var x = (w/2 - this.contentW*current_zoom/2);
-  var y = (h/2 - this.contentH*current_zoom/2);
+  var old_x = svgcontent.getAttribute('x') || 400;
+  var old_y = svgcontent.getAttribute('y') || 300;
+
+  let czW = this.contentW || 400;
+  let czH = this.contentH || 300;
+
+  var x = (w/2 - czW*current_zoom/2);
+  var y = (h/2 - czH*current_zoom/2);
 
   assignAttributes(svgcontent, {
-    width: this.contentW*current_zoom,
-    height: this.contentH*current_zoom,
+    width: czW*current_zoom,
+    height: czH*current_zoom,
     'x': x,
     'y': y,
-    "viewBox" : "0 0 " + this.contentW + " " + this.contentH
+    "viewBox" : "0 0 " + czW+ " " + czH
   });
   
   assignAttributes(bg, {

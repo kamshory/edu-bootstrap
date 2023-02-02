@@ -1896,3 +1896,30 @@ UPDATE `edu_school` set
 <p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/882ddd445e668edf8e8123bcc2d5cb62.svg\"></p>'
 	WHERE `school_id` = '063ce682801be89951aa'
 	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/03993b0cd95ce641d106c67b140e07f0.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/bbe7e1e3efcb86329f2b70c7da642f65.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/77fed55d471b428e282a4cb7c75072aa.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/77fed55d471b428e282a4cb7c75072aa.svg\" alt=\"\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-png\" src=\"media.edu/school/063ce682801be89951aa/description/35310254dca906659d2a9f8d4c3074f9.png\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p>&nbsp;</p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\" src=\"media.edu/school/063ce682801be89951aa/description/5609f347bd9a4caf9041c10cee456caf.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
