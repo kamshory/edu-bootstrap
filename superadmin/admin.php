@@ -323,8 +323,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<tr>
 		<td>Level Admin</td>
 		<td><select class="form-control input-select" name="admin_level" id="admin_level">
-		<option value="2"<?php if($data['admin_level'] == '2') echo PicoConst::SELECT_OPTION_SELECTED;?>>Administrator</option>
-		<option value="1"<?php if($data['admin_level'] == '1') echo PicoConst::SELECT_OPTION_SELECTED;?>>Super Administrator</option>
+		<option value="2"<?php echo $picoEdu->ifMatch($data['admin_level'], '2', PicoConst::SELECT_OPTION_SELECTED);?>>Administrator</option>
+		<option value="1"<?php echo $picoEdu->ifMatch($data['admin_level'], '1', PicoConst::SELECT_OPTION_SELECTED);?>>Super Administrator</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -416,7 +416,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Level Admin</td>
-		<td><?php if($data['admin_level']=='2') echo 'Administrator'; if($data['admin_level']=='1') echo 'Super Administrator';?> </td>
+		<td><?php echo $picoEdu->selectFromMap($data['admin_level'], array('2' => 'Administrator', '1' => 'Super Administrator'));?> </td>
 		</tr>
 		<tr>
 		<td>Nama</td>
@@ -637,7 +637,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $picoEdu->selectFromMap($data['gender'], array('M'=>'L', 'W'=>'P'));?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['email'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php if($data['admin_level']=='2') echo 'Administrator'; if($data['admin_level']=='1') echo 'Super Administrator';?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $picoEdu->selectFromMap($data['admin_level'], array('2' => 'Administrator', '1' => 'Super Administrator'));?></a></td>
       <td><?php echo $picoEdu->trueFalse($data['blocked'], 'Ya', 'Tidak');?> </td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
