@@ -1928,3 +1928,13 @@ UPDATE `edu_school` set
 	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/7eb3abd56a6d917731111fb930a0c070.svg\"><br>&nbsp;</p>'
 	WHERE `school_id` = '063ce682801be89951aa'
 	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_teacher` SET `active` = false WHERE `teacher_id` = '063ce68285402c98a82f' and `school_id` = '063ce682801be89951aa' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_teacher` SET `active` = false WHERE `teacher_id` = '063ce68285402c98a82f' and `school_id` = '063ce682801be89951aa' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_teacher` SET `active` = false WHERE `teacher_id` = '063ce68285402c98a82f' and `school_id` = '063ce682801be89951aa' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_teacher` SET `active` = false WHERE `teacher_id` = '063ce68285402c98a82f' and `school_id` = '063ce682801be89951aa' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_teacher` SET `active` = false WHERE `teacher_id` = '063ce68285402c98a82f' and `school_id` = '063ce682801be89951aa' ;

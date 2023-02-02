@@ -501,9 +501,9 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 </div>
 
 <div class="button-area">
-  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn com-button btn-success" />
-  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-success" />
-  <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-success delete-button" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
+  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn com-button btn-primary" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-warning" />
+  <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-danger delete-button" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
   <input type="button" name="print" id="print" value="Cetak Password" class="btn com-button btn-success" onclick="window.open('<?php echo basename($_SERVER['PHP_SELF']);?>?option=print-password&school_id=<?php echo $school_id;?>')" />
   </div>
 </form>

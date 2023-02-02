@@ -922,7 +922,7 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
   <input type="submit" name="set_active" id="set_active" value="Aktif" class="btn com-button btn-success" />
   <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktif" class="btn com-button btn-success" />
   <input type="submit" name="recalculation" id="recalculation" value="Hitung Ulang KD" class="btn com-button btn-success" onclick="return confirm('Perhitungan ulang nilai kompetensi dasar hanya dapat dilakukan jika soal ujian belum dihapus. Apakah Anda yakin untuk menghitung ulang nilai kompetensi dasar?');"/>
-  <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-success delete-button" onclick="return confirm('Apakah Anda yakin untuk menghapus data ini?');" />
+  <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-danger delete-button" onclick="return confirm('Apakah Anda yakin untuk menghapus data ini?');" />
 	<?php
     if(!isset($_GET['expand'])){
     ?>

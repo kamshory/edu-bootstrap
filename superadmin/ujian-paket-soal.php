@@ -1534,8 +1534,8 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 </div>
 
 <div class="button-area">
-  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn com-button btn-success" />
-  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-success" />
+  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn com-button btn-primary" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-warning" />
   </div>
 </form>
 <?php

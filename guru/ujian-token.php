@@ -548,8 +548,8 @@ if($test_id == 0 && $class_id == 0)
 ?>
 <div class="button-area">
   <input type="button" name="print" id="print" value="Cetak" class="btn com-button btn-success" onclick="printToken($(this).closest('form'))" />
-  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-success" onclick="return confirm('Apakah Anda akan menonaktifkan token ini?')" />
-  <input type="button" name="add" id="add" value="Tambah" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-warning" onclick="return confirm('Apakah Anda akan menonaktifkan token ini?')" />
+  <input type="button" name="add" id="add" value="Tambah" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
   <input type="submit" name="cleanup" id="cleanup" value="Hapus Token Salah" class="btn com-button btn-success" onclick="return confirm('Apakah Anda akan menghapus semua token salah yang dimasukkan siswa?')" />
   </div>
 </form>

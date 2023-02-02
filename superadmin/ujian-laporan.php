@@ -709,7 +709,7 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 <div class="button-area">
   <input type="submit" name="set_active" id="set_active" value="Aktif" class="btn com-button btn-success" />
   <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktif" class="btn com-button btn-success" />
-  <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-success delete-button" onclick="return confirm('Apakah Anda yakin untuk menghapus data ini?');" />
+  <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-danger delete-button" onclick="return confirm('Apakah Anda yakin untuk menghapus data ini?');" />
 	<?php
     if(!isset($_GET['expand'])){
     ?>
