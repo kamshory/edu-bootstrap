@@ -7,6 +7,7 @@ if(!@$admin_id)
 }
 $path = dirname(__FILE__) . "/planetedu.xlsx";
 require_once dirname(dirname(__FILE__)) . '/lib.inc/PHPExcel_1.8.0/Classes/PHPExcel/IOFactory.php';
+require_once dirname(dirname(__FILE__)) . '/lib.inc/dom.php';
 	
 
 function generateTable($header, $body)
@@ -22,14 +23,14 @@ function generateTable($header, $body)
     $table .= '<tbody>';
     foreach($body as $val)
     {
-    $table .= '<tr>';
-    $table .= '<td>'.implode('</td><td>', $val).'</td>';
-    $table .= '</tr>';
+        $table .= '<tr>';
+        $table .= '<td>'.implode('</td><td>', $val).'</td>';
+        $table .= '</tr>';
     }
     $table .= '</tbody>';
 
     $table .= '</table>';
-
+    $table = tidyHTML($table);
     return $table;
 }
 
