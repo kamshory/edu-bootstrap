@@ -1923,3 +1923,8 @@ UPDATE `edu_school` set
 <p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\" src=\"media.edu/school/063ce682801be89951aa/description/5609f347bd9a4caf9041c10cee456caf.svg\"></p>'
 	WHERE `school_id` = '063ce682801be89951aa'
 	;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/7eb3abd56a6d917731111fb930a0c070.svg\"><br>&nbsp;</p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
