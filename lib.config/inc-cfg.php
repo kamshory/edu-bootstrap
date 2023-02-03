@@ -24,7 +24,8 @@ $configs->db_pass = "alto1234";
 $configs->db_name = "mini_picopi";
 $configs->db_time_zone = "Asia/Jakarta";
 $configs->db_time_zone = "Asia/Jakarta";
-$configs->sync_database_dir = dirname(dirname(__FILE__))."/lib.sync";
+$configs->sync_database_dir = dirname(dirname(__FILE__))."/lib.sync/database/pool";
+$configs->sync_database_pool_name = "pool.txt";
 
 $cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
 $cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/";

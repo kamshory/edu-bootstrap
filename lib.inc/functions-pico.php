@@ -722,7 +722,8 @@ $database = new PicoDatabase(
 	$configs->db_pass,
 	$configs->db_name,
 	$configs->db_time_zone,
-	$configs->sync_database_dir
+	$configs->sync_database_dir,
+	$configs->sync_database_pool_name
 );
 
 $database->connect();
@@ -749,10 +750,10 @@ class FileSynchronizer
 	}
 	public function getPoolPath()
 	{
-		$poolPath = $this->basePath . "/" . "file.txt";
+		$poolPath = $this->basePath . "/" . $this->fileName;
 		if(filesize($poolPath) > $this->maxSize)
 		{
-			$newPath = 'pool_'.date('Y-m-d-H-i-s').'.txt';
+			$newPath = $this->basePath . "/" . 'pool_'.date('Y-m-d-H-i-s').'.txt';
 			rename($poolPath, $newPath);
 		}
 		return $poolPath;

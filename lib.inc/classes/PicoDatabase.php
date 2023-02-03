@@ -11,13 +11,15 @@ class PicoDatabase
 	public $database = "";
 	public $timezone = "00:00";
 	public $syncDatabaseDir = "";
+	public $syncDatabaseFileName = "";
+	public $maxSize = 1000000;
 
 	public $delimiter = '--------------ruihwuiethwiughweighiwehgiwe';
 	const NEW_LINE = "\r\n";
 
 	private $conn = null;
 
-	public function __construct($driver, $host, $port, $username, $password, $database, $timezone, $syncDatabaseDir = null) //NOSONAR
+	public function __construct($driver, $host, $port, $username, $password, $database, $timezone, $syncDatabaseDir = null, $syncDatabaseFileName = null) //NOSONAR
 	{
 		$this->driver = $driver;
 		$this->host = $host;
@@ -26,7 +28,14 @@ class PicoDatabase
 		$this->password = $password;
 		$this->database = $database;
 		$this->timezone = $timezone;
-		$this->syncDatabaseDir = $syncDatabaseDir;
+		if($syncDatabaseDir != null)
+		{
+			$this->syncDatabaseDir = $syncDatabaseDir;
+		}
+		if($syncDatabaseFileName != null)
+		{
+			$this->syncDatabaseFileName = $syncDatabaseFileName;
+		}
 	}
 
 	public function connect()
@@ -50,6 +59,18 @@ class PicoDatabase
 		return $this->conn;
 	}
 
+	public function execute($sql)
+	{
+		$stmt = $this->conn->prepare($sql);
+		try {
+			$stmt->execute();
+		}
+		catch(PDOException $e)
+		{
+			echo $e->getMessage()."\r\nERROR &raquo; $sql";
+		}
+	}
+
 	public function executeQuery($sql) : PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
@@ -63,7 +84,7 @@ class PicoDatabase
 		return $stmt;
 	}
 
-	public function execute($sql)
+	public function executeInsert($sql, $sync = false) : PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -73,71 +94,70 @@ class PicoDatabase
 		{
 			echo $e->getMessage()."\r\nERROR &raquo; $sql";
 		}
+		if($sync)
+		{
+			$this->createSync($sql);
+		}
+		return $stmt;
+	}
+	public function executeUpdate($sql, $sync = false) : PDOStatement
+	{
+		$stmt = $this->conn->prepare($sql);
+		try {
+			$stmt->execute();
+		}
+		catch(PDOException $e)
+		{
+			echo $e->getMessage()."\r\nERROR &raquo; $sql";
+		}
+		if($sync)
+		{
+			$this->createSync($sql);
+		}
+		return $stmt;
+	}
+	public function executeDelete($sql, $sync = false) : PDOStatement
+	{
+		$stmt = $this->conn->prepare($sql);
+		try {
+			$stmt->execute();
+		}
+		catch(PDOException $e)
+		{
+			echo $e->getMessage()."\r\nERROR &raquo; $sql";
+		}
+		if($sync)
+		{
+			$this->createSync($sql);
+		}
+		return $stmt;
+	}
+	public function executeTransaction($sql, $sync = false) : PDOStatement
+	{
+		$stmt = $this->conn->prepare($sql);
+		try {
+			$stmt->execute();
+		}
+		catch(PDOException $e)
+		{
+			echo $e->getMessage()."\r\nERROR &raquo; $sql";
+		}
+		if($sync)
+		{
+			$this->createSync($sql);
+		}
+		return $stmt;
 	}
 
-	public function executeInsert($sql, $sync = false)
+	public function getPoolPath()
 	{
-		$stmt = $this->conn->prepare($sql);
-		try {
-			$stmt->execute();
-		}
-		catch(PDOException $e)
+		$poolPath = $this->syncDatabaseDir . "/" . $this->syncDatabaseFileName;
+		if(filesize($poolPath) > $this->maxSize)
 		{
-			echo $e->getMessage()."\r\nERROR &raquo; $sql";
+			$newPath = $this->syncDatabaseDir . "/" . 'pool_'.date('Y-m-d-H-i-s').'.txt';
+			rename($poolPath, $newPath);
 		}
-		if($sync)
-		{
-			$this->createSync($sql);
-		}
-		return $stmt;
-	}
-	public function executeUpdate($sql, $sync = false)
-	{
-		$stmt = $this->conn->prepare($sql);
-		try {
-			$stmt->execute();
-		}
-		catch(PDOException $e)
-		{
-			echo $e->getMessage()."\r\nERROR &raquo; $sql";
-		}
-		if($sync)
-		{
-			$this->createSync($sql);
-		}
-		return $stmt;
-	}
-	public function executeDelete($sql, $sync = false)
-	{
-		$stmt = $this->conn->prepare($sql);
-		try {
-			$stmt->execute();
-		}
-		catch(PDOException $e)
-		{
-			echo $e->getMessage()."\r\nERROR &raquo; $sql";
-		}
-		if($sync)
-		{
-			$this->createSync($sql);
-		}
-		return $stmt;
-	}
-	public function executeTransaction($sql, $sync = false)
-	{
-		$stmt = $this->conn->prepare($sql);
-		try {
-			$stmt->execute();
-		}
-		catch(PDOException $e)
-		{
-			echo $e->getMessage()."\r\nERROR &raquo; $sql";
-		}
-		if($sync)
-		{
-			$this->createSync($sql);
-		}
-		return $stmt;
+		return $poolPath;
 	}
 
 	public function createSync($sql)
