@@ -7,7 +7,7 @@ class FileNotFoundException extends Exception
     }
 }
 
-class FileSyncMaster
+class DatabaseSyncMaster
 {
     public $database = null;
     public $uploadBaseDir = '';
@@ -97,7 +97,7 @@ class FileSyncMaster
 
     protected function getSyncRecordListFromDatabase($direction, $status)
     {
-        $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_direction` = '$direction' AND `status` = '$status' ";
+        $sql = "SELECT * FROM `edu_sync_database` WHERE `sync_direction` = '$direction' AND `status` = '$status' ";
         $stmt = $this->database->executeQuery($sql);
         if($stmt->rowCount() > 0)
         {
@@ -107,12 +107,12 @@ class FileSyncMaster
     }
     public function updateSyncRecord($sync_file_id, $status)
     {
-        $sql = "UPDATE `edu_sync_file` SET `status` = '$status' WHERE `sync_file_id` = '$sync_file_id' ";
+        $sql = "UPDATE `edu_sync_database` SET `status` = '$status' WHERE `sync_file_id` = '$sync_file_id' ";
         return $this->database->executeUpdate($sql, false);
     }
 }
 
-class FileSyncUpload extends FileSyncMaster
+class DatabaseSyncUpload extends DatabaseSyncMaster
 {
     public function __construct($database, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
     {
@@ -150,7 +150,7 @@ class FileSyncUpload extends FileSyncMaster
         $path = addslashes($val);
         $sync_file_id = $this->database->generateNewId();
         $timeUpload = date('Y-m-d H:i:s');
-        $sql = "INSERT INTO `edu_sync_file`
+        $sql = "INSERT INTO `edu_sync_database`
         (`sync_file_id`, `file_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `status`) VALUES
         ('$sync_file_id', '$path', '$baseName', '$fileSize', 'up', '$timeUpload', '$timeUpload', 0)";
         $this->database->execute($sql);
@@ -160,7 +160,7 @@ class FileSyncUpload extends FileSyncMaster
     /**
      * Move pooling sync file and record to database before send the sync file (step 1 and 2)
      */
-    public function syncLocalUserFileToDatabase()
+    public function syncLocalQueryToDatabase()
     {
         $fileList = $this->movePoolingFileToUpload();
         foreach($fileList as $key=>$val)
@@ -172,7 +172,7 @@ class FileSyncUpload extends FileSyncMaster
     /**
      * Sync all local user file to remote host and upload file (step 3, 4 and 5)
      */
-    public function syncLocalUserFileToRemoteHost($url, $username, $password)
+    public function syncLocalQueryToRemoteHost($url, $username, $password)
     {
         $records = $this->getSyncRecordListFromDatabase('up', 0);
         foreach($records as $key=>$record)
@@ -187,7 +187,7 @@ class FileSyncUpload extends FileSyncMaster
     }
 }
 
-class FileSyncDownload extends FileSyncMaster
+class DatabaseSyncDownload extends DatabaseSyncMaster
 {
     public function __construct($database, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
     {
@@ -210,7 +210,7 @@ class FileSyncDownload extends FileSyncMaster
 
     private function getLastSyncTime()
     {
-        $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_direction` = 'down' AND `status` > 0 ORDER BY `time_create` DESC LIMIT 0,1 ";
+        $sql = "SELECT * FROM `edu_sync_database` WHERE `sync_direction` = 'down' AND `status` > 0 ORDER BY `time_create` DESC LIMIT 0,1 ";
         $stmt = $this->database->executeQuery($sql);
         if($stmt->rowCount() > 0)
         {
@@ -317,7 +317,7 @@ class FileSyncDownload extends FileSyncMaster
                 {   
                     $localPath = addslashes($localPath);
                     $sync_file_id = $this->database->generateNewId();
-                    $sql = "INSERT INTO `edu_sync_file`
+                    $sql = "INSERT INTO `edu_sync_database`
                     (`sync_file_id`, `file_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
                     ('$sync_file_id', '$localPath', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
                     $this->database->execute($sql);
@@ -330,93 +330,23 @@ class FileSyncDownload extends FileSyncMaster
         }
     }
 
-    public function syncRemoteUserFileLocalHost($permission, $url, $username, $password)
+    public function syncRemoteQueryLocalDatabase()
     {
         $recordList = $this->getSyncRecordListFromDatabase('down', 0);
         foreach($recordList as $key=>$record)
         {
-            $this->syncUserFilesFromSyncRecord($record, $permission, $url, $username, $password);
+            $this->syncQuerysFromSyncRecord($record);
         }
     }
     
-    private function syncUserFilesFromSyncRecord($record, $permission, $url, $username, $password)
+    private function syncQuerysFromSyncRecord($record)
     {
         $syncFilePath = addslashes($record['file_path']);
 
         $handle = fopen($syncFilePath, "r");
         if ($handle) {
             while (($line = fgets($handle)) !== false) {
-                $info = json_decode($line, true);
-                $localPath = $info['path'];
-                $tm = $info['tm'];
-                if($info['op'] == 'CREATEFILE')
-                {
-                    // donload
-                    try
-                    {
-                        $response = $this->downloadFileFromRemote($localPath, $url, $username, $password);
-                        file_put_contents($localPath, $response);
-                        touch($localPath, $tm);
-                    }
-                    catch(FileNotFoundException $e)
-                    {
-
-                    }
-                }
-                else if($info['op'] == 'RENAMEFILE')
-                {
-                    $to = $info['to'];
-                    if(file_exists($localPath) && !file_exists($to))
-                    {
-                        chmod($localPath, 0777);
-                        rename($localPath, $to);
-                        chmod($to, $permission);
-                    }
-                    else
-                    {
-                        // force download
-                        try
-                        {
-                            $response = $this->downloadFileFromRemote($to, $url, $username, $password);
-                            file_put_contents($to, $response);
-                            touch($to, $tm);
-                        }
-                        catch(FileNotFoundException $e)
-                        {
-
-                        }
-                    }
-                }
-                else if($info['op'] == 'DELETEFILE')
-                {
-                    if(file_exists($localPath))
-                    {
-                        chmod($localPath, 0777);
-                        unlink($localPath);
-                    }
-                }
-                else if($info['op'] == 'CREATEDIR')
-                {
-                    if(file_exists($localPath))
-                    {
-                        mkdir($localPath, $permission);
-                    }
-                }
-                else if($info['op'] == 'RENAMEDIR')
-                {
-                    $to = $info['to'];
-                    if(file_exists($localPath) && !file_exists($to))
-                    {
-                        chmod($localPath, 0777);
-                        rename($localPath, $to);
-                        chmod($to, $permission);
-                    }
-                    else
-                    {
-                        // force download
-                        mkdir($to, $permission);
-                    }
-                }
+                
             }
             fclose($handle);
         }
@@ -428,20 +358,6 @@ class FileSyncDownload extends FileSyncMaster
 
 
 /**
- * File Sync Upload
- * 1. Move pooling file to upload directory
- * 2. Create sync record to database
- * 3. Upload sync file to remote host
- * 4. Upload user file to remote host
- * 5. Update sync record status
- * 
- * File Sync Download
- * 1. Get sync record from remote host
- * 2. Download sync file from remote host
- * 3. Create sync record to database
- * 4. Sync user file : CREATEFILE=>DOWNLOAD, RENAMEFILE=>RENAME if exists or DOWNLOAD if not exists, CREATEDIR, RENAMEDIR, DELETEDIR
- * 5. Update sync record status
- * 
  * Database Sync Upload
  * 1. Move pooling file to upload directory
  * 2. Create sync record to database
