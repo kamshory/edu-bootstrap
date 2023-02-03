@@ -5,7 +5,7 @@ if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database')
 {
     $uploadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/upload";
     $downloadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/upload";
-    $poolFileName = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/pool";
+    $poolBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/pool";
     $poolFileName = "pool";
     $poolRollingPrefix = "pool_";
     $poolFileExtension = ".txt";

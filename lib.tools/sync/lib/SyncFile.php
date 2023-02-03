@@ -1,12 +1,4 @@
 <?php
-class FileNotFoundException extends Exception
-{
-    public function __construct($message)
-    {
-        parent::__construct($message);
-    }
-}
-
 class FileSyncMaster
 {
     public $database = null;
@@ -163,7 +155,7 @@ class FileSyncUpload extends FileSyncMaster
     public function syncLocalUserFileToDatabase()
     {
         $fileList = $this->movePoolingFileToUpload();
-        foreach($fileList as $key=>$val)
+        foreach($fileList as $val)
         {
             $this->createUploadSyncRecord($val);
         }
@@ -175,7 +167,7 @@ class FileSyncUpload extends FileSyncMaster
     public function syncLocalUserFileToRemoteHost($url, $username, $password)
     {
         $records = $this->getSyncRecordListFromDatabase('up', 0);
-        foreach($records as $key=>$record)
+        foreach($records as $record)
         {
             $path = $record['file_path'];
             $sync_file_id = $record['sync_file_id'];
@@ -222,11 +214,11 @@ class FileSyncDownload extends FileSyncMaster
 
     /**
      * Get record list from remote host
-     * @param String $lastSync Last sync time
-     * @param String $url Remote host URL
-     * @param String $username Sync username
-     * @param String $password Sync password
-     * @return Array List of sync file from last sync
+     * @param string $lastSync Last sync time
+     * @param string $url Remote host URL
+     * @param string $username Sync username
+     * @param string $password Sync password
+     * @return array List of sync file from last sync
      */
     private function getSyncRecordListFromRemote($lastSync, $url, $username, $password) 
     {
@@ -256,18 +248,18 @@ class FileSyncDownload extends FileSyncMaster
         }
         else
         {
-            throw new FileNotFoundException("File not found");
+            throw new Exception("File not found");
         }
     }
 
      /**
      * Download file from remote host and copy it into local path
-     * @param String $remotePath Remote path
-     * @param String $localPath Local path
-     * @param String $url Remote host URL
-     * @param String $username Sync username
-     * @param String $password Sync password
-     * @return String Data from file downloaded
+     * @param string $remotePath Remote path
+     * @param string $localPath Local path
+     * @param string $url Remote host URL
+     * @param string $username Sync username
+     * @param string $password Sync password
+     * @return string Data from file downloaded
      */
     public function downloadFileFromRemote($remotePath, $url, $username, $password)
     {
@@ -290,7 +282,7 @@ class FileSyncDownload extends FileSyncMaster
         }
         else
         {
-            throw new FileNotFoundException("File not found");
+            throw new Exception("File not found");
         }
     }
     
@@ -323,7 +315,7 @@ class FileSyncDownload extends FileSyncMaster
                     $this->database->execute($sql);
                 }
             }
-            catch(FileNotFoundException $e)
+            catch(Exception $e)
             {
 
             }
@@ -358,7 +350,7 @@ class FileSyncDownload extends FileSyncMaster
                         file_put_contents($localPath, $response);
                         touch($localPath, $tm);
                     }
-                    catch(FileNotFoundException $e)
+                    catch(Exception $e)
                     {
 
                     }
@@ -381,7 +373,7 @@ class FileSyncDownload extends FileSyncMaster
                             file_put_contents($to, $response);
                             touch($to, $tm);
                         }
-                        catch(FileNotFoundException $e)
+                        catch(Exception $e)
                         {
 
                         }

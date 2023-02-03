@@ -1,11 +1,4 @@
 <?php
-class FileNotFoundException extends Exception
-{
-    public function __construct($message)
-    {
-        parent::__construct($message);
-    }
-}
 
 class DatabaseSyncMaster
 {
@@ -86,7 +79,7 @@ class DatabaseSyncMaster
             'file_contents' => $cFile
         );
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $path);
+        curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
@@ -129,7 +122,7 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
         $fileList = $this->filterPoolingFileList($fileList, $this->poolBaseDir, $this->poolFileName, $this->poolFileExtension);
         $fileList = $this->sort($fileList);
         $fileToUpload = array();
-        foreach($fileList as $key=>$val)
+        foreach($fileList as $val)
         {
             $baseName = basename($val);
             $newPath = $this->uploadBaseDir . "/" . $baseName;
@@ -163,7 +156,7 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
     public function syncLocalQueryToDatabase()
     {
         $fileList = $this->movePoolingFileToUpload();
-        foreach($fileList as $key=>$val)
+        foreach($fileList as $val)
         {
             $this->createUploadSyncRecord($val);
         }
@@ -175,7 +168,7 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
     public function syncLocalQueryToRemoteHost($url, $username, $password)
     {
         $records = $this->getSyncRecordListFromDatabase('up', 0);
-        foreach($records as $key=>$record)
+        foreach($records as $record)
         {
             $path = $record['file_path'];
             $sync_file_id = $record['sync_file_id'];
@@ -222,11 +215,11 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
 
     /**
      * Get record list from remote host
-     * @param String $lastSync Last sync time
-     * @param String $url Remote host URL
-     * @param String $username Sync username
-     * @param String $password Sync password
-     * @return Array List of sync file from last sync
+     * @param string $lastSync Last sync time
+     * @param string $url Remote host URL
+     * @param string $username Sync username
+     * @param string $password Sync password
+     * @return array List of sync file from last sync
      */
     private function getSyncRecordListFromRemote($lastSync, $url, $username, $password) 
     {
@@ -256,18 +249,18 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         }
         else
         {
-            throw new FileNotFoundException("File not found");
+            throw new Exception("File not found");
         }
     }
 
      /**
      * Download file from remote host and copy it into local path
-     * @param String $remotePath Remote path
-     * @param String $localPath Local path
-     * @param String $url Remote host URL
-     * @param String $username Sync username
-     * @param String $password Sync password
-     * @return String Data from file downloaded
+     * @param string $remotePath Remote path
+     * @param string $localPath Local path
+     * @param string $url Remote host URL
+     * @param string $username Sync username
+     * @param string $password Sync password
+     * @return string Data from file downloaded
      */
     public function downloadFileFromRemote($remotePath, $url, $username, $password)
     {
@@ -290,7 +283,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         }
         else
         {
-            throw new FileNotFoundException("File not found");
+            throw new Exception("File not found");
         }
     }
     
@@ -323,9 +316,9 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
                     $this->database->execute($sql);
                 }
             }
-            catch(FileNotFoundException $e)
+            catch(Exception $e)
             {
-
+                // Do nothing
             }
         }
     }
@@ -333,7 +326,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
     public function syncRemoteQueryToDatabase()
     {
         $recordList = $this->getSyncRecordListFromDatabase('down', 0);
-        foreach($recordList as $key=>$record)
+        foreach($recordList as $record)
         {
             $this->syncQuerysFromSyncRecord($record);
         }

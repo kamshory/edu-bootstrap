@@ -735,16 +735,26 @@ class FileSynchronizer
 	const NEW_LINE = "\r\n";
 	public $basePath = '';
 	public $fileName = 'pool.txt';
+	public $prefix = 'pool_';
+	public $extension = '.txt';
 	/**
 	 * Maximum file size
 	 */
-	private $maxSize = 20000; 
-	public function __construct($basePath, $fileName = null)
+	private $maxSize = 20000;
+	public function __construct($basePath, $fileName = null, $prefix = null, $extension = null)
 	{
 		$this->basePath = $basePath;
 		if($fileName != null)
 		{
 			$this->fileName = $fileName;
+		}
+		if($prefix != null)
+		{
+			$this->prefix = $prefix;
+		}
+		if($extension != null)
+		{
+			$this->extension = $extension;
 		}
 	}
 	public function getPoolPath()
@@ -752,7 +762,7 @@ class FileSynchronizer
 		$poolPath = $this->basePath . "/" . $this->fileName;
 		if(filesize($poolPath) > $this->maxSize)
 		{
-			$newPath = $this->basePath . "/" . 'pool_'.date('Y-m-d-H-i-s').'.txt';
+			$newPath = $this->basePath . "/" . $this->prefix.date('Y-m-d-H-i-s').$this->extension;
 			rename($poolPath, $newPath);
 		}
 		return $poolPath;
@@ -764,12 +774,12 @@ class FileSynchronizer
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
-			$content = json_encode(array(
+			$syncContent = json_encode(array(
 				'op'=>'CREATEFILE',
 				'tm'=>$time,
 				'path'=>$path
 			));
-			fwrite($fp, $content.self::NEW_LINE);  
+			fwrite($fp, $syncContent.self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return file_put_contents($path, $content);
@@ -781,12 +791,12 @@ class FileSynchronizer
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
-			$content = json_encode(array(
+			$syncContent = json_encode(array(
 				'op'=>'CREATEFILE',
 				'tm'=>$time,
 				'path'=>$path
 			));
-			fwrite($fp, $content.self::NEW_LINE);  
+			fwrite($fp, $syncContent.self::NEW_LINE);  
 			fclose($fp);  
 		}
 	}
@@ -797,12 +807,12 @@ class FileSynchronizer
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
-			$content = json_encode(array(
+			$syncContent = json_encode(array(
 				'op'=>'DELETEFILE',
 				'tm'=>$time,
 				'path'=>$path
 			));
-			fwrite($fp, $content.self::NEW_LINE);  
+			fwrite($fp, $syncContent.self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @unlink($path);
@@ -814,13 +824,13 @@ class FileSynchronizer
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
-			$content = json_encode(array(
+			$syncContent = json_encode(array(
 				'op'=>'RENAMEFILE',
 				'tm'=>$time,
 				'path'=>$oldPath,
 				'to'=>$newPath
 			));
-			fwrite($fp, $content.self::NEW_LINE);  
+			fwrite($fp, $syncContent.self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @rename($oldPath, $newPath);
@@ -850,12 +860,12 @@ class FileSynchronizer
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
-			$content = json_encode(array(
+			$syncContent = json_encode(array(
 				'op'=>'CREATEDIR',
 				'tm'=>$time,
 				'path'=>$path
 			));
-			fwrite($fp, $content.self::NEW_LINE);  
+			fwrite($fp, $syncContent.self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @mkdir($path, $permission);
@@ -868,12 +878,12 @@ class FileSynchronizer
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
-			$content = json_encode(array(
+			$syncContent = json_encode(array(
 				'op'=>'DELETEDIR',
 				'tm'=>$time,
 				'path'=>$path
 			));
-			fwrite($fp, $content.self::NEW_LINE);  
+			fwrite($fp, $syncContent.self::NEW_LINE);  
 			fclose($fp);  
 		}
 		$perms = fileperms($path);
@@ -887,7 +897,7 @@ class FileSynchronizer
 	}
 
 }
-$fileSync = new FileSynchronizer(dirname(dirname(__FILE__))."/lib.sync/pool/file", "pool.txt");
+$fileSync = new FileSynchronizer(dirname(dirname(__FILE__))."/lib.sync/file/pool", "pool.txt");
 
 $ip_create = $_SERVER['REMOTE_ADDR'];
 $ip_edit = $ip_create;

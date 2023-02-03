@@ -14,12 +14,12 @@ class PicoDatabase
 
 	public $syncDatabaseDir = "";
 	public $syncDatabaseFileName = "";
-	public $syncDatabaseMaxSize = 1000000;
+	public $syncDatabaseMaxSize = 6000;
 	public $syncDatabaseDelimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
 	
 	const NEW_LINE = "\r\n";
 
-	private \PDO $conn = null;
+	private \PDO $conn;
 
 	public function __construct($driver, $host, $port, $username, $password, $database, $timezone, $syncDatabaseDir = null, $syncDatabaseFileName = null) //NOSONAR
 	{

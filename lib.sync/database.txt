@@ -1990,3 +1990,101 @@ UPDATE `edu_article` set
 		`time_edit` = '2023-02-03 06:58:26', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
 		WHERE `article_id` = '063da67d0dcf5af0f05e' and `school_id` = '063ce682801be89951aa'
 		;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '1' WHERE `question_id` = '063dbd4c523fa546050b' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '2' WHERE `question_id` = '063dbd4c5404c2134531' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '3' WHERE `question_id` = '063dbd4c53f0c8d668bb' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '4' WHERE `question_id` = '063dbd4c53dc1ece2364' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '5' WHERE `question_id` = '063dbd4c53c586b3baa5' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '6' WHERE `question_id` = '063dbd4c53b22f507ad4' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '7' WHERE `question_id` = '063dbd4c539e326f1e86' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '8' WHERE `question_id` = '063dbd4c538bafbdec07' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '9' WHERE `question_id` = '063dbd4c5379ede34530' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '10' WHERE `question_id` = '063dbd4c54150c89143f' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '11' WHERE `question_id` = '063dbd4c5428727e86ec' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '12' WHERE `question_id` = '063dbd4c54b07d352564' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '13' WHERE `question_id` = '063dbd4c54a32fd8117d' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '14' WHERE `question_id` = '063dbd4c549037090d26' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '15' WHERE `question_id` = '063dbd4c54797f5fe7bb' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '16' WHERE `question_id` = '063dbd4c546a1fffbfc4' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '17' WHERE `question_id` = '063dbd4c545cc8659110' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '18' WHERE `question_id` = '063dbd4c544e5d5b8999' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '19' WHERE `question_id` = '063dbd4c543beb703cdf' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '20' WHERE `question_id` = '063dbd4c5369e2b30ddc' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '21' WHERE `question_id` = '063dbd4c535777f5cf3c' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '22' WHERE `question_id` = '063dbd4c52bc047654ba' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '23' WHERE `question_id` = '063dbd4c52ad9ba81961' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '24' WHERE `question_id` = '063dbd4c529f635e6a08' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '25' WHERE `question_id` = '063dbd4c528ed43e4a75' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '26' WHERE `question_id` = '063dbd4c527efc5910a3' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '27' WHERE `question_id` = '063dbd4c526c6adefcf0' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '28' WHERE `question_id` = '063dbd4c525d40c4f9b0' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '29' WHERE `question_id` = '063dbd4c524d9b7ce736' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '30' WHERE `question_id` = '063dbd4c52c92e2ac7d0' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '31' WHERE `question_id` = '063dbd4c52d5424f1294' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '32' WHERE `question_id` = '063dbd4c5346d4cf59fa' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '33' WHERE `question_id` = '063dbd4c533a73cd88fc' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '34' WHERE `question_id` = '063dbd4c532c1039c213' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '35' WHERE `question_id` = '063dbd4c531f7850e5e0' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '36' WHERE `question_id` = '063dbd4c5312fefa9510' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '37' WHERE `question_id` = '063dbd4c5300de6c1b42' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '38' WHERE `question_id` = '063dbd4c52f1561173b0' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '39' WHERE `question_id` = '063dbd4c52e1cd856f91' ;
+--------------ruihwuiethwiughweighiwehgiwe
+UPDATE `edu_question` SET `sort_order` = '40' WHERE `question_id` = '063dbd4c54c816500877' ;
+--------------ruihwuiethwiughweighiwehgiwe
+start transaction;
+--------------ruihwuiethwiughweighiwehgiwe
+INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063dc4f78d8ed6f94915', 'Perhatikan tabel berikut:<br />
+| No | Nama | Alamat |<br />
+| -- | -- | -- |<br />
+| 1 | Joko | Jakarta |<br />
+| 2 | Dedi | Bandung |<br />
+| 3 | Dede | Bekasi |<br />
+| 4 | Dodo | Bandung |<br />
+Dari tabel di atas diketahui ada', '063dbd4c5228f6e48356', '41', '1', '1', 'upper-alpha', '34100b615e07dbfdeb7a7273eb4b2123', 
+					'2023-02-03 07:04:08', 'aaaaaaaaaaaaa', '2023-02-03 07:04:08', 'aaaaaaaaaaaaa', true)
+					;
+--------------ruihwuiethwiughweighiwehgiwe
+commit;

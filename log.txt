@@ -118,3 +118,24 @@ Persamaan di atas adalah:
 Persamaan di atas adalah:', '063ce6a99c2c55214e6e', '15', '1', '1', 'upper-alpha', '34c66207d20f68d80e6b225fb90f8f07', 
 					'2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '2023-01-24 19:49:30', 'aaaaaaaaaaaaa', '1');
 					
+2023-02-03 07:08:08 Perhatikan tabel berikut:<br />
+| No | Nama | Alamat |<br />
+| -- | -- | -- |<br />
+| 1 | Joko | Jakarta |<br />
+| 2 | Dedi | Bandung |<br />
+| 3 | Dede | Bekasi |<br />
+| 4 | Dodo | Bandung |<br />
+Dari tabel di atas diketahui ada
+2023-02-03 07:08:08 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063dc4f78d8ed6f94915', 'Perhatikan tabel berikut:<br />
+| No | Nama | Alamat |<br />
+| -- | -- | -- |<br />
+| 1 | Joko | Jakarta |<br />
+| 2 | Dedi | Bandung |<br />
+| 3 | Dede | Bekasi |<br />
+| 4 | Dodo | Bandung |<br />
+Dari tabel di atas diketahui ada', '063dbd4c5228f6e48356', '41', '1', '1', 'upper-alpha', '34100b615e07dbfdeb7a7273eb4b2123', 
+					'2023-02-03 07:04:08', 'aaaaaaaaaaaaa', '2023-02-03 07:04:08', 'aaaaaaaaaaaaa', true)
+					
