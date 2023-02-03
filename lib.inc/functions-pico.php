@@ -742,10 +742,11 @@ class FileSynchronizer
 	{
 		if($sync)
 		{
+			$time = time();
 			$syncPath = $this->basePath . "/" . "file.txt";
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[CREATEFILE] <<".$path.">>".self::NEW_LINE);  
+			fwrite($fp, "[CREATEFILE][TIME=$time] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return file_put_contents($path, $content);
@@ -754,10 +755,11 @@ class FileSynchronizer
 	{
 		if($sync)
 		{
+			$time = time();
 			$syncPath = $this->basePath . "/" . "file.txt";
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[CREATEFILE] <<".$path.">>".self::NEW_LINE);  
+			fwrite($fp, "[CREATEFILE][TIME=$time] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 	}
@@ -765,10 +767,11 @@ class FileSynchronizer
 	{
 		if($sync)
 		{
+			$time = time();
 			$syncPath = $this->basePath . "/" . "file.txt";
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[DELETEFILE] <<".$path.">>".self::NEW_LINE);  
+			fwrite($fp, "[DELETEFILE][TIME=$time] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @unlink($path);
@@ -777,10 +780,11 @@ class FileSynchronizer
 	{
 		if($sync)
 		{
+			$time = time();
 			$syncPath = $this->basePath . "/" . "file.txt";
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[RENAMEFILE] <<".$oldPath.">> [TO] <<".$newPath.">>".self::NEW_LINE);  
+			fwrite($fp, "[RENAMEFILE][TIME=$time] <<".$oldPath.">> [TO] <<".$newPath.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @rename($oldPath, $newPath);
@@ -807,10 +811,11 @@ class FileSynchronizer
 	{
 		if($sync)
 		{
+			$time = time();
 			$syncPath = $this->basePath . "/" . "file.txt";
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[CREATEDIR] <<".$path.">>".self::NEW_LINE);  
+			fwrite($fp, "[CREATEDIR][TIME=$time] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @mkdir($path, $permission);
@@ -820,10 +825,11 @@ class FileSynchronizer
 	{
 		if($sync)
 		{
+			$time = time();
 			$syncPath = $this->basePath . "/" . "file.txt";
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[DELETEDIR] <<".$path.">>".self::NEW_LINE);  
+			fwrite($fp, "[DELETEDIR][TIME=$time] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @rmdir($path);
