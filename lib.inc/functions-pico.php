@@ -735,7 +735,6 @@ class FileSynchronizer
 	const NEW_LINE = "\r\n";
 	public $basePath = '';
 	public $fileName = 'pool.txt';
-	public $delimiter = '--------------ruihwuiethwiughweighiwehgiwe';
 	/**
 	 * Maximum file size
 	 */
@@ -765,8 +764,12 @@ class FileSynchronizer
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
-			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[CREATEFILE][TIME=\"$time\"] <<".$path.">>".self::NEW_LINE);  
+			$content = json_encode(array(
+				'op'=>'CREATEFILE',
+				'tm'=>$time,
+				'path'=>$path
+			));
+			fwrite($fp, $content.self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return file_put_contents($path, $content);
@@ -778,8 +781,12 @@ class FileSynchronizer
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
-			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[CREATEFILE][TIME=\"$time\"] <<".$path.">>".self::NEW_LINE);  
+			$content = json_encode(array(
+				'op'=>'CREATEFILE',
+				'tm'=>$time,
+				'path'=>$path
+			));
+			fwrite($fp, $content.self::NEW_LINE);  
 			fclose($fp);  
 		}
 	}
@@ -790,8 +797,12 @@ class FileSynchronizer
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
-			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[DELETEFILE][TIME=\"$time\"] <<".$path.">>".self::NEW_LINE);  
+			$content = json_encode(array(
+				'op'=>'DELETEFILE',
+				'tm'=>$time,
+				'path'=>$path
+			));
+			fwrite($fp, $content.self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @unlink($path);
@@ -803,8 +814,13 @@ class FileSynchronizer
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
-			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[RENAMEFILE][TIME=\"$time\"] <<".$oldPath.">> [TO] <<".$newPath.">>".self::NEW_LINE);  
+			$content = json_encode(array(
+				'op'=>'RENAMEFILE',
+				'tm'=>$time,
+				'path'=>$oldPath,
+				'to'=>$newPath
+			));
+			fwrite($fp, $content.self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @rename($oldPath, $newPath);
@@ -834,8 +850,12 @@ class FileSynchronizer
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
-			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[CREATEDIR][TIME=\"$time\"] <<".$path.">>".self::NEW_LINE);  
+			$content = json_encode(array(
+				'op'=>'CREATEDIR',
+				'tm'=>$time,
+				'path'=>$path
+			));
+			fwrite($fp, $content.self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @mkdir($path, $permission);
@@ -848,8 +868,12 @@ class FileSynchronizer
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
-			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[DELETEDIR][TIME=\"$time\"] <<".$path.">>".self::NEW_LINE);  
+			$content = json_encode(array(
+				'op'=>'DELETEDIR',
+				'tm'=>$time,
+				'path'=>$path
+			));
+			fwrite($fp, $content.self::NEW_LINE);  
 			fclose($fp);  
 		}
 		$perms = fileperms($path);

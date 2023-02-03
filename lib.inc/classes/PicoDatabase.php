@@ -14,7 +14,7 @@ class PicoDatabase
 	public $syncDatabaseFileName = "";
 	public $maxSize = 1000000;
 
-	public $delimiter = '--------------ruihwuiethwiughweighiwehgiwe';
+	public $delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
 	const NEW_LINE = "\r\n";
 
 	private \PDO $conn = null;
