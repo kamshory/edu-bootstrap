@@ -733,20 +733,39 @@ class FileSynchronizer
 {
 	const NEW_LINE = "\r\n";
 	public $basePath = '';
+	public $fileName = 'pool.txt';
 	public $delimiter = '--------------ruihwuiethwiughweighiwehgiwe';
-	public function __construct($basePath)
+	/**
+	 * Maximum file size
+	 */
+	private $maxSize = 20000; 
+	public function __construct($basePath, $fileName = null)
 	{
 		$this->basePath = $basePath;
+		if($fileName != null)
+		{
+			$this->fileName = $fileName;
+		}
+	}
+	public function getPoolPath()
+	{
+		$poolPath = $this->basePath . "/" . "file.txt";
+		if(filesize($poolPath) > $this->maxSize)
+		{
+			$newPath = 'pool_'.date('Y-m-d-H-i-s').'.txt';
+			rename($poolPath, $newPath);
+		}
+		return $poolPath;
 	}
 	public function createFileWithContent($path, $content, $sync)
 	{
 		if($sync)
 		{
 			$time = time();
-			$syncPath = $this->basePath . "/" . "file.txt";
+			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[CREATEFILE][TIME=$time] <<".$path.">>".self::NEW_LINE);  
+			fwrite($fp, "[CREATEFILE][TIME=\"$time\"] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return file_put_contents($path, $content);
@@ -756,10 +775,10 @@ class FileSynchronizer
 		if($sync)
 		{
 			$time = time();
-			$syncPath = $this->basePath . "/" . "file.txt";
+			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[CREATEFILE][TIME=$time] <<".$path.">>".self::NEW_LINE);  
+			fwrite($fp, "[CREATEFILE][TIME=\"$time\"] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 	}
@@ -768,10 +787,10 @@ class FileSynchronizer
 		if($sync)
 		{
 			$time = time();
-			$syncPath = $this->basePath . "/" . "file.txt";
+			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[DELETEFILE][TIME=$time] <<".$path.">>".self::NEW_LINE);  
+			fwrite($fp, "[DELETEFILE][TIME=\"$time\"] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @unlink($path);
@@ -781,10 +800,10 @@ class FileSynchronizer
 		if($sync)
 		{
 			$time = time();
-			$syncPath = $this->basePath . "/" . "file.txt";
+			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[RENAMEFILE][TIME=$time] <<".$oldPath.">> [TO] <<".$newPath.">>".self::NEW_LINE);  
+			fwrite($fp, "[RENAMEFILE][TIME=\"$time\"] <<".$oldPath.">> [TO] <<".$newPath.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @rename($oldPath, $newPath);
@@ -812,10 +831,10 @@ class FileSynchronizer
 		if($sync)
 		{
 			$time = time();
-			$syncPath = $this->basePath . "/" . "file.txt";
+			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[CREATEDIR][TIME=$time] <<".$path.">>".self::NEW_LINE);  
+			fwrite($fp, "[CREATEDIR][TIME=\"$time\"] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
 		return @mkdir($path, $permission);
@@ -826,17 +845,24 @@ class FileSynchronizer
 		if($sync)
 		{
 			$time = time();
-			$syncPath = $this->basePath . "/" . "file.txt";
+			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
 			fwrite($fp, $this->delimiter."\r\n");  
-			fwrite($fp, "[DELETEDIR][TIME=$time] <<".$path.">>".self::NEW_LINE);  
+			fwrite($fp, "[DELETEDIR][TIME=\"$time\"] <<".$path.">>".self::NEW_LINE);  
 			fclose($fp);  
 		}
-		return @rmdir($path);
+		$perms = fileperms($path);
+		chmod($path, 0777);
+		$ret = @rmdir($path);
+		if(!$ret)
+		{
+			chmod($path, $perms);
+		}
+		return $ret;
 	}
 
 }
-$fileSync = new FileSynchronizer(dirname(dirname(__FILE__))."/lib.sync");
+$fileSync = new FileSynchronizer(dirname(dirname(__FILE__))."/lib.sync/pool/file", "pool.txt");
 
 $ip_create = $_SERVER['REMOTE_ADDR'];
 $ip_edit = $ip_create;
