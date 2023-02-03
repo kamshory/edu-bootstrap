@@ -17,7 +17,7 @@ class PicoDatabase
 	public $delimiter = '--------------ruihwuiethwiughweighiwehgiwe';
 	const NEW_LINE = "\r\n";
 
-	private $conn = null;
+	private \PDO $conn = null;
 
 	public function __construct($driver, $host, $port, $username, $password, $database, $timezone, $syncDatabaseDir = null, $syncDatabaseFileName = null) //NOSONAR
 	{
@@ -44,10 +44,10 @@ class PicoDatabase
 		try {
 			$connectionString = $this->driver . ':host=' . $this->host . '; port=' . $this->port . '; dbname=' . $this->database;
 
-			$this->conn = new PDO($connectionString, $this->username, $this->password);
-			$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$this->conn = new \PDO($connectionString, $this->username, $this->password);
+			$this->conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 			$ret = true;
-		} catch (PDOException $e) {
+		} catch (\PDOException $e) {
 			echo "Connection error " . $e->getMessage();
 			$ret = false;
 		}
@@ -65,32 +65,32 @@ class PicoDatabase
 		try {
 			$stmt->execute();
 		}
-		catch(PDOException $e)
+		catch(\PDOException $e)
 		{
 			echo $e->getMessage()."\r\nERROR &raquo; $sql";
 		}
 	}
 
-	public function executeQuery($sql) : PDOStatement
+	public function executeQuery($sql) : \PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
 		}
-		catch(PDOException $e)
+		catch(\PDOException $e)
 		{
 			echo $e->getMessage()."\r\nERROR &raquo; $sql";
 		}
 		return $stmt;
 	}
 
-	public function executeInsert($sql, $sync = false) : PDOStatement
+	public function executeInsert($sql, $sync = false) : \PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
 		}
-		catch(PDOException $e)
+		catch(\PDOException $e)
 		{
 			echo $e->getMessage()."\r\nERROR &raquo; $sql";
 		}
@@ -100,13 +100,13 @@ class PicoDatabase
 		}
 		return $stmt;
 	}
-	public function executeUpdate($sql, $sync = false) : PDOStatement
+	public function executeUpdate($sql, $sync = false) : \PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
 		}
-		catch(PDOException $e)
+		catch(\PDOException $e)
 		{
 			echo $e->getMessage()."\r\nERROR &raquo; $sql";
 		}
@@ -116,13 +116,13 @@ class PicoDatabase
 		}
 		return $stmt;
 	}
-	public function executeDelete($sql, $sync = false) : PDOStatement
+	public function executeDelete($sql, $sync = false) : \PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
 		}
-		catch(PDOException $e)
+		catch(\PDOException $e)
 		{
 			echo $e->getMessage()."\r\nERROR &raquo; $sql";
 		}
@@ -132,13 +132,13 @@ class PicoDatabase
 		}
 		return $stmt;
 	}
-	public function executeTransaction($sql, $sync = false) : PDOStatement
+	public function executeTransaction($sql, $sync = false) : \PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
 		}
-		catch(PDOException $e)
+		catch(\PDOException $e)
 		{
 			echo $e->getMessage()."\r\nERROR &raquo; $sql";
 		}
