@@ -162,7 +162,7 @@ class PicoDatabase
 
 	public function createSync($sql)
 	{
-		$syncPath = $this->syncDatabaseDir . "/" . "database.txt";
+		$syncPath = $this->getPoolPath();
 		$fp = fopen($syncPath, 'a');
 		fwrite($fp, $this->delimiter."\r\n");  
 		fwrite($fp, $sql.";".self::NEW_LINE);  
