@@ -3,18 +3,20 @@
 class PicoDatabase
 {
 
-	public $driver = "mysql";
-	public $host = "localhost";
-	public $port = 3306;
-	public $username = "";
-	public $password = "";
-	public $database = "";
+	private $driver = "mysql";
+	private $host = "localhost";
+	private $port = 3306;
+	private $username = "";
+	private $password = "";
+	private $database = "";
+
 	public $timezone = "00:00";
+
 	public $syncDatabaseDir = "";
 	public $syncDatabaseFileName = "";
-	public $maxSize = 1000000;
-
-	public $delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
+	public $syncDatabaseMaxSize = 1000000;
+	public $syncDatabaseDelimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
+	
 	const NEW_LINE = "\r\n";
 
 	private \PDO $conn = null;
@@ -152,7 +154,7 @@ class PicoDatabase
 	public function getPoolPath()
 	{
 		$poolPath = $this->syncDatabaseDir . "/" . $this->syncDatabaseFileName;
-		if(filesize($poolPath) > $this->maxSize)
+		if(filesize($poolPath) > $this->syncDatabaseMaxSize)
 		{
 			$newPath = $this->syncDatabaseDir . "/" . 'pool_'.date('Y-m-d-H-i-s').'.txt';
 			rename($poolPath, $newPath);
@@ -164,7 +166,7 @@ class PicoDatabase
 	{
 		$syncPath = $this->getPoolPath();
 		$fp = fopen($syncPath, 'a');
-		fwrite($fp, $this->delimiter."\r\n");  
+		fwrite($fp, $this->syncDatabaseDelimiter."\r\n");  
 		fwrite($fp, $sql.";".self::NEW_LINE);  
 		fclose($fp);  
 	}

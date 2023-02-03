@@ -330,7 +330,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         }
     }
 
-    public function syncRemoteQueryLocalDatabase()
+    public function syncRemoteQueryToDatabase()
     {
         $recordList = $this->getSyncRecordListFromDatabase('down', 0);
         foreach($recordList as $key=>$record)
@@ -342,15 +342,34 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
     private function syncQuerysFromSyncRecord($record)
     {
         $syncFilePath = addslashes($record['file_path']);
+        $delimiter = trim($this->database->syncDatabaseDelimiter);
 
         $handle = fopen($syncFilePath, "r");
         if ($handle) {
+            $buff = "";
             while (($line = fgets($handle)) !== false) {
-                
+                $chk = trim($line);
+                if($chk == $delimiter)
+                {
+                    $this->execute($buff);
+                    $buff = "";
+                }
+                else
+                {
+                    $buff .= $line."\r\n";
+                }
             }
             fclose($handle);
         }
 
+    }
+    private function execute($sql)
+    {
+        $sql = trim($sql);
+        if(!empty($sql))
+        {
+            $this->database->execute($sql);
+        }
     }
 }
 
