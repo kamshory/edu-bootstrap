@@ -181,12 +181,10 @@ class FileSyncUpload extends FileSyncMaster
     public function syncLocalUserFileToDatabase()
     {
         $fileList = $this->getPoolingFiles();
-        print_r($fileList);
         foreach($fileList as $val)
         {
             $baseName = basename($val);
             $newPath = $this->uploadBaseDir . "/" . $baseName;
-            echo $newPath . "\r\n";
             copy($val, $newPath);
             unlink($val);
             $this->createUploadSyncRecord($newPath);
