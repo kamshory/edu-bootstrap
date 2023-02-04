@@ -50,7 +50,7 @@ class FileSyncMaster
         {
             if($val == $pathToRemove)
             {
-                $newPath = $this->uploadBaseDir . "/" . $this->poolRollingPrefix.date('Y-m-d-H-i-s').$this->poolFileExtension;
+                $newPath = $this->poolBaseDir . "/" . $this->poolRollingPrefix.date('Y-m-d-H-i-s').$this->poolFileExtension;
                 rename($val, $newPath);
                 $fileList[$key] = $newPath;
             }

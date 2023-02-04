@@ -768,7 +768,7 @@ class FileSynchronizer
 	public function getPoolPath()
 	{
 		$poolPath = $this->basePath . "/" . $this->fileName;
-		if(filesize($poolPath) > $this->maxSize)
+		if(file_exists($poolPath) && filesize($poolPath) > $this->maxSize)
 		{
 			$newPath = $this->basePath . "/" . $this->prefix.date('Y-m-d-H-i-s').$this->extension;
 			rename($poolPath, $newPath);

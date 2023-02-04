@@ -34,7 +34,7 @@ class PicoDatabaseSyncConfig
 	public function getPoolPath()
 	{
 		$poolPath = $this->sync_database_base_dir . "/" . $this->sync_database_pool_name . $this->sync_database_extension;
-		if(filesize($poolPath) > $this->sync_database_maximum_length)
+		if(file_exists($poolPath) && filesize($poolPath) > $this->sync_database_maximum_length)
 		{
 			$newPath = $this->sync_database_base_dir . "/" . $this->sync_database_rolling_prefix.date('Y-m-d-H-i-s').$this->sync_database_extension;
 			rename($poolPath, $newPath);

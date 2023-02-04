@@ -1,0 +1,647 @@
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/7ab2f39d3622179df05dbd862368b1fb.svg\"></p>
+<p><img class=\"latex-image equation-image\" style=\"vertical-align: middle;\" alt=\"\\sqrt{\\lim _{x \\to 2}\\left(\\frac{x+2}{x-2}\\right)+1}\" data-equation=\"N4IgNghgLgpgHiAXCAOigzgRwE5WGsASwFsACAfWDlLSgHtSAmAXwJgDMoAKNd7CAMZUA1CyoBaFmmyEA5gAsoASmEBGZiAA0IAFbo6AOySgoATwAOMJCACimAK7RChrSABuEMPauID9sGDadJb8BgAm6MYg9OYAMjBuMGAAwoZQEIQGMNhIANomFj4gAMoOENgwAEp0dFCuHl4+fgFBIRDhkYig/GGEAu1heQWW1rEkhHXaDd5IzYEgwdkDnaBgHHWI+dGF1sWmxABGdGD1njPICK1LHbP+YMwAutoyChtbZiPIe4fHp43WjFci1CEVuAUezGYmmGRQAQvwBABrGBQAAKGRyUzORXM5RgBig8hg6EI6HhgmRkwWbRuXRABwRlJgYRscHMFXQJJcmxhu3SSOZADEEVBnEYsf9fHcriCViA/MQlvQcjztp8SvsjicJecQJdqddQVLwdC1UUAPJtZV/XXCIE0o1zKG8r6a346oqAmXLMH3J4gML4ujETLQOgq947V0/bXubHWfXAn3G+6mj4Wq3hm1FQBIRPbDZ0nWmoxqY9mAfnZb6ITXi+rLUqsx7rHbvbSiy7S1ry8hVJXk06HpCh5CgA==\" data-latex=\"\\sqrt{\\lim _{x \\to 2}\\left(\\frac{x+2}{x-2}\\right)+1}\" data-renderer=\"browser-png\" src=\"media.edu/school/063ce682801be89951aa/description/08ce24b1ba4f54f8fd1ab1b81af01f42.png\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/5609f347bd9a4caf9041c10cee456caf.svg\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/451728098cbc5f575c7619c4b68b2770.svg\" alt=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" data-latex=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/c1ae76b33a78111d75519bc917aade4e.svg\"><br>&nbsp;</p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_test` 
+	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values
+	('063ddcbf6cec708179f8', '063ce682801be89951aa', 'Ujian Biologi Paket 01', '', '', '', '', '', 'Pilihlah jawaban yang paling tepat!', '0', '1', '1', '75', 'H', '10', '5', '10', '1', '3600', '1', '300', 'Lihat waktu sisa Anda. Silakan periksa kembali jawaban Anda. Segera kirimkan jawaban sebelum waktunya habis.', '0', '1', '0', '0', '0', '0', null, 'F', null, null, '2023-02-04 10:07:34', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa', 'A', 'aaaaaaaaaaaaa', 'A', '127.0.0.1', '127.0.0.1', '1');
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6d0f01e8a586', '<p>Pengamatan beberapa obyek menghasilkan data sebagai berikut:</p>
+<table border=\"1\"><tbody><tr><td>&nbsp;</td>
+<td style=\"text-align: center;\" colspan=\"4\">Benda</td>
+</tr><tr><td>Ciri-Ciri</td>
+<td style=\"text-align: center;\">1</td>
+<td style=\"text-align: center;\">2</td>
+<td style=\"text-align: center;\">3</td>
+<td style=\"text-align: center;\">4</td>
+</tr><tr><td>dapat bergerak</td>
+<td style=\"text-align: center;\">-</td>
+<td style=\"text-align: center;\">-</td>
+<td style=\"text-align: center;\">&radic;</td>
+<td style=\"text-align: center;\">&radic;</td>
+</tr><tr><td>mengeluarkan gas</td>
+<td style=\"text-align: center;\">&radic;</td>
+<td style=\"text-align: center;\">&radic;</td>
+<td style=\"text-align: center;\">-</td>
+<td style=\"text-align: center;\">&radic;</td>
+</tr><tr><td>membutuhkan energi</td>
+<td style=\"text-align: center;\">&radic;</td>
+<td style=\"text-align: center;\">&radic;</td>
+<td style=\"text-align: center;\">&radic;</td>
+<td style=\"text-align: center;\">&radic;</td>
+</tr><tr><td>memiliki anak</td>
+<td style=\"text-align: center;\">-</td>
+<td style=\"text-align: center;\">&radic;</td>
+<td style=\"text-align: center;\">-</td>
+<td style=\"text-align: center;\">-</td>
+</tr></tbody></table><p>Dari data tersebut, kemungkinan paling benar yang merupakan mahluk hidup adalah</p>', '063ddcbf6cec708179f8', true, '1', '1', 'upper-alpha', '614358d3ee7d9d59ba54d0572511364d', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6d300791bf2c', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/2ceb66_7b64b1d1ea9733a6169c098dba315f18.png\"></p>
+<p>Dari gambar organisme tersebut, hewan yang masuk dalam kelompok yang sama adalah...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'f6ad24c3bf943c15ae2d96a4faf4784d', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6d4e4870e818', '<p>Dalam ekosistem persawahan terdapat jaring makanan sebagai berikut:</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/a1b533_aa57742d6ab957bef117ff45d552d2f6.png\"></p>
+<p>Bila dalam ekosistem tersebut, ular habis diburu manusia, apa yang dapat diupayakan manusia agar hama tikus tidak mengganggu pertanian padi.</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'e55192aa64bba54a2108869dedd80688', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6d7036cb5449', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/6adc52_baaa5cca78cde1f288cc35cee0ee46c2.png\"></p>
+<p>Usaha manusia yang dapat dilakukan untuk mencegah dan mengatasi persoalan seperti dalam gambar tersebut adalah....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'b1b4f58b4b75166097638b702e0c43e5', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6d8d32089b7a', '<p>Pada tanggal 13 April 2013, di Waduk Jatiluhur Purwakarta Jawa Barat, terjadi peristiwa kematian massal pada ikan-ikan yang dibudidayakan dalam karamba/jaring apung. Ikan berbagai ukuran mati terapung dalam jumlah yang sangat banyak (http://pulihnugraha.wordpress.com/). Dugaan yang paling tepat faktor-faktor yang menjadi penyebab peristiwa tersebut adalah....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'ccb5de2890468048ea2e5103efe49b74', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6dacb1637a37', '<p>Perhatikan grafik jumlah penduduk di suatu wilayah dalam 8 tahun berikut ini!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/ce2ab4_848bd25173371d798b1077303b4ddb40.png\"></p>
+<p>Dari grafik pertumbuhan penduduk tersebut, persoalan lingkungan yang akan dihadapi oleh wilayah tersebut adalah......</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '2d3dfc96f25b59e193f7d2d978f64723', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6dc8b9adb890', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/a237e8_23707a773dcf55e3fefd52a8cb662a3e.png\"></p>
+<p>Fungsi bagian yang ditunjuk pada bagian P adalah......</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '4d04aad637c5f5b5e44d9bbac30d4123', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6de4a165dd4f', '<p>Perhatikan Gambar!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/d1e3e9_f5ed09864ad7613cf6b6b7f45f93d3ed.png\"></p>
+<p>Dari gambar, fenomena biologis yang teramati adalah....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'c6fce47adf595f0e62eb2f8a26319c4f', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6e0198bfbb18', '<p>Pasangan kelenjar atau organ, enzim yang dihasilkan, bahan dasar, dan hasil yang paling tepat adalah...
+</p><table border=\"1\"><tbody><tr><td>&nbsp;</td>
+<td style=\"text-align: center;\"><strong>Kelenjar/</strong><br><strong>Organ</strong></td>
+<td style=\"text-align: center;\"><strong>Enzim</strong></td>
+<td style=\"text-align: center;\"><strong>Bahan</strong><br><strong>Dasar</strong></td>
+<td style=\"text-align: center;\"><strong>Produk</strong></td>
+</tr><tr><td><strong>A</strong></td>
+<td>dinding <br>lambung</td>
+
+<td>pepsin</td>
+<td>protein</td>
+<td>pepton</td>
+</tr><tr><td><strong>B</strong></td>
+<td>pankreas</td>
+<td>tripsin</td>
+<td>protein</td>
+<td>pepton</td>
+</tr><tr><td><strong>C</strong></td>
+<td>hati</td>
+<td>empedu</td>
+<td>lemak</td>
+<td>gliserol</td>
+</tr><tr><td><strong>D</strong></td>
+<td>dinding <br>usus halus</td>
+<td>enterokinase</td>
+<td>pepsionogen</td>
+<td>pepsin</td>
+</tr></tbody></table>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '9b2fcd9d710abea47e53bd5db86a5d49', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6e19c527452d', '<p>Perhatikan pernyataan berikut!<br>
+p. alveolus mengembang<br>
+q. otot diafragma kontraksi<br>
+r. ruang rongga dada membesar<br>
+s. udara masuk<br>
+Proses inspirasi pada pernafasan perut terjadi apabila....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'fb4a0f2b9dd280217056d6cbe4ab953e', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6e315d1b484d', '<p>Pak. Karto beberapa hari ini selalu berobat ke dokter. Hasil dari diagnosis dokter ia divonis menderita bronkitis. Penyakit ini disebabkan oleh....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'f22ea041af3f627a3092e43375e55f6e', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6e4d75698f84', '<p>Perhatikan data pada tabel berikut!</p>
+<table style=\"max-width: 100%;\" border=\"1\"><tbody><tr><td style=\"text-align: center;\"><strong>No</strong></td>
+<td style=\"text-align: center;\"><strong>Pembuluh</strong></td>
+<td style=\"text-align: center;\"><strong>Ciri-Ciri</strong></td>
+</tr><tr><td style=\"text-align: center;\">P</td>
+<td>vena</td>
+<td>menuju jantung membaca O<sub>2</sub></td>
+</tr><tr><td style=\"text-align: center;\">Q</td>
+<td>arteri</td>
+<td>keluar dari jantung membawa O<sub>2</sub></td>
+</tr><tr><td style=\"text-align: center;\">R</td>
+<td>vena paru-paru</td>
+<td>dari jantung ke paru-paru membawa O<sub>2</sub></td>
+</tr><tr><td style=\"text-align: center;\">S</td>
+<td>arteri paru-paru</td>
+<td>dari jantung menuju paru-paru membawa CO<sub>2</sub></td>
+</tr></tbody></table><p>Pernyataan pada tabel yang sesuai adalah...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '9a3cf6c0888df2cfb89a35024739e530', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6e69aaa79af2', '<p>Pak Arta selama beberapa minggu ini sering sekali berobat ke dokter. Diketahui oleh dokter bahwa ia menderita athero.erosis. Penyakit ditandai dengan...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'a2260e7e45abb12ea61f50131ea24b0c', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6e8f6fc67576', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/c7861c_7c78461e6add0d35de22ddd38401f1bb.png\"></p>
+<p>Bagian yang ditunjuk dengan huruf X</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '3454f060cd633052e87ade2a1feb5331', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6eac8386fba4', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/9535d7_edf8c868fa9f854dcccafe66d5e823c5.png\"></p>
+<p>Bagian yang ditunjuk oleh huruf X berfungsi....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'e57df2ec65965ad5cf21ba1914ec6f43', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6eca2c09bcc7', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/e8d96f_d4b2b0a217a3c1bbfd62714bcc190b84.png\"></p>
+<p>Bagian yang ditunjuk dengann huruf P berfungsi ....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '5ae702a199912cea1c5f349de61685ea', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6ee84c5f7056', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/75ac57_012d6b081e4ee99c97cb1b78dbfe11f8.png\"></p>
+<p>Bagian yang ditunjuk dengan huruf R berfungsi ...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '81e90136752d039c2d7ffcdef0654bb5', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6f050f1b4cf7', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/a6f9c5_c0639d118813e6b4ba8b75e98afad898.png\"></p>
+<p>Bagian yang ditunjuk oleh tanda panah berfungsi untuk....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '4ab33568ab6cdbba0b4eff2ec7f9e483', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6f19f2ade1be', '<p>Saat ganggang Spyrogira mendapatkan rangsang cahaya maka respon yang dilakukan adalah....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'a3a62ef2c979cc015dd5c8fa5b236803', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf6f3bcd25685f', '<p>Seorang siswa melakukan percobaan fotosintesis seperti tampak pada gambar.</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/2c3076_e15c66f14fa807ba2bb4c64976892762.png\"></p>
+<p>Kesimpulan yang di peroleh dari hasil percobaan tersebut adalah bahwa fotosintesis &hellip;.</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'db9a6d1f0bd1332416c1dff9184e337a', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf7010be28c494', '<p>Dalam melakukan percobaan fotosintesis, Irma memasukkan daun yang digunakan untuk percobaan ke dalam air mendidih. Setelah layu, daun tersebut di masukan ke dalam larutan alkohol, kemudian di panaskan dalam air panas. Beberapa saat kemudian ditiriskan, selanjutnya di beri larutan lugol beberapa tetes. Tujuan Irma memanaskan daun di dalam larutan alkohol panas tersebut adalah &hellip;.</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'e4c40a22c08c24751db70f7e6824167f', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf702aac289ead', '<p>Pada kondisi yang kurang menguntungkan seperti musim kemarau yang panjang tumbuhan jati mengugurkan daunya, tujuanya adalah &hellip;.</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '53032bb2ef5f7b857e5b6b5633575b05', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf70455b0b0641', '<p>Populasi badak bercula satu di Taman Nasional Ujung Kulon saat ini semakin menurun, kalau tidak kita lestarikan keberadaanya akan punah. Faktor yang mempengaruhi punahnya hewan tersebut adalah ....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '3c650ac44e5d56024cf8737d6c99492b', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf705d1fd36f7e', '<p>Persilangan antara tanaman bunga pukul empat warna merah dengan warna putih menghasilkan tanaman (F1) berbunga merah jambu. Apabila F1 disilangkan dengan sesamanya dan menghasilkan tanaman F2 sebanyak 32 tanaman, maka kemungkinan akan dihasilkan tanaman berbunga merah sebanyak ....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'a982103ebb81e99773925f49f6b13ca8', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf7074e4cbc92a', '<p>Seorang petani mengawinkan sapi betinanya yang bertubuh pendek dan bertanduk panjang (ppGg) dengan sapi jantan yang bertubuh tinggi dan bertanduk pendek (PPgg). Persentase peluang anak sapi petani tadi memiliki ciri bertubuh tinggi dan bertanduk panjang adalah....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '767223d3f9626fed96b9a294a270fd92', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf708e61180183', '<p>Manfaat produk bioteknologi dalam bidang kesehatan diantaranya adalah...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '5f49715916d764a432245502434cca4d', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf70a73ecee958', '<p>Berikut ini adalah bahan kimia yang terdapat pada makanan<br>
+1. asam askorbat<br>
+2. oktil asetat<br>
+3. natrium benzoat<br>
+4. natrium siklamat<br>
+5. monosodium glutamat<br>
+Bahan kimia yang berfungsi sebagai pengawet dan penyedap adalah &hellip;.</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'c4176663dac42ee79f5291bc9d872d76', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf70bf42f692db', '<p>Putaw, heroin, alkohol, diazepam, morfin termasuk contoh zat psikotropika yang mempunyai jenis efek depresan, gejala yang tampak pada pemakainya adalah&hellip;.</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '52b68e88525181d6d5eae7eae525bf91', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf70d6d637cb8b', '<p>Perhatikan cuplikan teks berita berikut:<br>
+Pada hari Rabu 23 April 2014 pagi, diperkirakan, sebanyak belasan ekor gajah menyerang Desa Bergang, Kecamatan Ketol, Aceh Tengah. Puluhan hektare kebun masyarakat, mulai dari kopi, coklat, pinang, termasuk cabai rusak diamuk binatang berbelalai panjang itu, tetapi tidak sampai menyerang rumah penduduk.<br>
+Tidak hanya gajah, satwa liar lain juga sering menyerang lahan pertanian penduduk, seperti landak yang merusak tanaman palawija dan kebun sawit, kasusnya belum lama ini terjadi di Kecamatan Langkahan dan Cot Girek. Dampak lainnya yang sangat dirasakan masyarakat Aceh Utara adalah abrasi bibir Sungai (Krueng) Kreuto, dipicu rusaknya daerah tangkapan air yang berada pada kawasan hutan lindung Cut Mutia di Bate Uleu, Kecamatan Cot Girek.<br>
+(TribunNews.com)<br>
+Dari cuplikan berita tersebut, faaktor-faktor yang menyebabkan i peristiwa itu terjadi lagi adalah....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'dd172be9e6b159455dc89a905a8dad2e', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf70f8f57ed48c', '<p>Pernyataan berikut yang menunjukan proses ekspirasi pada pernafasan dada adalah....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'a05088b605e0fe42304e29d5592496ed', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf7113809ae909', '<p>Berikut merupakan pernyataan yang paling tepat berkaitan dengan penyakit Asma, yaitu....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '7de57de34c87fa8e3deecf36c16739e8', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf712bab4adba4', '<p>Perhatikan Pernyataan berikut!<br>
+1. menuju ke arah jantung<br>
+2. membawa lebih banyak CO2<br>
+3. ke luar dari jantung,<br>
+4. elastis<br>
+5. denyutnya terasa<br>
+6. tampak dari luar<br>
+Ciri-ciri pembuluh arteri ditunjukkan oleh nomor....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '1c3fce4f5f427f284c39f21f0b629184', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf714377ef79fa', '<p>Beberapa hari ini Ani harus pergi ke rumah sakit untuk dilakukan transfusi darah. Oleh dokter ia dinyatakan menderita thalasemia. Penyakit ini ditandai dengan...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '9e4cfeda925a89ae9507517fb227abfa', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf715ad956b326', '<p>Kelompok tumbuhan (Zingeberaceae) saat musim kemarau merespon keadaan kekurangan<br>
+air di lingkungan dengann cara ...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '07dfe1d138f12ffb16b9045553ad7202', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf7171d56b03c3', '<p>Dalam percobaan Ingenhousz volume udara dalam tabung reaksi yang dikenai sinar matahari meningkat lebih banyak dibanding yang tidaka terkena sinar matahari. Hal ini menunjukkan bahwa....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '5ece4382b76906ef4e9aa05009adc451', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf718beecaf656', '<p>Setelah perendaman daun di alkohol panas, selanjutnya daun di tetesi dengan larutan lugol dan terbentuklah warna biru pada bagian daun. kesimpulan dari percobaan tersebut membuktikan bahwa proses fotosintesis menghasilkan &hellip;.</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '906b233bae31c0e72f380e4ce4740c87', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf71a575fe718b', '<p>Sebelum melakukan percobaan fotosintesis guru memberintahkan siswa untuk menutup sebagian daun tanaman yang akan di jadikan percobaan dengan kertas karbon atau alumunium foil, ke esokan harinya baru di lakukan percobaan. Tujuan penutup sebagian daun tersebut adalah &hellip;.</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '2de5ae0848b6cdedc811329bc0df9739', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf71bba0bb057a', '<p>Hewan yang hidup di daerah kutub memiliki bulu tebal dan jaringan lemak yang banyak pada kulitnya, hal ini bertujuan untuk &hellip;.</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'cb54688eaf483c7a01e4c22663a2bfb2', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf71d64397cc58', '<p>Keberadaan jumlah belalang berwarna hijau dan berwarna coklat di sawah pada awalnhya seimbang, setalah padi di panen ternyata berpengaruh pada jumlah belalang yang berwarna hijau jumlahnya semakin menurun. Hal ini disebabkan &hellip;.</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '8300c074e5b34065091e4edaaf1d0d4f', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf71f091ccb924', '<p>Disilangkan kacang kedelai biji besar, beumur pendek (BBPp) dengan kacang kedelai biji besar, berumur panjang (Bbpp) maka perbandingan fenotif pada keturunanya adalah ....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '506669be6a73a9173a6c3bf57d41b8dc', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf720f432346c3', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/9857ad_21aac10ca27ec0da07b688f5503df043.png\"></p>
+<p>Ciri mahluk hidup yang ditunjukkan oleh gambar tersebut adalah...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '503edabdbf4a9eb84fc4c2093be493eb', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf7228c24da6b7', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/eb8039_3883a56ec5f76aad0d9ad83c2d5f3f90.png\"></p>
+<p>Dari gambar organisme tersebut, hewan yang masuk dalam kelompok yang sama adalah...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'c4c77aba903a3caadf4f99716d5b8844', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf7246f67bc6e2', '<p>Perhatikan jaring-jaring makanan berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/8d8869_c0529693c1e2f9a873328080f8b8597e.png\"></p>
+<p>Bila dalam ekosistem tersebut, rubah habis akibat diburu oleh manusia, yang dapat diupayakan manusia agar hama tikus tidak berkembang dan merajalela adalah...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '3baab34f288260ef644a6349ebb7a232', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf725d512632e7', '<p>Perhatikan gambar ruas persendian berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/c9a520_caeae660ab1c28c7406fb79b251110a0.png\"></p>
+<p>Fungsi bagian yang ditunjuk R adalah...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '94cf1f2e7a4fb989eeb543edd8509d3c', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf7274403e79c3', '<p>Perhatikan gambar!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/934294_2daac56f008301071a775059a587d184.png\"></p>
+<p>Dari gambar fenomena biologi yang teramati adalah....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '29e93db11c15ce69ef37187381d8227c', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf728c5d0c24e3', '<p>Pasangan kelenjar atau organ, enzim yang dihasilkan, bahan dasar, dan hasil yang paling tepat adalah...
+</p><table style=\"max-width: 100%;\" border=\"1\"><tbody><tr><td><span style=\"font-size: x-small;\">&nbsp;</span></td>
+<td><strong><span style=\"font-size: x-small;\">Kelenjar/Organ</span></strong></td>
+<td><strong><span style=\"font-size: x-small;\">Enzim</span></strong></td>
+<td><strong><span style=\"font-size: x-small;\">Bahan Dasar</span></strong></td>
+<td><strong><span style=\"font-size: x-small;\">Produk</span></strong></td>
+</tr><tr><td><span style=\"font-size: x-small;\">A</span></td>
+<td><span style=\"font-size: x-small;\">dinding lambung</span></td>
+<td><span style=\"font-size: x-small;\">pepsin</span></td>
+<td><span style=\"font-size: x-small;\">protein</span></td>
+<td><span style=\"font-size: x-small;\">asam amino</span></td>
+</tr><tr><td><span style=\"font-size: x-small;\">B</span></td>
+<td><span style=\"font-size: x-small;\">pankreas</span></td>
+<td><span style=\"font-size: x-small;\">tripsin</span></td>
+<td><span style=\"font-size: x-small;\">protein</span></td>
+<td><span style=\"font-size: x-small;\">pepton</span></td>
+</tr><tr><td><span style=\"font-size: x-small;\">C</span></td>
+<td><span style=\"font-size: x-small;\">hati</span></td>
+<td><span style=\"font-size: x-small;\">empedu</span></td>
+<td><span style=\"font-size: x-small;\">lemak</span></td>
+<td><span style=\"font-size: x-small;\">gliserol</span></td>
+</tr><tr><td><span style=\"font-size: x-small;\">D</span></td>
+<td><span style=\"font-size: x-small;\">dinding usus halus</span></td>
+<td><span style=\"font-size: x-small;\">enterokinase</span></td>
+<td><span style=\"font-size: x-small;\">tripsinogen</span></td>
+<td><span style=\"font-size: x-small;\">tripsin</span></td>
+</tr></tbody></table>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '4fb28180f29c0af480383c13fd658e79', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf72a523afcd53', '<p>Berikut merupakan pernyataan yang paling tepat berkaitan dengan penyakit Asma, yaitu...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '3b9f9158903862e65964acbd381b2e63', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf72bbceab733f', '<p>Perhatikan Pernyataan berikut!<br>
+1. menuju ke arah jantung<br>
+2. membawa lebih banyak CO2<br>
+3. ke luar dari jantung<br>
+4. elastis<br>
+5. denyutnya terasa<br>
+6. tampak dari luar<br>
+Ciri-ciri pembuluh arteri ditunjukkan oleh nomor...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'eff6eec56898ae9ac26cf8607b811faf', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf72cd6763c082', '<p>Beberapa hari ini Ani harus pergi ke rumah sakit untuk dilakukan transfusi darah. Oleh dokter ia dinyatakan menderita thalasemia. Penyakit ini ditandai dengan...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '9e4cfeda925a89ae9507517fb227abfa', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf72e9ee45dda2', '<p>Perhatikan gambar nefron ginjal berikut ini!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/3c0c28_57af96d1c30e0d724f53b39fb29dd142.png\"></p>
+<p>Pada bagian yang diberi label X berlangsung...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '58f912dc4d422a500a5c018b7ab95fda', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf7302865e5271', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/e25b55_ef101a151dcd08575585ecc3ce6d9449.png\"></p>
+<p>Bbagian yang ditunjuk dengan huruf R berfungsi untuk...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '33b76213ebd24d336d26238271bd39ec', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf731d6f2acf40', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/05c200_c7dc5964c2b94662aed31ba70940db35.png\"></p>
+<p>Bagian yang ditunjuk dengan huruf Z berperan untuk...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '8f5670b577b65cc32750c3fb2a296120', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf7334fce4f20f', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/fb596f_d5b3c03edfe468d52371de42af5ab320.png\"></p>
+<p>Bagian yang ditunjuk M berfungsi untuk ...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '785110ef7af06dc4b42c22b2c526e31f', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf734da6ab7ddc', '<p>Perhatikan gambar penampang akar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/ec57eb_eefcacb63caa0f5f57853d8356e86726.png\"></p>
+<p>Bagian yang ditunjuk dengan huruf P berperan...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '475d8e3d1125d6fb04cc6af200993006', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf7364582a10a0', '<p>Kelompok tumbuhan (<em>Zingeberaceae</em>) saat musim kemarau merespon keadaan kekurangan air di lingkungan dengann cara...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '158859f018cdf8d03b2daf519900e6ef', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf737f2d1b9b28', '<p>Dalam percobaan Ingenhousz volume udara dalam tabung reaksi yang dikenai sinar matahari meningkat lebih banyak dibanding yang tidaka terkena sinar matahari. Hal ini menunjukkan bahwa...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '137e463dd8dcffdbe247e087beef5a72', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf739957551552', '<p>Setelah perendaman daun di alkohol panas, selanjutnya daun di tetesi dengan larutan<br>
+lugol dan terbentuklah warna biru pada bagian daun. kesimpulan dari percobaan tersebut<br>
+membuktikan bahwa proses fotosintesis menghasilkan...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'e1d09ec73ed1997e4bdba7b70bf6facd', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf73b13c634050', '<p>Sebelum melakukan percobaan fotosintesis guru memberintahkan siswa untuk menutup sebagian daun tanaman yang akan di jadikan percobaan dengan kertas karbon atau alumunium foil, ke esokan harinya baru di lakukan percobaan. Tujuan penutup sebagian daun tersebut adalah...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '4b34ee3981979faf77e8d5a1fc033e5c', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf73cbf4a442e6', '<p>Hewan yang hidup di daerah kutub memiliki bulu tebal dan jaringan lemak yang banyak pada kulitnya, hal ini bertujuan untuk...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '600cdca469c4e8a2350b87bb72db66cc', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf73e29b8ea09e', '<p>Keberadaan jumlah belalang berwarna hijau dan berwarna coklat di sawah pada awalnhya seimbang, setalah padi di panen ternyata berpengaruh pada jumlah belalang yang berwarna hijau jumlahnya semakin menurun. Hal ini disebabkan...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'e95a94a01f1c437f77a8b21ed73f0aa0', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf7401cf262fdf', '<p>Perhatikan diagram persilangan antara bunga warna merah (MM) dengan bunga warna putih (mm) berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/7e3ace_87e3b06b54a6af3e02b105f8a5081738.png\"></p>
+<p>Persentase genotip homozigot dominan pada F2 adalah...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '1302305c11f71c8b4faaadc3f29f4a97', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf741985d5e1e8', '<p>Disilangkan kacang kedelai biji besar, beumur pendek (BBPp) dengan kacang kedelai biji besar, berumur panjang (Bbpp) maka perbandingan fenotif pada keturunanya adalah...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '582e746828a12255ef6c8765d9a54d88', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf7431cc889535', '<p>Termasuk bahan kimia yang sering ditambahkan sebagai pewarna sintetis dalam pembuatan bahan makanan dalam jumlah besar adalah...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'a93c451958a1c568c699c1008d9efdff', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf744ebe2f3023', '<p>Perhatikan data jumlah penduduk di suatu wilayah yang memiliki luas wilayah hampir sama dalam tabel berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/0cad05_69c45f27e16214987db7d302653be29b.png\"></p>
+<p>Dari tabel tersebut persoalan lingkungan yang mungkin terjadi adalah...</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', '3384405ac4877246f7adc92723b796da', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddcbf74681684b56b', '<p>Perhatikan gambar!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddcbf6cec708179f8/ee931c_005aa8bf179ea7df2fb7138f29959d21.png\"></p>
+<p>Bagian yang berfungsi sebagai pusat penulangan ditunjuk oleh....</p>', '063ddcbf6cec708179f8', true, '2', '1', 'upper-alpha', 'e8f4f35a96ee384e379ab922a58dfea9', '',
+								'2023-02-04 10:07:34', 'aaaaaaaaaaaaa', '2023-02-04 10:07:34', 'aaaaaaaaaaaaa')
+								;
