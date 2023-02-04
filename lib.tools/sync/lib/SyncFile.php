@@ -150,7 +150,6 @@ class FileSyncUpload extends FileSyncMaster
      */
     private function getPoolingFiles()
     {
-        echo $this->poolBaseDir;
         $fileList = $this->glob($this->poolBaseDir);
         $fileList = $this->filterPoolingFileList($fileList, $this->poolBaseDir, $this->poolFileName, $this->poolFileExtension);
         $fileList = $this->sort($fileList);
