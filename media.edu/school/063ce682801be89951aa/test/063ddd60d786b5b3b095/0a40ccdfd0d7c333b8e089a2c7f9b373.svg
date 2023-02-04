@@ -1,0 +1,17 @@
+<svg width="226.00000000000003" height="123" xmlns="http://www.w3.org/2000/svg">
+ <g id="Layer_1">
+  <title>Layer 1</title>
+  <path fill="#fff" stroke="#000" d="m8.18509,104.411l49.5,-87l49.5,87l-99.00001,0l0.00001,0z" id="svg_1"/>
+  <path fill="#fff" stroke="#000" d="m123.51104,104.37575l49.5,-87l49.5,87l-99.00001,0l0.00001,0z" id="svg_2"/>
+  <text fill="#000000" stroke="#000" x="0" y="119.61847" id="svg_3" stroke-width="0" font-size="16" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve">A</text>
+  <text fill="#000000" stroke="#000" x="102.20253" y="119.61847" id="svg_4" stroke-width="0" font-size="16" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve">B</text>
+  <text fill="#000000" stroke="#000" x="119.38313" y="119.61847" id="svg_5" stroke-width="0" font-size="16" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve">D</text>
+  <text fill="#000000" stroke="#000" x="216.73985" y="119.61847" id="svg_6" stroke-width="0" font-size="16" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve">F</text>
+  <text fill="#000000" stroke="#000" x="52.86338" y="14.33223" id="svg_7" stroke-width="0" font-size="16" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve">C</text>
+  <text fill="#000000" stroke="#000" x="167.4007" y="14.33223" id="svg_8" stroke-width="0" font-size="16" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve">F</text>
+  <text style="cursor: move;" fill="#000000" stroke="#000" x="14.45707" y="102.45653" id="svg_9" stroke-width="0" font-size="16" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve">x</text>
+  <text style="cursor: move;" fill="#000000" stroke="#000" x="91.6557" y="102.45653" id="svg_10" stroke-width="0" font-size="16" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve">o</text>
+  <text style="cursor: move;" fill="#000000" stroke="#000" x="207.29076" y="102.45653" id="svg_11" stroke-width="0" font-size="16" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve">o</text>
+ </g>
+
+</svg>

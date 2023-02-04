@@ -1,0 +1,1074 @@
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd7778ef16d823b2', '<p>Invers matriks&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"left[begin{array}{ccc}3 &amp; 2 \\
+5 &amp; 4 \\
+end{array}right]\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cleft%5B%5C%5Cbegin%7Barray%7D%7Bccc%7D3%20%26%202%20%5C%5C%5C%5C%5Cr%5Cn5%20%26%204%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright%5D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22squareBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd7776b70b2ccea3/4127d5_f440353eb6e20018c9dc92e70fe48ef6.png\"> = ...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '1dcaaf249b5836f96854c68b94b617bd', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd77792619346bed', '<p>Dari suatu barisan aritmetika suku ke-4 dan suku ke-9 berurut-turut 41 dan 26. Jumlah 14 suku pertama barisan tersebut adalah...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '995db20735bab48df2f1868ae70c4072', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd77793ce20bde9c', '<p>Diketahui deret 4 + 6 + 8 + 10 +... Rumus dari <em>n</em> suku pertamanya adalah...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '22aff7f94fd811947bdb59fccf9564f3', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd777957856025fe', '<p>Suku pertama dan suku ke lima suatu barisan geometri berturut&ndash;turut 54 dan <img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"\\frac{2}{3}\" data-latex=\"\\frac{2}{3}\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAq0lEQVQ4je2UzQ3DIAxG3wgdgCtX7hkgi7BBdsgOnYEtGKJTdAl6iFESZIgvlSK1T7KExYf/JAy34wFE4AUU4C2+SgJWeYScCxCsmcoo+hEn4skifopdEoHMXn+XmXOjQ2E6+J5Og15JHXvizNZ9a6bR/TGhzbe130JbBUtP3K6CKI9mS6YgYn9VzsT2s4dRa7QiZZm2keOb64uRuL2oo3OauE6gNpgx1ntnPjnQNfYtIujZAAAAAElFTkSuQmCC\">. Suku ketujuh barisan geometri tersebut adalah...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', 'c07a8f4acf089579ca6df31c46cc49bc', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd7779726342f02b', '<p>Diketahui suku pertama dan suku kelima suatu deret geometri berturut-turut 2 dan 32. Jumlah tujuh suku pertamanya adalah...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '33f639ef3bb434d190404a41ca1c8c24', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd77798b71ada608', '<p>Ada 6 bersaudara yang umurnya membentuk deret matematika. Jika yang termuda 25 tahun dan yang tertua 40 tahun. Jumlah umur mereka adalah...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '4277a5c18412b083c703ccbf2cdf2c82', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd7779a1ce64551e', '<p>Perhatikan gambar!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd7776b70b2ccea3/93ec0b_87bd0b59f74c17e80223dd4351296e3a.png\"></p>
+<p>Diberikan pernyataan<br> I AD sejajar FG<br> II BF berpotongan dengan CD<br> III AD tegak lurus CD<br> IV EF berpotongan dengan DH<br> Yang benar adalah...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '2133f8e78a88642e5f97cdddfb1f43da', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd7779b22b6730ad', '<p>Diketahui kubus ABCD EFGH dengan rusuk 6 cm. Jarak titik A ke titik G adalah...</p>
+<p><img alt=\"\" width=\"151\" height=\"138\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd7776b70b2ccea3/93ec0b_87bd0b59f74c17e80223dd4351296e3a.png\"></p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '191179b3afc37e06c97ff2b9ce509138', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd7779c60706feab', '<p>Diketahui segitiga <em>ABC</em> siku-siku. Jika <img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"\\sin\\left(B\\right)=\\frac{3}{5}\" data-latex=\"\\sin\\left(B\\right)=\\frac{3}{5}\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAoCAYAAACPSbZFAAACPElEQVRoge2azZWCMBCAvxJSgFev3i2ACtKBHdiDPWwNdLFFUIVNsIdhlsAmBBUNsPO9x3u6BhiG+c+CYRiGMZMDcAPuQAs0QFVUoh3QAr777ICv7m+HYhLtkAtitcYCHBC3r4FjYVl2wQVx+RaJr+b6C3IEvhH3d2VF2RdnxGJPpQXZEydMqS8xVqCWVE0xiWbwSMB3lIljHomjmqi+WGmiOiOCnh8459Sd4zPr/iUVopxnrE7d77qkQCVYMjA7pByJFc81vYvp0fBXgXqNTSeKJZV6RSwthuvuEw4rfOLeV+QlGExPePTlhWHhQFypsbWrwzEcb93pH75h+GBV971GEo3+notzKQUpnqH1afdyS6zPeY8qPne8LYx4RDn65m9IvxsKF968RhTvg/NbpgcNOevSkVp4TGX6NpBxlXiG1hmSUmpoVS6yJnWdFHf6EsvRj9hSL+ETSp1j6ZPoQ9wZCjtHqUTWjJlS6pF0PE3VsjmlFnf/kDND115aqbEQoV3LWI6pa44rhdVR0wvokPiai6kx9891SKk144JeX+x34jpqxaseFl/pM7/2t+qKmt11C6EK1vnImqkHjXVDapHjov9COp5W2JbGLxXLTHhqymb+VJlXjFcVorXxpwr/cCtldtb/NA6Jlc8oVhPaJ2PphQ21xBWPZe8T03H2XWxKqVvBlPoGtNLQCqfhseG6kUEHT/ZvPwujjY5t6yyIdnOm1BcIW+tw7rzqAfna0X3+sIVf9czBMAxjy/wAR27KJ+yUsAAAAAAASUVORK5CYII=\">, nilai&nbsp;<img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"\\sin\\left(C\\right)\" data-latex=\"\\sin\\left(C\\right)\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAXCAYAAABEQGxzAAABYElEQVRYhe2XyxGDIBCGvxIswKtX7xZgBXaQDuzBHlKDXaQIq6AJcgBGMAvB15iZ+M1wSPxDdtkHK9zc/C0lUGdqqxXaS+iBEWNoDiXwtKs4y6it9BjDtvDAHMQuakBzTMgrQBE/5RIYrEbbtXRgAto9Rhzp0GCXhHP2iXHM6aeFrhO+uwwFNJFnE5/RqPlMzwpzwCUJCsJQK+awToQRaplTofGe90lXZkOkSLs9k0Z6aOIHA8xhdLk9YAoQ5JQbMU533u816a7l9pF42ZWL9uwT6QijIhmydMhPj0LQxPbZZOAW/QPjlFqIcxxC0CyJObSl6aw6gIYwnY5yKFZDqdqK8bWGRuZ0KzD19K2GpJRL/gnxtJ4Ip4AaU1NSTWZ1uZ7wMvM3d11M2c+tp+sETaoxxO6hyjrg9lXEJ4Kfuodq0pNCDrsnhaO5fJY7Azdt516kPz1tO9a8D63R3tycyRtVHHOVeZ6kGwAAAABJRU5ErkJggg==\"> ...</p>
+<p><img alt=\"\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOIAAAB8CAIAAAD7HvuzAAAEhElEQVR4nO3Zu3HqQBiGYTWzM4SEBBvQgjpgRg042BaInZA7UAWqgNCJZhyrATl0QAF7gp8jY2Fz3ZX28j4RFoNGwTvoQy4sELxi7gsAriNTROBHpm3bdl0316UAfzlmWlWVUkprrZQqy3LeawJGCmttWZZVVQ2HqqqiVASl6LpOKXV66HA41HU91wUB54q6rrXWc18GcEmx2+3IFIEr2rYd3fSttdz0EZTCWqu1bppmOFTX9Xm4I5vN5uXl5evry+/VAdZaybRpGqWUMaZtW2OMUuq02l+t1+vNZrNYLN7e3qa4TOTt+Ny07/vtdluW5Xa77fv+6sfW6/V+v//8/NxsNqvV6uPjw/N1ImsP/rNUMpXX7+/vy+WSDQB/HGQqXl9f2QDwxFmm1lo2ADxxmalgA8A595kKNgAc8pWpZQPAHY+ZCjYAnuc9U8EGwDMmytSyAfCE6TIVbAA8YOpMBRsAd5knU8sGwD1my1SwAXCLmTMVbABcFkSmlg2Ai0LJVLAB8KuwMhVsAIyEmKllA+CnQDMVbACIoDMVbABEkKllA2QvjkwFGyBbMWUq2AAZii9TywbIT5SZCjZAPiLOVLABchB9ppYNkIEUMhVsgISlk6lgAyQptUwtGyBFCWYq2AApSTZTwQZIQ+KZWjZAEtLPVLABopZLpoINEKm8MrVsgDhll6lgA8Ql00wFGyAWWWdq2QCRyD1TwQYIHJl+YwMEi0x/YAOEiUx/wQYIDZn+iQ0QDjK9hA0QCDK9jg0wOzK9FRtgRmR6BzbAXMj0bmyA6ZHpg9gAUyLTx7EBJkOmz2IDTIBM3WADeEWmzrAB/CFTx9gAPpCpF2wAt8jUFzaAQ2TqFxvACTKdAhvgSWQ6ETbAM8h0UmyAx5DpDNgA9yLTebAB7kKmc2ID3IhM58cGuIpMg8AGuIxMA8IG+AuZBocNcI5MQ8QGGCHTcLEBBmQaOjaAJdMosAHINBo5bwAyjUyeG4BM45PhBiDTWGW1Acg0bplsADKNXg4bgEwTkfYGINOkpLoByDQ1SW4AMk1TYhuATFOWzAYg08SlsQHINAuxbwAyzUi8G4BM8xLpBiDTHEW3Acg0XxFtADLNWiwbgEwRwQYgUxyFvAHIFN+C3QBkirEAN8B3pn3fd11348fINHmzbID2RN/3w/HvTLXWSqnT9y4g0xxMvAHati2KQv+nlKrrWt46Ztp1nVLKGLPdbm85I5nmY7IN0LatUmr4s2ma4c9jpsYYY4zEessZyTQ3E2yA80y11vL6mKlSSoap1vqW/sg0Q743wPlNf2issNbu93uttezWqqrKsrx6RjLNlr8NIN+mw08oY8yPm35ZlvrELT+kyDRzPjbA6KZvrZVvT2tt0ff96L2yLI0xl89IpnC+AUaZHg6HYYsWu91udJff7/dXf0iRKYTDDXC+TauqkreKrusOh8P5By6fkUxxytUGuP54/y5kihGvzwHIFC55eg5ApnDP+XMAMoUXbjcAmcIjVxuATOHd8xvg8UyXy+UauM1isSiKYrVaPfa1+g95BD4L/sAPqQAAAABJRU5ErkJggg==\"></p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', 'fa0dd5b26941f0090f5edd11f8f06659', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd7779d6f7703992', '<p>hasil dari cos 60&deg; + sin 60&deg; + cos 30&deg; + sin 30&deg; = ...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', 'a9db7b80efdd4fbbfeed1eb1b7908982', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd7779e9fec03024', '<p>Dari angka &ndash; angka 2, 3, 4, 5, 6, 7 dan 8 akan disusun bilangan yang terdiri dari tiga angka. Banyaknya bilangan genap adalah...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '77370aa7dd048c7239886c4a5e16da0d', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd7779fa9c0efb92', '<p>Petugas perpustakaan suatu sekolah akan menyusun 3 buku matematika yang sama, 2 buku sastra yang sama dan 3 buku ekonomi yang sama secara berderet pada sebuah rak buku. Banyak susunan yang mungkin adalah...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', 'ef487c4e6fa3625f5b1dd3367cfe5cb8', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd777a0af04ccccb', '<p>Tiga bola akan diambil dari dalam kotak yang berisi 5 bola merah, 4 bola putih dan 3 bola biru. Banyaknya cara pengambilan tiga bola sehingga sedikitnya terdapat 2 bola merah ada...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', 'c41670d56cb1fcafcc4dcc772eecb9df', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd777a1b08668113', '<p>Dari 7 orang pria dan 5 orang wanita akan dipilih 5 orang yang terdiri dari 3 orang pria dan 2 orang wanita. Peluang terpilihnya 5 orang tersebut adalah...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '872a451bf3d14cac31b03ac942e97120', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd777a35bc046012', '<p>Diagram lingkaran berikut menunjukkan cara siswa &ndash; siswi SMA &ldquo;A&rdquo; datang ke sekolah. Jika jumlah siswa 480, maka siswa yang naik motor sebanyak...</p>
+<p><img alt=\"\" width=\"173\" height=\"174\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd7776b70b2ccea3/3f639a_36.gif\"></p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '5c295f6f7204fa7737f1f773e8f2276c', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd777a48a04c4e76', '<p>Modus data pada tabel berikut adalah...</p>
+<table style=\"width: 190px; height: 235px;\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td valign=\"top\" width=\"120\">
+<p align=\"center\">nilai</p>
+</td>
+<td valign=\"top\" width=\"108\">
+<p align=\"center\">frekuensi</p>
+</td>
+</tr><tr><td valign=\"top\" width=\"120\">
+<p align=\"center\">31 &ndash; 40</p>
+<p align=\"center\">41 &ndash; 50</p>
+<p align=\"center\">51 &ndash; 60</p>
+<p align=\"center\">61 &ndash; 70</p>
+<p align=\"center\">71 &ndash; 80</p>
+<p align=\"center\">81 &ndash; 90</p>
+<p align=\"center\">91 &ndash; 100</p>
+</td>
+<td valign=\"top\" width=\"108\">
+<p align=\"center\">2</p>
+<p align=\"center\">13</p>
+<p align=\"center\">13</p>
+<p align=\"center\">14</p>
+<p align=\"center\">24</p>
+<p align=\"center\">19</p>
+<p align=\"center\">5</p>
+</td>
+</tr></tbody></table>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '4cb6413c4655b589142681da3a78f2e0', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd777a5c68ba3581', '<p>Rataan hitung data pada histogram berikut adalah...</p>
+<p><img alt=\"\" width=\"251\" height=\"156\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd7776b70b2ccea3/276f10_38.gif\"></p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '15f604e9f1cf22fdeee9cdf7c1091e91', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd777a711721b7ce', '<p>Kuartil atas dari data 7, 4, 6, 8, 6, 7, 8, 7, 9, 8 adalah...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', 'b78f9c43305b0093bea50a099e2dbae8', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddd777a851275e97a', '<p>Simpangan rata &ndash; rata dari data 8, 4, 5, 6, 7, 5, 8, 5 adalah...</p>', '063ddd7776b70b2ccea3', true, '2', '1', 'upper-alpha', '36fbd9df9680e8aada353b57762ed105', '',
+								'2023-02-04 10:56:39', 'aaaaaaaaaaaaa', '2023-02-04 10:56:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"ascii-svg\" src=\"lib.tools/asciisvg/svgimg.php?sscr=-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cred%2C1%2Cnone\" style=\"width: 300px; height: 200px; vertical-align: middle; float: none;\" data-sscr=\"-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cred%2C1%2Cnone\"></p>
+<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/7ab2f39d3622179df05dbd862368b1fb.svg\" alt=\"\"></p>
+<p><img class=\"latex-image equation-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/08ce24b1ba4f54f8fd1ab1b81af01f42.png\" alt=\"\\sqrt{\\lim _{x \\to 2}\\left(\\frac{x+2}{x-2}\\right)+1}\" data-equation=\"N4IgNghgLgpgHiAXCAOigzgRwE5WGsASwFsACAfWDlLSgHtSAmAXwJgDMoAKNd7CAMZUA1CyoBaFmmyEA5gAsoASmEBGZiAA0IAFbo6AOySgoATwAOMJCACimAK7RChrSABuEMPauID9sGDadJb8BgAm6MYg9OYAMjBuMGAAwoZQEIQGMNhIANomFj4gAMoOENgwAEp0dFCuHl4+fgFBIRDhkYig/GGEAu1heQWW1rEkhHXaDd5IzYEgwdkDnaBgHHWI+dGF1sWmxABGdGD1njPICK1LHbP+YMwAutoyChtbZiPIe4fHp43WjFci1CEVuAUezGYmmGRQAQvwBABrGBQAAKGRyUzORXM5RgBig8hg6EI6HhgmRkwWbRuXRABwRlJgYRscHMFXQJJcmxhu3SSOZADEEVBnEYsf9fHcriCViA/MQlvQcjztp8SvsjicJecQJdqddQVLwdC1UUAPJtZV/XXCIE0o1zKG8r6a346oqAmXLMH3J4gML4ujETLQOgq947V0/bXubHWfXAn3G+6mj4Wq3hm1FQBIRPbDZ0nWmoxqY9mAfnZb6ITXi+rLUqsx7rHbvbSiy7S1ry8hVJXk06HpCh5CgA==\" data-latex=\"\\sqrt{\\lim _{x \\to 2}\\left(\\frac{x+2}{x-2}\\right)+1}\" data-renderer=\"browser-png\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/5609f347bd9a4caf9041c10cee456caf.svg\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/451728098cbc5f575c7619c4b68b2770.svg\" alt=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" data-latex=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/c1ae76b33a78111d75519bc917aade4e.svg\" alt=\"\"><br>&nbsp;</p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"ascii-svg\" src=\"lib.tools/asciisvg/svgimg.php?sscr=-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cblue%2C1%2Cnone\" style=\"width: 300px; height: 200px; vertical-align: middle; float: none;\" data-sscr=\"-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cblue%2C1%2Cnone\"></p>
+<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/7ab2f39d3622179df05dbd862368b1fb.svg\" alt=\"\"></p>
+<p><img class=\"latex-image equation-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/08ce24b1ba4f54f8fd1ab1b81af01f42.png\" alt=\"\\sqrt{\\lim _{x \\to 2}\\left(\\frac{x+2}{x-2}\\right)+1}\" data-equation=\"N4IgNghgLgpgHiAXCAOigzgRwE5WGsASwFsACAfWDlLSgHtSAmAXwJgDMoAKNd7CAMZUA1CyoBaFmmyEA5gAsoASmEBGZiAA0IAFbo6AOySgoATwAOMJCACimAK7RChrSABuEMPauID9sGDadJb8BgAm6MYg9OYAMjBuMGAAwoZQEIQGMNhIANomFj4gAMoOENgwAEp0dFCuHl4+fgFBIRDhkYig/GGEAu1heQWW1rEkhHXaDd5IzYEgwdkDnaBgHHWI+dGF1sWmxABGdGD1njPICK1LHbP+YMwAutoyChtbZiPIe4fHp43WjFci1CEVuAUezGYmmGRQAQvwBABrGBQAAKGRyUzORXM5RgBig8hg6EI6HhgmRkwWbRuXRABwRlJgYRscHMFXQJJcmxhu3SSOZADEEVBnEYsf9fHcriCViA/MQlvQcjztp8SvsjicJecQJdqddQVLwdC1UUAPJtZV/XXCIE0o1zKG8r6a346oqAmXLMH3J4gML4ujETLQOgq947V0/bXubHWfXAn3G+6mj4Wq3hm1FQBIRPbDZ0nWmoxqY9mAfnZb6ITXi+rLUqsx7rHbvbSiy7S1ry8hVJXk06HpCh5CgA==\" data-latex=\"\\sqrt{\\lim _{x \\to 2}\\left(\\frac{x+2}{x-2}\\right)+1}\" data-renderer=\"browser-png\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/5609f347bd9a4caf9041c10cee456caf.svg\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/451728098cbc5f575c7619c4b68b2770.svg\" alt=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" data-latex=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/c1ae76b33a78111d75519bc917aade4e.svg\" alt=\"\"><br>&nbsp;</p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"ascii-svg\" src=\"lib.tools/asciisvg/svgimg.php?sscr=-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cblue%2C1%2Cnone\" style=\"width: 300px; height: 200px; vertical-align: middle; float: none;\" data-sscr=\"-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cblue%2C1%2Cnone\"></p>
+<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/634ee722f4ad64a037407b1984409b22.svg\"></p>
+<p><img class=\"latex-image equation-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/08ce24b1ba4f54f8fd1ab1b81af01f42.png\" alt=\"\\sqrt{\\lim _{x \\to 2}\\left(\\frac{x+2}{x-2}\\right)+1}\" data-equation=\"N4IgNghgLgpgHiAXCAOigzgRwE5WGsASwFsACAfWDlLSgHtSAmAXwJgDMoAKNd7CAMZUA1CyoBaFmmyEA5gAsoASmEBGZiAA0IAFbo6AOySgoATwAOMJCACimAK7RChrSABuEMPauID9sGDadJb8BgAm6MYg9OYAMjBuMGAAwoZQEIQGMNhIANomFj4gAMoOENgwAEp0dFCuHl4+fgFBIRDhkYig/GGEAu1heQWW1rEkhHXaDd5IzYEgwdkDnaBgHHWI+dGF1sWmxABGdGD1njPICK1LHbP+YMwAutoyChtbZiPIe4fHp43WjFci1CEVuAUezGYmmGRQAQvwBABrGBQAAKGRyUzORXM5RgBig8hg6EI6HhgmRkwWbRuXRABwRlJgYRscHMFXQJJcmxhu3SSOZADEEVBnEYsf9fHcriCViA/MQlvQcjztp8SvsjicJecQJdqddQVLwdC1UUAPJtZV/XXCIE0o1zKG8r6a346oqAmXLMH3J4gML4ujETLQOgq947V0/bXubHWfXAn3G+6mj4Wq3hm1FQBIRPbDZ0nWmoxqY9mAfnZb6ITXi+rLUqsx7rHbvbSiy7S1ry8hVJXk06HpCh5CgA==\" data-latex=\"\\sqrt{\\lim _{x \\to 2}\\left(\\frac{x+2}{x-2}\\right)+1}\" data-renderer=\"browser-png\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/5609f347bd9a4caf9041c10cee456caf.svg\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/451728098cbc5f575c7619c4b68b2770.svg\" alt=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" data-latex=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/c1ae76b33a78111d75519bc917aade4e.svg\" alt=\"\"><br>&nbsp;</p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"ascii-svg\" src=\"lib.tools/asciisvg/svgimg.php?sscr=-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cblue%2C1%2Cnone\" style=\"width: 300px; height: 200px; vertical-align: middle; float: none;\" data-sscr=\"-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cblue%2C1%2Cnone\"></p>
+<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/634ee722f4ad64a037407b1984409b22.svg\" alt=\"\"></p>
+<p><img class=\"latex-image equation-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/08ce24b1ba4f54f8fd1ab1b81af01f42.png\" alt=\"\\sqrt{\\lim _{x \\to 2}\\left(\\frac{x+2}{x-2}\\right)+1}\" data-equation=\"N4IgNghgLgpgHiAXCAOigzgRwE5WGsASwFsACAfWDlLSgHtSAmAXwJgDMoAKNd7CAMZUA1CyoBaFmmyEA5gAsoASmEBGZiAA0IAFbo6AOySgoATwAOMJCACimAK7RChrSABuEMPauID9sGDadJb8BgAm6MYg9OYAMjBuMGAAwoZQEIQGMNhIANomFj4gAMoOENgwAEp0dFCuHl4+fgFBIRDhkYig/GGEAu1heQWW1rEkhHXaDd5IzYEgwdkDnaBgHHWI+dGF1sWmxABGdGD1njPICK1LHbP+YMwAutoyChtbZiPIe4fHp43WjFci1CEVuAUezGYmmGRQAQvwBABrGBQAAKGRyUzORXM5RgBig8hg6EI6HhgmRkwWbRuXRABwRlJgYRscHMFXQJJcmxhu3SSOZADEEVBnEYsf9fHcriCViA/MQlvQcjztp8SvsjicJecQJdqddQVLwdC1UUAPJtZV/XXCIE0o1zKG8r6a346oqAmXLMH3J4gML4ujETLQOgq947V0/bXubHWfXAn3G+6mj4Wq3hm1FQBIRPbDZ0nWmoxqY9mAfnZb6ITXi+rLUqsx7rHbvbSiy7S1ry8hVJXk06HpCh5CgA==\" data-latex=\"\\sqrt{\\lim _{x \\to 2}\\left(\\frac{x+2}{x-2}\\right)+1}\" data-renderer=\"browser-png\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/5609f347bd9a4caf9041c10cee456caf.svg\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/451728098cbc5f575c7619c4b68b2770.svg\" alt=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" data-latex=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/c1ae76b33a78111d75519bc917aade4e.svg\" alt=\"\"> <img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/0370ca49846d02b7b2c19ac80ee526a6.svg\"><br>&nbsp;</p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"ascii-svg\" src=\"lib.tools/asciisvg/svgimg.php?sscr=-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cblue%2C1%2Cnone\" style=\"width: 300px; height: 200px; vertical-align: middle; float: none;\" data-sscr=\"-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cblue%2C1%2Cnone\"></p>
+<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/634ee722f4ad64a037407b1984409b22.svg\" alt=\"\"></p>
+<p><img class=\"latex-image equation-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/08ce24b1ba4f54f8fd1ab1b81af01f42.png\" alt=\"\\sqrt{\\lim _{x \\to 2}\\left(\\frac{x+2}{x-2}\\right)+1}\" data-equation=\"N4IgNghgLgpgHiAXCAOigzgRwE5WGsASwFsACAfWDlLSgHtSAmAXwJgDMoAKNd7CAMZUA1CyoBaFmmyEA5gAsoASmEBGZiAA0IAFbo6AOySgoATwAOMJCACimAK7RChrSABuEMPauID9sGDadJb8BgAm6MYg9OYAMjBuMGAAwoZQEIQGMNhIANomFj4gAMoOENgwAEp0dFCuHl4+fgFBIRDhkYig/GGEAu1heQWW1rEkhHXaDd5IzYEgwdkDnaBgHHWI+dGF1sWmxABGdGD1njPICK1LHbP+YMwAutoyChtbZiPIe4fHp43WjFci1CEVuAUezGYmmGRQAQvwBABrGBQAAKGRyUzORXM5RgBig8hg6EI6HhgmRkwWbRuXRABwRlJgYRscHMFXQJJcmxhu3SSOZADEEVBnEYsf9fHcriCViA/MQlvQcjztp8SvsjicJecQJdqddQVLwdC1UUAPJtZV/XXCIE0o1zKG8r6a346oqAmXLMH3J4gML4ujETLQOgq947V0/bXubHWfXAn3G+6mj4Wq3hm1FQBIRPbDZ0nWmoxqY9mAfnZb6ITXi+rLUqsx7rHbvbSiy7S1ry8hVJXk06HpCh5CgA==\" data-latex=\"\\sqrt{\\lim _{x \\to 2}\\left(\\frac{x+2}{x-2}\\right)+1}\" data-renderer=\"browser-png\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/5609f347bd9a4caf9041c10cee456caf.svg\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/description/451728098cbc5f575c7619c4b68b2770.svg\" alt=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" data-latex=\"(1+x)^n=1+nx/1!+(n(n-1) x^2)/2!+&#8943;\" data-renderer=\"browser-mathml\"></p>
+<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/c1ae76b33a78111d75519bc917aade4e.svg\" alt=\"\"> <img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/0370ca49846d02b7b2c19ac80ee526a6.svg\" alt=\"\"></p>
+<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/f8ab80a9b02ca58f23a490ac7db81e06.svg\"><br>&nbsp;</p>'
+	WHERE `school_id` = '063ce682801be89951aa'
+	;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_test` 
+	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values
+	('063dde983ad521410e4b', '063ce682801be89951aa', 'Ujian Nasional Ilmu Pengetahuan Alam Paket 02', '', '', '', '', '', 'Pilihlah jawaban yang paling tepat!', '0', '1', '1', '75', 'H', '10', '5', '10', '1', '3600', '1', '300', 'Lihat waktu sisa Anda. Silakan periksa kembali jawaban Anda. Segera kirimkan jawaban sebelum waktunya habis.', '0', '1', '0', '0', '0', '0', null, 'F', null, null, '2023-02-04 12:13:39', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa', 'A', 'aaaaaaaaaaaaa', 'A', '127.0.0.1', '127.0.0.1', '1');
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983af1fe79968e', '<p>Perhatikan tabel berikut ini!</p>
+<table style=\"width: 219px; height: 153px;\" border=\"1\"><thead><tr><td>No</td>
+<td>Besaran</td>
+<td>Satuan</td>
+</tr></thead><tbody><tr><td style=\"text-align: center;\">(1)</td>
+<td>massa</td>
+<td>gram</td>
+</tr><tr><td style=\"text-align: center;\">(2)</td>
+<td>massa jenis</td>
+<td>kg/m<sup>3</sup></td>
+</tr><tr><td style=\"text-align: center;\">(3)</td>
+<td>panjang</td>
+<td>m</td>
+</tr><tr><td style=\"text-align: center;\">(4)</td>
+<td>luas</td>
+<td>m<sup>2</sup></td>
+</tr><tr><td style=\"text-align: center;\">(5)</td>
+<td>tegangan listrik</td>
+<td>volt</td>
+</tr></tbody></table><p>Berdasarkan tabel tersebut, yang termasuk kelompok besaran turunan dengan satuan dalam Sistem Internasional (SI) adalah nomor...</p>', '063dde983ad521410e4b', true, '1', '1', 'upper-alpha', 'cd76239d2c7b30f8b3170edc92dd270a', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983b0ba39a57e1', '<p>Perhatikan grafik pemanasan 500 gram air menjadi uap berikut.</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/023de9_547e0fb9358464ea652a26bc02518090.png\"></p>
+<p>Jika kalor jenis air 4.200 J / kg &deg;C, kalor uap air 2.270.000 J/kg, maka berapa kalor yang dibutuhkan dalam proses dari A - B - C?</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '0b24ad7624a393a4b2678b10f32ac0d4', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983b1e4a2d9249', '<p>Suhu Suatu benda 77 &deg;F. Jika suhu benda tersebut diukur dengan termometer celcius, maka akan menunjukkan suhu...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'e84a22f0a6148b0dc94c405dfcd2a0ea', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983b3614f90efe', '<p>Perhatikan tabel massa jenis beberapa zat berikut ini!</p>
+<table style=\"width: 223px; height: 118px;\" border=\"1\"><thead><tr><td>No</td>
+<td>Nama</td>
+<td>Massa Jenis (kg/m<sup>3</sup>)</td>
+</tr></thead><tbody><tr><td style=\"text-align: center;\">1</td>
+<td>Besi</td>
+<td>7.900</td>
+</tr><tr><td style=\"text-align: center;\">2</td>
+<td>Aluminium</td>
+<td>2.700</td>
+</tr><tr><td style=\"text-align: center;\">3</td>
+<td>Fiberglass</td>
+<td>2.000</td>
+</tr></tbody></table><p>Jika tiga benda tersebut dimasukkan ke dalam bejana berisi zat cair yang memiliki massa jenis 2700 kg/m<sup>3</sup>, posisi benda yang benar ditunjukkan gambar...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '9ceb2d019b26a82ecc7ede122f40ffbe', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983b569979f73c', '<p>Keempat balok pada gambar berikut mempunyai massa sama, maka balok yang memberikan tekanan terkecil pada bidang tekannya adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '01783f7b99fc036a47c806e9c18d56d5', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983b8285de9928', '<p>Seorang kuli ingin memindahkan kotak ke atas truk dengan berat 500 N dengan menggunakan bidang miring seperti gambar di bawah.<br><img alt=\"6pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/6c4906_6pt.gif\"><br>
+Bila tinggi truk 1,5 m, berapa besar gaya yang diperlukan untuk memindahkan kotak tersebut?</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '8849f6a5b1395026fec5a1f0e0e6bf34', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983b9b8c356353', '<p>Perhatikan gambar bus dan mobil yang sedang melaju berikut ini!<br><img alt=\"7pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/9813a5_7pt.gif\"><br>
+Massa bus 10.000 kg dan massa mobil 500 kg, maka perbandingan energi kinetik bus dan energi kinetik mobil adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '078478d112607a6ca64eb987c4cdf955', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983bb0b3777ddc', '<p>Sebuah peti didorong oleh beberapa orang seperti pada gambar. Peti memperoleh percepatan terbesar adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '3298f7aa77a07831c61e851fededc98d', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983bd3f8803389', '<p>Seutas tali digetarkan sehingga membentuk gelombang seperti gambar berikut!<br><img alt=\"9pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/f3f543_9pt.gif\"><br>
+Berapakah cepat rambat gelombang tersebut?</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '8193004d7bfd3892967a277d3f00799f', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983be9279efe58', '<p>Di suatu lembah yang dalam di bumi, teriakan seseorang akan terdengar bergema karena bunyi dipantulkan kembali dari gunung-gunung yang mengelilinginya. Di lembah yang sama di bulan tidak akan terdengar gema karena...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '814a2bbd2e8e78ea933d6aa6f76bb4ac', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983bfd1acf19ce', '<p>Apabila kita mengamati obyek menggunakan lup dengan mata berakomodasi maksimum, maka posisi obyek yang benar adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'a525e8f405e7e75bab9c2ad58e0ddcd7', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983c1e2a6f4468', '<p>Sebuah rumah terdapat 4 lampu 20 watt menyala 12 jam per hari, sebuah kulkas 250 watt menyala selama 24 jam perhari, dan pompa air 125 watt menyala 6 jam per hari. Berapakah besar energi listrik yang digunakan selama satu bulan (30 hari)?</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '717b322ee158a7efc00aa580c82852b1', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983c3783c93ab4', '<p>Perhatikan gambar berikut!<br><img alt=\"13pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/20d8e4_13pt.gif\"><br>
+Jika R1 = 3 &Omega;, R2 = 4 &Omega;, R3 = 4 &Omega; dan kuat arus yang mengalir adalah 0,5</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'af61ed233cdabc18cf056c2034e0de65', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983c4b23a256bc', '<p>Lima buah benda bermuatan A, B, C, D, dan E saling didekatkan.<br><img alt=\"14pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/80d3d0_14pt.gif\"><br>
+Muatan benda B dan D negatif, benda A dan B saling tarik menarik, benda<br>
+B menolak C dan D tetapi menarik benda E, maka muatan benda A, C, dan<br>
+E berturut-turut adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '63c52ad3dba7e97eabdcd0b672bf1e4c', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983c5e0ec46cc0', '<p>Perhatikan ciri-ciri benda langit berikut!<br>
+(1) Dapat menghasilkan cahaya sendiri<br>
+(2) Terdiri atas batu-batuan membentuk serbuk<br>
+(3) Berada antara Mars dan Jupiter<br>
+(4) Dapat jatuh ke atmosfer Bumi<br>
+Yang merupakan ciri-ciri Asteroid adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'e09ffa815b3fc2f3b08333c618375046', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983c76dd0a6e2e', '<p>Perhatikan tabel data dua transformator berikut ini!</p>
+<table style=\"width: 417px; height: 108px;\" border=\"1\"><thead><tr><td>&nbsp;</td>
+<td style=\"text-align: center;\">Np</td>
+<td style=\"text-align: center;\">Ns</td>
+<td style=\"text-align: center;\">Vp</td>
+<td style=\"text-align: center;\">Vs</td>
+</tr></thead><tbody><tr><td>Transformator P</td>
+<td>5.000 lilitan</td>
+<td>2.500 lilitan</td>
+<td>100 V</td>
+<td>50 V</td>
+</tr><tr><td>Transformator Q</td>
+<td>250 lilitan</td>
+<td>4.500 lilitan</td>
+<td>50 V</td>
+<td>150 V</td>
+</tr></tbody></table><p>Berdasarkan data di atas dapat disimpulkan bahwa...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '020b93a92d14ce6c9c041deca77d3b4b', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983c9012d8b830', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/5b1935_17pt.gif\"></p>
+<p>Batang besi AB terbentuk menjadi magnet dengan kutub utara di titik B dan kutub selatan di titik A akibat disentuh batang baja PQ yang telah dijadikan magnet dengan gosokan. Gambar yang benar cara pembuatan magnet sehingga menghasilkan magnet PQ adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '961418fdcdeec168719153aab0e8bf87', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983cb4a64dc1e9', '<p>Perhatikan tabel berikut!</p>
+<table style=\"width: 194px; height: 151px;\" border=\"1\"><thead><tr><td style=\"text-align: center;\" rowspan=\"2\">Zat</td>
+<td style=\"text-align: center;\" colspan=\"2\">Lakmus</td>
+</tr><tr><td style=\"text-align: center;\">merah</td>
+<td style=\"text-align: center;\">biru</td>
+</tr></thead><tbody><tr><td style=\"text-align: center;\">P</td>
+<td style=\"text-align: center;\">biru</td>
+<td style=\"text-align: center;\">biru</td>
+</tr><tr><td style=\"text-align: center;\">Q</td>
+<td style=\"text-align: center;\">merah</td>
+<td style=\"text-align: center;\">biru</td>
+</tr><tr><td style=\"text-align: center;\">R</td>
+<td style=\"text-align: center;\">biru</td>
+<td style=\"text-align: center;\">biru</td>
+</tr><tr><td style=\"text-align: center;\">S</td>
+<td style=\"text-align: center;\">merah</td>
+<td style=\"text-align: center;\">merah</td>
+</tr></tbody></table><p>Berdasarkan tabel di atas, zat yang bersifat asam adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '578b319d8d6e7dee971ffc182dd1e8c4', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983ccde1f631be', '<p>Berikut ini sifat-sifat yang dimiliki oleh emas:<br>
+(1) berwarna kuning;<br>
+(2) keras;<br>
+(3) sukar berkarat; dan<br>
+(4) meleleh bila dipanaskan.<br>
+Pasangan pernyataan yang merupakan sifat fisika adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '4854b01379b2ccf9798c54775ed78d04', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983ce01e328f83', '<p>Di antara gas berikut yang dapat menyebabkan karat pada kaleng adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '3236763abbe6e71c1aeff24c2d7b5573', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983cf6a6dfa357', '<p>Asam cuka (CH<sub>3</sub>COOH) sering dipakai sebagai pemberi rasa asam pada masakan. Dalam hal ini CH<sub>3</sub>COOH tergolong sebagai...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'b0127b12f34dac6d4f98b6ce15bd11f6', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983d0b1b713fe4', '<p>Agar terhindar dari dampak negatif penggunaan psikotropika kita harus menjauhi dan tidak mencoba untuk mengkonsumsi zat yang mengandung...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'a429aa162734ed2b7e3e4e178d6564bc', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983d2043e38791', '<p>Berikut ini adalah bahan kimia yang sering terdapat pada bahan makanan:<br>
+(1) aspartam<br>
+(2) sakarin<br>
+(3) natrium benzoat<br>
+(4) kurkumin<br>
+Zat yang merupakan pewarna alami adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'bd2fc77c82c673fa6b9f85391398fdf1', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983d3871205aec', '<p>Perhatikan gambar di bawah ini!<br><img alt=\"24pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/b5fb5a_24pt.gif\"><br>
+Kelompok hewan yang berkembang biak dengan cara yang sama adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '619d12e081525569f5752984cb994f6a', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983d4b4711ef51', '<p>Aktivitas berikut yang menggambarkan ciri mahkluk hidup adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '2ae37aa95f30c3c23d8805a518dbe87d', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983d634289792e', '<p>Diagram berikut menunjukkan contoh saling ketergantungan antarorganisme. Pada siang hari organsime-organisme tersebut menghirup atau mengeluarkan (a) atau (b) seperti yang ditunjuk oleh tanda panah.<br><img alt=\"26pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/c81eb1_26pt.gif\"><br>
+Manakah di antara pernyataan berikut yang benar?</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'acf04acc5cbc4f44f43e0e537c34508e', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983d7bfb0a5e75', '<p>Perhatikan grafik di bawah ini!<br><img alt=\"27pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/f6b0dd_27pt.gif\"><br>
+Prediksi pengaruh pertumbuhan penduduk terhadap sumber daya alam yang terjadi pada tahun 2017 adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '4cd21a346e26197edbda6c4edc378dd6', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983d910c73aea9', '<p>Berikut ini merupakan pabrik-pabrik yang menimbulkan pencemaran udara.<br><img alt=\"28pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/1f0308_28pt.gif\"><br>
+Tindakan yang dilakukan untuk memperbaiki lingkungan tersebut adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'eaaf12ec3a49f399bc97fdfd3b1292e7', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983da2a9f4980e', '<p>Aliran darah pada sistem peredaran darah besar adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '4f7154fcdbba248452ebfb0f4653217c', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983dbdc48e77c7', '<img alt=\"30pt.gif\" style=\"vertical-align:top\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/6ee823_30pt.gif\"><br>
+Berdasarkan gambar, proses pencernaan yang terjadi di organ P adalah...', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'bfc2b640e1fc79014aea1dfd329e0eeb', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983dd50d61e1ea', '<p>Pneumonia adalah gangguan sistem pernapasan yang disebabkan oleh...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'e185b51736aefbbd9b10fcedf5d84500', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983de8d121d889', '<p>Jika otot bisep relaksasi dan trisep berkontraksi, gerakan yang terjadi adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'cc12c356245b5e4aba2b0e2f808b3638', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983dff1ecf3133', '<p>Pada penampang melintang ginjal berikut ini, bagian X berfungsi untuk...<br><img alt=\"33pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/49ca2d_33pt.gif\"></p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '04f9744cbc8b14814fc1d9dce1fa950e', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983e16c22c56cb', '<p>Perhatikan gambar penampang lidah berikut!<br><img alt=\"34pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/f8dfa8_34pt.gif\"><br>
+Bagian lidah yang peka saat mencicipi jeruk nipis ditunjukkan oleh...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '7811353248a260bd54532841add42cfd', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983e2c55cf0aae', '<p>Perhatikan gambar percobaan fotosintesis di bawah ini!<br><img alt=\"35pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/7a8209_35pt.gif\"><br> Simpulan dari percobaan berikut adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '4555c34b2ac169286a7b90ebd556d525', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983e44e938bb3a', '<p>Perhatikan gambar penampang bunga berikut!<br><img alt=\"36pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dde983ad521410e4b/daf4f3_36pt.gif\"><br>
+Fungsi bagian X adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '87ac3e99868dab8195b42c38f8885651', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983e56b7a4e45d', '<p>Contoh gerak tumbuhan yang tergolong tigmotropisme adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', '644ad75eca7074a27ff6f01dcb4e792c', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983e688e596d8d', '<p>Kacang kapri biji bulat warna kuning (BBKK) disilangkan dengan kacang kapri biji kisut warna hijau (bbkk) menghasilkan F1 kacang kapri biji bulat warna kuning (BbKk). Apabila F1 disilangkan sesamanya, perbandingan fenotip pada F2 adalah...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'a673836f944b050fd04818447d456f68', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983e7afc96cadf', '<p>Pada proses pembuatan sari kelapa digunakan mikroorganisme <em>Acetobacter xylinum</em> yang berfungsi untuk mengubah gula menjadi...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'e194054d0ac5f0581ac7933810960d01', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063dde983e8bc13a4c96', '<p>Rayap merupakan hewan pemakan kayu yang membutuhkan enzim selulase. Enzim ini dihasilkan oleh sejenis flagellata yang terdapat pada saluran pencernaannya. Rayap yang baru menetas belum memiliki flagellata yang menghasilkan enzim tersebut dalam saluran pencernaannya. Untuk dapat bertahan hidup anak rayap beradaptasi dengan...</p>', '063dde983ad521410e4b', true, '2', '1', 'upper-alpha', 'ee2b28e358f88beaa32787e41b95b3cc', '',
+								'2023-02-04 12:13:39', 'aaaaaaaaaaaaa', '2023-02-04 12:13:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` 
+			set `time_edit` = '2023-02-04 12:19:58', `member_edit` = '' 
+			WHERE `question_id` = '063ddd60d97546a89e2f';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-04 12:19:58', `member_edit` = '' 
+					WHERE `question_id` = '063ddd60d97546a89e2f' and `option_id` = '063ddd60d9791c8d8abd';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-04 12:19:58', `member_edit` = '' 
+					WHERE `question_id` = '063ddd60d97546a89e2f' and `option_id` = '063ddd60d97be19394f9';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-04 12:19:58', `member_edit` = '' 
+					WHERE `question_id` = '063ddd60d97546a89e2f' and `option_id` = '063ddd60d97ef31da877';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-04 12:19:58', `member_edit` = '' 
+					WHERE `question_id` = '063ddd60d97546a89e2f' and `option_id` = '063ddd60d981d24a662e';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` 
+			set `time_edit` = '2023-02-04 12:21:14', `member_edit` = '' 
+			WHERE `question_id` = '063ddd60d97546a89e2f';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_test` 
+	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values
+	('063ddebc0176316e6b07', '063ce682801be89951aa', 'Try Out Ujian Nasional Kimia (IPA)  Paket 01', '', '', '', '', '', 'Pilihlah jawaban yang paling tepat!', '0', '1', '1', '75', 'H', '10', '5', '10', '1', '3600', '1', '300', 'Lihat waktu sisa Anda. Silakan periksa kembali jawaban Anda. Segera kirimkan jawaban sebelum waktunya habis.', '0', '1', '0', '0', '0', '0', null, 'F', null, null, '2023-02-04 12:23:12', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa', 'A', 'aaaaaaaaaaaaa', 'A', '127.0.0.1', '127.0.0.1', '1');
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc018f9847b477', '<p>Perhatikan grafik titik didih beberapa senyawa hidrida golongan IVA, VA, dan VIA berikut ini!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddebc0176316e6b07/c8ac24_f65b7fde1965a54168d360029465e0fa.png\"></p>
+<p>Senyawa yang mempunyai ikatan hidrogen antarmolekulnya adalah nomor...</p>', '063ddebc0176316e6b07', true, '1', '1', 'upper-alpha', 'a412f41ee794c68e4ad50e3aaa9b4383', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc01a9974421ba', '<p>Perhatikan data sifat fisik dari dua buah zat berikut!</p>
+<table style=\"width: 311px; height: 261px;\" border=\"1\"><thead><tr><td>No</td>
+<td>Sifat Fisik</td>
+<td>Zat A</td>
+<td>Zat B</td>
+</tr></thead><tbody><tr><td style=\"text-align: right;\">1</td>
+<td>Daya hantar listrik lelehan</td>
+<td>Menghantar listrik</td>
+<td>Tidak menghantar listrik</td>
+</tr><tr><td style=\"text-align: right;\">2</td>
+<td>Daya hantar listrik larutan</td>
+<td>Menghantar listrik</td>
+<td>Tidak menghantar listrik</td>
+</tr><tr><td style=\"text-align: right;\">4</td>
+<td>Titik didih dan titik leleh</td>
+<td>Tinggi</td>
+<td>Rendah</td>
+</tr></tbody></table><p>Berdasarkan data tersebut, jenis ikatan yang terdapat pada zat A dan zat B berturut-turut adalah...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'adead2de0cef73428ca7b324e79ace99', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc01c1146422fc', '<p>Konfigurasi elektron<br> N = 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>3</sup><br> Cl = 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>5</sup><br> Bentuk molekul dari senyawa yang terjadi jika kedua unsur tersebut berikatan sesuai aturan oktet adalah...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '3e648d4196392b0dbba9f5e7a710a3d6', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc01d915966c83', '<p>Perhatikan tabel berikut!</p>
+<table style=\"width: 251px; height: 172px;\" border=\"1\"><thead><tr><td>&nbsp;</td>
+<td>Golongan</td>
+<td>Periode</td>
+<td>Konfigurasi Elektron</td>
+</tr></thead><tbody><tr><td style=\"text-align: center;\">A</td>
+<td style=\"text-align: center;\">IA</td>
+<td style=\"text-align: center;\">4</td>
+<td>[Ar] 4s<sup>1</sup></td>
+</tr><tr><td style=\"text-align: center;\">B</td>
+<td style=\"text-align: center;\">IB</td>
+<td style=\"text-align: center;\">1</td>
+<td>[Ar] 4d<sup>1</sup></td>
+</tr><tr><td style=\"text-align: center;\">C</td>
+<td style=\"text-align: center;\">IIA</td>
+<td style=\"text-align: center;\">1</td>
+<td>[Ar] 4s<sup>2</sup></td>
+</tr><tr><td style=\"text-align: center;\">D</td>
+<td style=\"text-align: center;\">IIB</td>
+<td style=\"text-align: center;\">2</td>
+<td>[Ar] 4d<sup>2</sup></td>
+</tr><tr><td style=\"text-align: center;\">E</td>
+<td style=\"text-align: center;\">IVA</td>
+<td style=\"text-align: center;\">3</td>
+<td>[Ar] 4s<sup>2</sup>d<sup>2</sup></td>
+</tr></tbody></table><p>Letak unsur dan konfigurasi elektron yang tepat untuk atom unsur 19X39 pada tabel di atas adalah... (Nomor atom Ar = 18)</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '5f0e4af43d459bd15ce1826694765ba9', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc01ef84588ccf', '<p>Harga keempat bilangan kuantum elektron terakhir dari atom adalah ....</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'f6e7e3691cab7283f655ad9052ebabb1', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc0205b3f90e24', '<p>Perhatikan rumus struktur Lewis senyawa berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddebc0176316e6b07/7bd644_967ca8f3c3508affb6c51930d4c08212.png\"></p>
+<p>Ikatan kovalen koordinasi pada gambar tersebut ditunjukkan nomor ....<br> (Nomor atom N = 7; H = 1; Cl = 17)</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'c4b2407bf683740c16157514e82e38d0', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc02179815edd4', '<p>Aluminium sulfat dibuat dengan cara mereaksikan bauksit dengan asam sulfat. Persamaan reaksi setara yang terjadi pada pembuatan aluminium sulfat adalah...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '42dfd9a3415ba0915128a26d5c59394f', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc02328709a4a2', '<p>Sebanyak 2,62 gram hidrat dari kalsium sulfat dipanaskan sampai semua air kristalnya menguap sesuai persamaan reaksi:<br> CaSO<sub>4</sub> . xH<sub>2</sub>O(s) &rarr; CaSO<sub>4</sub>(s) + xH<sub>2</sub>O (aq).<br> Jika massa padatan kalsium sulfat yang terbentuk adalah 1,36 gram, rumus senyawa hidrat tersebut adalah... (Ar Ca = 40; S = 32; O = 16)</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '90ca4404b0c15e68abd47363047870c6', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc024b4a82c025', '<p>Sebanyak 10,8 gram logam aluminium habis bereaksi dengan 9,6 gram oksigen dalam ruang tertutup membentuk aluminium oksida menurut persamaan reaksi:<br> 4Al(s) + 3O<sub>2</sub>(g) &rarr; 2Al<sub>2</sub>O<sub>3</sub> (s)<br> Massa aluminium oksida yang dapat terbentuk sebanyak...<br> (Ar : Al = 27; O = 16)</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '8093a447d4d194511523c114a472bbf0', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc026729b9e5e1', '<p>Perhatikan data percobaan uji larutan berikut!</p>
+<table style=\"width: 300px; max-width: 100%;\" border=\"1\"><thead><tr><td rowspan=\"2\" width=\"20\">No</td>
+<td colspan=\"2\">Pengamatan pada</td>
+</tr><tr><td>Elektroda</td>
+<td>Lampu</td>
+</tr></thead><tbody><tr><td>&nbsp;(1)</td>
+<td>tidak ada gelembung</td>
+<td>padam</td>
+</tr><tr><td>&nbsp;(2)</td>
+<td>sedikit gelembung</td>
+<td>padam</td>
+</tr><tr><td>&nbsp;(3)</td>
+<td>sedikit gelembung</td>
+<td>redup</td>
+</tr><tr><td>&nbsp;(4)</td>
+<td>banyak gelembung</td>
+<td>redup</td>
+</tr><tr><td>&nbsp;(5)</td>
+<td>banyak gelembung</td>
+<td>menyala</td>
+</tr></tbody></table><p>Pasangan senyawa yang merupakan larutan elektrolit kuat dan nonelektrolit berturut-turut ditunjukkan oleh larutan nomor ....</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '69914bae34dee69c77ccd1a8679c185a', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc027de698a740', '<p>Beberapa contoh penerapan sifat koligatif larutan dalam kehidupan:<br>
+(1) pemberian garam dapur untuk mencairkan salju;<br>
+(2) membuat cairan infuse yang akan digunakan pada tubuh manusia;<br>
+(3) proses penyerapan air oleh akar tanaman dari dalam tanah;<br>
+(4) penggunaan garam dapur pada pembuatan es putar; dan<br>
+(5) pembuatan ikan asin.<br>
+Penerapan sifat koligatif penurunan titik beku larutan adalah nomor....</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '807630b6c913bda83b566edd2154ed59', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc029db9c99e7d', '<p>Perhatikan gambaran molekuler partikel zat terlarut dan pelarut (bukan sebenarnya) pada larutan berikut ini!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddebc0176316e6b07/8a83e5_9be9a120b3d3cf9a1ad8756939029cbb.png\"></p>
+<p>Tekanan uap larutan paling besar terdapat pada gambar...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'b2ba5381c4a7f109f9e79f76f25f0ba1', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc02b77930ee7b', '<p>Perhatikan data uji pH beberapa larutan!</p>
+<table style=\"width: 298px; height: 192px;\" border=\"1\"><thead><tr><td style=\"text-align: center;\" rowspan=\"2\">Larutan</td>
+<td style=\"text-align: center;\" rowspan=\"2\">pH Awal</td>
+<td style=\"text-align: center;\" colspan=\"2\">pH Setelah Penambahan</td>
+</tr><tr><td style=\"text-align: center;\">Sedikit Asam</td>
+<td style=\"text-align: center;\">Sedikit Basa </td>
+</tr></thead><tbody><tr><td style=\"text-align: center;\">P</td>
+<td style=\"text-align: center;\">3,0 </td>
+<td style=\"text-align: center;\">1,0 </td>
+<td style=\"text-align: center;\">4,0 </td>
+</tr><tr><td style=\"text-align: center;\">Q</td>
+<td style=\"text-align: center;\">5,0</td>
+<td style=\"text-align: center;\">4,9</td>
+<td style=\"text-align: center;\">5,1</td>
+</tr><tr><td style=\"text-align: center;\">R</td>
+<td style=\"text-align: center;\">8,0 </td>
+<td style=\"text-align: center;\">7,9</td>
+<td style=\"text-align: center;\">8,1</td>
+</tr><tr><td style=\"text-align: center;\">S</td>
+<td style=\"text-align: center;\">9,0</td>
+<td style=\"text-align: center;\">8,5</td>
+<td style=\"text-align: center;\">10,5</td>
+</tr><tr><td style=\"text-align: center;\">T</td>
+<td style=\"text-align: center;\">10,0</td>
+<td style=\"text-align: center;\">8,5</td>
+<td style=\"text-align: center;\">11,0</td>
+</tr></tbody></table><p>Larutan yang merupakan larutan penyangga adalah...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'b01399825ee8ef5d686cac743152af88', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc02ce1eceb798', '<p>Sebanyak 100 mL KOH 0,04 M dicampur dengan 100 mL HCOOH 0,04 M menurut reaksi:<br> KOH(aq) + HCOOH(aq) &rarr; HCOOK(aq) + H<sub>2</sub>O(l)<br> Jika Ka HCOOH = 2 x 10-4 dan Kw = 10-14, pH campuran tersebut sebesar...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'dee2b0d5406222c090ae171302df85ac', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc02e83cc64064', '<p>Berikut ini adalah penerapan sifat koloid dalam kehidupan sehari-hari.<br>
+(1) Pemutihan gula tebu dengan arang tulang.<br>
+(2) Langit berwarna jingga pada petang hari.<br>
+(3) Penyerapan asap pabrik dengan alat Cottrel.<br>
+(4) Proses cuci darah pada penderita gagal ginjal.<br>
+(5) Penggumpalan karet oleh lateks.<br>
+Contoh penerapan sifat adsorpsi terdapat pada nomor ....</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'e6b16b6a76704559c1bcb9e4489ffdf7', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc030009afaaac', '<p>Berikut ini data hasil titrasi larutan CH<sub>3</sub>COOH dengan larutan Ba(OH)<sub>2</sub> 0,1 M.</p>
+<table style=\"width: 300px;\" border=\"1\"><thead><tr><td style=\"text-align: center;\">Perc.</td>
+<td style=\"text-align: center;\">Volume CH<sub>3</sub>COOH yang dititrasi</td>
+<td style=\"text-align: center;\">Volume Ba(OH)<sub>2</sub> yang digunakan</td>
+</tr></thead><tbody><tr><td style=\"text-align: center;\">1</td>
+<td style=\"text-align: center;\">40 mL</td>
+<td style=\"text-align: center;\">24 mL</td>
+</tr><tr><td style=\"text-align: center;\">2</td>
+<td style=\"text-align: center;\">40 mL</td>
+<td style=\"text-align: center;\">25 mL</td>
+</tr><tr><td style=\"text-align: center;\">3</td>
+<td style=\"text-align: center;\">40 mL</td>
+<td style=\"text-align: center;\">26 mL</td>
+</tr></tbody></table><p>Konsentrasi larutan CH<sub>3</sub>COOH sebesar...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'f9dc9c48f4e872aae418294e9d28c932', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc0316667b74e7', '<p>Larutan Ca(OH)<sub>2</sub> 0,01 M sebanyak 1 L memiliki pH sebesar...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '84cefb885e9db4015378ff9e9ee8567b', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc032bacf25dee', '<p>Sebanyak 100 mL larutan Pb(NO<sub>3</sub>)<sub>2</sub> 0,4 M dicampurkan dengan 100 mL larutan K<sub>2</sub>SO<sub>4</sub> 0,4 M. Jika Ksp PbSO<sub>4</sub> = 4 x 10-8, maka massa PbSO<sub>4</sub> yang mengendap sebanyak .... (Ar Pb = 207; S = 32; O = 16; K = 39)</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'b9d4850ee537431d85f46b0de79b0833', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc033d8db5d88a', '<p>Perhatikan kegunaan bahan makanan dalam tubuh!<br>
+(1) Biokatalis.<br>
+(2) Sumber energi primer.<br>
+(3) Zat pembangun.<br>
+(4) Pelarut vitamin.<br>
+Fungsi dari protein ditunjukkan pada nomor</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '7bc08fe61ccd0012a1dcaac513820a05', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc03510c8f0c1d', '<p>Beberapa kegunaan senyawa karbon sebagai:<br>
+(1) pemberi aroma;<br>
+(2) pengawet preparat;<br>
+(3) bahan bakar;<br>
+(4) pelarut; dan<br>
+(5) pembersih cat kuku.<br>
+Kegunaan dari aseton terdapat pada nomor...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '725756d55993b2e036b45768fc26a088', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc03632928c81d', '<p>Berikut persamaan reaksi senyawa karbon.<br> (1) C<sub>3</sub>H<sub>7</sub>Cl + NH<sub>3</sub> &rarr; C<sub>3</sub>H<sub>7</sub>NH<sub>2</sub> + HCl<br> (2) CH<sub>2</sub> = CH<sub>2</sub> + H<sub>2</sub>O &rarr; CH<sub>3</sub> - CH<sub>2</sub>OH<br> Jenis reaksi yang terjadi pada persamaan reaksi tersebut berturut-turut adalah...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '60a9a58f00cde3b1b72f4d1ebccea625', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc037457b40639', '<p>Suatu senyawa dengan rumus CnH<sub>2</sub>nO dapat dioksidasi menjadi asam<br> karboksilat dan membentuk endapan merah bata jika direaksikan dengan<br> pereaksi Fehling. Senyawa tersebut memiliki gugus fungsi ....</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '28c2e1f0cb3ba231c95a39ba5d0ada06', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc0385e5752b3c', '<p>Berikut tabel yang berisi data polimer, monomer, proses pembentukan, dan<br>
+kegunaannya.<br>
+Pasangan data yang keempatnya berhubungan secara tepat adalah ....</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'd75ef7a149934117cee03664cdb87875', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc0399adb39cf0', '<p>Perhatikan tabel berikut!</p>
+<table style=\"width: 314px; height: 318px;\" border=\"1\"><thead><tr><td>Bahan Makanan</td>
+<td>Jenis Karbohidrat</td>
+<td>Hasil Identifikasi</td>
+</tr></thead><tbody><tr><td>A</td>
+<td>Glukosa</td>
+<td>Hasil uji Fehing menghasilkan ester dan Cu<sub>2</sub>O</td>
+</tr><tr><td>B</td>
+<td>Galaktosa</td>
+<td>Tidak terbentuk warna merah ungu saat uji Molisch</td>
+</tr><tr><td>C</td>
+<td>Amilum</td>
+<td>Hasil uji Fehing menghasilkan Cu<sub>2</sub>O</td>
+</tr><tr><td>D</td>
+<td>Selulosa</td>
+<td>Diperoleh dari hidrolisis amilum dengan enzim</td>
+</tr><tr><td>E</td>
+<td>Sukrosa</td>
+<td>Direaksikan dengan test Fehing tidak menghasilkan Cu<sub>2</sub>O</td>
+</tr></tbody></table><p>Pasangan data yang berhubungan dengan tepat adalah...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '635d3b09923d66872f42bb9e1671fa70', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc03ac88b3ba26', '<p>Berikut ini beberapa senyawa turunan benzena yang dapat dimanfaatkan<br>
+dalam kehidupan.<br>
+(1) asam benzoat;<br>
+(2) anilina;<br>
+(3) fenol; dan<br>
+(4) stirena.<br>
+Senyawa yang digunakan untuk pengawet makanan dan disinfektan<br>
+berturut-turut terdapat pada nomor ....</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '68395b55f18548b0ac9d2cd1fa490ae5', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc03c17d22e8b2', '<p>Diagram entalpi tahap-tahap reaksi ditunjukkan oleh bagan sebagai berikut.</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddebc0176316e6b07/4ce229_a21c50c173819ec3a44fb31bbeb416c8.png\"></p>
+<p>Harga &Delta;H1 sebesar...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '2b121becd7d1ea861f49c4f7a4ed15a7', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc03d3caba85c2', '<p>Diketahui reaksi pembentukan HBr sebagai berikut.<br> 1/2 H<sub>2</sub>(g) + 1/2 Br<sup>2</sup>(g) &rarr; HBr(g) &Delta;H = -55 kJ.mol-1<br> Diagram tingkat energi reaksi tersebut adalah...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'fbb5b5af92d9a4a7f165d595a9963821', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc03fcd7a8cd11', '<p>Pada reaksi kesetimbangan CO(g) + 3H<sub>2</sub>(g) &harr; CH<sub>4</sub>(g) + H<sub>2</sub>O(g) diperoleh data sebagai berikut:</p>
+<table style=\"width: 300px;\" border=\"1\"><thead><tr><td style=\"text-align: center;\">Keadaan Zat</td>
+<td style=\"text-align: center;\">[CO] (M)</td>
+<td style=\"text-align: center;\">[H<sub>2</sub>] (M)</td>
+<td style=\"text-align: center;\">[CH<sub>4</sub>] (M)</td>
+<td style=\"text-align: center;\">[H<sub>2</sub>O] (M)</td>
+</tr></thead><tbody><tr><td style=\"text-align: center;\">Mula-mula</td>
+<td style=\"text-align: center;\">0,20</td>
+<td style=\"text-align: center;\">0,30</td>
+<td style=\"text-align: center;\">-</td>
+<td style=\"text-align: center;\">-</td>
+</tr><tr><td style=\"text-align: center;\">Reaksi</td>
+<td style=\"text-align: center;\">0,05</td>
+<td style=\"text-align: center;\">0,15</td>
+<td style=\"text-align: center;\">0,05</td>
+<td style=\"text-align: center;\">0,05</td>
+</tr><tr><td style=\"text-align: center;\">Setimbang</td>
+<td style=\"text-align: center;\">0,15</td>
+<td style=\"text-align: center;\">0,15</td>
+<td style=\"text-align: center;\">0,05</td>
+<td style=\"text-align: center;\">0,05</td>
+</tr></tbody></table><p>&nbsp;Harga Kc dari reaksi tersebut...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '3f1184078ef6a8d19dd8a51ebe8c9a91', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc0436fe0b89e1', '<p>Pada reaksi kesetimbangan:<br> 2NO(g) + O<sub>2</sub>(g) &harr; N<sub>2</sub>O<sub>4</sub>(g) &Delta;H = -a kJ<br> Jika suhu dinaikkan, yang akan terjadi adalah ....</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '14170ca6f001a5068ba0f831a08020d1', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc0453751151ed', '<p>Perhatikan reaksi CaCO<sub>3</sub> dengan larutan HCl 2 M berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddebc0176316e6b07/e97d16_95b2e4770b142de275f8c5ef20e006d1.png\"></p>
+<p>Massa CaCO3 untuk seluruh larutan sama. Laju reaksi percobaan yang hanya dipengaruhi oleh luas permukaan terdapat pada gambar nomor ....</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'd3508275057e06b798590b8831a6f1c6', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc046f58b027d9', '<p>Diberikan data hasil reaksi logam X dengan HCl 1 M sebagai berikut.</p>
+<table style=\"width: 245px; height: 167px;\" border=\"1\"><thead><tr><td style=\"text-align: center;\">No</td>
+<td style=\"text-align: center;\">Suhu</td>
+<td style=\"text-align: center;\">Volume H<sub>2</sub> (mL)</td>
+<td style=\"text-align: center;\">Waktu (detik)</td>
+</tr></thead><tbody><tr><td style=\"text-align: center;\">1</td>
+<td style=\"text-align: center;\">27&deg;C</td>
+<td style=\"text-align: center;\">0</td>
+<td style=\"text-align: center;\">0</td>
+</tr><tr><td style=\"text-align: center;\">2</td>
+<td style=\"text-align: center;\">27&deg;C</td>
+<td style=\"text-align: center;\">15</td>
+<td style=\"text-align: center;\">12</td>
+</tr><tr><td style=\"text-align: center;\">3</td>
+<td style=\"text-align: center;\">27&deg;C</td>
+<td style=\"text-align: center;\">30</td>
+<td style=\"text-align: center;\">24</td>
+</tr></tbody></table><p>Laju reaksi pembentukan gas H<sub>2</sub> pada suhu 27&deg;C adalah...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '71f7205a70a127acb0a7e52c3184a62b', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc048b7c89d8f8', '<p>Berikut ini adalah percobaan tentang korosi besi.</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddebc0176316e6b07/19ede4_8aabb1a6f3fa71bf021e5454f8865581.png\"></p>
+<p>Proses korosi yang paling lambat terjadi pada gambar nomor...</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'd82ca03170fbe9f81ee9c7ad7f1f2ebc', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc04a3053a43ae', '<p>Beberapa data harga potensial reduksi standar (E&deg;) sebagai berikut.<br> Ag<sup>+</sup>(ag) + e<sup>-</sup> &rarr; Ag(s) E&deg; = +0,8 V<br> Pb<sub>2</sub><sup>+</sup>(ag) + 2e<sup>-</sup> &rarr; Pb(s) E&deg; = +0,14 V<br> Ni<sub>2</sub><sup>+</sup>(ag) + 2e<sup>-</sup> &rarr; Ni(s) E&deg; = -0,25 V<br> Fe<sub>2</sub><sup>+</sup>(ag) + 2e<sup>-</sup> &rarr; Fe(s) E&deg; = -0,44 V<br> Reaksi yang dapat berlangsung spontan adalah ....</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '6742d7b2a2f546caf515cd6716b438f9', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc04ba9f8d0a65', '<p>Perhatikan persamaan reaksi yang terjadi pada sel aki berikut ini!<br> Pb(s) + a PbO<sub>2</sub>(s) + b H<sub>2</sub>SO<sub>4</sub>(aq) &rarr; 2 PbSO<sub>4</sub>(s) + c H<sub>2</sub>O(l)<br> Harga koefisien a, b, dan c berturut-turut adalah ....</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', 'ba71cb868c42f93a0aa48f2bb1635745', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063ddebc04d1bbd771ee', '<p>Proses elektrolisis lelehan NaCl dengan elektroda karbon, digunakan arus sebesar 10 ampere selama 30 menit. Massa logam natrium yang diperoleh adalah... (Ar Na = 23; Cl = 35,5)</p>', '063ddebc0176316e6b07', true, '2', '1', 'upper-alpha', '1637fbad3b84f08a36c523caae8b5d86', '',
+								'2023-02-04 12:23:12', 'aaaaaaaaaaaaa', '2023-02-04 12:23:12', 'aaaaaaaaaaaaa')
+								;
