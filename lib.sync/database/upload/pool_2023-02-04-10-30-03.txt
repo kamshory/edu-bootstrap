@@ -1,0 +1,70 @@
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_answer` WHERE `test_id` = '063ddcbf6cec708179f8' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_question` WHERE `test_id` = '063ddcbf6cec708179f8' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_test` WHERE `test_id` = '063ddcbf6cec708179f8' and `school_id` = '063ce682801be89951aa' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+commit;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_answer` WHERE `test_id` = '063dbd50d51ae8326e8d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_question` WHERE `test_id` = '063dbd50d51ae8326e8d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_test` WHERE `test_id` = '063dbd50d51ae8326e8d' and `school_id` = '063ce682801be89951aa' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+commit;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_answer` WHERE `test_id` = '063dbd4c5228f6e48356' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_question` WHERE `test_id` = '063dbd4c5228f6e48356' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_test` WHERE `test_id` = '063dbd4c5228f6e48356' and `school_id` = '063ce682801be89951aa' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+commit;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_answer` WHERE `test_id` = '063db55d23c2b6856f5c' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_question` WHERE `test_id` = '063db55d23c2b6856f5c' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_test` WHERE `test_id` = '063db55d23c2b6856f5c' and `school_id` = '063ce682801be89951aa' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+commit;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_answer` WHERE `test_id` = '063dbd49a56cb8133269' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_question` WHERE `test_id` = '063dbd49a56cb8133269' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_test` WHERE `test_id` = '063dbd49a56cb8133269' and `school_id` = '063ce682801be89951aa' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+commit;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_answer` WHERE `test_id` = '063dbd463b1918215275' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_question` WHERE `test_id` = '063dbd463b1918215275' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_test` WHERE `test_id` = '063dbd463b1918215275' and `school_id` = '063ce682801be89951aa' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+commit;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_answer` WHERE `test_id` = '063dbd449613cba399c3' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_question` WHERE `test_id` = '063dbd449613cba399c3' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_test` WHERE `test_id` = '063dbd449613cba399c3' and `school_id` = '063ce682801be89951aa' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+commit;
