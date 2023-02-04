@@ -1,16 +1,33 @@
 <?php
+class FileSyncException extends Exception
+{
+    private $previous;
+    
+    public function __construct($message, $code = 0, Exception $previous = null)
+    {
+        parent::__construct($message, $code);
+        
+        if (!is_null($previous))
+        {
+            $this -> previous = $previous;
+        }
+    }
+    
+}
 class FileSyncMaster
 {
     public $database = null;
+    public $applicationRoot = '';
     public $uploadBaseDir = '';
     public $downloadBaseDir = '';
     public $poolBaseDir = '';
     public $poolFileName = '';
     public $poolRollingPrefix = '';
-    public $poolFileExtension = '.txt';
-    public function __construct($database, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
+    public $poolFileExtension = '';
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
     {
         $this->database = $database;
+        $this->applicationRoot = $applicationRoot;
         $this->uploadBaseDir = $uploadBaseDir;
         $this->downloadBaseDir = $downloadBaseDir;
         $this->poolBaseDir = $poolBaseDir;
@@ -23,13 +40,8 @@ class FileSyncMaster
     }
     protected function glob($base)
     {
-        $basePath = $base.".*";
-        $list = array();
-        foreach(glob($basePath) as $filename) 
-        {
-            $list[] = $base."/".$filename;
-        }
-        return $list;
+        $basePath = $base."/*.*";
+        return glob($basePath);
     }
     protected function filterPoolingFileList($fileList, $poolBaseDir, $poolFileName, $poolFileExtension)
     {
@@ -38,12 +50,16 @@ class FileSyncMaster
         {
             if($val == $pathToRemove)
             {
-                unset($fileList[$key]);
-                return array_values($fileList);
+                $newPath = $this->uploadBaseDir . "/" . $this->poolRollingPrefix.date('Y-m-d-H-i-s').$this->poolFileExtension;
+                rename($val, $newPath);
+                $fileList[$key] = $newPath;
             }
         }
         return array_values($fileList);
     }
+    /**
+     * Sort file ascending. File name represent time create
+     */
     protected function sort($fileList)
     {
         sort($fileList);
@@ -53,16 +69,16 @@ class FileSyncMaster
     protected function uploadSyncFile($path, $record, $url, $username, $password)
     {
         if(function_exists('curl_file_create')) 
-        { 
+        {
             $cFile = curl_file_create($path);
         } 
         else 
-        {  
+        {
             $cFile = '@' . realpath($path);
         }
-
         $sync_file_id = $record['sync_file_id'];
         $file_path = $record['file_path'];
+        $relative_path = $record['relative_path'];
         $file_name = $record['file_name'];
         $file_size = $record['file_size'];
         $time_create = $record['time_create'];
@@ -71,6 +87,7 @@ class FileSyncMaster
         $post = array(
             'sync_file_id' => $sync_file_id,
             'file_path' => $file_path,
+            'relative_path' => $relative_path,
             'file_name' => $file_name,
             'file_size' => $file_size,
             'time_create' => $time_create,
@@ -78,13 +95,16 @@ class FileSyncMaster
             'file_contents' => $cFile
         );
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $path);
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
         $result = curl_exec ($ch);
+        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close ($ch);
-        return true;
+        echo $httpcode. " ".$result;
+        return $httpcode;
     }
 
     protected function getSyncRecordListFromDatabase($direction, $status)
@@ -102,34 +122,39 @@ class FileSyncMaster
         $sql = "UPDATE `edu_sync_file` SET `status` = '$status' WHERE `sync_file_id` = '$sync_file_id' ";
         return $this->database->executeUpdate($sql, false);
     }
+
+    public function getRelativePath($path)
+    {
+        $post = stripos($path, $this->applicationRoot);
+        if($post === 0)
+        {
+            return substr($path, strlen($this->applicationRoot));
+        } 
+        else 
+        {
+            return $path;
+        }
+    }
 }
 
 class FileSyncUpload extends FileSyncMaster
 {
-    public function __construct($database, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
     {
-        parent::__construct($database, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
+        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
     }
     
 
     /**
      * Move pooling file to new path and return the new file list
      */
-    private function movePoolingFileToUpload()
+    private function getPoolingFiles()
     {
+        echo $this->poolBaseDir;
         $fileList = $this->glob($this->poolBaseDir);
         $fileList = $this->filterPoolingFileList($fileList, $this->poolBaseDir, $this->poolFileName, $this->poolFileExtension);
         $fileList = $this->sort($fileList);
-        $fileToUpload = array();
-        foreach($fileList as $key=>$val)
-        {
-            $baseName = basename($val);
-            $newPath = $this->uploadBaseDir . "/" . $baseName;
-            copy($val, $newPath);
-            unlink($val);
-            $fileToUpload[] = $newPath;
-        }
-        return $fileToUpload;
+        return $fileList;
     }
 
     /**
@@ -140,13 +165,14 @@ class FileSyncUpload extends FileSyncMaster
         $fileSize = filesize($val) * 1;
         $baseName = addslashes(basename($val));
         $path = addslashes($val);
+        $relativePath = $this->getRelativePath($val);
         $sync_file_id = $this->database->generateNewId();
         $timeUpload = date('Y-m-d H:i:s');
         $sql = "INSERT INTO `edu_sync_file`
-        (`sync_file_id`, `file_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `status`) VALUES
-        ('$sync_file_id', '$path', '$baseName', '$fileSize', 'up', '$timeUpload', '$timeUpload', 0)";
+        (`sync_file_id`, `file_path`, `relative_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `status`) VALUES
+        ('$sync_file_id', '$path', '$relativePath', '$baseName', '$fileSize', 'up', '$timeUpload', '$timeUpload', 0)";
         $this->database->execute($sql);
-        $this->database->getDatabaseConnection()->getLastId();
+
     }
 
     /**
@@ -154,10 +180,16 @@ class FileSyncUpload extends FileSyncMaster
      */
     public function syncLocalUserFileToDatabase()
     {
-        $fileList = $this->movePoolingFileToUpload();
+        $fileList = $this->getPoolingFiles();
+        print_r($fileList);
         foreach($fileList as $val)
         {
-            $this->createUploadSyncRecord($val);
+            $baseName = basename($val);
+            $newPath = $this->uploadBaseDir . "/" . $baseName;
+            echo $newPath . "\r\n";
+            copy($val, $newPath);
+            unlink($val);
+            $this->createUploadSyncRecord($newPath);
         }
     }
     
@@ -166,14 +198,14 @@ class FileSyncUpload extends FileSyncMaster
      */
     public function syncLocalUserFileToRemoteHost($url, $username, $password)
     {
-        $records = $this->getSyncRecordListFromDatabase('up', 0);
-        foreach($records as $record)
+        $recordList = $this->getSyncRecordListFromDatabase('up', 0);
+        foreach($recordList as $record)
         {
             $path = $record['file_path'];
             $sync_file_id = $record['sync_file_id'];
-            if($this->uploadSyncFile($path, $record, $url, $username, $password))
+            if($this->uploadSyncFile($path, $record, $url, $username, $password) == 200)
             {
-                $this->updateSyncRecord($sync_file_id, 1);
+                //$this->updateSyncRecord($sync_file_id, 1);
             }
         }
     }
@@ -181,9 +213,9 @@ class FileSyncUpload extends FileSyncMaster
 
 class FileSyncDownload extends FileSyncMaster
 {
-    public function __construct($database, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
     {
-        parent::__construct($database, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
+        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
     }
     
     /**
@@ -240,15 +272,14 @@ class FileSyncDownload extends FileSyncMaster
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         curl_close($ch);
-
         
-        if($httpcode)
+        if($httpcode == 200)
         {
             return json_decode($server_output);
         }
         else
         {
-            throw new Exception("File not found");
+            throw new FileSyncException("File not found");
         }
     }
 
@@ -282,7 +313,7 @@ class FileSyncDownload extends FileSyncMaster
         }
         else
         {
-            throw new Exception("File not found");
+            throw new FileSyncException("File not found");
         }
     }
     

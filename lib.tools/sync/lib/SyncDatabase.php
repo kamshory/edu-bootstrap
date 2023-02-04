@@ -1,15 +1,31 @@
 <?php
 
+class DatabaseSyncException extends Exception
+{
+    private $previous;
+    
+    public function __construct($message, $code = 0, Exception $previous = null)
+    {
+        parent::__construct($message, $code);
+        
+        if (!is_null($previous))
+        {
+            $this -> previous = $previous;
+        }
+    }
+    
+}
 class DatabaseSyncMaster
 {
     public $database = null;
+    public $applicationRoot = '';
     public $uploadBaseDir = '';
     public $downloadBaseDir = '';
     public $poolBaseDir = '';
     public $poolFileName = '';
     public $poolRollingPrefix = '';
-    public $poolFileExtension = '.txt';
-    public function __construct($database, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
+    public $poolFileExtension = '';
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
     {
         $this->database = $database;
         $this->uploadBaseDir = $uploadBaseDir;
@@ -24,13 +40,8 @@ class DatabaseSyncMaster
     }
     protected function glob($base)
     {
-        $basePath = $base.".*";
-        $list = array();
-        foreach(glob($basePath) as $filename) 
-        {
-            $list[] = $base."/".$filename;
-        }
-        return $list;
+        $basePath = $base."/*.*";
+        return glob($basePath);
     }
     protected function filterPoolingFileList($fileList, $poolBaseDir, $poolFileName, $poolFileExtension)
     {
@@ -39,8 +50,9 @@ class DatabaseSyncMaster
         {
             if($val == $pathToRemove)
             {
-                unset($fileList[$key]);
-                return array_values($fileList);
+                $newPath = $this->uploadBaseDir . "/" . $this->poolRollingPrefix.date('Y-m-d-H-i-s').$this->poolFileExtension;
+                rename($val, $newPath);
+                $fileList[$key] = $newPath;
             }
         }
         return array_values($fileList);
@@ -62,7 +74,7 @@ class DatabaseSyncMaster
             $cFile = '@' . realpath($path);
         }
 
-        $sync_file_id = $record['sync_file_id'];
+        $sync_database_id = $record['sync_database_id'];
         $file_path = $record['file_path'];
         $file_name = $record['file_name'];
         $file_size = $record['file_size'];
@@ -70,7 +82,7 @@ class DatabaseSyncMaster
         $time_upload = $record['time_upload'];
         
         $post = array(
-            'sync_file_id' => $sync_file_id,
+            'sync_database_id' => $sync_database_id,
             'file_path' => $file_path,
             'file_name' => $file_name,
             'file_size' => $file_size,
@@ -98,18 +110,18 @@ class DatabaseSyncMaster
         }
         return array();
     }
-    public function updateSyncRecord($sync_file_id, $status)
+    public function updateSyncRecord($sync_database_id, $status)
     {
-        $sql = "UPDATE `edu_sync_database` SET `status` = '$status' WHERE `sync_file_id` = '$sync_file_id' ";
+        $sql = "UPDATE `edu_sync_database` SET `status` = '$status' WHERE `sync_database_id` = '$sync_database_id' ";
         return $this->database->executeUpdate($sql, false);
     }
 }
 
 class DatabaseSyncUpload extends DatabaseSyncMaster
 {
-    public function __construct($database, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
     {
-        parent::__construct($database, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
+        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
     }
     
 
@@ -120,6 +132,7 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
     {
         $fileList = $this->glob($this->poolBaseDir);
         $fileList = $this->filterPoolingFileList($fileList, $this->poolBaseDir, $this->poolFileName, $this->poolFileExtension);
+
         $fileList = $this->sort($fileList);
         $fileToUpload = array();
         foreach($fileList as $val)
@@ -141,13 +154,12 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
         $fileSize = filesize($val) * 1;
         $baseName = addslashes(basename($val));
         $path = addslashes($val);
-        $sync_file_id = $this->database->generateNewId();
+        $sync_database_id = $this->database->generateNewId();
         $timeUpload = date('Y-m-d H:i:s');
         $sql = "INSERT INTO `edu_sync_database`
-        (`sync_file_id`, `file_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `status`) VALUES
-        ('$sync_file_id', '$path', '$baseName', '$fileSize', 'up', '$timeUpload', '$timeUpload', 0)";
+        (`sync_database_id`, `file_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `status`) VALUES
+        ('$sync_database_id', '$path', '$baseName', '$fileSize', 'up', '$timeUpload', '$timeUpload', 0)";
         $this->database->execute($sql);
-        $this->database->getDatabaseConnection()->getLastId();
     }
 
     /**
@@ -171,10 +183,10 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
         foreach($records as $record)
         {
             $path = $record['file_path'];
-            $sync_file_id = $record['sync_file_id'];
+            $sync_database_id = $record['sync_database_id'];
             if($this->uploadSyncFile($path, $record, $url, $username, $password))
             {
-                $this->updateSyncRecord($sync_file_id, 1);
+                $this->updateSyncRecord($sync_database_id, 1);
             }
         }
     }
@@ -182,9 +194,9 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
 
 class DatabaseSyncDownload extends DatabaseSyncMaster
 {
-    public function __construct($database, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
     {
-        parent::__construct($database, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
+        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
     }
     
     /**
@@ -249,7 +261,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         }
         else
         {
-            throw new Exception("File not found");
+            throw new DatabaseSyncException("File not found");
         }
     }
 
@@ -283,7 +295,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         }
         else
         {
-            throw new Exception("File not found");
+            throw new DatabaseSyncException("File not found");
         }
     }
     
@@ -294,7 +306,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         {
             $fileSize = ((int) $record['file_size']);
             $baseName = addslashes($record['file_name']);
-            $sync_file_id = addslashes($record['sync_file_id']);
+            $sync_database_id = addslashes($record['sync_database_id']);
             $time_create = addslashes($record['time_create']);
             $baseName = addslashes($record['file_name']);
             $remote_path = addslashes($record['file_path']);
@@ -309,10 +321,10 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
                 if(file_put_contents($localPath, $response))
                 {   
                     $localPath = addslashes($localPath);
-                    $sync_file_id = $this->database->generateNewId();
+                    $sync_database_id = $this->database->generateNewId();
                     $sql = "INSERT INTO `edu_sync_database`
-                    (`sync_file_id`, `file_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
-                    ('$sync_file_id', '$localPath', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
+                    (`sync_database_id`, `file_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
+                    ('$sync_database_id', '$localPath', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
                     $this->database->execute($sql);
                 }
             }

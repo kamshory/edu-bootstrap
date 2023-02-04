@@ -715,15 +715,23 @@ require_once dirname(__FILE__) . "/classes/StudentAuth.php";
 
 
 $database = new PicoDatabase(
-	$configs->db_type,
-	$configs->db_host,
-	$configs->db_port,
+	new PicoDatabaseServer(
+		$configs->db_type,
+		$configs->db_host,
+		$configs->db_port
+	),
 	$configs->db_user,
 	$configs->db_pass,
 	$configs->db_name,
 	$configs->db_time_zone,
-	$configs->sync_database_dir,
-	$configs->sync_database_pool_name
+	new PicoDatabaseSyncConfig(
+		$configs->sync_database_base_dir,
+		$configs->sync_database_pool_name,
+		$configs->sync_database_rolling_prefix,
+		$configs->sync_database_extension,
+		$configs->sync_database_maximum_length,
+		$configs->sync_database_delimiter
+	)
 );
 
 $database->connect();

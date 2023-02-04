@@ -1,5 +1,58 @@
 <?php
 
+class PicoDatabaseServer
+{
+	public $driver = 'mysql';
+	public $host = 'localhost';
+	public $port = 3306;
+	public function __construct($driver, $host, $port)
+	{
+		$this->driver = $driver;
+		$this->host = $host;
+		$this->port = $port;
+	}
+}
+class PicoDatabaseSyncConfig
+{
+	public $sync_database_base_dir = '';
+	public $sync_database_pool_name = '';
+	public $sync_database_rolling_prefix = '';
+	public $sync_database_extension = '';
+	public $sync_database_maximum_length = 1000000;
+	public $sync_database_delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
+	const NEW_LINE = "\r\n";
+	public function __construct($sync_database_base_dir, $sync_database_pool_name, $sync_database_rolling_prefix, $sync_database_extension, $sync_database_maximum_length, $sync_database_delimiter)
+	{
+		$this->sync_database_base_dir = $sync_database_base_dir;
+		$this->sync_database_pool_name = $sync_database_pool_name;
+		$this->sync_database_rolling_prefix = $sync_database_rolling_prefix;
+		$this->sync_database_extension = $sync_database_extension;
+		$this->sync_database_maximum_length = $sync_database_maximum_length;
+		$this->sync_database_delimiter = $sync_database_delimiter;
+	}
+
+	public function getPoolPath()
+	{
+		$poolPath = $this->sync_database_base_dir . "/" . $this->sync_database_pool_name . $this->sync_database_extension;
+		if(filesize($poolPath) > $this->sync_database_maximum_length)
+		{
+			$newPath = $this->sync_database_base_dir . "/" . $this->sync_database_rolling_prefix.date('Y-m-d-H-i-s').$this->sync_database_extension;
+			rename($poolPath, $newPath);
+		}
+		return $poolPath;
+	}
+
+	public function createSync($sql)
+	{
+		$syncPath = $this->getPoolPath();
+		$fp = fopen($syncPath, 'a');
+		$l1 = fwrite($fp, $this->sync_database_delimiter.self::NEW_LINE);  
+		$l2 = fwrite($fp, $sql.";".self::NEW_LINE);  
+		fclose($fp);
+		return $l1 + $l2;
+	}
+
+}
 class PicoDatabase
 {
 
@@ -12,32 +65,26 @@ class PicoDatabase
 
 	public $timezone = "00:00";
 
-	public $syncDatabaseDir = "";
-	public $syncDatabaseFileName = "";
-	public $syncDatabaseMaxSize = 6000;
-	public $syncDatabaseDelimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
-	
-	const NEW_LINE = "\r\n";
-
 	private \PDO $conn;
 
-	public function __construct($driver, $host, $port, $username, $password, $database, $timezone, $syncDatabaseDir = null, $syncDatabaseFileName = null) //NOSONAR
+	public \PicoDatabaseServer $databaseServer;
+	public \PicoDatabaseSyncConfig $databaseSyncConfig;
+
+	public function __construct($databaseServer, $username, $password, $database, $timezone, $databaseSyncConfig) //NOSONAR
 	{
-		$this->driver = $driver;
-		$this->host = $host;
-		$this->port = $port;
+		$this->databaseServer = $databaseServer;
+		$this->databaseSyncConfig = $databaseSyncConfig;
+
+		$this->driver = $this->databaseServer->driver;
+		$this->host = $this->databaseServer->host;
+		$this->port = $this->databaseServer->port;
+
 		$this->username = $username;
 		$this->password = $password;
 		$this->database = $database;
 		$this->timezone = $timezone;
-		if($syncDatabaseDir != null)
-		{
-			$this->syncDatabaseDir = $syncDatabaseDir;
-		}
-		if($syncDatabaseFileName != null)
-		{
-			$this->syncDatabaseFileName = $syncDatabaseFileName;
-		}
+		
+		
 	}
 
 	public function connect()
@@ -153,22 +200,12 @@ class PicoDatabase
 
 	public function getPoolPath()
 	{
-		$poolPath = $this->syncDatabaseDir . "/" . $this->syncDatabaseFileName;
-		if(filesize($poolPath) > $this->syncDatabaseMaxSize)
-		{
-			$newPath = $this->syncDatabaseDir . "/" . 'pool_'.date('Y-m-d-H-i-s').'.txt';
-			rename($poolPath, $newPath);
-		}
-		return $poolPath;
+		return $this->databaseSyncConfig->getPoolPath();
 	}
 
 	public function createSync($sql)
 	{
-		$syncPath = $this->getPoolPath();
-		$fp = fopen($syncPath, 'a');
-		fwrite($fp, $this->syncDatabaseDelimiter."\r\n");  
-		fwrite($fp, $sql.";".self::NEW_LINE);  
-		fclose($fp);  
+		return $this->databaseSyncConfig->createSync($sql);
 	}
 
 	/**
