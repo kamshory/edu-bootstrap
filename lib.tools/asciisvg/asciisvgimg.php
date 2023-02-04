@@ -1003,8 +1003,16 @@ class AStoIMG //NOSONAR
 		$func = mathphp($func,"x|y");
 		$func = str_replace(array('x','y'),array('$x','$y'),$func);
 		
-		$efunc = create_function('$x,$y','return ('.$func.');');
-
+		/**
+		 * Old definition
+		 * $efunc = create_function('$x,$y','return ('.$func.');');
+		 */
+		$efunc = function($t) use ($func) //NOSONAR
+		{
+			$ret = 0;
+			eval("$"."ret = $func;"); 
+			return $ret;
+		};
 
 
 		$dz = sqrt($dx*$dx + $dy*$dy)/6;
@@ -1041,17 +1049,47 @@ class AStoIMG //NOSONAR
 			$isparametric = true;
 			$xfunc = str_replace("[","",$funcp[0]);
 			$xfunc = mathphp($xfunc,"t");
-			$xfunc = str_replace("(t)",'($t)',$xfunc);
-			$exfunc = create_function('$t','return ('.$xfunc.');');
+			$xfunc = str_replace("(t)",'($t)',$xfunc);		
+			
+			/**
+			 * Old definition
+			 * $exfunc = create_function('$t','return ('.$xfunc.');');
+			*/
+			$exfunc = function($t) use ($xfunc) //NOSONAR
+			{
+				$y = 0;
+				eval("$"."y = $xfunc;"); 
+				return $y;
+			};
+
 			$yfunc = str_replace("]","",$funcp[1]);
 			$yfunc = mathphp($yfunc,"t");
 			$yfunc = str_replace("(t)",'($t)',$yfunc);
-			$eyfunc = create_function('$t','return ('.$yfunc.');');
+			/**
+			 * Old definition
+			 * $eyfunc = create_function('$t','return ('.$yfunc.');');
+			 */
+			$eyfunc = function($t) use ($yfunc) //NOSONAR
+			{
+				$y = 0;
+				eval("$"."y = $yfunc;"); 
+				return $y;
+			};
+			
 		} else {
 			$isparametric = false;
 			$func = mathphp($function[0],"x");
 			$func = str_replace("(x)",'($x)',$func);
-			$efunc = create_function('$x','return ('.$func.');');
+			/**
+			 * Old definition
+			 * $efunc = create_function('$x','return ('.$func.');');
+			 */
+			$efunc = function($x) use ($func) //NOSONAR
+			{
+				$y = 0;
+				eval("$"."y = $func;"); 
+				return $y;
+			};
 		}
 		$avoid = array();
 		if (isset($function[1]) && $function[1]!='' && $function[1]!='null') {
@@ -1208,10 +1246,10 @@ class AStoIMG //NOSONAR
 	public function outputimage() {
 		if (func_num_args()>0) {
 			$filename = func_get_arg(0);
-			imagepng($this->img,$filename,8);
+			imagepng($this->img,$filename,9);
 		} else {
 			header("Content-Type: image/png");
-			imagepng($this->img,null,8);
+			imagepng($this->img, null,9);
 		}
 	}
 	public function evalifneeded($str) {
