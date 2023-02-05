@@ -1,6 +1,6 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/auth-guru.php";
-if(!@$auth_school_id)
+if(empty(@$auth_school_id))
 {
 include_once dirname(__FILE__)."/lib.inc/auth-siswa.php";
 }
@@ -11,7 +11,4 @@ if(isset($_GET['school_id']))
 }
 $cfg->page_title = "Profil";
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-?>
-<?php
 include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
-?>

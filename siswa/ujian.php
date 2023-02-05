@@ -8,7 +8,7 @@ if(empty(@$school_id))
 $cfg->page_title = "Ujian";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
-if(@$auth_student_id && @$auth_school_id)
+if(!empty(@$auth_student_id) && !empty(@$auth_school_id))
 {
 if(@$_GET['option'] == 'answer' && isset($_GET['answer_id']))
 {

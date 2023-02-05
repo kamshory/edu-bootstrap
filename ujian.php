@@ -174,7 +174,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 				if($database->executeQuery($sqlx)->rowCount() > 0)
 				{
 					// siswa tak boleh pindah sekolah
-					include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
+					include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php"; //NOSONAR
 					?>
 					<div class="main-content">
 						<div class="main-content-wrapper">
@@ -184,7 +184,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 						</div>
 					</div>    
 					<?php
-					include_once dirname(__FILE__)."/lib.assets/theme/default/footer-home.php";
+					include_once dirname(__FILE__)."/lib.assets/theme/default/footer-home.php"; //NOSONAR
 				}
 				else
 				{
@@ -206,7 +206,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 				if($database->executeQuery($sqlx)->rowCount() > 0)
 				{
 					// siswa tak boleh pindah sekolah
-					include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
+					include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php"; //NOSONAR
 					?>
 					<div class="main-content">
 						<div class="main-content-wrapper">
@@ -216,7 +216,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 						</div>
 					</div>    
 					<?php
-					include_once dirname(__FILE__)."/lib.assets/theme/default/footer-home.php";
+					include_once dirname(__FILE__)."/lib.assets/theme/default/footer-home.php"; //NOSONAR
 				}
 				else
 				{
@@ -240,7 +240,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 			else
 			{
 				// tidak pernah terdaftar sebagai siswa
-				include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
+				include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php"; //NOSONAR
 				?>
                 <div class="main-content">
                     <div class="main-content-wrapper">
@@ -254,7 +254,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
                     </div>
                 </div>    
                 <?php
-				include_once dirname(__FILE__)."/lib.assets/theme/default/footer-home.php";
+				include_once dirname(__FILE__)."/lib.assets/theme/default/footer-home.php"; //NOSONAR
 			}
 		}
 		exit();
@@ -262,7 +262,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 }
 else
 {
-include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
+include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php"; //NOSONAR
 $school_grade = array(
 	'0'=>'',
 	'3'=>'SD Sederajat',
@@ -350,7 +350,7 @@ $school_grade = array(
     </div>
     </div>
 <?php
-include_once dirname(__FILE__)."/lib.assets/theme/default/footer-home.php";
+include_once dirname(__FILE__)."/lib.assets/theme/default/footer-home.php"; //NOSONAR
 }
 ?>
 

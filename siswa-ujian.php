@@ -1,15 +1,14 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/auth-siswa.php";
 include_once dirname(__FILE__)."/lib.inc/mobile-detector.php";
-if(@$auth_student_id && @$auth_school_id)
+if(!empty(@$auth_student_id) && !empty(@$auth_school_id))
 {
-
-$test_id = addslashes(abs(@$_GET['test_id']));
-if($test_id == 0)
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
+if(empty($test_id))
 {
-	$test_id = addslashes(abs(@$_POST['test_id']));
+	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
 }
-$offset = addslashes(abs(@$_GET['offset']));
+$offset = kh_filter_input(INPUT_GET, "offset", FILTER_SANITIZE_NUMBER_UINT);
 	
 if(@$_GET['option'] == 'login')
 {
