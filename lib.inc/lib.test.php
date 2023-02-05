@@ -667,6 +667,10 @@ function parseQuestion($question) //NOSONAR
 		foreach ($options as $key => $val) {
 			$options[$key]['text'] = str_replace("\\\\:", ":", $options[$key]['text']);
 		}
+		$question_text = detectTable($question_text);
+
+		
+
 		$result = array(
 			'question' => $question_text,
 			'numbering' => $numbering_type,
@@ -675,6 +679,165 @@ function parseQuestion($question) //NOSONAR
 	}
 	return $result;
 }
+
+function fixing_table($html)
+{
+	$html = str_replace('&lt;table&gt;', "<table>", $html);
+	$html = str_replace('&lt;/table&gt;', "</table>", $html);
+	$html = str_replace('&lt;thead&gt;', "<thead>", $html);
+	$html = str_replace('&lt;/thead&gt;', "</thead>", $html);
+	$html = str_replace('&lt;tbody&gt;', "<tbody>", $html);
+	$html = str_replace('&lt;/tbody&gt;', "</tbody>", $html);
+	$html = str_replace('&lt;tr&gt;', "<tr>", $html);
+	$html = str_replace('&lt;/tr&gt;', "</tr>", $html);
+	$html = str_replace('&lt;td&gt;', "<td>", $html);
+	$html = str_replace('&lt;/td&gt;', "</td>", $html);
+	return $html;
+}
+
+
+function createLineObject($lineNumber, $lineContent)
+{
+	$nPipe = count(explode('|', $lineContent)) - 1;
+	$x = preg_replace("/[^-\|]/", '', $lineContent);
+	$x2 = preg_replace("/\s/", '', $lineContent);
+	$hasPipeAndDash = $x == $x2 && strlen($x2) > 1;
+	return array(
+        'lineNumber'=> ((int) $lineNumber), 
+        'content'=> $lineContent, 
+        'pipe'=> $nPipe, 
+        'pipeDash'=> $hasPipeAndDash, 
+        'startTable'=>false, 
+        'inTable'=>false, 
+        'endTable'=>false
+    );
+}
+
+function detectTable($html)
+{
+	$html2 = $html;
+	$arr = explode("<br />", $html2);
+	$arr2 = explode("<br />", $html2);
+	$lineObj = array();
+	foreach($arr as $i=>$val)
+	{
+		$arr2[$i] = trim($val);
+		$lineObj[$i] = createLineObject($i, $arr2[$i]);
+	}
+	$inTable = false;
+	$tableObj = array();
+	$j = 0;
+	for($i = 1; $i<count($lineObj); $i++)
+	{
+		if($lineObj[$i]['pipeDash'] && $lineObj[$i-1]['pipe'] > 0)
+		{
+			$inTable = true;
+			$lineObj[$i]['inTable'] = true;
+			$lineObj[$i-1]['startTable'] = true;
+			$tableObj[$j] = array();
+			$tableObj[$j][] = $lineObj[$i-1]; 
+			$tableObj[$j][] = $lineObj[$i]; 
+		}
+		if($inTable && !$lineObj[$i]['pipeDash'] && $lineObj[$i]['pipe'] > 0)
+		{
+			$lineObj[$i]['inTable'] = true;
+			if($i == count($lineObj) - 1)
+            {
+                $lineObj[$i]['endTable'] = true;
+            }
+			$tableObj[$j][] = $lineObj[$i];
+		}
+		if($inTable && $lineObj[$i]['pipe'] == 0)
+		{
+			$inTable = false;
+			$lineObj[$i-1]['endTable'] = true;
+			$tableObj[$j][$i-2]['endTable'] = true;
+			$j++;
+		}
+	}
+
+	foreach($arr as $i=>$val)
+	{
+		$arr[$i] = $val . "<br />";
+	}
+
+	foreach($tableObj as $j=>$val)
+	{
+		$tab = $val;
+		foreach($tab as $i=>$val2)
+		{
+			$content = '';
+			if($tab[$i]['startTable'])
+			{
+				$content = createTableHeader($tab[$i]['content']);
+			}
+			else if($tab[$i]['inTable'])
+			{
+				if($tab[$i]['pipeDash'])
+				{
+					$content = '';
+				}
+				else if($tab[$i]['endTable'])
+				{
+					$content = createTableContent($tab[$i]['content']).'</tbody></table>';
+				}
+				else 
+				{
+					$content = createTableContent($tab[$i]['content']);
+				}
+			}
+			$arr[$tab[$i]['lineNumber']] = $content;
+		}
+	}
+	$text = implode('', $arr);
+	return $text;
+}
+
+function createTableHeader($input)
+{
+	$input = trim($input);
+	$arr = explode('|', $input);
+
+    $content = '<table><thead><tr>';
+	for($i = 0; $i < count($arr); $i++)
+	{
+		if(($i == 0 && $arr[$i] != '') || ($i == count($arr) -1 && $arr[$i] != '') || $arr[$i] != '')
+		{
+			// start with |
+			$content .= '<td>'.$arr[$i].'</td>';
+		}
+	}
+	$content .= '</tr></thead><tbody>';
+	return $content;
+}
+function createTableContent($input)
+{
+	$input = trim($input);
+	$arr = explode('|', $input);
+	$content = '<tr>';
+	for($i = 0; $i < count($arr); $i++)
+	{
+		if(($i == 0 && $arr[$i] != '') || ($i == count($arr) -1 && $arr[$i] != '') || $arr[$i] != '')
+		{
+			// start with |
+			$content .= '<td>'.$arr[$i].'</td>';
+		}
+	}
+	$content .= '</tr>';
+	return $content;
+}
+
+function customRTrim($line, $sub)
+{
+	if(stripos($line, $sub) !== false && substr($line, strlen($line) - count($sub)) == $sub)
+	{
+        return substr($line, 0, strlen($line) - strlen($sub));
+	}
+	return $line;
+}
+
+
+
 
 function addImages($text, $base_dir = '', $base_src = '', $temp_dir = "") //NOSONAR
 {

@@ -566,10 +566,10 @@ function createLineObject(lineNumber, lineContent)
 
 function detectTable(html)
 {
-	var html2 = html;
-	var arr = html2.split("<br />");
-	var arr2 = html2.split("<br />");
-	var lineObj = [];
+	let html2 = html;
+	let arr = html2.split("<br />");
+	let arr2 = html2.split("<br />");
+	let lineObj = [];
 	for(let i in arr)
 	{
 		arr2[i] = arr[i].trim();
@@ -591,16 +591,17 @@ function detectTable(html)
 		if(inTable && !lineObj[i].pipeDash && lineObj[i].pipe > 0)
 		{
 			lineObj[i].inTable = true;
-			tableObj[j].push(lineObj[i]);
 			if(i == lineObj.length - 1)
             {
                 lineObj[i].endTable = true;
             }
+			tableObj[j].push(lineObj[i]);
 		}
 		if(inTable && lineObj[i].pipe == 0)
 		{
 			inTable = false;
 			lineObj[i-1].endTable = true;
+			tableObj[j][i-1].endTable = true;
 			j++;
 		}
 	}
@@ -644,7 +645,7 @@ function detectTable(html)
 function createTableHeader(input)
 {
 	input = input.trim();
-	var arr = input.split('|');
+	let arr = input.split('|');
 	console.log(arr)
 	let content = '<table><thead><tr>';
 	for(let i = 0; i < arr.length; i++)
@@ -661,7 +662,7 @@ function createTableHeader(input)
 function createTableContent(input)
 {
 	input = input.trim();
-	var arr = input.split('|');
+	let arr = input.split('|');
 	let content = '<tr>';
 	for(let i = 0; i < arr.length; i++)
 	{

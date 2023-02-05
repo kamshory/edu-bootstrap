@@ -32,8 +32,6 @@ outline:none;
 		width:50%;
 	}
 	
-	#editor-area{
-	}
 	#editor-inner{
 		padding:10px 5px 10px 10px;
 		box-sizing:border-box;
@@ -66,6 +64,7 @@ outline:none;
 		vertical-align:bottom;
 		line-height:1.6;
 		resize:none;
+		overflow:auto;
 	}
 	#preview-area{
 		max-width:50%;
@@ -73,13 +72,6 @@ outline:none;
 	#preview-inner{
 		padding:10px 10px 10px 5px;
 		box-sizing:border-box;
-	}
-	#preview{
-		height:calc(100vh - 125px);
-		min-height:300px;
-		width:100%;
-		box-sizing:border-box;
-		overflow:auto;
 	}
 	#input, #preview{
 		font-family:"Times New Roman", Times, serif;
@@ -289,9 +281,6 @@ outline:none;
 .toolbar-icon-superscript{
 	background-position:-486px 0px;
 }
-.toolbar-icon-superscript{
-	background-position:-486px 0px;
-}
 .toolbar-icon-subscript{
 	background-position:-508px 0px;
 }
@@ -312,6 +301,9 @@ outline:none;
 }
 .toolbar-icon-chemistry-editor{
 	background-position:-618px 0px;
+}
+.toolbar-icon-table{
+	background-position:-640px 0px;
 }
 .toobar{
 	display:inline-block;

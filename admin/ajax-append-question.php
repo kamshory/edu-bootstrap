@@ -27,9 +27,8 @@ if (!empty(@$school_id) && isset($_POST['question_text']) && isset($_POST['test_
 			$random = ((int) $data['random']);
 			$sort_order = ((int) $data['sort_order']);
 			$score_standar = $data['standard_score'];
-			$xml_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
-			$clear_data = parseRawQuestion($xml_data);
-			
+			$raw_txt_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
+			$clear_data = parseRawQuestion($raw_txt_data);
 			
 			$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 			$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
@@ -43,16 +42,14 @@ if (!empty(@$school_id) && isset($_POST['question_text']) && isset($_POST['test_
 			foreach ($clear_data as $question_no => $question) {
 				$object = parseQuestion($question);
 				if (isset($object['question']) && isset($object['numbering']) && isset($object['option'])) {
-					$content = nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $base_dir, $base_src))));
+					$content = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $base_dir, $base_src)))));
 
-					$picoEdu->log($content);
+					//$picoEdu->log($content);
 
 					$content = $picoEdu->brToNewLineEncoded($content);
 					$content = addslashes($content);
 					$numbering = addslashes($object['numbering']);
 					$digest = md5($object['question']);
-
-
 
 					$sort_order++;
 

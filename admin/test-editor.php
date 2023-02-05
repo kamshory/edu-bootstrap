@@ -68,7 +68,7 @@ var equationURLGenerator = '<?php echo $cfg->equation_url_generator;?>';
 	<a class="toobar" id="toolbar-image" href="javascript:insertImage()" title="Masukkan Gambar"><span class="toolbar-icon toolbar-icon-image"></span></a>
 	<a class="toobar" id="toolbar-audio" href="javascript:insertAudio()" title="Masukkan Suara"><span class="toolbar-icon toolbar-icon-audio"></span></a>
 	<a class="toobar" id="toolbar-compress-audio" href="javascript:compressAudio()" title="Kompres Suara"><span class="toolbar-icon toolbar-icon-compress-audio"></span></a>
-	<a class="toobar" id="toolbar-compress-audio" href="javascript:showTableDialog()" title="Tabel"><span class="toolbar-icon toolbar-icon-table"></span></a>
+	<a class="toobar" id="toolbar-insert-table" href="javascript:showTableDialog()" title="Tabel"><span class="toolbar-icon toolbar-icon-table"></span></a>
 	<a class="toobar" id="toolbar-file-manager" href="lib.tools/filemanager/?test_id=<?php echo $test_id;?>" target="_blank" title="File Manager"><span class="toolbar-icon toolbar-icon-file-manager"></span></a>
 	<a class="toobar" id="toolbar-html" href="ujian-soal.php?option=add&test_id=<?php echo $test_id;?>" title="Modus HTML" onclick="return confirm('Apakah Anda akan mengganti modus menjadi HTML?')"><span class="toolbar-icon toolbar-icon-html"></span></a>
 	<a class="toobar" id="toolbar-append" href="javascript:appendToTest()" title="Masukkan Ke Dalam Ujian"><span class="toolbar-icon toolbar-icon-append"></span></a>

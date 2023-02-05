@@ -31,8 +31,8 @@ if(!empty(@$school_id))
 				$random = ((int) $data['random']);
 				$sort_order = ((int) $data['sort_order']);
 				$score_standar = $data['standard_score'];
-				$xml_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
-				$clear_data = parseRawQuestion($xml_data);
+				$raw_txt_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
+				$clear_data = parseRawQuestion($raw_txt_data);
 				
 				$base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
 				$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
