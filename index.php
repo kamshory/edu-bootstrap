@@ -100,7 +100,7 @@ else
 		$use_token = $student_login->use_token;
 	}
 
-	if(@$student_id)
+	if(!empty(@$student_id))
 	{
 		include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
 		?>

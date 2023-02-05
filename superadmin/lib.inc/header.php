@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 
 <!-- Bootstrap core CSS -->
-<link href="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.min.css">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>/avs/apple-touch-icon.png" sizes="180x180">
@@ -27,9 +27,9 @@
 
 <!-- Custom styles for this template -->
 <link href="<?php echo $cfg->base_url;?>lib.vendors/dashboard/dashboard.css" rel="stylesheet">
-<link rel="stylesheet" href="<?php echo $cfg->base_url;?>lib.style/style.css">
-<script src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"></script>
-<script src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.style/style.css">
+<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.bundle.min.js"></script>
 
 <script>
   $(document).ready(function(){

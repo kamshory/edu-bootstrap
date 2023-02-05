@@ -11,14 +11,14 @@
 
 
     <link rel="stylesheet" href="<?php echo $cfg->base_url;?>lib.vendors/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap">
+    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 
     <!-- Bootstrap core CSS -->
-    <link href="lib.vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <!-- Custom styles for this template -->
-    <link href="lib.style/album.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib.style/album.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="favs/apple-touch-icon.png" sizes="180x180">

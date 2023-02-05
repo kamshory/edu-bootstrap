@@ -16,7 +16,7 @@ else
 	else
 	{
 		include_once dirname(__FILE__)."/lib.inc/auth-siswa.php";
-		if(@$student_id)
+		if(!empty(@$student_id))
 		{
 			include_once dirname(__FILE__)."/student-profil.php";
 		}

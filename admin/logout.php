@@ -18,7 +18,7 @@ if(isset($_GET['confirm-logout']))
     <title>Pico Edu</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="lib.vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="lib.style/signin.css" rel="stylesheet">
 

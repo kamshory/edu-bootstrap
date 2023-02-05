@@ -14,7 +14,7 @@ if(isset($_SESSION['invalid_login']) && $_SESSION['invalid_login'] > 10)
 	else
 	{
 		$_SESSION = array();
-		// saveSessionManual($_SESSION);
+		
 		session_destroy();
 	}
 }
@@ -52,7 +52,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		$_SESSION['student_username'] = $data['username'];
 		$_SESSION['student_password'] = $password;
-		// saveSessionManual($_SESSION);
+		
 		if(isset($_POST['ref']))
 		{
 			$ref = $_POST['ref'];
@@ -95,8 +95,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 			{
 				$_SESSION['invalid_login'] = $_SESSION['invalid_login'] + 1;
 				$_SESSION['last_try'] = time();
-			}
-			// saveSessionManual($_SESSION);
+			}			
 		}
 
 		include_once dirname(__FILE__)."/login-form.php";
@@ -105,7 +104,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 else
 {
 	include_once dirname(__FILE__)."/lib.inc/auth-siswa.php";
-	if(@$student_id)
+	if(!empty(@$student_id))
 	{
 		header('Location: index.php'); //NOSONAR
 	}
