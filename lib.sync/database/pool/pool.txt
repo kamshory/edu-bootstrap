@@ -262,3 +262,7 @@ INSERT INTO `edu_question`
 					;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 commit;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` 
+			set `time_edit` = '2023-02-05 12:33:02', `member_edit` = '' 
+			WHERE `question_id` = '063de4df41e6af864e28';

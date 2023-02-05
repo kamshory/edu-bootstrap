@@ -548,7 +548,6 @@ function parseQuestion(input) //NOSONAR
 	{
 		options[i].text = options[i].text.replaceAll("\\\\:", ":");
 	}
-	question = detectTable(question);
 
 
 	return {question:question, options:options, numbering:numbering};
@@ -566,10 +565,10 @@ function createLineObject(lineNumber, lineContent)
 
 function detectTable(html)
 {
-	let html2 = html;
-	let arr = html2.split("<br />");
-	let arr2 = html2.split("<br />");
-	let lineObj = [];
+	var html2 = html;
+	var arr = html2.split("<br />");
+	var arr2 = html2.split("<br />");
+	var lineObj = [];
 	for(let i in arr)
 	{
 		arr2[i] = arr[i].trim();
@@ -591,17 +590,16 @@ function detectTable(html)
 		if(inTable && !lineObj[i].pipeDash && lineObj[i].pipe > 0)
 		{
 			lineObj[i].inTable = true;
+			tableObj[j].push(lineObj[i]);
 			if(i == lineObj.length - 1)
             {
                 lineObj[i].endTable = true;
             }
-			tableObj[j].push(lineObj[i]);
 		}
 		if(inTable && lineObj[i].pipe == 0)
 		{
 			inTable = false;
 			lineObj[i-1].endTable = true;
-			tableObj[j][i-1].endTable = true;
 			j++;
 		}
 	}
@@ -645,8 +643,7 @@ function detectTable(html)
 function createTableHeader(input)
 {
 	input = input.trim();
-	let arr = input.split('|');
-	console.log(arr)
+	var arr = input.split('|');
 	let content = '<table><thead><tr>';
 	for(let i = 0; i < arr.length; i++)
 	{
@@ -662,7 +659,7 @@ function createTableHeader(input)
 function createTableContent(input)
 {
 	input = input.trim();
-	let arr = input.split('|');
+	var arr = input.split('|');
 	let content = '<tr>';
 	for(let i = 0; i < arr.length; i++)
 	{
@@ -710,7 +707,10 @@ function buldOptionHTML(question, parseImg, baseIMGURL)
 		{
 			score = '';
 		}
-		html += '\r\n\t\t<li class="option-li">'+score+'<span>'+j.text.escapeHTMLEntities().restoreBR().addImage(parseImg, baseIMGURL)+'</span></li>';
+		let text = j.text;
+		text = detectTable(text);
+		let optionHTML = text.escapeHTMLEntities().restoreBR().addImage(parseImg, baseIMGURL).restoreTableEntity();
+		html += '\r\n\t\t<li class="option-li">'+score+'<span>'+optionHTML+'</span></li>';
 	}
 	html += '\r\n\t</ol>';
 	return html;
@@ -728,13 +728,13 @@ function buildQuestionHTML(inObj, parseImg, baseIMGURL)
 			html += '\r\n<ol class="question-ol">';
 			for(i in inObj)
 			{
-				let questionHTML = inObj[i]
-				.question
-				.escapeHTMLEntities()
-				.restoreBR()
-				.addImage(parseImg, baseIMGURL);
+				let questionHTML1 = inObj[i].question;
 
-				questionHTML = questionHTML.restoreTableEntity();
+				questionHTML1 = detectTable(questionHTML1);
+
+				let questionHTML = questionHTML1.escapeHTMLEntities()
+				.restoreBR()
+				.addImage(parseImg, baseIMGURL).restoreTableEntity();
 
 				html += '\r\n\t<li>'+'<span>'+
 				questionHTML
@@ -1975,17 +1975,21 @@ function downloadFileXML()
 	let questions = buildQuestion(document.getElementById('input').value);
 	let i;
 	let j;
-	let question;
+	let questionObj;
 	let options;
 	let option;
 	let xml;
 	xml = '<?xml version="1.0" encoding="utf-8"?>\r\n<test>\r\n';
 	for(i in questions)
 	{
-		question = questions[i];
+		questionObj = questions[i];
+		questionHTML = questionObj.question;
+		questionHTML = detectTable(questionHTML);
+
+
 		options = question.options;
 		xml += '<item>\r\n';
-		xml += '<question><text>'+(question.question.escapeHTMLEntities().escapeHTML())+'</text><random>1</random><numbering>'+question.numbering+'</numbering></question>\r\n';
+		xml += '<question><text>'+(questionHTML.escapeHTMLEntities().escapeHTML())+'</text><random>1</random><numbering>'+question.numbering+'</numbering></question>\r\n';
 		xml += '<answer>\r\n';
 		for(j in options)
 		{
