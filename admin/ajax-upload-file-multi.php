@@ -2,7 +2,7 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if(!empty(@$school_id))
 {
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.*, 
 (select `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` desc limit 0,1) as `sort_order`
 FROM `edu_test`
@@ -21,7 +21,7 @@ if($stmt->rowCount() > 0)
 	
 	if(@$_GET['option'] == 'transfer')
 	{
-		$url = kh_filter_input(INPUT_POST, 'url', FILTER_SANITIZE_URL);
+		$url = kh_filter_input(INPUT_POST, "url", FILTER_SANITIZE_URL);
 		$parsed = parse_url($url);
 		$basename = basename(@$parsed['path']);
 		$data = file_get_contents($url);
@@ -32,8 +32,8 @@ if($stmt->rowCount() > 0)
 	}
 	else if(@$_GET['option'] == 'uploadbase64image')
 	{
-		$data = kh_filter_input(INPUT_POST, 'data', FILTER_SANITIZE_STRING_NEW);
-		$ext = kh_filter_input(INPUT_POST, 'ext', FILTER_SANITIZE_STRING_NEW);
+		$data = kh_filter_input(INPUT_POST, "data", FILTER_SANITIZE_STRING_NEW);
+		$ext = kh_filter_input(INPUT_POST, "ext", FILTER_SANITIZE_STRING_NEW);
 		if(stripos($ext, 'svg') !== false)
 		{
 				$ext = 'svg';
@@ -57,7 +57,7 @@ if($stmt->rowCount() > 0)
 	}
 	else if(@$_GET['option'] == 'copyexternal')
 	{
-		$url = kh_filter_input(INPUT_POST, 'url', FILTER_SANITIZE_URL);
+		$url = kh_filter_input(INPUT_POST, "url", FILTER_SANITIZE_URL);
 		$parsed = parse_url($url);
 		$basename = basename(@$parsed['path']);
 		$basename = str_replace(" ", "-", $basename);

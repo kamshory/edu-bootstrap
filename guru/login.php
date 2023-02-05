@@ -3,11 +3,11 @@ include_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
 if(isset($_POST['username']) && isset($_POST['password']))
 {
-	$username = kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_ALPHANUMERICPUNC);
-	$phone = kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_ALPHANUMERICPUNC);
-	$email = kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_EMAIL);
-	$reg_number = kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_ALPHANUMERICPUNC);
-	$password = md5(kh_filter_input(INPUT_POST, 'password', FILTER_SANITIZE_PASSWORD));
+	$username = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
+	$phone = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
+	$email = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_EMAIL);
+	$reg_number = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
+	$password = md5(kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD));
 	$_SESSION['teacher_username'] = $username;
 	$_SESSION['teacher_password'] = $password;
 									 

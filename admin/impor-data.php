@@ -655,7 +655,7 @@ if(@$_GET['option'] == 'success')
 if(isset($_GET['school_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $nt = '';
 

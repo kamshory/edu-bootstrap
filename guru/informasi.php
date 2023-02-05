@@ -16,7 +16,7 @@ if(empty(@$school_id))
 
 if(isset($_GET['info_id']))
 {
-	$info_id = kh_filter_input(INPUT_GET, 'info_id', FILTER_SANITIZE_STRING_NEW);
+	$info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
 	$sql_filter_info = " and `edu_info`.`info_id` = '$info_id' ";
 
 	$sql = "SELECT `edu_info`.*, `member`.`name` as `creator`

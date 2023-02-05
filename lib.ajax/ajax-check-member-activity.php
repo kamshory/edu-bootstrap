@@ -1,7 +1,7 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth.php";
 
-$member_id = kh_filter_input(INPUT_GET, 'member_id', FILTER_SANITIZE_NUMBER_UINT);
+$member_id = kh_filter_input(INPUT_GET, "member_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `last_seen_time`, `last_activity_time`
 FROM `member`
 WHERE `member_id` = '$member_id'

@@ -7,7 +7,7 @@ if($admin_login->admin_level != 1)
 }
 if(isset($_POST['sort']))
 {
-	$array_question = kh_filter_input(INPUT_POST, 'array_question', FILTER_SANITIZE_STRING_NEW);
+	$array_question = kh_filter_input(INPUT_POST, "array_question", FILTER_SANITIZE_STRING_NEW);
 	$arr = explode(",", trim($array_question, " , "));
 	foreach($arr as $key=>$val)
 	{

@@ -12,7 +12,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'school_program_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "school_program_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school_program`.* ,
 (select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_school_program`.`school_id`) as `school_id`

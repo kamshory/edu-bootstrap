@@ -10,7 +10,7 @@ if(!empty(@$school_id))
 {
 	if(isset($_GET['article_id']))
 	{
-		$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
+		$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
 		$sql_filter_article = " and `edu_article`.`article_id` = '$article_id' ";
 	
 		$sql_filter_article .= " and `edu_article`.`school_id` = '$school_id' and `edu_article`.`open` = '1' ";
@@ -141,18 +141,18 @@ else
 {
 if(isset($_POST['publish']) || isset($_POST['draff']))
 {
-	$option = kh_filter_input(INPUT_POST, 'option', FILTER_SANITIZE_SPECIAL_CHARS);
-	$title = trim(kh_filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS));
+	$option = kh_filter_input(INPUT_POST, "option", FILTER_SANITIZE_SPECIAL_CHARS);
+	$title = trim(kh_filter_input(INPUT_POST, "title", FILTER_SANITIZE_SPECIAL_CHARS));
 	if($title == '')
 	{
 		$title = '(Tanpa Judul)';
 	}
 	
-	$content = kh_filter_input(INPUT_POST, 'content');
+	$content = kh_filter_input(INPUT_POST, "content");
 	$content = addslashes($content);
 	
-	$open = kh_filter_input(INPUT_POST, 'open', FILTER_SANITIZE_NUMBER_UINT);
-	$class = kh_filter_input(INPUT_POST, 'class', FILTER_SANITIZE_STRING_NEW);
+	$open = kh_filter_input(INPUT_POST, "open", FILTER_SANITIZE_NUMBER_UINT);
+	$class = kh_filter_input(INPUT_POST, "class", FILTER_SANITIZE_STRING_NEW);
 	
 	$admin_id = $auth_teacher_id;
 	$school_id = $auth_teacher_school_id;
@@ -177,7 +177,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	}
 	else if($option == 'edit')
 	{
-		$article_id = kh_filter_input(INPUT_POST, 'article_id');
+		$article_id = kh_filter_input(INPUT_POST, "article_id", FILTER_SANITIZE_STRING_NEW);
 		$sql = "UPDATE `edu_article` set
 		`title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
 		`time_edit` = '$time', `member_edit` = '$admin_id', `role_edit` = 'T', `ip_edit` =  '$ip', `active` = '$active'
@@ -191,7 +191,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 }
 if(isset($_GET['school_id']))
 {
-	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
+	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }
 $sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' ORDER BY `sort_order` asc ";
 $stmt = $database->executeQuery($sql);
@@ -215,8 +215,8 @@ var classList = <?php echo json_encode($arrc);?>;
     <?php
 	if(@$_GET['option'] == 'edit' && isset($_GET['article_id']) && $auth_teacher_id)
 	{
-	$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
-	$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
+	$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
+	$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT * FROM `edu_article` WHERE `article_id` = '$article_id' and `school_id` = '$school_id' and `member_create` = '$auth_teacher_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -286,7 +286,7 @@ var classList = <?php echo json_encode($arrc);?>;
 }
 else if(isset($_GET['article_id']))
 {
-	$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
+	$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
 	$sql_filter_article = " and `edu_article`.`article_id` = '$article_id' ";
 
 	if(isset($school_id))

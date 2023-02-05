@@ -5,8 +5,8 @@ $basename = "ujian-soal.php";
 $test_id = 0;
 $edit_mode = '';
 if (!empty(@$school_id) && isset($_POST['question_text']) && isset($_POST['test_id']) && @$_POST['option'] == 'add') {
-	$test_id = kh_filter_input(INPUT_POST, 'test_id', FILTER_SANITIZE_STRING_NEW);
-	$edit_mode = kh_filter_input(INPUT_POST, 'edit_mode', FILTER_SANITIZE_NUMBER_UINT);
+	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
+	$edit_mode = kh_filter_input(INPUT_POST, "edit_mode", FILTER_SANITIZE_NUMBER_UINT);
 	$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
@@ -27,7 +27,7 @@ if (!empty(@$school_id) && isset($_POST['question_text']) && isset($_POST['test_
 			$random = ((int) $data['random']);
 			$sort_order = ((int) $data['sort_order']);
 			$score_standar = $data['standard_score'];
-			$raw_txt_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
+			$raw_txt_data = kh_filter_input(INPUT_POST, "question_text", FILTER_DEFAULT);
 			$clear_data = parseRawQuestion($raw_txt_data);
 			
 			$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
@@ -105,7 +105,7 @@ if (!empty(@$school_id) && isset($_POST['question_text']) && isset($_POST['test_
 
 if (!empty(@$school_id)) {
 	if ($test_id == 0) {
-		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+		$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	}
 
 	$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ";

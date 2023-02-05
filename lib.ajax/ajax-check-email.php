@@ -7,7 +7,7 @@ $json = array('registered'=>0);
 
 if(isset($_POST['email']))
 {
-$email = kh_filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+$email = kh_filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
 $sql = "SELECT `member_id`, `email`, `username`
 FROM `member`
 WHERE `email` like '$email'

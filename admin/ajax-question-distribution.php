@@ -7,8 +7,8 @@ if(empty(@$school_id))
 
 if(isset($_POST['save']) && isset($_POST['test_id']) && isset($_POST['data']))
 {
-	$test_id = kh_filter_input(INPUT_POST, 'test_id', FILTER_SANITIZE_STRING_NEW);
-	$data = kh_filter_input(INPUT_POST, 'data');
+	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
+	$data = kh_filter_input(INPUT_POST, "data");
 	try
 	{
 		$try = @json_decode($data, true);
@@ -29,7 +29,7 @@ if(isset($_POST['save']) && isset($_POST['test_id']) && isset($_POST['data']))
 }
 else
 {
-	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	if($test_id)
 	{
 		$randobj = array();

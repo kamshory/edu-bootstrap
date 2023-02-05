@@ -10,7 +10,7 @@ if($fmanConfig->authentification_needed && !$userlogin)
 if(@$_GET['option'] == 'ajax-load')
 {
 	$cnt = "";
-	$path = kh_filter_input(INPUT_GET, 'filepath');
+	$path = kh_filter_input(INPUT_GET, "filepath");
 	$filepath = path_decode($path, $fmanConfig->rootdir);
 	if(file_exists($filepath))
 	{
@@ -21,7 +21,7 @@ if(@$_GET['option'] == 'ajax-load')
 else
 {
 	$cnt = "";
-	$path = kh_filter_input(INPUT_GET, 'filepath');
+	$path = kh_filter_input(INPUT_GET, "filepath");
 	$filepath = path_decode($path, $fmanConfig->rootdir);
 	if(file_exists($filepath))
 	{

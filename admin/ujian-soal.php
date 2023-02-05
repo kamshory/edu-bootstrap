@@ -19,8 +19,8 @@ $time_create = $time_edit = $picoEdu->getLocalDateTime();
 
 if(@$_GET['option'] == 'delete')
 {
-	$question_id = kh_filter_input(INPUT_GET, 'question_id', FILTER_SANITIZE_STRING_NEW);
-	$digest = kh_filter_input(INPUT_GET, 'digest', FILTER_SANITIZE_STRING_NEW_BASE64);
+	$question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);
+	$digest = kh_filter_input(INPUT_GET, "digest", FILTER_SANITIZE_STRING_NEW_BASE64);
 	$sql = "SELECT * FROM `edu_question`
 	inner join(`edu_test`) on(`edu_test`.`test_id` = `edu_question`.`test_id` and `edu_test`.`school_id` = '$school_id')
 	WHERE `question_id` = '$question_id' and `digest` = '$digest' ";
@@ -41,7 +41,7 @@ if(@$_GET['option'] == 'delete')
 if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 {
 	// Format Plain
-	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$picoEdu->sortQuestion($test_id);
 	$sql = "SELECT `edu_test`.*, 
 	(select `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` desc limit 0,1) as `sort_order`
@@ -61,7 +61,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$sort_order = ((int) $data['sort_order']);
 		$score_standar = $data['standard_score'];
 		
-		$xml_data = kh_filter_input(INPUT_POST, 'question_text', FILTER_DEFAULT);
+		$xml_data = kh_filter_input(INPUT_POST, "question_text", FILTER_DEFAULT);
 		$clear_data = parseRawQuestion($xml_data);
 
 		
@@ -146,15 +146,15 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
-	$test_id = kh_filter_input(INPUT_POST, 'test_id', FILTER_SANITIZE_STRING_NEW);
-	$number_of_option = kh_filter_input(INPUT_POST, 'number_of_option', FILTER_SANITIZE_NUMBER_UINT);
-	$numbering = kh_filter_input(INPUT_POST, 'numbering', FILTER_SANITIZE_STRING_NEW);
-	$random = kh_filter_input(INPUT_POST, 'random', FILTER_SANITIZE_NUMBER_UINT);
+	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
+	$number_of_option = kh_filter_input(INPUT_POST, "number_of_option", FILTER_SANITIZE_NUMBER_UINT);
+	$numbering = kh_filter_input(INPUT_POST, "numbering", FILTER_SANITIZE_STRING_NEW);
+	$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
 	
 	$direktori = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
 	$prefiks = "media.edu/school/$school_id/test/$test_id";
 
-	$question = kh_filter_input(INPUT_POST, 'question');
+	$question = kh_filter_input(INPUT_POST, "question");
 	$question = UTF8ToEntities($question);
 	$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 	$question = $picoEdu->brToNewLineEncoded($question);
@@ -203,12 +203,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			$sort_order++;
 			$id2 = $i;
 				
-			$option = kh_filter_input(INPUT_POST, 'option_'.$id2);
+			$option = kh_filter_input(INPUT_POST, "option_".$id2);
 			$option = UTF8ToEntities($option);
 			$option = addslashes(removeparagraphtag(extractImageData($option, $direktori, $prefiks, $fileSync)));
 			$option = $picoEdu->brToNewLineEncoded($option);
 					
-			$score = kh_filter_input(INPUT_POST, 'score_'.$id2, FILTER_SANITIZE_NUMBER_FLOAT);
+			$score = kh_filter_input(INPUT_POST, "score_".$id2, FILTER_SANITIZE_NUMBER_FLOAT);
 			$option_id = $database->generateNewId();
 
 			$sql = "INSERT INTO `edu_option` 
@@ -237,10 +237,10 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$question_id = kh_filter_input(INPUT_POST, 'question_id', FILTER_SANITIZE_STRING_NEW);
-	$numbering = kh_filter_input(INPUT_POST, 'numbering', FILTER_SANITIZE_STRING_NEW);
-	$random = kh_filter_input(INPUT_POST, 'random', FILTER_SANITIZE_NUMBER_UINT);
-	$basic_competence = trim(kh_filter_input(INPUT_POST, 'basic_competence', FILTER_SANITIZE_STRING_NEW));
+	$question_id = kh_filter_input(INPUT_POST, "question_id", FILTER_SANITIZE_STRING_NEW);
+	$numbering = kh_filter_input(INPUT_POST, "numbering", FILTER_SANITIZE_STRING_NEW);
+	$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
+	$basic_competence = trim(kh_filter_input(INPUT_POST, "basic_competence", FILTER_SANITIZE_STRING_NEW));
 	$basic_competence = preg_replace("/[^0-9]/i", ".", $basic_competence);
 	$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
 
@@ -254,7 +254,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$direktori = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
 		$prefiks = "media.edu/school/$school_id/test/$test_id";
 	
-		$question = kh_filter_input(INPUT_POST, 'question');
+		$question = kh_filter_input(INPUT_POST, "question");
 		$question = UTF8ToEntities($question);
 		$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 		$question = $picoEdu->brToNewLineEncoded($question);
@@ -283,12 +283,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 			foreach ($rows2 as $dt) {
 				$id2 = $dt['option_id'];
 
-				$option = kh_filter_input(INPUT_POST, 'option_' . $id2);
+				$option = kh_filter_input(INPUT_POST, "option_" . $id2);
 				$option = UTF8ToEntities($option);
 				$option = addslashes(removeparagraphtag(extractImageData($option, $direktori, $prefiks, $fileSync)));
 				$option = $picoEdu->brToNewLineEncoded($option);
 
-				$score = kh_filter_input(INPUT_POST, 'score_' . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
+				$score = kh_filter_input(INPUT_POST, "score_" . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
 				$sql = "UPDATE `edu_option` 
 				set `content` = '$option', `score` = '$score' 
 				WHERE `question_id` = '$question_id' and `option_id` = '$id2'";
@@ -326,7 +326,7 @@ include_once dirname(__FILE__)."/test-editor.php";
 exit();
 }
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* ,
 (select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `collection`
 FROM `edu_test` WHERE `test_id` = '$test_id' ";
@@ -454,7 +454,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'edit')
 {
 	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-	$question_id = kh_filter_input(INPUT_GET, 'question_id', FILTER_SANITIZE_STRING_NEW);
+	$question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
@@ -606,7 +606,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(isset($_GET['test_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* ,
 (select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `collection`
 FROM `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id'
@@ -947,7 +947,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 ?>
 <style type="text/css">
 .menu-control{
@@ -1111,7 +1111,12 @@ FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
 ORDER BY `edu_test`.`test_id` desc
 ";
-$sql_test = $sql;
+$sql_test = "SELECT `edu_test`.* $nt,
+(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
+(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
+FROM `edu_test`
+WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
+";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();
 $stmt = $database->executeQuery($sql.$pagination->limit_sql);

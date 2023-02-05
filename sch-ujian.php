@@ -4,7 +4,7 @@ if (@!$auth_teacher_id)
 	include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
 
 if (isset($_GET['school_id'])) {
-	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
+	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }
 if (!$school_id) {
 	exit();
@@ -13,7 +13,7 @@ include_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 
 if (@$auth_student_id && @$auth_school_id) {
 	if (@$_GET['option'] == 'answer' && isset($_GET['answer_id'])) {
-		$answer_id = kh_filter_input(INPUT_GET, 'answer_id', FILTER_SANITIZE_STRING_NEW);
+		$answer_id = kh_filter_input(INPUT_GET, "answer_id", FILTER_SANITIZE_STRING_NEW);
 		$now = $picoEdu->getLocalDateTime();
 		include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 
@@ -167,7 +167,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		}
 		include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 	} else if (@$_GET['option'] == 'history' && isset($_GET['test_id'])) {
-		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+		$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 		include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 		$sql = "SELECT `edu_answer`.*
 		FROM `edu_answer`
@@ -240,7 +240,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 	} else if (@$_GET['option'] == 'detail' && isset($_GET['test_id'])) {
 		include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
-		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+		$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 		$nt = '';
 		$sql = "SELECT `edu_test`.* $nt,
 		(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`
@@ -403,7 +403,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 	} else {
 		include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
-		$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+		$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 		$array_class = $picoEdu->getArrayClass($school_id);
 		?>
 		<style type="text/css">
@@ -664,7 +664,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	}
 } else if (@$auth_teacher_id && @$auth_school_id) {
 	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
-	$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+	$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$array_class = $picoEdu->getArrayClass($school_id);
 	?>
 	<script type="text/javascript">
@@ -721,19 +721,19 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 		$nt = '';
 
 		$sql = "SELECT `edu_test`.* $nt
-FROM `edu_test`
-WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
-ORDER BY `edu_test`.`test_id` desc
-";
+		FROM `edu_test`
+		WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+		ORDER BY `edu_test`.`test_id` desc
+		";
 		$sql_test = "SELECT `edu_test`.*
-FROM `edu_test`
-WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
-";
+		FROM `edu_test`
+		WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+		";
 
-$stmt = $database->executeQuery($sql_test);
-$pagination->total_record = $stmt->rowCount();
-$stmt = $database->executeQuery($sql.$pagination->limit_sql);
-$pagination->total_record_with_limit = $stmt->rowCount();
+		$stmt = $database->executeQuery($sql_test);
+		$pagination->total_record = $stmt->rowCount();
+		$stmt = $database->executeQuery($sql.$pagination->limit_sql);
+		$pagination->total_record_with_limit = $stmt->rowCount();
 		if ($pagination->total_record_with_limit) {
 			$pagination->start = $pagination->offset + 1;
 			$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
@@ -825,7 +825,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else {
 	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
-	$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+	$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$array_class = $picoEdu->$picoEdu->getArrayClass($school_id);
 ?>
 	<script type="text/javascript">
@@ -890,10 +890,10 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 		FROM `edu_test`
 		WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
 		";
-$stmt = $database->executeQuery($sql_test);
-$pagination->total_record = $stmt->rowCount();
-$stmt = $database->executeQuery($sql.$pagination->limit_sql);
-$pagination->total_record_with_limit = $stmt->rowCount();
+		$stmt = $database->executeQuery($sql_test);
+		$pagination->total_record = $stmt->rowCount();
+		$stmt = $database->executeQuery($sql.$pagination->limit_sql);
+		$pagination->total_record_with_limit = $stmt->rowCount();
 		if ($pagination->total_record_with_limit) {
 			$pagination->start = $pagination->offset + 1;
 			$pagination->end = $pagination->offset + $pagination->total_record_with_limit;

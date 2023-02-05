@@ -4,8 +4,8 @@ if(empty(@$school_id))
 {
 	exit();
 }
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-$test_status = kh_filter_input(INPUT_GET, 'status', FILTER_SANITIZE_STRING_NEW);
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
+$test_status = kh_filter_input(INPUT_GET, "status", FILTER_SANITIZE_STRING_NEW);
 
 $arr_status = array(
 1=>'Ujian',
@@ -16,8 +16,8 @@ $arr_status = array(
 
 if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET['id']))
 {
-	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
-	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+	$id = kh_filter_input(INPUT_GET, "id", FILTER_SANITIZE_STRING_NEW);
+	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_test_member`.* FROM `edu_test_member` WHERE `test_member_id` = '$id' and `status` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
@@ -35,8 +35,8 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 }
 if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET['id']))
 {
-	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
-	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+	$id = kh_filter_input(INPUT_GET, "id", FILTER_SANITIZE_STRING_NEW);
+	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_test_member`.* FROM `edu_test_member` WHERE `test_member_id` = '$id' and `status` = '1'
 	";
 	$stmt = $database->executeQuery($sql);

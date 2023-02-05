@@ -3,7 +3,7 @@ include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
 $cfg->page_title = "Pilih Sekolah";
 include_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 if (@$_GET['option'] == 'select') {
-	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_INT);
+	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_NUMBER_INT);
 	$sql = "
 	select `edu_school3`.* from(
 	
@@ -35,7 +35,7 @@ $base_dir = 'siswa/';
 $school_code_from_parser = 'student';
 if (@$_GET['option'] == 'detail') {
 	include_once dirname(__FILE__) . "/lib.assets/theme/default/header-home.php";
-	$edit_key = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_INT);
+	$edit_key = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_NUMBER_INT);
 	$nt = '';
 	$sql = "SELECT `edu_school`.* $nt,
 	(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
@@ -185,7 +185,25 @@ if (@$_GET['option'] == 'detail') {
 				WHERE 1 $sql_filter
 				ORDER BY `edu_school3`.`open` asc, `edu_school3`.`name` asc
 				";
-				$sql_test = $sql;
+				
+				$sql_test = "
+				select `edu_school3`.* from(
+
+				select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
+				`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
+				FROM `edu_member_school`
+				inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
+				WHERE `edu_member_school`.`member_id` = '$member_id' and `edu_member_school`.`role` = 'S'
+
+				union
+
+				select `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
+				`edu_school2`.`principal`, `edu_school2`.`active`, `edu_school2`.`open`
+				FROM `edu_school` as `edu_school2`
+				WHERE `edu_school2`.`open` = '1' and `edu_school2`.`active` = true 
+				) as `edu_school3`
+				WHERE 1 $sql_filter
+				";
 
 				$stmt1 = $database->executeQuery($sql_test);
 				$pagination->total_record = $stmt1->rowCount();

@@ -1,8 +1,8 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
-$state_id = kh_filter_input(INPUT_GET, 'state_id', FILTER_SANITIZE_NUMBER_UINT);
-$state_name = trim(kh_filter_input(INPUT_GET, 'state_name', FILTER_SANITIZE_STRING_NEW));
-$country_id = trim(kh_filter_input(INPUT_GET, 'country_id', FILTER_SANITIZE_STRING_NEW));
+$state_id = kh_filter_input(INPUT_GET, "state_id", FILTER_SANITIZE_STRING_NEW);
+$state_name = trim(kh_filter_input(INPUT_GET, "state_name", FILTER_SANITIZE_STRING_NEW));
+$country_id = trim(kh_filter_input(INPUT_GET, "country_id", FILTER_SANITIZE_STRING_NEW));
 
 if($state_id == 0 && $state_name != '')
 {

@@ -5,19 +5,19 @@ $cfg->page_title = "Token";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST))
 {
-	$token_id = kh_filter_input(INPUT_POST, 'token_id', FILTER_SANITIZE_NUMBER_INT);
-	$token_id2 = kh_filter_input(INPUT_POST, 'token_id2', FILTER_SANITIZE_NUMBER_INT);
+	$token_id = kh_filter_input(INPUT_POST, "token_id", FILTER_SANITIZE_NUMBER_INT);
+	$token_id2 = kh_filter_input(INPUT_POST, "token_id2", FILTER_SANITIZE_NUMBER_INT);
 	if(!isset($_POST['token_id']))
 	{
 		$token_id = $token_id2;
 	}
-	$test_id = kh_filter_input(INPUT_POST, 'test_id', FILTER_SANITIZE_STRING_NEW);
-	$class_id = kh_filter_input(INPUT_POST, 'class_id', FILTER_SANITIZE_STRING_NEW);
-	$student_id = kh_filter_input(INPUT_POST, 'student_id', FILTER_SANITIZE_STRING_NEW);
+	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
+	$class_id = kh_filter_input(INPUT_POST, "class_id", FILTER_SANITIZE_STRING_NEW);
+	$student_id = kh_filter_input(INPUT_POST, "student_id", FILTER_SANITIZE_STRING_NEW);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
-	$time_expire = kh_filter_input(INPUT_POST, 'time_expire', FILTER_SANITIZE_STRING_NEW);
-	$teacher_create = $teacher_id;
-	$teacher_edit = $teacher_id;
+	$time_expire = kh_filter_input(INPUT_POST, "time_expire", FILTER_SANITIZE_STRING_NEW);
+	$member_create = $teacher_id;
+	$member_edit = $teacher_id;
 	$active = 1;
 }
 
@@ -75,7 +75,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				(`token_id`, `token`, `school_id`, `class_id`, `student_id`, `test_id`, `time_create`, `time_edit`, `time_expire`, 
 				`teacher_create`, `teacher_edit`, `active`) values
 				('$token_id', '$token', '$school_id', '$class_id', '$student_id', '$test_id', '$time_create', '$time_edit', '$time_expire', 
-				'$teacher_create', '$teacher_edit', '$active')";
+				'$member_create', '$member_edit', '$active')";
 				$database->executeInsert($sql, true);
 			}
 			header("Location: ".basename($_SERVER['PHP_SELF'])."?class_id=$class_id&test_id=$test_id");
@@ -91,7 +91,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			(`token_id1, `token`, `school_id`, `class_id`, `student_id`, `test_id`, `time_create`, `time_edit`, `time_expire`, 
 			`teacher_create`, `teacher_edit`, `active`) values
 			('$token_id', '$token', '$school_id', '$class_id', '$student_id', '$test_id', '$time_create', '$time_edit', '$time_expire', 
-			'$teacher_create', '$teacher_edit', '$active')";
+			'$member_create', '$member_edit', '$active')";
 			$database->executeInsert($sql, true);
 			header("Location: ".basename($_SERVER['PHP_SELF'])."?class_id=$class_id&test_id=$test_id");
 		}
@@ -208,7 +208,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'token_id', FILTER_SANITIZE_NUMBER_INT);
+$edit_key = kh_filter_input(INPUT_GET, "token_id", FILTER_SANITIZE_NUMBER_INT);
 $nt = '';
 $sql = "SELECT `edu_token`.* $nt,
 (select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_create`) as `creator_name`,
@@ -288,8 +288,8 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
+$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $now = $picoEdu->getLocalDateTime();
 $oneday = date(PicoConst::DATE_TIME_MYSQL, time()-86400);
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR

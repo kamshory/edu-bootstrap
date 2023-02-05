@@ -15,7 +15,7 @@ $time_create = $time_edit = $picoEdu->getLocalDateTime();
 
 if(@$_GET['option'] == 'export')
 {
-	$test_collection_id = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
+	$test_collection_id = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -34,8 +34,8 @@ if(@$_GET['option'] == 'export')
 Commented
 if(@$_GET['option'] == 'delete')
 {
-	$test_collection_id = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
-	$question_index = kh_filter_input(INPUT_GET, 'question_index', FILTER_SANITIZE_NUMBER_UINT);
+	$test_collection_id = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
+	$question_index = kh_filter_input(INPUT_GET, "question_index", FILTER_SANITIZE_NUMBER_UINT);
 	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 	$res = mysql_query($sql);
 	if(mysql_num_rows($res))
@@ -147,10 +147,10 @@ if(@$_GET['option'] == 'delete')
 Commented
 if(isset($_POST['sort']))
 {
-	$test_collection_id = kh_filter_input(INPUT_POST, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
-	$array_question = kh_filter_input(INPUT_POST, 'array_question', FILTER_SANITIZE_STRING_NEW);
+	$test_collection_id = kh_filter_input(INPUT_POST, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
+	$array_question = kh_filter_input(INPUT_POST, "array_question", FILTER_SANITIZE_STRING_NEW);
 	$new_order = explode(",", $array_question);
-	$question_index = kh_filter_input(INPUT_POST, 'question_index', FILTER_SANITIZE_NUMBER_UINT);
+	$question_index = kh_filter_input(INPUT_POST, "question_index", FILTER_SANITIZE_NUMBER_UINT);
 	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 	$res = mysql_query($sql);
 	if(mysql_num_rows($res))
@@ -261,13 +261,13 @@ if(isset($_POST['sort']))
 */
 if(isset($_POST['sort']))
 {
-	$test_collection_id = kh_filter_input(INPUT_POST, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
-	$array_question = kh_filter_input(INPUT_POST, 'array_question', FILTER_SANITIZE_STRING_NEW);
+	$test_collection_id = kh_filter_input(INPUT_POST, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
+	$array_question = kh_filter_input(INPUT_POST, "array_question", FILTER_SANITIZE_STRING_NEW);
 	$new_order = explode(",", $array_question);
 
 
-	$test_collection_id = kh_filter_input(INPUT_POST, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
-	$question_index = kh_filter_input(INPUT_POST, 'question_index', FILTER_SANITIZE_NUMBER_UINT);
+	$test_collection_id = kh_filter_input(INPUT_POST, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
+	$question_index = kh_filter_input(INPUT_POST, "question_index", FILTER_SANITIZE_NUMBER_UINT);
 	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -379,8 +379,8 @@ if(isset($_POST['sort']))
 }
 if(@$_GET['option'] == 'delete')
 {
-	$test_collection_id = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
-	$question_index = kh_filter_input(INPUT_GET, 'question_index', FILTER_SANITIZE_NUMBER_UINT);
+	$test_collection_id = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
+	$question_index = kh_filter_input(INPUT_GET, "question_index", FILTER_SANITIZE_NUMBER_UINT);
 	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -497,8 +497,8 @@ if(@$_GET['option'] == 'delete')
 if(isset($_POST['save']) && (@$_GET['option'] == 'edit' || @$_GET['option'] == 'add'))
 {
 	
-	$test_collection_id = kh_filter_input(INPUT_POST, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
-	$question_index = kh_filter_input(INPUT_POST, 'question_index', FILTER_SANITIZE_NUMBER_UINT);
+	$test_collection_id = kh_filter_input(INPUT_POST, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
+	$question_index = kh_filter_input(INPUT_POST, "question_index", FILTER_SANITIZE_NUMBER_UINT);
 	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -516,12 +516,12 @@ if(isset($_POST['save']) && (@$_GET['option'] == 'edit' || @$_GET['option'] == '
 		{
 			$question_array[$ii] = $test_data->item[$ii];
 		}
-		$question_text = kh_filter_input(INPUT_POST, 'question');
+		$question_text = kh_filter_input(INPUT_POST, "question");
 		$question_text = UTF8ToEntities($question_text);
-		$numbering = kh_filter_input(INPUT_POST, 'numbering', FILTER_SANITIZE_STRING_NEW);
-		$competence = trim(kh_filter_input(INPUT_POST, 'basic_competence', FILTER_SANITIZE_STRING_NEW));
-		$random = kh_filter_input(INPUT_POST, 'random', FILTER_SANITIZE_NUMBER_UINT);
-		$number_of_option = kh_filter_input(INPUT_POST, 'number_of_option', FILTER_SANITIZE_NUMBER_UINT);
+		$numbering = kh_filter_input(INPUT_POST, "numbering", FILTER_SANITIZE_STRING_NEW);
+		$competence = trim(kh_filter_input(INPUT_POST, "basic_competence", FILTER_SANITIZE_STRING_NEW));
+		$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
+		$number_of_option = kh_filter_input(INPUT_POST, "number_of_option", FILTER_SANITIZE_NUMBER_UINT);
 		
 		if(!isset($question_array[$question_index]))
 		{
@@ -669,8 +669,8 @@ if(@$_GET['option'] == 'edit' || @$_GET['option'] == 'add')
 if(isset($_GET['test_collection_id']) && (@$_GET['option'] == 'add' || isset($_GET['question_index'])))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$test_collection_id = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_STRING_NEW);
-$question_index = kh_filter_input(INPUT_GET, 'question_index', FILTER_SANITIZE_NUMBER_UINT);
+$test_collection_id = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
+$question_index = kh_filter_input(INPUT_GET, "question_index", FILTER_SANITIZE_NUMBER_UINT);
 $sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -697,11 +697,11 @@ $noption = 0;
 $question_count = $nquestion = count($test_data->item);
 
 
-$number_of_option = kh_filter_input(INPUT_POST, 'number_of_option', FILTER_SANITIZE_NUMBER_UINT);
-$numbering = kh_filter_input(INPUT_POST, 'numbering', FILTER_SANITIZE_STRING_NEW);
-$competence = trim(kh_filter_input(INPUT_POST, 'basic_competence', FILTER_SANITIZE_STRING_NEW));
-$random = kh_filter_input(INPUT_POST, 'random', FILTER_SANITIZE_NUMBER_UINT);
-$question_text = kh_filter_input(INPUT_POST, 'question');
+$number_of_option = kh_filter_input(INPUT_POST, "number_of_option", FILTER_SANITIZE_NUMBER_UINT);
+$numbering = kh_filter_input(INPUT_POST, "numbering", FILTER_SANITIZE_STRING_NEW);
+$competence = trim(kh_filter_input(INPUT_POST, "basic_competence", FILTER_SANITIZE_STRING_NEW));
+$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
+$question_text = kh_filter_input(INPUT_POST, "question");
 $question_text = UTF8ToEntities($question_text);
 $question_text = htmlspecialchars($question_text);
 	
@@ -1185,7 +1185,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(isset($_GET['test_collection_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$test_collection_id = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
+$test_collection_id = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id'  ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -1333,7 +1333,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$grade_id = kh_filter_input(INPUT_GET, 'grade_id', FILTER_SANITIZE_NUMBER_INT);
+$grade_id = kh_filter_input(INPUT_GET, "grade_id", FILTER_SANITIZE_NUMBER_INT);
 ?>
 <style type="text/css">
 #test-preview h3 {

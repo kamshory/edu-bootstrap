@@ -5,7 +5,7 @@ if(!empty(@$school_id))
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 	if (isset($_GET['test_id'])) {
-		$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+		$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 		$sql = "SELECT `edu_test`.* ,
 (select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `koleksi`
 FROM `edu_test` WHERE `test_id` = '$test_id' 

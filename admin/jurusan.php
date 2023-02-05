@@ -15,19 +15,19 @@ $cfg->page_title = "Jurusan";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST))
 {
-	$school_program_id = kh_filter_input(INPUT_POST, 'school_program_id', FILTER_SANITIZE_STRING_NEW);
-	$school_program_id2 = kh_filter_input(INPUT_POST, 'school_program_id2', FILTER_SANITIZE_STRING_NEW);
+	$school_program_id = kh_filter_input(INPUT_POST, "school_program_id", FILTER_SANITIZE_STRING_NEW);
+	$school_program_id2 = kh_filter_input(INPUT_POST, "school_program_id2", FILTER_SANITIZE_STRING_NEW);
 	if(!isset($_POST['school_program_id']))
 	{
 		$school_program_id = $school_program_id2;
 	}
-	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-	$sort_order = kh_filter_input(INPUT_POST, 'sort_order', FILTER_SANITIZE_NUMBER_INT);
-	$default = kh_filter_input(INPUT_POST, 'default', FILTER_SANITIZE_NUMBER_UINT);
+	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
+	$sort_order = kh_filter_input(INPUT_POST, "sort_order", FILTER_SANITIZE_NUMBER_INT);
+	$default = kh_filter_input(INPUT_POST, "default", FILTER_SANITIZE_NUMBER_UINT);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$admin_create = $admin_edit = $admin_login->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
-	$active = kh_filter_input(INPUT_POST, 'active', FILTER_SANITIZE_NUMBER_UINT);
+	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 }
 
 if(isset($_POST['set_active']) && isset($_POST['school_program_id']))
@@ -81,7 +81,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$id = $database->getDatabaseConnection()->lastInsertId();
 	if($id == 0)
 	{
-		$id = kh_filter_input(INPUT_POST, "school_program_id", FILTER_SANITIZE_NUMBER_UINT);
+		$id = kh_filter_input(INPUT_POST, "school_program_id", FILTER_SANITIZE_STRING_NEW);
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&school_program_id=$id");
 }
@@ -133,7 +133,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'school_program_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "school_program_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_school_program`.* 
 FROM `edu_school_program` 
 WHERE `edu_school_program`.`school_program_id` = '$edit_key' and `school_id` = '$school_id'
@@ -185,7 +185,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'school_program_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "school_program_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school_program`.* ,
 (select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_school_program`.`school_id`) as `school_id`

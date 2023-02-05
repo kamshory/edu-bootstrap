@@ -3,12 +3,12 @@ include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if(!empty(@$school_id))
 {
 $basename = "ujian-soal.php";
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$edit_mode = kh_filter_input(INPUT_GET, 'edit_mode', FILTER_SANITIZE_NUMBER_UINT);
+$edit_mode = kh_filter_input(INPUT_GET, "edit_mode", FILTER_SANITIZE_NUMBER_UINT);
 $sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ";
 $stmt = $database->executeQuery($sql);
 ?>

@@ -9,7 +9,7 @@ $cfg->page_title = "Pilih Kelas";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(@$_GET['option'] == 'select')
 {
-	$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_NUMBER_INT);
+	$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_NUMBER_INT);
 	$sql = "SELECT `edu_class`.`class_id`, `edu_student`.`student_id`
 	FROM `edu_school`
 	inner join(`edu_student`) on(`edu_student`.`school_id` = `edu_school`.`school_id`)
@@ -33,7 +33,7 @@ $school_code_from_parser = 'student';
 if(@$_GET['option'] == 'detail')
 {
 include_once dirname(dirname(__FILE__))."/lib.inc/header.php";
-$edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_class`.* $nt,
 (select `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,

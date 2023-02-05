@@ -9,7 +9,7 @@ $cfg->page_title = "Pilih Sekolah";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(@$_GET['option'] == 'select')
 {
-	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
+	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_school`.* 
 	FROM `edu_member_school`
 	inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
@@ -52,7 +52,7 @@ if(@$_GET['option'] == 'select')
 if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
 (select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,

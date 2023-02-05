@@ -14,7 +14,7 @@ if($fmanConfig->readonly){
 $rooturl = $fmanConfig->rootdir;
 if(@$_GET['option'] == 'compress-audio')
 {
-	$path = path_decode(kh_filter_input(INPUT_POST, 'path'), $fmanConfig->rootdir);
+	$path = path_decode(kh_filter_input(INPUT_POST, "path"), $fmanConfig->rootdir);
 	if(file_exists($path))
 	{
 		$arr = explode(".", $path);
@@ -41,8 +41,8 @@ if(@$_GET['option'] == 'compress-audio')
 }
 else if(@$_GET['option'] == 'createdir')
 {
-$dir2 = path_decode(kh_filter_input(INPUT_POST, 'location'), $fmanConfig->rootdir);
-$name = kh_filter_input(INPUT_POST, 'name');
+$dir2 = path_decode(kh_filter_input(INPUT_POST, "location"), $fmanConfig->rootdir);
+$name = kh_filter_input(INPUT_POST, "name");
 $name = trim(str_replace(array("../","./","..\\",".\\","\\"),"/",$name),"/\\");
 if(file_exists($dir2))
 {
@@ -64,8 +64,8 @@ if(file_exists($dir2))
 }
 if(@$_GET['option'] == 'createfile')
 {
-$dir2 = path_decode(kh_filter_input(INPUT_POST, 'location'), $fmanConfig->rootdir);
-$name = kh_filter_input(INPUT_POST, 'name');
+$dir2 = path_decode(kh_filter_input(INPUT_POST, "location"), $fmanConfig->rootdir);
+$name = kh_filter_input(INPUT_POST, "name");
 $name = trim(str_replace(array("../","./","..\\",".\\","\\"),"/",$name),"/\\");
 if(file_exists($dir2))
 {
@@ -102,7 +102,7 @@ if(isset($_POST) && (@get_magic_quotes_runtime())) //NOSONAR
 	array_walk_recursive($_POST, 'array_stripslashes');
 }
 
-$targetdir = path_decode(kh_filter_input(INPUT_POST, 'targetdir'), $fmanConfig->rootdir);
+$targetdir = path_decode(kh_filter_input(INPUT_POST, "targetdir"), $fmanConfig->rootdir);
 
 // prepare dir
 $dir = str_replace("\\","/",$targetdir);
@@ -206,9 +206,9 @@ echo 'FAILED';
 
 if(@$_GET['option'] == 'renamefile')
 {
-$location = path_decode(kh_filter_input(INPUT_POST, 'location'), $fmanConfig->rootdir);
-$oldname = $location."/".trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, 'oldname')),"/\\");
-$newname = $location."/".trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, 'newname')),"/\\");
+$location = path_decode(kh_filter_input(INPUT_POST, "location"), $fmanConfig->rootdir);
+$oldname = $location."/".trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, "oldname")),"/\\");
+$newname = $location."/".trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, "newname")),"/\\");
 if(file_exists($newname))
 {
 	die('EXIST');
@@ -237,8 +237,8 @@ if(!class_exists('ZipArchive'))
 {
 	die('NOTSUPPORTED');
 }
-$targetdir = path_decode(kh_filter_input(INPUT_POST, 'targetdir'), $fmanConfig->rootdir);
-$filepath = path_decode(kh_filter_input(INPUT_POST, 'filepath'), $fmanConfig->rootdir);
+$targetdir = path_decode(kh_filter_input(INPUT_POST, "targetdir"), $fmanConfig->rootdir);
+$filepath = path_decode(kh_filter_input(INPUT_POST, "filepath"), $fmanConfig->rootdir);
 
 if(file_exists($filepath))
 {
@@ -281,7 +281,7 @@ if(isset($_POST['postdata']))
 		array_walk_recursive($_POST, 'array_stripslashes');
 	}
 }
-$target = path_decode(kh_filter_input(INPUT_POST, 'targetpath'), $fmanConfig->rootdir);
+$target = path_decode(kh_filter_input(INPUT_POST, "targetpath"), $fmanConfig->rootdir);
 if(file_exists($target))
 {
 	die('CONFLICT');
@@ -376,9 +376,9 @@ else
 
 if(@$_GET['option'] == 'transferfile')
 {
-$source = kh_filter_input(INPUT_POST, 'source');
-$location = trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, 'location')),"/\\");
-$name = basename(trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, 'name')),"/\\"));
+$source = kh_filter_input(INPUT_POST, "source");
+$location = trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, "location")),"/\\");
+$name = basename(trim(str_replace(array("../","./","..\\",".\\","\\"),"/",kh_filter_input(INPUT_POST, "name")),"/\\"));
 
 $target = path_decode(rtrim($location, "\\/")."/".trim($name, "\\/"), $fmanConfig->rootdir);
 
@@ -426,7 +426,7 @@ else
 
 if(@$_GET['option'] == 'get-perms')
 {
-	$filename = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
+	$filename = path_decode(kh_filter_input(INPUT_GET, "filepath"), $fmanConfig->rootdir);
 	if(file_exists($filename))
 	{
 		$fileperms = substr(sprintf('%o', fileperms($filename)), -4);

@@ -54,8 +54,8 @@ if(isset($_POST['delete']) && isset($_POST['answerid']))
 
 if(@$_GET['option'] == 'export' && isset($_GET['test_id']))
 {
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
+$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt, 
 (select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
@@ -277,7 +277,7 @@ echo '</body>
 else if(@$_GET['option'] == 'answerdetail' && isset($_GET['test_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.*, `edu_answer`.*, 
 timediff(`edu_answer`.`end`,`edu_answer`.`start`) as `duration_test` ,
 (select `edu_student`.`name` FROM `edu_student` WHERE `edu_student`.`student_id` = `edu_answer`.`student_id`) as `student_name`
@@ -429,7 +429,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* $nt
 FROM `edu_test` 
 where (`edu_test`.`active` = true or `edu_test`.`active` = false)
@@ -440,8 +440,8 @@ if($stmt->rowCount() > 0)
 {
   $data = $stmt->fetch(PDO::FETCH_ASSOC);
   $school_id = $data['school_id'];
-$q = kh_filter_input(INPUT_GET, 'q', FILTER_SANITIZE_STRING_NEW);
-$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$q = kh_filter_input(INPUT_GET, "q", FILTER_SANITIZE_STRING_NEW);
+$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $pagination->array_get[] = 'option';
 $pagination->array_get[] = 'test_id';
 ?>
@@ -755,8 +755,8 @@ else
 include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 } else {
     include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
-    $school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
-    $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+    $school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
+    $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 
     ?>
 <div class="search-control">
@@ -851,22 +851,21 @@ window.onload = function()
           $sql_filter .= " and (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
         }
 
-        $sql = "SELECT `edu_test`.*,
-(select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_test`.`school_id` limit 0,1) as `school_name`,
-(select count(distinct `edu_answer`.`student_id`) FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id`) as `number_of_student`,
-(select `edu_answer`.`start` FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` ORDER BY `edu_answer`.`start` desc limit 0,1) as `last_test`
-FROM `edu_test`
-WHERE 1 $sql_filter
-having 1 and `number_of_student` > 0
-ORDER BY `last_test` desc, `edu_test`.`test_id` desc
-";
-        $sql_test = "SELECT `edu_test`.*,
-(select count(distinct `edu_answer`.`student_id`) FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id`) as `number_of_student`
-FROM `edu_test`
-WHERE 1 $sql_filter
-having 1 and `number_of_student` > 0
-ORDER BY `edu_test`.`test_id` desc
-";
+      $sql = "SELECT `edu_test`.*,
+      (select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_test`.`school_id` limit 0,1) as `school_name`,
+      (select count(distinct `edu_answer`.`student_id`) FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id`) as `number_of_student`,
+      (select `edu_answer`.`start` FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` ORDER BY `edu_answer`.`start` desc limit 0,1) as `last_test`
+      FROM `edu_test`
+      WHERE 1 $sql_filter
+      having 1 and `number_of_student` > 0
+      ORDER BY `last_test` desc, `edu_test`.`test_id` desc
+      ";
+      $sql_test = "SELECT `edu_test`.*,
+      (select count(distinct `edu_answer`.`student_id`) FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id`) as `number_of_student`
+      FROM `edu_test`
+      WHERE 1 $sql_filter
+      having 1 and `number_of_student` > 0
+      ";
 
 
 

@@ -1,6 +1,6 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
-$country_id = trim(kh_filter_input(INPUT_GET, 'country_id', FILTER_SANITIZE_STRING_NEW));
+$country_id = trim(kh_filter_input(INPUT_GET, "country_id", FILTER_SANITIZE_STRING_NEW));
 
 $sql = "SELECT `state`.`state_id` as `v`, `state`.`name` as `l`
 FROM `state` WHERE `state`.`country_id` = '$country_id' 

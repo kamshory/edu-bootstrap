@@ -10,26 +10,26 @@ $cfg->page_title = "Guru";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST) && isset($_POST['save']))
 {
-	$teacher_id = kh_filter_input(INPUT_POST, 'teacher_id', FILTER_SANITIZE_STRING_NEW);
-	$teacher_id2 = kh_filter_input(INPUT_POST, 'teacher_id2', FILTER_SANITIZE_NUMBER_UINT);
+	$teacher_id = kh_filter_input(INPUT_POST, "teacher_id", FILTER_SANITIZE_STRING_NEW);
+	$teacher_id2 = kh_filter_input(INPUT_POST, "teacher_id2", FILTER_SANITIZE_NUMBER_UINT);
 	if(!isset($_POST['teacher_id']))
 	{
 		$teacher_id = $teacher_id2;
 	}
-	$reg_number = kh_filter_input(INPUT_POST, 'reg_number', FILTER_SANITIZE_SPECIAL_CHARS);
-	$reg_number_national = kh_filter_input(INPUT_POST, 'reg_number_national', FILTER_SANITIZE_SPECIAL_CHARS);
-	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-	$gender = kh_filter_input(INPUT_POST, 'gender', FILTER_SANITIZE_SPECIAL_CHARS);
-	$birth_place = kh_filter_input(INPUT_POST, 'birth_place', FILTER_SANITIZE_SPECIAL_CHARS);
-	$birth_day = kh_filter_input(INPUT_POST, 'birth_day', FILTER_SANITIZE_STRING_NEW);
-	$phone = kh_filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_SPECIAL_CHARS);
-	$email = kh_filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-	$password = kh_filter_input(INPUT_POST, 'password', FILTER_SANITIZE_PASSWORD);
-	$address = kh_filter_input(INPUT_POST, 'address', FILTER_SANITIZE_SPECIAL_CHARS);
+	$reg_number = kh_filter_input(INPUT_POST, "reg_number", FILTER_SANITIZE_SPECIAL_CHARS);
+	$reg_number_national = kh_filter_input(INPUT_POST, "reg_number_national", FILTER_SANITIZE_SPECIAL_CHARS);
+	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
+	$gender = kh_filter_input(INPUT_POST, "gender", FILTER_SANITIZE_SPECIAL_CHARS);
+	$birth_place = kh_filter_input(INPUT_POST, "birth_place", FILTER_SANITIZE_SPECIAL_CHARS);
+	$birth_day = kh_filter_input(INPUT_POST, "birth_day", FILTER_SANITIZE_STRING_NEW);
+	$phone = kh_filter_input(INPUT_POST, "phone", FILTER_SANITIZE_SPECIAL_CHARS);
+	$email = kh_filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+	$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
+	$address = kh_filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
-	$blocked = kh_filter_input(INPUT_POST, 'blocked', FILTER_SANITIZE_NUMBER_INT);
-	$active = kh_filter_input(INPUT_POST, 'active', FILTER_SANITIZE_NUMBER_INT);
+	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_INT);
+	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_INT);
 }
 
 if(isset($_POST['set_active']) && isset($_POST['teacher_id']))
@@ -114,7 +114,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'teacher_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_teacher`.* 
 FROM `edu_teacher` 
 WHERE `edu_teacher`.`teacher_id` = '$edit_key'
@@ -233,7 +233,7 @@ include_once dirname(__FILE__)."/cetak-login-guru.php";
 else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'teacher_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_teacher`.* $nt,
 (select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_teacher`.`school_id` limit 0,1) as `school_name`,
@@ -350,7 +350,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
+$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 ?>
 <script type="text/javascript">
 $(document).ready(function(e) {

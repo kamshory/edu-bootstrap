@@ -8,9 +8,9 @@ if(isset($_POST['from']) && isset($_POST['to']))
 {
 	include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 	include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
-	$id = kh_filter_input(INPUT_POST, 'from', FILTER_SANITIZE_NUMBER_UINT);
-	$test_id = kh_filter_input(INPUT_POST, 'to', FILTER_SANITIZE_NUMBER_UINT);
-	$selection = kh_filter_input(INPUT_POST, 'selection', FILTER_SANITIZE_STRING_NEW);
+	$id = kh_filter_input(INPUT_POST, "from", FILTER_SANITIZE_NUMBER_UINT);
+	$test_id = kh_filter_input(INPUT_POST, "to", FILTER_SANITIZE_NUMBER_UINT);
+	$selection = kh_filter_input(INPUT_POST, "selection", FILTER_SANITIZE_STRING_NEW);
 	$selection_index = json_decode($selection);
 	
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();	

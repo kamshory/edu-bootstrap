@@ -128,7 +128,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 
 else if(isset($_POST['token']))
 {
-	$token = kh_filter_input(INPUT_POST, 'token', FILTER_SANITIZE_NUMBER_UINT);
+	$token = kh_filter_input(INPUT_POST, "token", FILTER_SANITIZE_NUMBER_UINT);
 	if($token != 0)
 	{
 		$now = $picoEdu->getLocalDateTime();

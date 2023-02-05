@@ -50,8 +50,8 @@ if(isset($_POST['delete']) && isset($_POST['info_id']))
 
 if(isset($_POST['publish']) || isset($_POST['draff']))
 {
-	$option = kh_filter_input(INPUT_POST, 'option', FILTER_SANITIZE_SPECIAL_CHARS);
-	$name = trim(kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS));
+	$option = kh_filter_input(INPUT_POST, "option", FILTER_SANITIZE_SPECIAL_CHARS);
+	$name = trim(kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS));
 	if($name == '')
 	{
 		$name = '(Tanpa Judul)';
@@ -88,8 +88,8 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 				mkdir(dirname(dirname(__FILE__)) . "/media.edu/info/$info_id", 0755);
 			}
 
-			$content = kh_filter_input(INPUT_POST, 'content');
-			$content = extractImageData($content, $base_dir, $base_src);
+			$content = kh_filter_input(INPUT_POST, "content");
+			$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 			$content = addslashes(UTF8ToEntities($content));
 
 			$sql = "UPDATE `edu_info` set
@@ -103,7 +103,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	}
 	else if($option == 'edit')
 	{
-		$info_id = kh_filter_input(INPUT_POST, 'info_id');
+		$info_id = kh_filter_input(INPUT_POST, "info_id");
 		
 		$base_dir = dirname(dirname(__FILE__))."/media.edu/info/$info_id";
 		$base_src = "media.edu/info/$info_id";
@@ -113,7 +113,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$permission = 0755;
 		$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 		
-		$content = kh_filter_input(INPUT_POST, 'content');
+		$content = kh_filter_input(INPUT_POST, "content");
 		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 		$content = addslashes(UTF8ToEntities($content));
 
@@ -277,7 +277,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'edit' && isset($_GET['info_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$info_id = kh_filter_input(INPUT_GET, 'info_id', FILTER_SANITIZE_STRING_NEW);
+$info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT * FROM `edu_info` WHERE `info_id` = '$info_id'";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -431,7 +431,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(isset($_GET['info_id']))
 {
 	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-	$info_id = kh_filter_input(INPUT_GET, 'info_id', FILTER_SANITIZE_STRING_NEW);
+	$info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
 	$sql_filter_info = " and `edu_info`.`info_id` = '$info_id' ";
 
 	$sql = "SELECT `edu_info`.*, `member`.`name` as `creator`

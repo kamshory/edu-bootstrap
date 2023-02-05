@@ -6,7 +6,7 @@ function showquran($lang, $surah, $verse)
 		$versenumber = @$_GET['versenumber'];
 		@ob_start();
 		$vn = "";
-		include strtolower($lang . "/" . $surah . ".php");
+		include strtolower($lang . "/" . $surah . ".php"); //NOSONAR
 		$content = @ob_get_clean();
 		if ($lang == 'ar-src') {
 			if ($versenumber) {

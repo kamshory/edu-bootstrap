@@ -11,20 +11,20 @@ if(empty(@$real_school_id)) {
 $cfg->page_title = "Kelas";
 include_once dirname(dirname(__FILE__)) . "/lib.inc/cfg.pagination.php";
 if (count(@$_POST) && isset($_POST['save'])) {
-	$class_id = kh_filter_input(INPUT_POST, 'grade_id', FILTER_SANITIZE_STRING_NEW);
-	$class_id2 = kh_filter_input(INPUT_POST, 'class_id2', FILTER_SANITIZE_NUMBER_UINT);
+	$class_id = kh_filter_input(INPUT_POST, "grade_id", FILTER_SANITIZE_STRING_NEW);
+	$class_id2 = kh_filter_input(INPUT_POST, "class_id2", FILTER_SANITIZE_NUMBER_UINT);
 	if (!isset($_POST['class_id'])) {
 		$class_id = $class_id2;
 	}
-	$class_code = kh_filter_input(INPUT_POST, 'class_code', FILTER_SANITIZE_SPECIAL_CHARS);
-	$grade_id = kh_filter_input(INPUT_POST, 'grade_id', FILTER_SANITIZE_STRING_NEW);
-	$school_program_id = kh_filter_input(INPUT_POST, 'school_program_id', FILTER_SANITIZE_SPECIAL_CHARS);
-	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+	$class_code = kh_filter_input(INPUT_POST, "class_code", FILTER_SANITIZE_SPECIAL_CHARS);
+	$grade_id = kh_filter_input(INPUT_POST, "grade_id", FILTER_SANITIZE_STRING_NEW);
+	$school_program_id = kh_filter_input(INPUT_POST, "school_program_id", FILTER_SANITIZE_SPECIAL_CHARS);
+	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$admin_create = $admin_edit = $admin_login->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
-	$sort_order = kh_filter_input(INPUT_POST, 'sort_order', FILTER_SANITIZE_NUMBER_INT);
-	$active = kh_filter_input(INPUT_POST, 'active', FILTER_SANITIZE_NUMBER_INT);
+	$sort_order = kh_filter_input(INPUT_POST, "sort_order", FILTER_SANITIZE_NUMBER_INT);
+	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_INT);
 }
 
 if (isset($_POST['set_active']) && isset($_POST['class_id'])) {
@@ -67,7 +67,7 @@ if (isset($_POST['save']) && @$_GET['option'] == 'add') {
 	$database->executeInsert($sql, true);
 	$id = $database->getDatabaseConnection()->lastInsertId();
 	if ($id == 0) {
-		$id = kh_filter_input(INPUT_POST, "class_id", FILTER_SANITIZE_NUMBER_UINT);
+		$id = kh_filter_input(INPUT_POST, "class_id", FILTER_SANITIZE_STRING_NEW);
 	}
 	header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&class_id=$id");
 }
@@ -160,7 +160,7 @@ if (@$_GET['option'] == 'add') {
 else if (@$_GET['option'] == 'edit') 
 {
 	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
-	$edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+	$edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_class`.* 
 	FROM `edu_class` 
 	WHERE `edu_class`.`school_id` = '$school_id'
@@ -254,7 +254,7 @@ else if (@$_GET['option'] == 'edit')
 else if (@$_GET['option'] == 'detail') 
 {
 	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
-	$edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+	$edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$nt = '';
 	$sql = "SELECT `edu_class`.* $nt,
 	(select `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,

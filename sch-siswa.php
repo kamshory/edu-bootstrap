@@ -4,7 +4,7 @@ include_once dirname(__FILE__) . "/lib.inc/sessions.php";
 $cfg->page_title = "Siswa";
 include_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 if (isset($_GET['school_id'])) {
-  $school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
+  $school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }
 if (!@$student_id && !@$teacher_id) {
   include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
@@ -47,7 +47,7 @@ if (!@$student_id && !@$teacher_id) {
 
 if (@$_GET['option'] == 'detail') {
   include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
-  $edit_key = kh_filter_input(INPUT_GET, 'student_id', FILTER_SANITIZE_STRING_NEW);
+  $edit_key = kh_filter_input(INPUT_GET, "student_id", FILTER_SANITIZE_STRING_NEW);
   $nt = '';
   $sql = "SELECT `edu_student`.* ,
 (select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
@@ -109,7 +109,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
   include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else {
   include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
-  $class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+  $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
   ?>
   <div class="search-control">
     <form id="searchform" name="form1" method="get" action="">

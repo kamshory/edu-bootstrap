@@ -6,13 +6,13 @@ if($admin_login->admin_level != 1)
 	exit();
 }
 $admin_id = $admin_login->admin_id;
-$tokens = kh_filter_input(INPUT_GET, 'tokens', FILTER_SANITIZE_STRING_NEW);
+$tokens = kh_filter_input(INPUT_GET, "tokens", FILTER_SANITIZE_STRING_NEW);
 $arr = explode(",", $tokens);
 foreach($arr as $key=>$val)
 {
 	$arr[$key] = "'".addslashes($val)."'";
 }
-$edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 ?><!DOCTYPE html>
 <html lang="en">

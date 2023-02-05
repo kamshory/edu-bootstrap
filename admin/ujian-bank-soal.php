@@ -12,7 +12,7 @@ if(empty(@$real_school_id))
 }
 $cfg->page_title = "Bank Soal";
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$grade_id = kh_filter_input(INPUT_GET, 'grade_id', FILTER_SANITIZE_NUMBER_UINT);
+$grade_id = kh_filter_input(INPUT_GET, "grade_id", FILTER_SANITIZE_STRING_NEW);
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test-import.css">

@@ -5,8 +5,8 @@ $err = '';
 $link_ok = false;
 if(isset($_GET['username']) && isset($_GET['auth']))
 {
-	$username = kh_filter_input(INPUT_GET, 'username', FILTER_SANITIZE_ALPHANUMERICPUNC);
-	$auth = kh_filter_input(INPUT_GET, 'auth', FILTER_SANITIZE_ALPHANUMERICPUNC);
+	$username = kh_filter_input(INPUT_GET, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
+	$auth = kh_filter_input(INPUT_GET, "auth", FILTER_SANITIZE_ALPHANUMERICPUNC);
 	$sql = "SELECT `username`, `member_id`, `email`, `auth`
 	FROM `member`
 	where (`username` like '$username' and `auth` like '$auth') 
@@ -19,8 +19,8 @@ if(isset($_GET['username']) && isset($_GET['auth']))
 		$link_ok = true;
 		if(isset($_POST['reset-password']))
 		{
-			$password = kh_filter_input(INPUT_POST, 'password', FILTER_SANITIZE_PASSWORD);
-			$password2 = kh_filter_input(INPUT_POST, 'password2', FILTER_SANITIZE_PASSWORD);
+			$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
+			$password2 = kh_filter_input(INPUT_POST, "password2", FILTER_SANITIZE_PASSWORD);
 			if($password == $password2 && strlen($password)>3)
 			{
 				$newauth = md5(mt_rand(111111,999999));
@@ -43,10 +43,10 @@ if(isset($_GET['username']) && isset($_GET['auth']))
 }
 if(isset($_POST['username']) && isset($_POST['send']))
 {
-	$username = kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_ALPHANUMERICPUNC);
-	$phone = kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_ALPHANUMERICPUNC);
-	$email = kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_EMAIL);
-	$password = md5(kh_filter_input(INPUT_POST, 'password', FILTER_SANITIZE_PASSWORD));
+	$username = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
+	$phone = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
+	$email = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_EMAIL);
+	$password = md5(kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD));
 	
 	$auth = md5($_SERVER['REMOTE_ADDR'].date('Y-m-d'));
 	$sql = "UPDATE `member` SET `auth` = '$auth'

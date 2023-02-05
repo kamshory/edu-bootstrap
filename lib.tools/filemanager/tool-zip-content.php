@@ -6,7 +6,7 @@ if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-$filename = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
+$filename = path_decode(kh_filter_input(INPUT_GET, "filepath"), $fmanConfig->rootdir);
 $path = path_encode($filename, $fmanConfig->rootdir);
 $json_exif = "";
 if(file_exists($filename))

@@ -11,12 +11,12 @@ if(isset($_GET['relative']))
 	$filepath = $fmanConfig->rootdir
 		.'/'
 		.substr(str_replace(array("./", "../"), "", 
-		kh_filter_input(INPUT_GET, 'filepath')), 
+		kh_filter_input(INPUT_GET, "filepath")), 
 		strlen(basename($fmanConfig->rooturl)));
 }
 else
 {
-	$filepath = rawurldecode(path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir));
+	$filepath = rawurldecode(path_decode(kh_filter_input(INPUT_GET, "filepath"), $fmanConfig->rootdir));
 }
 if(!file_exists($filepath)) 
 {

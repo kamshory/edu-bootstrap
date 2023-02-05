@@ -7,8 +7,8 @@ if($fmanConfig->authentification_needed && !$userlogin)
 	exit();
 }
 $rooturl = $fmanConfig->rootdir;
-$seldir = kh_filter_input(INPUT_GET, 'dir', FILTER_SANITIZE_STRING_NEW);
-$dir2 = path_decode(kh_filter_input(INPUT_GET, 'seldir'), $fmanConfig->rootdir);
+$seldir = kh_filter_input(INPUT_GET, "dir", FILTER_SANITIZE_STRING_NEW);
+$dir2 = path_decode(kh_filter_input(INPUT_GET, "seldir"), $fmanConfig->rootdir);
 if(!is_dir($dir2)){
 	$dir2 = path_decode('', $fmanConfig->rootdir);	
 }

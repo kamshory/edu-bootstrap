@@ -88,10 +88,10 @@ if(isset($_POST['recalculation']) && isset($_POST['answer_id']))
 
 if(@$_GET['option'] == 'export' && isset($_GET['test_id']))
 {
-	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$bc_array = $picoEdu->getBasicCompetence($test_id);
 
-	$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+	$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$nt = '';
 	$sql = "SELECT `edu_test`.* $nt, 
 	(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
@@ -358,7 +358,7 @@ else if(@$_GET['option'] == 'answerdetail' && isset($_GET['answer_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $array_class = $picoEdu->getArrayClass($school_id);
-$answer_id = kh_filter_input(INPUT_GET, 'answer_id', FILTER_SANITIZE_STRING_NEW);
+$answer_id = kh_filter_input(INPUT_GET, "answer_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.*, `edu_answer`.*, 
 timediff(`edu_answer`.`end`,`edu_answer`.`start`) as `duration_test` ,
 (select `edu_student`.`name` FROM `edu_student` WHERE `edu_student`.`student_id` = `edu_answer`.`student_id`) as `student_name`
@@ -632,9 +632,9 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-$q = kh_filter_input(INPUT_GET, 'q', FILTER_SANITIZE_STRING_NEW);
-$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
+$q = kh_filter_input(INPUT_GET, "q", FILTER_SANITIZE_STRING_NEW);
+$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $pagination->array_get[] = 'option';
 $pagination->array_get[] = 'test_id';
 ?>
@@ -967,7 +967,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 
 ?>
 <div class="search-control">
@@ -1040,10 +1040,7 @@ $sql_test = "SELECT `edu_test`.*,
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
 having 1 and `number_of_student` > 0
-ORDER BY `edu_test`.`test_id` desc
 ";
-
-
 
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

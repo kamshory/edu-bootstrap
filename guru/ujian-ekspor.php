@@ -13,7 +13,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(isset($_POST['export']) && isset($_POST['test_id']))
 {
-	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `name` FROM `edu_test` WHERE `school_id` = '$school_id' and `test_id` = '$test_id'
 	";
 	$stmt = $database->executeQuery($sql);
@@ -32,7 +32,7 @@ if(isset($_POST['export']) && isset($_POST['test_id']))
 if(isset($_GET['test_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
 (select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `number_of_real_question`
@@ -122,8 +122,8 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$tahun_id = kh_filter_input(INPUT_GET, 'tahun_id', FILTER_SANITIZE_NUMBER_UINT);
-$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$tahun_id = kh_filter_input(INPUT_GET, "tahun_id", FILTER_SANITIZE_STRING_NEW);
+$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 ?>
 <script type="text/javascript">
 window.onload = function()

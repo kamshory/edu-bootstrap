@@ -5,7 +5,7 @@ if(empty(@$school_id))
 	include_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)

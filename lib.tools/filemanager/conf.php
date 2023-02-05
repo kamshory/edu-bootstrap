@@ -8,7 +8,7 @@ $fmanConfig->authentification_needed = true;
 
 if(@$_GET['test_id']!='')
 {
-	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `test_id` FROM `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() == 0)
@@ -22,7 +22,7 @@ if(@$_GET['test_id']!='')
 }
 else if(@$_GET['article_id']!='')
 {
-	$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
+	$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `article_id` FROM `edu_article` WHERE `article_id` = '$article_id' and `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() == 0)
@@ -45,7 +45,7 @@ if(@$_SESSION['curdir'] == '')
 
 if(@$_GET['section'] == 'info' && @$_GET['info_id']!='')
 {
-	$info_id = kh_filter_input(INPUT_GET, 'info_id', FILTER_SANITIZE_STRING_NEW);
+	$info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
 	$_SESSION['curdir'] = "info/$info_id";
 }
 

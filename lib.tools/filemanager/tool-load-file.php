@@ -16,7 +16,7 @@ if(@$fmanConfig->thumbnail_on_load)
 }
 
 
-$dir2 = path_decode(kh_filter_input(INPUT_GET, 'dir'), $fmanConfig->rootdir);
+$dir2 = path_decode(kh_filter_input(INPUT_GET, "dir"), $fmanConfig->rootdir);
 if(!is_dir($dir2)){
 	$dir2 = path_decode('base', $fmanConfig->rootdir);	
 }
@@ -111,7 +111,7 @@ if(file_exists($dir2) && ($handle = opendir($dir2)))
 }
 
 
-$sortby = kh_filter_input(INPUT_GET, 'sortby', FILTER_SANITIZE_STRING_NEW);
+$sortby = kh_filter_input(INPUT_GET, "sortby", FILTER_SANITIZE_STRING_NEW);
 if(!in_array($sortby, array('name', 'filesize', 'type', 'permission', 'filemtime')))
 {
 	$sortby = '';	
@@ -120,7 +120,7 @@ if($sortby == '')
 {
 	$sortby = 'type';
 }
-$sortorder = kh_filter_input(INPUT_GET, 'sortorder', FILTER_SANITIZE_STRING_NEW);
+$sortorder = kh_filter_input(INPUT_GET, "sortorder", FILTER_SANITIZE_STRING_NEW);
 if(!in_array($sortorder, array('asc', 'desc')))
 {
 	$sortorder = '';

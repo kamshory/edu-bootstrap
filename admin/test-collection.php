@@ -5,25 +5,25 @@ $cfg->page_title = "Edu Test Collection";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST))
 {
-	$test_collection_id = kh_filter_input(INPUT_POST, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
-	$test_collection_id2 = kh_filter_input(INPUT_POST, 'test_collection_id2', FILTER_SANITIZE_NUMBER_UINT);
+	$test_collection_id = kh_filter_input(INPUT_POST, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
+	$test_collection_id2 = kh_filter_input(INPUT_POST, "test_collection_id2", FILTER_SANITIZE_NUMBER_UINT);
 	if(!isset($_POST['test_collection_id']))
 	{
 		$test_collection_id = $test_collection_id2;
 	}
-	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-	$grade_id = kh_filter_input(INPUT_POST, 'grade_id', FILTER_SANITIZE_STRING_NEW);
-	$file_name = kh_filter_input(INPUT_POST, 'file_name', FILTER_SANITIZE_SPECIAL_CHARS);
-	$file_path = kh_filter_input(INPUT_POST, 'file_path', FILTER_SANITIZE_SPECIAL_CHARS);
-	$file_size = kh_filter_input(INPUT_POST, 'file_size', FILTER_SANITIZE_NUMBER_INT);
-	$file_md5 = kh_filter_input(INPUT_POST, 'file_md5', FILTER_SANITIZE_SPECIAL_CHARS);
-	$file_sha1 = kh_filter_input(INPUT_POST, 'file_sha1', FILTER_SANITIZE_SPECIAL_CHARS);
-	$time_create = kh_filter_input(INPUT_POST, 'time_create', FILTER_SANITIZE_STRING_NEW);
-	$time_edit = kh_filter_input(INPUT_POST, 'time_edit', FILTER_SANITIZE_STRING_NEW);
-	$ip_create = kh_filter_input(INPUT_POST, 'ip_create', FILTER_SANITIZE_SPECIAL_CHARS);
-	$ip_edit = kh_filter_input(INPUT_POST, 'ip_edit', FILTER_SANITIZE_SPECIAL_CHARS);
-	$taken = kh_filter_input(INPUT_POST, 'taken', FILTER_SANITIZE_NUMBER_UINT);
-	$active = kh_filter_input(INPUT_POST, 'active', FILTER_SANITIZE_NUMBER_UINT);
+	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
+	$grade_id = kh_filter_input(INPUT_POST, "grade_id", FILTER_SANITIZE_STRING_NEW);
+	$file_name = kh_filter_input(INPUT_POST, "file_name", FILTER_SANITIZE_SPECIAL_CHARS);
+	$file_path = kh_filter_input(INPUT_POST, "file_path", FILTER_SANITIZE_SPECIAL_CHARS);
+	$file_size = kh_filter_input(INPUT_POST, "file_size", FILTER_SANITIZE_NUMBER_INT);
+	$file_md5 = kh_filter_input(INPUT_POST, "file_md5", FILTER_SANITIZE_SPECIAL_CHARS);
+	$file_sha1 = kh_filter_input(INPUT_POST, "file_sha1", FILTER_SANITIZE_SPECIAL_CHARS);
+	$time_create = kh_filter_input(INPUT_POST, "time_create", FILTER_SANITIZE_STRING_NEW);
+	$time_edit = kh_filter_input(INPUT_POST, "time_edit", FILTER_SANITIZE_STRING_NEW);
+	$ip_create = kh_filter_input(INPUT_POST, "ip_create", FILTER_SANITIZE_SPECIAL_CHARS);
+	$ip_edit = kh_filter_input(INPUT_POST, "ip_edit", FILTER_SANITIZE_SPECIAL_CHARS);
+	$taken = kh_filter_input(INPUT_POST, "taken", FILTER_SANITIZE_NUMBER_UINT);
+	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 }
 
 if(isset($_POST['set_active']) && isset($_POST['test_collection_id']))
@@ -140,7 +140,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
+$edit_key = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test_collection`.* 
 FROM `edu_test_collection` 
 WHERE `edu_test_collection`.`test_collection_id` = '$edit_key'
@@ -227,7 +227,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
+$edit_key = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $nt = $picoEdu->createSubSelect('edu_test_collection', array('grade_id'=>'grade_id'));
 $sql = "SELECT `edu_test_collection`.* $nt

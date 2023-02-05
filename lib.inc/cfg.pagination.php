@@ -37,10 +37,10 @@ class PicoPagination
 
     public function __construct()
     {
-        $this->query = trim(kh_filter_input(INPUT_GET, 'q', FILTER_SANITIZE_SPECIAL_CHARS));
-        $this->query_edit = kh_filter_input(INPUT_GET, 'q');
+        $this->query = trim(kh_filter_input(INPUT_GET, "q", FILTER_SANITIZE_SPECIAL_CHARS));
+        $this->query_edit = kh_filter_input(INPUT_GET, "q");
         $this->query_edit = trim(htmlspecialchars($this->query_edit));
-        $this->offset = kh_filter_input(INPUT_GET, 'offset', FILTER_SANITIZE_NUMBER_UINT);
+        $this->offset = kh_filter_input(INPUT_GET, "offset", FILTER_SANITIZE_NUMBER_UINT);
     
         $this->limit_sql = " limit ".$this->offset.",".$this->limit;
         $this->str_result = "";          

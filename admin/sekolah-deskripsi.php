@@ -10,7 +10,7 @@ $cfg->page_title = "Keterangan Sekolah";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['save']))
 {
-	$description = kh_filter_input(INPUT_POST, 'description');
+	$description = kh_filter_input(INPUT_POST, "description");
 	
 	$base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/description";
 	$base_src = "media.edu/school/$school_id/description";

@@ -10,8 +10,8 @@ include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET['id']))
 {
-	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
-	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+	$id = kh_filter_input(INPUT_GET, "id", FILTER_SANITIZE_STRING_NEW);
+	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_peserta_test`.* FROM `edu_peserta_test` WHERE `id` = '$id' and `status` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
@@ -30,8 +30,8 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 }
 if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET['id']))
 {
-	$id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
-	$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+	$id = kh_filter_input(INPUT_GET, "id", FILTER_SANITIZE_STRING_NEW);
+	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_peserta_test`.* FROM `edu_peserta_test` WHERE `id` = '$id' and `status` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
@@ -55,8 +55,8 @@ if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
-$test_id = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
-$status = kh_filter_input(INPUT_GET, 'status', FILTER_SANITIZE_STRING_NEW);
+$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
+$status = kh_filter_input(INPUT_GET, "status", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* ,
 (select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `number_of_real_question`
 FROM `edu_test` WHERE `test_id` = '$test_id' ";
@@ -196,7 +196,7 @@ include_once dirname(__FILE__)."/ajax-test-history.php";
 else
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 ?>
 <script type="text/javascript">
 window.onload = function()

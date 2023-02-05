@@ -21,13 +21,13 @@ if(isset($_SESSION['invalid_login']) && $_SESSION['invalid_login'] > 10)
 
 if(isset($_POST['username']) && isset($_POST['password']))
 {
-	$post_username = kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING_NEW);
-	$post_password = kh_filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING_NEW);
-	$username = kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_ALPHANUMERICPUNC);
-	$phone = kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_ALPHANUMERICPUNC);
-	$email = kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_EMAIL);
-	$reg_number = kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_ALPHANUMERICPUNC);
-	$password = md5(kh_filter_input(INPUT_POST, 'password', FILTER_SANITIZE_PASSWORD));
+	$post_username = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_STRING_NEW);
+	$post_password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING_NEW);
+	$username = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
+	$phone = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
+	$email = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_EMAIL);
+	$reg_number = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
+	$password = md5(kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD));
 	$_SESSION['student_username'] = $username;
 	$_SESSION['student_password'] = $password;
 									 

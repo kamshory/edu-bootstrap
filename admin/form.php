@@ -60,19 +60,6 @@ $lang_pack['id']['label_yes'] = "Ya";
 $lang_pack['id']['label_no'] = "Tidak";
 $lang_pack['id']['tip_needed'] = "Wajib";
 
-$cfgdb = new StdClass();
-$cfgdb->connection = @mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
-
-if(!$cfgdb->connection)
-{
-exit();
-}
-
-$cfgdb->selecteddb = @mysql_select_db(DB_NAME, $cfgdb->connection);
-if(!$cfgdb->selecteddb)
-{
-exit();
-}
 
 function createEnumOption(PicoDatabase $database, $table, $field, $defaultValue=null)
 {
@@ -1067,7 +1054,7 @@ if(@$_POST['show'])
 {
 	$table = trim($_POST['table']);
 	$sql = "show columns FROM `$table` ";
-	$res = mysql_query($sql);
+	
 ?>
 <script type="text/javascript" src="script/jquery/jquery.min.js"></script>
 <script type="text/javascript">

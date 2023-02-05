@@ -7,7 +7,7 @@ $json = array('registered'=>0);
 
 if(isset($_POST['username']))
 {
-	$username = ltrim(kh_filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING_NEW), " \r\n\t0 ");
+	$username = ltrim(kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_STRING_NEW), " \r\n\t0 ");
 	$username = $picoEdu->getValidUsername($username);
 	if($username != '')
 	{

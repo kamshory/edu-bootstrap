@@ -120,8 +120,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 	$permission = 0755;
 	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 
-	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-	$grade_id = kh_filter_input(INPUT_POST, 'grade_id', FILTER_SANITIZE_NUMBER_INT);
+	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
+	$grade_id = kh_filter_input(INPUT_POST, "grade_id", FILTER_SANITIZE_NUMBER_INT);
 	$target_dir = dirname(dirname(__FILE__))."/media.edu/question-collection/data"; //NOSONAR
 	$base_name = md5(session_id()."-".time()."-".mt_rand(111111, 999999)).".xml";
 	$file_path = $target_dir."/".$base_name;
@@ -165,7 +165,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 
 		$time_create = $time_edit = $picoEdu->getLocalDateTime();
 		$ip_create = $ip_edit = addslashes($_SERVER['REMOTE_ADDR']);
-		$active = kh_filter_input(INPUT_POST, 'active', FILTER_SANITIZE_NUMBER_UINT);
+		$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 	
 		$file_path = basename($file_path);
 		$sql = "INSERT INTO `edu_test_collection` 
@@ -185,12 +185,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$permission = 0755;
 	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 
-	$test_collection_id = kh_filter_input(INPUT_POST, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
-	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-	$grade_id = kh_filter_input(INPUT_POST, 'grade_id', FILTER_SANITIZE_NUMBER_INT);
+	$test_collection_id = kh_filter_input(INPUT_POST, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
+	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
+	$grade_id = kh_filter_input(INPUT_POST, "grade_id", FILTER_SANITIZE_NUMBER_INT);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$ip_create = $ip_edit = addslashes($_SERVER['REMOTE_ADDR']);
-	$active = kh_filter_input(INPUT_POST, 'active', FILTER_SANITIZE_NUMBER_UINT);
+	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 
 	$sql = "UPDATE `edu_test_collection` SET 
 	`name` = '$name', `grade_id` = '$grade_id', `time_edit` = '$time_edit', `ip_edit` = '$ip_edit', `active` = '$active'
@@ -241,7 +241,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
+$edit_key = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test_collection`.* 
 FROM `edu_test_collection` 
 WHERE `edu_test_collection`.`test_collection_id` = '$edit_key'
@@ -292,7 +292,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'test_collection_id', FILTER_SANITIZE_NUMBER_UINT);
+$edit_key = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test_collection`.* $nt
 FROM `edu_test_collection` 
@@ -388,7 +388,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$grade_id = kh_filter_input(INPUT_GET, 'grade_id', FILTER_SANITIZE_NUMBER_INT);
+$grade_id = kh_filter_input(INPUT_GET, "grade_id", FILTER_SANITIZE_NUMBER_INT);
 ?>
 <style type="text/css">
 #test-preview h3 {

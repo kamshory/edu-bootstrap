@@ -10,22 +10,22 @@ $authblogid = 1;
 if(isset($_POST['save']) && isset($_POST['data']))
 {
 	parse_str($_POST['data'], $_POST);
-	$imagequality = kh_filter_input(INPUT_POST, 'imagequality', FILTER_SANITIZE_NUMBER_UINT);
+	$imagequality = kh_filter_input(INPUT_POST, "imagequality", FILTER_SANITIZE_NUMBER_UINT);
 	if($imagequality > 100) 
 	{
 		$imagequality = 100;
 	}
 	$picoEdu->writeprofile("imagequality", $imagequality, $authblogid);
-	$picoEdu->writeprofile("imageinterlace", kh_filter_input(INPUT_POST, 'imageinterlace', FILTER_SANITIZE_NUMBER_UINT), $authblogid);
-	$picoEdu->writeprofile("compressimageonupload", kh_filter_input(INPUT_POST, 'compressimageonupload', FILTER_SANITIZE_NUMBER_UINT), $authblogid);
-	$picoEdu->writeprofile("maximagewidth", kh_filter_input(INPUT_POST, 'maximagewidth', FILTER_SANITIZE_NUMBER_UINT), $authblogid);
-	$picoEdu->writeprofile("maximageheight", kh_filter_input(INPUT_POST, 'maximageheight', FILTER_SANITIZE_NUMBER_UINT) ,$authblogid);
-	$picoEdu->writeprofile("imageformat", kh_filter_input(INPUT_POST, 'imageformat', FILTER_SANITIZE_STRING_NEW), $authblogid);
+	$picoEdu->writeprofile("imageinterlace", kh_filter_input(INPUT_POST, "imageinterlace", FILTER_SANITIZE_NUMBER_UINT), $authblogid);
+	$picoEdu->writeprofile("compressimageonupload", kh_filter_input(INPUT_POST, "compressimageonupload", FILTER_SANITIZE_NUMBER_UINT), $authblogid);
+	$picoEdu->writeprofile("maximagewidth", kh_filter_input(INPUT_POST, "maximagewidth", FILTER_SANITIZE_NUMBER_UINT), $authblogid);
+	$picoEdu->writeprofile("maximageheight", kh_filter_input(INPUT_POST, "maximageheight", FILTER_SANITIZE_NUMBER_UINT) ,$authblogid);
+	$picoEdu->writeprofile("imageformat", kh_filter_input(INPUT_POST, "imageformat", FILTER_SANITIZE_STRING_NEW), $authblogid);
 	echo 'SAVED';
 }
 if(isset($_POST['change-state']))
 {
-	$state = kh_filter_input(INPUT_POST, 'state', FILTER_SANITIZE_NUMBER_UINT);
+	$state = kh_filter_input(INPUT_POST, "state", FILTER_SANITIZE_NUMBER_UINT);
 	$_SESSION['compress-image-cb'] = $state;
 }
 if(@$_GET['show-form'])

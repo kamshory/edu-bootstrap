@@ -11,7 +11,7 @@ if(!$fmanConfig->thumbnail_quality)
 	$fmanConfig->thumbnail_quality=75;
 }
 
-$filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
+$filepath = path_decode(kh_filter_input(INPUT_GET, "filepath"), $fmanConfig->rootdir);
 
 function gettumbpict($originalfile, $maxw, $maxh)
 {

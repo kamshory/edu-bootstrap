@@ -11,8 +11,8 @@ $cfg->page_title = "Sekolah";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST) && isset($_POST['save']))
 {
-	$school_id = kh_filter_input(INPUT_POST, 'school_id2', FILTER_SANITIZE_NUMBER_INT);
-	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+	$school_id = kh_filter_input(INPUT_POST, "school_id2", FILTER_SANITIZE_NUMBER_INT);
+	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
 
 	$name = preg_replace("/[^A-Za-z\.\-\d_]/i"," ",$name);
 	$name = trim($name, " ._- ");
@@ -28,31 +28,31 @@ if(count(@$_POST) && isset($_POST['save']))
 	
 	$school_code = addslashes($school_code);
 
-	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-	$description = kh_filter_input(INPUT_POST, 'description', FILTER_SANITIZE_SPECIAL_CHARS);
-	$school_type_id = kh_filter_input(INPUT_POST, 'school_type_id', FILTER_SANITIZE_SPECIAL_CHARS);
-	$school_grade_id = kh_filter_input(INPUT_POST, 'school_grade_id', FILTER_SANITIZE_SPECIAL_CHARS);
-	$public_private = kh_filter_input(INPUT_POST, 'public_private', FILTER_SANITIZE_SPECIAL_CHARS);
-	$open = kh_filter_input(INPUT_POST, 'open', FILTER_SANITIZE_NUMBER_INT);
-	$principal = kh_filter_input(INPUT_POST, 'principal', FILTER_SANITIZE_SPECIAL_CHARS);
-	$address = kh_filter_input(INPUT_POST, 'address', FILTER_SANITIZE_SPECIAL_CHARS);
-	$phone = kh_filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_SPECIAL_CHARS);
-	$email = kh_filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
-	$language = kh_filter_input(INPUT_POST, 'language', FILTER_SANITIZE_SPECIAL_CHARS);
-	$country_id = kh_filter_input(INPUT_POST, 'country_id', FILTER_SANITIZE_SPECIAL_CHARS);
-	$state_id = kh_filter_input(INPUT_POST, 'state_id', FILTER_SANITIZE_SPECIAL_CHARS);
-	$city_id = kh_filter_input(INPUT_POST, 'city_id', FILTER_SANITIZE_SPECIAL_CHARS);
-	$student = kh_filter_input(INPUT_POST, 'student', FILTER_SANITIZE_NUMBER_INT);
+	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
+	$description = kh_filter_input(INPUT_POST, "description", FILTER_SANITIZE_SPECIAL_CHARS);
+	$school_type_id = kh_filter_input(INPUT_POST, "school_type_id", FILTER_SANITIZE_SPECIAL_CHARS);
+	$school_grade_id = kh_filter_input(INPUT_POST, "school_grade_id", FILTER_SANITIZE_SPECIAL_CHARS);
+	$public_private = kh_filter_input(INPUT_POST, "public_private", FILTER_SANITIZE_SPECIAL_CHARS);
+	$open = kh_filter_input(INPUT_POST, "open", FILTER_SANITIZE_NUMBER_INT);
+	$principal = kh_filter_input(INPUT_POST, "principal", FILTER_SANITIZE_SPECIAL_CHARS);
+	$address = kh_filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
+	$phone = kh_filter_input(INPUT_POST, "phone", FILTER_SANITIZE_SPECIAL_CHARS);
+	$email = kh_filter_input(INPUT_POST, "email", FILTER_SANITIZE_SPECIAL_CHARS);
+	$language = kh_filter_input(INPUT_POST, "language", FILTER_SANITIZE_SPECIAL_CHARS);
+	$country_id = kh_filter_input(INPUT_POST, "country_id", FILTER_SANITIZE_SPECIAL_CHARS);
+	$state_id = kh_filter_input(INPUT_POST, "state_id", FILTER_SANITIZE_SPECIAL_CHARS);
+	$city_id = kh_filter_input(INPUT_POST, "city_id", FILTER_SANITIZE_SPECIAL_CHARS);
+	$student = kh_filter_input(INPUT_POST, "student", FILTER_SANITIZE_NUMBER_INT);
 
-	$prevent_change_school = kh_filter_input(INPUT_POST, 'prevent_change_school', FILTER_SANITIZE_NUMBER_UINT);
-	$prevent_resign = kh_filter_input(INPUT_POST, 'prevent_resign', FILTER_SANITIZE_NUMBER_UINT);
-	$use_token = kh_filter_input(INPUT_POST, 'use_token', FILTER_SANITIZE_NUMBER_UINT);
+	$prevent_change_school = kh_filter_input(INPUT_POST, "prevent_change_school", FILTER_SANITIZE_NUMBER_UINT);
+	$prevent_resign = kh_filter_input(INPUT_POST, "prevent_resign", FILTER_SANITIZE_NUMBER_UINT);
+	$use_token = kh_filter_input(INPUT_POST, "use_token", FILTER_SANITIZE_NUMBER_UINT);
 
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$admin_create = $admin_edit = $admin_login->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 
-	$active = kh_filter_input(INPUT_POST, 'active', FILTER_SANITIZE_NUMBER_INT);
+	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_INT);
 
 
 
@@ -429,7 +429,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(@$_GET['option'] == 'edit')
 {
-$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
+$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 $state_list = array();
@@ -741,7 +741,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
+$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
 (select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,

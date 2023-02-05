@@ -2,7 +2,7 @@
 include_once dirname(__FILE__) . "/lib.inc/functions-pico.php";
 include_once dirname(__FILE__) . "/lib.inc/sessions.php";
 if (isset($_GET['school_id'])) {
-	$page_school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
+	$page_school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }
 if (@$page_school_id) {
 	include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
@@ -24,7 +24,7 @@ if (@$page_school_id) {
 		$school_name = $data['name'];
 		$school_code = $data['school_code'];
 
-		$page_tab = kh_filter_input(INPUT_GET, 'tab', FILTER_SANITIZE_STRING_NEW);
+		$page_tab = kh_filter_input(INPUT_GET, "tab", FILTER_SANITIZE_STRING_NEW);
 		if ($page_tab == '') {
 			$cfg->page_title = $school_name;
 			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
@@ -39,16 +39,16 @@ if (@$page_school_id) {
 			// student profile
 
 			if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
-				$reg_number_national = kh_filter_input(INPUT_POST, 'reg_number_national', FILTER_SANITIZE_SPECIAL_CHARS);
-				$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-				$gender = kh_filter_input(INPUT_POST, 'gender', FILTER_SANITIZE_SPECIAL_CHARS);
-				$birth_place = kh_filter_input(INPUT_POST, 'birth_place', FILTER_SANITIZE_SPECIAL_CHARS);
-				$birth_day = kh_filter_input(INPUT_POST, 'birth_day', FILTER_SANITIZE_STRING_NEW);
-				$phone = kh_filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_SPECIAL_CHARS);
-				$email = kh_filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-				$password = kh_filter_input(INPUT_POST, 'password', FILTER_SANITIZE_PASSWORD);
-				$address = kh_filter_input(INPUT_POST, 'address', FILTER_SANITIZE_SPECIAL_CHARS);
-				$religion_id = kh_filter_input(INPUT_POST, 'religion_id', FILTER_SANITIZE_SPECIAL_CHARS);
+				$reg_number_national = kh_filter_input(INPUT_POST, "reg_number_national", FILTER_SANITIZE_SPECIAL_CHARS);
+				$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
+				$gender = kh_filter_input(INPUT_POST, "gender", FILTER_SANITIZE_SPECIAL_CHARS);
+				$birth_place = kh_filter_input(INPUT_POST, "birth_place", FILTER_SANITIZE_SPECIAL_CHARS);
+				$birth_day = kh_filter_input(INPUT_POST, "birth_day", FILTER_SANITIZE_STRING_NEW);
+				$phone = kh_filter_input(INPUT_POST, "phone", FILTER_SANITIZE_SPECIAL_CHARS);
+				$email = kh_filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+				$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
+				$address = kh_filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
+				$religion_id = kh_filter_input(INPUT_POST, "religion_id", FILTER_SANITIZE_SPECIAL_CHARS);
 				$time_create = $time_edit = $picoEdu->getLocalDateTime();
 				$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 				$admin_create = $admin_edit = $admin_id;
@@ -499,7 +499,7 @@ if (@$page_school_id) {
 		} else if ($page_tab == 'article') {
 			$cfg->page_title = "Artikel " . $school_name;
 			include_once dirname(__FILE__) . "/lib.inc/dom.php";
-			$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
+			$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
 			if ($article_id) {
 				$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 					FROM `edu_article` 

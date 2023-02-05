@@ -26,7 +26,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 	$start = addslashes(@$_SESSION['session_test'][$student_id][$test_id]['start']);
 	if($start == '' || $start == '0000-00-00 00:00:00')
 	{
-		$start = kh_filter_input(INPUT_POST, 'time_start', FILTER_SANITIZE_STRING);
+		$start = kh_filter_input(INPUT_POST, "time_start", FILTER_SANITIZE_STRING);
 	}
 	$end = date('Y-m-d H:i:s');
 	

@@ -6,8 +6,8 @@ if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-$filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
-$fileurl = htmlspecialchars(kh_filter_input(INPUT_GET, 'filepath', FILTER_SANITIZE_STRING_NEW));
+$filepath = path_decode(kh_filter_input(INPUT_GET, "filepath"), $fmanConfig->rootdir);
+$fileurl = htmlspecialchars(kh_filter_input(INPUT_GET, "filepath", FILTER_SANITIZE_STRING_NEW));
 
 $error_code = "";
 if(file_exists($filepath))

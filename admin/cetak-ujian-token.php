@@ -5,14 +5,14 @@ if(empty(@$school_id))
 	include_once dirname(__FILE__)."/bukan-admin.php";
 	exit();
 }
-$tokens = kh_filter_input(INPUT_GET, 'tokens', FILTER_SANITIZE_STRING_NEW);
+$tokens = kh_filter_input(INPUT_GET, "tokens", FILTER_SANITIZE_STRING_NEW);
 $arr = explode(",", $tokens);
 foreach($arr as $key=>$val)
 {
 	$val = preg_replace("/[^\d]/i", "", $val);
 	$arr[$key] = abs($val*1);
 }
-$edit_key = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school`.*, `edu_school`.`name` as `school_name`
 FROM `edu_school` 

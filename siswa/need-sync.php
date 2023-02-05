@@ -4,10 +4,10 @@ include_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
 
 if(isset($_POST['sync']))
 {
-	$student_id = kh_filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING_NEW);
-	$email = kh_filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-	$auth = kh_filter_input(INPUT_POST, 'auth', FILTER_SANITIZE_STRING_NEW);
-	$password = kh_filter_input(INPUT_POST, 'password', FILTER_SANITIZE_PASSWORD);
+	$student_id = kh_filter_input(INPUT_POST, "id", FILTER_SANITIZE_STRING_NEW);
+	$email = kh_filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+	$auth = kh_filter_input(INPUT_POST, "auth", FILTER_SANITIZE_STRING_NEW);
+	$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
 	if($password != '')
 	{
 		$sql = "SELECT `edu_student`.*
@@ -46,9 +46,9 @@ if(isset($_POST['sync']))
 	}
 }
 
-$student_id = kh_filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING_NEW);
-$email = kh_filter_input(INPUT_GET, 'email', FILTER_SANITIZE_EMAIL);
-$auth = kh_filter_input(INPUT_GET, 'auth', FILTER_SANITIZE_STRING_NEW);
+$student_id = kh_filter_input(INPUT_GET, "id", FILTER_SANITIZE_STRING_NEW);
+$email = kh_filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
+$auth = kh_filter_input(INPUT_GET, "auth", FILTER_SANITIZE_STRING_NEW);
 
 $sql = "SELECT `edu_student`.*
 FROM `edu_student` 

@@ -17,16 +17,16 @@ $cfg->page_title = "Artikel";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['publish']) || isset($_POST['draff']))
 {
-	$option = kh_filter_input(INPUT_POST, 'option', FILTER_SANITIZE_SPECIAL_CHARS);
-	$title = trim(kh_filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS));
+	$option = kh_filter_input(INPUT_POST, "option", FILTER_SANITIZE_SPECIAL_CHARS);
+	$title = trim(kh_filter_input(INPUT_POST, "title", FILTER_SANITIZE_SPECIAL_CHARS));
 	if($title == '')
 	{
 		$title = '(Tanpa Judul)';
 	}
 	
-	$content = kh_filter_input(INPUT_POST, 'content');
-	$open = kh_filter_input(INPUT_POST, 'open', FILTER_SANITIZE_NUMBER_UINT);
-	$class = kh_filter_input(INPUT_POST, 'class', FILTER_SANITIZE_STRING_NEW);
+	$content = kh_filter_input(INPUT_POST, "content");
+	$open = kh_filter_input(INPUT_POST, "open", FILTER_SANITIZE_NUMBER_UINT);
+	$class = kh_filter_input(INPUT_POST, "class", FILTER_SANITIZE_STRING_NEW);
 	
 	$active = 0;
 	$time = $picoEdu->getLocalDateTime();
@@ -64,8 +64,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	}
 	else if($option == 'edit')
 	{
-		$article_id = kh_filter_input(INPUT_POST, 'article_id');
-		$article_id = kh_filter_input(INPUT_POST, 'article_id');
+		$article_id = kh_filter_input(INPUT_POST, "article_id", FILTER_SANITIZE_STRING_NEW);
 
 		$base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id";
 		$base_src = "media.edu/school/$school_id/article/$article_id";
@@ -192,7 +191,7 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/article-editor.js"></script>
 
 <?php
-$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
+$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT * FROM `edu_article` WHERE `article_id` = '$article_id' and `school_id` = '$school_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -237,7 +236,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(isset($_GET['article_id']))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
+$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
 $sql_filter_article = " and `edu_article`.`article_id` = '$article_id' ";
 
 if(isset($school_id))
@@ -320,7 +319,7 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 ?>
 <script type="text/javascript">
 $(document).ready(function(e) {
@@ -390,7 +389,6 @@ ORDER BY `edu_article`.`article_id` desc
 $sql_test = "SELECT `edu_article`.`article_id` 
 FROM `edu_article` 
 WHERE 1 $sql_filter 
-ORDER BY `edu_article`.`article_id` desc
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

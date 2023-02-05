@@ -5,12 +5,12 @@ $cfg->page_title = "Artikel";
 include_once dirname(__FILE__)."/lib.inc/cfg.pagination.php";
 if(isset($_GET['school_id']))
 {
-	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
+	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }
 
 if(isset($_GET['article_id']))
 {
-	$article_id = kh_filter_input(INPUT_GET, 'article_id', FILTER_SANITIZE_STRING_NEW);
+	$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
 	$sql_filter_article = " and `edu_article`.`article_id` = '$article_id' ";
 
 	if(isset($school_id))

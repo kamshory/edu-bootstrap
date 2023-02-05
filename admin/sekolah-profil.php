@@ -9,7 +9,7 @@ $cfg->page_title = "Profil Sekolah";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['save']) && count(@$_POST))
 {
-	$name = kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
 
 	$name = preg_replace("/[^A-Za-z\.\-\d_]/i"," ",$name);
 	$name = trim($name, " ._- ");
@@ -25,21 +25,21 @@ if(isset($_POST['save']) && count(@$_POST))
 	
 	$school_code = addslashes($school_code);
 
-	$school_grade_id = kh_filter_input(INPUT_POST, 'school_grade_id', FILTER_SANITIZE_SPECIAL_CHARS);
-	$public_private = kh_filter_input(INPUT_POST, 'public_private', FILTER_SANITIZE_SPECIAL_CHARS);
-	$open = kh_filter_input(INPUT_POST, 'open', FILTER_SANITIZE_NUMBER_UINT);
-	$principal = kh_filter_input(INPUT_POST, 'principal', FILTER_SANITIZE_SPECIAL_CHARS);
-	$address = kh_filter_input(INPUT_POST, 'address', FILTER_SANITIZE_SPECIAL_CHARS);
-	$phone = kh_filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_SPECIAL_CHARS);
-	$email = kh_filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-	$language = kh_filter_input(INPUT_POST, 'language', FILTER_SANITIZE_SPECIAL_CHARS);
-	$country_id = kh_filter_input(INPUT_POST, 'country_id', FILTER_SANITIZE_SPECIAL_CHARS);
-	$state_id = kh_filter_input(INPUT_POST, 'state_id', FILTER_SANITIZE_SPECIAL_CHARS);
-	$city_id = kh_filter_input(INPUT_POST, 'city_id', FILTER_SANITIZE_SPECIAL_CHARS);
+	$school_grade_id = kh_filter_input(INPUT_POST, "school_grade_id", FILTER_SANITIZE_SPECIAL_CHARS);
+	$public_private = kh_filter_input(INPUT_POST, "public_private", FILTER_SANITIZE_SPECIAL_CHARS);
+	$open = kh_filter_input(INPUT_POST, "open", FILTER_SANITIZE_NUMBER_UINT);
+	$principal = kh_filter_input(INPUT_POST, "principal", FILTER_SANITIZE_SPECIAL_CHARS);
+	$address = kh_filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
+	$phone = kh_filter_input(INPUT_POST, "phone", FILTER_SANITIZE_SPECIAL_CHARS);
+	$email = kh_filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+	$language = kh_filter_input(INPUT_POST, "language", FILTER_SANITIZE_SPECIAL_CHARS);
+	$country_id = kh_filter_input(INPUT_POST, "country_id", FILTER_SANITIZE_SPECIAL_CHARS);
+	$state_id = kh_filter_input(INPUT_POST, "state_id", FILTER_SANITIZE_SPECIAL_CHARS);
+	$city_id = kh_filter_input(INPUT_POST, "city_id", FILTER_SANITIZE_SPECIAL_CHARS);
 
-	$prevent_change_school = kh_filter_input(INPUT_POST, 'prevent_change_school', FILTER_SANITIZE_NUMBER_UINT);
-	$prevent_resign = kh_filter_input(INPUT_POST, 'prevent_resign', FILTER_SANITIZE_NUMBER_UINT);
-	$use_token = kh_filter_input(INPUT_POST, 'use_token', FILTER_SANITIZE_NUMBER_UINT);
+	$prevent_change_school = kh_filter_input(INPUT_POST, "prevent_change_school", FILTER_SANITIZE_NUMBER_UINT);
+	$prevent_resign = kh_filter_input(INPUT_POST, "prevent_resign", FILTER_SANITIZE_NUMBER_UINT);
+	$use_token = kh_filter_input(INPUT_POST, "use_token", FILTER_SANITIZE_NUMBER_UINT);
 
 
 	$sql1 = "UPDATE `edu_student` SET `prevent_change_school` = '$prevent_change_school', `prevent_resign` = '$prevent_resign'

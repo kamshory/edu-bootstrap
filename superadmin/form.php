@@ -620,7 +620,7 @@ foreach($field_new as $k=>$field2)
 		break;
 		case 'enum':
 		$tab = addslashes($_POST['table']);
-		$opt = createEnumOption($tab, $field2);
+		$opt = createEnumOption($database, $tab, $field2);
 		
 		$str .= "<select class=\"input-select\" name=\"$field2\" id=\"$field2\"$nd>
 		<option value=\"\"></option>\r\n";
@@ -746,7 +746,7 @@ foreach($field_edit as $k=>$field2)
 		break;
 		case 'enum':
 		$tab = addslashes($_POST['table']);
-		$opt = createEnumOption($tab, $field2);
+		$opt = createEnumOption($database, $tab, $field2);
 		
 		$str .= "<select class=\"input-select\" name=\"$field2\" id=\"$field2\"$nd>
 		<option value=\"\"></option>\r\n";

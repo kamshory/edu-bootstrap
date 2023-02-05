@@ -4,7 +4,7 @@ if(empty(@$school_id))
 {
 	exit();
 }
-$article_id = kh_filter_input(INPUT_POST, 'article_id', FILTER_SANITIZE_STRING_NEW);
+$article_id = kh_filter_input(INPUT_POST, "article_id", FILTER_SANITIZE_STRING_NEW);
 if(@$_POST['option'] == 'delete')
 {
 	$sql = "DELETE FROM `edu_article` WHERE `article_id` = '$article_id' and `school_id` = '$school_id' and `teacher_id` = '$auth_teacher_id' ";

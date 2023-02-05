@@ -8,7 +8,7 @@ if($fmanConfig->authentification_needed && !$userlogin)
 }
 if(@$_GET['option'] == 'openfile')
 {
-$filepath = path_decode(kh_filter_input(INPUT_GET, 'filepath'), $fmanConfig->rootdir);
+$filepath = path_decode(kh_filter_input(INPUT_GET, "filepath"), $fmanConfig->rootdir);
 if(file_exists($filepath))
 {
 	$cnt = file_get_contents($filepath);
@@ -43,7 +43,7 @@ if(@$_GET['option'] == 'savefile' && isset($_POST['filepath']))
 		die('READONLY');
 	}
 	
-	$filepath = path_decode(kh_filter_input(INPUT_POST, 'filepath'));
+	$filepath = path_decode(kh_filter_input(INPUT_POST, "filepath"));
 	// prepare dir
 	$dir = dirname($filepath);
 	$dir = str_replace("\\","/",$dir);
@@ -62,7 +62,7 @@ if(@$_GET['option'] == 'savefile' && isset($_POST['filepath']))
 		}
 	}
 	
-	$content = kh_filter_input(INPUT_POST, 'filecontent');
+	$content = kh_filter_input(INPUT_POST, "filecontent");
 	$content = str_replace(array("\n"), array("\r\n"), $content);
 	$content = str_replace(array("\r\r\n"), array("\r\n"), $content);
 	

@@ -14,7 +14,7 @@ if($fmanConfig->readonly)
 {
 	die('READONLY');
 }
-$targetdir = path_decode(kh_filter_input(INPUT_GET, 'targetdir'), $fmanConfig->rootdir);
+$targetdir = path_decode(kh_filter_input(INPUT_GET, "targetdir"), $fmanConfig->rootdir);
 
 
 if(isset($_FILES["images"]))

@@ -11,55 +11,55 @@ $cfg->page_title = "Ujian";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST) && isset($_POST['save']))
 {
-	$test_id = kh_filter_input(INPUT_POST, 'test_id', FILTER_SANITIZE_STRING_NEW);
-	$test_id2 = kh_filter_input(INPUT_POST, 'test_id2', FILTER_SANITIZE_STRING_NEW);
+	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
+	$test_id2 = kh_filter_input(INPUT_POST, "test_id2", FILTER_SANITIZE_STRING_NEW);
 	if(!isset($_POST['test_id']))
 	{
 		$test_id = $test_id2;
 	}
-	$name = trim(kh_filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS));
+	$name = trim(kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS));
 	if($name == '')
 	{
 		$name = "{NAMA UJIAN}";
 	}
-	$class = kh_filter_input(INPUT_POST, 'classlist', FILTER_SANITIZE_SPECIAL_CHARS);
-	$subject = kh_filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS);
-	$teacher_id = kh_filter_input(INPUT_POST, 'teacher_id', FILTER_SANITIZE_SPECIAL_CHARS);
-	$description = kh_filter_input(INPUT_POST, 'description', FILTER_SANITIZE_SPECIAL_CHARS);
-	$guidance = kh_filter_input(INPUT_POST, 'guidance', FILTER_SANITIZE_SPECIAL_CHARS);
-	$open = kh_filter_input(INPUT_POST, 'open', FILTER_SANITIZE_NUMBER_UINT);
-	$has_limits = kh_filter_input(INPUT_POST, 'has_limits', FILTER_SANITIZE_NUMBER_UINT);
-	$trial_limits = kh_filter_input(INPUT_POST, 'trial_limits', FILTER_SANITIZE_NUMBER_UINT);
-	$threshold = kh_filter_input(INPUT_POST, 'threshold', FILTER_SANITIZE_NUMBER_FLOAT);
-	$assessment_methods = kh_filter_input(INPUT_POST, 'assessment_methods', FILTER_SANITIZE_SPECIAL_CHARS);
-	$number_of_question = kh_filter_input(INPUT_POST, 'number_of_question', FILTER_SANITIZE_NUMBER_UINT);
-	$number_of_option = kh_filter_input(INPUT_POST, 'number_of_option', FILTER_SANITIZE_NUMBER_UINT);
-	$question_per_page = kh_filter_input(INPUT_POST, 'question_per_page', FILTER_SANITIZE_NUMBER_UINT);
-	$random = kh_filter_input(INPUT_POST, 'random', FILTER_SANITIZE_NUMBER_UINT);
-	$autosubmit = kh_filter_input(INPUT_POST, 'autosubmit', FILTER_SANITIZE_NUMBER_UINT);
+	$class = kh_filter_input(INPUT_POST, "classlist", FILTER_SANITIZE_SPECIAL_CHARS);
+	$subject = kh_filter_input(INPUT_POST, "subject", FILTER_SANITIZE_SPECIAL_CHARS);
+	$teacher_id = kh_filter_input(INPUT_POST, "teacher_id", FILTER_SANITIZE_SPECIAL_CHARS);
+	$description = kh_filter_input(INPUT_POST, "description", FILTER_SANITIZE_SPECIAL_CHARS);
+	$guidance = kh_filter_input(INPUT_POST, "guidance", FILTER_SANITIZE_SPECIAL_CHARS);
+	$open = kh_filter_input(INPUT_POST, "open", FILTER_SANITIZE_NUMBER_UINT);
+	$has_limits = kh_filter_input(INPUT_POST, "has_limits", FILTER_SANITIZE_NUMBER_UINT);
+	$trial_limits = kh_filter_input(INPUT_POST, "trial_limits", FILTER_SANITIZE_NUMBER_UINT);
+	$threshold = kh_filter_input(INPUT_POST, "threshold", FILTER_SANITIZE_NUMBER_FLOAT);
+	$assessment_methods = kh_filter_input(INPUT_POST, "assessment_methods", FILTER_SANITIZE_SPECIAL_CHARS);
+	$number_of_question = kh_filter_input(INPUT_POST, "number_of_question", FILTER_SANITIZE_NUMBER_UINT);
+	$number_of_option = kh_filter_input(INPUT_POST, "number_of_option", FILTER_SANITIZE_NUMBER_UINT);
+	$question_per_page = kh_filter_input(INPUT_POST, "question_per_page", FILTER_SANITIZE_NUMBER_UINT);
+	$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
+	$autosubmit = kh_filter_input(INPUT_POST, "autosubmit", FILTER_SANITIZE_NUMBER_UINT);
 		
 	
 	$sort_order = 0;
-	$has_alert = kh_filter_input(INPUT_POST, 'has_alert', FILTER_SANITIZE_NUMBER_UINT);
-	$alert_message = kh_filter_input(INPUT_POST, 'alert_message', FILTER_SANITIZE_SPECIAL_CHARS);
-	$standard_score = kh_filter_input(INPUT_POST, 'standard_score', FILTER_SANITIZE_NUMBER_FLOAT);
-	$penalty = kh_filter_input(INPUT_POST, 'penalty', FILTER_SANITIZE_NUMBER_FLOAT);
-	$score_notification = kh_filter_input(INPUT_POST, 'score_notification', FILTER_SANITIZE_NUMBER_UINT);
-	$publish_answer = kh_filter_input(INPUT_POST, 'publish_answer', FILTER_SANITIZE_NUMBER_UINT);
-	$time_answer_publication = kh_filter_input(INPUT_POST, 'time_answer_publication', FILTER_SANITIZE_STRING_NEW);
-	$test_availability = kh_filter_input(INPUT_POST, 'test_availability', FILTER_SANITIZE_SPECIAL_CHARS);
-	$available_from = kh_filter_input(INPUT_POST, 'available_from', FILTER_SANITIZE_STRING_NEW);
-	$available_to = kh_filter_input(INPUT_POST, 'available_to', FILTER_SANITIZE_STRING_NEW);
+	$has_alert = kh_filter_input(INPUT_POST, "has_alert", FILTER_SANITIZE_NUMBER_UINT);
+	$alert_message = kh_filter_input(INPUT_POST, "alert_message", FILTER_SANITIZE_SPECIAL_CHARS);
+	$standard_score = kh_filter_input(INPUT_POST, "standard_score", FILTER_SANITIZE_NUMBER_FLOAT);
+	$penalty = kh_filter_input(INPUT_POST, "penalty", FILTER_SANITIZE_NUMBER_FLOAT);
+	$score_notification = kh_filter_input(INPUT_POST, "score_notification", FILTER_SANITIZE_NUMBER_UINT);
+	$publish_answer = kh_filter_input(INPUT_POST, "publish_answer", FILTER_SANITIZE_NUMBER_UINT);
+	$time_answer_publication = kh_filter_input(INPUT_POST, "time_answer_publication", FILTER_SANITIZE_STRING_NEW);
+	$test_availability = kh_filter_input(INPUT_POST, "test_availability", FILTER_SANITIZE_SPECIAL_CHARS);
+	$available_from = kh_filter_input(INPUT_POST, "available_from", FILTER_SANITIZE_STRING_NEW);
+	$available_to = kh_filter_input(INPUT_POST, "available_to", FILTER_SANITIZE_STRING_NEW);
 
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	
 	$role_create = $role_edit = 'A';
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 
-	$active = kh_filter_input(INPUT_POST, 'active', FILTER_SANITIZE_NUMBER_UINT);
+	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 	
-	$duration = kh_filter_input(INPUT_POST, 'duration', FILTER_SANITIZE_SPECIAL_CHARS);
-	$alert_time = kh_filter_input(INPUT_POST, 'alert_time', FILTER_SANITIZE_SPECIAL_CHARS);
+	$duration = kh_filter_input(INPUT_POST, "duration", FILTER_SANITIZE_SPECIAL_CHARS);
+	$alert_time = kh_filter_input(INPUT_POST, "alert_time", FILTER_SANITIZE_SPECIAL_CHARS);
 	
 	if(stripos($duration, ":") !== false)
 	{
@@ -160,7 +160,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* 
 FROM `edu_test` 
 WHERE `edu_test`.`test_id` = '$edit_key' 
@@ -516,7 +516,7 @@ else if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $array_class = $picoEdu->getArrayClass($school_id);
-$edit_key = kh_filter_input(INPUT_GET, 'test_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
 (select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
@@ -720,8 +720,8 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
-$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
+$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
+$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 ?>
 <script type="text/javascript">
 window.onload = function()

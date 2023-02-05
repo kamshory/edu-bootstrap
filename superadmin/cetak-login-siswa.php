@@ -5,8 +5,8 @@ if($admin_login->admin_level != 1)
 	include_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
-$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_STRING_NEW);
-$class_id = kh_filter_input(INPUT_GET, 'class_id', FILTER_SANITIZE_STRING_NEW);
+$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
+$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $url = 'http://192.168.0.11/';
 require_once dirname(dirname(__FILE__)) . "/lib.inc/phpqrcode/phpqrcode.php";
 ob_start();

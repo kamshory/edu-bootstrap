@@ -7,7 +7,7 @@ $cfg->page_title = "Guru";
 include_once dirname(__FILE__)."/lib.inc/cfg.pagination.php";
 if(isset($_GET['school_id']))
 {
-	$school_id = kh_filter_input(INPUT_GET, 'school_id', FILTER_SANITIZE_NUMBER_UINT);
+	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }
 if(empty(@$student_id) && empty(@$teacher_id))
 {
@@ -51,7 +51,7 @@ exit();
 if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, 'teacher_id', FILTER_SANITIZE_STRING_NEW);
+$edit_key = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_teacher`.* $nt
 FROM `edu_teacher` 
