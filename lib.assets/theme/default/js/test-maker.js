@@ -340,7 +340,6 @@ if(typeof escapeHtmlEntities == 'undefined') {
 	};
 }
 
-
 String.prototype.splitWithLimit = function(separator, limit) {
 	let value = this;
 	value = value.toString();
@@ -408,14 +407,62 @@ function getNumberingType(opt1, opt2)
 	}
 	return numbering;
 }
+
 let numberingList = {
-	'upper-alpha':['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
-	'lower-alpha':['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'],
-	'upper-roman':['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'],
-	'lower-roman':['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'vii', 'ix', 'x'],
-	'decimal':['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
-	'decimal-leading-zero':['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
+	'upper-alpha' : ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
+	'lower-alpha' : ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'],
+	'upper-roman' : ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'],
+	'lower-roman' : ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'vii', 'ix', 'x'],
+	'decimal' : ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+	'decimal-leading-zero' : ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
 };
+
+
+function getNumType(lines)
+{
+
+	for(let key1 in numberingList)
+	{
+		if(numberingList.hasOwnProperty(key1))
+		{
+			let arrType = [];
+			let lastLine = -1;
+			for(let key2 in lines)
+			{
+				let line = lines[key2];
+				if (line.indexOf(".") !== -1) {
+					let arr = line.trim.split('.', 2);
+					let tp = arr[0].trim();
+					if ($.inArray(tp, type) != -1 && key2 > lastLine) {
+						arrType.push(tp);
+					}
+				}
+			}
+			let numbering = matchNumberingType(arrType, numberingList);
+			if(numbering !== false)
+			{
+				return numbering;
+			}
+		}
+	}
+	return '';
+}
+
+function matchNumberingType(arrType, numList)
+{
+	for(let key1 in numList)
+	{
+		let type = numList[key1];
+		if (arrType.length > 1) {
+			if(type[0] == arrType[0] && type[1] == arrType[1])
+			{
+				return key1;
+			}
+		}
+	}
+	return false;
+}
+
 function optionMatch(opt, numbering)
 {
 	let num = numberingList[numbering];

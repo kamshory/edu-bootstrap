@@ -715,3 +715,72 @@ Data di atas adalah data..<br />
 ', '063df66df1f3f48d7ac7', '8', '1', '1', 'upper-alpha', 'ade0575556a5a2b4e18ad7ad65d2503d', 
 					'2023-02-05 15:24:42', 'aaaaaaaaaaaaa', '2023-02-05 15:24:42', 'aaaaaaaaaaaaa', true)
 					
+2023-02-05 17:10:10 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063df892e9967d15d3dc', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Tio </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Dio </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Rio </td><td> Makassar </td><td> 356735 </td><td> djfsdjf@khsk </td></tr></tbody></table>img:1e8c02863854cb30c7c9f5ef3e3161d1.svg#middle##latex%7C%5Cint_%7Bx%3D0%7D%5E%7B23%7D%20%5Csin(2x)%20dx<br />
+Data di atas adalah data..<br />
+', '063df88ec0db6ea1d793', '1', '1', '1', 'upper-alpha', 'fde8897b73550e3550ecbc63193aff8e', 
+					'2023-02-05 17:47:10', 'aaaaaaaaaaaaa', '2023-02-05 17:47:10', 'aaaaaaaaaaaaa', true)
+					
+2023-02-05 17:10:10 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063df892e99f2497bd80', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063df88ec0db6ea1d793', '2', '1', '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+					'2023-02-05 17:47:10', 'aaaaaaaaaaaaa', '2023-02-05 17:47:10', 'aaaaaaaaaaaaa', true)
+					
+2023-02-05 17:10:10 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063df892e9a4f46e0e2b', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063df88ec0db6ea1d793', '3', '1', '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+					'2023-02-05 17:47:10', 'aaaaaaaaaaaaa', '2023-02-05 17:47:10', 'aaaaaaaaaaaaa', true)
+					
+2023-02-05 17:10:10 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063df892e9abf37e946f', 'Berikut ini adalah sebuah tabel<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063df88ec0db6ea1d793/37f0d72eb5c45dcd47768ffd60b4467d.svg\" alt=\"37f0d72eb5c45dcd47768ffd60b4467d.svg\" style=\"vertical-align:middle\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \" class=\"latex-image\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \"> <img src=\"media.edu/school/063ce682801be89951aa/test/063df88ec0db6ea1d793/37f0d72eb5c45dcd47768ffd60b4467d.svg\" alt=\"37f0d72eb5c45dcd47768ffd60b4467d.svg\" style=\"vertical-align:middle\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \" class=\"latex-image\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \"><br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Didi </td><td> Surabaya </td><td> 3532587 </td><td> sdfhs@hguf </td></tr></tbody></table>Data di atas merupakan data...<br />
+', '063df88ec0db6ea1d793', '4', '1', '1', 'upper-alpha', '4a9d6fc5fd6a27c7aff75437fbed184f', 
+					'2023-02-05 17:47:10', 'aaaaaaaaaaaaa', '2023-02-05 17:47:10', 'aaaaaaaaaaaaa', true)
+					
+2023-02-05 17:08:08 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063df8968d3b66d17e97', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Tio </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Dio </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Rio </td><td> Makassar </td><td> 356735 </td><td> djfsdjf@khsk </td></tr></tbody></table><br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063df88ec0db6ea1d793/1e8c02863854cb30c7c9f5ef3e3161d1.svg\" alt=\"1e8c02863854cb30c7c9f5ef3e3161d1.svg\" style=\"vertical-align:middle\" data-latex=\"\\int_{x=0}^{23} \\sin(2x) dx\" class=\"latex-image\" alt=\"\\int_{x=0}^{23} \\sin(2x) dx\"><br />
+Data di atas adalah data..<br />
+', '063df88ec0db6ea1d793', '5', '1', '1', 'upper-alpha', '0d4ca84c8019a4475bc81251c725151d', 
+					'2023-02-05 17:48:08', 'aaaaaaaaaaaaa', '2023-02-05 17:48:08', 'aaaaaaaaaaaaa', true)
+					
+2023-02-05 17:08:08 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063df8968d41ea444f53', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063df88ec0db6ea1d793', '6', '1', '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+					'2023-02-05 17:48:08', 'aaaaaaaaaaaaa', '2023-02-05 17:48:08', 'aaaaaaaaaaaaa', true)
+					
+2023-02-05 17:08:08 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063df8968d47c6cc8bc9', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063df88ec0db6ea1d793', '7', '1', '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+					'2023-02-05 17:48:08', 'aaaaaaaaaaaaa', '2023-02-05 17:48:08', 'aaaaaaaaaaaaa', true)
+					
+2023-02-05 17:08:08 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063df8968d4e8aa4112c', 'Berikut ini adalah sebuah tabel<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063df88ec0db6ea1d793/37f0d72eb5c45dcd47768ffd60b4467d.svg\" alt=\"37f0d72eb5c45dcd47768ffd60b4467d.svg\" style=\"vertical-align:middle\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \" class=\"latex-image\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \"><br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Didi </td><td> Surabaya </td><td> 3532587 </td><td> sdfhs@hguf </td></tr></tbody></table>Data di atas merupakan data...<br />
+', '063df88ec0db6ea1d793', '8', '1', '1', 'upper-alpha', 'ade0575556a5a2b4e18ad7ad65d2503d', 
+					'2023-02-05 17:48:08', 'aaaaaaaaaaaaa', '2023-02-05 17:48:08', 'aaaaaaaaaaaaa', true)
+					

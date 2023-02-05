@@ -634,6 +634,7 @@ function matchNumberingType($arrType, $numberingList)
 
 function parseQuestion($question) //NOSONAR
 {
+	$whiteSpaceTrimmer = " \t\r\n\t ";
 	$question_text = "";
 	$question = str_replace("\\\\\r\n", "<br />", $question); //NOSONAR
 	$lines = explode("\r\n", $question);
@@ -648,7 +649,7 @@ function parseQuestion($question) //NOSONAR
 		/*
 		Old code
 		foreach ($lines as $key => $val) {
-			$lines[$key] = trim($val, " \t\r\n\t "); //NOSONAR
+			$lines[$key] = trim($val, $whiteSpaceTrimmer); //NOSONAR
 		}
 		$i = 1;
 		do {
@@ -666,10 +667,14 @@ function parseQuestion($question) //NOSONAR
 		for ($i = 1; $i < $lineslength - 1; $i++) {
 			if (stripos($lines[$i], '.') !== false) {
 				$tmp = explode(".", $lines[$i], 2);
-				$opt = trim($tmp[0], " \t\r\n\t ");
+				$opt = trim($tmp[0], $whiteSpaceTrimmer);
 				if (optionMatch($opt, $numbering_type) > -1) {
 					$texx = $tmp[1];					
-					$options[] = array('text' => trim($texx, " \t\r\n\t "), 'value' => 0);
+					$options[] = array(
+						'text' => trim($texx, $whiteSpaceTrimmer), 
+						'value' => 0,
+						'score' => 0
+					);
 					$k++;
 				} else {
 					if ($k == -1) {
@@ -695,30 +700,38 @@ function parseQuestion($question) //NOSONAR
 			if (stripos($lines[$lineslength - 1], ':') !== false && $lastIsAnswer) {
 				$lines[$lineslength - 1] = str_replace("\t", " ", $lines[$lineslength - 1]);
 				$tmp = explode(":", $lines[$lineslength - 1], 2);
-				$opt = trim($tmp[1], " \t\r\n\t ");
+				$opt = trim($tmp[1], $whiteSpaceTrimmer);
 				$xx = explode(" ", $opt);
 				$opt = $xx[0];
-				$opt = trim($opt, " \t\r\n\t ");
+				$opt = trim($opt, $whiteSpaceTrimmer);
 				$answerIndex = optionMatch($opt, $numbering_type);
 				if ($answerIndex > -1 && $answerIndex < count($options)) {
 					$options[$answerIndex]['value'] = 1;
+					$options[$answerIndex]['score'] = 1;
 				} else {
 					$tmp = explode(".", $lines[$lineslength - 1], 2);
-					$opt = trim($tmp[0], " \t\r\n\t ");
+					$opt = trim($tmp[0], $whiteSpaceTrimmer);
 					if (optionMatch($opt, $numbering_type) > -1) {
 						$texx = $tmp[1];
 						
-						$options[] = array('text' > trim($texx, " \t\r\n\t "), 'value' => 0);
+						$options[] = array(
+							'text' > trim($texx, $whiteSpaceTrimmer), 
+							'value' => 0,
+							'score' => 0
+						);
 					}
 				}
 			} else {
 				if (stripos($lines[$lineslength - 1], '.') !== false) {
 					$tmp = explode(".", $lines[$lineslength - 1], 2);
-					$opt = trim($tmp[0], " \t\r\n\t ");
+					$opt = trim($tmp[0], $whiteSpaceTrimmer);
 					if (optionMatch($opt, $numbering_type) > -1) {
-						$texx = $tmp[1];
-						
-						$options[] = array('text' => trim($texx, " \t\r\n\t "), 'value' => 0);
+						$texx = $tmp[1];						
+						$options[] = array(
+							'text' => trim($texx, $whiteSpaceTrimmer), 
+							'value' => 0,
+							'score' => 0
+						);
 					}
 				}
 			}
@@ -1345,7 +1358,9 @@ function removeparagraphtag($text)
 		}
 		$ret = $text;
 	}
-	*/ else {
+	*/ 
+	else 
+	{
 		$ret = $text;
 	}
 	return $ret;
