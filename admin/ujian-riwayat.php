@@ -245,17 +245,25 @@ window.onload = function()
     <select class="form-control input-select" name="teacher_id" id="teacher_id">
     <option value="">- Pilih Guru -</option>
     <?php 
-	$sql = "SELECT * FROM `edu_teacher` WHERE `school_id` = '$school_id' and `active` = true";
-	$stmt2 = $database->executeQuery($sql);
-	if ($stmt2->rowCount() > 0) {
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-		foreach ($rows2 as $data2) {
-			?>
-        <option value="<?php echo $data2['teacher_id']; ?>"<?php if ($data2['teacher_id'] == $teacher_id)
-				  echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
-        <?php
-		}
-	}
+	$sql2 = "SELECT * FROM `edu_teacher` WHERE `school_id` = '$school_id' and `active` = true";
+	echo $picoEdu->createFilterDb(
+		$sql2,
+		array(
+			'attributeList'=>array(
+				array('attribute'=>'value', 'source'=>'teacher_id')
+			),
+			'selectCondition'=>array(
+				'source'=>'teacher_id',
+				'value'=>$teacher_id
+			),
+			'caption'=>array(
+				'delimiter'=>PicoEdu::RAQUO,
+				'values'=>array(
+					'name'
+				)
+			)
+		)
+	);
 	?>
     </select>
     <span class="search-label">Ujian</span>
@@ -295,6 +303,12 @@ FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
 having 1 and `student` > 0
 ORDER BY `edu_test`.`test_id` desc
+";
+$sql_test = "SELECT `edu_test`.* $nt, 
+(select count(distinct `edu_test_member`.`student_id`) FROM `edu_test_member` WHERE `edu_test_member`.`test_id` = `edu_test`.`test_id`) as `student`
+FROM `edu_test`
+WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
+having 1 and `student` > 0
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();
@@ -376,7 +390,7 @@ else if(@$_GET['q'])
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="ujian.php?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="warning">Data tidak ditemukan.</div>
 <?php
 }
 ?>

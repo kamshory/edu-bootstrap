@@ -202,6 +202,7 @@ else
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
+$teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);
 ?>
 <script type="text/javascript">
 window.onload = function()
@@ -239,6 +240,31 @@ window.onload = function()
 
 	?>
     </select>
+	<span class="search-label">Guru</span>
+    <select class="form-control input-select" name="teacher_id" id="teacher_id">
+    <option value="">- Pilih Guru -</option>
+    <?php 
+	$sql2 = "SELECT * FROM `edu_teacher` WHERE `school_id` = '$school_id' and `active` = true";
+	echo $picoEdu->createFilterDb(
+		$sql2,
+		array(
+			'attributeList'=>array(
+				array('attribute'=>'value', 'source'=>'teacher_id')
+			),
+			'selectCondition'=>array(
+				'source'=>'teacher_id',
+				'value'=>$teacher_id
+			),
+			'caption'=>array(
+				'delimiter'=>PicoEdu::RAQUO,
+				'values'=>array(
+					'name'
+				)
+			)
+		)
+	);
+	?>
+    </select>
     <span class="search-label">Ujian</span>
     <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
     "))));?>" />
@@ -258,6 +284,11 @@ if($class_id != '')
 {
 	$sql_filter .= " and concat(',',`edu_test`.`class`,',') like '%,$class_id,%' ";
 	$pagination->array_get[] = 'class_id';
+}
+if($teacher_id != '')
+{
+	$sql_filter .= " and `edu_test`.`teacher_id` = '$teacher_id' ";
+	$pagination->array_get[] = 'teacher_id';
 }
 
 $nt = '';
@@ -357,7 +388,7 @@ else if(@$_GET['q'])
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="ujian.php?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="warning">Data tidak ditemukan.</div>
 <?php
 }
 ?>

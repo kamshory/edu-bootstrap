@@ -64,15 +64,7 @@ if (@$_GET['option'] == 'detail') {
 						<tr>
 							<td>Jenjang</td>
 							<td><?php 
-							if ($data['school_grade_id'] == 3) {
-								echo 'SD';
-							}
-							if ($data['school_grade_id'] == 4) {
-								echo 'SMP';
-							}
-							if ($data['school_grade_id'] == 5){
-								echo 'SMA Sederajat';
-							}  
+							echo $picoEdu->getSchoolGradeName($data['school_grade_id']);
 							?> </td>
 						</tr>
 						<tr>
@@ -254,15 +246,7 @@ if (@$_GET['option'] == 'detail') {
 										<td align="right"><?php echo $no;?> </td>
 										<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&school_id=<?php echo $data['school_id']; ?>"><?php echo $data['name']; ?></a></td>
 										<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&school_id=<?php echo $data['school_id']; ?>"><?php 
-										if ($data['school_grade_id'] == 3) {
-											echo 'SD';
-										}
-										if ($data['school_grade_id'] == 4) {
-											echo 'SMP';
-										}
-										if ($data['school_grade_id'] == 5) {
-											echo 'SMA'; 
-										}
+										echo $picoEdu->getSchoolGradeName($data['school_grade_id']);
 										?></a></td>
 										</tr>
 									<?php

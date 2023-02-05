@@ -1151,4 +1151,19 @@ class PicoEdu //NOSONAR
 		}
 		return trim(implode(' ', $rowclass)); 
 	}
+
+	public function getSchoolGradeName($school_grade_id)
+	{
+		return $this->selectFromMap(
+			$school_grade_id,
+			array(
+			'1', 'Play Group',
+			'2', 'Taman Kanak-Kanak',
+			'3', 'SD Sederajat',
+			'4', 'SMP Sederajat',
+			'5', 'SMA Sederajat',
+			'6', 'Perguruan Tinggi'
+			)
+		);
+	}
 }

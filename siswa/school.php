@@ -27,7 +27,7 @@ $cfg->page_title = "Tentang ".$school_name;
     </tr>
     <tr>
     <td>Jenjang Sekolah</td>
-    <td><?php if($data['school_grade_id'] == 3) echo 'SD Sederajat'; if($data['school_grade_id'] == 4) echo 'SMP Sederajat'; if($data['school_grade_id'] == 5) echo 'SMA Sederajat';?> </td>
+    <td><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?> </td>
     </tr>
     <tr>
     <td>Negeri/Swasta</td>

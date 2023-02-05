@@ -1209,9 +1209,6 @@ $array_class = $picoEdu->getArrayClass($school_id);
 <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
-
-
-
 </form>
 <?php
 }

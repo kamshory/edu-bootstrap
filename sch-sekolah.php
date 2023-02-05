@@ -4,9 +4,8 @@ include_once dirname(__FILE__) . "/lib.inc/sessions.php";
 if (isset($_GET['school_id'])) {
 	$page_school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }
-if (@$page_school_id) {
+if(!empty(@$page_school_id)) {
 	include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
-
 	$sql = "SELECT `edu_school`.*,
 	(select `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
 	(select `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
@@ -27,15 +26,15 @@ if (@$page_school_id) {
 		$page_tab = kh_filter_input(INPUT_GET, "tab", FILTER_SANITIZE_STRING_NEW);
 		if ($page_tab == '') {
 			$cfg->page_title = $school_name;
-			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
+			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 ?>
 			<div class="page-title">
 				<h3><?php echo $data['name']; ?></h3>
 			</div>
 			<div class="page-content"><?php echo ($data['description']); ?></div>
 			<?php
-			include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php";
-		} else if ($page_tab == 'profile' && @$auth_student_id) {
+			include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php"; //NOSONAR
+		} else if ($page_tab == 'profile' && !empty(@$auth_student_id)) {
 			// student profile
 
 			if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
@@ -81,7 +80,7 @@ if (@$page_school_id) {
 
 
 			if (@$_GET['option'] == 'edit') {
-				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
+				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 				$sql = "SELECT `edu_student`.* 
 					FROM `edu_student` 
 					WHERE `edu_student`.`school_id` = '$school_id'
@@ -135,7 +134,7 @@ if (@$page_school_id) {
 								<td><textarea name="address" class="form-control input-text input-text-long" id="address" autocomplete="off"><?php echo $data['address']; ?></textarea></td>
 							</tr>
 							</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+							<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 							<tr>
 								<td></td>
 								<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan" class="btn com-button btn-success" onclick="window.location='profil.php'" /></td>
@@ -148,9 +147,9 @@ if (@$page_school_id) {
 					<div class="warning">Data tidak ditemukan. <a href="profil.php">Klik di sini untuk kembali.</a></div>
 				<?php
 				}
-				include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php";
+				include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php"; //NOSONAR
 			} else {
-				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
+				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 				$nt = '';
 				$sql = "SELECT `edu_student`.* , `edu_school`.`name` as `school_name`, `edu_school`.`open` as `school_open`,
 					(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
@@ -234,7 +233,7 @@ if (@$page_school_id) {
 								<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 							</tr>
 							</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+							<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 							<tr>
 								<td></td>
 								<td>
@@ -254,11 +253,11 @@ if (@$page_school_id) {
 					</form>
 			<?php
 				}
-				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
+				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 			}
 		} else if ($page_tab == 'about') {
 			$cfg->page_title = "Tentang " . $school_name;
-			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
+			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 			?>
 			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
@@ -267,12 +266,9 @@ if (@$page_school_id) {
 				</tr>
 				<tr>
 					<td>Jenjang Sekolah</td>
-					<td><?php if ($data['school_grade_id'] == 1) echo 'Play Group';
-						if ($data['school_grade_id'] == 2) echo 'Taman Kanak-Kanak';
-						if ($data['school_grade_id'] == 3) echo 'SD Sederajat';
-						if ($data['school_grade_id'] == 4) echo 'SMP Sederajat';
-						if ($data['school_grade_id'] == 5) echo 'SMA Sederajat';
-						if ($data['school_grade_id'] == 6) echo 'Perguruan Tinggi';?> </td>
+					<td><?php 
+					echo $picoEdu->getSchoolGradeName($data['school_grade_id']);
+					?> </td>
 				</tr>
 				<tr>
 					<td>Negeri/Swasta</td>
@@ -326,10 +322,10 @@ if (@$page_school_id) {
 				</tr>
 			</table>
 			<?php
-			include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php";
+			include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php"; //NOSONAR
 		} else if ($page_tab == 'student') {
 			$cfg->page_title = "Siswa " . $school_name;
-			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
+			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 			$sql = "SELECT `edu_class`.*,
 				(select `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
 				(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
@@ -449,10 +445,10 @@ if (@$page_school_id) {
 				<?php
 				}
 			}
-			include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php";
+			include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php"; //NOSONAR
 		} else if ($page_tab == 'teacher') {
 			$cfg->page_title = "Guru " . $school_name;
-			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
+			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 			$sql = "SELECT `edu_teacher`.*
 				FROM `edu_teacher`
 				WHERE `edu_teacher`.`active` = true and `edu_teacher`.`school_id` = '$page_school_id'
@@ -495,7 +491,7 @@ if (@$page_school_id) {
 				</form>
 				<?php
 			}
-			include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php";
+			include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php"; //NOSONAR
 		} else if ($page_tab == 'article') {
 			$cfg->page_title = "Artikel " . $school_name;
 			include_once dirname(__FILE__) . "/lib.inc/dom.php";
@@ -509,7 +505,7 @@ if (@$page_school_id) {
 					if ($stmt->rowCount() > 0) {
 						$data = $stmt->fetch(PDO::FETCH_ASSOC);
 					$cfg->page_title = $data['name'] . " - " . $school_name;
-					include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
+					include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 				?>
 					<div class="article-title">
 						<h3 data-active="<?php echo $data['active']; ?>"><?php echo $data['title']; ?></h3>
@@ -521,16 +517,16 @@ if (@$page_school_id) {
 						<a href="artikel.php">Lihat Semua</a>
 					</div>
 				<?php
-					include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php";
+					include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php"; //NOSONAR
 				} else {
-					include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
+					include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 				?>
 					<p>Artiikel tidak ditemukan.</p>
 					<?php
-					include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php";
+					include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php"; //NOSONAR
 				}
 			} else {
-				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
+				include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 				$sql_filter_article = "";
 				$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 					FROM `edu_article` 
@@ -613,11 +609,11 @@ if (@$page_school_id) {
 				<?php
 					}
 				}
-				include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php";
+				include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php"; //NOSONAR
 			}
 		} else if ($page_tab == 'test') {
 			$cfg->page_title = "Ujian " . $school_name;
-			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php";
+			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 			$array_class = $picoEdu->getArrayClass($page_school_id);
 			$nt = '';
 
@@ -674,7 +670,7 @@ if (@$page_school_id) {
 				</form>
 <?php
 			}
-			include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php";
+			include_once dirname(__FILE__) . "/lib.assets/theme/default/footer-sekolah.php"; //NOSONAR
 		}
 	} else {
 		include_once dirname(__FILE__) . "/lib.assets/theme/default/header-home.php";

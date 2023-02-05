@@ -2,10 +2,10 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 if(!empty(@$school_id))
 {
-$question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);
-$number = kh_filter_input(INPUT_GET, "number", FILTER_SANITIZE_NUMBER_UINT);
-$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' ";
-$stmt = $database->executeQuery($sql);
+    $question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);
+    $number = kh_filter_input(INPUT_GET, "number", FILTER_SANITIZE_NUMBER_UINT);
+    $sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' ";
+    $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);$question_id = $data['question_id'];
