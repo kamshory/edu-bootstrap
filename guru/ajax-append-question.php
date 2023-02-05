@@ -48,8 +48,8 @@ if(!empty(@$school_id))
 					$object = parseQuestion($question);
 					if(isset($object['question']) && isset($object['numbering']) && isset($object['option']))
 					{
-						$content = addslashes(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $base_dir, $base_src)))));
-						$content = $picoEdu->brToNewLineEncoded($content);
+						$content = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $base_dir, $base_src)))));
+						$content = addslashes($picoEdu->brToNewLineEncoded($content));
 						$numbering = addslashes($object['numbering']);
 						$digest = md5($object['question']);
 						$sort_order++;
@@ -71,8 +71,8 @@ if(!empty(@$school_id))
 							{
 								foreach($object['option'] as $option_no=>$option)
 								{
-									$content_option = addslashes(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src)))));
-									$content_option = $picoEdu->brToNewLineEncoded($content_option);
+									$content_option = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src)))));
+									$content_option = addslashes($picoEdu->brToNewLineEncoded($content_option));
 									$order_option = $option_no+1;
 									$score_option = addslashes(@$option['value']*$score_standar); 
 									if($score_option == 0) 

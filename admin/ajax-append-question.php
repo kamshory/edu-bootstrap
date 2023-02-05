@@ -44,7 +44,6 @@ if (!empty(@$school_id) && isset($_POST['question_text']) && isset($_POST['test_
 				if (isset($object['question']) && isset($object['numbering']) && isset($object['option'])) {
 					$content = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $base_dir, $base_src)))));
 
-					//$picoEdu->log($content);
 
 					$content = $picoEdu->brToNewLineEncoded($content);
 					$content = addslashes($content);
@@ -68,8 +67,9 @@ if (!empty(@$school_id) && isset($_POST['question_text']) && isset($_POST['test_
 					} else {
 						if (@is_array($object['option']) && count($object['option'])) {
 							foreach ($object['option'] as $option_no => $option) {
-								$content_option = addslashes(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src)))));
+								$content_option = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src)))));								
 								$content_option = $picoEdu->brToNewLineEncoded($content_option);
+								$content_option = addslashes($content_option);
 								$order_option = $option_no + 1;
 								$score_option = addslashes(@$option['value'] * $score_standar);
 								if ($score_option == 0) {

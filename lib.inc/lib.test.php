@@ -1,5 +1,8 @@
 <?php
-
+if(!isset($cfg))
+{
+	$cfg = new \stdClass;
+}
 $cfg->image_not_exported = array('latex.codecogs.com');
 $cfg->audio_not_exported = array();
 
@@ -507,6 +510,8 @@ function last_index($array)
 {
 	return $array[count($array) - 1];
 }
+/*
+Old code
 function getNumberingType($s1, $s2)
 {
 	$a1 = explode(".", $s1);
@@ -532,6 +537,7 @@ function getNumberingType($s1, $s2)
 
 	return $ret;
 }
+*/
 function delTree($dir, $fileSync)
 {
 	$files = array_diff(scandir($dir), array('.', '..'));
@@ -580,17 +586,67 @@ function optionMatch($opt, $numbering)
 	return -1;
 }
 
+function getNumType($lines)
+{
+	$numberingList = array(
+		'upper-alpha' => array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'),
+		'lower-alpha' => array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'),
+		'upper-roman' => array('I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'),
+		'lower-roman' => array('i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'vii', 'ix', 'x'),
+		'decimal' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
+		'decimal-leading-zero' => array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')
+	);
+	foreach($numberingList as $key1=>$type)
+	{
+		$arrType = array();
+		$lastLine = -1;
+		foreach($lines as $key2=>$line)
+		{
+			if (stripos($line, ".") !== false) {
+				$arr = explode('.', trim($line), 2);
+				$tp = trim($arr[0]);
+				if (in_array($tp, $type) && $key2 > $lastLine) {
+					$arrType[] = $tp;
+				}
+			}
+		}
+		$numbering = matchNumberingType($arrType, $numberingList);
+		if($numbering !== false)
+		{
+			return $numbering;
+		}
+	}
+	return '';
+}
+function matchNumberingType($arrType, $numberingList)
+{
+	foreach($numberingList as $key1=>$type)
+	{
+		if (count($arrType) > 1) {
+			if($type[0] == $arrType[0] && $type[1] == $arrType[1])
+			{
+				return $key1;
+			}
+		}
+	}
+	return false;
+}
+
 function parseQuestion($question) //NOSONAR
 {
 	$question_text = "";
 	$question = str_replace("\\\\\r\n", "<br />", $question); //NOSONAR
 	$lines = explode("\r\n", $question);
+	
 	$question_text = $lines[0];
 	$numbering_type = false;
 	$result = array();
 	$options = array();
+
 	$lineslength = count($lines);
 	if ($lineslength > 2) {
+		/*
+		Old code
 		foreach ($lines as $key => $val) {
 			$lines[$key] = trim($val, " \t\r\n\t "); //NOSONAR
 		}
@@ -602,15 +658,19 @@ function parseQuestion($question) //NOSONAR
 				break;
 			}
 		} while ($numbering == '');
-		$numbering_type = $numbering;
+		//$numbering_type = $numbering;
+		*/
+		$numbering_type = getNumType($lines);
 
-		for ($i = 1, $k = -1; $i < $lineslength - 1; $i++) {
+		$k = -1;
+		for ($i = 1; $i < $lineslength - 1; $i++) {
 			if (stripos($lines[$i], '.') !== false) {
 				$tmp = explode(".", $lines[$i], 2);
 				$opt = trim($tmp[0], " \t\r\n\t ");
 				if (optionMatch($opt, $numbering_type) > -1) {
-					$options[] = array('text' => trim($tmp[1], " \t\r\n\t "), 'value' => 0);
-					$k++; //NOSONAR
+					$texx = $tmp[1];					
+					$options[] = array('text' => trim($texx, " \t\r\n\t "), 'value' => 0);
+					$k++;
 				} else {
 					if ($k == -1) {
 						$question_text .= '<br />' . $lines[$i];
@@ -646,7 +706,9 @@ function parseQuestion($question) //NOSONAR
 					$tmp = explode(".", $lines[$lineslength - 1], 2);
 					$opt = trim($tmp[0], " \t\r\n\t ");
 					if (optionMatch($opt, $numbering_type) > -1) {
-						$options[] = array('text' > trim($tmp[1], " \t\r\n\t "), 'value' => 0);
+						$texx = $tmp[1];
+						
+						$options[] = array('text' > trim($texx, " \t\r\n\t "), 'value' => 0);
 					}
 				}
 			} else {
@@ -654,7 +716,9 @@ function parseQuestion($question) //NOSONAR
 					$tmp = explode(".", $lines[$lineslength - 1], 2);
 					$opt = trim($tmp[0], " \t\r\n\t ");
 					if (optionMatch($opt, $numbering_type) > -1) {
-						$options[] = array('text' => trim($tmp[1], " \t\r\n\t "), 'value' => 0);
+						$texx = $tmp[1];
+						
+						$options[] = array('text' => trim($texx, " \t\r\n\t "), 'value' => 0);
 					}
 				}
 			}
@@ -665,6 +729,7 @@ function parseQuestion($question) //NOSONAR
 		$question_text = trim($question_text, " \r\n ");
 		$question_text = str_replace("\\\\:", ":", $question_text);
 		foreach ($options as $key => $val) {
+			$options[$key]['text'] = detectTable($options[$key]['text']);
 			$options[$key]['text'] = str_replace("\\\\:", ":", $options[$key]['text']);
 		}
 		$question_text = detectTable($question_text);
@@ -682,16 +747,18 @@ function parseQuestion($question) //NOSONAR
 
 function fixing_table($html)
 {
-	$html = str_replace('&lt;table&gt;', "<table>", $html);
-	$html = str_replace('&lt;/table&gt;', "</table>", $html);
-	$html = str_replace('&lt;thead&gt;', "<thead>", $html);
-	$html = str_replace('&lt;/thead&gt;', "</thead>", $html);
-	$html = str_replace('&lt;tbody&gt;', "<tbody>", $html);
-	$html = str_replace('&lt;/tbody&gt;', "</tbody>", $html);
-	$html = str_replace('&lt;tr&gt;', "<tr>", $html);
-	$html = str_replace('&lt;/tr&gt;', "</tr>", $html);
-	$html = str_replace('&lt;td&gt;', "<td>", $html);
-	$html = str_replace('&lt;/td&gt;', "</td>", $html);
+	$html = str_replace('&lt;table border=&quot;1&quot;&gt;', '<table border="1">', $html);
+	$html = str_replace('&lt;table border="1"&gt;', '<table border="1">', $html);
+	$html = str_replace('&lt;table&gt;', '<table>', $html);
+	$html = str_replace('&lt;/table&gt;', '</table>', $html);
+	$html = str_replace('&lt;thead&gt;', '<thead>', $html);
+	$html = str_replace('&lt;/thead&gt;', '</thead>', $html);
+	$html = str_replace('&lt;tbody&gt;', '<tbody>', $html);
+	$html = str_replace('&lt;/tbody&gt;', '</tbody>', $html);
+	$html = str_replace('&lt;tr&gt;', '<tr>', $html);
+	$html = str_replace('&lt;/tr&gt;', '</tr>', $html);
+	$html = str_replace('&lt;td&gt;', '<td>', $html);
+	$html = str_replace('&lt;/td&gt;', '</td>', $html); //NOSONAR
 	return $html;
 }
 
@@ -699,9 +766,15 @@ function fixing_table($html)
 function createLineObject($lineNumber, $lineContent)
 {
 	$nPipe = count(explode('|', $lineContent)) - 1;
-	$x = preg_replace("/[^-\|]/", '', $lineContent);
-	$x2 = preg_replace("/\s/", '', $lineContent);
-	$hasPipeAndDash = $x == $x2 && strlen($x2) > 1;
+	$x1 = preg_replace("/[^-\|]/", '', $lineContent);
+	$x2 = preg_replace("/[^-\|]/", '', $lineContent)."\\";
+	$x4 = preg_replace("/\s/", '', $lineContent);
+
+	$hasPipeAndDash = 
+	($x1 == $x4 && strlen($x4) > 1)
+	|| 
+	($x2 == $x4 && strlen($x4) > 1)
+	;
 	return array(
         'lineNumber'=> ((int) $lineNumber), 
         'content'=> $lineContent, 
@@ -713,7 +786,7 @@ function createLineObject($lineNumber, $lineContent)
     );
 }
 
-function detectTable($html)
+function detectTable($html) //NOSONAR
 {
 	$html2 = $html;
 	$arr = explode("<br />", $html2);
@@ -741,6 +814,7 @@ function detectTable($html)
 		if($inTable && !$lineObj[$i]['pipeDash'] && $lineObj[$i]['pipe'] > 0)
 		{
 			$lineObj[$i]['inTable'] = true;
+			$lineObj[$i]['startTable'] = false;
 			if($i == count($lineObj) - 1)
             {
                 $lineObj[$i]['endTable'] = true;
@@ -751,7 +825,13 @@ function detectTable($html)
 		{
 			$inTable = false;
 			$lineObj[$i-1]['endTable'] = true;
+			$lineObj[$i-1]['startTable'] = false;
 			$tableObj[$j][$i-2]['endTable'] = true;
+			$tableObj[$j][$i-2]['startTable'] = false;
+			$tableObj[$j][$i-2]['lineNumber'] = $lineObj[$i-1]['lineNumber'];
+			$tableObj[$j][$i-2]['inTable'] = $lineObj[$i-1]['inTable'];
+			$tableObj[$j][$i-2]['pipeDash'] = $lineObj[$i-1]['pipeDash'];
+			$tableObj[$j][$i-2]['content'] = $lineObj[$i-1]['content'];
 			$j++;
 		}
 	}
@@ -789,8 +869,7 @@ function detectTable($html)
 			$arr[$tab[$i]['lineNumber']] = $content;
 		}
 	}
-	$text = implode('', $arr);
-	return $text;
+	return implode('', $arr);
 }
 
 function createTableHeader($input)
@@ -798,13 +877,24 @@ function createTableHeader($input)
 	$input = trim($input);
 	$arr = explode('|', $input);
 
-    $content = '<table><thead><tr>';
+    $content = '<table border="1"><thead><tr>';
 	for($i = 0; $i < count($arr); $i++)
 	{
-		if(($i == 0 && $arr[$i] != '') || ($i == count($arr) -1 && $arr[$i] != '') || $arr[$i] != '')
+		if(
+			($i == 0 && $arr[$i] != '') 
+			|| 
+			($i == count($arr) -1 && $arr[$i] != '' && $arr[$i] != '\\') 
+			|| 
+			$arr[$i] != ''
+			)
 		{
 			// start with |
-			$content .= '<td>'.$arr[$i].'</td>';
+			if($i == count($arr) -1 && trim($arr[$i]) == '\\')
+			{
+				// Do nothing
+			} else {
+				$content .= '<td>' . $arr[$i] . '</td>';
+			}
 		}
 	}
 	$content .= '</tr></thead><tbody>';
@@ -817,10 +907,20 @@ function createTableContent($input)
 	$content = '<tr>';
 	for($i = 0; $i < count($arr); $i++)
 	{
-		if(($i == 0 && $arr[$i] != '') || ($i == count($arr) -1 && $arr[$i] != '') || $arr[$i] != '')
+		if(
+			($i == 0 && $arr[$i] != '') 
+			|| 
+			($i == count($arr) -1 && trim($arr[$i]) != '' && trim($arr[$i]) != '\\') 
+			|| 
+			$arr[$i] != ''
+			)
 		{
-			// start with |
-			$content .= '<td>'.$arr[$i].'</td>';
+			if($i == count($arr) -1 && trim($arr[$i]) == '\\')
+			{
+				// Do nothing
+			} else {
+				$content .= '<td>' . $arr[$i] . '</td>';
+			}
 		}
 	}
 	$content .= '</tr>';

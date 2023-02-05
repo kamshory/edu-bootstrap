@@ -17,7 +17,8 @@ if (!empty(@$school_id)) {
 			foreach ($clear_data as $question_no => $question) {
 
 				$object = parseQuestion($question);
-				$isi = nl2br(filter_html(addImages(@$object['question'], $base_dir, $base_src)));
+				$isi = nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $base_dir, $base_src))));
+				// Commented $isi = fixing_table($isi);
 			?>
 				<li class="question-li">
 					<p><?php echo $isi; ?></p>
@@ -32,6 +33,7 @@ if (!empty(@$school_id)) {
 									}?>"></span>
 									<?php
 									$isi_pilihan = nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src))));
+									// Commented $isi_pilihan = fixing_table($isi_pilihan);
 									echo $isi_pilihan;
 									?>
 								</li>

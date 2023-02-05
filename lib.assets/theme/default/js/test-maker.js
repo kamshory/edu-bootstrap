@@ -60,6 +60,8 @@ String.prototype.escapeHTMLEntities = function() {
 }
 String.prototype.restoreTableEntity = function() {
 	return this
+	.replaceAll('&lt;table border=&quot;1&quot;&gt;', '<table border="1">')
+	.replaceAll('&lt;table border="1"&gt;', '<table border="1">')
 	.replaceAll('&lt;table&gt;', "<table>")
 	.replaceAll('&lt;/table&gt;', "</table>")
 	.replaceAll('&lt;thead&gt;', "<thead>")
@@ -563,9 +565,10 @@ function createLineObject(lineNumber, lineContent)
 	return {lineNumber: parseInt(lineNumber), content:lineContent, pipe: nPipe, pipeDash: hasPipeAndDash, startTable:false, inTable:false, endTable:false};
 }
 
-function detectTable(html)
+function detectTable(input)
 {
-	var html2 = html;
+	console.log(input);
+	var html2 = input;
 	var arr = html2.split("<br />");
 	var arr2 = html2.split("<br />");
 	var lineObj = [];
@@ -637,14 +640,16 @@ function detectTable(html)
 			arr[tab[i].lineNumber] = content;
 		}
 	}
-	return arr.join('');
+	let output = arr.join('');
+	console.log(output);
+	return output;
 }
 
 function createTableHeader(input)
 {
 	input = input.trim();
 	var arr = input.split('|');
-	let content = '<table><thead><tr>';
+	let content = '<table border="1"><thead><tr>';
 	for(let i = 0; i < arr.length; i++)
 	{
 		if((i == 0 && arr[i] != '') || (i == arr.length -1 && arr[i] != '') || arr[i] != '')
@@ -735,6 +740,7 @@ function buildQuestionHTML(inObj, parseImg, baseIMGURL)
 				let questionHTML = questionHTML1.escapeHTMLEntities()
 				.restoreBR()
 				.addImage(parseImg, baseIMGURL).restoreTableEntity();
+				console.log(questionHTML)
 
 				html += '\r\n\t<li>'+'<span>'+
 				questionHTML
