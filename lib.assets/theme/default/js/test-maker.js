@@ -6,10 +6,12 @@ if(!('remove' in Element.prototype)) {
         }
     };
 }
+
 String.prototype.replaceAll = function(str1, str2, ignore) 
 {
     return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
 };
+
 String.prototype.trimMask = function(mask) {
 	let s = this.trim();
     while (~mask.indexOf(s[0])) {
@@ -22,11 +24,13 @@ String.prototype.trimMask = function(mask) {
 	s = s.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, ''); //NOSONAR
     return s;
 }
+
 String.prototype.countSubstring = function(subText)
 {
 	let arr = this.split(subText);
 	return arr.length-1;
 }
+
 String.prototype.escapeHTML = function(repAll) {
 	if(typeof repAll == 'undefined')
 	{
@@ -51,13 +55,16 @@ String.prototype.escapeHTML = function(repAll) {
 			.replace(/\n/g, "&lt;br /&gt;");
 	}
 }
+
 String.prototype.restoreBR = function() {
 	return this
 		.replace(/&lt;br \/&gt;/g, " <br />")
 }
+
 String.prototype.escapeHTMLEntities = function() {
 	return escapeHtmlEntities(this);
 }
+
 String.prototype.restoreTableEntity = function() {
 	return this
 	.replaceAll('&lt;table border=&quot;1&quot;&gt;', '<table border="1">')
@@ -73,6 +80,7 @@ String.prototype.restoreTableEntity = function() {
 	.replaceAll('&lt;td&gt;', "<td>")
 	.replaceAll('&lt;/td&gt;', "</td>")
 }
+
 if(typeof escapeHtmlEntities == 'undefined') {
 	escapeHtmlEntities = function (text) {
 		return text.replace(/[\u00A0-\u2666<>\&]/g, function(c) {
@@ -367,10 +375,8 @@ String.prototype.splitWithLimit = function(separator, limit) {
     } 
 	while(m && parts.length < limit - 1);
     parts.push(value.substring(pattern.lastIndex));
-
     return parts;
 }
-
 
 function getNumberingType(opt1, opt2)
 {
@@ -417,10 +423,8 @@ let numberingList = {
 	'decimal-leading-zero' : ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
 };
 
-
 function getNumType(lines)
 {
-
 	for(let key1 in numberingList)
 	{
 		if(numberingList.hasOwnProperty(key1))
@@ -614,7 +618,6 @@ function createLineObject(lineNumber, lineContent)
 
 function detectTable(input)
 {
-	console.log(input);
 	var html2 = input;
 	var arr = html2.split("<br />");
 	var arr2 = html2.split("<br />");
@@ -687,9 +690,7 @@ function detectTable(input)
 			arr[tab[i].lineNumber] = content;
 		}
 	}
-	let output = arr.join('');
-	console.log(output);
-	return output;
+	return arr.join('');
 }
 
 function createTableHeader(input)
@@ -781,13 +782,10 @@ function buildQuestionHTML(inObj, parseImg, baseIMGURL)
 			for(i in inObj)
 			{
 				let questionHTML1 = inObj[i].question;
-
 				questionHTML1 = detectTable(questionHTML1);
-
 				let questionHTML = questionHTML1.escapeHTMLEntities()
 				.restoreBR()
 				.addImage(parseImg, baseIMGURL).restoreTableEntity();
-				console.log(questionHTML)
 
 				html += '\r\n\t<li>'+'<span>'+
 				questionHTML
@@ -975,7 +973,6 @@ String.prototype.addImage = function(image, base){
 			str = str.replace(txt, imghtml);
 		}
 		// end audio
-
 
 		// begin video
 		arrayX = str.match(/(?:^|)video:([a-zA-Z\S]+)/gi); //NOSONAR
