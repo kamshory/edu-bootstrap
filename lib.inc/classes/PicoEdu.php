@@ -1089,19 +1089,6 @@ class PicoEdu //NOSONAR
 
 	}
 
-	public function getSchoolGradeName($grade_id)
-	{
-		$arr = array(
-			'1'=>'Play Group',
-			'2'=>'Taman Kanak-Kanak',
-			'3'=>'SD Sederajat',
-			'4'=>'SMP Sederajat',
-			'5'=>'SMA Sederajat',
-			'6'=>'Perguruan Tinggi'
-		);
-		return isset($arr[$grade_id]) ? $arr[$grade_id] : '';
-	}
-
 	public function ifMatch($v1, $v2, $out)
 	{
 		return $v1 == $v2 ? $out : '';
@@ -1111,18 +1098,20 @@ class PicoEdu //NOSONAR
 	{
 		return $val ? $trueVal : $falseVal;
 	}
+
 	public function selectFromMap($value, $map)
 	{
-		if($value == null || $map == null || !is_array($value))
+		if($value == null || $map == null || !is_array($map))
 		{
 			return "";
 		}
 		if(isset($map[$value]))
 		{
-			return $map[$value];
+			return $map[trim($value)];
 		}
 		return "";
 	}
+
 	public function getRowClass($data)
 	{
 		if(!isset($data) || empty($data))
@@ -1151,19 +1140,16 @@ class PicoEdu //NOSONAR
 		}
 		return trim(implode(' ', $rowclass)); 
 	}
-
-	public function getSchoolGradeName($school_grade_id)
+	public function getSchoolGradeName($grade_id)
 	{
-		return $this->selectFromMap(
-			$school_grade_id,
-			array(
-			'1', 'Play Group',
-			'2', 'Taman Kanak-Kanak',
-			'3', 'SD Sederajat',
-			'4', 'SMP Sederajat',
-			'5', 'SMA Sederajat',
-			'6', 'Perguruan Tinggi'
-			)
+		$arr = array(
+			'1'=>'Play Group',
+			'2'=>'Taman Kanak-Kanak',
+			'3'=>'SD Sederajat',
+			'4'=>'SMP Sederajat',
+			'5'=>'SMA Sederajat',
+			'6'=>'Perguruan Tinggi'
 		);
+		return isset($arr[$grade_id]) ? $arr[$grade_id] : '';
 	}
 }
