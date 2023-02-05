@@ -70,7 +70,6 @@ class PicoEdu //NOSONAR
 		return false;
 	}
 
-	
 	public function timeToText($tm) //NOSONAR
 	{
 		global $language_res;
@@ -176,7 +175,6 @@ class PicoEdu //NOSONAR
 		$username = "";
 		while ($oke === false || $oke == '') {
 			$username = $oke = $this->isValidUsername($uname);
-			$this->log($oke." ".__LINE__);
 			if ($oke == '' || $oke === false) {
 				$uname = $uname . mt_rand(11, 99);
 				$username = $uname;
@@ -187,7 +185,7 @@ class PicoEdu //NOSONAR
 			FROM `member` 
 			WHERE `name` like '$name' and `birth_day` like '$birth_day' 
 			";
-		$this->log(__LINE__." ".$sql);
+		
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount()) {
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -207,7 +205,7 @@ class PicoEdu //NOSONAR
 			('$member_id', '$name', '$username', '$email', '$gender', '$birth_day', '$password', '$auth', '$language', '$phone', '$country_id', 
 			'$now', '$ip', '$now', '$ip', '$now', '1');
 			";
-			$this->log(__LINE__." ".$sql);
+			
 			$this->database->executeInsert($sql, true);
 			
 			return array(
@@ -577,8 +575,6 @@ class PicoEdu //NOSONAR
 			return "1.0.0";
 		}
 	}
-
-
 
 	public function generateToken($count = 1, $length = 6)
 	{

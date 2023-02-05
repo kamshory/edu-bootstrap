@@ -392,7 +392,7 @@ function printToken(frm)
 <select name="test_id" id="test_id">
 	<option value=""></option>
     <?php
-	$sql = "SELECT * FROM `edu_test`
+	$sql2 = "SELECT * FROM `edu_test`
 	WHERE `school_id` = '$school_id'
 	and (`test_availability` = 'F' or `available_to` > '$now')
 	ORDER BY `test_id` desc

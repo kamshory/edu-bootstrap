@@ -510,7 +510,7 @@ if (@$auth_student_id && @$auth_school_id) {
 				<select class="form-control input-select" name="class_id" id="class_id">
 					<option value="">- Pilih Kelas -</option>
 					<?php
-					$sql = "SELECT * FROM `edu_class` WHERE `school_id` = '$school_id' ";				
+					$sql2 = "SELECT * FROM `edu_class` WHERE `school_id` = '$school_id' ";				
 					echo $picoEdu->createFilterDb(
 						$sql2,
 						array(
