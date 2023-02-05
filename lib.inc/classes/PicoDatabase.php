@@ -12,6 +12,7 @@ class PicoDatabaseServer
 		$this->port = $port;
 	}
 }
+
 class PicoDatabaseSyncConfig
 {
 	public $sync_database_base_dir = '';
@@ -53,6 +54,7 @@ class PicoDatabaseSyncConfig
 	}
 
 }
+
 class PicoDatabase
 {
 
