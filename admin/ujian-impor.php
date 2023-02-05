@@ -126,7 +126,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 			{
 				// Format Plain				
 				$clear_data = parseRawQuestion($xml_data);
-				$database->executeQuery('start transaction');
+				$database->executeTransaction("start transaction", true);
 				$oke = 1;
 				foreach($clear_data as $question_no=>$question)
 				{
@@ -183,11 +183,11 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 				}
 				if($oke)
 				{
-					$database->executeQuery('commit');
+					$database->executeTransaction("commit", true);
 				}
 				else
 				{
-					$database->executeQuery('rollback');
+					$database->executeTransaction("rollback", true);
 				}
 			}
 			else
@@ -494,7 +494,7 @@ WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
 
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();
-$stmt = $database->executeQuery($sql.$pagination->limit_sql);
+$stmt = $database->executeQuery($sql . $pagination->limit_sql);
 
 $pagination->total_record_with_limit = $stmt->rowCount();
 if($pagination->total_record_with_limit > 0)

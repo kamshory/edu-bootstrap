@@ -186,7 +186,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$stmt3 = $database->executeQuery($sql3);
 	if($stmt3->rowCount() == 0)
 	{
-		$database->executeQuery('start transaction');
+		$database->executeTransaction("start transaction", true);
 		$question_id = $database->generateNewId();
 
 		$sql = "INSERT INTO `edu_question` 
@@ -1119,7 +1119,7 @@ WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();
-$stmt = $database->executeQuery($sql.$pagination->limit_sql);
+$stmt = $database->executeQuery($sql . $pagination->limit_sql);
 
 $pagination->total_record_with_limit = $stmt->rowCount();
 if($pagination->total_record_with_limit > 0)

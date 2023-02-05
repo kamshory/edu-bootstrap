@@ -213,7 +213,7 @@ WHERE `edu_member_school`.`member_id` = '$admin_id' and `edu_member_school`.`rol
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();
-$stmt = $database->executeQuery($sql.$pagination->limit_sql);
+$stmt = $database->executeQuery($sql . $pagination->limit_sql);
 $pagination->total_record_with_limit = $stmt->rowCount();
 if($pagination->total_record_with_limit)
 {

@@ -564,7 +564,7 @@ if (@$auth_student_id && @$auth_school_id) {
 
 			$stmt = $database->executeQuery($sql_test);
 			$pagination->total_record = $stmt->rowCount();
-			$stmt = $database->executeQuery($sql.$pagination->limit_sql);
+			$stmt = $database->executeQuery($sql . $pagination->limit_sql);
 			$pagination->total_record_with_limit = $stmt->rowCount();
 			if ($pagination->total_record_with_limit) {
 				$pagination->start = $pagination->offset + 1;
@@ -732,7 +732,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 
 		$stmt = $database->executeQuery($sql_test);
 		$pagination->total_record = $stmt->rowCount();
-		$stmt = $database->executeQuery($sql.$pagination->limit_sql);
+		$stmt = $database->executeQuery($sql . $pagination->limit_sql);
 		$pagination->total_record_with_limit = $stmt->rowCount();
 		if ($pagination->total_record_with_limit) {
 			$pagination->start = $pagination->offset + 1;
@@ -892,7 +892,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 		";
 		$stmt = $database->executeQuery($sql_test);
 		$pagination->total_record = $stmt->rowCount();
-		$stmt = $database->executeQuery($sql.$pagination->limit_sql);
+		$stmt = $database->executeQuery($sql . $pagination->limit_sql);
 		$pagination->total_record_with_limit = $stmt->rowCount();
 		if ($pagination->total_record_with_limit) {
 			$pagination->start = $pagination->offset + 1;

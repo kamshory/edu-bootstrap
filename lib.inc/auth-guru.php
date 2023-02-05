@@ -7,12 +7,12 @@ $password = '';
 
 if(isset($_SESSION['teacher_username']))
 {
-$username = $_SESSION['teacher_username'];
+	$username = $_SESSION['teacher_username'];
 }
 
 if(isset($_SESSION['teacher_password']))
 {
-$password = $_SESSION['teacher_password'];
+	$password = $_SESSION['teacher_password'];
 }
 
 $teacher_login = new \TeacherAuth($database, $username, $password, false);

@@ -404,7 +404,7 @@ where (`edu_article`.`member_create` = '$teacher_id' or `edu_article`.`active` =
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();
-$stmt = $database->executeQuery($sql.$pagination->limit_sql);
+$stmt = $database->executeQuery($sql . $pagination->limit_sql);
 $pagination->total_record_with_limit = $stmt->rowCount();
 if($pagination->total_record_with_limit)
 {

@@ -3,7 +3,6 @@ include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 if(!empty(@$school_id))
 {
-	$school_id = @$school_id . '';
 	$basename = "ujian-soal.php";
 	if(isset($_POST['question_text']) && isset($_POST['test_id']) && @$_POST['option']=='add')
 	{
@@ -41,7 +40,7 @@ if(!empty(@$school_id))
 				$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 				
 				$base_src = "media.edu/school/$school_id/test/$test_id";
-				$database->executeQuery('start transaction');
+				$database->executeTransaction("start transaction", true);
 				$oke = 1;
 				foreach($clear_data as $question_no=>$question)
 				{
@@ -97,11 +96,11 @@ if(!empty(@$school_id))
 				}
 				if($oke)
 				{
-					$database->executeQuery('commit');
+					$database->executeTransaction("commit", true);
 				}
 				else
 				{
-					$database->executeQuery('rollback');
+					$database->executeTransaction("rollback", true);
 				}
 				$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ";
 				$stmt = $database->executeQuery($sql);

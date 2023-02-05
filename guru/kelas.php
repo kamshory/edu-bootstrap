@@ -108,7 +108,7 @@ WHERE `edu_class`.`active` = true and `edu_class`.`school_id` = '$school_id' $sq
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();
-$stmt = $database->executeQuery($sql.$pagination->limit_sql);
+$stmt = $database->executeQuery($sql . $pagination->limit_sql);
 $pagination->total_record_with_limit = $stmt->rowCount();
 if($pagination->total_record_with_limit)
 {
