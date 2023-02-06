@@ -376,11 +376,16 @@ if($collection)
 	}
 }
 
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' ORDER BY `sort_order` asc ";
+$sqlc = "SELECT `edu_class`.`class_id`, `edu_class`.`name` 
+FROM `edu_class` 
+LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = `edu_class`.`school_program_id`)
+WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id' and `edu_class`.`name` != '' 
+ORDER BY `edu_school_program`.`sort_order` asc , `edu_class`.`sort_order` asc 
+";
 $stmt = $database->executeQuery($sqlc);
 if($stmt->rowCount() > 0)
 {
-	$arrc = $stmt->fetch(PDO::FETCH_ASSOC);
+	$arrc = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 <style type="text/css">
@@ -405,7 +410,9 @@ input#duration{
 		<td>Kelas
 		</td>
         <td><input type="hidden" name="classlist" id="classlist" autocomplete="off" />
-        <input class="btn btn-sm btn-primary" type="button" id="select-class" value="Atur Kelas" />
+		<button type="button" class="btn btn-primary" id="select-class">
+		Atur Kelas
+		</button>
         </td>
 		</tr>
 		<tr>
@@ -567,7 +574,7 @@ input#duration{
 		</td>
 		</tr>
 		</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
 		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
@@ -576,7 +583,7 @@ input#duration{
 </form>
 <script type="text/javascript">
 var classList = <?php echo json_encode($arrc);?>;
-function updateGoggle()
+function updateToggle()
 {
 	$('.toggle-tr').each(function(index, element) {
 		var row = $(this)
@@ -644,24 +651,22 @@ function buildClassOption(list, value){
 function selectClass()
 {
 	var val = $('#formedu_test #classlist').val();
-	var html = ''+
-	'<div class="overlay-dialog-area">\r\n'+
-	'	<h3>Pilih Kelas</h3>\r\n'+
-	'    <div class="select-class-area">\r\n'+
-	buildClassOption(classList, val)+
-	'    </div>\r\n'+
-	'    <div class="button-area" style="text-align:center">\r\n'+
-	'    	<input type="button" class="btn com-button btn-success" id="update-class" value="Terapkan" />\r\n'+
-	'    	<input type="button" class="btn com-button btn-success" id="cancel-class" value="Batalkan" />\r\n'+
-	'    </div>\r\n'+
-	'</div>\r\n';
-	overlayDialog(html, 400, 360);
-	$('.class-item').each(function(index, element) {
-        $(this).find('a').on('click', function(e){
-			$(this).parent().toggleClass('class-item-selected');
-			e.preventDefault();
-		});
-    });
+	$('#class-list-container').empty().append(buildClassOption(classList, val));
+	$('#select-class-modal').modal('show');
+}
+$(document).ready(function(e) {
+    setTimeout(function(){
+		initToggle();
+		updateToggle();
+	}, 100);
+    setTimeout(function(){
+		var duration = parseInt(parseInt($('#duration').val() || '0')/60);
+		$('#duration').val(duration);
+	}, 500);
+	$(document).on('click', '#select-class', function(e){
+		selectClass();
+		e.preventDefault();
+	}); 
 	$('#update-class').on('click', function(e){
 		var arr = [];
 		$('.class-item').each(function(index, element) {
@@ -673,29 +678,32 @@ function selectClass()
 		$('#formedu_test #classlist').val(arr.join(','));
 		closeOverlayDialog();
 	});
-	$('#cancel-class').on('click', function(e){
-		closeOverlayDialog();
-	});
-}
-$(document).ready(function(e) {
-    setTimeout(function(){
-		initToggle();
-		updateGoggle();
-	}, 100);
-    setTimeout(function(){
-		var duration = parseInt(parseInt($('#duration').val() || '0')/60);
-		$('#duration').val(duration);
-	}, 500);
-	$(document).on('click', '#select-class', function(e){
-		selectClass();
-		e.preventDefault();
-	}); 
-	
 		
 });
 
 </script>
 <?php getDefaultValues($database, 'edu_test', array('open','has_limits','trial_limits','threshold','assessment_methods','number_of_question','number_of_option','question_per_page','random','duration','has_alert','alert_time','standard_score','penalty','score_notification','publish_answer','test_availability','active')); ?>
+
+<!-- Modal -->
+<div class="modal fade" id="select-class-modal" tabindex="-1" role="dialog" aria-labelledby="selectClassTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="selectClassTitle">Pilih Kelas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="class-list-container"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
+        <button type="button" class="btn btn-primary">Terapkan</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?php
 include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
@@ -732,7 +740,7 @@ input#duration{
 </style>
 <script type="text/javascript">
 var classList = <?php echo json_encode($arrc);?>;
-function updateGoggle()
+function updateToggle()
 {
 	$('.toggle-tr').each(function(index, element) {
 		var row = $(this)
@@ -836,7 +844,7 @@ function selectClass()
 $(document).ready(function(e) {
     setTimeout(function(){
 		initToggle();
-		updateGoggle();
+		updateToggle();
 	}, 100);
 	$(document).on('click', '#select-class', function(e){
 		selectClass();
