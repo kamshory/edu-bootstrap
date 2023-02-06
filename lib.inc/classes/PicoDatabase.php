@@ -93,10 +93,11 @@ class PicoDatabase
 				$this->username, 
 				$this->password,
 				array(
-					PDO::MYSQL_ATTR_INIT_COMMAND =>"SET time_zone = '$timezone_str'"
+					\PDO::MYSQL_ATTR_INIT_COMMAND =>"SET time_zone = '$timezone_str';",
+					\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
 					)
 			);
-			$this->conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+
 			$ret = true;
 
 
@@ -137,7 +138,7 @@ class PicoDatabase
 		return $stmt;
 	}
 
-	public function executeInsert($sql, $sync = false) : \PDOStatement
+	public function executeInsert($sql, $sync) : \PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -153,7 +154,7 @@ class PicoDatabase
 		}
 		return $stmt;
 	}
-	public function executeUpdate($sql, $sync = false) : \PDOStatement
+	public function executeUpdate($sql, $sync) : \PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -169,7 +170,7 @@ class PicoDatabase
 		}
 		return $stmt;
 	}
-	public function executeDelete($sql, $sync = false) : \PDOStatement
+	public function executeDelete($sql, $sync) : \PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -185,7 +186,7 @@ class PicoDatabase
 		}
 		return $stmt;
 	}
-	public function executeTransaction($sql, $sync = false) : \PDOStatement
+	public function executeTransaction($sql, $sync) : \PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -219,12 +220,11 @@ class PicoDatabase
 	public function generateNewId()
 	{
 		$uuid = uniqid();
-		while((strlen($uuid) % 2) == 1)
+		if((strlen($uuid) % 2) == 1)
 		{
 			$uuid = '0'.$uuid;
 		}
 		$random = sprintf('%06x', mt_rand(0, 16777215));
-
 		return sprintf('%s%s', $uuid, $random);
 	}
 }
