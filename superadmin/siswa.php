@@ -35,7 +35,6 @@ if(count(@$_POST) && isset($_POST['save']))
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
-	$admin_create = $admin_edit = $admin_id;
 }
 
 if(isset($_POST['set_active']) && isset($_POST['student_id']))

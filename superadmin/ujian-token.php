@@ -26,7 +26,6 @@ if(count(@$_POST) && isset($_POST['save']))
 	$student_id = kh_filter_input(INPUT_POST, "student_id", FILTER_SANITIZE_STRING_NEW);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$time_expire = kh_filter_input(INPUT_POST, "time_expire", FILTER_SANITIZE_STRING_NEW);
-	$admin_create = $admin_id;
 	$admin_edit = $admin_id;
 	$active = 1;
 }
