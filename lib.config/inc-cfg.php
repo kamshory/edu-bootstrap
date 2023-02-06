@@ -23,7 +23,6 @@ $configs->db_user = "root";
 $configs->db_pass = "alto1234";
 $configs->db_name = "mini_picopi";
 $configs->db_time_zone = "Asia/Jakarta";
-$configs->db_time_zone = "Asia/Jakarta";
 $configs->sync_database_base_dir = dirname(dirname(__FILE__))."/lib.sync/database/pool";
 $configs->sync_database_pool_name = "pool";
 $configs->sync_database_rolling_prefix = "poll_";
@@ -45,7 +44,6 @@ $cfg->cdn_jquery = $cfg->base_assets."lib.assets/script/jquery/jquery.min.js";
 
 $cfg->base_avatar = "http://".$_SERVER['SERVER_NAME']."/media.images/";
 $cfg->base_images = "http://".$_SERVER['SERVER_NAME']."/media.images/";
-$cfg->base_languages = "http://".$_SERVER['SERVER_NAME']."/lib.languages/";
 $cfg->base_url = 'http://'.$_SERVER['SERVER_NAME'].'/';
 $cfg->meta_description = "Planet Edu merupakan sekolah virtual yang dapat dimanfaatkan oleh sekolah, guru dan siswa untuk pengayaan materi dan ujian online. Planet Edu bukanlan sistem informasi akademik karena sebenarnya Planet Edu merupakan media sosial yang mendukung pendidikan.";
 
@@ -64,7 +62,6 @@ $cfg->cdn_jquery = $cfg->base_assets."lib.assets/script/jquery/jquery.min.js";
 Old config
 $cfg->base_avatar = "http://".$_SERVER['SERVER_NAME']."/media.images/";
 $cfg->base_images = "http://".$_SERVER['SERVER_NAME']."/media.images/";
-$cfg->base_languages = "http://".$_SERVER['SERVER_NAME']."/lib.languages/";
 $cfg->base_url = 'http://'.$_SERVER['SERVER_NAME'].'/';
 */
 
@@ -72,7 +69,6 @@ $cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
 $cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
 $cfg->base_avatar = "/media.images/";
 $cfg->base_images = "/media.images/";
-$cfg->base_languages = "/lib.languages/";
 
 
 $cfg->language_id = 'id';

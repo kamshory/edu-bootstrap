@@ -21,7 +21,7 @@ if (!empty(@$school_id) && isset($_POST['question_text']) && isset($_POST['test_
 		if ($stmt->rowCount() > 0) {
 			$time_create = $picoEdu->getLocalDateTime();
 			$time_edit = $picoEdu->getLocalDateTime();
-			$member_create = $admin_id;
+			
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			$random = ((int) $data['random']);
 			$sort_order = ((int) $data['sort_order']);

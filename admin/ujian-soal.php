@@ -178,9 +178,6 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$time_create = $picoEdu->getLocalDateTime();
 	$time_edit = $picoEdu->getLocalDateTime();
 	
-	$member_create = @$admin_login->admin_id.'';
-	$member_edit = @$admin_login->admin_id.'';
-	
 	$digest = md5($question);
 	$sql3 = "SELECT * FROM `edu_question` WHERE `digest` = '$digest' and `test_id` = '$test_id' ";
 	$stmt3 = $database->executeQuery($sql3);

@@ -646,7 +646,6 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 	exit();
 }
 
-
 $cfg->page_title = "Impor Data";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 

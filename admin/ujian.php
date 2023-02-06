@@ -13,9 +13,6 @@ if(empty(@$real_school_id))
 $school_id = @$school_id . '';
 $real_school_id = @$real_school_id . '';
 
-$member_create = @$admin_login->admin_id . '';
-$member_edit = @$admin_login->admin_id . '';
-
 $cfg->page_title = "Ujian";
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";

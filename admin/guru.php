@@ -33,7 +33,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$admin_create = $admin_edit = $admin_login->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
-	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_INT);
+	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_INT);
 }
 
@@ -437,7 +437,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Blokir</td>
-		<td><?php echo $data['blocked']?'Ya':'Tidak';?> </td>
+		<td><?php echo $picoEdu->trueFalse($data['blocked'], 'Ya', 'Tidak')?> </td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
@@ -562,7 +562,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td><?php echo $picoEdu->selectFromMap($data['gender'], array('M'=>'L', 'W'=>'P'));?> </td>
       <td><?php echo $data['phone'];?> </td>
       <td><?php echo $data['email'];?> </td>
-      <td><?php echo $data['blocked']?'Ya':'Tidak';?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['blocked'], 'Ya', 'Tidak')?> </td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php

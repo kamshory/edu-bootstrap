@@ -26,7 +26,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$admin_create = $admin_edit = $admin_login->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
-	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_INT);
+	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_INT);
 	
 	if($admin_id2 == $admin_login->admin_id)

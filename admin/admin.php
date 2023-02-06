@@ -28,7 +28,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$admin_create = $admin_edit = $admin_login->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
-	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_INT);
+	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_INT);
 	
 	if($admin_id2 == $admin_login->admin_id)
@@ -411,7 +411,7 @@ else if(@$_GET['option'] == 'detail')
 			</tr>
 			<tr>
 			<td>Blokir</td>
-			<td><?php echo $data['blocked']?'Ya':'Tidak';?> </td>
+			<td><?php echo $picoEdu->trueFalse($data['blocked'], 'Ya', 'Tidak')?> </td>
 			</tr>
 			<tr>
 			<td>Aktif</td>
@@ -539,7 +539,7 @@ else
 			<td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['name'];?></a></td>
 			<td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['gender'];?></a></td>
 			<td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&admin_id=<?php echo $data['admin_id'];?>"><?php echo $data['email'];?></a></td>
-			<td><?php echo $data['blocked']?'Ya':'Tidak';?> </td>
+			<td><?php echo $picoEdu->trueFalse($data['blocked'], 'Ya', 'Tidak')?> </td>
 			<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 			</tr>
 			<?php
