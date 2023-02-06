@@ -202,8 +202,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			$basename = $data['file_path'];
 			$file_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$basename;
 			if(file_exists($file_path))
-			{
-	
+			{	
 				$sql = "SELECT `edu_test`.*, 
 				(select `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` desc limit 0,1) as `sort_order`
 				FROM `edu_test`
@@ -276,9 +275,9 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 								$question_id = $database->generateNewId();		
 
 								$sql1 = "INSERT INTO `edu_question` 
-								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('$question_id', '$pertanyaan', '$test_id', true, '$sort_order', '$random', '$numbering', '$digest', '$competence',
+								('$question_id', '$pertanyaan', '$school_id', '$test_id', true, '$sort_order', '$random', '$numbering', '$digest', '$competence',
 								'$time_create', '$member_create', '$time_edit', '$member_edit')
 								";
 								$database->executeInsert($sql1, true);
@@ -320,11 +319,11 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 										$option_id = $database->generateNewId();
 										
 										$sql2 = "INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('$option_id', '$question_id', '$school_id', '$test_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')
 										";
 										
-										$database->executeInsert($sql2);
+										$database->executeInsert($sql2, true);
 									}
 								}
 							}

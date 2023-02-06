@@ -13,7 +13,6 @@ if(count(@$_POST) && isset($_POST['save']))
 	$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
 	$address = kh_filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
-	$admin_create = $admin_edit = $teacher_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 }
 
@@ -108,7 +107,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</td><td><textarea name="address" class="form-control input-text input-text-long" id="address" autocomplete="off"><?php echo $data['address'];?></textarea></td>
 		</tr>
 		</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr><td></td>
 		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> 
         <input type="button" name="showall" id="showall" value="Tampilkan" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>

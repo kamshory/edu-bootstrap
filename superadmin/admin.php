@@ -130,7 +130,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			(`member_id`, `school_id`, `role`, `time_create`, `active`) values
 			('$admin_id', '$school_id', 'A', '$time_create', true)
 			";
-			$res2 = $database->executeInsert($sql2);
+			$res2 = $database->executeInsert($sql2, true);
 			header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&admin_id=$admin_id");
 		} else {
 			// DO nothing
@@ -180,7 +180,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 			(`member_id`, `school_id`, `role`, `time_create`, `active`) values
 			('$admin_id', '$school_id', 'A', '$time_create', true)
 			";
-			$database->executeInsert($sql2);
+			$database->executeInsert($sql2, true);
 		}
 	}
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&admin_id=$admin_id");

@@ -76,7 +76,6 @@ if(count(@$_POST) && isset($_POST['save']))
   }
 
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
-	$member_create = $member_edit = $teacher_id;
 	$role_create = $role_edit = 'T';
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 
@@ -181,7 +180,6 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$selection_index = json_decode($selection);
 		include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 		$time_create = $time_edit = $picoEdu->getLocalDateTime();	
-		$member_create = $member_edit = $teacher_id;
 		
 		
 		$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' and `active` = true ";
@@ -265,9 +263,9 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 								
 								$question_id = $database->generateNewId();		
 								$sql1 = "INSERT INTO `edu_question` 
-								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`, 
+								(`question_id`, `content`, `test_id`, `school_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`, 
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('$question_id', '$pertanyaan', '$test_id', true, '$sort_order', '$random', '$numbering', '$digest', '$competence',
+								('$question_id', '$pertanyaan', '$test_id', '$school_id', true, '$sort_order', '$random', '$numbering', '$digest', '$competence',
 								'$time_create', '$member_create', '$time_edit', '$member_edit')
 								";
 								$res1 = $database->executeInsert($sql1, true);
@@ -308,11 +306,11 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 										$option_id = $database->generateNewId();
 
 										$sql2 = "INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('$option_id', '$question_id', '$school_id', '$test_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')
 										";
 										
-										$res2 = $database->executeInsert($sql2);
+										$res2 = $database->executeInsert($sql2, true);
 									}
 								}
 							}

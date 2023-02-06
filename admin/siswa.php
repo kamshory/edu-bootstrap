@@ -131,7 +131,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) values
 		('$student_id', '$school_id', 'S', '$class_id', '$time_create', true)
 		";
-		$database->executeInsert($sql2);
+		$database->executeInsert($sql2, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&student_id=$student_id");
 	}
 }

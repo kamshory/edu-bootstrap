@@ -8,7 +8,6 @@ include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 
 $time_create = $time_edit = $picoEdu->getLocalDateTime();
-$member_create = $member_edit = $teacher_id;
 
 if(isset($_POST['data']))
 {

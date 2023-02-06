@@ -140,7 +140,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				(`member_id`, `school_id`, `role`, `time_create`, `active`) values
 				('$teacher_id', '$school_id', 'T', '$time_create', true)
 				";
-				$database->executeInsert($sql2);
+				$database->executeInsert($sql2, true);
 
 				$sql3 = "UPDATE `edu_teacher` SET `school_id` = '$school_id' WHERE `teacher_id` = '$teacher_id' 
 				and (`school_id` = '' or `school_id` is null)

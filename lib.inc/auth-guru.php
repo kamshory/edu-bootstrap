@@ -34,8 +34,8 @@ if($teacher_login->teacher_id)
 		= $auth_teacher_id 
 		= $member_create
 		= $member_edit
-		= $admin_create
-		= $admin_edit
+		= $teacher_create
+		= $teacher_edit
 		= $teacher_login->teacher_id . '';
 	$school_id 
 		= $auth_school_id 

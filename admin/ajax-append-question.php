@@ -83,7 +83,7 @@ if (!empty(@$school_id) && isset($_POST['question_text']) && isset($_POST['test_
 								('$option_id', '$question_id', '$content_option', '$order_option', '$score_option', 
 								'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 								";
-								$stmt2 = $database->executeInsert($sql2);
+								$stmt2 = $database->executeInsert($sql2, true);
 								if ($stmt2->rowCount() == 0) {
 									$oke = $oke * 0;
 								}

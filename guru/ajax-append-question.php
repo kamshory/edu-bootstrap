@@ -25,8 +25,6 @@ if(!empty(@$school_id))
 			    $data = $stmt->fetch(PDO::FETCH_ASSOC);
 				$time_create = $picoEdu->getLocalDateTime();
 				$time_edit = $picoEdu->getLocalDateTime();
-				$member_create = $teacher_id;
-				$member_edit = $teacher_id;
 				$random = ((int) $data['random']);
 				$sort_order = ((int) $data['sort_order']);
 				$score_standar = $data['standard_score'];
@@ -84,7 +82,7 @@ if(!empty(@$school_id))
 									('$question_id', '$content_option', '$order_option', '$score_option', 
 									'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 									";
-									$stmt2 = $database->executeInsert($sql2);
+									$stmt2 = $database->executeInsert($sql2, true);
 									if($stmt2->rowCount() == 0)
 									{
 										$oke = $oke * 0;
