@@ -15,8 +15,6 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	$selection_index = json_decode($selection);
 	
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();	
-	$member_create = $member_edit = $admin_id;
-	
 	
 	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' and `active` = true ";
 	$stmt = $database->executeQuery($sql);

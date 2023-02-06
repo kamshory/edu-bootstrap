@@ -322,3 +322,75 @@ INSERT INTO `edu_question`
 </tr></tbody></table><p>Modus dari data tabel distribusi frekuensi di atas adalah ....</p>', '063e0552d4ae6cef6c24', true, '2', '1', 'upper-alpha', '9de0c65da5b9000c5820d91985a94868', '',
 								'2023-02-06 08:17:33', 'aaaaaaaaaaaaa', '2023-02-06 08:17:33', 'aaaaaaaaaaaaa')
 								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` 
+			set `time_edit` = '2023-02-06 19:05:42', `member_edit` = '' 
+			WHERE `question_id` = '063e0552d59530fe152e';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:05:42', `member_edit` = '' 
+					WHERE `question_id` = '063e0552d59530fe152e' and `option_id` = '063e0552d59e815faf22';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:05:42', `member_edit` = '' 
+					WHERE `question_id` = '063e0552d59530fe152e' and `option_id` = '063e0552d5a733af2e59';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:05:42', `member_edit` = '' 
+					WHERE `question_id` = '063e0552d59530fe152e' and `option_id` = '063e0552d5b0774e61ff';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:05:42', `member_edit` = '' 
+					WHERE `question_id` = '063e0552d59530fe152e' and `option_id` = '063e0552d5bb34c098fd';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:05:42', `member_edit` = '' 
+					WHERE `question_id` = '063e0552d59530fe152e' and `option_id` = '063e0552d5c440257e4d';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` 
+			set `time_edit` = '2023-02-06 19:10:40', `member_edit` = '' 
+			WHERE `question_id` = '063e0552d53467b107fc';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:10:40', `member_edit` = '' 
+					WHERE `question_id` = '063e0552d53467b107fc' and `option_id` = '063e0552d53e6a46a486';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:10:40', `member_edit` = '' 
+					WHERE `question_id` = '063e0552d53467b107fc' and `option_id` = '063e0552d546b08f12ba';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:10:40', `member_edit` = '' 
+					WHERE `question_id` = '063e0552d53467b107fc' and `option_id` = '063e0552d54db56df29d';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:10:40', `member_edit` = '' 
+					WHERE `question_id` = '063e0552d53467b107fc' and `option_id` = '063e0552d556986d87d7';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:10:40', `member_edit` = '' 
+					WHERE `question_id` = '063e0552d53467b107fc' and `option_id` = '063e0552d55e24a24d58';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` 
+			set `time_edit` = '2023-02-06 19:13:34', `member_edit` = 'aaaaaaaaaaaaa' 
+			WHERE `question_id` = '063e0552d59530fe152e';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:13:34', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e0552d59530fe152e' and `option_id` = '063e0552d59e815faf22';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:13:34', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e0552d59530fe152e' and `option_id` = '063e0552d5a733af2e59';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:13:34', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e0552d59530fe152e' and `option_id` = '063e0552d5b0774e61ff';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:13:34', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e0552d59530fe152e' and `option_id` = '063e0552d5bb34c098fd';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					set `time_edit` = '2023-02-06 19:13:34', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e0552d59530fe152e' and `option_id` = '063e0552d5c440257e4d';

@@ -20,7 +20,6 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 {
 	// sesuai dengan login masing-masning
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();	
-	$member_create = $member_edit = $admin_id;
 	//
 	
 	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);

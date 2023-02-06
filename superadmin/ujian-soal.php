@@ -48,8 +48,6 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		$time_create = $picoEdu->getLocalDateTime();
 		$time_edit = $picoEdu->getLocalDateTime();
-		$member_create = $admin_id;
-		$member_edit = $admin_id;
 	
 		$random = ((int) $data['random']);
 		$sort_order = ((int) $data['sort_order']);

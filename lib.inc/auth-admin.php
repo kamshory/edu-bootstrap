@@ -25,6 +25,8 @@ if(!empty($admin_login->admin_id))
 {
 	$admin_create 
 		= $admin_edit 
+		= $member_create 
+		= $member_edit 
 		= $admin_id 
 		= $auth_admin_id 
 		= $admin_login->admin_id . '';
