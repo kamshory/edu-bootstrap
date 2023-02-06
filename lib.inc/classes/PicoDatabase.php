@@ -58,14 +58,10 @@ class PicoDatabaseSyncConfig
 class PicoDatabase
 {
 
-	private $driver = "mysql";
-	private $host = "localhost";
-	private $port = 3306;
 	private $username = "";
 	private $password = "";
 	private $database = "";
-
-	public $timezone = "00:00";
+	private $timezone = "00:00";
 
 	private \PDO $conn;
 
@@ -76,10 +72,6 @@ class PicoDatabase
 	{
 		$this->databaseServer = $databaseServer;
 		$this->databaseSyncConfig = $databaseSyncConfig;
-
-		$this->driver = $this->databaseServer->driver;
-		$this->host = $this->databaseServer->host;
-		$this->port = $this->databaseServer->port;
 
 		$this->username = $username;
 		$this->password = $password;
@@ -92,12 +84,22 @@ class PicoDatabase
 	public function connect()
 	{
 		$ret = false;
+		$timezone_str = date("P");
 		try {
-			$connectionString = $this->driver . ':host=' . $this->host . '; port=' . $this->port . '; dbname=' . $this->database;
+			$connectionString = $this->databaseServer->driver . ':host=' . $this->databaseServer->host . '; port=' . $this->databaseServer->port . '; dbname=' . $this->database;
 
-			$this->conn = new \PDO($connectionString, $this->username, $this->password);
+			$this->conn = new \PDO(
+				$connectionString, 
+				$this->username, 
+				$this->password,
+				array(
+					PDO::MYSQL_ATTR_INIT_COMMAND =>"SET time_zone = '$timezone_str'"
+					)
+			);
 			$this->conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 			$ret = true;
+
+
 		} catch (\PDOException $e) {
 			echo "Connection error " . $e->getMessage();
 			$ret = false;
