@@ -109,7 +109,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$user_data['country_id'] = $country_id;
 	$user_data['language'] = $language;
 
-	if($name != '' && $email != '')
+	if(!empty($name) && !empty($email))
 	{
 		$chk = $picoEdu->getExistsingUser($user_data);
 		$student_id = addslashes($chk['member_id']);
@@ -573,12 +573,12 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_student`.`name` like '%".addslashes($pagination->query)."%' OR `edu_student`.`reg_number` like '".addslashes($pagination->query)."' OR `edu_student`.`reg_number_national` like '".addslashes($pagination->query)."')";
+$sql_filter .= " AND (`edu_student`.`name` like '%".addslashes($pagination->query)."%' OR `edu_student`.`reg_number` like '".addslashes($pagination->query)."' OR `edu_student`.`reg_number_national` like '".addslashes($pagination->query)."')";
 }
 if($class_id != 0)
 {
 	$pagination->array_get[] = 'class_id';
-	$sql_filter .= " and (`edu_student`.`class_id` = '$class_id' )";
+	$sql_filter .= " AND (`edu_student`.`class_id` = '$class_id' )";
 }
 
 $nt = '';
@@ -586,7 +586,7 @@ $nt = '';
 
 $sql = "SELECT `edu_student`.* , `edu_class`.`name` AS `class_id`, `edu_class`.`sort_order` AS `sort_order`
 FROM `edu_student`
-LEFT JOIN(`edu_class`) ON (`edu_class`.`class_id` = `edu_student`.`class_id`)
+LEFT JOIN (`edu_class`) ON (`edu_class`.`class_id` = `edu_student`.`class_id`)
 WHERE `edu_student`.`school_id` = '$school_id' $sql_filter
 ORDER BY `sort_order` ASC, `edu_student`.`name` asc
 ";

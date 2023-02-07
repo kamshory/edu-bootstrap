@@ -55,10 +55,10 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	{
 		$article_id = kh_filter_input(INPUT_POST, "article_id", FILTER_SANITIZE_STRING_NEW);
 
-		$base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id";
+		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
 		$base_src = "media.edu/school/$school_id/article/$article_id";
 
-		$dir2prepared = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id";
+		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
 		$dirBase = dirname(dirname(__FILE__));
 		$permission = 0755;
 		$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
@@ -122,7 +122,7 @@ if(isset($_POST['delete']) && isset($_POST['article_id']))
 				if($stmt->rowCount() > 0)
 				{
 					// destroy directory
-					$dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/article/$article_id";
+					$dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
 					$destroyer = new DirectoryDestroyer($fileSync);
 					$destroyer->destroy($dir, true);
 				}
@@ -251,7 +251,7 @@ if(isset($school_id))
 }
 $sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 FROM `edu_article` 
-LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
+LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 where (`edu_article`.`member_create` = '$teacher_id' OR `edu_article`.`active` = true) $sql_filter_article ";
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $stmt = $database->executeQuery($sql);
@@ -381,20 +381,20 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_article`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_article`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 if($class_id != 0)
 {
 	$pagination->array_get[] = 'class_id';
 	$sql_filter .= " and (concat(',',`edu_article`.`class`,',') like '%,$class_id,%')";
 }
-$sql_filter .= " and (`edu_article`.`school_id` = '$school_id' )";
+$sql_filter .= " AND (`edu_article`.`school_id` = '$school_id' )";
 
 $nt = '';
 
 $sql = "SELECT `edu_article`.* , `member`.`name` AS `creator`
 FROM `edu_article` 
-LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
+LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 where (`edu_article`.`member_create` = '$teacher_id' OR `edu_article`.`active` = true) $sql_filter 
 ORDER BY `edu_article`.`article_id` DESC
 ";

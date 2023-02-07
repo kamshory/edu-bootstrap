@@ -22,7 +22,7 @@ if(@$_GET['option'] == 'export')
 	{
 		$data3 = $stmt->fetch(PDO::FETCH_ASSOC);
 		$basename = $data3['file_path'];
-		$file_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$basename;
+		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 		header("Content-Type: text/xml");
 		$fn = str_replace(" ", "-", strtolower($data3['name']));
 		header("Content-Disposition: attachment; filename=\"$fn.xml\"");
@@ -42,7 +42,7 @@ if(@$_GET['option'] == 'delete')
 	{
 		$data3 = mysql_fetch_assoc($res);
 		$basename = $data3['file_path'];
-		$file_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$basename;
+		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 		
 		$s = file_get_contents($file_path);
 		$test_data = json_decode(json_encode(simplexml_load_string($s)), true);
@@ -157,7 +157,7 @@ if(isset($_POST['sort']))
 	{
 		$data3 = mysql_fetch_assoc($res);
 		$basename = $data3['file_path'];
-		$file_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$basename;
+		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 		
 		$s = file_get_contents($file_path);
 		$test_data = json_decode(json_encode(simplexml_load_string($s)), true);
@@ -274,7 +274,7 @@ if(isset($_POST['sort']))
 	{
 		$data3 = $stmt->fetch(PDO::FETCH_ASSOC);
 		$basename = $data3['file_path'];
-		$file_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$basename;
+		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 		
 		$s = file_get_contents($file_path);
 		$test_data = simplexml_load_string($s);
@@ -387,7 +387,7 @@ if(@$_GET['option'] == 'delete')
 	{
 		$data3 = $stmt->fetch(PDO::FETCH_ASSOC);
 		$basename = $data3['file_path'];
-		$file_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$basename;
+		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 		
 		$s = file_get_contents($file_path);
 		$test_data = simplexml_load_string($s);
@@ -505,7 +505,7 @@ if(isset($_POST['save']) && (@$_GET['option'] == 'edit' || @$_GET['option'] == '
 	{
 		$data3 = $stmt->fetch(PDO::FETCH_ASSOC);
 		$basename = $data3['file_path'];
-		$file_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$basename;
+		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 		
 		$s = file_get_contents($file_path);
 		$test_data = simplexml_load_string($s);
@@ -678,7 +678,7 @@ if($stmt->rowCount() > 0)
 
 $data3 = $stmt->fetch(PDO::FETCH_ASSOC);
 $basename = $data3['file_path'];
-$file_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$basename;
+$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 
 $s = file_get_contents($file_path);
 $test_data = simplexml_load_string($s);
@@ -1192,7 +1192,7 @@ if($stmt->rowCount() > 0)
 {
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$basename = $data['file_path'];
-	$file_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$basename;
+	$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 	if(file_exists($file_path))
 	{
 		$text_all = loadXmlData($file_path);
@@ -1425,13 +1425,13 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_test_collection`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_test_collection`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
 
 if($grade_id){
 $pagination->array_get[] = 'grade_id';
-$sql_filter .= " and (`edu_test_collection`.`grade_id` = '$grade_id' )";
+$sql_filter .= " AND (`edu_test_collection`.`grade_id` = '$grade_id' )";
 }
 
 $nt = '';

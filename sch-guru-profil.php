@@ -54,7 +54,7 @@ if(@$_GET['option'] == 'edit')
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $sql = "SELECT `edu_teacher`.* , `edu_school`.`name` AS `school_name`
 FROM `edu_teacher` 
-LEFT JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_teacher`.`school_id`)
+LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_teacher`.`school_id`)
 WHERE `edu_teacher`.`school_id` = '$school_id'
 AND `edu_teacher`.`teacher_id` = '$teacher_id'
 ";
@@ -134,7 +134,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $nt = '';
 $sql = "SELECT `edu_teacher`.* , `edu_school`.`name` AS `school_name`
 FROM `edu_teacher` 
-LEFT JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_teacher`.`school_id`)
+LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_teacher`.`school_id`)
 WHERE `edu_teacher`.`school_id` = '$school_id'
 AND `edu_teacher`.`teacher_id` = '$teacher_id'
 ";

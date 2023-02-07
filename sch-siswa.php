@@ -153,11 +153,11 @@ WHERE `edu_student`.`student_id` = '$edit_key'
     $pagination->array_get = array();
     if ($pagination->query) {
       $pagination->array_get[] = 'q';
-      $sql_filter .= " and (`edu_student`.`name` like '%" . addslashes($pagination->query) . "%' )";
+      $sql_filter .= " AND (`edu_student`.`name` like '%" . addslashes($pagination->query) . "%' )";
     }
     if ($class_id != 0) {
       $pagination->array_get[] = 'class_id';
-      $sql_filter .= " and (`edu_student`.`class_id` = '$class_id' )";
+      $sql_filter .= " AND (`edu_student`.`class_id` = '$class_id' )";
     }
 
     $nt = '';
@@ -165,7 +165,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
 
     $sql = "SELECT `edu_student`.* , `edu_class`.`name` AS `class_id`, `edu_class`.`sort_order` AS `sort_order`
     FROM `edu_student`
-    LEFT JOIN(`edu_class`) ON (`edu_class`.`class_id` = `edu_student`.`class_id`)
+    LEFT JOIN (`edu_class`) ON (`edu_class`.`class_id` = `edu_student`.`class_id`)
     WHERE 1 $sql_filter
     ORDER BY `sort_order` ASC, `edu_student`.`name` asc
     ";

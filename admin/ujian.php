@@ -168,7 +168,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 				$database->executeDelete($sql, true);
 				$sql = "DELETE FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = '$school_id' ";
 				$database->executeDelete($sql, true);
-				$dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
+				$dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 				$destroyer = new DirectoryDestroyer($fileSync);
 				$destroyer->destroy($dir, true);
 				$database->executeTransaction("commit", true);
@@ -200,11 +200,11 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		{
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			$basename = $data['file_path'];
-			$file_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$basename;
+			$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 			if(file_exists($file_path))
 			{	
 				$sql = "SELECT `edu_test`.*, 
-				(SELECT `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` DESC LIMIT 0,1) AS `sort_order`
+				(SELECT `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` DESC LIMIT 0, 1) AS `sort_order`
 				FROM `edu_test`
 				WHERE `edu_test`.`test_id` = '$test_id' AND `edu_test`.`school_id` = '$school_id'
 				";
@@ -218,7 +218,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 					$score_standar = $data['standard_score'];
 	
 					
-					$test_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
+					$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 					$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 					$dirBase = dirname(dirname(__FILE__));
 					$permission = 0755;
@@ -1341,7 +1341,7 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 	$pagination->array_get[] = 'q';
-	$sql_filter .= " and (`edu_test`.`name` like '%".addslashes($pagination->query)."%' )";
+	$sql_filter .= " AND (`edu_test`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 if($class_id != '')
 {

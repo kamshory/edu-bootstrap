@@ -105,7 +105,7 @@ $state_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $sql = "SELECT `city`.`city_id` AS `v`, `city`.`name` AS `l`
 FROM `city` WHERE `city`.`country_id` = '".$data['country_id']."' 
-and (`city`.`state_id` = '".$data['state_id']."' OR `city`.`state_id` = '' OR `city`.`state_id` is null) 
+AND (`city`.`state_id` = '".$data['state_id']."' OR `city`.`state_id` = '' OR `city`.`state_id` is null) 
 ";
 $stmt = $database->executeQuery($sql);
 $city_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -330,7 +330,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql = "SELECT * FROM `city` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' OR `state_id` = '' OR `state_id` is null) ORDER BY `type` asc, `name` asc 
+            $sql = "SELECT * FROM `city` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' AND (`state_id` = '$data[state_id]' OR `state_id` = '' OR `state_id` is null) ORDER BY `type` asc, `name` asc 
             ";
             $stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {

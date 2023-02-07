@@ -26,7 +26,7 @@ if(isset($_POST['question']))
 	$numbering = kh_filter_input(INPUT_POST, "numbering", FILTER_SANITIZE_STRING_NEW);
 	$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
 	
-	$direktori = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
+	$direktori = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 	$prefiks = "media.edu/school/$school_id/test/$test_id";
 
 	$question = kh_filter_input(INPUT_POST, "question");

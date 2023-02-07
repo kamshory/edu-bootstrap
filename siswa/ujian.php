@@ -19,7 +19,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, 
 `edu_answer`.`start`, `edu_answer`.`end`, `edu_answer`.`competence_score`
 FROM `edu_answer`
-INNER JOIN (`edu_test`) on (`edu_test`.`test_id` = `edu_answer`.`test_id`)
+INNER JOIN (`edu_test`) ON (`edu_test`.`test_id` = `edu_answer`.`test_id`)
 WHERE `edu_answer`.`answer_id` = '$answer_id' AND `edu_answer`.`student_id` = '$auth_student_id'
 ";
 $stmt = $database->executeQuery($sql);
@@ -199,8 +199,8 @@ foreach($bc_score as $key=>$val)
 $sql = "SELECT `edu_question`.* , `edu_answer`.`answer` AS `answer` , instr(`edu_answer`.`answer`,`edu_question`.`question_id`) AS `pos`,
 `edu_test`.`publish_answer`, `edu_test`.`time_answer_publication`
 FROM `edu_question` 
-LEFT JOIN (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
-LEFT JOIN (`edu_test`) on (`edu_test`.`test_id` = `edu_question`.`test_id`)
+LEFT JOIN (`edu_answer`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
+LEFT JOIN (`edu_test`) ON (`edu_test`.`test_id` = `edu_question`.`test_id`)
 WHERE `edu_answer`.`answer_id` = '$answer_id' AND `edu_answer`.`student_id` = '$auth_student_id'
 GROUP BY `edu_question`.`question_id` 
 ORDER BY `pos` asc ";
@@ -301,7 +301,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 $sql = "SELECT `edu_test`.* 
 FROM `edu_test`
-INNER JOIN(`edu_answer`) on (`edu_answer`.`test_id` = `edu_test`.`test_id`)
+INNER JOIN (`edu_answer`) ON (`edu_answer`.`test_id` = `edu_test`.`test_id`)
 WHERE `edu_test`.`test_id` = '$test_id' AND `edu_answer`.`student_id` = '$auth_student_id'
 ";
 $stmt = $database->executeQuery($sql);
@@ -685,7 +685,7 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_test`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_test`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 $sql_filter .= " 
 	and (

@@ -78,12 +78,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	(`school_program_id`, `school_id`, `name`, `sort_order`, `default`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 	('$school_program_id', '$school_id', '$name', '$sort_order', '$default', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
-	$id = $database->getDatabaseConnection()->lastInsertId();
-	if($id == 0)
-	{
-		$id = kh_filter_input(INPUT_POST, "school_program_id", FILTER_SANITIZE_STRING_NEW);
-	}
-	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&school_program_id=$id");
+	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&school_program_id=$school_program_id");
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
@@ -280,7 +275,7 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 	$pagination->array_get[] = 'q';
-	$sql_filter .= " and (`edu_school_program`.`name` like '%".addslashes($pagination->query)."%' )";
+	$sql_filter .= " AND (`edu_school_program`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
 $nt = '';

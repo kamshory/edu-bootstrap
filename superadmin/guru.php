@@ -29,7 +29,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
-	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_INT);
+	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 }
 
 if(isset($_POST['set_active']) && isset($_POST['teacher_id']))
@@ -398,11 +398,11 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_teacher`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_teacher`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 if(!empty($school_id)){
 $pagination->array_get[] = 'school_id';
-$sql_filter .= " and (`edu_teacher`.`school_id` = '$school_id' )";
+$sql_filter .= " AND (`edu_teacher`.`school_id` = '$school_id' )";
 }
 
 

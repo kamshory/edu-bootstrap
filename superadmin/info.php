@@ -105,10 +105,10 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	{
 		$info_id = kh_filter_input(INPUT_POST, "info_id");
 		
-		$base_dir = dirname(dirname(__FILE__))."/media.edu/info/$info_id";
+		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
 		$base_src = "media.edu/info/$info_id";
 
-		$dir2prepared = dirname(dirname(__FILE__))."/media.edu/info/$info_id";
+		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
 		$dirBase = dirname(dirname(__FILE__));
 		$permission = 0755;
 		$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
@@ -436,7 +436,7 @@ else if(isset($_GET['info_id']))
 
 	$sql = "SELECT `edu_info`.*, `member`.`name` AS `creator`
 	FROM `edu_info` 
-	LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_info`.`admin_create`) 
+	LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_info`.`admin_create`) 
 	WHERE 1 $sql_filter_info ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -530,7 +530,7 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_info`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_info`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
 

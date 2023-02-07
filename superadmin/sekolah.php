@@ -51,7 +51,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 
-	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_INT);
+	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 
 
 
@@ -370,7 +370,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql2 = "SELECT * FROM `city` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' OR `state_id` = '' OR `state_id` is null) ORDER BY `type` asc, `name` asc 
+            $sql2 = "SELECT * FROM `city` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' AND (`state_id` = '$data[state_id]' OR `state_id` = '' OR `state_id` is null) ORDER BY `type` asc, `name` asc 
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -451,7 +451,7 @@ if ($stmtx->rowCount() > 0) {
 }
 $sql = "SELECT `city`.`city_id` AS `v`, `city`.`name` AS `l`
 FROM `city` WHERE `city`.`country_id` = '".$data['country_id']."' 
-and (`city`.`state_id` = '".$data['state_id']."' OR `city`.`state_id` = '' OR `city`.`state_id` is null) 
+AND (`city`.`state_id` = '".$data['state_id']."' OR `city`.`state_id` = '' OR `city`.`state_id` is null) 
 ";
 $stmtx = $database->executeQuery($sql);
 if ($stmtx->rowCount() > 0) {
@@ -680,7 +680,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql2 = "SELECT * FROM `city` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' and (`state_id` = '$data[state_id]' OR `state_id` = '' OR `state_id` is null) ORDER BY `type` asc, `name` asc 
+            $sql2 = "SELECT * FROM `city` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' AND (`state_id` = '$data[state_id]' OR `state_id` = '' OR `state_id` is null) ORDER BY `type` asc, `name` asc 
             ";
             echo $picoEdu->createFilterDb(
 				$sql2,
@@ -910,7 +910,7 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_school`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_school`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
 

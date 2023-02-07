@@ -130,7 +130,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 			{
 				$sql = "SELECT `edu_school`.*
 				FROM `edu_school`
-				LEFT JOIN(`edu_member_school`) ON (`edu_member_school`.`school_id` = `edu_school`.`school_id` AND `edu_member_school`.`role` = 'A')
+				LEFT JOIN (`edu_member_school`) ON (`edu_member_school`.`school_id` = `edu_school`.`school_id` AND `edu_member_school`.`role` = 'A')
 				WHERE `edu_school`.`school_id` = '$school_id' AND `edu_member_school`.`member_id` = '$admin_id' 
 				";
 				$stmt = $database->executeQuery($sql);
@@ -174,9 +174,9 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 					$password = addslashes($data2['password']);
 					$token_admin = md5($data2['phone'] . "-" . $data2['email'] . "-" . time() . "-" . mt_rand(111111, 999999));
 
-					if ($name != '') {
+					if (!empty($name)) {
 
-						if ($email != '' && $name != '') {
+						if (!empty($name) && !empty($email)) {
 
 							$sql2 = "UPDATE `edu_admin` SET
 							`school_id` = '$school_id'
@@ -256,7 +256,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$user_data['address'] = $address;
 								$user_data['country_id'] = $country_id;
 								$user_data['language'] = $language;
-								if ($name != '' && $email != '') {
+								if (!empty($name) && !empty($email)) {
 									$chk = $picoEdu->getExistsingUser($user_data);
 									$admin_id = addslashes($chk['member_id']);
 									$username = addslashes($chk['username']);
@@ -342,7 +342,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									$o[$grade_id]++;
 								}
 								$sort_order = $o[$grade_id];
-								if ($name != '') {
+								if (!empty($name)) {
 									$sql = "SELECT * FROM `edu_class` WHERE `class_code` = '$class_code' AND `school_id` = '$school_id' ";
 									$stmt3 = $database->executeQuery($sql);
 									if ($stmt3->rowCount() == 0) {
@@ -441,7 +441,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$user_data['address'] = $address;
 								$user_data['country_id'] = $country_id;
 								$user_data['language'] = $language;
-								if ($name != '') {
+								if (!empty($name)) {
 									if ($picoEdu->checkStudent($school_id, $reg_number, $reg_number_national, $name)) {
 										continue;
 									}
@@ -478,7 +478,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									$database->executeInsert($sql2, true);
 
 									$sql3 = "UPDATE `edu_student` SET `school_id` = '$school_id' WHERE `student_id` = '$student_id' 
-									and (`school_id` = '' OR `school_id` is null)
+									AND (`school_id` = '' OR `school_id` is null)
 									";
 
 
@@ -572,7 +572,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$user_data['address'] = $address;
 								$user_data['country_id'] = $country_id;
 								$user_data['language'] = $language;
-								if ($name != '' && $email != '') {
+								if (!empty($name) && !empty($email)) {
 									$chk = $picoEdu->getExistsingUser($user_data);
 									$teacher_id = addslashes($chk['member_id']);
 									$username = addslashes($chk['username']);
@@ -605,7 +605,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									$sql3 = "UPDATE `edu_teacher` 
 									set `school_id` = '$school_id' 
 									WHERE `teacher_id` = '$teacher_id' 
-									and (`school_id` = '' OR `school_id` is null)
+									AND (`school_id` = '' OR `school_id` is null)
 									";
 									$database->executeUpdate($sql3, true);
 								} else {

@@ -12,7 +12,7 @@ if(@$_GET['option'] == 'select')
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_school`.* 
 	FROM `edu_member_school`
-	INNER JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_member_school`.`school_id`)
+	INNER JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_member_school`.`school_id`)
 	WHERE `edu_member_school`.`member_id` = '$admin_id' AND `edu_member_school`.`role` = 'A' 
 	ORDER BY `edu_school`.`school_id` asc
 	";
@@ -192,7 +192,7 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_school`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_school`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
 
@@ -202,13 +202,13 @@ $sql = "SELECT `edu_school`.* $nt,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) AS `admin_create`,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) AS `admin_edit`
 FROM `edu_member_school`
-INNER JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_member_school`.`school_id`)
+INNER JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_member_school`.`school_id`)
 WHERE `edu_member_school`.`member_id` = '$admin_id' AND `edu_member_school`.`role` = 'A' $sql_filter
 ORDER BY `edu_school`.`school_id` asc
 ";
 $sql_test = "SELECT `edu_school`.*
 FROM `edu_member_school`
-INNER JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_member_school`.`school_id`)
+INNER JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_member_school`.`school_id`)
 WHERE `edu_member_school`.`member_id` = '$admin_id' AND `edu_member_school`.`role` = 'A' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);

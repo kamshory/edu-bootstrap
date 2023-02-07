@@ -133,7 +133,7 @@ $sql = "SELECT `edu_student`.* , `edu_school`.`name` AS `school_name`, `edu_scho
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) AS `admin_edit`,
 (SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) AS `class_id`
 FROM `edu_student` 
-LEFT JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_student`.`school_id`)
+LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_student`.`school_id`)
 WHERE `edu_student`.`school_id` = '$school_id'
 AND `edu_student`.`student_id` = '$auth_student_id'
 ";

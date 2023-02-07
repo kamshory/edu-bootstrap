@@ -12,7 +12,7 @@ $cfg->page_title = "Kelas";
 include_once dirname(dirname(__FILE__)) . "/lib.inc/cfg.pagination.php";
 if (count(@$_POST) && isset($_POST['save'])) {
 	$class_id = kh_filter_input(INPUT_POST, "grade_id", FILTER_SANITIZE_STRING_NEW);
-	$class_id2 = kh_filter_input(INPUT_POST, "class_id2", FILTER_SANITIZE_NUMBER_UINT);
+	$class_id2 = kh_filter_input(INPUT_POST, "class_id2", FILTER_SANITIZE_STRING_NEW);
 	if (!isset($_POST['class_id'])) {
 		$class_id = $class_id2;
 	}
@@ -24,7 +24,7 @@ if (count(@$_POST) && isset($_POST['save'])) {
 	$admin_create = $admin_edit = $admin_login->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$sort_order = kh_filter_input(INPUT_POST, "sort_order", FILTER_SANITIZE_NUMBER_INT);
-	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_INT);
+	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 }
 
 if (isset($_POST['set_active']) && isset($_POST['class_id'])) {
@@ -356,7 +356,7 @@ if($stmt->rowCount() > 0)
 		$pagination->array_get = array();
 		if ($pagination->query) {
 			$pagination->array_get[] = 'q';
-			$sql_filter .= " and (`edu_class`.`name` like '%" . addslashes($pagination->query) . "%' )";
+			$sql_filter .= " AND (`edu_class`.`name` like '%" . addslashes($pagination->query) . "%' )";
 		}
 
 

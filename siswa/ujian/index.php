@@ -156,7 +156,7 @@ $sql = "SELECT `edu_test`.*
 FROM `edu_test` 
 WHERE `edu_test`.`active` = true
 AND `edu_test`.`test_id` = '$test_id' 
-and (`edu_test`.`test_availability` = 'F' OR `edu_test`.`available_to` >= '$now')
+AND (`edu_test`.`test_availability` = 'F' OR `edu_test`.`available_to` >= '$now')
 AND `edu_test`.`school_id` = '$school_id'
 $sql_filter
 ";

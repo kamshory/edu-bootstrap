@@ -19,7 +19,7 @@ if (@$auth_student_id && @$auth_school_id) {
 
 		$sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, `edu_answer`.`start`, `edu_answer`.`end`
 		FROM `edu_answer`
-		INNER JOIN (`edu_test`) on (`edu_test`.`test_id` = `edu_answer`.`test_id`)
+		INNER JOIN (`edu_test`) ON (`edu_test`.`test_id` = `edu_answer`.`test_id`)
 		WHERE `edu_answer`.`answer_id` = '$answer_id' AND `edu_answer`.`student_id` = '$student_id'
 		";
 		$stmt = $database->executeQuery($sql);
@@ -88,8 +88,8 @@ if (@$auth_student_id && @$auth_school_id) {
 			$sql = "SELECT `edu_question`.* , `edu_answer`.`answer` AS `answer` , instr(`edu_answer`.`answer`,`edu_question`.`question_id`) AS `pos`,
 			`edu_test`.`publish_answer`, `edu_test`.`time_answer_publication`
 			FROM `edu_question` 
-			LEFT JOIN (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
-			LEFT JOIN (`edu_test`) on (`edu_test`.`test_id` = `edu_question`.`test_id`)
+			LEFT JOIN (`edu_answer`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
+			LEFT JOIN (`edu_test`) ON (`edu_test`.`test_id` = `edu_question`.`test_id`)
 			WHERE `edu_answer`.`answer_id` = '$answer_id' AND `edu_answer`.`student_id` = '$student_id'
 			GROUP BY `edu_question`.`question_id` 
 			ORDER BY `pos` asc ";
@@ -544,7 +544,7 @@ if (@$auth_student_id && @$auth_school_id) {
 			$pagination->array_get = array();
 			if ($pagination->query) {
 				$pagination->array_get[] = 'q';
-				$sql_filter .= " and (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
+				$sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
 			}
 
 
@@ -714,7 +714,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 		$pagination->array_get = array();
 		if ($pagination->query) {
 			$pagination->array_get[] = 'q';
-			$sql_filter .= " and (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
+			$sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
 		}
 
 
@@ -875,7 +875,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 		$pagination->array_get = array();
 		if ($pagination->query) {
 			$pagination->array_get[] = 'q';
-			$sql_filter .= " and (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
+			$sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
 		}
 
 

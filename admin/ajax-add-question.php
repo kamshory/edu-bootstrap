@@ -28,7 +28,7 @@ if(isset($_POST['question']))
 	$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
 	$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
 	
-	$directory = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
+	$directory = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 	$prefiks = "media.edu/school/$school_id/test/$test_id";
 
 	$question = kh_filter_input(INPUT_POST, "question");

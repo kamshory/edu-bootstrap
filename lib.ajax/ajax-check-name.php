@@ -10,7 +10,7 @@ if(isset($_POST['name']))
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_STRING_NEW);
 	$name = trim(preg_replace("/[^a-zA-Z 0-9\.\-]+/", " ", $name), " -. ");
 	$name = trim(preg_replace("/\s+/", " ", $name));
-	if($name != '')
+	if(!empty($name))
 	{
 		if($picoEdu->checkValidName($name))
 		{

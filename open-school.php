@@ -10,7 +10,7 @@ if (@$_GET['option'] == 'select') {
 	select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 	`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
 	FROM `edu_member_school`
-	INNER JOIN(`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
+	INNER JOIN (`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 	WHERE `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S'
 	
 	union
@@ -152,7 +152,7 @@ if (@$_GET['option'] == 'detail') {
 				$pagination->array_get = array();
 				if ($pagination->query) {
 					$pagination->array_get[] = 'q';
-					$sql_filter .= " and (`edu_school3`.`name` like '%" . addslashes($pagination->query) . "%' )";
+					$sql_filter .= " AND (`edu_school3`.`name` like '%" . addslashes($pagination->query) . "%' )";
 				}
 
 
@@ -164,7 +164,7 @@ if (@$_GET['option'] == 'detail') {
 				select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 				`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
 				FROM `edu_member_school`
-				INNER JOIN(`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
+				INNER JOIN (`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 				WHERE `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S'
 
 				union
@@ -184,7 +184,7 @@ if (@$_GET['option'] == 'detail') {
 				select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 				`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
 				FROM `edu_member_school`
-				INNER JOIN(`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
+				INNER JOIN (`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 				WHERE `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S'
 
 				union

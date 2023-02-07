@@ -30,7 +30,7 @@ class StudenAuth
 			`edu_student`.`state_id`, `edu_student`.`city_id`, `edu_student`.`school_id`, `edu_student`.`class_id`,
 			`edu_school`.`name` AS `school_name`, `edu_school`.`school_code` AS `school_code`, `edu_school`.`use_token`
 			FROM `edu_student` 
-			LEFT JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_student`.`school_id`)
+			LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_student`.`school_id`)
 			WHERE `edu_student`.`username` like '$username' AND `edu_student`.`password` = md5('$password') 
 			AND `edu_student`.`active` = true
 			AND `edu_student`.`blocked` = false

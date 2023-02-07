@@ -133,7 +133,7 @@ $(document).ready(function(e) {
 		<?php 
 		$sql = "SELECT * FROM `edu_test`
 		WHERE `school_id` = '$school_id' AND `teacher_id` = '$teacher_id'
-		and (`test_availability` = 'F' OR `available_to` > '$now')
+		AND (`test_availability` = 'F' OR `available_to` > '$now')
 		ORDER BY `test_id` DESC
 		";
 		$stmt2 = $database->executeQuery($sql2);
@@ -339,7 +339,7 @@ function printToken(frm)
     <?php
 	$sql2 = "SELECT * FROM `edu_test`
 	WHERE `school_id` = '$school_id' AND `teacher_id` = '$teacher_id'
-	and (`test_availability` = 'F' OR `available_to` > '$now')
+	AND (`test_availability` = 'F' OR `available_to` > '$now')
 	ORDER BY `test_id` DESC
 	";
 	echo $picoEdu->createFilterDb(
@@ -404,7 +404,7 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_token`.`token` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_token`.`token` like '%".addslashes($pagination->query)."%' )";
 }
 if($class_id != 0)
 {

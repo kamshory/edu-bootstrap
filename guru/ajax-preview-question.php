@@ -9,7 +9,7 @@ if($test_id != 0 && $xml_data!= '')
 {
 	$clear_data = parseRawQuestion($xml_data);
 
-	$base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
+	$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 	$base_src = "media.edu/school/$school_id/test/$test_id";
 	?>
     <ol class="question-ol">

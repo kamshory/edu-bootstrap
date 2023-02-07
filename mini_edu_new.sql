@@ -801,7 +801,7 @@ end if;
 
 
 select `city`.`city_id` into `out_city_id`
-FROM `city` WHERE `city`.`name` like `in_name` and (`city`.`state_id` = `in_state_id` OR `in_state_id` = '' OR `in_state_id` = 0 OR `in_state_id` is null) AND `city`.`country_id` = `in_country_id` limit 0,1;
+FROM `city` WHERE `city`.`name` like `in_name` AND (`city`.`state_id` = `in_state_id` OR `in_state_id` = '' OR `in_state_id` = 0 OR `in_state_id` is null) AND `city`.`country_id` = `in_country_id` limit 0,1;
 
 
 if `out_city_id` is null OR `out_city_id` = 0 then

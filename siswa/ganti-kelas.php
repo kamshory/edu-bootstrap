@@ -12,8 +12,8 @@ if(@$_GET['option'] == 'select')
 	$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_NUMBER_INT);
 	$sql = "SELECT `edu_class`.`class_id`, `edu_student`.`student_id`
 	FROM `edu_school`
-	INNER JOIN(`edu_student`) ON (`edu_student`.`school_id` = `edu_school`.`school_id`)
-	INNER JOIN(`edu_class`) ON (`edu_class`.`school_id` = `edu_school`.`school_id`)
+	INNER JOIN (`edu_student`) ON (`edu_student`.`school_id` = `edu_school`.`school_id`)
+	INNER JOIN (`edu_class`) ON (`edu_class`.`school_id` = `edu_school`.`school_id`)
 	WHERE `edu_student`.`student_id` = '$auth_student_id' 
 	AND `edu_class`.`class_id` = '$class_id'
 	AND `edu_school`.`open` = '1'
@@ -139,7 +139,7 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 	$pagination->array_get[] = 'q';
-	$sql_filter .= " and (`edu_class`.`name` like '%".addslashes($pagination->query)."%' )";
+	$sql_filter .= " AND (`edu_class`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
 $sql_filter .= " AND `edu_class`.`school_id` = '$school_id' ";

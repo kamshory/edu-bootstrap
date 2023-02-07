@@ -26,7 +26,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
-	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_INT);
+	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 	
 	if($admin_id2 == $admin_login->admin_id)
 	{
@@ -110,7 +110,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$user_data['country_id'] = $country_id;
 		$user_data['language'] = $language;
 
-		if ($name != '' && $username != '') {
+		if (!empty($name) && $username != '') {
 			$chk = $picoEdu->getExistsingUser($user_data);
 			$admin_id = addslashes($chk['member_id']);
 			$username = addslashes($chk['username']);
@@ -558,11 +558,11 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_admin`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_admin`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 if(!empty($school_id)){
 $pagination->array_get[] = 'school_id';
-$sql_filter .= " and (`edu_admin`.`school_id` = '$school_id' )";
+$sql_filter .= " AND (`edu_admin`.`school_id` = '$school_id' )";
 }
 
 $nt = '';

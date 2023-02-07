@@ -34,7 +34,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$admin_create = $admin_edit = $admin_login->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
-	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_INT);
+	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 }
 
 if(isset($_POST['set_active']) && isset($_POST['teacher_id']))
@@ -103,7 +103,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$phone = $picoEdu->trimPunctuation($phone);
 	$email = $picoEdu->trimPunctuation($email);
 
-	if ($name != '') {
+	if (!empty($name)) {
 
 		if ($email == '') {
 			$email = $picoEdu->generateAltEmail('planetbiru.com', ($reg_number_national != '') ? 'tc_' . $reg_number_national : '', ($reg_number != '') ? 'tc_' . $reg_number . '_' . $school_id : '', ($phone != '') ? 'ph_' . $country_id . '_' . $phone : '');
@@ -119,7 +119,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$user_data['address'] = $address;
 		$user_data['country_id'] = $country_id;
 		$user_data['language'] = $language;
-		if ($name != '' && $email != '') {
+		if (!empty($name) && !empty($email)) {
 			$chk = $picoEdu->getExistsingUser($user_data);
 			$teacher_id = addslashes($chk['member_id']);
 			$username = addslashes($chk['username']);
@@ -143,7 +143,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				$database->executeInsert($sql2, true);
 
 				$sql3 = "UPDATE `edu_teacher` SET `school_id` = '$school_id' WHERE `teacher_id` = '$teacher_id' 
-				and (`school_id` = '' OR `school_id` is null)
+				AND (`school_id` = '' OR `school_id` is null)
 				";
 				$database->executeUpdate($sql3, true);
 				header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&teacher_id=$teacher_id");
@@ -480,7 +480,7 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_teacher`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_teacher`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
 $nt = '';

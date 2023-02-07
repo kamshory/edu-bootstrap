@@ -6,7 +6,7 @@ if(!empty(@$school_id) && isset($_POST['filename']) && isset($_POST['test_id']))
 	$filename = trim(@$_POST['filename']);
 	$test_id = trim(@$_POST['test_id']);
 	$no = abs($_POST['no'])*1;
-	$test_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
+	$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 	$path = $test_dir."/".trim($filename, "/");
 	if(file_exists($path))
 	{

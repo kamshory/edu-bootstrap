@@ -38,7 +38,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$picoEdu->sortQuestion($test_id);
 	$sql = "SELECT `edu_test`.*, 
-	(SELECT `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` DESC LIMIT 0,1) AS `sort_order`
+	(SELECT `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` DESC LIMIT 0, 1) AS `sort_order`
 	FROM `edu_test`
 	WHERE `edu_test`.`test_id` = '$test_id'
 	";
@@ -56,13 +56,13 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$xml_data = kh_filter_input(INPUT_POST, "question_text", FILTER_DEFAULT);
 		$clear_data = parseRawQuestion($xml_data);
 
-		$base_dir = dirname(dirname(__FILE__))."/media.edu/school";
-		$dir2prepared = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
+		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school";
+		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 		$dirBase = dirname(dirname(__FILE__));
 		$permission = 0755;
 		$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 	
-		$base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
+		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 
 		$base_src = "media.edu/school/$school_id/test/$test_id";
 		$database->executeTransaction("start transaction", true);
@@ -146,7 +146,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$dt = $stmt->fetch(PDO::FETCH_ASSOC);
 		$test_id = $dt['test_id'];
 		
-		$direktori = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
+		$direktori = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 		$prefiks = "media.edu/school/$school_id/test/$test_id";
 	
 		$question = kh_filter_input(INPUT_POST, "question");
@@ -1057,12 +1057,12 @@ function buildMenu(id)
 				$pagination->array_get = array();
 				if ($pagination->query) {
 					$pagination->array_get[] = 'q';
-					$sql_filter .= " and (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
+					$sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
 				}
 
 				if ($school_id != 0) {
 					$pagination->array_get[] = 'school_id';
-					$sql_filter .= " and (`edu_test`.`school_id` = '$school_id' )";
+					$sql_filter .= " AND (`edu_test`.`school_id` = '$school_id' )";
 				}
 				if ($class_id != '') {
 					$sql_filter .= " and concat(',',`edu_test`.`class`,',') like '%,$class_id,%' ";

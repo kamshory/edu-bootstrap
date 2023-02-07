@@ -12,10 +12,10 @@ if(isset($_POST['save']))
 {
 	$description = kh_filter_input(INPUT_POST, "description");
 	
-	$base_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/description";
+	$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/description";
 	$base_src = "media.edu/school/$school_id/description";
 
-	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/school/$school_id/description";
+	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/description";
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
 	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);

@@ -117,7 +117,7 @@ class PicoEdu //NOSONAR
 		}
 		return $text;
 	}
-	public function get_country_name($country_id)
+	public function getCountryName($country_id)
 	{
 		$sql = "SELECT `name` FROM `country` WHERE `country_id` = '$country_id' ";
 		$stmt = $this->database->executeQuery($sql);
@@ -646,7 +646,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT * FROM `edu_student` 
 		WHERE `school_id` = '$school_id' 
-		and (`reg_number` like '$reg_number' AND `reg_number` != '') ";
+		AND (`reg_number` like '$reg_number' AND `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
 		return $stmt->rowCount() > 0;
 	}
@@ -654,7 +654,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT * FROM `edu_teacher` 
 		WHERE `school_id` = '$school_id' 
-		and (`reg_number` like '$reg_number' AND `reg_number` != '') ";
+		AND (`reg_number` like '$reg_number' AND `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
 		return $stmt->rowCount() > 0;
 	}
@@ -1021,7 +1021,7 @@ class PicoEdu //NOSONAR
 		FROM `edu_school_program`
 		WHERE `edu_school_program`.`name` like '$school_program'
 		AND `edu_school_program`.`school_id` = '$school_id'
-		limit 0, 1";
+		LIMIT 0, 1 ";
 
 		$stmt = $this->database->executeQuery($sql);
 
@@ -1056,7 +1056,7 @@ class PicoEdu //NOSONAR
 		FROM `edu_class`
 		WHERE `edu_class`.`name` like '$class'
 		AND `edu_class`.`school_id` = '$school_id'
-		limit 0, 1";
+		LIMIT 0, 1 ";
 
 		$stmt = $this->database->executeQuery($sql);
 

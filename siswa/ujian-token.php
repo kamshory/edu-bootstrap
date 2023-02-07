@@ -19,7 +19,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 	$now = $picoEdu->getLocalDateTime();
 	$sql = "SELECT `edu_token`.* , `edu_test`.*
 	FROM `edu_token`
-	INNER JOIN(`edu_test`) ON (`edu_test`.`test_id` = `edu_token`.`test_id`)
+	INNER JOIN (`edu_test`) ON (`edu_test`.`test_id` = `edu_token`.`test_id`)
 	WHERE `edu_token`.`student_id` = '$auth_student_id'
 	AND `edu_token`.`token` = '$token' AND `edu_token`.`active` = true AND `edu_token`.`time_expire` > '$now'
 	";

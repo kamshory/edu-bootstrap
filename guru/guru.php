@@ -124,7 +124,7 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_teacher`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_teacher`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
 

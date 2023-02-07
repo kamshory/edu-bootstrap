@@ -159,8 +159,8 @@ if(isset($_GET['expand']))
 	`edu_student`.`name` AS `student_name`, `edu_student`.`class_id`
 
 	FROM `edu_answer` 
-	LEFT JOIN(`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
-	LEFT JOIN (`edu_question`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
+	LEFT JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
+	LEFT JOIN (`edu_question`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
 	where  `edu_answer`.`test_id` = '$test_id' $sql_filter
 	GROUP BY `edu_answer`.`answer_id` 
 	ORDER BY `edu_student`.`class_id`, `edu_answer`.`student_id` asc, `edu_answer`.`start` asc ";
@@ -196,8 +196,8 @@ else
 	(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` AND `edu_class`.`school_id` = `edu_student`.`school_id`) AS `class`,
 	`edu_student`.`name` AS `student_name`, `edu_student`.`class_id`
 	FROM `edu_answer` 
-	LEFT JOIN(`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
-	LEFT JOIN (`edu_question`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
+	LEFT JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
+	LEFT JOIN (`edu_question`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
 	where  `edu_answer`.`test_id` = '$test_id' $sql_filter
 	GROUP BY `edu_answer`.`answer_id` 
 	$grp ) AS `inv` group by concat(`inv`.`test_id`, '-', `inv`.`student_id`) 
@@ -282,7 +282,7 @@ $sql = "SELECT `edu_test`.*, `edu_answer`.*,
 timediff(`edu_answer`.`end`,`edu_answer`.`start`) AS `duration_test` ,
 (SELECT `edu_student`.`name` FROM `edu_student` WHERE `edu_student`.`student_id` = `edu_answer`.`student_id`) AS `student_name`
 FROM `edu_test`
-LEFT JOIN (`edu_answer`) on (`edu_answer`.`test_id` = `edu_test`.`test_id`)
+LEFT JOIN (`edu_answer`) ON (`edu_answer`.`test_id` = `edu_test`.`test_id`)
 WHERE `edu_answer`.`answer_id` = '$test_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -347,8 +347,8 @@ $info = $stmt->fetch(PDO::FETCH_ASSOC);
 <?php
 $sql = "SELECT `edu_question`.* , `edu_answer`.`answer` AS `answer` , instr(`edu_answer`.`answer`,`edu_question`.`question_id`) AS `pos`
 FROM `edu_question` 
-LEFT JOIN (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
-LEFT JOIN (`edu_test`) on (`edu_test`.`test_id` = `edu_question`.`test_id`)
+LEFT JOIN (`edu_answer`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
+LEFT JOIN (`edu_test`) ON (`edu_test`.`test_id` = `edu_question`.`test_id`)
 WHERE `edu_answer`.`answer_id` = '$test_id' 
 GROUP BY `edu_question`.`question_id` 
 ORDER BY `pos` asc ";
@@ -566,8 +566,8 @@ if(isset($_GET['expand']))
 	`edu_student`.`name` AS `student_name`, `edu_student`.`class_id` 
 
 	FROM `edu_answer` 
-	LEFT JOIN(`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
-	LEFT JOIN (`edu_question`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
+	LEFT JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
+	LEFT JOIN (`edu_question`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
 	where  `edu_answer`.`test_id` = '$test_id' $sql_filter
 	GROUP BY `edu_answer`.`answer_id` having 1 $sql_filter
 	ORDER BY `edu_student`.`class_id`, `edu_answer`.`student_id` asc, `edu_answer`.`start` asc ";
@@ -604,8 +604,8 @@ else
 	(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` AND `edu_class`.`school_id` = `edu_student`.`school_id`) AS `class`,
 	`edu_student`.`name` AS `student_name`, `edu_student`.`class_id` AS `class_id`, `edu_student`.`time_edit` AS `time_edit`
 	FROM `edu_answer` 
-	LEFT JOIN(`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
-	LEFT JOIN (`edu_question`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
+	LEFT JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
+	LEFT JOIN (`edu_question`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
 	where  `edu_answer`.`test_id` = '$test_id' $sql_filter
 	GROUP BY `edu_answer`.`answer_id` having 1 $sql_filter
 	$grp ) AS `inv` group by concat(`inv`.`test_id`, '-', `inv`.`student_id`) 
@@ -840,7 +840,7 @@ window.onload = function()
 
         if ($school_id != 0) {
           $pagination->array_get[] = 'school_id';
-          $sql_filter .= " and (`edu_test`.`school_id` = '$school_id' )";
+          $sql_filter .= " AND (`edu_test`.`school_id` = '$school_id' )";
         }
         if ($class_id != '') {
           $pagination->array_get[] = 'class_id';
@@ -848,13 +848,13 @@ window.onload = function()
         }
         if ($pagination->query) {
           $pagination->array_get[] = 'q';
-          $sql_filter .= " and (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
+          $sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
         }
 
       $sql = "SELECT `edu_test`.*,
       (SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_test`.`school_id` limit 0,1) AS `school_name`,
       (SELECT COUNT(DISTINCT `edu_answer`.`student_id`) FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id`) AS `number_of_student`,
-      (SELECT `edu_answer`.`start` FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` ORDER BY `edu_answer`.`start` DESC LIMIT 0,1) AS `last_test`
+      (SELECT `edu_answer`.`start` FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` ORDER BY `edu_answer`.`start` DESC LIMIT 0, 1) AS `last_test`
       FROM `edu_test`
       WHERE 1 $sql_filter
       having 1 AND `number_of_student` > 0

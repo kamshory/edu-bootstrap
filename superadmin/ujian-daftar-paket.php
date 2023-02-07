@@ -10,7 +10,7 @@ $cfg->page_title = "Daftar Paket";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 {
-	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data"; //NOSONAR
+	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
 	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
@@ -27,7 +27,7 @@ if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 		{
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			$file_path = $data['file_path'];
-			$real_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$file_path;
+			$real_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$file_path;
 			$md5 = md5_file($real_path);
 			$sha1 = sha1_file($real_path);
 			$s = file_get_contents($real_path);
@@ -85,7 +85,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 {
 	$test_id = $_POST['test_collection_id'];
-	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data"; //NOSONAR
+	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
 	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
@@ -101,7 +101,7 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 			$file_path = $data['file_path'];
 			$sql = "DELETE FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 			$database->execute($sql);
-			$real_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$file_path;
+			$real_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$file_path;
 			if(file_exists($real_path))
 			{
 				@unlink($real_path);
@@ -115,14 +115,14 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 {
-	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data"; //NOSONAR
+	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
 	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
 
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
 	$grade_id = kh_filter_input(INPUT_POST, "grade_id", FILTER_SANITIZE_NUMBER_INT);
-	$target_dir = dirname(dirname(__FILE__))."/media.edu/question-collection/data"; //NOSONAR
+	$target_dir = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
 	$base_name = md5(session_id()."-".time()."-".mt_rand(111111, 999999)).".xml";
 	$file_path = $target_dir."/".$base_name;
 
@@ -180,7 +180,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$dir2prepared = dirname(dirname(__FILE__))."/media.edu/question-collection/data"; //NOSONAR
+	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
 	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
@@ -474,13 +474,13 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_test_collection`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_test_collection`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
 
 if($grade_id){
 $pagination->array_get[] = 'grade_id';
-$sql_filter .= " and (`edu_test_collection`.`grade_id` = '$grade_id' )";
+$sql_filter .= " AND (`edu_test_collection`.`grade_id` = '$grade_id' )";
 }
 
 $nt = '';

@@ -156,7 +156,7 @@ if(!empty(@$page_school_id)) {
 					(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) AS `admin_edit`,
 					(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) AS `class_id`
 					FROM `edu_student` 
-					LEFT JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_student`.`school_id`)
+					LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_student`.`school_id`)
 					WHERE `edu_student`.`school_id` = '$school_id'
 					AND `edu_student`.`student_id` = '$student_id'
 					";
@@ -499,7 +499,7 @@ if(!empty(@$page_school_id)) {
 			if ($article_id) {
 				$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 					FROM `edu_article` 
-					LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
+					LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 					WHERE `edu_article`.`article_id` = '$article_id' AND `edu_article`.`school_id` = '$page_school_id' AND `edu_article`.`active` = true ";
 					$stmt = $database->executeQuery($sql);
 					if ($stmt->rowCount() > 0) {
@@ -530,7 +530,7 @@ if(!empty(@$page_school_id)) {
 				$sql_filter_article = "";
 				$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 					FROM `edu_article` 
-					LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
+					LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 					WHERE `edu_article`.`active` = true AND `edu_article`.`school_id` = '$page_school_id'
 					ORDER BY `edu_article`.`article_id` DESC
 					";
