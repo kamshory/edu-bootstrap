@@ -736,8 +736,16 @@ $database = new PicoDatabase(
 
 $database->connect();
 
+$fileSync = new FileSynchronizer(
+	$configs->sync_file_base_dir,
+	$configs->sync_file_pool_name,
+	$configs->sync_file_rolling_prefix,
+	$configs->sync_file_extension,
+	$configs->sync_file_maximum_length
+);
+
 $picoEdu = new PicoEdu($database);
-$fileSync = new FileSynchronizer(dirname(dirname(__FILE__))."/lib.sync/file/pool", "pool.txt");
+
 
 $ip_create = $_SERVER['REMOTE_ADDR'];
 $ip_edit = $ip_create;

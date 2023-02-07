@@ -9,8 +9,8 @@ class FileSynchronizer
 	/**
 	 * Maximum file size
 	 */
-	private $maxSize = 20000;
-	public function __construct($basePath, $fileName = null, $prefix = null, $extension = null)
+	private $maximumlength = 20000;
+	public function __construct($basePath, $fileName, $prefix, $extension, $maximumlength)
 	{
 		$this->basePath = $basePath;
 		if($fileName != null)
@@ -29,7 +29,7 @@ class FileSynchronizer
 	public function getPoolPath()
 	{
 		$poolPath = $this->basePath . "/" . $this->fileName;
-		if(file_exists($poolPath) && filesize($poolPath) > $this->maxSize)
+		if(file_exists($poolPath) && filesize($poolPath) > $this->maximumlength)
 		{
 			$newPath = $this->basePath . "/" . $this->prefix.date('Y-m-d-H-i-s').$this->extension;
 			rename($poolPath, $newPath);
