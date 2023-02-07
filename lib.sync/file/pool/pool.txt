@@ -21,3 +21,8 @@
 {"op":"DELETEFILE","tm":1675729965,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063ddd14d3bf89302255\/f27a97_35.png"}
 {"op":"DELETEFILE","tm":1675729965,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063ddd14d3bf89302255\/fe3d14_7.gif"}
 {"op":"DELETEDIR","tm":1675729965,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063ddd14d3bf89302255"}
+{"op":"DELETEFILE","tm":1675730070,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063da67d0dcf5af0f05e\/43a3a9094fb72c6b6cc2f4f5fcfcf640.svg"}
+{"op":"DELETEFILE","tm":1675730070,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063da67d0dcf5af0f05e\/6b8840f7ebc659104251e34f30227a2d.svg"}
+{"op":"DELETEFILE","tm":1675730070,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063da67d0dcf5af0f05e\/92dd8da891e1e0a9bbbbaca0b390ac68.svg"}
+{"op":"DELETEFILE","tm":1675730070,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063da67d0dcf5af0f05e\/a15012684b11757855a2d83c54fee7ad.svg"}
+{"op":"DELETEFILE","tm":1675730070,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063da67d0dcf5af0f05e\/c90d57890e84bbd7bebb0ff9ab02530f.svg"}
