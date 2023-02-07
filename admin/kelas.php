@@ -178,8 +178,7 @@ else if (@$_GET['option'] == 'edit')
 					<td><input type="text" class="form-control input-text input-text-long" name="class_code" id="class_code" value="<?php echo $data['class_code']; ?>" autocomplete="off" /><input type="hidden" name="class_id2" id="class_id2" value="<?php echo $data['class_id']; ?>" /></td>
 				</tr>
 				<tr>
-					<td>Tingkat
-					</td>
+					<td>Tingkat</td>
 					<td><select class="form-control input-select" name="grade_id" id="grade_id">
 							<option value=""></option>
 							<?php

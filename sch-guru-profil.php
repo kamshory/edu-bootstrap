@@ -208,8 +208,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td>IP Ubah
 		</td><td><?php echo $data['ip_edit'];?> </td>
 		</tr>
-		</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+	</table>
+	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
 		<td>

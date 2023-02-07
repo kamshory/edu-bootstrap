@@ -389,8 +389,8 @@ if (@$auth_student_id && @$auth_school_id) {
 				<?php
 				}
 				?>
-				</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+			</table>
+		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td></td>
 					<td><input type="button" name="join" id="join" class="btn com-button btn-success" value="Ikuti" onclick="window.location='<?php echo $cfg->base_url; ?>/siswa/ujian/index.php?test_id=<?php echo $data['test_id']; ?>'" />

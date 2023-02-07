@@ -97,7 +97,6 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$phone = $picoEdu->fixPhone($phone);
 	$email = $picoEdu->filterEmailAddress($email);
 
-
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	
@@ -131,7 +130,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$database->executeInsert($sql, true);
 		
 		$sql2 = "INSERT INTO `edu_member_school` 
-		(`member_id`, `school_id`, `role`, `time_create`, `active`) values
+		(`member_id`, `school_id`, `role`, `time_create`, `active`) VALUES
 		('$admin_id', '$school_id', 'A', '$time_create', true)
 		";
 		$database->executeInsert($sql2, true);
@@ -229,8 +228,8 @@ if(@$_GET['option'] == 'add')
 			<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"> Aktif</label>
 			</td>
 			</tr>
-			</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+		</table>
+		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 			<tr>
 			<td></td>
 			<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
@@ -311,8 +310,8 @@ if($stmt->rowCount() > 0)
 			}?>> Aktif</label>
 			</td>
 			</tr>
-			</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+		</table>
+		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 			<tr><td></td>
 			<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> 
 			<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
@@ -417,8 +416,8 @@ else if(@$_GET['option'] == 'detail')
 			<td>Aktif</td>
 			<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 			</tr>
-			</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+		</table>
+		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 			<tr>
 			<td></td>
 			<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&admin_id=<?php echo $data['admin_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>

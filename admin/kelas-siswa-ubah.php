@@ -247,7 +247,7 @@ if(@$_GET['option'] == 'edit')
 		</td>
 		</tr>
 		</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr><td></td>
 		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
@@ -294,10 +294,7 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>Tingkat</td>
-		<td><?php 
-echo $picoEdu->getGradeName($data['grade_id']);
-?>
-<td>
+		<td><?php echo $picoEdu->getGradeName($data['grade_id']);?><td>
 		</tr>
 		<tr>
 		<td>Kelas</td>
@@ -367,8 +364,8 @@ echo $picoEdu->getGradeName($data['grade_id']);
 		<td>Aktif</td>
 		<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
-		</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+	</table>
+	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
 		<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&student_id=<?php echo $data['student_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
@@ -457,10 +454,10 @@ $(document).ready(function(e) {
 
     ?>
     </select>
-    <span class="search-label">Nama Siswa</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
- "))));?>" />
-  <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
+	<span class="search-label">Nama Siswa</span>
+	<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
+	"))));?>" />
+	<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
 <div class="search-result">

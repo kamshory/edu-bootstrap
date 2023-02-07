@@ -100,8 +100,8 @@ $stmt = $database->executeQuery($sql);
 		<td>Alamat
 		</td><td><?php echo $data['address'];?> </td>
 		</tr>
-		</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+	</table>
+	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
 		<td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo 'guru.php';?>'" /></td>

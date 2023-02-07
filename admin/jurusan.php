@@ -117,8 +117,8 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"> Active</label>
 		</td>
 		</tr>
-		</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+	</table>
+	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
 		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
@@ -164,8 +164,8 @@ $stmt = $database->executeQuery($sql);
 		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
 		</td>
 		</tr>
-		</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+	</table>
+	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr><td></td>
 		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
@@ -243,8 +243,8 @@ $stmt = $database->executeQuery($sql);
 		<td>Aktif</td>
 		<td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
 		</tr>
-		</table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+	</table>
+	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
 		<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_program_id=<?php echo $data['school_program_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
@@ -279,10 +279,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
-$pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_school_program`.`name` like '%".addslashes($pagination->query)."%' )";
+	$pagination->array_get[] = 'q';
+	$sql_filter .= " and (`edu_school_program`.`name` like '%".addslashes($pagination->query)."%' )";
 }
-
 
 $nt = '';
 
@@ -325,7 +324,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
       <td>Order</td>
       <td>Default</td>
       <td width="60">Aktif</td>
-</tr>
+	</tr>
     </thead>
     <tbody>
     <?php
