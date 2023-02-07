@@ -16,7 +16,7 @@ if(@$_GET['option'] == 'select')
 	select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 	`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`, `edu_member_school`.`role`
 	FROM `edu_member_school`
-	inner join(`edu_school` AS `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
+	INNER JOIN(`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 	WHERE `edu_member_school`.`member_id` = '$auth_student_id' AND `edu_member_school`.`role` = 'S'
 	) AS `edu_school3`
 	WHERE `edu_school3`.`school_id` = '$school_id'
@@ -41,7 +41,7 @@ include_once dirname((__FILE__))."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_NUMBER_INT);
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
-(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) AS `student`,
+(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) AS `student`,
 (SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) AS `country_id`,
 (SELECT `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) AS `state_id`,
 (SELECT `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) AS `city_id`,
@@ -177,7 +177,7 @@ select `edu_school3`.* from(
 select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 `edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`, `edu_member_school`.`role`
 FROM `edu_member_school`
-inner join(`edu_school` AS `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
+INNER JOIN(`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 WHERE `edu_member_school`.`member_id` = '$auth_student_id' AND `edu_member_school`.`role` = 'S'
 ) AS `edu_school3`
 WHERE 1 $sql_filter
@@ -190,7 +190,7 @@ select `edu_school3`.* from(
 select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 `edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`, `edu_member_school`.`role`
 FROM `edu_member_school`
-inner join(`edu_school` AS `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
+INNER JOIN(`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 WHERE `edu_member_school`.`member_id` = '$auth_student_id' AND `edu_member_school`.`role` = 'S'
 ) AS `edu_school3`
 WHERE 1 $sql_filter

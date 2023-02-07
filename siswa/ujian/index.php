@@ -196,7 +196,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="info">
 <?php
-$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' AND `test_id` = '$test_id' ORDER BY `start` desc ";
+$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' AND `test_id` = '$test_id' ORDER BY `start` DESC ";
 $stmt = $database->executeQuery($sql);
 $ntest = $stmt->rowCount();
 if($ntest)
@@ -299,7 +299,7 @@ else if(@$_GET['login-to-test']=="yes")
 	$dur_obj = $picoEdu->secondsToTime($data['duration']);
 	if($data['has_limits'])
 	{
-		$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' AND `test_id` = '$test_id' ORDER BY `start` desc ";
+		$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' AND `test_id` = '$test_id' ORDER BY `start` DESC ";
 		$stmt = $database->executeQuery($sql);
 		$ntest = $stmt->rowCount();
 		if($ntest < $data['trial_limits'])
@@ -347,7 +347,7 @@ else if(@$_GET['login-to-test']=="yes")
 				{
 					$sql = "SELECT `question_id` , `sort_order`
 					FROM `edu_question` WHERE `test_id` = '$test_id'
-					ORDER BY `sort_order` asc, `question_id` asc
+					ORDER BY `sort_order` ASC, `question_id` asc
 					limit 0, $number_of_question
 					";
 				}

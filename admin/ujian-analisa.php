@@ -7,7 +7,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 	if (isset($_GET['test_id'])) {
 		$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 		$sql = "SELECT `edu_test`.* ,
-(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `koleksi`
+(SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `koleksi`
 FROM `edu_test` WHERE `test_id` = '$test_id' 
 ";
 		$stmt = $database->executeQuery($sql);
@@ -33,7 +33,7 @@ for ($i = 0; $i < $number_of_option; $i++) {
 	$caption_option[$i] = chr(65 + $i);
 }
 
-$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` asc ";
+$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` ASC ";
 $stmt = $database->executeQuery($sql);
 if ($stmt->rowCount() > 0) {
 {
@@ -100,10 +100,10 @@ foreach($rows as $data){
 	}
 
 	$sql2 = "SELECT `edu_option`.*,
-	(select count(distinct `edu_answer`.`answer_id`) 
+	(SELECT COUNT(DISTINCT `edu_answer`.`answer_id`) 
 		FROM `edu_answer` 
 		WHERE `edu_answer`.`answer` like concat('%,',`edu_option`.`option_id`,']%')
-		group by `edu_answer`.`test_id`
+		GROUP BY `edu_answer`.`test_id`
 		limit 0,1
 		) AS `pilih`
 	FROM `edu_option`

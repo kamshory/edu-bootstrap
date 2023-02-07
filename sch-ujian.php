@@ -19,7 +19,7 @@ if (@$auth_student_id && @$auth_school_id) {
 
 		$sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, `edu_answer`.`start`, `edu_answer`.`end`
 		FROM `edu_answer`
-		inner join (`edu_test`) on (`edu_test`.`test_id` = `edu_answer`.`test_id`)
+		INNER JOIN (`edu_test`) on (`edu_test`.`test_id` = `edu_answer`.`test_id`)
 		WHERE `edu_answer`.`answer_id` = '$answer_id' AND `edu_answer`.`student_id` = '$student_id'
 		";
 		$stmt = $database->executeQuery($sql);
@@ -88,10 +88,10 @@ if (@$auth_student_id && @$auth_school_id) {
 			$sql = "SELECT `edu_question`.* , `edu_answer`.`answer` AS `answer` , instr(`edu_answer`.`answer`,`edu_question`.`question_id`) AS `pos`,
 			`edu_test`.`publish_answer`, `edu_test`.`time_answer_publication`
 			FROM `edu_question` 
-			left join (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
-			left join (`edu_test`) on (`edu_test`.`test_id` = `edu_question`.`test_id`)
+			LEFT JOIN (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
+			LEFT JOIN (`edu_test`) on (`edu_test`.`test_id` = `edu_question`.`test_id`)
 			WHERE `edu_answer`.`answer_id` = '$answer_id' AND `edu_answer`.`student_id` = '$student_id'
-			group by `edu_question`.`question_id` 
+			GROUP BY `edu_question`.`question_id` 
 			ORDER BY `pos` asc ";
 			$stmt = $database->executeQuery($sql);
 
@@ -114,7 +114,7 @@ if (@$auth_student_id && @$auth_school_id) {
 								<?php
 								$sql2 = "SELECT `edu_option`.* , '$answer' like concat('%,',`edu_option`.`option_id`,']%') AS `my_answer`
 								FROM `edu_option` 
-								where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` sort_order by  `edu_option`.`sort_order` asc";
+								where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` sort_order by  `edu_option`.`sort_order` ASC ";
 								$stmt2 = $database->executeQuery($sql2);
 								if ($stmt2->rowCount() > 0) 
 								{
@@ -551,11 +551,11 @@ if (@$auth_student_id && @$auth_school_id) {
 			$nt = '';
 
 			$sql = "SELECT `edu_test`.* $nt,
-			(select count(distinct `edu_answer`.`answer_id`) FROM `edu_answer` 
+			(SELECT COUNT(DISTINCT `edu_answer`.`answer_id`) FROM `edu_answer` 
 			WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` AND `edu_answer`.`student_id` = '$student_id') AS `ntest`
 			FROM `edu_test`
 			WHERE `edu_test`.`active` = true AND `edu_test`.`school_id` = '$school_id' $sql_filter
-			ORDER BY `edu_test`.`test_id` desc
+			ORDER BY `edu_test`.`test_id` DESC
 			";
 			$sql_test = "SELECT `edu_test`.*
 			FROM `edu_test`
@@ -723,7 +723,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 		$sql = "SELECT `edu_test`.* $nt
 		FROM `edu_test`
 		WHERE `edu_test`.`active` = true AND `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
-		ORDER BY `edu_test`.`test_id` desc
+		ORDER BY `edu_test`.`test_id` DESC
 		";
 		$sql_test = "SELECT `edu_test`.*
 		FROM `edu_test`
@@ -884,7 +884,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 		$sql = "SELECT `edu_test`.* $nt
 		FROM `edu_test`
 		WHERE `edu_test`.`active` = true AND `edu_test`.`school_id` = '$school_id' $sql_filter
-		ORDER BY `edu_test`.`test_id` desc
+		ORDER BY `edu_test`.`test_id` DESC
 		";
 		$sql_test = "SELECT `edu_test`.*
 		FROM `edu_test`

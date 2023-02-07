@@ -130,7 +130,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 			{
 				$sql = "SELECT `edu_school`.*
 				FROM `edu_school`
-				left join(`edu_member_school`) on(`edu_member_school`.`school_id` = `edu_school`.`school_id` AND `edu_member_school`.`role` = 'A')
+				LEFT JOIN(`edu_member_school`) ON (`edu_member_school`.`school_id` = `edu_school`.`school_id` AND `edu_member_school`.`role` = 'A')
 				WHERE `edu_school`.`school_id` = '$school_id' AND `edu_member_school`.`member_id` = '$admin_id' 
 				";
 				$stmt = $database->executeQuery($sql);
@@ -663,10 +663,10 @@ $sql = "SELECT `edu_school`.* $nt,
 (SELECT `edu_admin2`.`name` FROM `edu_admin` AS `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_school`.`admin_edit` limit 0,1) AS `admin_edit`,
 (SELECT `edu_admin3`.`name` FROM `edu_admin` AS `edu_admin3` WHERE `edu_admin3`.`admin_id` = `edu_school`.`admin_import_first` limit 0,1) AS `admin_import_first`,
 (SELECT `edu_admin4`.`name` FROM `edu_admin` AS `edu_admin4` WHERE `edu_admin4`.`admin_id` = `edu_school`.`admin_import_last` limit 0,1) AS `admin_import_last`,
-(select count(distinct `edu_admin`.`admin_id`) FROM `edu_admin` WHERE `edu_admin`.`school_id` = `edu_school`.`school_id` group by `edu_admin`.`school_id` limit 0,1) AS `num_admin`,
-(select count(distinct `edu_class`.`class_id`) FROM `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id` group by `edu_class`.`school_id` limit 0,1) AS `num_class`,
-(select count(distinct `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` group by `edu_teacher`.`school_id` limit 0,1) AS `num_teacher`,
-(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id` group by `edu_student`.`school_id` limit 0,1) AS `num_student`
+(SELECT COUNT(DISTINCT `edu_admin`.`admin_id`) FROM `edu_admin` WHERE `edu_admin`.`school_id` = `edu_school`.`school_id` GROUP BY `edu_admin`.`school_id` limit 0,1) AS `num_admin`,
+(SELECT COUNT(DISTINCT `edu_class`.`class_id`) FROM `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id` GROUP BY `edu_class`.`school_id` limit 0,1) AS `num_class`,
+(SELECT COUNT(DISTINCT `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` GROUP BY `edu_teacher`.`school_id` limit 0,1) AS `num_teacher`,
+(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id` GROUP BY `edu_student`.`school_id` limit 0,1) AS `num_student`
 FROM `edu_school` 
 WHERE `edu_school`.`school_id` = '$edit_key'
 ";

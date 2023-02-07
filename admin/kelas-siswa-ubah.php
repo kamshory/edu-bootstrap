@@ -177,7 +177,7 @@ if(@$_GET['option'] == 'edit')
 		<td><select class="form-control input-select" name="class_id" id="class_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` asc ";
+		$sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` ASC ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(
@@ -432,7 +432,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` asc ";
+    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` ASC ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -478,9 +478,9 @@ $nt = '';
 
 $sql = "SELECT `edu_student`.* , `edu_class`.`name` AS `class_id`, `edu_class`.`sort_order` AS `sort_order`
 FROM `edu_student`
-left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
+LEFT JOIN(`edu_class`) ON (`edu_class`.`class_id` = `edu_student`.`class_id`)
 WHERE `edu_student`.`school_id` = '$school_id' $sql_filter
-ORDER BY `sort_order` asc, `edu_student`.`name` asc
+ORDER BY `sort_order` ASC, `edu_student`.`name` asc
 ";
 $sql_test = "SELECT `edu_student`.*
 FROM `edu_student`
@@ -509,7 +509,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
             	<select class="form-control input-select" name="class_id" id="class_id" style="width:100%; box-sizing:border-box;" required="required">
                 <option value="">- Pilih Kelas Baru -</option>
                 <?php 
-                $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` asc ";
+                $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` ASC ";
                 echo $picoEdu->createFilterDb(
 					$sql2,
 					array(

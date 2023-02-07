@@ -17,7 +17,7 @@ if(isset($_POST['question']))
 {
 	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$picoEdu->sortQuestion($test_id);
-	$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` desc";
+	$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` DESC";
 	$stmt = $database->executeQuery($sql);
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$sort_order = (@$data['sort_order'])+1;

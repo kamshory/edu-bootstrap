@@ -12,7 +12,7 @@ if(@$_GET['option'] == 'select')
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_school`.* 
 	FROM `edu_member_school`
-	inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
+	INNER JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_member_school`.`school_id`)
 	WHERE `edu_member_school`.`member_id` = '$admin_id' AND `edu_member_school`.`role` = 'A' 
 	ORDER BY `edu_school`.`school_id` asc
 	";
@@ -55,7 +55,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
-(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) AS `student`,
+(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) AS `student`,
 (SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) AS `country_id`,
 (SELECT `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) AS `state_id`,
 (SELECT `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) AS `city_id`,
@@ -202,13 +202,13 @@ $sql = "SELECT `edu_school`.* $nt,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) AS `admin_create`,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) AS `admin_edit`
 FROM `edu_member_school`
-inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
+INNER JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_member_school`.`school_id`)
 WHERE `edu_member_school`.`member_id` = '$admin_id' AND `edu_member_school`.`role` = 'A' $sql_filter
 ORDER BY `edu_school`.`school_id` asc
 ";
 $sql_test = "SELECT `edu_school`.*
 FROM `edu_member_school`
-inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
+INNER JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_member_school`.`school_id`)
 WHERE `edu_member_school`.`member_id` = '$admin_id' AND `edu_member_school`.`role` = 'A' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);

@@ -288,7 +288,7 @@ $nt = '';
 $sql = "SELECT `edu_school_program`.*
 FROM `edu_school_program`
 WHERE `school_id` = '$school_id' $sql_filter
-ORDER BY `sort_order` asc
+ORDER BY `sort_order` ASC
 ";
 $sql_test = "SELECT `edu_school_program`.*
 FROM `edu_school_program`

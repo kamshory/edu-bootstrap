@@ -489,7 +489,7 @@ $nt = '';
 $sql = "SELECT `edu_test_collection`.* $nt
 FROM `edu_test_collection`
 WHERE 1 $sql_filter
-ORDER BY `edu_test_collection`.`test_collection_id` desc
+ORDER BY `edu_test_collection`.`test_collection_id` DESC
 ";
 $sql_test = "SELECT `edu_test_collection`.*
 FROM `edu_test_collection`

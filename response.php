@@ -7,7 +7,7 @@ include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
 $sql = "SELECT `edu_school_response`.* 
 FROM `edu_school_response` 
 WHERE `edu_school_response`.`active` = true 
-ORDER BY `edu_school_response`.`time` desc
+ORDER BY `edu_school_response`.`time` DESC
 ";
 
 $stmt = $database->executeQuery($sql);

@@ -139,7 +139,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td><select class="form-control input-select" name="class_id" id="class_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT * FROM `edu_class` WHERE `active` = true  ORDER BY `sort_order` asc ";
+		$sql2 = "SELECT * FROM `edu_class` WHERE `active` = true  ORDER BY `sort_order` ASC ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(
@@ -375,7 +375,7 @@ $(document).ready(function(e) {
     <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc";
+    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` DESC";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -404,7 +404,7 @@ $(document).ready(function(e) {
     <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` asc ";
+    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` ASC ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -460,9 +460,9 @@ $sql = "SELECT `edu_student`.* ,
 (SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_student`.`school_id` limit 0,1) AS `school_name`,
 `edu_class`.`name` AS `class_id`, `edu_class`.`sort_order` AS `sort_order`
 FROM `edu_student`
-left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
+LEFT JOIN(`edu_class`) ON (`edu_class`.`class_id` = `edu_student`.`class_id`)
 WHERE 1 $sql_filter
-ORDER BY `edu_student`.`school_id` desc, `edu_student`.`name` asc
+ORDER BY `edu_student`.`school_id` DESC, `edu_student`.`name` asc
 ";
 $sql_test = "SELECT `edu_student`.*
 FROM `edu_student`

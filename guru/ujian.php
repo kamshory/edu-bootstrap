@@ -347,7 +347,7 @@ if(@$_GET['option'] == 'add')
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $collection = kh_filter_input(INPUT_GET, "collection", FILTER_SANITIZE_STRING_NEW);
 $selection = kh_filter_input(INPUT_GET, "selection", FILTER_SANITIZE_STRING_NEW);
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
 $stmtc = $database->executeQuery($sqlc);
 $arrc = array();
 if($stmtc->rowCount() > 0)
@@ -645,7 +645,7 @@ $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
 $stmtc = $database->executeQuery($sqlc);
 $arrc = array();
 if($stmtc->rowCount() > 0)
@@ -1216,7 +1216,7 @@ $sql = "SELECT `edu_test`.* $nt,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
-ORDER BY `edu_test`.`test_id` desc
+ORDER BY `edu_test`.`test_id` DESC
 ";
 $sql_test = "SELECT `edu_test`.*
 FROM `edu_test`

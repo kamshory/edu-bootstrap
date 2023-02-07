@@ -10,9 +10,9 @@ if(!empty(@$page_school_id)) {
 	(SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) AS `country_id`,
 	(SELECT `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) AS `state_id`,
 	(SELECT `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) AS `city_id`,
-	(select count(distinct `edu_class`.`class_id`) FROM `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id` group by `edu_class`.`school_id` limit 0,1) AS `num_class`,
-	(select count(distinct `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` group by `edu_teacher`.`school_id` limit 0,1) AS `num_teacher`,
-	(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id` group by `edu_student`.`school_id` limit 0,1) AS `num_student`
+	(SELECT COUNT(DISTINCT `edu_class`.`class_id`) FROM `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id` GROUP BY `edu_class`.`school_id` limit 0,1) AS `num_class`,
+	(SELECT COUNT(DISTINCT `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` GROUP BY `edu_teacher`.`school_id` limit 0,1) AS `num_teacher`,
+	(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id` GROUP BY `edu_student`.`school_id` limit 0,1) AS `num_student`
 	FROM `edu_school` 
 	where 1
 	AND `edu_school`.`school_id` = '$page_school_id'
@@ -156,7 +156,7 @@ if(!empty(@$page_school_id)) {
 					(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) AS `admin_edit`,
 					(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) AS `class_id`
 					FROM `edu_student` 
-					left join(`edu_school`) on(`edu_school`.`school_id` = `edu_student`.`school_id`)
+					LEFT JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_student`.`school_id`)
 					WHERE `edu_student`.`school_id` = '$school_id'
 					AND `edu_student`.`student_id` = '$student_id'
 					";
@@ -328,10 +328,10 @@ if(!empty(@$page_school_id)) {
 			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 			$sql = "SELECT `edu_class`.*,
 				(SELECT `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) AS `school_program_id`,
-				(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) AS `num_student`
+				(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) AS `num_student`
 				FROM `edu_class`
 				WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$page_school_id'
-				ORDER BY `edu_class`.`grade_id` asc, `edu_class`.`sort_order` asc
+				ORDER BY `edu_class`.`grade_id` asc, `edu_class`.`sort_order` ASC
 				";
 			$stmt = $database->executeQuery($sql);
 			
@@ -412,9 +412,9 @@ if(!empty(@$page_school_id)) {
 				<?php
 			} else {
 				$sql = "SELECT `edu_school`.*, 
-					(select count(distinct `edu_student`.`student_id`) FROM `edu_student`
+					(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student`
 					WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'M') AS `M`,
-					(select count(distinct `edu_student`.`student_id`) FROM `edu_student`
+					(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student`
 					WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'W') AS `W`
 					FROM `edu_school`
 					WHERE `edu_school`.`school_id` = '$page_school_id' 
@@ -499,7 +499,7 @@ if(!empty(@$page_school_id)) {
 			if ($article_id) {
 				$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 					FROM `edu_article` 
-					left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
+					LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 					WHERE `edu_article`.`article_id` = '$article_id' AND `edu_article`.`school_id` = '$page_school_id' AND `edu_article`.`active` = true ";
 					$stmt = $database->executeQuery($sql);
 					if ($stmt->rowCount() > 0) {
@@ -530,9 +530,9 @@ if(!empty(@$page_school_id)) {
 				$sql_filter_article = "";
 				$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 					FROM `edu_article` 
-					left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
+					LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 					WHERE `edu_article`.`active` = true AND `edu_article`.`school_id` = '$page_school_id'
-					ORDER BY `edu_article`.`article_id` desc
+					ORDER BY `edu_article`.`article_id` DESC
 					";
 				$stmt = $database->executeQuery($sql);
 				if ($stmt->rowCount() > 0) {
@@ -620,7 +620,7 @@ if(!empty(@$page_school_id)) {
 			$sql = "SELECT `edu_test`.*
 				FROM `edu_test`
 				WHERE `edu_test`.`active` = true AND `edu_test`.`school_id` = '$page_school_id' 
-				ORDER BY `edu_test`.`test_id` desc
+				ORDER BY `edu_test`.`test_id` DESC
 				";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {

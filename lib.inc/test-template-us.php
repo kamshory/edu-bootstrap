@@ -189,7 +189,7 @@ foreach($rows as $data)
 	$sql2 = "SELECT `edu_option`.* , rand() AS `rand`
 	FROM `edu_option`
 	WHERE `edu_option`.`question_id` = '$soal'
-	ORDER BY `sort_order` asc
+	ORDER BY `sort_order` ASC
 	";
 	}
 	$i=1;

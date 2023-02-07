@@ -19,7 +19,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 	$now = $picoEdu->getLocalDateTime();
 	$sql = "SELECT `edu_token`.* , `edu_test`.*
 	FROM `edu_token`
-	inner join(`edu_test`) on(`edu_test`.`test_id` = `edu_token`.`test_id`)
+	INNER JOIN(`edu_test`) ON (`edu_test`.`test_id` = `edu_token`.`test_id`)
 	WHERE `edu_token`.`student_id` = '$auth_student_id'
 	AND `edu_token`.`token` = '$token' AND `edu_token`.`active` = true AND `edu_token`.`time_expire` > '$now'
 	";
@@ -40,7 +40,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 		$dur_obj = $picoEdu->secondsToTime($data['duration']);
 		if($data['has_limits'])
 		{
-			$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' AND `test_id` = '$test_id' ORDER BY `start` desc ";
+			$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' AND `test_id` = '$test_id' ORDER BY `start` DESC ";
 			$stmt = $database->executeQuery($sql);
 			$ntest = $stmt->rowCount();
 			if($ntest < $data['trial_limits'])
@@ -86,7 +86,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 				{
 					$sql = "SELECT `question_id` , `sort_order`
 					FROM `edu_question` WHERE `test_id` = '$test_id'
-					ORDER BY `sort_order` asc, `question_id` asc
+					ORDER BY `sort_order` ASC, `question_id` asc
 					limit 0, $number_of_question
 					";
 				}

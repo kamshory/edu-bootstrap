@@ -30,7 +30,7 @@ class TeacherAuth
 				`edu_teacher`.`country_id`, `edu_teacher`.`state_id`, `edu_teacher`.`city_id`, `edu_teacher`.`school_id`, 
 				`edu_school`.`name` AS `school_name`, `edu_school`.`school_code` AS `school_code`, `edu_school`.`use_token`
 				FROM `edu_teacher` 
-				left join(`edu_school`) on(`edu_school`.`school_id` = `edu_teacher`.`school_id`)
+				LEFT JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_teacher`.`school_id`)
 				WHERE `edu_teacher`.`username` like '$username' 
 				AND `edu_teacher`.`password` = md5('$password') 
 				AND `edu_teacher`.`active` = true

@@ -436,7 +436,7 @@ else if(isset($_GET['info_id']))
 
 	$sql = "SELECT `edu_info`.*, `member`.`name` AS `creator`
 	FROM `edu_info` 
-	left join(`member`) on(`member`.`member_id` = `edu_info`.`admin_create`) 
+	LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_info`.`admin_create`) 
 	WHERE 1 $sql_filter_info ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -540,7 +540,7 @@ $sql = "SELECT `edu_info`.*,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_info`.`admin_edit`) AS `admin_edit_name` 
 FROM `edu_info`
 WHERE 1 $sql_filter
-ORDER BY `edu_info`.`info_id` desc
+ORDER BY `edu_info`.`info_id` DESC
 ";
 $sql_test = "SELECT `edu_info`.*
 FROM `edu_info`

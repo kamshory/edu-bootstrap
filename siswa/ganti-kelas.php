@@ -12,8 +12,8 @@ if(@$_GET['option'] == 'select')
 	$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_NUMBER_INT);
 	$sql = "SELECT `edu_class`.`class_id`, `edu_student`.`student_id`
 	FROM `edu_school`
-	inner join(`edu_student`) on(`edu_student`.`school_id` = `edu_school`.`school_id`)
-	inner join(`edu_class`) on(`edu_class`.`school_id` = `edu_school`.`school_id`)
+	INNER JOIN(`edu_student`) ON (`edu_student`.`school_id` = `edu_school`.`school_id`)
+	INNER JOIN(`edu_class`) ON (`edu_class`.`school_id` = `edu_school`.`school_id`)
 	WHERE `edu_student`.`student_id` = '$auth_student_id' 
 	AND `edu_class`.`class_id` = '$class_id'
 	AND `edu_school`.`open` = '1'
@@ -149,10 +149,10 @@ $nt = '';
 
 $sql = "SELECT `edu_class`.* $nt,
 (SELECT `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) AS `school_program_id`,
-(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) AS `num_student`
+(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) AS `num_student`
 FROM `edu_class`
 WHERE 1 $sql_filter
-ORDER BY `edu_class`.`sort_order` asc
+ORDER BY `edu_class`.`sort_order` ASC
 ";
 $sql_test = "SELECT `edu_class`.*
 FROM `edu_class`

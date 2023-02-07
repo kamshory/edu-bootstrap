@@ -22,7 +22,7 @@ if(@$_GET['option'] == 'delete')
 	$question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);
 	$digest = kh_filter_input(INPUT_GET, "digest", FILTER_SANITIZE_STRING_NEW_BASE64);
 	$sql = "SELECT * FROM `edu_question`
-	inner join(`edu_test`) on(`edu_test`.`test_id` = `edu_question`.`test_id` AND `edu_test`.`school_id` = '$school_id')
+	INNER JOIN(`edu_test`) ON (`edu_test`.`test_id` = `edu_question`.`test_id` AND `edu_test`.`school_id` = '$school_id')
 	WHERE `question_id` = '$question_id' AND `digest` = '$digest' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -325,7 +325,7 @@ exit();
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* ,
-(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `collection`
+(SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `collection`
 FROM `edu_test` WHERE `test_id` = '$test_id' ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -459,7 +459,7 @@ else if(@$_GET['option'] == 'edit')
 		$test_id = $data['test_id'];
 
 		$sql = "SELECT `edu_test`.* ,
-		(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `collection`
+		(SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `collection`
 		FROM `edu_test` WHERE `test_id` = '$test_id' ";
 
 		$stmt3 = $database->executeQuery($sql);
@@ -605,7 +605,7 @@ else if(isset($_GET['test_id']))
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* ,
-(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `collection`
+(SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `collection`
 FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
@@ -657,7 +657,7 @@ for($i=0;$i<$number_of_option;$i++)
 
 if(@$_GET['option'] == 'analys')
 {
-$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` asc ";
+$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` ASC ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -733,10 +733,10 @@ foreach($rows as $data)
 	}
 	
 	$sql2 = "SELECT `edu_option`.*,
-	(select count(distinct `edu_answer`.`answer_id`) 
+	(SELECT COUNT(DISTINCT `edu_answer`.`answer_id`) 
 		FROM `edu_answer` 
 		WHERE `edu_answer`.`answer` like concat('%,',`edu_option`.`option_id`,']%')
-		group by `edu_answer`.`test_id`
+		GROUP BY `edu_answer`.`test_id`
 		limit 0,1
 		) AS `pilih`
 	FROM `edu_option`
@@ -857,7 +857,7 @@ else
 <?php
 $sql = "SELECT * 
 FROM `edu_question` WHERE `test_id` = '$test_id' 
-ORDER BY `sort_order` asc, `question_id` asc
+ORDER BY `sort_order` ASC, `question_id` asc
 ";
 $stmt = $database->executeQuery($sql);
 
@@ -1103,14 +1103,14 @@ $nt = '';
 
 $sql = "SELECT `edu_test`.* $nt,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`,
-(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 AS `number_of_question`
+(SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` GROUP BY `edu_question`.`test_id`)*1 AS `number_of_question`
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
-ORDER BY `edu_test`.`test_id` desc
+ORDER BY `edu_test`.`test_id` DESC
 ";
 $sql_test = "SELECT `edu_test`.* $nt,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`,
-(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 AS `number_of_question`
+(SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` GROUP BY `edu_question`.`test_id`)*1 AS `number_of_question`
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
 ";

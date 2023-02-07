@@ -10,7 +10,7 @@ class PicoEdu //NOSONAR
 	const RAQUO = ' &raquo; ';
 	const AMPERSAND_OFFSET = '&offset=';
 
-	public PicoDatabase $database;
+	public \PicoDatabase $database;
 
 	public function __construct(PicoDatabase $database)
 	{
@@ -60,7 +60,6 @@ class PicoEdu //NOSONAR
 	}
 	public function containingLowercase($text)
 	{
-
 		for ($i = 0; $i < strlen($text); $i++) {
 			$j = $text[$i];
 			if (ctype_lower($j)) {
@@ -125,8 +124,6 @@ class PicoEdu //NOSONAR
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		return @$data['name'];
 	}
-
-
 
 	public function fixPhone($phone)
 	{
@@ -473,7 +470,7 @@ class PicoEdu //NOSONAR
 	}
 	public function getBasicCompetence($test_id)
 	{
-		$sql = "SELECT `basic_competence` FROM `edu_question` WHERE `test_id` = '$test_id' group by `basic_competence` ";
+		$sql = "SELECT `basic_competence` FROM `edu_question` WHERE `test_id` = '$test_id' GROUP BY `basic_competence` ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
 			$result = array();
@@ -882,7 +879,7 @@ class PicoEdu //NOSONAR
 
 	public function sortQuestion($test_id)
 	{
-		$sql = "SELECT `question_id` FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` asc ";
+		$sql = "SELECT `question_id` FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` ASC ";
 		$stmt = $this->database->executeQuery($sql);
 		$ret = array();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -170,7 +170,7 @@ if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 $school_id = $data['school_id'];
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
 $stmtc = $database->executeQuery($sqlc);
 $arrc = array();
 if($stmtc->rowCount() > 0)
@@ -747,7 +747,7 @@ window.onload = function()
   <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc";
+    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` DESC";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -834,7 +834,7 @@ $sql = "SELECT `edu_test`.* $nt,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`
 FROM `edu_test`
 WHERE 1 $sql_filter
-ORDER BY `edu_test`.`test_id` desc
+ORDER BY `edu_test`.`test_id` DESC
 ";
 $sql_test = "SELECT `edu_test`.*
 FROM `edu_test`

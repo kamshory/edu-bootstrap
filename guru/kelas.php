@@ -94,12 +94,12 @@ $nt = '';
 
 $sql = "SELECT `edu_class`.* $nt,
 (SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_class`.`school_id` limit 0,1) AS `school_name`,
-(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) AS `num_student`,
+(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) AS `num_student`,
 `edu_school_program`.`name` AS `school_program`
 FROM `edu_class`
 LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = `edu_class`.`school_program_id`) 
 WHERE `edu_class`.`school_id` = '$school_id' $sql_filter
-ORDER BY `edu_class`.`school_id` desc, `edu_school_program`.`sort_order` asc, `edu_class`.`sort_order` asc
+ORDER BY `edu_class`.`school_id` DESC, `edu_school_program`.`sort_order` ASC, `edu_class`.`sort_order` ASC
 ";
 
 $sql_test = "SELECT `edu_class`.*

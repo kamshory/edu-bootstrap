@@ -30,11 +30,11 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 	`edu_school`.`active` AS `school_active`,
 	`edu_student`.`student_id` AS `student_id`,
 	`edu_member_school`.`member_id` AS `student_in_school_id`,
-	(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`student_id` = '$member_id' AND `edu_member_school`.`role` = 'S') AS `student_registered`
+	(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`student_id` = '$member_id' AND `edu_member_school`.`role` = 'S') AS `student_registered`
 	FROM `edu_test` 
-	inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
-	left join(`edu_student`) on(`edu_student`.`school_id` = `edu_test`.`school_id` AND `edu_student`.`student_id` = '$member_id')
-	left join(`edu_member_school`) on(`edu_member_school`.`school_id` = `edu_test`.`school_id` AND `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S')
+	INNER JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_test`.`school_id`)
+	LEFT JOIN(`edu_student`) ON (`edu_student`.`school_id` = `edu_test`.`school_id` AND `edu_student`.`student_id` = '$member_id')
+	LEFT JOIN(`edu_member_school`) ON (`edu_member_school`.`school_id` = `edu_test`.`school_id` AND `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S')
 	WHERE `edu_test`.`test_id` = '$test_id' 
 	AND `edu_test`.`open` = '1' 
 	AND `edu_test`.`active` = true
@@ -137,11 +137,11 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 		`edu_school`.`active` AS `school_active`,
 		`edu_student`.`student_id` AS `student_id`,
 		`edu_member_school`.`member_id` AS `student_in_school_id`,
-		(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`student_id` = '$member_id' AND `edu_member_school`.`role` = 'S') AS `student_registered`
+		(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`student_id` = '$member_id' AND `edu_member_school`.`role` = 'S') AS `student_registered`
 		FROM `edu_test` 
-		inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
-		left join(`edu_student`) on(`edu_student`.`school_id` = `edu_test`.`school_id` AND `edu_student`.`student_id` = '$member_id')
-		left join(`edu_member_school`) on(`edu_member_school`.`school_id` = `edu_test`.`school_id` AND `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S')
+		INNER JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_test`.`school_id`)
+		LEFT JOIN(`edu_student`) ON (`edu_student`.`school_id` = `edu_test`.`school_id` AND `edu_student`.`student_id` = '$member_id')
+		LEFT JOIN(`edu_member_school`) ON (`edu_member_school`.`school_id` = `edu_test`.`school_id` AND `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S')
 		WHERE `edu_test`.`test_id` = '$test_id' 
 		AND `edu_test`.`open` = '1' AND `edu_test`.`active` = true
 		AND `edu_school`.`open` = '1' AND `edu_school`.`active` = true
@@ -279,7 +279,7 @@ $school_grade = array(
 		$school_data = array();
 		$sql = "SELECT `edu_test`.*, `edu_test`.`name` AS `test_name`, `edu_school`.`name` AS `school_name`, `edu_school`.`school_grade_id`
 		FROM `edu_test`
-		inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
+		INNER JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_test`.`school_id`)
 		where 1 
 		AND `edu_test`.`open` = '1' AND `edu_test`.`active` = true
 		AND `edu_school`.`open` = '1' AND `edu_school`.`active` = true

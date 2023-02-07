@@ -58,7 +58,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $status = kh_filter_input(INPUT_GET, "status", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* ,
-(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `number_of_real_question`
+(SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `number_of_real_question`
 FROM `edu_test` WHERE `test_id` = '$test_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -259,16 +259,16 @@ $nt = '';
 
 
 $sql = "SELECT `edu_test`.* $nt,
-(select count(distinct `edu_test_member`.`student_id`) FROM `edu_test_member` WHERE `edu_test_member`.`test_id` = `edu_test`.`test_id`) AS `student`,
-(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 AS `number_of_question`
+(SELECT COUNT(DISTINCT `edu_test_member`.`student_id`) FROM `edu_test_member` WHERE `edu_test_member`.`test_id` = `edu_test`.`test_id`) AS `student`,
+(SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` GROUP BY `edu_question`.`test_id`)*1 AS `number_of_question`
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 having 1 AND `student` > 0
-ORDER BY `edu_test`.`test_id` desc
+ORDER BY `edu_test`.`test_id` DESC
 ";
 
 $sql_test = "SELECT `edu_test`.`test_id`,
-(select count(distinct `edu_test_member`.`student_id`) FROM `edu_test_member` WHERE `edu_test_member`.`test_id` = `edu_test`.`test_id`) AS `student`
+(SELECT COUNT(DISTINCT `edu_test_member`.`student_id`) FROM `edu_test_member` WHERE `edu_test_member`.`test_id` = `edu_test`.`test_id`) AS `student`
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 having `student` > 0

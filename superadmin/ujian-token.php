@@ -179,7 +179,7 @@ $(document).ready(function(e) {
 		$sql2 = "SELECT * FROM `edu_test`
 		WHERE `school_id` = '$school_id'
 		and (`test_availability` = 'F' OR `available_to` > '$now')
-		ORDER BY `test_id` desc
+		ORDER BY `test_id` DESC
 		";
 		echo $picoEdu->createFilterDb(
 			$sql2,
@@ -209,7 +209,7 @@ $(document).ready(function(e) {
 		<?php 
 		$sql2 = "SELECT * FROM `edu_class`
 		WHERE `active` = true AND `school_id` = '$school_id'
-		ORDER BY `sort_order` asc
+		ORDER BY `sort_order` ASC
 		";
 		echo $picoEdu->createFilterDb(
 			$sql2,
@@ -394,7 +394,7 @@ function printToken(frm)
 	$sql2 = "SELECT * FROM `edu_test`
 	WHERE `school_id` = '$school_id'
 	and (`test_availability` = 'F' OR `available_to` > '$now')
-	ORDER BY `test_id` desc
+	ORDER BY `test_id` DESC
 	";
 	echo $picoEdu->createFilterDb(
 		$sql2,
@@ -422,7 +422,7 @@ function printToken(frm)
     <?php
 	$sql2 = "SELECT * FROM `edu_class`
 	WHERE `active` = true AND `school_id` = '$school_id'
-	ORDER BY `sort_order` asc
+	ORDER BY `sort_order` ASC
 	";
 	echo $picoEdu->createFilterDb(
 		$sql2,
@@ -483,7 +483,7 @@ $sql = "SELECT `edu_token`.* $nt,
 (SELECT `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) AS `test_name`
 FROM `edu_token`
 WHERE `school_id` = '$school_id' $sql_filter
-ORDER BY `edu_token`.`token_id` desc
+ORDER BY `edu_token`.`token_id` DESC
 ";
 $sql_test = "SELECT `edu_token`.*
 FROM `edu_token`

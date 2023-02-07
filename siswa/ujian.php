@@ -19,7 +19,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, 
 `edu_answer`.`start`, `edu_answer`.`end`, `edu_answer`.`competence_score`
 FROM `edu_answer`
-inner join (`edu_test`) on (`edu_test`.`test_id` = `edu_answer`.`test_id`)
+INNER JOIN (`edu_test`) on (`edu_test`.`test_id` = `edu_answer`.`test_id`)
 WHERE `edu_answer`.`answer_id` = '$answer_id' AND `edu_answer`.`student_id` = '$auth_student_id'
 ";
 $stmt = $database->executeQuery($sql);
@@ -101,7 +101,7 @@ else
 	$sql = "SELECT `edu_question`.`basic_competence`, count(distinct `edu_question`.`question_id`) AS `num_question`
 	FROM `edu_question`
 	WHERE `edu_question`.`test_id` = '$test_id' 
-	group by `edu_question`.`basic_competence`
+	GROUP BY `edu_question`.`basic_competence`
 	";
 	$stmtx = $database->executeQuery($sql);
 	if ($stmtx->rowCount() > 0) {
@@ -199,10 +199,10 @@ foreach($bc_score as $key=>$val)
 $sql = "SELECT `edu_question`.* , `edu_answer`.`answer` AS `answer` , instr(`edu_answer`.`answer`,`edu_question`.`question_id`) AS `pos`,
 `edu_test`.`publish_answer`, `edu_test`.`time_answer_publication`
 FROM `edu_question` 
-left join (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
-left join (`edu_test`) on (`edu_test`.`test_id` = `edu_question`.`test_id`)
+LEFT JOIN (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
+LEFT JOIN (`edu_test`) on (`edu_test`.`test_id` = `edu_question`.`test_id`)
 WHERE `edu_answer`.`answer_id` = '$answer_id' AND `edu_answer`.`student_id` = '$auth_student_id'
-group by `edu_question`.`question_id` 
+GROUP BY `edu_question`.`question_id` 
 ORDER BY `pos` asc ";
 
 $stmt1 = $database->executeQuery($sql);
@@ -230,7 +230,7 @@ foreach($rows1 as $data)
 	<?php
 	$sql2 = "SELECT `edu_option`.* , '$answer' like concat('%,',`edu_option`.`option_id`,']%') AS `my_answer`
 	FROM `edu_option` 
-	where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` sort_order by  `edu_option`.`sort_order` asc";
+	where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` sort_order by  `edu_option`.`sort_order` ASC ";
 	$stmt2 = $database->executeQuery($sql);
 
 	if($stmt2->rowCount() > 0)
@@ -301,7 +301,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 $sql = "SELECT `edu_test`.* 
 FROM `edu_test`
-inner join(`edu_answer`) on (`edu_answer`.`test_id` = `edu_test`.`test_id`)
+INNER JOIN(`edu_answer`) on (`edu_answer`.`test_id` = `edu_test`.`test_id`)
 WHERE `edu_test`.`test_id` = '$test_id' AND `edu_answer`.`student_id` = '$auth_student_id'
 ";
 $stmt = $database->executeQuery($sql);
@@ -699,11 +699,11 @@ $nt = '';
 
 $sql = "SELECT `edu_test`.* $nt,
 (SELECT `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_test`.`school_program_id`) AS `school_program`,
-(select count(distinct `edu_answer`.`answer_id`) FROM `edu_answer` 
+(SELECT COUNT(DISTINCT `edu_answer`.`answer_id`) FROM `edu_answer` 
 WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` AND `edu_answer`.`student_id` = '$auth_student_id') AS `ntest`
 FROM `edu_test`
 WHERE `edu_test`.`active` = true AND `edu_test`.`school_id` = '$school_id' $sql_filter
-ORDER BY `edu_test`.`test_id` desc
+ORDER BY `edu_test`.`test_id` DESC
 ";
 $sql_test = "SELECT `edu_test`.*
 FROM `edu_test`

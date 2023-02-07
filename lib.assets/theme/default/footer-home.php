@@ -55,7 +55,7 @@
 		$sql = "SELECT `edu_info`.* 
 		FROM `edu_info` 
 		WHERE `edu_info`.`active` = true
-		ORDER BY `edu_info`.`info_id` desc
+		ORDER BY `edu_info`.`info_id` DESC
 		limit 0, 10
 		";
 		$stmt = $database->executeQuery($sql);
@@ -83,8 +83,8 @@
 		$sql = "SELECT `edu_info`.`time_create` , left(`edu_info`.`time_create`, 7) AS `month`, count(*) AS `count`
 		FROM `edu_info` 
 		WHERE `edu_info`.`active` = true
-		group by `month`
-		ORDER BY `edu_info`.`info_id` desc
+		GROUP BY `month`
+		ORDER BY `edu_info`.`info_id` DESC
 		";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)

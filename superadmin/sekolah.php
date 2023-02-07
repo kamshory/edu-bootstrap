@@ -309,7 +309,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql2 = "SELECT * FROM `country` WHERE `active` = true ORDER BY `sort_order` asc
+        $sql2 = "SELECT * FROM `country` WHERE `active` = true ORDER BY `sort_order` ASC
 		";
 
 		echo $picoEdu->createFilterDb(
@@ -623,7 +623,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql2 = "SELECT * FROM `country` WHERE `active` = true ORDER BY `sort_order` asc
+        $sql2 = "SELECT * FROM `country` WHERE `active` = true ORDER BY `sort_order` ASC
 		";
 		echo $picoEdu->createFilterDb(
 			$sql2,
@@ -743,9 +743,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
-(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) AS `student`,
-(select count(distinct `edu_class`.`class_id`) FROM `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id`) AS `class`,
-(select count(distinct `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id`) AS `teacher`,
+(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) AS `student`,
+(SELECT COUNT(DISTINCT `edu_class`.`class_id`) FROM `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id`) AS `class`,
+(SELECT COUNT(DISTINCT `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id`) AS `teacher`,
 (SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) AS `country_id`,
 (SELECT `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) AS `state_id`,
 (SELECT `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) AS `city_id`,
@@ -918,13 +918,13 @@ $nt = '';
 
 
 $sql = "SELECT `edu_school`.* $nt,
-(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) AS `student`,
-(select count(distinct `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id`) AS `teacher`,
+(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) AS `student`,
+(SELECT COUNT(DISTINCT `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id`) AS `teacher`,
 (SELECT `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) AS `state_id`,
 (SELECT `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) AS `city_id`
 FROM `edu_school`
 WHERE 1 $sql_filter
-ORDER BY `edu_school`.`school_id` desc
+ORDER BY `edu_school`.`school_id` DESC
 ";
 $sql_test = "SELECT `edu_school`.*
 FROM `edu_school`

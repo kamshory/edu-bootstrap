@@ -376,7 +376,7 @@ $sqlc = "SELECT `edu_class`.`class_id`, `edu_class`.`name`
 FROM `edu_class` 
 LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = `edu_class`.`school_program_id`)
 WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id' AND `edu_class`.`name` != '' 
-ORDER BY `edu_school_program`.`sort_order` asc , `edu_class`.`sort_order` asc 
+ORDER BY `edu_school_program`.`sort_order` ASC , `edu_class`.`sort_order` ASC 
 ";
 $stmt = $database->executeQuery($sqlc);
 if($stmt->rowCount() > 0)
@@ -717,7 +717,7 @@ if($stmt->rowCount() > 0)
 {
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -1361,7 +1361,7 @@ $sql = "SELECT `edu_test`.* $nt,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
-ORDER BY `edu_test`.`test_id` desc
+ORDER BY `edu_test`.`test_id` DESC
 ";
 $sql_test = "SELECT `edu_test`.*
 FROM `edu_test`

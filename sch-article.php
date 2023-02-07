@@ -16,7 +16,7 @@ if(!empty(@$school_id))
 		$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' AND `edu_article`.`open` = '1' ";
 		$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 		FROM `edu_article` 
-		left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
+		LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 		WHERE 1 $sql_filter_article ";
 		include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		$stmt = $database->executeQuery($sql);
@@ -42,9 +42,9 @@ if(!empty(@$school_id))
 	$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' AND `edu_article`.`open` = '1'";
 	$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 	FROM `edu_article` 
-	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
+	LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 	WHERE 1 $sql_filter_article 
-	ORDER BY `edu_article`.`article_id` desc
+	ORDER BY `edu_article`.`article_id` DESC
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -193,7 +193,7 @@ if(isset($_GET['school_id']))
 {
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
 $stmt = $database->executeQuery($sql);
 $arrc = array();
 if($stmt->rowCount())
@@ -295,7 +295,7 @@ else if(isset($_GET['article_id']))
 	}
 	$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 	FROM `edu_article` 
-	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
+	LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 	where (`edu_article`.`active` = true OR `edu_article`.`member_create` = '$member_id') $sql_filter_article ";
 	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$stmt = $database->executeQuery($sql);
@@ -354,9 +354,9 @@ else
 	}
 	$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 	FROM `edu_article` 
-	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
+	LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 	where (`edu_article`.`active` = true OR `edu_article`.`member_create` = '$member_id') $sql_filter_article 
-	ORDER BY `edu_article`.`article_id` desc
+	ORDER BY `edu_article`.`article_id` DESC
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)

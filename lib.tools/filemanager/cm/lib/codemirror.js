@@ -3414,7 +3414,7 @@
     // Some browsers fire contextmenu *after* opening the menu, at
     // which point we can't mess with it anymore. Context menu is
     // handled in onMouseDown for these browsers.
-    if (!captureRightClick) on(d.scroller, "contextmenu", function(e) {onContextMenu(cm, e);});
+    if (!captureRightClick) ON (d.scroller, "contextmenu", function(e) {onContextMenu(cm, e);});
 
     // Used to suppress mouse event handling when a touch happens
     var touchFinished, prevTouch = {end: 0};
@@ -6210,7 +6210,7 @@
       if (lineIsHidden(doc, line)) updateLineHeight(line, 0);
     });
 
-    if (marker.clearOnEnter) on(marker, "beforeCursorEnter", function() { marker.clear(); });
+    if (marker.clearOnEnter) ON (marker, "beforeCursorEnter", function() { marker.clear(); });
 
     if (marker.readOnly) {
       sawReadOnlySpans = true;

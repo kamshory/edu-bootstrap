@@ -93,9 +93,9 @@ $sql = "SELECT `edu_token`.* , `edu_student`.`name` AS `student_name`, `edu_stud
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_token`.`teacher_create`) AS `teacher_name`,
 (SELECT `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) AS `test_name`
 FROM `edu_token` 
-inner join(`edu_student`) on (`edu_student`.`student_id` = `edu_token`.`student_id`)
+INNER JOIN(`edu_student`) on (`edu_student`.`student_id` = `edu_token`.`student_id`)
 WHERE `edu_token`.`token_id` in ($tokens)
-ORDER BY `edu_student`.`reg_number` asc ";
+ORDER BY `edu_student`.`reg_number` ASC ";
 $stmt = $database->executeQuery($sql);
     if ($stmt->rowCount() > 0) {
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

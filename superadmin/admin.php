@@ -522,7 +522,7 @@ $(document).ready(function(e) {
     <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` desc";
+    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` DESC";
 
 	echo $picoEdu->createFilterDb(
 		$sql2,
@@ -571,7 +571,7 @@ $sql = "SELECT `edu_admin`.* $nt,
 (SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) AS `school_name`
 FROM `edu_admin`
 WHERE 1 $sql_filter
-ORDER BY `edu_admin`.`school_id` desc, `edu_admin`.`name` asc
+ORDER BY `edu_admin`.`school_id` DESC, `edu_admin`.`name` asc
 ";
 $sql_test = "SELECT `edu_admin`.*
 FROM `edu_admin`

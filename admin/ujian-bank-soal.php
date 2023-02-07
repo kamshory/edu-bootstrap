@@ -43,7 +43,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 				}
 				$sql = "SELECT `edu_test_collection`.* FROM `edu_test_collection` 
 				WHERE `edu_test_collection`.`active` = true $filter
-				ORDER BY `test_collection_id` desc
+				ORDER BY `test_collection_id` DESC
 				";
 				$stmt = $database->executeQuery($sql);
 				
@@ -75,10 +75,10 @@ $array_class = $picoEdu->getArrayClass($school_id);
 
 			$sql = "SELECT `edu_test`.*,
 			(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`,
-			(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `question`
+			(SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `question`
 			FROM `edu_test`
 			WHERE `edu_test`.`school_id` = '$school_id' 
-			ORDER BY `edu_test`.`test_id` desc
+			ORDER BY `edu_test`.`test_id` DESC
 			";
 			$stmt = $database->executeQuery($sql);
 				

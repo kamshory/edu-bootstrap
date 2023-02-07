@@ -10,9 +10,9 @@ if (!@$student_id && !@$teacher_id) {
   include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
   if(!empty(@$school_id)) {
     $sql = "SELECT `edu_school`.*, 
-    (select count(distinct `edu_student`.`student_id`) FROM `edu_student`
+    (SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student`
     WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'M') AS `M`,
-    (select count(distinct `edu_student`.`student_id`) FROM `edu_student`
+    (SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student`
     WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'W') AS `W`
     FROM `edu_school`
     WHERE `edu_school`.`school_id` = '$school_id' 
@@ -117,7 +117,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
       <select class="form-control input-select" name="class_id" id="class_id">
         <option value=""></option>
         <?php
-        $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` asc ";
+        $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` ASC ";
         
         echo $picoEdu->createFilterDb(
           $sql2,
@@ -165,9 +165,9 @@ WHERE `edu_student`.`student_id` = '$edit_key'
 
     $sql = "SELECT `edu_student`.* , `edu_class`.`name` AS `class_id`, `edu_class`.`sort_order` AS `sort_order`
     FROM `edu_student`
-    left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
+    LEFT JOIN(`edu_class`) ON (`edu_class`.`class_id` = `edu_student`.`class_id`)
     WHERE 1 $sql_filter
-    ORDER BY `sort_order` asc, `edu_student`.`name` asc
+    ORDER BY `sort_order` ASC, `edu_student`.`name` asc
     ";
 
     $stmt = $database->executeQuery($sql);

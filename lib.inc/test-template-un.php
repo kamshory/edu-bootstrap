@@ -15,7 +15,7 @@ $question_package = addslashes($question_package);
 $sql = "SELECT `edu_question`.* , instr('$question_package', `edu_question`.`question_id`) AS `sort_order`
 FROM `edu_question`
 where '$question_package' like concat('%[',`edu_question`.`question_id`,']%') 
-ORDER BY `sort_order` asc
+ORDER BY `sort_order` ASC
 ";
 $stmt = $database->executeQuery($sql);
 $number_of_question = $stmt->rowCount();
@@ -56,7 +56,7 @@ if($number_of_question)
 				$sql2 = "SELECT `edu_option`.* , rand() AS `rand`
 				FROM `edu_option`
 				WHERE `edu_option`.`question_id` = '$soal'
-				ORDER BY `sort_order` asc
+				ORDER BY `sort_order` ASC
 				";
 			}
 			$options = array();

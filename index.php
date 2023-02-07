@@ -185,7 +185,7 @@ else
 			$sql = "SELECT `edu_info`.* 
 			FROM `edu_info` 
 			WHERE `edu_info`.`active` = true
-			ORDER BY `edu_info`.`info_id` desc
+			ORDER BY `edu_info`.`info_id` DESC
 			limit 0, 2
 			";
 			$stmt = $database->executeQuery($sql);

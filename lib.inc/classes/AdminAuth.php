@@ -4,7 +4,7 @@
 
 class AdminAuth
 {
-	public String $admin_id = '';
+	public $admin_id = '';
 	public $admin_level = 0;
 	public $username = '';
 	public $name = '';
@@ -33,7 +33,7 @@ class AdminAuth
 		`edu_school`.`school_id` AS `real_school_id`, `edu_school`.`use_token`, `edu_admin`.`admin_level`,
 		`edu_school`.`use_token`
 		FROM `edu_admin` 
-		left join(`edu_school`) on(`edu_school`.`school_id` = `edu_admin`.`school_id`)
+		LEFT JOIN(`edu_school`) ON (`edu_school`.`school_id` = `edu_admin`.`school_id`)
 		WHERE `edu_admin`.`username` like '$username' AND `edu_admin`.`password` = md5('$password') 
 		AND `edu_admin`.`active` = true
 		AND `edu_admin`.`blocked` = false

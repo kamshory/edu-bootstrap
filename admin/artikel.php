@@ -147,7 +147,7 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/article-editor.js"></script>
 
 <?php
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
 $stmt = $database->executeQuery($sqlc);
 		$arrc = array();
 if($stmt->rowCount() > 0)
@@ -199,7 +199,7 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <?php
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
 $stmt = $database->executeQuery($sqlc);
 $arrc = array();
 if($stmt->rowCount() > 0)
@@ -245,7 +245,7 @@ if(isset($school_id))
 }
 $sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 FROM `edu_article` 
-left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
+LEFT JOIN(`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 where (`edu_article`.`school_id` = '$school_id') $sql_filter_article ";
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $stmt = $database->executeQuery($sql);
@@ -334,7 +334,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` asc ";
+    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` ASC ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -381,10 +381,10 @@ $nt = '';
 
 $sql = "SELECT `edu_article`.* , `edu_teacher`.`name` AS `teacher_create`, `edu_admin`.`name` AS `admin_create`
 FROM `edu_article` 
-left join(`edu_teacher`) on(`edu_teacher`.`teacher_id` = `edu_article`.`member_create`) 
-left join(`edu_admin`) on(`edu_admin`.`admin_id` = `edu_article`.`member_create`) 
+LEFT JOIN(`edu_teacher`) ON (`edu_teacher`.`teacher_id` = `edu_article`.`member_create`) 
+LEFT JOIN(`edu_admin`) ON (`edu_admin`.`admin_id` = `edu_article`.`member_create`) 
 WHERE 1 $sql_filter 
-ORDER BY `edu_article`.`article_id` desc
+ORDER BY `edu_article`.`article_id` DESC
 ";
 $sql_test = "SELECT `edu_article`.`article_id` 
 FROM `edu_article` 
