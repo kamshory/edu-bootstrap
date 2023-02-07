@@ -154,6 +154,12 @@ class PicoDatabase
 		return $stmt;
 	}
 
+	/**
+	 * Execute query and sync
+	 * @param mixed $sql Query string to be executed
+	 * @param mixed $sync Flag synchronizing
+	 * @return PDOStatement|bool
+	 */
 	private function executeAndSync($sql, $sync)
 	{
 		$stmt = $this->conn->prepare($sql);
