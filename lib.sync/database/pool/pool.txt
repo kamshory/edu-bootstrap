@@ -1,790 +1,846 @@
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-INSERT INTO `edu_question` 
-								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c6729546ca9fe', '<p>Perhatikan gambar nefron ginjal berikut ini!</p>
-<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e0f7c62acb4fe2a99/3c0c28_57af96d1c30e0d724f53b39fb29dd142.png\"></p>
-<p>Pada bagian yang diberi label X berlangsung...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', '8ce99f909b24a7a23f64188015948392', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
-								;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6733436a491b', '063e0f7c6729546ca9fe', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>Proses penyaringan darah sehingga dihasilkan urine sekunder</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
-										;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c673901ba433d', '063e0f7c6729546ca9fe', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>Pengikatan zat-zat yang masih dibutuhkan seperti protein dan gula</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
-										;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c673df235e75d', '063e0f7c6729546ca9fe', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>Filtrasi darah sehingga dihasilkan urine primer atau filtrat glomerulus</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
-										;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c674286a9fa91', '063e0f7c6729546ca9fe', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>Reabsorbsi zat-zat yang tidak diperlukan, membentuk urine sebenarnya</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b4fc2692d20a', '063e1af9b4dfaf1aaae6', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<img alt=\"11pild.gif\" style=\"vertical-align:top\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/e0ab05_11pild.gif\">', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c674b2664c911', '<p>Perhatikan gambar berikut!</p>
-<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e0f7c62acb4fe2a99/e25b55_ef101a151dcd08575585ecc3ce6d9449.png\"></p>
-<p>Bbagian yang ditunjuk dengan huruf R berfungsi untuk...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', 'e286f5baaf7556fac099cb7242921c2e', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b5045bfc79d8', '<p>Sebuah rumah terdapat 4 lampu 20 watt menyala 12 jam per hari, sebuah kulkas 250 watt menyala selama 24 jam perhari, dan pompa air 125 watt menyala 6 jam per hari. Berapakah besar energi listrik yang digunakan selama satu bulan (30 hari)?</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '717b322ee158a7efc00aa580c82852b1', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c674fc9ca1e76', '063e0f7c674b2664c911', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>memproduksi sel telur</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b50a75330174', '063e1af9b5045bfc79d8', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>462,6 kWh</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6754912f9138', '063e0f7c674b2664c911', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>tempat mematangkan sel telur</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b50ecd3decb1', '063e1af9b5045bfc79d8', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>231,3 kWh</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67594259b20d', '063e0f7c674b2664c911', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>berlangsungnya proses pembuahan</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b513b7150407', '063e1af9b5045bfc79d8', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>180,00 kWh</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c675dd31b81b2', '063e0f7c674b2664c911', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>menghasilkan hormon estrogen</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b519af0dc2f6', '063e1af9b5045bfc79d8', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>81,00 kWh</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c676514236126', '<p>Perhatikan gambar berikut!</p>
-<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e0f7c62acb4fe2a99/05c200_c7dc5964c2b94662aed31ba70940db35.png\"></p>
-<p>Bagian yang ditunjuk dengan huruf Z berperan untuk...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', '41aba890386e130f2a899bfedcc91b96', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b522c998f773', '<p>Perhatikan gambar berikut!<br><img alt=\"13pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/20d8e4_13pt.gif\"><br>
+Jika R1 = 3 &Omega;, R2 = 4 &Omega;, R3 = 4 &Omega; dan kuat arus yang mengalir adalah 0,5</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'ed9a124ed93cd2e352741843f5f00464', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67686e0712a1', '063e0f7c676514236126', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>pusat koordinasi sistem gerak tubuh</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5279db9c708', '063e1af9b522c998f773', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>Berapakah tegangan listriknya?</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c676c8a2a07a3', '063e0f7c676514236126', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>mengordinasikan gerakan sadar</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b52c1f1e82ad', '063e1af9b522c998f773', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>2,0 V C. 4,0 V</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c677106ff9928', '063e0f7c676514236126', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>pusat pengaturan gerakan reflek saat bersin</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
-										;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c677540539a20', '063e0f7c676514236126', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>mengatur kesimbangan tubuh saat gerak cepat</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b53142a48a33', '063e1af9b522c998f773', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>2,5 V D. 4,5 V</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c677fee8ff92b', '<p>Perhatikan gambar berikut!</p>
-<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e0f7c62acb4fe2a99/fb596f_d5b3c03edfe468d52371de42af5ab320.png\"></p>
-<p>Bagian yang ditunjuk M berfungsi untuk ...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', '3a320ce06bf48deaa8cc26ebbed46e52', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b53963a3fa46', '<p>Lima buah benda bermuatan A, B, C, D, dan E saling didekatkan.<br><img alt=\"14pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/80d3d0_14pt.gif\"><br>
+Muatan benda B dan D negatif, benda A dan B saling tarik menarik, benda<br>
+B menolak C dan D tetapi menarik benda E, maka muatan benda A, C, dan<br>
+E berturut-turut adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'f02a6648709af32e418266b61a1c4d4b', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6784c4cf5620', '063e0f7c677fee8ff92b', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>menyaring debu maupun udara yang masuk ke dalam hidung</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b53e7bfeb882', '063e1af9b53963a3fa46', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>negatif, positif, negatif</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c678a57f16518', '063e0f7c677fee8ff92b', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>menerima rangsang bau yang merupakan molekul terlarut dalam lendir</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b542f298dc81', '063e1af9b53963a3fa46', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>negatif, negatif, positif</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c678e83e51575', '063e0f7c677fee8ff92b', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>menghantarkan rangsang dari rongga hidung ke pusat</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5495f0f0b75', '063e1af9b53963a3fa46', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>positif, negatif, negatif</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6792d3f42ab1', '063e0f7c677fee8ff92b', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>menjaga kelembaban udara yang masuk ke dalam ruang hidung</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b54e6db40e48', '063e1af9b53963a3fa46', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>positif, negatif, positif</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c679a5c87d390', '<p>Perhatikan gambar penampang akar berikut!</p>
-<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e0f7c62acb4fe2a99/ec57eb_eefcacb63caa0f5f57853d8356e86726.png\"></p>
-<p>Bagian yang ditunjuk dengan huruf P berperan...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', '483c8b5d9f9afe4db99f0f5d7fdd2b99', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b553eaf018f9', '<p>Perhatikan ciri-ciri benda langit berikut!<br>
+(1) Dapat menghasilkan cahaya sendiri<br>
+(2) Terdiri atas batu-batuan membentuk serbuk<br>
+(3) Berada antara Mars dan Jupiter<br>
+(4) Dapat jatuh ke atmosfer Bumi<br>
+Yang merupakan ciri-ciri Asteroid adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'e09ffa815b3fc2f3b08333c618375046', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67a010453d3b', '063e0f7c679a5c87d390', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>menyimpan cadangan makanan</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5590bbbfc0a', '063e1af9b553eaf018f9', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(1) dan (2)</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67a4ada9b0be', '063e0f7c679a5c87d390', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>mengangkut air dan garam mineral menuju daun</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b55d8db941b2', '063e1af9b553eaf018f9', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(1) dan (3)</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67a89272a5c1', '063e0f7c679a5c87d390', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>mengedarkan hasil fotosintesis disekitar akar</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b562709629b4', '063e1af9b553eaf018f9', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(2) dan (3)</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67ad93ded504', '063e0f7c679a5c87d390', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>membelah menjadi sel baru</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b567dfa124da', '063e1af9b553eaf018f9', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(3) dan (4)</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c67b2182c227a', '<p>Kelompok tumbuhan (<em>Zingeberaceae</em>) saat musim kemarau merespon keadaan kekurangan air di lingkungan dengann cara...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', '158859f018cdf8d03b2daf519900e6ef', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b56d0989ca42', '<p>Perhatikan tabel data dua transformator berikut ini!</p>
+<table style=\"width: 417px; height: 108px;\" border=\"1\"><thead><tr><td>&nbsp;</td>
+<td style=\"text-align: center;\">Np</td>
+<td style=\"text-align: center;\">Ns</td>
+<td style=\"text-align: center;\">Vp</td>
+<td style=\"text-align: center;\">Vs</td>
+</tr></thead><tbody><tr><td>Transformator P</td>
+<td>5.000 lilitan</td>
+<td>2.500 lilitan</td>
+<td>100 V</td>
+<td>50 V</td>
+</tr><tr><td>Transformator Q</td>
+<td>250 lilitan</td>
+<td>4.500 lilitan</td>
+<td>50 V</td>
+<td>150 V</td>
+</tr></tbody></table><p>Berdasarkan data di atas dapat disimpulkan bahwa...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '020b93a92d14ce6c9c041deca77d3b4b', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67b716c8d9d1', '063e0f7c67b2182c227a', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>menggugurkan daunnya yang sudah tua</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b571551b8df8', '063e1af9b56d0989ca42', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>Transformator P : step up karena Np &gt; Ns<br> Transformator Q : step down karena Vp &lt; Vs</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67bbd3a959f6', '063e0f7c67b2182c227a', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>mengurangi proses penyerbukan sendiri</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b577193d1eb0', '063e1af9b56d0989ca42', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>Transformator P : step up karena Np &gt; Ns<br> Transformator Q : step up karena Vp &lt; Vs</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67bfdafe8c03', '063e0f7c67b2182c227a', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>mematikan daun yang ada dipermukaan tanah</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b57c7630d6b6', '063e1af9b56d0989ca42', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>Transformator P : step down karena Vp &gt; Vs<br> Transformator Q : step up karena Np &lt; Ns</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67c3dcbcab3d', '063e0f7c67b2182c227a', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>mengeringkan bagian akar sehingga tidak terbentuk jahe</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5815927f9cf', '063e1af9b56d0989ca42', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>Transformator P : step down karena Vp &gt; Vs<br> Transformator Q : step down karena Np &lt; Ns</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c67c7b6982cdc', '<p>Dalam percobaan Ingenhousz volume udara dalam tabung reaksi yang dikenai sinar matahari meningkat lebih banyak dibanding yang tidaka terkena sinar matahari. Hal ini menunjukkan bahwa...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', '137e463dd8dcffdbe247e087beef5a72', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b5890ed7a8c4', '<p>Perhatikan gambar berikut!</p>
+<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/5b1935_17pt.gif\"></p>
+<p>Batang besi AB terbentuk menjadi magnet dengan kutub utara di titik B dan kutub selatan di titik A akibat disentuh batang baja PQ yang telah dijadikan magnet dengan gosokan. Gambar yang benar cara pembuatan magnet sehingga menghasilkan magnet PQ adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '2c5f98aee4ea287fee36be1ace7fbb30', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67cb9f9aadba', '063e0f7c67c7b6982cdc', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>Laju proses fotosintesis sangat dipengaruhi oleh kandungan udara</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b58fdbdc0501', '063e1af9b5890ed7a8c4', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<img style=\"vertical-align: top;\" alt=\"17pila.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/21f638_17pila.gif\">', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67d05360d5c9', '063e0f7c67c7b6982cdc', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>proses fotosintesis sangat membutuhkan cahaya matahari</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b596700e9a87', '063e1af9b5890ed7a8c4', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<img style=\"vertical-align: top;\" alt=\"17pilb.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/d06d87_17pilb.gif\">', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67d5886aa616', '063e0f7c67c7b6982cdc', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>dalam percobaan ini oksigen ditangkap dalam tabung reaksi</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b59d69e89db9', '063e1af9b5890ed7a8c4', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<img style=\"vertical-align: top;\" alt=\"17pilc.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/7a6b06_17pilc.gif\">', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67dad2e8828f', '063e0f7c67c7b6982cdc', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>semakin banyak air dalam gelas kimia semakin besar jumlah oksigen</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5a3a517b1ff', '063e1af9b5890ed7a8c4', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<img style=\"vertical-align: top;\" alt=\"17pild.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/732803_17pild.gif\">', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c67e03e31874a', '<p>Setelah perendaman daun di alkohol panas, selanjutnya daun di tetesi dengan larutan<br>
-lugol dan terbentuklah warna biru pada bagian daun. kesimpulan dari percobaan tersebut<br>
-membuktikan bahwa proses fotosintesis menghasilkan...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', 'e1d09ec73ed1997e4bdba7b70bf6facd', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b5a8da6864a2', '<p>Perhatikan tabel berikut!</p>
+<table style=\"width: 194px; height: 151px;\" border=\"1\"><thead><tr><td style=\"text-align: center;\" rowspan=\"2\">Zat</td>
+<td style=\"text-align: center;\" colspan=\"2\">Lakmus</td>
+</tr><tr><td style=\"text-align: center;\">merah</td>
+<td style=\"text-align: center;\">biru</td>
+</tr></thead><tbody><tr><td style=\"text-align: center;\">P</td>
+<td style=\"text-align: center;\">biru</td>
+<td style=\"text-align: center;\">biru</td>
+</tr><tr><td style=\"text-align: center;\">Q</td>
+<td style=\"text-align: center;\">merah</td>
+<td style=\"text-align: center;\">biru</td>
+</tr><tr><td style=\"text-align: center;\">R</td>
+<td style=\"text-align: center;\">biru</td>
+<td style=\"text-align: center;\">biru</td>
+</tr><tr><td style=\"text-align: center;\">S</td>
+<td style=\"text-align: center;\">merah</td>
+<td style=\"text-align: center;\">merah</td>
+</tr></tbody></table><p>Berdasarkan tabel di atas, zat yang bersifat asam adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '578b319d8d6e7dee971ffc182dd1e8c4', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67e419770cc3', '063e0f7c67e03e31874a', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>oksigen</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5af7b8e0c7a', '063e1af9b5a8da6864a2', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>P</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67e790861749', '063e0f7c67e03e31874a', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>karbohidrat</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5b469e70555', '063e1af9b5a8da6864a2', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>Q</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67eb43751825', '063e0f7c67e03e31874a', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>protein</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5ba7dfb6e02', '063e1af9b5a8da6864a2', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>R</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67ef9fa22263', '063e0f7c67e03e31874a', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>amilum</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5bf82a4a4b5', '063e1af9b5a8da6864a2', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>S</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c67f3c4e0fdef', '<p>Sebelum melakukan percobaan fotosintesis guru memberintahkan siswa untuk menutup sebagian daun tanaman yang akan di jadikan percobaan dengan kertas karbon atau alumunium foil, ke esokan harinya baru di lakukan percobaan. Tujuan penutup sebagian daun tersebut adalah...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', '4b34ee3981979faf77e8d5a1fc033e5c', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b5c43daa01ba', '<p>Berikut ini sifat-sifat yang dimiliki oleh emas:<br>
+(1) berwarna kuning;<br>
+(2) keras;<br>
+(3) sukar berkarat; dan<br>
+(4) meleleh bila dipanaskan.<br>
+Pasangan pernyataan yang merupakan sifat fisika adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '4854b01379b2ccf9798c54775ed78d04', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67f7db1d3521', '063e0f7c67f3c4e0fdef', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>mengurangi terjadinya penguapan air</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5c97b6d2a55', '063e1af9b5c43daa01ba', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(1) dan (2)</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67fb9ab2dac2', '063e0f7c67f3c4e0fdef', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>menghalangi sinar matahari ke daun</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5ce60751b8d', '063e1af9b5c43daa01ba', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(1) dan (3)</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c67ff73660b57', '063e0f7c67f3c4e0fdef', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>agar daun tetap segar dan tidak layu</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5d2b8cc1d46', '063e1af9b5c43daa01ba', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(2) dan (3)</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c68033bdef0fb', '063e0f7c67f3c4e0fdef', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>menghalangi proses fotosintesis di daun</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5d726974b82', '063e1af9b5c43daa01ba', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(3) dan (4)</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c68076335ebb9', '<p>Hewan yang hidup di daerah kutub memiliki bulu tebal dan jaringan lemak yang banyak pada kulitnya, hal ini bertujuan untuk...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', '600cdca469c4e8a2350b87bb72db66cc', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b5db3c9af628', '<p>Di antara gas berikut yang dapat menyebabkan karat pada kaleng adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '3236763abbe6e71c1aeff24c2d7b5573', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c680b7ec2ccb7', '063e0f7c68076335ebb9', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>melindungi diri dari musuhnya</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5dec6f80eb1', '063e1af9b5db3c9af628', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>Hidrogen</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c680f04457994', '063e0f7c68076335ebb9', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>menahan lingkungan yang dingin</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5e20e981229', '063e1af9b5db3c9af628', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>Oksigen</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c68128cccd09b', '063e0f7c68076335ebb9', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>sebagai cadangan makanan</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5e588b2dad0', '063e1af9b5db3c9af628', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>Nitrogen</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c68167e77a67b', '063e0f7c68076335ebb9', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>menyamarkan diri terhadap musuh</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5e9020c11d4', '063e1af9b5db3c9af628', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>Helium</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c681a4e1014ce', '<p>Keberadaan jumlah belalang berwarna hijau dan berwarna coklat di sawah pada awalnhya seimbang, setalah padi di panen ternyata berpengaruh pada jumlah belalang yang berwarna hijau jumlahnya semakin menurun. Hal ini disebabkan...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', 'e95a94a01f1c437f77a8b21ed73f0aa0', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b5ec831bef14', '<p>Asam cuka (CH<sub>3</sub>COOH) sering dipakai sebagai pemberi rasa asam pada masakan. Dalam hal ini CH<sub>3</sub>COOH tergolong sebagai...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'b0127b12f34dac6d4f98b6ce15bd11f6', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c681e4914a3c9', '063e0f7c681a4e1014ce', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>belalang berwarna hijau tidak dapat berkembang biak</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5ef76397e43', '063e1af9b5ec831bef14', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>atom</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c68221f4e93f2', '063e0f7c681a4e1014ce', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>jumlahnya berkurang karena dimakan oleh pemangsa</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5f3355150ff', '063e1af9b5ec831bef14', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>molekul</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6825b2dc9950', '063e0f7c681a4e1014ce', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>tidak dapat beradaptasi dengan lingkungan sawah</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5f879633667', '063e1af9b5ec831bef14', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>ion</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c682948a3e3e3', '063e0f7c681a4e1014ce', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>adanya pengaruh predasi antara sesama belalang</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b5fdea00ce88', '063e1af9b5ec831bef14', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>unsur</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c68300106e5d6', '<p>Perhatikan diagram persilangan antara bunga warna merah (MM) dengan bunga warna putih (mm) berikut!</p>
-<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e0f7c62acb4fe2a99/7e3ace_87e3b06b54a6af3e02b105f8a5081738.png\"></p>
-<p>Persentase genotip homozigot dominan pada F2 adalah...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', 'ad02a9aa3e9122c64a32a8d84e2d40c4', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b602cff30553', '<p>Agar terhindar dari dampak negatif penggunaan psikotropika kita harus menjauhi dan tidak mencoba untuk mengkonsumsi zat yang mengandung...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'a429aa162734ed2b7e3e4e178d6564bc', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6835ac830ce0', '063e0f7c68300106e5d6', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>25%</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b606f27fb870', '063e1af9b602cff30553', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>nikotin</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c683a44c6ccb7', '063e0f7c68300106e5d6', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>50%</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b60a96f2ecd7', '063e1af9b602cff30553', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>alkohol</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c683e5877e3f8', '063e0f7c68300106e5d6', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>75%</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b60e923e2f0f', '063e1af9b602cff30553', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>kokain</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c68422134f58a', '063e0f7c68300106e5d6', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>100%</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b6122a88b838', '063e1af9b602cff30553', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>sakarin</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c68460b654d62', '<p>Disilangkan kacang kedelai biji besar, beumur pendek (BBPp) dengan kacang kedelai biji besar, berumur panjang (Bbpp) maka perbandingan fenotif pada keturunanya adalah...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', '582e746828a12255ef6c8765d9a54d88', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b6153e67a0ea', '<p>Berikut ini adalah bahan kimia yang sering terdapat pada bahan makanan:<br>
+(1) aspartam<br>
+(2) sakarin<br>
+(3) natrium benzoat<br>
+(4) kurkumin<br>
+Zat yang merupakan pewarna alami adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'bd2fc77c82c673fa6b9f85391398fdf1', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6849b4c7cef2', '063e0f7c68460b654d62', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>biji besar, umur panjang : biji besar umur pendek = 1 : 1</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b618af122850', '063e1af9b6153e67a0ea', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(1)</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c684d7d600351', '063e0f7c68460b654d62', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>biji besar, umur panjang : biji kecil, umur panjang = 1 : 2</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b61c600a7259', '063e1af9b6153e67a0ea', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(2)</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c685158a45019', '063e0f7c68460b654d62', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>biji kecil, umur panjang : biji besar, umur pendek = 2 : 1</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b62195619175', '063e1af9b6153e67a0ea', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(3)</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c685527ad9d44', '063e0f7c68460b654d62', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>biji besar, umur pendek : biji kecil, umur panjang = 3 : 1</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b62543fcf5ad', '063e1af9b6153e67a0ea', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(4)</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c68592932ab1f', '<p>Termasuk bahan kimia yang sering ditambahkan sebagai pewarna sintetis dalam pembuatan bahan makanan dalam jumlah besar adalah...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', 'a93c451958a1c568c699c1008d9efdff', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b62b4fddbb1e', '<p>Perhatikan gambar di bawah ini!<br><img alt=\"24pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/b5fb5a_24pt.gif\"><br>
+Kelompok hewan yang berkembang biak dengan cara yang sama adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '792fa048ca0986f62544fd1df25784b3', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c685d032f0136', '063e0f7c68592932ab1f', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>tartrazin, brilliant blue FCF, karmoisin</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b62f0af34adf', '063e1af9b62b4fddbb1e', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>1, 2, dan 3</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6860c983af7c', '063e0f7c68592932ab1f', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>sakarim, siklamat, sorbitol</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b6331e4d5c20', '063e1af9b62b4fddbb1e', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>1, 2, dan 4</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6865176a940f', '063e0f7c68592932ab1f', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>beta karotin, natrium benzoat, ponceau 4R</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b637d888cb5d', '063e1af9b62b4fddbb1e', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>2, 3, dan 4</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6868f38eaa9e', '063e0f7c68592932ab1f', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>sakarim, boraks, kalsium propionat</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b63c115bbc3c', '063e1af9b62b4fddbb1e', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>3, 4, dan 5</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c687101ea5813', '<p>Perhatikan data jumlah penduduk di suatu wilayah yang memiliki luas wilayah hampir sama dalam tabel berikut!</p>
-<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e0f7c62acb4fe2a99/0cad05_69c45f27e16214987db7d302653be29b.png\"></p>
-<p>Dari tabel tersebut persoalan lingkungan yang mungkin terjadi adalah...</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', 'f06a1b817d384038fdd1a8fea15a5887', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b640a51b8a31', '<p>Aktivitas berikut yang menggambarkan ciri mahkluk hidup adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '2ae37aa95f30c3c23d8805a518dbe87d', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c687863ba0e05', '063e0f7c687101ea5813', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>penurunan derjat kesehatan di Kota baru</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b64498f80980', '063e1af9b640a51b8a31', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>daun pisang bergerak ditiup angin</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c687caa5664c5', '063e0f7c687101ea5813', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>penurunan kualitas air sungai di Kota baru</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b647f4f1366a', '063e1af9b640a51b8a31', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>katak hidup bergerombol di dalam kolam</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c688091dfb00f', '063e0f7c687101ea5813', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>peningkatan resiko kriminal di Sungai Raya</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b64b2f133632', '063e1af9b640a51b8a31', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>tumbuhan memerlukan CO<sub>2</sub> untuk fotosintesis</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6884b19ce196', '063e0f7c687101ea5813', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>penurunan luas lahan pertanaian di Hulu Sungai</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b64e9751b250', '063e1af9b640a51b8a31', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>manusia menghisap O<sub>2</sub> dan mengeluarkan CO<sub>2</sub></p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
 								`time_create`, `member_create`, `time_edit`, `member_edit`) values
-								('063e0f7c688d381dfbf5', '<p>Perhatikan gambar!</p>
-<p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e0f7c62acb4fe2a99/ee931c_005aa8bf179ea7df2fb7138f29959d21.png\"></p>
-<p>Bagian yang berfungsi sebagai pusat penulangan ditunjuk oleh....</p>', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', true, '2', '1', 'upper-alpha', 'a8cef72ec1fce593bf9c6e624bdf06dc', '',
-								'2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+								('063e1af9b6550e9ef2dd', '<p>Diagram berikut menunjukkan contoh saling ketergantungan antarorganisme. Pada siang hari organsime-organisme tersebut menghirup atau mengeluarkan (a) atau (b) seperti yang ditunjuk oleh tanda panah.<br><img alt=\"26pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/c81eb1_26pt.gif\"><br>
+Manakah di antara pernyataan berikut yang benar?</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '13cf539a23cf53fc3ca74beec70dce0b', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6891e9968ac0', '063e0f7c688d381dfbf5', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>P dan Q</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b65954635272', '063e1af9b6550e9ef2dd', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(a) karbon dioksida dan (b) nitrogen</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6895f90ff0aa', '063e0f7c688d381dfbf5', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>Q dan S</p>', '1', '1', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b65d1b0cdc76', '063e1af9b6550e9ef2dd', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(a) oksigen dan (b) karbon dioksida</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c6899b782b3d8', '063e0f7c688d381dfbf5', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>R dan T</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b660d3c428bd', '063e1af9b6550e9ef2dd', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(a) karbon dioksida dan (b) uap air</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
-										('063e0f7c689dd0d1e525', '063e0f7c688d381dfbf5', '063ce682801be89951aa', '063e0f7c62acb4fe2a99', '<p>P dan T</p>', '1', '0', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa', '2023-02-06 19:51:18', 'aaaaaaaaaaaaa')
+										('063e1af9b6644e9401c6', '063e1af9b6550e9ef2dd', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>(a) karbon dioksida dan (b) oksigen</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063e0f7c62acb4fe2a99' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063e0f7c62acb4fe2a99' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063e0f7c62acb4fe2a99' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063e0f78e80fb96b3220' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063e0f78e80fb96b3220' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063e0f78e80fb96b3220' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063e0552d4ae6cef6c24' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063e0552d4ae6cef6c24' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063e0552d4ae6cef6c24' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063e054fd383efc4a124' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063e054fd383efc4a124' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063e054fd383efc4a124' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063dfc2b7c939bb427cd' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063dfc2b7c939bb427cd' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063dfc2b7c939bb427cd' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063dfa6862aa3a9a3075' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063dfa6862aa3a9a3075' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063dfa6862aa3a9a3075' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063dfa6135d12965a86d' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063dfa6135d12965a86d' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063dfa6135d12965a86d' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063dfa5a1bb1bc5b49de' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063dfa5a1bb1bc5b49de' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063dfa5a1bb1bc5b49de' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063dfa5585669776c57d' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063dfa5585669776c57d' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063dfa5585669776c57d' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063dfa1724538e88fcc7' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063dfa1724538e88fcc7' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063dfa1724538e88fcc7' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063df88ec0db6ea1d793' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063df88ec0db6ea1d793' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063df88ec0db6ea1d793' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063df73878b3380cc9b8' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063df73878b3380cc9b8' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063df73878b3380cc9b8' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063df69e2e3bc7088eec' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063df69e2e3bc7088eec' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063df69e2e3bc7088eec' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063df694ebcd36473a29' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063df694ebcd36473a29' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063df694ebcd36473a29' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063df68cb5e397c0caa1' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063df68cb5e397c0caa1' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063df68cb5e397c0caa1' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063df66df1f3f48d7ac7' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063df66df1f3f48d7ac7' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063df66df1f3f48d7ac7' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063df53f0b8b3f2d65ac' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063df53f0b8b3f2d65ac' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063df53f0b8b3f2d65ac' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063df502b66c1b9b9480' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063df502b66c1b9b9480' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063df502b66c1b9b9480' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063de479d3f10ce5d22c' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063de479d3f10ce5d22c' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063de479d3f10ce5d22c' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063de36bfdaa44f54b95' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063de36bfdaa44f54b95' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063de36bfdaa44f54b95' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063de36b103651b0d5d7' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063de36b103651b0d5d7' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063de36b103651b0d5d7' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063de35fd47b1a9d2820' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063de35fd47b1a9d2820' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063de35fd47b1a9d2820' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063de30c540c4506a66c' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063de30c540c4506a66c' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063de30c540c4506a66c' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063ddebc0176316e6b07' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063ddebc0176316e6b07' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063ddebc0176316e6b07' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063dde983ad521410e4b' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063dde983ad521410e4b' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063dde983ad521410e4b' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063ddd7776b70b2ccea3' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063ddd7776b70b2ccea3' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063ddd7776b70b2ccea3' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063ddd60d786b5b3b095' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063ddd60d786b5b3b095' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063ddd60d786b5b3b095' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063ddd53f6019a527e1f' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063ddd53f6019a527e1f' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063ddd53f6019a527e1f' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063ddd522b13052dede3' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063ddd522b13052dede3' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063ddd522b13052dede3' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063ddd4ce912ec19500b' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063ddd4ce912ec19500b' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063ddd4ce912ec19500b' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063ddd3e71ee093e8ccb' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063ddd3e71ee093e8ccb' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063ddd3e71ee093e8ccb' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063ddd3c9de2745fbdf3' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063ddd3c9de2745fbdf3' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063ddd3c9de2745fbdf3' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063ddd182bfb13afde50' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063ddd182bfb13afde50' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063ddd182bfb13afde50' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-start transaction;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_answer` WHERE `test_id` = '063ddd14d3bf89302255' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_question` WHERE `test_id` = '063ddd14d3bf89302255' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-DELETE FROM `edu_test` WHERE `test_id` = '063ddd14d3bf89302255' and `school_id` = '063ce682801be89951aa' ;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-commit;
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b66ad2d67761', '<p>Perhatikan grafik di bawah ini!<br><img alt=\"27pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/f6b0dd_27pt.gif\"><br>
+Prediksi pengaruh pertumbuhan penduduk terhadap sumber daya alam yang terjadi pada tahun 2017 adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'c2e5b2dca8846fb88dfb94f1ad0fb64b', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b66e4e5d5545', '063e1af9b66ad2d67761', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>hasil pertanian meningkat</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6734661a3ff', '063e1af9b66ad2d67761', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>lahan untuk perumahan semakin luas</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b67800be74f5', '063e1af9b66ad2d67761', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>daerah resapan air berkurang</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b67de4f835bd', '063e1af9b66ad2d67761', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>daya dukung alam akan lebih baik</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b685291dd62a', '<p>Berikut ini merupakan pabrik-pabrik yang menimbulkan pencemaran udara.<br><img alt=\"28pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/1f0308_28pt.gif\"><br>
+Tindakan yang dilakukan untuk memperbaiki lingkungan tersebut adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'd7039ee800a53b884972e34f618918d1', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b689825148ce', '063e1af9b685291dd62a', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>mengalihkan pabrik ke daerah pegunungan</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b68d04858331', '063e1af9b685291dd62a', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>memperbaiki instalasi pembuangan limbah/ cerobong asap</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6904c3a1314', '063e1af9b685291dd62a', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>mewajibkan karyawan memakai masker</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6939ca40d2e', '063e1af9b685291dd62a', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>mengganti bahan bakar fosil dengan bahan bakar gas</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b6972fc8d8b8', '<p>Aliran darah pada sistem peredaran darah besar adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '4f7154fcdbba248452ebfb0f4653217c', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b69a5b590108', '063e1af9b6972fc8d8b8', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>jantung - seluruh tubuh - paru-paru</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b69d47f68144', '063e1af9b6972fc8d8b8', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>jantung - seluruh tubuh - jantung</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6a040964b24', '063e1af9b6972fc8d8b8', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>jantung - paru-paru - jantung</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6a3db26bd79', '063e1af9b6972fc8d8b8', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>jantung - paru-paru - seluruh tubuh</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b6a9e5e3c6ad', '<img alt=\"30pt.gif\" style=\"vertical-align:top\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/6ee823_30pt.gif\"><br>
+Berdasarkan gambar, proses pencernaan yang terjadi di organ P adalah...', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '734bc77b1e768f63630dc148b5c52524', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6ad8eb3b86a', '063e1af9b6a9e5e3c6ad', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>pengubahan protein menjadi pepton</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6b1bd2ba4e1', '063e1af9b6a9e5e3c6ad', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>pengubahan amilum menjadi glukosa</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6b5bdd9e136', '063e1af9b6a9e5e3c6ad', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>pengubahan lemak menjadi asam lemak</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6ba440f0f11', '063e1af9b6a9e5e3c6ad', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>peradangan rongga hidung oleh bakteri</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b6bdf41dbd81', '<p>Pneumonia adalah gangguan sistem pernapasan yang disebabkan oleh...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'e185b51736aefbbd9b10fcedf5d84500', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6c133a98cec', '063e1af9b6bdf41dbd81', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>gangguan kontraksi otot polos pada bronkus dan bronkiolus</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6c468949e8b', '063e1af9b6bdf41dbd81', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>peradangan paru-paru oleh bakteri</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6c7890107a6', '063e1af9b6bdf41dbd81', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>infeksi pada alveolus oleh jamur</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6caac2e34d5', '063e1af9b6bdf41dbd81', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>peradangan rongga hidung oleh bakteri</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b6cde22eaa5a', '<p>Jika otot bisep relaksasi dan trisep berkontraksi, gerakan yang terjadi adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'cc12c356245b5e4aba2b0e2f808b3638', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6d0e1c730db', '063e1af9b6cde22eaa5a', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>lengan bawah lurus</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6d45b85b8bd', '063e1af9b6cde22eaa5a', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>lengan bawah menekuk</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6d7c99070ab', '063e1af9b6cde22eaa5a', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>telapak tangan menelungkup</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6db536c1e25', '063e1af9b6cde22eaa5a', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>telapak tangan menengadah</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b6e1a7a8d72c', '<p>Pada penampang melintang ginjal berikut ini, bagian X berfungsi untuk...<br><img alt=\"33pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/49ca2d_33pt.gif\"></p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '8e992349bfcc65beb19fd6d3b92421f9', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6e564b635ff', '063e1af9b6e1a7a8d72c', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>filtrasi darah</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6e9115a43cd', '063e1af9b6e1a7a8d72c', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>menampung urin</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6eca17d50eb', '063e1af9b6e1a7a8d72c', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>augmentasi urin primer</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6efe710a94c', '063e1af9b6e1a7a8d72c', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>reabsorbsi urin sesungguhnya</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b6f68aa9699f', '<p>Perhatikan gambar penampang lidah berikut!<br><img alt=\"34pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/f8dfa8_34pt.gif\"><br>
+Bagian lidah yang peka saat mencicipi jeruk nipis ditunjukkan oleh...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '4b383861934b8690ec35d38bdf0d53d9', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6fa7c7c3a48', '063e1af9b6f68aa9699f', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>1</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b6fedafc07cd', '063e1af9b6f68aa9699f', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>2</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b7025ce619cd', '063e1af9b6f68aa9699f', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>3</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b70600fc2276', '063e1af9b6f68aa9699f', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>4</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b70c88be2f19', '<p>Perhatikan gambar percobaan fotosintesis di bawah ini!<br><img alt=\"35pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/7a8209_35pt.gif\"><br> Simpulan dari percobaan berikut adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '11590b6592e36dfd834f936a9c202a61', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b711edc57647', '063e1af9b70c88be2f19', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>fotosintesis menghasilkan amilum</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b715f38a786b', '063e1af9b70c88be2f19', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>fotosintesis menghasilkan oksigen</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b71997184695', '063e1af9b70c88be2f19', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>oksigen yang dihasilkan pada fotosintesis berasal dari H<sub>2</sub>O</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b71db2e8a758', '063e1af9b70c88be2f19', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>reaksi fotosintesis dipengaruhi cahaya</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b7242600fe66', '<p>Perhatikan gambar penampang bunga berikut!<br><img alt=\"36pt.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063e1af9b3a5eae99f72/daf4f3_36pt.gif\"><br>
+Fungsi bagian X adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '57ed254e1845a5ccba1decf14faaac1a', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b728065d232f', '063e1af9b7242600fe66', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>merupakan perhiasan bunga</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b72bca3a6714', '063e1af9b7242600fe66', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>menghasilkan serbuk sari</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b72f9ac5bb80', '063e1af9b7242600fe66', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>menghasilkan sel telur</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b7335ea67efa', '063e1af9b7242600fe66', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>tempat pembuahan</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b738201186cf', '<p>Contoh gerak tumbuhan yang tergolong tigmotropisme adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', '644ad75eca7074a27ff6f01dcb4e792c', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b73c36704f06', '063e1af9b738201186cf', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>pertumbuhan akar menuju sumber air</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b740806e4a08', '063e1af9b738201186cf', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>sulur tanaman semangka membelit kayu</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b7445d8e13de', '063e1af9b738201186cf', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>mengatupnya dauh tumbuhan putri malu pada saat disentuh</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b7484b5a7475', '063e1af9b738201186cf', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>Spyrogira sp, berpindah ke tempat yang terang</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b74c8589d60b', '<p>Kacang kapri biji bulat warna kuning (BBKK) disilangkan dengan kacang kapri biji kisut warna hijau (bbkk) menghasilkan F1 kacang kapri biji bulat warna kuning (BbKk). Apabila F1 disilangkan sesamanya, perbandingan fenotip pada F2 adalah...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'a673836f944b050fd04818447d456f68', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b74ff734923f', '063e1af9b74c8589d60b', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>bulat hijau : kisut kuning = 3 : 1</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b753504f8c83', '063e1af9b74c8589d60b', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>bulat hijau : kisut kuning = 3 : 3</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b756c7c6834b', '063e1af9b74c8589d60b', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>bulat hijau : B<br>
+ulat kuning : kisut kuning = 1 : 2 : 1</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b75b1621e13d', '063e1af9b74c8589d60b', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>bulat kuning : B<br>
+ulat hijau : kisut kuning : kisut hijau = 9 : 3 : 3 : 1</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b75ef8972e93', '<p>Pada proses pembuatan sari kelapa digunakan mikroorganisme <em>Acetobacter xylinum</em> yang berfungsi untuk mengubah gula menjadi...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'e194054d0ac5f0581ac7933810960d01', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b763390db163', '063e1af9b75ef8972e93', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>selulosa</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b76749c466d3', '063e1af9b75ef8972e93', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>asam amino</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b76b813cf0a7', '063e1af9b75ef8972e93', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>asam lemak</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b76f6b465001', '063e1af9b75ef8972e93', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>asam asetat</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
+								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								('063e1af9b77312ed4b8d', '<p>Rayap merupakan hewan pemakan kayu yang membutuhkan enzim selulase. Enzim ini dihasilkan oleh sejenis flagellata yang terdapat pada saluran pencernaannya. Rayap yang baru menetas belum memiliki flagellata yang menghasilkan enzim tersebut dalam saluran pencernaannya. Untuk dapat bertahan hidup anak rayap beradaptasi dengan...</p>', '063ce682801be89951aa', '063e1af9b3a5eae99f72', true, '2', '1', 'upper-alpha', 'ee2b28e358f88beaa32787e41b95b3cc', '',
+								'2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+								;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b77765af5441', '063e1af9b77312ed4b8d', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>memakan kulitnya yang mengelupas</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b77c2669a4ac', '063e1af9b77312ed4b8d', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>menjilati dubur induknya</p>', '1', '1', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b7817f20c7cc', '063e1af9b77312ed4b8d', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>mengeskresikan enzim tersebut dalam lambungnya</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										('063e1af9b7865d440930', '063e1af9b77312ed4b8d', '063ce682801be89951aa', '063e1af9b3a5eae99f72', '<p>mengeluarkan hormon pengurai kayu</p>', '1', '0', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa', '2023-02-07 08:55:39', 'aaaaaaaaaaaaa')
+										;
