@@ -105,7 +105,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 	if (!empty($name)) {
 
-		if ($email == '') {
+		if (empty($email)) {
 			$email = $picoEdu->generateAltEmail('planetbiru.com', ($reg_number_national != '') ? 'tc_' . $reg_number_national : '', ($reg_number != '') ? 'tc_' . $reg_number . '_' . $school_id : '', ($phone != '') ? 'ph_' . $country_id . '_' . $phone : '');
 		}
 

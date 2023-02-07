@@ -275,7 +275,7 @@ try {
         $email = $picoEdu->trimPunctuation($email);
         $email = $picoEdu->filterEmailAddress($email);
 
-        if ($email == '') {
+        if (empty($email)) {
             $email = $picoEdu->generateAltEmail('local', ($reg_number_national != '') ? 'st_' . $reg_number_national : '', ($reg_number != '') ? 'st_' . $reg_number : '', ($phone != '') ? 'ph_' . $country_id . '_' . $phone : '');
         }
 
@@ -358,7 +358,7 @@ try {
         if (empty($name)) {
             continue;
         }
-        if ($email == '') {
+        if (empty($email)) {
             $email = $picoEdu->generateAltEmail('local', ($reg_number_national != '') ? 'tc_' . $reg_number_national : '', ($reg_number != '') ? 'tc_' . $reg_number : '', ($phone != '') ? 'ph_' . $country_id . '_' . $phone : '');
         }
 

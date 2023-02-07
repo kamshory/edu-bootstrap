@@ -427,7 +427,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								if (empty($name)) {
 									continue;
 								}
-								if ($email == '') {
+								if (empty($email)) {
 									$email = $picoEdu->generateAltEmail('local', ($reg_number_national != '') ? 'st_' . $reg_number_national : '', ($reg_number != '') ? 'st_' . $reg_number : '', ($phone != '') ? 'ph_' . $country_id . '_' . $phone : '');
 								}
 
@@ -558,7 +558,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								if (empty($name)) {
 									continue;
 								}
-								if ($email == '') {
+								if (empty($email)) {
 									$email = $picoEdu->generateAltEmail('local', ($reg_number_national != '') ? 'tc_' . $reg_number_national : '', ($reg_number != '') ? 'tc_' . $reg_number : '', ($phone != '') ? 'ph_' . $country_id . '_' . $phone : '');
 								}
 
