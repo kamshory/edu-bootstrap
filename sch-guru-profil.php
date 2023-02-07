@@ -14,7 +14,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
 	$address = kh_filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
-	$admin_create = $admin_edit = $member_login->member_id;
+	$admin_create = $admin_edit = $memberLoggedIn->member_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 }
 

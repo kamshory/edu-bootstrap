@@ -47,34 +47,34 @@ class MemberAuth
 		";
 		$stmt = $database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
-			$member_login = $stmt->fetchObject();
-			$this->member_id = $member_login->member_id;
-			$this->username = ($member_login->username != '') ? $member_login->username : $member_login->member_id;
-			$this->name = trim($member_login->name);
-			$this->gender = $member_login->gender;
-			$this->birth_place = $member_login->birth_place;
-			$this->birth_day = $member_login->birth_day;
-			$this->email = $member_login->email;
-			$this->phone = $member_login->phone;
-			$this->url = $member_login->url;
-			$this->img_360_compress = $member_login->img_360_compress;
-			$this->autoplay_360 = $member_login->autoplay_360;
-			$this->autorotate_360 = $member_login->autorotate_360;
-			$this->show_compass = $member_login->show_compass;
-			$this->background = $member_login->background;
-			$this->circle_avatar = $member_login->circle_avatar;
-			$this->language = $member_login->language;
-			$this->country_id = $member_login->country_id;
-			$this->state_id = $member_login->state_id;
-			$this->city_id = $member_login->city_id;
-			if ($member_login->picture_hash == '') {
-				$this->image_url = $cfg->base_avatar . "__default/" . $member_login->gender . "/avatar.jpg";
-				$this->image_url_50 = $cfg->base_avatar . "__default/" . $member_login->gender . "/uimage-50.jpg";
-				$this->image_url_100 = $cfg->base_avatar . "__default/" . $member_login->gender . "/uimage-100.jpg";
+			$memberLoggedIn = $stmt->fetchObject();
+			$this->member_id = $memberLoggedIn->member_id;
+			$this->username = ($memberLoggedIn->username != '') ? $memberLoggedIn->username : $memberLoggedIn->member_id;
+			$this->name = trim($memberLoggedIn->name);
+			$this->gender = $memberLoggedIn->gender;
+			$this->birth_place = $memberLoggedIn->birth_place;
+			$this->birth_day = $memberLoggedIn->birth_day;
+			$this->email = $memberLoggedIn->email;
+			$this->phone = $memberLoggedIn->phone;
+			$this->url = $memberLoggedIn->url;
+			$this->img_360_compress = $memberLoggedIn->img_360_compress;
+			$this->autoplay_360 = $memberLoggedIn->autoplay_360;
+			$this->autorotate_360 = $memberLoggedIn->autorotate_360;
+			$this->show_compass = $memberLoggedIn->show_compass;
+			$this->background = $memberLoggedIn->background;
+			$this->circle_avatar = $memberLoggedIn->circle_avatar;
+			$this->language = $memberLoggedIn->language;
+			$this->country_id = $memberLoggedIn->country_id;
+			$this->state_id = $memberLoggedIn->state_id;
+			$this->city_id = $memberLoggedIn->city_id;
+			if ($memberLoggedIn->picture_hash == '') {
+				$this->image_url = $cfg->base_avatar . "__default/" . $memberLoggedIn->gender . "/avatar.jpg";
+				$this->image_url_50 = $cfg->base_avatar . "__default/" . $memberLoggedIn->gender . "/uimage-50.jpg";
+				$this->image_url_100 = $cfg->base_avatar . "__default/" . $memberLoggedIn->gender . "/uimage-100.jpg";
 			} else {
-				$this->image_url = $cfg->base_avatar . "" . $member_login->member_id . "/avatar.jpg?hash=" . $member_login->picture_hash;
-				$this->image_url_50 = $cfg->base_avatar . "" . $member_login->member_id . "/uimage-50.jpg?hash=" . $member_login->picture_hash;
-				$this->image_url_100 = $cfg->base_avatar . "" . $member_login->member_id . "/uimage-100.jpg?hash=" . $member_login->picture_hash;
+				$this->image_url = $cfg->base_avatar . "" . $memberLoggedIn->member_id . "/avatar.jpg?hash=" . $memberLoggedIn->picture_hash;
+				$this->image_url_50 = $cfg->base_avatar . "" . $memberLoggedIn->member_id . "/uimage-50.jpg?hash=" . $memberLoggedIn->picture_hash;
+				$this->image_url_100 = $cfg->base_avatar . "" . $memberLoggedIn->member_id . "/uimage-100.jpg?hash=" . $memberLoggedIn->picture_hash;
 			}
 			if ($createlog) {
 				$ip = addslashes($_SERVER['REMOTE_ADDR']);

@@ -8,7 +8,7 @@ if(!@$admin_id)
 if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 { 
 	$country_id = 'ID';
-	$admin_id = $admin_login->admin_id;
+	$admin_id = $adminLoggedIn->admin_id;
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$admin_create = $admin_edit = $admin_id;

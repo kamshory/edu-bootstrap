@@ -1,7 +1,7 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth.php";
 
-$mlid = $member_login->member_id;
+$mlid = $memberLoggedIn->member_id;
 
 $json = array('valid'=>false, 'corrected'=>'');
 

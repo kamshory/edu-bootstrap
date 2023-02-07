@@ -4,12 +4,12 @@ if(@$cfg->protocol == 'http')
 {
 	header("Location: https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']);
 }
-if(!@$admin_login->admin_id)
+if(!@$adminLoggedIn->admin_id)
 {
 	include_once dirname(__FILE__)."/login-form.php";
         exit();
 }
-if($admin_login->admin_level != 1)
+if($adminLoggedIn->admin_level != 1)
 {
 	include_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();

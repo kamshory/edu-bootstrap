@@ -82,7 +82,7 @@ else
 		$password = $_SESSION['student_password'];
 	}
 	
-	$student_login = new StudenAuth($database, $username, $password, false);
+	$studentLoggedIn = new StudenAuth($database, $username, $password, false);
 	
 	$student_id = 0;
 	$school_id = 0;
@@ -90,14 +90,14 @@ else
 	$auth_student_school_id = 0;
 	$auth_school_id = 0;
 	$use_token = 0;
-	if($student_login->student_id)
+	if($studentLoggedIn->student_id)
 	{
-		$student_id = $auth_student_id = $student_login->student_id;
-		$student_name = $student_login->name;
-		$school_id = $auth_student_school_id = $auth_school_id = $student_login->school_id;
-		$school_code = $student_login->school_code;
-		$class_id = $student_login->class_id;
-		$use_token = $student_login->use_token;
+		$student_id = $auth_student_id = $studentLoggedIn->student_id;
+		$student_name = $studentLoggedIn->name;
+		$school_id = $auth_student_school_id = $auth_school_id = $studentLoggedIn->school_id;
+		$school_code = $studentLoggedIn->school_code;
+		$class_id = $studentLoggedIn->class_id;
+		$use_token = $studentLoggedIn->use_token;
 	}
 
 	if(!empty(@$student_id))
@@ -247,7 +247,7 @@ else
 			$password = $_SESSION['teacher_password'];
 		}
 		
-		$teacher_login = new TeacherAuth($database, $username, $password, false);
+		$teacherLoggedIn = new TeacherAuth($database, $username, $password, false);
 		
 		$teacher_id = 0;
 		$school_id = 0;
@@ -256,13 +256,13 @@ else
 		$auth_teacher_school_id = 0;
 		$school_code = '';
 		$use_token = 0;
-		if($teacher_login->teacher_id)
+		if($teacherLoggedIn->teacher_id)
 		{
-			$teacher_id = $auth_teacher_id = $teacher_login->teacher_id;
-			$school_id = $auth_school_id = $auth_teacher_school_id = $teacher_login->school_id;
-			$school_code = $teacher_login->school_code;
-			$school_name = $teacher_login->school_name;
-			$use_token = $teacher_login->use_token;
+			$teacher_id = $auth_teacher_id = $teacherLoggedIn->teacher_id;
+			$school_id = $auth_school_id = $auth_teacher_school_id = $teacherLoggedIn->school_id;
+			$school_code = $teacherLoggedIn->school_code;
+			$school_name = $teacherLoggedIn->school_name;
+			$use_token = $teacherLoggedIn->use_token;
 			$loged_in = true;
 		}
 		if(@$teacher_id)
@@ -297,19 +297,19 @@ else
 		{
 			$password = $_SESSION['admin_password'];
 		}
-		$admin_login = new AdminAuth($database, $username, $password, false);
+		$adminLoggedIn = new AdminAuth($database, $username, $password, false);
 		$admin_id = 0;
 		$school_id = 0;
 		$real_school_id = 0;
 		$use_token = 0;
-		if($admin_login->admin_id)
+		if($adminLoggedIn->admin_id)
 		{
-			$admin_id = $auth_admin_id = $admin_login->admin_id;
-			$school_id = $auth_school_id = $admin_login->school_id;
-			$real_school_id = $auth_school_id = $admin_login->real_school_id;
-			$school_name = $admin_login->school_name;
-			$school_code = $admin_login->school_code;
-			$use_token = $admin_login->use_token;
+			$admin_id = $auth_admin_id = $adminLoggedIn->admin_id;
+			$school_id = $auth_school_id = $adminLoggedIn->school_id;
+			$real_school_id = $auth_school_id = $adminLoggedIn->real_school_id;
+			$school_name = $adminLoggedIn->school_name;
+			$school_code = $adminLoggedIn->school_code;
+			$use_token = $adminLoggedIn->use_token;
 		}
 		if(!empty(@$admin_id))
 		{

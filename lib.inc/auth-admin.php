@@ -13,7 +13,7 @@ if(isset($_SESSION['admin_password']))
 {
 	$password = $_SESSION['admin_password'];
 }
-$admin_login = new \AdminAuth($database, $username, $password, false);
+$adminLoggedIn = new \AdminAuth($database, $username, $password, false);
 $admin_id = '';
 $school_id = '';
 $real_school_id = '';
@@ -21,7 +21,7 @@ $use_token = '';
 $admin_create = '';
 $admin_edit = '';
 
-if(!empty($admin_login->admin_id))
+if(!empty($adminLoggedIn->admin_id))
 {
 	$admin_create 
 		= $admin_edit 
@@ -29,14 +29,14 @@ if(!empty($admin_login->admin_id))
 		= $member_edit 
 		= $admin_id 
 		= $auth_admin_id 
-		= $admin_login->admin_id . '';
+		= $adminLoggedIn->admin_id . '';
 	$school_id 
 		= $auth_school_id 
-		= $admin_login->school_id . '';
+		= $adminLoggedIn->school_id . '';
 	$real_school_id 
 		= $auth_school_id 
-		= $admin_login->real_school_id . '';
-	$school_name = $admin_login->school_name . '';
-	$school_code = $admin_login->school_code . '';
-	$use_token = $admin_login->use_token . '';
+		= $adminLoggedIn->real_school_id . '';
+	$school_name = $adminLoggedIn->school_name . '';
+	$school_code = $adminLoggedIn->school_code . '';
+	$use_token = $adminLoggedIn->use_token . '';
 }

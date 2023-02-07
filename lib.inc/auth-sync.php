@@ -13,9 +13,9 @@ if(isset($_SESSION['admin_password']))
 {
 	$password = $_SESSION['admin_password'];
 }
-$member_login = new \AdminAuth($database, $username, $password, false);
+$memberLoggedIn = new \AdminAuth($database, $username, $password, false);
 
-if(empty($member_login->admin_id))
+if(empty($memberLoggedIn->admin_id))
 {
     if(isset($_SESSION['teacher_username']))
     {
@@ -25,15 +25,15 @@ if(empty($member_login->admin_id))
     {
         $password = $_SESSION['teacher_password'];
     }
-    $member_login = new \TeacherAuth($database, $username, $password, false);
-    if(empty($member_login->teacher_id))
+    $memberLoggedIn = new \TeacherAuth($database, $username, $password, false);
+    if(empty($memberLoggedIn->teacher_id))
     {
-        $user_id = $member_login->teacher_id;
+        $user_id = $memberLoggedIn->teacher_id;
     }
 }
 else
 {
-    $user_id = $member_login->admin_id;
+    $user_id = $memberLoggedIn->admin_id;
 }
 
 if(empty($user_id))

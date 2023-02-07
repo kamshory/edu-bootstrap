@@ -17,7 +17,7 @@ if(count(@$_POST))
 	$phone = kh_filter_input(INPUT_POST, "phone", FILTER_SANITIZE_SPECIAL_CHARS);
 	$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
-	$admin_create = $admin_edit = $admin_login->admin_id;
+	$admin_create = $admin_edit = $adminLoggedIn->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 }
 

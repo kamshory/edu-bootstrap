@@ -45,22 +45,22 @@ class TeacherAuth
 				";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
-				$teacher_login = $stmt->fetchObject();
-				$this->teacher_id = $teacher_login->teacher_id;
-				$this->username = ($teacher_login->username != '') ? $teacher_login->username : $teacher_login->member_id;
-				$this->name = trim($teacher_login->name);
-				$this->gender = $teacher_login->gender;
-				$this->birth_place = $teacher_login->birth_place;
-				$this->birth_day = $teacher_login->birth_day;
-				$this->email = $teacher_login->email;
-				$this->phone = $teacher_login->phone;
-				$this->country_id = $teacher_login->country_id;
-				$this->state_id = $teacher_login->state_id;
-				$this->city_id = $teacher_login->city_id;
-				$this->school_id = $teacher_login->school_id;
-				$this->school_name = $teacher_login->school_name;
-				$this->school_code = $teacher_login->school_code;
-				$this->use_token = $teacher_login->use_token;
+				$teacherLoggedIn = $stmt->fetchObject();
+				$this->teacher_id = $teacherLoggedIn->teacher_id;
+				$this->username = ($teacherLoggedIn->username != '') ? $teacherLoggedIn->username : $teacherLoggedIn->member_id;
+				$this->name = trim($teacherLoggedIn->name);
+				$this->gender = $teacherLoggedIn->gender;
+				$this->birth_place = $teacherLoggedIn->birth_place;
+				$this->birth_day = $teacherLoggedIn->birth_day;
+				$this->email = $teacherLoggedIn->email;
+				$this->phone = $teacherLoggedIn->phone;
+				$this->country_id = $teacherLoggedIn->country_id;
+				$this->state_id = $teacherLoggedIn->state_id;
+				$this->city_id = $teacherLoggedIn->city_id;
+				$this->school_id = $teacherLoggedIn->school_id;
+				$this->school_name = $teacherLoggedIn->school_name;
+				$this->school_code = $teacherLoggedIn->school_code;
+				$this->use_token = $teacherLoggedIn->use_token;
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
 					$now = $picoEdu->getLocalDateTime();

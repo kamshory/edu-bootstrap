@@ -15,7 +15,7 @@ if(isset($_SESSION['teacher_password']))
 	$password = $_SESSION['teacher_password'];
 }
 
-$teacher_login = new \TeacherAuth($database, $username, $password, false);
+$teacherLoggedIn = new \TeacherAuth($database, $username, $password, false);
 
 $teacher_id = '';
 $school_id = '';
@@ -28,7 +28,7 @@ $member_create = '';
 $member_edit = '';
 $admin_create = '';
 $admin_edit = '';
-if($teacher_login->teacher_id)
+if($teacherLoggedIn->teacher_id)
 {
 	$teacher_id 
 		= $auth_teacher_id 
@@ -36,14 +36,14 @@ if($teacher_login->teacher_id)
 		= $member_edit
 		= $teacher_create
 		= $teacher_edit
-		= $teacher_login->teacher_id . '';
+		= $teacherLoggedIn->teacher_id . '';
 	$school_id 
 		= $auth_school_id 
 		= $auth_teacher_school_id 
-		= $teacher_login->school_id . '';
-	$school_code = $teacher_login->school_code . '';
-	$school_name = $teacher_login->school_name . '';
-	$use_token = $teacher_login->use_token;
+		= $teacherLoggedIn->school_id . '';
+	$school_code = $teacherLoggedIn->school_code . '';
+	$school_name = $teacherLoggedIn->school_name . '';
+	$use_token = $teacherLoggedIn->use_token;
 }
 
 if(!isset($cfg))

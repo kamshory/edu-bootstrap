@@ -15,12 +15,12 @@ if(isset($_SESSION['password']))
 $password = $_SESSION['password'];
 }
 
-$member_login = new MemberAuth($database, $username, $password, false);
-if(@$member_login->member_id)
+$memberLoggedIn = new MemberAuth($database, $username, $password, false);
+if(@$memberLoggedIn->member_id)
 {
-	$member_id = $member_login->member_id;
+	$member_id = $memberLoggedIn->member_id;
 }
-if($member_login->member_id)
+if($memberLoggedIn->member_id)
 {
 	// Do nothing
 }

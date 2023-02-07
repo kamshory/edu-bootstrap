@@ -1,13 +1,13 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-if($admin_login->admin_level != 1)
+if($adminLoggedIn->admin_level != 1)
 {
 	include_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
 include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-$admin_id = $admin_login->admin_id;
+$admin_id = $adminLoggedIn->admin_id;
 if(isset($_POST['set_active']) && isset($_POST['info_id']))
 {
 	$infos = @$_POST['info_id'];

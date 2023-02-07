@@ -1,12 +1,12 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-if($admin_login->admin_level != 1)
+if($adminLoggedIn->admin_level != 1)
 {
 	include_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
 
-$admin_id = $admin_login->admin_id;
+$admin_id = $adminLoggedIn->admin_id;
 
 $cfg->page_title = "Administrator";
 
@@ -28,7 +28,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 	
-	if($admin_id2 == $admin_login->admin_id)
+	if($admin_id2 == $adminLoggedIn->admin_id)
 	{
 		$blocked = 0;
 		$active = 1;
@@ -43,7 +43,7 @@ if(isset($_POST['set_active']) && isset($_POST['admin_id']))
 	foreach($admin_arr as $key=>$val)
 	{
 		$admin_id = addslashes($val);
-		if($val != $admin_login->admin_id)
+		if($val != $adminLoggedIn->admin_id)
 		{
 			$sql = "UPDATE `edu_admin` SET `active` = true WHERE `admin_id` = '$admin_id' AND `school_id` = '$school_id'";
 			$database->executeUpdate($sql, true);
@@ -56,7 +56,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['admin_id']))
 	foreach($admin_arr as $key=>$val)
 	{
 		$admin_id = addslashes($val);
-		if($val != $admin_login->admin_id)
+		if($val != $adminLoggedIn->admin_id)
 		{
 			$sql = "UPDATE `edu_admin` SET `active` = false WHERE `admin_id` = '$admin_id' ";
 			$database->executeUpdate($sql, true);
@@ -69,7 +69,7 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 	foreach($admin_arr as $key=>$val)
 	{
 		$admin_id = addslashes($val);
-		if($val != $admin_login->admin_id)
+		if($val != $adminLoggedIn->admin_id)
 		{
 			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$admin_id' AND `role` = 'A' ";
 			$database->executeDelete($sql, true);

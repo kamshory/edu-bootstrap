@@ -53,7 +53,7 @@ if(isset($_POST['save']) && count(@$_POST))
 	$database->exeexecuteUpdatecute($sql2);
 
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
-	$admin_create = $admin_edit = $admin_login->admin_id;
+	$admin_create = $admin_edit = $adminLoggedIn->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	
 	$sql = "UPDATE `edu_school` set

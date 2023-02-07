@@ -13,7 +13,7 @@ if(empty($real_school_id))
 
 $cfg->page_title = "Administrator";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-$my_admin = $admin_login->admin_id;
+$my_admin = $adminLoggedIn->admin_id;
 
 if(count(@$_POST) && isset($_POST['save']))
 {
@@ -26,12 +26,12 @@ if(count(@$_POST) && isset($_POST['save']))
 	$phone = kh_filter_input(INPUT_POST, "phone", FILTER_SANITIZE_SPECIAL_CHARS);
 	$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
-	$admin_create = $admin_edit = $admin_login->admin_id;
+	$admin_create = $admin_edit = $adminLoggedIn->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 	
-	if($admin_id2 == $admin_login->admin_id)
+	if($admin_id2 == $adminLoggedIn->admin_id)
 	{
 		$blocked = 0;
 		$active = 1;
@@ -44,7 +44,7 @@ if(isset($_POST['set_active']) && isset($_POST['admin_id']))
 	foreach($admin_arr as $key=>$val)
 	{
 		$val = addslashes($val);
-		if($val != $admin_login->admin_id)
+		if($val != $adminLoggedIn->admin_id)
 		{
 			$sql = "UPDATE `edu_admin` SET `active` = true WHERE `admin_id` = '$val' AND `school_id` = '$school_id'";
 			$database->executeUpdate($sql, true);
@@ -57,7 +57,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['admin_id']))
 	$admin_arr = $_POST['admin_id'];
 	foreach($admin_arr as $key=>$val)
 	{
-		if($val != $admin_login->admin_id)
+		if($val != $adminLoggedIn->admin_id)
 		{
 			$val = addslashes($val);
 			$sql = "UPDATE `edu_admin` SET `active` = false WHERE `admin_id` = '$val' AND `school_id` = '$school_id'";
@@ -71,7 +71,7 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 	$admin_arr = $_POST['admin_id'];
 	foreach($admin_arr as $key=>$val)
 	{
-		if($val != $admin_login->admin_id)
+		if($val != $adminLoggedIn->admin_id)
 		{
 			$val = addslashes($val);
 			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$val' AND `role` = 'A' AND `school_id` = '$school_id' ";

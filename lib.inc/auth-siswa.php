@@ -14,7 +14,7 @@ if(isset($_SESSION['student_password']))
 $password = $_SESSION['student_password'];
 }
 
-$student_login = new \StudenAuth($database, $username, $password, false);
+$studentLoggedIn = new \StudenAuth($database, $username, $password, false);
 
 $student_id = '';
 $school_id = '';
@@ -22,17 +22,17 @@ $class_id = '';
 $auth_student_school_id = '';
 $auth_school_id = '';
 $use_token = false;
-if($student_login->student_id)
+if($studentLoggedIn->student_id)
 {
 	$student_id 
 		= $auth_student_id 
-		= $student_login->student_id;
-	$student_name = $student_login->name;
+		= $studentLoggedIn->student_id;
+	$student_name = $studentLoggedIn->name;
 	$school_id 
 		= $auth_student_school_id 
 		= $auth_school_id 
-		= $student_login->school_id;
-	$school_code = $student_login->school_code;
-	$class_id = $student_login->class_id;
-	$use_token = $student_login->use_token;
+		= $studentLoggedIn->school_id;
+	$school_code = $studentLoggedIn->school_code;
+	$class_id = $studentLoggedIn->class_id;
+	$use_token = $studentLoggedIn->use_token;
 }

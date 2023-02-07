@@ -1,11 +1,11 @@
 <?php
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-if($admin_login->admin_level != 1)
+if($adminLoggedIn->admin_level != 1)
 {
 	include_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
-$admin_id = $admin_login->admin_id;
+$admin_id = $adminLoggedIn->admin_id;
 $tokens = kh_filter_input(INPUT_GET, "tokens", FILTER_SANITIZE_STRING_NEW);
 $arr = explode(",", $tokens);
 foreach($arr as $key=>$val)
