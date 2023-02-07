@@ -2,9 +2,9 @@
 
 class PicoDatabaseServer
 {
-	public $driver = 'mysql';
-	public $host = 'localhost';
-	public $port = 3306;
+	public string $driver = 'mysql';
+	public string $host = 'localhost';
+	public int $port = 3306;
 	public function __construct($driver, $host, $port)
 	{
 		$this->driver = $driver;
@@ -15,53 +15,71 @@ class PicoDatabaseServer
 
 class PicoDatabaseSyncConfig
 {
-	public $sync_database_base_dir = '';
-	public $sync_database_pool_name = '';
-	public $sync_database_rolling_prefix = '';
-	public $sync_database_extension = '';
-	public $sync_database_maximum_length = 1000000;
-	public $sync_database_delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
+	public string $baseDir = '';
+	public string $poolName = '';
+	public string $rollingPrefix = '';
+	public string $extension = '';
+	public string $maximumlength = 1000000;
+	public string $delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
 	const NEW_LINE = "\r\n";
-	public function __construct($sync_database_base_dir, $sync_database_pool_name, $sync_database_rolling_prefix, $sync_database_extension, $sync_database_maximum_length, $sync_database_delimiter)
+
+	/**
+	 * Constructor of PicoDatabaseSyncConfig
+	 * @param string $baseDir Base directory of sync file
+	 * @param string $poolName Pooling file name
+	 * @param string $rollingPrefix Rolling prefix file name
+	 * @param string $extension File extension
+	 * @param int $maximumlength Maximum length of sync file
+	 * @param string $delimiter Extra query delimiter
+	 */
+	public function __construct($baseDir, $poolName, $rollingPrefix, $extension, $maximumlength, $delimiter)
 	{
-		$this->sync_database_base_dir = $sync_database_base_dir;
-		$this->sync_database_pool_name = $sync_database_pool_name;
-		$this->sync_database_rolling_prefix = $sync_database_rolling_prefix;
-		$this->sync_database_extension = $sync_database_extension;
-		$this->sync_database_maximum_length = $sync_database_maximum_length;
-		$this->sync_database_delimiter = $sync_database_delimiter;
+		$this->baseDir = $baseDir;
+		$this->poolName = $poolName;
+		$this->rollingPrefix = $rollingPrefix;
+		$this->extension = $extension;
+		$this->maximumlength = $maximumlength;
+		$this->delimiter = $delimiter;
 	}
 
+	/**
+	 * Get pooling path
+	 * @return string Polling path
+	 */
 	public function getPoolPath()
 	{
-		$poolPath = $this->sync_database_base_dir . "/" . $this->sync_database_pool_name . $this->sync_database_extension;
-		if(file_exists($poolPath) && filesize($poolPath) > $this->sync_database_maximum_length)
+		$poolPath = $this->baseDir . "/" . $this->poolName . $this->extension;
+		if(file_exists($poolPath) && filesize($poolPath) > $this->maximumlength)
 		{
-			$newPath = $this->sync_database_base_dir . "/" . $this->sync_database_rolling_prefix.date('Y-m-d-H-i-s').$this->sync_database_extension;
+			$newPath = $this->baseDir . "/" . $this->rollingPrefix.date('Y-m-d-H-i-s').$this->extension;
 			rename($poolPath, $newPath);
 		}
 		return $poolPath;
 	}
 
+	/**
+	 * Append query to sync file
+	 * @param string $sql Query to be synchronized
+	 * @return int Number of byte written to sync file include delimiter
+	 */
 	public function createSync($sql)
 	{
 		$syncPath = $this->getPoolPath();
 		$fp = fopen($syncPath, 'a');
-		$l1 = fwrite($fp, $this->sync_database_delimiter.self::NEW_LINE);  
+		$l1 = fwrite($fp, $this->delimiter.self::NEW_LINE);  
 		$l2 = fwrite($fp, $sql.";".self::NEW_LINE);  
 		fclose($fp);
 		return $l1 + $l2;
 	}
-
 }
 
 class PicoDatabase
 {
 
-	private $username = "";
-	private $password = "";
-	private $databaseName = "";
-	private $timezone = "00:00";
+	private string $username = "";
+	private string $password = "";
+	private string $databaseName = "";
+	private string $timezone = "00:00";
 
 	private \PDO $conn;
 
@@ -88,10 +106,15 @@ class PicoDatabase
 		$this->timezone = $timezone;	
 	}
 
+	/**
+	 * Connect to database
+	 * @return bool true if success and false if failed
+	 */
 	public function connect()
 	{
 		$ret = false;
-		$timezone_str = date("P");
+		date_default_timezone_set($this->timezone);
+		$timezoneOffset = date("P");
 		try {
 			$connectionString = $this->databaseServer->driver . ':host=' . $this->databaseServer->host . '; port=' . $this->databaseServer->port . '; dbname=' . $this->databaseName;
 
@@ -100,7 +123,7 @@ class PicoDatabase
 				$this->username, 
 				$this->password,
 				array(
-					\PDO::MYSQL_ATTR_INIT_COMMAND =>"SET time_zone = '$timezone_str';",
+					\PDO::MYSQL_ATTR_INIT_COMMAND =>"SET time_zone = '$timezoneOffset';",
 					\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
 					)
 			);
@@ -115,6 +138,10 @@ class PicoDatabase
 		return $ret;
 	}
 
+	/**
+	 * Get database connection
+	 * @return PDO Represents a connection between PHP and a database server.
+	 */
 	public function getDatabaseConnection()
 	{
 		return $this->conn;
@@ -219,14 +246,10 @@ class PicoDatabase
 	}
 
 	/**
-	 * Get Pooling path
-	 * @return string
+	 * Create database synchronizer
+	 * @param string $sql
+	 * @return int Number of byte written to sync file include delimiter
 	 */
-	public function getPoolPath()
-	{
-		return $this->databaseSyncConfig->getPoolPath();
-	}
-
 	public function createSync($sql)
 	{
 		return $this->databaseSyncConfig->createSync($sql);

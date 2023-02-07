@@ -25,9 +25,22 @@ class DatabaseSyncMaster
     public $poolFileName = '';
     public $poolRollingPrefix = '';
     public $poolFileExtension = '';
+
+    /**
+     * Constructor
+     * @param \PicoDatabase $database
+     * @param string $applicationRoot
+     * @param string $uploadBaseDir
+     * @param string $downloadBaseDir
+     * @param string $poolBaseDir
+     * @param string $poolFileName
+     * @param string $poolRollingPrefix
+     * @param string $poolFileExtension
+     */
     public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
     {
         $this->database = $database;
+        $this->applicationRoot = $applicationRoot;
         $this->uploadBaseDir = $uploadBaseDir;
         $this->downloadBaseDir = $downloadBaseDir;
         $this->poolBaseDir = $poolBaseDir;
@@ -48,7 +61,16 @@ class DatabaseSyncMaster
         $basePath = $base."/*.*";
         return glob($basePath);
     }
-    protected function filterPoolingFileList($fileList, $poolBaseDir, $poolFileName, $poolFileExtension)
+
+    /**
+     * Rolling last polling file
+     * @param array $fileList File list
+     * @param string $poolBaseDir Pooling base directory
+     * @param string $poolFileName Pooling file name
+     * @param string $poolFileExtension Pooling file extension
+     * @return array File list
+     */
+    protected function rollingLastPoolingFile($fileList, $poolBaseDir, $poolFileName, $poolFileExtension)
     {
         $pathToRemove = $poolBaseDir ."/". $poolFileName . $poolFileExtension;
         foreach($fileList as $key=>$val)
@@ -120,6 +142,12 @@ class DatabaseSyncMaster
         return true;
     }
 
+    /**
+     * Get sync record list from database
+     * @param string $direction Sync direction
+     * @param string $status Sync record status
+     * @return array
+     */
     protected function getSyncRecordListFromDatabase($direction, $status)
     {
         $sql = "SELECT * FROM `edu_sync_database` WHERE `sync_direction` = '$direction' AND `status` = '$status' ";
@@ -139,7 +167,18 @@ class DatabaseSyncMaster
 
 class DatabaseSyncUpload extends DatabaseSyncMaster
 {
-    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
+    /**
+     * Constructor
+     * @param \PicoDatabase $database
+     * @param string $applicationRoot
+     * @param string $uploadBaseDir
+     * @param string $downloadBaseDir
+     * @param string $poolBaseDir
+     * @param string $poolFileName
+     * @param string $poolRollingPrefix
+     * @param string $poolFileExtension
+     */
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
         parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
     }
@@ -151,7 +190,7 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
     private function movePoolingFileToUpload()
     {
         $fileList = $this->glob($this->poolBaseDir);
-        $fileList = $this->filterPoolingFileList($fileList, $this->poolBaseDir, $this->poolFileName, $this->poolFileExtension);
+        $fileList = $this->rollingLastPoolingFile($fileList, $this->poolBaseDir, $this->poolFileName, $this->poolFileExtension);
 
         $fileList = $this->sort($fileList);
         $fileToUpload = array();
@@ -214,7 +253,18 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
 
 class DatabaseSyncDownload extends DatabaseSyncMaster
 {
-    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
+        /**
+     * Constructor
+     * @param \PicoDatabase $database
+     * @param string $applicationRoot
+     * @param string $uploadBaseDir
+     * @param string $downloadBaseDir
+     * @param string $poolBaseDir
+     * @param string $poolFileName
+     * @param string $poolRollingPrefix
+     * @param string $poolFileExtension
+     */
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
         parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
     }
@@ -367,7 +417,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
     private function syncQuerysFromSyncRecord($record)
     {
         $syncFilePath = addslashes($record['file_path']);
-        $delimiter = trim($this->database->syncDatabaseDelimiter);
+        $delimiter = trim($this->database->databaseSyncConfig->delimiter);
 
         $handle = fopen($syncFilePath, "r");
         if ($handle) {
