@@ -60,7 +60,7 @@ class PicoDatabase
 
 	private $username = "";
 	private $password = "";
-	private $database = "";
+	private $databaseName = "";
 	private $timezone = "00:00";
 
 	private \PDO $conn;
@@ -68,17 +68,24 @@ class PicoDatabase
 	public \PicoDatabaseServer $databaseServer;
 	public \PicoDatabaseSyncConfig $databaseSyncConfig;
 
-	public function __construct($databaseServer, $username, $password, $database, $timezone, $databaseSyncConfig) //NOSONAR
+	/**
+	 * Summary of __construct
+	 * @param PicoDatabaseServer $databaseServer
+	 * @param string $username
+	 * @param string $password
+	 * @param mixed $databaseName
+	 * @param mixed $timezone
+	 * @param \PicoDatabaseSyncConfig $databaseSyncConfig
+	 */
+	public function __construct($databaseServer, $username, $password, $databaseName, $timezone, $databaseSyncConfig) //NOSONAR
 	{
 		$this->databaseServer = $databaseServer;
 		$this->databaseSyncConfig = $databaseSyncConfig;
 
 		$this->username = $username;
 		$this->password = $password;
-		$this->database = $database;
-		$this->timezone = $timezone;
-		
-		
+		$this->databaseName = $databaseName;
+		$this->timezone = $timezone;	
 	}
 
 	public function connect()
@@ -86,7 +93,7 @@ class PicoDatabase
 		$ret = false;
 		$timezone_str = date("P");
 		try {
-			$connectionString = $this->databaseServer->driver . ':host=' . $this->databaseServer->host . '; port=' . $this->databaseServer->port . '; dbname=' . $this->database;
+			$connectionString = $this->databaseServer->driver . ':host=' . $this->databaseServer->host . '; port=' . $this->databaseServer->port . '; dbname=' . $this->databaseName;
 
 			$this->conn = new \PDO(
 				$connectionString, 
@@ -113,6 +120,10 @@ class PicoDatabase
 		return $this->conn;
 	}
 
+	/**
+	 * Execute query without return anything
+	 * @param string $sql Query string to be executed
+	 */
 	public function execute($sql)
 	{
 		$stmt = $this->conn->prepare($sql);
@@ -125,6 +136,11 @@ class PicoDatabase
 		}
 	}
 
+	/**
+	 * Execute query
+	 * @param string $sql Query string to be executed
+	 * @return PDOStatement
+	 */
 	public function executeQuery($sql) : \PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
@@ -138,55 +154,7 @@ class PicoDatabase
 		return $stmt;
 	}
 
-	public function executeInsert($sql, $sync) : \PDOStatement
-	{
-		$stmt = $this->conn->prepare($sql);
-		try {
-			$stmt->execute();
-		}
-		catch(\PDOException $e)
-		{
-			echo $e->getMessage()."\r\nERROR &raquo; $sql";
-		}
-		if($sync)
-		{
-			$this->createSync($sql);
-		}
-		return $stmt;
-	}
-	public function executeUpdate($sql, $sync) : \PDOStatement
-	{
-		$stmt = $this->conn->prepare($sql);
-		try {
-			$stmt->execute();
-		}
-		catch(\PDOException $e)
-		{
-			echo $e->getMessage()."\r\nERROR &raquo; $sql";
-		}
-		if($sync)
-		{
-			$this->createSync($sql);
-		}
-		return $stmt;
-	}
-	public function executeDelete($sql, $sync) : \PDOStatement
-	{
-		$stmt = $this->conn->prepare($sql);
-		try {
-			$stmt->execute();
-		}
-		catch(\PDOException $e)
-		{
-			echo $e->getMessage()."\r\nERROR &raquo; $sql";
-		}
-		if($sync)
-		{
-			$this->createSync($sql);
-		}
-		return $stmt;
-	}
-	public function executeTransaction($sql, $sync) : \PDOStatement
+	private function executeAndSync($sql, $sync)
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -203,6 +171,51 @@ class PicoDatabase
 		return $stmt;
 	}
 
+	/**
+	 * Execute query and sync to hub
+	 * @param string $sql Query string to be executed
+	 * @param bool $sync Flag synchronizing
+	 * @return PDOStatement
+	 */
+	public function executeInsert($sql, $sync) : \PDOStatement
+	{
+		return $this->executeAndSync($sql, $sync);
+	}
+	/**
+	 * Execute update query
+	 * @param string $sql Query string to be executed
+	 * @param bool $sync Flag synchronizing
+	 * @return PDOStatement
+	 */
+	public function executeUpdate($sql, $sync) : \PDOStatement
+	{
+		return $this->executeAndSync($sql, $sync);
+	}
+	/**
+	 * Execute delete query
+	 * @param string $sql Query string to be executed
+	 * @param bool $sync Flag synchronizing
+	 * @return PDOStatement
+	 */
+	public function executeDelete($sql, $sync) : \PDOStatement
+	{
+		return $this->executeAndSync($sql, $sync);
+	}
+	/**
+	 * Execute transaction query
+	 * @param string $sql Query string to be executed
+	 * @param bool $sync Flag synchronizing
+	 * @return PDOStatement
+	 */
+	public function executeTransaction($sql, $sync) : \PDOStatement
+	{
+		return $this->executeAndSync($sql, $sync);
+	}
+
+	/**
+	 * Get Pooling path
+	 * @return string
+	 */
 	public function getPoolPath()
 	{
 		return $this->databaseSyncConfig->getPoolPath();

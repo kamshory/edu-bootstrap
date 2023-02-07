@@ -16,7 +16,7 @@ class FileSyncException extends Exception
 }
 class FileSyncMaster
 {
-    public $database = null;
+    public \PicoDatabase $database;
     public $applicationRoot = '';
     public $uploadBaseDir = '';
     public $downloadBaseDir = '';
@@ -71,7 +71,7 @@ class FileSyncMaster
         }
         return array_values($fileList);
     }
-    
+
     /**
      * Sort file ascending. File name represent time create
      * @param array $fileList Array contain file list
@@ -126,9 +126,9 @@ class FileSyncMaster
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-        $result = curl_exec ($ch);
+        curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close ($ch);
+        curl_close($ch);
         return $httpcode;
     }
 
@@ -201,7 +201,8 @@ class FileSyncUpload extends FileSyncMaster
 
     /**
      * Create sync record to database
-     * @param 
+     * @param string $localPath Sync file path
+     * @return void
      */
     private function createUploadSyncRecord($localPath)
     {
@@ -215,7 +216,6 @@ class FileSyncUpload extends FileSyncMaster
         (`sync_file_id`, `file_path`, `relative_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `status`) VALUES
         ('$sync_file_id', '$path', '$relativePath', '$baseName', '$fileSize', 'up', '$timeUpload', '$timeUpload', 0)";
         $this->database->execute($sql);
-
     }
 
     /**
@@ -249,7 +249,7 @@ class FileSyncUpload extends FileSyncMaster
             $sync_file_id = $record['sync_file_id'];
             if($this->uploadSyncFile($path, $record, $url, $username, $password) == 200)
             {
-                //$this->updateSyncRecord($sync_file_id, 1);
+                $this->updateSyncRecord($sync_file_id, 1);
             }
         }
     }
