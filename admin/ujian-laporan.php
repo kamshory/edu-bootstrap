@@ -1127,7 +1127,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	$j=$i%2;
 	$no++;
 	?>
-    <tr class="row-data row<?php echo $j;?>">
+    <tr class="row-data">
         <td width="16"><a title="Per Ujian" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=export&test_id=<?php echo $data['test_id'];?>&expand=1"><img src="lib.tools/images/excel.png" /></a></td>
         <td width="16"><a title="Per Siswa" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=export&test_id=<?php echo $data['test_id'];?>"><img src="lib.tools/images/excel.png" /></a></td>
         <td align="right"><?php echo $no;?> </td>
