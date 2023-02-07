@@ -19,7 +19,7 @@ class PicoDatabaseSyncConfig
 	public string $poolName = '';
 	public string $rollingPrefix = '';
 	public string $extension = '';
-	public string $maximumlength = 1000000;
+	public int $maximumlength = 1000000;
 	public string $delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
 	const NEW_LINE = "\r\n";
 
