@@ -137,48 +137,81 @@ function pack_exif_data($exif)
 		{
 			$exif['IFD0']['Make'] = '';
 		}
+
+		$camera = "-";
+		if(isset($exif['IFD0']['Make']))
+		{
+			$camera = trim(@$exif['IFD0']['Make'].' '.@$exif['IFD0']['Model']);
+		}
+
+		$time_capture = "-";
 		
-		$camera = (isset($exif['IFD0']['Make']))?((@$exif['IFD0']['Make'].' '.@$exif['IFD0']['Model'])):'-';
-		$time_capture = (@$exif['IFD0']['Datetime'])?(@$exif['IFD0']['Datetime']):(@$exif['EXIF']['DateTimeOriginal'])?(@$exif['EXIF']['DateTimeOriginal']):'-';
+		if(!empty(@$exif['IFD0']['Datetime']))
+		{
+			$time_capture = @$exif['IFD0']['Datetime'];
+		}
+		else if(!empty(@$exif['EXIF']['DateTimeOriginal']))
+		{
+			$time_capture = @$exif['EXIF']['DateTimeOriginal'];
+		}		
+
 		if(isset($exif['GPS']))
 		{
 			$gpsinfo = $exif['GPS'];
 			
-			$latar = explode("/",@$gpsinfo['GPSLatitude'][0]);
+			$latar = explode("/", @$gpsinfo['GPSLatitude'][0]);
 			if(count($latar)>1 && $latar[1])
-			$latd = $latar[0]/$latar[1];
-			$latar = explode("/",@$gpsinfo['GPSLatitude'][1]);
+			{
+				$latd = $latar[0]/$latar[1];
+			}
+			$latar = explode("/", @$gpsinfo['GPSLatitude'][1]);
 			if(count($latar)>1 && $latar[1])
-			$latm = $latar[0]/$latar[1];
-			$latar = explode("/",@$gpsinfo['GPSLatitude'][2]);
+			{
+				$latm = $latar[0]/$latar[1];
+			}
+			$latar = explode("/", @$gpsinfo['GPSLatitude'][2]);
 			if(count($latar)>1 && $latar[1])
-			$lats = $latar[0]/$latar[1];
+			{
+				$lats = $latar[0]/$latar[1];
+			}
 			$reallat = dmstoreal($latd, $latm, $lats);
 			if(stripos(@$gpsinfo['GPSLatitudeRef'],"S")!==false)
-			$reallat = $reallat*-1;
+			{
+				$reallat = $reallat*-1;
+			}
 			$latitude = "$latd; $latm; $lats ".@$gpsinfo['GPSLatitudeRef'];
 			$latitude = trim($latitude, " ; ");
 			
-			$longar = explode("/",@$gpsinfo['GPSLongitude'][0]);
+			$longar = explode("/", @$gpsinfo['GPSLongitude'][0]);
 			if(count($longar)>1 && $longar[1])
-			$longd = $longar[0]/$longar[1];
-			$longar = explode("/",@$gpsinfo['GPSLongitude'][1]);
+			{
+				$longd = $longar[0]/$longar[1];
+			}
+			$longar = explode("/", @$gpsinfo['GPSLongitude'][1]);
 			if(count($longar)>1 && $longar[1])
-			$longm = $longar[0]/$longar[1];
-			$longar = explode("/",@$gpsinfo['GPSLongitude'][2]);
+			{
+				$longm = $longar[0]/$longar[1];
+			}
+			$longar = explode("/", @$gpsinfo['GPSLongitude'][2]);
 			if(count($longar)>1 && $longar[1])
-			$longs = $longar[0]/$longar[1];
+			{
+				$longs = $longar[0]/$longar[1];
+			}
 			
 			$reallong = dmstoreal($longd, $longm, $longs);
 			if(stripos(@$gpsinfo['GPSLongitudeRef'],"W")!==false)
-			$reallong = $reallong*-1;
+			{
+				$reallong = $reallong*-1;
+			}
 			$longitude = "$longd; $longm; $longs ".@$gpsinfo['GPSLongitudeRef'];
 			
 			$longitude = trim($longitude, " ; ");
 			
-			$alar = explode("/",@$gpsinfo['GPSAltitude']);
+			$alar = explode("/", @$gpsinfo['GPSAltitude']);
 			if(count($alar)>1 && $alar[1])
-			$altitude = $alar[0]/$alar[1];
+			{
+				$altitude = $alar[0]/$alar[1];
+			}
 			$altref = @$gpsinfo['GPSAltitudeRef'];
 		}
 		else
@@ -188,17 +221,18 @@ function pack_exif_data($exif)
 			$altitude = "-";
 			$altref = "";
 		}
-		$exifdata = array(
-		'width'=>@$width,
-		'height'=>@$height,
-		'time'=>@$time_capture,
-		'camera'=>@$camera,
-		'latitude'=>@$latitude,
-		'longitude'=>@$longitude,
-		'altitude'=>@$altitude,
-		'capture_info'=>get_capture_info(@$exif)
+		return array(
+			'width'=>@$width,
+			'height'=>@$height,
+			'time'=>@$time_capture,
+			'camera'=>@$camera,
+			'latitude'=>@$latitude,
+			'longitude'=>@$longitude,
+			'altitude'=>@$altitude,
+			'altref'=>@$altref,
+			'capture_info'=>get_capture_info(@$exif)
 		);
-		return $exifdata;
+		
 	}
 	return null;
 }
@@ -214,7 +248,13 @@ function get_capture_info($exif)
 	{
 		$tmpdt['Camera_Maker'] = @$exif['IFD0']['Make'];
 		$tmpdt['Camera_Model'] = @$exif['IFD0']['Model'];
-		$tmpdt['Capture_Time'] = (@$exif['IFD0']['Datetime'])?(@$exif['IFD0']['Datetime']):(@$exif['EXIF']['DateTimeOriginal'])?(@$exif['EXIF']['DateTimeOriginal']):'';
+
+		$tmpdt['Capture_Time'] = '';
+		if (!empty(@$exif['IFD0']['Datetime'])) {
+			$tmpdt['Capture_Time'] = @$exif['IFD0']['Datetime'];
+		} else if (!empty(@$exif['EXIF']['DateTimeOriginal'])) {
+			$tmpdt['Capture_Time'] = @$exif['EXIF']['DateTimeOriginal'];
+		}
 		$tmpdt['Aperture_F_Number'] = @$exif['COMPUTED']['ApertureFNumber'];
 		$tmpdt['Orientation'] = @$exif['IFD0']['Orientation'];
 		$tmpdt['X_Resolution'] = @$exif['IFD0']['XResolution'];
@@ -305,7 +345,6 @@ function create_thumb_image($originalfile, $destination, $dwidth, $dheight, $int
             } 
 			else 
 			{
-                //notice('GIF not supported on this server');
                 $fileSync->deleteFile($originalfile, true);
                 return false;
             }
@@ -317,7 +356,6 @@ function create_thumb_image($originalfile, $destination, $dwidth, $dheight, $int
             } 
 			else 
 			{
-                //notice('JPEG not supported on this server');
                 $fileSync->deleteFile($originalfile, true);
                 return false;
             }
@@ -329,7 +367,6 @@ function create_thumb_image($originalfile, $destination, $dwidth, $dheight, $int
             } 
 			else 
 			{
-                //notice('PNG not supported on this server');
                 $fileSync->deleteFile($originalfile, true);
                 return false;
             }
@@ -338,11 +375,9 @@ function create_thumb_image($originalfile, $destination, $dwidth, $dheight, $int
             $fileSync->deleteFile($originalfile, true);
             return false;
     }
-    //if (function_exists('imagecreatetruecolor') and $CFG->gdversion >= 2) 
-	{
-        $im1 = imagecreatetruecolor($dwidth,$dheight);
-    } 
-    $cx = $image->width / 2;
+    $im1 = imagecreatetruecolor($dwidth,$dheight);
+
+	$cx = $image->width / 2;
     $cy = $image->height / 2;
     if ($image->width < $image->height) 
 	{
