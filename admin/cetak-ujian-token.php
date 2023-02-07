@@ -2,15 +2,15 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if(empty(@$school_id))
 {
-	include_once dirname(__FILE__)."/bukan-admin.php";
-	exit();
+  include_once dirname(__FILE__)."/bukan-admin.php";
+  exit();
 }
 $tokens = kh_filter_input(INPUT_GET, "tokens", FILTER_SANITIZE_STRING_NEW);
 $arr = explode(",", $tokens);
 foreach($arr as $key=>$val)
 {
-	$val = preg_replace("/[^\d]/i", "", $val);
-	$arr[$key] = abs($val*1);
+  $val = preg_replace("/[^\d]/i", "", $val);
+  $arr[$key] = abs($val*1);
 }
 $edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
@@ -96,14 +96,14 @@ h3{
 </div>
 <div class="main">
 <?php
-    $tokens = implode(",", $arr);
-    $sql = "SELECT `edu_token`.* , `edu_student`.`name` AS `student_name`, `edu_student`.`reg_number` AS `reg_number`, 
-(SELECT `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) AS `test_name`
-FROM `edu_token` 
-INNER JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_token`.`student_id`)
-WHERE `edu_token`.`school_id` = '$school_id' 
-AND `edu_token`.`token_id` in ($tokens)
-ORDER BY `edu_student`.`reg_number` ASC ";
+  $tokens = implode(",", $arr);
+  $sql = "SELECT `edu_token`.* , `edu_student`.`name` AS `student_name`, `edu_student`.`reg_number` AS `reg_number`, 
+  (SELECT `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) AS `test_name`
+  FROM `edu_token` 
+  INNER JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_token`.`student_id`)
+  WHERE `edu_token`.`school_id` = '$school_id' 
+  AND `edu_token`.`token_id` in ($tokens)
+  ORDER BY `edu_student`.`reg_number` ASC ";
     $stmt = $database->executeQuery($sql);
     if ($stmt->rowCount() > 0) {
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
