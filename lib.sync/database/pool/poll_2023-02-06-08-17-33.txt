@@ -1,77 +1,77 @@
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa68653dad9e0cb6', '<p>Nilai cosinus sudut antara bidang BDE dan bidang BDG seperti terlihat pada gambar prisma segi-4 ABCD.EFGH beraturan berikut adalah...<br><img alt=\"27.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dfa6862aa3a9a3075/e76855_27.gif\"></p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', 'efa5a498100fc564f90d6c77c9dbefe5', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa68655a48cb6500', '<p>Diketahui persegi panjang PQRS seperti pada gambar dengan panjang 5 cm dan lebar 3 cm.<br><img alt=\"28.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dfa6862aa3a9a3075/03a93b_28.gif\"><br> Agar luas ABCD mencapai nilai minimum, luas daerah yang diarsir adalah...</p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', '503bb14414653f58e2c487a631697837', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa686574e2ccae01', '<p>Nilai&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"lim _{x to propto }left(sqrt{4x^{2}+3x+4}-2x+1right)\" data-equation=\"%7B%22latex%22%3A%22%5C%5Clim%20_%7Bx%20%5C%5Cto%20%5C%5Cpropto%20%7D%5C%5Cleft(%5C%5Csqrt%7B4x%5E%7B2%7D%2B3x%2B4%7D-2x%2B1%5C%5Cright)%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Limit%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22left%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%2C%22right%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%9D%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfa6862aa3a9a3075/c843a6d7ed0125e8e095ac74f9552372.svg\"> = ...</p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', '4fa3475762ec521e049ec7d46c292f88', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa68659d89a2ceb2', '<p>Nilai&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\lim _{x \\to 2}\\frac{\\left(2x+1\\right)\\times \\tan\\left(x-2\\right)}{\\left(x^{2}-4\\right)}\" data-equation=\"%7B%22latex%22%3A%22%5C%5Clim%20_%7Bx%20%5C%5Cto%202%7D%5C%5Cfrac%7B%5C%5Cleft(2x%2B1%5C%5Cright)%5C%5Ctimes%20%5C%5Ctan%5C%5Cleft(x-2%5C%5Cright)%7D%7B%5C%5Cleft(x%5E%7B2%7D-4%5C%5Cright)%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Limit%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22left%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%2C%22right%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%C3%97%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22tan%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfa6862aa3a9a3075/bf357251e3603214dc3b9e65d94e9feb.svg\"> = ...</p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', '95f93b4e28eeb3ee458d8fab9f56b89f', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa6865b7029eb6ac', '<p>Hasil dari&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\int _{0}^{2}x\\left(x+1\\right)\\left(x-6\\right)dx\" width=\"170\" height=\"44\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cint%20_%7B0%7D%5E%7B2%7Dx%5C%5Cleft(x%2B1%5C%5Cright)%5C%5Cleft(x-6%5C%5Cright)dx%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Integral%22%2C%22value%22%3A%22single%22%2C%22operands%22%3A%7B%22lowerLimit%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%2C%22upperLimit%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22d%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfa6862aa3a9a3075/d3f22eeeda32f903bfa140e6125939fb.svg\"> = ...</p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', '38de274bc3e2277b088d06f339eca2fc', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa6865d061c179bd', '<p>Hasil dari&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\int \\left(3x+1\\right)\\sqrt{3x^{2}+2x-4}dx\" width=\"215\" height=\"40\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cint%20%5C%5Cleft(3x%2B1%5C%5Cright)%5C%5Csqrt%7B3x%5E%7B2%7D%2B2x-4%7Ddx%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Integral%22%2C%22value%22%3A%22single%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22d%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfa6862aa3a9a3075/55da8cb4674cc82acdf630bf5c15fa8f.svg\"> = ...</p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', '9517bfbda7d829ccb0a74ca63d81f48d', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa686605593078e0', '<p>Nilai dari&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\int _{0}^{\\frac{\\pi }{2}}\\sin^{3}\\left(x\\right)dx\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cint%20_%7B0%7D%5E%7B%5C%5Cfrac%7B%5C%5Cpi%20%7D%7B2%7D%7D%5C%5Csin%5E%7B3%7D%5C%5Cleft(x%5C%5Cright)dx%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Integral%22%2C%22value%22%3A%22single%22%2C%22operands%22%3A%7B%22lowerLimit%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%2C%22upperLimit%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22%CF%80%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%2C%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22sin%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22d%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfa6862aa3a9a3075/adacaa91c5f42c90a4dbe1a9a5aae1c8.svg\"> = ...</p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', 'f251dadb8b4b4b30aeeff4bc18b9572f', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa68661c076cae62', '<p>Volume daerah yang dibatasi kurva y = 2x<sup>2</sup> dan y = 4x bila diputar mengelilingi sumbu X sejauh 360&deg; adalah...</p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', '745b90023d541190a2ddea6e371762dc', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa68664bc64de954', '<p>Luas daerah yang diarsir pada gambar berikut dapat dinyatakan dengan rumus...<br><img alt=\"35.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dfa6862aa3a9a3075/d0c2b4_35.gif\"></p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', 'f9d0dbf9d6bf191926c783798026c78f', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa68667a48911fd5', '<p>Dari angka 1, 2, 3, dan 4 akan dibentuk bilangan genap yang terdiri dari tiga angka berbeda. Banyak blangan genap yang terbentuk adalah...</p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', 'ce8aaf450d28fcd8ca92bd2131cea148', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa6866917daad475', '<p>Pada musyawarah karang taruna akan dipilih pengurus organisasi yang baru, terdiri dari ketua, sekretaris, bendahara, dan koordinator olahraga.<br>
 Dari hasil seleksi lolos 6 orang calon pengurus. Banyak susunan pengurus yang dapat dibentuk adalah...</p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', 'bb97a3291260357e0fa3f6667c6ca273', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
@@ -79,7 +79,7 @@ Dari hasil seleksi lolos 6 orang calon pengurus. Banyak susunan pengurus yang da
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa6866a9013c4a33', '<p>Tabel berikut menyajikan data berat badan sekelompok siswa.</p>
 <table style=\"width: 236px; height: 201px;\" border=\"1\"><tbody><tr><td style=\"text-align: center;\"><strong>Berat Badan (kg)</strong></td>
 <td style=\"text-align: center;\"><strong>Frekuensi</strong></td>
@@ -103,7 +103,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa6866d994473f68', '<p>Erik suka sekali main skateboard. Dia mengunjungi sebuah toko bersama SKATERS untuk mengetahui beberapa model. Di toko ini dia dapat membeli skateboard yang lengkap. Atau, ia dapat membeli sebuah papan, satu set roda yang terdiri 4 roda, satu set sumbu yang terdiri dari dua sumbu, dan satu set perlengkapan kecil untuk dapat merakit skateboard sendiri. Daftar barang dan model/jenis skateboard di toko ini sebagai berikut.<br><img alt=\"39.gif\" src=\"media.edu/school/063ce682801be89951aa/test/063dfa6862aa3a9a3075/3f5ce0_39.gif\"><br>
 Toko itu menawarkan tiga macam papan, dua macam set roda, dan dua macam set perlengkapan kecil. Hanya ada satu macam sumbu. Berapa banyak skateboard berbeda yang dapat dibuat oleh Erik?</p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', 'fc4795b9173476fd5f8b41185265e031', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
@@ -111,19 +111,19 @@ Toko itu menawarkan tiga macam papan, dua macam set roda, dan dua macam set perl
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfa6866f3c712a85d', '<p>Sebuah film dokumenter menayangkan perihal gempa bumi dan seberapa sering gempa bumi terjadi. Film itu mencakup diskusi tentang keterkiraan gempa bumi. Seorang ahli geologi menyatakan: \"Dalam dua puluh tahun ke depan, peluang bahwa sebuah gempa bumi akan terjadi di kota Zadia adalah dua per tiga.\"<br>
 Manakah di bawah ini yang paling mencerminkan maksud pernyataan ahli geologi tersebut?</p>', '063dfa6862aa3a9a3075', true, '2', '1', 'upper-alpha', '53668ab340cc855037fef6639fd9eb59', '',
 								'2023-02-05 19:52:22', 'aaaaaaaaaaaaa', '2023-02-05 19:52:22', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_test` 
-	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values
+	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 	('063dfc2b7c939bb427cd', '063ce682801be89951aa', 'Try Out Ujian Nasional Matematika (IPS) Paket 01', '', '', '', '', '', 'Pilihlah jawaban yang paling tepat!', '0', '1', '1', '75', 'H', '10', '5', '10', '1', '3600', '1', '300', 'Lihat waktu sisa Anda. Silakan periksa kembali jawaban Anda. Segera kirimkan jawaban sebelum waktunya habis.', '0', '1', '0', '0', '0', '0', null, 'F', null, null, '2023-02-05 21:52:39', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa', 'A', 'aaaaaaaaaaaaa', 'A', '127.0.0.1', '127.0.0.1', '0');
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7cb3ae2f0895', '<p>Diketahui premis-premis berikut:<br>
 Premis 1 : Jika masyarakat membuang sampah pada tempatnya maka lingkungan bersih.<br>
 Premis 2 : Jika lingkungan bersih maka hidup akan nyaman.<br>
@@ -133,77 +133,77 @@ Kesimpulan yang sah dari kedua premis tersebut adalah ....</p>', '063dfc2b7c939b
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7ccc88be25c6', '<p>Ingkaran pernyataan \"Hari hujan dan semua jalan raya banjir\" adalah....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '74843ca7cc36cff4d6ec61331f2b2cd3', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7ce41326e987', '<p>Pernyataan yang setara dengan \"Jika harga BBM naik maka harga kebutuhan pokok akan naik\" adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '1feceefd5703fcf42e26eb67d07a7603', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7cf9c765a546', '<p>Nilai dari <sup>5</sup>log 25 + <sup>5</sup>log 3 - <sup>5</sup>log 15 = ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '576c97ec9027d1a4c7a85dfd6aa4b6ed', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7d18467783a3', '<p>Bentuk sederhana&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\frac{9k^{12}m^{-2}}{6^{2}k^{-4}m^{8}}\" width=\"59\" height=\"39\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cfrac%7B9k%5E%7B12%7Dm%5E%7B-2%7D%7D%7B6%5E%7B2%7Dk%5E%7B-4%7Dm%5E%7B8%7D%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%229%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22k%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22m%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22k%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22m%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfc2b7c939bb427cd/44efa7508b2495ac3e47118f2bcc2f26.svg\"> = ...</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', 'cd55386593dec25d5ae2ec2b4503f888', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7d4d322f54c0', '<p>Bentuk sederhana dari &radic;242 - &radic;200 - &radic;50 - &radic;8 = ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '24635f01e2fd4bd065d92fd14fede981', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7d6334b06a70', '<p>Diketahui p dan q adalah akar-akar persamaan kuadarat x<sup>2</sup> - 5x - 6 = 0.<br> Nilai dari p<sup>2</sup> + q<sup>2</sup> - 4pq = ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '82b28faf569c309a628b9ebde0d69c33', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7d7d84b9b418', '<p>Invers fungsi&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"f\\left(x\\right)=\\frac{2x+3}{x-1},x\\neq 1\" width=\"160\" height=\"38\" data-equation=\"%7B%22latex%22%3A%22f%5C%5Cleft(x%5C%5Cright)%3D%5C%5Cfrac%7B2x%2B3%7D%7Bx-1%7D%2Cx%5C%5Cneq%201%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22f%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%3D%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2C%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%89%A0%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfc2b7c939bb427cd/4fdc98faa42f1cde37682047e60d9ec5.svg\"> adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '3d281fd1b35be67a48cc3ab3d4ec77d8', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7db436d35f34', '<p>Diketahui fungsi f(x) = x<sup>2</sup> + 2x + 3 dan g(x) = x + 1.<br> Fungsi komposisi (f o g)(x) = ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '096a432241eb17e2773effe6e2392919', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7dcc51e98a35', '<p>Persamaan fungsi kuadrat yang grafiknya memotong sumbu X di titik (1,0) dan (-2,0) dan melalui titik (0,-6) adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '740b10f8f82115b83c67ed4fbb2ea11a', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7de58ab6516b', '<p>Penyelesaian dari pertidaksamaan 2x<sup>2</sup> - 9x + 7 &lt; 0 adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', 'ccb3d628107a75d5fcf75b4d132a926e', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7df9048679fe', '<p>Diketahui m dan n merupakan penyelesaian system persamaan<br>
 3x + 2y = 17<br>
 2x + 3y = 8<br>
@@ -213,28 +213,28 @@ Nilai m + n = ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', 
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7e114fbc8cb0', '<p>Di arena bermain anak-anak, Rere membeli koin seharga Rp 15.000,00 untuk digunakan bermain 7 kali permainan A dan 4 kali permainan B. Sementara Hanif membeli koin seharga Rp 14.000,00 yang digunakan untuk membeli 4 kali permainan A dan 5 kali permainan B. Fira telah bermain 8 kali permainan A dan 5 kali permainan B. Besar uang yang digunakan Fira adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '4e8215a896e3570845af9517ffd482e7', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7e27083b3d96', '<p>Seorang pemilik toko sandal memiliki modal Rp 4.000.0000,00. la membeli setiap pasang sandal A Rp 10.000,00 dan sandal B Rp 8.000,00. Setiap pasang sandal A dan sandal B masing-masing memberi keuntungan Rp 5.000,00 dan Rp 4.000,00. Kapasitas tempat penjualan yang tersedia tidak lebih dari 450 pasang. Keuntungan maksimum yang diperoleh pemilik toko tersebut jika semua sandal habis terjual adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', 'f20019018dffe3aeaca1693ded6b3db8', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7e3d416b9efe', '<p>Nilai minimum fungsi objektif f(x,y) = 6x + 5y yang memenuhi system pertidaksamaan 2x + y &ge; 8; 2x + 3y &ge; 12; x &ge; 0; y &ge; 0; xy R adalah.....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '952f10854bb50c6fc0aedb4fefd02cc0', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7e5ace7c31a9', '<p>Diketahui matriks <img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"A=\\left[\\begin{array}{ccc}2 &amp; 5 \\\\
 3 &amp; 4 \\\\
 \\end{array}\\right]\" data-equation=\"%7B%22latex%22%3A%22A%3D%5C%5Cleft%5B%5C%5Cbegin%7Barray%7D%7Bccc%7D2%20%26%205%20%5C%5C%5C%5C%5Cr%5Cn3%20%26%204%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright%5D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22A%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%3D%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22squareBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfc2b7c939bb427cd/c9c779_0c077ce844e4794741087d279424c834.png\">,&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"B=\\left[\\begin{array}{ccc}-1 &amp; 0 \\\\
@@ -245,7 +245,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7e9c1406f787', '<p>Diketahui matriks <img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"A=\\left[\\begin{array}{ccc}2 &amp; 3 \\\\
 15 &amp; x \\\\
 \\end{array}\\right]\" data-equation=\"%7B%22latex%22%3A%22A%3D%5C%5Cleft%5B%5C%5Cbegin%7Barray%7D%7Bccc%7D2%20%26%203%20%5C%5C%5C%5C%5Cr%5Cn15%20%26%20x%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright%5D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22A%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%3D%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22squareBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfc2b7c939bb427cd/40b749_2e55d5f779923a08a5334beed7485c10.png\">, <img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"B=\\left[\\begin{array}{ccc}x &amp; 7 \\\\
@@ -258,7 +258,7 @@ y &amp; 5 \\\\
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7ebd47bda2eb', '<p>Diketahui matriks <img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"A=\\left[\\begin{array}{ccc}2 &amp; 4 \\\\
 3 &amp; 8 \\\\
 \\end{array}\\right]\" data-equation=\"%7B%22latex%22%3A%22A%3D%5C%5Cleft%5B%5C%5Cbegin%7Barray%7D%7Bccc%7D2%20%26%204%20%5C%5C%5C%5C%5Cr%5Cn3%20%26%208%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright%5D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22A%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%3D%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22squareBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfc2b7c939bb427cd/5a71f7_fedb13c2f524b6455f0eeba47aeae336.png\">, <img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"B=\\left[\\begin{array}{ccc}3 &amp; 5 \\\\
@@ -269,28 +269,28 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7ed3f0470699', '<p>Jika suatu suku ke-8 = 23 dan suku ke-20 = 59 dari suatu barisan aritmetika, suku ke-10 = ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '9bc067e0e5fd2b9368903bd2f5ce46d9', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7ee8949c8b51', '<p>Dari suatu deret aritmetika diketahui suku keenam adalah 17 dan suku kesepuluh 33. Jumlah tiga puluh suku pertama adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '7a2e304551b687fce20792e2ebfbd66f', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7f0216375e88', '<p>Jumlah deret tak hingga dari 1 + &frac12; + &frac14; + &#8539; + ... adalah...</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '94aaf1436d3cce3ce1448bfdc3bcd284', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7f1756f783c8', '<p>Suku pertama dari suatu barisan geometri adalah 3 dan suku ke-5 adalah 48.<br>
 Nilai suku ke-8 adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '2edddf48be466ad937d1e8995d8e3cab', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
@@ -298,7 +298,7 @@ Nilai suku ke-8 adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7f2d06b3c368', '<p>Suku ke-2 dan suku ke-5 suatu deret geometri berturut-turut adalah 8 dan 1.<br>
 Jumlah lima suku pertama adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '02a6ba96811c32b5c226f4ed84e3a654', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
@@ -306,21 +306,21 @@ Jumlah lima suku pertama adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b7f409b9d13ad', '<p>Seutas tali dibagi menjadi 20 bagian dengan panjang membetuk deret aritmetika. Tali yang terpendek 10 cm dan tali yang terpanjang adalah 200 cm. Panjang tali seluruhnya adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', 'dbb8e8dbf65ba5780aabd4bc6083030a', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b8017ece053ce', '<p>Nilai <img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"lim _{x to 1}frac{x^{2}-5x+4}{x-1}\" width=\"114\" height=\"40\" data-equation=\"%7B%22latex%22%3A%22%5C%5Clim%20_%7Bx%20%5C%5Cto%201%7D%5C%5Cfrac%7Bx%5E%7B2%7D-5x%2B4%7D%7Bx-1%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Limit%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22left%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%2C%22right%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfc2b7c939bb427cd/6055b25dc5dfe245d835b02f24dac5df.svg\">= ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '25a2f62cca81eb61a01f0ec56f0bbd61', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b802a017ff802', '<p>Diketahui fungsi . Turunan pertama fungsi f(x) adalah f \'(x).<br>
 Nilai dari f \'(1) = ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '876abd9d233b98b66a157ab7414079a5', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
@@ -328,42 +328,42 @@ Nilai dari f \'(1) = ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-a
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b803c49022e94', '<p>Turunan pertama dari f(x) = 3x<sup>3</sup> - 6x<sup>2</sup> + 3 adalah .....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '072e5f6e48d08334cca288ccb99d5ef1', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b805618ff4fd8', '<p>Untuk memproduksi x unit barang diperlukan biaya&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\frac{1}{3}x^{3}-500x^{2}+6.000.000\" width=\"182\" height=\"36\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cfrac%7B1%7D%7B3%7Dx%5E%7B3%7D-500x%5E%7B2%7D%2B6.000.000%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22.%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22.%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfc2b7c939bb427cd/15d9800e844f7c1afdf426a5d196d041.svg\"> rupiah. Jumlah barang yang diproduksi agar biaya produksi minimum adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '9b8c7253e73ca9888c4365401b1da2b5', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b806e4b25ace9', '<p>Nilai dari&nbsp;<img class=\"equation-image\" style=\"vertical-align: middle;\" alt=\"\\int _{1}^{2}\\left(3x^{2}-4x+5\\right)dx\" width=\"157\" height=\"44\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cint%20_%7B1%7D%5E%7B2%7D%5C%5Cleft(3x%5E%7B2%7D-4x%2B5%5C%5Cright)dx%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Integral%22%2C%22value%22%3A%22single%22%2C%22operands%22%3A%7B%22lowerLimit%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22upperLimit%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22parenthesisBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22d%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063dfc2b7c939bb427cd/7dd75fe5928ac7708d725034df75bbb6.svg\"> = ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', 'f35df1fdccc608411ac6bc75d1f69507', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b8083968b4125', '<p>Hasil dari &int;(5 - 4x + 9x<sup>2</sup> + 4x<sup>3</sup>) dx = ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '617ee1df3fa88a44dd8a2fa09f4757b9', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b809ca5456501', '<p>Luas daerah yang dibatasi kurva y = 3x<sup>2</sup> - 1, sumbu X, garis x = 1, dan garis x = 2 adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '4fca01407c08c1da035082082fbcaf63', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b80b7e5f6c69f', '<p>Dari 10 finalis pemain tenis meja, akan dipilih juara I, II, dan III.<br>
 Banyak cara yang dapat menjadi juara adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', 'bfe83c168f52e150666a4f284b657f62', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
@@ -371,35 +371,35 @@ Banyak cara yang dapat menjadi juara adalah ....</p>', '063dfc2b7c939bb427cd', t
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b80ce0fd8069d', '<p>Banyak bilangan ratusan dengan angka berbeda yang dapat disususn dari angka 1, 2, 3, 4, 5, 6 dan nilainya lebih dari 400 adalah .....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '0d3fffb1f968380baf8f48af18f2860c', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b80dfc0320d2b', '<p>Di sebuah warung penjual martabak manis. Kamu dapat memesan martabak biasa dengan 2 macam isi, mentega, dan gula. Kamu juga dapat memesan martabak manis dengan isi tambahan. Kamu dapat memilih dari empat macam isi berikut: keju, coklat, pisang, dan kacang. Pipit ingin memesan sebuah martabak manis dengan dua macam isi tambahan. Berapakah banyaknya jenis martabak berbeda yang dapat dipilih oleh Pipit?</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', 'cc130082ab4545f661dcb8f2516d7945', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b80f16df827a5', '<p>Dalam suatu kotak terdapat 3 bola hijau, 5 bola merah, dan 4 bola biru. Jika dari kotak tersebut diambil dua bola sekaligus secara acak, peluang terambil dua merah atau dua biru adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', 'a49b1fc7f4043bd93d5adf0129967920', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b810377833b11', '<p>Dua dadu dilempar undi bersama-sama sebanyak 216 kali. Frekuensi harapan munculnya mata dadu berjumlah 5 adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', 'b6a4683040f601a9f474dd74a9906342', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b81179db0a7c1', '<p>Grafik dibawah ini memberikan informasi tentang ekspor dari Zedia, sebuah Negara yang menggunakan satuan mata uang zed.<br>
 Berapakah harga jus buah yang diekspor dari Zedia di tahun 2000?</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '81ba4faab9060ccb49b09d49e1239286', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
@@ -407,21 +407,21 @@ Berapakah harga jus buah yang diekspor dari Zedia di tahun 2000?</p>', '063dfc2b
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b812c8c9ab960', '<p>Simpangan rata-rata dari data 4, 7, 5, 6, 8, 6 adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', '835e96a24d1ea49736396c04fbddec94', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b8143516f79cc', '<p>Varians (ragam) dari data 8, 5, 6, 9, 8, 6 adalah ....</p>', '063dfc2b7c939bb427cd', true, '2', '1', 'upper-alpha', 'cd83e8176e1473722e6aa7c011903c62', '',
 								'2023-02-05 21:52:39', 'aaaaaaaaaaaaa', '2023-02-05 21:52:39', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063dfc2b815c2ce4a4e1', '<p>Perhatikan tabel berikut!</p>
 <table style=\"width: 152px; height: 176px;\" border=\"1\"><thead><tr><td style=\"text-align: center;\">Nilai</td>
 <td style=\"text-align: center;\">Frekuensi</td>
@@ -442,33 +442,33 @@ INSERT INTO `edu_question`
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_test` 
-	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values
+	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 	('063e054fd383efc4a124', '063ce682801be89951aa', 'Ujian Nasional Pendidikan Kewarganegaraan Paket 02', '', '', '', '', '', 'Pilihlah jawaban yang paling tepat!', '0', '1', '1', '75', 'H', '10', '5', '10', '1', '3600', '1', '300', 'Lihat waktu sisa Anda. Silakan periksa kembali jawaban Anda. Segera kirimkan jawaban sebelum waktunya habis.', '0', '1', '0', '0', '0', '0', null, 'F', null, null, '2023-02-06 08:16:45', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa', 'A', 'aaaaaaaaaaaaa', 'A', '127.0.0.1', '127.0.0.1', '0');
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd39c7bd6da80', '<p>Norma dalam kehidupan manusia yang memiliki sanksi yang tegas adalah norma...</p>', '063e054fd383efc4a124', true, '1', '1', 'upper-alpha', '0b1caa67938714631786adbb7c081b6d', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd3b085b4d0cf', '<p>Hukum menurut bentuknya terdiri atas...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '3a13d56640f826d010044e129cd918c0', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd3c2452f5c29', '<p>Salah satu contoh penerapan hukum di sekolah, antara lain...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '066421189f93e6602f08dc4896209777', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd3d60a2df0f9', '<p>Perhatikan pernyataan di bawah ini!<br>
 (1) Dengan proklamasi bangsa Indonesia bebas berbuat apa saja<br>
 (2) Proklamasi menjadikan bangas Indonesia bebas bekerja sama membuat senjata nuklir<br>
@@ -480,35 +480,35 @@ Makna proklamasi bagi bangsa Indonesia ditunjukkan pada nomor...</p>', '063e054f
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd3e57accf15a', '<p>Yang bukan bentuk sikap positif warga negara terhadap makna proklamasi kemerdekaan RI yaitu...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'be9cba250cdc31f73f85e4015aee597e', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd3f51d24c858', '<p>Pengakuan hak asasi manusia di Indoesia diatur dalam amandemen kedua UUD 1945 yakni pada pasal...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '8f7a7479a278602877e518ab16e7f661', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd405ec0af1cc', '<p>Salah satu contoh kasus pelanggaran hak asasi manusia adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '66a086cae9f6ea02ec1a19b3155df426', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd417cfa3d87c', '<p>Kemerdekaan mengemukakan pendapat mengandung arti bahwa setiap orang berhak untuk...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '6e772556289cc1775b43c0b4e3b9a7a6', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd4268d66a64e', '<p>1. Menjaga keutuhan, persatuan, dan kesatuan bangsa<br>
 2. Menjaga keamanan dan ketertiban<br>
 3. Menjaga kepentingan kelompok/etnis tertentu<br>
@@ -519,14 +519,14 @@ Alasan pentingnya mengemukakan pendapat dilandasi kebebasan yang bertanggung jaw
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd4360811ac42', '<p>Warga negara bebas untuk menyampaikan pendapat di muka umum, tetapi berkewajiban dan bertanggung jawab untuk...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '83afa998f56975d99dbacdda3ee18cd6', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd44851e5eb67', '<p>Pancasila adalah dasar negara Republik Indonesia. Rumusan Pancasila<br>
 yang sah tercantum dalam...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'dc3264c7fdf3df1567107195fe9bb529', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
@@ -534,28 +534,28 @@ yang sah tercantum dalam...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd45b204542a6', '<p>Sila ketiga Pancasila mengandung nilai persatuan, di antaranya...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '7d9bc827a02a1a6aea587b1d382a87cc', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd46b80523171', '<p>Sikap positif terhadap nilai-nilai Ketuhanan Yang Maha Esa dalam kehidupan bermasyarakat diwujudkan dengan cara...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'bee58cf38d872e0a8ee320a06dc65859', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd47bb2e3f45d', '<p>Konstitusi yang pernah berlaku di Indonesia pada periode 17 Agustus 1950 - 5 Juli 1959 adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '6d70064d997b3a4d91f399599d56a8ff', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd48e1a15e1d6', '<p>Perhatikan pernyataan berikut ini!<br>
 (1) Mengeluarkan peraturan dalam bentuk penetapan presiden<br>
 (2) Pidato Presiden dijadikan sebagai GBHN<br>
@@ -568,21 +568,21 @@ Bentuk penyimpangan terhadap konstitusi yang berlaku pada masa pemerintahan orde
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd49f8ea51903', '<p>Salah satu hasil amandeman (perubahan) UUD 1945 dalam kekuasaan kehakiman yaitu...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '93fea1c19e7642f80ce5c03caec99825', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd4ae7850e266', '<p>Sikap positif terhadap hasil perubahan UUD 1945 dalam bidang pendidikan ditunjukkan dengan...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '05093fb8f233d68f966ecf604f2f6c21', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd4bede5d9d46', '<p>Government of the people by the people and for the people.<br>
 Hal ini merupakan pengertian demokrasi menurut...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '470646fde5629e86407b7a40642564b3', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
@@ -590,7 +590,7 @@ Hal ini merupakan pengertian demokrasi menurut...</p>', '063e054fd383efc4a124', 
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd4cf700ad81d', '<p>Sikap demokratis sangat penting untuk dilaksanakan dalam kehidupan<br>
 bermasyarakat karena...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'fc543ab83f9cde176adb6f299ab05fab', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
@@ -598,14 +598,14 @@ bermasyarakat karena...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alp
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd4dd998a40c2', '<p>Pelaksanaan demokrasi di lingkungan sekolah diwujudkan dalam bentuk...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'dcc0db8aba2197fca1518e0a540c3644', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd4ec16baa2ae', '<p>Kedaulatan berasal dari kata daulah (Arab), soverignty (Inggris), dan<br>
 supremus (latin) yang berarti...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '65c2770a4b719cf71e2af31531db663d', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
@@ -613,7 +613,7 @@ supremus (latin) yang berarti...</p>', '063e054fd383efc4a124', true, '2', '1', '
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd4fb9fe513ea', '<p>Kekuasaan pemerintah atau negara untuk mengurus rumah tangganya<br>
 sendiri tanpa campur tangan negara lain disebut...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '7d8161f0444289db5c5a3ff09d3aa355', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
@@ -621,35 +621,35 @@ sendiri tanpa campur tangan negara lain disebut...</p>', '063e054fd383efc4a124',
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd51499d2e06a', '<p>Lembaga negara yang memegang kekuasaan yudikatif adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'd7060799bfc882df4104afd996c159df', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd523e8b58cd2', '<p>Kedudukan presiden hanya sebagai lambang yang menjalankan kegiatankegiatan di luar pengelolaan kebijakan pemerintah. Hal ini merupakan ciri sistem pemerintahan...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '28591b26c7b767afa5a897bb8fc96512', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd53105d01485', '<p>Sebagai warga negara yang baik hendaknya kita bersikap positif dan aktif dalam mewujudkan kedaulatan rakyat. Bentuk sikap positif terhadap kedaulatan rakyat dapat diwujudkan dengan cara...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'b371a1839240cf94703e0c02f93f8bd1', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd53f1933d543', '<p>Negara adalah suatu masyarakat yang mempunyai monopoli dalam menggunakan kekerasan fisik secara sah dalam suatu wilayah. Pendapat tersebut dikemukakan oleh...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'b5979dc09b1eeae7e469e454d7e585be', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd550625cbdf3', '<p>Syarat berdirinya suatu negara meliputi:<br>
 1. Rakyat yang mendiami negara tersebut<br>
 2. Wilayah yang meliputi darat, laut, dan udara<br>
@@ -661,14 +661,14 @@ Yang termasuk unsur konstitusi berdirinya suatu negara karena keberadaanya mutla
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd560dc04cee3', '<p>Pengatur kehidupan dalam wilayah negara demi tercapainya tujuan merupakan bagian dari...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '933a8009da7346187e9a7930da257310', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd5742fe9b34a', '<p>\"Tiap-tiap warga negara berhak dan wajib ikut serta dalam usaha pertanahan dan keamanan negara\".<br>
 Pernyataan tersebut merupakan dasar hukum tentang bela negara yang terdapat dalam UUD 1945 hasil amandemen, yaitu...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '863e28483ff8bd7d74b7cb4b38a83fc1', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
@@ -676,7 +676,7 @@ Pernyataan tersebut merupakan dasar hukum tentang bela negara yang terdapat dala
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd585a6547bcc', '<p>Tugas dan peran TNI berbeda dengan tugas dan peran kopolisian.<br>
 Perhatikan pernyataan di bawah ini:<br>
 1. Bertugas menegakkan kedaulatan negara<br>
@@ -689,42 +689,42 @@ Yang menjadi tugas pokok TNI adalah...</p>', '063e054fd383efc4a124', true, '2', 
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd59703dac88e', '<p>Bentuk partisipasi pelajar dalam usaha pembelaan negara dapat diwujudkan dengan cara...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '463ee011ba2502cce4ed9baf3090c14b', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd5a658ca37ca', '<p>32. Apabila terjadi ancaman yang serius terhadap keselamatan negara dan bangsa yang berasal dari dalam negeri, maka sikap kita sebaiknya...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'c0aa561d7a84ad68ff83ec228b113059', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd5b5c7c3bb88', '<p>Otonomi daerah adalah hak dan wewenang untuk mengatur dan mengurus pemerintahan dan kepentingan masyarakat yang sesuai dengan...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '3a5150ca319649cfbe5fd49c59b0f46e', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd5c42f7ba450', '<p>Peraturan perundang-undangan yang mengatur tentang otonomi daerah yang terbaru adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '83d90bc36963794c0e30c9e57b1f9343', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd5d2c4c4299d', '<p>Arti penting peran serta masyarakat dalam perumusan kebijakan publik bagi masyarakat dan pemerintah adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '276d51578066a7d718a2822f2b5462c0', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd5e66da2f023', '<p>Perhatikan pernyataan di bawah ini!<br>
 (1) Perumusan kebijakan publik<br>
 (2) Evaluasi kebijakan publik<br>
@@ -736,56 +736,56 @@ Urutan yang benar dalam proses kebijakan publik adalah...</p>', '063e054fd383efc
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd5f4d50e6989', '<p>Seluruh proses di mana penduduk dunia terhubung ke dalam komunitas yang tunggal (mendunia) dinamakan...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '9f5b5f5f516a9b26916b4a22a7b19e37', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd603fadf675a', '<p>Arti penting globalisasi bagi bangsa Indonesia adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '87871a454b37123b4f286543c0b7af9a', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd61591bda117', '<p>Yang tidak termasuk ciri-ciri globalisasi adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '8525d9507fd5de2e746b2d11c20a4327', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd62385991fbf', '<p>Landasan konstitusional politik luar negeri RI adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'c93644c4a275ad779904f5ec5b43367c', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd6327bc20883', '<p>Yang tidak termasuk contoh peran Indonesia di dunia internasional yaitu...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '376824ff5266dc7cfb854070c6a52394', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd641eaffd607', '<p>Tujuan politik luar negeri RI seperti yang tercantum dalam pembukaan UUD 1945 adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '482f42775895452b853d6775206b2809', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd650ffb928a1', '<p>Contoh dampak negatif dari globalisasi terhadap aspek sosial budaya bangsa Indonesia adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'bfed819356f20ee1942e75c955d8c448', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd6609885d8fc', '<p>Perhatikan pernyataan berikut ini!<br>
 1. Adanya persaingan bebas yang dapat mengakibatkan adanya pelaku ekonomi yang kalah dan yang bersaing.<br>
 2. Bisa mengakibatkan munculnya sifat konsumtif.<br>
@@ -798,14 +798,14 @@ Manakan nilai-nilai positif globalisasi bagi Indonesia?</p>', '063e054fd383efc4a
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd66f6fbadf7d', '<p>Yang termasuk dampak dari globalisasi informasi adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '3e6ee25e1befccbe96801a83f079abd3', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd67e54020d76', '<p>Sebagai warga negara yang baik, sikap saya terhadap dampak globalisasi<br>
 ekonomi adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '492687de532e690bfe19cc40eac2a252', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
@@ -813,28 +813,28 @@ ekonomi adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd68c0b3360fe', '<p>Arti penting prestasi diri bagi seseorang yaitu...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'ef85acb2c193238ee6fd5761ced3fa1e', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd69d565a60fd', '<p>Yang tidak termasuk cara memotivasi diri untuk berprestasi adalah...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '04ff9fd6c632e27147f9a1acce50b4e8', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd6b17630028a', '<p>49. Upaya untuk mencapai prestasi diri yaitu dapat dilakukan dengan sikap...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', 'ad7df34f8cb3b9ec726af5971d4b8129', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e054fd6c46e20c958', '<p>Prestasi diri yang dicapai oleh seseorang dalam bidang akademik dapat<br>
 ditunjukkan melalui...</p>', '063e054fd383efc4a124', true, '2', '1', 'upper-alpha', '484c65560304454de64179423576ca69', '',
 								'2023-02-06 08:16:45', 'aaaaaaaaaaaaa', '2023-02-06 08:16:45', 'aaaaaaaaaaaaa')

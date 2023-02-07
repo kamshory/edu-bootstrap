@@ -61,7 +61,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$token_school = md5($name.'-'.time().'-'.mt_rand(111111, 999999));
 	$sql = "INSERT INTO `edu_school` 
-	(`school_code`, `token_school`, `name`, `description`, `school_type_id`, `school_grade_id`, `public_private`, `open`, `principal`, `address`, `phone`, `email`, `language`, `country_id`, `prevent_change_school`, `prevent_resign`, `use_token`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) values
+	(`school_code`, `token_school`, `name`, `description`, `school_type_id`, `school_grade_id`, `public_private`, `open`, `principal`, `address`, `phone`, `email`, `language`, `country_id`, `prevent_change_school`, `prevent_resign`, `use_token`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 	('$school_code', '$token_school', '$name', '$description', '$school_type_id', '$school_grade_id', '$public_private', '$open', '$principal', '$address', '$phone', '$email', '$language', '$country_id', '$prevent_change_school', '$prevent_resign', '$use_token', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
 	$school_id = $database->getDatabaseConnection()->lastInsertId();

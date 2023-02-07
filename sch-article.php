@@ -168,7 +168,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	if($option == 'add')
 	{
 		$sql = "INSERT INTO `edu_article`
-		(`school_id`, `title`, `content`, `open`, `class`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values	
+		(`school_id`, `title`, `content`, `open`, `class`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES	
 		('$school_id', '$title', '$content', '$open', '$class', '$time', '$time', '$admin_id', 'T', '$admin_id', 'T', '$ip', '$ip', '$active')
 		";
 		$stmt = $database->executeQuery($sql);

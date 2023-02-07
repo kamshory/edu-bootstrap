@@ -486,7 +486,7 @@ $edit_key_type = 'FILTER_SANITIZE_DEFAULT';
 
 
 $str .= "\t\$sql = \"INSERT INTO `\".DB_PREFIX.\"$table` 
-\t(`".implode("`, `", $field_new)."`) values
+\t(`".implode("`, `", $field_new)."`) VALUES
 \t('$".implode("', '$", $field_new)."')\";
 ";
 $str .= "\tmysql_query(\$sql);

@@ -118,7 +118,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 			$competence_score = addslashes(json_encode($picoEdu->getTextScoreFromString($answer_str, true)));
 			$sql = "INSERT INTO `edu_answer` 
 			(`school_id`, `test_id`, `student_id`, `start`, `end`, `answer`, `competence_score`, 
-			`true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) values
+			`true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) VALUES
 			('$school_id', '$test_id', '$auth_student_id', '$start', '$end', '$answer_str', '$competence_score', 
 			'$true', '$false', '$score', '$penalty', '$final_score', '$percent', '1') ";
 			$stmt = $database->executeInsert($sql, true);

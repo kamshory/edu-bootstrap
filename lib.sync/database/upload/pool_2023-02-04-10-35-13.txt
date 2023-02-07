@@ -1,11 +1,11 @@
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_test` 
-	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values
+	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 	('063ddd14d3bf89302255', '063ce682801be89951aa', 'Ujian Nasional Ilmu Pengetahuan Alam Paket 03', '', '', '', '', '', 'Pilihlah jawaban yang paling tepat!', '0', '1', '1', '75', 'H', '10', '5', '10', '1', '3600', '1', '300', 'Lihat waktu sisa Anda. Silakan periksa kembali jawaban Anda. Segera kirimkan jawaban sebelum waktunya habis.', '0', '1', '0', '0', '0', '0', null, 'F', null, null, '2023-02-04 10:30:21', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa', 'A', 'aaaaaaaaaaaaa', 'A', '127.0.0.1', '127.0.0.1', '1');
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d3df8a78c941', '<p>Untuk mengetahui volum balok yang terbuat dari gabus dilakukan dengan urutan kegiatan seperti gambar dengan silinder logam sebagai pemberat.</p>
 <p><img alt=\"\" width=\"198\" height=\"179\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/3c38d6_1.gif\"></p>
 <p>Volum gabus berdasarkan data adalah...</p>', '063ddd14d3bf89302255', true, '1', '1', 'upper-alpha', 'fb55765dba3694c9608a2cda8a551ba9', '',
@@ -14,7 +14,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d3f7b6b1a6ce', '<p>Perhatikan sifat zat berikut!<br>
 1. Gaya tarik antar molekul sangat lemah.<br>
 2. Partikelnya bergetar dan berputar pada tempatnya.<br>
@@ -25,14 +25,14 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d40a8261287a', '<p>Termometer skala Fahrenheit yang tergantung<br> pada dinding suatu ruang menunjuk angka 77&deg;.<br> Suhu tersebut sama dengan ....</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '078218c101204b279ba24c7d92dc983c', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d41fafd27a8d', '<p>Grafik kalor-suhu berikut menggambarkan perubahan 2kg es.</p>
 <p><img alt=\"\" width=\"303\" height=\"179\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/ace01d_4.gif\"></p>
 <p>Jika kalor jenis es 2100J/kg&deg;C, kalor lebur es 330000J/kg dan kalor jenis air 4200J/kg&deg;C, kalor yang diperlukan pada proses G ke H adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '495e256c8cd4a0328f40e4a295a0c0e4', '',
@@ -41,7 +41,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d43e8ab5583c', '<p>Mobil mainan meluncur bebas pada bidang miring menanjak.</p>
 <p><img alt=\"\" width=\"285\" height=\"232\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/38f937_5.gif\"></p>
 <p>Grafik yang menunjukkan hubungan antara kecepatan dan waktu pada saat mobil menanjak dan kembali ke ujung tanjakan adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', 'fe63d5a4e509386b3b4ce55190f5ef4b', '',
@@ -50,7 +50,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d4578f2d8de4', '<p>Benda yang massanya 500g, dilemparkan secara vertikal dengan lintasan seperti gambar.</p>
 <p><img alt=\"\" width=\"130\" height=\"196\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/441b47_6.gif\"></p>
 <p>Energi potensial gravitasi benda pada posisi P jika g=10m/s<sup>2</sup>, adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '2ed3d2e83dc75d68383f217c997ff001', '',
@@ -59,7 +59,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d46d4ff10b5a', '<p>Perhatikan gambar tangga berikut!</p>
 <p><img alt=\"\" width=\"259\" height=\"126\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/fe3d14_7.gif\"></p>
 <p>Urutan keuntungan mekanis pesawat sederhana tersebut dari yang terbesar hingga yang terkecil adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', 'cfb0367109034b72e08008aeef729814', '',
@@ -68,7 +68,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d4871b0064ac', '<p>Perhatikan gambar berikut!</p>
 <p><img alt=\"\" width=\"149\" height=\"134\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/4b81e3_8.gif\"></p>
 <p>Ruang yang kosong pada tabung setinggi 10cm, dan percepatan gravitasi bumi 10m/s<sup>2</sup>. Tekanan zat zair pada dasar tabung adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', 'd0079c11f0ac4e8b4dab304df42baf1a', '',
@@ -77,7 +77,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d49f6b548bc2', '<p>Gelombang merambat dengan data seperti gambar.</p>
 <p><img alt=\"\" width=\"255\" height=\"95\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/789922_9.gif\"></p>
 <p>Berdasarkan data pada gambar, frekuensi gelombang tersebut adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '5ed6bbc80f16bfb55614eadf99abc9c2', '',
@@ -86,7 +86,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d4b2d6b748fd', '<p>Perhatikan pernyataan berikut!<br>
 1. Untuk menentukan kedalaman laut.<br>
 2. Melakukan USG pada janin.<br>
@@ -98,7 +98,7 @@ Yang merupakan manfaat bunyi dalam kehidupan sehari-hari adalah...</p>', '063ddd
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d4cc5dbc8735', '<p>Benda terletak di depan cermin seperti gambar.</p>
 <p><img alt=\"\" width=\"178\" height=\"134\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/dbb167_11.gif\"></p>
 <p>Jarak fokus cermin tersebut adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '1845e8c22e7cf375a325d6a81c228071', '',
@@ -107,7 +107,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d4df942c3378', '<p>Perhatikan pernyataan berikut!<br>
 1. Gaya elektrostatika tidak dipengaruhi oleh jarak tetapi dipengaruhi oleh muatan.<br>
 2. Makin dekat jarak dua benda bermuatan listrik, gaya elektrostatikanya makin besar<br>
@@ -119,7 +119,7 @@ Pernyataan yang benar berkaitan dengan gaya elektrostatika adalah...</p>', '063d
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d4f5e3067b41', '<p>Perhatikan rangkaian listrik berikut!</p>
 <p><img alt=\"\" width=\"249\" height=\"139\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/17f5d0_13.gif\"></p>
 <p>Berdasarkan data pada gambar, tegangan jepit baterai pada rangkaian tersebut adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '46950772665d09bc6839b436b6b0817f', '',
@@ -128,7 +128,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d5069f046165', '<p>Alat listrik dihubungkan pada sumber tegangan 200V. Kuat arus listrik pada alat tersebut 2A.<br>
 Daya alat tersebut adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', 'fefa4713c8a5eae102b4994046f54f1c', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
@@ -136,7 +136,7 @@ Daya alat tersebut adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'uppe
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d51780f05f10', '<p>Perhatikan cara pembuatan magnet pada gambar berikut!</p>
 <p><img alt=\"\" width=\"155\" height=\"126\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/d366e1_15.gif\"></p>
 <p>Kemudian perhatikan pernyataan berikut!<br> 1. Jika Y kutub U, Q menjadi kutub S<br> 2. Jika Y kutub U, Q menjadi kutub U<br> 3. Jika Y kutub S, Q menjadi kutub S<br> 4. Jika Y kutub S, Q menjadi kutub U<br> Yang benar adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '4793753888b903cf335170af3238fc7c', '',
@@ -145,14 +145,14 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d527522c8c5f', '<p>Kumparan primer trafo terdiri dari 400lilitan dan kumparan sekunder terdiri dari 80lilitan. Jika trafo dihubungkan pada sumber tegangan 220V, tegangan sekundernya adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '555db21f6ec8d77368a9d95e7e49e494', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d53d864253dd', '<p>Perhatikan sifat benda langit berikut!<br>
 1. Lintasannya sangat lonjong. <br>
 2. Lintasannya berada diantara planet Mars dengan Yupiter.<br>
@@ -164,14 +164,14 @@ Meteor ditunjukkan oleh sifat nomor...</p>', '063ddd14d3bf89302255', true, '2', 
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d5513dbfcfd0', '<p>Cairan aki merupakan larutan asam sulfat (H<sub>2</sub>SO<sub>4</sub>). Berarti larutan tersebut terdapat ion...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '8f71914e9b3fb103f7461d85476dba44', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d561b82e9cc3', '<p>Larutan zat memiliki ciri-ciri seperti berikut!<br>
 1. Licin jika dikenai air.<br>
 2. Memiliki bilangan pH lebih dari 7.<br>
@@ -183,14 +183,14 @@ Yang merupakan ciri basa adalah...</p>', '063ddd14d3bf89302255', true, '2', '1',
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d5748f780225', '<p>Perhatikan pernyataan yang berkaitan dengan zat berikut!<br> 1. Terbentuk dari beberapa zat dengan perbandingan tidak tetap.<br> 2. Sifat zat pembentuk tidak berubah.<br> 3. Dapat dipisahkan dengan cara fisika.<br> 4. Zat tunggal yang tersusun dari atom-atom berbeda.<br>5. Mudah dipisahkan melalui proses kimia.<br>Sifat campuran ditunjukkan oleh pernyataan nomor...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '699a94fddd6e9a343753acb1f3d81105', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d586754da72f', '<p>Beberapa perubahan benda berikut sering kita jumpai dalam kehidupan kita.<br>
 1. Alkohol menguap.<br>
 2. Kamper dalam lemari habis karena menyublim.<br>
@@ -202,14 +202,14 @@ Peruabahan kimia ditunjukkan oleh peristiwa...</p>', '063ddd14d3bf89302255', tru
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d598b15e7802', '<p>Pada produk minuman isotonik terdapat TARTRAZIN. Kegunaaan zat tersebut adalah sebagai...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '390555b7d2f21c927be478a32e6a52b2', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d5a6988e3a56', '<p>Seorang remaja melakukan penyalahgunaan narkotika dengan mengkonsumsi amfetamin supaya lebih bersemangat dalam mengerjakan soal ujian di sekolahnya.<br>
 Dari data tersebut diperoleh gambaran bahwa amfetamin merupakan narkotika golongan...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '499f2889112021b83a50c294af49fd2b', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
@@ -217,7 +217,7 @@ Dari data tersebut diperoleh gambaran bahwa amfetamin merupakan narkotika golong
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d5b737c5c1f9', '<p>Perhatikan aktifitas makhluk hidup berikut!<br>
 1. bunga berkembang menjadi buah<br>
 2. Amoeba membelah diri<br>
@@ -229,7 +229,7 @@ Aktifitas makhluk hidup yang menunjukkan ciri bereproduksi adalah...</p>', '063d
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d5c58d147407', '<p>Ciri&ndash;ciri tumbuhan:<br>
 1. mahkota bunga berjumlah 2,5 atau kelipatannya<br>
 2. batang bercabang-cabang<br>
@@ -240,7 +240,7 @@ Berdasarkan ciri-ciri nya maka tumbuhan biji tersebut tergolong kelas...</p>', '
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d5d9581fbe0b', '<p>Perhatikan gambar berikut!</p>
 <p><img alt=\"\" width=\"200\" height=\"140\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/36c19d_26.jpg\"></p>
 <p>Keuntungan yang diperoleh oleh ikan badut tersebut dari Anemon adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '996db9bcad6df7e1fb91fba25963c344', '',
@@ -249,7 +249,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d5ee802a3663', '<p>Perhatikan gambar berikut ini!</p>
 <p><img alt=\"\" width=\"200\" height=\"131\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/3ae1c0_27.jpg\"></p>
 <p>Akibat aktivitas pabrik dengan cerobong asap seperti pada gambar di atas maka akan menimbulkan pencemaran udara di lingkungan sekitarnya. Usaha yang dapat kita lakukan untuk mengurangi pencemaran udara itu adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', 'b4dcdf91ceb857167250c5f4f5a9aaca', '',
@@ -258,7 +258,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d603efa043e0', '<p>Perhatikan grafik pertumbuhan populasi penduduk di suatu daerah berikut!</p>
 <p><img alt=\"\" width=\"250\" height=\"111\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/d1d125_28.png\"></p>
 <p>Berdasarkan data tersebut maka dampak yang kemungkinan akan timbul terhadap kualitas lingkungan adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', 'f1f32ce18d675da46d8438749a6ac809', '',
@@ -267,14 +267,14 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d6179115c615', '<p>Jika otot bisep relaksasi maka akan terjadi gerakan otot...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '7c0035f46b4155cfb62c3eb8fcf65d3e', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d62fe4732473', '<p>Perhatikan gambar organ pencernaan berikut!</p>
 <p><img alt=\"\" width=\"160\" height=\"225\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/97dddf_30.jpg\"></p>
 <p>Enzim yang terdapat pada organ tersebut adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', 'e38335081e51a77fc602dd3c7a61529e', '',
@@ -283,7 +283,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d64ac897f46d', '<p>Perhatikan organ pernapasan berikut!</p>
 <p><img alt=\"\" width=\"266\" height=\"156\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/ba1336_31.jpg\"></p>
 <p>Bagian yang ditunjuk oleh huruf A berfungsi...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '90abe4d03c573398fe62cfc0810d1aed', '',
@@ -292,7 +292,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d661872b7f13', '<p>Perhatikan gambar jantung berikut!</p>
 <p><img alt=\"\" width=\"199\" height=\"187\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/c9f602_32.png\"></p>
 <p>Darah yang berasal dari paru-paru akan masuk ke jantung melalui ruang...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '1b73d873385925e5ef48461987734305', '',
@@ -301,14 +301,14 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d67325e2173c', '<p>Proses yang terjadi pada nefron di bagian glomerulus adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '35d3d30581728f23c58f64b814c70aa9', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d68aec4111d2', '<p>Perhatikan gambar sel saraf berikut!</p>
 <p><img alt=\"\" width=\"98\" height=\"312\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/7c8583_34.png\"></p>
 <p>Fungsi bagian yang ditunjuk oleh huruf X adalah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '2795d5ff915eb8c840dd20faff885ad0', '',
@@ -317,7 +317,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d6a09f3fa237', '<p>Perhatikan skema irisan melintang daun berikut!</p>
 <p><img alt=\"\" width=\"149\" height=\"216\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd14d3bf89302255/f27a97_35.png\"></p>
 <p>Bagian yang ditunjuk oleh huruf X berfungsi untuk...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', 'fee1f2e43443c5e9403df0b0e4ae0497', '',
@@ -326,53 +326,53 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d6b3ab4e9667', '<p>Tumbuhan lamtoro pada malam hari/keadaan gelap akan melakukan respon...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', 'baecdedd4b6172a23f3471180e526a84', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d6ca166f3da8', '<p>Pada percobaan fotosintesis, untuk menghilangkan klorofil daun dapat dilakukan dengan cara...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', 'f9a50ef8a9c9c10f04a654dd80c358cc', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d6dbc6e0c0ce', '<p>Untuk mempertahankan kelangsungan hidupnya tumbuhan bakau yang hidup pada ekosistem mangrove beradaptasi dengan cara...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '10ce20385c44106bc823a68f58289007', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d6ecc4a6c9e7', '<p>Kacang ercis berbatang tinggi warna biji hijau (TTkk) disilangkan dengan tanaman sejenis berbatang pendek warna biji kuning (ttKK), sifat batang tinggi dominan terhadap sifat pendek dan sifat warna biji kuning dominan terhadap warna hijau.Hasil dari persilangan tersebut diperoleh keturunan F1 100% berfenotip tanaman berbatang tinggi dan warna biji kuning. Jika tanaman generasi F1 disilangkan dengan tanaman sejenis berfenotip batang pendek warna biji kuning (ttKk) maka akan diperoleh keturunan F2 dengan perbandingan fenotip...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', 'c5d2c4741e7420d2834d00de56748a89', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd14d6fec3f2f256', '<p>Pada pembuatan sari kelapa digunakan jasa bakteri <em>Acetobacter xylinum</em>, karena memiliki kemampuan mengubah...</p>', '063ddd14d3bf89302255', true, '2', '1', 'upper-alpha', '31181a11c533c2c48c46888e0c075481', '',
 								'2023-02-04 10:30:21', 'aaaaaaaaaaaaa', '2023-02-04 10:30:21', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_test` 
-	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values
+	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 	('063ddd182bfb13afde50', '063ce682801be89951aa', 'Try Out Ujian Nasional Kimia (IPA) Paket 02', '', '', '', '', '', 'Pilihlah jawaban yang paling tepat!', '0', '1', '1', '75', 'H', '10', '5', '10', '1', '3600', '1', '300', 'Lihat waktu sisa Anda. Silakan periksa kembali jawaban Anda. Segera kirimkan jawaban sebelum waktunya habis.', '0', '1', '0', '0', '0', '0', null, 'F', null, null, '2023-02-04 10:31:14', '2023-02-04 10:31:14', 'aaaaaaaaaaaaa', 'A', 'aaaaaaaaaaaaa', 'A', '127.0.0.1', '127.0.0.1', '1');
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182c1319a543a3', '<p>Kelompok unsur/ion berikut yang mempunyai konfigurasi elektron yang sama adalah...</p>', '063ddd182bfb13afde50', true, '1', '1', 'upper-alpha', 'f1f813fc701b5f696f01e9d9ea66507f', '',
 								'2023-02-04 10:31:14', 'aaaaaaaaaaaaa', '2023-02-04 10:31:14', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182c2c41616b7e', '<p>Kulit valensi dan elektron valensi berikut yang <strong><em>tidak mungkin</em></strong> dimiliki oleh suatu atom ialah...</p>
 <table border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td width=\"48\">
 <p align=\"center\">Atom</p>
@@ -452,7 +452,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182c46a678426d', '<p>Gambaran elektron dalam orbital dari unsur dengan notasi X&nbsp; sebagai berikut:</p>
 <table style=\"width: 225px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td valign=\"bottom\" nowrap width=\"31\">
 <p>X</p>
@@ -490,14 +490,14 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182c5bf3947eeb', '<p>Konfigurasi elektron ion <strong>A<sup>2&#9472;</sup></strong> adalah 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>4s<sup>2</sup>3d<sup>10</sup>4p<sup>6 </sup>&nbsp;dalam tabel periodik atom unsur A terletak pada...</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', '5c30697d092e844f92882dbce60bddce', '',
 								'2023-02-04 10:31:14', 'aaaaaaaaaaaaa', '2023-02-04 10:31:14', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182c726e999f25', '<p>Perhatikan grafik jari-jari atom unsur berikut:</p>
 <p><img alt=\"\" width=\"586\" height=\"101\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd182bfb13afde50/359264_5.gif\"></p>
 <p>Pernyataan yang benar tentang grafik jari-jari atom ini adalah...</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', 'b0e5574d354f6b0c0b45278861ddf525', '',
@@ -506,7 +506,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182c94fe51edf2', '<p>Unsur dengan notasi <sub>15</sub>X<sup>31</sup>&nbsp; dapat membentuk senyawa dengan unsur&nbsp; <sub>17</sub>Y<sup>36</sup>.&nbsp; Pasangan yang tepat dari senyawa dan bentuk molekul yang kemungkinan dapat terbentuk adalah...</p>
 <table border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td valign=\"top\" width=\"30\">
 <p>&nbsp;</p>
@@ -576,7 +576,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182caafd6efc62', '<p>Urea salah satu pupuk yang banyak mengandung unsur Nitrogen. Bila dalam 5 Kg pupuk urea (CO(NH<sub>2</sub>)<sub>2</sub>) terdapat 2 Kg Nitrogen. Kemurnian pupuk tersebut adalah...</p>
 <p>( ArC = 12, O = 16, N = 14, H = 1)</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', 'a017cf7e05f1628dcefda5596f591ce4', '',
 								'2023-02-04 10:31:14', 'aaaaaaaaaaaaa', '2023-02-04 10:31:14', 'aaaaaaaaaaaaa')
@@ -584,7 +584,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182cc061725ef0', '<p>Seorang siswa menemukan suatu logam berwarna putih dan mengkilat yang belum dikenal, untuk mengetahui logam tersebut dia mereaksikan sebanyak 2.08 gram dengan asam klorida</p>
 <p>2X(g) + 6HCl(aq) &rarr; 2XCl<sub>3</sub>(aq) + 3 H<sub>2</sub>(g)</p>
 <p>Volume gas hidrogen yang terjadi pada keadaan standar 1,344 Liter, maka massa atom relatif (Ar) dari X&nbsp; adalah...</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', '5ad246dfc5480b0c2d4adb9898e0e0b8', '',
@@ -593,14 +593,14 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182cd55fd58c58', '<p>Suatu senyawa organik yang mengandung belerang dibakar sebanyak 10 gram dan menghasilkan 16,26 gram CO<sub>2</sub>; 5,52 gram H<sub>2</sub>O; dan 7,9 gram SO<sub>2</sub>. Massa molar zat tersebut adalah 162 g/mol. Rumus&nbsp; molekul zat tersebut adalah</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', 'ea3154a3ba2b94f97c3fbb6963fb492b', '',
 								'2023-02-04 10:31:14', 'aaaaaaaaaaaaa', '2023-02-04 10:31:14', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182ce92b98309e', '<p>Data percobaan daya hantar listrik&nbsp;&nbsp;</p>
 <table style=\"width: 448px; height: 172px;\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td valign=\"top\" width=\"20\">
 <p align=\"center\"><strong>No</strong></p>
@@ -668,7 +668,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182d01ef214729', '<p>Reaksi kesetimbangan dari:</p>
 <p>NH<sub>3</sub>(aq)&nbsp;&nbsp; +&nbsp; H<sub>2</sub>O(l)&nbsp;&nbsp;&#8644; &nbsp; NH<sub>4</sub><sup>+</sup>(aq)&nbsp; +&nbsp; OH<sup>-</sup>(aq)</p>
 <p>Menurut konsep asam basa Bronsted dan Lowry, pernyataan yang benar adalah...</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', '425fd323d31f009d8cc4e74812daf9f6', '',
@@ -677,7 +677,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182d15706c9b08', '<p>Dilarutkan 39,2 gram asam fosfat sampai volume 500 mL, ditetesi dengan indikator metil hingga warnanya merah. Bila Ka<sub>1</sub> asam fosfat 2.10<sup>&shy;-3</sup> , maka derajat ionisasi dan pH larutan secara berurutan&nbsp; adalah...</p>
 <p>(Ar H = 1, P = 31, O = 16)</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', '93ba7f77d517ce53dc824c08cd59ac92', '',
 								'2023-02-04 10:31:14', 'aaaaaaaaaaaaa', '2023-02-04 10:31:14', 'aaaaaaaaaaaaa')
@@ -685,7 +685,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182d2bfa402a17', '<p>Perhatikan data uji larutan dengan menggunakan indikator kertas lakmus berikut ini:&nbsp;&nbsp;</p>
 <table style=\"width: 383px; height: 202px;\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td rowspan=\"2\" width=\"38\">
 <p align=\"center\"><strong>No</strong></p>
@@ -736,7 +736,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182d4633050ff9', '<p>Direaksikan dua macam larutan berikut:</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd182bfb13afde50/a06e41_2c10f2949aafe70b6a7aad6fb1d6607f.png\"></p>
 <p>Ke dalam larutan H<sub>2</sub>SO<sub>4</sub>diteteskan phenolphthalein, pH dan warna larutan setelah reaksi adalah</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', '90f5c2f791b6ae4bcb141b370d406d0a', '',
@@ -745,14 +745,14 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182d58c42e46f5', '<p>Sebanyak 34,32 gram soda kristal (Na<sub>2</sub>CO<sub>3</sub> xH<sub>2</sub>O) dilarutkan dalam air sehingga volumnya dijadikan 1 Liter. 25 mL larutan ini dititrasi dengan larutan H<sub>2</sub>SO<sub>4</sub> 0,15 M. Jika perubahan warna indicator terjadi pada saat volum larutan H<sub>2</sub>SO<sub>4</sub>20 mL maka rumus air kristal soda tersebut adalah...</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', '8c8d4704e87ca867bc475811e9ccf30f', '',
 								'2023-02-04 10:31:14', 'aaaaaaaaaaaaa', '2023-02-04 10:31:14', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182d6f0e35a972', '<p>Perhatikan ilustrasi gambar berikut:</p>
 <p><img alt=\"\" width=\"144\" height=\"116\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd182bfb13afde50/10bc9a_16.gif\"></p>
 <p>Untuk membuat campuran penyangga dengan&nbsp; pH 6 , maka berat Natrium asetat yang dimasukkan adalah...</p>
@@ -762,7 +762,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182d8448d85bf0', '<p>Perhatikan pasangan zat berikut ini !</p>
 <p>(1) Senyawa CH<sub>3</sub>COONa dan CH<sub>3</sub>COOH</p>
 <p>(2) Ion H<sub>2</sub>PO<sub>4</sub><sup>&ndash;</sup>dan HPO<sub>4</sub><sup>2&ndash;</sup></p>
@@ -775,7 +775,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182d95effebba4', '<p>Sebanyak 250 mL larutan asam klorida 0,04 M dialirkan&nbsp; 224 mL (STP) gas amoniak sehingga terjadi reaksi:NH<sub>3</sub> (g) + HCl (aq)&nbsp;&rarr; NH<sub>4</sub>Cl (aq)</p>
 <p>Jika harga Kb NH<sub>3</sub> = 1 x 10<sup>&ndash;5</sup>, maka harga pH larutan yang terjadi sebesar...</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', 'd8ef8ce03643c669311c24bf46c016a8', '',
 								'2023-02-04 10:31:14', 'aaaaaaaaaaaaa', '2023-02-04 10:31:14', 'aaaaaaaaaaaaa')
@@ -783,7 +783,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182da96573907d', '<p>Pencampuran larutan berikut:</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd182bfb13afde50/ce2152_19.gif\"></p>
 <p>Jika Ksp CaSO<sub>4</sub>&nbsp; 10<sup>-8</sup>,&nbsp;&nbsp; ArCa = 40,&nbsp; S = 32, O =16</p>
@@ -793,7 +793,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182dc171ed4f85', '<p>Perhatikan diagram P&ndash;T berikut:</p>
 <p><img alt=\"\" width=\"268\" height=\"180\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd182bfb13afde50/ef52af_20.gif\"></p>
 <p>Jika larutan X dibuat dengan melarutkan 16,0 gram BeCl<sub>2</sub> dalam 200 gram air, maka harga derajat ionisasi (&alpha;) dari BeCl<sub>2</sub> adalah...</p>
@@ -803,21 +803,21 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182dda6d1428dd', '<p>Tujuan elektrodialisis yang dilakukan terhadap larutan koloid untuk...</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', 'e0b1c578b85e0c588b503caa8828f5e9', '',
 								'2023-02-04 10:31:14', 'aaaaaaaaaaaaa', '2023-02-04 10:31:14', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182def0f6e79dd', '<p>Senyawa berikut yang mempunyai nama&nbsp; 3 etil 2,4 dimetil pentana adalah...</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', '2041a6f976e9d0578b20ff01c54c4a14', '',
 								'2023-02-04 10:31:14', 'aaaaaaaaaaaaa', '2023-02-04 10:31:14', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182e080397b738', '<p><strong>Dehidrasi</strong> alkohol dengan menggunakan asam sulfat pekat pada suhu 170<sup>0</sup>C</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd182bfb13afde50/abe62f_97f57a52ecd5b81610336a03233ffec3.png\"></p>
 <p><strong>Jenis reaksi</strong> dan <strong>hasil reaksi</strong> yang benar adalah...</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', 'c4812982bfccbd908a54b558d10c9863', '',
@@ -826,7 +826,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182e1d7eeb3772', '<p>Pasangan yang tepat antara rumus senyawa dan kegunaannya adalah...</p>
 <table border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td valign=\"top\" width=\"28\">
 <p align=\"center\">&nbsp;</p>
@@ -888,7 +888,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182e343f0c6590', '<p>Zat X dapat terbentuk dari reaksi fenil klorida dengan triklor asetaldehid dalam suasana asam yang digunakan sebagai insektisida, tapi karena zat ini sukar dibiodegradasi dan berbahaya bagi manusia dan binatang sekarang tidak boleh digunakan lagi. Reaksinya sebagai berikut:</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd182bfb13afde50/133d62_d7ddf34d35da80256493aa0d1be8cb30.png\"></p>
 <p>Rumus&nbsp; dari zat X tersebut adalah</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', '07210e9dd8efda83873290db2dc2c62c', '',
@@ -897,7 +897,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182e5896e35830', '<p>Tabel berikut berisi data tentang polimer:</p>
 <table style=\"width: 534px; height: 136px;\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td valign=\"top\" width=\"38\">
 <p><strong>No</strong>.</p>
@@ -965,7 +965,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182e736b77a896', '<p>Pereaksi yang digunakan dalam persamaan reaksi berikut:</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd182bfb13afde50/36e20d_79149373589a692b08cb018f4348df46.png\"></p>
 <p>Pereaksi 1 dan 2 secara berurutan adalah...</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', '7364aee9c28a9f12b7708ec650453108', '',
@@ -974,7 +974,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182e8d9daaa1db', '<p dir=\"ltr\">Data hasil uji beberapa makanan berikut!</p>
 <table style=\"width: 543px; height: 181px;\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td valign=\"top\" width=\"113\">
 <p align=\"center\">Bahan Makanan</p>
@@ -1018,7 +1018,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182ea63754508d', '<p>Berdasarkan data pada 25<sup>o</sup>C di bawah ini:</p>
 <table style=\"width: 349px; height: 95px;\" border=\"0\"><tbody><tr><td>2NOCl(g) &rarr; 2 NO(g)+ Cl<sub>2</sub>(g)</td>
 <td>&Delta;H<sup>0 </sup>= +75,56&nbsp;&nbsp; kJ</td>
@@ -1032,7 +1032,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182eb870f9396b', '<p>Gas asetilen (gas karbid) dapat dihasilkan dari kalsium karbida (CaC<sub>2</sub>) dalam air. Pada pembakaran gas asetilen dihasilkan energi sebesar 4878 kJ, dengan reaksi&nbsp;&nbsp;</p>
 <p>C<sub>2</sub>H<sub>2</sub>(g) +2&frac12; O<sub>2 </sub>(g)&agrave;2CO<sub>2</sub>(g)+H<sub>2</sub>O(g)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 <p>bila diketahui energi ikatan rata-rata</p>
@@ -1043,7 +1043,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182ed0d77af172', '<p>Sekelompok siswa melakukan percobaan reaksi&nbsp; penguraian hidrogen peroksida</p>
 <p>H<sub>2</sub>O<sub>2</sub>(<em>l</em>) &rarr; H<sub>2</sub>O(<em>l</em>)&nbsp; + O<sub>2</sub>(g)</p>
 <table style=\"width: 595px; height: 191px;\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td valign=\"top\" width=\"189\">
@@ -1083,7 +1083,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182ee503b8b0f5', '<p>Persamaan reaksi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X&nbsp;&nbsp;&nbsp; +&nbsp; 2Y&nbsp; &rarr;&nbsp; 3W&nbsp;&nbsp; +&nbsp; 2Z&nbsp;&nbsp; merupakan reaksi yang memiliki orde reaksi 2 terhadap&nbsp; X dan orde reaksi 3 terhadap Y.</p>
 <table style=\"width: 321px;\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td width=\"47\">
 <p align=\"center\">No</p>
@@ -1119,7 +1119,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182ef58f74c1a0', '<p>Persamaan reaksi berikut : 2NO(g) + Cl<sub>2 </sub>(g)&nbsp;&#8644; 2 NOCl(g)&nbsp; &#8710;H = + 105,2 kJ/mol</p>
 <p>Pernyataan yang benar apabila suhu diperbesar adalah...</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', '10ed686fd9dcf2b82aa3bd5d7590fa15', '',
 								'2023-02-04 10:31:14', 'aaaaaaaaaaaaa', '2023-02-04 10:31:14', 'aaaaaaaaaaaaa')
@@ -1127,7 +1127,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182f08f359d098', '<p>Perhatikan reaksi setimbang berikut:</p>
 <p>NO(g)&nbsp; + <sup>1</sup>/<sub>2</sub>O<sub>2</sub>(g)&nbsp;&#8644; NO<sub>2</sub>(g)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K&nbsp; = 0,5</p>
 <p>2NO<sub>2</sub>(g) &#8644; N<sub>2</sub>O<sub>4</sub>(g)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K&nbsp; = 0,25</p>
@@ -1138,7 +1138,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182f1c4924b908', '<p>Beberapa reaksi berikut:</p>
 <ol><li>IO<sub>3</sub><sup>&#8213;</sup>&nbsp;&nbsp;&nbsp; +&nbsp; 5I<sup>&#8213;</sup>&nbsp; + 6 H<sup>+&nbsp;</sup>&rarr;&nbsp;&nbsp;&nbsp; 3 I<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp; 3 H<sub>2</sub>O</li>
 <li>Pb&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp;&nbsp; PbO<sub>2</sub>&nbsp;&nbsp;&nbsp; +&nbsp; 2H<sub>2</sub>SO<sub>4</sub>&agrave;&nbsp;&nbsp;&nbsp; 2PbSO<sub>4</sub>&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp;&nbsp; 2H<sub>2</sub>O</li>
@@ -1151,7 +1151,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd182f30128c4079', '<p>Sejumlah lelehan garam klorida, masing-masing AgCl, NaCl, &nbsp;CaCl<sub>2</sub>, AlCl<sub>3</sub> ,dan FeCl<sub>3</sub></p>
 <p>dielektrolisis dengan kuat arus sebesar 2,5 A. Jumlah endapan (deposit) logam yang memerlukan waktu elektrolisis paling lama adalah...</p>
 <p>(Ar Ag = 108, Na = 23, Ca = 40, Al = 27, Fe = 56)</p>', '063ddd182bfb13afde50', true, '2', '1', 'upper-alpha', 'd258c647433d1cb9b00983013ac42b0c', '',
@@ -1160,7 +1160,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd183004d97f417f', '<p>Sejumlah arus listrik dialirkan melalui 2 jenis larutan dalam rangkaian seri, sesuai gambar berikut:</p>
 <p><img alt=\"\" width=\"145\" height=\"113\" src=\"media.edu/school/063ce682801be89951aa/test/063ddd182bfb13afde50/ad8387_37.gif\"></p>
 <p>Jika dalam sel A dihasilkan 32,5 gram seng, maka massa perak yang dihasilkan dalam sel B adalah ...&nbsp;&nbsp;</p>
@@ -1170,7 +1170,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd18302c9cdb5eb3', '<p>Beberapa contoh cara yang dilakukan untuk mencegah korosi pada besi antara lain:<br>
 1.	pengecatan pagar rumah<br>
 2.	galvanisasi<br>
@@ -1182,7 +1182,7 @@ Yang termasuk proses perlindungan katodik adalah...</p>', '063ddd182bfb13afde50'
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd183043a2396061', '<p>Perhatikan tabel berikut:</p>
 <table style=\"width: 445px; height: 55px;\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td valign=\"top\" width=\"94\">
 <p align=\"center\">Ion Unsur</p>
@@ -1232,7 +1232,7 @@ INSERT INTO `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063ddd18305d89f00490', '<p>Perhatikan tabel unsur-unsur periode ke tiga berikut:</p>
 <table style=\"width: 604px; height: 163px;\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr><td valign=\"top\" width=\"156\">
 <p align=\"center\">unsur</p>

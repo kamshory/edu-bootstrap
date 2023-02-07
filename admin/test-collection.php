@@ -44,7 +44,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$test_collection_id = $database->generateNewId();
 	$sql = "INSERT INTO `edu_test_collection` 
-	(`test_collection_id`, `name`, `grade_id`, `file_name`, `file_path`, `file_size`, `file_md5`, `file_sha1`, `time_create`, `time_edit`, `ip_create`, `ip_edit`, `taken`, `active`) values
+	(`test_collection_id`, `name`, `grade_id`, `file_name`, `file_path`, `file_size`, `file_md5`, `file_sha1`, `time_create`, `time_edit`, `ip_create`, `ip_edit`, `taken`, `active`) VALUES
 	('$test_collection_id', '$name', '$grade_id', '$file_name', '$file_path', '$file_size', '$file_md5', '$file_sha1', '$time_create', '$time_edit', '$ip_create', '$ip_edit', '$taken', '$active')";
 	$database->executeInsert($sql, true);
 

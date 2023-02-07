@@ -42,7 +42,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 
 		$sql = "INSERT INTO `edu_article`
 		(`article_id`, `school_id`, `title`, `open`, `class`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, 
-		`role_edit`, `ip_create`, `ip_edit`, `active`) values	
+		`role_edit`, `ip_create`, `ip_edit`, `active`) VALUES	
 		('$article_id', '$school_id', '$title', '$open', '$class', '$time', '$time', '$admin_id', 'A', '$admin_id', 
 		'A', '$ip', '$ip', '$active')
 		";

@@ -171,7 +171,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 			$sql = "INSERT INTO `edu_question` 
 			(`question_id`, `content`, `test_id`, `multiple_choice`, `random`, `numbering`, `digest`, `sort_order`,
-			`time_create`, `member_create`, `time_edit`, `member_edit`) values
+			`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 			('$question_id', '$question', '$test_id', true, '$random', '$numbering', '$digest', '$sort_order',
 			'$time_create', '$member_create', '$time_edit', '$member_edit')";
 			$database->executeInsert($sql, true);
@@ -190,7 +190,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				$score = kh_filter_input(INPUT_POST, "score_".$id2, FILTER_SANITIZE_NUMBER_FLOAT);
 				$option_id = $database->generateNewId();
 				$sql = "INSERT INTO `edu_option` 
-				(`option_id`, `question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+				(`option_id`, `question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 				('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit');";
 				$stmt3 = $database->executeInsert($sql, true);
 				if($stmt3->rowCount() > 0)

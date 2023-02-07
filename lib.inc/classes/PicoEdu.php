@@ -539,7 +539,7 @@ class PicoEdu //NOSONAR
 		} else {
 			$profil_id = $this->database->generateNewId();
 			$sql = "INSERT INTO `profile` 
-			(`profil_id`, `school_id`, `name`, `value`) values
+			(`profil_id`, `school_id`, `name`, `value`) VALUES
 			('$profil_id', '$school', '$name', '$value')";
 		}
 		$this->database->executeInsert($sql, true);
@@ -611,7 +611,7 @@ class PicoEdu //NOSONAR
 		$this->database->executeDelete($sql, true);
 
 		$sql = "INSERT INTO `edu_invalid_signin` 
-		(`member_id`, `signin_type`, `signin_time`) values
+		(`member_id`, `signin_type`, `signin_time`) VALUES
 		('$member_id', '$signin_type', '$time')
 		";
 		$this->database->executeInsert($sql, true);
@@ -751,7 +751,7 @@ class PicoEdu //NOSONAR
 	public function loginTest($school_id, $student_id, $test_id, $sessions_id, $time, $ip)
 	{
 		$sql = "INSERT INTO `edu_test_member` 
-		(`school_id`, `student_id`, `test_id`, `sessions_id`, `time_enter`, `ip_enter`, `status`) values
+		(`school_id`, `student_id`, `test_id`, `sessions_id`, `time_enter`, `ip_enter`, `status`) VALUES
 		('$school_id', '$student_id', '$test_id', '$sessions_id', '$time', '$ip', '1')
 		";
 		$this->database->executeInsert($sql, true);
@@ -1038,7 +1038,7 @@ class PicoEdu //NOSONAR
 			$school_program_id = $this->database->generateNewId();
 			$now = $this->getLocalDateTime();
 			$sql = "INSERT INTO `edu_school_program` 
-			(`school_program_id`, `school_id`, `name`, `time_create`, `time_edit`, `active`) values
+			(`school_program_id`, `school_id`, `name`, `time_create`, `time_edit`, `active`) VALUES
 			('$school_program_id', '$school_id', '$school_program', '$now', '$now', true)";
 			$stmt = $this->database->executeInsert($sql, true);
 			if($stmt->rowCount() > 0)
@@ -1073,7 +1073,7 @@ class PicoEdu //NOSONAR
 			$class_id = $this->database->generateNewId();
 			$now = $this->getLocalDateTime();
 			$sql = "INSERT INTO `edu_class` 
-			(`class_id`, `school_id`, `name`, `time_create`, `time_edit`, `active`) values
+			(`class_id`, `school_id`, `name`, `time_create`, `time_edit`, `active`) VALUES
 			('$class_id', '$school_id', '$class', '$now', '$now', true)";
 			$stmt = $this->database->executeInsert($sql, true);
 			if($stmt->rowCount() > 0)

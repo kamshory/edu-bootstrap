@@ -71,7 +71,7 @@ FROM `city` WHERE `city`.`name` like `in_name` and (`city`.`state_id` = `in_stat
 
 if `out_city_id` is null or `out_city_id` = 0 then
 INSERT INTO `city` 
-(`name`, `state_id`, `country_id`) values
+(`name`, `state_id`, `country_id`) VALUES
 (`in_name`, `in_state_id`, `in_country_id`);
 select last_insert_id() into `out_city_id`;
 end if;
@@ -99,7 +99,7 @@ limit 0, 1;
 
 if `out_id` is null then
 INSERT INTO `edu_class` 
-(`school_id`, `name`, `time_create`, `time_edit`, `active`) values
+(`school_id`, `name`, `time_create`, `time_edit`, `active`) VALUES
 (`in_school`, `in_class`, now(), now(), '1');
 select last_insert_id() into `out_id`;
 end if;
@@ -139,7 +139,7 @@ limit 0, 1;
 
 if `out_id` is null then
 INSERT INTO `edu_school_program` 
-(`school_id`, `name`, `time_create`, `time_edit`, `active`) values
+(`school_id`, `name`, `time_create`, `time_edit`, `active`) VALUES
 (`in_school`, `in_school_program`, now(), now(), '1');
 select last_insert_id() into `out_id`;
 end if;
@@ -182,7 +182,7 @@ end if;
 
 if `out_state_id` is null or `out_state_id` = 0 then
 INSERT INTO `state` 
-(`name`, `country_id`) values
+(`name`, `country_id`) VALUES
 (`in_name`, `in_country_id`);
 select last_insert_id() into `out_state_id`;
 end if;

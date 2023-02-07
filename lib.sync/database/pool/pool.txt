@@ -1,35 +1,35 @@
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c233d77866eae', '<p>Perhatikan gambar di bawah!</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e1b6c21c6f3415a02/41c27c_0b8f7e6064b3749ecbddaa68bdac5798.png\"><br> Panjang EF adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '5b5dd2fc22729b9e41e8f66ed9599609', '',
 								'2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c234a351b2af8', '063e1b6c233d77866eae', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>2 cm</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c234fd0c62aa7', '063e1b6c233d77866eae', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>6 cm</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2354b1814483', '063e1b6c233d77866eae', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>12 cm</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2359209e7a38', '063e1b6c233d77866eae', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>14 cm</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c23606dc3525c', '<p>Pada persegi KLMN dan persegipanjang PQRS diketahui panjang PQ = 10 cm, QR = 15 cm, ML = 20 cm dan luas yang diarsir 67 cm<sup>2</sup>.</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e1b6c21c6f3415a02/20c537_016442be87612730502f4a078b3b5192.png\"></p>
 <p>Luas daerah yang tidak diarsir adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '3dcdbffbeb4573fd34070650f1d036a0', '',
@@ -37,82 +37,82 @@ INSERT INTO `edu_question`
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c236516e50a30', '063e1b6c23606dc3525c', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>416 cm<sup>2</sup></p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2369adf48fab', '063e1b6c23606dc3525c', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>467 cm<sup>2</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c236dba2e36bf', '063e1b6c23606dc3525c', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>476 cm<sup>2</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2371c0010247', '063e1b6c23606dc3525c', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>486 cm<sup>2</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c23768cf93082', '<p>Lapangan upacara sekolah berbentuk persegi panjang dengan ukuran 26 m x 14 m. siswa melakukan pemanasan dengan berlari mengelilingi lapangan sebanyak 3 kali. Jarak tempuh siswa tersebut adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', 'ebdf6e364a036f2fb70dcdc5a5c440ba', '',
 								'2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c237b4df5e5fe', '063e1b6c23768cf93082', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>80 m</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c238076a6af84', '063e1b6c23768cf93082', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>160 m</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2384ffea69c5', '063e1b6c23768cf93082', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>200 m</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c238a973b29f6', '063e1b6c23768cf93082', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>240 m</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c239057c27b01', '<p>Segitiga DEF tumpul di D, ditarik garis dari titik D dan tegak lurus EF. Garis tersebut adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '8a823643198eff9c7b5918da56f2a589', '',
 								'2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2394be55ab36', '063e1b6c239057c27b01', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>Garis bagi</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23992d0b5fe0', '063e1b6c239057c27b01', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>Garis tinggi</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c239d81307a56', '063e1b6c239057c27b01', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>Garis sumbu</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23a2097afe1c', '063e1b6c239057c27b01', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>Garis berat</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c23a8a0946ea2', '<p>Perhatikan gambar!</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e1b6c21c6f3415a02/3798f3_ccc456e3f38c41fb7fd676827868df57.png\"></p>
 <p>Besar penyiku POR adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', 'be37983cdb4b984b64f8ccb3d55b6c75', '',
@@ -120,28 +120,28 @@ INSERT INTO `edu_question`
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23adcef7b6ee', '063e1b6c23a8a0946ea2', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>49&deg;</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23b1c44350ec', '063e1b6c23a8a0946ea2', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>41&deg;</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23b5c5fd9edc', '063e1b6c23a8a0946ea2', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>31&deg;</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23ba8b3c6173', '063e1b6c23a8a0946ea2', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>18&deg;</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c23c393969dbd', '<p>Perhatikan gambar!</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e1b6c21c6f3415a02/2e20c7_bc70b5772a8082f24b65b743e646382c.png\"></p>
 <p>Titik O adalah pusat lingkaran. Diketahui ABE + ACE + ADE = 96&deg;.<br> Besar AOE adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '82e154a887d8b9932fddb3900d3cd97c', '',
@@ -149,56 +149,56 @@ INSERT INTO `edu_question`
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23c7d9f762e4', '063e1b6c23c393969dbd', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>32&deg;</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23cc88c2b46b', '063e1b6c23c393969dbd', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>48&deg;</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23d0e6e273f2', '063e1b6c23c393969dbd', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>64&deg;</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23d50ec9b1fa', '063e1b6c23c393969dbd', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>84&deg;</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c23d9b30f60c8', '<p>Dua buah lingkaran masing-masing mempunyai jari-jari 14 cm dan 2 cm.<br>
 Jika jarak antara kedua pusat lingkaran 20 cm, panjang sisi garis singgung persekutuan luar dua lingkaran tersebut adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '4d5e9b2aadfcaa14b07ebff70ff05af9', '',
 								'2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23de377f0e91', '063e1b6c23d9b30f60c8', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>16 cm</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23e2d3738a76', '063e1b6c23d9b30f60c8', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>18 cm</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23e6f80c86fe', '063e1b6c23d9b30f60c8', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>22 cm</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23eb1bb708d8', '063e1b6c23d9b30f60c8', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>24 cm</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c23f232276952', '<p>Perhatikan gambar!</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e1b6c21c6f3415a02/2aca32_13ea6ccf79c96dc86257ddce16849d80.png\"></p>
 <p>Jika luas juring ORS = 15 cm<sup>2</sup>, luas juring OPQ adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', 'dda606f1ca0dc22bb60eec38d3271733', '',
@@ -206,55 +206,55 @@ INSERT INTO `edu_question`
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23f687bcc7af', '063e1b6c23f232276952', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>15 cm<sup>2</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23fa654994a0', '063e1b6c23f232276952', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>18 cm<sup>2</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c23feb902a84b', '063e1b6c23f232276952', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>21 cm<sup>2</sup></p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2403113e0027', '063e1b6c23f232276952', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>30 cm<sup>2</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c240871ba45e1', '<p>Sebuah model kerangka balok terbuat dari kawat dengan ukuran panjang 30 cm, lebar 40 cm, dan tinggi 45 cm. Panjang kawat minimal yang diperlukan untuk membuat 2 model kerangka balok adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '30156b8d799da0d12f62c8e2472023e9', '',
 								'2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c240f6e964f2f', '063e1b6c240871ba45e1', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>115 cm</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2414c28b8b88', '063e1b6c240871ba45e1', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>230 cm</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2419db4a44ea', '063e1b6c240871ba45e1', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>460 cm</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c241e5a231220', '063e1b6c240871ba45e1', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>920 cm</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c242587126b8c', '<p>Perhatikan gambar kerucut di bawah!</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e1b6c21c6f3415a02/b512c6_a00e4b20426935fe962b5c596e6a0aee.png\"></p>
 <p>Yang merupakan garis pelukis kerucut adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '10d721dc039546f2047fbece5c556d8e', '',
@@ -262,28 +262,28 @@ INSERT INTO `edu_question`
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c242a2e7b6e71', '063e1b6c242587126b8c', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>KL</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c242eb206e67b', '063e1b6c242587126b8c', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>MN</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24336d4c766e', '063e1b6c242587126b8c', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>NL</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2438876b5669', '063e1b6c242587126b8c', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>KM</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c243fd12734f2', '<p>Perhatikan limas T. ABCD alasnya berbentuk persegi. Keliling alas limas 72 cm, dan panjang TP = 15 cm.</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e1b6c21c6f3415a02/16df15_f777baf308abb8304869986c692e7021.png\"></p>
 <p>Volume limas tersebut adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '8eda0ccf3023d6ff86544e8a82bc1661', '',
@@ -291,190 +291,190 @@ INSERT INTO `edu_question`
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2443a8cac064', '063e1b6c243fd12734f2', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>4.860 cm<sup>3</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2447b72a45a2', '063e1b6c243fd12734f2', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>3.888 cm<sup>3</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c244c52a379d4', '063e1b6c243fd12734f2', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>1.620 cm<sup>3</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2450e98ec549', '063e1b6c243fd12734f2', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>1.296 cm<sup>3</sup></p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c24560a5e47b9', '<p>Volume bola terbesar yang dapat dimasukkan kedalam sebuah kubus dengan panjang rusuk 12 cm adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '0b78416246f17cd87ebb6684c6c1810f', '',
 								'2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c245a4032f7b9', '063e1b6c24560a5e47b9', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>196 &pi; cm3</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c245e6e0cf694', '063e1b6c24560a5e47b9', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>288 &pi; cm3</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24635c1ad074', '063e1b6c24560a5e47b9', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>384 &pi; cm3</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2467c4f81de9', '063e1b6c24560a5e47b9', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>576 &pi; cm3</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c246cbd043536', '<p>Sebuah aula berbentuk balok dengan ukuran panjang 8 meter, lebar 6 meter, dan tinggi 5 meter. Dinding bagian dalamnya dicat dengan biaya Rp 50.000,00 per meter persegi. Seluruh biaya pengecatan aula adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '77a78438ba2c2b0c3bdcaedb3c023f56', '',
 								'2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2471b8166e2d', '063e1b6c246cbd043536', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>Rp 9.200.000,00</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24762b8fbe22', '063e1b6c246cbd043536', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>Rp 7.000.000,00</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c247a78d4b5a4', '063e1b6c246cbd043536', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>Rp 4.200.000,00</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c247e674e8570', '063e1b6c246cbd043536', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>Rp 3.500.000,00</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c2482a338f6f1', '<p>Panjang diagonal sisi kubus adalah 6&radic;2 cm.<br> Luas seluruh permukaan kubus adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '87bd32a248f2a427cbec0518bf8e5190', '',
 								'2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c248654033e0f', '063e1b6c2482a338f6f1', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>72 cm<sup>2</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c248a5980d618', '063e1b6c2482a338f6f1', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>108 cm<sup>2</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c248ef8d63a8e', '063e1b6c2482a338f6f1', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>216 cm<sup>2</sup></p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2493d1a0241b', '063e1b6c2482a338f6f1', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>864 cm<sup>2</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c24984eb6a44f', '<p>Sebuah tabung jari-jari alasnya 35 cm dan tingginya 10 cm.<br> Luas seluruh permukaan tabung adalah... (&pi; = 22/7)</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '7786fd829e7c03d4110ead481092e493', '',
 								'2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c249c92f40f08', '063e1b6c24984eb6a44f', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>1.925 cm<sup>2</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24a1244497eb', '063e1b6c24984eb6a44f', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>2.200 cm<sup>2</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24a541626d64', '063e1b6c24984eb6a44f', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>3.850 cm<sup>2</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24a996281659', '063e1b6c24984eb6a44f', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>9.900 cm<sup>2</sup></p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c24ad150a2d1d', '<p>Rata-rata nilai ulangan matematika 36 siswa adalah 86. Terdapat 4 siswa mengikuti ulangan susulan dan memperoleh nilai rata-rata 80. Rata-rata nilai seluruh siswa adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '9d973fe59f047b5ab63c0ba232e12788', '',
 								'2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24b04e717948', '063e1b6c24ad150a2d1d', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>86,2</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24b3a8fd8461', '063e1b6c24ad150a2d1d', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>85,4</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24b706578cb5', '063e1b6c24ad150a2d1d', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>85,0</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24ba81d1bca8', '063e1b6c24ad150a2d1d', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>84,6</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c24bd963f77fb', '<p>Modus dari data 5, 6, 8, 5, 4, 5, 6, 7, 5, 4, 6, 5, 5 adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '860c8852258a997b234cc15c960de7cb', '',
 								'2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24c06d99a9f5', '063e1b6c24bd963f77fb', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>8</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24c39c9c85a9', '063e1b6c24bd963f77fb', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>6</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24c72690e939', '063e1b6c24bd963f77fb', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>5</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24caeb45fddc', '063e1b6c24bd963f77fb', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>3</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c24d20e486925', '<p>Parto minum 80 mg obat untuk mengendalikan tekanan darahnya. Grafik berikut memperlihatkan banyaknya obat pada saat itu beserta banyaknya obat dalam darah Parto setelah satu, dua, tiga dan empat hari.</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e1b6c21c6f3415a02/0700d8_36535f6f3587159c87a305968ebbc76b.png\"></p>
 <p>Banyaknya obat yang masih aktif pada akhir hari pertama adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '40cafb462d973953cb39360217d72ca7', '',
@@ -482,28 +482,28 @@ INSERT INTO `edu_question`
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24d6b24a4dbe', '063e1b6c24d20e486925', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>6 mg</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24da28895ced', '063e1b6c24d20e486925', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>12 mg</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24dd72eb78ce', '063e1b6c24d20e486925', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>26 mg</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24e09e81c8aa', '063e1b6c24d20e486925', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>32 mg</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c24e69a75d82b', '<p>Diagram batang di bawah menunjukkan produksi minyak bumi (dalam ribuan m3) pada tahun 2000 - 2005.</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e1b6c21c6f3415a02/319a63_7698e703444aec25198717f1431ca49b.png\"></p>
 <p>Selisih produksi tahun 2002 dan tahun 2005 adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '4335e8fccb9f16beecaf1620d5ff57bf', '',
@@ -511,55 +511,55 @@ INSERT INTO `edu_question`
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24eae00138b1', '063e1b6c24e69a75d82b', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>40.000 m<sup>3</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24eea07712b8', '063e1b6c24e69a75d82b', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>60.000 m<sup>3</sup></p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24f27107f26d', '063e1b6c24e69a75d82b', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>100.000 m<sup>3</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24f5a1f56b20', '063e1b6c24e69a75d82b', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>160.000 m<sup>3</sup></p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c24f94c6d6597', '<p>Tiga keping uang logam dilempar bersama-sama. Peluang muncul ketiganya gambar adalah...</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', 'e3857145e530fb69f03e1b89e0c95d5f', '',
 								'2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c24fd722d860c', '063e1b6c24f94c6d6597', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>1/8</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c25016fb1ce1b', '063e1b6c24f94c6d6597', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>3/8</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c250570ea0dcd', '063e1b6c24f94c6d6597', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>5/8</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2508bcede1ce', '063e1b6c24f94c6d6597', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>7/8</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('063e1b6c251078a416d6', '<p>Roni diperbolehkan ibunya untuk mengambil satu permen dari sebuah kantong. Dia tidak dapat melihat warna permen tersebut. Banyaknya permen dengan masing-masing warna dalam kantong tersebut ditunjukkan dalam grafik berikut:</p>
 <p><img alt=\"\" src=\"media.edu/school/063ce682801be89951aa/test/063e1b6c21c6f3415a02/fb0057_b8fa2146ee15890d1d3b3b7a76ad6d33.png\"></p>
 <p>Berapakah peluang Roni mengambil permen berwarna merah?</p>', '063ce682801be89951aa', '063e1b6c21c6f3415a02', true, '2', '1', 'upper-alpha', '138d1d298cdf05746423efb76b366552', '',
@@ -567,21 +567,21 @@ INSERT INTO `edu_question`
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c251549f1769d', '063e1b6c251078a416d6', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>100%</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c2519c50bc9a8', '063e1b6c251078a416d6', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>20%</p>', '1', '1', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c251df4156c63', '063e1b6c251078a416d6', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>25%</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e1b6c25247110369f', '063e1b6c251078a416d6', '063ce682801be89951aa', '063e1b6c21c6f3415a02', '<p>50%</p>', '1', '0', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa', '2023-02-07 09:26:10', 'aaaaaaaaaaaaa')
 										;

@@ -189,7 +189,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 							}
 
 							$sql2 = "INSERT INTO `edu_member_school` 
-							(`member_id`, `school_id`, `role`, `time_create`, `active`) values
+							(`member_id`, `school_id`, `role`, `time_create`, `active`) VALUES
 							('$admin_id', '$school_id', 'A', '$time_create', true)
 							";
 							try {
@@ -279,7 +279,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									$database->executeInsert($sql, true);
 
 									$sql2 = "INSERT INTO `edu_member_school` 
-									(`member_id`, `school_id`, `role`, `time_create`, `active`) values
+									(`member_id`, `school_id`, `role`, `time_create`, `active`) VALUES
 									('$admin_id', '$school_id', 'A', '$time_create', true)
 									";
 									$database->executeInsert($sql2, true);
@@ -471,7 +471,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									$database->executeInsert($sql, true);
 
 									$sql2 = "INSERT INTO `edu_member_school` 
-									(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) values
+									(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) VALUES
 									('$student_id', '$school_id', 'S', '$class_id', '$time_create', true)
 									";
 
@@ -597,7 +597,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									$database->executeInsert($sql, true);
 
 									$sql2 = "INSERT INTO `edu_member_school` 
-									(`member_id`, `school_id`, `role`, `time_create`, `active`) values
+									(`member_id`, `school_id`, `role`, `time_create`, `active`) VALUES
 									('$teacher_id', '$school_id', 'T', '$time_create', true)
 									";
 									$database->executeInsert($sql2, true);

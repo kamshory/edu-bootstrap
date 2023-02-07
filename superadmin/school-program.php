@@ -70,7 +70,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$school_program_id = $database->generateNewId();
 	$sql = "INSERT INTO `edu_school_program` 
-	(`school_program_id`, `school_id`, `name`, `sort_order`, `default`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) values
+	(`school_program_id`, `school_id`, `name`, `sort_order`, `default`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 	('$school_program_id', '$school_id', '$name', '$sort_order', '$default', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
 	if(empty($school_program_id))

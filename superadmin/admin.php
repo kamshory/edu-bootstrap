@@ -126,7 +126,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			$database->executeInsert($sql, true);
 
 			$sql2 = "INSERT INTO `edu_member_school` 
-			(`member_id`, `school_id`, `role`, `time_create`, `active`) values
+			(`member_id`, `school_id`, `role`, `time_create`, `active`) VALUES
 			('$admin_id', '$school_id', 'A', '$time_create', true)
 			";
 			$res2 = $database->executeInsert($sql2, true);
@@ -176,7 +176,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		}
 		if ($initial != $school_id) {
 			$sql2 = "INSERT INTO `edu_member_school` 
-			(`member_id`, `school_id`, `role`, `time_create`, `active`) values
+			(`member_id`, `school_id`, `role`, `time_create`, `active`) VALUES
 			('$admin_id', '$school_id', 'A', '$time_create', true)
 			";
 			$database->executeInsert($sql2, true);

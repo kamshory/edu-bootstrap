@@ -71,7 +71,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				$token_id = $database->generateNewId();
 				$sql = "INSERT INTO `edu_token` 
 				(`token_id`, `token`, `school_id`, `class_id`, `student_id`, `test_id`, `time_create`, `time_edit`, `time_expire`, 
-				`teacher_create`, `teacher_edit`, `active`) values
+				`teacher_create`, `teacher_edit`, `active`) VALUES
 				('$token_id', '$token', '$school_id', '$class_id', '$student_id', '$test_id', '$time_create', '$time_edit', '$time_expire', 
 				'$member_create', '$member_edit', '$active')";
 				$database->executeInsert($sql, true);
@@ -87,7 +87,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			$token_id = $database->generateNewId();
 			$sql = "INSERT INTO `edu_token` 
 			(`token_id1, `token`, `school_id`, `class_id`, `student_id`, `test_id`, `time_create`, `time_edit`, `time_expire`, 
-			`teacher_create`, `teacher_edit`, `active`) values
+			`teacher_create`, `teacher_edit`, `active`) VALUES
 			('$token_id', '$token', '$school_id', '$class_id', '$student_id', '$test_id', '$time_create', '$time_edit', '$time_expire', 
 			'$member_create', '$member_edit', '$active')";
 			$database->executeInsert($sql, true);

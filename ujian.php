@@ -70,7 +70,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 		else
 		{
 			$sql2 = "INSERT INTO `edu_member_school` 
-			(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) values
+			(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) VALUES
 			('$student_id', '$school_id', 'S', '$class_id', '$time_create', true)
 			";
 			$database->execute($sql2);
@@ -224,7 +224,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 					// buat catatan
 	
 					$sql2 = "INSERT INTO `edu_member_school` 
-					(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) values
+					(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) VALUES
 					('$student_id', '$school_id', 'S', '$class_id', '$time_create', true)
 					";
 					$database->execute($sql2);

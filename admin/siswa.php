@@ -128,7 +128,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 
 		$sql2 = "INSERT INTO `edu_member_school` 
-		(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) values
+		(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) VALUES
 		('$student_id', '$school_id', 'S', '$class_id', '$time_create', true)
 		";
 		$database->executeInsert($sql2, true);

@@ -182,7 +182,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$test_id = $database->generateNewId();
 	$sql = "INSERT INTO `edu_test` 
-	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) values
+	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 	('$test_id', '$school_id', '$name', '$class', '$school_program_id', '$subject', '$teacher_id', '$description', '$guidance', '$open', '$has_limits', '$trial_limits', '$threshold', '$assessment_methods', '$number_of_question', '$number_of_option', '$question_per_page', '$random', '$duration', '$has_alert', '$alert_time', '$alert_message', '$autosubmit', '$standard_score', '$penalty', '$sort_order', '$score_notification', '$publish_answer', $time_answer_publication, '$test_availability', $available_from, $available_to, '$time_create', '$time_edit', '$member_create', '$role_create', '$member_edit', '$role_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
 
@@ -276,7 +276,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 								$sql1 = "INSERT INTO `edu_question` 
 								(`question_id`, `content`, `school_id`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-								`time_create`, `member_create`, `time_edit`, `member_edit`) values
+								`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('$question_id', '$pertanyaan', '$school_id', '$test_id', true, '$sort_order', '$random', '$numbering', '$digest', '$competence',
 								'$time_create', '$member_create', '$time_edit', '$member_edit')
 								";
@@ -319,7 +319,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 										$option_id = $database->generateNewId();
 										
 										$sql2 = "INSERT INTO `edu_option` 
-										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('$option_id', '$question_id', '$school_id', '$test_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')
 										";
 										

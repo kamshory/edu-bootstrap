@@ -116,7 +116,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 		$_SESSION['session_test'] = array();
 		// simpan di tabel answer
 		$sql = "INSERT INTO `edu_answer` 
-		(`school_id`, `test_id`, `student_id`, `start`, `end`, `answer`, `true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) values
+		(`school_id`, `test_id`, `student_id`, `start`, `end`, `answer`, `true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) VALUES
 		('$school_id', '$test_id', '$student_id', '$start', '$end', '$answer_str', '$true', '$false', '$score', '$penalty', '$final_score', '$percent', '1') ";
 		$database->execute($sql);
 		$picoEdu->logoutTest($school_id, $student_id, $test_id, session_id(), $picoEdu->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));

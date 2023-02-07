@@ -48,7 +48,7 @@ if(isset($_POST['question']))
 
 		$sql = "INSERT INTO `edu_question` 
 		(`question_id`, `content`, `basic_competence`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
-		`time_create`, `member_create`, `time_edit`, `member_edit`) values
+		`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 		('$question_id', '$question', '$basic_competence', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
 		'$time_create', '$member_create', '$time_edit', '$member_edit') ";
 		$database->executeInsert($sql, true);
@@ -70,7 +70,7 @@ if(isset($_POST['question']))
 			$option_id = $database->generateNewId();
 
 			$sql = "INSERT INTO `edu_option` 
-			(`option_id`, `question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+			(`option_id`, `question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 			('$option_id', '$question_id', '$option', '$sort_order', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')";
 			$stmt = $database->executeInsert($sql, true);
 			if($stmt->rowCount() > 0)

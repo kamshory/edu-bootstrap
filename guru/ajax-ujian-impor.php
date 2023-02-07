@@ -91,7 +91,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 							
 							$sql1 = "INSERT INTO `edu_question` 
 							(`content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-							`time_create`, `member_create`, `time_edit`, `member_edit`) values
+							`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 							('$pertanyaan', '$test_id', true, '$sort_order', '$random', '$numbering', '$digest', '$competence',
 							'$time_create', '$member_create', '$time_edit', '$member_edit')
 							";
@@ -128,7 +128,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 									$order2 = $index_option + 1;
 									
 									$sql2 = "INSERT INTO `edu_option` 
-									(`question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+									(`question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 									('$id_question', '$option', '$order2', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')
 									";
 									

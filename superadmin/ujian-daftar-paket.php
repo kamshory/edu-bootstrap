@@ -170,7 +170,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 		$file_path = basename($file_path);
 		$sql = "INSERT INTO `edu_test_collection` 
 		(`name`, `grade_id`, `file_name`, `file_path`, `file_size`, `file_md5`, `file_sha1`, `number_of_question`, `number_of_option`,
-		`time_create`, `time_edit`, `ip_create`, `ip_edit`, `active`) values
+		`time_create`, `time_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 		('$name', '$grade_id', '$file_name', '$file_path', '$file_size', '$file_md5', '$file_sha1', '$number_of_question', '$number_of_option',
 		'$time_create', '$time_edit', '$ip_create', '$ip_edit', '$active')";
 		$database->execute($sql);

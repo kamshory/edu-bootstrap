@@ -69,7 +69,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	{
 		$info_id = $database->generateNewId();
 		$sql = "INSERT INTO `edu_info`
-		(`info_id`, `name`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) values	
+		(`info_id`, `name`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES	
 		('$info_id', '$name', '$time', '$time', '$admin_id', '$admin_id', '$ip', '$ip', '$active')
 		";
 		$stmt = $database->executeQuery($sql);

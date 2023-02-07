@@ -233,7 +233,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 						
 						$sql1 = "INSERT INTO `edu_question` 
 						(`question_id`, `content`, `test_id`, `multiple_choice`, `sort_order`, `random`, `numbering`, `digest`, `basic_competence`,
-						`time_create`, `member_create`, `time_edit`, `member_edit`) values
+						`time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 						('$question_id', '$pertanyaan', '$test_id', '1', '$sort_order', '$random', '$numbering', '$digest', '$competence',
 						'$time_create', '$member_create', '$time_edit', '$member_edit') 
 						";
@@ -272,7 +272,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 								$option_id = $database->generateNewId();
 
 								$sql2 = "INSERT INTO `edu_option` 
-								(`option_id`, `question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) values
+								(`option_id`, `question_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 								('$option_id', '$question_id', '$option', '$order2', '$score', '$time_create', '$member_create', '$time_edit', '$member_edit')
 								;
 								";

@@ -103,7 +103,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		}
 		if ($initial != $school_id) {
 			$sql2 = "INSERT INTO `edu_member_school` 
-				(`member_id`, `school_id`, `role`, `time_create`, `active`) values
+				(`member_id`, `school_id`, `role`, `time_create`, `active`) VALUES
 				('$admin_id', '$school_id', 'T', '$time_create', true)
 				";
 			$database->executeUpdate($sql2, true);

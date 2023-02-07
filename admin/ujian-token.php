@@ -68,7 +68,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				$token_id = $picoEdu->generateNewId();
 				$sql = "INSERT INTO `edu_token` 
 				(`token_id`, `token`, `school_id`, `class_id`, `student_id`, `test_id`, `time_create`, `time_edit`, `time_expire`, 
-				`admin_create`, `admin_edit`, `active`) values
+				`admin_create`, `admin_edit`, `active`) VALUES
 				('$token_id', '$token', '$school_id', '$class_id', '$student_id', '$test_id', '$time_create', '$time_edit', '$time_expire', 
 				'$admin_create', '$admin_edit', '$active')";
 				$database->executeInsert($sql, true);
@@ -83,7 +83,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			$token = $tokens[0];
 			$sql = "INSERT INTO `edu_token` 
 			(`token`, `school_id`, `class_id`, `student_id`, `test_id`, `time_create`, `time_edit`, `time_expire`, 
-			`admin_create`, `admin_edit`, `active`) values
+			`admin_create`, `admin_edit`, `active`) VALUES
 			('$token', '$school_id', '$class_id', '$student_id', '$test_id', '$time_create', '$time_edit', '$time_expire', 
 			'$admin_create', '$admin_edit', '$active')";
 			$database->executeInsert($sql, true);
