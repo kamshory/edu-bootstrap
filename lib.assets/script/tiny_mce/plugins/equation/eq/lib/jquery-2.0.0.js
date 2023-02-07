@@ -5798,7 +5798,7 @@ jQuery.extend({
 					}
 				}
 			}
-			// Discard any remaining `private` and `user` data
+			// Discard any remaining `private` AND `user` data
 			// One day we'll replace the dual arrays with a WeakMap and this won't be an issue.
 			// (Splices the data objects out of the internal cache arrays)
 			data_user.discard( elem );

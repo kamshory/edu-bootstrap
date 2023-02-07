@@ -34,9 +34,9 @@ class AdminAuth
 		`edu_school`.`use_token`
 		FROM `edu_admin` 
 		left join(`edu_school`) on(`edu_school`.`school_id` = `edu_admin`.`school_id`)
-		WHERE `edu_admin`.`username` like '$username' and `edu_admin`.`password` = md5('$password') 
-		and `edu_admin`.`active` = true
-		and `edu_admin`.`blocked` = false
+		WHERE `edu_admin`.`username` like '$username' AND `edu_admin`.`password` = md5('$password') 
+		AND `edu_admin`.`active` = true
+		AND `edu_admin`.`blocked` = false
 		";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount()) {

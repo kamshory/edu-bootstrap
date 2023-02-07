@@ -4,7 +4,7 @@ $country_id = trim(kh_filter_input(INPUT_GET, "country_id", FILTER_SANITIZE_STRI
 
 $sql = "SELECT `state`.`state_id` as `v`, `state`.`name` as `l`
 FROM `state` WHERE `state`.`country_id` = '$country_id' 
-and `state`.`active` = true and `state`.`verify` = '1'
+AND `state`.`active` = true AND `state`.`verify` = '1'
 ORDER BY `state`.`type` asc, `state`.`name` asc
 ";
 $list = array();

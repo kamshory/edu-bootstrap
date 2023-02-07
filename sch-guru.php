@@ -16,9 +16,9 @@ if(!empty(@$school_id))
 {
 $sql = "SELECT `edu_school`.*, 
 (select count(distinct `edu_teacher`.`teacher_id`) FROM `edu_teacher`
-WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` and `edu_teacher`.`gender` = 'M') as `M`,
+WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` AND `edu_teacher`.`gender` = 'M') as `M`,
 (select count(distinct `edu_teacher`.`teacher_id`) FROM `edu_teacher`
-WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` and `edu_teacher`.`gender` = 'W') as `W`
+WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` AND `edu_teacher`.`gender` = 'W') as `W`
 FROM `edu_school`
 WHERE `edu_school`.`school_id` = '$school_id' 
 ";

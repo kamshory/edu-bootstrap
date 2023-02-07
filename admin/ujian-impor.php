@@ -312,7 +312,7 @@ $sql = "SELECT `edu_test`.* $nt,
 (select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
 (select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `collection_of_question`
 FROM `edu_test` 
-WHERE `edu_test`.`test_id` = '$edit_key' and `school_id` = '$school_id'
+WHERE `edu_test`.`test_id` = '$edit_key' AND `school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)

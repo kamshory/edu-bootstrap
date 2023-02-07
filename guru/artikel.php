@@ -68,7 +68,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$sql = "UPDATE `edu_article` set
 		`title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
 		`time_edit` = '$time', `member_edit` = '$teacher_id', `role_edit` = 'T', `ip_edit` =  '$ip', `active` = '$active'
-		WHERE `article_id` = '$article_id' and `school_id` = '$school_id' and `member_create` = '$auth_teacher_id'
+		WHERE `article_id` = '$article_id' AND `school_id` = '$school_id' AND `member_create` = '$auth_teacher_id'
 		";
 		$database->executeUpdate($sql, true);
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&article_id=$article_id");
@@ -84,7 +84,7 @@ if(isset($_POST['set_active']) && isset($_POST['article_id']))
 		{
 			$article_id = addslashes($article_id);
 			$sql = "UPDATE `edu_article` SET `active` = true 
-			WHERE `article_id` = '$article_id' and `school_id` = '$school_id' and `edu_article`.`member_create` = '$teacher_id' ";
+			WHERE `article_id` = '$article_id' AND `school_id` = '$school_id' AND `edu_article`.`member_create` = '$teacher_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -98,7 +98,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['article_id']))
 		{
 			$article_id = addslashes($article_id);
 			$sql = "UPDATE `edu_article` SET `active` = false 
-			WHERE `article_id` = '$article_id' and `school_id` = '$school_id' and `edu_article`.`member_create` = '$teacher_id' ";
+			WHERE `article_id` = '$article_id' AND `school_id` = '$school_id' AND `edu_article`.`member_create` = '$teacher_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -112,12 +112,12 @@ if(isset($_POST['delete']) && isset($_POST['article_id']))
 		{
 			$article_id = addslashes($article_id);
 			$sql = "SELECT `article_id` FROM `edu_article` 
-			WHERE `article_id` = '$article_id' and `school_id` = '$school_id' and `edu_article`.`member_create` = '$teacher_id' ";
+			WHERE `article_id` = '$article_id' AND `school_id` = '$school_id' AND `edu_article`.`member_create` = '$teacher_id' ";
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)
 			{
 				$sql = "DELETE FROM `edu_article` 
-				WHERE `article_id` = '$article_id' and `school_id` = '$school_id' and `edu_article`.`member_create` = '$teacher_id' ";
+				WHERE `article_id` = '$article_id' AND `school_id` = '$school_id' AND `edu_article`.`member_create` = '$teacher_id' ";
 				$stmt = $database->executeDelete($sql, true);
 				if($stmt->rowCount() > 0)
 				{
@@ -144,7 +144,7 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/article-editor.min.js"></script>
 
 <?php
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' ORDER BY `sort_order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` asc ";
 $stmtc = $database->executeQuery($sqlc);
 $arrc = array();
 if($stmtc->rowCount() > 0)
@@ -189,14 +189,14 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 
 <?php
 $article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
-$sql = "SELECT * FROM `edu_article` WHERE `article_id` = '$article_id' and `school_id` = '$school_id' and `member_create` = '$auth_teacher_id' ";
+$sql = "SELECT * FROM `edu_article` WHERE `article_id` = '$article_id' AND `school_id` = '$school_id' AND `member_create` = '$auth_teacher_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <?php
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' ORDER BY `sort_order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` asc ";
 $stmtc = $database->executeQuery($sqlc);
 $arrc = array();
 if($stmtc->rowCount() > 0)
@@ -243,16 +243,16 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 
 <?php
 $article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
-$sql_filter_article = " and `edu_article`.`article_id` = '$article_id' ";
+$sql_filter_article = " AND `edu_article`.`article_id` = '$article_id' ";
 
 if(isset($school_id))
 {
-	$sql_filter_article .= " and `edu_article`.`school_id` = '$school_id' ";
+	$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' ";
 }
 $sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 FROM `edu_article` 
 left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
-where (`edu_article`.`member_create` = '$teacher_id' or `edu_article`.`active` = true) $sql_filter_article ";
+where (`edu_article`.`member_create` = '$teacher_id' OR `edu_article`.`active` = true) $sql_filter_article ";
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -347,7 +347,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' ORDER BY `sort_order` asc ";
+    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -395,12 +395,12 @@ $nt = '';
 $sql = "SELECT `edu_article`.* , `member`.`name` as `creator`
 FROM `edu_article` 
 left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
-where (`edu_article`.`member_create` = '$teacher_id' or `edu_article`.`active` = true) $sql_filter 
+where (`edu_article`.`member_create` = '$teacher_id' OR `edu_article`.`active` = true) $sql_filter 
 ORDER BY `edu_article`.`article_id` desc
 ";
 $sql_test = "SELECT `edu_article`.`article_id` 
 FROM `edu_article` 
-where (`edu_article`.`member_create` = '$teacher_id' or `edu_article`.`active` = true) $sql_filter 
+where (`edu_article`.`member_create` = '$teacher_id' OR `edu_article`.`active` = true) $sql_filter 
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

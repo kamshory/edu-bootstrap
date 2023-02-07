@@ -71,7 +71,7 @@ if(isset($_POST['delete']) && isset($_POST['student_id']))
 		foreach($students as $key=>$val)
 		{
 			$student_id = addslashes($val);
-			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$student_id' and `role` = 'S'  ";
+			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$student_id' AND `role` = 'S'  ";
 			$database->executeDelete($sql, true);
 			$sql = "UPDATE `edu_student` SET `school_id` = '' WHERE `student_id` = '$student_id'  ";
 			$database->executeUpdate($sql, true);
@@ -404,7 +404,7 @@ $(document).ready(function(e) {
     <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' ORDER BY `sort_order` asc ";
+    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(

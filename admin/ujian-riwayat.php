@@ -17,7 +17,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 {
 	$id = kh_filter_input(INPUT_GET, "id", FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `edu_peserta_test`.* FROM `edu_peserta_test` WHERE `id` = '$id' and `status` = '1'
+	$sql = "SELECT `edu_peserta_test`.* FROM `edu_peserta_test` WHERE `id` = '$id' AND `status` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -37,7 +37,7 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 {
 	$id = kh_filter_input(INPUT_GET, "id", FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `edu_peserta_test`.* FROM `edu_peserta_test` WHERE `id` = '$id' and `status` = '1'
+	$sql = "SELECT `edu_peserta_test`.* FROM `edu_peserta_test` WHERE `id` = '$id' AND `status` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -52,7 +52,7 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 		$database->executeDelete($sql, true);
 		$sql = "UPDATE `edu_peserta_test` SET `waktu_keluar` = '$waktu', `ip_keluar` = '$ip', `login_edit` = '$admin_id', `status` = '4' WHERE `id` = '$id'";	
 		$database->executeUpdate($sql, true);
-		$sql = "UPDATE `siswa` SET `blokir` = '1' WHERE `siswa_id` = '$siswa_id' and `school_id` = '$school_id' ";
+		$sql = "UPDATE `siswa` SET `blokir` = '1' WHERE `siswa_id` = '$siswa_id' AND `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 }
@@ -219,7 +219,7 @@ window.onload = function()
     <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-	$sql2 = "SELECT * FROM `edu_class` WHERE `school_id` = '$school_id' and `active` = true";
+	$sql2 = "SELECT * FROM `edu_class` WHERE `school_id` = '$school_id' AND `active` = true";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -245,7 +245,7 @@ window.onload = function()
     <select class="form-control input-select" name="teacher_id" id="teacher_id">
     <option value="">- Pilih Guru -</option>
     <?php 
-	$sql2 = "SELECT * FROM `edu_teacher` WHERE `school_id` = '$school_id' and `active` = true";
+	$sql2 = "SELECT * FROM `edu_teacher` WHERE `school_id` = '$school_id' AND `active` = true";
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -288,7 +288,7 @@ if($class_id != '')
 }
 if($teacher_id != 0)
 {
-	$sql_filter .= " and `edu_test`.`teacher_id` = '$teacher_id' ";
+	$sql_filter .= " AND `edu_test`.`teacher_id` = '$teacher_id' ";
 	$pagination->array_get[] = 'teacher_id';
 }
 
@@ -301,14 +301,14 @@ $sql = "SELECT `edu_test`.* $nt,
 (select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
-having 1 and `student` > 0
+having 1 AND `student` > 0
 ORDER BY `edu_test`.`test_id` desc
 ";
 $sql_test = "SELECT `edu_test`.* $nt, 
 (select count(distinct `edu_test_member`.`student_id`) FROM `edu_test_member` WHERE `edu_test_member`.`test_id` = `edu_test`.`test_id`) as `student`
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
-having 1 and `student` > 0
+having 1 AND `student` > 0
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

@@ -11,9 +11,9 @@ if(!empty(@$school_id))
 	if(isset($_GET['article_id']))
 	{
 		$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
-		$sql_filter_article = " and `edu_article`.`article_id` = '$article_id' ";
+		$sql_filter_article = " AND `edu_article`.`article_id` = '$article_id' ";
 	
-		$sql_filter_article .= " and `edu_article`.`school_id` = '$school_id' and `edu_article`.`open` = '1' ";
+		$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' AND `edu_article`.`open` = '1' ";
 		$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 		FROM `edu_article` 
 		left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
@@ -39,7 +39,7 @@ if(!empty(@$school_id))
 	else
 	{
 	$sql_filter_article = "";
-	$sql_filter_article .= " and `edu_article`.`school_id` = '$school_id' and `edu_article`.`open` = '1'";
+	$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' AND `edu_article`.`open` = '1'";
 	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
@@ -181,7 +181,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$sql = "UPDATE `edu_article` set
 		`title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
 		`time_edit` = '$time', `member_edit` = '$admin_id', `role_edit` = 'T', `ip_edit` =  '$ip', `active` = '$active'
-		WHERE `article_id` = '$article_id' and `school_id` = '$school_id' and `member_create` = '$admin_id'
+		WHERE `article_id` = '$article_id' AND `school_id` = '$school_id' AND `member_create` = '$admin_id'
 		";
 		$database->execute($sql);
 		header("Location: artikel.php?option=detail&article_id=$article_id");
@@ -193,7 +193,7 @@ if(isset($_GET['school_id']))
 {
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' ORDER BY `sort_order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` asc ";
 $stmt = $database->executeQuery($sql);
 $arrc = array();
 if($stmt->rowCount())
@@ -217,7 +217,7 @@ var classList = <?php echo json_encode($arrc);?>;
 	{
 	$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
 	$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT * FROM `edu_article` WHERE `article_id` = '$article_id' and `school_id` = '$school_id' and `member_create` = '$auth_teacher_id' ";
+	$sql = "SELECT * FROM `edu_article` WHERE `article_id` = '$article_id' AND `school_id` = '$school_id' AND `member_create` = '$auth_teacher_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -287,16 +287,16 @@ var classList = <?php echo json_encode($arrc);?>;
 else if(isset($_GET['article_id']))
 {
 	$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
-	$sql_filter_article = " and `edu_article`.`article_id` = '$article_id' ";
+	$sql_filter_article = " AND `edu_article`.`article_id` = '$article_id' ";
 
 	if(isset($school_id))
 	{
-		$sql_filter_article .= " and `edu_article`.`school_id` = '$school_id' ";
+		$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' ";
 	}
 	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
-	where (`edu_article`.`active` = true or `edu_article`.`member_create` = '$member_id') $sql_filter_article ";
+	where (`edu_article`.`active` = true OR `edu_article`.`member_create` = '$member_id') $sql_filter_article ";
 	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -350,12 +350,12 @@ else
 	$sql_filter_article = "";
 	if(isset($school_id))
 	{
-		$sql_filter_article .= " and `edu_article`.`school_id` = '$school_id' ";
+		$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' ";
 	}
 	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
-	where (`edu_article`.`active` = true or `edu_article`.`member_create` = '$member_id') $sql_filter_article 
+	where (`edu_article`.`active` = true OR `edu_article`.`member_create` = '$member_id') $sql_filter_article 
 	ORDER BY `edu_article`.`article_id` desc
 	";
 	$stmt = $database->executeQuery($sql);

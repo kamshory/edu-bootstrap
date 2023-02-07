@@ -19,18 +19,18 @@ if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
 	$admin_create = $admin_edit = $admin_id;
 	$sql = "UPDATE `edu_student` SET 
 	`reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit'
-	WHERE `student_id` = '$student_id' and `school_id` = '$school_id' ";
+	WHERE `student_id` = '$student_id' AND `school_id` = '$school_id' ";
 	$database->execute($sql);
 	if ($email != '') {
 		$sql = "UPDATE `edu_student` SET 
 		`email` = '$email'
-		WHERE `student_id` = '$student_id' and `school_id` = '$school_id' ";
+		WHERE `student_id` = '$student_id' AND `school_id` = '$school_id' ";
 		$database->execute($sql);
 	}
 	if ($password != '') {
 		$sql = "UPDATE `edu_student` SET 
 		`password` = md5(md5('$password')), `password_initial` = ''
-		WHERE `student_id` = '$student_id' and `school_id` = '$school_id' ";
+		WHERE `student_id` = '$student_id' AND `school_id` = '$school_id' ";
 		$database->execute($sql);
 		$sql = "UPDATE `member` SET 
 		`password` = md5(md5('$password'))
@@ -46,7 +46,7 @@ if (@$_GET['option'] == 'edit') {
 	$sql = "SELECT `edu_student`.* 
 	FROM `edu_student` 
 	WHERE `edu_student`.`school_id` = '$school_id'
-	and `edu_student`.`student_id` = '$student_id'
+	AND `edu_student`.`student_id` = '$student_id'
 	";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
@@ -119,7 +119,7 @@ if (@$_GET['option'] == 'edit') {
 FROM `edu_student` 
 left join(`edu_school`) on(`edu_school`.`school_id` = `edu_student`.`school_id`)
 WHERE `edu_student`.`school_id` = '$school_id'
-and `edu_student`.`student_id` = '$student_id'
+AND `edu_student`.`student_id` = '$student_id'
 ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {

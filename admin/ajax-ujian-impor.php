@@ -6,7 +6,7 @@ if(empty(@$school_id))
 }
 if(isset($_POST['from']) && isset($_POST['to']))
 {
-	$school_id = @$school_id . '';
+	
 	include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 	include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 	$id = kh_filter_input(INPUT_POST, "from", FILTER_SANITIZE_NUMBER_UINT);
@@ -16,7 +16,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();	
 	
-	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' and `active` = true ";
+	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' AND `active` = true ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -25,7 +25,6 @@ if(isset($_POST['from']) && isset($_POST['to']))
 		$file_path = dirname(dirname(__FILE__))."/media.edu/question-collection/data/".$basename;
 		if(file_exists($file_path))
 		{
-
 			$sql = "SELECT `edu_test`.*, 
 			(select `edu_question`.`sort_order` FROM `edu_question` 
 				WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` desc limit 0,1) as `sort_order`
@@ -39,7 +38,6 @@ if(isset($_POST['from']) && isset($_POST['to']))
 				$random = ((int) $data['random']);
 				$sort_order = ((int) $data['sort_order']);
 				$score_standar = $data['standard_score'];
-
 				
 				$test_dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
 				$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";

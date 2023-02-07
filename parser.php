@@ -60,12 +60,12 @@ if(file_exists(dirname(__FILE__)."/sch-".$modul_name))
 	if(is_numeric($school_code))
 	{
 		$school_code = addslashes($school_code);
-		$sql_filter .= " and `school_id` = '$school_code' "; 
+		$sql_filter .= " AND `school_id` = '$school_code' "; 
 	}
 	else
 	{
 		$school_code = addslashes($school_code);
-		$sql_filter .= " and `school_code` = '$school_code' "; 
+		$sql_filter .= " AND `school_code` = '$school_code' "; 
 	}
 	$sql = "SELECT `edu_school`.*
 	FROM `edu_school`

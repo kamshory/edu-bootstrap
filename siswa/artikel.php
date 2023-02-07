@@ -18,7 +18,7 @@ if(isset($_GET['article_id']))
 	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
-	WHERE `edu_article`.`article_id` = '$article_id' and `edu_article`.`active` = true ";
+	WHERE `edu_article`.`article_id` = '$article_id' AND `edu_article`.`active` = true ";
 	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -46,7 +46,7 @@ else
 	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
-	WHERE `edu_article`.`school_id` = '$school_id' and `edu_article`.`active` = true
+	WHERE `edu_article`.`school_id` = '$school_id' AND `edu_article`.`active` = true
 	ORDER BY `edu_article`.`article_id` desc
 	";
 	$stmt = $database->executeQuery($sql);

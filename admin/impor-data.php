@@ -130,8 +130,8 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 			{
 				$sql = "SELECT `edu_school`.*
 				FROM `edu_school`
-				left join(`edu_member_school`) on(`edu_member_school`.`school_id` = `edu_school`.`school_id` and `edu_member_school`.`role` = 'A')
-				WHERE `edu_school`.`school_id` = '$school_id' and `edu_member_school`.`member_id` = '$admin_id' 
+				left join(`edu_member_school`) on(`edu_member_school`.`school_id` = `edu_school`.`school_id` AND `edu_member_school`.`role` = 'A')
+				WHERE `edu_school`.`school_id` = '$school_id' AND `edu_member_school`.`member_id` = '$admin_id' 
 				";
 				$stmt = $database->executeQuery($sql);
 				if($stmt->rowCount() == 0)
@@ -343,7 +343,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								}
 								$sort_order = $o[$grade_id];
 								if ($name != '') {
-									$sql = "SELECT * FROM `edu_class` WHERE `class_code` = '$class_code' and `school_id` = '$school_id' ";
+									$sql = "SELECT * FROM `edu_class` WHERE `class_code` = '$class_code' AND `school_id` = '$school_id' ";
 									$stmt3 = $database->executeQuery($sql);
 									if ($stmt3->rowCount() == 0) {
 
@@ -478,7 +478,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									$database->executeInsert($sql2, true);
 
 									$sql3 = "UPDATE `edu_student` SET `school_id` = '$school_id' WHERE `student_id` = '$student_id' 
-									and (`school_id` = '' or `school_id` is null)
+									and (`school_id` = '' OR `school_id` is null)
 									";
 
 
@@ -605,7 +605,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									$sql3 = "UPDATE `edu_teacher` 
 									set `school_id` = '$school_id' 
 									WHERE `teacher_id` = '$teacher_id' 
-									and (`school_id` = '' or `school_id` is null)
+									and (`school_id` = '' OR `school_id` is null)
 									";
 									$database->executeUpdate($sql3, true);
 								} else {

@@ -14,7 +14,7 @@ if(isset($_POST['username']))
 		$sql = "SELECT `member_id`, `email`, `username`
 		FROM `member`
 		WHERE `username` like '$username'
-		and `member_id` != '$mlid'
+		AND `member_id` != '$mlid'
 		";
 		$stmt = $database->executeQuery($sql);
 		$json = array('registered'=>0, 'corrected'=>$username, 'valid'=>true);

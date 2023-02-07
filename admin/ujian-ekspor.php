@@ -19,7 +19,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['export']) && isset($_POST['test_id']))
 {
 	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `name` FROM `edu_test` WHERE `school_id` = '$school_id' and `test_id` = '$test_id'
+	$sql = "SELECT `name` FROM `edu_test` WHERE `school_id` = '$school_id' AND `test_id` = '$test_id'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -42,7 +42,7 @@ $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
 (select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`) as `number_of_real_question`
 FROM `edu_test` 
-WHERE `edu_test`.`test_id` = '$edit_key' and `school_id` = '$school_id'
+WHERE `edu_test`.`test_id` = '$edit_key' AND `school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)

@@ -15,8 +15,8 @@ if(@$_GET['option'] == 'select')
 	inner join(`edu_student`) on(`edu_student`.`school_id` = `edu_school`.`school_id`)
 	inner join(`edu_class`) on(`edu_class`.`school_id` = `edu_school`.`school_id`)
 	WHERE `edu_student`.`student_id` = '$auth_student_id' 
-	and `edu_class`.`class_id` = '$class_id'
-	and `edu_school`.`open` = '1'
+	AND `edu_class`.`class_id` = '$class_id'
+	AND `edu_school`.`open` = '1'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -41,7 +41,7 @@ $sql = "SELECT `edu_class`.* $nt,
 (select `edu_admin2`.`name` FROM `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_class`.`admin_edit` limit 0,1) as `admin_edit`
 FROM `edu_class` 
 WHERE `edu_class`.`school_id` = '$school_id'
-and `edu_class`.`class_id` = '$edit_key'
+AND `edu_class`.`class_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -142,7 +142,7 @@ if($pagination->query){
 	$sql_filter .= " and (`edu_class`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
-$sql_filter .= " and `edu_class`.`school_id` = '$school_id' ";
+$sql_filter .= " AND `edu_class`.`school_id` = '$school_id' ";
 
 $nt = '';
 

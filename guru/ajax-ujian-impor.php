@@ -15,7 +15,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();		
 	
-	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' and `active` = true ";
+	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' AND `active` = true ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -28,7 +28,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 			$sql = "SELECT `edu_test`.*, 
 			(select `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` desc limit 0,1) as `sort_order`
 			FROM `edu_test`
-			WHERE `edu_test`.`test_id` = '$test_id' and `edu_test`.`teacher_id` = '$auth_teacher_id'
+			WHERE `edu_test`.`test_id` = '$test_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id'
 			";
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)
@@ -147,7 +147,7 @@ $sql = "SELECT `edu_test`.*,
 (select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
 (select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `question`
 FROM `edu_test`
-WHERE `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id'
+WHERE `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id'
 ORDER BY `edu_test`.`test_id` desc
 ";
 $stmt = $database->executeQuery($sql);

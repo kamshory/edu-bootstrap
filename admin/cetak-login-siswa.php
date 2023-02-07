@@ -19,7 +19,7 @@ $sql = "SELECT `edu_class`.* $nt,
 (select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_class`.`school_id`) as `school_name`
 FROM `edu_class` 
 WHERE `edu_class`.`school_id` = '$school_id'
-and `edu_class`.`class_id` = '$class_id'  
+AND `edu_class`.`class_id` = '$class_id'  
 ";
 $stmt = $database->executeQuery($sql);
 
@@ -136,7 +136,7 @@ if($class_id)
 <?php
 if($class_id)
 {
-$filter = " and `edu_student`.`class_id` = '$class_id' ";
+$filter = " AND `edu_student`.`class_id` = '$class_id' ";
 }
 else
 {
@@ -144,7 +144,7 @@ $filter = "";
 }
 $sql = "SELECT `edu_student`.* 
 FROM `edu_student` 
-WHERE `edu_student`.`school_id` = '$school_id' and `edu_student`.`active` = true $filter
+WHERE `edu_student`.`school_id` = '$school_id' AND `edu_student`.`active` = true $filter
 ORDER BY `edu_student`.`name` asc ";
 $stmt = $database->executeQuery($sql);
 

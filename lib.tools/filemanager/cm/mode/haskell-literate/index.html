@@ -187,7 +187,7 @@ can then pass the resulting view to our own `userView`.
 We have no special view code for `Package`, so we can just add that to
 `releaseView` as well. `childErrorList` will generate a list of errors for each
 child of the specified form. In this case, this means a list of errors from
-`"package.name"` and `"package.version"`. Note how we use `foo.bar` to refer to
+`"package.name"` AND `"package.version"`. Note how we use `foo.bar` to refer to
 nested forms.
 
 > releaseView :: View H.Html -> H.Html

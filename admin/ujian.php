@@ -10,7 +10,7 @@ if(empty(@$real_school_id))
 	include_once dirname(__FILE__)."/belum-ada-sekolah.php";
 	exit();
 }
-$school_id = @$school_id . '';
+
 $real_school_id = @$real_school_id . '';
 
 $cfg->page_title = "Ujian";
@@ -131,7 +131,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_id']))
 		foreach($tests as $key=>$val)
 		{
 			$test_id = addslashes($val);
-			$sql = "UPDATE `edu_test` SET `active` = true WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_test` SET `active` = true WHERE `test_id` = '$test_id' AND `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -144,7 +144,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_id']))
 		foreach($tests as $key=>$val)
 		{
 			$test_id = addslashes($val);
-			$sql = "UPDATE `edu_test` SET `active` = false WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_test` SET `active` = false WHERE `test_id` = '$test_id' AND `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -157,7 +157,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 		foreach($tests as $key=>$val)
 		{
 			$test_id = addslashes($val);
-			$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
+			$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = '$school_id' ";
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)
 			{
@@ -166,7 +166,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 				$database->executeDelete($sql, true);
 				$sql = "DELETE FROM `edu_question` WHERE `test_id` = '$test_id' ";
 				$database->executeDelete($sql, true);
-				$sql = "DELETE FROM `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id' ";
+				$sql = "DELETE FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = '$school_id' ";
 				$database->executeDelete($sql, true);
 				$dir = dirname(dirname(__FILE__))."/media.edu/school/$school_id/test/$test_id";
 				$destroyer = new DirectoryDestroyer($fileSync);
@@ -194,7 +194,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 		$time_create = $time_edit = $picoEdu->getLocalDateTime();		
 		
-		$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' and `active` = true ";
+		$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' AND `active` = true ";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
@@ -206,7 +206,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				$sql = "SELECT `edu_test`.*, 
 				(select `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` desc limit 0,1) as `sort_order`
 				FROM `edu_test`
-				WHERE `edu_test`.`test_id` = '$test_id' and `edu_test`.`school_id` = '$school_id'
+				WHERE `edu_test`.`test_id` = '$test_id' AND `edu_test`.`school_id` = '$school_id'
 				";
 				$stmt = $database->executeQuery($sql);
 				if($stmt->rowCount() > 0)
@@ -351,7 +351,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	`test_availability` = '$test_availability', `available_from` = $available_from, `available_to` = $available_to, 
 	`time_create` = '$time_create', `time_edit` = '$time_edit', `member_create` = '$member_create', `role_create` = '$role_create', 
 	`member_edit` = '$member_edit', `role_edit` = '$role_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
-	WHERE `test_id` = '$test_id2' and `school_id` = '$school_id'";
+	WHERE `test_id` = '$test_id2' AND `school_id` = '$school_id'";
 	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id");
 }
@@ -375,7 +375,7 @@ if($collection)
 $sqlc = "SELECT `edu_class`.`class_id`, `edu_class`.`name` 
 FROM `edu_class` 
 LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = `edu_class`.`school_program_id`)
-WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id' and `edu_class`.`name` != '' 
+WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id' AND `edu_class`.`name` != '' 
 ORDER BY `edu_school_program`.`sort_order` asc , `edu_class`.`sort_order` asc 
 ";
 $stmt = $database->executeQuery($sqlc);
@@ -710,14 +710,14 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* 
 FROM `edu_test` 
-WHERE `edu_test`.`test_id` = '$edit_key' and `edu_test`.`school_id` = '$school_id'
+WHERE `edu_test`.`test_id` = '$edit_key' AND `edu_test`.`school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' and `name` != '' ORDER BY `sort_order` asc ";
+$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` asc ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -1051,7 +1051,7 @@ $sql = "SELECT `edu_test`.* $nt,
 (select `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_create`) as `member_create`,
 (select `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_edit`) as `member_edit`
 FROM `edu_test` 
-WHERE `edu_test`.`test_id` = '$edit_key' and `edu_test`.`school_id` = '$school_id'
+WHERE `edu_test`.`test_id` = '$edit_key' AND `edu_test`.`school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -1306,7 +1306,7 @@ window.onload = function()
     <select class="form-control input-select" name="teacher_id" id="teacher_id">
     <option value="">- Pilih Guru -</option>
     <?php 
-	$sql2 = "SELECT * FROM `edu_teacher` WHERE `school_id` = '$school_id' and `active` = true ORDER BY `name` asc ";	
+	$sql2 = "SELECT * FROM `edu_teacher` WHERE `school_id` = '$school_id' AND `active` = true ORDER BY `name` asc ";	
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -1350,7 +1350,7 @@ if($class_id != '')
 }
 if($teacher_id != 0)
 {
-	$sql_filter .= " and `edu_test`.`teacher_id` = '$teacher_id' ";
+	$sql_filter .= " AND `edu_test`.`teacher_id` = '$teacher_id' ";
 	$pagination->array_get[] = 'teacher_id';
 }
 

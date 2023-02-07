@@ -31,9 +31,9 @@ class StudenAuth
 			`edu_school`.`name` as `school_name`, `edu_school`.`school_code` as `school_code`, `edu_school`.`use_token`
 			FROM `edu_student` 
 			left join(`edu_school`) on(`edu_school`.`school_id` = `edu_student`.`school_id`)
-			WHERE `edu_student`.`username` like '$username' and `edu_student`.`password` = md5('$password') 
-			and `edu_student`.`active` = true
-			and `edu_student`.`blocked` = false
+			WHERE `edu_student`.`username` like '$username' AND `edu_student`.`password` = md5('$password') 
+			AND `edu_student`.`active` = true
+			AND `edu_student`.`blocked` = false
 			";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {

@@ -35,7 +35,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
             	<?php
 				if($grade_id != 0)
 				{
-					$filter = " and `grade_id` = '$grade_id' ";
+					$filter = " AND `grade_id` = '$grade_id' ";
 				}
 				else
 				{

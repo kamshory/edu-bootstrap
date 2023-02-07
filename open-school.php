@@ -11,14 +11,14 @@ if (@$_GET['option'] == 'select') {
 	`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
 	FROM `edu_member_school`
 	inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
-	WHERE `edu_member_school`.`member_id` = '$member_id' and `edu_member_school`.`role` = 'S'
+	WHERE `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S'
 	
 	union
 	
 	select `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
 	`edu_school2`.`principal`, `edu_school2`.`active`, `edu_school2`.`open`
 	FROM `edu_school` as `edu_school2`
-	WHERE `edu_school2`.`open` = '1' and `edu_school2`.`active` = true 
+	WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 
 	) as `edu_school3`
 	WHERE `edu_school3`.`school_id` = '$school_id'
 	ORDER BY `edu_school3`.`open` asc, `edu_school3`.`name` asc
@@ -46,7 +46,7 @@ if (@$_GET['option'] == 'detail') {
 	(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
 	FROM `edu_school` 
 	where 1
-	and `edu_school`.`school_id` = '$edit_key'
+	AND `edu_school`.`school_id` = '$edit_key'
 ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
@@ -165,14 +165,14 @@ if (@$_GET['option'] == 'detail') {
 				`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
 				FROM `edu_member_school`
 				inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
-				WHERE `edu_member_school`.`member_id` = '$member_id' and `edu_member_school`.`role` = 'S'
+				WHERE `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S'
 
 				union
 
 				select `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
 				`edu_school2`.`principal`, `edu_school2`.`active`, `edu_school2`.`open`
 				FROM `edu_school` as `edu_school2`
-				WHERE `edu_school2`.`open` = '1' and `edu_school2`.`active` = true 
+				WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 
 				) as `edu_school3`
 				WHERE 1 $sql_filter
 				ORDER BY `edu_school3`.`open` asc, `edu_school3`.`name` asc
@@ -185,14 +185,14 @@ if (@$_GET['option'] == 'detail') {
 				`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
 				FROM `edu_member_school`
 				inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
-				WHERE `edu_member_school`.`member_id` = '$member_id' and `edu_member_school`.`role` = 'S'
+				WHERE `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S'
 
 				union
 
 				select `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
 				`edu_school2`.`principal`, `edu_school2`.`active`, `edu_school2`.`open`
 				FROM `edu_school` as `edu_school2`
-				WHERE `edu_school2`.`open` = '1' and `edu_school2`.`active` = true 
+				WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 
 				) as `edu_school3`
 				WHERE 1 $sql_filter
 				";

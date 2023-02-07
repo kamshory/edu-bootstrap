@@ -11,9 +11,9 @@ if (!@$student_id && !@$teacher_id) {
   if(!empty(@$school_id)) {
     $sql = "SELECT `edu_school`.*, 
     (select count(distinct `edu_student`.`student_id`) FROM `edu_student`
-    WHERE `edu_student`.`school_id` = `edu_school`.`school_id` and `edu_student`.`gender` = 'M') as `M`,
+    WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'M') as `M`,
     (select count(distinct `edu_student`.`student_id`) FROM `edu_student`
-    WHERE `edu_student`.`school_id` = `edu_school`.`school_id` and `edu_student`.`gender` = 'W') as `W`
+    WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'W') as `W`
     FROM `edu_school`
     WHERE `edu_school`.`school_id` = '$school_id' 
     ";
@@ -117,7 +117,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
       <select class="form-control input-select" name="class_id" id="class_id">
         <option value=""></option>
         <?php
-        $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' ORDER BY `sort_order` asc ";
+        $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` asc ";
         
         echo $picoEdu->createFilterDb(
           $sql2,

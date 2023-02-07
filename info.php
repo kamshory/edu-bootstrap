@@ -6,7 +6,7 @@ $cfg->page_title = "Infomasi";
 if(isset($_GET['info_id']))
 {
 	$info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
-	$sql_filter_info = " and `edu_info`.`info_id` = '$info_id' ";
+	$sql_filter_info = " AND `edu_info`.`info_id` = '$info_id' ";
 
 	$sql = "SELECT `edu_info`.*, `member`.`name` as `creator`
 	FROM `edu_info` 
@@ -221,7 +221,7 @@ if(isset($_GET['period']))
 $period = kh_filter_input(INPUT_GET, "period", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_info`.* 
 FROM `edu_info` 
-WHERE `edu_info`.`active` = true and `edu_info`.`time_create` like '$period%' $sql_filter_info 
+WHERE `edu_info`.`active` = true AND `edu_info`.`time_create` like '$period%' $sql_filter_info 
 ORDER BY `edu_info`.`info_id` desc
 ";
 }

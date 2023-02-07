@@ -36,7 +36,7 @@ $sql = "SELECT `edu_test`.* $nt,
 (select `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_create`) as `member_create`,
 (select `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_edit`) as `member_edit`
 FROM `edu_test` 
-WHERE `edu_test`.`test_id` = '$test_id' and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id'
+WHERE `edu_test`.`test_id` = '$test_id' AND `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

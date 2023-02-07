@@ -747,19 +747,19 @@ UPDATE `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
 					set `time_edit` = '2023-02-04 10:52:01', `member_edit` = '' 
-					WHERE `question_id` = '063ddd60d7a5eef7c3c2' and `option_id` = '063ddd60d7aea9dd2de7';
+					WHERE `question_id` = '063ddd60d7a5eef7c3c2' AND `option_id` = '063ddd60d7aea9dd2de7';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
 					set `time_edit` = '2023-02-04 10:52:01', `member_edit` = '' 
-					WHERE `question_id` = '063ddd60d7a5eef7c3c2' and `option_id` = '063ddd60d7b5a21654c4';
+					WHERE `question_id` = '063ddd60d7a5eef7c3c2' AND `option_id` = '063ddd60d7b5a21654c4';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
 					set `time_edit` = '2023-02-04 10:52:01', `member_edit` = '' 
-					WHERE `question_id` = '063ddd60d7a5eef7c3c2' and `option_id` = '063ddd60d7be8fba09f5';
+					WHERE `question_id` = '063ddd60d7a5eef7c3c2' AND `option_id` = '063ddd60d7be8fba09f5';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
 					set `time_edit` = '2023-02-04 10:52:01', `member_edit` = '' 
-					WHERE `question_id` = '063ddd60d7a5eef7c3c2' and `option_id` = '063ddd60d7c923403171';
+					WHERE `question_id` = '063ddd60d7a5eef7c3c2' AND `option_id` = '063ddd60d7c923403171';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_question` 
 			set `time_edit` = '2023-02-04 10:53:44', `member_edit` = '' 
@@ -767,19 +767,19 @@ UPDATE `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
 					set `time_edit` = '2023-02-04 10:53:44', `member_edit` = '' 
-					WHERE `question_id` = '063ddd60d8106ba0033c' and `option_id` = '063ddd60d816e8580306';
+					WHERE `question_id` = '063ddd60d8106ba0033c' AND `option_id` = '063ddd60d816e8580306';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
 					set `time_edit` = '2023-02-04 10:53:44', `member_edit` = '' 
-					WHERE `question_id` = '063ddd60d8106ba0033c' and `option_id` = '063ddd60d81fd480b04d';
+					WHERE `question_id` = '063ddd60d8106ba0033c' AND `option_id` = '063ddd60d81fd480b04d';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
 					set `time_edit` = '2023-02-04 10:53:44', `member_edit` = '' 
-					WHERE `question_id` = '063ddd60d8106ba0033c' and `option_id` = '063ddd60d8272cccd1f5';
+					WHERE `question_id` = '063ddd60d8106ba0033c' AND `option_id` = '063ddd60d8272cccd1f5';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
 					set `time_edit` = '2023-02-04 10:53:44', `member_edit` = '' 
-					WHERE `question_id` = '063ddd60d8106ba0033c' and `option_id` = '063ddd60d82d8545f52e';
+					WHERE `question_id` = '063ddd60d8106ba0033c' AND `option_id` = '063ddd60d82d8545f52e';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_question` 
 			set `time_edit` = '2023-02-04 10:54:50', `member_edit` = '' 
@@ -787,19 +787,19 @@ UPDATE `edu_question`
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
 					set `time_edit` = '2023-02-04 10:54:50', `member_edit` = '' 
-					WHERE `question_id` = '063ddd60d8106ba0033c' and `option_id` = '063ddd60d816e8580306';
+					WHERE `question_id` = '063ddd60d8106ba0033c' AND `option_id` = '063ddd60d816e8580306';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
 					set `time_edit` = '2023-02-04 10:54:50', `member_edit` = '' 
-					WHERE `question_id` = '063ddd60d8106ba0033c' and `option_id` = '063ddd60d81fd480b04d';
+					WHERE `question_id` = '063ddd60d8106ba0033c' AND `option_id` = '063ddd60d81fd480b04d';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
 					set `time_edit` = '2023-02-04 10:54:50', `member_edit` = '' 
-					WHERE `question_id` = '063ddd60d8106ba0033c' and `option_id` = '063ddd60d8272cccd1f5';
+					WHERE `question_id` = '063ddd60d8106ba0033c' AND `option_id` = '063ddd60d8272cccd1f5';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
 					set `time_edit` = '2023-02-04 10:54:50', `member_edit` = '' 
-					WHERE `question_id` = '063ddd60d8106ba0033c' and `option_id` = '063ddd60d82d8545f52e';
+					WHERE `question_id` = '063ddd60d8106ba0033c' AND `option_id` = '063ddd60d82d8545f52e';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_test` 
 	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES

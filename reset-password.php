@@ -9,7 +9,7 @@ if(isset($_GET['username']) && isset($_GET['auth']))
 	$auth = kh_filter_input(INPUT_GET, "auth", FILTER_SANITIZE_ALPHANUMERICPUNC);
 	$sql = "SELECT `username`, `member_id`, `email`, `auth`
 	FROM `member`
-	where (`username` like '$username' and `auth` like '$auth') 
+	where (`username` like '$username' AND `auth` like '$auth') 
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -27,7 +27,7 @@ if(isset($_GET['username']) && isset($_GET['auth']))
 				$sql = "UPDATE `member`
 				set `password` = md5(md5('$password')),
 				`auth` = '$newauth'
-				where (`username` like '$un' and `auth` like '$auth') 
+				where (`username` like '$un' AND `auth` like '$auth') 
 				";
 				$database->execute($sql);
 				$_SESSION['username'] = $un;
@@ -50,13 +50,13 @@ if(isset($_POST['username']) && isset($_POST['send']))
 	
 	$auth = md5($_SERVER['REMOTE_ADDR'].date('Y-m-d'));
 	$sql = "UPDATE `member` SET `auth` = '$auth'
-	where ((`email` like '$email' and '$email' != '') or `username` like '$username' or (`phone` like '$phone' and '$phone' != '')) 
+	where ((`email` like '$email' and '$email' != '') OR `username` like '$username' or (`phone` like '$phone' and '$phone' != '')) 
 	";
 	$database->execute($sql);
 	
 	$sql = "SELECT `username`, `member_id`, `email`, `auth`, `name`
 	FROM `member`
-	where ((`email` like '$email' and '$email' != '') or `username` like '$username' or (`phone` like '$phone' and '$phone' != '')) 
+	where ((`email` like '$email' and '$email' != '') OR `username` like '$username' or (`phone` like '$phone' and '$phone' != '')) 
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)

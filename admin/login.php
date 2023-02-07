@@ -13,15 +13,15 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	$sql = "SELECT `username`, `admin_id` as `member_id`, `admin_id` as `admin_id`
 	FROM `edu_admin`
 	where (
-		(`email` like '$email' and `email` != '')
+		(`email` like '$email' AND `email` != '')
 		or 
-		(`username` like '$username' and `username` != '')
+		(`username` like '$username' AND `username` != '')
 		or 
-		(`phone` like '$phone' and `phone` != '')
+		(`phone` like '$phone' AND `phone` != '')
 		) 
-		and `password` like md5('$password')
-		and `active` = true
-		and `blocked` = false
+		AND `password` like md5('$password')
+		AND `active` = true
+		AND `blocked` = false
 	";
 	$stmt = $database->executeQuery($sql);
 

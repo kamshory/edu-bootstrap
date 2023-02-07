@@ -14,8 +14,8 @@ $edit_key = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW)
 $nt = '';
 $sql = "SELECT `edu_teacher`.* $nt
 FROM `edu_teacher` 
-WHERE `edu_teacher`.`active` = true and `edu_teacher`.`school_id` = '$school_id'
-and `edu_teacher`.`teacher_id` = '$edit_key'
+WHERE `edu_teacher`.`active` = true AND `edu_teacher`.`school_id` = '$school_id'
+AND `edu_teacher`.`teacher_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -132,12 +132,12 @@ $nt = '';
 
 $sql = "SELECT `edu_teacher`.* $nt
 FROM `edu_teacher`
-WHERE `edu_teacher`.`active` = true and `edu_teacher`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_teacher`.`active` = true AND `edu_teacher`.`school_id` = '$school_id' $sql_filter
 ORDER BY `edu_teacher`.`teacher_id` asc
 ";
 $sql_test = "SELECT `edu_teacher`.*
 FROM `edu_teacher`
-WHERE `edu_teacher`.`active` = true and `edu_teacher`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_teacher`.`active` = true AND `edu_teacher`.`school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

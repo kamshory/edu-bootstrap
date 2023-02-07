@@ -32,9 +32,9 @@ class TeacherAuth
 				FROM `edu_teacher` 
 				left join(`edu_school`) on(`edu_school`.`school_id` = `edu_teacher`.`school_id`)
 				WHERE `edu_teacher`.`username` like '$username' 
-				and `edu_teacher`.`password` = md5('$password') 
-				and `edu_teacher`.`active` = true
-				and `edu_teacher`.`blocked` = false
+				AND `edu_teacher`.`password` = md5('$password') 
+				AND `edu_teacher`.`active` = true
+				AND `edu_teacher`.`blocked` = false
 				";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {

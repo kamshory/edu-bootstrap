@@ -16,7 +16,7 @@ $nt = '';
 $sql = "SELECT `edu_teacher`.* $nt
 FROM `edu_teacher` 
 WHERE `edu_teacher`.`school_id` = '$school_id'
-and `edu_teacher`.`teacher_id` = '$edit_key'
+AND `edu_teacher`.`teacher_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

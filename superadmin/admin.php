@@ -45,7 +45,7 @@ if(isset($_POST['set_active']) && isset($_POST['admin_id']))
 		$admin_id = addslashes($val);
 		if($val != $admin_login->admin_id)
 		{
-			$sql = "UPDATE `edu_admin` SET `active` = true WHERE `admin_id` = '$admin_id' and `school_id` = '$school_id'";
+			$sql = "UPDATE `edu_admin` SET `active` = true WHERE `admin_id` = '$admin_id' AND `school_id` = '$school_id'";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -71,7 +71,7 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 		$admin_id = addslashes($val);
 		if($val != $admin_login->admin_id)
 		{
-			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$admin_id' and `role` = 'A' ";
+			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$admin_id' AND `role` = 'A' ";
 			$database->executeDelete($sql, true);
 			$sql = "UPDATE `edu_admin` SET `school_id` = '' WHERE `admin_id` = '$admin_id' ";
 			$database->executeUpdate($sql, true);
@@ -400,7 +400,7 @@ $sql = "SELECT `edu_admin`.* $nt,
 (select `edu_admin2`.`name` FROM `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
 FROM `edu_admin` 
 where 1 
-and `edu_admin`.`admin_id` = '$edit_key'
+AND `edu_admin`.`admin_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

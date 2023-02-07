@@ -12,11 +12,11 @@ if(isset($_POST['sync']))
 	{
 		$sql = "SELECT `edu_student`.*
 		FROM `edu_student` 
-		WHERE `edu_student`.`student_id` = '$auth_student_id' and `edu_student`.`email` like '$email' and `edu_student`.`auth` like '$auth' ";
+		WHERE `edu_student`.`student_id` = '$auth_student_id' AND `edu_student`.`email` like '$email' AND `edu_student`.`auth` like '$auth' ";
 		$stmt1 = $database->executeQuery($sql);
 		if($stmt1->rowCount() > 0)
 		{
-			$sql = "SELECT * FROM `member` WHERE `email` like '$email' and `member_id` != '$auth_student_id' ";
+			$sql = "SELECT * FROM `member` WHERE `email` like '$email' AND `member_id` != '$auth_student_id' ";
 			$stmt2 = $database->executeQuery($sql);
 			if($stmt2->rowCount() == 0)
 			{
@@ -26,7 +26,7 @@ if(isset($_POST['sync']))
 				$database->executeUpdate($sql, true);
 				$sql = "SELECT `username`, `member_id`
 				FROM `member`
-				WHERE `email` like '$email' and `password` like md5(md5('$password'))
+				WHERE `email` like '$email' AND `password` like md5(md5('$password'))
 				";
 				$stmt3 = $database->executeQuery($sql);
 				if($stmt3->rowCount() > 0)
@@ -52,7 +52,7 @@ $auth = kh_filter_input(INPUT_GET, "auth", FILTER_SANITIZE_STRING_NEW);
 
 $sql = "SELECT `edu_student`.*
 FROM `edu_student` 
-WHERE `edu_student`.`student_id` = '$auth_student_id' and `edu_student`.`email` like '$email' and `edu_student`.`auth` like '$auth' ";
+WHERE `edu_student`.`student_id` = '$auth_student_id' AND `edu_student`.`email` like '$email' AND `edu_student`.`auth` like '$auth' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {

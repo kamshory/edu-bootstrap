@@ -355,7 +355,7 @@
      *
      *  @param p    the predicate used to test elements.
      *  @return     an option value containing the first element in the $coll
-     *              that satisfies `p`, or `None` if none exists.
+     *              that satisfies `p`, OR `None` if none exists.
      */
     def find(p: A => Boolean): Option[A] = {
       var result: Option[A] = None
@@ -572,7 +572,7 @@
      *  Fills the given array `xs` with at most `len` elements of
      *  this $coll, starting at position `start`.
      *  Copying will stop once either the end of the current $coll is reached,
-     *  or the end of the array is reached, or `len` elements have been copied.
+     *  or the end of the array is reached, OR `len` elements have been copied.
      *
      *  $willNotTerminateInf
      * 
@@ -634,7 +634,7 @@
 
     /** Creates a non-strict view of a slice of this $coll.
      *
-     *  Note: the difference between `view` and `slice` is that `view` produces
+     *  Note: the difference between `view` AND `slice` is that `view` produces
      *        a view of the current $coll, whereas `slice` produces a new $coll.
      * 
      *  Note: `view(from, to)` is equivalent to `view.slice(from, to)`
@@ -649,15 +649,15 @@
 
     /** Creates a non-strict filter of this $coll.
      *
-     *  Note: the difference between `c filter p` and `c withFilter p` is that
+     *  Note: the difference between `c filter p` AND `c withFilter p` is that
      *        the former creates a new collection, whereas the latter only
      *        restricts the domain of subsequent `map`, `flatMap`, `foreach`,
-     *        and `withFilter` operations.
+     *        AND `withFilter` operations.
      *  $orderDependent
      * 
      *  @param p   the predicate used to test elements.
      *  @return    an object of class `WithFilter`, which supports
-     *             `map`, `flatMap`, `foreach`, and `withFilter` operations.
+     *             `map`, `flatMap`, `foreach`, AND `withFilter` operations.
      *             All these operations apply to those elements of this $coll which
      *             satisfy the predicate `p`.
      */
@@ -737,7 +737,7 @@
        *
        *  @param q   the predicate used to test elements.
        *  @return    an object of class `WithFilter`, which supports
-       *             `map`, `flatMap`, `foreach`, and `withFilter` operations.
+       *             `map`, `flatMap`, `foreach`, AND `withFilter` operations.
        *             All these operations apply to those elements of this $coll which
        *             satisfy the predicate `q` in addition to the predicate `p`.
        */

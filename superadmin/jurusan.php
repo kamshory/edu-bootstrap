@@ -33,7 +33,7 @@ if(isset($_POST['set_active']) && isset($_POST['school_program_id']))
 		foreach($school_program as $key=>$val)
 		{
 			$school_program_id = addslashes($val);
-			$sql = "UPDATE `edu_school_program` SET `active` = true WHERE `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_school_program` SET `active` = true WHERE `school_program_id` = '$school_program_id' AND `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -46,7 +46,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['school_program_id']))
 		foreach($school_program as $key=>$val)
 		{
 			$school_program_id = addslashes($val);
-			$sql = "UPDATE `edu_school_program` SET `active` = false WHERE `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_school_program` SET `active` = false WHERE `school_program_id` = '$school_program_id' AND `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -59,7 +59,7 @@ if(isset($_POST['delete']) && isset($_POST['school_program_id']))
 		foreach($school_program as $key=>$val)
 		{
 			$school_program_id = addslashes($val);
-			$sql = "DELETE FROM `edu_school_program` WHERE `school_program_id` = '$school_program_id' and `school_id` = '$school_id' ";
+			$sql = "DELETE FROM `edu_school_program` WHERE `school_program_id` = '$school_program_id' AND `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}

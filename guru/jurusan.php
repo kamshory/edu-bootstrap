@@ -17,7 +17,7 @@ $nt = '';
 $sql = "SELECT `edu_school_program`.* ,
 (select `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_school_program`.`school_id`) as `school_id`
 FROM `edu_school_program` 
-WHERE `edu_school_program`.`school_program_id` = '$edit_key' and `school_id` = '$school_id'
+WHERE `edu_school_program`.`school_program_id` = '$edit_key' AND `school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)

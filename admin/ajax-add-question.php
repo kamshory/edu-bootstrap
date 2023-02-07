@@ -38,7 +38,7 @@ if(isset($_POST['question']))
 	
 	$digest = md5($question);
 	
-	$sql = "SELECT * FROM `edu_question` WHERE `digest` = '$digest' and `test_id` = '$test_id' ";
+	$sql = "SELECT * FROM `edu_question` WHERE `digest` = '$digest' AND `test_id` = '$test_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() == 0)
 	{

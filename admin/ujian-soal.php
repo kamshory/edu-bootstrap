@@ -22,8 +22,8 @@ if(@$_GET['option'] == 'delete')
 	$question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);
 	$digest = kh_filter_input(INPUT_GET, "digest", FILTER_SANITIZE_STRING_NEW_BASE64);
 	$sql = "SELECT * FROM `edu_question`
-	inner join(`edu_test`) on(`edu_test`.`test_id` = `edu_question`.`test_id` and `edu_test`.`school_id` = '$school_id')
-	WHERE `question_id` = '$question_id' and `digest` = '$digest' ";
+	inner join(`edu_test`) on(`edu_test`.`test_id` = `edu_question`.`test_id` AND `edu_test`.`school_id` = '$school_id')
+	WHERE `question_id` = '$question_id' AND `digest` = '$digest' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -179,7 +179,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$time_edit = $picoEdu->getLocalDateTime();
 	
 	$digest = md5($question);
-	$sql3 = "SELECT * FROM `edu_question` WHERE `digest` = '$digest' and `test_id` = '$test_id' ";
+	$sql3 = "SELECT * FROM `edu_question` WHERE `digest` = '$digest' AND `test_id` = '$test_id' ";
 	$stmt3 = $database->executeQuery($sql3);
 	if($stmt3->rowCount() == 0)
 	{
@@ -288,13 +288,13 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 				$score = kh_filter_input(INPUT_POST, "score_" . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
 				$sql = "UPDATE `edu_option` 
 				set `content` = '$option', `score` = '$score' 
-				WHERE `question_id` = '$question_id' and `option_id` = '$id2'";
+				WHERE `question_id` = '$question_id' AND `option_id` = '$id2'";
 				$stmt3 = $database->executeQuery($sql);
 				if ($stmt3->rowCount() > 0) 
 				{
 					$sql = "UPDATE `edu_option` 
 					set `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
-					WHERE `question_id` = '$question_id' and `option_id` = '$id2'";
+					WHERE `question_id` = '$question_id' AND `option_id` = '$id2'";
 					$database->executeUpdate($sql, true);
 				}
 			}
@@ -606,7 +606,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* ,
 (select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `collection`
-FROM `edu_test` WHERE `test_id` = '$test_id' and `school_id` = '$school_id'
+FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)

@@ -117,7 +117,7 @@ feature -- Comparison
         end
 
     frozen equal (a: detachable ANY; b: like a): BOOLEAN
-            -- Are `a' and `b' either both void or attached
+            -- Are `a' AND `b' either both void or attached
             -- to objects considered equal?
         do
             if a = Void then
@@ -133,7 +133,7 @@ feature -- Comparison
         end
 
     frozen standard_equal (a: detachable ANY; b: like a): BOOLEAN
-            -- Are `a' and `b' either both void or attached to
+            -- Are `a' AND `b' either both void or attached to
             -- field-by-field identical objects of the same type?
             -- Always uses default object comparison criterion.
         do
@@ -150,7 +150,7 @@ feature -- Comparison
         end
 
     frozen is_deep_equal (other: like Current): BOOLEAN
-            -- Are `Current' and `other' attached to isomorphic object structures?
+            -- Are `Current' AND `other' attached to isomorphic object structures?
         require
             other_not_void: other /= Void
         external
@@ -162,7 +162,7 @@ feature -- Comparison
         end
 
     frozen deep_equal (a: detachable ANY; b: like a): BOOLEAN
-            -- Are `a' and `b' either both void
+            -- Are `a' AND `b' either both void
             -- or attached to isomorphic object structures?
         do
             if a = Void then

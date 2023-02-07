@@ -17,7 +17,7 @@ if(@$_GET['option'] == 'select')
 	`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`, `edu_member_school`.`role`
 	FROM `edu_member_school`
 	inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
-	WHERE `edu_member_school`.`member_id` = '$auth_student_id' and `edu_member_school`.`role` = 'S'
+	WHERE `edu_member_school`.`member_id` = '$auth_student_id' AND `edu_member_school`.`role` = 'S'
 	) as `edu_school3`
 	WHERE `edu_school3`.`school_id` = '$school_id'
 	having `edu_school3`.`role` = 'S'
@@ -178,10 +178,10 @@ select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_gr
 `edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`, `edu_member_school`.`role`
 FROM `edu_member_school`
 inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
-WHERE `edu_member_school`.`member_id` = '$auth_student_id' and `edu_member_school`.`role` = 'S'
+WHERE `edu_member_school`.`member_id` = '$auth_student_id' AND `edu_member_school`.`role` = 'S'
 ) as `edu_school3`
 WHERE 1 $sql_filter
-having `edu_school3`.`role` = 'S' and `edu_school3`.`open` = '1'
+having `edu_school3`.`role` = 'S' AND `edu_school3`.`open` = '1'
 ORDER BY `edu_school3`.`name` asc
 ";
 $sql_test = "
@@ -191,10 +191,10 @@ select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_gr
 `edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`, `edu_member_school`.`role`
 FROM `edu_member_school`
 inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
-WHERE `edu_member_school`.`member_id` = '$auth_student_id' and `edu_member_school`.`role` = 'S'
+WHERE `edu_member_school`.`member_id` = '$auth_student_id' AND `edu_member_school`.`role` = 'S'
 ) as `edu_school3`
 WHERE 1 $sql_filter
-having `edu_school3`.`role` = 'S' and `edu_school3`.`open` = '1'
+having `edu_school3`.`role` = 'S' AND `edu_school3`.`open` = '1'
 ";
 
 $stmt = $database->executeQuery($sql_test);

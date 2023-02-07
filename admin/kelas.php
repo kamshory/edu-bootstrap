@@ -32,7 +32,7 @@ if (isset($_POST['set_active']) && isset($_POST['class_id'])) {
 	if (isset($classs) && is_array($classs)) {
 		foreach ($classs as $key => $val) {
 			$class_id = addslashes($val);
-			$sql = "UPDATE `edu_class` SET `active` = true WHERE `class_id` = '$class_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_class` SET `active` = true WHERE `class_id` = '$class_id' AND `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -41,7 +41,7 @@ if (isset($_POST['set_inactive']) && isset($_POST['class_id'])) {
 	$classs = @$_POST['class_id'];
 	if (isset($classs) && is_array($classs)) {
 		$class_id = addslashes($val);
-		$sql = "UPDATE `edu_class` SET `active` = false WHERE `class_id` = '$class_id' and `school_id` = '$school_id' ";
+		$sql = "UPDATE `edu_class` SET `active` = false WHERE `class_id` = '$class_id' AND `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 }
@@ -50,7 +50,7 @@ if (isset($_POST['delete']) && isset($_POST['class_id'])) {
 	if (isset($classs) && is_array($classs)) {
 		foreach ($classs as $key => $val) {
 			$class_id = addslashes($val);
-			$sql = "DELETE FROM `edu_class` WHERE `class_id` = '$class_id' and `school_id` = '$school_id' ";
+			$sql = "DELETE FROM `edu_class` WHERE `class_id` = '$class_id' AND `school_id` = '$school_id' ";
 			$database->executeDelete($sql, true);
 		}	
 	}
@@ -76,7 +76,7 @@ if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
 	`class_code` = '$class_code', `grade_id` = '$grade_id', `school_program_id` = '$school_program_id', `name` = '$name', 
 	`time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', 
 	`ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `sort_order` = '$sort_order', `active` = '$active'
-	WHERE `class_id` = '$class_id2' and `school_id` = '$school_id' ";
+	WHERE `class_id` = '$class_id2' AND `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&class_id=$class_id");
 }
@@ -107,7 +107,7 @@ if (@$_GET['option'] == 'add') {
 						<?php
 							$sql2 = "SELECT `edu_school_program`.*
 							FROM `edu_school_program`
-							WHERE `edu_school_program`.`school_id` = '$school_id' and `active` = true 
+							WHERE `edu_school_program`.`school_id` = '$school_id' AND `active` = true 
 							ORDER BY `edu_school_program`.`name` asc
 							";
 							echo $picoEdu->createFilterDb(
@@ -164,7 +164,7 @@ else if (@$_GET['option'] == 'edit')
 	$sql = "SELECT `edu_class`.* 
 	FROM `edu_class` 
 	WHERE `edu_class`.`school_id` = '$school_id'
-	and `edu_class`.`class_id` = '$edit_key'
+	AND `edu_class`.`class_id` = '$edit_key'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -194,7 +194,7 @@ else if (@$_GET['option'] == 'edit')
 							<?php
 							$sql2 = "SELECT `edu_school_program`.*
 							FROM `edu_school_program`
-							WHERE `edu_school_program`.`school_id` = '$school_id' and `active` = true 
+							WHERE `edu_school_program`.`school_id` = '$school_id' AND `active` = true 
 							ORDER BY `edu_school_program`.`name` asc
 							";
 							echo $picoEdu->createFilterDb(
@@ -261,7 +261,7 @@ else if (@$_GET['option'] == 'detail')
 	(select `edu_admin2`.`name` FROM `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_class`.`admin_edit` limit 0,1) as `admin_edit`
 	FROM `edu_class` 
 	WHERE `edu_class`.`school_id` = '$school_id'
-	and `edu_class`.`class_id` = '$edit_key'
+	AND `edu_class`.`class_id` = '$edit_key'
 	";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

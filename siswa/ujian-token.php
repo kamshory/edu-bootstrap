@@ -21,7 +21,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 	FROM `edu_token`
 	inner join(`edu_test`) on(`edu_test`.`test_id` = `edu_token`.`test_id`)
 	WHERE `edu_token`.`student_id` = '$auth_student_id'
-	and `edu_token`.`token` = '$token' and `edu_token`.`active` = true and `edu_token`.`time_expire` > '$now'
+	AND `edu_token`.`token` = '$token' AND `edu_token`.`active` = true AND `edu_token`.`time_expire` > '$now'
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -40,7 +40,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 		$dur_obj = $picoEdu->secondsToTime($data['duration']);
 		if($data['has_limits'])
 		{
-			$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' and `test_id` = '$test_id' ORDER BY `start` desc ";
+			$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' AND `test_id` = '$test_id' ORDER BY `start` desc ";
 			$stmt = $database->executeQuery($sql);
 			$ntest = $stmt->rowCount();
 			if($ntest < $data['trial_limits'])
@@ -103,14 +103,14 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 				$picoEdu->loginTest($school_id, $auth_student_id, $test_id, session_id(), $picoEdu->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
 
 				$sql = "UPDATE `edu_token` SET `active` = false 
-				WHERE `edu_token`.`student_id` = '$auth_student_id' and `edu_token`.`token` = '$token' ";
+				WHERE `edu_token`.`student_id` = '$auth_student_id' AND `edu_token`.`token` = '$token' ";
 				$database->execute($sql);
 				header("Location: ujian/index.php?test_id=$test_id");
 			}
 			else
 			{
 				$sql = "UPDATE `edu_token` SET `active` = false 
-				WHERE `edu_token`.`student_id` = '$auth_student_id' and `edu_token`.`token` = '$token' ";
+				WHERE `edu_token`.`student_id` = '$auth_student_id' AND `edu_token`.`token` = '$token' ";
 				$database->execute($sql);
 				header("Location: ujian/index.php?test_id=$test_id");
 			}
@@ -134,7 +134,7 @@ else if(isset($_POST['token']))
 		$now = $picoEdu->getLocalDateTime();
 		$sql = "SELECT * FROM `edu_token`
 		WHERE `student_id` = '$auth_student_id'
-		and `token` = '$token' and `active` = true and `time_expire` > '$now'
+		AND `token` = '$token' AND `active` = true AND `time_expire` > '$now'
 		";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)

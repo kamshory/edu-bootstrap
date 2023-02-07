@@ -93,7 +93,7 @@ $pagination->array_get[] = 'q';
 $sql_filter .= " and (`edu_class`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
-$sql_filter .= " and `edu_class`.`school_id` = '$school_id' ";
+$sql_filter .= " AND `edu_class`.`school_id` = '$school_id' ";
 $nt = '';
 
 

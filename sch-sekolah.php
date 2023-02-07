@@ -15,7 +15,7 @@ if(!empty(@$page_school_id)) {
 	(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id` group by `edu_student`.`school_id` limit 0,1) as `num_student`
 	FROM `edu_school` 
 	where 1
-	and `edu_school`.`school_id` = '$page_school_id'
+	AND `edu_school`.`school_id` = '$page_school_id'
 	";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
@@ -53,18 +53,18 @@ if(!empty(@$page_school_id)) {
 				$admin_create = $admin_edit = $admin_id;
 				$sql = "UPDATE `edu_student` SET 
 					`reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit'
-					WHERE `student_id` = '$student_id' and `school_id` = '$school_id' ";
+					WHERE `student_id` = '$student_id' AND `school_id` = '$school_id' ";
 					$database->execute($sql);
 				if ($email != '') {
 					$sql = "UPDATE `edu_student` SET 
 					`email` = '$email'
-					WHERE `student_id` = '$student_id' and `school_id` = '$school_id' ";
+					WHERE `student_id` = '$student_id' AND `school_id` = '$school_id' ";
 					$database->execute($sql);
 				}
 				if ($password != '') {
 					$sql = "UPDATE `edu_student` SET 
 					`password` = md5(md5('$password')), `password_initial` = ''
-					WHERE `student_id` = '$student_id' and `school_id` = '$school_id' ";
+					WHERE `student_id` = '$student_id' AND `school_id` = '$school_id' ";
 					$database->execute($sql);
 					$sql = "UPDATE `member` SET 
 					`password` = md5(md5('$password'))
@@ -84,7 +84,7 @@ if(!empty(@$page_school_id)) {
 				$sql = "SELECT `edu_student`.* 
 					FROM `edu_student` 
 					WHERE `edu_student`.`school_id` = '$school_id'
-					and `edu_student`.`student_id` = '$student_id'
+					AND `edu_student`.`student_id` = '$student_id'
 					";
 				$stmt = $database->executeQuery($sql);
 				if ($stmt->rowCount() > 0) {
@@ -158,7 +158,7 @@ if(!empty(@$page_school_id)) {
 					FROM `edu_student` 
 					left join(`edu_school`) on(`edu_school`.`school_id` = `edu_student`.`school_id`)
 					WHERE `edu_student`.`school_id` = '$school_id'
-					and `edu_student`.`student_id` = '$student_id'
+					AND `edu_student`.`student_id` = '$student_id'
 					";
 					$stmt = $database->executeQuery($sql);
 					if ($stmt->rowCount() > 0) {
@@ -330,7 +330,7 @@ if(!empty(@$page_school_id)) {
 				(select `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
 				(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
 				FROM `edu_class`
-				WHERE `edu_class`.`active` = true and `edu_class`.`school_id` = '$page_school_id'
+				WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$page_school_id'
 				ORDER BY `edu_class`.`grade_id` asc, `edu_class`.`sort_order` asc
 				";
 			$stmt = $database->executeQuery($sql);
@@ -413,9 +413,9 @@ if(!empty(@$page_school_id)) {
 			} else {
 				$sql = "SELECT `edu_school`.*, 
 					(select count(distinct `edu_student`.`student_id`) FROM `edu_student`
-					WHERE `edu_student`.`school_id` = `edu_school`.`school_id` and `edu_student`.`gender` = 'M') as `M`,
+					WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'M') as `M`,
 					(select count(distinct `edu_student`.`student_id`) FROM `edu_student`
-					WHERE `edu_student`.`school_id` = `edu_school`.`school_id` and `edu_student`.`gender` = 'W') as `W`
+					WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'W') as `W`
 					FROM `edu_school`
 					WHERE `edu_school`.`school_id` = '$page_school_id' 
 					";
@@ -451,7 +451,7 @@ if(!empty(@$page_school_id)) {
 			include_once dirname(__FILE__) . "/lib.assets/theme/default/header-sekolah.php"; //NOSONAR
 			$sql = "SELECT `edu_teacher`.*
 				FROM `edu_teacher`
-				WHERE `edu_teacher`.`active` = true and `edu_teacher`.`school_id` = '$page_school_id'
+				WHERE `edu_teacher`.`active` = true AND `edu_teacher`.`school_id` = '$page_school_id'
 				ORDER BY `edu_teacher`.`name` asc
 				";
 			$stmt = $database->executeQuery($sql);
@@ -500,7 +500,7 @@ if(!empty(@$page_school_id)) {
 				$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 					FROM `edu_article` 
 					left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
-					WHERE `edu_article`.`article_id` = '$article_id' and `edu_article`.`school_id` = '$page_school_id' and `edu_article`.`active` = true ";
+					WHERE `edu_article`.`article_id` = '$article_id' AND `edu_article`.`school_id` = '$page_school_id' AND `edu_article`.`active` = true ";
 					$stmt = $database->executeQuery($sql);
 					if ($stmt->rowCount() > 0) {
 						$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -531,7 +531,7 @@ if(!empty(@$page_school_id)) {
 				$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
 					FROM `edu_article` 
 					left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
-					WHERE `edu_article`.`active` = true and `edu_article`.`school_id` = '$page_school_id'
+					WHERE `edu_article`.`active` = true AND `edu_article`.`school_id` = '$page_school_id'
 					ORDER BY `edu_article`.`article_id` desc
 					";
 				$stmt = $database->executeQuery($sql);
@@ -619,7 +619,7 @@ if(!empty(@$page_school_id)) {
 
 			$sql = "SELECT `edu_test`.*
 				FROM `edu_test`
-				WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$page_school_id' 
+				WHERE `edu_test`.`active` = true AND `edu_test`.`school_id` = '$page_school_id' 
 				ORDER BY `edu_test`.`test_id` desc
 				";
 			$stmt = $database->executeQuery($sql);

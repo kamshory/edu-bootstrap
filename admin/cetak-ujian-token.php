@@ -102,7 +102,7 @@ h3{
 FROM `edu_token` 
 inner join(`edu_student`) on (`edu_student`.`student_id` = `edu_token`.`student_id`)
 WHERE `edu_token`.`school_id` = '$school_id' 
-and `edu_token`.`token_id` in ($tokens)
+AND `edu_token`.`token_id` in ($tokens)
 ORDER BY `edu_student`.`reg_number` asc ";
     $stmt = $database->executeQuery($sql);
     if ($stmt->rowCount() > 0) {

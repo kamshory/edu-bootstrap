@@ -432,7 +432,7 @@ else if(isset($_GET['info_id']))
 {
 	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
-	$sql_filter_info = " and `edu_info`.`info_id` = '$info_id' ";
+	$sql_filter_info = " AND `edu_info`.`info_id` = '$info_id' ";
 
 	$sql = "SELECT `edu_info`.*, `member`.`name` as `creator`
 	FROM `edu_info` 

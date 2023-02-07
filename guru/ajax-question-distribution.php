@@ -17,7 +17,7 @@ if(isset($_POST['save']) && isset($_POST['test_id']) && isset($_POST['data']))
 			$data = json_encode($try);
 			$data = addslashes($data);
 			$sql = "UPDATE `edu_test` SET `random_distribution` = '$data'
-			WHERE `test_id` = '$test_id' and `teacher_id` = '$teacher_id'
+			WHERE `test_id` = '$test_id' AND `teacher_id` = '$teacher_id'
 			";
 			$database->executeUpdate($sql, true);
 		}
@@ -35,7 +35,7 @@ else
 		$randobj = array();
 		$sql = "SELECT `edu_test`.`random_distribution`
 		FROM `edu_test`
-		WHERE `edu_test`.`test_id` = '$test_id' and `edu_test`.`teacher_id` = '$teacher_id'
+		WHERE `edu_test`.`test_id` = '$test_id' AND `edu_test`.`teacher_id` = '$teacher_id'
 		";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)

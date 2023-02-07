@@ -9,8 +9,8 @@ if(@$_POST['option'] == 'delete')
 {
 	$sql = "DELETE FROM `edu_article` 
 	WHERE `article_id` = '$article_id' 
-	and `school_id` = '$school_id' 
-	and `member_create` = '$auth_teacher_id' 
+	AND `school_id` = '$school_id' 
+	AND `member_create` = '$auth_teacher_id' 
 	";
 	$database->executeDelete($sql, true);
 }

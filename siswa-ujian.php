@@ -16,7 +16,7 @@ if(@$_GET['option'] == 'login')
 	exit();
 }
 
-$school_id = @$school_id . '';
+
 
 if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 {
@@ -88,7 +88,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 	$answer_str = addslashes(implode(",", $answer_arr)); // catatan answer
 	if($data['has_limits'])
 	{
-		$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' ";
+		$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' AND `test_id` = '$test_id' ";
 		$nujian = $database->executeQuery($sql)->rowCount();
 		if($nujian < $data['trial_limits'])
 		{
@@ -141,7 +141,7 @@ $sql_filter .= "
 	and (
 	`edu_test`.`open` = '1'
 	or (
-		((`edu_test`.`class` = '' or `edu_test`.`class` = '||')))
+		((`edu_test`.`class` = '' OR `edu_test`.`class` = '||')))
 	or (concat(',',`edu_test`.`class`,',') like '%,$class_id,%')
 	)
 ";
@@ -151,9 +151,9 @@ $now = $picoEdu->getLocalDateTime();
 $sql = "SELECT `edu_test`.*  
 FROM `edu_test` 
 WHERE `edu_test`.`active` = true
-and `edu_test`.`test_id` = '$test_id' 
-and (`edu_test`.`test_availability` = 'F' or `edu_test`.`available_to` >= '$now')
-and `edu_test`.`school_id` = '$school_id'
+AND `edu_test`.`test_id` = '$test_id' 
+and (`edu_test`.`test_availability` = 'F' OR `edu_test`.`available_to` >= '$now')
+AND `edu_test`.`school_id` = '$school_id'
 $sql_filter
 ";
 $stmt = $database->executeQuery($sql);
@@ -192,7 +192,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="info">
 <?php
-$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' ORDER BY `start` desc ";
+$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' AND `test_id` = '$test_id' ORDER BY `start` desc ";
 $stmt = $database->executeQuery($sql);
 $ntest = $stmt->rowCount();
 if($ntest > 0)
@@ -221,7 +221,7 @@ else if(@$_GET['login-to-test'])
 $dur_obj = $picoEdu->secondsToTime($data['duration']);
 if($data['has_limits'])
 {
-	$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' ORDER BY `start` desc ";
+	$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' AND `test_id` = '$test_id' ORDER BY `start` desc ";
 	$stmt = $database->executeQuery($sql);
 	$ntest = $stmt->rowCount();
 	if($ntest < $data['trial_limits'])

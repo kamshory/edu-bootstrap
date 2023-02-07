@@ -20,7 +20,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		$sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, `edu_answer`.`start`, `edu_answer`.`end`
 		FROM `edu_answer`
 		inner join (`edu_test`) on (`edu_test`.`test_id` = `edu_answer`.`test_id`)
-		WHERE `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$student_id'
+		WHERE `edu_answer`.`answer_id` = '$answer_id' AND `edu_answer`.`student_id` = '$student_id'
 		";
 		$stmt = $database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
@@ -90,7 +90,7 @@ if (@$auth_student_id && @$auth_school_id) {
 			FROM `edu_question` 
 			left join (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
 			left join (`edu_test`) on (`edu_test`.`test_id` = `edu_question`.`test_id`)
-			WHERE `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$student_id'
+			WHERE `edu_answer`.`answer_id` = '$answer_id' AND `edu_answer`.`student_id` = '$student_id'
 			group by `edu_question`.`question_id` 
 			ORDER BY `pos` asc ";
 			$stmt = $database->executeQuery($sql);
@@ -171,7 +171,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 		$sql = "SELECT `edu_answer`.*
 		FROM `edu_answer`
-		WHERE `edu_answer`.`student_id` = '$student_id' and `edu_answer`.`test_id` = '$test_id' 
+		WHERE `edu_answer`.`student_id` = '$student_id' AND `edu_answer`.`test_id` = '$test_id' 
 		ORDER BY `edu_answer`.`start` asc
 		";
 		$stmt = $database->executeQuery($sql);
@@ -246,7 +246,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`
 		FROM `edu_test` 
 		where 1
-		and `edu_test`.`test_id` = '$test_id' and `edu_test`.`school_id` = '$school_id'
+		AND `edu_test`.`test_id` = '$test_id' AND `edu_test`.`school_id` = '$school_id'
 		";
 		$stmt = $database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
@@ -552,14 +552,14 @@ if (@$auth_student_id && @$auth_school_id) {
 
 			$sql = "SELECT `edu_test`.* $nt,
 			(select count(distinct `edu_answer`.`answer_id`) FROM `edu_answer` 
-			WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` and `edu_answer`.`student_id` = '$student_id') as `ntest`
+			WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` AND `edu_answer`.`student_id` = '$student_id') as `ntest`
 			FROM `edu_test`
-			WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
+			WHERE `edu_test`.`active` = true AND `edu_test`.`school_id` = '$school_id' $sql_filter
 			ORDER BY `edu_test`.`test_id` desc
 			";
 			$sql_test = "SELECT `edu_test`.*
 			FROM `edu_test`
-			WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
+			WHERE `edu_test`.`active` = true AND `edu_test`.`school_id` = '$school_id' $sql_filter
 			";
 
 			$stmt = $database->executeQuery($sql_test);
@@ -722,12 +722,12 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 
 		$sql = "SELECT `edu_test`.* $nt
 		FROM `edu_test`
-		WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+		WHERE `edu_test`.`active` = true AND `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 		ORDER BY `edu_test`.`test_id` desc
 		";
 		$sql_test = "SELECT `edu_test`.*
 		FROM `edu_test`
-		WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+		WHERE `edu_test`.`active` = true AND `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 		";
 
 		$stmt = $database->executeQuery($sql_test);
@@ -883,12 +883,12 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 
 		$sql = "SELECT `edu_test`.* $nt
 		FROM `edu_test`
-		WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
+		WHERE `edu_test`.`active` = true AND `edu_test`.`school_id` = '$school_id' $sql_filter
 		ORDER BY `edu_test`.`test_id` desc
 		";
 		$sql_test = "SELECT `edu_test`.*
 		FROM `edu_test`
-		WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
+		WHERE `edu_test`.`active` = true AND `edu_test`.`school_id` = '$school_id' $sql_filter
 		";
 		$stmt = $database->executeQuery($sql_test);
 		$pagination->total_record = $stmt->rowCount();

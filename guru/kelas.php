@@ -15,8 +15,8 @@ $nt = '';
 $sql = "SELECT `edu_class`.* $nt,
 (select `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`
 FROM `edu_class` 
-WHERE `edu_class`.`active` = true and `edu_class`.`school_id` = '$school_id'
-and `edu_class`.`class_id` = '$edit_key'
+WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id'
+AND `edu_class`.`class_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -104,7 +104,7 @@ ORDER BY `edu_class`.`school_id` desc, `edu_school_program`.`sort_order` asc, `e
 
 $sql_test = "SELECT `edu_class`.*
 FROM `edu_class`
-WHERE `edu_class`.`active` = true and `edu_class`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

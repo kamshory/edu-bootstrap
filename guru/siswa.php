@@ -18,7 +18,7 @@ $sql = "SELECT `edu_student`.* , `edu_school_program`.`name` as `school_program_
 FROM `edu_student` 
 left join (`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
 left join (`edu_school_program`) on(`edu_school_program`.`school_program_id` = `edu_class`.`school_program_id`)
-WHERE `edu_student`.`student_id` = '$edit_key' and `edu_student`.`school_id` = '$school_id'
+WHERE `edu_student`.`student_id` = '$edit_key' AND `edu_student`.`school_id` = '$school_id'
 group by `edu_student`.`student_id`
 ";
 $stmt = $database->executeQuery($sql);
@@ -173,7 +173,7 @@ $(document).ready(function(e) {
   <select class="form-control input-select" name="class_id" id="class_id">
     <option value="">- Pilih Kelas -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true and `school_id` = '$school_id' ORDER BY `sort_order` asc ";
+    $sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` asc ";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -207,7 +207,7 @@ $sql_filter = "";
 $pagination->array_get = array();
 if($pagination->query){
 $pagination->array_get[] = 'q';
-$sql_filter .= " and (`edu_student`.`name` like '%".addslashes($pagination->query)."%' or `edu_student`.`reg_number` like '".addslashes($pagination->query)."' or `edu_student`.`reg_number_national` like '".addslashes($pagination->query)."')";
+$sql_filter .= " and (`edu_student`.`name` like '%".addslashes($pagination->query)."%' OR `edu_student`.`reg_number` like '".addslashes($pagination->query)."' OR `edu_student`.`reg_number_national` like '".addslashes($pagination->query)."')";
 }
 if($class_id != 0)
 {
@@ -221,12 +221,12 @@ $nt = '';
 $sql = "SELECT `edu_student`.* , `edu_class`.`name` as `class_id`, `edu_class`.`sort_order` as `sort_order`
 FROM `edu_student`
 left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
-WHERE `edu_student`.`active` = true and `edu_student`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_student`.`active` = true AND `edu_student`.`school_id` = '$school_id' $sql_filter
 ORDER BY `sort_order` asc, `edu_student`.`name` asc
 ";
 $sql_test = "SELECT `edu_student`.*
 FROM `edu_student`
-WHERE `edu_student`.`active` = true and `edu_student`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_student`.`active` = true AND `edu_student`.`school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

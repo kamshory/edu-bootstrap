@@ -10,7 +10,7 @@
   // Baseline setup
   // --------------
 
-  // Establish the root object, `window` in the browser, or `exports` on the server.
+  // Establish the root object, `window` in the browser, OR `exports` on the server.
   var root = this;
 
   // Save the previous value of the `_` variable.
@@ -107,7 +107,7 @@
   var reduceError = 'Reduce of empty array with no initial value';
 
   // **Reduce** builds up a single result from a list of values, aka `inject`,
-  // or `foldl`. Delegates to **ECMAScript 5**'s native `reduce` if available.
+  // OR `foldl`. Delegates to **ECMAScript 5**'s native `reduce` if available.
   _.reduce = _.foldl = _.inject = function(obj, iterator, memo, context) {
     var initial = arguments.length > 2;
     if (obj == null) obj = [];
@@ -399,7 +399,7 @@
   // ---------------
 
   // Get the first element of an array. Passing **n** will return the first N
-  // values in the array. Aliased as `head` and `take`. The **guard** check
+  // values in the array. Aliased as `head` AND `take`. The **guard** check
   // allows it to work with `_.map`.
   _.first = _.head = _.take = function(array, n, guard) {
     if (array == null) return void 0;
@@ -424,7 +424,7 @@
     return slice.call(array, Math.max(array.length - n, 0));
   };
 
-  // Returns everything but the first entry of the array. Aliased as `tail` and `drop`.
+  // Returns everything but the first entry of the array. Aliased as `tail` AND `drop`.
   // Especially useful on the arguments object. Passing an **n** will return
   // the rest N values in the array. The **guard**
   // check allows it to work with `_.map`.

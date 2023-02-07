@@ -17,7 +17,7 @@ if(@$_GET['option'] == 'delete')
 {
 	$question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);
 	$digest = kh_filter_input(INPUT_GET, "digest", FILTER_SANITIZE_STRING_NEW_BASE64);
-	$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' and `digest` = '$digest' ";
+	$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' AND `digest` = '$digest' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -173,11 +173,11 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 				$option = addslashes(removeparagraphtag(extractImageData($option, $direktori, $prefiks, $fileSync)));
 
 				$score = kh_filter_input(INPUT_POST, "score_" . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
-				$sql = "UPDATE `edu_option` SET `content` = '$option', `score` = '$score' WHERE `question_id` = '$question_id' and `option_id` = '$id2' ";
+				$sql = "UPDATE `edu_option` SET `content` = '$option', `score` = '$score' WHERE `question_id` = '$question_id' AND `option_id` = '$id2' ";
 				$stmt4 = $database->executeUpdate($sql, true);
 				if ($stmt4->rowCount() > 0) {
 					$sql = "UPDATE `edu_option` SET `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
-					WHERE `question_id` = '$question_id' and `option_id` = '$id2' ";
+					WHERE `question_id` = '$question_id' AND `option_id` = '$id2' ";
 					$database->executeUpdate($sql, true);
 				}
 			}

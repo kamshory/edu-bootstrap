@@ -26,7 +26,7 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
   }
 
   // Should characters that affect highlighting be highlighted separate?
-  // Does not include characters that will be output (such as `1.` and `-` for lists)
+  // Does not include characters that will be output (such as `1.` AND `-` for lists)
   if (modeCfg.highlightFormatting === undefined)
     modeCfg.highlightFormatting = false;
 
@@ -273,7 +273,7 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
           styles.push(tokenTypes.formatting + "-" + state.formatting[i] + "-" + state.header);
         }
 
-        // Add `formatting-quote` and `formatting-quote-#` for blockquotes
+        // Add `formatting-quote` AND `formatting-quote-#` for blockquotes
         // Add `error` instead if the maximum blockquote nesting depth is passed
         if (state.formatting[i] === "quote") {
           if (!modeCfg.maxBlockquoteDepth || modeCfg.maxBlockquoteDepth >= state.quote) {

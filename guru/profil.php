@@ -22,20 +22,20 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	`reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', 
 	`birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', 
 	`time_edit` = '$time_edit', `ip_edit` = '$ip_edit'
-	WHERE `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+	WHERE `teacher_id` = '$teacher_id' AND `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	if($email != '')
 	{
 		$sql = "UPDATE `edu_teacher` SET 
 		`email` = '$email'
-		WHERE `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+		WHERE `teacher_id` = '$teacher_id' AND `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
 		$sql = "UPDATE `edu_teacher` SET 
 		`password` = md5(md5('$password')), `password_initial` = ''
-		WHERE `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+		WHERE `teacher_id` = '$teacher_id' AND `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 		$sql = "UPDATE `member` SET 
 		`password` = md5(md5('$password'))
@@ -52,7 +52,7 @@ $sql = "SELECT `edu_teacher`.* , `edu_school`.`name` as `school_name`
 FROM `edu_teacher` 
 left join(`edu_school`) on(`edu_school`.`school_id` = `edu_teacher`.`school_id`)
 WHERE `edu_teacher`.`school_id` = '$school_id'
-and `edu_teacher`.`teacher_id` = '$teacher_id'
+AND `edu_teacher`.`teacher_id` = '$teacher_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -133,7 +133,7 @@ $sql = "SELECT `edu_teacher`.* , `edu_school`.`name` as `school_name`
 FROM `edu_teacher` 
 left join(`edu_school`) on(`edu_school`.`school_id` = `edu_teacher`.`school_id`)
 WHERE `edu_teacher`.`school_id` = '$school_id'
-and `edu_teacher`.`teacher_id` = '$teacher_id'
+AND `edu_teacher`.`teacher_id` = '$teacher_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

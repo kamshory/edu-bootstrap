@@ -46,7 +46,7 @@ if(isset($_POST['set_active']) && isset($_POST['admin_id']))
 		$val = addslashes($val);
 		if($val != $admin_login->admin_id)
 		{
-			$sql = "UPDATE `edu_admin` SET `active` = true WHERE `admin_id` = '$val' and `school_id` = '$school_id'";
+			$sql = "UPDATE `edu_admin` SET `active` = true WHERE `admin_id` = '$val' AND `school_id` = '$school_id'";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -60,7 +60,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['admin_id']))
 		if($val != $admin_login->admin_id)
 		{
 			$val = addslashes($val);
-			$sql = "UPDATE `edu_admin` SET `active` = false WHERE `admin_id` = '$val' and `school_id` = '$school_id'";
+			$sql = "UPDATE `edu_admin` SET `active` = false WHERE `admin_id` = '$val' AND `school_id` = '$school_id'";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -74,9 +74,9 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 		if($val != $admin_login->admin_id)
 		{
 			$val = addslashes($val);
-			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$val' and `role` = 'A' and `school_id` = '$school_id' ";
+			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$val' AND `role` = 'A' AND `school_id` = '$school_id' ";
 			$database->executeDelete($sql, true);
-			$sql = "UPDATE `edu_admin` SET `school_id` = '' WHERE `admin_id` = '$val' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_admin` SET `school_id` = '' WHERE `admin_id` = '$val' AND `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -144,22 +144,22 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$sql = "UPDATE `edu_admin` SET 
 	`name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', 
 	`time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
-	WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
+	WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' OR `admin_id` = '$my_admin') ";
 	$database->executeUpdate($sql, true);
 	
 	$sql = "UPDATE `edu_admin` SET 
-	`email` = '$email' WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
+	`email` = '$email' WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' OR `admin_id` = '$my_admin') ";
 	$database->executeUpdate($sql, true);
 	
 	$sql = "UPDATE `edu_admin` SET 
-	`phone` = '$phone' WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
+	`phone` = '$phone' WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' OR `admin_id` = '$my_admin') ";
 	$database->executeUpdate($sql, true);
 
 	if($username != '')
 	{
 		$sql = "UPDATE `edu_admin` SET 
 		`username` = '$username'
-		WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
+		WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' OR `admin_id` = '$my_admin') ";
 		$database->executeUpdate($sql, true);
 	}
 	
@@ -167,7 +167,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	{
 		$sql = "UPDATE `edu_admin` SET 
 		`password` = md5(md5('$password'))
-		WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
+		WHERE `admin_id` = '$admin_id2' and (`admin_level` != '1' OR `admin_id` = '$my_admin') ";
 		$database->executeUpdate($sql, true);
 	}
 	
@@ -249,9 +249,9 @@ $edit_key = kh_filter_input(INPUT_GET, "admin_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_admin`.* 
 FROM `edu_admin` 
 where 1=1 
-and `edu_admin`.`school_id` = '$school_id' 
-and `edu_admin`.`admin_id` = '$edit_key' 
-and (`admin_level` != '1' or `admin_id` = '$my_admin')
+AND `edu_admin`.`school_id` = '$school_id' 
+AND `edu_admin`.`admin_id` = '$edit_key' 
+and (`admin_level` != '1' OR `admin_id` = '$my_admin')
 ";
 
 $stmt = $database->executeQuery($sql);
@@ -339,7 +339,7 @@ else if(@$_GET['option'] == 'detail')
 	(select `edu_admin2`.`name` FROM `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
 	FROM `edu_admin` 
 	WHERE `edu_admin`.`school_id` = '$school_id' 
-	and `edu_admin`.`admin_id` = '$edit_key' and (`admin_level` != '1' or `admin_id` = '$my_admin') 
+	AND `edu_admin`.`admin_id` = '$edit_key' and (`admin_level` != '1' OR `admin_id` = '$my_admin') 
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -456,7 +456,7 @@ else
 		$pagination->array_get[] = 'q';
 		$sql_filter .= " and (`edu_admin`.`name` like '%".addslashes($pagination->query)."%' )";
 	}
-	$sql_filter .= " and (`admin_level` != '1' or `admin_id` = '$my_admin') ";
+	$sql_filter .= " and (`admin_level` != '1' OR `admin_id` = '$my_admin') ";
 
 	$nt = '';
 

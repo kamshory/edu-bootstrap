@@ -38,7 +38,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['token_id']))
 		foreach($tokens as $key=>$val)
 		{
 			$token_id = addslashes($val);
-			$sql = "UPDATE `edu_token` SET `active` = false WHERE `token_id` = '$token_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_token` SET `active` = false WHERE `token_id` = '$token_id' AND `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -60,7 +60,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		if($student_id == 0)
 		{
 			// membuat token untuk semua siswa
-			$sql = "SELECT `student_id` FROM `edu_student` WHERE `class_id` = '$class_id' and `active` = true
+			$sql = "SELECT `student_id` FROM `edu_student` WHERE `class_id` = '$class_id' AND `active` = true
 			";
 			$stmt = $database->executeQuery($sql);
 			$students = array();
@@ -178,7 +178,7 @@ $(document).ready(function(e) {
 		<?php 
 		$sql2 = "SELECT * FROM `edu_test`
 		WHERE `school_id` = '$school_id'
-		and (`test_availability` = 'F' or `available_to` > '$now')
+		and (`test_availability` = 'F' OR `available_to` > '$now')
 		ORDER BY `test_id` desc
 		";
 		echo $picoEdu->createFilterDb(
@@ -208,7 +208,7 @@ $(document).ready(function(e) {
 		<option value="">- Pilih Kelas -</option>
 		<?php 
 		$sql2 = "SELECT * FROM `edu_class`
-		WHERE `active` = true and `school_id` = '$school_id'
+		WHERE `active` = true AND `school_id` = '$school_id'
 		ORDER BY `sort_order` asc
 		";
 		echo $picoEdu->createFilterDb(
@@ -270,7 +270,7 @@ $sql = "SELECT `edu_token`.* $nt,
 (select `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
 FROM `edu_token` 
 WHERE `school_id` = '$school_id'
-and `edu_token`.`token_id` = '$edit_key'
+AND `edu_token`.`token_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -393,7 +393,7 @@ function printToken(frm)
     <?php
 	$sql2 = "SELECT * FROM `edu_test`
 	WHERE `school_id` = '$school_id'
-	and (`test_availability` = 'F' or `available_to` > '$now')
+	and (`test_availability` = 'F' OR `available_to` > '$now')
 	ORDER BY `test_id` desc
 	";
 	echo $picoEdu->createFilterDb(
@@ -421,7 +421,7 @@ function printToken(frm)
 	<option value=""></option>
     <?php
 	$sql2 = "SELECT * FROM `edu_class`
-	WHERE `active` = true and `school_id` = '$school_id'
+	WHERE `active` = true AND `school_id` = '$school_id'
 	ORDER BY `sort_order` asc
 	";
 	echo $picoEdu->createFilterDb(
@@ -462,18 +462,18 @@ $sql_filter .= " and (`edu_token`.`token` like '%".addslashes($pagination->query
 if($class_id != 0)
 {
 $pagination->array_get[] = 'class_id';
-$sql_filter .= " and `edu_token`.`class_id` = '$class_id' ";
+$sql_filter .= " AND `edu_token`.`class_id` = '$class_id' ";
 }
 if($test_id != 0)
 {
 $pagination->array_get[] = 'test_id';
-$sql_filter .= " and `edu_token`.`test_id` = '$test_id' ";
+$sql_filter .= " AND `edu_token`.`test_id` = '$test_id' ";
 }
 if($test_id == 0 && $class_id == 0)
 {
 	$pagination->limit_sql = "";
 }
-$sql_filter .= " and `edu_token`.`active` = true ";
+$sql_filter .= " AND `edu_token`.`active` = true ";
 $nt = '';
 
 $sql = "SELECT `edu_token`.* $nt,

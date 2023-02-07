@@ -15,7 +15,7 @@ if(@$_GET['option'] == 'delete')
 {
 	$question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);
 	$digest = kh_filter_input(INPUT_GET, "digest", FILTER_SANITIZE_STRING_NEW_BASE64);
-	$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' and `digest` = '$digest' ";
+	$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' AND `digest` = '$digest' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -161,7 +161,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$time_edit = $picoEdu->getLocalDateTime();
 		
 		$digest = md5($question);
-		$sql = "SELECT * FROM `edu_question` WHERE `digest` = '$digest' and `test_id` = '$test_id' ";
+		$sql = "SELECT * FROM `edu_question` WHERE `digest` = '$digest' AND `test_id` = '$test_id' ";
 		$stmt2 = $database->executeQuery($sql);
 		if($stmt2->rowCount() == 0)
 		{
@@ -261,12 +261,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 				$option = $picoEdu->brToNewLineEncoded($option);
 
 				$score = kh_filter_input(INPUT_POST, "score_" . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
-				$sql = "UPDATE `edu_option` SET `content` = '$option', `score` = '$score' WHERE `question_id` = '$question_id' and `option_id` = '$id2'";
+				$sql = "UPDATE `edu_option` SET `content` = '$option', `score` = '$score' WHERE `question_id` = '$question_id' AND `option_id` = '$id2'";
 				$stmt4 = $database->executeQuery($sql);
 				if ($stmt4->rowCount() > 0) 
 				{
 					$sql = "UPDATE `edu_option` SET `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
-					WHERE `question_id` = '$question_id' and `option_id` = '$id2'";
+					WHERE `question_id` = '$question_id' AND `option_id` = '$id2'";
 					$database->executeUpdate($sql, true);
 				}
 			}
@@ -1240,12 +1240,12 @@ $sql = "SELECT `edu_test`.* $nt,
 (select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
 (select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
 FROM `edu_test`
-WHERE `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+WHERE `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 ORDER BY `edu_test`.`test_id` desc
 ";
 $sql_test = "SELECT `edu_test`.`test_id`
 FROM `edu_test`
-WHERE `edu_test`.`school_id` = '$school_id' and `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
+WHERE `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 ";
 
 $stmt = $database->executeQuery($sql_test);

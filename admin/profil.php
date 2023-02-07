@@ -44,7 +44,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	{
 		$sql = "UPDATE `edu_admin` SET 
 		`password` = md5(md5('$password'))
-		WHERE `admint_id` = '$admin_id' and `school_id` = '$school_id' ";
+		WHERE `admint_id` = '$admin_id' AND `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 		$_SESSION['password'] = md5($password);
 	}

@@ -34,17 +34,17 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	$sql = "SELECT `username`, `student_id`
 	FROM `edu_student`
 	where (
-		(`email` like '$email' and `email` != '')
+		(`email` like '$email' AND `email` != '')
 		or 
-		(`reg_number` like '$reg_number' and `reg_number` != '')
+		(`reg_number` like '$reg_number' AND `reg_number` != '')
 		or 
-		(`username` like '$username' and `username` != '')
+		(`username` like '$username' AND `username` != '')
 		or 
-		(`phone` like '$phone' and `phone` != '')
+		(`phone` like '$phone' AND `phone` != '')
 		) 
-		and `password` like md5('$password')
-		and `active` = true
-		and `blocked` = false
+		AND `password` like md5('$password')
+		AND `active` = true
+		AND `blocked` = false
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)

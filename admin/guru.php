@@ -45,7 +45,7 @@ if(isset($_POST['set_active']) && isset($_POST['teacher_id']))
 		foreach($teachers as $key=>$val)
 		{
 			$teacher_id = addslashes($val);
-			$sql = "UPDATE `edu_teacher` SET `active` = true WHERE `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_teacher` SET `active` = true WHERE `teacher_id` = '$teacher_id' AND `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -58,7 +58,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['teacher_id']))
 		foreach($teachers as $key=>$val)
 		{
 			$teacher_id = addslashes($val);
-			$sql = "UPDATE `edu_teacher` SET `active` = false WHERE `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_teacher` SET `active` = false WHERE `teacher_id` = '$teacher_id' AND `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -71,9 +71,9 @@ if(isset($_POST['delete']) && isset($_POST['teacher_id']))
 		foreach($teachers as $key=>$val)
 		{
 			$teacher_id = addslashes($val);
-			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$teacher_id' and `role` = 'T' and `school_id` = '$school_id' ";
+			$sql = "DELETE FROM `edu_member_school` WHERE `member_id` = '$teacher_id' AND `role` = 'T' AND `school_id` = '$school_id' ";
 			$database->executeDelete($sql, true);
-			$sql = "UPDATE `edu_teacher` SET `school_id` = '' WHERE `teacher_id` = '$teacher_id' and `school_id` = '$school_id' ";
+			$sql = "UPDATE `edu_teacher` SET `school_id` = '' WHERE `teacher_id` = '$teacher_id' AND `school_id` = '$school_id' ";
 			$database->executeUpdate($sql, true);
 		}
 	}
@@ -143,7 +143,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				$database->executeInsert($sql2, true);
 
 				$sql3 = "UPDATE `edu_teacher` SET `school_id` = '$school_id' WHERE `teacher_id` = '$teacher_id' 
-				and (`school_id` = '' or `school_id` is null)
+				and (`school_id` = '' OR `school_id` is null)
 				";
 				$database->executeUpdate($sql3, true);
 				header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&teacher_id=$teacher_id");
@@ -157,28 +157,28 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	`reg_number` = '$reg_number', `reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', 
 	`birth_place` = '$birth_place', `birth_day` = '$birth_day', `address` = '$address', `time_edit` = '$time_edit', 
 	`admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
-	WHERE `teacher_id` = '$teacher_id2' and `school_id` = '$school_id' ";
+	WHERE `teacher_id` = '$teacher_id2' AND `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	
 	if($phone != '')
 	{
 		$sql = "UPDATE `edu_teacher` SET 
 		`phone` = '$phone'
-		WHERE `teacher_id` = '$teacher_id2' and `school_id` = '$school_id' ";
+		WHERE `teacher_id` = '$teacher_id2' AND `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	if($email != '')
 	{
 		$sql = "UPDATE `edu_teacher` SET 
 		`email` = '$email'
-		WHERE `teacher_id` = '$teacher_id2' and `school_id` = '$school_id' ";
+		WHERE `teacher_id` = '$teacher_id2' AND `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
 		$sql = "UPDATE `edu_teacher` SET 
 		`password` = md5(md5('$password')), `password_initial` = '$password'
-		WHERE `teacher_id` = '$teacher_id2' and `school_id` = '$school_id' ";
+		WHERE `teacher_id` = '$teacher_id2' AND `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	header("Location:".basename($_SERVER['PHP_SELF'])."?option=detail&teacher_id=$teacher_id");
@@ -264,7 +264,7 @@ $edit_key = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW)
 $sql = "SELECT `edu_teacher`.* 
 FROM `edu_teacher` 
 WHERE `edu_teacher`.`school_id` = '$school_id'
-and `edu_teacher`.`teacher_id` = '$edit_key'
+AND `edu_teacher`.`teacher_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -359,7 +359,7 @@ $sql = "SELECT `edu_teacher`.* $nt,
 (select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_teacher`.`admin_edit`) as `admin_edit`
 FROM `edu_teacher` 
 WHERE `edu_teacher`.`school_id` = '$school_id'
-and `edu_teacher`.`teacher_id` = '$edit_key'
+AND `edu_teacher`.`teacher_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

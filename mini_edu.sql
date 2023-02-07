@@ -60,16 +60,16 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `city_name_to_id` (`in_name` VARCHAR(
 declare `out_city_id` bigint default 0;
 
 
-if `in_name` = '' or `in_name` is null then
+if `in_name` = '' OR `in_name` is null then
 return null;
 end if;
 
 
 select `city`.`city_id` into `out_city_id`
-FROM `city` WHERE `city`.`name` like `in_name` and (`city`.`state_id` = `in_state_id` or `in_state_id` = '' or `in_state_id` = 0 or `in_state_id` is null) and `city`.`country_id` = `in_country_id` limit 0,1;
+FROM `city` WHERE `city`.`name` like `in_name` and (`city`.`state_id` = `in_state_id` OR `in_state_id` = '' OR `in_state_id` = 0 OR `in_state_id` is null) AND `city`.`country_id` = `in_country_id` limit 0,1;
 
 
-if `out_city_id` is null or `out_city_id` = 0 then
+if `out_city_id` is null OR `out_city_id` = 0 then
 INSERT INTO `city` 
 (`name`, `state_id`, `country_id`) VALUES
 (`in_name`, `in_state_id`, `in_country_id`);
@@ -93,7 +93,7 @@ declare `out_id` bigint default null;
 select `edu_class`.`class_id` into `out_id`
 FROM `edu_class`
 WHERE `edu_class`.`name` like `in_class`
-and `edu_class`.`school_id` = `in_school`
+AND `edu_class`.`school_id` = `in_school`
 limit 0, 1;
 
 
@@ -133,7 +133,7 @@ declare `out_id` bigint default null;
 select `edu_school_program`.`school_program_id` into `out_id`
 FROM `edu_school_program`
 WHERE `edu_school_program`.`name` like `in_school_program`
-and `edu_school_program`.`school_id` = `in_school`
+AND `edu_school_program`.`school_id` = `in_school`
 limit 0, 1;
 
 
@@ -166,13 +166,13 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `state_name_to_id` (`in_name` VARCHAR
 declare `out_state_id` bigint default 0;
 
 
-if `in_name` = '' or `in_name` is null then
+if `in_name` = '' OR `in_name` is null then
 return null;
 end if;
 
 
 select `state`.`state_id` into `out_state_id`
-FROM `state` WHERE `state`.`name` like `in_name` and `state`.`country_id` = `in_country_id` limit 0,1;
+FROM `state` WHERE `state`.`name` like `in_name` AND `state`.`country_id` = `in_country_id` limit 0,1;
 
 
 if `out_state_id` > 0 then
@@ -180,7 +180,7 @@ return `out_state_id`;
 end if;
 
 
-if `out_state_id` is null or `out_state_id` = 0 then
+if `out_state_id` is null OR `out_state_id` = 0 then
 INSERT INTO `state` 
 (`name`, `country_id`) VALUES
 (`in_name`, `in_country_id`);
@@ -1256,7 +1256,7 @@ INSERT INTO `edu_admin` (`admin_id`, `school_id`, `name`, `gender`, `birth_place
 --
 DELIMITER $$
 CREATE TRIGGER `after_delete_edu_admin` AFTER DELETE ON `edu_admin` FOR EACH ROW begin
-DELETE FROM `edu_member_school` WHERE `role` = 'A' and `member_id` = OLD.`admin_id`;
+DELETE FROM `edu_member_school` WHERE `role` = 'A' AND `member_id` = OLD.`admin_id`;
 end
 $$
 DELIMITER ;
@@ -1769,7 +1769,7 @@ INSERT INTO `edu_student` (`student_id`, `token_student`, `school_id`, `reg_numb
 --
 DELIMITER $$
 CREATE TRIGGER `after_delete_edu_student` AFTER DELETE ON `edu_student` FOR EACH ROW begin
-DELETE FROM `edu_member_school` WHERE `role` = 'S' and `member_id` = OLD.`student_id`;
+DELETE FROM `edu_member_school` WHERE `role` = 'S' AND `member_id` = OLD.`student_id`;
 end
 $$
 DELIMITER ;
@@ -1847,7 +1847,7 @@ INSERT INTO `edu_teacher` (`teacher_id`, `token_teacher`, `school_id`, `reg_numb
 --
 DELIMITER $$
 CREATE TRIGGER `after_delete_edu_teacher` AFTER DELETE ON `edu_teacher` FOR EACH ROW begin
-DELETE FROM `edu_member_school` WHERE `role` = 'T' and `member_id` = OLD.`teacher_id`;
+DELETE FROM `edu_member_school` WHERE `role` = 'T' AND `member_id` = OLD.`teacher_id`;
 end
 $$
 DELIMITER ;

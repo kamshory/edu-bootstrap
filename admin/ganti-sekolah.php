@@ -13,7 +13,7 @@ if(@$_GET['option'] == 'select')
 	$sql = "SELECT `edu_school`.* 
 	FROM `edu_member_school`
 	inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
-	WHERE `edu_member_school`.`member_id` = '$admin_id' and `edu_member_school`.`role` = 'A' 
+	WHERE `edu_member_school`.`member_id` = '$admin_id' AND `edu_member_school`.`role` = 'A' 
 	ORDER BY `edu_school`.`school_id` asc
 	";
 	$stmt = $database->executeQuery($sql);
@@ -203,13 +203,13 @@ $sql = "SELECT `edu_school`.* $nt,
 (select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
 FROM `edu_member_school`
 inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
-WHERE `edu_member_school`.`member_id` = '$admin_id' and `edu_member_school`.`role` = 'A' $sql_filter
+WHERE `edu_member_school`.`member_id` = '$admin_id' AND `edu_member_school`.`role` = 'A' $sql_filter
 ORDER BY `edu_school`.`school_id` asc
 ";
 $sql_test = "SELECT `edu_school`.*
 FROM `edu_member_school`
 inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_member_school`.`school_id`)
-WHERE `edu_member_school`.`member_id` = '$admin_id' and `edu_member_school`.`role` = 'A' $sql_filter
+WHERE `edu_member_school`.`member_id` = '$admin_id' AND `edu_member_school`.`role` = 'A' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

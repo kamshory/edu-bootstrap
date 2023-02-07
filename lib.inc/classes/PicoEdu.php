@@ -183,7 +183,7 @@ class PicoEdu //NOSONAR
 		$username = addslashes($username);
 		$sql = "SELECT `member`.* 
 			FROM `member` 
-			WHERE `name` like '$name' and `birth_day` like '$birth_day' 
+			WHERE `name` like '$name' AND `birth_day` like '$birth_day' 
 			";
 		
 		$stmt = $this->database->executeQuery($sql);
@@ -415,7 +415,7 @@ class PicoEdu //NOSONAR
 					WHERE `edu_question`.`question_id` = `edu_option`.`question_id`) as `basic_competence`,
 				`edu_option`.`score`
 				FROM `edu_option`
-				WHERE `edu_option`.`question_id` = '$question_id' and `edu_option`.`option_id` = '$option_id';
+				WHERE `edu_option`.`question_id` = '$question_id' AND `edu_option`.`option_id` = '$option_id';
 				";
 				$stmt = $this->database->executeQuery($sql2);
 				if ($stmt->rowCount() > 0) {
@@ -532,10 +532,10 @@ class PicoEdu //NOSONAR
 	}
 	public function writeprofile($school, $name, $value)
 	{
-		$sql = "SELECT * FROM `profile` WHERE `name` = '$name' and `school_id` = '$school' ";
+		$sql = "SELECT * FROM `profile` WHERE `name` = '$name' AND `school_id` = '$school' ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
-			$sql = "UPDATE `profile` SET `value` = '$value' WHERE `name` = '$name' and `school_id` = '$school'";
+			$sql = "UPDATE `profile` SET `value` = '$value' WHERE `name` = '$name' AND `school_id` = '$school'";
 		} else {
 			$profil_id = $this->database->generateNewId();
 			$sql = "INSERT INTO `profile` 
@@ -546,7 +546,7 @@ class PicoEdu //NOSONAR
 	}
 	public function getProfile($school, $name, $default = "")
 	{
-		$sql = "SELECT * FROM `profile` WHERE `name` = '$name' and `school_id` = '$school' ";
+		$sql = "SELECT * FROM `profile` WHERE `name` = '$name' AND `school_id` = '$school' ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -557,12 +557,12 @@ class PicoEdu //NOSONAR
 	}
 	public function deleteProfile($school, $name)
 	{
-		$sql = "DELETE FROM `profile` WHERE `name` = '$name' and `school_id` = '$school' ";
+		$sql = "DELETE FROM `profile` WHERE `name` = '$name' AND `school_id` = '$school' ";
 		$this->database->executeDelete($sql, true);
 	}
 	public function getApplicationVersion()
 	{
-		$sql = "SELECT `version_id` FROM `version` WHERE `active` = true and `current_version` = '1' ";
+		$sql = "SELECT `version_id` FROM `version` WHERE `active` = true AND `current_version` = '1' ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -606,7 +606,7 @@ class PicoEdu //NOSONAR
 		$start_time = date(PicoConst::DATE_TIME_MYSQL, strtotime($time) - $time_limit);
 
 		$sql = "DELETE FROM `edu_invalid_signin` 
-		WHERE `member_id` = '$member_id' and `signin_type` = '$signin_type' and `signin_time` < '$start_time'
+		WHERE `member_id` = '$member_id' AND `signin_type` = '$signin_type' AND `signin_time` < '$start_time'
 		";
 		$this->database->executeDelete($sql, true);
 
@@ -618,7 +618,7 @@ class PicoEdu //NOSONAR
 
 		$sql = "SELECT * 
 		FROM `edu_invalid_signin` 
-		WHERE `member_id` = '$member_id' and `signin_type` = '$signin_type' and `signin_time` >= '$start_time'
+		WHERE `member_id` = '$member_id' AND `signin_type` = '$signin_type' AND `signin_time` >= '$start_time'
 		";
 		$stmt = $this->database->executeQuery($sql);
 
@@ -649,7 +649,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT * FROM `edu_student` 
 		WHERE `school_id` = '$school_id' 
-		and (`reg_number` like '$reg_number' and `reg_number` != '') ";
+		and (`reg_number` like '$reg_number' AND `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
 		return $stmt->rowCount() > 0;
 	}
@@ -657,7 +657,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT * FROM `edu_teacher` 
 		WHERE `school_id` = '$school_id' 
-		and (`reg_number` like '$reg_number' and `reg_number` != '') ";
+		and (`reg_number` like '$reg_number' AND `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
 		return $stmt->rowCount() > 0;
 	}
@@ -682,7 +682,7 @@ class PicoEdu //NOSONAR
 						WHERE `edu_question`.`question_id` = `edu_option`.`question_id`) as `basic_competence`,
 					`edu_option`.`score`
 					FROM `edu_option`
-					WHERE `edu_option`.`question_id` = '$question_id' and `edu_option`.`option_id` = '$option_id';
+					WHERE `edu_option`.`question_id` = '$question_id' AND `edu_option`.`option_id` = '$option_id';
 					";
 					$stmt2 = $this->database->executeQuery($sql2);
 					if ($stmt2->rowCount() > 0) {
@@ -759,7 +759,7 @@ class PicoEdu //NOSONAR
 	public function logoutTest($school_id, $student_id, $test_id, $sessions_id, $time, $ip)
 	{
 		$sql = "UPDATE `edu_test_member` SET `time_exit` = '$time', `ip_exit` = '$ip', `status` = '2'
-		WHERE `school_id` = '$school_id' and `student_id` = '$student_id' and `test_id` = '$test_id' and `sessions_id` = '$sessions_id'
+		WHERE `school_id` = '$school_id' AND `student_id` = '$student_id' AND `test_id` = '$test_id' AND `sessions_id` = '$sessions_id'
 		";
 		$this->database->executeUpdate($sql, true);
 	}
@@ -1023,7 +1023,7 @@ class PicoEdu //NOSONAR
 		$sql = "SELECT `edu_school_program`.`school_program_id` 
 		FROM `edu_school_program`
 		WHERE `edu_school_program`.`name` like '$school_program'
-		and `edu_school_program`.`school_id` = '$school_id'
+		AND `edu_school_program`.`school_id` = '$school_id'
 		limit 0, 1";
 
 		$stmt = $this->database->executeQuery($sql);
@@ -1058,7 +1058,7 @@ class PicoEdu //NOSONAR
 		$sql = "SELECT `edu_class`.`class_id` 
 		FROM `edu_class`
 		WHERE `edu_class`.`name` like '$class'
-		and `edu_class`.`school_id` = '$school_id'
+		AND `edu_class`.`school_id` = '$school_id'
 		limit 0, 1";
 
 		$stmt = $this->database->executeQuery($sql);
