@@ -7,7 +7,7 @@ if(empty(@$school_id))
 }
 $edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
-$sql = "SELECT `edu_school`.*, `edu_school`.`name` as `school_name`
+$sql = "SELECT `edu_school`.*, `edu_school`.`name` AS `school_name`
 FROM `edu_school` 
 WHERE `edu_school`.`school_id` = '$school_id'
 ";

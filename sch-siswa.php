@@ -11,9 +11,9 @@ if (!@$student_id && !@$teacher_id) {
   if(!empty(@$school_id)) {
     $sql = "SELECT `edu_school`.*, 
     (select count(distinct `edu_student`.`student_id`) FROM `edu_student`
-    WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'M') as `M`,
+    WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'M') AS `M`,
     (select count(distinct `edu_student`.`student_id`) FROM `edu_student`
-    WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'W') as `W`
+    WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'W') AS `W`
     FROM `edu_school`
     WHERE `edu_school`.`school_id` = '$school_id' 
     ";
@@ -50,9 +50,9 @@ if (@$_GET['option'] == 'detail') {
   $edit_key = kh_filter_input(INPUT_GET, "student_id", FILTER_SANITIZE_STRING_NEW);
   $nt = '';
   $sql = "SELECT `edu_student`.* ,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
-(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) AS `admin_create`,
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) AS `admin_edit`,
+(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) AS `class_id`
 FROM `edu_student` 
 WHERE `edu_student`.`student_id` = '$edit_key'
 ";
@@ -163,7 +163,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
     $nt = '';
 
 
-    $sql = "SELECT `edu_student`.* , `edu_class`.`name` as `class_id`, `edu_class`.`sort_order` as `sort_order`
+    $sql = "SELECT `edu_student`.* , `edu_class`.`name` AS `class_id`, `edu_class`.`sort_order` AS `sort_order`
     FROM `edu_student`
     left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
     WHERE 1 $sql_filter

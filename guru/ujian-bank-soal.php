@@ -68,8 +68,8 @@ $grade_id = kh_filter_input(INPUT_GET, "grade_id", FILTER_SANITIZE_STRING_NEW);
         	<?php
 
 			$sql = "SELECT `edu_test`.*,
-			(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
-			(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `question`
+			(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`,
+			(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `question`
 			FROM `edu_test`
 			WHERE `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id'
 			ORDER BY `edu_test`.`test_id` desc

@@ -97,13 +97,13 @@ if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$sql = "SELECT `state`.`state_id` as `v`, `state`.`name` as `l`
+$sql = "SELECT `state`.`state_id` AS `v`, `state`.`name` AS `l`
 FROM `state` WHERE `state`.`country_id` = '".$data['country_id']."' 
 ";
 $stmt = $database->executeQuery($sql);
 $state_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$sql = "SELECT `city`.`city_id` as `v`, `city`.`name` as `l`
+$sql = "SELECT `city`.`city_id` AS `v`, `city`.`name` AS `l`
 FROM `city` WHERE `city`.`country_id` = '".$data['country_id']."' 
 and (`city`.`state_id` = '".$data['state_id']."' OR `city`.`state_id` = '' OR `city`.`state_id` is null) 
 ";
@@ -385,14 +385,14 @@ else
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
-(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
-(SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
-(SELECT `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
-(SELECT `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`,
-(SELECT `edu_admin3`.`name` FROM `edu_admin` as `edu_admin3` WHERE `edu_admin3`.`admin_id` = `edu_school`.`admin_import_first` limit 0,1) as `admin_import_first`,
-(SELECT `edu_admin4`.`name` FROM `edu_admin` as `edu_admin4` WHERE `edu_admin4`.`admin_id` = `edu_school`.`admin_import_last` limit 0,1) as `admin_import_last`
+(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) AS `student`,
+(SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) AS `country_id`,
+(SELECT `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) AS `state_id`,
+(SELECT `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) AS `city_id`,
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) AS `admin_create`,
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) AS `admin_edit`,
+(SELECT `edu_admin3`.`name` FROM `edu_admin` AS `edu_admin3` WHERE `edu_admin3`.`admin_id` = `edu_school`.`admin_import_first` limit 0,1) AS `admin_import_first`,
+(SELECT `edu_admin4`.`name` FROM `edu_admin` AS `edu_admin4` WHERE `edu_admin4`.`admin_id` = `edu_school`.`admin_import_last` limit 0,1) AS `admin_import_last`
 FROM `edu_school` 
 WHERE `edu_school`.`school_id` = '$school_id'
 ";

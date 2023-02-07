@@ -36,9 +36,9 @@ include_once dirname(dirname(__FILE__))."/lib.inc/header.php";
 $edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_class`.* $nt,
-(SELECT `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
-(SELECT `edu_admin1`.`name` FROM `edu_admin` as `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_class`.`admin_create` limit 0,1) as `admin_create`,
-(SELECT `edu_admin2`.`name` FROM `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_class`.`admin_edit` limit 0,1) as `admin_edit`
+(SELECT `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) AS `school_program_id`,
+(SELECT `edu_admin1`.`name` FROM `edu_admin` AS `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_class`.`admin_create` limit 0,1) AS `admin_create`,
+(SELECT `edu_admin2`.`name` FROM `edu_admin` AS `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_class`.`admin_edit` limit 0,1) AS `admin_edit`
 FROM `edu_class` 
 WHERE `edu_class`.`school_id` = '$school_id'
 AND `edu_class`.`class_id` = '$edit_key'
@@ -148,8 +148,8 @@ $nt = '';
 
 
 $sql = "SELECT `edu_class`.* $nt,
-(SELECT `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) as `school_program_id`,
-(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) as `num_student`
+(SELECT `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) AS `school_program_id`,
+(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) AS `num_student`
 FROM `edu_class`
 WHERE 1 $sql_filter
 ORDER BY `edu_class`.`sort_order` asc

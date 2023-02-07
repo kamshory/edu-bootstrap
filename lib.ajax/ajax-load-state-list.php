@@ -2,7 +2,7 @@
 include_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
 $country_id = trim(kh_filter_input(INPUT_GET, "country_id", FILTER_SANITIZE_STRING_NEW));
 
-$sql = "SELECT `state`.`state_id` as `v`, `state`.`name` as `l`
+$sql = "SELECT `state`.`state_id` AS `v`, `state`.`name` AS `l`
 FROM `state` WHERE `state`.`country_id` = '$country_id' 
 AND `state`.`active` = true AND `state`.`verify` = '1'
 ORDER BY `state`.`type` asc, `state`.`name` asc

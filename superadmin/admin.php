@@ -395,9 +395,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "admin_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_admin`.* $nt,
-(SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) as `school_name`,
-(SELECT `edu_admin1`.`name` FROM `edu_admin` as `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) as `admin_create`,
-(SELECT `edu_admin2`.`name` FROM `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
+(SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) AS `school_name`,
+(SELECT `edu_admin1`.`name` FROM `edu_admin` AS `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) AS `admin_create`,
+(SELECT `edu_admin2`.`name` FROM `edu_admin` AS `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) AS `admin_edit`
 FROM `edu_admin` 
 where 1 
 AND `edu_admin`.`admin_id` = '$edit_key'
@@ -568,7 +568,7 @@ $sql_filter .= " and (`edu_admin`.`school_id` = '$school_id' )";
 $nt = '';
 
 $sql = "SELECT `edu_admin`.* $nt,
-(SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) as `school_name`
+(SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) AS `school_name`
 FROM `edu_admin`
 WHERE 1 $sql_filter
 ORDER BY `edu_admin`.`school_id` desc, `edu_admin`.`name` asc

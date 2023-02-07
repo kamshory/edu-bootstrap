@@ -27,7 +27,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 		{
 			$sql = "SELECT `edu_test`.*, 
 			(SELECT `edu_question`.`sort_order` FROM `edu_question` 
-				WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` DESC LIMIT 0,1) as `sort_order`
+				WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` DESC LIMIT 0,1) AS `sort_order`
 			FROM `edu_test`
 			WHERE `edu_test`.`test_id` = '$test_id'
 			";
@@ -149,8 +149,8 @@ if(isset($_POST['from']) && isset($_POST['to']))
 
 
 $sql = "SELECT `edu_test`.*,
-(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
-(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `question`
+(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`,
+(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `question`
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' 
 ORDER BY `edu_test`.`test_id` desc

@@ -26,7 +26,7 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
   }
 
   // Should characters that affect highlighting be highlighted separate?
-  // Does not include characters that will be output (such as `1.` AND `-` for lists)
+  // Does not include characters that will be output (such AS `1.` AND `-` for lists)
   if (modeCfg.highlightFormatting === undefined)
     modeCfg.highlightFormatting = false;
 

@@ -23,14 +23,14 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	
 	$sql = "
-	select `edu_test`.*, `edu_test`.`name` as `test_name`, 
-	`edu_school`.`school_code` as `school_code`,
-	`edu_school`.`name` as `school_name`,
-	`edu_school`.`open` as `school_open`, 
-	`edu_school`.`active` as `school_active`,
-	`edu_student`.`student_id` as `student_id`,
-	`edu_member_school`.`member_id` as `student_in_school_id`,
-	(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`student_id` = '$member_id' AND `edu_member_school`.`role` = 'S') as `student_registered`
+	select `edu_test`.*, `edu_test`.`name` AS `test_name`, 
+	`edu_school`.`school_code` AS `school_code`,
+	`edu_school`.`name` AS `school_name`,
+	`edu_school`.`open` AS `school_open`, 
+	`edu_school`.`active` AS `school_active`,
+	`edu_student`.`student_id` AS `student_id`,
+	`edu_member_school`.`member_id` AS `student_in_school_id`,
+	(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`student_id` = '$member_id' AND `edu_member_school`.`role` = 'S') AS `student_registered`
 	FROM `edu_test` 
 	inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
 	left join(`edu_student`) on(`edu_student`.`school_id` = `edu_test`.`school_id` AND `edu_student`.`student_id` = '$member_id')
@@ -130,14 +130,14 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 		$time_create = $time_edit = $picoEdu->getLocalDateTime();
 		$admin_create = $admin_edit = $member_id;
 		$ip_create = $ip_edit = addslashes($_SERVER['REMOTE_ADDR']);
-		$sql = "SELECT `edu_test`.*, `edu_test`.`name` as `test_name`, 
-		`edu_school`.`school_code` as `school_code`,
-		`edu_school`.`name` as `school_name`,
-		`edu_school`.`open` as `school_open`, 
-		`edu_school`.`active` as `school_active`,
-		`edu_student`.`student_id` as `student_id`,
-		`edu_member_school`.`member_id` as `student_in_school_id`,
-		(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`student_id` = '$member_id' AND `edu_member_school`.`role` = 'S') as `student_registered`
+		$sql = "SELECT `edu_test`.*, `edu_test`.`name` AS `test_name`, 
+		`edu_school`.`school_code` AS `school_code`,
+		`edu_school`.`name` AS `school_name`,
+		`edu_school`.`open` AS `school_open`, 
+		`edu_school`.`active` AS `school_active`,
+		`edu_student`.`student_id` AS `student_id`,
+		`edu_member_school`.`member_id` AS `student_in_school_id`,
+		(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`student_id` = '$member_id' AND `edu_member_school`.`role` = 'S') AS `student_registered`
 		FROM `edu_test` 
 		inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
 		left join(`edu_student`) on(`edu_student`.`school_id` = `edu_test`.`school_id` AND `edu_student`.`student_id` = '$member_id')
@@ -277,7 +277,7 @@ $school_grade = array(
         <p>Anda dapat mengikuti ujian online berikut ini secara gratis dan tidak perlu membayar. Silakan pilih ujian online yang akan Anda ikuti sesuai dengan jenjang pendidikan Anda. Ujian ini terbuka bagi siapa saja tanpa ada pengecualian.</p>
         <?php
 		$school_data = array();
-		$sql = "SELECT `edu_test`.*, `edu_test`.`name` as `test_name`, `edu_school`.`name` as `school_name`, `edu_school`.`school_grade_id`
+		$sql = "SELECT `edu_test`.*, `edu_test`.`name` AS `test_name`, `edu_school`.`name` AS `school_name`, `edu_school`.`school_grade_id`
 		FROM `edu_test`
 		inner join(`edu_school`) on(`edu_school`.`school_id` = `edu_test`.`school_id`)
 		where 1 

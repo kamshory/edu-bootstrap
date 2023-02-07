@@ -36,7 +36,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$picoEdu->sortQuestion($test_id);
 	$sql = "SELECT `edu_test`.*, 
-	(SELECT `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` DESC LIMIT 0,1) as `sort_order`
+	(SELECT `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` DESC LIMIT 0,1) AS `sort_order`
 	FROM `edu_test`
 	WHERE `edu_test`.`test_id` = '$test_id'
 	";
@@ -147,7 +147,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$question = $picoEdu->brToNewLineEncoded($question);
 	$picoEdu->sortQuestion($test_id);
 	$sql1 = "SELECT `edu_test`.*, 
-	(SELECT `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` DESC LIMIT 0,1) as `sort_order`
+	(SELECT `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` DESC LIMIT 0,1) AS `sort_order`
 	FROM `edu_test`
 	WHERE `edu_test`.`test_id` = '$test_id'
 	";
@@ -297,7 +297,7 @@ if(@$_GET['option'] == 'add')
 	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_test`.* ,
-	(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `collection`
+	(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `collection`
 	FROM `edu_test` WHERE `test_id` = '$test_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -434,7 +434,7 @@ else if(@$_GET['option'] == 'edit')
 		$test_id = $data['test_id'];
 
 		$sql = "SELECT `edu_test`.* ,
-			(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `collection`
+			(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `collection`
 			FROM `edu_test` WHERE `test_id` = '$test_id' ";
 
 		$stmt3 = $database->executeQuery($sql);
@@ -579,7 +579,7 @@ else if(isset($_GET['test_id']))
 	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_test`.* ,
-	(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `collection`
+	(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `collection`
 	FROM `edu_test` WHERE `test_id` = '$test_id' 
 	";
 
@@ -699,7 +699,7 @@ else if(isset($_GET['test_id']))
 				WHERE `edu_answer`.`answer` like concat('%,',`edu_option`.`option_id`,']%')
 				group by `edu_answer`.`test_id`
 				limit 0,1
-				) as `pilih`
+				) AS `pilih`
 				FROM `edu_option`
 				WHERE `edu_option`.`question_id` = '$question_id' ";
 				$answer = '';
@@ -1237,8 +1237,8 @@ $nt = '';
 
 
 $sql = "SELECT `edu_test`.* $nt,
-(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`,
-(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 as `number_of_question`
+(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`,
+(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` group by `edu_question`.`test_id`)*1 AS `number_of_question`
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 ORDER BY `edu_test`.`test_id` desc

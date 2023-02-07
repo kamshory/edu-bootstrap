@@ -193,7 +193,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			{
 	
 				$sql = "SELECT `edu_test`.*, 
-				(SELECT `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` DESC LIMIT 0,1) as `sort_order`
+				(SELECT `edu_question`.`sort_order` FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` ORDER BY `sort_order` DESC LIMIT 0,1) AS `sort_order`
 				FROM `edu_test`
 				WHERE `edu_test`.`test_id` = '$test_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id'
 				";
@@ -938,9 +938,9 @@ $array_class = $picoEdu->getArrayClass($school_id);
 $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
-(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`,
-(SELECT `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_create`) as `member_create`,
-(SELECT `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_edit`) as `member_edit`
+(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher_id`,
+(SELECT `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_create`) AS `member_create`,
+(SELECT `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_edit`) AS `member_edit`
 FROM `edu_test` 
 WHERE `edu_test`.`test_id` = '$edit_key' AND `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id'
 ";
@@ -1213,7 +1213,7 @@ $nt = '';
 
 
 $sql = "SELECT `edu_test`.* $nt,
-(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher`
+(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 ORDER BY `edu_test`.`test_id` desc

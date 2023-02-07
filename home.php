@@ -38,7 +38,7 @@ include_once dirname(__FILE__)."/lib.inc/auth.php";
         <div class="article">
             <h3>Artikel</h3>
 			<?php
-            $sql = "SELECT `edu_info`.`time_create` , left(`edu_info`.`time_create`, 7) as `month`, count(*) as `count`
+            $sql = "SELECT `edu_info`.`time_create` , left(`edu_info`.`time_create`, 7) AS `month`, count(*) AS `count`
             FROM `edu_info` 
             WHERE `edu_info`.`active` = true
             group by `month`

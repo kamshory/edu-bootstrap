@@ -10,16 +10,16 @@ if (@$_GET['option'] == 'select') {
 	select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 	`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
 	FROM `edu_member_school`
-	inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
+	inner join(`edu_school` AS `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 	WHERE `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S'
 	
 	union
 	
 	select `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
 	`edu_school2`.`principal`, `edu_school2`.`active`, `edu_school2`.`open`
-	FROM `edu_school` as `edu_school2`
+	FROM `edu_school` AS `edu_school2`
 	WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 
-	) as `edu_school3`
+	) AS `edu_school3`
 	WHERE `edu_school3`.`school_id` = '$school_id'
 	ORDER BY `edu_school3`.`open` asc, `edu_school3`.`name` asc
 	";
@@ -38,12 +38,12 @@ if (@$_GET['option'] == 'detail') {
 	$edit_key = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_NUMBER_INT);
 	$nt = '';
 	$sql = "SELECT `edu_school`.* $nt,
-	(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) as `student`,
-	(SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) as `country_id`,
-	(SELECT `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) as `state_id`,
-	(SELECT `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) as `city_id`,
-	(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) as `admin_create`,
-	(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) as `admin_edit`
+	(select count(distinct `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) AS `student`,
+	(SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) AS `country_id`,
+	(SELECT `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) AS `state_id`,
+	(SELECT `city`.`name` FROM `city` WHERE `city`.`city_id` = `edu_school`.`city_id`) AS `city_id`,
+	(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) AS `admin_create`,
+	(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) AS `admin_edit`
 	FROM `edu_school` 
 	where 1
 	AND `edu_school`.`school_id` = '$edit_key'
@@ -164,16 +164,16 @@ if (@$_GET['option'] == 'detail') {
 				select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 				`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
 				FROM `edu_member_school`
-				inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
+				inner join(`edu_school` AS `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 				WHERE `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S'
 
 				union
 
 				select `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
 				`edu_school2`.`principal`, `edu_school2`.`active`, `edu_school2`.`open`
-				FROM `edu_school` as `edu_school2`
+				FROM `edu_school` AS `edu_school2`
 				WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 
-				) as `edu_school3`
+				) AS `edu_school3`
 				WHERE 1 $sql_filter
 				ORDER BY `edu_school3`.`open` asc, `edu_school3`.`name` asc
 				";
@@ -184,16 +184,16 @@ if (@$_GET['option'] == 'detail') {
 				select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 				`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
 				FROM `edu_member_school`
-				inner join(`edu_school` as `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
+				inner join(`edu_school` AS `edu_school1`) on(`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 				WHERE `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S'
 
 				union
 
 				select `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
 				`edu_school2`.`principal`, `edu_school2`.`active`, `edu_school2`.`open`
-				FROM `edu_school` as `edu_school2`
+				FROM `edu_school` AS `edu_school2`
 				WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 
-				) as `edu_school3`
+				) AS `edu_school3`
 				WHERE 1 $sql_filter
 				";
 

@@ -405,9 +405,9 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "student_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_student`.* ,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
-(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) AS `admin_create`,
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) AS `admin_edit`,
+(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) AS `class_id`
 FROM `edu_student` 
 WHERE `edu_student`.`school_id` = '$school_id'
 AND `edu_student`.`student_id` = '$edit_key'
@@ -584,7 +584,7 @@ if($class_id != 0)
 $nt = '';
 
 
-$sql = "SELECT `edu_student`.* , `edu_class`.`name` as `class_id`, `edu_class`.`sort_order` as `sort_order`
+$sql = "SELECT `edu_student`.* , `edu_class`.`name` AS `class_id`, `edu_class`.`sort_order` AS `sort_order`
 FROM `edu_student`
 left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
 WHERE `edu_student`.`school_id` = '$school_id' $sql_filter

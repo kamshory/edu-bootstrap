@@ -355,8 +355,8 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_teacher`.* $nt,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_teacher`.`admin_create`) as `admin_create`,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_teacher`.`admin_edit`) as `admin_edit`
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_teacher`.`admin_create`) AS `admin_create`,
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_teacher`.`admin_edit`) AS `admin_edit`
 FROM `edu_teacher` 
 WHERE `edu_teacher`.`school_id` = '$school_id'
 AND `edu_teacher`.`teacher_id` = '$edit_key'

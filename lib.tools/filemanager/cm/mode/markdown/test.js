@@ -223,7 +223,7 @@
   // Setext headers - H1, H2
   // Per documentation, "Any number of underlining =’s or -’s will work."
   // http://daringfireball.net/projects/markdown/syntax#header
-  // Ideally, the text would be marked as `header` as well, but this is
+  // Ideally, the text would be marked AS `header` as well, but this is
   // not really feasible at the moment. So, instead, we're testing against
   // what works today, to avoid any regressions.
   //

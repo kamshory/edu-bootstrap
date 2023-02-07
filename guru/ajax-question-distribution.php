@@ -54,7 +54,7 @@ else
 					// Do nothing
 				}
 			}
-			$sql = "SELECT `edu_question`.`basic_competence` , count(distinct `edu_question`.`question_id`) as `colection`
+			$sql = "SELECT `edu_question`.`basic_competence` , count(distinct `edu_question`.`question_id`) AS `colection`
 			FROM `edu_question`
 			WHERE `edu_question`.`test_id` = '$test_id'
 			group by `edu_question`.`basic_competence`

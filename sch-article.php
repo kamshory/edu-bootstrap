@@ -14,7 +14,7 @@ if(!empty(@$school_id))
 		$sql_filter_article = " AND `edu_article`.`article_id` = '$article_id' ";
 	
 		$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' AND `edu_article`.`open` = '1' ";
-		$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
+		$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 		FROM `edu_article` 
 		left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 		WHERE 1 $sql_filter_article ";
@@ -40,7 +40,7 @@ if(!empty(@$school_id))
 	{
 	$sql_filter_article = "";
 	$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' AND `edu_article`.`open` = '1'";
-	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
+	$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 	WHERE 1 $sql_filter_article 
@@ -293,7 +293,7 @@ else if(isset($_GET['article_id']))
 	{
 		$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' ";
 	}
-	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
+	$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 	where (`edu_article`.`active` = true OR `edu_article`.`member_create` = '$member_id') $sql_filter_article ";
@@ -352,7 +352,7 @@ else
 	{
 		$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' ";
 	}
-	$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
+	$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 	FROM `edu_article` 
 	left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 	where (`edu_article`.`active` = true OR `edu_article`.`member_create` = '$member_id') $sql_filter_article 

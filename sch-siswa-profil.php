@@ -112,10 +112,10 @@ if (@$_GET['option'] == 'edit') {
 } else {
 	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 	$nt = '';
-	$sql = "SELECT `edu_student`.* , `edu_school`.`name` as `school_name`, `edu_school`.`open` as `school_open`,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) as `admin_create`,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) as `admin_edit`,
-(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) as `class_id`
+	$sql = "SELECT `edu_student`.* , `edu_school`.`name` AS `school_name`, `edu_school`.`open` AS `school_open`,
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) AS `admin_create`,
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) AS `admin_edit`,
+(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) AS `class_id`
 FROM `edu_student` 
 left join(`edu_school`) on(`edu_school`.`school_id` = `edu_student`.`school_id`)
 WHERE `edu_student`.`school_id` = '$school_id'

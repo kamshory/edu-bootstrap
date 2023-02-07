@@ -12,7 +12,7 @@
 <body>
 <?php
 $question_package = addslashes($question_package);
-$sql = "SELECT `edu_question`.* , instr('$question_package', `edu_question`.`question_id`) as `sort_order`
+$sql = "SELECT `edu_question`.* , instr('$question_package', `edu_question`.`question_id`) AS `sort_order`
 FROM `edu_question`
 where '$question_package' like concat('%[',`edu_question`.`question_id`,']%') 
 ORDER BY `sort_order` asc
@@ -32,7 +32,7 @@ if($number_of_question)
 	}
 	$question_per_page = $question_per_page * 1;
 	
-	$sql = "SELECT `edu_question`.* , instr('$question_package', `edu_question`.`question_id`) as `sort_order`
+	$sql = "SELECT `edu_question`.* , instr('$question_package', `edu_question`.`question_id`) AS `sort_order`
 	FROM `edu_question`
 	where '$question_package' like concat('%[',`edu_question`.`question_id`,']%') 
 	ORDER BY `sort_order`
@@ -47,13 +47,13 @@ if($number_of_question)
 			$soal = $data1['question_id'];
 			$question_set[] = $soal;
 			if ($data['random']) {
-				$sql2 = "SELECT `edu_option`.* , rand() as `rand`
+				$sql2 = "SELECT `edu_option`.* , rand() AS `rand`
 				FROM `edu_option`
 				WHERE `edu_option`.`question_id` = '$soal'
 				ORDER BY `rand` asc
 				";
 			} else {
-				$sql2 = "SELECT `edu_option`.* , rand() as `rand`
+				$sql2 = "SELECT `edu_option`.* , rand() AS `rand`
 				FROM `edu_option`
 				WHERE `edu_option`.`question_id` = '$soal'
 				ORDER BY `sort_order` asc

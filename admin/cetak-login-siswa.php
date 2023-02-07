@@ -16,7 +16,7 @@ ob_end_clean();
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_class`.* $nt,
-(SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_class`.`school_id`) as `school_name`
+(SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_class`.`school_id`) AS `school_name`
 FROM `edu_class` 
 WHERE `edu_class`.`school_id` = '$school_id'
 AND `edu_class`.`class_id` = '$class_id'  
@@ -31,7 +31,7 @@ if($stmt->rowCount() > 0)
 else
 {
 $class_id = 0;
-$sql = "SELECT `edu_school`.*, `edu_school`.`name` as `school_name`
+$sql = "SELECT `edu_school`.*, `edu_school`.`name` AS `school_name`
 FROM `edu_school` 
 WHERE `edu_school`.`school_id` = '$school_id'
 ";

@@ -335,8 +335,8 @@ else if(@$_GET['option'] == 'detail')
 	$edit_key = kh_filter_input(INPUT_GET, "admin_id", FILTER_SANITIZE_STRING_NEW);
 	$nt = '';
 	$sql = "SELECT `edu_admin`.* $nt,
-	(SELECT `edu_admin1`.`name` FROM `edu_admin` as `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) as `admin_create`,
-	(SELECT `edu_admin2`.`name` FROM `edu_admin` as `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) as `admin_edit`
+	(SELECT `edu_admin1`.`name` FROM `edu_admin` AS `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) AS `admin_create`,
+	(SELECT `edu_admin2`.`name` FROM `edu_admin` AS `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) AS `admin_edit`
 	FROM `edu_admin` 
 	WHERE `edu_admin`.`school_id` = '$school_id' 
 	AND `edu_admin`.`admin_id` = '$edit_key' and (`admin_level` != '1' OR `admin_id` = '$my_admin') 

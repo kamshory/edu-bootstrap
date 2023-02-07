@@ -125,7 +125,7 @@
     return memo;
   };
 
-  // The right-associative version of reduce, also known as `foldr`.
+  // The right-associative version of reduce, also known AS `foldr`.
   // Delegates to **ECMAScript 5**'s native `reduceRight` if available.
   _.reduceRight = _.foldr = function(obj, iterator, memo, context) {
     var initial = arguments.length > 2;
@@ -152,7 +152,7 @@
     return memo;
   };
 
-  // Return the first value which passes a truth test. Aliased as `detect`.
+  // Return the first value which passes a truth test. Aliased AS `detect`.
   _.find = _.detect = function(obj, predicate, context) {
     var result;
     any(obj, function(value, index, list) {
@@ -166,7 +166,7 @@
 
   // Return all the elements that pass a truth test.
   // Delegates to **ECMAScript 5**'s native `filter` if available.
-  // Aliased as `select`.
+  // Aliased AS `select`.
   _.filter = _.select = function(obj, predicate, context) {
     var results = [];
     if (obj == null) return results;
@@ -186,7 +186,7 @@
 
   // Determine whether all of the elements match a truth test.
   // Delegates to **ECMAScript 5**'s native `every` if available.
-  // Aliased as `all`.
+  // Aliased AS `all`.
   _.every = _.all = function(obj, predicate, context) {
     predicate || (predicate = _.identity);
     var result = true;
@@ -200,7 +200,7 @@
 
   // Determine if at least one element in the object matches a truth test.
   // Delegates to **ECMAScript 5**'s native `some` if available.
-  // Aliased as `any`.
+  // Aliased AS `any`.
   var any = _.some = _.any = function(obj, predicate, context) {
     predicate || (predicate = _.identity);
     var result = false;
@@ -213,7 +213,7 @@
   };
 
   // Determine if the array or object contains a given value (using `===`).
-  // Aliased as `include`.
+  // Aliased AS `include`.
   _.contains = _.include = function(obj, target) {
     if (obj == null) return false;
     if (nativeIndexOf && obj.indexOf === nativeIndexOf) return obj.indexOf(target) != -1;
@@ -397,7 +397,7 @@
   // ---------------
 
   // Get the first element of an array. Passing **n** will return the first N
-  // values in the array. Aliased as `head` AND `take`. The **guard** check
+  // values in the array. Aliased AS `head` AND `take`. The **guard** check
   // allows it to work with `_.map`.
   _.first = _.head = _.take = function(array, n, guard) {
     if (array == null) return void 0;
@@ -422,7 +422,7 @@
     return slice.call(array, Math.max(array.length - n, 0));
   };
 
-  // Returns everything but the first entry of the array. Aliased as `tail` AND `drop`.
+  // Returns everything but the first entry of the array. Aliased AS `tail` AND `drop`.
   // Especially useful on the arguments object. Passing an **n** will return
   // the rest N values in the array. The **guard**
   // check allows it to work with `_.map`.
@@ -473,7 +473,7 @@
 
   // Produce a duplicate-free version of the array. If the array has already
   // been sorted, you have the option of using a faster algorithm.
-  // Aliased as `unique`.
+  // Aliased AS `unique`.
   _.uniq = _.unique = function(array, isSorted, iterator, context) {
     if (_.isFunction(isSorted)) {
       context = iterator;
@@ -833,7 +833,7 @@
   };
 
   // Return a sorted list of the function names available on the object.
-  // Aliased as `methods`
+  // Aliased AS `methods`
   _.functions = _.methods = function(obj) {
     var names = [];
     for (var key in obj) {

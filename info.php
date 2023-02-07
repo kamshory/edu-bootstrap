@@ -8,7 +8,7 @@ if(isset($_GET['info_id']))
 	$info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
 	$sql_filter_info = " AND `edu_info`.`info_id` = '$info_id' ";
 
-	$sql = "SELECT `edu_info`.*, `member`.`name` as `creator`
+	$sql = "SELECT `edu_info`.*, `member`.`name` AS `creator`
 	FROM `edu_info` 
 	left join(`member`) on(`member`.`member_id` = `edu_info`.`admin_create`) 
 	WHERE `edu_info`.`active` = true $sql_filter_info ";

@@ -243,7 +243,7 @@ if(isset($school_id))
 {
 	$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' ";
 }
-$sql = "SELECT `edu_article`.*, `member`.`name` as `creator`
+$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 FROM `edu_article` 
 left join(`member`) on(`member`.`member_id` = `edu_article`.`member_create`) 
 where (`edu_article`.`school_id` = '$school_id') $sql_filter_article ";
@@ -379,7 +379,7 @@ $sql_filter .= " and (`edu_article`.`school_id` = '$school_id' )";
 
 $nt = '';
 
-$sql = "SELECT `edu_article`.* , `edu_teacher`.`name` as `teacher_create`, `edu_admin`.`name` as `admin_create`
+$sql = "SELECT `edu_article`.* , `edu_teacher`.`name` AS `teacher_create`, `edu_admin`.`name` AS `admin_create`
 FROM `edu_article` 
 left join(`edu_teacher`) on(`edu_teacher`.`teacher_id` = `edu_article`.`member_create`) 
 left join(`edu_admin`) on(`edu_admin`.`admin_id` = `edu_article`.`member_create`) 

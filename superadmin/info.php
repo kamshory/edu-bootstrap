@@ -434,7 +434,7 @@ else if(isset($_GET['info_id']))
 	$info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
 	$sql_filter_info = " AND `edu_info`.`info_id` = '$info_id' ";
 
-	$sql = "SELECT `edu_info`.*, `member`.`name` as `creator`
+	$sql = "SELECT `edu_info`.*, `member`.`name` AS `creator`
 	FROM `edu_info` 
 	left join(`member`) on(`member`.`member_id` = `edu_info`.`admin_create`) 
 	WHERE 1 $sql_filter_info ";
@@ -537,7 +537,7 @@ $sql_filter .= " and (`edu_info`.`name` like '%".addslashes($pagination->query).
 $nt = '';
 
 $sql = "SELECT `edu_info`.*,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_info`.`admin_edit`) as `admin_edit_name` 
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_info`.`admin_edit`) AS `admin_edit_name` 
 FROM `edu_info`
 WHERE 1 $sql_filter
 ORDER BY `edu_info`.`info_id` desc

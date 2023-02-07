@@ -8,7 +8,7 @@ if (!empty(@$school_id))
 	{
 		$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 		$sql = "SELECT `edu_test`.* ,
-		(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) as `koleksi`
+		(select count(distinct `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `koleksi`
 		FROM `edu_test` WHERE `test_id` = '$test_id' 
 		";
 		$stmt = $database->executeQuery($sql); 
@@ -106,7 +106,7 @@ foreach($rows as $data){
 		WHERE `edu_answer`.`answer` like concat('%,',`edu_option`.`option_id`,']%')
 		group by `edu_answer`.`test_id`
 		limit 0,1
-		) as `pilih`
+		) AS `pilih`
 	FROM `edu_option`
 	WHERE `edu_option`.`question_id` = '$question_id' ";
 	$stmt2 = $database->executeQuery($sql2);

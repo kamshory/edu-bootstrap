@@ -48,7 +48,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 if(@$_GET['option'] == 'edit')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$sql = "SELECT `edu_teacher`.* , `edu_school`.`name` as `school_name`
+$sql = "SELECT `edu_teacher`.* , `edu_school`.`name` AS `school_name`
 FROM `edu_teacher` 
 left join(`edu_school`) on(`edu_school`.`school_id` = `edu_teacher`.`school_id`)
 WHERE `edu_teacher`.`school_id` = '$school_id'
@@ -129,7 +129,7 @@ else
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $nt = '';
-$sql = "SELECT `edu_teacher`.* , `edu_school`.`name` as `school_name`
+$sql = "SELECT `edu_teacher`.* , `edu_school`.`name` AS `school_name`
 FROM `edu_teacher` 
 left join(`edu_school`) on(`edu_school`.`school_id` = `edu_teacher`.`school_id`)
 WHERE `edu_teacher`.`school_id` = '$school_id'

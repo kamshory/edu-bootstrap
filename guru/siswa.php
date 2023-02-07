@@ -13,8 +13,8 @@ if(@$_GET['option'] == 'detail')
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "student_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
-$sql = "SELECT `edu_student`.* , `edu_school_program`.`name` as `school_program_name`,
-`edu_class`.`name` as `class_name`
+$sql = "SELECT `edu_student`.* , `edu_school_program`.`name` AS `school_program_name`,
+`edu_class`.`name` AS `class_name`
 FROM `edu_student` 
 left join (`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
 left join (`edu_school_program`) on(`edu_school_program`.`school_program_id` = `edu_class`.`school_program_id`)
@@ -218,7 +218,7 @@ if($class_id != 0)
 $nt = '';
 
 
-$sql = "SELECT `edu_student`.* , `edu_class`.`name` as `class_id`, `edu_class`.`sort_order` as `sort_order`
+$sql = "SELECT `edu_student`.* , `edu_class`.`name` AS `class_id`, `edu_class`.`sort_order` AS `sort_order`
 FROM `edu_student`
 left join(`edu_class`) on(`edu_class`.`class_id` = `edu_student`.`class_id`)
 WHERE `edu_student`.`active` = true AND `edu_student`.`school_id` = '$school_id' $sql_filter

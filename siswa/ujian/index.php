@@ -337,7 +337,7 @@ else if(@$_GET['login-to-test']=="yes")
 				
 				if($data['random'])
 				{	
-					$sql = "SELECT `question_id` , rand() as `rand`
+					$sql = "SELECT `question_id` , rand() AS `rand`
 					FROM `edu_question` WHERE `test_id` = '$test_id'
 					ORDER BY `rand` asc
 					limit 0, $number_of_question
