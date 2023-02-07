@@ -142,7 +142,7 @@ if($pagination->query){
 $nt = '';
 
 $sql = "SELECT `edu_info`.*,
-(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_info`.`admin_edit`) as `admin_edit_name` 
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_info`.`admin_edit`) as `admin_edit_name` 
 FROM `edu_info`
 WHERE 1 $sql_filter
 ORDER BY `edu_info`.`info_id` desc

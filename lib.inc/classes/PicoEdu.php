@@ -410,7 +410,7 @@ class PicoEdu //NOSONAR
 				$question_id = $question[0] * 1;
 				$option_id = $question[1] * 1;
 				$sql2 = "SELECT `edu_option`.`question_id`, `edu_option`.`option_id`, 
-				(select `edu_question`.`basic_competence` 
+				(SELECT `edu_question`.`basic_competence` 
 					FROM `edu_question` 
 					WHERE `edu_question`.`question_id` = `edu_option`.`question_id`) as `basic_competence`,
 				`edu_option`.`score`
@@ -677,7 +677,7 @@ class PicoEdu //NOSONAR
 					$question_id = $question[0] * 1;
 					$option_id = $question[1] * 1;
 					$sql2 = "SELECT `edu_option`.`question_id`, `edu_option`.`option_id`, 
-					(select `edu_question`.`basic_competence` 
+					(SELECT `edu_question`.`basic_competence` 
 						FROM `edu_question` 
 						WHERE `edu_question`.`question_id` = `edu_option`.`question_id`) as `basic_competence`,
 					`edu_option`.`score`

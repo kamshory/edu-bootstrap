@@ -112,7 +112,7 @@ end$$
 
 CREATE DEFINER=`root`@`localhost` FUNCTION `get_last_order_image` (`id` BIGINT) RETURNS INT(11) NO SQL begin
 declare `last_order` int(11) default 0;
-SELECT `post_attachment`.`sort_order` into `last_order` FROM `post_attachment` WHERE `post_attachment`.`post_id` = `id` ORDER BY `post_attachment`.`sort_order` desc limit 0,1 ;
+SELECT `post_attachment`.`sort_order` into `last_order` FROM `post_attachment` WHERE `post_attachment`.`post_id` = `id` ORDER BY `post_attachment`.`sort_order` DESC LIMIT 0,1 ;
 if `last_order` is null then
 set `last_order` = 0;
 end if;

@@ -209,11 +209,11 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "token_id", FILTER_SANITIZE_NUMBER_INT);
 $nt = '';
 $sql = "SELECT `edu_token`.* $nt,
-(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_create`) as `creator_name`,
-(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_edit`) as `editor_name`,
-(select `edu_student`.`name` FROM `edu_student` WHERE `edu_student`.`student_id` = `edu_token`.`student_id`) as `student_name`,
-(select `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_token`.`class_id`) as `class_name`,
-(select `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_create`) as `creator_name`,
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_edit`) as `editor_name`,
+(SELECT `edu_student`.`name` FROM `edu_student` WHERE `edu_student`.`student_id` = `edu_token`.`student_id`) as `student_name`,
+(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_token`.`class_id`) as `class_name`,
+(SELECT `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
 FROM `edu_token` 
 WHERE `school_id` = '$school_id'
 AND `edu_token`.`token_id` = '$edit_key'
@@ -424,11 +424,11 @@ $sql_filter .= " AND `edu_token`.`active` = true ";
 $nt = '';
 
 $sql = "SELECT `edu_token`.* $nt,
-(select `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_create`) as `admin_create_name`,
-(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_token`.`teacher_create`) as `teacher_create_name`,
-(select `edu_student`.`name` FROM `edu_student` WHERE `edu_student`.`student_id` = `edu_token`.`student_id`) as `student_name`,
-(select `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_token`.`class_id`) as `class_name`,
-(select `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
+(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_create`) as `admin_create_name`,
+(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_token`.`teacher_create`) as `teacher_create_name`,
+(SELECT `edu_student`.`name` FROM `edu_student` WHERE `edu_student`.`student_id` = `edu_token`.`student_id`) as `student_name`,
+(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_token`.`class_id`) as `class_name`,
+(SELECT `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
 FROM `edu_token`
 WHERE `school_id` = '$school_id' AND `edu_token`.`teacher_create` = '$teacher_id' $sql_filter
 ORDER BY `edu_token`.`token_id` desc

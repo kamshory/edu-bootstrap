@@ -243,7 +243,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 		$nt = '';
 		$sql = "SELECT `edu_test`.* $nt,
-		(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`
+		(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) as `teacher_id`
 		FROM `edu_test` 
 		where 1
 		AND `edu_test`.`test_id` = '$test_id' AND `edu_test`.`school_id` = '$school_id'

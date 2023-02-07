@@ -90,8 +90,8 @@ h3{
 <?php
 $tokens = implode(",", $arr);
 $sql = "SELECT `edu_token`.* , `edu_student`.`name` as `student_name`, `edu_student`.`reg_number` as `reg_number`, 
-(select `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_token`.`teacher_create`) as `teacher_name`,
-(select `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
+(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_token`.`teacher_create`) as `teacher_name`,
+(SELECT `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) as `test_name`
 FROM `edu_token` 
 inner join(`edu_student`) on (`edu_student`.`student_id` = `edu_token`.`student_id`)
 WHERE `edu_token`.`token_id` in ($tokens)
