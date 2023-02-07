@@ -24,7 +24,7 @@ class FileSyncMaster
     public $poolFileName = '';
     public $poolRollingPrefix = '';
     public $poolFileExtension = '';
-    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
         $this->database = $database;
         $this->applicationRoot = $applicationRoot;
@@ -38,27 +38,44 @@ class FileSyncMaster
             $this->poolFileExtension = $poolFileExtension;
         }
     }
+    /**
+     * List directory content
+     * @param mixed $base
+     * @return array|bool
+     */
     protected function glob($base)
     {
         $basePath = $base."/*.*";
         return glob($basePath);
     }
-    protected function filterPoolingFileList($fileList, $poolBaseDir, $poolFileName, $poolFileExtension)
+    
+    /**
+     * Rolling last polling file
+     * @param array $fileList File list
+     * @param string $poolBaseDir Pooling base directory
+     * @param string $poolFileName Pooling file name
+     * @param string $poolFileExtension Pooling file extension
+     * @return array File list
+     */
+    protected function rollingLastPoolingFile($fileList, $poolBaseDir, $poolFileName, $poolFileExtension)
     {
         $pathToRemove = $poolBaseDir ."/". $poolFileName . $poolFileExtension;
-        foreach($fileList as $key=>$val)
+        foreach($fileList as $key=>$localPath)
         {
-            if($val == $pathToRemove)
+            if($localPath == $pathToRemove)
             {
                 $newPath = $this->poolBaseDir . "/" . $this->poolRollingPrefix.date('Y-m-d-H-i-s').$this->poolFileExtension;
-                rename($val, $newPath);
+                rename($localPath, $newPath);
                 $fileList[$key] = $newPath;
             }
         }
         return array_values($fileList);
     }
+    
     /**
      * Sort file ascending. File name represent time create
+     * @param array $fileList Array contain file list
+     * @return array Array contain file list
      */
     protected function sort($fileList)
     {
@@ -66,7 +83,16 @@ class FileSyncMaster
         return $fileList;
     }
 
-    protected function uploadSyncFile($path, $record, $url, $username, $password)
+    /**
+     * Upload sync file to sync hub
+     * @param mixed $path Sync file path
+     * @param mixed $record Sync record
+     * @param string $url Synch hub URL
+     * @param string $username Sync username
+     * @param string $password Sync password
+     * @return mixed
+     */
+    protected function uploadSyncFile($path, $record, $url, $username, $password) //NOSONAR
     {
         if(function_exists('curl_file_create')) 
         {
@@ -103,10 +129,15 @@ class FileSyncMaster
         $result = curl_exec ($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close ($ch);
-        echo $httpcode. " ".$result;
         return $httpcode;
     }
 
+    /**
+     * Get sync record list from database
+     * @param mixed $direction Sync direction
+     * @param mixed $status Sync record status
+     * @return mixed
+     */
     protected function getSyncRecordListFromDatabase($direction, $status)
     {
         $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_direction` = '$direction' AND `status` = '$status' ";
@@ -117,12 +148,24 @@ class FileSyncMaster
         }
         return array();
     }
+
+    /**
+     * Update sync record
+     * @param mixed $sync_file_id Sync record ID
+     * @param mixed $status Record status
+     * @return mixed
+     */
     public function updateSyncRecord($sync_file_id, $status)
     {
         $sql = "UPDATE `edu_sync_file` SET `status` = '$status' WHERE `sync_file_id` = '$sync_file_id' ";
         return $this->database->executeUpdate($sql, false);
     }
 
+    /**
+     * Get relative from absolute path given
+     * @param mixed $path Absolute path
+     * @return mixed Relative path
+     */
     public function getRelativePath($path)
     {
         $post = stripos($path, $this->applicationRoot);
@@ -139,7 +182,7 @@ class FileSyncMaster
 
 class FileSyncUpload extends FileSyncMaster
 {
-    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
         parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
     }
@@ -151,20 +194,21 @@ class FileSyncUpload extends FileSyncMaster
     private function getPoolingFiles()
     {
         $fileList = $this->glob($this->poolBaseDir);
-        $fileList = $this->filterPoolingFileList($fileList, $this->poolBaseDir, $this->poolFileName, $this->poolFileExtension);
+        $fileList = $this->rollingLastPoolingFile($fileList, $this->poolBaseDir, $this->poolFileName, $this->poolFileExtension);
         $fileList = $this->sort($fileList);
         return $fileList;
     }
 
     /**
      * Create sync record to database
+     * @param 
      */
-    private function createUploadSyncRecord($val)
+    private function createUploadSyncRecord($localPath)
     {
-        $fileSize = filesize($val) * 1;
-        $baseName = addslashes(basename($val));
-        $path = addslashes($val);
-        $relativePath = $this->getRelativePath($val);
+        $fileSize = filesize($localPath) * 1;
+        $baseName = addslashes(basename($localPath));
+        $path = addslashes($localPath);
+        $relativePath = $this->getRelativePath($localPath);
         $sync_file_id = $this->database->generateNewId();
         $timeUpload = date('Y-m-d H:i:s');
         $sql = "INSERT INTO `edu_sync_file`
@@ -180,20 +224,23 @@ class FileSyncUpload extends FileSyncMaster
     public function syncLocalUserFileToDatabase()
     {
         $fileList = $this->getPoolingFiles();
-        foreach($fileList as $val)
+        foreach($fileList as $localPath)
         {
-            $baseName = basename($val);
+            $baseName = basename($localPath);
             $newPath = $this->uploadBaseDir . "/" . $baseName;
-            copy($val, $newPath);
-            unlink($val);
+            copy($localPath, $newPath);
+            unlink($localPath);
             $this->createUploadSyncRecord($newPath);
         }
     }
     
     /**
-     * Sync all local user file to remote host and upload file (step 3, 4 and 5)
+     * Sync all local user file to sync hub and upload file (step 3, 4 and 5)
+     * @param string $url Sync hub URL
+     * @param string $username Sync hub username
+     * @param string $password Sync hub password
      */
-    public function syncLocalUserFileToRemoteHost($url, $username, $password)
+    public function syncLocalUserFileToSyncHub($url, $username, $password)
     {
         $recordList = $this->getSyncRecordListFromDatabase('up', 0);
         foreach($recordList as $record)
@@ -210,15 +257,18 @@ class FileSyncUpload extends FileSyncMaster
 
 class FileSyncDownload extends FileSyncMaster
 {
-    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
         parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
     }
     
     /**
      * (step 1, 2 and 3)
+     * @param string $url Synch hub URL
+     * @param string $username Sync username
+     * @param string $password Sync password
      */
-    public function syncRemoteHostRecordToDatabase($url, $username, $password)
+    public function syncHubToDatabase($url, $username, $password)
     {
         $lastSync = $this->getLastSyncTime();
         if($lastSync === null)
@@ -229,6 +279,10 @@ class FileSyncDownload extends FileSyncMaster
         $this->createDownloadSyncRecord($recordList, $url, $username, $password);
     }
 
+    /**
+     * Get last sync time
+     * @return mixed Last sync time if exists or null not exists
+     */
     private function getLastSyncTime()
     {
         $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_direction` = 'down' AND `status` > 0 ORDER BY `time_create` DESC LIMIT 0,1 ";
@@ -244,12 +298,12 @@ class FileSyncDownload extends FileSyncMaster
     /**
      * Get record list from remote host
      * @param string $lastSync Last sync time
-     * @param string $url Remote host URL
+     * @param string $url Synch hub URL
      * @param string $username Sync username
      * @param string $password Sync password
      * @return array List of sync file from last sync
      */
-    private function getSyncRecordListFromRemote($lastSync, $url, $username, $password) 
+    private function getSyncRecordListFromRemote($lastSync, $url, $username, $password) //NOSONAR
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -284,12 +338,12 @@ class FileSyncDownload extends FileSyncMaster
      * Download file from remote host and copy it into local path
      * @param string $remotePath Remote path
      * @param string $localPath Local path
-     * @param string $url Remote host URL
+     * @param string $url Synch hub URL
      * @param string $username Sync username
      * @param string $password Sync password
      * @return string Data from file downloaded
      */
-    public function downloadFileFromRemote($remotePath, $url, $username, $password)
+    public function downloadFileFromRemote($remotePath, $url, $username, $password) //NOSONAR
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -314,7 +368,13 @@ class FileSyncDownload extends FileSyncMaster
         }
     }
     
-
+    /**
+     * Create download sync record
+     * @param array $recordList Record list
+     * @param string $url Synch hub URL
+     * @param string $username Sync username
+     * @param string $password Sync password
+    */
     private function createDownloadSyncRecord($recordList, $url, $username, $password)
     {
         foreach($recordList as $record)
@@ -345,102 +405,191 @@ class FileSyncDownload extends FileSyncMaster
             }
             catch(Exception $e)
             {
-
+                //NOSONAR
             }
         }
     }
 
+    /**
+     * Synchronize user files 
+     * @param mixed $permission File permission
+     * @param mixed $url Sync hub URL
+     * @param mixed $username Sync hub username
+     * @param mixed $password Sync hub password
+     * @return void
+     */
     public function syncRemoteUserFileLocalHost($permission, $url, $username, $password)
     {
         $recordList = $this->getSyncRecordListFromDatabase('down', 0);
-        foreach($recordList as $key=>$record)
+        foreach($recordList as $record)
         {
             $this->syncUserFilesFromSyncRecord($record, $permission, $url, $username, $password);
         }
     }
     
+    /**
+     * Synchronize user file from sync record
+     * @param mixed $record Sync record
+     * @param mixed $permission File permission
+     * @param mixed $url Sync hub URL
+     * @param mixed $username Sync hub username
+     * @param mixed $password Sync hub password
+     * @return void
+     */
     private function syncUserFilesFromSyncRecord($record, $permission, $url, $username, $password)
     {
         $syncFilePath = addslashes($record['file_path']);
-
         $handle = fopen($syncFilePath, "r");
         if ($handle) {
             while (($line = fgets($handle)) !== false) {
                 $info = json_decode($line, true);
-                $localPath = $info['path'];
-                $tm = $info['tm'];
                 if($info['op'] == 'CREATEFILE')
                 {
-                    // donload
-                    try
-                    {
-                        $response = $this->downloadFileFromRemote($localPath, $url, $username, $password);
-                        file_put_contents($localPath, $response);
-                        touch($localPath, $tm);
-                    }
-                    catch(Exception $e)
-                    {
-
-                    }
+                    $this->procCreateFile($info, $permission, $url, $username, $password);
                 }
                 else if($info['op'] == 'RENAMEFILE')
                 {
-                    $to = $info['to'];
-                    if(file_exists($localPath) && !file_exists($to))
-                    {
-                        chmod($localPath, 0777);
-                        rename($localPath, $to);
-                        chmod($to, $permission);
-                    }
-                    else
-                    {
-                        // force download
-                        try
-                        {
-                            $response = $this->downloadFileFromRemote($to, $url, $username, $password);
-                            file_put_contents($to, $response);
-                            touch($to, $tm);
-                        }
-                        catch(Exception $e)
-                        {
-
-                        }
-                    }
+                    $this->procRenameFile($info, $permission, $url, $username, $password);
                 }
                 else if($info['op'] == 'DELETEFILE')
                 {
-                    if(file_exists($localPath))
-                    {
-                        chmod($localPath, 0777);
-                        unlink($localPath);
-                    }
+                    $this->procDeleteFile($info);
                 }
                 else if($info['op'] == 'CREATEDIR')
                 {
-                    if(file_exists($localPath))
-                    {
-                        mkdir($localPath, $permission);
-                    }
+                    $this->procCreateDir($info, $permission);
                 }
                 else if($info['op'] == 'RENAMEDIR')
                 {
-                    $to = $info['to'];
-                    if(file_exists($localPath) && !file_exists($to))
-                    {
-                        chmod($localPath, 0777);
-                        rename($localPath, $to);
-                        chmod($to, $permission);
-                    }
-                    else
-                    {
-                        // force download
-                        mkdir($to, $permission);
-                    }
+                    $this->procRenameDir($info, $permission);
                 }
             }
             fclose($handle);
         }
+    }
 
+    /**
+     * Download user file from sync hub and create on local host and set its permission
+     * @param mixed $info File info from sync record
+     * @param mixed $permission File permission
+     * @param mixed $url Sync hub URL
+     * @param mixed $username Sync hub username
+     * @param mixed $password Sync hub password
+     * @return void
+     */
+    public function procCreateFile($info, $permission, $url, $username, $password)
+    {
+        $localPath = $info['path'];
+        $tm = $info['tm'];
+        try
+        {
+            $response = $this->downloadFileFromRemote($localPath, $url, $username, $password);
+            file_put_contents($localPath, $response);
+            touch($localPath, $tm);
+            chmod($localPath, $permission);
+        }
+        catch(FileSyncException $e)
+        {
+            //NOSONAR
+        }
+        catch(Exception $e)
+        {
+            //NOSONAR
+        }
+    }
+
+    /**
+     * Rename user file on local host if exists or download it if not exists and set its permission
+     * @param mixed $info File info from sync record
+     * @param mixed $permission File permission
+     * @param mixed $url Sync hub URL
+     * @param mixed $username Sync hub username
+     * @param mixed $password Sync hub password
+     * @return void
+     */
+    public function procRenameFile($info, $permission, $url, $username, $password)
+    {
+        $localPath = $info['path'];
+        $tm = $info['tm'];
+        $to = $info['to'];
+
+        if(file_exists($localPath) && !file_exists($to))
+        {
+            chmod($localPath, 0777);
+            rename($localPath, $to);
+            chmod($to, $permission);
+        }
+        else
+        {
+            // force download
+            try
+            {
+                $response = $this->downloadFileFromRemote($to, $url, $username, $password);
+                file_put_contents($to, $response);
+                touch($to, $tm);
+            }
+            catch(FileSyncException $e)
+            {
+                //NOSONAR
+            }
+            catch(Exception $e)
+            {
+                //NOSONAR
+            }
+        }
+    }
+
+    /**
+     * Delete user file on local host
+     * @param mixed $info File info from sync record
+     * @return void
+     */
+    public function procDeleteFile($info)
+    {
+        $localPath = $info['path'];
+        if(file_exists($localPath))
+        {
+            chmod($localPath, 0777);
+            unlink($localPath);
+        }
+    }
+
+    /**
+     * Create direcory on local host and set its permission
+     * @param mixed $info File info from sync record
+     * @param mixed $permission File permission
+     * @return void
+     */
+    public function procCreateDir($info, $permission)
+    {
+        $localPath = $info['path'];
+        if(file_exists($localPath))
+        {
+            mkdir($localPath, $permission);
+        }
+    }
+
+    /**
+     * Rename directory and set its permission
+     * @param mixed $info File info from sync record
+     * @param mixed $permission File permission
+     * @return void
+     */
+    public function procRenameDir($info, $permission)
+    {
+        $localPath = $info['path'];
+        $to = $info['to'];
+        if(file_exists($localPath) && !file_exists($to))
+        {
+            chmod($localPath, 0777);
+            rename($localPath, $to);
+            chmod($to, $permission);
+        }
+        else
+        {
+            // force download
+            mkdir($to, $permission);
+        }
     }
 }
 

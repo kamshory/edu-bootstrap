@@ -38,6 +38,11 @@ class DatabaseSyncMaster
             $this->poolFileExtension = $poolFileExtension;
         }
     }
+    /**
+     * List directory content
+     * @param mixed $base
+     * @return array|bool
+     */
     protected function glob($base)
     {
         $basePath = $base."/*.*";
@@ -57,12 +62,27 @@ class DatabaseSyncMaster
         }
         return array_values($fileList);
     }
+
+    /**
+     * Sort file ascending. File name represent time create
+     * @param array $fileList Array contain file list
+     * @return array Array contain file list
+     */
     protected function sort($fileList)
     {
         sort($fileList);
         return $fileList;
     }
 
+    /**
+     * Upload sync file to sync hub
+     * @param mixed $path Sync file path
+     * @param mixed $record Sync record
+     * @param string $url Synch hub URL
+     * @param string $username Sync username
+     * @param string $password Sync password
+     * @return mixed
+     */
     protected function uploadSyncFile($path, $record, $url, $username, $password)
     {
         if(function_exists('curl_file_create')) 

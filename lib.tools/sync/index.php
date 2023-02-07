@@ -24,7 +24,6 @@ if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database')
     $databasePoolRollingPrefix = "pool_";
     $databasePoolExtension = ".txt";
     $databaseSyncUrl = 'http://localhost/sync/database/';
-
     
 }
 if(@$_GET['type'] == 'file')
@@ -41,7 +40,7 @@ if(@$_GET['type'] == 'file')
         }
         else if(@$_GET['step'] == '2')
         {
-            $fileSyncUpload->syncLocalUserFileToRemoteHost($fileSyncUrl, $username, $password);
+            $fileSyncUpload->syncLocalUserFileToSyncHub($fileSyncUrl, $username, $password);
         }
     }
     if(@$_GET['direction'] == 'down')
@@ -49,7 +48,7 @@ if(@$_GET['type'] == 'file')
         $fileSyncDownload = new \FileSyncDownload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
         if(@$_GET['step'] == '1')
         {
-            $fileSyncDownload->syncRemoteHostRecordToDatabase($fileSyncUrl, $username, $password);
+            $fileSyncDownload->syncHubToDatabase($fileSyncUrl, $username, $password);
         }
         else if(@$_GET['step'] == '2')
         {
