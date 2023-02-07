@@ -27,6 +27,13 @@ class MemberAuth
 	public $state_id = '';
 	public $city_id = '';
 
+	/**
+	 * Constructor of MemberAuth
+	 * @param \PicoDatabase $database
+	 * @param string $username
+	 * @param string $password
+	 * @param bool $createlog
+	 */
 	public function __construct($database, $username, $password, $createlog = false)
 	{
 		global $cfg;

@@ -1347,25 +1347,25 @@ INSERT INTO `edu_question`
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_question` 
-			set `time_edit` = '2023-02-04 10:34:39', `member_edit` = '' 
+			SET `time_edit` = '2023-02-04 10:34:39', `member_edit` = '' 
 			WHERE `question_id` = '063ddd182def0f6e79dd';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-04 10:34:39', `member_edit` = '' 
+					SET `time_edit` = '2023-02-04 10:34:39', `member_edit` = '' 
 					WHERE `question_id` = '063ddd182def0f6e79dd' AND `option_id` = '063ddd182df31f0fa3c3';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-04 10:34:39', `member_edit` = '' 
+					SET `time_edit` = '2023-02-04 10:34:39', `member_edit` = '' 
 					WHERE `question_id` = '063ddd182def0f6e79dd' AND `option_id` = '063ddd182df711c89517';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-04 10:34:39', `member_edit` = '' 
+					SET `time_edit` = '2023-02-04 10:34:39', `member_edit` = '' 
 					WHERE `question_id` = '063ddd182def0f6e79dd' AND `option_id` = '063ddd182dfb588d1e49';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-04 10:34:39', `member_edit` = '' 
+					SET `time_edit` = '2023-02-04 10:34:39', `member_edit` = '' 
 					WHERE `question_id` = '063ddd182def0f6e79dd' AND `option_id` = '063ddd182dfef86bde69';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-04 10:34:39', `member_edit` = '' 
+					SET `time_edit` = '2023-02-04 10:34:39', `member_edit` = '' 
 					WHERE `question_id` = '063ddd182def0f6e79dd' AND `option_id` = '063ddd182e026b388d58';

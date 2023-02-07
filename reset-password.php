@@ -25,7 +25,7 @@ if(isset($_GET['username']) && isset($_GET['auth']))
 			{
 				$newauth = md5(mt_rand(111111,999999));
 				$sql = "UPDATE `member`
-				set `password` = md5(md5('$password')),
+				SET `password` = md5(md5('$password')),
 				`auth` = '$newauth'
 				where (`username` like '$un' AND `auth` like '$auth') 
 				";

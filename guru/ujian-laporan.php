@@ -300,7 +300,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 			{
 				$bc_score = $picoEdu->getTextScore($data['answer_id'], true);
 				$sql = "UPDATE `edu_answer` 
-				set `competence_score` = '".addslashes(json_encode($bc_score))."' 
+				SET `competence_score` = '".addslashes(json_encode($bc_score))."' 
 				WHERE `answer_id` = '".$data['answer_id']."' AND `student_id` = '".$data['student_id']."' 
 				";
 				$bc_score = $picoEdu->changeIndexScore($bc_score);
@@ -475,7 +475,7 @@ else
 	if(isset($data['answer_id']) && isset($data['student_id']))
 	{
 		$sql = "UPDATE `edu_answer` 
-		set `competence_score` = '".addslashes(json_encode($bc_score))."' 
+		SET `competence_score` = '".addslashes(json_encode($bc_score))."' 
 		WHERE `answer_id` = '".$data['answer_id']."' AND `student_id` = '".$data['student_id']."' 
 		";
 		$database->executeUpdate($sql, true);

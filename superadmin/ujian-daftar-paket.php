@@ -50,7 +50,7 @@ if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 				}
 			}
 			$sql = "UPDATE `edu_test_collection` 
-			set `number_of_question` = '$nquestion', `number_of_option` = '$noption', `file_md5` = '$md5', `file_sha1` = '$sha1'
+			SET `number_of_question` = '$nquestion', `number_of_option` = '$noption', `file_md5` = '$md5', `file_sha1` = '$sha1'
 			WHERE `test_collection_id` = '$test_collection_id' ";
 			$database->execute($sql);
 		}

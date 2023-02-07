@@ -165,51 +165,51 @@ Sifat unsur golongan alkali terdapat pada nomor...</p>', '063df69e2e3bc7088eec',
 								;
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_question` 
-			set `time_edit` = '2023-02-05 15:42:44', `member_edit` = '' 
+			SET `time_edit` = '2023-02-05 15:42:44', `member_edit` = '' 
 			WHERE `question_id` = '063df69e311cb4153ad9';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-05 15:42:44', `member_edit` = '' 
+					SET `time_edit` = '2023-02-05 15:42:44', `member_edit` = '' 
 					WHERE `question_id` = '063df69e311cb4153ad9' AND `option_id` = '063df69e31280f2e68fd';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-05 15:42:44', `member_edit` = '' 
+					SET `time_edit` = '2023-02-05 15:42:44', `member_edit` = '' 
 					WHERE `question_id` = '063df69e311cb4153ad9' AND `option_id` = '063df69e31313ee80e4d';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-05 15:42:44', `member_edit` = '' 
+					SET `time_edit` = '2023-02-05 15:42:44', `member_edit` = '' 
 					WHERE `question_id` = '063df69e311cb4153ad9' AND `option_id` = '063df69e3139979c0c5a';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-05 15:42:44', `member_edit` = '' 
+					SET `time_edit` = '2023-02-05 15:42:44', `member_edit` = '' 
 					WHERE `question_id` = '063df69e311cb4153ad9' AND `option_id` = '063df69e31441e531ff4';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-05 15:42:44', `member_edit` = '' 
+					SET `time_edit` = '2023-02-05 15:42:44', `member_edit` = '' 
 					WHERE `question_id` = '063df69e311cb4153ad9' AND `option_id` = '063df69e314f759ae4de';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_question` 
-			set `time_edit` = '2023-02-05 15:43:25', `member_edit` = '' 
+			SET `time_edit` = '2023-02-05 15:43:25', `member_edit` = '' 
 			WHERE `question_id` = '063df69e30b54a0f4a1c';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-05 15:43:25', `member_edit` = '' 
+					SET `time_edit` = '2023-02-05 15:43:25', `member_edit` = '' 
 					WHERE `question_id` = '063df69e30b54a0f4a1c' AND `option_id` = '063df69e30b91b63dd25';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-05 15:43:25', `member_edit` = '' 
+					SET `time_edit` = '2023-02-05 15:43:25', `member_edit` = '' 
 					WHERE `question_id` = '063df69e30b54a0f4a1c' AND `option_id` = '063df69e30bbb7c2103a';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-05 15:43:25', `member_edit` = '' 
+					SET `time_edit` = '2023-02-05 15:43:25', `member_edit` = '' 
 					WHERE `question_id` = '063df69e30b54a0f4a1c' AND `option_id` = '063df69e30be783efa60';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-05 15:43:25', `member_edit` = '' 
+					SET `time_edit` = '2023-02-05 15:43:25', `member_edit` = '' 
 					WHERE `question_id` = '063df69e30b54a0f4a1c' AND `option_id` = '063df69e30c13b90bde7';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-					set `time_edit` = '2023-02-05 15:43:25', `member_edit` = '' 
+					SET `time_edit` = '2023-02-05 15:43:25', `member_edit` = '' 
 					WHERE `question_id` = '063df69e30b54a0f4a1c' AND `option_id` = '063df69e30c3af03684e';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 INSERT INTO `edu_test` 

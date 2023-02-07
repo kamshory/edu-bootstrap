@@ -22,6 +22,13 @@ class AdminAuth
 	public $school_code = '';
 	public $use_token = 0;
 
+	/**
+	 * Constructor of AdminAuth
+	 * @param \PicoDatabase $database
+	 * @param string $username
+	 * @param string $password
+	 * @param bool $createlog
+	 */
 	public function __construct($database, $username, $password, $createlog = false)
 	{
 		global $picoEdu;

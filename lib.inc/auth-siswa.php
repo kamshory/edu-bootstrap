@@ -24,9 +24,14 @@ $auth_school_id = '';
 $use_token = false;
 if($student_login->student_id)
 {
-	$student_id = $auth_student_id = $student_login->student_id;
+	$student_id 
+		= $auth_student_id 
+		= $student_login->student_id;
 	$student_name = $student_login->name;
-	$school_id = $auth_student_school_id = $auth_school_id = $student_login->school_id;
+	$school_id 
+		= $auth_student_school_id 
+		= $auth_school_id 
+		= $student_login->school_id;
 	$school_code = $student_login->school_code;
 	$class_id = $student_login->class_id;
 	$use_token = $student_login->use_token;

@@ -638,3 +638,43 @@ INSERT INTO `edu_option`
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e245a16cb2213c632', '063e245a16a6b0d9931f', '063ce682801be89951aa', '063e245a128868746277', '<img class=\"equation-image\" alt=\"\\frac{3}{14}\" data-equation=\"%7B%22latex%22%3A%22%5C%5Cfrac%7B3%7D%7B14%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D\" src=\"media.edu/school/063ce682801be89951aa/test/063e245a128868746277/e8298ee73a3428659ebb13033d9abe6e.svg\">', '1', '0', '2023-02-07 19:35:45', 'aaaaaaaaaaaaa', '2023-02-07 19:35:45', 'aaaaaaaaaaaaa')
 										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` 
+			SET `time_edit` = '2023-02-07 19:36:56', `member_edit` = 'aaaaaaaaaaaaa' 
+			WHERE `question_id` = '063e245a12ab1f365eb0';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					SET `time_edit` = '2023-02-07 19:36:56', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e245a12ab1f365eb0' AND `option_id` = '063e245a12b43de4ed6c';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					SET `time_edit` = '2023-02-07 19:36:56', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e245a12ab1f365eb0' AND `option_id` = '063e245a12bd68a25054';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					SET `time_edit` = '2023-02-07 19:36:56', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e245a12ab1f365eb0' AND `option_id` = '063e245a12c5829aa7cb';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					SET `time_edit` = '2023-02-07 19:36:56', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e245a12ab1f365eb0' AND `option_id` = '063e245a12ce001954c5';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` 
+			SET `time_edit` = '2023-02-07 19:37:41', `member_edit` = 'aaaaaaaaaaaaa' 
+			WHERE `question_id` = '063e245a12ab1f365eb0';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					SET `time_edit` = '2023-02-07 19:37:41', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e245a12ab1f365eb0' AND `option_id` = '063e245a12b43de4ed6c';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					SET `time_edit` = '2023-02-07 19:37:41', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e245a12ab1f365eb0' AND `option_id` = '063e245a12bd68a25054';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					SET `time_edit` = '2023-02-07 19:37:41', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e245a12ab1f365eb0' AND `option_id` = '063e245a12c5829aa7cb';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_option` 
+					SET `time_edit` = '2023-02-07 19:37:41', `member_edit` = 'aaaaaaaaaaaaa' 
+					WHERE `question_id` = '063e245a12ab1f365eb0' AND `option_id` = '063e245a12ce001954c5';

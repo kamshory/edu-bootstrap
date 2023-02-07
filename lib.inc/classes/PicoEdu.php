@@ -12,10 +12,19 @@ class PicoEdu //NOSONAR
 
 	public \PicoDatabase $database;
 
+	/**
+	 * Constuctor of PicoEdu
+	 * @param PicoDatabase $database Database
+	 */
 	public function __construct(PicoDatabase $database)
 	{
 		$this->database = $database;
 	}
+	/**
+	 * Get valid username
+	 * @param string $username Username to be validate
+	 * @return string Valid username
+	 */
 	public function getValidUsername($username)
 	{
 		$username = preg_replace("/[^A-Za-z\d_]/i", "", $username); //NOSONAR
@@ -29,10 +38,10 @@ class PicoEdu //NOSONAR
 		$username = trim($username, "_");
 		return $username;
 	}
-	public function checkValidName($full_name)
+	public function checkValidName($fullName)
 	{
-		$full_name = trim(preg_replace(self::TRIM_EXTRA_SPACE, " ", $full_name));
-		$arr_name = explode(" ", $full_name);
+		$fullName = trim(preg_replace(self::TRIM_EXTRA_SPACE, " ", $fullName));
+		$arr_name = explode(" ", $fullName);
 		$valid_name = 1;
 		foreach ($arr_name as $name) {
 			$valid_part = 1;
@@ -894,27 +903,6 @@ class PicoEdu //NOSONAR
 		}
 	}
 
-	/*
-	Commented
-	$picoEdu->createFilterDb($sql,
-		array(
-			'attributeList'=>array(
-				array('attribute'=>'data-code', 'source'=>'phone_code'),
-				array('attribute'=>'value', 'source'=>'country_id')
-			),
-			'selectCondition'=>array(
-				'source'=>'country_id',
-				'value'=>null
-			),
-			'caption'=>array(
-				'delimiter'=>'',
-				'values'=>array(
-					'name'
-				)
-			)
-		)
-	);
-	*/
 	public function createFilterDb($sql, $params = null)
 	{
 		if($params == null)
@@ -968,17 +956,6 @@ class PicoEdu //NOSONAR
 		if($stmt->rowCount() > 0)
 		{
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
-
-			/**
-			 * INSERT INTO `mini_picopi`.`edu_admin` (`admin_id`, `school_id`, `name`, `gender`, `birth_place`, `birth_day`, `username`, `admin_level`, `token_admin`, `email`, `phone`, `address`, `country_id`, `state_id`, `city_id`, `password`, `password_initial`, `auth`, `time_create`, `time_edit`, `time_last_activity`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `ip_last_activity`, `blocked`, `active`) VALUES 
-			 * (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-			 */
-
-			/**
-			 * generateCreateMmeberFromAdmin
-			 * INSERT INTO `member` (`member_id`, `name`, `username`, `email`, `phone`, `gender`, `birth_day`, `birth_place`, `password`, `auth`, `url`, `background`, `circle_avatar`, `picture_hash`, `picture_crop_position`, `img_360_compress`, `show_compass`, `autoplay_360`, `autorotate_360`, `following`, `follower`, `language`, `country_id`, `state_id`, `city_id`, `state`, `city`, `time_register`, `last_activity_ip`, `last_activity_time`, `last_update_avatar_time`, `last_seen_ip`, `last_seen_time`, `confirmed`, `blocked`, `active`) VALUES 
-			 * (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-			 */
 
 			$member_id = addslashes($data['admin_id']);
 			$name = addslashes($data['name']);

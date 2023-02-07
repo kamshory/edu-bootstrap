@@ -257,7 +257,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$question = $picoEdu->brToNewLineEncoded($question);
 		
 		$sql = "UPDATE `edu_question` 
-		set `content` = '$question', 
+		SET `content` = '$question', 
 		`random` = '$random', 
 		`numbering` = '$numbering', 
 		`basic_competence` = '$basic_competence'
@@ -266,7 +266,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		if($stmt5->rowCount() > 0)
 		{
 			$sql = "UPDATE `edu_question` 
-			set `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
+			SET `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
 			WHERE `question_id` = '$question_id'";
 			$database->executeUpdate($sql, true);			
 		}
@@ -287,13 +287,13 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 
 				$score = kh_filter_input(INPUT_POST, "score_" . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
 				$sql = "UPDATE `edu_option` 
-				set `content` = '$option', `score` = '$score' 
+				SET `content` = '$option', `score` = '$score' 
 				WHERE `question_id` = '$question_id' AND `option_id` = '$id2'";
 				$stmt3 = $database->executeQuery($sql);
 				if ($stmt3->rowCount() > 0) 
 				{
 					$sql = "UPDATE `edu_option` 
-					set `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
+					SET `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
 					WHERE `question_id` = '$question_id' AND `option_id` = '$id2'";
 					$database->executeUpdate($sql, true);
 				}
