@@ -180,7 +180,7 @@ FROM `edu_member_school`
 INNER JOIN (`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 WHERE `edu_member_school`.`member_id` = '$auth_student_id' AND `edu_member_school`.`role` = 'S'
 ) AS `edu_school3`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 having `edu_school3`.`role` = 'S' AND `edu_school3`.`open` = '1'
 ORDER BY `edu_school3`.`name` asc
 ";
@@ -193,7 +193,7 @@ FROM `edu_member_school`
 INNER JOIN (`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 WHERE `edu_member_school`.`member_id` = '$auth_student_id' AND `edu_member_school`.`role` = 'S'
 ) AS `edu_school3`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 having `edu_school3`.`role` = 'S' AND `edu_school3`.`open` = '1'
 ";
 

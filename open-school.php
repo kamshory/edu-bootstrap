@@ -174,7 +174,7 @@ if (@$_GET['option'] == 'detail') {
 				FROM `edu_school` AS `edu_school2`
 				WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 
 				) AS `edu_school3`
-				WHERE 1 $sql_filter
+				WHERE (1=1) $sql_filter
 				ORDER BY `edu_school3`.`open` asc, `edu_school3`.`name` asc
 				";
 				
@@ -194,7 +194,7 @@ if (@$_GET['option'] == 'detail') {
 				FROM `edu_school` AS `edu_school2`
 				WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 
 				) AS `edu_school3`
-				WHERE 1 $sql_filter
+				WHERE (1=1) $sql_filter
 				";
 
 				$stmt1 = $database->executeQuery($sql_test);

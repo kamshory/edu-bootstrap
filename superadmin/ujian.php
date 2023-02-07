@@ -18,7 +18,7 @@ if(count(@$_POST) && isset($_POST['save']))
 		$test_id = $test_id2;
 	}
 	$name = trim(kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS));
-	if($name == '')
+	if(empty($name))
 	{
 		$name = "{NAMA UJIAN}";
 	}
@@ -833,12 +833,12 @@ $sql = "SELECT `edu_test`.* $nt,
 (SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_test`.`school_id` limit 0,1) AS `school_name`,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`
 FROM `edu_test`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ORDER BY `edu_test`.`test_id` DESC
 ";
 $sql_test = "SELECT `edu_test`.*
 FROM `edu_test`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ";
 
 $stmt = $database->executeQuery($sql_test);

@@ -16,7 +16,7 @@ if(count(@$_POST) && isset($_POST['save']))
 		$test_id = $test_id2;
 	}
 	$name = trim(kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS));
-	if($name == '')
+	if(empty($name))
 	{
 		$name = '{NAMA UJIAN}';
 	}

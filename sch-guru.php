@@ -145,12 +145,12 @@ $nt = '';
 
 $sql = "SELECT `edu_teacher`.* $nt
 FROM `edu_teacher`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ORDER BY `edu_teacher`.`teacher_id` asc
 ";
 $sql_test = "SELECT `edu_teacher`.*
 FROM `edu_teacher`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

@@ -382,12 +382,12 @@ if($stmt->rowCount() > 0)
 		`edu_school_program`.`name` AS `school_program`
 		FROM `edu_class`
 		LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = `edu_class`.`school_program_id`) 
-		WHERE 1 $sql_filter
+		WHERE (1=1) $sql_filter
 		ORDER BY `edu_class`.`school_id` DESC, `edu_school_program`.`sort_order` ASC, `edu_class`.`sort_order` ASC
 		";
 		$sql_test = "SELECT `edu_class`.*
 		FROM `edu_class`
-		WHERE 1 $sql_filter
+		WHERE (1=1) $sql_filter
 		";
 		$stmt = $database->executeQuery($sql_test);
 		$pagination->total_record = $stmt->rowCount();

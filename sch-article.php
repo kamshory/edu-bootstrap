@@ -17,7 +17,7 @@ if(!empty(@$school_id))
 		$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 		FROM `edu_article` 
 		LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
-		WHERE 1 $sql_filter_article ";
+		WHERE (1=1) $sql_filter_article ";
 		include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
@@ -43,7 +43,7 @@ if(!empty(@$school_id))
 	$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 	FROM `edu_article` 
 	LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
-	WHERE 1 $sql_filter_article 
+	WHERE (1=1) $sql_filter_article 
 	ORDER BY `edu_article`.`article_id` DESC
 	";
 	$stmt = $database->executeQuery($sql);

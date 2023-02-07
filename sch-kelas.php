@@ -101,12 +101,12 @@ $sql = "SELECT `edu_class`.* $nt,
 (SELECT `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_class`.`school_program_id` limit 0,1) AS `school_program_id`,
 (SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) AS `num_student`
 FROM `edu_class`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ORDER BY `edu_class`.`sort_order` ASC
 ";
 $sql_test = "SELECT `edu_class`.*
 FROM `edu_class`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

@@ -355,7 +355,7 @@ try {
         $phone = $picoEdu->trimPunctuation($phone);
         $email = $picoEdu->trimPunctuation($email);
 
-        if ($name == '') {
+        if (empty($name)) {
             continue;
         }
         if ($email == '') {

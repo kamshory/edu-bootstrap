@@ -856,14 +856,14 @@ window.onload = function()
       (SELECT COUNT(DISTINCT `edu_answer`.`student_id`) FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id`) AS `number_of_student`,
       (SELECT `edu_answer`.`start` FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` ORDER BY `edu_answer`.`start` DESC LIMIT 0, 1) AS `last_test`
       FROM `edu_test`
-      WHERE 1 $sql_filter
+      WHERE (1=1) $sql_filter
       having 1 AND `number_of_student` > 0
       ORDER BY `last_test` DESC, `edu_test`.`test_id` DESC
       ";
       $sql_test = "SELECT `edu_test`.*,
       (SELECT COUNT(DISTINCT `edu_answer`.`student_id`) FROM `edu_answer` WHERE `edu_answer`.`test_id` = `edu_test`.`test_id`) AS `number_of_student`
       FROM `edu_test`
-      WHERE 1 $sql_filter
+      WHERE (1=1) $sql_filter
       having 1 AND `number_of_student` > 0
       ";
 

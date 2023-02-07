@@ -488,12 +488,12 @@ $nt = '';
 
 $sql = "SELECT `edu_test_collection`.* $nt
 FROM `edu_test_collection`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ORDER BY `edu_test_collection`.`test_collection_id` DESC
 ";
 $sql_test = "SELECT `edu_test_collection`.*
 FROM `edu_test_collection`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

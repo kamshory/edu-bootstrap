@@ -461,12 +461,12 @@ $sql = "SELECT `edu_student`.* ,
 `edu_class`.`name` AS `class_id`, `edu_class`.`sort_order` AS `sort_order`
 FROM `edu_student`
 LEFT JOIN (`edu_class`) ON (`edu_class`.`class_id` = `edu_student`.`class_id`)
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ORDER BY `edu_student`.`school_id` DESC, `edu_student`.`name` asc
 ";
 $sql_test = "SELECT `edu_student`.*
 FROM `edu_student`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

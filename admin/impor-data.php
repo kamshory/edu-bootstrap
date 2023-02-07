@@ -85,7 +85,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 					$token_school = md5($name.'-'.time().'-'.mt_rand(111111, 999999));
 					
 					$name_school = $name;
-					if($name == '')
+					if(empty($name))
 					{
 						continue;
 					}
@@ -236,7 +236,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$password = addslashes(trim(@$data['password']));
 								$address = addslashes(trim(@$data['address']));
 
-								if ($name == '') {
+								if (empty($name)) {
 									continue;
 								}
 
@@ -328,7 +328,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$time_create = $time_edit = $picoEdu->getLocalDateTime();
 								$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 								$admin_create = $admin_edit = $admin_id;
-								if ($name == '') {
+								if (empty($name)) {
 									continue;
 								}
 
@@ -424,7 +424,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$email = $picoEdu->trimPunctuation($email);
 								$email = $picoEdu->filterEmailAddress($email);
 
-								if ($name == '') {
+								if (empty($name)) {
 									continue;
 								}
 								if ($email == '') {
@@ -555,7 +555,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$phone = $picoEdu->trimPunctuation($phone);
 								$email = $picoEdu->trimPunctuation($email);
 
-								if ($name == '') {
+								if (empty($name)) {
 									continue;
 								}
 								if ($email == '') {

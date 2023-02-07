@@ -383,12 +383,12 @@ $sql = "SELECT `edu_article`.* , `edu_teacher`.`name` AS `teacher_create`, `edu_
 FROM `edu_article` 
 LEFT JOIN (`edu_teacher`) ON (`edu_teacher`.`teacher_id` = `edu_article`.`member_create`) 
 LEFT JOIN (`edu_admin`) ON (`edu_admin`.`admin_id` = `edu_article`.`member_create`) 
-WHERE 1 $sql_filter 
+WHERE (1=1) $sql_filter 
 ORDER BY `edu_article`.`article_id` DESC
 ";
 $sql_test = "SELECT `edu_article`.`article_id` 
 FROM `edu_article` 
-WHERE 1 $sql_filter 
+WHERE (1=1) $sql_filter 
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

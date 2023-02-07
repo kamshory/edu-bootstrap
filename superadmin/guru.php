@@ -411,12 +411,12 @@ $nt = '';
 $sql = "SELECT `edu_teacher`.* $nt,
 (SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_teacher`.`school_id` limit 0,1) AS `school_name`
 FROM `edu_teacher`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ORDER BY `edu_teacher`.`school_id` DESC, `edu_teacher`.`name` asc
 ";
 $sql_test = "SELECT `edu_teacher`.*
 FROM `edu_teacher`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();

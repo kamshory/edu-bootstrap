@@ -109,7 +109,7 @@ ORDER BY `edu_class`.`school_id` DESC, `edu_school_program`.`sort_order` ASC, `e
 
 $sql_test = "SELECT `edu_class`.*
 FROM `edu_class`
-WHERE 1 $sql_filter
+WHERE (1=1) $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->total_record = $stmt->rowCount();
