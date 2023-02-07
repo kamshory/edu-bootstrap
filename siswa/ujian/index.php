@@ -1,7 +1,7 @@
 <?php
 include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-siswa.php";
 include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/mobile-detector.php";
-$student_id = @$student_id . '';
+$auth_student_id = @$auth_student_id . '';
 $class_id = @$class_id . '';
 $test_id = addslashes((@$_GET['test_id']));
 if(empty($test_id))
@@ -23,7 +23,7 @@ if(@$_GET['option'] == 'login')
 
 if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 {
-	$start = addslashes(@$_SESSION['session_test'][$student_id][$test_id]['start']);
+	$start = addslashes(@$_SESSION['session_test'][$auth_student_id][$test_id]['start']);
 	if($start == '' || $start == '0000-00-00 00:00:00')
 	{
 		$start = kh_filter_input(INPUT_POST, "time_start", FILTER_SANITIZE_STRING);
@@ -43,12 +43,12 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 			if (stripos($key, 'answer_') === 0) {
 				$field = addslashes($key);
 				$value = addslashes($val);
-				$_SESSION['answer_tmp'][$student_id][$test_id][$field] = $value;
+				$_SESSION['answer_tmp'][$auth_student_id][$test_id][$field] = $value;
 			}
 		}
 
 		// check score dari answer
-		$arr = $_SESSION['answer_tmp'][$student_id][$test_id];
+		$arr = $_SESSION['answer_tmp'][$auth_student_id][$test_id];
 		$answer_arr = array();
 
 		$true = 0;
@@ -84,7 +84,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 		if ($jumlah_soal == 0) {
 			$jumlah_soal = 1;
 		}
-		$str_soal = @$_SESSION['session_test'][$student_id][$test_id]['soal'];
+		$str_soal = @$_SESSION['session_test'][$auth_student_id][$test_id]['soal'];
 		$str_soal = trim(str_replace(array('[', ']'), array('', ','), $str_soal), ',');
 
 		$penalty = $false * $data['penalty'];
@@ -93,7 +93,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 		$proses = false;
 		$answer_str = addslashes(implode(",", $answer_arr)); // catatan answer
 		if ($data['has_limits']) {
-			$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' ";
+			$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' and `test_id` = '$test_id' ";
 			$stmt2 = $database->executeQuery($sql);
 			$nujian = $stmt2->rowCount();
 			if ($nujian < $data['trial_limits']) {
@@ -104,25 +104,25 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 		} else {
 			$proses = true;
 		}
-		$question_set = str_replace(array('[', ']'), array(',', ','), @$_SESSION['session_test'][$student_id][$test_id]['soal']);
+		$question_set = str_replace(array('[', ']'), array(',', ','), @$_SESSION['session_test'][$auth_student_id][$test_id]['soal']);
 		$question_set = trim(str_replace(",,", ",", $question_set), ",");
-		$storage_key = md5($student_id . "-" . $test_id . "|" . $question_set);
+		$storage_key = md5($auth_student_id . "-" . $test_id . "|" . $question_set);
 		$storage_key;
 		if ($proses) {
-			$_SESSION['session_test'][$student_id][$test_id] = null;
-			unset($_SESSION['session_test'][$student_id][$test_id]);
-			$_SESSION['answer_tmp'][$student_id][$test_id] = null;
-			unset($_SESSION['answer_tmp'][$student_id][$test_id]);
+			$_SESSION['session_test'][$auth_student_id][$test_id] = null;
+			unset($_SESSION['session_test'][$auth_student_id][$test_id]);
+			$_SESSION['answer_tmp'][$auth_student_id][$test_id] = null;
+			unset($_SESSION['answer_tmp'][$auth_student_id][$test_id]);
 			$_SESSION['session_test'] = array();
 			// simpan di tabel answer
 			$competence_score = addslashes(json_encode($picoEdu->getTextScoreFromString($answer_str, true)));
 			$sql = "INSERT INTO `edu_answer` 
 			(`school_id`, `test_id`, `student_id`, `start`, `end`, `answer`, `competence_score`, 
 			`true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) values
-			('$school_id', '$test_id', '$student_id', '$start', '$end', '$answer_str', '$competence_score', 
+			('$school_id', '$test_id', '$auth_student_id', '$start', '$end', '$answer_str', '$competence_score', 
 			'$true', '$false', '$score', '$penalty', '$final_score', '$percent', '1') ";
 			$stmt = $database->executeInsert($sql, true);
-			$picoEdu->logoutTest($school_id, $student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
+			$picoEdu->logoutTest($school_id, $auth_student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
 			include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 			?>
 			<div class="info">Jawaban berhasil dikirim.</div>
@@ -196,7 +196,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="info">
 <?php
-$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' ORDER BY `start` desc ";
+$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' and `test_id` = '$test_id' ORDER BY `start` desc ";
 $stmt = $database->executeQuery($sql);
 $ntest = $stmt->rowCount();
 if($ntest)
@@ -299,7 +299,7 @@ else if(@$_GET['login-to-test']=="yes")
 	$dur_obj = $picoEdu->secondsToTime($data['duration']);
 	if($data['has_limits'])
 	{
-		$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' ORDER BY `start` desc ";
+		$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' and `test_id` = '$test_id' ORDER BY `start` desc ";
 		$stmt = $database->executeQuery($sql);
 		$ntest = $stmt->rowCount();
 		if($ntest < $data['trial_limits'])
@@ -324,15 +324,15 @@ else if(@$_GET['login-to-test']=="yes")
 	{
 		if($proses)
 		{
-			$question_package = @$_SESSION['session_test'][$student_id][$test_id]['soal'];
+			$question_package = @$_SESSION['session_test'][$auth_student_id][$test_id]['soal'];
 			if(empty($question_package))
 			{
 				$number_of_question = $data['number_of_question'];
 				$duration = $data['duration'];
 				$question_per_page = $data['question_per_page'];
 				$due_time = time()+$duration;
-				$_SESSION['session_test'][$student_id][$test_id]['start'] = date('Y-m-d H:i:s');
-				$_SESSION['session_test'][$student_id][$test_id]['due_time'] = $due_time;
+				$_SESSION['session_test'][$auth_student_id][$test_id]['start'] = date('Y-m-d H:i:s');
+				$_SESSION['session_test'][$auth_student_id][$test_id]['due_time'] = $due_time;
 				$alert_message = $data['alert_message'];
 				
 				if($data['random'])
@@ -362,8 +362,8 @@ else if(@$_GET['login-to-test']=="yes")
 					}
 				}
 				$question_package = $str = '['.implode('][', $arr).']';
-				$_SESSION['session_test'][$student_id][$test_id]['soal'] = $str;
-				$picoEdu->loginTest($school_id, $student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
+				$_SESSION['session_test'][$auth_student_id][$test_id]['soal'] = $str;
+				$picoEdu->loginTest($school_id, $auth_student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
 				header("Location: ".basename($_SERVER['PHP_SELF'])."?test_id=$test_id");
 			}
 			else
@@ -399,11 +399,11 @@ include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 exit();
 }
 
-if(isset($_SESSION['session_test'][$student_id][$test_id]))
+if(isset($_SESSION['session_test'][$auth_student_id][$test_id]))
 {
 	$session_id = session_id();
 
-	$question_package = @$_SESSION['session_test'][$student_id][$test_id]['soal'];
+	$question_package = @$_SESSION['session_test'][$auth_student_id][$test_id]['soal'];
 	
 
 	if(@!$mobile_browser)

@@ -20,7 +20,7 @@ $sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`
 `edu_answer`.`start`, `edu_answer`.`end`, `edu_answer`.`competence_score`
 FROM `edu_answer`
 inner join (`edu_test`) on (`edu_test`.`test_id` = `edu_answer`.`test_id`)
-WHERE `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$student_id'
+WHERE `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$auth_student_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -201,7 +201,7 @@ $sql = "SELECT `edu_question`.* , `edu_answer`.`answer` as `answer` , instr(`edu
 FROM `edu_question` 
 left join (`edu_answer`) on (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
 left join (`edu_test`) on (`edu_test`.`test_id` = `edu_question`.`test_id`)
-WHERE `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$student_id'
+WHERE `edu_answer`.`answer_id` = '$answer_id' and `edu_answer`.`student_id` = '$auth_student_id'
 group by `edu_question`.`question_id` 
 ORDER BY `pos` asc ";
 
@@ -302,7 +302,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $sql = "SELECT `edu_test`.* 
 FROM `edu_test`
 inner join(`edu_answer`) on (`edu_answer`.`test_id` = `edu_test`.`test_id`)
-WHERE `edu_test`.`test_id` = '$test_id' and `edu_answer`.`student_id` = '$student_id'
+WHERE `edu_test`.`test_id` = '$test_id' and `edu_answer`.`student_id` = '$auth_student_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
@@ -346,7 +346,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
 $sql = "SELECT `edu_answer`.*
 FROM `edu_answer`
-WHERE `edu_answer`.`student_id` = '$student_id' and `edu_answer`.`test_id` = '$test_id' 
+WHERE `edu_answer`.`student_id` = '$auth_student_id' and `edu_answer`.`test_id` = '$test_id' 
 ORDER BY `edu_answer`.`start` asc
 ";
 $stmt = $database->executeQuery($sql);
@@ -700,7 +700,7 @@ $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
 (select `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_test`.`school_program_id`) as `school_program`,
 (select count(distinct `edu_answer`.`answer_id`) FROM `edu_answer` 
-WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` and `edu_answer`.`student_id` = '$student_id') as `ntest`
+WHERE `edu_answer`.`test_id` = `edu_test`.`test_id` and `edu_answer`.`student_id` = '$auth_student_id') as `ntest`
 FROM `edu_test`
 WHERE `edu_test`.`active` = true and `edu_test`.`school_id` = '$school_id' $sql_filter
 ORDER BY `edu_test`.`test_id` desc

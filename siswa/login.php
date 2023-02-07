@@ -70,7 +70,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 else
 {
 	include_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
-	if(!empty(@$student_id))
+	if(!empty(@$auth_student_id))
 	{
 		header('Location: index.php');
 	}

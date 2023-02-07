@@ -145,7 +145,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				$sql3 = "UPDATE `edu_teacher` SET `school_id` = '$school_id' WHERE `teacher_id` = '$teacher_id' 
 				and (`school_id` = '' or `school_id` is null)
 				";
-				$database->executeUpdate($sql3);
+				$database->executeUpdate($sql3, true);
 				header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&teacher_id=$teacher_id");
 			}
 		}

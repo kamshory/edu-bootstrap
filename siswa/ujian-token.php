@@ -20,7 +20,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 	$sql = "SELECT `edu_token`.* , `edu_test`.*
 	FROM `edu_token`
 	inner join(`edu_test`) on(`edu_test`.`test_id` = `edu_token`.`test_id`)
-	WHERE `edu_token`.`student_id` = '$student_id'
+	WHERE `edu_token`.`student_id` = '$auth_student_id'
 	and `edu_token`.`token` = '$token' and `edu_token`.`active` = true and `edu_token`.`time_expire` > '$now'
 	";
 	$stmt = $database->executeQuery($sql);
@@ -40,7 +40,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 		$dur_obj = $picoEdu->secondsToTime($data['duration']);
 		if($data['has_limits'])
 		{
-			$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$student_id' and `test_id` = '$test_id' ORDER BY `start` desc ";
+			$sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' and `test_id` = '$test_id' ORDER BY `start` desc ";
 			$stmt = $database->executeQuery($sql);
 			$ntest = $stmt->rowCount();
 			if($ntest < $data['trial_limits'])
@@ -63,15 +63,15 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 		
 		if($proses)
 		{
-			$question_package = @$_SESSION['session_test'][$student_id][$test_id]['soal'];
+			$question_package = @$_SESSION['session_test'][$auth_student_id][$test_id]['soal'];
 			if(empty($question_package))
 			{
 				$number_of_question = $data['number_of_question'];
 				$duration = $data['duration'];
 				$question_per_page = $data['question_per_page'];
 				$due_time = time()+$duration;
-				$_SESSION['session_test'][$student_id][$test_id]['start'] = $picoEdu->getLocalDateTime();
-				$_SESSION['session_test'][$student_id][$test_id]['due_time'] = $due_time;
+				$_SESSION['session_test'][$auth_student_id][$test_id]['start'] = $picoEdu->getLocalDateTime();
+				$_SESSION['session_test'][$auth_student_id][$test_id]['due_time'] = $due_time;
 				$alert_message = $data['alert_message'];
 				
 				if($data['random'])
@@ -99,18 +99,18 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 					}
 				}
 				$question_package = $str = '['.implode('][', $arr).']';
-				$_SESSION['session_test'][$student_id][$test_id]['soal'] = $str;
-				$picoEdu->loginTest($school_id, $student_id, $test_id, session_id(), $picoEdu->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
+				$_SESSION['session_test'][$auth_student_id][$test_id]['soal'] = $str;
+				$picoEdu->loginTest($school_id, $auth_student_id, $test_id, session_id(), $picoEdu->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
 
 				$sql = "UPDATE `edu_token` SET `active` = false 
-				WHERE `edu_token`.`student_id` = '$student_id' and `edu_token`.`token` = '$token' ";
+				WHERE `edu_token`.`student_id` = '$auth_student_id' and `edu_token`.`token` = '$token' ";
 				$database->execute($sql);
 				header("Location: ujian/index.php?test_id=$test_id");
 			}
 			else
 			{
 				$sql = "UPDATE `edu_token` SET `active` = false 
-				WHERE `edu_token`.`student_id` = '$student_id' and `edu_token`.`token` = '$token' ";
+				WHERE `edu_token`.`student_id` = '$auth_student_id' and `edu_token`.`token` = '$token' ";
 				$database->execute($sql);
 				header("Location: ujian/index.php?test_id=$test_id");
 			}
@@ -133,7 +133,7 @@ else if(isset($_POST['token']))
 	{
 		$now = $picoEdu->getLocalDateTime();
 		$sql = "SELECT * FROM `edu_token`
-		WHERE `student_id` = '$student_id'
+		WHERE `student_id` = '$auth_student_id'
 		and `token` = '$token' and `active` = true and `time_expire` > '$now'
 		";
 		$stmt = $database->executeQuery($sql);
@@ -149,10 +149,10 @@ else if(isset($_POST['token']))
 		else
 		{
 			$token_valid = 0;
-			if(!$picoEdu->logInvalidLogin($student_id, 'T', $picoEdu->getLocalDateTime(), $cfg->max_invalid_signin_time, $cfg->max_invalid_signin_count))
+			if(!$picoEdu->logInvalidLogin($auth_student_id, 'T', $picoEdu->getLocalDateTime(), $cfg->max_invalid_signin_time, $cfg->max_invalid_signin_count))
 			{
 				$account_blocked = 1;
-				$sql = "UPDATE `edu_student` SET `blocked` = true WHERE `student_id` = '$student_id' ";
+				$sql = "UPDATE `edu_student` SET `blocked` = true WHERE `student_id` = '$auth_student_id' ";
 				$database->execute($sql);
 			}
 		}

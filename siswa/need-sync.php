@@ -4,7 +4,7 @@ include_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
 
 if(isset($_POST['sync']))
 {
-	$student_id = kh_filter_input(INPUT_POST, "id", FILTER_SANITIZE_STRING_NEW);
+	$auth_student_id = kh_filter_input(INPUT_POST, "id", FILTER_SANITIZE_STRING_NEW);
 	$email = kh_filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
 	$auth = kh_filter_input(INPUT_POST, "auth", FILTER_SANITIZE_STRING_NEW);
 	$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
@@ -12,17 +12,17 @@ if(isset($_POST['sync']))
 	{
 		$sql = "SELECT `edu_student`.*
 		FROM `edu_student` 
-		WHERE `edu_student`.`student_id` = '$student_id' and `edu_student`.`email` like '$email' and `edu_student`.`auth` like '$auth' ";
+		WHERE `edu_student`.`student_id` = '$auth_student_id' and `edu_student`.`email` like '$email' and `edu_student`.`auth` like '$auth' ";
 		$stmt1 = $database->executeQuery($sql);
 		if($stmt1->rowCount() > 0)
 		{
-			$sql = "SELECT * FROM `member` WHERE `email` like '$email' and `member_id` != '$student_id' ";
+			$sql = "SELECT * FROM `member` WHERE `email` like '$email' and `member_id` != '$auth_student_id' ";
 			$stmt2 = $database->executeQuery($sql);
 			if($stmt2->rowCount() == 0)
 			{
 			
 				$sql = "UPDATE `member` SET `email` = '$email', `password` = md5(md5('$password')), `active` = true, `blocked` = false 
-				WHERE `member_id` = '$student_id' ";
+				WHERE `member_id` = '$auth_student_id' ";
 				$database->executeUpdate($sql, true);
 				$sql = "SELECT `username`, `member_id`
 				FROM `member`
@@ -40,19 +40,19 @@ if(isset($_POST['sync']))
 			else
 			{
 				// someone take email
-				header("Location: need-sync.php?option=email-taken&id=$student_id&email=$email&auth=$auth");
+				header("Location: need-sync.php?option=email-taken&id=$auth_student_id&email=$email&auth=$auth");
 			}
 		}
 	}
 }
 
-$student_id = kh_filter_input(INPUT_GET, "id", FILTER_SANITIZE_STRING_NEW);
+$auth_student_id = kh_filter_input(INPUT_GET, "id", FILTER_SANITIZE_STRING_NEW);
 $email = kh_filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
 $auth = kh_filter_input(INPUT_GET, "auth", FILTER_SANITIZE_STRING_NEW);
 
 $sql = "SELECT `edu_student`.*
 FROM `edu_student` 
-WHERE `edu_student`.`student_id` = '$student_id' and `edu_student`.`email` like '$email' and `edu_student`.`auth` like '$auth' ";
+WHERE `edu_student`.`student_id` = '$auth_student_id' and `edu_student`.`email` like '$email' and `edu_student`.`auth` like '$auth' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {

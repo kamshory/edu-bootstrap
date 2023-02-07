@@ -8,7 +8,6 @@ if(empty(@$school_id))
 $cfg->page_title = "Guru";
 include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
-
 if(@$_GET['option'] == 'detail')
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR

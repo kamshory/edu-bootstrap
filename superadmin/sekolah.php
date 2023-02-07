@@ -77,12 +77,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$sql1 = "UPDATE `edu_student` SET `prevent_change_school` = '$prevent_change_school', `prevent_resign` = '$prevent_resign'
 	WHERE `school_id` = '$school_id' 
 	";
-	$database->executeUpdate($sql1);
+	$database->executeUpdate($sql1, true);
 
 	$sql2 = "UPDATE `edu_school` SET `prevent_change_school` = '$prevent_change_school', `prevent_resign` = '$prevent_resign'
 	WHERE `school_id` = '$school_id' 
 	";
-	$database->executeUpdate($sql2);
+	$database->executeUpdate($sql2, true);
 
 	$sql = "UPDATE `edu_school` set
 	`school_code` = '$school_code', `name` = '$name', `school_grade_id` = '$school_grade_id', `public_private` = '$public_private', 
