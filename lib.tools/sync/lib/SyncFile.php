@@ -396,7 +396,6 @@ class FileSyncDownload extends FileSyncMaster
                 if(file_put_contents($localPath, $response))
                 {   
                     $localPath = addslashes($localPath);
-                    $sync_file_id = $this->database->generateNewId();
                     $sql = "INSERT INTO `edu_sync_file`
                     (`sync_file_id`, `file_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
                     ('$sync_file_id', '$localPath', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
