@@ -29,7 +29,7 @@ $configs->sync_database_base_dir = dirname(dirname(__FILE__))."/lib.sync/databas
 $configs->sync_database_pool_name = "pool";
 $configs->sync_database_rolling_prefix = "poll_";
 $configs->sync_database_extension = ".txt";
-$configs->sync_database_maximum_length = 100000;
+$configs->sync_database_maximum_length = 1000000;
 $configs->sync_database_delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
 
 $configs->sync_file_base_dir = dirname(dirname(__FILE__))."/lib.sync/file/pool";

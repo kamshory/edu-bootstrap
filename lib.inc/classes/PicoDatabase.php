@@ -80,9 +80,7 @@ class PicoDatabase
 	private string $password = "";
 	private string $databaseName = "";
 	private string $timezone = "00:00";
-
 	private \PDO $conn;
-
 	public \PicoDatabaseServer $databaseServer;
 	public \PicoDatabaseSyncConfig $databaseSyncConfig;
 
@@ -214,6 +212,7 @@ class PicoDatabase
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
+
 	/**
 	 * Execute update query
 	 * @param string $sql Query string to be executed
@@ -224,6 +223,7 @@ class PicoDatabase
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
+
 	/**
 	 * Execute delete query
 	 * @param string $sql Query string to be executed
@@ -234,6 +234,7 @@ class PicoDatabase
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
+
 	/**
 	 * Execute transaction query
 	 * @param string $sql Query string to be executed

@@ -1122,4 +1122,22 @@ class PicoEdu //NOSONAR
 		);
 		return isset($arr[$grade_id]) ? $arr[$grade_id] : '';
 	}
+
+	/**
+	 * Fixing input date time for database
+	 * @param string $input
+	 * @return string Fixed date time for SQL query
+	 */
+	public function fixInputTimeSQL($input)
+	{
+		if($input == null || empty($input))
+		{
+			$input = 'null';
+		}
+		else
+		{
+			$input = "'$input'";
+		}
+		return $input;
+	}
 }

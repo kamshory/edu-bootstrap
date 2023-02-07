@@ -46,7 +46,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 if(@$_GET['option'] == 'edit')
 {
 include_once dirname((__FILE__))."/lib.inc/header.php";
-if(@!$mobile_browser)
+if(@!$mobileBrowser)
 {
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/script/jquery-ui/jquery-ui.min.css">

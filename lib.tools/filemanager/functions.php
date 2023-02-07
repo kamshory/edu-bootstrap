@@ -648,13 +648,13 @@ function compressImageFile($path, $authblogid)
 				$maxheight = getfmprofile('maximageheight', $authblogid, 800);
 				if (@stripos($info['mime'], 'jpeg') !== false) {
 					// jpeg
-					$imagelocation = imageresizemax($path, $path, $maxwidth, $maxheight, $interlace, $quality); //NOSONAR
+					$imagelocation = imageResizeMax($path, $path, $maxwidth, $maxheight, $interlace, $quality); //NOSONAR
 				} else if (@stripos($info['mime'], 'png') !== false) {
 					// png
-					$imagelocation = imageresizemax($path, $path, $maxwidth, $maxheight, $interlace); //NOSONAR
+					$imagelocation = imageResizeMax($path, $path, $maxwidth, $maxheight, $interlace); //NOSONAR
 				} else if (@stripos($info['mime'], 'gif') !== false) {
 					// gif
-					$imagelocation = imageresizemax($path, $path, $maxwidth, $maxheight, $interlace); //NOSONAR
+					$imagelocation = imageResizeMax($path, $path, $maxwidth, $maxheight, $interlace); //NOSONAR
 				}
 			}
 		}
@@ -662,7 +662,7 @@ function compressImageFile($path, $authblogid)
 }
 
 
-function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace = false, $quality = 80)  //NOSONAR
+function imageResizeMax($source, $destination, $maxwidth, $maxheight, $interlace = false, $quality = 80)  //NOSONAR
 {
 	$image = new StdClass();
 	global $fileSync;

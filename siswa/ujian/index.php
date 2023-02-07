@@ -406,7 +406,7 @@ if(isset($_SESSION['session_test'][$auth_student_id][$test_id]))
 	$question_package = @$_SESSION['session_test'][$auth_student_id][$test_id]['soal'];
 	
 
-	if(@!$mobile_browser)
+	if(@!$mobileBrowser)
 	{
 		include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/test-template-un.php";
 	}

@@ -5,6 +5,13 @@ class MainMenu
     {
         // Do nothing
     }
+
+    /**
+     * Show menu
+     * @param array $strcuture Menu structure
+     * @param string $selectedMenu Selected menu link
+     * @return string HTML contain menu structure
+     */
     public function show($strcuture, $selectedMenu)
     {
 $html = 
@@ -34,7 +41,13 @@ $html .=
         return $html;
     }
 
-    public function containLink($menu, $selectedMenu)
+    /**
+     * Check if menu is contain selected menu link
+     * @param array $menu Menu object
+     * @param string $selectedMenu Selected menu link
+     * @return bool true if menu is contain selected menu link and false if menu is not contain selected menu link
+     */
+    private function containLink($menu, $selectedMenu)
     {
         if(!isset($menu['submenu']))
         {
@@ -50,7 +63,15 @@ $html .=
         return false;
     }
 
-    public function createSubmenu($index, $menu, $expanded, $selectedMenu) //NOSONAR
+    /**
+     * Create submenu
+     * @param int $index Menu index
+     * @param array $menu Menu object
+     * @param bool $expanded Flag if menu is expanded or not
+     * @param string $selectedMenu Selected menu link
+     * @return string HTML contain menu structure
+     */
+    private function createSubmenu($index, $menu, $expanded, $selectedMenu) //NOSONAR
     {
         $cls1 = $expanded ? ' show' : '';
         if(!isset($menu['submenu']))
@@ -64,7 +85,6 @@ $html .=
 '        <div id="'.$id.'" class="collapse'.$cls1.'" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordionEx" style="">
             <div class="menu-child">
 ';
-
 
 
         foreach($menu['submenu'] as $submenu)
@@ -86,6 +106,13 @@ $html .=
         return $html;
     }
 
+    /**
+     * Create menu
+     * @param int $index Menu index
+     * @param string $caption Menu caption
+     * @param bool $expanded Flag if menu is expanded or not
+     * @return string HTML contain menu structure
+     */
     public function createMenu($index, $caption, $expanded)
     {
         $id = 'collapseMainMenu' . $index;

@@ -170,14 +170,14 @@ function cerrarTag($tag, $xml)
 			break;
 		}
 	}
-	if(broken_tags($xml) && stripos($xml, "<$tag", 0) !== false) 
+	if(brokenTags($xml) && stripos($xml, "<$tag", 0) !== false) 
 	{
 		$xml .= "</$tag>";
 	}
 	return $xml;
 }
 
-function broken_tags($str)
+function brokenTags($str)
 {
 	preg_match_all("/(<\w+)(?:.){0,}?>/", $str, $v1); // NOSONAR
 	preg_match_all("/<\/\w+>/", $str, $v2);
@@ -888,7 +888,7 @@ function extractParagraph($data)
 	$doc->xmlEncoding = "UTF-8";
 	$xpath = new DOMXPath($dom);
 	// a tag
-	$hrefs = @$xpath->evaluate("/html/body//p"); //NOSONAR //NOSONAR
+	$hrefs = @$xpath->evaluate("/html/body//p"); //NOSONAR
 	for ($i = 0; $i < $hrefs->length; $i++) {
 		$par = $hrefs->item($i);
         $result[$i] = $par->textContent;

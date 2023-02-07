@@ -287,7 +287,7 @@ if(isset($_SESSION['session_test'][$student_id][$test]))
 	$arr = explode('"start"', $str);
 }
 
-if(@!$mobile_browser)
+if(@!$mobileBrowser)
 {
 	include_once dirname(__FILE__)."/lib.inc/test-template-un.php";
 }

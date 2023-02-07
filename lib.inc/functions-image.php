@@ -3,7 +3,7 @@ if(!function_exists("exif_read_data"))
 {
 	include_once dirname(__FILE__)."/exif.php";
 }
-function imageresizemax($source, $destination, $maxwidth, $maxheight, $interlace=false, $type = 'jpeg', $quality = 80)
+function imageResizeMax($source, $destination, $maxwidth, $maxheight, $interlace=false, $type = 'jpeg', $quality = 80)
 {
 	global $fileSync;
 	$imageinfo = getimagesize($source);

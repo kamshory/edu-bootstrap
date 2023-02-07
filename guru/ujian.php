@@ -20,6 +20,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	{
 		$name = '{NAMA UJIAN}';
 	}
+	$sort_order = 0;
 	$class = kh_filter_input(INPUT_POST, "classlist", FILTER_SANITIZE_SPECIAL_CHARS);
 	$subject = kh_filter_input(INPUT_POST, "subject", FILTER_SANITIZE_SPECIAL_CHARS);
 	$description = kh_filter_input(INPUT_POST, "description", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -33,10 +34,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$number_of_option = kh_filter_input(INPUT_POST, "number_of_option", FILTER_SANITIZE_NUMBER_UINT);
 	$question_per_page = kh_filter_input(INPUT_POST, "question_per_page", FILTER_SANITIZE_NUMBER_UINT);
 	$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
-	$autosubmit = kh_filter_input(INPUT_POST, "autosubmit", FILTER_SANITIZE_NUMBER_UINT);
-		
-	
-	$sort_order = 0;
+	$autosubmit = kh_filter_input(INPUT_POST, "autosubmit", FILTER_SANITIZE_NUMBER_UINT);			
 	$has_alert = kh_filter_input(INPUT_POST, "has_alert", FILTER_SANITIZE_NUMBER_UINT);
 	$alert_message = kh_filter_input(INPUT_POST, "alert_message", FILTER_SANITIZE_SPECIAL_CHARS);
 	$standard_score = kh_filter_input(INPUT_POST, "standard_score", FILTER_SANITIZE_NUMBER_FLOAT);
@@ -44,36 +42,13 @@ if(count(@$_POST) && isset($_POST['save']))
 	$score_notification = kh_filter_input(INPUT_POST, "score_notification", FILTER_SANITIZE_NUMBER_UINT);
 	$publish_answer = kh_filter_input(INPUT_POST, "publish_answer", FILTER_SANITIZE_NUMBER_UINT);
 	$time_answer_publication = kh_filter_input(INPUT_POST, "time_answer_publication", FILTER_SANITIZE_STRING_NEW);
-
-  
 	$test_availability = kh_filter_input(INPUT_POST, "test_availability", FILTER_SANITIZE_SPECIAL_CHARS);
 	$available_from = kh_filter_input(INPUT_POST, "available_from", FILTER_SANITIZE_STRING_NEW);
 	$available_to = kh_filter_input(INPUT_POST, "available_to", FILTER_SANITIZE_STRING_NEW);
 
-  if(empty($time_answer_publication))
-  {
-    $time_answer_publication = 'null';
-  }
-  else
-  {
-    $time_answer_publication = "'" . $time_answer_publication . "'";
-  }
-  if(empty($available_from))
-  {
-    $available_from = 'null';
-  }
-  else
-  {
-    $available_from = "'" . $available_from . "'";
-  }
-  if(empty($available_to))
-  {
-    $available_to = 'null';
-  }
-  else
-  {
-    $available_to = "'" . $available_to . "'";
-  }
+	$time_answer_publication = $picoEdu->fixInputTimeSQL($time_answer_publication);
+	$available_from = $picoEdu->fixInputTimeSQL($available_from);
+	$available_to = $picoEdu->fixInputTimeSQL($available_to);
 
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$role_create = $role_edit = 'T';
