@@ -902,11 +902,11 @@ where 1 \$sql_filter
 \$pagination->total_record_with_limit = mysql_num_rows(\$res);
 if(\$pagination->total_record_with_limit)
 {
-\$pagination->start = \$pagination->offset+1;
-\$pagination->end = \$pagination->offset+\$pagination->total_record_with_limit;
+\$pagination->start = \$pagination->getOffset()+1;
+\$pagination->end = \$pagination->getOffset()+\$pagination->total_record_with_limit;
 
 \$pagination->createPagination(basename(\$_SERVER['PHP_SELF']), \$pagination->total_record, \$pagination->limit, \$pagination->num_page, 
-\$pagination->offset, \ true, \$pagination->str_first, \$pagination->str_last, \$pagination->str_prev, \$pagination->str_next); 
+\$pagination->getOffset(), \ true, \$pagination->str_first, \$pagination->str_last, \$pagination->str_prev, \$pagination->str_next); 
 \$paginationHTML = \"\";
 foreach(\$pagination->result as \$i=>\$obj)
 {
@@ -937,7 +937,7 @@ $str .="</tr>
     </thead>
     <tbody>
     <?php
-	\$no=\$pagination->offset;
+	\$no=\$pagination->getOffset();
 	while((\$data = mysql_fetch_assoc(\$res)))
 	{
 	\$no++;

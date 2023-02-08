@@ -1091,7 +1091,7 @@ function buildMenu(id)
 				$stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 
 				$pagination->setTotalRecordWithLimit($stmt->rowCount());
-				if ($pagination->total_record_with_limit > 0) {
+				if ($pagination->getTotalRecordWithLimit() > 0) {
 					
 					
 
@@ -1134,7 +1134,7 @@ function buildMenu(id)
 						</thead>
 						<tbody>
 						<?php
-					$no = $pagination->offset;
+					$no = $pagination->getOffset();
 					$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 					foreach ($rows as $data) {
 						$no++;

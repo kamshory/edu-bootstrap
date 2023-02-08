@@ -153,7 +153,7 @@ $paginationHTML = $pagination->buildHTML();
     </thead>
     <tbody>
     <?php
-	$no = $pagination->offset;
+	$no = $pagination->getOffset();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{

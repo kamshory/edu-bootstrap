@@ -214,7 +214,7 @@ if($stmt1->rowCount() > 0)
 <ol class="test-question">
 <?php
 $i=0;
-$no = $pagination->offset;
+$no = $pagination->getOffset();
 $rows1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 foreach($rows1 as $data)
 {
@@ -378,7 +378,7 @@ if($stmt->rowCount() > 0)
     </thead>
     <tbody>
     <?php
-	$no = $pagination->offset;
+	$no = $pagination->getOffset();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
@@ -761,7 +761,7 @@ $paginationHTML = $pagination->buildHTML();
     </thead>
     <tbody>
     <?php
-	$no = $pagination->offset;
+	$no = $pagination->getOffset();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{

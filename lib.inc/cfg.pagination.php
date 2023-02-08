@@ -32,7 +32,6 @@ class PicoPagination
     private $offset = '';
 
     private $limit_sql = '';
-    private $str_result = "";
 
 
     private $array_get = array();
@@ -46,12 +45,26 @@ class PicoPagination
         $this->start = $this->offset + 1;
     
         $this->limit_sql = " limit ".$this->offset.", ".$this->limit;
-        $this->str_result = "";          
+    }
+
+    public function getQuery()
+    {
+        return $this->query;
     }
 
     public function getLimitSql()
     {
         return $this->limit_sql;
+    }
+
+    public function setLimitSql($sqlLimit)
+    {
+        $this->limit_sql = $sqlLimit;
+    }
+
+    public function getOffset()
+    {
+        return $this->offset;
     }
 
     public function appendQueryName($queryParameterName)

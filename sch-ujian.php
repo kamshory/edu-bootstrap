@@ -100,7 +100,7 @@ if (@$auth_student_id && @$auth_school_id) {
 				<ol class="test-question">
 					<?php
 					$i = 0;
-					$no = $pagination->offset;
+					$no = $pagination->getOffset();
 					$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 					foreach($rows as $data) {
 						$j = $i % 2;
@@ -208,7 +208,7 @@ if (@$auth_student_id && @$auth_school_id) {
 				</thead>
 				<tbody>
 					<?php
-					$no = $pagination->offset;
+					$no = $pagination->getOffset();
 					$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 					foreach($rows as $data) {
 						$no++;
@@ -609,7 +609,7 @@ if (@$auth_student_id && @$auth_school_id) {
 						</thead>
 						<tbody>
 							<?php
-							$no = $pagination->offset;
+							$no = $pagination->getOffset();
 							$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 							foreach($rows as $data) {
 								$no++;
@@ -761,7 +761,7 @@ if (@$auth_student_id && @$auth_school_id) {
 					</thead>
 					<tbody>
 						<?php
-						$no = $pagination->offset;
+						$no = $pagination->getOffset();
 						$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 						foreach($rows as $data){
 							$no++;
@@ -909,7 +909,7 @@ if (@$auth_student_id && @$auth_school_id) {
 					</thead>
 					<tbody>
 						<?php
-						$no = $pagination->offset;
+						$no = $pagination->getOffset();
 						$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 						foreach($rows as $data)
 						{

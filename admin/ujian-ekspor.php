@@ -208,7 +208,7 @@ $stmt = $database->executeQuery($sql_test);
 $pagination->setTotalRecord($stmt->rowCount());
 $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
-if($pagination->total_record_with_limit > 0)
+if($pagination->getTotalRecordWithLimit() > 0)
 {
 
 
@@ -264,7 +264,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     </thead>
     <tbody>
     <?php
-	$no = $pagination->offset;
+	$no = $pagination->getOffset();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{

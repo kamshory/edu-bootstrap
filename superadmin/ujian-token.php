@@ -471,7 +471,7 @@ $sql_filter .= " AND `edu_token`.`test_id` = '$test_id' ";
 }
 if($test_id == 0 && $class_id == 0)
 {
-	$pagination->getLimitSql() = "";
+	$pagination->setLimitSql("");
 }
 $sql_filter .= " AND `edu_token`.`active` = true ";
 $nt = '';
@@ -552,7 +552,7 @@ if($test_id == 0 && $class_id == 0)
     </thead>
     <tbody>
     <?php
-	$no = $pagination->offset;
+	$no = $pagination->getOffset();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{

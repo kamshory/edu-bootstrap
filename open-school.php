@@ -198,9 +198,9 @@ if (@$_GET['option'] == 'detail') {
 				";
 
 				$stmt1 = $database->executeQuery($sql_test);
-				$pagination->total_record = $stmt1->rowCount();
+				$pagination->setTotalRecord($stmt1->rowCount());
 				$stmt2 = $database->executeQuery($sql . $pagination->getLimitSql());
-				$pagination->total_record_with_limit = $stmt2->rowCount();
+				$pagination->setTotalRecordWithLimit($stmt2->rowCount());
 				if($pagination->getTotalRecordWithLimit() > 0) {
 					
 					
@@ -225,7 +225,7 @@ if (@$_GET['option'] == 'detail') {
 							</thead>
 							<tbody>
 								<?php
-								$no = $pagination->offset;
+								$no = $pagination->getOffset();
 								$rows = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 								foreach($rows as $data) {
 									$no++;

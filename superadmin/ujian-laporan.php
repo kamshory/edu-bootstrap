@@ -231,7 +231,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	<tbody>
 	<?php
 	$i=0;
-	$no = $pagination->offset;
+	$no = $pagination->getOffset();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
@@ -360,7 +360,7 @@ if($stmt->rowCount() > 0)
 <ol class="test-question">
 <?php
 $i=0;
-$no = $pagination->offset;
+$no = $pagination->getOffset();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach($rows as $data)
 {
@@ -617,7 +617,7 @@ $stmt = $database->executeQuery($sql_test);
 $pagination->setTotalRecord($stmt->rowCount());
 $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
-if($pagination->total_record_with_limit > 0)
+if($pagination->getTotalRecordWithLimit() > 0)
 {
 
 
@@ -657,7 +657,7 @@ $paginationHTML = $pagination->buildHTML();
 	<tbody>
 	<?php
 	$i=0;
-	$no = $pagination->offset;
+	$no = $pagination->getOffset();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
@@ -866,7 +866,7 @@ window.onload = function()
         $pagination->setTotalRecord($stmt->rowCount());
         $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
         $pagination->setTotalRecordWithLimit($stmt->rowCount());
-        if ($pagination->total_record_with_limit > 0) {
+        if ($pagination->getTotalRecordWithLimit() > 0) {
           
           
 
@@ -901,7 +901,7 @@ window.onload = function()
 	<tbody>
 	<?php
           $i = 0;
-          $no = $pagination->offset;
+          $no = $pagination->getOffset();
           $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
           foreach($rows as $data)
           {

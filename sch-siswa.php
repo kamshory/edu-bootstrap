@@ -224,7 +224,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
           </thead>
           <tbody>
             <?php
-            $no = $pagination->offset;
+            $no = $pagination->getOffset();
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             foreach($rows as $data) {
               $no++;
