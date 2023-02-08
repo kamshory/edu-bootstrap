@@ -212,11 +212,7 @@ if (@$_GET['option'] == 'detail') {
 						$pagination->num_page,
 						$pagination->offset,
 						
-						true,
-						$pagination->str_first,
-						$pagination->str_last,
-						$pagination->str_prev,
-						$pagination->str_next
+						true
 					);
 					$paginationHTML = $pagination->createPaginationHtml();
 					

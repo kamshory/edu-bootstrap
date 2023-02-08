@@ -1098,7 +1098,7 @@ function buildMenu(id)
 					$pagination->result = $pagination->createPagination(
 						basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page,
 						$pagination->offset, 
-						true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next
+						true
 					);
 					$paginationHTML = $pagination->createPaginationHtml();
 

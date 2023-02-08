@@ -48,7 +48,7 @@ class PicoPagination
         $this->str_result = "";          
     }
 
-    public function createPagination($module, $totalrecord, $resultperpage = 1, $numberofpage = 1, $offset = 0, $showfirstandlast = true, $firstCaption = "First", $lastCaption = "Last", $prevCaption = "Prev", $nextCaption = "Next") //NOSONAR
+    public function createPagination($module, $totalrecord, $resultperpage = 1, $numberofpage = 1, $offset = 0, $showfirstandlast = true) //NOSONAR
     {
         $result = array();
         $result[0] = new StdClass();
@@ -80,15 +80,15 @@ class PicoPagination
         $paginationObject->text = "";
         $paginationObject->ref = "";
         $paginationObject->ref_first = 0;
-        $paginationObject->str_first = $firstCaption;
-        $paginationObject->str_prev = $prevCaption;
+        $paginationObject->str_first = $this->str_first;
+        $paginationObject->str_prev = $this->str_prev;
         $paginationObject->ref_prev = ($curpage - 2) * $resultperpage;
         if ($paginationObject->ref_prev < 0) {
             $paginationObject->ref_prev = 0;
         }
-        $paginationObject->str_next = $nextCaption;
+        $paginationObject->str_next = $this->str_next;
         $paginationObject->ref_next = ($curpage) * $resultperpage;
-        $paginationObject->str_last = $lastCaption;
+        $paginationObject->str_last = $this->str_last;
         $paginationObject->ref_last = floor($totalrecord / $resultperpage) * $resultperpage;
         if ($paginationObject->ref_last == $totalrecord) {
             $paginationObject->ref_last = $totalrecord - $resultperpage;
