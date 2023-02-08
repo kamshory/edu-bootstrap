@@ -1053,7 +1053,7 @@ if(@$_POST['show'])
 {
 	$table = trim($_POST['table']);
 	$sql = "show columns FROM `$table` ";
-	//$res = mysql_query($sql);
+	$stmt = $database->executeQuery($sql);
 ?>
 <script type="text/javascript" src="script/jquery/jquery.min.js"></script>
 <script type="text/javascript">
@@ -1087,7 +1087,9 @@ function submitForm(frm)
   </thead>
   <tbody>
     <?php
-	while(($data = mysql_fetch_assoc($res)))
+	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	
+	foreach($rows as $data)
 	{
 		if(strpos($data['Type'], 'enum')===0)
 		{
