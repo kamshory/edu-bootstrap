@@ -43,6 +43,7 @@ class PicoPagination
         $this->query_edit = kh_filter_input(INPUT_GET, "q");
         $this->query_edit = trim(htmlspecialchars($this->query_edit));
         $this->offset = kh_filter_input(INPUT_GET, "offset", FILTER_SANITIZE_NUMBER_UINT);
+        $this->start = $this->offset + 1;
     
         $this->limit_sql = " limit ".$this->offset.", ".$this->limit;
         $this->str_result = "";          
@@ -51,6 +52,16 @@ class PicoPagination
     public function appendQueryName($queryParameterName)
     {
         $this->array_get[] = $queryParameterName;
+    }
+
+    public function setTotalRecord($totalRecord)
+    {
+        $this->total_record = $totalRecord;
+    }
+
+    public function setTotalRecordWithLimit($totalRecordWithLimit)
+    {
+        $this->total_record_with_limit = $totalRecordWithLimit;
     }
 
     public function createPagination($module, $totalrecord, $resultperpage = 1, $numberofpage = 1, $offset = 0, $showfirstandlast = true) //NOSONAR

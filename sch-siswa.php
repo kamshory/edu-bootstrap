@@ -171,17 +171,17 @@ WHERE `edu_student`.`student_id` = '$edit_key'
     ";
 
     $stmt = $database->executeQuery($sql);
-    $pagination->total_record = $stmt->rowCount();
+    $pagination->setTotalRecord($stmt->rowCount());
     if ($class_id == 0) 
     {
       $stmt = $database->executeQuery($sql . $pagination->limit_sql);
     }
 
-    $pagination->total_record_with_limit = $stmt->rowCount();
-    if ($pagination->total_record_with_limit) {
+    $pagination->setTotalRecordWithLimit($stmt->rowCount());
+    if($pagination->getTotalRecordWithLimit() > 0) {
       if ($class_id == 0) {
-        $pagination->start = $pagination->offset + 1;
-        $pagination->end = $pagination->offset + $pagination->total_record_with_limit;
+        //$pagination->start = $pagination->offset + 1;
+        //$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
         $pagination->result = $pagination->createPagination(
           'siswa.php',

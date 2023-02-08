@@ -490,15 +490,15 @@ FROM `edu_token`
 WHERE `school_id` = '$school_id' $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
-$pagination->total_record = $stmt->rowCount();
+$pagination->setTotalRecord($stmt->rowCount());
 $stmt = $database->executeQuery($sql . $pagination->limit_sql);
-$pagination->total_record_with_limit = $stmt->rowCount();
-if($pagination->total_record_with_limit)
+$pagination->setTotalRecordWithLimit($stmt->rowCount());
+if($pagination->getTotalRecordWithLimit() > 0)
 {
 if($test_id == 0 && $class_id == 0)
 {
-$pagination->start = $pagination->offset+1;
-$pagination->end = $pagination->offset+$pagination->total_record_with_limit;
+//$pagination->start = $pagination->offset + 1;
+//$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
 $pagination->result = $pagination->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset,  true); 

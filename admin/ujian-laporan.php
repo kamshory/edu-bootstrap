@@ -810,13 +810,13 @@ else
 }
 $ke = array();
 $stmt = $database->executeQuery($sql_test);
-$pagination->total_record = $stmt->rowCount();
+$pagination->setTotalRecord($stmt->rowCount());
 $stmt = $database->executeQuery($sql . $pagination->limit_sql);
-$pagination->total_record_with_limit = $stmt->rowCount();
+$pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->total_record_with_limit > 0)
 {
-$pagination->start = $pagination->offset+1;
-$pagination->end = $pagination->offset+$pagination->total_record_with_limit;
+//$pagination->start = $pagination->offset + 1;
+//$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
 $pagination->result = $pagination->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset,  true); 
@@ -1075,13 +1075,13 @@ having 1 AND `number_of_student` > 0
 ";
 
 $stmt = $database->executeQuery($sql_test);
-$pagination->total_record = $stmt->rowCount();
+$pagination->setTotalRecord($stmt->rowCount());
 $stmt = $database->executeQuery($sql . $pagination->limit_sql);
-$pagination->total_record_with_limit = $stmt->rowCount();
+$pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->total_record_with_limit > 0)
 {
-$pagination->start = $pagination->offset+1;
-$pagination->end = $pagination->offset+$pagination->total_record_with_limit;
+//$pagination->start = $pagination->offset + 1;
+//$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
 $pagination->result = $pagination->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset,  true); 

@@ -151,8 +151,7 @@ if (@$_GET['option'] == 'detail') {
 				$sql_filter = "";
 				
 				if ($pagination->query) {
-					$pagination->array_get[] = 'q';
-					$pagination->appendQuery('q');
+					$pagination->appendQueryName('q');
 					$sql_filter .= " AND (`edu_school3`.`name` like '%" . addslashes($pagination->query) . "%' )";
 				}
 
@@ -202,9 +201,9 @@ if (@$_GET['option'] == 'detail') {
 				$pagination->total_record = $stmt1->rowCount();
 				$stmt2 = $database->executeQuery($sql . $pagination->limit_sql);
 				$pagination->total_record_with_limit = $stmt2->rowCount();
-				if ($pagination->total_record_with_limit) {
-					$pagination->start = $pagination->offset + 1;
-					$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
+				if($pagination->getTotalRecordWithLimit() > 0) {
+					//$pagination->start = $pagination->offset + 1;
+					//$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
 					$pagination->result = $pagination->createPagination(
 						basename($_SERVER['PHP_SELF']),
