@@ -864,7 +864,7 @@ $str .= "<div class=\"search-control\">
 ";
 $str .= "<?php
 \$sql_filter = \"\";
-\$pagination->array_get = array();
+\
 if(\$pagination->query){
 \$pagination->array_get[] = 'q';
 \$sql_filter .= \" AND (`\".DB_PREFIX.\"$table`.`nama` like '%\".addslashes(\$pagination->query).\"%' )\";
@@ -905,7 +905,7 @@ if(\$pagination->total_record_with_limit)
 \$pagination->end = \$pagination->offset+\$pagination->total_record_with_limit;
 
 \$pagination->result = $pagination->createPagination(basename(\$_SERVER['PHP_SELF']), \$pagination->total_record, \$pagination->limit, \$pagination->num_page, 
-\$pagination->offset, \$pagination->array_get, true, \$pagination->str_first, \$pagination->str_last, \$pagination->str_prev, \$pagination->str_next); 
+\$pagination->offset, \ true, \$pagination->str_first, \$pagination->str_last, \$pagination->str_prev, \$pagination->str_next); 
 \$paginationHTML = \"\";
 foreach(\$pagination->result as \$i=>\$obj)
 {

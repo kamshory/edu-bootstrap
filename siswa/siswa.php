@@ -159,7 +159,7 @@ $(document).ready(function(e) {
 <div class="search-result">
 <?php
 $sql_filter = "";
-$pagination->array_get = array();
+
 if($pagination->query){
 $pagination->array_get[] = 'q';
 $sql_filter .= " AND (`edu_student`.`name` like '%".addslashes($pagination->query)."%' )";
@@ -198,7 +198,7 @@ $pagination->start = $pagination->offset+1;
 $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
 $pagination->result = $pagination->createPagination('siswa.php', $pagination->total_record, $pagination->limit, $pagination->num_page, 
-$pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
+$pagination->offset,  true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
 $paginationHTML = $pagination->createPaginationHtml();
 }
 ?>

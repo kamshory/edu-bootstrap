@@ -724,7 +724,7 @@ if ($stmtx->rowCount() > 0) {
 	$assessment_methods = $data['assessment_methods'];
 }
 
-$pagination->array_get = array();
+
 $pagination->array_get[] = 'class_id';
 $pagination->array_get[] = 'option';
 $pagination->array_get[] = 'test_id';
@@ -819,7 +819,7 @@ $pagination->start = $pagination->offset+1;
 $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
 $pagination->result = $pagination->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
-$pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
+$pagination->offset,  true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
 $paginationHTML = "";
 
 foreach($pagination->result as $i=>$obj)
@@ -1042,7 +1042,7 @@ window.onload = function()
 <?php
 
 $sql_filter = "";
-$pagination->array_get = array();
+
 
 if($class_id != ''){
 $pagination->array_get[] = 'class_id';
@@ -1084,7 +1084,7 @@ $pagination->start = $pagination->offset+1;
 $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
 $pagination->result = $pagination->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
-$pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
+$pagination->offset,  true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
 $paginationHTML = "";
 
 foreach($pagination->result as $i=>$obj)

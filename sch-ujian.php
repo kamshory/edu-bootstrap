@@ -541,7 +541,7 @@ if (@$auth_student_id && @$auth_school_id) {
 		<div class="search-result">
 			<?php
 			$sql_filter = "";
-			$pagination->array_get = array();
+			
 			if ($pagination->query) {
 				$pagination->array_get[] = 'q';
 				$sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
@@ -576,7 +576,7 @@ if (@$auth_student_id && @$auth_school_id) {
 					$pagination->limit,
 					$pagination->num_page,
 					$pagination->offset,
-					$pagination->array_get,
+					
 					true,
 					$pagination->str_first,
 					$pagination->str_last,
@@ -711,7 +711,7 @@ $paginationHTML = $pagination->createPaginationHtml();
 	<div class="search-result">
 		<?php
 		$sql_filter = "";
-		$pagination->array_get = array();
+		
 		if ($pagination->query) {
 			$pagination->array_get[] = 'q';
 			$sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
@@ -744,7 +744,7 @@ $paginationHTML = $pagination->createPaginationHtml();
 				$pagination->limit,
 				$pagination->num_page,
 				$pagination->offset,
-				$pagination->array_get,
+				
 				true,
 				$pagination->str_first,
 				$pagination->str_last,
@@ -872,7 +872,7 @@ $paginationHTML = $pagination->createPaginationHtml();
 	<div class="search-result">
 		<?php
 		$sql_filter = "";
-		$pagination->array_get = array();
+		
 		if ($pagination->query) {
 			$pagination->array_get[] = 'q';
 			$sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
@@ -904,7 +904,7 @@ $paginationHTML = $pagination->createPaginationHtml();
 				$pagination->limit,
 				$pagination->num_page,
 				$pagination->offset,
-				$pagination->array_get,
+				
 				true,
 				$pagination->str_first,
 				$pagination->str_last,

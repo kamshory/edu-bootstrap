@@ -44,11 +44,11 @@ class PicoPagination
         $this->query_edit = trim(htmlspecialchars($this->query_edit));
         $this->offset = kh_filter_input(INPUT_GET, "offset", FILTER_SANITIZE_NUMBER_UINT);
     
-        $this->limit_sql = " limit ".$this->offset.",".$this->limit;
+        $this->limit_sql = " limit ".$this->offset.", ".$this->limit;
         $this->str_result = "";          
     }
 
-    public function createPagination($module, $totalrecord, $resultperpage = 1, $numberofpage = 1, $offset = 0, $arrayget, $showfirstandlast = true, $firstCaption = "First", $lastCaption = "Last", $prevCaption = "Prev", $nextCaption = "Next") //NOSONAR
+    public function createPagination($module, $totalrecord, $resultperpage = 1, $numberofpage = 1, $offset = 0, $showfirstandlast = true, $firstCaption = "First", $lastCaption = "Last", $prevCaption = "Prev", $nextCaption = "Next") //NOSONAR
     {
         $result = array();
         $result[0] = new StdClass();
@@ -60,10 +60,8 @@ class PicoPagination
         if ($totalrecord <= $resultperpage) {
             return array();
         }
-        if (!is_array($arrayget)) {
-            $arrayget = array($arrayget);
-        }
-        foreach ($arrayget as $item) {
+        
+        foreach ($this->array_get as $item) {
             $arg .= "&$item=" . @$_GET[$item];
         }
         $arg = "$module?" . trim($arg, "&");

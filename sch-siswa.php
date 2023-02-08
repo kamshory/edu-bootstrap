@@ -150,7 +150,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
   <div class="search-result">
     <?php
     $sql_filter = "";
-    $pagination->array_get = array();
+    
     if ($pagination->query) {
       $pagination->array_get[] = 'q';
       $sql_filter .= " AND (`edu_student`.`name` like '%" . addslashes($pagination->query) . "%' )";
@@ -189,7 +189,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
           $pagination->limit,
           $pagination->num_page,
           $pagination->offset,
-          $pagination->array_get,
+          
           true,
           $pagination->str_first,
           $pagination->str_last,

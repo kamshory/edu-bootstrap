@@ -352,7 +352,7 @@ if($stmt->rowCount() > 0)
 	<div class="search-result">
 		<?php
 		$sql_filter = "";
-		$pagination->array_get = array();
+		
 		if ($pagination->query) {
 			$pagination->array_get[] = 'q';
 			$sql_filter .= " AND (`edu_class`.`name` like '%" . addslashes($pagination->query) . "%' )";
@@ -389,7 +389,7 @@ if($stmt->rowCount() > 0)
 				$pagination->limit,
 				$pagination->num_page,
 				$pagination->offset,
-				$pagination->array_get,
+				
 				true,
 				$pagination->str_first,
 				$pagination->str_last,

@@ -149,7 +149,7 @@ if (@$_GET['option'] == 'detail') {
 			<div class="search-result">
 				<?php
 				$sql_filter = "";
-				$pagination->array_get = array();
+				
 				if ($pagination->query) {
 					$pagination->array_get[] = 'q';
 					$sql_filter .= " AND (`edu_school3`.`name` like '%" . addslashes($pagination->query) . "%' )";
@@ -211,7 +211,7 @@ if (@$_GET['option'] == 'detail') {
 						$pagination->limit,
 						$pagination->num_page,
 						$pagination->offset,
-						$pagination->array_get,
+						
 						true,
 						$pagination->str_first,
 						$pagination->str_last,
