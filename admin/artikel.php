@@ -6,7 +6,7 @@ if(!isset($school_id) || empty($school_id))
 	require_once dirname(__FILE__)."/bukan-admin.php";
 	exit();
 }
-if(empty(@$real_school_id))
+if(empty($real_school_id))
 {
 	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
 	exit();

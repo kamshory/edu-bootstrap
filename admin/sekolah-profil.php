@@ -11,7 +11,7 @@ if(isset($_POST['save']) && count(@$_POST))
 {
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
 
-	$name = preg_replace("/[^A-Za-z\.\-\d_]/i"," ",$name);
+	$name = preg_replace("/[^A-Za-z\.\-\d_]/i", " ", $name); //NOSONAR
 	$name = trim($name, " ._- ");
 	$name = preg_replace('/(\s)+/', ' ', $name);
 	$name = trim($name, " ._- ");

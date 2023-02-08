@@ -1,7 +1,7 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/auth-admin.php";
 $cfg->page_title = "Profil";
-if(!empty(@$admin_id))
+if(!empty($admin_id))
 {
 	$base_dir = 'admin/';
 	include_once dirname(__FILE__)."/admin-profil.php";
@@ -9,7 +9,7 @@ if(!empty(@$admin_id))
 else
 {
 	include_once dirname(__FILE__)."/lib.inc/auth-guru.php";
-	if(@$auth_teacher_id)
+	if(!empty($auth_teacher_id))
 	{
 		include_once dirname(__FILE__)."/teacher-profil.php";
 	}
@@ -26,4 +26,3 @@ else
 		}
 	}
 }
-?>

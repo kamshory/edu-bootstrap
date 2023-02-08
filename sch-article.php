@@ -302,7 +302,7 @@ else if(isset($_GET['article_id']))
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
-		if(@$auth_teacher_id)
+		if(!empty($auth_teacher_id))
 		{
 		?>
 		<script type="text/javascript">
@@ -361,7 +361,7 @@ else
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		if(@$auth_teacher_id)
+		if(!empty($auth_teacher_id))
 		{
 		?>
 		<script type="text/javascript">

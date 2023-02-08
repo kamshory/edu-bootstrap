@@ -249,11 +249,11 @@ else
 		
 		$teacherLoggedIn = new TeacherAuth($database, $username, $password, false);
 		
-		$teacher_id = 0;
-		$school_id = 0;
-		$auth_teacher_id = 0;
-		$auth_school_id = 0;
-		$auth_teacher_school_id = 0;
+		$teacher_id = '';
+		$school_id = "";
+		$auth_teacher_id = '';
+		$auth_school_id = '';
+		$auth_teacher_school_id = '';
 		$school_code = '';
 		$use_token = 0;
 		if($teacherLoggedIn->teacher_id)
@@ -298,9 +298,9 @@ else
 			$password = $_SESSION['admin_password'];
 		}
 		$adminLoggedIn = new AdminAuth($database, $username, $password, false);
-		$admin_id = 0;
-		$school_id = 0;
-		$real_school_id = 0;
+		$admin_id = "";
+		$school_id = "";
+		$real_school_id = "";
 		$use_token = 0;
 		if($adminLoggedIn->admin_id)
 		{
@@ -311,7 +311,7 @@ else
 			$school_code = $adminLoggedIn->school_code;
 			$use_token = $adminLoggedIn->use_token;
 		}
-		if(!empty(@$admin_id))
+		if(!empty($admin_id))
 		{
 			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
 			?>

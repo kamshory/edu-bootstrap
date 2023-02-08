@@ -5,7 +5,7 @@ if(empty($school_id))
 	require_once dirname(__FILE__)."/bukan-admin.php";
 	exit();
 }
-if(empty(@$real_school_id))
+if(empty($real_school_id))
 {
 	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
 	exit();
@@ -77,7 +77,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 					default:
 					$err = true;
 					break;
-					$err = true;
+					$err = true; //NOSONAR
 					break;
 				}
 			}			
@@ -160,7 +160,11 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 								{
 									$isi_option = addslashes(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $test_dir, $base_src, $temp_dir)))));
 									$order_option = $option_no+1;
-									$score_option = addslashes(@$option['value']*$score_standar); if($score_option == 0) $score_option = addslashes(@$option['score']*$score_standar);
+									$score_option = addslashes(@$option['value']*$score_standar); 
+									if($score_option == 0) 
+									{
+										$score_option = addslashes(@$option['score']*$score_standar);
+									}
 
 									$option_id = $database->generateNewId();
 									$sql2 = "INSERT INTO `edu_option` 

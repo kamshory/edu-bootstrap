@@ -92,7 +92,7 @@ if(isset($_GET['info_id']))
         <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/info.js"></script>
         <style type="text/css">
 		.article-title h1{
-			font-family:Roboto;
+			font-family:"Roboto";
 			font-size:28px;
 		}
 		</style>
@@ -214,12 +214,15 @@ if($pagination->getTotalRecordWithLimit() > 0)
 			$content.=" ";
 			$pos = stripos($content, ". ", $maxlen);
 			if($pos===false){
-			$pos = stripos($content, ".", $maxlen);
+				$pos = stripos($content, ".", $maxlen);
 			}
 			if($pos===false){
-			$pos = stripos($content, " ", $maxlen);
+				$pos = stripos($content, " ", $maxlen);
 			}
-			if($pos===false) $pos = $maxlen;
+			if($pos===false) 
+			{
+				$pos = $maxlen;
+			}
 			$content = substr($content, 0, $pos+1);
 			$content = tidyHTML($content);
 		}

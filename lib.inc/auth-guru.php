@@ -18,7 +18,7 @@ if(isset($_SESSION['teacher_password']))
 $teacherLoggedIn = new \TeacherAuth($database, $username, $password, false);
 
 $teacher_id = '';
-$school_id = '';
+$school_id = "";
 $auth_teacher_id = '';
 $auth_school_id = '';
 $auth_teacher_school_id = '';
@@ -26,8 +26,8 @@ $school_code = '';
 $use_token = false;
 $member_create = '';
 $member_edit = '';
-$admin_create = '';
-$admin_edit = '';
+$admin_create = "";
+$admin_edit = "";
 if($teacherLoggedIn->teacher_id)
 {
 	$teacher_id 

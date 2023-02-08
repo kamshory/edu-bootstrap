@@ -67,7 +67,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 else
 {
 	require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-	if(!empty(@$admin_id))
+	if(!empty($admin_id))
 	{
 		header('Location: index.php'); //NOSONAR
 	}

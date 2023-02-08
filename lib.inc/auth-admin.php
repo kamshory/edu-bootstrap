@@ -14,12 +14,12 @@ if(isset($_SESSION['admin_password']))
 	$password = $_SESSION['admin_password'];
 }
 $adminLoggedIn = new \AdminAuth($database, $username, $password, false);
-$admin_id = '';
-$school_id = '';
-$real_school_id = '';
+$admin_id = "";
+$school_id = "";
+$real_school_id = "";
 $use_token = '';
-$admin_create = '';
-$admin_edit = '';
+$admin_create = "";
+$admin_edit = "";
 
 if(!empty($adminLoggedIn->admin_id))
 {

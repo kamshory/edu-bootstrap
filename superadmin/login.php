@@ -71,7 +71,7 @@ else
 		require_once dirname(__FILE__)."/bukan-super-admin.php";
 		exit();
 	}
-	if(!empty(@$admin_id))
+	if(!empty($admin_id))
 	{
 		header('Location: index.php');
 	}

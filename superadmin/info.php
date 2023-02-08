@@ -495,7 +495,7 @@ else if(isset($_GET['info_id']))
 		<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
         <style type="text/css">
 		.article-title h1{
-			font-family:Roboto;
+			font-family:"Roboto";
 			font-size:28px;
 		}
 		</style>

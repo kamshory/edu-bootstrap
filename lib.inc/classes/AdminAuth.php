@@ -4,7 +4,7 @@
 
 class AdminAuth
 {
-	public $admin_id = '';
+	public $admin_id = "";
 	public $admin_level = 0;
 	public $username = '';
 	public $name = '';
@@ -16,8 +16,8 @@ class AdminAuth
 	public $country_id = '';
 	public $state_id = '';
 	public $city_id = '';
-	public $school_id = '';
-	public $real_school_id = '';
+	public $school_id = "";
+	public $real_school_id = "";
 	public $school_name = '';
 	public $school_code = '';
 	public $use_token = 0;

@@ -17,7 +17,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 	
 	if(isset($_FILES['file']['tmp_name']))
 	{
-		$school_id = '';
+		$school_id = "";
 
 		$myschool = true;
 		$ip = str_replace(array(':','.'), '-', $_SERVER['REMOTE_ADDR']);

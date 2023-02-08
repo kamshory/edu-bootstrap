@@ -4,7 +4,7 @@
 
 class TeacherAuth
 {
-	public $teacher_id = 0;
+	public $teacher_id = '';
 	public $username = '';
 	public $name = '';
 	public $gender = 'M';
@@ -15,7 +15,7 @@ class TeacherAuth
 	public $country_id = '';
 	public $state_id = '';
 	public $city_id = '';
-	public $school_id = '';
+	public $school_id = "";
 	public $school_name = '';
 	public $school_code = '';
 	public $use_token = 0;
