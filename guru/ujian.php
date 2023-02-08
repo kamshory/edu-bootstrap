@@ -163,7 +163,6 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		if($stmt->rowCount() > 0)
 		{
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
-			print_r($data);
 			$basename = $data['file_path'];
 			$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 			if(file_exists($file_path))
@@ -206,7 +205,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 						foreach($test_data->item as $index_question => $question)
 						{
 							// petanyaan
-							if($selection_index[$idx] == 1 || $selection == ""  || $selection == "[]")
+							if(isset($selection_index) && isset($selection_index[$idx]) && $selection_index[$idx] == 1 || $selection == ""  || $selection == "[]")
 							{
 								$text_pertanyaan = trim(@$question->question->text);
 								$random = trim(@$question->question->random)*1;
