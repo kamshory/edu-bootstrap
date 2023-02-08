@@ -619,9 +619,6 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-
-
-
 $pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
@@ -867,9 +864,6 @@ window.onload = function()
         $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
         $pagination->setTotalRecordWithLimit($stmt->rowCount());
         if ($pagination->getTotalRecordWithLimit() > 0) {
-          
-          
-
           $pagination->createPagination(basename($_SERVER['PHP_SELF']), true);
           $paginationHTML = $pagination->buildHTML();
           ?>
