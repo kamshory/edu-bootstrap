@@ -834,20 +834,20 @@ if($pagination->total_record_with_limit > 0)
 $pagination->start = $pagination->offset+1;
 $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
-$pagination->result = $picoEdu->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
+$pagination->result = $pagination->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
-$pagination->str_result = "";
+$paginationHTML = "";
 
 foreach($pagination->result as $i=>$obj)
 {
 $cls = (@$obj->sel)?" class=\"pagination-selected\"":"";
-$pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
+$paginationHTML .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 }
 ?>
 <form name="form1" method="post" action="" enctype="multipart/form-data">
 
 <div class="d-flex search-pagination search-pagination-top">
-<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
 <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
@@ -914,7 +914,7 @@ $pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
   </table>
 
 <div class="d-flex search-pagination search-pagination-bottom">
-<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
 <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
@@ -1058,14 +1058,14 @@ if($pagination->total_record_with_limit > 0)
 $pagination->start = $pagination->offset+1;
 $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
-$pagination->result = $picoEdu->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
+$pagination->result = $pagination->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
-$pagination->str_result = "";
+$paginationHTML = "";
 
 foreach($pagination->result as $i=>$obj)
 {
 $cls = (@$obj->sel)?" class=\"pagination-selected\"":"";
-$pagination->str_result .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
+$paginationHTML .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 }
 ?>
 <?php
@@ -1074,7 +1074,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 <form name="form1" method="post" action="" enctype="multipart/form-data">
 
 <div class="d-flex search-pagination search-pagination-top">
-<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
 <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 
@@ -1122,7 +1122,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
   </table>
 
 <div class="d-flex search-pagination search-pagination-bottom">
-<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
 <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 

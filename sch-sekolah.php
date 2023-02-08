@@ -5,7 +5,7 @@ if (isset($_GET['school_id'])) {
 	$page_school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }
 if(!empty(@$page_school_id)) {
-	include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
+	require_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
 	$sql = "SELECT `edu_school`.*,
 	(SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) AS `country_id`,
 	(SELECT `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) AS `state_id`,

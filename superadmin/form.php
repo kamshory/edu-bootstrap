@@ -904,19 +904,19 @@ if(\$pagination->total_record_with_limit)
 \$pagination->start = \$pagination->offset+1;
 \$pagination->end = \$pagination->offset+\$pagination->total_record_with_limit;
 
-\$pagination->result = $picoEdu->createPagination(basename(\$_SERVER['PHP_SELF']), \$pagination->total_record, \$pagination->limit, \$pagination->num_page, 
+\$pagination->result = $pagination->createPagination(basename(\$_SERVER['PHP_SELF']), \$pagination->total_record, \$pagination->limit, \$pagination->num_page, 
 \$pagination->offset, \$pagination->array_get, true, \$pagination->str_first, \$pagination->str_last, \$pagination->str_prev, \$pagination->str_next); 
-\$pagination->str_result = \"\";
+\$paginationHTML = \"\";
 foreach(\$pagination->result as \$i=>\$obj)
 {
 \$cls = (\$obj->sel)?\" class=\\\"pagination-selected\\\"\":\"\";
-\$pagination->str_result .= \"<a href=\\\"\".\$obj->ref.\"\\\"\$cls>\".\$obj->text.\"</a> \";
+\$paginationHTML .= \"<a href=\\\"\".\$obj->ref.\"\\\"\$cls>\".\$obj->text.\"</a> \";
 }
 ?>
 <form name=\"form1\" method=\"post\" action=\"\">
 
 <div class=\"search-pagination search-pagination-top\">
-<div class=\"search-pagination-control\"><?php echo \$pagination->str_result;?></div>
+<div class=\"search-pagination-control\"><?php echo \$paginationHTML;?></div>
 <div class=\"search-pagination-label\">".$lpack['label_row']." <?php echo \$pagination->start;?> ".$lpack['label_to']." <?php echo \$pagination->end;?> ".$lpack['label_from']." <?php echo \$pagination->total_record;?></div>
 </div>
 
@@ -965,7 +965,7 @@ $str .="     </tr>
   </table>
 
 <div class=\"search-pagination search-pagination-bottom\">
-<div class=\"search-pagination-control\"><?php echo \$pagination->str_result;?></div>
+<div class=\"search-pagination-control\"><?php echo \$paginationHTML;?></div>
 <div class=\"search-pagination-label\">".$lpack['label_row']." <?php echo \$pagination->start;?> ".$lpack['label_to']." <?php echo \$pagination->end;?> ".$lpack['label_from']." <?php echo \$pagination->total_record;?></div>
 </div>
 

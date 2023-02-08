@@ -7,7 +7,7 @@ $cfg->page_title = "Profil";
 if (!empty(@$auth_teacher_id)) {
 	include_once dirname(__FILE__) . "/sch-guru-profil.php";
 } else {
-	include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
+	require_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
 	if (!empty(@$student_id)) {
 		include_once dirname(__FILE__) . "/sch-siswa-profil.php";
 	}

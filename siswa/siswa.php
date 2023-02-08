@@ -197,9 +197,9 @@ if($class_id == 0)
 $pagination->start = $pagination->offset+1;
 $pagination->end = $pagination->offset+$pagination->total_record_with_limit;
 
-$pagination->result = $picoEdu->createPagination('siswa.php', $pagination->total_record, $pagination->limit, $pagination->num_page, 
+$pagination->result = $pagination->createPagination('siswa.php', $pagination->total_record, $pagination->limit, $pagination->num_page, 
 $pagination->offset, $pagination->array_get, true, $pagination->str_first, $pagination->str_last, $pagination->str_prev, $pagination->str_next); 
-$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+$paginationHTML = $pagination->createPaginationHtml();
 }
 ?>
 <form name="form1" method="post" action="">
@@ -222,7 +222,7 @@ if($class_id == 0)
 {
 ?>
 <div class="d-flex search-pagination search-pagination-top">
-<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
 <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 <?php
@@ -265,7 +265,7 @@ if($class_id == 0)
 {
 ?>
 <div class="d-flex search-pagination search-pagination-bottom">
-<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
 <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
 </div>
 <?php

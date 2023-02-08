@@ -1,7 +1,7 @@
 <?php
-include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
+require_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
 $cfg->page_title = "Siswa";
-include_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
+require_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 
 if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
 	$reg_number_national = kh_filter_input(INPUT_POST, "reg_number_national", FILTER_SANITIZE_SPECIAL_CHARS);

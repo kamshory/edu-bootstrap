@@ -407,7 +407,7 @@ if($stmt->rowCount() > 0)
 			$pagination->start = $pagination->offset + 1;
 			$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
-			$pagination->result = $picoEdu->createPagination(
+			$pagination->result = $pagination->createPagination(
 				basename($_SERVER['PHP_SELF']),
 				$pagination->total_record,
 				$pagination->limit,
@@ -420,7 +420,7 @@ if($stmt->rowCount() > 0)
 				$pagination->str_prev,
 				$pagination->str_next
 			);
-		$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+		$paginationHTML = $pagination->createPaginationHtml();
 
 		?>
 			<form name="form1" method="post" action="">
@@ -438,7 +438,7 @@ if($stmt->rowCount() > 0)
 				</style>
 
 				<div class="d-flex search-pagination search-pagination-top">
-					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
 					<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 				</div>
 
@@ -488,7 +488,7 @@ if($stmt->rowCount() > 0)
 				</table>
 
 				<div class="d-flex search-pagination search-pagination-bottom">
-					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
 					<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 				</div>
 

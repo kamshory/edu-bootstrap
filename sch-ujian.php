@@ -1,7 +1,7 @@
 <?php
 include_once dirname(__FILE__) . "/lib.inc/auth-guru.php";
 if (@!$auth_teacher_id)
-	include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
+	require_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
 
 if (isset($_GET['school_id'])) {
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
@@ -9,7 +9,7 @@ if (isset($_GET['school_id'])) {
 if (!$school_id) {
 	exit();
 }
-include_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
+require_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 
 if (@$auth_student_id && @$auth_school_id) {
 	if (@$_GET['option'] == 'answer' && isset($_GET['answer_id'])) {
@@ -570,7 +570,7 @@ if (@$auth_student_id && @$auth_school_id) {
 				$pagination->start = $pagination->offset + 1;
 				$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
-				$pagination->result = $picoEdu->createPagination(
+				$pagination->result = $pagination->createPagination(
 					basename($_SERVER['PHP_SELF']),
 					$pagination->total_record,
 					$pagination->limit,
@@ -583,7 +583,7 @@ if (@$auth_student_id && @$auth_school_id) {
 					$pagination->str_prev,
 					$pagination->str_next
 				);
-$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+$paginationHTML = $pagination->createPaginationHtml();
 
 			?>
 				<form name="form1" method="post" action="">
@@ -604,7 +604,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 					</ul>
 
 					<div class="d-flex search-pagination search-pagination-top">
-						<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+						<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
 						<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 					</div>
 
@@ -642,7 +642,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 					</table>
 
 					<div class="d-flex search-pagination search-pagination-bottom">
-						<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+						<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
 						<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 					</div>
 
@@ -738,7 +738,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 			$pagination->start = $pagination->offset + 1;
 			$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
-			$pagination->result = $picoEdu->createPagination(
+			$pagination->result = $pagination->createPagination(
 				basename($_SERVER['PHP_SELF']),
 				$pagination->total_record,
 				$pagination->limit,
@@ -751,7 +751,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 				$pagination->str_prev,
 				$pagination->str_next
 			);
-$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+$paginationHTML = $pagination->createPaginationHtml();
 
 		?>
 			<form name="form1" method="post" action="">
@@ -770,7 +770,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 				</style>
 
 				<div class="d-flex search-pagination search-pagination-top">
-					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
 					<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 				</div>
 
@@ -804,7 +804,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 				</table>
 
 				<div class="d-flex search-pagination search-pagination-bottom">
-					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
 					<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 				</div>
 
@@ -898,7 +898,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 			$pagination->start = $pagination->offset + 1;
 			$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
-			$pagination->result = $picoEdu->createPagination(
+			$pagination->result = $pagination->createPagination(
 				basename($_SERVER['PHP_SELF']),
 				$pagination->total_record,
 				$pagination->limit,
@@ -911,7 +911,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 				$pagination->str_prev,
 				$pagination->str_next
 			);
-$pagination->str_result = $picoEdu->createPaginationHtml($pagination);
+$paginationHTML = $pagination->createPaginationHtml();
 
 		?>
 			<form name="form1" method="post" action="">
@@ -930,7 +930,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 				</style>
 
 				<div class="d-flex search-pagination search-pagination-top">
-					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
 					<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 				</div>
 
@@ -965,7 +965,7 @@ $pagination->str_result = $picoEdu->createPaginationHtml($pagination);
 				</table>
 
 				<div class="d-flex search-pagination search-pagination-bottom">
-					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $pagination->str_result; ?></div>
+					<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
 					<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
 				</div>
 
