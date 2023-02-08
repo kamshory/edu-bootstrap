@@ -124,7 +124,7 @@ Status <select name="status" id="status">
 </form>
 
 <style type="text/css">
-.tabel-peserta-test tbody tr.duplikat td{
+.tabel-peserta-test tbody tr.duplicated td{
 	animation-iteration-count:infinite;
 	animation-name:kedip;
 	animation-timing-function:ease-in-out;

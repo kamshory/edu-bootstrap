@@ -818,14 +818,10 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 
 
-$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
-$paginationHTML = "";
+$pagination->createPagination(basename($_SERVER['PHP_SELF']), true);
+$paginationHTML = $pagination->buildHTML();
 
-foreach($pagination->result as $i=>$obj)
-{
-$cls = (@$obj->sel)?" class=\"pagination-selected\"":"";
-$paginationHTML .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
-}
+
 ?>
 <style type="text/css">
 @media screen and (max-width:800px)
@@ -1083,13 +1079,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 
 $pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
-$paginationHTML = "";
-
-foreach($pagination->result as $i=>$obj)
-{
-$cls = (@$obj->sel)?" class=\"pagination-selected\"":"";
-$paginationHTML .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
-}
+$paginationHTML = $pagination->buildHTML();
 ?>
 <?php
 $array_class = $picoEdu->getArrayClass($school_id);

@@ -215,11 +215,8 @@ $paginationHTML = $pagination->buildHTML();
 	{
 	$no++;
 	$cls = "";
-	if($data['active']) $cls .= "data-active";
-	else $cls .= "data-inactive";
-	if($data['school_id'] == @$auth_school_id) $cls .= " data-default";
 	?>
-    <tr class="<?php echo $cls;?>">
+    <tr class="<?php echo $picoEdu->getRowClass($data, $data['school_id'] == $auth_school_id);?>">
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></a></td>

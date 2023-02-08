@@ -980,14 +980,20 @@ class PicoEdu //NOSONAR
 		return "";
 	}
 
-	public function getRowClass($data)
+	/**
+	 * Create row class
+	 * @param array $data Array containing data
+	 * @param bool $defaultCondition Default condition
+	 * @return string
+	 */
+	public function getRowClass($data, $defaultCondition = false)
 	{
 		if(!isset($data) || empty($data))
 		{
 			return "";
 		}
 		$rowclass = array(); 
-		if(isset($data['default']) && $data['default']==1) 
+		if($defaultCondition || (isset($data['default']) && $data['default']==1))
 		{
 			$rowclass[] = "data-default"; 
 		}
@@ -1006,6 +1012,7 @@ class PicoEdu //NOSONAR
 				$rowclass[] = "data-inactive";
 			}
 		}
+		$rowclass = array_unique($rowclass);
 		return trim(implode(' ', $rowclass)); 
 	}
 	public function getSchoolGradeName($grade_id)

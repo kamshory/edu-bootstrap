@@ -835,13 +835,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 
 $pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
-$paginationHTML = "";
-
-foreach($pagination->result as $i=>$obj)
-{
-$cls = (@$obj->sel)?" class=\"pagination-selected\"":"";
-$paginationHTML .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
-}
+$paginationHTML = $pagination->buildHTML();
 ?>
 <form name="form1" method="post" action="" enctype="multipart/form-data">
 
@@ -1058,13 +1052,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 
 $pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
-$paginationHTML = "";
-
-foreach($pagination->result as $i=>$obj)
-{
-$cls = (@$obj->sel)?" class=\"pagination-selected\"":"";
-$paginationHTML .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
-}
+$paginationHTML = $pagination->buildHTML();
 ?>
 <?php
 $array_class = $picoEdu->getArrayClass($school_id);

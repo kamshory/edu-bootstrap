@@ -18,6 +18,7 @@ $studentLoggedIn = new \StudenAuth($database, $username, $password, false);
 
 $member_id = '';
 $student_id = '';
+$auth_student_id = '';
 $school_id = '';
 $class_id = '';
 $auth_student_school_id = '';
@@ -26,6 +27,7 @@ $use_token = false;
 if($studentLoggedIn->student_id)
 {
 	$student_id 
+		= $auth_student_id
 		= $member_id
 		= $auth_student_id 
 		= $studentLoggedIn->student_id;

@@ -75,7 +75,7 @@ else if($test_status == '4')
 }
 
 $sql = "SELECT `edu_test_member`.* , `edu_student`.`reg_number`,
-(SELECT COUNT(DISTINCT `u`.`student_id`) FROM `edu_test_member` AS `u` WHERE `u`.`student_id` = `edu_test_member`.`student_id` AND `u`.`school_id` = `edu_test_member`.`school_id` AND `u`.`test_id` = `edu_test_member`.`test_id` AND `u`.`test_member_id` != `edu_test_member`.`test_member_id` AND `u`.`status` = '1' AND `edu_test_member`.`status` = '1' and left(`u`.`time_enter`, 10) = left(`edu_test_member`.`time_enter`, 10)) AS `duplikat_login`,
+(SELECT COUNT(DISTINCT `u`.`student_id`) FROM `edu_test_member` AS `u` WHERE `u`.`student_id` = `edu_test_member`.`student_id` AND `u`.`school_id` = `edu_test_member`.`school_id` AND `u`.`test_id` = `edu_test_member`.`test_id` AND `u`.`test_member_id` != `edu_test_member`.`test_member_id` AND `u`.`status` = '1' AND `edu_test_member`.`status` = '1' and left(`u`.`time_enter`, 10) = left(`edu_test_member`.`time_enter`, 10)) AS `duplicated_login`,
 `edu_student`.`name` AS `name_student`,
 (SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` AND `edu_class`.`school_id` = `edu_test_member`.`school_id`) AS `name_class`
 FROM `edu_test_member` 
@@ -113,9 +113,9 @@ if($stmt->rowCount() > 0)
 	{
 		$no++;
 		$cls = "";
-		if($data['duplikat_login']>0)
+		if($data['duplicated_login']>0)
 		{
-			$cls = "duplikat";
+			$cls = "duplicated";
 		}
 ?>
     <tr class="<?php echo $cls;?>">

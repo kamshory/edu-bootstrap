@@ -146,9 +146,6 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-
-
-
 $pagination->createPagination('guru.php', true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
