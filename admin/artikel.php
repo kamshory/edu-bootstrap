@@ -1,20 +1,20 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+if(!isset($school_id) || empty($school_id))
 {
-	include_once dirname(__FILE__)."/bukan-admin.php";
+	require_once dirname(__FILE__)."/bukan-admin.php";
 	exit();
 }
 if(empty(@$real_school_id))
 {
-	include_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
 	exit();
 }
 
 $cfg->page_title = "Artikel";
 
-include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['publish']) || isset($_POST['draff']))
 {
 	$option = kh_filter_input(INPUT_POST, "option", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -136,7 +136,7 @@ if(isset($_POST['delete']) && isset($_POST['article_id']))
 
 if(@$_GET['option'] == 'add')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 
 <script type="text/javascript">
@@ -177,11 +177,11 @@ var defaultdir = 'lib.content/media/article/';
 </div>
 </form>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(@$_GET['option'] == 'edit' && isset($_GET['article_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
@@ -231,11 +231,11 @@ var defaultdir = 'lib.content/media/article/';
 </form>
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(isset($_GET['article_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
 $sql_filter_article = " AND `edu_article`.`article_id` = '$article_id' ";
 
@@ -247,7 +247,7 @@ $sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 FROM `edu_article` 
 LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 where (`edu_article`.`school_id` = '$school_id') $sql_filter_article ";
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -314,11 +314,11 @@ return doc;
 </div>
 <?php
 	}
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 ?>
 <script type="text/javascript">
@@ -498,6 +498,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

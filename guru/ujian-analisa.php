@@ -1,9 +1,9 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 if (!empty(@$school_id)) 
 {
-	include_once dirname(dirname(__FILE__)) . "/lib.inc/dom.php";
-	include_once dirname(dirname(__FILE__)) . "/lib.inc/lib.test.php";
+	require_once dirname(dirname(__FILE__)) . "/lib.inc/dom.php";
+	require_once dirname(dirname(__FILE__)) . "/lib.inc/lib.test.php";
 	if (isset($_GET['test_id'])) 
 	{
 		$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);

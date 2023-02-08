@@ -3,9 +3,9 @@ if(!defined('DB_NAME'))
 {
 	exit();
 }
-if(empty(@$school_id))
+if(!isset($school_id) || empty($school_id))
 {
-	include_once dirname(__FILE__)."/login-form.php";
+	require_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
 $token_valid = 0;

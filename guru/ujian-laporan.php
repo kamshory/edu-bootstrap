@@ -1,13 +1,13 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+if(!isset($school_id) || empty($school_id))
 {
-	include_once dirname(__FILE__)."/bukan-guru.php";
+	require_once dirname(__FILE__)."/bukan-guru.php";
 	exit();
 }
 
 $cfg->page_title = "Hasil Ujian";
-include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(isset($_POST['set_active']) && isset($_POST['answer_id']))
 {
@@ -336,7 +336,7 @@ echo '</body>
 }
 else if(@$_GET['option'] == 'answerdetail' && isset($_GET['answer_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $answer_id = kh_filter_input(INPUT_GET, "answer_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.*, `edu_answer`.*, 
 timediff(`edu_answer`.`end`,`edu_answer`.`start`) AS `duration_test` ,
@@ -636,17 +636,17 @@ $i++;
 }
 ?>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 }
 else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $q = kh_filter_input(INPUT_GET, "q", FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
@@ -965,11 +965,11 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $tahun_id = kh_filter_input(INPUT_GET, "tahun_id", FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 
@@ -1145,6 +1145,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

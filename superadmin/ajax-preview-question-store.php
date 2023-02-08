@@ -1,12 +1,12 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
-	include_once dirname(__FILE__)."/bukan-super-admin.php";
+	require_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
-include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+if(!isset($school_id) || empty($school_id))
 {
 	exit();
 }

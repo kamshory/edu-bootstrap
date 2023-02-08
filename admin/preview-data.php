@@ -1,8 +1,8 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if(!@$admin_id)
 {
-	include_once dirname(__FILE__)."/login-form.php";
+	require_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
 $path = dirname(__FILE__) . "/planetedu.xlsx";

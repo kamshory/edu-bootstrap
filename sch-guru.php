@@ -5,7 +5,7 @@ $cfg->page_title = "Guru";
 
 
 include_once dirname(__FILE__)."/lib.inc/cfg.pagination.php";
-if(isset($_GET['school_id']))
+if(isset($_GET['school_id']) && !empty($_GET['school_id']))
 {
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }

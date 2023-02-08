@@ -1,17 +1,17 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+if(!isset($school_id) || empty($school_id))
 {
-	include_once dirname(__FILE__)."/bukan-admin.php";
+	require_once dirname(__FILE__)."/bukan-admin.php";
 	exit();
 }
 if(empty(@$real_school_id))
 {
-	include_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
 	exit();
 }
 $cfg->page_title = "Bank Soal";
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $grade_id = kh_filter_input(INPUT_GET, "grade_id", FILTER_SANITIZE_STRING_NEW);
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
@@ -128,5 +128,5 @@ $array_class = $picoEdu->getArrayClass($school_id);
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 ?>

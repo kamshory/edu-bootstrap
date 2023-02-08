@@ -1,9 +1,9 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 
 if(!@$admin_id)
 {
-include_once dirname(__FILE__)."/login-form.php";
+require_once dirname(__FILE__)."/login-form.php";
 exit();
 }
 $cfg->page_title = "Peralatan";
@@ -22,7 +22,7 @@ if(isset($_POST['clear']))
 }
 
 
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $li = "";
 $totalsize = 0;
 if(file_exists($dir2) && ($handle = opendir($dir2)))
@@ -56,5 +56,5 @@ echo $li;
 </form>
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 ?>

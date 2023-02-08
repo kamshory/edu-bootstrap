@@ -1,21 +1,21 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+if(!isset($school_id) || empty($school_id))
 {
-	include_once dirname(__FILE__)."/bukan-admin.php";
+	require_once dirname(__FILE__)."/bukan-admin.php";
 	exit();
 }
 if(empty(@$real_school_id))
 {
-	include_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
 	exit();
 }
 
 $real_school_id = @$real_school_id . '';
 
 $cfg->page_title = "Ujian";
-include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
-include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST) && isset($_POST['save']))
 {
 	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
@@ -166,7 +166,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	{
 		$selection = kh_filter_input(INPUT_POST, "selection", FILTER_SANITIZE_STRING_NEW);
 		$selection_index = json_decode($selection);
-		include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+		require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 		$time_create = $time_edit = $picoEdu->getLocalDateTime();		
 		
 		$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$collection' AND `active` = true ";
@@ -332,7 +332,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 }
 if(@$_GET['option'] == 'add')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $collection = kh_filter_input(INPUT_GET, "collection", FILTER_SANITIZE_STRING_NEW);
 $selection = kh_filter_input(INPUT_GET, "selection", FILTER_SANITIZE_STRING_NEW);
 
@@ -392,15 +392,26 @@ input#duration{
 		<option value=""></option>
 		<?php 
 		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` ASC ";
-		$stmt2 = $database->executeQuery($sql2);
-		if ($stmt2->rowCount() > 0) {
-			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-			foreach ($rows2 as $data2) {
-				?>
-          <option value="<?php echo $data2['school_program_id']; ?>"><?php echo $data2['name']; ?></option>
-            <?php
-			}
-		}
+		echo $picoEdu->createFilterDb(
+			$sql2,
+			array(
+				'attributeList'=>array(
+					array('attribute'=>'value', 'source'=>'school_program_id')
+				),
+				'selectCondition'=>array(
+					'source'=>'school_program_id',
+					'value'=>null
+				),
+				'caption'=>array(
+					'delimiter'=>PicoEdu::RAQUO,
+					'values'=>array(
+						'name'
+					)
+				)
+			)
+		);
+		
+		
 		?>
 		</select></td>
 		</tr>
@@ -414,15 +425,26 @@ input#duration{
 		<option value=""></option>
 		<?php 
 		$sql2 = "SELECT `edu_teacher`.* FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' ORDER BY `name` ASC ";
-		$stmt2 = $database->executeQuery($sql2);
-		if ($stmt2->rowCount() > 0) {
-			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-			foreach ($rows2 as $data2) {
-				?>
-            <option value="<?php echo $data2['teacher_id']; ?>"><?php echo $data2['name']; ?></option>
-            <?php
-			}
-		}
+		echo $picoEdu->createFilterDb(
+			$sql2,
+			array(
+				'attributeList'=>array(
+					array('attribute'=>'value', 'source'=>'teacher_id')
+				),
+				'selectCondition'=>array(
+					'source'=>'teacher_id',
+					'value'=>null
+				),
+				'caption'=>array(
+					'delimiter'=>PicoEdu::RAQUO,
+					'values'=>array(
+						'name'
+					)
+				)
+			)
+		);
+		
+		
 		?>
 		</select></td>
 		</tr>
@@ -676,12 +698,12 @@ $(document).ready(function(e) {
   </div>
 </div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'edit')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* 
 FROM `edu_test` 
@@ -844,16 +866,25 @@ $(document).ready(function(e) {
 		<option value=""></option>
 		<?php 
 		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` ASC ";
-		$stmt2 = $database->executeQuery($sql2);
-		if ($stmt2->rowCount() > 0) {
-			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-			foreach ($rows2 as $data2) {
-				?>
-          <option value="<?php echo $data2['school_program_id']; ?>"<?php if ($data2['school_program_id'] == $data['school_program_id'])
-						echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
-            <?php
-			}
-		}
+		echo $picoEdu->createFilterDb(
+			$sql2,
+			array(
+				'attributeList'=>array(
+					array('attribute'=>'value', 'source'=>'school_program_id')
+				),
+				'selectCondition'=>array(
+					'source'=>'school_program_id',
+					'value'=>$data['school_program_id']
+				),
+				'caption'=>array(
+					'delimiter'=>PicoEdu::RAQUO,
+					'values'=>array(
+						'name'
+					)
+				)
+			)
+		);
+
 		?>
 		</select></td>
 		</tr>
@@ -867,16 +898,25 @@ $(document).ready(function(e) {
 		<option value=""></option>
 		<?php 
 		$sql2 = "SELECT `edu_teacher`.* FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' ORDER BY `name` ASC ";
-		$stmt2 = $database->executeQuery($sql2);
-		if ($stmt2->rowCount() > 0) {
-			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-			foreach ($rows2 as $data2) {
-				?>
-          <option value="<?php echo $data2['teacher_id']; ?>"<?php if ($data2['teacher_id'] == $data['teacher_id'])
-						echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
-            <?php
-			}
-		}
+		echo $picoEdu->createFilterDb(
+			$sql2,
+			array(
+				'attributeList'=>array(
+					array('attribute'=>'value', 'source'=>'teacher_id')
+				),
+				'selectCondition'=>array(
+					'source'=>'teacher_id',
+					'value'=>$data['teacher_id']
+				),
+				'caption'=>array(
+					'delimiter'=>PicoEdu::RAQUO,
+					'values'=>array(
+						'name'
+					)
+				)
+			)
+		);
+		
 		?>
 		</select></td>
 		</tr>
@@ -1012,12 +1052,12 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'detail')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $array_class = $picoEdu->getArrayClass($school_id);
 $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
@@ -1220,12 +1260,12 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);
 $array_class = $picoEdu->getArrayClass($school_id);
@@ -1451,6 +1491,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

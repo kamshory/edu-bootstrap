@@ -1,6 +1,6 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
-include_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
 if(isset($_POST['username']) && isset($_POST['password']))
 {
 	$username = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
@@ -64,18 +64,18 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	}
 	else
 	{
-		include_once dirname(__FILE__)."/login-form.php";
+		require_once dirname(__FILE__)."/login-form.php";
 	}
 }
 else
 {
-	include_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
+	require_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
 	if(!empty(@$auth_student_id))
 	{
 		header('Location: index.php');
 	}
 	else
 	{
-		include_once dirname(__FILE__)."/login-form.php";
+		require_once dirname(__FILE__)."/login-form.php";
 	}
 }

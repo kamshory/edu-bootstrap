@@ -1,11 +1,11 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+if(!isset($school_id) || empty($school_id))
 {
 	exit();
 }
-include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 
 $time_create = $time_edit = $picoEdu->getLocalDateTime();
 

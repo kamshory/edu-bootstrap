@@ -58,7 +58,7 @@
   <div class="container-fluid">
     <div class="row">
       <?php
-	  include_once dirname(__FILE__) . '/menu.php';
+	  require_once dirname(__FILE__) . '/menu.php';
       $phpSelf = basename($_SERVER['PHP_SELF']);
 	  
       ?>

@@ -1,7 +1,7 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
-include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+if(!isset($school_id) || empty($school_id))
 {
 	exit();
 }

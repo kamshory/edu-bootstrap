@@ -1,12 +1,12 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+if(!isset($school_id) || empty($school_id))
 {
-	include_once dirname(__FILE__)."/bukan-admin.php";
+	require_once dirname(__FILE__)."/bukan-admin.php";
 	exit();
 }
 $cfg->page_title = "Profil Sekolah";
-include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['save']) && count(@$_POST))
 {
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -84,7 +84,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['school_id']))
 
 if(@$_GET['option'] == 'edit')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 $state_list = array();
 $city_list = array();
@@ -308,19 +308,28 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="state_id" id="state_id">
 		<option value="">- Pilih Provinsi -</option>
 			<?php
-            $sql = "SELECT * FROM `state` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' ORDER BY `type` ASC, `name` ASC
+            $sql2 = "SELECT * FROM `state` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' ORDER BY `type` ASC, `name` ASC
             ";
-            $stmt = $database->executeQuery($sql);
-			if ($stmt->rowCount() > 0) {
-
-				$rows2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
-				foreach ($rows2 as $data2) {
-					?>
-                <option value="<?php echo $data2['name']; ?>"<?php if ($data2['state_id'] == $data['state_id'])
-					  echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
-                <?php
-				}
-			}
+			echo $picoEdu->createFilterDb(
+				$sql2,
+				array(
+					'attributeList'=>array(
+						array('attribute'=>'value', 'source'=>'state_id')
+					),
+					'selectCondition'=>array(
+						'source'=>'state_id',
+						'value'=>$state_id
+					),
+					'caption'=>array(
+						'delimiter'=>PicoEdu::RAQUO,
+						'values'=>array(
+							'name'
+						)
+					)
+				)
+			);
+            
+			
             ?>
             <!--<option value="--">- Tambah Provinsi -</option>-->
 		</select></td>
@@ -330,19 +339,27 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql = "SELECT * FROM `city` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' AND (`state_id` = '$data[state_id]' OR `state_id` = '' OR `state_id` is null) ORDER BY `type` ASC, `name` ASC 
+            $sql2 = "SELECT * FROM `city` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' AND (`state_id` = '$data[state_id]' OR `state_id` = '' OR `state_id` is null) ORDER BY `type` ASC, `name` ASC 
             ";
-            $stmt = $database->executeQuery($sql);
-			if ($stmt->rowCount() > 0) {
-
-				$rows2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
-				foreach ($rows2 as $data2) {
-					?>
-                <option value="<?php echo $data2['name']; ?>"<?php if ($data2['city_id'] == $data['city_id'])
-					  echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
-                <?php
-				}
-			}
+			echo $picoEdu->createFilterDb(
+				$sql2,
+				array(
+					'attributeList'=>array(
+						array('attribute'=>'value', 'source'=>'city_id')
+					),
+					'selectCondition'=>array(
+						'source'=>'city_id',
+						'value'=>$city_id
+					),
+					'caption'=>array(
+						'delimiter'=>PicoEdu::RAQUO,
+						'values'=>array(
+							'name'
+						)
+					)
+				)
+			);
+            
             ?>
 		<!--<option value="--">- Tambah Kabupaten/Kota -</option>-->
 		</select></td>
@@ -377,12 +394,12 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
 (SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) AS `student`,
@@ -560,7 +577,7 @@ else
 <div class="warning">Anda tidak terdaftar sebagai Administrator sekolah. <a href="impor-data.php">Klik di sini untuk import data.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 ?>

@@ -1,10 +1,10 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-include_once('lib.inc/menu.php');
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once('lib.inc/menu.php');
 exit();
 
 $cfg->page_title = "Sekolah";
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <ul class="list-rounded">
   <li><a href="sekolah-profil.php">Profil Sekolah</a></li>
@@ -15,5 +15,5 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
   <li><a href="peralatan.php">Peralatan</a></li>
 </ul>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 ?>

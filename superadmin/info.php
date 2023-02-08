@@ -1,12 +1,12 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
-	include_once dirname(__FILE__)."/bukan-super-admin.php";
+	require_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
-include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $admin_id = $adminLoggedIn->admin_id;
 if(isset($_POST['set_active']) && isset($_POST['info_id']))
 {
@@ -131,7 +131,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 
 if(@$_GET['option'] == 'add')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
@@ -272,11 +272,11 @@ var defaultdir = 'lib.content/media/info/';
 </div>
 </form>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(@$_GET['option'] == 'edit' && isset($_GET['info_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT * FROM `edu_info` WHERE `info_id` = '$info_id'";
 $stmt = $database->executeQuery($sql);
@@ -426,11 +426,11 @@ var info_id = '<?php echo $info_id;?>';
 </form>
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(isset($_GET['info_id']))
 {
-	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+	require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
 	$sql_filter_info = " AND `edu_info`.`info_id` = '$info_id' ";
 
@@ -514,7 +514,7 @@ else if(isset($_GET['info_id']))
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
@@ -640,6 +640,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

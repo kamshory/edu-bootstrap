@@ -1,16 +1,16 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+if(!isset($school_id) || empty($school_id))
 {
-	include_once dirname(__FILE__)."/login-form.php";
+	require_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
-include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $cfg->page_title = "Infomasi";
-if(empty(@$school_id))
+if(!isset($school_id) || empty($school_id))
 {
-	include_once dirname(__FILE__)."/login-form.php";
+	require_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
 
@@ -84,7 +84,7 @@ if(isset($_GET['info_id']))
 		}
 	
 		$cfg->meta_description = htmlspecialchars(strip_tags($content));
-		include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+		require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		?>
         <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 		<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/FileSaver.js"></script>
@@ -108,18 +108,18 @@ if(isset($_GET['info_id']))
         </div>
         </div>
 		<?php
-		include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+		require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 	}
 	else
 	{
-		include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-		include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+		require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+		require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 	}
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
@@ -269,6 +269,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

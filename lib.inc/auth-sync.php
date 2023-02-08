@@ -1,6 +1,6 @@
 <?php
-include_once dirname(__FILE__)."/functions-pico.php";
-include_once dirname(__FILE__)."/sessions.php";
+require_once dirname(__FILE__)."/functions-pico.php";
+require_once dirname(__FILE__)."/sessions.php";
 $username = '';
 $password = '';
 $user_id = '';

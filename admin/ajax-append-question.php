@@ -1,6 +1,6 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 $basename = "ujian-soal.php";
 $test_id = 0;
 $edit_mode = '';

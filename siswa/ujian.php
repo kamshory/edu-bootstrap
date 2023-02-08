@@ -1,12 +1,12 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
+if(!isset($school_id) || empty($school_id))
 {
-	include_once dirname(__FILE__)."/login-form.php";
+	require_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
 $cfg->page_title = "Ujian";
-include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(!empty(@$auth_student_id) && !empty(@$auth_school_id))
 {
@@ -14,7 +14,7 @@ if(@$_GET['option'] == 'answer' && isset($_GET['answer_id']))
 {
 $answer_id = kh_filter_input(INPUT_GET, "answer_id", FILTER_SANITIZE_STRING_NEW);
 $now = $picoEdu->getLocalDateTime();
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 $sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, 
 `edu_answer`.`start`, `edu_answer`.`end`, `edu_answer`.`competence_score`
@@ -292,12 +292,12 @@ Ujian tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Kl
 </div>
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(@$_GET['option'] == 'history' && isset($_GET['test_id']))
 {
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 $sql = "SELECT `edu_test`.* 
 FROM `edu_test`
@@ -413,11 +413,11 @@ Ujian tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Kl
 </div>
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
@@ -564,17 +564,17 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	</table>
     <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(@$_GET['option'] == 'enter-token')
 {
-include_once dirname(__FILE__)."/ujian-token.php";
+require_once dirname(__FILE__)."/ujian-token.php";
 }
 else
 {
 if(!$use_token || @$_GET['option'] == 'list')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <style type="text/css">
@@ -806,18 +806,18 @@ else
 ?>
 </div>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if($use_token)
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <ul class="list-rounded">
   <li><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=enter-token">Masuk Ujian</a></li>
   <li><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=list">Daftar Ujian</a></li>
 </ul>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 }
 }

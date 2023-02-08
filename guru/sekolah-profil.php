@@ -1,13 +1,13 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+if(!isset($school_id) || empty($school_id))
 {
-	include_once dirname(__FILE__)."/bukan-guru.php";
+	require_once dirname(__FILE__)."/bukan-guru.php";
 	exit();
 }
 $cfg->page_title = "Profil Sekolah";
-include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
 (SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) AS `country_id`,
@@ -81,5 +81,5 @@ else
 <div class="warning">Anda tidak terdaftar sebagai guru.</div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 ?>

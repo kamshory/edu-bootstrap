@@ -1,8 +1,8 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 
 $cfg->page_title = "Token";
-include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST))
 {
 	$token_id = kh_filter_input(INPUT_POST, "token_id", FILTER_SANITIZE_NUMBER_INT);
@@ -97,11 +97,11 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 }
 if(@$_GET['option'] == 'print')
 {
-include_once dirname(__FILE__)."/cetak-ujian-token.php";
+require_once dirname(__FILE__)."/cetak-ujian-token.php";
 }
 else if(@$_GET['option'] == 'add')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <script type="text/javascript">
 $(document).ready(function(e) {
@@ -136,15 +136,25 @@ $(document).ready(function(e) {
 		AND (`test_availability` = 'F' OR `available_to` > '$now')
 		ORDER BY `test_id` DESC
 		";
-		$stmt2 = $database->executeQuery($sql2);
-		if ($stmt2->rowCount() > 0) {
-			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-			foreach ($rows2 as $data2) {
-				?>
-            <option value="<?php echo $data2['test_id']; ?>"><?php echo $data2['name']; ?></option>
-            <?php
-			}
-		}		
+		echo $picoEdu->createFilterDb(
+			$sql2,
+			array(
+				'attributeList'=>array(
+					array('attribute'=>'value', 'source'=>'test_id')
+				),
+				'selectCondition'=>array(
+					'source'=>'test_id',
+					'value'=>$data['test_id']
+				),
+				'caption'=>array(
+					'delimiter'=>PicoEdu::RAQUO,
+					'values'=>array(
+						'name'
+					)
+				)
+			)
+		);
+			
 		?>
 		</select></td>
 		</tr>
@@ -200,12 +210,12 @@ $(document).ready(function(e) {
 </form>
 <?php getDefaultValues($database, 'edu_token', array('active')); ?>
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'detail')
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "token_id", FILTER_SANITIZE_NUMBER_INT);
 $nt = '';
 $sql = "SELECT `edu_token`.* $nt,
@@ -281,7 +291,7 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
@@ -290,7 +300,7 @@ $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $now = $picoEdu->getLocalDateTime();
 $oneday = date(PicoConst::DATE_TIME_MYSQL, time()-86400);
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 if(isset($_POST['cleanup']))
 {
 	$sql = "DELETE FROM `edu_invalid_signin` WHERE `signin_type` = 'T' ";
@@ -569,6 +579,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

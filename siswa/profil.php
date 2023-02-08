@@ -1,12 +1,12 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
+if(!isset($school_id) || empty($school_id))
 {
-	include_once dirname(__FILE__)."/login-form.php";
+	require_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
 $cfg->page_title = "Siswa";
-include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
@@ -45,7 +45,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 }
 if(@$_GET['option'] == 'edit')
 {
-include_once dirname((__FILE__))."/lib.inc/header.php";
+require_once dirname((__FILE__))."/lib.inc/header.php";
 if(@!$mobileBrowser)
 {
 ?>
@@ -121,12 +121,12 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname((__FILE__))."/lib.inc/footer.php";
+require_once dirname((__FILE__))."/lib.inc/footer.php";
 
 }
 else
 {
-include_once dirname((__FILE__))."/lib.inc/header.php";
+require_once dirname((__FILE__))."/lib.inc/header.php";
 $nt = '';
 $sql = "SELECT `edu_student`.* , `edu_school`.`name` AS `school_name`, `edu_school`.`open` AS `school_open`,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) AS `admin_create`,
@@ -228,7 +228,7 @@ else
 <div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-include_once dirname((__FILE__))."/lib.inc/footer.php";
+require_once dirname((__FILE__))."/lib.inc/footer.php";
 
 }
 ?>

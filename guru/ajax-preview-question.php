@@ -1,8 +1,8 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 if(!empty(@$school_id))
 {
-include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 $test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
 $xml_data = kh_filter_input(INPUT_POST, "text", FILTER_DEFAULT);
 if($test_id != 0 && $xml_data!= '')

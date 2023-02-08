@@ -1,13 +1,13 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
-if(empty(@$school_id))
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
+if(!isset($school_id) || empty($school_id))
 {
-	include_once dirname(__FILE__)."/login-form.php";
+	require_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
-include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 $cfg->page_title = "Artikel";
-include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 
 
@@ -19,7 +19,7 @@ if(isset($_GET['article_id']))
 	FROM `edu_article` 
 	LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 	WHERE `edu_article`.`article_id` = '$article_id' AND `edu_article`.`active` = true ";
-	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+	require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -38,11 +38,11 @@ if(isset($_GET['article_id']))
         </div>
         <?php
 	}
-	include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+	require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-	include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+	require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 	FROM `edu_article` 
 	LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
@@ -140,7 +140,7 @@ else
         <?php
 			
 	}
-	include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+	require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 
 ?>

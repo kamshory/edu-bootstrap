@@ -1,17 +1,17 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
-	include_once dirname(__FILE__)."/bukan-super-admin.php";
+	require_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
 $admin_id = $adminLoggedIn->admin_id;
 
-include_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-include_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 
 $cfg->page_title = "Ekspor Soal Ujian";
-include_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(isset($_POST['export']) && isset($_POST['test_id']))
 {
@@ -33,7 +33,7 @@ if(isset($_POST['export']) && isset($_POST['test_id']))
 
 if(isset($_GET['test_id']))
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
@@ -119,11 +119,11 @@ $array_class = $picoEdu->getArrayClass($school_id);
 </form>
 <?php
 }
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <script type="text/javascript">
 window.onload = function()
@@ -270,6 +270,6 @@ else
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

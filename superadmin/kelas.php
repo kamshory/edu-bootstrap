@@ -1,13 +1,13 @@
 <?php
-include_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
+require_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
 if ($adminLoggedIn->admin_level != 1) {
-	include_once dirname(__FILE__) . "/bukan-super-admin.php";
+	require_once dirname(__FILE__) . "/bukan-super-admin.php";
 	exit();
 }
 $admin_id = $adminLoggedIn->admin_id;
 
 $cfg->page_title = "Daftar Kelas";
-include_once dirname(dirname(__FILE__)) . "/lib.inc/cfg.pagination.php";
+require_once dirname(dirname(__FILE__)) . "/lib.inc/cfg.pagination.php";
 if (count(@$_POST) && isset($_POST['save'])) {
 	$class_id = kh_filter_input(INPUT_POST, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$class_id2 = kh_filter_input(INPUT_POST, "class_id2", FILTER_SANITIZE_STRING_NEW);
@@ -64,7 +64,7 @@ if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
 	header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&class_id=$class_id");
 }
 if (@$_GET['option'] == 'add') {
-	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+	require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 ?>
 <form name="formedu_class" id="formedu_class" action="" method="post" enctype="multipart/form-data">
 <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -92,15 +92,25 @@ if (@$_GET['option'] == 'add') {
 				WHERE `edu_school_program`.`school_id` = '$school_id' AND `active` = true 
 				ORDER BY `edu_school_program`.`name` ASC
 				";
-				$stmt2 = $database->executeQuery($sql);
-				if ($stmt2->rowCount() > 0) {
-					$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-					foreach ($rows2 as $data2) {
-						?>
-					<option value="<?php echo $data2['school_program_id']; ?>"><?php echo $data2['name']; ?></option>
-				<?php
-					}
-				}
+				echo $picoEdu->createFilterDb(
+					$sql2,
+					array(
+						'attributeList'=>array(
+							array('attribute'=>'value', 'source'=>'school_program_id')
+						),
+						'selectCondition'=>array(
+							'source'=>'school_program_id',
+							'value'=>null
+						),
+						'caption'=>array(
+							'delimiter'=>PicoEdu::RAQUO,
+							'values'=>array(
+								'name'
+							)
+						)
+					)
+				);
+				
 				?>
 			</select>
 		</td>
@@ -128,9 +138,9 @@ if (@$_GET['option'] == 'add') {
 	</form>
 	<?php getDefaultValues($database, 'edu_class', array('active')); ?>
 	<?php
-	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
+	require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else if (@$_GET['option'] == 'edit') {
-	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+	require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 	$edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_class`.* 
 	FROM `edu_class` 
@@ -219,11 +229,11 @@ if (@$_GET['option'] == 'add') {
 		<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']); ?>">Klik di sini untuk kembali.</a></div>
 	<?php
 	}
-	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
+	require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else if (@$_GET['option'] == 'print') {
-	include_once dirname(__FILE__) . "/cetak-login-siswa.php";
+	require_once dirname(__FILE__) . "/cetak-login-siswa.php";
 } else if (@$_GET['option'] == 'detail') {
-	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+	require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 	$edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$nt = '';
 	$sql = "SELECT `edu_class`.* $nt,
@@ -313,9 +323,9 @@ if($stmt->rowCount() > 0)
 		<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']); ?>">Klik di sini untuk kembali.</a></div>
 	<?php
 	}
-	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
+	require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else {
-	include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+	require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 	?>
 	<script type="text/javascript">
@@ -502,6 +512,6 @@ if($stmt->rowCount() > 0)
 	</div>
 
 <?php
-	include_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
+	require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 }
 ?>

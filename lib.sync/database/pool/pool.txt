@@ -5213,3 +5213,13 @@ UPDATE `edu_school` set
 <p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/description/2db3c8563930b2d9450b0243ebf6323a.svg\" alt=\"\"><br>&nbsp;</p>'
 	WHERE `school_id` = '063ce682801be89951aa'
 	;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_article`
+		(`article_id`, `school_id`, `title`, `open`, `class`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, 
+		`role_edit`, `ip_create`, `ip_edit`, `active`) VALUES	
+		('063e2ef9aed05f1956e2', '063ce682801be89951aa', '(Tanpa Judul)', '0', '', '2023-02-08 07:40:58', '2023-02-08 07:40:58', 'aaaaaaaaaaaaa', 'A', 'aaaaaaaaaaaaa', 
+		'A', '127.0.0.1', '127.0.0.1', '0')
+		;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `content` = '
+' WHERE `article_id` = '063e2ef9aed05f1956e2' ;

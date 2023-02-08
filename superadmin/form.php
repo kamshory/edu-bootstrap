@@ -367,10 +367,10 @@ $str = "";
 if(isset($field))
 {
 $str .= "<"."?php
-include_once dirname(dirname(dirname(__FILE__))).\"/planetbiru/lib.inc/auth.php\";
+require_once dirname(dirname(dirname(__FILE__))).\"/planetbiru/lib.inc/auth.php\";
 
 \$cfg->page_title = \"$module_title\";
-include_once dirname(dirname(__FILE__)).\"/lib.inc/cfg.pagination.php\";
+require_once dirname(dirname(__FILE__)).\"/lib.inc/cfg.pagination.php\";
 ";
 
 $str .= "if(count(@\$_POST))
@@ -521,7 +521,7 @@ $str .= "\tmysql_query(\$sql);
 $str .= "if(@\$_GET"."['option']"."=='add')
 {
 ";
-$str .= "include_once dirname(__FILE__).\"/lib.inc/header.php\";
+$str .= "require_once dirname(__FILE__).\"/lib.inc/header.php\";
 ";
 $str .= "?".">
 ";
@@ -631,7 +631,7 @@ $str .= "</form>
 ";
 $str .= "<"."?php getDefaultValues(DB_PREFIX.'$table', array('".implode("','", $field_new)."')); ?".">\r\n";
 $str .= "<"."?php
-include_once dirname(__FILE__).\"/lib.inc/footer.php\";
+require_once dirname(__FILE__).\"/lib.inc/footer.php\";
 ";
 $str .= "
 }
@@ -639,7 +639,7 @@ $str .= "
 $str .= "else if(@\$_GET"."['option']"."=='edit')
 {
 ";
-$str .= "include_once dirname(__FILE__).\"/lib.inc/header.php\";
+$str .= "require_once dirname(__FILE__).\"/lib.inc/header.php\";
 \$edit_key = kh_filter_input(INPUT_GET, '$edit_key', $edit_key_type);
 \$sql = \"SELECT `\".DB_PREFIX.\"$table"."`.* 
 FROM `\".DB_PREFIX.\"$table"."` 
@@ -772,7 +772,7 @@ $str .= "<div class=\"warning\">".$lpack['message_search_data_not_found']." <a h
 ";
 $str .= "<"."?php
 }
-include_once dirname(__FILE__).\"/lib.inc/footer.php\";
+require_once dirname(__FILE__).\"/lib.inc/footer.php\";
 ";
 $str .= "
 }
@@ -780,7 +780,7 @@ $str .= "
 $str .= "else if(@\$_GET"."['option']"."=='detail')
 {
 ";
-$str .= "include_once dirname(__FILE__).\"/lib.inc/header.php\";
+$str .= "require_once dirname(__FILE__).\"/lib.inc/header.php\";
 \$edit_key = kh_filter_input(INPUT_GET, '$edit_key', $edit_key_type);
 \$nt = '';
 ";
@@ -843,14 +843,14 @@ $str .= "<div class=\"warning\">".$lpack['message_search_data_not_found']." <a h
 ";
 $str .= "<"."?php
 }
-include_once dirname(__FILE__).\"/lib.inc/footer.php\";
+require_once dirname(__FILE__).\"/lib.inc/footer.php\";
 ";
 $str .= "
 }
 ";
 $str .= "else
 {
-include_once dirname(__FILE__).\"/lib.inc/header.php\";
+require_once dirname(__FILE__).\"/lib.inc/header.php\";
 ?".">
 ";
 $str .= "<div class=\"search-control\">
@@ -996,7 +996,7 @@ $str .= "</div>
 ";
 $str .= "
 <"."?php
-include_once dirname(__FILE__).\"/lib.inc/footer.php\";
+require_once dirname(__FILE__).\"/lib.inc/footer.php\";
 }
 ";
 $str .= "?".">";
