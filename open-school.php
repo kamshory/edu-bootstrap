@@ -3,7 +3,7 @@ include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
 $cfg->page_title = "Pilih Sekolah";
 include_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 if (@$_GET['option'] == 'select') {
-	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_NUMBER_INT);
+	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "
 	select `edu_school3`.* from(
 	
@@ -35,7 +35,7 @@ $base_dir = 'siswa/';
 $school_code_from_parser = 'student';
 if (@$_GET['option'] == 'detail') {
 	include_once dirname(__FILE__) . "/lib.assets/theme/default/header-home.php";
-	$edit_key = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_NUMBER_INT);
+	$edit_key = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 	$nt = '';
 	$sql = "SELECT `edu_school`.* $nt,
 	(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id`) AS `student`,
