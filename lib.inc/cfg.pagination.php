@@ -22,10 +22,10 @@ class PicoPagination
     private $str_keyword = 'Kata kunci';//$lang_pack['search_label'];
     private $str_search = 'Cari';//$lang_pack['search_button_search'];
     private $str_soundlike = 'Cari seperti';//$lang_pack['search_button_soundlike'];
-    private $str_record = 'Baris';//$lang_pack['pagination_record'];
-    private $str_from = 'dari';//$lang_pack['pagination_from'];
-    private $str_to = 'hingga';//$lang_pack['pagination_to'];
-    private $str_of = 'dari';//$lang_pack['pagination_of'];
+    private $str_record = ' Baris ';//$lang_pack['pagination_record'];
+    private $str_from = ' dari ';//$lang_pack['pagination_from'];
+    private $str_to = ' hingga ';//$lang_pack['pagination_to'];
+    private $str_of = ' dari ';//$lang_pack['pagination_of'];
 
     private $query = '';
     private $query_edit = '';
@@ -89,13 +89,23 @@ class PicoPagination
 
     public function getResultInfo()
     {
-        return $this->start.'-'.$this->end.'/'.$this->total_record;
+        return $this->str_record.$this->start.$this->str_to.$this->end.$this->str_of.$this->total_record;
     }
     
     public function createPagination($module, $showfirstandlast = true) //NOSONAR
     {
-        /*
-        Old code
+        $totalrecord = $this->total_record;
+        $resultperpage = $this->limit;
+        $numberofpage = $this->num_page;
+        $offset = $this->offset;
+        $arrayget = $this->array_get;
+        $showfirstandlast = true;
+
+        $firstCaption = $this->str_first;
+        $lastCaption = $this->str_last;
+        $prevCaption = $this->str_prev;
+        $nextCaption = $this->str_next;
+
         $result = array();
         $result[0] = new StdClass();
         $result[1] = new StdClass();
@@ -103,21 +113,23 @@ class PicoPagination
         $paginationObject = new StdClass();
         $paginationObject->text = "";
         $paginationObject->ref = "";
-        if ($this->total_record <= $this->limit) {
+        if ($totalrecord <= $resultperpage) {
             return array();
         }
-        
-        foreach ($this->array_get as $item) {
+        if (!is_array($arrayget)) {
+            $arrayget = array($arrayget);
+        }
+        foreach ($arrayget as $item) {
             $arg .= "&$item=" . @$_GET[$item];
         }
         $arg = "$module?" . trim($arg, "&");
-        $curpage = abs(ceil($this->offset / $this->limit)) + 1;
-        $startpage = abs(ceil($curpage - floor($this->limit / 2)));
+        $curpage = abs(ceil($offset / $resultperpage)) + 1;
+        $startpage = abs(ceil($curpage - floor($numberofpage / 2)));
         if ($startpage < 1) {
             $startpage = 1;
         }
-        $endpage = $startpage + $this->num_page - 1;
-        $lastpage = ceil($this->total_record / $this->limit);
+        $endpage = $startpage + $numberofpage - 1;
+        $lastpage = ceil($totalrecord / $resultperpage);
 
 
         if ($endpage > $lastpage) {
@@ -126,18 +138,18 @@ class PicoPagination
         $paginationObject->text = "";
         $paginationObject->ref = "";
         $paginationObject->ref_first = 0;
-        $paginationObject->str_first = $this->str_first;
-        $paginationObject->str_prev = $this->str_prev;
-        $paginationObject->ref_prev = ($curpage - 2) * $this->limit;
+        $paginationObject->str_first = $firstCaption;
+        $paginationObject->str_prev = $prevCaption;
+        $paginationObject->ref_prev = ($curpage - 2) * $resultperpage;
         if ($paginationObject->ref_prev < 0) {
             $paginationObject->ref_prev = 0;
         }
-        $paginationObject->str_next = $this->str_next;
-        $paginationObject->ref_next = ($curpage) * $this->limit;
-        $paginationObject->str_last = $this->str_last;
-        $paginationObject->ref_last = floor($this->total_record / $this->limit) * $this->limit;
-        if ($paginationObject->ref_last == $this->total_record) {
-            $paginationObject->ref_last = $this->total_record - $this->limit;
+        $paginationObject->str_next = $nextCaption;
+        $paginationObject->ref_next = ($curpage) * $resultperpage;
+        $paginationObject->str_last = $lastCaption;
+        $paginationObject->ref_last = floor($totalrecord / $resultperpage) * $resultperpage;
+        if ($paginationObject->ref_last == $totalrecord) {
+            $paginationObject->ref_last = $totalrecord - $resultperpage;
         }
 
         $result[0]->text = $paginationObject->str_first;
@@ -152,7 +164,7 @@ class PicoPagination
             $pn = $i;
             $result[$j] = new StdClass();
             $result[$j]->text = "$pn";
-            $result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . (($i - 1) * $this->limit));
+            $result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . (($i - 1) * $resultperpage));
             if ($curpage == $i) {
                 $result[$j]->sel = true;
             } else {
@@ -170,87 +182,7 @@ class PicoPagination
         $result[$j]->text = $paginationObject->str_last;
         $result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . $paginationObject->ref_last);
         $result[$j]->sel = false;
-        */
-
-
-        $result = array();
-			$result[0] = new StdClass();
-			$result[1] = new StdClass();
-			$arg = "";
-			$paginationObject = new StdClass();
-			$paginationObject->text = "";
-			$paginationObject->ref = "";
-			if ($totalrecord <= $resultperpage) {
-				return array();
-			}
-			if (!is_array($arrayget)) {
-				$arrayget = array($arrayget);
-			}
-			foreach ($arrayget as $item) {
-				$arg .= "&$item=" . @$_GET[$item];
-			}
-			$arg = "$module?" . trim($arg, "&");
-			$curpage = abs(ceil($offset / $resultperpage)) + 1;
-			$startpage = abs(ceil($curpage - floor($numberofpage / 2)));
-			if ($startpage < 1) {
-				$startpage = 1;
-			}
-			$endpage = $startpage + $numberofpage - 1;
-			$lastpage = ceil($totalrecord / $resultperpage);
-	
-	
-			if ($endpage > $lastpage) {
-				$endpage = $lastpage;
-			}
-			$paginationObject->text = "";
-			$paginationObject->ref = "";
-			$paginationObject->ref_first = 0;
-			$paginationObject->str_first = $firstCaption;
-			$paginationObject->str_prev = $prevCaption;
-			$paginationObject->ref_prev = ($curpage - 2) * $resultperpage;
-			if ($paginationObject->ref_prev < 0) {
-				$paginationObject->ref_prev = 0;
-			}
-			$paginationObject->str_next = $nextCaption;
-			$paginationObject->ref_next = ($curpage) * $resultperpage;
-			$paginationObject->str_last = $lastCaption;
-			$paginationObject->ref_last = floor($totalrecord / $resultperpage) * $resultperpage;
-			if ($paginationObject->ref_last == $totalrecord) {
-				$paginationObject->ref_last = $totalrecord - $resultperpage;
-			}
-	
-			$result[0]->text = $paginationObject->str_first;
-			$result[0]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . $paginationObject->ref_first);
-			$result[0]->sel = false;
-			if ($curpage >= 0) {
-				$result[1]->text = $paginationObject->str_prev;
-				$result[1]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . $paginationObject->ref_prev);
-				$result[1]->sel = 0;
-			}
-			for ($j = 2, $i = $startpage; $i <= ($endpage); $i++, $j++) {
-				$pn = $i;
-				$result[$j] = new StdClass();
-				$result[$j]->text = "$pn";
-				$result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . (($i - 1) * $resultperpage));
-				if ($curpage == $i) {
-					$result[$j]->sel = true;
-				} else {
-					$result[$j]->sel = false;
-				}
-			}
-			if ($endpage < $lastpage) {
-				$result[$j] = new StdClass();
-				$result[$j]->text = $paginationObject->str_next;
-				$result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . $paginationObject->ref_next);
-				$result[$j]->sel = false;
-				$j++;
-			}
-			$result[$j] = new StdClass();
-			$result[$j]->text = $paginationObject->str_last;
-			$result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . $paginationObject->ref_last);
-			$result[$j]->sel = false;
-			return $result;
-
+       
         $this->result = $result;
     }
 
