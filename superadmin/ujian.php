@@ -769,7 +769,7 @@ window.onload = function()
     ?>
     </select>
     <?php
-	if(!empty(@$school_id))
+	if(isset($school_id) && !empty($school_id))
 	{
 	?>
     <span class="search-label">Kelas</span> 

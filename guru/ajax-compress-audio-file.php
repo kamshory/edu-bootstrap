@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
-if(!empty(@$school_id) && isset($_POST['filename']) && isset($_POST['test_id']))
+if(isset($school_id) && !empty($school_id) && isset($_POST['filename']) && isset($_POST['test_id']))
 {
 	$absolute_dir = dirname(dirname(__FILE__));
 	$filename = trim(@$_POST['filename']);

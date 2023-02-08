@@ -78,7 +78,7 @@ var setTimeToken = '<?php echo $setTimeToken;?>';
 			}
 			?>
             <?php
-			if(!empty(@$school_id))
+			if(isset($school_id) && !empty($school_id))
 			{
 			?>
     	    <li><a href="logout.php">Keluar</a></li>

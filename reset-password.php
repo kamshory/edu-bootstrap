@@ -93,7 +93,7 @@ $message = '<!DOCTYPE html>
 		$headers  = "MIME-Version: 1.0" . "\r\n";
 		$headers .= "Content-type: text/html; charset=utf-8" . "\r\n";
 		// Additional headers
-		$headers .= "From: Reset Password ".$cfg->app_name." <".$cfg->mail_reset_password.">\r\n";
+		$headers .= "From: Reset Password ".$cfg->app_name." <".$cfg->mail_noreply.">\r\n";
 		$headers .= "X-Mailer: PHP/" . phpversion();
 		
 		$message = wordwrap($message, 70);

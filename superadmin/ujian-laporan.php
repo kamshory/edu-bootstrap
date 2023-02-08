@@ -476,7 +476,7 @@ window.onload = function()
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
     <?php
-	if(!empty(@$school_id))
+	if(isset($school_id) && !empty($school_id))
 	{
 	?>
     <span class="search-label">Kelas</span> 
@@ -787,7 +787,7 @@ require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
     ?>
     </select>
     <?php
-    if (!empty(@$school_id)) {
+    if(isset($school_id) && !empty($school_id)) {
       ?>
     <span class="search-label">Kelas</span> 
     <select class="form-control input-select" name="class_id" id="class_id">

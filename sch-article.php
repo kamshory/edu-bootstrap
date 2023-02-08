@@ -6,7 +6,7 @@ include_once dirname(__FILE__)."/lib.inc/auth.php";
 if(!@$memberLoggedIn->member_id)
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-if(!empty(@$school_id))
+if(isset($school_id) && !empty($school_id))
 {
 	if(isset($_GET['article_id']))
 	{

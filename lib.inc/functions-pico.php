@@ -372,7 +372,14 @@ class DirectoryDestroyer
 }
 
 
-
+/**
+ * Filter input from POST, GET, REQUEST, etc
+ * @param int $type
+ * @param string $variable_name
+ * @param int $filter
+ * @param mixed $options
+ * @return string
+ */
 function kh_filter_input($type, $variable_name, $filter = FILTER_DEFAULT, $options = null) //NOSONAR
 {
 	switch ($type) //NOSONAR

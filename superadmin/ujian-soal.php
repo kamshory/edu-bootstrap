@@ -1015,7 +1015,7 @@ function buildMenu(id)
 			?>
     </select>
     <?php
-			if (!empty(@$school_id)) {
+			if(isset($school_id) && !empty($school_id)) {
 				?>
 				<span class="search-label">Kelas</span> 
 				<select class="form-control input-select" name="class_id" id="class_id">

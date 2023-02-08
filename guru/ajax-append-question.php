@@ -1,7 +1,7 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
-if(!empty(@$school_id))
+if(isset($school_id) && !empty($school_id))
 {
 	$basename = "ujian-soal.php";
 	if(isset($_POST['question_text']) && isset($_POST['test_id']) && @$_POST['option']=='add')

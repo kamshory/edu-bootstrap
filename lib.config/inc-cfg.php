@@ -13,8 +13,7 @@ if(!defined('DB_PREF'))
 define('DB_PREF', '');
 */
 
-$cfg = new \stdClass;
-$configs = new \stdClass;
+$configs = new stdClass();
 
 $configs->db_type = "mysql";
 $configs->db_host = "localhost";
@@ -38,31 +37,24 @@ $configs->sync_file_rolling_prefix = "poll_";
 $configs->sync_file_extension = ".txt";
 $configs->sync_file_maximum_length = 100000;
 
+
+$cfg = new stdClass();
+
 $cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
-$cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/";
+$cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
+
 $cfg->app_name = "Planet Edu";
-$cfg->mail_reset_password = "resetpassword@quliah.com";
-$cfg->mail_invitation = "invitation@quliah.com";
 $cfg->mail_noreply = "noreply@planetbiru.com";
 $cfg->mail_update_profile = "noreply@planetbiru.com";
-$cfg->main_url = "http://www.planetbiru.com";
+$cfg->main_url = "https://www.planetbiru.com";
 $cfg->main_domain = "www.planetbiru.com";
 
 $cfg->cdn_jquery = $cfg->base_assets."lib.assets/script/jquery/jquery.min.js";
 
 $cfg->base_avatar = "http://".$_SERVER['SERVER_NAME']."/media.images/";
-$cfg->base_images = "http://".$_SERVER['SERVER_NAME']."/media.images/";
-$cfg->base_url = 'http://'.$_SERVER['SERVER_NAME'].'/';
+$cfg->base_images = "http://".$_SERVER['SERVER_NAME']."/media.edu/";
 $cfg->meta_description = "Planet Edu merupakan sekolah virtual yang dapat dimanfaatkan oleh sekolah, guru dan siswa untuk pengayaan materi dan ujian online. Planet Edu bukanlan sistem informasi akademik karena sebenarnya Planet Edu merupakan media sosial yang mendukung pendidikan.";
 
-$cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/";
-$cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/";
-$cfg->mail_reset_password = "resetpassword@quliah.com";
-$cfg->mail_invitation = "invitation@quliah.com";
-$cfg->mail_noreply = "noreply@planetbiru.com";
-$cfg->mail_update_profile = "noreply@planetbiru.com";
-$cfg->main_url = "http://www.planetbiru.com";
-$cfg->main_domain = "www.planetbiru.com";
 
 $cfg->cdn_jquery = $cfg->base_assets."lib.assets/script/jquery/jquery.min.js";
 
@@ -73,8 +65,6 @@ $cfg->base_images = "http://".$_SERVER['SERVER_NAME']."/media.images/";
 $cfg->base_url = 'http://'.$_SERVER['SERVER_NAME'].'/';
 */
 
-$cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
-$cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
 $cfg->base_avatar = "/media.images/";
 $cfg->base_images = "/media.images/";
 

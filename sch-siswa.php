@@ -8,7 +8,7 @@ if (isset($_GET['school_id'])) {
 }
 if (!@$student_id && !@$teacher_id) {
   include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
-  if(!empty(@$school_id)) {
+  if(isset($school_id) && !empty($school_id)) {
     $sql = "SELECT `edu_school`.*, 
     (SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student`
     WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'M') AS `M`,
