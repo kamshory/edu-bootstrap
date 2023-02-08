@@ -249,7 +249,7 @@ $paginationHTML = $pagination->createPaginationHtml();
                 <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo $data['name']; ?></a></td>
                 <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo $data['grade_id']; ?></a></td>
                 <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo $data['class_id']; ?></a></td>
-                <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo ($data['gender']); ?></a></td>
+                <td><a href="<?php echo 'siswa.php'; ?>?option=detail&student_id=<?php echo $data['student_id']; ?>"><?php echo $data['gender']; ?></a></td>
                 </tr>
               <?php
             }
