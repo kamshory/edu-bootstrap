@@ -5,7 +5,6 @@ if($adminLoggedIn->admin_level != 1)
 	require_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
-$admin_id = $adminLoggedIn->admin_id;
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 $cfg->page_title = "Paket Soal";

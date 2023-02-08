@@ -5,7 +5,7 @@ if($adminLoggedIn->admin_level != 1)
 	require_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
-$admin_id = $adminLoggedIn->admin_id;
+
 
 $cfg->page_title = "Sekolah";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
@@ -27,7 +27,6 @@ if(count(@$_POST) && isset($_POST['save']))
 	$school_code = str_replace("--", "-", $school_code);
 	
 	$school_code = addslashes($school_code);
-
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
 	$description = kh_filter_input(INPUT_POST, "description", FILTER_SANITIZE_SPECIAL_CHARS);
 	$school_type_id = kh_filter_input(INPUT_POST, "school_type_id", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -43,14 +42,11 @@ if(count(@$_POST) && isset($_POST['save']))
 	$state_id = kh_filter_input(INPUT_POST, "state_id", FILTER_SANITIZE_SPECIAL_CHARS);
 	$city_id = kh_filter_input(INPUT_POST, "city_id", FILTER_SANITIZE_SPECIAL_CHARS);
 	$student = kh_filter_input(INPUT_POST, "student", FILTER_SANITIZE_NUMBER_INT);
-
 	$prevent_change_school = kh_filter_input(INPUT_POST, "prevent_change_school", FILTER_SANITIZE_NUMBER_UINT);
 	$prevent_resign = kh_filter_input(INPUT_POST, "prevent_resign", FILTER_SANITIZE_NUMBER_UINT);
 	$use_token = kh_filter_input(INPUT_POST, "use_token", FILTER_SANITIZE_NUMBER_UINT);
-
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
-
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 
 
@@ -767,7 +763,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Token Sekolah</td>
-		<td><?php echo ($data['token_school']);?> </td>
+		<td><?php echo $data['token_school'];?> </td>
 		</tr>
 		<tr>
 		<td>Nama Sekolah</td>

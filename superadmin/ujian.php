@@ -6,7 +6,7 @@ if($adminLoggedIn->admin_level != 1)
 	exit();
 }
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
-$admin_id = $adminLoggedIn->admin_id;
+
 $cfg->page_title = "Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST) && isset($_POST['save']))

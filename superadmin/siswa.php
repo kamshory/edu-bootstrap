@@ -6,7 +6,7 @@ if($adminLoggedIn->admin_level != 1)
 	exit();
 }
 
-$admin_id = $adminLoggedIn->admin_id;
+
 
 $cfg->page_title = "Siswa";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";

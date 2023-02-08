@@ -6,7 +6,7 @@ if($adminLoggedIn->admin_level != 1)
 	exit();
 }
 
-$admin_id = $adminLoggedIn->admin_id;
+
 
 $cfg->page_title = "Administrator";
 

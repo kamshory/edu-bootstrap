@@ -5,7 +5,7 @@ if($adminLoggedIn->admin_level != 1)
 	require_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
-$admin_id = $adminLoggedIn->admin_id;
+
 $tokens = kh_filter_input(INPUT_GET, "tokens", FILTER_SANITIZE_STRING_NEW);
 $arr = explode(",", $tokens);
 foreach($arr as $key=>$val)

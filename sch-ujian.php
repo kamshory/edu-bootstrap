@@ -1,17 +1,17 @@
 <?php
 include_once dirname(__FILE__) . "/lib.inc/auth-guru.php";
-if (@!$auth_teacher_id)
+if (empty($auth_teacher_id)) {
 	require_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
-
+}
 if (isset($_GET['school_id'])) {
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }
-if (!$school_id) {
+if(empty($school_id)) {
 	exit();
 }
 require_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 
-if (@$auth_student_id && @$auth_school_id) {
+if(!empty($auth_student_id) && !empty($auth_school_id)) {
 	if (@$_GET['option'] == 'answer' && isset($_GET['answer_id'])) {
 		$answer_id = kh_filter_input(INPUT_GET, "answer_id", FILTER_SANITIZE_STRING_NEW);
 		$now = $picoEdu->getLocalDateTime();
@@ -129,13 +129,14 @@ if (@$auth_student_id && @$auth_school_id) {
 													<?php
 													if ($data['publish_answer'] && $data['time_answer_publication'] <= $now) {
 													?>
-														<span class="option-circle<?php if ($data2['score']) echo ' option-circle-selected'; ?>"><?php
-																																				echo $data2['score'] * 1;
-																																				?></span>
+														<span class="option-circle<?php echo $picoEdu->trueFalse($data2['score'] > 0, ' option-circle-selected', ''); ?>">
+														<?php
+														echo $data2['score'] * 1;
+														?></span>
 													<?php
 													}
 													?>
-													<div class="list-option-item<?php echo ($data2['my_answer']) ? ' list-option-item-selected' : ''; ?>">
+													<div class="list-option-item<?php echo $picoEdu->trueFalse($data2['my_answer'], ' list-option-item-selected', ''); ?>">
 														<div class="option-content">
 															<?php
 															echo $data2['content'];
@@ -532,8 +533,8 @@ if (@$auth_student_id && @$auth_school_id) {
 					?>
 				</select>
 				<span class="search-label">Ujian</span>
-				<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
-    ")))); ?>" />
+				<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" 
+				value="<?php echo htmlspecialchars(rawurldecode(trim(@$_GET['q'], " "))); ?>" />
 				<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 			</form>
 		</div>
@@ -544,7 +545,7 @@ if (@$auth_student_id && @$auth_school_id) {
 			
 			if($pagination->getQuery()) {
 				$pagination->appendQueryName('q');
-				$sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->getQuery()) . "%' )";
+				$sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->getQuery()) . "%' )"; //NOSONAR
 			}
 
 
@@ -621,7 +622,9 @@ if (@$auth_student_id && @$auth_school_id) {
 									<td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php $class = $picoEdu->textClass($array_class, $data['class']);
 																													$class_sort = $picoEdu->textClass($array_class, $data['class'], 2); ?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class); ?>"><?php echo $class_sort; ?></a></td>
 									<td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['subject']; ?></a></td>
-									<td><?php if ($data['ntest']) { ?><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['ntest']; ?> &times;</a><?php } else echo '-';?> </td>
+									<td><?php if ($data['ntest']) { ?><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['ntest']; ?> &times;</a><?php } else {
+										echo '-';
+									}?> </td>
 								</tr>
 							<?php
 							}
