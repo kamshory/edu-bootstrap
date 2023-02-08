@@ -5,7 +5,7 @@ if(empty($school_id))
 	require_once dirname(__FILE__)."/bukan-admin.php";
 	exit();
 }
-if(empty($real_school_id))
+if(empty(@$real_school_id))
 {
 	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
 	exit();
@@ -69,7 +69,6 @@ if(isset($_POST['delete']) && isset($_POST['school_program_id']))
 		}
 	}
 }
-
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
@@ -322,7 +321,7 @@ $paginationHTML = $pagination->buildHTML();
     </thead>
     <tbody>
     <?php
-	$no = $pagination->getOffset();
+	$no = $pagination->offset;
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
