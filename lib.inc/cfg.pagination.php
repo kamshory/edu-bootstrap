@@ -62,8 +62,12 @@ class PicoPagination
     public function setTotalRecordWithLimit($totalRecordWithLimit)
     {
         $this->total_record_with_limit = $totalRecordWithLimit;
+        $this->end = $this->offset + $this->total_record_with_limit;
     }
-
+    public function getTotalRecordWithLimit()
+    {
+        return $this->total_record_with_limit;
+    }
     public function createPagination($module, $totalrecord, $resultperpage = 1, $numberofpage = 1, $offset = 0, $showfirstandlast = true) //NOSONAR
     {
         $result = array();
