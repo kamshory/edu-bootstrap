@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
-if(!isset($school_id) || empty($school_id))
+if(empty($school_id))
 {
 	require_once dirname(__FILE__)."/bukan-guru.php";
 	exit();

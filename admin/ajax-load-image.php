@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-if(!isset($school_id) || empty($school_id))
+if(empty($school_id))
 {
 	exit();
 }
@@ -33,7 +33,7 @@ if($stmt->rowCount() > 0)
 			)
 			{
 				?>
-                <div class="img-li"><a href="<?php echo $filename;?>" title="<?php echo basename($filename);?>" data-name="<?php echo basename($filename);?>"><img src="<?php echo $filename;?>" /></a></div>
+                <div class="img-li"><a href="<?php echo $filename;?>" title="<?php echo basename($filename);?>" data-name="<?php echo basename($filename);?>"><img alt="" src="<?php echo $filename;?>" /></a></div>
                 <?php
 			}
 		}

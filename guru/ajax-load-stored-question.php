@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
-if(isset($school_id) && !empty($school_id))
+if(!empty($school_id))
 {
 $basename = "ujian-soal.php";
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
