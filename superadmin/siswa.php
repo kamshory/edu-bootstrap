@@ -440,16 +440,16 @@ $(document).ready(function(e) {
 $sql_filter = "";
 
 if($pagination->query){
-$pagination->array_get[] = 'q';
+$pagination->appendQueryName('q');
 $sql_filter .= " AND (`edu_student`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 if(!empty($school_id)){
-$pagination->array_get[] = 'school_id';
+$pagination->appendQueryName('school_id');
 $sql_filter .= " AND (`edu_student`.`school_id` = '$school_id' )";
 }
 if($class_id != 0)
 {
-	$pagination->array_get[] = 'class_id';
+	$pagination->appendQueryName('class_id');
 	$sql_filter .= " AND (`edu_student`.`class_id` = '$class_id' )";
 }
 

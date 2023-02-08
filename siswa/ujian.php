@@ -684,7 +684,7 @@ function buildMenu(id)
 $sql_filter = "";
 
 if($pagination->query){
-$pagination->array_get[] = 'q';
+$pagination->appendQueryName('q');
 $sql_filter .= " AND (`edu_test`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 $sql_filter .= " 

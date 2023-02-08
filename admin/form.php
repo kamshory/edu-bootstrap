@@ -867,7 +867,7 @@ $str .= "<?php
 \$sql_filter = \"\";
 \
 if(\$pagination->query){
-\$pagination->array_get[] = 'q';
+\$pagination->appendQueryName('q');
 \$sql_filter .= \" AND (`\".DB_PREFIX.\"$table`.`nama` like '%\".addslashes(\$pagination->query).\"%' )\";
 }
 

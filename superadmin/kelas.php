@@ -373,12 +373,12 @@ if($stmt->rowCount() > 0)
 		$sql_filter = "";
 		
 		if ($pagination->query) {
-			$pagination->array_get[] = 'q';
+			$pagination->appendQueryName('q');
 			$sql_filter .= " AND (`edu_class`.`name` like '%" . addslashes($pagination->query) . "%' )";
 		}
 
 		if ($school_id != 0) {
-			$pagination->array_get[] = 'school_id';
+			$pagination->appendQueryName('school_id');
 			$sql_filter .= " AND (`edu_class`.`school_id` = '$school_id' )";
 		}
 

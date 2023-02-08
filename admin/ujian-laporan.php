@@ -635,8 +635,8 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $q = kh_filter_input(INPUT_GET, "q", FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
-$pagination->array_get[] = 'option';
-$pagination->array_get[] = 'test_id';
+$pagination->appendQueryName('option');
+$pagination->appendQueryName('test_id');
 ?>
 <script type="text/javascript">
 window.onload = function()
@@ -725,9 +725,9 @@ if ($stmtx->rowCount() > 0) {
 }
 
 
-$pagination->array_get[] = 'class_id';
-$pagination->array_get[] = 'option';
-$pagination->array_get[] = 'test_id';
+$pagination->appendQueryName('class_id');
+$pagination->appendQueryName('option');
+$pagination->appendQueryName('test_id');
 
 
 $sql_filter = "";
@@ -1045,17 +1045,17 @@ $sql_filter = "";
 
 
 if($class_id != ''){
-$pagination->array_get[] = 'class_id';
+$pagination->appendQueryName('class_id');
 $sql_filter .= " and concat(',',`edu_test`.`class`,',') like '%,$class_id,%' ";
 }
 if($teacher_id != '')
 {
 	$sql_filter .= " AND `edu_test`.`teacher_id` = '$teacher_id' ";
-	$pagination->array_get[] = 'teacher_id';
+	$pagination->appendQueryName('teacher_id');
 }
 
 if($pagination->query){
-$pagination->array_get[] = 'q';
+$pagination->appendQueryName('q');
 $sql_filter .= " AND (`edu_test`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 

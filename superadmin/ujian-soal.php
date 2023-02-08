@@ -1056,17 +1056,17 @@ function buildMenu(id)
 				$sql_filter = "";
 				
 				if ($pagination->query) {
-					$pagination->array_get[] = 'q';
+					$pagination->appendQueryName('q');
 					$sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
 				}
 
 				if ($school_id != 0) {
-					$pagination->array_get[] = 'school_id';
+					$pagination->appendQueryName('school_id');
 					$sql_filter .= " AND (`edu_test`.`school_id` = '$school_id' )";
 				}
 				if ($class_id != '') {
 					$sql_filter .= " and concat(',',`edu_test`.`class`,',') like '%,$class_id,%' ";
-					$pagination->array_get[] = 'class_id';
+					$pagination->appendQueryName('class_id');
 				}
 
 				$nt = '';

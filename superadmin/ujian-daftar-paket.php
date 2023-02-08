@@ -473,13 +473,13 @@ $(document).ready(function(e) {
 $sql_filter = "";
 
 if($pagination->query){
-$pagination->array_get[] = 'q';
+$pagination->appendQueryName('q');
 $sql_filter .= " AND (`edu_test_collection`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
 
 if($grade_id){
-$pagination->array_get[] = 'grade_id';
+$pagination->appendQueryName('grade_id');
 $sql_filter .= " AND (`edu_test_collection`.`grade_id` = '$grade_id' )";
 }
 

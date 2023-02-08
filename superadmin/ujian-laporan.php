@@ -442,8 +442,8 @@ if($stmt->rowCount() > 0)
   $school_id = $data['school_id'];
 $q = kh_filter_input(INPUT_GET, "q", FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
-$pagination->array_get[] = 'option';
-$pagination->array_get[] = 'test_id';
+$pagination->appendQueryName('option');
+$pagination->appendQueryName('test_id');
 ?>
 <script type="text/javascript">
 window.onload = function()
@@ -529,9 +529,9 @@ $assessment_methods = $data['assessment_methods'];
 
 
 
-$pagination->array_get[] = 'class_id';
-$pagination->array_get[] = 'option';
-$pagination->array_get[] = 'test_id';
+$pagination->appendQueryName('class_id');
+$pagination->appendQueryName('option');
+$pagination->appendQueryName('test_id');
 
 
 $sql_filter = "";
@@ -839,15 +839,15 @@ window.onload = function()
 
 
         if ($school_id != 0) {
-          $pagination->array_get[] = 'school_id';
+          $pagination->appendQueryName('school_id');
           $sql_filter .= " AND (`edu_test`.`school_id` = '$school_id' )";
         }
         if ($class_id != '') {
-          $pagination->array_get[] = 'class_id';
+          $pagination->appendQueryName('class_id');
           $sql_filter .= " and concat(',',`edu_test`.`class`,',') like '%,$class_id,%' ";
         }
         if ($pagination->query) {
-          $pagination->array_get[] = 'q';
+          $pagination->appendQueryName('q');
           $sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
         }
 

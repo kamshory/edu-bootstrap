@@ -89,7 +89,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $sql_filter = "";
 
 if($pagination->query){
-$pagination->array_get[] = 'q';
+$pagination->appendQueryName('q');
 $sql_filter .= " AND (`edu_class`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 

@@ -48,6 +48,11 @@ class PicoPagination
         $this->str_result = "";          
     }
 
+    public function appendQueryName($queryParameterName)
+    {
+        $this->array_get[] = $queryParameterName;
+    }
+
     public function createPagination($module, $totalrecord, $resultperpage = 1, $numberofpage = 1, $offset = 0, $showfirstandlast = true) //NOSONAR
     {
         $result = array();

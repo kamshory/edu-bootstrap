@@ -396,15 +396,15 @@ function printToken(frm)
 $sql_filter = "";
 
 if ($pagination->query) {
-	$pagination->array_get[] = 'q';
+	$pagination->appendQueryName('q');
 	$sql_filter .= " AND (`edu_token`.`token` like '%" . addslashes($pagination->query) . "%' )";
 }
 if ($class_id != 0) {
-	$pagination->array_get[] = 'class_id';
+	$pagination->appendQueryName('class_id');
 	$sql_filter .= " AND `edu_token`.`class_id` = '$class_id' ";
 }
 if ($test_id != 0) {
-	$pagination->array_get[] = 'test_id';
+	$pagination->appendQueryName('test_id');
 	$sql_filter .= " AND `edu_token`.`test_id` = '$test_id' ";
 }
 if ($test_id != 0 || $class_id != 0) {

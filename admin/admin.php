@@ -453,7 +453,7 @@ else
 	
 	if($pagination->query)
 	{
-		$pagination->array_get[] = 'q';
+		$pagination->appendQueryName('q');
 		$sql_filter .= " AND (`edu_admin`.`name` like '%".addslashes($pagination->query)."%' )";
 	}
 	$sql_filter .= " AND (`admin_level` != '1' OR `admin_id` = '$my_admin') ";

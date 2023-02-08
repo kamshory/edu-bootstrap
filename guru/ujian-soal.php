@@ -1223,14 +1223,14 @@ function buildMenu(id)
 $sql_filter = "";
 
 if($pagination->query){
-$pagination->array_get[] = 'q';
+$pagination->appendQueryName('q');
 $sql_filter .= " AND (`edu_test`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 
 if($class_id != '')
 {
 	$sql_filter .= " and concat(',',`edu_test`.`class`,',') like '%,$class_id,%' ";
-	$pagination->array_get[] = 'class_id';
+	$pagination->appendQueryName('class_id');
 }
 
 $nt = '';

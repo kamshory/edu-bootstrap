@@ -354,7 +354,7 @@ if($stmt->rowCount() > 0)
 		$sql_filter = "";
 		
 		if ($pagination->query) {
-			$pagination->array_get[] = 'q';
+			$pagination->appendQueryName('q');
 			$sql_filter .= " AND (`edu_class`.`name` like '%" . addslashes($pagination->query) . "%' )";
 		}
 

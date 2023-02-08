@@ -367,12 +367,12 @@ $(document).ready(function(e) {
 $sql_filter = "";
 
 if($pagination->query){
-$pagination->array_get[] = 'q';
+$pagination->appendQueryName('q');
 $sql_filter .= " AND (`edu_article`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 if($class_id != 0)
 {
-	$pagination->array_get[] = 'class_id';
+	$pagination->appendQueryName('class_id');
 	$sql_filter .= " and (concat(',',`edu_article`.`class`,',') like '%,$class_id,%')";
 }
 $sql_filter .= " AND (`edu_article`.`school_id` = '$school_id' )";

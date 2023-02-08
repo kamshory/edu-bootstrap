@@ -254,11 +254,11 @@ $(document).ready(function(e) {
 $sql_filter = "";
 
 if($pagination->query){
-$pagination->array_get[] = 'q';
+$pagination->appendQueryName('q');
 $sql_filter .= " AND (`edu_school_program`.`name` like '%".addslashes($pagination->query)."%' )";
 }
 if(!empty($school_id)){
-$pagination->array_get[] = 'school_id';
+$pagination->appendQueryName('school_id');
 $sql_filter .= " AND (`edu_school_program`.`school_id` = '$school_id' )";
 }
 
