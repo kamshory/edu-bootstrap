@@ -9050,3 +9050,31 @@ UPDATE `edu_article` set
 		`time_edit` = '2023-02-08 14:20:10', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
 		WHERE `article_id` = '063e2ef9aed05f1956e2' AND `school_id` = '063ce682801be89951aa'
 		;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` set
+		`title` = 'Volume Tabung', `content` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/article/063da67d0dcf5af0f05e/2af4145f6823b8fb4deabd3839e04351.svg\"></p>
+<p>Volume tabung di atas adalah 945,48 mL</p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-08 18:07:38', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063da67d0dcf5af0f05e' AND `school_id` = '063ce682801be89951aa'
+		;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` set
+		`title` = 'Volume Tabung', `content` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/article/063da67d0dcf5af0f05e/2825b81aba56bca44da528275ffc6035.svg\"></p>
+<p>Volume tabung di atas adalah 945,48 mL</p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-08 18:09:13', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063da67d0dcf5af0f05e' AND `school_id` = '063ce682801be89951aa'
+		;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` set
+		`title` = 'Volume Tabung', `content` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/article/063da67d0dcf5af0f05e/d785a087aad458e49fd82a67f83c9613.svg\"></p>
+<p>Volume tabung di atas adalah 945,48 mL</p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-08 18:10:00', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063da67d0dcf5af0f05e' AND `school_id` = '063ce682801be89951aa'
+		;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` set
+		`title` = 'Volume Tabung', `content` = '<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/article/063da67d0dcf5af0f05e/d785a087aad458e49fd82a67f83c9613.svg\" alt=\"\"></p>
+<p>Volume tabung di atas adalah 945,48 mL</p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-08 18:11:38', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '0'
+		WHERE `article_id` = '063da67d0dcf5af0f05e' AND `school_id` = '063ce682801be89951aa'
+		;

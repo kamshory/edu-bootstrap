@@ -1,12 +1,10 @@
 <?php
 class FileSyncException extends Exception
 {
-    private $previous;
-    
+    private $previous;   
     public function __construct($message, $code = 0, Exception $previous = null)
     {
-        parent::__construct($message, $code);
-        
+        parent::__construct($message, $code);  
         if (!is_null($previous))
         {
             $this -> previous = $previous;
@@ -24,6 +22,18 @@ class FileSyncMaster
     protected string $poolFileName = '';
     protected string $poolRollingPrefix = '';
     protected string $poolFileExtension = '';
+
+    /**
+     * Constructor of FileSyncMaster
+     * @param \PicoDatabase $database Database
+     * @param string $applicationRoot Application root
+     * @param string $uploadBaseDir Upload base direcory
+     * @param string $downloadBaseDir Download base directory
+     * @param string $poolBaseDir Pooling file base directory
+     * @param string $poolFileName Pooling file name
+     * @param string $poolRollingPrefix Pooling file prefix
+     * @param string $poolFileExtension Pooling file extension
+     */
     public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
         $this->database = $database;
@@ -121,15 +131,24 @@ class FileSyncMaster
             'file_contents' => $cFile
         );
         $ch = curl_init();
+        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
         curl_exec($ch);
+        $server_output = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-        return $httpcode;
+        if($httpcode == 200)
+        {
+            return json_decode($server_output, true);
+        }
+        else
+        {
+            throw new FileSyncException("Upload file has been failed", $httpcode);
+        }
     }
 
     /**
@@ -138,7 +157,7 @@ class FileSyncMaster
      * @param string $status Sync record status
      * @return array
      */
-    protected function getSyncRecordListFromDatabase($direction, $status)
+    public function getSyncRecordListFromDatabase($direction, $status)
     {
         $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_direction` = '$direction' AND `status` = '$status' ";
         $stmt = $this->database->executeQuery($sql);
@@ -182,6 +201,17 @@ class FileSyncMaster
 
 class FileSyncUpload extends FileSyncMaster
 {
+    /**
+     * Constructor of FileSyncUpload
+     * @param \PicoDatabase $database Database
+     * @param string $applicationRoot Application root
+     * @param string $uploadBaseDir Upload base direcory
+     * @param string $downloadBaseDir Download base directory
+     * @param string $poolBaseDir Pooling file base directory
+     * @param string $poolFileName Pooling file name
+     * @param string $poolRollingPrefix Pooling file prefix
+     * @param string $poolFileExtension Pooling file extension
+     */
     public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
         parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
@@ -257,6 +287,17 @@ class FileSyncUpload extends FileSyncMaster
 
 class FileSyncDownload extends FileSyncMaster
 {
+    /**
+     * Constructor of FileSyncDownload
+     * @param \PicoDatabase $database Database
+     * @param string $applicationRoot Application root
+     * @param string $uploadBaseDir Upload base direcory
+     * @param string $downloadBaseDir Download base directory
+     * @param string $poolBaseDir Pooling file base directory
+     * @param string $poolFileName Pooling file name
+     * @param string $poolRollingPrefix Pooling file prefix
+     * @param string $poolFileExtension Pooling file extension
+     */
     public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
         parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
@@ -306,6 +347,7 @@ class FileSyncDownload extends FileSyncMaster
     private function getSyncRecordListFromRemote($lastSync, $url, $username, $password) //NOSONAR
     {
         $ch = curl_init();
+        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
@@ -346,6 +388,7 @@ class FileSyncDownload extends FileSyncMaster
     public function downloadFileFromRemote($remotePath, $url, $username, $password) //NOSONAR
     {
         $ch = curl_init();
+        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
@@ -364,7 +407,7 @@ class FileSyncDownload extends FileSyncMaster
         }
         else
         {
-            throw new FileSyncException("File not found");
+            throw new FileSyncException("File not found", $httpcode);
         }
     }
     
@@ -424,6 +467,23 @@ class FileSyncDownload extends FileSyncMaster
         {
             $this->syncUserFilesFromSyncRecord($record, $permission, $url, $username, $password);
         }
+    }
+
+    /**
+     * Get sync record
+     * @param string $recordId Sync record ID
+     * @return array|null Sync record if success and null if failed
+     */
+    public function getSyncRecord($recordId)
+    {
+        $recordId = addslashes($recordId);
+        $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_direction` = 'down' AND `sync_file_id` = '$recordId' ";
+        $stmt = $this->database->executeQuery($sql);
+        if($stmt->rowCount() > 0)
+        {
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+        return null;
     }
     
     /**

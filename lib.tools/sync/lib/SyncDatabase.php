@@ -27,17 +27,17 @@ class DatabaseSyncMaster
     protected $poolFileExtension = '';
 
     /**
-     * Constructor
-     * @param \PicoDatabase $database
-     * @param string $applicationRoot
-     * @param string $uploadBaseDir
-     * @param string $downloadBaseDir
-     * @param string $poolBaseDir
-     * @param string $poolFileName
-     * @param string $poolRollingPrefix
-     * @param string $poolFileExtension
+     * Constructor of DatabaseSyncMaster
+     * @param \PicoDatabase $database Database
+     * @param string $applicationRoot Application root
+     * @param string $uploadBaseDir Upload base direcory
+     * @param string $downloadBaseDir Download base directory
+     * @param string $poolBaseDir Pooling file base directory
+     * @param string $poolFileName Pooling file name
+     * @param string $poolRollingPrefix Pooling file prefix
+     * @param string $poolFileExtension Pooling file extension
      */
-    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null)
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
         $this->database = $database;
         $this->applicationRoot = $applicationRoot;
@@ -133,13 +133,24 @@ class DatabaseSyncMaster
             'file_contents' => $cFile
         );
         $ch = curl_init();
+        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-        $result = curl_exec ($ch);
-        curl_close ($ch);
-        return true;
+        $server_output = curl_exec($ch);
+        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+        curl_close($ch);
+       
+        if($httpcode)
+        {
+            return json_decode($server_output);
+        }
+        else
+        {
+            throw new DatabaseSyncException("Upload failed", $httpcode);
+        }
     }
 
     /**
@@ -168,15 +179,15 @@ class DatabaseSyncMaster
 class DatabaseSyncUpload extends DatabaseSyncMaster
 {
     /**
-     * Constructor
-     * @param \PicoDatabase $database
-     * @param string $applicationRoot
-     * @param string $uploadBaseDir
-     * @param string $downloadBaseDir
-     * @param string $poolBaseDir
-     * @param string $poolFileName
-     * @param string $poolRollingPrefix
-     * @param string $poolFileExtension
+     * Constructor of DatabaseSyncUpload
+     * @param \PicoDatabase $database Database
+     * @param string $applicationRoot Application root
+     * @param string $uploadBaseDir Upload base direcory
+     * @param string $downloadBaseDir Download base directory
+     * @param string $poolBaseDir Pooling file base directory
+     * @param string $poolFileName Pooling file name
+     * @param string $poolRollingPrefix Pooling file prefix
+     * @param string $poolFileExtension Pooling file extension
      */
     public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
@@ -253,16 +264,16 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
 
 class DatabaseSyncDownload extends DatabaseSyncMaster
 {
-        /**
-     * Constructor
-     * @param \PicoDatabase $database
-     * @param string $applicationRoot
-     * @param string $uploadBaseDir
-     * @param string $downloadBaseDir
-     * @param string $poolBaseDir
-     * @param string $poolFileName
-     * @param string $poolRollingPrefix
-     * @param string $poolFileExtension
+    /**
+     * Constructor of DatabaseSyncDownload
+     * @param \PicoDatabase $database Database
+     * @param string $applicationRoot Application root
+     * @param string $uploadBaseDir Upload base direcory
+     * @param string $downloadBaseDir Download base directory
+     * @param string $poolBaseDir Pooling file base directory
+     * @param string $poolFileName Pooling file name
+     * @param string $poolRollingPrefix Pooling file prefix
+     * @param string $poolFileExtension Pooling file extension
      */
     public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
@@ -306,6 +317,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
     private function getSyncRecordListFromRemote($lastSync, $url, $username, $password) 
     {
         $ch = curl_init();
+        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
@@ -343,10 +355,12 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
      * @param string $username Sync username
      * @param string $password Sync password
      * @return string Data from file downloaded
+     * @throws DatabaseSyncException
      */
     public function downloadFileFromRemote($remotePath, $url, $username, $password)
     {
         $ch = curl_init();
+        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
@@ -365,7 +379,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         }
         else
         {
-            throw new DatabaseSyncException("File not found");
+            throw new DatabaseSyncException("File not found", $httpcode);
         }
     }
     
@@ -447,8 +461,6 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         }
     }
 }
-
-
 
 
 /**

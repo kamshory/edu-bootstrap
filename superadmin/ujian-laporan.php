@@ -725,7 +725,7 @@ $paginationHTML = $pagination->buildHTML();
 </form>
 <?php
 }
-else if(strlen(@$_GET['q']))
+else if(strlen(@$_GET['q'] != ''))
 {
 ?>
 <div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi lagi dengan kata kunci yang lain.</div>
@@ -927,7 +927,7 @@ window.onload = function()
 
 </form>
 <?php
-        } else if (strlen(@$_GET['q'])) {
+        } else if (strlen(@$_GET['q'] != '')) {
           ?>
 <div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi lagi dengan kata kunci yang lain.</div>
 <?php

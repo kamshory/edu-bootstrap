@@ -247,7 +247,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 </div>
 <?php
 }
-else if(@$_GET['q'])
+else if(@$_GET['q'] != '')
 {
 ?>
 <div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>

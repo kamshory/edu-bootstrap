@@ -8,7 +8,7 @@ class PicoPagination
     private $end = 0;
     private $result = "";
     private $limit = 20;
-    private $num_page = 4;
+    private $num_page = 3;
     private $total_record = 0;
     private $total_record_with_limit = 0;
 
@@ -92,7 +92,7 @@ class PicoPagination
         return $this->start.'-'.$this->end.'/'.$this->total_record;
     }
     
-    public function createPagination($module, $totalrecord, $resultperpage = 1, $numberofpage = 1, $offset = 0, $showfirstandlast = true) //NOSONAR
+    public function createPagination($module, $showfirstandlast = true) //NOSONAR
     {
         $result = array();
         $result[0] = new StdClass();
@@ -101,7 +101,7 @@ class PicoPagination
         $paginationObject = new StdClass();
         $paginationObject->text = "";
         $paginationObject->ref = "";
-        if ($totalrecord <= $resultperpage) {
+        if ($this->total_record <= $this->limit) {
             return array();
         }
         
@@ -109,13 +109,13 @@ class PicoPagination
             $arg .= "&$item=" . @$_GET[$item];
         }
         $arg = "$module?" . trim($arg, "&");
-        $curpage = abs(ceil($offset / $resultperpage)) + 1;
-        $startpage = abs(ceil($curpage - floor($numberofpage / 2)));
+        $curpage = abs(ceil($this->offset / $this->limit)) + 1;
+        $startpage = abs(ceil($curpage - floor($this->limit / 2)));
         if ($startpage < 1) {
             $startpage = 1;
         }
-        $endpage = $startpage + $numberofpage - 1;
-        $lastpage = ceil($totalrecord / $resultperpage);
+        $endpage = $startpage + $this->num_page - 1;
+        $lastpage = ceil($this->total_record / $this->limit);
 
 
         if ($endpage > $lastpage) {
@@ -126,16 +126,16 @@ class PicoPagination
         $paginationObject->ref_first = 0;
         $paginationObject->str_first = $this->str_first;
         $paginationObject->str_prev = $this->str_prev;
-        $paginationObject->ref_prev = ($curpage - 2) * $resultperpage;
+        $paginationObject->ref_prev = ($curpage - 2) * $this->limit;
         if ($paginationObject->ref_prev < 0) {
             $paginationObject->ref_prev = 0;
         }
         $paginationObject->str_next = $this->str_next;
-        $paginationObject->ref_next = ($curpage) * $resultperpage;
+        $paginationObject->ref_next = ($curpage) * $this->limit;
         $paginationObject->str_last = $this->str_last;
-        $paginationObject->ref_last = floor($totalrecord / $resultperpage) * $resultperpage;
-        if ($paginationObject->ref_last == $totalrecord) {
-            $paginationObject->ref_last = $totalrecord - $resultperpage;
+        $paginationObject->ref_last = floor($this->total_record / $this->limit) * $this->limit;
+        if ($paginationObject->ref_last == $this->total_record) {
+            $paginationObject->ref_last = $this->total_record - $this->limit;
         }
 
         $result[0]->text = $paginationObject->str_first;
@@ -150,7 +150,7 @@ class PicoPagination
             $pn = $i;
             $result[$j] = new StdClass();
             $result[$j]->text = "$pn";
-            $result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . (($i - 1) * $resultperpage));
+            $result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . (($i - 1) * $this->limit));
             if ($curpage == $i) {
                 $result[$j]->sel = true;
             } else {

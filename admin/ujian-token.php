@@ -534,7 +534,7 @@ if ($test_id == 0 && $class_id == 0) {
 </div>
 </form>
 <?php
-} else if (@$_GET['q']) {
+} else if (@$_GET['q'] != '') {
 ?>
 <div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
 <?php

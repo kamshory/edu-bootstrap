@@ -33,3 +33,9 @@
 {"op":"CREATEFILE","tm":1675836315,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e33b9ab28787723d7\/3f5ce0_39.gif"}
 {"op":"CREATEFILE","tm":1675840434,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063e2ef9aed05f1956e2\/new-directory\/kisspng-virtual-reality-headset-google-cardboard-shinecon-vr-shinecon-ervaar-de-wereld-van-virtual-realit-5d22126e42cb36.7892948315625140302736.png"}
 {"op":"CREATEFILE","tm":1675840810,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063e2ef9aed05f1956e2\/98b930077f8732ba04950aed0b87c749.svg"}
+{"op":"CREATEFILE","tm":1675854458,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063da67d0dcf5af0f05e\/2af4145f6823b8fb4deabd3839e04351.svg"}
+{"op":"CREATEFILE","tm":1675854553,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063da67d0dcf5af0f05e\/2825b81aba56bca44da528275ffc6035.svg"}
+{"op":"DELETEFILE","tm":1675854596,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063da67d0dcf5af0f05e\/2825b81aba56bca44da528275ffc6035.svg"}
+{"op":"DELETEFILE","tm":1675854596,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063da67d0dcf5af0f05e\/2af4145f6823b8fb4deabd3839e04351.svg"}
+{"op":"DELETEFILE","tm":1675854596,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063da67d0dcf5af0f05e\/bd09362e62896c0cf09973c866fe6c9f.svg"}
+{"op":"CREATEFILE","tm":1675854600,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063da67d0dcf5af0f05e\/d785a087aad458e49fd82a67f83c9613.svg"}

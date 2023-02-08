@@ -255,7 +255,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
         ?>
       </form>
     <?php
-    } else if (@$_GET['q']) {
+    } else if (@$_GET['q'] != '') {
     ?>
       <div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
     <?php

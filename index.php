@@ -84,11 +84,11 @@ else
 	
 	$studentLoggedIn = new StudenAuth($database, $username, $password, false);
 	
-	$student_id = 0;
-	$school_id = 0;
-	$class_id = 0;
-	$auth_student_school_id = 0;
-	$auth_school_id = 0;
+	$student_id = '';
+	$school_id = '';
+	$class_id = '';
+	$auth_student_school_id = '';
+	$auth_school_id = '';
 	$use_token = 0;
 	if($studentLoggedIn->student_id)
 	{
@@ -100,7 +100,7 @@ else
 		$use_token = $studentLoggedIn->use_token;
 	}
 
-	if(!empty(@$student_id))
+	if(!empty($student_id))
 	{
 		include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
 		?>
@@ -265,21 +265,82 @@ else
 			$use_token = $teacherLoggedIn->use_token;
 			$loged_in = true;
 		}
-		if(@$teacher_id)
+		if(!empty($teacher_id))
 		{
 			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
 			?>
-			<ul class="shortcut-image-80">
-				<li><a href="./"><div><img alt="img" src="lib.assets/theme/default/css/images/home-80.png" /></div><div class="menu-label">Depan</div></a></li>
-				<li><a href="guru/kelas.php"><div><img alt="img" src="lib.assets/theme/default/css/images/class-80.png" /></div><div class="menu-label">Kelas</div></a></li>
-				<li><a href="guru/siswa.php"><div><img alt="img" src="lib.assets/theme/default/css/images/students-80.png" /></div><div class="menu-label">Siswa</div></a></li>
-				<li><a href="guru/guru.php"><div><img alt="img" src="lib.assets/theme/default/css/images/teachers-80.png" /></div><div class="menu-label">Guru</div></a></li>
-				<li><a href="guru/artikel.php"><div><img alt="img" src="lib.assets/theme/default/css/images/article-80.png" /></div><div class="menu-label">Artikel</div></a></li>
-				<li><a href="guru/informasi.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a></li>
-				<li><a href="guru/ujian.php"><div><img alt="img" src="lib.assets/theme/default/css/images/exam-80.png" /></div><div class="menu-label">Ujian</div></a></li>
-				<li><a href="guru/profil.php"><div><img alt="img" src="lib.assets/theme/default/css/images/profile-80.png" /></div><div class="menu-label">Profil</div></a></li>
-				<li><a href="guru/logout.php"><div><img alt="img" src="lib.assets/theme/default/css/images/logout-80.png" /></div><div class="menu-label">Logout</div></a></li>
-			</ul>
+			<div class="card-container row container container-fluid d-flex justify-content-between">
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="guru/kelas.php"><div><img alt="img" src="lib.assets/theme/default/css/images/class-80.png" /></div><div class="menu-label">Kelas</div></a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="guru/siswa.php"><div><img alt="img" src="lib.assets/theme/default/css/images/students-80.png" /></div><div class="menu-label">Siswa</div></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="guru/guru.php"><div><img alt="img" src="lib.assets/theme/default/css/images/teachers-80.png" /></div><div class="menu-label">Guru</div></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="guru/artikel.php"><div><img alt="img" src="lib.assets/theme/default/css/images/article-80.png" /></div><div class="menu-label">Artikel</div></a>
+					</div>
+				</div>
+			</div>
+
+			</div>
+
+			<div class="card-container row container container-fluid">
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="guru/informasi.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="guru/ujian.php"><div><img alt="img" src="lib.assets/theme/default/css/images/exam-80.png" /></div><div class="menu-label">Ujian</div></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="guru/profil.php"><div><img alt="img" src="lib.assets/theme/default/css/images/profile-80.png" /></div><div class="menu-label">Profil</div></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="guru/logout.php"><div><img alt="img" src="lib.assets/theme/default/css/images/logout-80.png" /></div><div class="menu-label">Logout</div></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
 			<?php
 			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
 			exit();
@@ -315,17 +376,78 @@ else
 		{
 			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
 			?>
-			<ul class="shortcut-image-80">
-				<li><a href="./"><div><img alt="img" src="lib.assets/theme/default/css/images/home-80.png" /></div><div class="menu-label">Depan</div></a></li>
-				<li><a href="admin/kelas.php"><div><img alt="img" src="lib.assets/theme/default/css/images/class-80.png" /></div><div class="menu-label">Kelas</div></a></li>
-				<li><a href="admin/siswa.php"><div><img alt="img" src="lib.assets/theme/default/css/images/students-80.png" /></div><div class="menu-label">Siswa</div></a></li>
-				<li><a href="admin/guru.php"><div><img alt="img" src="lib.assets/theme/default/css/images/teachers-80.png" /></div><div class="menu-label">Guru</div></a></li>
-				<li><a href="admin/artikel.php"><div><img alt="img" src="lib.assets/theme/default/css/images/article-80.png" /></div><div class="menu-label">Artikel</div></a></li>
-				<li><a href="admin/informasi.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a></li>
-				<li><a href="admin/ujian.php"><div><img alt="img" src="lib.assets/theme/default/css/images/exam-80.png" /></div><div class="menu-label">Ujian</div></a></li>
-				<li><a href="admin/profil.php"><div><img alt="img" src="lib.assets/theme/default/css/images/profile-80.png" /></div><div class="menu-label">Profil</div></a></li>
-				<li><a href="admin/logout.php"><div><img alt="img" src="lib.assets/theme/default/css/images/logout-80.png" /></div><div class="menu-label">Logout</div></a></li>
-			</ul>
+			<div class="card-container row container container-fluid d-flex justify-content-between">
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="admin/kelas.php"><div><img alt="img" src="lib.assets/theme/default/css/images/class-80.png" /></div><div class="menu-label">Kelas</div></a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="admin/siswa.php"><div><img alt="img" src="lib.assets/theme/default/css/images/students-80.png" /></div><div class="menu-label">Siswa</div></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="admin/guru.php"><div><img alt="img" src="lib.assets/theme/default/css/images/teachers-80.png" /></div><div class="menu-label">Guru</div></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="admin/artikel.php"><div><img alt="img" src="lib.assets/theme/default/css/images/article-80.png" /></div><div class="menu-label">Artikel</div></a>
+					</div>
+				</div>
+			</div>
+
+			</div>
+
+			<div class="card-container row container container-fluid">
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="admin/informasi.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="admin/ujian.php"><div><img alt="img" src="lib.assets/theme/default/css/images/exam-80.png" /></div><div class="menu-label">Ujian</div></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="admin/profil.php"><div><img alt="img" src="lib.assets/theme/default/css/images/profile-80.png" /></div><div class="menu-label">Profil</div></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="card">
+					<div class="card-body card-center">
+					<a href="admin/logout.php"><div><img alt="img" src="lib.assets/theme/default/css/images/logout-80.png" /></div><div class="menu-label">Logout</div></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
 			<?php
 			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
 			exit();

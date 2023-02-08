@@ -234,9 +234,6 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-
-
-
 $pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
@@ -312,7 +309,7 @@ $paginationHTML = $pagination->buildHTML();
 </form>
 <?php
 }
-else if(@$_GET['q'])
+else if(@$_GET['q'] != '')
 {
 ?>
 <div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>

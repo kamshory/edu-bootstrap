@@ -340,9 +340,48 @@ if($stmt->rowCount() > 0)
 	require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 } else {
 	require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+
+	$school_program_id = kh_filter_input(INPUT_GET, "school_program_id", FILTER_SANITIZE_STRING_NEW);
+
 	?>
+	<script type="text/javascript">
+	window.onload = function()
+	{
+		$(document).on('change', '#searchform select', function(){
+			$(this).closest('form').submit();
+		});
+	}
+	</script>
 	<div class="search-control">
 		<form id="searchform" name="form1" method="get" action="">
+
+		<span class="search-label">Jurusan</span> 
+		<select class="form-control input-select" name="school_program_id" id="school_program_id">
+		<option value=""></option>
+		<?php 
+		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` ASC ";
+		echo $picoEdu->createFilterDb(
+			$sql2,
+			array(
+				'attributeList'=>array(
+					array('attribute'=>'value', 'source'=>'school_program_id')
+				),
+				'selectCondition'=>array(
+					'source'=>'school_program_id',
+					'value'=>$school_program_id
+				),
+				'caption'=>array(
+					'delimiter'=>PicoEdu::RAQUO,
+					'values'=>array(
+						'name'
+					)
+				)
+			)
+		);
+
+		?>
+		</select>
+
 			<span class="search-label">Nama Kelas</span>
 			<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
     ")))); ?>" />
@@ -357,7 +396,11 @@ if($stmt->rowCount() > 0)
 			$pagination->appendQueryName('q');
 			$sql_filter .= " AND (`edu_class`.`name` like '%" . addslashes($pagination->getQuery()) . "%' )";
 		}
-
+		if($school_program_id != '')
+		{
+			$pagination->appendQueryName('school_program_id');
+			$sql_filter .= " and `edu_class`.`school_program_id` = '$school_program_id' ";
+		}
 
 		$nt = '';
 
@@ -460,7 +503,7 @@ if($stmt->rowCount() > 0)
 				</div>
 			</form>
 		<?php
-		} else if (@$_GET['q']) {
+		} else if (@$_GET['q'] != '') {
 		?>
 			<div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
 		<?php
