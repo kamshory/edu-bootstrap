@@ -56,8 +56,6 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 	}
 }
 
-
-
 $filter = "";
 if($test_status == '1')
 {

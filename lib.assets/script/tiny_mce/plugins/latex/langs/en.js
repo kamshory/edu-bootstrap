@@ -1,3 +1,3 @@
 tinyMCE.addI18n('en.latex',{
-	desc : 'Latex'
+	desc : 'Insert Latex'
 });

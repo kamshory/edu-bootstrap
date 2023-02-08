@@ -9044,3 +9044,9 @@ INSERT INTO `edu_option`
 										(`option_id`, `question_id`, `school_id`, `test_id`, `content`, `sort_order`, `score`, `time_create`, `member_create`, `time_edit`, `member_edit`) VALUES
 										('063e33b9b0f34bf65b61', '063e33b9b0e2356cec59', '063ce682801be89951aa', '063e33b9ab28787723d7', '<p>Pasti akan terjadi gempa bumi 20 tahun yang akan datang, karena sudah diperkirakan oleh ahli geologi.</p>', '1', '0', '2023-02-08 13:05:14', 'aaaaaaaaaaaaa', '2023-02-08 13:05:14', 'aaaaaaaaaaaaa')
 										;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` set
+		`title` = '(Tanpa Judul)', `content` = '<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} dx\" data-latex=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} dx\" data-renderer=\"browser-mathml\" src=\"media.edu/school/063ce682801be89951aa/article/063e2ef9aed05f1956e2/98b930077f8732ba04950aed0b87c749.svg\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-08 14:20:10', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e2ef9aed05f1956e2' AND `school_id` = '063ce682801be89951aa'
+		;

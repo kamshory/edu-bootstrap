@@ -128,7 +128,6 @@ function selectFileIndex(url){
     <li><a href="javascript:createFile()" title="Create New File"><img src="style/images/trans16.gif" class="createfile" alt="New" /></a></li>
     <li><a href="javascript:createDirectory()" title="Create New Directory"><img src="style/images/trans16.gif" class="createdir" alt="New" /></a></li>
     <li><a href="javascript:uploadFile()" title="Upload File"><img src="style/images/trans16.gif" class="upload" alt="Upload" /></a></li>
-    <li><a href="javascript:transferFile()" title="Transfer File"><img src="style/images/trans16.gif" class="transfer" alt="Transfer" /></a></li>
     <li><a href="javascript:goToUpDir()" title="Go to One Up Level Directory"><img src="style/images/trans16.gif" class="up" alt="Up" /></a></li>
     <li><a href="javascript:refreshList()" title="Reload"><img src="style/images/trans16.gif" class="refresh" alt="Reload" /></a></li>
     <li><a href="javascript:searchFile()" title="Search"><img src="style/images/trans16.gif" class="search" alt="Search" /></a></li>
