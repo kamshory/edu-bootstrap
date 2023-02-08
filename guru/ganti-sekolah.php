@@ -145,9 +145,9 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 <?php
 $sql_filter = "";
 
-if($pagination->query){
+if($pagination->getQuery()){
 $pagination->appendQueryName('q');
-$sql_filter .= " AND (`edu_school`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_school`.`name` like '%".addslashes($pagination->getQuery())."%' )";
 }
 
 

@@ -1053,9 +1053,9 @@ if($teacher_id != '')
 	$pagination->appendQueryName('teacher_id');
 }
 
-if($pagination->query){
+if($pagination->getQuery()){
 $pagination->appendQueryName('q');
-$sql_filter .= " AND (`edu_test`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_test`.`name` like '%".addslashes($pagination->getQuery())."%' )";
 }
 
 $sql = "SELECT `edu_test`.*,

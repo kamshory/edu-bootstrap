@@ -379,9 +379,9 @@ $(document).ready(function(e) {
 <?php
 $sql_filter = "";
 
-if($pagination->query){
+if($pagination->getQuery()){
 $pagination->appendQueryName('q');
-$sql_filter .= " AND (`edu_article`.`name` like '%".addslashes($pagination->query)."%' )";
+$sql_filter .= " AND (`edu_article`.`name` like '%".addslashes($pagination->getQuery())."%' )";
 }
 if($class_id != 0)
 {

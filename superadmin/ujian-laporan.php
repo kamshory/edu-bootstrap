@@ -839,9 +839,9 @@ window.onload = function()
           $pagination->appendQueryName('class_id');
           $sql_filter .= " and concat(',',`edu_test`.`class`,',') like '%,$class_id,%' ";
         }
-        if($pagination->query) {
+        if($pagination->getQuery()) {
           $pagination->appendQueryName('q');
-          $sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
+          $sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->getQuery()) . "%' )";
         }
 
       $sql = "SELECT `edu_test`.*,

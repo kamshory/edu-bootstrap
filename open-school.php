@@ -150,9 +150,9 @@ if (@$_GET['option'] == 'detail') {
 				<?php
 				$sql_filter = "";
 				
-				if($pagination->query) {
+				if($pagination->getQuery()) {
 					$pagination->appendQueryName('q');
-					$sql_filter .= " AND (`edu_school3`.`name` like '%" . addslashes($pagination->query) . "%' )";
+					$sql_filter .= " AND (`edu_school3`.`name` like '%" . addslashes($pagination->getQuery()) . "%' )";
 				}
 
 

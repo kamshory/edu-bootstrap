@@ -866,9 +866,9 @@ $str .= "<div class=\"search-control\">
 $str .= "<?php
 \$sql_filter = \"\";
 \
-if(\$pagination->query){
+if(\$pagination->getQuery()){
 \$pagination->appendQueryName('q');
-\$sql_filter .= \" AND (`\".DB_PREFIX.\"$table`.`nama` like '%\".addslashes(\$pagination->query).\"%' )\";
+\$sql_filter .= \" AND (`\".DB_PREFIX.\"$table`.`nama` like '%\".addslashes(\$pagination->getQuery()).\"%' )\";
 }
 
 
