@@ -2,15 +2,29 @@
 
 class PicoDatabaseServer
 {
-	public string $driver = 'mysql';
-	public string $host = 'localhost';
-	public int $port = 3306;
+	private $driver = 'mysql';
+	private $host = 'localhost';
+	private $port = 3306;
+	
 	public function __construct($driver, $host, $port)
 	{
 		$this->driver = $driver;
 		$this->host = $host;
 		$this->port = $port;
 	}
+	public function getDriver()
+	{
+		return $this->driver;
+	}
+	public function getHost()
+	{
+		return $this->host;
+	}
+	public function getPort()
+	{
+		return $this->port;
+	}
+	
 }
 
 class PicoDatabaseSyncConfig
@@ -114,7 +128,7 @@ class PicoDatabase
 		date_default_timezone_set($this->timezone);
 		$timezoneOffset = date("P");
 		try {
-			$connectionString = $this->databaseServer->driver . ':host=' . $this->databaseServer->host . '; port=' . $this->databaseServer->port . '; dbname=' . $this->databaseName;
+			$connectionString = $this->databaseServer->getDriver() . ':host=' . $this->databaseServer->getHost() . '; port=' . $this->databaseServer->getPort() . '; dbname=' . $this->databaseName;
 
 			$this->conn = new \PDO(
 				$connectionString, 
