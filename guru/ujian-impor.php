@@ -484,17 +484,16 @@ WHERE `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->setTotalRecord($stmt->rowCount());
-$stmt = $database->executeQuery($sql . $pagination->limit_sql);
+$stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->total_record_with_limit > 0)
 {
-//$pagination->start = $pagination->offset + 1;
-//$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
-$pagination->result = $pagination->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
-$pagination->offset,  true); 
-$paginationHTML = $pagination->createPaginationHtml();
+
+
+$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+$paginationHTML = $pagination->buildHTML();
 ?>
 <?php
 $array_class = $picoEdu->getArrayClass($school_id);
@@ -525,7 +524,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 
 <div class="d-flex search-pagination search-pagination-top">
 <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
-<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 </div>
 
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
@@ -569,7 +568,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 
 <div class="d-flex search-pagination search-pagination-bottom">
 <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
-<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 </div>
 
 </form>

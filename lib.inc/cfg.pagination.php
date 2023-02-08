@@ -4,38 +4,38 @@ class PicoPagination
 	const RAQUO = ' &raquo; ';
 	const AMPERSAND_OFFSET = '&offset=';
 
-    public $start = 0;
-    public $end = 0;
-    public $result = "";
-    public $limit = 20;
-    public $num_page = 4;
-    public $total_record = 0;
-    public $total_record_with_limit = 0;
+    private $start = 0;
+    private $end = 0;
+    private $result = "";
+    private $limit = 20;
+    private $num_page = 4;
+    private $total_record = 0;
+    private $total_record_with_limit = 0;
 
-    public $str_first = '&laquo;';//'<span class="pagination-icon first"></span>';//$lang_pack['pagination_first'];
-    public $str_last = '&raquo;';//'<span class="pagination-icon last"></span>';//$lang_pack['pagination_last'];
-    public $str_prev = '&lsaquo;';//'<span class="pagination-icon prev"></span>';//$lang_pack['pagination_prev'];
-    public $str_next = '&rsaquo;';//'<span class="pagination-icon next"></span>';//$lang_pack['pagination_next'];
-    public $str_noresult = 'Pencarian tidak menemukan hasil.';//$lang_pack['pagination_noresult'];
-    public $str_nodata = 'Data tidak ditemukan.';//$lang_pack['pagination_nodata'];
-    public $str_nodata_add = 'Data tidak ditemukan. <a href="%s">Klik di sini untuk membuat baru</a>.';//$lang_pack['pagination_nodata_add'];
-    public $str_keyword = 'Kata kunci';//$lang_pack['search_label'];
-    public $str_search = 'Cari';//$lang_pack['search_button_search'];
-    public $str_soundlike = 'Cari seperti';//$lang_pack['search_button_soundlike'];
-    public $str_record = 'Baris';//$lang_pack['pagination_record'];
-    public $str_from = 'dari';//$lang_pack['pagination_from'];
-    public $str_to = 'hingga';//$lang_pack['pagination_to'];
-    public $str_of = 'dari';//$lang_pack['pagination_of'];
+    private $str_first = '&laquo;';//'<span class="pagination-icon first"></span>';//$lang_pack['pagination_first'];
+    private $str_last = '&raquo;';//'<span class="pagination-icon last"></span>';//$lang_pack['pagination_last'];
+    private $str_prev = '&lsaquo;';//'<span class="pagination-icon prev"></span>';//$lang_pack['pagination_prev'];
+    private $str_next = '&rsaquo;';//'<span class="pagination-icon next"></span>';//$lang_pack['pagination_next'];
+    private $str_noresult = 'Pencarian tidak menemukan hasil.';//$lang_pack['pagination_noresult'];
+    private $str_nodata = 'Data tidak ditemukan.';//$lang_pack['pagination_nodata'];
+    private $str_nodata_add = 'Data tidak ditemukan. <a href="%s">Klik di sini untuk membuat baru</a>.';//$lang_pack['pagination_nodata_add'];
+    private $str_keyword = 'Kata kunci';//$lang_pack['search_label'];
+    private $str_search = 'Cari';//$lang_pack['search_button_search'];
+    private $str_soundlike = 'Cari seperti';//$lang_pack['search_button_soundlike'];
+    private $str_record = 'Baris';//$lang_pack['pagination_record'];
+    private $str_from = 'dari';//$lang_pack['pagination_from'];
+    private $str_to = 'hingga';//$lang_pack['pagination_to'];
+    private $str_of = 'dari';//$lang_pack['pagination_of'];
 
-    public $query = '';
-    public $query_edit = '';
-    public $offset = '';
+    private $query = '';
+    private $query_edit = '';
+    private $offset = '';
 
-    public $limit_sql = '';
-    public $str_result = "";
+    private $limit_sql = '';
+    private $str_result = "";
 
 
-    public $array_get = array();
+    private $array_get = array();
 
     public function __construct()
     {
@@ -47,6 +47,11 @@ class PicoPagination
     
         $this->limit_sql = " limit ".$this->offset.", ".$this->limit;
         $this->str_result = "";          
+    }
+
+    public function getLimitSql()
+    {
+        return $this->limit_sql;
     }
 
     public function appendQueryName($queryParameterName)
@@ -67,6 +72,10 @@ class PicoPagination
     public function getTotalRecordWithLimit()
     {
         return $this->total_record_with_limit;
+    }
+    public function getResultInfo()
+    {
+        return $this->start.'-'.$this->end.'/'.$this->total_record;
     }
     public function createPagination($module, $totalrecord, $resultperpage = 1, $numberofpage = 1, $offset = 0, $showfirstandlast = true) //NOSONAR
     {
@@ -144,10 +153,10 @@ class PicoPagination
         $result[$j]->text = $paginationObject->str_last;
         $result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . $paginationObject->ref_last);
         $result[$j]->sel = false;
-        return $result;
+        $this->result = $result;
     }
 
-    public function createPaginationHtml()
+    public function buildHTML()
 	{
 		$str_result = "";
 		if(is_array($this->result))

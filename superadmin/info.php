@@ -548,22 +548,21 @@ WHERE (1=1) $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->setTotalRecord($stmt->rowCount());
-$stmt = $database->executeQuery($sql . $pagination->limit_sql);
+$stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-//$pagination->start = $pagination->offset + 1;
-//$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
-$pagination->result = $pagination->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
-$pagination->offset,  true); 
-$paginationHTML = $pagination->createPaginationHtml();
+
+
+$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+$paginationHTML = $pagination->buildHTML();
 ?>
 <form name="form1" method="post" action="">
 
 <div class="d-flex search-pagination search-pagination-top">
 <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
-<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 </div>
 
 <form name="form1" method="post" action="">
@@ -612,7 +611,7 @@ $paginationHTML = $pagination->createPaginationHtml();
 
 <div class="d-flex search-pagination search-pagination-bottom">
 <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
-<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 </div>
 
 <div class="button-area">

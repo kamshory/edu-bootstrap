@@ -150,7 +150,7 @@ if (@$_GET['option'] == 'detail') {
 				<?php
 				$sql_filter = "";
 				
-				if ($pagination->query) {
+				if($pagination->query) {
 					$pagination->appendQueryName('q');
 					$sql_filter .= " AND (`edu_school3`.`name` like '%" . addslashes($pagination->query) . "%' )";
 				}
@@ -199,28 +199,20 @@ if (@$_GET['option'] == 'detail') {
 
 				$stmt1 = $database->executeQuery($sql_test);
 				$pagination->total_record = $stmt1->rowCount();
-				$stmt2 = $database->executeQuery($sql . $pagination->limit_sql);
+				$stmt2 = $database->executeQuery($sql . $pagination->getLimitSql());
 				$pagination->total_record_with_limit = $stmt2->rowCount();
 				if($pagination->getTotalRecordWithLimit() > 0) {
-					//$pagination->start = $pagination->offset + 1;
-					//$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
+					
+					
 
-					$pagination->result = $pagination->createPagination(
-						basename($_SERVER['PHP_SELF']),
-						$pagination->total_record,
-						$pagination->limit,
-						$pagination->num_page,
-						$pagination->offset,
-						
-						true
-					);
-					$paginationHTML = $pagination->createPaginationHtml();
+					$pagination->createPagination(basename($_SERVER['PHP_SELF']), true);
+					$paginationHTML = $pagination->buildHTML();
 					
 				?>
 					<form name="form1" method="post" action="">
 						<div class="d-flex search-pagination search-pagination-top">
 							<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
-							<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+							<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 						</div>
 
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm bordered hide-some-cell">
@@ -253,7 +245,7 @@ if (@$_GET['option'] == 'detail') {
 
 						<div class="d-flex search-pagination search-pagination-bottom">
 							<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
-							<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+							<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 						</div>
 
 					</form>

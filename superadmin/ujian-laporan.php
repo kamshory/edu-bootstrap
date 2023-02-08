@@ -615,28 +615,21 @@ else
 $ke = array();
 $stmt = $database->executeQuery($sql_test);
 $pagination->setTotalRecord($stmt->rowCount());
-$stmt = $database->executeQuery($sql . $pagination->limit_sql);
+$stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->total_record_with_limit > 0)
 {
-//$pagination->start = $pagination->offset + 1;
-//$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
-$pagination->result = $pagination->createPagination(basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page, 
-$pagination->offset,  true); 
-$paginationHTML = "";
 
-foreach($pagination->result as $i=>$obj)
-{
-$cls = (@$obj->sel)?" class=\"pagination-selected\"":"";
-$paginationHTML .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
-}
+
+$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+$paginationHTML = $pagination->buildHTML();
 ?>
 <form name="form1" method="post" action="" enctype="multipart/form-data">
 
 <div class="d-flex search-pagination search-pagination-top">
 <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
-<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 </div>
 
 
@@ -703,7 +696,7 @@ $paginationHTML .= "<a href=\"".$obj->ref."\"$cls>".$obj->text."</a> ";
 
 <div class="d-flex search-pagination search-pagination-bottom">
 <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
-<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 </div>
 
 <div class="button-area">
@@ -846,7 +839,7 @@ window.onload = function()
           $pagination->appendQueryName('class_id');
           $sql_filter .= " and concat(',',`edu_test`.`class`,',') like '%,$class_id,%' ";
         }
-        if ($pagination->query) {
+        if($pagination->query) {
           $pagination->appendQueryName('q');
           $sql_filter .= " AND (`edu_test`.`name` like '%" . addslashes($pagination->query) . "%' )";
         }
@@ -871,23 +864,14 @@ window.onload = function()
 
         $stmt = $database->executeQuery($sql_test);
         $pagination->setTotalRecord($stmt->rowCount());
-        $stmt = $database->executeQuery($sql . $pagination->limit_sql);
+        $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
         $pagination->setTotalRecordWithLimit($stmt->rowCount());
         if ($pagination->total_record_with_limit > 0) {
-          //$pagination->start = $pagination->offset + 1;
-          //$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
+          
+          
 
-          $pagination->result = $pagination->createPagination(
-            basename($_SERVER['PHP_SELF']), $pagination->total_record, $pagination->limit, $pagination->num_page,
-            $pagination->offset, 
-            true
-          );
-          $paginationHTML = "";
-
-foreach ($pagination->result as $i => $obj) {
-$cls = (@$obj->sel) ? " class=\"pagination-selected\"" : "";
-$paginationHTML .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
-}
+          $pagination->createPagination(basename($_SERVER['PHP_SELF']), true);
+          $paginationHTML = $pagination->buildHTML();
           ?>
 <?php
             $array_class = $picoEdu->getArrayClass($school_id);
@@ -896,7 +880,7 @@ $paginationHTML .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
 
 <div class="d-flex search-pagination search-pagination-top">
 <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
-<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 </div>
 
 <form name="rowform" method="post" action="">
@@ -945,7 +929,7 @@ $paginationHTML .= "<a href=\"" . $obj->ref . "\"$cls>" . $obj->text . "</a> ";
 
 <div class="d-flex search-pagination search-pagination-bottom">
 <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
-<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 </div>
 
 </form>

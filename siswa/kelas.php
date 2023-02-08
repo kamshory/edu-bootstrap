@@ -113,16 +113,15 @@ WHERE (1=1) $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->setTotalRecord($stmt->rowCount());
-$stmt = $database->executeQuery($sql . $pagination->limit_sql);
+$stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-//$pagination->start = $pagination->offset + 1;
-//$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
 
-$pagination->result = $pagination->createPagination('kelas.php', $pagination->total_record, $pagination->limit, $pagination->num_page, 
-$pagination->offset,  true); 
-$paginationHTML = $pagination->createPaginationHtml();
+
+
+$pagination->createPagination('kelas.php', true); 
+$paginationHTML = $pagination->buildHTML();
 ?>
 <form name="form1" method="post" action="">
 <style type="text/css">
@@ -136,7 +135,7 @@ $paginationHTML = $pagination->createPaginationHtml();
 
 <div class="d-flex search-pagination search-pagination-top">
 <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
-<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 </div>
 
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
@@ -172,7 +171,7 @@ $paginationHTML = $pagination->createPaginationHtml();
 
 <div class="d-flex search-pagination search-pagination-bottom">
 <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
-<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start;?>-<?php echo $pagination->end;?>/<?php echo $pagination->total_record;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 </div>
 
 </form>

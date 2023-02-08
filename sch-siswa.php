@@ -151,7 +151,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
     <?php
     $sql_filter = "";
     
-    if ($pagination->query) {
+    if($pagination->query) {
       $pagination->appendQueryName('q');
       $sql_filter .= " AND (`edu_student`.`name` like '%" . addslashes($pagination->query) . "%' )";
     }
@@ -174,27 +174,14 @@ WHERE `edu_student`.`student_id` = '$edit_key'
     $pagination->setTotalRecord($stmt->rowCount());
     if ($class_id == 0) 
     {
-      $stmt = $database->executeQuery($sql . $pagination->limit_sql);
+      $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
     }
 
     $pagination->setTotalRecordWithLimit($stmt->rowCount());
     if($pagination->getTotalRecordWithLimit() > 0) {
-      if ($class_id == 0) {
-        //$pagination->start = $pagination->offset + 1;
-        //$pagination->end = $pagination->offset + $pagination->total_record_with_limit;
+        $pagination->createPagination('siswa.php', true);
+        $paginationHTML = $pagination->buildHTML();
 
-        $pagination->result = $pagination->createPagination(
-          'siswa.php',
-          $pagination->total_record,
-          $pagination->limit,
-          $pagination->num_page,
-          $pagination->offset,
-          
-          true
-        );
-$paginationHTML = $pagination->createPaginationHtml();
-
-      }
     ?>
       <form name="form1" method="post" action="">
         <style type="text/css">
@@ -218,7 +205,7 @@ $paginationHTML = $pagination->createPaginationHtml();
         ?>
           <div class="d-flex search-pagination search-pagination-top">
             <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
-            <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+            <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
           </div>
         <?php
         }
@@ -261,7 +248,7 @@ $paginationHTML = $pagination->createPaginationHtml();
         ?>
           <div class="d-flex search-pagination search-pagination-bottom">
             <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
-            <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->start; ?>-<?php echo $pagination->end; ?>/<?php echo $pagination->total_record; ?></div>
+            <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
           </div>
         <?php
         }

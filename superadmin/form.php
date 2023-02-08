@@ -897,14 +897,14 @@ where 1 \$sql_filter
 \";
 \$res = mysql_query(\$sql_test);
 \$pagination->total_record = mysql_num_rows(\$res);
-\$res = mysql_query(\$sql.\$pagination->limit_sql);
+\$res = mysql_query(\$sql.\$pagination->getLimitSql());
 \$pagination->total_record_with_limit = mysql_num_rows(\$res);
 if(\$pagination->total_record_with_limit)
 {
 \$pagination->start = \$pagination->offset+1;
 \$pagination->end = \$pagination->offset+\$pagination->total_record_with_limit;
 
-\$pagination->result = $pagination->createPagination(basename(\$_SERVER['PHP_SELF']), \$pagination->total_record, \$pagination->limit, \$pagination->num_page, 
+\$pagination->createPagination(basename(\$_SERVER['PHP_SELF']), \$pagination->total_record, \$pagination->limit, \$pagination->num_page, 
 \$pagination->offset, \ true, \$pagination->str_first, \$pagination->str_last, \$pagination->str_prev, \$pagination->str_next); 
 \$paginationHTML = \"\";
 foreach(\$pagination->result as \$i=>\$obj)
