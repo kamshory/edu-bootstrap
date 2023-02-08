@@ -375,7 +375,7 @@ input#duration{
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama Ujian</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $name;?>" autocomplete="off" required="required" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo htmlspecialchars($name);?>" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>Kelas

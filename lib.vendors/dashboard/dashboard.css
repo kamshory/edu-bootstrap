@@ -296,3 +296,7 @@ select{
 .date-format-tip{
   display: none;
 }
+
+a:focus-visible{
+  outline:none;
+}

@@ -147,9 +147,9 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	(`test_id`, `school_id`, `name`, `class`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 	('$test_id', '$school_id', '$name', '$class', '$subject', '$teacher_id', '$description', '$guidance', '$open', '$has_limits', '$trial_limits', '$threshold', '$assessment_methods', '$number_of_question', '$number_of_option', '$question_per_page', '$random', '$duration', '$has_alert', '$alert_time', '$alert_message', '$autosubmit', '$standard_score', '$penalty', '$sort_order', '$score_notification', '$publish_answer', $time_answer_publication, '$test_availability', $available_from, $available_to, '$time_create', '$time_edit', '$member_create', '$role_create', '$member_edit', '$role_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
-  
-	$collection = kh_filter_input(INPUT_POST, "collection", FILTER_SANITIZE_NUMBER_UINT);
-	if($collection)
+
+	$collection = kh_filter_input(INPUT_POST, "collection", FILTER_SANITIZE_STRING_NEW);
+	if(!empty($collection))
 	{
 		$selection = kh_filter_input(INPUT_POST, "selection", FILTER_SANITIZE_STRING_NEW);
 		$selection_index = json_decode($selection);
@@ -158,10 +158,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		
 		
 		$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$collection' AND `active` = true ";
+		
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			print_r($data);
 			$basename = $data['file_path'];
 			$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 			if(file_exists($file_path))
@@ -322,6 +324,18 @@ if(@$_GET['option'] == 'add')
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $collection = kh_filter_input(INPUT_GET, "collection", FILTER_SANITIZE_STRING_NEW);
 $selection = kh_filter_input(INPUT_GET, "selection", FILTER_SANITIZE_STRING_NEW);
+
+$name = "";
+if(!empty($collection))
+{
+	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$collection' ";
+	$stmt = $database->executeQuery($sql);
+	if ($stmt->rowCount() > 0) {
+		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$name = $data['name'];
+	}
+}
+
 $sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
 $stmtc = $database->executeQuery($sqlc);
 $arrc = array();
@@ -346,7 +360,7 @@ input#duration{
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama Ujian</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" required="required" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo htmlspecialchars($name);?>" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>Kelas
@@ -603,7 +617,7 @@ $(document).ready(function(e) {
 		
 });
 </script>
-<?php getDefaultValues($database, 'edu_test', array('name','class','subject','teacher_id','open','has_limits','trial_limits','threshold','assessment_methods','number_of_question','number_of_option','question_per_page','random','duration','has_alert','alert_time','standard_score','penalty','sort_order','score_notification','publish_answer','time_answer_publication','test_availability','available_from','available_to','active')); ?>
+<?php getDefaultValues($database, 'edu_test', array('open','has_limits','trial_limits','threshold','assessment_methods','number_of_question','number_of_option','question_per_page','random','duration','has_alert','alert_time','standard_score','penalty','score_notification','publish_answer','test_availability','active')); ?>
 <?php
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
