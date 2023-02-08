@@ -342,7 +342,7 @@ $nt = $picoEdu->createSubSelect('edu_test_collection', array('grade_id'=>'grade_
 $sql = "SELECT `edu_test_collection`.* $nt
 FROM `edu_test_collection`
 WHERE (1=1) $sql_filter
-ORDER BY `edu_test_collection`.`test_collection_id` asc
+ORDER BY `edu_test_collection`.`test_collection_id` ASC
 ";
 $sql_test = "SELECT `edu_test_collection`.*
 FROM `edu_test_collection`

@@ -146,7 +146,7 @@ $nt = '';
 $sql = "SELECT `edu_teacher`.* $nt
 FROM `edu_teacher`
 WHERE (1=1) $sql_filter
-ORDER BY `edu_teacher`.`teacher_id` asc
+ORDER BY `edu_teacher`.`teacher_id` ASC
 ";
 $sql_test = "SELECT `edu_teacher`.*
 FROM `edu_teacher`

@@ -200,7 +200,7 @@ if(isset($_GET['expand']))
 	LEFT JOIN (`edu_question`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
 	where  `edu_answer`.`test_id` = '$test_id' $sql_filter
 	GROUP BY `edu_answer`.`answer_id` 
-	ORDER BY `edu_student`.`class_id`, `edu_answer`.`student_id` asc, `edu_answer`.`start` asc ";
+	ORDER BY `edu_student`.`class_id`, `edu_answer`.`student_id` ASC, `edu_answer`.`start` ASC ";
 }
 else
 {
@@ -239,7 +239,7 @@ else
 	where  `edu_answer`.`test_id` = '$test_id' $sql_filter
 	GROUP BY `edu_answer`.`answer_id` 
 	$grp ) AS `inv` group by concat(`inv`.`test_id`, '-', `inv`.`student_id`) 
-	ORDER BY `inv`.`class_id`, `inv`.`student_id` asc, `inv`.`start` asc ";
+	ORDER BY `inv`.`class_id`, `inv`.`student_id` ASC, `inv`.`start` ASC ";
 	
 }
 $ke = array();
@@ -554,7 +554,7 @@ LEFT JOIN (`edu_answer`) ON (`edu_answer`.`answer` like concat('%[',`edu_questio
 LEFT JOIN (`edu_test`) ON (`edu_test`.`test_id` = `edu_question`.`test_id`)
 WHERE `edu_answer`.`answer_id` = '$answer_id' 
 GROUP BY `edu_question`.`question_id` 
-ORDER BY `pos` asc ";
+ORDER BY `pos` ASC ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -766,7 +766,7 @@ if(isset($_GET['expand']))
 	LEFT JOIN (`edu_question`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
 	where  `edu_answer`.`test_id` = '$test_id' $sql_filter
 	GROUP BY `edu_answer`.`answer_id` having 1 $sql_filter
-	ORDER BY `edu_student`.`class_id`, `edu_answer`.`student_id` asc, `edu_answer`.`start` asc ";
+	ORDER BY `edu_student`.`class_id`, `edu_answer`.`student_id` ASC, `edu_answer`.`start` ASC ";
 }
 else
 {
@@ -805,7 +805,7 @@ else
 	where  `edu_answer`.`test_id` = '$test_id' $sql_filter
 	GROUP BY `edu_answer`.`answer_id` having 1 $sql_filter
 	$grp ) AS `inv` group by concat(`inv`.`test_id`, '-', `inv`.`student_id`) 
-	ORDER BY `inv`.`class_id`, `inv`.`student_id` asc, `inv`.`start` asc ";
+	ORDER BY `inv`.`class_id`, `inv`.`student_id` ASC, `inv`.`start` ASC ";
 	
 }
 $ke = array();

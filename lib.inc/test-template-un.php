@@ -50,7 +50,7 @@ if($number_of_question)
 				$sql2 = "SELECT `edu_option`.* , rand() AS `rand`
 				FROM `edu_option`
 				WHERE `edu_option`.`question_id` = '$soal'
-				ORDER BY `rand` asc
+				ORDER BY `rand` ASC
 				";
 			} else {
 				$sql2 = "SELECT `edu_option`.* , rand() AS `rand`
@@ -92,7 +92,7 @@ var test = '<?php echo $test_id;?>';
 var autosubmit = <?php echo $autosubmit*1;?>;
 var due_time = <?php echo @$_SESSION['session_test'][$student_id][$test_id]['due_time']-time();?>;
 </script>
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/test-un.min.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-un.js"></script>
 <div class="all">
 <div class="header">
 <h3><?php echo $data['name'];?> <?php echo ($data['subject'])?(" : ".$data['subject']):"";?></h3>

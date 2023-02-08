@@ -21,7 +21,7 @@ if(@$_GET['option'] == 'select')
 	) AS `edu_school3`
 	WHERE `edu_school3`.`school_id` = '$school_id'
 	having `edu_school3`.`role` = 'S'
-	ORDER BY `edu_school3`.`open` asc, `edu_school3`.`name` asc
+	ORDER BY `edu_school3`.`open` ASC, `edu_school3`.`name` ASC
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -182,7 +182,7 @@ WHERE `edu_member_school`.`member_id` = '$auth_student_id' AND `edu_member_schoo
 ) AS `edu_school3`
 WHERE (1=1) $sql_filter
 having `edu_school3`.`role` = 'S' AND `edu_school3`.`open` = '1'
-ORDER BY `edu_school3`.`name` asc
+ORDER BY `edu_school3`.`name` ASC
 ";
 $sql_test = "
 select `edu_school3`.* from(

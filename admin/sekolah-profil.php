@@ -308,7 +308,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="state_id" id="state_id">
 		<option value="">- Pilih Provinsi -</option>
 			<?php
-            $sql = "SELECT * FROM `state` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' ORDER BY `type` asc, `name` asc
+            $sql = "SELECT * FROM `state` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' ORDER BY `type` ASC, `name` ASC
             ";
             $stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
@@ -330,7 +330,7 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="city_id" id="city_id">
 		<option value="">- Pilih Kabupaten/Kota -</option>
 			<?php
-            $sql = "SELECT * FROM `city` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' AND (`state_id` = '$data[state_id]' OR `state_id` = '' OR `state_id` is null) ORDER BY `type` asc, `name` asc 
+            $sql = "SELECT * FROM `city` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' AND (`state_id` = '$data[state_id]' OR `state_id` = '' OR `state_id` is null) ORDER BY `type` ASC, `name` ASC 
             ";
             $stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {

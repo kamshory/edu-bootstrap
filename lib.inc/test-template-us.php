@@ -78,7 +78,7 @@ var test = <?php echo $test_id;?>;
 var autosubmit = <?php echo $autosubmit*1;?>;
 var due_time = <?php echo @$_SESSION['session_test'][$student_id][$test_id]['due_time']-time();?>;
 </script>
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/test-us.min.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-us.js"></script>
 <?php	
 
 $question_package = addslashes($question_package);
@@ -181,7 +181,7 @@ foreach($rows as $data)
 	$sql2 = "SELECT `edu_option`.* , rand() AS `rand`
 	FROM `edu_option`
 	WHERE `edu_option`.`question_id` = '$soal'
-	ORDER BY `rand` asc
+	ORDER BY `rand` ASC
 	";
 	}
 	else

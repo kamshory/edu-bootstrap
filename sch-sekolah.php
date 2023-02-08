@@ -331,7 +331,7 @@ if(!empty(@$page_school_id)) {
 				(SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`class_id` = `edu_class`.`class_id`) AS `num_student`
 				FROM `edu_class`
 				WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$page_school_id'
-				ORDER BY `edu_class`.`grade_id` asc, `edu_class`.`sort_order` ASC
+				ORDER BY `edu_class`.`grade_id` ASC, `edu_class`.`sort_order` ASC
 				";
 			$stmt = $database->executeQuery($sql);
 			
@@ -452,7 +452,7 @@ if(!empty(@$page_school_id)) {
 			$sql = "SELECT `edu_teacher`.*
 				FROM `edu_teacher`
 				WHERE `edu_teacher`.`active` = true AND `edu_teacher`.`school_id` = '$page_school_id'
-				ORDER BY `edu_teacher`.`name` asc
+				ORDER BY `edu_teacher`.`name` ASC
 				";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {

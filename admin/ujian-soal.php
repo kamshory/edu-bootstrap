@@ -374,7 +374,7 @@ var test_id = '<?php echo $test_id;?>';
 var maxScore = '<?php echo $data['standard_score'];?>';
 var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$test_id/");?>;	
 </script>
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/test-editor.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-editor.js"></script>
 <div class="question-area">
 <?php
 $numbering = 'upper-alpha';
@@ -475,7 +475,7 @@ var numbering = <?php echo json_encode($cfg->numbering); ?>;
 var test_id = '<?php echo $data['test_id']; ?>';
 var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$test_id/"); ?>;	
 </script>
-<script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/js/test-editor.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/script/test-editor.js"></script>
 
 <div class="dialogs">
 	<div id="split-dialog">
@@ -857,7 +857,7 @@ else
 <?php
 $sql = "SELECT * 
 FROM `edu_question` WHERE `test_id` = '$test_id' 
-ORDER BY `sort_order` ASC, `question_id` asc
+ORDER BY `sort_order` ASC, `question_id` ASC
 ";
 $stmt = $database->executeQuery($sql);
 

@@ -148,7 +148,7 @@ $(document).ready(function(e) {
 		<?php 
 		$sql2 = "SELECT * FROM `edu_school`
 		WHERE `active` = true
-		ORDER BY `school_grade_id` asc
+		ORDER BY `school_grade_id` ASC
 		";
 		echo $picoEdu->createFilterDb(
 			$sql2,

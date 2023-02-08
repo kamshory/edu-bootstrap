@@ -83,7 +83,7 @@ h3{
     $sql = "SELECT `edu_teacher`.* 
     FROM `edu_teacher` 
     WHERE `edu_teacher`.`active` = true
-    ORDER BY `edu_teacher`.`name` asc 
+    ORDER BY `edu_teacher`.`name` ASC 
     ";
     $stmt = $database->executeQuery($sql);
     if ($stmt->rowCount() > 0) {

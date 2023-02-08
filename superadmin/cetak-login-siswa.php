@@ -145,7 +145,7 @@ $filter = "";
 $sql = "SELECT `edu_student`.* 
 FROM `edu_student` 
 WHERE `edu_student`.`school_id` = '$school_id' AND `edu_student`.`active` = true $filter
-ORDER BY `edu_student`.`name` asc ";
+ORDER BY `edu_student`.`name` ASC ";
 $stmt = $database->executeQuery($sql);
 
 if ($stmt->rowCount() > 0) {

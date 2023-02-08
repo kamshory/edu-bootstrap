@@ -43,7 +43,7 @@ if(ua.indexOf('Firefox') !== -1)
 var equationURLPreview = '<?php echo $cfg->equation_url_preview;?>';
 var equationURLGenerator = '<?php echo $cfg->equation_url_generator;?>';
 </script>
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/test-maker.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-maker.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/FileSaver.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/lz-string.min.js"></script>
 <link rel="shortcut icon" type="image/jpeg" href="../favicon.ico"/>

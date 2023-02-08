@@ -805,7 +805,7 @@ window.onload=function(){
 <?php
 $sql = "SELECT * 
 FROM `edu_question` WHERE `test_id` = '$test_id' 
-ORDER BY `sort_order` ASC, `question_id` asc
+ORDER BY `sort_order` ASC, `question_id` ASC
 ";
 $stmt = $database->executeQuery($sql);
 if ($stmt->rowCount() > 0) {

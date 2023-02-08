@@ -59,7 +59,7 @@ else
 			FROM `edu_question`
 			WHERE `edu_question`.`test_id` = '$test_id'
 			GROUP BY `edu_question`.`basic_competence`
-			ORDER BY `edu_question`.`basic_competence` asc
+			ORDER BY `edu_question`.`basic_competence` ASC
 			";
 			$stmt = $database->executeQuery($sql);
 			$questions = array();

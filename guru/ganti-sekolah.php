@@ -9,7 +9,7 @@ if(@$_GET['option'] == 'select')
 	FROM `edu_member_school`
 	INNER JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_member_school`.`school_id`)
 	WHERE `edu_member_school`.`member_id` = '$teacher_id' AND `edu_member_school`.`role` = 'T' 
-	ORDER BY `edu_school`.`school_id` asc
+	ORDER BY `edu_school`.`school_id` ASC
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
@@ -157,7 +157,7 @@ $sql = "SELECT `edu_school`.* $nt
 FROM `edu_member_school`
 INNER JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_member_school`.`school_id`)
 WHERE `edu_member_school`.`member_id` = '$teacher_id' AND `edu_member_school`.`role` = 'T' $sql_filter
-ORDER BY `edu_school`.`school_id` asc
+ORDER BY `edu_school`.`school_id` ASC
 ";
 $sql_test = "SELECT `edu_school`.*
 FROM `edu_member_school`

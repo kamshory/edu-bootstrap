@@ -21,7 +21,7 @@ if (@$_GET['option'] == 'select') {
 	WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 
 	) AS `edu_school3`
 	WHERE `edu_school3`.`school_id` = '$school_id'
-	ORDER BY `edu_school3`.`open` asc, `edu_school3`.`name` asc
+	ORDER BY `edu_school3`.`open` ASC, `edu_school3`.`name` ASC
 	";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
@@ -175,7 +175,7 @@ if (@$_GET['option'] == 'detail') {
 				WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 
 				) AS `edu_school3`
 				WHERE (1=1) $sql_filter
-				ORDER BY `edu_school3`.`open` asc, `edu_school3`.`name` asc
+				ORDER BY `edu_school3`.`open` ASC, `edu_school3`.`name` ASC
 				";
 				
 				$sql_test = "

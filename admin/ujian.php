@@ -391,7 +391,7 @@ input#duration{
         <td><select class="form-control input-select" name="school_program_id" id="school_program_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` asc ";
+		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` ASC ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -413,7 +413,7 @@ input#duration{
 		</td><td><select class="form-control input-select" name="teacher_id" id="teacher_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT `edu_teacher`.* FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' ORDER BY `name` asc ";
+		$sql2 = "SELECT `edu_teacher`.* FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' ORDER BY `name` ASC ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -843,7 +843,7 @@ $(document).ready(function(e) {
         <td><select class="form-control input-select" name="school_program_id" id="school_program_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` asc ";
+		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` ASC ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -866,7 +866,7 @@ $(document).ready(function(e) {
         <td><select class="form-control input-select" name="teacher_id" id="teacher_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT `edu_teacher`.* FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' ORDER BY `name` asc ";
+		$sql2 = "SELECT `edu_teacher`.* FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' ORDER BY `name` ASC ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -1281,7 +1281,7 @@ window.onload = function()
     <select class="form-control input-select" name="teacher_id" id="teacher_id">
     <option value="">- Pilih Guru -</option>
     <?php 
-	$sql2 = "SELECT * FROM `edu_teacher` WHERE `school_id` = '$school_id' AND `active` = true ORDER BY `name` asc ";	
+	$sql2 = "SELECT * FROM `edu_teacher` WHERE `school_id` = '$school_id' AND `active` = true ORDER BY `name` ASC ";	
 	echo $picoEdu->createFilterDb(
 		$sql2,
 		array(

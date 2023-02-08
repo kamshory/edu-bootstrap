@@ -283,7 +283,7 @@ $school_grade = array(
 		where 1 
 		AND `edu_test`.`open` = '1' AND `edu_test`.`active` = true
 		AND `edu_school`.`open` = '1' AND `edu_school`.`active` = true
-		ORDER BY `edu_school`.`school_grade_id` asc, `edu_test`.`subject` asc, `edu_test`.`name` asc
+		ORDER BY `edu_school`.`school_grade_id` ASC, `edu_test`.`subject` ASC, `edu_test`.`name` ASC
 		";
 		$stmt = $database->executeQuery($sql);
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

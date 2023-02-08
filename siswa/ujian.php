@@ -203,7 +203,7 @@ LEFT JOIN (`edu_answer`) ON (`edu_answer`.`answer` like concat('%[',`edu_questio
 LEFT JOIN (`edu_test`) ON (`edu_test`.`test_id` = `edu_question`.`test_id`)
 WHERE `edu_answer`.`answer_id` = '$answer_id' AND `edu_answer`.`student_id` = '$auth_student_id'
 GROUP BY `edu_question`.`question_id` 
-ORDER BY `pos` asc ";
+ORDER BY `pos` ASC ";
 
 $stmt1 = $database->executeQuery($sql);
 
@@ -347,7 +347,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 $sql = "SELECT `edu_answer`.*
 FROM `edu_answer`
 WHERE `edu_answer`.`student_id` = '$auth_student_id' AND `edu_answer`.`test_id` = '$test_id' 
-ORDER BY `edu_answer`.`start` asc
+ORDER BY `edu_answer`.`start` ASC
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

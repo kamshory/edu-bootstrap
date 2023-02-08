@@ -131,7 +131,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td><select class="form-control input-select" name="school_id" id="school_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT * FROM `edu_school` WHERE `active` = true ORDER BY `school_grade_id` asc ";
+		$sql2 = "SELECT * FROM `edu_school` WHERE `active` = true ORDER BY `school_grade_id` ASC ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(
@@ -412,7 +412,7 @@ $sql = "SELECT `edu_teacher`.* $nt,
 (SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_teacher`.`school_id` limit 0,1) AS `school_name`
 FROM `edu_teacher`
 WHERE (1=1) $sql_filter
-ORDER BY `edu_teacher`.`school_id` DESC, `edu_teacher`.`name` asc
+ORDER BY `edu_teacher`.`school_id` DESC, `edu_teacher`.`name` ASC
 ";
 $sql_test = "SELECT `edu_teacher`.*
 FROM `edu_teacher`

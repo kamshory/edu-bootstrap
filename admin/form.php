@@ -890,7 +890,7 @@ $str .= "
 \$sql = \"SELECT `\".DB_PREFIX.\"$table"."`.* \$nt
 FROM `\".DB_PREFIX.\"$table"."`
 where 1 \$sql_filter
-ORDER BY `\".DB_PREFIX.\"$table"."`.`$edit_key` asc
+ORDER BY `\".DB_PREFIX.\"$table"."`.`$edit_key` ASC
 \";
 \$sql_test = \"SELECT `\".DB_PREFIX.\"$table"."`.*
 FROM `\".DB_PREFIX.\"$table"."`

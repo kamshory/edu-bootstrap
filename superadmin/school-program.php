@@ -279,7 +279,7 @@ $sql = "SELECT `edu_school_program`.*,
 (SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_school_program`.`school_id`) AS `school_id`
 FROM `edu_school_program`
 WHERE (1=1) $sql_filter
-ORDER BY `edu_school_program`.`school_program_id` asc
+ORDER BY `edu_school_program`.`school_program_id` ASC
 ";
 $sql_test = "SELECT `edu_school_program`.*
 FROM `edu_school_program`

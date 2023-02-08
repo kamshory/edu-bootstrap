@@ -167,7 +167,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
     FROM `edu_student`
     LEFT JOIN (`edu_class`) ON (`edu_class`.`class_id` = `edu_student`.`class_id`)
     WHERE (1=1) $sql_filter
-    ORDER BY `sort_order` ASC, `edu_student`.`name` asc
+    ORDER BY `sort_order` ASC, `edu_student`.`name` ASC
     ";
 
     $stmt = $database->executeQuery($sql);

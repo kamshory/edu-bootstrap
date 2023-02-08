@@ -339,7 +339,7 @@ else if(@$_GET['login-to-test']=="yes")
 				{	
 					$sql = "SELECT `question_id` , rand() AS `rand`
 					FROM `edu_question` WHERE `test_id` = '$test_id'
-					ORDER BY `rand` asc
+					ORDER BY `rand` ASC
 					limit 0, $number_of_question
 					";
 				}
@@ -347,7 +347,7 @@ else if(@$_GET['login-to-test']=="yes")
 				{
 					$sql = "SELECT `question_id` , `sort_order`
 					FROM `edu_question` WHERE `test_id` = '$test_id'
-					ORDER BY `sort_order` ASC, `question_id` asc
+					ORDER BY `sort_order` ASC, `question_id` ASC
 					limit 0, $number_of_question
 					";
 				}

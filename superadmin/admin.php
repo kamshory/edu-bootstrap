@@ -195,7 +195,7 @@ include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		<td><select class="form-control input-select" name="school_id" id="school_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT * FROM `edu_school` WHERE `active` = true ORDER BY `school_grade_id` asc ";
+		$sql2 = "SELECT * FROM `edu_school` WHERE `active` = true ORDER BY `school_grade_id` ASC ";
 		$stmt2 = $database->executeQuery($sql2);
 		if ($stmt2->rowCount() > 0) {
 			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
@@ -294,7 +294,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td><select class="form-control input-select" name="school_id" id="school_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT * FROM `edu_school` WHERE `active` = true ORDER BY `school_grade_id` asc ";
+		$sql2 = "SELECT * FROM `edu_school` WHERE `active` = true ORDER BY `school_grade_id` ASC ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(
@@ -571,7 +571,7 @@ $sql = "SELECT `edu_admin`.* $nt,
 (SELECT `edu_school`.`name` FROM `edu_school` WHERE `edu_school`.`school_id` = `edu_admin`.`school_id` limit 0,1) AS `school_name`
 FROM `edu_admin`
 WHERE (1=1) $sql_filter
-ORDER BY `edu_admin`.`school_id` DESC, `edu_admin`.`name` asc
+ORDER BY `edu_admin`.`school_id` DESC, `edu_admin`.`name` ASC
 ";
 $sql_test = "SELECT `edu_admin`.*
 FROM `edu_admin`

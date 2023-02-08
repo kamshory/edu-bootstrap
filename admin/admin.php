@@ -463,7 +463,7 @@ else
 	$sql = "SELECT `edu_admin`.* $nt
 	FROM `edu_admin`
 	WHERE `edu_admin`.`school_id` = '$school_id' $sql_filter
-	ORDER BY `edu_admin`.`admin_id` asc
+	ORDER BY `edu_admin`.`admin_id` ASC
 	";
 	$sql_test = "SELECT `edu_admin`.*
 	FROM `edu_admin`

@@ -90,7 +90,7 @@ if (@$_GET['option'] == 'add') {
 				$sql2 = "SELECT `edu_school_program`.*
 				FROM `edu_school_program`
 				WHERE `edu_school_program`.`school_id` = '$school_id' AND `active` = true 
-				ORDER BY `edu_school_program`.`name` asc
+				ORDER BY `edu_school_program`.`name` ASC
 				";
 				$stmt2 = $database->executeQuery($sql);
 				if ($stmt2->rowCount() > 0) {
@@ -167,7 +167,7 @@ if (@$_GET['option'] == 'add') {
 							$sql2 = "SELECT `edu_school_program`.*
 							FROM `edu_school_program`
 							WHERE `edu_school_program`.`school_id` = '$school_id' AND `active` = true 
-							ORDER BY `edu_school_program`.`name` asc
+							ORDER BY `edu_school_program`.`name` ASC
 							";
 							echo $picoEdu->createFilterDb(
 								$sql2,

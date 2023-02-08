@@ -5,7 +5,7 @@ $class_id = trim(kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_N
 $sql = "SELECT `edu_student`.`student_id` AS `v`, `edu_student`.`name` AS `l`
 FROM `edu_student` WHERE `edu_student`.`class_id` = '$class_id' 
 AND `edu_student`.`active` = true 
-ORDER BY `edu_student`.`name` asc
+ORDER BY `edu_student`.`name` ASC
 ";
 $list = array();
 $stmt = $database->executeQuery($sql);

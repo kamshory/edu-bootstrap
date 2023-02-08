@@ -425,7 +425,7 @@ function exportTest($database, $test_id, $base_dir = "")
 	$html = "<" . "?xml version=\"1.0\" encoding=\"utf-8\"?" . ">
 <test>
 ";
-	$sql = "SELECT `question_id` FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` ASC, `question_id` asc ";
+	$sql = "SELECT `question_id` FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` ASC, `question_id` ASC ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -323,7 +323,7 @@ $(document).ready(function(e) {
         <td><select class="form-control input-select" name="school_program_id" id="school_program_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` asc ";
+		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` ASC ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(
@@ -354,7 +354,7 @@ $(document).ready(function(e) {
         <td><select class="form-control input-select" name="teacher_id" id="teacher_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT `edu_teacher`.* FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' ORDER BY `name` asc ";
+		$sql2 = "SELECT `edu_teacher`.* FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = '$school_id' ORDER BY `name` ASC ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(

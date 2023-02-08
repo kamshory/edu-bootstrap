@@ -462,7 +462,7 @@ $sql = "SELECT `edu_student`.* ,
 FROM `edu_student`
 LEFT JOIN (`edu_class`) ON (`edu_class`.`class_id` = `edu_student`.`class_id`)
 WHERE (1=1) $sql_filter
-ORDER BY `edu_student`.`school_id` DESC, `edu_student`.`name` asc
+ORDER BY `edu_student`.`school_id` DESC, `edu_student`.`name` ASC
 ";
 $sql_test = "SELECT `edu_student`.*
 FROM `edu_student`
