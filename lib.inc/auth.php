@@ -14,9 +14,9 @@ if(isset($_SESSION['password']))
 {
 $password = $_SESSION['password'];
 }
-
+$member_id = "";
 $memberLoggedIn = new MemberAuth($database, $username, $password, false);
-if(@$memberLoggedIn->member_id)
+if(!empty($memberLoggedIn->member_id))
 {
 	$member_id = $memberLoggedIn->member_id;
 }

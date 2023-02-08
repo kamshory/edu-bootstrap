@@ -3,7 +3,7 @@ include_once dirname(__FILE__)."/lib.inc/functions-pico.php";
 include_once dirname(__FILE__)."/lib.inc/sessions.php";
 include_once dirname(__FILE__)."/lib.inc/dom.php";
 include_once dirname(__FILE__)."/lib.inc/auth.php";
-if(!@$memberLoggedIn->member_id)
+if(empty($memberLoggedIn->member_id))
 {
 include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 if(isset($school_id) && !empty($school_id))

@@ -3,7 +3,7 @@
 
 class MemberAuth
 {
-	public $member_id = 0;
+	public $member_id = '';
 	public $username = '';
 	public $name = '';
 	public $gender = 'M';
