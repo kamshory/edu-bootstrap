@@ -18,11 +18,8 @@ if($stmt->rowCount() > 0)
 	{
 		$text_all = loadXmlData($file_path);
 
-		$expires = 0;
-		header("Pragma: public");
-		header('Expires: ' . gmdate('D, d M Y H:i:s', time()+$expires) . ' GMT');
-		header("Cache-Control: max-age=$expires");
-		header("User-Cache-Control: max-age=$expires");
+		require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+		$browserCache->setMaxAge(3600);	
 
 		?>
         <div class="title">
