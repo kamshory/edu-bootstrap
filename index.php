@@ -186,7 +186,7 @@ else
 			FROM `edu_info` 
 			WHERE `edu_info`.`active` = true
 			ORDER BY `edu_info`.`info_id` DESC
-			limit 0, 2
+			LIMIT 0, 2
 			";
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)
