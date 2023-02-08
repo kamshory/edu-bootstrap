@@ -17,14 +17,14 @@ class DatabaseSyncException extends Exception
 }
 class DatabaseSyncMaster
 {
-    public $database = null;
-    public $applicationRoot = '';
-    public $uploadBaseDir = '';
-    public $downloadBaseDir = '';
-    public $poolBaseDir = '';
-    public $poolFileName = '';
-    public $poolRollingPrefix = '';
-    public $poolFileExtension = '';
+    protected $database = null;
+    protected $applicationRoot = '';
+    protected $uploadBaseDir = '';
+    protected $downloadBaseDir = '';
+    protected $poolBaseDir = '';
+    protected $poolFileName = '';
+    protected $poolRollingPrefix = '';
+    protected $poolFileExtension = '';
 
     /**
      * Constructor
@@ -417,7 +417,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
     private function syncQuerysFromSyncRecord($record)
     {
         $syncFilePath = addslashes($record['file_path']);
-        $delimiter = trim($this->database->databaseSyncConfig->delimiter);
+        $delimiter = trim($this->database->getDatabaseSyncConfig()->getDelimiter());
 
         $handle = fopen($syncFilePath, "r");
         if ($handle) {

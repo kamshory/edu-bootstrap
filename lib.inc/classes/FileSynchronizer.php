@@ -25,6 +25,10 @@ class FileSynchronizer
 		{
 			$this->extension = $extension;
 		}
+		if($maximumlength > 0)
+		{
+			$this->maximumlength = $maximumlength;
+		}
 	}
 	public function getPoolPath()
 	{

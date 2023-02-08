@@ -15,12 +15,12 @@ class PicoDatabaseServer
 
 class PicoDatabaseSyncConfig
 {
-	public string $baseDir = '';
-	public string $poolName = '';
-	public string $rollingPrefix = '';
-	public string $extension = '';
-	public int $maximumlength = 1000000;
-	public string $delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
+	private string $baseDir = '';
+	private string $poolName = '';
+	private string $rollingPrefix = '';
+	private string $extension = '';
+	private int $maximumlength = 1000000;
+	private string $delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
 	const NEW_LINE = "\r\n";
 
 	/**
@@ -71,6 +71,15 @@ class PicoDatabaseSyncConfig
 		fclose($fp);
 		return $l1 + $l2;
 	}
+
+	/**
+	 * Get sync file delimiter
+	 * @return string Sync file delimiter
+	 */
+	public function getDelimiter()
+	{
+		return $this->delimiter;
+	}
 }
 
 class PicoDatabase
@@ -81,8 +90,8 @@ class PicoDatabase
 	private string $databaseName = "";
 	private string $timezone = "00:00";
 	private \PDO $conn;
-	public \PicoDatabaseServer $databaseServer;
-	public \PicoDatabaseSyncConfig $databaseSyncConfig;
+	private \PicoDatabaseServer $databaseServer;
+	private \PicoDatabaseSyncConfig $databaseSyncConfig;
 
 	/**
 	 * Summary of __construct
@@ -102,6 +111,24 @@ class PicoDatabase
 		$this->password = $password;
 		$this->databaseName = $databaseName;
 		$this->timezone = $timezone;	
+	}
+
+	/**
+	 * Get database server information
+	 * @return PicoDatabaseServer Database server information
+	 */
+	public function getDatabaseServer()
+	{
+		return $this->databaseServer;
+	}
+
+	/**
+	 * Get database sync configuration
+	 * @return PicoDatabaseSyncConfig Database sync configuration
+	 */
+	public function getDatabaseSyncConfig()
+	{
+		return $this->databaseSyncConfig;
 	}
 
 	/**

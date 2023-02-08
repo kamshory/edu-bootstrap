@@ -16,14 +16,14 @@ class FileSyncException extends Exception
 }
 class FileSyncMaster
 {
-    public \PicoDatabase $database;
-    public string $applicationRoot = '';
-    public string $uploadBaseDir = '';
-    public string $downloadBaseDir = '';
-    public string $poolBaseDir = '';
-    public string $poolFileName = '';
-    public string $poolRollingPrefix = '';
-    public string $poolFileExtension = '';
+    protected \PicoDatabase $database;
+    protected string $applicationRoot = '';
+    protected string $uploadBaseDir = '';
+    protected string $downloadBaseDir = '';
+    protected string $poolBaseDir = '';
+    protected string $poolFileName = '';
+    protected string $poolRollingPrefix = '';
+    protected string $poolFileExtension = '';
     public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
         $this->database = $database;
