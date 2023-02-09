@@ -61,9 +61,12 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 					";
 					$picoEdu->log($sql1);
 					$stmt = $database->executeInsert($sql1, true);
-					if ($stmt->rowCount() == 0) {
+					if ($stmt->rowCount() == 0) 
+					{
 						$oke = $oke * 0;
-					} else {
+					} 
+					else 
+					{
 						if (@is_array($object['option']) && count($object['option'])) {
 							foreach ($object['option'] as $option_no => $option) {
 								$content_option = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src)))));								

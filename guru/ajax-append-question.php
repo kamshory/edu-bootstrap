@@ -50,20 +50,22 @@ if(!empty($school_id))
 						$numbering = addslashes($object['numbering']);
 						$digest = md5($object['question']);
 						$sort_order++;
+
+						$question_id = $database->generateNewId();
+
 						$sql1 = "INSERT INTO `edu_question` 
-						(`content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
 						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
-						('$content', '$test_id', '$sort_order', true, '$random', '$numbering', '$digest', 
+						('$question_id', '$content', '$test_id', '$sort_order', true, '$random', '$numbering', '$digest', 
 						'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 						";
 						$stmt1 = $database->executeInsert($sql1, true);
-						if($stmt1->rowCount())
+						if($stmt1->rowCount() == 0)
 						{
 							$oke = $oke * 0;
 						}
 						else
 						{
-							$question_id = $database->getDatabaseConnection()->lastInsertId();
 							if(@is_array($object['option']) && count($object['option']))
 							{
 								foreach($object['option'] as $option_no=>$option)
@@ -76,10 +78,13 @@ if(!empty($school_id))
 									{
 										$score_option = addslashes(@$option['score']*$score_standar);
 									}
+
+									$option_id = $database->generateNewId();
+
 									$sql2 = "INSERT INTO `edu_option` 
-									(`question_id`, `content`, `sort_order`, `score`, 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
 									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
-									('$question_id', '$content_option', '$order_option', '$score_option', 
+									('$option_id', '$question_id', '$content_option', '$order_option', '$score_option', 
 									'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 									";
 									$stmt2 = $database->executeInsert($sql2, true);

@@ -5911,3 +5911,961 @@ UPDATE `edu_test` SET
 	`time_create` = '2023-02-09 08:13:43', `time_edit` = '2023-02-09 08:13:43', `member_create` = '063ce68285cc5b02bb04', `role_create` = 'T', 
 	`member_edit` = '063ce68285cc5b02bb04', `role_edit` = 'T', `ip_create` = '127.0.0.1', `ip_edit` = '127.0.0.1', `active` = '0'
 	WHERE `test_id` = '063e393ff0c10a584ba6' AND `school_id` = '063ce682801be89951aa' AND `teacher_id` = '063ce68285cc5b02bb04';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '1' WHERE `question_id` = '063e447ad7bc41980d6f' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '2' WHERE `question_id` = '063e447ad8d071c17ec6' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '3' WHERE `question_id` = '063e447ad8e2b19d095e' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '4' WHERE `question_id` = '063e447ad8f3da3ffc77' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '5' WHERE `question_id` = '063e447ad90727dc9bb8' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '6' WHERE `question_id` = '063e447ad9180a526ee9' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '7' WHERE `question_id` = '063e447ad927a1bce36c' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '8' WHERE `question_id` = '063e447ad936e25bff47' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '9' WHERE `question_id` = '063e447ad949974af775' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '10' WHERE `question_id` = '063e447ad959ec71bb7d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '11' WHERE `question_id` = '063e447ad969a1b6678d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '12' WHERE `question_id` = '063e447ad8baf3f3322d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '13' WHERE `question_id` = '063e447ad8a72caf4aa3' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '14' WHERE `question_id` = '063e447ad8979c6070ff' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '15' WHERE `question_id` = '063e447ad7d987d9cc6d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '16' WHERE `question_id` = '063e447ad7f09724f875' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '17' WHERE `question_id` = '063e447ad80798281a4e' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '18' WHERE `question_id` = '063e447ad81c1e22ca51' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '19' WHERE `question_id` = '063e447ad82f01707ab5' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '20' WHERE `question_id` = '063e447ad8420bb0b2b7' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '21' WHERE `question_id` = '063e447ad8556608fb30' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '22' WHERE `question_id` = '063e447ad865de85c498' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '23' WHERE `question_id` = '063e447ad8751e791f1f' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '24' WHERE `question_id` = '063e447ad8880665677a' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '25' WHERE `question_id` = '063e447ad9785744cbbc' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Tio </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Dio </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Rio </td><td> Makassar </td><td> 356735 </td><td> djfsdjf@khsk </td></tr></tbody></table>img:1e8c02863854cb30c7c9f5ef3e3161d1.svg#middle##latex%7C%5Cint_%7Bx%3D0%7D%5E%7B23%7D%20%5Csin(2x)%20dx<br />
+Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '26', true, '1', 'upper-alpha', 'fde8897b73550e3550ecbc63193aff8e', 
+						'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Kontak<br />
+', '1', '1', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Pelanggan<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Budi </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Didi </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>', '2', '0', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Calon Pelanggan<br />
+', '3', '0', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Mita<br />
+', '4', '0', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '27', true, '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+						'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Kontak<br />
+', '1', '1', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Pelanggan<br />
+', '2', '0', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Calon Pelanggan<br />
+', '3', '0', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Mita<br />
+', '4', '0', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '28', true, '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+						'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Kontak<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>', '1', '1', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Pelanggan<br />
+', '2', '0', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Calon Pelanggan<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>', '3', '0', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Mita<br />
+', '4', '0', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('Berikut ini adalah sebuah tabel<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063e447ad7a00d39a1dd/37f0d72eb5c45dcd47768ffd60b4467d.svg\" alt=\"37f0d72eb5c45dcd47768ffd60b4467d.svg\" style=\"vertical-align:middle\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \" class=\"latex-image\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \"><br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Didi </td><td> Surabaya </td><td> 3532587 </td><td> sdfhs@hguf </td></tr></tbody></table>Data di atas merupakan data...<br />
+', '063e447ad7a00d39a1dd', '29', true, '1', 'upper-alpha', 'ade0575556a5a2b4e18ad7ad65d2503d', 
+						'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Kontak<br />
+', '1', '1', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Pelanggan<br />
+', '2', '0', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Calon Pelanggan<br />
+', '3', '0', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('0', 'Mita<br />
+', '4', '0', 
+									'2023-02-09 08:36:13', '063ce68285cc5b02bb04', '2023-02-09 08:36:13', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+rollback;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '1' WHERE `question_id` = '063e447ad7bc41980d6f' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '2' WHERE `question_id` = '063e447ad8d071c17ec6' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '3' WHERE `question_id` = '063e447ad8e2b19d095e' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '4' WHERE `question_id` = '063e447ad8f3da3ffc77' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '5' WHERE `question_id` = '063e447ad90727dc9bb8' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '6' WHERE `question_id` = '063e447ad9180a526ee9' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '7' WHERE `question_id` = '063e447ad927a1bce36c' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '8' WHERE `question_id` = '063e447ad936e25bff47' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '9' WHERE `question_id` = '063e447ad949974af775' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '10' WHERE `question_id` = '063e447ad959ec71bb7d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '11' WHERE `question_id` = '063e447ad969a1b6678d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '12' WHERE `question_id` = '063e447ad8baf3f3322d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '13' WHERE `question_id` = '063e447ad8a72caf4aa3' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '14' WHERE `question_id` = '063e447ad8979c6070ff' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '15' WHERE `question_id` = '063e447ad7d987d9cc6d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '16' WHERE `question_id` = '063e447ad7f09724f875' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '17' WHERE `question_id` = '063e447ad80798281a4e' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '18' WHERE `question_id` = '063e447ad81c1e22ca51' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '19' WHERE `question_id` = '063e447ad82f01707ab5' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '20' WHERE `question_id` = '063e447ad8420bb0b2b7' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '21' WHERE `question_id` = '063e447ad8556608fb30' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '22' WHERE `question_id` = '063e447ad865de85c498' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '23' WHERE `question_id` = '063e447ad8751e791f1f' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '24' WHERE `question_id` = '063e447ad8880665677a' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '25' WHERE `question_id` = '063e447ad9785744cbbc' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e44ea9c8e5be3646a', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Tio </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Dio </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Rio </td><td> Makassar </td><td> 356735 </td><td> djfsdjf@khsk </td></tr></tbody></table>img:0538dce591b915131d25f588845f73fb.svg#middle##latex%7C%5Cint_%7Bx%3D0%7D%5E%7B23%7D%20%5Csin(2x)%20dx<br />
+Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '26', true, '1', 'upper-alpha', '0bad202bc5de7994ca066338996c658f', 
+						'2023-02-09 08:38:49', '063ce68285cc5b02bb04', '2023-02-09 08:38:49', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e44ea9c90bbad5fc6', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '27', true, '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+						'2023-02-09 08:38:49', '063ce68285cc5b02bb04', '2023-02-09 08:38:49', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e44ea9c93a1eb168c', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '28', true, '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+						'2023-02-09 08:38:49', '063ce68285cc5b02bb04', '2023-02-09 08:38:49', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e44ea9c96b4734766', 'Berikut ini adalah sebuah tabel<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063e447ad7a00d39a1dd/37f0d72eb5c45dcd47768ffd60b4467d.svg\" alt=\"37f0d72eb5c45dcd47768ffd60b4467d.svg\" style=\"vertical-align:middle\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \" class=\"latex-image\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \"><br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Didi </td><td> Surabaya </td><td> 3532587 </td><td> sdfhs@hguf </td></tr></tbody></table>Data di atas merupakan data...<br />
+', '063e447ad7a00d39a1dd', '29', true, '1', 'upper-alpha', 'ade0575556a5a2b4e18ad7ad65d2503d', 
+						'2023-02-09 08:38:49', '063ce68285cc5b02bb04', '2023-02-09 08:38:49', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+rollback;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '1' WHERE `question_id` = '063e447ad7bc41980d6f' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '2' WHERE `question_id` = '063e447ad8d071c17ec6' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '3' WHERE `question_id` = '063e447ad8e2b19d095e' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '4' WHERE `question_id` = '063e447ad8f3da3ffc77' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '5' WHERE `question_id` = '063e447ad90727dc9bb8' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '6' WHERE `question_id` = '063e447ad9180a526ee9' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '7' WHERE `question_id` = '063e447ad927a1bce36c' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '8' WHERE `question_id` = '063e447ad936e25bff47' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '9' WHERE `question_id` = '063e447ad949974af775' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '10' WHERE `question_id` = '063e447ad959ec71bb7d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '11' WHERE `question_id` = '063e447ad969a1b6678d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '12' WHERE `question_id` = '063e447ad8baf3f3322d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '13' WHERE `question_id` = '063e447ad8a72caf4aa3' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '14' WHERE `question_id` = '063e447ad8979c6070ff' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '15' WHERE `question_id` = '063e447ad7d987d9cc6d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '16' WHERE `question_id` = '063e447ad7f09724f875' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '17' WHERE `question_id` = '063e447ad80798281a4e' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '18' WHERE `question_id` = '063e447ad81c1e22ca51' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '19' WHERE `question_id` = '063e447ad82f01707ab5' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '20' WHERE `question_id` = '063e447ad8420bb0b2b7' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '21' WHERE `question_id` = '063e447ad8556608fb30' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '22' WHERE `question_id` = '063e447ad865de85c498' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '23' WHERE `question_id` = '063e447ad8751e791f1f' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '24' WHERE `question_id` = '063e447ad8880665677a' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '25' WHERE `question_id` = '063e447ad9785744cbbc' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e44f3307259ba8005', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Tio </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Dio </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Rio </td><td> Makassar </td><td> 356735 </td><td> djfsdjf@khsk </td></tr></tbody></table>img:0538dce591b915131d25f588845f73fb.svg#middle##latex%7C%5Cint_%7Bx%3D0%7D%5E%7B23%7D%20%5Csin(2x)%20dx<br />
+Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '26', true, '1', 'upper-alpha', '0bad202bc5de7994ca066338996c658f', 
+						'2023-02-09 08:41:07', '063ce68285cc5b02bb04', '2023-02-09 08:41:07', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e44f3307446c3c135', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '27', true, '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+						'2023-02-09 08:41:07', '063ce68285cc5b02bb04', '2023-02-09 08:41:07', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e44f33076015bfa54', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '28', true, '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+						'2023-02-09 08:41:07', '063ce68285cc5b02bb04', '2023-02-09 08:41:07', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e44f33078071e9caf', 'Berikut ini adalah sebuah tabel<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063e447ad7a00d39a1dd/37f0d72eb5c45dcd47768ffd60b4467d.svg\" alt=\"37f0d72eb5c45dcd47768ffd60b4467d.svg\" style=\"vertical-align:middle\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \" class=\"latex-image\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \"><br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Didi </td><td> Surabaya </td><td> 3532587 </td><td> sdfhs@hguf </td></tr></tbody></table>Data di atas merupakan data...<br />
+', '063e447ad7a00d39a1dd', '29', true, '1', 'upper-alpha', 'ade0575556a5a2b4e18ad7ad65d2503d', 
+						'2023-02-09 08:41:07', '063ce68285cc5b02bb04', '2023-02-09 08:41:07', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+rollback;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '1' WHERE `question_id` = '063e447ad7bc41980d6f' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '2' WHERE `question_id` = '063e447ad8d071c17ec6' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '3' WHERE `question_id` = '063e447ad8e2b19d095e' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '4' WHERE `question_id` = '063e447ad8f3da3ffc77' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '5' WHERE `question_id` = '063e447ad90727dc9bb8' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '6' WHERE `question_id` = '063e447ad9180a526ee9' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '7' WHERE `question_id` = '063e447ad927a1bce36c' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '8' WHERE `question_id` = '063e447ad936e25bff47' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '9' WHERE `question_id` = '063e447ad949974af775' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '10' WHERE `question_id` = '063e447ad959ec71bb7d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '11' WHERE `question_id` = '063e447ad969a1b6678d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '12' WHERE `question_id` = '063e447ad8baf3f3322d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '13' WHERE `question_id` = '063e447ad8a72caf4aa3' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '14' WHERE `question_id` = '063e447ad8979c6070ff' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '15' WHERE `question_id` = '063e447ad7d987d9cc6d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '16' WHERE `question_id` = '063e447ad7f09724f875' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '17' WHERE `question_id` = '063e447ad80798281a4e' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '18' WHERE `question_id` = '063e447ad81c1e22ca51' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '19' WHERE `question_id` = '063e447ad82f01707ab5' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '20' WHERE `question_id` = '063e447ad8420bb0b2b7' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '21' WHERE `question_id` = '063e447ad8556608fb30' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '22' WHERE `question_id` = '063e447ad865de85c498' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '23' WHERE `question_id` = '063e447ad8751e791f1f' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '24' WHERE `question_id` = '063e447ad8880665677a' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '25' WHERE `question_id` = '063e447ad9785744cbbc' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e44f59d7fbde1da42', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Tio </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Dio </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Rio </td><td> Makassar </td><td> 356735 </td><td> djfsdjf@khsk </td></tr></tbody></table>img:0538dce591b915131d25f588845f73fb.svg#middle##latex%7C%5Cint_%7Bx%3D0%7D%5E%7B23%7D%20%5Csin(2x)%20dx<br />
+Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '26', true, '1', 'upper-alpha', '0bad202bc5de7994ca066338996c658f', 
+						'2023-02-09 08:41:45', '063ce68285cc5b02bb04', '2023-02-09 08:41:45', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e44f59d81b3502905', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '27', true, '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+						'2023-02-09 08:41:45', '063ce68285cc5b02bb04', '2023-02-09 08:41:45', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e44f59d836608291d', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '28', true, '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+						'2023-02-09 08:41:45', '063ce68285cc5b02bb04', '2023-02-09 08:41:45', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e44f59d8574f80f77', 'Berikut ini adalah sebuah tabel<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063e447ad7a00d39a1dd/37f0d72eb5c45dcd47768ffd60b4467d.svg\" alt=\"37f0d72eb5c45dcd47768ffd60b4467d.svg\" style=\"vertical-align:middle\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \" class=\"latex-image\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \"><br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Didi </td><td> Surabaya </td><td> 3532587 </td><td> sdfhs@hguf </td></tr></tbody></table>Data di atas merupakan data...<br />
+', '063e447ad7a00d39a1dd', '29', true, '1', 'upper-alpha', 'ade0575556a5a2b4e18ad7ad65d2503d', 
+						'2023-02-09 08:41:45', '063ce68285cc5b02bb04', '2023-02-09 08:41:45', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+rollback;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '1' WHERE `question_id` = '063e447ad7bc41980d6f' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '2' WHERE `question_id` = '063e447ad8d071c17ec6' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '3' WHERE `question_id` = '063e447ad8e2b19d095e' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '4' WHERE `question_id` = '063e447ad8f3da3ffc77' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '5' WHERE `question_id` = '063e447ad90727dc9bb8' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '6' WHERE `question_id` = '063e447ad9180a526ee9' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '7' WHERE `question_id` = '063e447ad927a1bce36c' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '8' WHERE `question_id` = '063e447ad936e25bff47' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '9' WHERE `question_id` = '063e447ad949974af775' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '10' WHERE `question_id` = '063e447ad959ec71bb7d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '11' WHERE `question_id` = '063e447ad969a1b6678d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '12' WHERE `question_id` = '063e447ad8baf3f3322d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '13' WHERE `question_id` = '063e447ad8a72caf4aa3' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '14' WHERE `question_id` = '063e447ad8979c6070ff' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '15' WHERE `question_id` = '063e447ad7d987d9cc6d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '16' WHERE `question_id` = '063e447ad7f09724f875' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '17' WHERE `question_id` = '063e447ad80798281a4e' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '18' WHERE `question_id` = '063e447ad81c1e22ca51' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '19' WHERE `question_id` = '063e447ad82f01707ab5' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '20' WHERE `question_id` = '063e447ad8420bb0b2b7' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '21' WHERE `question_id` = '063e447ad8556608fb30' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '22' WHERE `question_id` = '063e447ad865de85c498' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '23' WHERE `question_id` = '063e447ad8751e791f1f' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '24' WHERE `question_id` = '063e447ad8880665677a' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '25' WHERE `question_id` = '063e447ad9785744cbbc' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '26' WHERE `question_id` = '063e44f59d7fbde1da42' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e4500c55165305217', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Tio </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Dio </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Rio </td><td> Makassar </td><td> 356735 </td><td> djfsdjf@khsk </td></tr></tbody></table>img:0538dce591b915131d25f588845f73fb.svg#middle##latex%7C%5Cint_%7Bx%3D0%7D%5E%7B23%7D%20%5Csin(2x)%20dx<br />
+Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '27', true, '1', 'upper-alpha', '0bad202bc5de7994ca066338996c658f', 
+						'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c552d3df2d73', '0', 'Kontak<br />
+', '1', '1', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c5550b70f3ac', '0', 'Pelanggan<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Budi </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Didi </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>', '2', '0', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c556e5c8b5eb', '0', 'Calon Pelanggan<br />
+', '3', '0', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c5587ca117b9', '0', 'Mita<br />
+', '4', '0', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e4500c55aed582956', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '28', true, '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+						'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c55d208e7161', '0', 'Kontak<br />
+', '1', '1', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c55eac201849', '0', 'Pelanggan<br />
+', '2', '0', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c5601cb9687b', '0', 'Calon Pelanggan<br />
+', '3', '0', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c561a6250eb5', '0', 'Mita<br />
+', '4', '0', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e4500c563c6785a25', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '29', true, '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+						'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c56569001f4d', '0', 'Kontak<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>', '1', '1', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c566efe24f3a', '0', 'Pelanggan<br />
+', '2', '0', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c56892c7aa4e', '0', 'Calon Pelanggan<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>', '3', '0', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c56a09af7b87', '0', 'Mita<br />
+', '4', '0', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e4500c56c60183fa4', 'Berikut ini adalah sebuah tabel<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063e447ad7a00d39a1dd/37f0d72eb5c45dcd47768ffd60b4467d.svg\" alt=\"37f0d72eb5c45dcd47768ffd60b4467d.svg\" style=\"vertical-align:middle\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \" class=\"latex-image\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \"><br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Didi </td><td> Surabaya </td><td> 3532587 </td><td> sdfhs@hguf </td></tr></tbody></table>Data di atas merupakan data...<br />
+', '063e447ad7a00d39a1dd', '30', true, '1', 'upper-alpha', 'ade0575556a5a2b4e18ad7ad65d2503d', 
+						'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c56dfb8f86e1', '0', 'Kontak<br />
+', '1', '1', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c56f8b27b7d0', '0', 'Pelanggan<br />
+', '2', '0', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c5712fffff5f', '0', 'Calon Pelanggan<br />
+', '3', '0', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e4500c5729ce2ee86', '0', 'Mita<br />
+', '4', '0', 
+									'2023-02-09 08:44:44', '063ce68285cc5b02bb04', '2023-02-09 08:44:44', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+commit;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_option` WHERE `question_id` = '063e4500c56c60183fa4' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_question` WHERE `question_id` = '063e4500c56c60183fa4' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_option` WHERE `question_id` = '063e4500c563c6785a25' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_question` WHERE `question_id` = '063e4500c563c6785a25' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_option` WHERE `question_id` = '063e4500c55aed582956' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_question` WHERE `question_id` = '063e4500c55aed582956' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_option` WHERE `question_id` = '063e4500c55165305217' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_question` WHERE `question_id` = '063e4500c55165305217' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_option` WHERE `question_id` = '063e44f59d7fbde1da42' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+DELETE FROM `edu_question` WHERE `question_id` = '063e44f59d7fbde1da42' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '1' WHERE `question_id` = '063e447ad7bc41980d6f' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '2' WHERE `question_id` = '063e447ad8d071c17ec6' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '3' WHERE `question_id` = '063e447ad8e2b19d095e' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '4' WHERE `question_id` = '063e447ad8f3da3ffc77' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '5' WHERE `question_id` = '063e447ad90727dc9bb8' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '6' WHERE `question_id` = '063e447ad9180a526ee9' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '7' WHERE `question_id` = '063e447ad927a1bce36c' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '8' WHERE `question_id` = '063e447ad936e25bff47' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '9' WHERE `question_id` = '063e447ad949974af775' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '10' WHERE `question_id` = '063e447ad959ec71bb7d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '11' WHERE `question_id` = '063e447ad969a1b6678d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '12' WHERE `question_id` = '063e447ad8baf3f3322d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '13' WHERE `question_id` = '063e447ad8a72caf4aa3' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '14' WHERE `question_id` = '063e447ad8979c6070ff' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '15' WHERE `question_id` = '063e447ad7d987d9cc6d' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '16' WHERE `question_id` = '063e447ad7f09724f875' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '17' WHERE `question_id` = '063e447ad80798281a4e' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '18' WHERE `question_id` = '063e447ad81c1e22ca51' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '19' WHERE `question_id` = '063e447ad82f01707ab5' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '20' WHERE `question_id` = '063e447ad8420bb0b2b7' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '21' WHERE `question_id` = '063e447ad8556608fb30' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '22' WHERE `question_id` = '063e447ad865de85c498' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '23' WHERE `question_id` = '063e447ad8751e791f1f' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '24' WHERE `question_id` = '063e447ad8880665677a' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_question` SET `sort_order` = '25' WHERE `question_id` = '063e447ad9785744cbbc' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+start transaction;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e45093ee67282872c', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Tio </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Dio </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Rio </td><td> Makassar </td><td> 356735 </td><td> djfsdjf@khsk </td></tr></tbody></table>img:0538dce591b915131d25f588845f73fb.svg#middle##latex%7C%5Cint_%7Bx%3D0%7D%5E%7B23%7D%20%5Csin(2x)%20dx<br />
+Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '26', true, '1', 'upper-alpha', '0bad202bc5de7994ca066338996c658f', 
+						'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093ee8131c0921', '063e45093ee67282872c', 'Kontak<br />
+', '1', '1', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093ee9d9ea4ecf', '063e45093ee67282872c', 'Pelanggan<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Budi </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Didi </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>', '2', '0', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093eeb78dd29b8', '063e45093ee67282872c', 'Calon Pelanggan<br />
+', '3', '0', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093eed044583d7', '063e45093ee67282872c', 'Mita<br />
+', '4', '0', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e45093eef075ebfb3', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '27', true, '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+						'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093ef03842b9ad', '063e45093eef075ebfb3', 'Kontak<br />
+', '1', '1', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093ef115400fc9', '063e45093eef075ebfb3', 'Pelanggan<br />
+', '2', '0', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093ef2556b654a', '063e45093eef075ebfb3', 'Calon Pelanggan<br />
+', '3', '0', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093ef385b6602d', '063e45093eef075ebfb3', 'Mita<br />
+', '4', '0', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e45093ef5b3a6c07a', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063e447ad7a00d39a1dd', '28', true, '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+						'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093ef76e73a703', '063e45093ef5b3a6c07a', 'Kontak<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>', '1', '1', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093ef885e8cda9', '063e45093ef5b3a6c07a', 'Pelanggan<br />
+', '2', '0', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093efa050c45bc', '063e45093ef5b3a6c07a', 'Calon Pelanggan<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>', '3', '0', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093efb478a7fef', '063e45093ef5b3a6c07a', 'Mita<br />
+', '4', '0', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_question` 
+						(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+						`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+						('063e45093efd930ae4f2', 'Berikut ini adalah sebuah tabel<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063e447ad7a00d39a1dd/37f0d72eb5c45dcd47768ffd60b4467d.svg\" alt=\"37f0d72eb5c45dcd47768ffd60b4467d.svg\" style=\"vertical-align:middle\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \" class=\"latex-image\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \"><br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Didi </td><td> Surabaya </td><td> 3532587 </td><td> sdfhs@hguf </td></tr></tbody></table>Data di atas merupakan data...<br />
+', '063e447ad7a00d39a1dd', '29', true, '1', 'upper-alpha', 'ade0575556a5a2b4e18ad7ad65d2503d', 
+						'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+						;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093eff8959b486', '063e45093efd930ae4f2', 'Kontak<br />
+', '1', '1', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093f011004eef0', '063e45093efd930ae4f2', 'Pelanggan<br />
+', '2', '0', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093f0202464688', '063e45093efd930ae4f2', 'Calon Pelanggan<br />
+', '3', '0', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_option` 
+									(`option_id`, `question_id`, `content`, `sort_order`, `score`, 
+									`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+									('063e45093f02d0a32bc2', '063e45093efd930ae4f2', 'Mita<br />
+', '4', '0', 
+									'2023-02-09 08:46:59', '063ce68285cc5b02bb04', '2023-02-09 08:46:59', '063ce68285cc5b02bb04', true)
+									;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+commit;
