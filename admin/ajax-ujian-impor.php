@@ -43,7 +43,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 				$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 				$dirBase = dirname(dirname(__FILE__));
 				$permission = 0755;
-				$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
+				$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
 				
 				$base_src = "media.edu/school/$school_id/test/$test_id";
 				

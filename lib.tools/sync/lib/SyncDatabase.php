@@ -239,6 +239,13 @@ class DatabaseSyncMaster
         }
         return null;
     }
+    protected function prepareDirectory($dir)
+    {
+        if(!file_exists($dir))
+        {
+            $this->database->getDatabaseSyncConfig()->prepareDirectory($dir, $this->applicationRoot, 0755);
+        }
+    }
 }
 
 class DatabaseSyncUpload extends DatabaseSyncMaster
@@ -265,6 +272,8 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
      */
     private function movePoolingFileToUpload()
     {
+        $this->prepareDirectory($this->uploadBaseDir);
+        
         $fileList = $this->glob($this->poolBaseDir);
         $fileList = $this->rollingLastPoolingFile($fileList, $this->poolBaseDir, $this->poolFileName, $this->poolFileExtension);
 
@@ -509,6 +518,8 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
                 $relativePath = $this->getRelativePath($record['file_path']);
                 $absolutePath = $this->getAbsolutePath($relativePath);
                 $content = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
+                $dir = dirname($absolutePath);
+                $this->prepareDirectory($dir);
                 file_put_contents($absolutePath, $content);
                 chmod($absolutePath, $permission);
                 $this->updatePathAndStatus($recordId, $absolutePath, $relativePath, 1);

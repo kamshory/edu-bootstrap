@@ -118,7 +118,7 @@ if(@$_GET['type'] == 'file')
         else if(@$_GET['step'] == '2')
         {
             $recordList = $fileSyncUpload->filePrepareUploadUserFiles();
-            $success = !empty($recordList);
+            $success = true;
             $completed = $success;
             $recordList2 = array();
             foreach($recordList as $record)

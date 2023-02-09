@@ -1,0 +1,12 @@
+<svg width="222" height="206" xmlns="http://www.w3.org/2000/svg">
+ <title>Tabung</title>
+
+ <g id="Layer_1">
+  <title>Layer 1</title>
+  <path id="svg_1" d="m164,36.33332c0,18.40949 -33.35479,33.33333 -74.50001,33.33333m74.50001,-33.33333l0,0c0,18.40949 -33.35479,33.33333 -74.50001,33.33333c-41.14521,0 -74.49999,-14.92381 -74.49999,-33.33333m0,0l0,0c0,-18.40947 33.35478,-33.33332 74.49999,-33.33332c41.14522,0 74.50001,14.92385 74.50001,33.33332l0,133.33338c0,18.40947 -33.35479,33.33327 -74.50001,33.33327c-41.14521,0 -74.49999,-14.9238 -74.49999,-33.33327l0,-133.33338z" stroke="#884D58" fill="#97944B"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="176.31526" x2="180.74592" y1="30.05416" x1="180.3125" stroke="#000" fill="none"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="12" stroke-width="0" id="svg_3" y="106.76947" x="187.98078" stroke="#000" fill="#000000">12 cm</text>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_4" y2="35.52563" x2="157.54934" y1="35.52563" x1="83.52947" stroke="#000" fill="none"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="12" stroke-width="0" id="svg_5" y="30.62365" x="104.60797" stroke="#000" fill="#000000">5 cm</text>
+ </g>
+</svg>

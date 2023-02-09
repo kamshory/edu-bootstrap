@@ -111,7 +111,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
 		$dirBase = dirname(dirname(__FILE__));
 		$permission = 0755;
-		$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
+		$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
 		
 		$content = kh_filter_input(INPUT_POST, "content");
 		$content = extractImageData($content, $base_dir, $base_src, $fileSync);

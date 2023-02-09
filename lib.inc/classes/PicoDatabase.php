@@ -82,7 +82,7 @@ class PicoDatabaseSyncConfig
 	{
 		if(!file_exists($this->baseDir))
 		{
-			$this->prepareDirecory($this->baseDir, $this->applicationDir, 0777);
+			$this->prepareDirectory($this->baseDir, $this->applicationDir, 0777);
 		}
 		$poolPath = $this->baseDir . "/" . $this->poolName . $this->extension;
 		if(file_exists($poolPath) && filesize($poolPath) > $this->maximumlength)
@@ -125,7 +125,7 @@ class PicoDatabaseSyncConfig
 	 * @param bool $sync Flag that renaming file will be synchronized or not
 	 * @return void
 	 */
-	public function prepareDirecory($dir2prepared, $dirBase, $permission)
+	public function prepareDirectory($dir2prepared, $dirBase, $permission)
 	{
 		$dir = str_replace("\\", "/", $dir2prepared);
 		$base = str_replace("\\", "/", $dirBase);

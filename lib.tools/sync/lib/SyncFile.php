@@ -323,6 +323,14 @@ class FileSyncMaster
         }
         return null;
     }
+
+    protected function prepareDirectory($dir)
+    {
+        if(!file_exists($dir))
+        {
+            $this->database->getDatabaseSyncConfig()->prepareDirectory($dir, $this->applicationRoot, 0755);
+        }
+    }
 }
 
 class FileSyncUpload extends FileSyncMaster
@@ -384,6 +392,7 @@ class FileSyncUpload extends FileSyncMaster
         foreach($fileList as $localPath)
         {
             $baseName = basename($localPath);
+            $this->prepareDirectory($this->uploadBaseDir);
             $newPath = $this->uploadBaseDir . "/" . $baseName;
             copy($localPath, $newPath);
             unlink($localPath);
@@ -452,6 +461,7 @@ class FileSyncUpload extends FileSyncMaster
         }
         catch(FileSyncException $e)
         {
+            // Do nothing
         }
         return true;
         
@@ -659,6 +669,10 @@ class FileSyncDownload extends FileSyncMaster
                 $relativePath = $this->getRelativePath($record['file_path']);
                 $absolutePath = $this->getAbsolutePath($relativePath);
                 $content = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
+
+                $dir = dirname($absolutePath);
+                $this->prepareDirectory($dir);
+
                 file_put_contents($absolutePath, $content);
                 chmod($absolutePath, $permission);
                 $this->updatePathAndStatus($recordId, $absolutePath, $relativePath, 1);
@@ -751,6 +765,8 @@ class FileSyncDownload extends FileSyncMaster
         try
         {
             $response = $this->downloadFileFromRemote($localPath, $fileSyncUrl, $username, $password);
+            $dir = dirname($localPath);
+            $this->prepareDirectory($dir);
             file_put_contents($localPath, $response);
             touch($localPath, $tm);
             chmod($localPath, $permission);
@@ -779,7 +795,10 @@ class FileSyncDownload extends FileSyncMaster
         $localPath = $info['path'];
         $tm = $info['tm'];
         $to = $info['to'];
-
+        $dir = dirname($localPath);
+        $this->prepareDirectory($dir);
+        $dir = dirname($to);
+        $this->prepareDirectory($dir);
         if(file_exists($localPath) && !file_exists($to))
         {
             chmod($localPath, 0777);

@@ -18,7 +18,7 @@ if(isset($_POST['save']))
 	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/description";
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
-	$fileSync->prepareDirecory($dir2prepared, $dirBase, $permission, true);
+	$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
 
 	$description = extractImageData($description, $base_dir, $base_src, $fileSync);
 	

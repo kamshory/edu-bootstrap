@@ -1,0 +1,3 @@
+{"op":"CREATEFILE","tm":1675953649,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063e500818a9499f5736\/84b82dbd0f7f691dba711ec81ace8d85.svg"}
+{"op":"CREATEFILE","tm":1675954241,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063e500818a9499f5736\/813634efe57473ce08d54c95eb9e833b.svg"}
+{"op":"CREATEFILE","tm":1675954336,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063e500818a9499f5736\/65506c5a5872ffc4b9e8c252e5538e00.svg"}

@@ -80,7 +80,7 @@ class FileSynchronizer
 	{
 		if(!file_exists($this->baseDir))
 		{
-			$this->prepareDirecory($this->baseDir, $this->applicationDir, 0777, false);
+			$this->prepareDirectory($this->baseDir, $this->applicationDir, 0777, false);
 		}
 		$poolPath = $this->baseDir . "/" . $this->fileName . $this->extension;
 		if(file_exists($poolPath) && filesize($poolPath) > $this->maximumlength)
@@ -199,7 +199,7 @@ class FileSynchronizer
 	 * @param bool $sync Flag that renaming file will be synchronized or not
 	 * @return void
 	 */
-	public function prepareDirecory($dir2prepared, $dirBase, $permission, $sync = false)
+	public function prepareDirectory($dir2prepared, $dirBase, $permission, $sync = false)
 	{
 		$dir = str_replace("\\", "/", $dir2prepared);
 		$base = str_replace("\\", "/", $dirBase);
