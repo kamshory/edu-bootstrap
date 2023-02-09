@@ -195,7 +195,7 @@ function filePrepareDownloadUserFiles(clbk)
                 else
                 {
                     updateProgressBar('file', 'down', 5, 100);
-                    filePrepareUploadUserFiles(clbk);
+                    fileUploadPreparation(clbk);
                 }
             }
         }
@@ -230,13 +230,34 @@ function fileDownloadUserFiles(recordId, clbk)
                 }
                 else
                 {
-                    filePrepareUploadUserFiles(clbk);
+                    fileUploadPreparation(clbk);
                 }
             }
         }
     });
 }
 
+function fileUploadPreparation(clbk)
+{
+    $.ajax({
+        url:syncPath,
+        data:{
+            type:'file',
+            direction:'up',
+            step:1
+        },
+        type:'GET',
+        dataType:'json',
+        success:function(response)
+        {         
+            if(response.success)
+            {             
+                updateProgressBar('file', 'up', 1, 100);
+                filePrepareUploadUserFiles(clbk);
+            }
+        }
+    });
+}
 
 
 /**
@@ -293,7 +314,7 @@ function fileUploadUserFiles(recordId, clbk)
             if(response.success)
             {
                 updateRecordStatus(fileSyncFilesUpload, recordId);
-                updateProgressBar('file', 'up', 1, fileSyncFilesUpload.recordList);
+                updateProgressBar('file', 'up', 3, fileSyncFilesUpload.recordList);
                 let nextRecordId = getFileSyncId(fileSyncFilesUpload);
                 if(nextRecordId != null)
                 {
@@ -335,7 +356,7 @@ function filePrepareUploadSyncFiles(clbk)
                     fileUploadSyncFiles(recordId, clbk);                         
                 }
                 else{
-                    updateProgressBar('file', 'up', 3, 100);
+                    updateProgressBar('file', 'up', 5, 100);
                     fileUploadInformation(clbk);
                 }
             }
@@ -363,7 +384,7 @@ function fileUploadSyncFiles(recordId, clbk)
             if(response.success)
             {
                 updateRecordStatus(fileUserFilesUpload, recordId);
-                updateProgressBar('file', 'up', 3, fileUserFilesUpload.recordList);
+                updateProgressBar('file', 'up', 5, fileUserFilesUpload.recordList);
                 let nextRecordId = getFileSyncId(fileUserFilesUpload);
                 if(nextRecordId != null)
                 {
@@ -396,7 +417,7 @@ function fileUploadInformation(clbk)
         {
             if(response.success)
             {
-                updateProgressBar('file', 'up', 5, 100);
+                updateProgressBar('file', 'up', 7, 100);
 
                 databaseDownloadInformation(clbk);
             }
@@ -637,7 +658,7 @@ function databasePrepareUploadSyncFiles(clbk)
                 }
                 else
                 {
-                    updateProgressBar('database', 'up', 5, 100);
+                    updateProgressBar('database', 'up', 3, 100);
                     databaseUploadInformation(clbk);
                 }
             }

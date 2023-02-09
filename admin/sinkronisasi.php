@@ -54,20 +54,26 @@ if(!empty($school_id))
         </div>
 
         <div class="sync-item" data-type="file" data-direction="up" data-step="1">
+            <div class="sync-label">Persiapan file sync untuk diupload</div>
+            <div class="progress">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="sync-item" data-type="file" data-direction="up" data-step="3">
             <div class="sync-label">Upload file pengguna ke sync hub</div>
             <div class="progress">
                 <div class="progress-bar bg-primary" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
         </div>
 
-        <div class="sync-item" data-type="file" data-direction="up" data-step="3">
+        <div class="sync-item" data-type="file" data-direction="up" data-step="5">
             <div class="sync-label">Upload file sync ke sync hub</div>
             <div class="progress">
                 <div class="progress-bar bg-primary" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
         </div>
 
-        <div class="sync-item" data-type="file" data-direction="up" data-step="5">
+        <div class="sync-item" data-type="file" data-direction="up" data-step="7">
             <div class="sync-label">Upload informasi ke sync hub</div>
             <div class="progress">
                 <div class="progress-bar bg-primary" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
