@@ -81,8 +81,7 @@ $html .=
         $html = '';
         $id = 'collapseMainMenu' . $index;
 
-        $html .= 
-'        <div id="'.$id.'" class="collapse'.$cls1.'" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordionEx" style="">
+        $html .= '        <div id="'.$id.'" class="collapse'.$cls1.'" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordionEx">
             <div class="menu-child">
 ';
 

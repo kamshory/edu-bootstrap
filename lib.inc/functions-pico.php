@@ -664,7 +664,6 @@ $fileSync = new FileSynchronizer(
 
 $picoEdu = new PicoEdu($database);
 
-
 $ip_create = $_SERVER['REMOTE_ADDR'];
 $ip_edit = $ip_create;
 

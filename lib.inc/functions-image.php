@@ -3,7 +3,7 @@ if(!function_exists("exif_read_data"))
 {
 	include_once dirname(__FILE__)."/exif.php";
 }
-function imageResizeMax($source, $destination, $maxwidth, $maxheight, $interlace=false, $type = 'jpeg', $quality = 80)
+function imageResizeMax($source, $destination, $maxwidth, $maxheight, $interlace=false, $type = 'jpeg', $quality = 80) //NOSONAR
 {
 	global $fileSync;
 	$imageinfo = getimagesize($source);
@@ -127,7 +127,7 @@ function read_exif_data_file($filename)
 	return $exif;
 }
 
-function pack_exif_data($exif)
+function pack_exif_data($exif) //NOSONAR
 {
 	if(count($exif))
 	{
@@ -322,7 +322,7 @@ function flip_vertical($im)
 	return $im2;
 }
 
-function create_thumb_image($originalfile, $destination, $dwidth, $dheight, $interlace=false, $quality=80) 
+function create_thumb_image($originalfile, $destination, $dwidth, $dheight, $interlace=false, $quality = 80) //NOSONAR
 {
 	global $fileSync;
 	$image = new StdClass();
@@ -377,11 +377,11 @@ function create_thumb_image($originalfile, $destination, $dwidth, $dheight, $int
     }
     $im1 = imagecreatetruecolor($dwidth,$dheight);
 
-	$cx = $image->width / 2;
-    $cy = $image->height / 2;
+	$cx = $image->width / 2; //NOSONAR
+    $cy = $image->height / 2; //NOSONAR
     if ($image->width < $image->height) 
 	{
-        $half = floor($image->width / 2.0);
+        $half = floor($image->width / 2.0); //NOSONAR
     } 
 	else 
 	{
