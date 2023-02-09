@@ -8,9 +8,9 @@ let databaseUserFilesDownload = {};
 let databaseSyncFilesUpload = {};
 let databaseUserFilesUpload = {};
 
-function startSync()
+function startSync(clbk)
 {
-    fileDownloadInformation();
+    fileDownloadInformation(clbk);
 }
 
 function getFileSyncId(source)
@@ -72,7 +72,7 @@ function updateProgressBar(type, direction, step, value)
 /**
  * Download informasi dari sync hub
  */
-function fileDownloadInformation()
+function fileDownloadInformation(clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -89,7 +89,7 @@ function fileDownloadInformation()
             {
                 if(response.completed)
                 {
-                    filePrepareDownloadSyncFiles();
+                    filePrepareDownloadSyncFiles(clbk);
                     updateProgressBar('file', 'down', 1, 100);
                 }
             }
@@ -100,7 +100,7 @@ function fileDownloadInformation()
 /**
  * Persiapan download file sync dari sync hub
  */
-function filePrepareDownloadSyncFiles()
+function filePrepareDownloadSyncFiles(clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -112,15 +112,14 @@ function filePrepareDownloadSyncFiles()
         type:'GET',
         dataType:'json',
         success:function(response)
-        {
-            
+        {         
             if(response.success)
             {
                 fileSyncFilesDownload.recordList = response.recordList;
                 let recordId = getFileSyncId(fileSyncFilesDownload);
                 if(recordId != null)
                 {
-                    fileDownloadSyncFiles(recordId);                         
+                    fileDownloadSyncFiles(recordId, clbk);                         
                 }
             }
         }
@@ -130,7 +129,7 @@ function filePrepareDownloadSyncFiles()
 /**
  * Download file sync dari sync hub
  */
-function fileDownloadSyncFiles(recordId)
+function fileDownloadSyncFiles(recordId, clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -151,11 +150,11 @@ function fileDownloadSyncFiles(recordId)
                 let nextRecordId = getFileSyncId(fileSyncFilesDownload);
                 if(nextRecordId != null)
                 {
-                    fileDownloadSyncFiles(nextRecordId);
+                    fileDownloadSyncFiles(nextRecordId, clbk);
                 }
                 else
                 {
-                    filePrepareDownloadUserFiles();
+                    filePrepareDownloadUserFiles(clbk);
                 }
             }
         }
@@ -165,7 +164,7 @@ function fileDownloadSyncFiles(recordId)
 /**
  * Persiapan download file pengguna dari sync hub
  */
-function filePrepareDownloadUserFiles()
+function filePrepareDownloadUserFiles(clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -185,7 +184,7 @@ function filePrepareDownloadUserFiles()
                 let recordId = getFileSyncId(fileUserFilesDownload);
                 if(recordId != null)
                 {
-                    fileDownloadUserFiles(recordId);                         
+                    fileDownloadUserFiles(recordId, clbk);                         
                 }
             }
         }
@@ -195,7 +194,7 @@ function filePrepareDownloadUserFiles()
 /**
  * Download file pengguna dari sync hub
  */
-function fileDownloadUserFiles(recordId)
+function fileDownloadUserFiles(recordId, clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -216,11 +215,11 @@ function fileDownloadUserFiles(recordId)
                 let nextRecordId = getFileSyncId(fileUserFilesDownload);
                 if(nextRecordId != null)
                 {
-                    fileDownloadUserFiles(nextRecordId);
+                    fileDownloadUserFiles(nextRecordId, clbk);
                 }
                 else
                 {
-                    filePrepareUploadUserFiles();
+                    filePrepareUploadUserFiles(clbk);
                 }
             }
         }
@@ -229,22 +228,10 @@ function fileDownloadUserFiles(recordId)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /**
  * Persiapan upload file pengguna ke sync hub
  */
-function filePrepareUploadUserFiles()
+function filePrepareUploadUserFiles(clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -263,7 +250,7 @@ function filePrepareUploadUserFiles()
                 let recordId = getFileSyncId(fileSyncFilesUpload);
                 if(recordId != null)
                 {
-                    fileUploadFiles(recordId);                         
+                    fileUploadFiles(recordId, clbk);                         
                 }
             }
         }
@@ -273,7 +260,7 @@ function filePrepareUploadUserFiles()
 /**
  * Download file sync dari sync hub
  */
-function fileUploadFiles(recordId)
+function fileUploadFiles(recordId, clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -294,11 +281,11 @@ function fileUploadFiles(recordId)
                 let nextRecordId = getFileSyncId(fileSyncFilesUpload);
                 if(nextRecordId != null)
                 {
-                    fileUploadFiles(nextRecordId);
+                    fileUploadFiles(nextRecordId, clbk);
                 }
                 else
                 {
-                    filePrepareUploadSyncFiles();
+                    filePrepareUploadSyncFiles(clbk);
                 }
             }
         }
@@ -309,7 +296,7 @@ function fileUploadFiles(recordId)
 /**
  * Persiapan upload file sync ke sync hub
  */
-function filePrepareUploadSyncFiles()
+function filePrepareUploadSyncFiles(clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -329,7 +316,7 @@ function filePrepareUploadSyncFiles()
                 let recordId = getFileSyncId(fileUserFilesUpload);
                 if(recordId != null)
                 {
-                    fileUploadSyncFiles(recordId);                         
+                    fileUploadSyncFiles(recordId, clbk);                         
                 }
             }
         }
@@ -339,7 +326,7 @@ function filePrepareUploadSyncFiles()
 /**
  * Upload file sync ke sync hub
  */
-function fileUploadSyncFiles(recordId)
+function fileUploadSyncFiles(recordId, clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -360,11 +347,11 @@ function fileUploadSyncFiles(recordId)
                 let nextRecordId = getFileSyncId(fileUserFilesUpload);
                 if(nextRecordId != null)
                 {
-                    fileUploadSyncFiles(nextRecordId);
+                    fileUploadSyncFiles(nextRecordId, clbk);
                 }
                 else
                 {
-                    fileUploadInformation();
+                    fileUploadInformation(clbk);
                 }
             }
         }
@@ -391,7 +378,7 @@ function fileUploadInformation()
             {
                 updateProgressBar('file', 'up', 5, 100);
 
-                databaseDownloadInformation();
+                databaseDownloadInformation(clbk);
             }
         }
     });
@@ -431,7 +418,7 @@ function databaseDownloadInformation()
             {
                 if(response.completed)
                 {
-                    databasePrepareDownloadSyncFiles();
+                    databasePrepareDownloadSyncFiles(clbk);
                     updateProgressBar('database', 'down', 1, 100);
                 }
             }
@@ -442,7 +429,7 @@ function databaseDownloadInformation()
 /**
  * Persiapan download database sync dari sync hub
  */
-function databasePrepareDownloadSyncFiles()
+function databasePrepareDownloadSyncFiles(clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -459,10 +446,10 @@ function databasePrepareDownloadSyncFiles()
             if(response.success)
             {
                 databaseSyncFilesDownload.recordList = response.recordList;
-                let recordId = getFileSyncId(databaseSyncFilesDownload);
+                let recordId = getFileSyncId(databaseSyncFilesDownload, clbk);
                 if(recordId != null)
                 {
-                    databaseDownloadSyncFiles(recordId);                         
+                    databaseDownloadSyncFiles(recordId, clbk);                         
                 }
             }
         }
@@ -472,7 +459,7 @@ function databasePrepareDownloadSyncFiles()
 /**
  * Download database sync dari sync hub
  */
-function databaseDownloadSyncFiles(recordId)
+function databaseDownloadSyncFiles(recordId, clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -493,11 +480,11 @@ function databaseDownloadSyncFiles(recordId)
                 let nextRecordId = getFileSyncId(databaseSyncFilesDownload);
                 if(nextRecordId != null)
                 {
-                    databaseDownloadSyncFiles(nextRecordId);
+                    databaseDownloadSyncFiles(nextRecordId, clbk);
                 }
                 else
                 {
-                    databasePrepareExecuteQuery();
+                    databasePrepareExecuteQuery(clbk);
                 }
             }
         }
@@ -508,7 +495,7 @@ function databaseDownloadSyncFiles(recordId)
 /**
  * Persiapan eksekusi query
  */
-function databasePrepareExecuteQuery()
+function databasePrepareExecuteQuery(clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -528,7 +515,7 @@ function databasePrepareExecuteQuery()
                 let recordId = getFileSyncId(databaseSyncFilesDownload);
                 if(recordId != null)
                 {
-                    databaseExecuteQuery(recordId);                         
+                    databaseExecuteQuery(recordId, clbk);                         
                 }
             }
         }
@@ -538,7 +525,7 @@ function databasePrepareExecuteQuery()
 /**
  * Download database sync dari sync hub
  */
-function databaseExecuteQuery(recordId)
+function databaseExecuteQuery(recordId, clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -559,11 +546,11 @@ function databaseExecuteQuery(recordId)
                 let nextRecordId = getFileSyncId(databaseSyncFilesDownload);
                 if(nextRecordId != null)
                 {
-                    databaseExecuteQuery(nextRecordId);
+                    databaseExecuteQuery(nextRecordId, clbk);
                 }
                 else
                 {
-                    databasePrepareUploadSyncFiles();
+                    databasePrepareUploadSyncFiles(clbk);
                 }
             }
         }
@@ -573,7 +560,7 @@ function databaseExecuteQuery(recordId)
 /**
  * Persiapan upload database sync ke sync hub
  */
-function databasePrepareUploadSyncFiles()
+function databasePrepareUploadSyncFiles(clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -593,7 +580,7 @@ function databasePrepareUploadSyncFiles()
                 let recordId = getFileSyncId(databaseUserFilesUpload);
                 if(recordId != null)
                 {
-                    databaseUploadSyncFiles(recordId);                         
+                    databaseUploadSyncFiles(recordId, clbk);                         
                 }
             }
         }
@@ -624,11 +611,11 @@ function databaseUploadSyncFiles(recordId)
                 let nextRecordId = getFileSyncId(databaseUserFilesUpload);
                 if(nextRecordId != null)
                 {
-                    databaseUploadSyncFiles(nextRecordId);
+                    databaseUploadSyncFiles(nextRecordId, clbk);
                 }
                 else
                 {
-                    databaseUploadInformation();
+                    databaseUploadInformation(clbk);
                 }
             }
         }
@@ -638,7 +625,7 @@ function databaseUploadSyncFiles(recordId)
 /**
  * Upload informasi ke sync hub
  */
-function databaseUploadInformation()
+function databaseUploadInformation(clbk)
 {
     $.ajax({
         url:'lib.tools/sync/test.php',
@@ -654,7 +641,7 @@ function databaseUploadInformation()
             if(response.success)
             {
                 updateProgressBar('database', 'up', 5, 100);
-
+                clbk();
             }
         }
     });

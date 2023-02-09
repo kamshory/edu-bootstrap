@@ -23,10 +23,9 @@ if(!empty($school_id))
             $(document).on('click', '#start-sync', function(e){
                 startSync();
             })
-        });
-
-        
+        });       
     </script>
+
     <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.assets/script/sync.js"></script>
     <button class="btn btn-success" id="start-sync">Mulai Sinkronisasi</button>
     <div class="sync-container">
