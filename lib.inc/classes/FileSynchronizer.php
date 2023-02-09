@@ -46,10 +46,10 @@ class FileSynchronizer
 	}
 	public function getPoolPath()
 	{
-		$poolPath = $this->basePath . "/" . $this->fileName;
+		$poolPath = $this->basePath . "/" . $this->fileName . $this->extension;
 		if(file_exists($poolPath) && filesize($poolPath) > $this->maximumlength)
 		{
-			$newPath = $this->basePath . "/" . $this->prefix.date('Y-m-d-H-i-s')."-".$this->generateNewId().$this->extension;
+			$newPath = $this->basePath . "/" . $this->prefix.date('Y-m-d-H-i-s') . "-" . $this->generateNewId() . $this->extension;
 			rename($poolPath, $newPath);
 		}
 		return $poolPath;
