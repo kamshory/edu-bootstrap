@@ -22,3 +22,9 @@ UPDATE `edu_option`
 UPDATE `edu_option` 
 					SET `time_edit` = '2023-02-09 21:53:47', `member_edit` = 'aaaaaaaaaaaaa' 
 					WHERE `question_id` = '063e4f321d659fb3ff73' AND `option_id` = '063e4f321d951ee5b3ea';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` set
+		`title` = '(Tanpa Judul)', `content` = '<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-latex=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-renderer=\"browser-png\" src=\"media.edu/school/063ce682801be89951aa/article/063e2ef9aed05f1956e2/5ba16f09fb4bf89c02eb617bfc21362b.png\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-09 22:23:03', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e2ef9aed05f1956e2' AND `school_id` = '063ce682801be89951aa'
+		;

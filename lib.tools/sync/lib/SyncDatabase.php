@@ -265,18 +265,15 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
     {
         parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
     }
-    
 
     /**
      * Move pooling file to new path and return the new file list
      */
     private function movePoolingFileToUpload()
     {
-        $this->prepareDirectory($this->uploadBaseDir);
-        
+        $this->prepareDirectory($this->uploadBaseDir);     
         $fileList = $this->glob($this->poolBaseDir);
         $fileList = $this->rollingLastPoolingFile($fileList, $this->poolBaseDir, $this->poolFileName, $this->poolFileExtension);
-
         $fileList = $this->sort($fileList);
         $fileToUpload = array();
         foreach($fileList as $val)
@@ -316,7 +313,6 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
         {
             $this->createUploadSyncRecord($val);
         }
-
         return true;
     }
     
@@ -356,16 +352,13 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
         if(file_exists($path))
         {
             try{
-                $result = $this->uploadSyncFile($path, $record, $fileSyncUrl, $username, $password);
-                
+                $result = $this->uploadSyncFile($path, $record, $fileSyncUrl, $username, $password);              
                 $this->updateSyncRecord($sync_file_id, 2);
-
             }
             catch(Exception $e)
             {
                 $this->updateSyncRecord($sync_file_id, 1);
-            }  
-
+            }
         }
         return true;
     }
@@ -460,7 +453,6 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         curl_close($ch);
-
         
         if($httpcode)
         {
