@@ -22,6 +22,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	}
 	$sort_order = 0;
 	$class = kh_filter_input(INPUT_POST, "classlist", FILTER_SANITIZE_SPECIAL_CHARS);
+	$school_program_id = kh_filter_input(INPUT_POST, "school_program_id", FILTER_SANITIZE_STRING_NEW);
 	$subject = kh_filter_input(INPUT_POST, "subject", FILTER_SANITIZE_SPECIAL_CHARS);
 	$description = kh_filter_input(INPUT_POST, "description", FILTER_SANITIZE_SPECIAL_CHARS);
 	$guidance = kh_filter_input(INPUT_POST, "guidance", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -87,7 +88,7 @@ if(count(@$_POST) && isset($_POST['save']))
 
 if(isset($_POST['set_active']) && isset($_POST['test_id']))
 {
-	$tests = @$_POST['test_id'];
+	$tests = $_POST['test_id'];
 	if(isset($tests) && is_array($tests))
 	{
 		foreach($tests as $key=>$val)
@@ -100,7 +101,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_id']))
 }
 if(isset($_POST['set_inactive']) && isset($_POST['test_id']))
 {
-	$tests = @$_POST['test_id'];
+	$tests = $_POST['test_id'];
 	if(isset($tests) && is_array($tests))
 	{
 		foreach($tests as $key=>$val)
@@ -113,7 +114,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_id']))
 }
 if(isset($_POST['delete']) && isset($_POST['test_id']))
 {
-	$tests = @$_POST['test_id'];
+	$tests = $_POST['test_id'];
 	if(isset($tests) && is_array($tests))
 	{
 		foreach($tests as $key=>$val)
@@ -144,8 +145,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$test_id = $database->generateNewId();
 	$sql = "INSERT INTO `edu_test` 
-	(`test_id`, `school_id`, `name`, `class`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
-	('$test_id', '$school_id', '$name', '$class', '$subject', '$teacher_id', '$description', '$guidance', '$open', '$has_limits', '$trial_limits', '$threshold', '$assessment_methods', '$number_of_question', '$number_of_option', '$question_per_page', '$random', '$duration', '$has_alert', '$alert_time', '$alert_message', '$autosubmit', '$standard_score', '$penalty', '$sort_order', '$score_notification', '$publish_answer', $time_answer_publication, '$test_availability', $available_from, $available_to, '$time_create', '$time_edit', '$member_create', '$role_create', '$member_edit', '$role_edit', '$ip_create', '$ip_edit', '$active')";
+	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
+	('$test_id', '$school_id', '$name', '$class', '$school_program_id', '$subject', '$teacher_id', '$description', '$guidance', '$open', '$has_limits', '$trial_limits', '$threshold', '$assessment_methods', '$number_of_question', '$number_of_option', '$question_per_page', '$random', '$duration', '$has_alert', '$alert_time', '$alert_message', '$autosubmit', '$standard_score', '$penalty', '$sort_order', '$score_notification', '$publish_answer', $time_answer_publication, '$test_availability', $available_from, $available_to, '$time_create', '$time_edit', '$member_create', '$role_create', '$member_edit', '$role_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
 
 	$collection = kh_filter_input(INPUT_POST, "collection", FILTER_SANITIZE_STRING_NEW);
@@ -304,7 +305,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "UPDATE `edu_test` SET 
-	`name` = '$name', `class` = '$class', `subject` = '$subject', `teacher_id` = '$teacher_id', `description` = '$description', 
+	`name` = '$name', `class` = '$class', `school_program_id` = '$school_program_id', `subject` = '$subject', `teacher_id` = '$teacher_id', `description` = '$description', 
 	`guidance` = '$guidance', `open` = '$open', `has_limits` = '$has_limits', `trial_limits` = '$trial_limits', `threshold` = '$threshold', 
 	`assessment_methods` = '$assessment_methods', `number_of_question` = '$number_of_question', `number_of_option` = '$number_of_option', 
 	`question_per_page` = '$question_per_page', `random` = '$random', `duration` = '$duration', `has_alert` = '$has_alert', 
@@ -335,24 +336,39 @@ if(!empty($collection))
 	}
 }
 
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
-$stmtc = $database->executeQuery($sqlc);
+?>
+<?php
+$sqlc = "SELECT `edu_class`.`class_id`, `edu_class`.`name`, `edu_class`.`school_program_id` 
+FROM `edu_class` 
+LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = `edu_class`.`school_program_id`)
+WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id' AND `edu_class`.`name` != '' 
+ORDER BY `edu_school_program`.`sort_order` ASC , `edu_class`.`sort_order` ASC 
+";
 $arrc = array();
-if($stmtc->rowCount() > 0)
+$stmt = $database->executeQuery($sqlc);
+if($stmt->rowCount() > 0)
 {
-	$arrc = $stmtc->fetchAll(PDO::FETCH_ASSOC);
+	$arrc = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
+<script type="text/javascript">
+var classList = <?php echo json_encode($arrc);?>;
+</script>
 <style type="text/css">
-input#duration{
-	background:url(lib.assets/theme/default/css/images/duration-bg.png) no-repeat right center;
-	padding-right:60px;
-	box-sizing:border-box;
-}
 .toggle-tr{
 	display:none;
 }
+.class-list li label{
+	display:block; 
+	width:100%;
+}
+label > span{
+	display:inline-block;
+	width:100%;
+}
 </style>
+<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.assets/script/test-creator.js"></script>
+
 <form name="formedu_test" id="formedu_test" action="" method="post" enctype="multipart/form-data">
   <input type="hidden" name="collection" id="collection" value="<?php echo $collection;?>" />
   <input type="hidden" name="selection" id="selection" value="<?php echo $selection;?>" />
@@ -362,9 +378,38 @@ input#duration{
 		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo htmlspecialchars($name);?>" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
+		<td>Jurusan</td>
+        <td><select class="form-control input-select" name="school_program_id" id="school_program_id">
+		<option value=""></option>
+		<?php 
+		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` ASC ";
+		echo $picoEdu->createFilterDb(
+			$sql2,
+			array(
+				'attributeList'=>array(
+					array('attribute'=>'value', 'source'=>'school_program_id')
+				),
+				'selectCondition'=>array(
+					'source'=>'school_program_id',
+					'value'=>null
+				),
+				'caption'=>array(
+					'delimiter'=>PicoEdu::RAQUO,
+					'values'=>array(
+						'name'
+					)
+				)
+			)
+		);		
+		?>
+		</select></td>
+		</tr>
+		<tr>
 		<td>Kelas
 		</td><td><input type="hidden" name="classlist" id="classlist" autocomplete="off" />
-        <input class="btn btn-sm" type="button" id="select-class" value="Pilih Kelas" />
+        <button type="button" class="btn btn-primary" id="select-class">
+		Atur Kelas
+		</button>
         </td>
 		</tr>
 		<tr>
@@ -497,126 +542,28 @@ input#duration{
 		</tr>
 	</table>
 </form>
-<script type="text/javascript">
-var classList = <?php echo json_encode($arrc);?>;
-function updateGoggle()
-{
-	$('.toggle-tr').each(function(index, element) {
-		var row = $(this)
-        var sel = row.attr('data-toggle');
-		$(':input[name="'+sel+'"]').change();
-	});
-}
-function initToggle()
-{
-	$('.toggle-tr').each(function(index, element) {
-		var row = $(this)
-        var sel = row.attr('data-toggle');
-		$(':input[name="'+sel+'"]').on('change', function(){
-			var val = "0";
-			if(($(this).attr('type') == 'checkbox' || $(this).attr('type') == 'radio'))
-			{
-				if($(this)[0].checked)
-				{
-					val = $(this).attr('value');
-				}
-				else
-				{
-					val = "0";
-				}
-			}
-			else
-			{
-				val = $(this).val();
-			}
-			if(!val) val = "0";
-			if(val == row.attr('data-show-condition'))
-			{
-				row.css({'display':'table-row'});
-			}
-			if(val == row.attr('data-hide-condition'))
-			{
-				row.css({'display':'none'});
-			}
-		});
-    });
-}
-function buildClassOption(list, value){
-	var i, j, k;
-	var html = '';
-	var sel = '';
-	var vals = value.split(",");
-	html += '<ul class="class-list">';
-	
-	for(i in list)
-	{
-		if($.inArray(list[i].class_id, vals) != -1)
-		{
-			sel = ' class-item-selected';
-		}
-		else 
-		{
-			sel = '';
-		}
-		html += '<li class="class-item'+sel+'" data-class-id="'+list[i].class_id+'"><a href="javascript:;">'+list[i].name+'</a></li>'; 
-	}
-	
-	html += '</ul>';
-	return html;
-}
-function selectClass()
-{
-	var val = $('#formedu_test #classlist').val();
-	var html = ''+
-	'<div class="overlay-dialog-area">\r\n'+
-	'	<h3>Pilih Kelas</h3>\r\n'+
-	'    <div class="select-class-area">\r\n'+
-	buildClassOption(classList, val)+
-	'    </div>\r\n'+
-	'    <div class="button-area" style="text-align:center">\r\n'+
-	'    	<input type="button" class="btn com-button btn-success" id="update-class" value="Terapkan" />\r\n'+
-	'    	<input type="button" class="btn com-button btn-success" id="cancel-class" value="Batalkan" />\r\n'+
-	'    </div>\r\n'+
-	'</div>\r\n';
-	overlayDialog(html, 400, 360);
-	$('.class-item').each(function(index, element) {
-        $(this).find('a').on('click', function(e){
-			$(this).parent().toggleClass('class-item-selected');
-			e.preventDefault();
-		});
-    });
-	$('#update-class').on('click', function(e){
-		var arr = [];
-		$('.class-item').each(function(index, element) {
-			if($(this).hasClass('class-item-selected'))
-			{
-				arr.push($(this).attr('data-class-id'));
-			}
-		});
-		$('#formedu_test #classlist').val(arr.join(','));
-		closeOverlayDialog();
-	});
-	$('#cancel-class').on('click', function(e){
-		closeOverlayDialog();
-	});
-}
-$(document).ready(function(e) {
-    setTimeout(function(){
-		initToggle();
-		updateGoggle();
-	}, 100);
-    setTimeout(function(){
-		var duration = parseInt(parseInt($('#duration').val() || '0')/60);
-		$('#duration').val(duration);
-	}, 500);
-	$(document).on('click', '#select-class', function(e){
-		selectClass();
-		e.preventDefault();
-	}); 
-		
-});
-</script>
 <?php getDefaultValues($database, 'edu_test', array('open','has_limits','trial_limits','threshold','assessment_methods','number_of_question','number_of_option','question_per_page','random','duration','has_alert','alert_time','standard_score','penalty','score_notification','publish_answer','test_availability','active')); ?>
+
+<!-- Modal -->
+<div class="modal fade" id="select-class-modal" tabindex="-1" role="dialog" aria-labelledby="selectClassTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="selectClassTitle">Pilih Kelas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="class-list-container"></div>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-primary" id="update-class">Terapkan</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?php
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
@@ -633,139 +580,40 @@ $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
-$sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
-$stmtc = $database->executeQuery($sqlc);
+
+?>
+<?php
+$sqlc = "SELECT `edu_class`.`class_id`, `edu_class`.`name`, `edu_class`.`school_program_id` 
+FROM `edu_class` 
+LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = `edu_class`.`school_program_id`)
+WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id' AND `edu_class`.`name` != '' 
+ORDER BY `edu_school_program`.`sort_order` ASC , `edu_class`.`sort_order` ASC 
+";
 $arrc = array();
-if($stmtc->rowCount() > 0)
+$stmt = $database->executeQuery($sqlc);
+if($stmt->rowCount() > 0)
 {
-	$arrc = $stmtc->fetchAll(PDO::FETCH_ASSOC);
+	$arrc = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
+<script type="text/javascript">
+var classList = <?php echo json_encode($arrc);?>;
+</script>
 <style type="text/css">
-input#duration{
-	background:url(lib.assets/theme/default/css/images/duration-bg.png) no-repeat right center;
-	padding-right:60px;
-	box-sizing:border-box;
-}
 .toggle-tr{
 	display:none;
 }
+.class-list li label{
+	display:block; 
+	width:100%;
+}
+label > span{
+	display:inline-block;
+	width:100%;
+}
 </style>
-<script type="text/javascript">
-var classList = <?php echo json_encode($arrc);?>;
-function updateGoggle()
-{
-	$('.toggle-tr').each(function(index, element) {
-		var row = $(this)
-        var sel = row.attr('data-toggle');
-		$(':input[name="'+sel+'"]').change();
-	});
-}
-function initToggle()
-{
-	$('.toggle-tr').each(function(index, element) {
-		var row = $(this)
-        var sel = row.attr('data-toggle');
-		$(':input[name="'+sel+'"]').on('change', function(){
-			var val = "0";
-			if(($(this).attr('type') == 'checkbox' || $(this).attr('type') == 'radio'))
-			{
-				if($(this)[0].checked)
-				{
-					val = $(this).attr('value');
-				}
-				else
-				{
-					val = "0";
-				}
-			}
-			else
-			{
-				val = $(this).val();
-			}
-			if(!val) val = "0";
-			if(val == row.attr('data-show-condition'))
-			{
-				row.css({'display':'table-row'});
-			}
-			if(val == row.attr('data-hide-condition'))
-			{
-				row.css({'display':'none'});
-			}
-		});
-    });
-}
-function buildClassOption(list, value){
-	var i, j, k;
-	var html = '';
-	var sel = '';
-	var vals = value.split(",");
-	html += '<ul class="class-list">';
-	
-	for(i in list)
-	{
-		if($.inArray(list[i].class_id, vals) != -1)
-		{
-			sel = ' class-item-selected';
-		}
-		else 
-		{
-			sel = '';
-		}
-		html += '<li class="class-item'+sel+'" data-class-id="'+list[i].class_id+'"><a href="javascript:;">'+list[i].name+'</a></li>'; 
-	}
-	
-	html += '</ul>';
-	return html;
-}
-function selectClass()
-{
-	var val = $('#formedu_test #classlist').val();
-	var html = ''+
-	'<div class="overlay-dialog-area">\r\n'+
-	'	<h3>Pilih Kelas</h3>\r\n'+
-	'    <div class="select-class-area">\r\n'+
-	buildClassOption(classList, val)+
-	'    </div>\r\n'+
-	'    <div class="button-area" style="text-align:center">\r\n'+
-	'    	<input type="button" class="btn com-button btn-success" id="update-class" value="Terapkan" />\r\n'+
-	'    	<input type="button" class="btn com-button btn-success" id="cancel-class" value="Batalkan" />\r\n'+
-	'    </div>\r\n'+
-	'</div>\r\n';
-	overlayDialog(html, 400, 360);
-	$('.class-item').each(function(index, element) {
-        $(this).find('a').on('click', function(e){
-			$(this).parent().toggleClass('class-item-selected');
-			e.preventDefault();
-		});
-    });
-	$('#update-class').on('click', function(e){
-		var arr = [];
-		$('.class-item').each(function(index, element) {
-			if($(this).hasClass('class-item-selected'))
-			{
-				arr.push($(this).attr('data-class-id'));
-			}
-		});
-		$('#formedu_test #classlist').val(arr.join(','));
-		closeOverlayDialog();
-	});
-	$('#cancel-class').on('click', function(e){
-		closeOverlayDialog();
-	});
-}
-$(document).ready(function(e) {
-    setTimeout(function(){
-		initToggle();
-		updateGoggle();
-	}, 100);
-	$(document).on('click', '#select-class', function(e){
-		selectClass();
-		e.preventDefault();
-	}); 
-		
-});
-</script>
+<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.assets/script/test-creator.js"></script>
+
 <form name="formedu_test" id="formedu_test" action="" method="post" enctype="multipart/form-data">
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
@@ -774,10 +622,39 @@ $(document).ready(function(e) {
 		  <input type="hidden" name="test_id2" id="test_id2" value="<?php echo $data['test_id'];?>" /></td>
 		</tr>
 		<tr>
+		<td>Jurusan</td>
+        <td><select class="form-control input-select" name="school_program_id" id="school_program_id">
+		<option value=""></option>
+		<?php 
+		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` ASC ";
+		echo $picoEdu->createFilterDb(
+			$sql2,
+			array(
+				'attributeList'=>array(
+					array('attribute'=>'value', 'source'=>'school_program_id')
+				),
+				'selectCondition'=>array(
+					'source'=>'school_program_id',
+					'value'=>$data['school_program_id']
+				),
+				'caption'=>array(
+					'delimiter'=>PicoEdu::RAQUO,
+					'values'=>array(
+						'name'
+					)
+				)
+			)
+		);		
+		?>
+		</select></td>
+		</tr>
+		<tr>
 		<td>Kelas
 		</td>
         <td><input type="hidden" name="classlist" id="classlist" value="<?php echo $data['class'];?>" autocomplete="off" />
-        <input type="button" id="select-class" value="Atur Kelas" />
+        <button type="button" class="btn btn-primary" id="select-class">
+		Atur Kelas
+		</button>
         </td>
 		</tr>
 		<tr>
@@ -908,6 +785,26 @@ $(document).ready(function(e) {
 		</tr>
 	</table>
 </form>
+<!-- Modal -->
+<div class="modal fade" id="select-class-modal" tabindex="-1" role="dialog" aria-labelledby="selectClassTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="selectClassTitle">Pilih Kelas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="class-list-container"></div>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-primary" id="update-class">Terapkan</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?php
 }
 else
@@ -927,6 +824,7 @@ $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher_id`,
+(SELECT `edu_school_program`.`name` FROM `edu_school_program` WHERE `edu_school_program`.`school_program_id` = `edu_test`.`school_program_id`) AS `school_program_id`,
 (SELECT `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_create`) AS `member_create`,
 (SELECT `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_edit`) AS `member_edit`
 FROM `edu_test` 
@@ -944,8 +842,15 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td><?php echo $data['name'];?> </td>
 		</tr>
 		<tr>
+		<td>Jurusan
+		</td><td><?php echo $data['school_program_id'];?> </td>
+		</tr>
+		<tr>
 		<td>Kelas
-		</td><td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
+		</td>
+		<td><?php $class = $picoEdu->textClass($array_class, $data['class']); 
+		$class_sort = $picoEdu->textClass($array_class, $data['class'], 5);?>
+		<a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
 		</tr>
 		<tr>
 		<td>Mata Pelajaran
