@@ -34,7 +34,7 @@ if($stmt->rowCount() > 0)
 	{
 		$data = kh_filter_input(INPUT_POST, "data", FILTER_SANITIZE_STRING_NEW);
 		$ext = kh_filter_input(INPUT_POST, "ext", FILTER_SANITIZE_STRING_NEW);
-		if(stripos($ext, 'svg'))
+		if(stripos($ext, 'svg') !== false)
 		{
 			$ext = 'svg';
 		}
