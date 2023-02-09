@@ -7,7 +7,7 @@ let databaseSyncFilesDownload = {};
 let databaseUserFilesDownload = {};
 let databaseSyncFilesUpload = {};
 let databaseUserFilesUpload = {};
-let path = '';
+let syncPath = '';
 function startSync(path, clbk)
 {
     syncPath = path;
@@ -467,9 +467,16 @@ function databasePrepareDownloadSyncFiles(clbk)
             {
                 databaseSyncFilesDownload.recordList = response.recordList;
                 let recordId = getFileSyncId(databaseSyncFilesDownload, clbk);
+                console.log(recordId)
                 if(recordId != null)
                 {
                     databaseDownloadSyncFiles(recordId, clbk);                         
+                }
+                else
+                {
+                    updateProgressBar('database', 'down', 3, 100);
+                    console.log('updateProgressBar')
+                    databasePrepareExecuteQuery(clbk);
                 }
             }
         }
@@ -537,6 +544,11 @@ function databasePrepareExecuteQuery(clbk)
                 {
                     databaseExecuteQuery(recordId, clbk);                         
                 }
+                else
+                {
+                    updateProgressBar('database', 'down', 5, 100);
+                    databaseUploadPreparation(clbk);
+                }
             }
         }
     });
@@ -570,8 +582,30 @@ function databaseExecuteQuery(recordId, clbk)
                 }
                 else
                 {
-                    databasePrepareUploadSyncFiles(clbk);
+                    databaseUploadPreparation(clbk);
                 }
+            }
+        }
+    });
+}
+
+function databaseUploadPreparation(clbk)
+{
+    $.ajax({
+        url:syncPath,
+        data:{
+            type:'database',
+            direction:'up',
+            step:1
+        },
+        type:'GET',
+        dataType:'json',
+        success:function(response)
+        {         
+            if(response.success)
+            {             
+                updateProgressBar('database', 'up', 1, 100);
+                databasePrepareUploadSyncFiles(clbk);
             }
         }
     });
@@ -587,13 +621,12 @@ function databasePrepareUploadSyncFiles(clbk)
         data:{
             type:'database',
             direction:'up',
-            step:4
+            step:2
         },
         type:'GET',
         dataType:'json',
         success:function(response)
-        {
-            
+        {         
             if(response.success)
             {
                 databaseUserFilesUpload.recordList = response.recordList;
@@ -601,6 +634,11 @@ function databasePrepareUploadSyncFiles(clbk)
                 if(recordId != null)
                 {
                     databaseUploadSyncFiles(recordId, clbk);                         
+                }
+                else
+                {
+                    updateProgressBar('database', 'up', 5, 100);
+                    databaseUploadInformation(clbk);
                 }
             }
         }
@@ -617,7 +655,7 @@ function databaseUploadSyncFiles(recordId, clbk)
         data:{
             type:'database',
             direction:'up',
-            step:5,
+            step:3,
             recordId:recordId
         },
         type:'GET',
@@ -652,7 +690,7 @@ function databaseUploadInformation(clbk)
         data:{
             type:'database',
             direction:'up',
-            step:6
+            step:4
         },
         type:'GET',
         dataType:'json',

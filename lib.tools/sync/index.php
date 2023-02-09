@@ -206,11 +206,82 @@ if(@$_GET['type'] == 'database')
         $databaseSyncDownload = new \DatabaseSyncDownload($database, $applicationRoot, $databaseUploadBaseDir, $databaseDownloadBaseDir, $databasePoolBaseDir, $databasePoolName, $databasePoolRollingPrefix, $databasePoolExtension);
         if(@$_GET['step'] == '1')
         {
-            $databaseSyncDownload->syncRemoteHostRecordToDatabase($databaseSyncUrl, $username, $password);
+            $success = $databaseSyncDownload->databaseDownloadInformation($databaseSyncUrl, $username, $password);
+            echo json_encode(
+                array(
+                    'success'=>$success,
+                    'completed'=>$success
+                )
+            );
+            exit();
         }
         else if(@$_GET['step'] == '2')
         {
-            $databaseSyncDownload->syncRemoteQueryToDatabase();
+            $recordList = $databaseSyncDownload->databasePrepareDownloadSyncFiles();
+            $success = true;
+            $completed = $success;
+            $recordList2 = array();
+            foreach($recordList as $record)
+            {
+                $recordList2[] = array(
+                    'recordId'=>$record['sync_database_id'],
+                    'executed'=>false
+                );
+            }
+            echo json_encode(
+                array(
+                    'success'=>$success,
+                    'completed'=>$completed,
+                    'recordList'=>$recordList2
+                )
+            );
+            exit();
+        }
+        else if(@$_GET['step'] == '3')
+        {
+            $recordId = trim(@$_GET['recordId']);
+            $success = $databaseSyncDownload->databaseDownloadSyncFiles($recordId, $permission, $databaseSyncUrl, $username, $password);
+            echo json_encode(
+                array(
+                    'success'=>$success,
+                    'completed'=>$success
+                )
+            );
+            exit();
+        }
+        else if(@$_GET['step'] == '4')
+        {
+            $recordList = $databaseSyncDownload->databasePrepareExecuteQuery();
+            $success = true;
+            $completed = $success;
+            $recordList2 = array();
+            foreach($recordList as $record)
+            {
+                $recordList2[] = array(
+                    'recordId'=>$record['sync_database_id'],
+                    'executed'=>false
+                );
+            }
+            echo json_encode(
+                array(
+                    'success'=>$success,
+                    'completed'=>$completed,
+                    'recordList'=>$recordList2
+                )
+            );
+            exit();
+        }
+        else if(@$_GET['step'] == '5')
+        {
+            $recordId = trim(@$_GET['recordId']);
+            $success = $databaseSyncDownload->databaseExecuteQuery($recordId);
+            echo json_encode(
+                array(
+                    'success'=>$success,
+                    'completed'=>$success
+                )
+            );
+            exit();
         }
     }
     if(@$_GET['direction'] == 'up')
@@ -218,11 +289,60 @@ if(@$_GET['type'] == 'database')
         $databaseSyncUpload = new \DatabaseSyncUpload($database, $applicationRoot, $databaseUploadBaseDir, $databaseDownloadBaseDir, $databasePoolBaseDir, $databasePoolName, $databasePoolRollingPrefix, $databasePoolExtension);
         if(@$_GET['step'] == '1')
         {
-            $databaseSyncUpload->syncLocalQueryToDatabase();
+            $success = $databaseSyncUpload->syncLocalQueryToDatabase();
+            echo json_encode(
+                array(
+                    'success'=>$success,
+                    'completed'=>$success
+                )
+            );
+            exit();
         }
         else if(@$_GET['step'] == '2')
         {
-            $databaseSyncUpload->syncLocalQueryToRemoteHost($databaseSyncUrl, $username, $password);
+            $recordList = $databaseSyncUpload->databasePrepareUploadSyncFiles();
+            $success = true;
+            $completed = $success;
+            $recordList2 = array();
+            foreach($recordList as $record)
+            {
+                $recordList2[] = array(
+                    'recordId'=>$record['sync_database_id'],
+                    'executed'=>false
+                );
+            }
+            echo json_encode(
+                array(
+                    'success'=>$success,
+                    'completed'=>$completed,
+                    'recordList'=>$recordList2
+                )
+            );
+            exit();
+        }
+        else if(@$_GET['step'] == '3')
+        {
+            $recordId = trim(@$_GET['recordId']);
+            
+            $success = $databaseSyncUpload->databaseUploadSyncFiles($recordId, $databaseSyncUrl, $username, $password);
+            echo json_encode(
+                array(
+                    'success'=>$success,
+                    'completed'=>$success
+                )
+            );
+            exit();
+        }
+        else if(@$_GET['step'] == '4')
+        {
+            $success = true;
+            echo json_encode(
+                array(
+                    'success'=>$success,
+                    'completed'=>$success
+                )
+            );
+            exit();
         }
     }
 }

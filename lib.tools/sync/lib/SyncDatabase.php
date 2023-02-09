@@ -107,6 +107,7 @@ class DatabaseSyncMaster
      */
     protected function uploadSyncFile($path, $record, $url, $username, $password)
     {
+        ob_start();
         if(function_exists('curl_file_create')) 
         { 
             $cFile = curl_file_create($path);
@@ -132,17 +133,20 @@ class DatabaseSyncMaster
             'time_upload' => $time_upload,
             'file_contents' => $cFile
         );
+        
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+  
         $server_output = curl_exec($ch);
+
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         curl_close($ch);
-       
+        ob_end_clean();
         if($httpcode)
         {
             return json_decode($server_output);
@@ -173,6 +177,67 @@ class DatabaseSyncMaster
     {
         $sql = "UPDATE `edu_sync_database` SET `status` = '$status' WHERE `sync_database_id` = '$sync_database_id' ";
         return $this->database->executeUpdate($sql, false);
+    }
+
+    /**
+     * Get relative from absolute path given
+     * @param mixed $path Absolute path
+     * @return mixed Relative path
+     */
+    public function getRelativePath($path)
+    {
+        $post = stripos($path, $this->applicationRoot);
+        if($post === 0)
+        {
+            return substr($path, strlen($this->applicationRoot));
+        } 
+        else 
+        {
+            return $path;
+        }
+    }
+
+    /**
+     * Get absolute from relative path given
+     * @param mixed $path Relative path
+     * @return mixed Absolute path
+     */
+    public function getAbsolutePath($path)
+    {
+        $post = stripos($path, $this->applicationRoot);
+        if($post === 0)
+        {
+            return $path;
+        } 
+        else 
+        {
+            return $this->applicationRoot.$path;
+        }
+    }
+
+    
+
+    protected function updatePathAndStatus($recordId, $absolutePath, $relativePath, $status)
+    {
+        $sql = "UPDATE `edu_sync_database` SET `file_path` = '$absolutePath', `relative_path` = '$relativePath', `status` = '$status' WHERE `sync_database_id` = '$recordId' ";
+        return $this->database->executeQuery($sql);
+    }
+
+    /**
+     * Get sync record
+     * @param string $recordId Sync record ID
+     * @return array|null Sync record if success and null if failed
+     */
+    public function getSyncRecord($recordId)
+    {
+        $recordId = addslashes($recordId);
+        $sql = "SELECT * FROM `edu_sync_database` WHERE `sync_database_id` = '$recordId' ";
+        $stmt = $this->database->executeQuery($sql);
+        if($stmt->rowCount() > 0)
+        {
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        }
+        return null;
     }
 }
 
@@ -242,6 +307,8 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
         {
             $this->createUploadSyncRecord($val);
         }
+
+        return true;
     }
     
     /**
@@ -260,6 +327,40 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
             }
         }
     }
+    public function databasePrepareUploadSyncFiles()
+    {
+        return $this->getSyncRecordListFromDatabase('up', 0);
+    }
+
+    /**
+     * Sync all local user file to sync hub and upload file (step 3, 4 and 5)
+     * @param string $recordId Sync record ID
+     * @param string $fileSyncUrl Sync hub URL
+     * @param string $username Sync hub username
+     * @param string $password Sync hub password
+     */
+    public function databaseUploadSyncFiles($recordId, $fileSyncUrl, $username, $password)
+    {
+        $record = $this->getSyncRecord($recordId);
+        $path = $record['file_path'];
+        $sync_file_id = $record['sync_database_id'];
+        if(file_exists($path))
+        {
+            try{
+                $result = $this->uploadSyncFile($path, $record, $fileSyncUrl, $username, $password);
+                
+                $this->updateSyncRecord($sync_file_id, 2);
+
+            }
+            catch(Exception $e)
+            {
+                $this->updateSyncRecord($sync_file_id, 1);
+            }  
+
+        }
+        return true;
+    }
+
 }
 
 class DatabaseSyncDownload extends DatabaseSyncMaster
@@ -283,15 +384,30 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
     /**
      * (step 1, 2 and 3)
      */
-    public function syncRemoteHostRecordToDatabase($url, $username, $password)
+    public function databaseDownloadInformation($url, $username, $password)
     {
         $lastSync = $this->getLastSyncTime();
         if($lastSync === null)
         {
             $lastSync = '0000-00-00 00:00:00';
         }
-        $recordList = $this->getSyncRecordListFromRemote($lastSync, $url, $username, $password);
-        $this->createDownloadSyncRecord($recordList, $url, $username, $password);
+        try {
+            $recordList = $this->getSyncRecordListFromRemote($lastSync, $url, $username, $password);
+            return $this->createDownloadSyncRecord($recordList, $url, $username, $password);
+        }
+        catch(Exception $e)
+        {
+            return true;
+        }
+    }
+
+    public function databasePrepareDownloadSyncFiles()
+    {
+        return $this->getSyncRecordListFromDatabase('up', 1);
+    }
+    public function databasePrepareExecuteQuery()
+    {
+        return $this->getSyncRecordListFromDatabase('down', 2);
     }
 
     private function getLastSyncTime()
@@ -383,7 +499,29 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         }
     }
     
-
+    public function databaseDownloadSyncFiles($recordId, $permission, $fileSyncUrl, $username, $password)
+    {     
+        try
+        {
+            $record = $this->getSyncRecord($recordId);
+            if ($record != null) 
+            {
+                $relativePath = $this->getRelativePath($record['file_path']);
+                $absolutePath = $this->getAbsolutePath($relativePath);
+                $content = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
+                file_put_contents($absolutePath, $content);
+                chmod($absolutePath, $permission);
+                $this->updatePathAndStatus($recordId, $absolutePath, $relativePath, 1);
+                return true;
+            }
+        }
+        catch(FileSyncException $e)
+        {
+            $this->updateSyncRecord($recordId, 1);
+        }
+        return true;
+        
+    }
     private function createDownloadSyncRecord($recordList, $url, $username, $password)
     {
         foreach($recordList as $record)
@@ -411,12 +549,15 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
                     ('$sync_database_id', '$localPath', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
                     $this->database->execute($sql);
                 }
+                return true;
             }
             catch(Exception $e)
             {
                 // Do nothing
+                return false;
             }
         }
+        return true;
     }
 
     public function syncRemoteQueryToDatabase()
@@ -451,6 +592,13 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
             fclose($handle);
         }
 
+    }
+
+    public function databaseExecuteQuery($recordId)
+    {
+        $record = $this->getSyncRecord($recordId);
+        $this->syncQuerysFromSyncRecord($record);
+        $this->updateSyncRecord($recordId, 2);
     }
     private function execute($sql)
     {

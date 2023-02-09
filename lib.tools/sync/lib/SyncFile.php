@@ -291,11 +291,11 @@ class FileSyncMaster
         $post = stripos($path, $this->applicationRoot);
         if($post === 0)
         {
-            return $this->applicationRoot.$path;
+            return $path;
         } 
         else 
         {
-            return $path;
+            return $this->applicationRoot.$path;
         }
     }
 
@@ -303,7 +303,7 @@ class FileSyncMaster
 
     protected function updatePathAndStatus($recordId, $absolutePath, $relativePath, $status)
     {
-        $sql = "UPDATE FROM `edu_sync_file` SET `file_path` = '$absolutePath', `relative_path` = '$relativePath', `status` = '$status' WHERE `sync_file_id` = '$recordId' ";
+        $sql = "UPDATE `edu_sync_file` SET `file_path` = '$absolutePath', `relative_path` = '$relativePath', `status` = '$status' WHERE `sync_file_id` = '$recordId' ";
         return $this->database->executeQuery($sql);
     }
 
@@ -452,8 +452,8 @@ class FileSyncUpload extends FileSyncMaster
         }
         catch(FileSyncException $e)
         {
-            return true;
         }
+        return true;
         
     }
 }
@@ -668,8 +668,8 @@ class FileSyncDownload extends FileSyncMaster
         catch(FileSyncException $e)
         {
             $this->updateSyncRecord($recordId, 1);
-            return true;
         }
+        return true;
         
     }
 
