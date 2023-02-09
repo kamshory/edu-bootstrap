@@ -170,3 +170,8 @@
 {"op":"CREATEFILE","tm":1675906560,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e447ad7a00d39a1dd\/37f0d72eb5c45dcd47768ffd60b4467d.svg"}
 {"op":"CREATEFILE","tm":1675906708,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e447ad7a00d39a1dd\/0538dce591b915131d25f588845f73fb.svg"}
 {"op":"CREATEFILE","tm":1675906716,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e447ad7a00d39a1dd\/37f0d72eb5c45dcd47768ffd60b4467d.svg"}
+{"op":"DELETEFILE","tm":1675907365,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e447ad7a00d39a1dd\/1e8c02863854cb30c7c9f5ef3e3161d1.png"}
+{"op":"DELETEFILE","tm":1675907365,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e447ad7a00d39a1dd\/37f0d72eb5c45dcd47768ffd60b4467d.png"}
+{"op":"DELETEFILE","tm":1675907365,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e447ad7a00d39a1dd\/386187f6a1a1ad5f3a1e6380b0cfde3e.png"}
+{"op":"DELETEFILE","tm":1675907365,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e447ad7a00d39a1dd\/adc58931e68addd1a41f54f65c8e6713.png"}
+{"op":"DELETEFILE","tm":1675907365,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e447ad7a00d39a1dd\/f0b6274b7f2ec088c14998eb001cba4f.png"}
