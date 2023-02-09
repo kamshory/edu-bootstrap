@@ -1,5 +1,10 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+if(empty($school_id))
+{
+	require_once dirname(__FILE__)."/login-form.php";
+	exit();
+}
 $cfg->page_title = "Pilih Sekolah";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(@$_GET['option'] == 'select')

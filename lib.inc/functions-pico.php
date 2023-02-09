@@ -643,6 +643,7 @@ $database = new PicoDatabase(
 	$configs->db_name,
 	$configs->db_time_zone,
 	new PicoDatabaseSyncConfig(
+		$configs->sync_database_application_dir,
 		$configs->sync_database_base_dir,
 		$configs->sync_database_pool_name,
 		$configs->sync_database_rolling_prefix,
@@ -655,6 +656,7 @@ $database = new PicoDatabase(
 $database->connect();
 
 $fileSync = new FileSynchronizer(
+	$configs->sync_file_application_dir,
 	$configs->sync_file_base_dir,
 	$configs->sync_file_pool_name,
 	$configs->sync_file_rolling_prefix,

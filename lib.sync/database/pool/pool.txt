@@ -1,0 +1,6 @@
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` set
+		`title` = 'Tabung', `content` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/article/063e500818a9499f5736/84b82dbd0f7f691dba711ec81ace8d85.svg\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-09 21:40:49', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e500818a9499f5736' AND `school_id` = '063ce682801be89951aa'
+		;

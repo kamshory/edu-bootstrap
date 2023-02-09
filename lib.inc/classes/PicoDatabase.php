@@ -29,6 +29,7 @@ class PicoDatabaseServer
 
 class PicoDatabaseSyncConfig
 {
+	private string $applicationDir = '';
 	private string $baseDir = '';
 	private string $poolName = '';
 	private string $rollingPrefix = '';
@@ -39,6 +40,7 @@ class PicoDatabaseSyncConfig
 
 	/**
 	 * Constructor of PicoDatabaseSyncConfig
+	 * @param string $applicationDir Base directory of sync file
 	 * @param string $baseDir Base directory of sync file
 	 * @param string $poolName Pooling file name
 	 * @param string $rollingPrefix Rolling prefix file name
@@ -46,8 +48,9 @@ class PicoDatabaseSyncConfig
 	 * @param int $maximumlength Maximum length of sync file
 	 * @param string $delimiter Extra query delimiter
 	 */
-	public function __construct($baseDir, $poolName, $rollingPrefix, $extension, $maximumlength, $delimiter)
+	public function __construct($applicationDir, $baseDir, $poolName, $rollingPrefix, $extension, $maximumlength, $delimiter)
 	{
+		$this->applicationDir = $applicationDir;
 		$this->baseDir = $baseDir;
 		$this->poolName = $poolName;
 		$this->rollingPrefix = $rollingPrefix;
@@ -77,6 +80,10 @@ class PicoDatabaseSyncConfig
 	 */
 	public function getPoolPath()
 	{
+		if(!file_exists($this->baseDir))
+		{
+			$this->prepareDirecory($this->baseDir, $this->applicationDir, 0777);
+		}
 		$poolPath = $this->baseDir . "/" . $this->poolName . $this->extension;
 		if(file_exists($poolPath) && filesize($poolPath) > $this->maximumlength)
 		{
@@ -108,6 +115,45 @@ class PicoDatabaseSyncConfig
 	public function getDelimiter()
 	{
 		return $this->delimiter;
+	}
+
+	/**
+	 * Prepare directory
+	 * @param string $dir2prepared Path to be pepared
+	 * @param string $dirBase Base directory
+	 * @param int $permission File permission
+	 * @param bool $sync Flag that renaming file will be synchronized or not
+	 * @return void
+	 */
+	public function prepareDirecory($dir2prepared, $dirBase, $permission)
+	{
+		$dir = str_replace("\\", "/", $dir2prepared);
+		$base = str_replace("\\", "/", $dirBase);
+		$arrDir = explode("/", $dir);
+		$arrBase = explode("/", $base);
+		$base = implode("/", $arrBase);
+		$dir2created = "";
+		foreach($arrDir as $val)
+		{
+			$dir2created .= $val;
+			if(stripos($base, $dir2created) !== 0 && !file_exists($dir2created))
+			{
+				$this->createDirecory($dir2created, $permission);
+			}
+			$dir2created .= "/";
+		}
+	}
+
+	/**
+	 * Create directory
+	 * @param string $path Path to be created
+	 * @param int $permission File permission
+	 * @param bool $sync Flag that renaming file will be synchronized or not
+	 * @return bool true on success or false on failure.
+	 */
+	public function createDirecory($path, $permission)
+	{
+		return @mkdir($path, $permission);
 	}
 }
 

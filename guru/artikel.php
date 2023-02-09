@@ -1,5 +1,10 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+if(empty($school_id))
+{
+	require_once dirname(__FILE__)."/bukan-guru.php";
+	exit();
+}
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
@@ -8,13 +13,12 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 {
 	$option = kh_filter_input(INPUT_POST, "option", FILTER_SANITIZE_SPECIAL_CHARS);
 	$title = trim(kh_filter_input(INPUT_POST, "title", FILTER_SANITIZE_SPECIAL_CHARS));
-	if($title == '')
+	if($title == "")
 	{
-		$title = '(Tanpa Judul)';
+		$title = "(Tanpa Judul)";
 	}
 	
-	$content = kh_filter_input(INPUT_POST, "content");
-	
+	$content = kh_filter_input(INPUT_POST, "content");	
 	$open = kh_filter_input(INPUT_POST, "open", FILTER_SANITIZE_NUMBER_UINT);
 	$class = kh_filter_input(INPUT_POST, "class", FILTER_SANITIZE_STRING_NEW);
 	$active = 0;
@@ -408,9 +412,6 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-
-
-
 $pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>

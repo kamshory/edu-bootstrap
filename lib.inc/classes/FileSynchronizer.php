@@ -2,40 +2,45 @@
 class FileSynchronizer
 {
 	const NEW_LINE = "\r\n";
+
+	public string $applicationDir = '';
+
 	/**
-	 * Base path
+	 * Base directory
 	 */
-	public $basePath = '';
+	public string $baseDir = '';
 
 	/**
 	 * Pooling file name
 	 */
-	public $fileName = 'pool.txt';
+	public string $fileName = 'pool.txt';
 
 	/**
 	 * Rolling name
 	 */
-	public $prefix = 'pool_';
+	public string $prefix = 'pool_';
 	/**
 	 * File extenstion
 	 */
-	public $extension = '.txt';
+	public string $extension = '.txt';
 	/**
 	 * Maximum file size
 	 */
-	private $maximumlength = 20000;
+	private int $maximumlength = 20000;
 	
 	/**
 	 * Constructor of FileSynchronizer
-	 * @param string $basePath Base path
+	 * @param string $applicationDir Application directory
+	 * @param string $baseDir Base path
 	 * @param string $fileName File name
 	 * @param string $prefix File prefix
 	 * @param string $extension Extension
 	 * @param int $maximumlength Maximum length
 	 */
-	public function __construct($basePath, $fileName, $prefix, $extension, $maximumlength)
+	public function __construct($applicationDir, $baseDir, $fileName, $prefix, $extension, $maximumlength)
 	{
-		$this->basePath = $basePath;
+		$this->applicationDir = $applicationDir;
+		$this->baseDir = $baseDir;
 		if($fileName != null)
 		{
 			$this->fileName = $fileName;
@@ -73,10 +78,14 @@ class FileSynchronizer
 	 */
 	public function getPoolPath()
 	{
-		$poolPath = $this->basePath . "/" . $this->fileName . $this->extension;
+		if(!file_exists($this->baseDir))
+		{
+			$this->prepareDirecory($this->baseDir, $this->applicationDir, 0777, false);
+		}
+		$poolPath = $this->baseDir . "/" . $this->fileName . $this->extension;
 		if(file_exists($poolPath) && filesize($poolPath) > $this->maximumlength)
 		{
-			$newPath = $this->basePath . "/" . $this->prefix.date('Y-m-d-H-i-s') . "-" . $this->generateNewId() . $this->extension;
+			$newPath = $this->baseDir . "/" . $this->prefix.date('Y-m-d-H-i-s') . "-" . $this->generateNewId() . $this->extension;
 			rename($poolPath, $newPath);
 		}
 		return $poolPath;

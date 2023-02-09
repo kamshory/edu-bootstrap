@@ -66,7 +66,7 @@ if(!empty($school_id))
 						}
 						else
 						{
-							if(@is_array($object['option']) && count($object['option']))
+							if(isset($object['option']) && @is_array($object['option']) && count($object['option']))
 							{
 								foreach($object['option'] as $option_no=>$option)
 								{

@@ -2,17 +2,12 @@
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/login-form.php";
+	require_once dirname(__FILE__)."/bukan-guru.php";
 	exit();
 }
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $cfg->page_title = "Infomasi";
-if(!isset($school_id) || empty($school_id))
-{
-	require_once dirname(__FILE__)."/login-form.php";
-	exit();
-}
 
 if(isset($_GET['info_id']))
 {
@@ -89,12 +84,6 @@ if(isset($_GET['info_id']))
         <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 		<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/FileSaver.js"></script>
         <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/info.js"></script>
-        <style type="text/css">
-		.article-title h1{
-			font-family:"Roboto";
-			font-size:28px;
-		}
-		</style>
         <div class="main-content">
             <div class="main-content-wrapper">
             <div class="article-title"><h1><?php echo $data['name'];?></h1></div>

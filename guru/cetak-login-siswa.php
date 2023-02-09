@@ -9,7 +9,7 @@ $url = 'http://192.168.0.11/';
 require_once dirname(dirname(__FILE__)) . "/lib.inc/phpqrcode/phpqrcode.php";
 ob_start();
 QRCode::png($url, null);
-$imageString = base64_encode( ob_get_contents() );
+$imageString = base64_encode(ob_get_contents());
 ob_end_clean();
 
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
@@ -29,17 +29,17 @@ if($stmt->rowCount() > 0)
 }
 else
 {
-$class_id = 0;
-$sql = "SELECT `edu_school`.*, `edu_school`.`name` AS `school_name`
-FROM `edu_school` 
-WHERE `edu_school`.`school_id` = '$school_id'
-";
-$stmt = $database->executeQuery($sql);
+  $class_id = 0;
+  $sql = "SELECT `edu_school`.*, `edu_school`.`name` AS `school_name`
+  FROM `edu_school` 
+  WHERE `edu_school`.`school_id` = '$school_id'
+  ";
+  $stmt = $database->executeQuery($sql);
 
-if($stmt->rowCount() > 0)
-{
-  $data = $stmt->fetch(PDO::FETCH_ASSOC);
-}
+  if($stmt->rowCount() > 0)
+  {
+    $data = $stmt->fetch(PDO::FETCH_ASSOC);
+  }
 }
 ?><!DOCTYPE html>
 <html lang="en">

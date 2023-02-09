@@ -11,7 +11,13 @@ if(!empty($school_id) && isset($_POST['filename']) && isset($_POST['test_id']))
 	if(file_exists($path))
 	{
 		$arr = explode(".", $path);
-		if(strtolower(end($arr)) == 'mp3' || strtolower(end($arr)) == 'mp4' || strtolower(end($arr)) == 'ogg' || strtolower(end($arr)) == 'wav' || strtolower(end($arr)) == 'webm')
+		if(
+			strtolower(end($arr)) == 'mp3' 
+			|| strtolower(end($arr)) == 'mp4' 
+			|| strtolower(end($arr)) == 'ogg' 
+			|| strtolower(end($arr)) == 'wav' 
+			|| strtolower(end($arr)) == 'webm'
+			)
 		{
 			$rand = mt_rand(111111, 999999);
 			shell_exec("lame -b 32 $path $path-$rand");
