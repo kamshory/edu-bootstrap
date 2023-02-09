@@ -7,9 +7,10 @@ let databaseSyncFilesDownload = {};
 let databaseUserFilesDownload = {};
 let databaseSyncFilesUpload = {};
 let databaseUserFilesUpload = {};
-
-function startSync(clbk)
+let path = '';
+function startSync(path, clbk)
 {
+    syncPath = path;
     fileDownloadInformation(clbk);
 }
 
@@ -75,7 +76,7 @@ function updateProgressBar(type, direction, step, value)
 function fileDownloadInformation(clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'file',
             direction:'down',
@@ -103,7 +104,7 @@ function fileDownloadInformation(clbk)
 function filePrepareDownloadSyncFiles(clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'file',
             direction:'down',
@@ -121,6 +122,11 @@ function filePrepareDownloadSyncFiles(clbk)
                 {
                     fileDownloadSyncFiles(recordId, clbk);                         
                 }
+                else
+                {
+                    updateProgressBar('file', 'down', 3, 100);
+                    filePrepareDownloadUserFiles(clbk);
+                }
             }
         }
     });
@@ -132,7 +138,7 @@ function filePrepareDownloadSyncFiles(clbk)
 function fileDownloadSyncFiles(recordId, clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'file',
             direction:'down',
@@ -167,7 +173,7 @@ function fileDownloadSyncFiles(recordId, clbk)
 function filePrepareDownloadUserFiles(clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'file',
             direction:'down',
@@ -186,6 +192,11 @@ function filePrepareDownloadUserFiles(clbk)
                 {
                     fileDownloadUserFiles(recordId, clbk);                         
                 }
+                else
+                {
+                    updateProgressBar('file', 'down', 5, 100);
+                    filePrepareUploadUserFiles(clbk);
+                }
             }
         }
     });
@@ -197,7 +208,7 @@ function filePrepareDownloadUserFiles(clbk)
 function fileDownloadUserFiles(recordId, clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'file',
             direction:'down',
@@ -234,7 +245,7 @@ function fileDownloadUserFiles(recordId, clbk)
 function filePrepareUploadUserFiles(clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'file',
             direction:'up',
@@ -250,7 +261,12 @@ function filePrepareUploadUserFiles(clbk)
                 let recordId = getFileSyncId(fileSyncFilesUpload);
                 if(recordId != null)
                 {
-                    fileUploadFiles(recordId, clbk);                         
+                    fileUploadUserFiles(recordId, clbk);                         
+                }
+                else
+                {
+                    updateProgressBar('file', 'up', 3, 100);
+                    filePrepareUploadSyncFiles(clbk);
                 }
             }
         }
@@ -260,10 +276,10 @@ function filePrepareUploadUserFiles(clbk)
 /**
  * Download file sync dari sync hub
  */
-function fileUploadFiles(recordId, clbk)
+function fileUploadUserFiles(recordId, clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'file',
             direction:'up',
@@ -281,7 +297,7 @@ function fileUploadFiles(recordId, clbk)
                 let nextRecordId = getFileSyncId(fileSyncFilesUpload);
                 if(nextRecordId != null)
                 {
-                    fileUploadFiles(nextRecordId, clbk);
+                    fileUploadUserFiles(nextRecordId, clbk);
                 }
                 else
                 {
@@ -299,7 +315,7 @@ function fileUploadFiles(recordId, clbk)
 function filePrepareUploadSyncFiles(clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'file',
             direction:'up',
@@ -318,6 +334,10 @@ function filePrepareUploadSyncFiles(clbk)
                 {
                     fileUploadSyncFiles(recordId, clbk);                         
                 }
+                else{
+                    updateProgressBar('file', 'up', 3, 100);
+                    fileUploadInformation(clbk);
+                }
             }
         }
     });
@@ -329,7 +349,7 @@ function filePrepareUploadSyncFiles(clbk)
 function fileUploadSyncFiles(recordId, clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'file',
             direction:'up',
@@ -361,10 +381,10 @@ function fileUploadSyncFiles(recordId, clbk)
 /**
  * Upload informasi ke sync hub
  */
-function fileUploadInformation()
+function fileUploadInformation(clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'file',
             direction:'up',
@@ -401,10 +421,10 @@ function fileUploadInformation()
 /**
  * Download informasi dari sync hub
  */
-function databaseDownloadInformation()
+function databaseDownloadInformation(clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'database',
             direction:'down',
@@ -432,7 +452,7 @@ function databaseDownloadInformation()
 function databasePrepareDownloadSyncFiles(clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'database',
             direction:'down',
@@ -462,7 +482,7 @@ function databasePrepareDownloadSyncFiles(clbk)
 function databaseDownloadSyncFiles(recordId, clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'database',
             direction:'down',
@@ -498,7 +518,7 @@ function databaseDownloadSyncFiles(recordId, clbk)
 function databasePrepareExecuteQuery(clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'database',
             direction:'down',
@@ -528,7 +548,7 @@ function databasePrepareExecuteQuery(clbk)
 function databaseExecuteQuery(recordId, clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'database',
             direction:'down',
@@ -563,7 +583,7 @@ function databaseExecuteQuery(recordId, clbk)
 function databasePrepareUploadSyncFiles(clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'database',
             direction:'up',
@@ -590,10 +610,10 @@ function databasePrepareUploadSyncFiles(clbk)
 /**
  * Upload database sync ke sync hub
  */
-function databaseUploadSyncFiles(recordId)
+function databaseUploadSyncFiles(recordId, clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'database',
             direction:'up',
@@ -628,7 +648,7 @@ function databaseUploadSyncFiles(recordId)
 function databaseUploadInformation(clbk)
 {
     $.ajax({
-        url:'lib.tools/sync/test.php',
+        url:syncPath,
         data:{
             type:'database',
             direction:'up',

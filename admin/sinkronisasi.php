@@ -21,7 +21,9 @@ if(!empty($school_id))
     <script>
         $(document).ready(function(){
             $(document).on('click', '#start-sync', function(e){
-                startSync();
+                startSync('lib.tools/sync/', function(){
+                    console.log('All process has been done')
+                });
             })
         });       
     </script>
