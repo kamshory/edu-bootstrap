@@ -57,6 +57,21 @@ class PicoDatabaseSyncConfig
 	}
 
 	/**
+	 * Generate 20 bytes unique ID
+	 * @return string 20 bytes
+	 */
+	public function generateNewId()
+	{
+		$uuid = uniqid();
+		if((strlen($uuid) % 2) == 1)
+		{
+			$uuid = '0'.$uuid;
+		}
+		$random = sprintf('%06x', mt_rand(0, 16777215));
+		return sprintf('%s%s', $uuid, $random);
+	}
+
+	/**
 	 * Get pooling path
 	 * @return string Polling path
 	 */
@@ -65,7 +80,7 @@ class PicoDatabaseSyncConfig
 		$poolPath = $this->baseDir . "/" . $this->poolName . $this->extension;
 		if(file_exists($poolPath) && filesize($poolPath) > $this->maximumlength)
 		{
-			$newPath = $this->baseDir . "/" . $this->rollingPrefix.date('Y-m-d-H-i-s').$this->extension;
+			$newPath = $this->baseDir . "/" . $this->rollingPrefix.date('Y-m-d-H-i-s')."-".$this->generateNewId().$this->extension;
 			rename($poolPath, $newPath);
 		}
 		return $poolPath;

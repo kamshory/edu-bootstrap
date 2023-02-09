@@ -30,12 +30,26 @@ class FileSynchronizer
 			$this->maximumlength = $maximumlength;
 		}
 	}
+	/**
+	 * Generate 20 bytes unique ID
+	 * @return string 20 bytes
+	 */
+	public function generateNewId()
+	{
+		$uuid = uniqid();
+		if((strlen($uuid) % 2) == 1)
+		{
+			$uuid = '0'.$uuid;
+		}
+		$random = sprintf('%06x', mt_rand(0, 16777215));
+		return sprintf('%s%s', $uuid, $random);
+	}
 	public function getPoolPath()
 	{
 		$poolPath = $this->basePath . "/" . $this->fileName;
 		if(file_exists($poolPath) && filesize($poolPath) > $this->maximumlength)
 		{
-			$newPath = $this->basePath . "/" . $this->prefix.date('Y-m-d-H-i-s').$this->extension;
+			$newPath = $this->basePath . "/" . $this->prefix.date('Y-m-d-H-i-s')."-".$this->generateNewId().$this->extension;
 			rename($poolPath, $newPath);
 		}
 		return $poolPath;

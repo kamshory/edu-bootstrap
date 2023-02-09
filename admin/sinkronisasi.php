@@ -10,45 +10,48 @@ if(!empty($school_id))
         .sync-container{
             margin-bottom: 20px;
         }
+        .sync-item{
+            padding: 5px 0;
+        }
     </style>
     <div class="sync-container">
     <h4>Sinkronisasi File</h4>
-    <div class="">
+    <div class="sync-item">
         <div>Download informasi dari sync hub</div>
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
 
-    <div class="">
+    <div class="sync-item">
         <div>Download file sync dari sync hub</div>
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
 
-    <div class="">
+    <div class="sync-item">
         <div>Download file pengguna dari sync hub</div>
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
 
-    <div class="">
+    <div class="sync-item">
         <div>Upload file pengguna ke sync hub</div>
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
 
-    <div class="">
+    <div class="sync-item">
         <div>Upload file sync ke sync hub</div>
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
 
-    <div class="">
+    <div class="sync-item">
         <div>Upload informasi ke sync hub</div>
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -59,35 +62,35 @@ if(!empty($school_id))
     <div class="sync-container">
 
     <h4>Sinkronisasi Database</h4>
-    <div class="">
+    <div class="sync-item">
         <div>Download informasi dari sync hub</div>
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
 
-    <div class="">
+    <div class="sync-item">
         <div>Download file sync dari sync hub</div>
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
 
-    <div class="">
+    <div class="sync-item">
         <div>Eksekusi query dari file sync</div>
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
 
-    <div class="">
+    <div class="sync-item">
         <div>Upload informasi ke sync hub</div>
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
 
-    <div class="">
+    <div class="sync-item">
         <div>Upload file sync ke sync hub</div>
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
