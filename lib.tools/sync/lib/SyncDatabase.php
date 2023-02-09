@@ -599,6 +599,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         $record = $this->getSyncRecord($recordId);
         $this->syncQuerysFromSyncRecord($record);
         $this->updateSyncRecord($recordId, 2);
+        return true;
     }
     private function execute($sql)
     {

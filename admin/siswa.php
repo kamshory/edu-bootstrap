@@ -37,13 +37,11 @@ if(count(@$_POST) && isset($_POST['save']))
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
-	$admin_create = @$admin_id.'';
-	$admin_edit = @$admin_id.'';
 }
 
 if(isset($_POST['set_active']) && isset($_POST['student_id']))
 {
-	$students = @$_POST['student_id'];
+	$students = $_POST['student_id'];
 	if(isset($students) && is_array($students))
 	{
 		foreach($students as $key=>$val)
@@ -56,7 +54,7 @@ if(isset($_POST['set_active']) && isset($_POST['student_id']))
 }
 if(isset($_POST['set_inactive']) && isset($_POST['student_id']))
 {
-	$students = @$_POST['student_id'];
+	$students = $_POST['student_id'];
 	if(isset($students) && is_array($students))
 	{
 		foreach($students as $key=>$val)
@@ -69,7 +67,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['student_id']))
 }
 if(isset($_POST['delete']) && isset($_POST['student_id']))
 {
-	$students = @$_POST['student_id'];
+	$students = $_POST['student_id'];
 	if(isset($students) && is_array($students))
 	{
 		foreach($students as $key=>$val)
@@ -115,7 +113,6 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$student_id = addslashes($chk['member_id']);
 		$username = addslashes($chk['username']);
 
-
 		$sql = "INSERT INTO `edu_student` 
 		(`student_id`, `token_student`, `school_id`, `reg_number`, `reg_number_national`, `class_id`, `grade_id`,
 		`name`, `gender`, `birth_place`, `birth_day`, `phone`, `email`, `password`, `password_initial`, 
@@ -125,7 +122,6 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		'$address', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', 0, 1)
 		";
 		$database->executeInsert($sql, true);
-
 
 		$sql2 = "INSERT INTO `edu_member_school` 
 		(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) VALUES

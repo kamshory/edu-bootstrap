@@ -1,0 +1,22 @@
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET 
+	`reg_number` = '1111128', `reg_number_national` = '1011216', `grade_id` = '10', 
+	`class_id` = '063ce68280e52755ca2a', `name` = 'Cesilya', `gender` = 'W', `birth_place` = 'JAKARTA', 
+	`birth_day` = '2137-12-04', `phone` = '08123456798', `address` = 'werr', `time_edit` = '2023-02-09 20:12:36', 
+	`admin_edit` = 'aaaaaaaaaaaaa', `ip_edit` = '127.0.0.1', `blocked` = '1', `active` = '1'
+	WHERE `student_id` = '063ce682839ac33c15cc' AND `school_id` = '063ce682801be89951aa' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET 
+		`email` = '5325@planetbiru.com'
+		WHERE `student_id` = '063ce682839ac33c15cc' AND `school_id` = '063ce682801be89951aa' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET 
+	`reg_number` = '1111128', `reg_number_national` = '1011216', `grade_id` = '10', 
+	`class_id` = '063ce68280e52755ca2a', `name` = 'Cesilya', `gender` = 'W', `birth_place` = 'JAKARTA', 
+	`birth_day` = '2137-12-04', `phone` = '08123456798', `address` = 'werr', `time_edit` = '2023-02-09 20:13:44', 
+	`admin_edit` = 'aaaaaaaaaaaaa', `ip_edit` = '127.0.0.1', `blocked` = '1', `active` = '1'
+	WHERE `student_id` = '063ce682839ac33c15cc' AND `school_id` = '063ce682801be89951aa' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET 
+		`email` = '5345@planetbiru.com'
+		WHERE `student_id` = '063ce682839ac33c15cc' AND `school_id` = '063ce682801be89951aa' ;
