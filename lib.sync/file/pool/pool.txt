@@ -1,2 +1,3 @@
 {"op":"CREATEFILE","tm":1675956183,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/article\/063e2ef9aed05f1956e2\/5ba16f09fb4bf89c02eb617bfc21362b.png"}
 {"op":"DELETEFILE","tm":1675956280,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/description\/VID_20221222_202434.mp4"}
+{"op":"CREATEFILE","tm":1675956877,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/description\/592e3de2167a5a01ff3b4fd6792df299.svg"}
