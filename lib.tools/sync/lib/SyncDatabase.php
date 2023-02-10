@@ -409,8 +409,8 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
         if(file_exists($path))
         {
             try{
-                $result = $this->uploadSyncFile($path, $record, $fileSyncUrl, $username, $password);              
-                $this->updateSyncRecord($recordId, 2);
+                $result = $this->uploadSyncFile($path, $record, $fileSyncUrl, $username, $password); // NOSONAR            
+                $this->updateSyncRecord($recordId, 1);
             }
             catch(Exception $e)
             {
@@ -455,11 +455,12 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
             if($response['response_code'] == '00')
             {
                 $recordList = $response['data'];
-                return $this->createDownloadSyncRecord($recordList, $url, $username, $password);
+                return $this->createDownloadSyncRecord($recordList);
             }
         }
         catch(Exception $e)
         {
+            // Do nothing
         }
         return true;
     }
@@ -568,14 +569,12 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
                 $absolutePath = $this->downloadBaseDir . "/" . basename($relativePath);
                 $content = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
                 $dir = dirname($absolutePath);
-
                 $this->prepareDirectory($dir);
                 file_put_contents($absolutePath, $content);
                 chmod($absolutePath, $permission);
                 $absolutePath = addslashes($absolutePath);
                 $relativePath = addslashes($relativePath);
                 $this->updatePathAndStatus($recordId, $absolutePath, $relativePath, 1);
-                return true;
             }
         }
         catch(FileSyncException $e)
@@ -585,7 +584,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         return true;
         
     }
-    private function createDownloadSyncRecord($recordList, $url, $username, $password)
+    private function createDownloadSyncRecord($recordList)
     {
         foreach($recordList as $record)
         {
@@ -598,18 +597,12 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
             $time_download = date('Y-m-d H:i:s');
 
             $localPath = $this->downloadBaseDir . "/" . $baseName;
-            try
-            {
-                $localPath = addslashes($localPath);
-                $sql = "INSERT INTO `edu_sync_database`
-                (`sync_database_id`, `file_path`, `relative_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
-                ('$sync_database_id', '$localPath', '$relative_path', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
-                $this->database->execute($sql);
-            }
-            catch(Exception $e)
-            {
-            }
-        }
+            $localPath = addslashes($localPath);
+            $sql = "INSERT INTO `edu_sync_database`
+            (`sync_database_id`, `file_path`, `relative_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
+            ('$sync_database_id', '$localPath', '$relative_path', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
+            $this->database->execute($sql);
+         }
         return true;
     }
 
@@ -627,7 +620,6 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
                     if($chk == $delimiter)
                     {
                         $this->execute($buff);
-                        //echo "<br>BUFF = >>>>$buff<<<<; ";
                         $buff = "";
                     }
                     else

@@ -568,7 +568,7 @@ class FileSyncDownload extends FileSyncMaster
             if($response['response_code'] == '00')
             {
                 $recordList = $response['data'];
-                return $this->createDownloadSyncRecord($recordList, $fileSyncUrl, $username, $password);
+                return $this->createDownloadSyncRecord($recordList);
             }
             return true;
 
@@ -669,11 +669,8 @@ class FileSyncDownload extends FileSyncMaster
     /**
      * Create download sync record
      * @param array $recordList Record list
-     * @param string $fileSyncUrl Synch hub URL
-     * @param string $username Sync username
-     * @param string $password Sync password
     */
-    private function createDownloadSyncRecord($recordList, $fileSyncUrl, $username, $password)
+    private function createDownloadSyncRecord($recordList)
     {
         foreach($recordList as $record)
         {
@@ -688,23 +685,11 @@ class FileSyncDownload extends FileSyncMaster
   
             $localPath = $this->downloadBaseDir . "/" . $baseName;
  
-            try
-            {
-                //$response = $this->downloadFileFromRemote($remote_path, $fileSyncUrl, $username, $password);
-                //if(file_put_contents($localPath, $response))
-                {   
-                    $localPath = addslashes($localPath);
-                    $sql = "INSERT INTO `edu_sync_file`
-                    (`sync_file_id`, `file_path`, `relative_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
-                    ('$sync_file_id', '$localPath', '$relative_path', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
-                    $this->database->execute($sql);
-                }
-            }
-            catch(Exception $e)
-            {
-                //NOSONAR
-                return false;
-            }
+            $localPath = addslashes($localPath);
+            $sql = "INSERT INTO `edu_sync_file`
+            (`sync_file_id`, `file_path`, `relative_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
+            ('$sync_file_id', '$localPath', '$relative_path', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
+            $this->database->execute($sql);
         }
         return true;
     }
@@ -765,8 +750,7 @@ class FileSyncDownload extends FileSyncMaster
         }
         catch(FileSyncException $e)
         {
-           
-           
+           // DO nothing
         }
         return true;
         
