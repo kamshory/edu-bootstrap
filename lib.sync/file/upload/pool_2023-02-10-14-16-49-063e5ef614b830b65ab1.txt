@@ -1,6 +1,0 @@
-{"op":"CREATEFILE","tm":1676013381,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e5eeb91ad8b4b38d1\/748f0f036126d3d2f719fd1ceaa1d35f.svg"}
-{"op":"CREATEFILE","tm":1676013381,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e5eeb91ad8b4b38d1\/56db1130cde9b2ed1be4cfb5038eb767.svg"}
-{"op":"CREATEFILE","tm":1676013381,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e5eeb91ad8b4b38d1\/d2e4c21d77fdc068165fa7f36555d979.svg"}
-{"op":"CREATEFILE","tm":1676013381,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e5eeb91ad8b4b38d1\/849c2ce5c9990ea8c2ad15cb40c0eb27.svg"}
-{"op":"CREATEFILE","tm":1676013381,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e5eeb91ad8b4b38d1\/67a54a2cbef881ccd7f7644537218109.svg"}
-{"op":"CREATEFILE","tm":1676013381,"path":"D:\\xampp\\htdocs\\edu-bootstrap\/media.edu\/school\/063ce682801be89951aa\/test\/063e5eeb91ad8b4b38d1\/85f1db62d93a5f7ebdb3af7520f5c3b0.svg"}

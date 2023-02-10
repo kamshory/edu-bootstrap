@@ -215,7 +215,7 @@ class FileSyncMaster
      */
     public function filePrepareDownloadSyncFiles()
     {
-        return $this->getSyncRecordListFromDatabase('down', 0);
+        return $this->getSyncRecordListFromDatabase('down', array(0));
     }
     /**
      * Get sync record list from database with status 1
@@ -223,7 +223,7 @@ class FileSyncMaster
      */
     public function filePrepareDownloadUserFiles()
     {
-        return $this->getSyncRecordListFromDatabase('down', 1);
+        return $this->getSyncRecordListFromDatabase('down', array(0, 1));
     }
 
     /**
@@ -232,7 +232,7 @@ class FileSyncMaster
      */
     public function filePrepareUploadSyncFiles()
     {
-        return $this->getSyncRecordListFromDatabase('up', 1);
+        return $this->getSyncRecordListFromDatabase('up', array(0, 1));
     }
     
     /**
@@ -241,18 +241,29 @@ class FileSyncMaster
      */
     public function filePrepareUploadUserFiles()
     {
-        return $this->getSyncRecordListFromDatabase('up', 0);
+        return $this->getSyncRecordListFromDatabase('up', array(0, 1));
     }
 
     /**
      * Get sync record list from database
      * @param string $direction Sync direction
-     * @param string $status Sync record status
+     * @param array $status Sync record status
      * @return array
      */
     protected function getSyncRecordListFromDatabase($direction, $status)
     {
-        $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_direction` = '$direction' AND `status` = '$status' ";
+        $filter = "";
+        if(is_array($status) && count($status) > 0)
+        {
+            $vals = array();
+            foreach($status as $val)
+            {
+                $val = addslashes($val);
+                $vals[] = "`status` = '$val'";
+            }
+            $filter = " AND (".implode(" OR ", $vals).") ";
+        }
+        $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_direction` = '$direction' $filter ORDER BY  `edu_sync_file`.`time_create` ASC ";
         $stmt = $this->database->executeQuery($sql);
         if($stmt->rowCount() > 0)
         {

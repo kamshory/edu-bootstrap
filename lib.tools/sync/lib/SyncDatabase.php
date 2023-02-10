@@ -167,12 +167,24 @@ class DatabaseSyncMaster
     /**
      * Get sync record list from database
      * @param string $direction Sync direction
-     * @param string $status Sync record status
+     * @param array $status Sync record status
      * @return array
      */
     protected function getSyncRecordListFromDatabase($direction, $status)
     {
-        $sql = "SELECT * FROM `edu_sync_database` WHERE `sync_direction` = '$direction' AND `status` = '$status' ";
+        $filter = "";
+        if(is_array($status) && count($status) > 0)
+        {
+            $vals = array();
+            foreach($status as $val)
+            {
+                $val = addslashes($val);
+                $vals[] = "`status` = '$val'";
+            }
+            $filter = " AND (".implode(" OR ", $vals).") ";
+        }
+        $sql = "SELECT * FROM `edu_sync_database` WHERE `sync_direction` = '$direction' $filter ORDER BY  `edu_sync_database`.`time_create` ASC ";
+
         $stmt = $this->database->executeQuery($sql);
         if($stmt->rowCount() > 0)
         {
@@ -344,7 +356,8 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
         $timeUpload = date('Y-m-d H:i:s');
         $sql = "INSERT INTO `edu_sync_database`
         (`sync_database_id`, `file_path`, `relative_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `status`) VALUES
-        ('$sync_database_id', '$path', '$relativePath', '$baseName', '$fileSize', 'up', '$timeUpload', '$timeUpload', 0)";
+        ('$sync_database_id', '$path', '$relativePath', '$baseName', '$fileSize', 'up', '$timeUpload', '$timeUpload', 0)
+        ";
         $this->database->execute($sql);
     }
 
@@ -366,7 +379,7 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
      */
     public function syncLocalQueryToRemoteHost($url, $username, $password)
     {
-        $records = $this->getSyncRecordListFromDatabase('up', 0);
+        $records = $this->getSyncRecordListFromDatabase('up', array(0,));
         foreach($records as $record)
         {
             $path = $record['file_path'];
@@ -379,7 +392,7 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
     }
     public function databasePrepareUploadSyncFiles()
     {
-        return $this->getSyncRecordListFromDatabase('up', 0);
+        return $this->getSyncRecordListFromDatabase('up', array(0));
     }
 
     /**
@@ -442,7 +455,6 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
             if($response['response_code'] == '00')
             {
                 $recordList = $response['data'];
-                
                 return $this->createDownloadSyncRecord($recordList, $url, $username, $password);
             }
         }
@@ -454,11 +466,11 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
 
     public function databasePrepareDownloadSyncFiles()
     {
-        return $this->getSyncRecordListFromDatabase('up', 1);
+        return $this->getSyncRecordListFromDatabase('down', array(0));
     }
     public function databasePrepareExecuteQuery()
     {
-        return $this->getSyncRecordListFromDatabase('down', 2);
+        return $this->getSyncRecordListFromDatabase('down', array(0, 1));
     }
 
     private function getLastSyncTime()
@@ -552,13 +564,16 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
             $record = $this->getSyncRecord($recordId);
             if ($record != null) 
             {
-                $relativePath = $this->getRelativePath($record['file_path']);
-                $absolutePath = $this->getAbsolutePath($relativePath);
+                $relativePath = $record['relative_path'];
+                $absolutePath = $this->downloadBaseDir . "/" . basename($relativePath);
                 $content = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
                 $dir = dirname($absolutePath);
+
                 $this->prepareDirectory($dir);
                 file_put_contents($absolutePath, $content);
                 chmod($absolutePath, $permission);
+                $absolutePath = addslashes($absolutePath);
+                $relativePath = addslashes($relativePath);
                 $this->updatePathAndStatus($recordId, $absolutePath, $relativePath, 1);
                 return true;
             }
@@ -575,68 +590,53 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         foreach($recordList as $record)
         {
             $fileSize = ((int) $record['file_size']);
-            $baseName = addslashes($record['file_name']);
             $sync_database_id = addslashes($record['sync_database_id']);
             $time_create = addslashes($record['time_create']);
             $baseName = addslashes($record['file_name']);
-            $remote_path = addslashes($record['relative_path']);
+            $relative_path = addslashes($record['relative_path']);
             $time_upload = addslashes($record['time_upload']);
             $time_download = date('Y-m-d H:i:s');
 
             $localPath = $this->downloadBaseDir . "/" . $baseName;
             try
             {
-                $response = $this->downloadFileFromRemote($remote_path, $url, $username, $password);
-                if(file_put_contents($localPath, $response))
-                {   
-                    $localPath = addslashes($localPath);
-                    $sync_database_id = $this->database->generateNewId();
-                    $sql = "INSERT INTO `edu_sync_database`
-                    (`sync_database_id`, `file_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
-                    ('$sync_database_id', '$localPath', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
-                    $this->database->execute($sql);
-                }
-                return true;
+                $localPath = addslashes($localPath);
+                $sql = "INSERT INTO `edu_sync_database`
+                (`sync_database_id`, `file_path`, `relative_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
+                ('$sync_database_id', '$localPath', '$relative_path', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
+                $this->database->execute($sql);
             }
             catch(Exception $e)
             {
-                // Do nothing
-                return false;
             }
         }
         return true;
     }
 
-    public function syncRemoteQueryToDatabase()
-    {
-        $recordList = $this->getSyncRecordListFromDatabase('down', 0);
-        foreach($recordList as $record)
-        {
-            $this->syncQuerysFromSyncRecord($record);
-        }
-    }
-    
     private function syncQuerysFromSyncRecord($record)
     {
-        $syncFilePath = addslashes($record['file_path']);
+        $syncFilePath = $record['file_path'];
         $delimiter = trim($this->database->getDatabaseSyncConfig()->getDelimiter());
-
-        $handle = fopen($syncFilePath, "r");
-        if ($handle) {
-            $buff = "";
-            while (($line = fgets($handle)) !== false) {
-                $chk = trim($line);
-                if($chk == $delimiter)
-                {
-                    $this->execute($buff);
-                    $buff = "";
+        if(file_exists($syncFilePath))
+        {
+            $handle = fopen($syncFilePath, "r");
+            if ($handle) {
+                $buff = "";
+                while (($line = fgets($handle)) !== false) {
+                    $chk = trim($line);
+                    if($chk == $delimiter)
+                    {
+                        $this->execute($buff);
+                        //echo "<br>BUFF = >>>>$buff<<<<; ";
+                        $buff = "";
+                    }
+                    else
+                    {
+                        $buff .= $line."\r\n";
+                    }
                 }
-                else
-                {
-                    $buff .= $line."\r\n";
-                }
+                fclose($handle);
             }
-            fclose($handle);
         }
 
     }
