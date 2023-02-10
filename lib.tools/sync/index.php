@@ -3,12 +3,17 @@ include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-sync.php";
 
 if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database')
 {
-    $syncHubURL = "http://localhost/sync/";
-
     $applicationRoot = dirname(dirname(dirname(__FILE__)));
-    $username = 'user';
-    $password = 'password';
     $permission = 0755;
+
+    $syncHubURL = "http://localhost/sync/";
+    $syncHubURL = $database->getSystemVariable("sync_hub_url");
+
+    $username = 'user';
+    $username = $database->getSystemVariable("sync_hub_username");
+
+    $password = 'password';
+    $password = $database->getSystemVariable("sync_hub_password");
     
     $fileUploadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/upload";
     $fileDownloadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/download";
@@ -38,10 +43,11 @@ if(@$_GET['type'] == 'file')
         if(@$_GET['step'] == '1')
         {
             $success = $fileSyncDownload->fileDownloadInformation($fileSyncUrl, $username, $password);
+            $completed = true;
             echo json_encode(
                 array(
                     'success'=>$success,
-                    'completed'=>$success
+                    'completed'=>$completed
                 )
             );
             exit();
@@ -50,7 +56,7 @@ if(@$_GET['type'] == 'file')
         {
             $recordList = $fileSyncDownload->filePrepareDownloadSyncFiles();
             $success = true;
-            $completed = $success;
+            $completed = true;
             $recordList2 = array();
             foreach($recordList as $record)
             {
@@ -73,10 +79,11 @@ if(@$_GET['type'] == 'file')
             $recordId = addslashes(trim(@$_GET['recordId']));
             $fileSyncDownload->fileDownloadSyncFiles($recordId, $permission, $fileSyncUrl, $username, $password);
             $success = true;
+            $completed = true;
             echo json_encode(
                 array(
                     'success'=>$success,
-                    'completed'=>$success
+                    'completed'=>$completed
                 )
             );
             exit();
@@ -85,7 +92,7 @@ if(@$_GET['type'] == 'file')
         {
             $recordList = $fileSyncDownload->filePrepareDownloadUserFiles();
             $success = true;
-            $completed = $success;
+            $completed = true;
             $recordList2 = array();
             foreach($recordList as $record)
             {
@@ -119,18 +126,20 @@ if(@$_GET['type'] == 'file')
             exit();
         }
     }
+
     if(@$_GET['direction'] == 'up')
     {
-        $success = $fileSyncUpload = new \FileSyncUpload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
+        $fileSyncUpload = new \FileSyncUpload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
         $fileSyncUpload->setUseRelativePath($configs->sync_file_use_relative_path);
         if(@$_GET['step'] == '1')
         {
             $fileSyncUpload->fileUploadPreparation();
             $success = true;
+            $completed = true;
             echo json_encode(
                 array(
                     'success'=>$success,
-                    'completed'=>$success
+                    'completed'=>$completed
                 )
             );
             exit();
@@ -139,7 +148,7 @@ if(@$_GET['type'] == 'file')
         {
             $recordList = $fileSyncUpload->filePrepareUploadUserFiles();
             $success = true;
-            $completed = $success;
+            $completed = true;
             $recordList2 = array();
             foreach($recordList as $record)
             {
@@ -162,10 +171,11 @@ if(@$_GET['type'] == 'file')
             $recordId = trim(@$_GET['recordId']);
             $fileSyncUpload->fileUploadUserFiles($recordId, $fileSyncUrl, $username, $password);
             $success = true;
+            $completed = true;
             echo json_encode(
                 array(
                     'success'=>$success,
-                    'completed'=>$success
+                    'completed'=>$completed
                 )
             );
             exit();
@@ -173,9 +183,8 @@ if(@$_GET['type'] == 'file')
         else if(@$_GET['step'] == '4')
         {
             $recordList = $fileSyncUpload->filePrepareUploadSyncFiles();
-
             $success = true;
-            $completed = $success;
+            $completed = true;
             $recordList2 = array();
             foreach($recordList as $record)
             {
@@ -198,10 +207,11 @@ if(@$_GET['type'] == 'file')
             $recordId = trim(@$_GET['recordId']);
             $fileSyncUpload->fileUploadSyncFiles($recordId, $fileSyncUrl, $username, $password);
             $success = true;
+            $completed = true;
             echo json_encode(
                 array(
                     'success'=>$success,
-                    'completed'=>$success
+                    'completed'=>$completed
                 )
             );
             exit();
@@ -209,10 +219,11 @@ if(@$_GET['type'] == 'file')
         else if(@$_GET['step'] == '6')
         {
             $success = true;
+            $completed = true;
             echo json_encode(
                 array(
                     'success'=>$success,
-                    'completed'=>$success
+                    'completed'=>$completed
                 )
             );
             exit();
@@ -229,10 +240,11 @@ if(@$_GET['type'] == 'database')
         if(@$_GET['step'] == '1')
         {
             $success = $databaseSyncDownload->databaseDownloadInformation($databaseSyncUrl, $username, $password);
+            $completed = true;
             echo json_encode(
                 array(
                     'success'=>$success,
-                    'completed'=>$success
+                    'completed'=>$completed
                 )
             );
             exit();
@@ -241,7 +253,7 @@ if(@$_GET['type'] == 'database')
         {
             $recordList = $databaseSyncDownload->databasePrepareDownloadSyncFiles();
             $success = true;
-            $completed = $success;
+            $completed = true;
             $recordList2 = array();
             foreach($recordList as $record)
             {
@@ -263,10 +275,11 @@ if(@$_GET['type'] == 'database')
         {
             $recordId = trim(@$_GET['recordId']);
             $success = $databaseSyncDownload->databaseDownloadSyncFiles($recordId, $permission, $databaseSyncUrl, $username, $password);
+            $completed = true;
             echo json_encode(
                 array(
                     'success'=>$success,
-                    'completed'=>$success
+                    'completed'=>$completed
                 )
             );
             exit();
@@ -275,7 +288,7 @@ if(@$_GET['type'] == 'database')
         {
             $recordList = $databaseSyncDownload->databasePrepareExecuteQuery();
             $success = true;
-            $completed = $success;
+            $completed = true;
             $recordList2 = array();
             foreach($recordList as $record)
             {
@@ -297,10 +310,11 @@ if(@$_GET['type'] == 'database')
         {
             $recordId = trim(@$_GET['recordId']);
             $success = $databaseSyncDownload->databaseExecuteQuery($recordId);
+            $completed = true;
             echo json_encode(
                 array(
                     'success'=>$success,
-                    'completed'=>$success
+                    'completed'=>$completed
                 )
             );
             exit();
@@ -312,10 +326,11 @@ if(@$_GET['type'] == 'database')
         if(@$_GET['step'] == '1')
         {
             $success = $databaseSyncUpload->syncLocalQueryToDatabase();
+            $completed = true;
             echo json_encode(
                 array(
                     'success'=>$success,
-                    'completed'=>$success
+                    'completed'=>$completed
                 )
             );
             exit();
@@ -324,7 +339,7 @@ if(@$_GET['type'] == 'database')
         {
             $recordList = $databaseSyncUpload->databasePrepareUploadSyncFiles();
             $success = true;
-            $completed = $success;
+            $completed = true;
             $recordList2 = array();
             foreach($recordList as $record)
             {
@@ -344,13 +359,13 @@ if(@$_GET['type'] == 'database')
         }
         else if(@$_GET['step'] == '3')
         {
-            $recordId = trim(@$_GET['recordId']);
-            
+            $recordId = trim(@$_GET['recordId']);         
             $success = $databaseSyncUpload->databaseUploadSyncFiles($recordId, $databaseSyncUrl, $username, $password);
+            $completed = true;
             echo json_encode(
                 array(
                     'success'=>$success,
-                    'completed'=>$success
+                    'completed'=>$completed
                 )
             );
             exit();
@@ -358,10 +373,11 @@ if(@$_GET['type'] == 'database')
         else if(@$_GET['step'] == '4')
         {
             $success = true;
+            $completed = true;
             echo json_encode(
                 array(
                     'success'=>$success,
-                    'completed'=>$success
+                    'completed'=>$completed
                 )
             );
             exit();

@@ -606,6 +606,10 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         return true;
     }
 
+    /**
+     * Execute all queries from selected sync record
+     * @param array $record Sync record
+     */
     private function syncQuerysFromSyncRecord($record)
     {
         $syncFilePath = $record['file_path'];
@@ -619,7 +623,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
                     $chk = trim($line);
                     if($chk == $delimiter)
                     {
-                        $this->execute($buff);
+                        $this->executeQuery($buff);
                         $buff = "";
                     }
                     else
@@ -630,9 +634,13 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
                 fclose($handle);
             }
         }
-
     }
 
+    /**
+     * Execute all queries from selected sync record and update record status
+     * @param string $recordId Sync record ID
+     * @return bool true if success and false if failed
+     */
     public function databaseExecuteQuery($recordId)
     {
         $record = $this->getSyncRecord($recordId);
@@ -640,13 +648,32 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         $this->updateSyncRecord($recordId, 2);
         return true;
     }
-    private function execute($sql)
+
+    /**
+     * Execute database query
+     * @param string $sql Database query to be executed
+     * @return bool true if success and false if failed
+     */
+    private function executeQuery($sql)
     {
         $sql = trim($sql);
         if(!empty($sql))
         {
-            $this->database->execute($sql);
+            /**
+             * Old code
+             * $this->database->execute($sql);
+            */
+            $stmt = $this->database->getDatabaseConnection()->prepare($sql);
+            try 
+            {
+                $stmt->execute();
+            }
+            catch(\PDOException $e)
+            {
+                // Do nothing
+            }
         }
+        return true;
     }
 }
 

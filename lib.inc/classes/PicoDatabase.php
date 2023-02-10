@@ -372,5 +372,56 @@ class PicoDatabase
 		$random = sprintf('%06x', mt_rand(0, 16777215));
 		return sprintf('%s%s', $uuid, $random);
 	}
+
+	/**
+	 * Get system variable
+	 * @param string $variable_name Variable name
+	 * @param mixed $default_value Default value
+	 * @return mixed System variable value of return default value if not exists
+	 */
+	public function getSystemVariable($variable_name, $default_value = null)
+	{
+		$variable_name = addslashes($variable_name);
+		$sql = "SELECT * FROM `edu_system_variable` 
+		WHERE `system_variable_id` = '$variable_name' ";
+		$data = $this->executeQuery($sql)->fetch(PDO::FETCH_ASSOC);
+		if(isset($data) && is_array($data) && !empty($data))
+		{
+			return $data['system_value'];
+		}
+		else
+		{
+			return $default_value;
+		}
+	}
+
+	/**
+	 * Set system variable
+	 * @param string $variable_name Variable name
+	 * @param mixed $value Value to be set
+	 */
+	public function setSystemVariable($variable_name, $value)
+	{
+		$current_time = date('Y-m-d H:i:s');
+		$variable_name = addslashes($variable_name);
+		$value = addslashes($value);
+		$sql = "SELECT * FROM `edu_system_variable` 
+		WHERE `system_variable_id` = '$variable_name' ";
+		if($this->executeQuery($sql)->rowCount() > 0)
+		{
+			$sql = "UPDATE `edu_system_variable` 
+			SET `system_value` = '$value', `time_edit` = '$current_time' 
+			WHERE `system_variable_id` = '$variable_name' ";
+			$this->executeUpdate($sql, true);
+		}
+		else
+		{
+			$sql = "INSERT INTO `edu_system_variable` 
+			(`system_variable_id`, `system_value`, `time_create`, `time_edit`) VALUES
+			('$variable_name', '$value', '$current_time' , '$current_time')
+			";
+			$this->executeInsert($sql, true);
+		}
+	}
 }
 
