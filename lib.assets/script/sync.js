@@ -487,7 +487,6 @@ function databasePrepareDownloadSyncFiles(clbk)
             {
                 databaseSyncFilesDownload.recordList = response.recordList;
                 let recordId = getFileSyncId(databaseSyncFilesDownload, clbk);
-                console.log(recordId)
                 if(recordId != null)
                 {
                     databaseDownloadSyncFiles(recordId, clbk);                         

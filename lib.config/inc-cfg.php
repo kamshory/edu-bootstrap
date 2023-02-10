@@ -39,7 +39,7 @@ $configs->sync_file_pool_name = "pool";
 $configs->sync_file_rolling_prefix = "poll_";
 $configs->sync_file_extension = ".txt";
 $configs->sync_file_maximum_length = 100000;
-$configs->sync_file_use_relative_path = true;
+$configs->sync_file_use_relative_path = false;
 
 
 $cfg = new stdClass();

@@ -356,11 +356,16 @@ class FileSyncMaster
         return null;
     }
 
-    protected function prepareDirectory($dir)
+    /**
+     * Create directory recursively
+     * @param string $dir Directory to be prepared
+     * @param int $permission
+     */
+    protected function prepareDirectory($dir, $permission = 0755)
     {
         if(!file_exists($dir))
         {
-            $this->database->getDatabaseSyncConfig()->prepareDirectory($dir, $this->applicationRoot, 0755);
+            $this->database->getDatabaseSyncConfig()->prepareDirectory($dir, $this->applicationRoot, $permission);
         }
     }
 
@@ -907,10 +912,7 @@ class FileSyncDownload extends FileSyncMaster
             {
                 $response = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
                 $dir = dirname($newName);
-                if(!file_exists($dir))
-                {
-                    $this->prepareDirectory($dir);
-                }
+                $this->prepareDirectory($dir);               
                 file_put_contents($newName, $response);
                 touch($newName, $tm);
             }
@@ -959,7 +961,7 @@ class FileSyncDownload extends FileSyncMaster
         }
         if(!file_exists($localPath))
         {
-            mkdir($localPath, $permission);
+            $this->prepareDirectory($localPath, $permission);
         }
     }
 

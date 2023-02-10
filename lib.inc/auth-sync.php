@@ -40,3 +40,21 @@ if(empty($user_id))
 {
     exit();
 }
+
+$applicationRoot = dirname(dirname(__FILE__));
+$permission = 0755;
+
+$fileUploadBaseDir = $applicationRoot."/lib.sync/file/upload";
+$fileDownloadBaseDir = $applicationRoot."/lib.sync/file/download";
+$filePoolBaseDir = $applicationRoot."/lib.sync/file/pool";
+$filePoolName = "pool";
+$filePoolRollingPrefix = "pool_";
+$filePoolExtension = ".txt";
+
+$databaseUploadBaseDir = $applicationRoot."/lib.sync/database/upload";
+$databaseDownloadBaseDir = $applicationRoot."/lib.sync/database/download";
+$databasePoolBaseDir = $applicationRoot."/lib.sync/database/pool";
+$databasePoolName = "pool";
+$databasePoolRollingPrefix = "pool_";
+$databasePoolExtension = ".txt";
+

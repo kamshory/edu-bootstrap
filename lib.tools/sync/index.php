@@ -3,33 +3,16 @@ include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-sync.php";
 
 if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database')
 {
-    $applicationRoot = dirname(dirname(dirname(__FILE__)));
-    $permission = 0755;
-
     $syncHubURL = "http://localhost/sync/";
     $syncHubURL = $database->getSystemVariable("sync_hub_url");
+    $fileSyncUrl = rtrim($syncHubURL, "/")."/";
+    $databaseSyncUrl = rtrim($syncHubURL, "/")."/";
 
     $username = 'user';
     $username = $database->getSystemVariable("sync_hub_username");
 
     $password = 'password';
     $password = $database->getSystemVariable("sync_hub_password");
-    
-    $fileUploadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/upload";
-    $fileDownloadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/download";
-    $filePoolBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/pool";
-    $filePoolName = "pool";
-    $filePoolRollingPrefix = "pool_";
-    $filePoolExtension = ".txt";
-    $fileSyncUrl = rtrim($syncHubURL, "/")."/";
-
-    $databaseUploadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/database/upload";
-    $databaseDownloadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/database/download";
-    $databasePoolBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/database/pool";
-    $databasePoolName = "pool";
-    $databasePoolRollingPrefix = "pool_";
-    $databasePoolExtension = ".txt";
-    $databaseSyncUrl = rtrim($syncHubURL, "/")."/";
     
 }
 
