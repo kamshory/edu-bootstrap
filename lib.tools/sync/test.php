@@ -105,8 +105,6 @@ if(
 }
 
 
-
-
 if(
     @$_GET['type'] == 'file'
     && @$_GET['direction'] == 'up'

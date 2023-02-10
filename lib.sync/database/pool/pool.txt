@@ -1,0 +1,21 @@
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_article`
+		(`article_id`, `school_id`, `title`, `open`, `class`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, 
+		`role_edit`, `ip_create`, `ip_edit`, `active`) VALUES	
+		('063e62cae7969a506235', '063ce682801be89951aa', 'Sync Hub', '0', '', '2023-02-10 18:38:22', '2023-02-10 18:38:22', 'aaaaaaaaaaaaa', 'A', 'aaaaaaaaaaaaa', 
+		'A', '127.0.0.1', '127.0.0.1', '1')
+		;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `content` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/article/063e62cae7969a506235/c9dd5ae833e1b989366db6e2aa543dcf.svg\"></p>' WHERE `article_id` = '063e62cae7969a506235' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` set
+		`title` = 'Sync Hub', `content` = '<p><img src=\"media.edu/school/063ce682801be89951aa/article/063e62cae7969a506235/c9dd5ae833e1b989366db6e2aa543dcf.svg\" alt=\"\" width=\"300\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-10 18:41:13', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e62cae7969a506235' AND `school_id` = '063ce682801be89951aa'
+		;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` set
+		`title` = 'Sync Hub', `content` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/article/063e62cae7969a506235/b2bf749e4c3bed3104cd790f0b852b95.svg\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-10 18:41:43', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e62cae7969a506235' AND `school_id` = '063ce682801be89951aa'
+		;
