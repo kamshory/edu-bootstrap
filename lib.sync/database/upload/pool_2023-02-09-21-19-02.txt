@@ -1,9 +1,0 @@
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-INSERT INTO `edu_article`
-		(`article_id`, `school_id`, `title`, `open`, `class`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, 
-		`role_edit`, `ip_create`, `ip_edit`, `active`) VALUES	
-		('063e500818a9499f5736', '063ce682801be89951aa', 'Tabung', '0', '', '2023-02-09 21:17:37', '2023-02-09 21:17:37', 'aaaaaaaaaaaaa', 'A', 'aaaaaaaaaaaaa', 
-		'A', '127.0.0.1', '127.0.0.1', '1')
-		;
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-UPDATE `edu_article` SET `content` = '<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/article/063e500818a9499f5736/d785a087aad458e49fd82a67f83c9613.svg\"></p>' WHERE `article_id` = '063e500818a9499f5736' ;

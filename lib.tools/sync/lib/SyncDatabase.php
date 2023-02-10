@@ -348,16 +348,15 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
     {
         $record = $this->getSyncRecord($recordId);
         $path = $record['file_path'];
-        $sync_file_id = $record['sync_database_id'];
         if(file_exists($path))
         {
             try{
                 $result = $this->uploadSyncFile($path, $record, $fileSyncUrl, $username, $password);              
-                $this->updateSyncRecord($sync_file_id, 2);
+                $this->updateSyncRecord($recordId, 2);
             }
             catch(Exception $e)
             {
-                $this->updateSyncRecord($sync_file_id, 1);
+                $this->updateSyncRecord($recordId, 1);
             }
         }
         return true;

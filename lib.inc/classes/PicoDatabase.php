@@ -173,8 +173,8 @@ class PicoDatabase
 	 * @param PicoDatabaseServer $databaseServer
 	 * @param string $username
 	 * @param string $password
-	 * @param mixed $databaseName
-	 * @param mixed $timezone
+	 * @param string $databaseName
+	 * @param string $timezone
 	 * @param \PicoDatabaseSyncConfig $databaseSyncConfig
 	 */
 	public function __construct($databaseServer, $username, $password, $databaseName, $timezone, $databaseSyncConfig) //NOSONAR
@@ -259,7 +259,7 @@ class PicoDatabase
 		}
 		catch(\PDOException $e)
 		{
-			echo $e->getMessage()."\r\nERROR &raquo; $sql";
+			//echo $e->getMessage()."\r\nERROR &raquo; $sql";
 		}
 	}
 
@@ -283,8 +283,8 @@ class PicoDatabase
 
 	/**
 	 * Execute query and sync
-	 * @param mixed $sql Query string to be executed
-	 * @param mixed $sync Flag synchronizing
+	 * @param string $sql Query string to be executed
+	 * @param bool $sync Flag synchronizing
 	 * @return PDOStatement|bool
 	 */
 	private function executeAndSync($sql, $sync)

@@ -3,6 +3,7 @@ include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-sync.php";
 
 if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database')
 {
+    $syncHubURL = "http://localhost/sync/";
 
     $applicationRoot = dirname(dirname(dirname(__FILE__)));
     $username = 'user';
@@ -10,23 +11,22 @@ if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database')
     $permission = 0755;
     
     $fileUploadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/upload";
-    $fileDownloadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/upload";
+    $fileDownloadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/download";
     $filePoolBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/file/pool";
     $filePoolName = "pool";
     $filePoolRollingPrefix = "pool_";
     $filePoolExtension = ".txt";
-    $fileSyncUrl = 'http://localhost/sync/file/';
+    $fileSyncUrl = rtrim($syncHubURL, "/")."/";
 
     $databaseUploadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/database/upload";
-    $databaseDownloadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/database/upload";
+    $databaseDownloadBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/database/download";
     $databasePoolBaseDir = dirname(dirname(dirname(__FILE__)))."/lib.sync/database/pool";
     $databasePoolName = "pool";
     $databasePoolRollingPrefix = "pool_";
     $databasePoolExtension = ".txt";
-    $databaseSyncUrl = 'http://localhost/sync/database/';
+    $databaseSyncUrl = rtrim($syncHubURL, "/")."/";
     
 }
-
 
 if(@$_GET['type'] == 'file')
 {
@@ -71,6 +71,14 @@ if(@$_GET['type'] == 'file')
         {
             $recordId = addslashes(trim(@$_GET['recordId']));
             $fileSyncDownload->fileDownloadSyncFiles($recordId, $permission, $fileSyncUrl, $username, $password);
+            $success = true;
+            echo json_encode(
+                array(
+                    'success'=>$success,
+                    'completed'=>$success
+                )
+            );
+            exit();
         }
         else if(@$_GET['step'] == '4')
         {
@@ -99,6 +107,15 @@ if(@$_GET['type'] == 'file')
         {
             $recordId = trim(@$_GET['recordId']);
             $fileSyncDownload->fileDownloadUserFiles($recordId, $permission, $fileSyncUrl, $username, $password);
+            $success = true;
+            $completed = true;
+            echo json_encode(
+                array(
+                    'success'=>$success,
+                    'completed'=>$completed
+                )
+            );
+            exit();
         }
     }
     if(@$_GET['direction'] == 'up')
@@ -141,6 +158,7 @@ if(@$_GET['type'] == 'file')
         {
             $recordId = trim(@$_GET['recordId']);
             $fileSyncUpload->fileUploadUserFiles($recordId, $fileSyncUrl, $username, $password);
+            $success = true;
             echo json_encode(
                 array(
                     'success'=>$success,
@@ -176,6 +194,7 @@ if(@$_GET['type'] == 'file')
         {
             $recordId = trim(@$_GET['recordId']);
             $fileSyncUpload->fileUploadSyncFiles($recordId, $fileSyncUrl, $username, $password);
+            $success = true;
             echo json_encode(
                 array(
                     'success'=>$success,

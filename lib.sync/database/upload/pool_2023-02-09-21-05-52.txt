@@ -1,6 +1,0 @@
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-UPDATE `edu_class` SET 
-	`class_code` = 'XI.IPA7', `grade_id` = '11', `school_program_id` = '063ce68281203e741899', `name` = 'XI.IPA7', 
-	`time_create` = '2023-02-09 21:05:37', `time_edit` = '2023-02-09 21:05:37', `admin_create` = 'aaaaaaaaaaaaa', `admin_edit` = 'aaaaaaaaaaaaa', 
-	`ip_create` = '127.0.0.1', `ip_edit` = '127.0.0.1', `sort_order` = '1130', `active` = '1'
-	WHERE `class_id` = '063ce6828175ccbdcbeb' AND `school_id` = '063ce682801be89951aa' ;
