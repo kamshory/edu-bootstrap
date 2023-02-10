@@ -124,6 +124,7 @@ if(@$_GET['type'] == 'file')
         if(@$_GET['step'] == '1')
         {
             $fileSyncUpload->fileUploadPreparation();
+            $success = true;
             echo json_encode(
                 array(
                     'success'=>$success,

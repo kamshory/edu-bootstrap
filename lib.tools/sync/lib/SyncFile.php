@@ -74,7 +74,7 @@ class FileSyncMaster
         {
             if($localPath == $pathToRemove)
             {
-                $newPath = $this->poolBaseDir . "/" . $this->poolRollingPrefix.date('Y-m-d-H-i-s').$this->poolFileExtension;
+                $newPath = $this->poolBaseDir . "/" . $this->poolRollingPrefix.date('Y-m-d-H-i-s')."-".$this->generateNewId().$this->poolFileExtension;
                 rename($localPath, $newPath);
                 $fileList[$key] = $newPath;
             }
@@ -143,7 +143,6 @@ class FileSyncMaster
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-        curl_exec($ch);
         $server_output = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
@@ -311,8 +310,6 @@ class FileSyncMaster
         }
     }
 
-    
-
     protected function updatePathAndStatus($recordId, $absolutePath, $relativePath, $status)
     {
         $sql = "UPDATE `edu_sync_file` SET `file_path` = '$absolutePath', `relative_path` = '$relativePath', `status` = '$status' WHERE `sync_file_id` = '$recordId' ";
@@ -366,6 +363,21 @@ class FileSyncMaster
         $url = $url."?".http_build_query($combined);
         return $url;
     }
+
+    /**
+	 * Generate 20 bytes unique ID
+	 * @return string 20 bytes
+	 */
+	public function generateNewId()
+	{
+		$uuid = uniqid();
+		if((strlen($uuid) % 2) == 1)
+		{
+			$uuid = '0'.$uuid;
+		}
+		$random = sprintf('%06x', mt_rand(0, 16777215));
+		return sprintf('%s%s', $uuid, $random);
+	}
 
 }
 
@@ -763,34 +775,37 @@ class FileSyncDownload extends FileSyncMaster
     private function syncUserFilesFromSyncRecord($record, $permission, $fileSyncUrl, $username, $password)
     {
         $syncFilePath = rtrim($this->downloadBaseDir, "/")."/".basename($record['relative_path']);
-        $handle = fopen($syncFilePath, "r");
-        if ($handle) {
-            while (($line = fgets($handle)) !== false) {
-                $info = json_decode($line, true);
-                
-                if($info['op'] == 'CREATEFILE')
-                {
-                   
-                    $this->procCreateFile($info, $permission, $fileSyncUrl, $username, $password);
+        if(file_exists($syncFilePath))
+        {
+            $handle = fopen($syncFilePath, "r");
+            if ($handle) {
+                while (($line = fgets($handle)) !== false) {
+                    $info = json_decode($line, true);
+                    
+                    if($info['op'] == 'CREATEFILE')
+                    {
+                    
+                        $this->procCreateFile($info, $permission, $fileSyncUrl, $username, $password);
+                    }
+                    else if($info['op'] == 'RENAMEFILE')
+                    {
+                        $this->procRenameFile($info, $permission, $fileSyncUrl, $username, $password);
+                    }
+                    else if($info['op'] == 'DELETEFILE')
+                    {
+                        $this->procDeleteFile($info);
+                    }
+                    else if($info['op'] == 'CREATEDIR')
+                    {
+                        $this->procCreateDir($info, $permission);
+                    }
+                    else if($info['op'] == 'RENAMEDIR')
+                    {
+                        $this->procRenameDir($info, $permission);
+                    }
                 }
-                else if($info['op'] == 'RENAMEFILE')
-                {
-                    $this->procRenameFile($info, $permission, $fileSyncUrl, $username, $password);
-                }
-                else if($info['op'] == 'DELETEFILE')
-                {
-                    $this->procDeleteFile($info);
-                }
-                else if($info['op'] == 'CREATEDIR')
-                {
-                    $this->procCreateDir($info, $permission);
-                }
-                else if($info['op'] == 'RENAMEDIR')
-                {
-                    $this->procRenameDir($info, $permission);
-                }
+                fclose($handle);
             }
-            fclose($handle);
         }
         return true;
     }

@@ -77,7 +77,7 @@ class DatabaseSyncMaster
         {
             if($val == $pathToRemove)
             {
-                $newPath = $this->poolBaseDir . "/" . $this->poolRollingPrefix.date('Y-m-d-H-i-s').$this->poolFileExtension;
+                $newPath = $this->poolBaseDir . "/" . $this->poolRollingPrefix.date('Y-m-d-H-i-s')."-".$this->generateNewId().$this->poolFileExtension;
                 rename($val, $newPath);
                 $fileList[$key] = $newPath;
             }
@@ -105,9 +105,14 @@ class DatabaseSyncMaster
      * @param string $password Sync password
      * @return mixed
      */
-    protected function uploadSyncFile($path, $record, $url, $username, $password)
+    protected function uploadSyncFile($path, $record, $fileSyncUrl, $username, $password)
     {
-        ob_start();
+        $httpQuery = array(
+            'sync_type'=>'database',
+            'action'=>'upload-sync-file'
+        );
+        $fileSyncUrl = $this->buildURL($fileSyncUrl, $httpQuery);
+         ob_start();
         if(function_exists('curl_file_create')) 
         { 
             $cFile = curl_file_create($path);
@@ -119,6 +124,7 @@ class DatabaseSyncMaster
 
         $sync_database_id = $record['sync_database_id'];
         $file_path = $record['file_path'];
+        $relative_path = $record['relative_path'];
         $file_name = $record['file_name'];
         $file_size = $record['file_size'];
         $time_create = $record['time_create'];
@@ -127,6 +133,7 @@ class DatabaseSyncMaster
         $post = array(
             'sync_database_id' => $sync_database_id,
             'file_path' => $file_path,
+            'relative_path' => $relative_path,
             'file_name' => $file_name,
             'file_size' => $file_size,
             'time_create' => $time_create,
@@ -136,17 +143,17 @@ class DatabaseSyncMaster
         
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
-        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_URL, $fileSyncUrl);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-  
         $server_output = curl_exec($ch);
-
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-
         curl_close($ch);
+
         ob_end_clean();
+
         if($httpcode)
         {
             return json_decode($server_output);
@@ -246,6 +253,43 @@ class DatabaseSyncMaster
             $this->database->getDatabaseSyncConfig()->prepareDirectory($dir, $this->applicationRoot, 0755);
         }
     }
+
+    /**
+	 * Generate 20 bytes unique ID
+	 * @return string 20 bytes
+	 */
+	public function generateNewId()
+	{
+		$uuid = uniqid();
+		if((strlen($uuid) % 2) == 1)
+		{
+			$uuid = '0'.$uuid;
+		}
+		$random = sprintf('%06x', mt_rand(0, 16777215));
+		return sprintf('%s%s', $uuid, $random);
+	}
+
+    protected function buildURL($url, $httpQuery, $keepOriginal = true)
+    {
+        $original = array();
+        if($keepOriginal)
+        {
+            $parsed = parse_url($url);
+            if(isset($parsed['query']))
+            {
+                parse_str($parsed['query'], $original);
+            }
+        }
+        $combined = array_merge($original, $httpQuery);
+        
+        if(stripos($url, "?") !== false)
+        {
+            $arr = explode("?", $url);
+            $url = $arr[0];
+        }        
+        $url = $url."?".http_build_query($combined);
+        return $url;
+    }
 }
 
 class DatabaseSyncUpload extends DatabaseSyncMaster
@@ -290,16 +334,17 @@ class DatabaseSyncUpload extends DatabaseSyncMaster
     /**
      * Create sync record to database
      */
-    private function createUploadSyncRecord($val)
+    private function createUploadSyncRecord($localPath)
     {
-        $fileSize = filesize($val) * 1;
-        $baseName = addslashes(basename($val));
-        $path = addslashes($val);
+        $fileSize = filesize($localPath) * 1;
+        $baseName = addslashes(basename($localPath));
+        $path = addslashes($localPath);
+        $relativePath = $this->getRelativePath($localPath);
         $sync_database_id = $this->database->generateNewId();
         $timeUpload = date('Y-m-d H:i:s');
         $sql = "INSERT INTO `edu_sync_database`
-        (`sync_database_id`, `file_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `status`) VALUES
-        ('$sync_database_id', '$path', '$baseName', '$fileSize', 'up', '$timeUpload', '$timeUpload', 0)";
+        (`sync_database_id`, `file_path`, `relative_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `status`) VALUES
+        ('$sync_database_id', '$path', '$relativePath', '$baseName', '$fileSize', 'up', '$timeUpload', '$timeUpload', 0)";
         $this->database->execute($sql);
     }
 
@@ -393,13 +438,18 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
             $lastSync = '0000-00-00 00:00:00';
         }
         try {
-            $recordList = $this->getSyncRecordListFromRemote($lastSync, $url, $username, $password);
-            return $this->createDownloadSyncRecord($recordList, $url, $username, $password);
+            $response = $this->getSyncRecordListFromRemote($lastSync, $url, $username, $password);
+            if($response['response_code'] == '00')
+            {
+                $recordList = $response['data'];
+                
+                return $this->createDownloadSyncRecord($recordList, $url, $username, $password);
+            }
         }
         catch(Exception $e)
         {
-            return true;
         }
+        return true;
     }
 
     public function databasePrepareDownloadSyncFiles()
@@ -431,31 +481,31 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
      * @param string $password Sync password
      * @return array List of sync file from last sync
      */
-    private function getSyncRecordListFromRemote($lastSync, $url, $username, $password) 
+    private function getSyncRecordListFromRemote($lastSync, $fileSyncUrl, $username, $password) 
     {
+        $httpQuery = array(
+            'sync_type'=>'database',
+            'action'=>'list-record',
+            'last_sync'=>$lastSync
+        );
+        $fileSyncUrl = $this->buildURL($fileSyncUrl, $httpQuery);
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
-        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_URL, $fileSyncUrl);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
-        curl_setopt($ch, CURLOPT_POSTFIELDS,
-            http_build_query(
-                array(
-                    'last_sync'=>$lastSync
-                    )
-            )
-        );
 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $server_output = curl_exec($ch);
+ 
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         curl_close($ch);
         
         if($httpcode)
         {
-            return json_decode($server_output);
+            return json_decode($server_output, true);
         }
         else
         {
@@ -473,18 +523,14 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
      * @return string Data from file downloaded
      * @throws DatabaseSyncException
      */
-    public function downloadFileFromRemote($remotePath, $url, $username, $password)
+    public function downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password)
     {
+        $url = rtrim($fileSyncUrl, "/")."/".ltrim($relativePath, "/");
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
-        curl_setopt($ch, CURLOPT_POSTFIELDS,
-            http_build_query(
-                array('file_path'=>$remotePath)
-            )
-        );
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $server_output = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
@@ -533,12 +579,11 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
             $sync_database_id = addslashes($record['sync_database_id']);
             $time_create = addslashes($record['time_create']);
             $baseName = addslashes($record['file_name']);
-            $remote_path = addslashes($record['file_path']);
+            $remote_path = addslashes($record['relative_path']);
             $time_upload = addslashes($record['time_upload']);
             $time_download = date('Y-m-d H:i:s');
 
             $localPath = $this->downloadBaseDir . "/" . $baseName;
-
             try
             {
                 $response = $this->downloadFileFromRemote($remote_path, $url, $username, $password);

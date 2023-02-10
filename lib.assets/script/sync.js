@@ -6,7 +6,6 @@ let fileUserFilesUpload = {};
 let databaseSyncFilesDownload = {};
 let databaseUserFilesDownload = {};
 let databaseSyncFilesUpload = {};
-let databaseUserFilesUpload = {};
 let syncPath = '';
 function startSync(path, clbk)
 {
@@ -650,8 +649,8 @@ function databasePrepareUploadSyncFiles(clbk)
         {         
             if(response.success)
             {
-                databaseUserFilesUpload.recordList = response.recordList;
-                let recordId = getFileSyncId(databaseUserFilesUpload);
+                databaseSyncFilesUpload.recordList = response.recordList;
+                let recordId = getFileSyncId(databaseSyncFilesUpload);
                 if(recordId != null)
                 {
                     databaseUploadSyncFiles(recordId, clbk);                         
@@ -685,9 +684,9 @@ function databaseUploadSyncFiles(recordId, clbk)
         {
             if(response.success)
             {
-                updateRecordStatus(databaseUserFilesUpload, recordId);
-                updateProgressBar('database', 'up', 3, databaseUserFilesUpload.recordList);
-                let nextRecordId = getFileSyncId(databaseUserFilesUpload);
+                updateRecordStatus(databaseSyncFilesUpload, recordId);
+                updateProgressBar('database', 'up', 3, databaseSyncFilesUpload.recordList);
+                let nextRecordId = getFileSyncId(databaseSyncFilesUpload);
                 if(nextRecordId != null)
                 {
                     databaseUploadSyncFiles(nextRecordId, clbk);
