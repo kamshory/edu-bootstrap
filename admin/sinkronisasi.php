@@ -27,6 +27,7 @@ if(!empty($school_id))
     <script>
         $(document).ready(function(){
             $(document).on('click', '#start-sync', function(e){
+                $(this)[0].disabled = true;
                 $('.sync-area').slideDown('fast', function(e2){
                     startSync('lib.tools/sync/', function(e3){
                         setTimeout(function(){
