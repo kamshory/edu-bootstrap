@@ -661,7 +661,8 @@ $fileSync = new FileSynchronizer(
 	$configs->sync_file_pool_name,
 	$configs->sync_file_rolling_prefix,
 	$configs->sync_file_extension,
-	$configs->sync_file_maximum_length
+	$configs->sync_file_maximum_length,
+	$configs->sync_file_use_relative_path
 );
 
 $picoEdu = new PicoEdu($database);

@@ -22,6 +22,7 @@ class FileSyncMaster
     protected string $poolFileName = '';
     protected string $poolRollingPrefix = '';
     protected string $poolFileExtension = '';
+    protected bool $useRelativePath;
 
     /**
      * Constructor of FileSyncMaster
@@ -34,7 +35,7 @@ class FileSyncMaster
      * @param string $poolRollingPrefix Pooling file prefix
      * @param string $poolFileExtension Pooling file extension
      */
-    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null, $useRelativePath = false) //NOSONAR
     {
         $this->database = $database;
         $this->applicationRoot = $applicationRoot;
@@ -47,10 +48,21 @@ class FileSyncMaster
         {
             $this->poolFileExtension = $poolFileExtension;
         }
+        $this->useRelativePath = $useRelativePath;
     }
+    
+    /**
+     * Set useRelativePath to true or false
+     * @param bool $useRelativePath Use relative path value
+     */
+    public function setUseRelativePath($useRelativePath)
+    {
+        $this->useRelativePath = $useRelativePath;
+    }
+
     /**
      * List directory content
-     * @param mixed $base
+     * @param mixed $base Base directory to be list
      * @return array|bool
      */
     protected function glob($base)
@@ -95,8 +107,8 @@ class FileSyncMaster
 
     /**
      * Upload sync file to sync hub
-     * @param mixed $path Sync file path
-     * @param mixed $record Sync record
+     * @param string $path Sync file path
+     * @param array $record Sync record
      * @param string $fileSyncUrl Synch hub URL
      * @param string $username Sync username
      * @param string $password Sync password
@@ -159,8 +171,8 @@ class FileSyncMaster
 
     /**
      * Upload sync file to sync hub
-     * @param mixed $path Sync file path
-     * @param mixed $record Sync record
+     * @param string $path Sync file path
+     * @param array $record Sync record
      * @param string $fileSyncUrl Synch hub URL
      * @param string $username Sync username
      * @param string $password Sync password
@@ -274,14 +286,14 @@ class FileSyncMaster
 
     /**
      * Update sync record
-     * @param mixed $sync_file_id Sync record ID
-     * @param mixed $status Record status
+     * @param string $syncFileId Sync record ID
+     * @param int $status Record status
      * @return mixed
      */
-    public function updateSyncRecord($sync_file_id, $status)
+    public function updateSyncRecord($syncFileId, $status)
     {
-        $sync_file_id = addslashes($sync_file_id);
-        $sql = "UPDATE `edu_sync_file` SET `status` = '$status' WHERE `sync_file_id` = '$sync_file_id' ";
+        $syncFileId = addslashes($syncFileId);
+        $sql = "UPDATE `edu_sync_file` SET `status` = '$status' WHERE `sync_file_id` = '$syncFileId' ";
         return $this->database->executeUpdate($sql, false);
     }
 
@@ -404,10 +416,11 @@ class FileSyncUpload extends FileSyncMaster
      * @param string $poolFileName Pooling file name
      * @param string $poolRollingPrefix Pooling file prefix
      * @param string $poolFileExtension Pooling file extension
+     * @param bool $useRelativePath Use relative path
      */
-    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null, $useRelativePath = false) //NOSONAR
     {
-        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
+        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension, $useRelativePath);      
     }
     
 
@@ -541,10 +554,11 @@ class FileSyncDownload extends FileSyncMaster
      * @param string $poolFileName Pooling file name
      * @param string $poolRollingPrefix Pooling file prefix
      * @param string $poolFileExtension Pooling file extension
+     * @param bool $useRelativePath Use relative path
      */
-    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
+    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null, $useRelativePath = false) //NOSONAR
     {
-        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
+        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension, $useRelativePath);      
     }
     
     /**
@@ -778,8 +792,7 @@ class FileSyncDownload extends FileSyncMaster
                     $info = json_decode($line, true);
                     
                     if($info['op'] == 'CREATEFILE')
-                    {
-                    
+                    {                   
                         $this->procCreateFile($info, $permission, $fileSyncUrl, $username, $password);
                     }
                     else if($info['op'] == 'RENAMEFILE')
@@ -816,11 +829,21 @@ class FileSyncDownload extends FileSyncMaster
      */
     public function procCreateFile($info, $permission, $fileSyncUrl, $username, $password)
     {
-        $localPath = $info['path'];
-        $tm = $info['tm'];
         try
         {
-            $relativePath = $this->getRelativePath($localPath);
+            $tm = $info['tm'];
+            
+            if($this->useRelativePath)
+            {
+                $relativePath = $info['path'];
+                $localPath = rtrim($this->applicationRoot, "/")."/".ltrim($relativePath);
+            }
+            else
+            {
+                $localPath = $info['path'];
+                $relativePath = $this->getRelativePath($localPath);
+            }
+            
             $response = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
             $dir = dirname($localPath);
             $this->prepareDirectory($dir);
@@ -849,28 +872,47 @@ class FileSyncDownload extends FileSyncMaster
      */
     public function procRenameFile($info, $permission, $fileSyncUrl, $username, $password)
     {
-        $localPath = $info['path'];
         $tm = $info['tm'];
-        $to = $info['to'];
-        $dir = dirname($localPath);
-        $this->prepareDirectory($dir);
-        $dir = dirname($to);
-        $this->prepareDirectory($dir);
-        if(file_exists($localPath) && !file_exists($to))
+        $oldName = $info['path']; // Assumed path is absolute
+        $newName = $info['to']; // Assumed path is absolute
+
+        if($this->useRelativePath)
         {
-            chmod($localPath, 0777);
-            rename($localPath, $to);
-            chmod($to, $permission);
+            $relativePath = $info['to']; // Relative
+            $oldName = rtrim($this->applicationRoot, "/")."/".ltrim($oldName); // Absolute
+            $newName = rtrim($this->applicationRoot, "/")."/".ltrim($newName); // Absolute
+        }
+        else
+        {
+            $relativePath = $this->getRelativePath($newName); //Relative
+        }
+
+
+
+        if(file_exists($oldName) && !file_exists($newName))
+        {
+            chmod($oldName, 0777);
+            $dir = dirname($newName);
+            if(!file_exists($dir))
+            {
+                $this->prepareDirectory($dir);
+            }
+            rename($oldName, $newName);
+            chmod($newName, $permission);
         }
         else
         {
             // force download
             try
             {
-                $relativePath = $this->getRelativePath($to);
                 $response = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
-                file_put_contents($to, $response);
-                touch($to, $tm);
+                $dir = dirname($newName);
+                if(!file_exists($dir))
+                {
+                    $this->prepareDirectory($dir);
+                }
+                file_put_contents($newName, $response);
+                touch($newName, $tm);
             }
             catch(FileSyncException $e)
             {
@@ -891,6 +933,10 @@ class FileSyncDownload extends FileSyncMaster
     public function procDeleteFile($info)
     {
         $localPath = $info['path'];
+        if($this->useRelativePath)
+        {
+            $localPath = rtrim($this->applicationRoot, "/")."/".ltrim($localPath);
+        }
         if(file_exists($localPath))
         {
             chmod($localPath, 0777);
@@ -907,6 +953,10 @@ class FileSyncDownload extends FileSyncMaster
     public function procCreateDir($info, $permission)
     {
         $localPath = $info['path'];
+        if($this->useRelativePath)
+        {
+            $localPath = rtrim($this->applicationRoot, "/")."/".ltrim($localPath);
+        }
         if(!file_exists($localPath))
         {
             mkdir($localPath, $permission);
@@ -921,18 +971,28 @@ class FileSyncDownload extends FileSyncMaster
      */
     public function procRenameDir($info, $permission)
     {
-        $localPath = $info['path'];
-        $to = $info['to'];
-        if(file_exists($localPath) && !file_exists($to))
+        $oldName = $info['path']; // Assumed path is absolute
+        $newName = $info['to']; // Assumed path is absolute
+
+        if($this->useRelativePath)
         {
-            chmod($localPath, 0777);
-            rename($localPath, $to);
-            chmod($to, $permission);
+            $oldName = rtrim($this->applicationRoot, "/")."/".ltrim($oldName); // Absolute
+            $newName = rtrim($this->applicationRoot, "/")."/".ltrim($newName); // Absolute
         }
-        else
+
+        if(!file_exists($newName))
         {
-            // force download
-            mkdir($to, $permission);
+            if(file_exists($oldName))
+            {
+                chmod($oldName, 0777);
+                rename($oldName, $newName);
+                chmod($newName, $permission);
+            }
+            else
+            {
+                // force create new direcory
+                mkdir($newName, $permission);
+            }
         }
     }
 }

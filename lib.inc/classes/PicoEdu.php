@@ -37,6 +37,12 @@ class PicoEdu //NOSONAR
 		$username = trim($username, "_");
 		return $username;
 	}
+
+	/**
+	 * Chek valid full name
+	 * @param string $fullName Full name to be checked
+	 * @return bool true if valid and false if invalid
+	 */
 	public function checkValidName($fullName)
 	{
 		$fullName = trim(preg_replace(self::TRIM_EXTRA_SPACE, " ", $fullName));
@@ -64,8 +70,13 @@ class PicoEdu //NOSONAR
 				break;
 			}
 		}
-		return $valid_name;
+		return $valid_name != 0;
 	}
+
+	/**
+	 * Check that text is containing lower letter
+	 * @param string $text Text to be checked
+	 */
 	public function containingLowercase($text)
 	{
 		for ($i = 0; $i < strlen($text); $i++) {
@@ -238,9 +249,6 @@ class PicoEdu //NOSONAR
 		}
 		return false;
 	}
-
-	
-
 	
 	public function getArrayClass($school_id)
 	{
@@ -1015,6 +1023,11 @@ class PicoEdu //NOSONAR
 		$rowclass = array_unique($rowclass);
 		return trim(implode(' ', $rowclass)); 
 	}
+
+	/**
+	 * Get school grade name
+	 * @param string $grade_id School grade ID
+	 */
 	public function getSchoolGradeName($grade_id)
 	{
 		$arr = array(
@@ -1030,7 +1043,7 @@ class PicoEdu //NOSONAR
 
 	/**
 	 * Fixing input date time for database
-	 * @param string $input
+	 * @param string $input Date time to be fixed and match to SQL query
 	 * @return string Fixed date time for SQL query
 	 */
 	public function fixInputTimeSQL($input)

@@ -27,6 +27,8 @@ class FileSynchronizer
 	 * Maximum file size
 	 */
 	private int $maximumlength = 20000;
+
+	private bool $useRelativePath = false;
 	
 	/**
 	 * Constructor of FileSynchronizer
@@ -35,9 +37,10 @@ class FileSynchronizer
 	 * @param string $fileName File name
 	 * @param string $prefix File prefix
 	 * @param string $extension Extension
+	 * @param bool $useRelativePath User relative path
 	 * @param int $maximumlength Maximum length
 	 */
-	public function __construct($applicationDir, $baseDir, $fileName, $prefix, $extension, $maximumlength)
+	public function __construct($applicationDir, $baseDir, $fileName, $prefix, $extension, $maximumlength, $useRelativePath)
 	{
 		$this->applicationDir = $applicationDir;
 		$this->baseDir = $baseDir;
@@ -57,7 +60,13 @@ class FileSynchronizer
 		{
 			$this->maximumlength = $maximumlength;
 		}
+		$this->useRelativePath = $useRelativePath;
 	}
+
+	public function setUseRelativePath($useRelativePath)
+    {
+        $this->useRelativePath = $useRelativePath;
+    }
 	/**
 	 * Generate 20 bytes unique ID
 	 * @return string 20 bytes
@@ -72,6 +81,25 @@ class FileSynchronizer
 		$random = sprintf('%06x', mt_rand(0, 16777215));
 		return sprintf('%s%s', $uuid, $random);
 	}
+
+	/**
+     * Get relative from absolute path given
+     * @param mixed $path Absolute path
+     * @return mixed Relative path
+     */
+    public function getRelativePath($path)
+    {
+        $post = stripos($path, $this->applicationDir);
+        if($post === 0)
+        {
+            return substr($path, strlen($this->applicationDir));
+        } 
+        else 
+        {
+            return $path;
+        }
+    }
+
 	/**
 	 * Get pooling path
 	 * @return string Absolute pooling path
@@ -102,6 +130,10 @@ class FileSynchronizer
 	{
 		if($sync)
 		{
+			if($this->useRelativePath)
+			{
+				$path = $this->getRelativePath($path);
+			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
@@ -126,6 +158,10 @@ class FileSynchronizer
 	{
 		if($sync)
 		{
+			if($this->useRelativePath)
+			{
+				$path = $this->getRelativePath($path);
+			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
@@ -151,6 +187,10 @@ class FileSynchronizer
 	{
 		if($sync)
 		{
+			if($this->useRelativePath)
+			{
+				$path = $this->getRelativePath($path);
+			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
@@ -176,6 +216,11 @@ class FileSynchronizer
 	{
 		if($sync)
 		{
+			if($this->useRelativePath)
+			{
+				$oldPath = $this->getRelativePath($oldPath);
+				$newPath = $this->getRelativePath($newPath);
+			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
@@ -229,6 +274,10 @@ class FileSynchronizer
 	{
 		if($sync)
 		{
+			if($this->useRelativePath)
+			{
+				$path = $this->getRelativePath($path);
+			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
@@ -253,6 +302,10 @@ class FileSynchronizer
 	{
 		if($sync)
 		{
+			if($this->useRelativePath)
+			{
+				$path = $this->getRelativePath($path);
+			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');

@@ -319,7 +319,7 @@ class PicoDatabase
 	 * Execute update query
 	 * @param string $sql Query string to be executed
 	 * @param bool $sync Flag synchronizing
-	 * @return PDOStatement
+	 * @return PDOStatement|bool
 	 */
 	public function executeUpdate($sql, $sync) : \PDOStatement
 	{

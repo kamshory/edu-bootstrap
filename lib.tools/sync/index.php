@@ -34,6 +34,7 @@ if(@$_GET['type'] == 'file')
     if(@$_GET['direction'] == 'down')
     {
         $fileSyncDownload = new \FileSyncDownload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
+        $fileSyncDownload->setUseRelativePath($configs->sync_file_use_relative_path);
         if(@$_GET['step'] == '1')
         {
             $success = $fileSyncDownload->fileDownloadInformation($fileSyncUrl, $username, $password);
@@ -121,6 +122,7 @@ if(@$_GET['type'] == 'file')
     if(@$_GET['direction'] == 'up')
     {
         $success = $fileSyncUpload = new \FileSyncUpload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
+        $fileSyncUpload->setUseRelativePath($configs->sync_file_use_relative_path);
         if(@$_GET['step'] == '1')
         {
             $fileSyncUpload->fileUploadPreparation();
