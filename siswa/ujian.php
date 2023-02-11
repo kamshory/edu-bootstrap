@@ -230,7 +230,7 @@ foreach($rows1 as $data)
 	<?php
 	$sql2 = "SELECT `edu_option`.* , '$answer' like concat('%,',`edu_option`.`option_id`,']%') AS `my_answer`
 	FROM `edu_option` 
-	where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` sort_order by  `edu_option`.`sort_order` ASC ";
+	where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` ORDER BY  `edu_option`.`sort_order` ASC ";
 	$stmt2 = $database->executeQuery($sql);
 
 	if($stmt2->rowCount() > 0)
@@ -575,60 +575,11 @@ else
 if(!$use_token || @$_GET['option'] == 'list')
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+$teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);
+
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
-<style type="text/css">
-.menu-control{
-margin:0;
-padding:2px 0;
-position:absolute;
-z-index:100;
-left:30px;
-top:100px;
-background-color:#FFFFFF;
-border:1px solid #DDDDDD;
-box-shadow:0 0 3px #E5E5E5;
-display:none;
-}
-.menu-control::before{
-content:"";
-width:10px;
-height:0px;
-border:10px solid transparent;
-border-right:10px solid #DDDDDD;
-position:absolute;
-margin-left:-30px;
-margin-top:30px;
-}
-.menu-control li{
-list-style-type:none;
-margin:0;
-padding:0 2px;
-}
-.menu-control > li:first-child::before{
-content:"";
-width:9px;
-height:0px;
-border:9px solid transparent;
-border-right:9px solid #FFFFFF;
-position:absolute;
-margin-left:-28px;
-margin-top:31px;
-}
-.menu-control li a{
-background-color:#FEFEFE;
-display:block;
-padding:5px 16px;
-border-bottom:1px solid #EEEEEE;
-}
-.menu-control li a:hover{
-background-color:#428AB7;
-color:#FFFFFF;
-}
-.menu-control li:last-child a{
-border-bottom:none;
-}
-</style>
+
 <script type="text/javascript">
 var use_token = <?php echo $use_token;?>;
 window.onload = function()
@@ -636,42 +587,41 @@ window.onload = function()
 	$(document).on('change', '#searchform select', function(e){
 		$(this).closest('form').submit();
 	});
-	$(document).on('click', '.show-controls', function(e){
-		var obj = $(this);
-		if(obj.hasClass('menu-show'))
-		{
-			$('.show-controls').each(function(index, element) {
-				$(this).removeClass('menu-show');
-			});
-			$('.menu-control').css({display:'none'});
-		}
-		else
-		{
-			$('.show-controls').each(function(index, element) {
-				$(this).removeClass('menu-show');
-			});
-			var left = obj.offset().left + 40;
-			var top = obj.offset().top - 34;
-			var id = obj.attr('data-test-id');
-			obj.addClass('menu-show');
-			$('.menu-control').empty().append(buildMenu(id)).css({left:left, top:top, display:'block'});
-		}
-		e.preventDefault();
-	});
-}
-function buildMenu(id)
-{
-	var html = 
-	'<li><a href="ujian.php?option=detail&test_id='+id+'">Informasi Ujian</a></li>\r\n'+
-	'<li><a href="ujian.php?option=history&test_id='+id+'">Riwayat Ujian</a></li>\r\n'+
-	((use_token)?'':'<li><a href="ujian/?option=login&test_id='+id+'">Ikuti Ujian</a></li>\r\n')
-	;
-	return html;
+	
 }
 
 </script>
 <div class="search-control">  
 <form id="searchform" name="form1" method="get" action="">
+
+<span class="search-label">Guru</span>
+    <select class="form-control input-select" name="teacher_id" id="teacher_id">
+    <option value="">- Pilih Guru -</option>
+    <?php 
+	$sql2 = "SELECT * FROM `edu_teacher` WHERE `school_id` = '$school_id' AND `active` = true ORDER BY `name` ASC ";	
+	echo $picoEdu->createFilterDb(
+		$sql2,
+		array(
+			'attributeList'=>array(
+				array('attribute'=>'value', 'source'=>'teacher_id')
+			),
+			'selectCondition'=>array(
+				'source'=>'teacher_id',
+				'value'=>$teacher_id
+			),
+			'caption'=>array(
+				'delimiter'=>PicoEdu::RAQUO,
+				'values'=>array(
+					'reg_number',
+					'name'
+				)
+			)
+		)
+	);
+	
+	?>
+    </select>
+
     <span class="search-label">Ujian</span>
     <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
     "))));?>" />
@@ -768,13 +718,13 @@ $paginationHTML = $pagination->buildHTML();
 	$no++;
 	?>
     <tr>
-      <td><a class="show-controls" data-test-id="<?php echo $data['test_id'];?>" href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-pencil"></i></a></td>
+      <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
-      <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo ($data['school_program']);?></a></td>
+      <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['school_program'];?></a></td>
       <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['subject'];?></a></td>
-      <td><?php if($data['ntest']){?><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo ($data['ntest']);?> &times;</a><?php } else echo '-';?> </td>
+      <td><?php if($data['ntest']){?><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['ntest'];?> &times;</a><?php } else echo '-';?> </td>
       </tr>
     <?php
 	}

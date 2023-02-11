@@ -101,3 +101,4 @@ $cfg->dec_separator = ".";
 $cfg->dec_thousands_separator = ",";
 
 
+$pageTitle = "";

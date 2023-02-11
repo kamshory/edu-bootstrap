@@ -236,7 +236,7 @@ var classList = <?php echo json_encode($arrc);?>;
     <input type="hidden" name="class" id="classlist" value="<?php echo $data['class'];?>" />
 	</div>
 	<div class="input-block">
-	<input type="button" id="select-class" value="Atur Kelas" />
+	<input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
 	<input type="submit" id="publish" name="publish" value="Publikasikan" />
 	<input type="submit" id="draff" name="draff" value="Simpan Konsep" />
 	<input type="button" id="cancel" name="publish" value="Batalkan" onclick="window.location='artikel.php?article_id=<?php echo $article_id;?>'" />
@@ -269,7 +269,7 @@ var classList = <?php echo json_encode($arrc);?>;
     <input type="hidden" name="class" id="classlist" value="" />
 	</div>
 	<div class="input-block">
-	<input type="button" id="select-class" value="Atur Kelas" />
+	<input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
 	<input type="submit" id="publish" name="publish" value="Publikasikan" />
 	<input type="submit" id="draff" name="draff" value="Simpan Konsep" />
 	<input type="hidden" name="option" id="option" value="add" />

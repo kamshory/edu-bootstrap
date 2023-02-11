@@ -173,7 +173,9 @@ var defaultdir = 'lib.content/media/article/';
 <div class="input-block">
 <input type="submit" id="publish" name="publish" value="Publikasikan" />
 <input type="submit" id="draff" name="draff" value="Simpan Konsep" />
-<input type="button" id="select-class" value="Atur Kelas" />
+<button type="button" class="btn btn-tn btn-primary" id="select-class">
+Atur Kelas
+</button>
 <input type="hidden" name="option" id="option" value="add" />
 <input type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
 </div>
@@ -224,7 +226,9 @@ var defaultdir = 'lib.content/media/article/';
 <div class="input-block">
 <input type="submit" id="publish" name="publish" value="Publikasikan" />
 <input type="submit" id="draff" name="draff" value="Simpan Konsep" />
-<input type="button" id="select-class" value="Atur Kelas" />
+<button type="button" class="btn btn-tn btn-primary" id="select-class">
+Atur Kelas
+</button>
 <input type="hidden" name="option" id="option" value="edit" />
 <input type="hidden" name="article_id" id="article_id" value="<?php echo $article_id;?>" />
 <input type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />

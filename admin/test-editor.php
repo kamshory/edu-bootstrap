@@ -25,7 +25,7 @@ if($max_upload_file == 0)
 <meta name="theme-color" content="#3558BE">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#3558BE">
-<title><?php echo $cfg->app_name;?> Test Editor</title>
+<title><?php echo $picoEdu->printPageTitle($pageTitle, $cfg->app_name);?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test-editor.css">
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery/jquery.min.js"></script>
 <script type="text/javascript">

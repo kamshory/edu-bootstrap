@@ -157,12 +157,8 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-	
-	
-	
 	$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
-	$paginationHTML = $pagination->buildHTML();
-	
+	$paginationHTML = $pagination->buildHTML();	
 	?>
     <div class="main-content">
     	<div class="main-content-wrapper">
@@ -199,8 +195,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 				}
 			}
 			if(!$content)
-			{
-				
+			{				
 				$content = $cntmax;
 			}
 		}

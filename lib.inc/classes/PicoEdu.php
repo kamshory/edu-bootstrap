@@ -317,46 +317,49 @@ class PicoEdu //NOSONAR
 		if ($answer != '') {
 			$answer = str_replace(",]", ",0]", $answer);
 			$json = '[' . $answer . ']';
-			$arr = json_decode($json);
-			foreach ($arr as $question) {
-				$question_id = $question[0] * 1;
-				$option_id = $question[1] * 1;
-				$sql2 = "SELECT `edu_option`.`question_id`, `edu_option`.`option_id`, 
-				(SELECT `edu_question`.`basic_competence` 
-					FROM `edu_question` 
-					WHERE `edu_question`.`question_id` = `edu_option`.`question_id`) AS `basic_competence`,
-				`edu_option`.`score`
-				FROM `edu_option`
-				WHERE `edu_option`.`question_id` = '$question_id' AND `edu_option`.`option_id` = '$option_id';
-				";
-				$stmt = $this->database->executeQuery($sql2);
-				if ($stmt->rowCount() > 0) {
-					$data2 = $stmt->fetch(PDO::FETCH_ASSOC);
-					$basic_competence = $data2['basic_competence'];
-					$basic_competence = preg_replace(self::TRIM_NON_NUMERIC, ".", $basic_competence);
-					$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
-					$score = $data2['score'];
-					$index = 0;
-					if (stripos($basic_competence, ".") !== false) {
-						$sp = explode(".", $basic_competence);
-						$index = ($sp[0] * 1000) + $sp[1] * 1;
-					} else {
-						$index = $basic_competence * 1;
+			$arr = json_decode($json, true);
+			if($arr != null && is_array($arr))
+			{
+				foreach ($arr as $question) {
+					$question_id = $question[0] * 1;
+					$option_id = $question[1] * 1;
+					$sql2 = "SELECT `edu_option`.`question_id`, `edu_option`.`option_id`, 
+					(SELECT `edu_question`.`basic_competence` 
+						FROM `edu_question` 
+						WHERE `edu_question`.`question_id` = `edu_option`.`question_id`) AS `basic_competence`,
+					`edu_option`.`score`
+					FROM `edu_option`
+					WHERE `edu_option`.`question_id` = '$question_id' AND `edu_option`.`option_id` = '$option_id';
+					";
+					$stmt = $this->database->executeQuery($sql2);
+					if ($stmt->rowCount() > 0) {
+						$data2 = $stmt->fetch(PDO::FETCH_ASSOC);
+						$basic_competence = $data2['basic_competence'];
+						$basic_competence = preg_replace(self::TRIM_NON_NUMERIC, ".", $basic_competence);
+						$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
+						$score = $data2['score'];
+						$index = 0;
+						if (stripos($basic_competence, ".") !== false) {
+							$sp = explode(".", $basic_competence);
+							$index = ($sp[0] * 1000) + $sp[1] * 1;
+						} else {
+							$index = $basic_competence * 1;
+						}
+						$index = floor($index);
+						if (!isset($result[$index])) {
+							$result[$index] = array();
+							$len = 0;
+						} else {
+							$len = count($result[$index]['data']);
+						}
+						$result[$index]['basic_competence'] = $basic_competence;
+						$result[$index]['data'][$len] = array(
+							'question_id' => $question_id,
+							'option_id' => $option_id,
+							'basic_competence' => $basic_competence,
+							'score' => $score
+						);
 					}
-					$index = floor($index);
-					if (!isset($result[$index])) {
-						$result[$index] = array();
-						$len = 0;
-					} else {
-						$len = count($result[$index]['data']);
-					}
-					$result[$index]['basic_competence'] = $basic_competence;
-					$result[$index]['data'][$len] = array(
-						'question_id' => $question_id,
-						'option_id' => $option_id,
-						'basic_competence' => $basic_competence,
-						'score' => $score
-					);
 				}
 			}
 			foreach ($result as $key => $value) {
@@ -584,47 +587,51 @@ class PicoEdu //NOSONAR
 			if ($data['answer'] != '') {
 				$data['answer'] = str_replace(",]", ",0]", $data['answer']);
 				$json = '[' . $data['answer'] . ']';
-				$arr = json_decode($json);
-				foreach ($arr as $question) {
-					$question_id = $question[0] * 1;
-					$option_id = $question[1] * 1;
-					$sql2 = "SELECT `edu_option`.`question_id`, `edu_option`.`option_id`, 
-					(SELECT `edu_question`.`basic_competence` 
-						FROM `edu_question` 
-						WHERE `edu_question`.`question_id` = `edu_option`.`question_id`) AS `basic_competence`,
-					`edu_option`.`score`
-					FROM `edu_option`
-					WHERE `edu_option`.`question_id` = '$question_id' AND `edu_option`.`option_id` = '$option_id';
-					";
-					$stmt2 = $this->database->executeQuery($sql2);
-					if ($stmt2->rowCount() > 0) {
-						$data2 = $stmt2->fetch(PDO::FETCH_ASSOC);
+				$arr = json_decode($json, true);
+				if($arr != null && is_array($arr))
+				{
+					foreach ($arr as $question) 
+					{
+						$question_id = $question[0] * 1;
+						$option_id = $question[1] * 1;
+						$sql2 = "SELECT `edu_option`.`question_id`, `edu_option`.`option_id`, 
+						(SELECT `edu_question`.`basic_competence` 
+							FROM `edu_question` 
+							WHERE `edu_question`.`question_id` = `edu_option`.`question_id`) AS `basic_competence`,
+						`edu_option`.`score`
+						FROM `edu_option`
+						WHERE `edu_option`.`question_id` = '$question_id' AND `edu_option`.`option_id` = '$option_id';
+						";
+						$stmt2 = $this->database->executeQuery($sql2);
+						if ($stmt2->rowCount() > 0) {
+							$data2 = $stmt2->fetch(PDO::FETCH_ASSOC);
 
-						$basic_competence = $data2['basic_competence'];
-						$basic_competence = preg_replace(self::TRIM_NON_NUMERIC, ".", $basic_competence);
-						$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
-						$score = $data2['score'];
-						$index = 0;
-						if (stripos($basic_competence, ".") !== false) {
-							$sp = explode(".", $basic_competence);
-							$index = ($sp[0] * 1000) + $sp[1] * 1;
-						} else {
-							$index = $basic_competence * 1;
+							$basic_competence = $data2['basic_competence'];
+							$basic_competence = preg_replace(self::TRIM_NON_NUMERIC, ".", $basic_competence);
+							$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
+							$score = $data2['score'];
+							$index = 0;
+							if (stripos($basic_competence, ".") !== false) {
+								$sp = explode(".", $basic_competence);
+								$index = ($sp[0] * 1000) + $sp[1] * 1;
+							} else {
+								$index = $basic_competence * 1;
+							}
+							$index = floor($index);
+							if (!isset($result[$index])) {
+								$result[$index] = array();
+								$len = 0;
+							} else {
+								$len = count($result[$index]['data']);
+							}
+							$result[$index]['basic_competence'] = $basic_competence;
+							$result[$index]['data'][$len] = array(
+								'question_id' => $question_id,
+								'option_id' => $option_id,
+								'basic_competence' => $basic_competence,
+								'score' => $score
+							);
 						}
-						$index = floor($index);
-						if (!isset($result[$index])) {
-							$result[$index] = array();
-							$len = 0;
-						} else {
-							$len = count($result[$index]['data']);
-						}
-						$result[$index]['basic_competence'] = $basic_competence;
-						$result[$index]['data'][$len] = array(
-							'question_id' => $question_id,
-							'option_id' => $option_id,
-							'basic_competence' => $basic_competence,
-							'score' => $score
-						);
 					}
 				}
 			}
@@ -1057,5 +1064,11 @@ class PicoEdu //NOSONAR
 			$input = "'$input'";
 		}
 		return $input;
+	}
+	
+	
+	public function printPageTitle($pageTitle, $appName)
+	{
+		return trim($pageTitle .' - '. $appName, ' ');
 	}
 }

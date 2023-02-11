@@ -1,8 +1,4 @@
 <?php
-if(!defined('DB_NAME'))
-{
-	exit();
-}
 if(!isset($school_id) || empty($school_id))
 {
 	require_once dirname(__FILE__)."/login-form.php";
@@ -120,8 +116,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 		// 
 		// End sign in to test
 		// 
-		// /////////////////////////////////////////////////////////////////////////////
-	
+		// /////////////////////////////////////////////////////////////////////////////	
 	}
 	$token_valid = 1;
 }
@@ -173,7 +168,7 @@ $pageTitle = "Token Ujian";
 <meta name="theme-color" content="#3558BE">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#3558BE">
-<title><?php if(isset($pageTitle)) echo ltrim($pageTitle.' - ', ' - ');?><?php echo $cfg->app_name;?></title>
+<title><?php echo $picoEdu->printPageTitle($pageTitle, $cfg->app_name);?></title>
 <link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test-token.css" />
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery/jquery.min.js"></script>

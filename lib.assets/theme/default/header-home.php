@@ -22,7 +22,7 @@
 <meta name="description" content="<?php echo $cfg->meta_description;?>">
 */
 ?>
-<title><?php if(isset($pageTitle)) echo ltrim($pageTitle. ' - ', ' - ');?><?php echo $cfg->app_name;?></title>
+<title><?php echo $picoEdu->printPageTitle($pageTitle, $cfg->app_name);?></title>
 </head>
 
 <body>

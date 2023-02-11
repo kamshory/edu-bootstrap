@@ -56,10 +56,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Tingkat
-		</td><td><?php 
-echo $picoEdu->getGradeName($data['grade_id']);
-?>
-<td>
+		</td><td><?php echo $picoEdu->getGradeName($data['grade_id']);?><td>
 		</tr>
 		<tr>
 		<td>Jurusan</td>
@@ -164,9 +161,6 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-
-
-
 $pagination->createPagination('kelas.php',true); 
 $paginationHTML = $pagination->buildHTML();
 ?>

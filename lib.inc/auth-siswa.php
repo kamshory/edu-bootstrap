@@ -1,8 +1,8 @@
 <?php
 require_once dirname(__FILE__)."/functions-pico.php";
 require_once dirname(__FILE__)."/sessions.php";
-$username = '';
-$password = '';
+$username = "";
+$password = "";
 
 if(isset($_SESSION['student_username']))
 {
@@ -16,13 +16,13 @@ if(isset($_SESSION['student_password']))
 
 $studentLoggedIn = new \StudenAuth($database, $username, $password, false);
 
-$member_id = '';
-$student_id = '';
-$auth_student_id = '';
+$member_id = "";
+$student_id = "";
+$auth_student_id = "";
 $school_id = "";
-$class_id = '';
-$auth_student_school_id = '';
-$auth_school_id = '';
+$class_id = "";
+$auth_student_school_id = "";
+$auth_school_id = "";
 $use_token = false;
 if($studentLoggedIn->student_id)
 {

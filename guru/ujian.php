@@ -407,7 +407,7 @@ label > span{
 		<tr>
 		<td>Kelas
 		</td><td><input type="hidden" name="classlist" id="classlist" autocomplete="off" />
-        <button type="button" class="btn btn-primary" id="select-class">
+        <button type="button" class="btn btn-tn btn-primary" id="select-class">
 		Atur Kelas
 		</button>
         </td>
@@ -652,7 +652,7 @@ label > span{
 		<td>Kelas
 		</td>
         <td><input type="hidden" name="classlist" id="classlist" value="<?php echo $data['class'];?>" autocomplete="off" />
-        <button type="button" class="btn btn-primary" id="select-class">
+        <button type="button" class="btn btn-tn btn-primary" id="select-class">
 		Atur Kelas
 		</button>
         </td>

@@ -17,7 +17,7 @@
 <meta property="og:type" content="website" />
 <meta name="og:description" content="<?php echo $cfg->meta_description;?>">
 <meta name="description" content="<?php echo $cfg->meta_description;?>">
-<title><?php if(isset($pageTitle)) echo ltrim($pageTitle. ' - ', ' - ');?><?php echo $cfg->app_name;?></title>
+<title><?php echo $picoEdu->printPageTitle($pageTitle, $cfg->app_name);?></title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>

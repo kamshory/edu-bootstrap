@@ -1,9 +1,9 @@
 <?php
 require_once dirname(__FILE__)."/functions-pico.php";
 require_once dirname(__FILE__)."/sessions.php";
-$username = '';
-$password = '';
-$user_id = '';
+$username = "";
+$password = "";
+$user_id = "";
 
 if(isset($_SESSION['admin_username']))
 {

@@ -418,7 +418,7 @@ label > span{
 		<td>Kelas
 		</td>
         <td><input type="hidden" name="classlist" id="classlist" autocomplete="off" />
-		<button type="button" class="btn btn-primary" id="select-class">
+		<button type="button" class="btn btn-tn btn-primary" id="select-class">
 		Atur Kelas
 		</button>
         </td>
@@ -696,7 +696,9 @@ label > span{
 		<td>Kelas
 		</td>
         <td><input type="hidden" name="classlist" id="classlist" value="<?php echo $data['class'];?>" autocomplete="off" />
-        <input class="btn btn-sm btn-primary" type="button" id="select-class" value="Atur Kelas" />
+        <button type="button" class="btn btn-tn btn-primary" id="select-class">
+		Atur Kelas
+		</button>
         </td>
 		</tr>
 		<tr>
@@ -917,7 +919,8 @@ if($stmt->rowCount() > 0)
 		</tr>
 		<tr>
 		<td>Kelas
-		</td><td><?php 
+		</td>
+		<td><?php 
 		$class = $picoEdu->textClass($array_class, $data['class']); 
 		$class_sort = $picoEdu->textClass($array_class, $data['class'], 5);
 		?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>

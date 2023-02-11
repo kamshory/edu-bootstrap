@@ -311,7 +311,21 @@ a:focus-visible{
   outline:none;
 }
 
-table td .btn.btn-sm{
+table td .btn.btn-sm.dropdown-toggle{
   padding: 2px 4px;
   margin: -2px;
+}
+
+.btn-group-sm > .btn, .btn-tn {
+  padding: .15rem .3rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  border-radius: .2rem;
+}
+
+.article-content{
+  position: relative;
+}
+.article-content img{
+  max-width:100%;
 }

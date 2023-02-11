@@ -1142,7 +1142,7 @@ function buildMenu(id)
 						?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><div class="dropdown show">
-  <a class="btn btn-sm btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <i class="fas fa-list"></i>
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">

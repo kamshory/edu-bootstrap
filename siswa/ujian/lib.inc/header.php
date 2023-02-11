@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#3558BE">
 <base href="<?php echo $cfg->base_url;?>siswa/">
-<title><?php if(isset($pageTitle)) echo ltrim($pageTitle.' - ', ' - ');?><?php echo $cfg->app_name;?></title>
+<title><?php echo $picoEdu->printPageTitle($pageTitle, $cfg->app_name);?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/css.min.css">
 <link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/favicon.png" />
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery/jquery.min.js"></script>

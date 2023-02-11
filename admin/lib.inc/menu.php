@@ -37,11 +37,6 @@ $structure = array(
                 'link'=>'impor-data.php'                       
             ),
             array(
-                'caption'=>'Update Aplikasi',
-                'icon'=>'fa-rotate',
-                'link'=>'update.php'                       
-            ),
-            array(
                 'caption'=>'Peralatan',
                 'icon'=>'fa-home',
                 'link'=>'peralatan.php'                       

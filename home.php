@@ -10,7 +10,7 @@ include_once dirname(__FILE__)."/lib.inc/auth.php";
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#3558BE">
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/home-new.min.css">
-<title><?php echo $cfg->app_name;?></title>
+<title><?php echo $picoEdu->printPageTitle($pageTitle, $cfg->app_name);?></title>
 </head>
 
 <body>

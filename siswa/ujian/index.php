@@ -108,22 +108,37 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 		$question_set = trim(str_replace(",,", ",", $question_set), ",");
 		$storage_key = md5($auth_student_id . "-" . $test_id . "|" . $question_set);
 		$storage_key;
+
+		print_r($proses); 
+
 		if ($proses) {
 			$_SESSION['session_test'][$auth_student_id][$test_id] = null;
 			unset($_SESSION['session_test'][$auth_student_id][$test_id]);
 			$_SESSION['answer_tmp'][$auth_student_id][$test_id] = null;
 			unset($_SESSION['answer_tmp'][$auth_student_id][$test_id]);
 			$_SESSION['session_test'] = array();
+
 			// simpan di tabel answer
 			$competence_score = addslashes(json_encode($picoEdu->getTextScoreFromString($answer_str, true)));
+			if($competence_score == null || $competence_score = 'null')
+			{
+				$competence_score = "{}";
+			}
+
+			$answer_id = $database->generateNewId();
+
 			$sql = "INSERT INTO `edu_answer` 
-			(`school_id`, `test_id`, `student_id`, `start`, `end`, `answer`, `competence_score`, 
+			(`answer_id`, `school_id`, `test_id`, `student_id`, `start`, `end`, `answer`, `competence_score`, 
 			`true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) VALUES
-			('$school_id', '$test_id', '$auth_student_id', '$start', '$end', '$answer_str', '$competence_score', 
+			('$answer_id', '$school_id', '$test_id', '$auth_student_id', '$start', '$end', '$answer_str', '$competence_score', 
 			'$true', '$false', '$score', '$penalty', '$final_score', '$percent', '1') ";
 			$stmt = $database->executeInsert($sql, true);
+
 			$picoEdu->logoutTest($school_id, $auth_student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
+			
+			
 			require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+			
 			?>
 			<div class="info">Jawaban berhasil dikirim.</div>
 			<script type="text/javascript">

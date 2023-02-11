@@ -593,7 +593,7 @@ $answer = $data['answer'];
 <?php
 $sql2 = "SELECT `edu_option`.* , '$answer' like concat('%,',`edu_option`.`option_id`,']%') AS `my_answer`
 FROM `edu_option` 
-where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` sort_order by  `edu_option`.`sort_order` ASC ";
+where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` ORDER BY  `edu_option`.`sort_order` ASC ";
 $stmt2 = $database->executeQuery($sql2);
 if($stmt2->rowCount() > 0)
 {
