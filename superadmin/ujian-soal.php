@@ -1141,7 +1141,18 @@ function buildMenu(id)
 						$no++;
 						?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
-      <td><a class="show-controls" data-test-id="<?php echo $data['test_id']; ?>" href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id']; ?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></a></td>
+      <td><div class="dropdown show">
+  <a class="btn btn-sm btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-list"></i>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="ujian-soal.php?test_id=<?php echo $data['test_id'];?>">Tampilkan Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-ekspor.php?test_id=<?php echo $data['test_id'];?>">Ekspor Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-soal.php?option=analys&test_id=<?php echo $data['test_id'];?>">Analisa Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-laporan.php?option=detail&test_id=<?php echo $data['test_id'];?>">Laporan Hasil Ujian</a>
+    <a class="dropdown-item" href="ujian.php?option=edit&test_id=<?php echo $data['test_id'];?>">Ubah Informasi Ujian</a>
+  </div>
+</div></td>
       <td align="right"><?php echo $no; ?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['school_name']; ?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['name']; ?></a></td>
@@ -1162,9 +1173,6 @@ function buildMenu(id)
 <div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML; ?></div>
 <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 </div>
-
-
-
 
 </form>
 <?php

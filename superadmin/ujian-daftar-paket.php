@@ -530,11 +530,11 @@ $paginationHTML = $pagination->buildHTML();
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
+      <td width="16">&nbsp;</td>
       <td width="16"><input type="checkbox" name="control-test_collection_id" id="control-test_collection_id" class="checkbox-selector" data-target=".test_collection_id" value="1"></td>
       <td width="16"><i class="fas fa-pencil"></i></td>
-      <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Browse" border="0" /></td>
-      <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-download-16" alt="Download" border="0" /></td>
-      <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-key-16" alt="Key" border="0" /></td>
+      <td width="16"><i class="fas fa-download"></i></td>
+      <td width="16"><i class="fas fa-upload"></i></td>
       <td width="25">No</td>
       <td>Nama Ujian</td>
       <td>Tingkat</td>
@@ -555,11 +555,25 @@ $paginationHTML = $pagination->buildHTML();
 	$no++;
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
+      <td>
+	  <div class="dropdown show">
+  <a class="btn btn-sm btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-list"></i>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="ujian-soal.php?test_collection_id=<?php echo $data['test_collection_id'];?>">Tampilkan Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-ekspor.php?test_collection_id=<?php echo $data['test_collection_id'];?>">Ekspor Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-soal.php?option=analys&test_collection_id=<?php echo $data['test_collection_id'];?>">Analisa Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-laporan.php?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>">Laporan Hasil Ujian</a>
+    <a class="dropdown-item" href="ujian.php?option=edit&test_collection_id=<?php echo $data['test_collection_id'];?>">Ubah Informasi Ujian</a>
+  </div>
+</div>	
+	  
+	</td>
       <td><input type="checkbox" name="test_collection_id[]" id="test_collection_id" value="<?php echo $data['test_collection_id'];?>" class="test_collection_id" /></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_collection_id=<?php echo $data['test_collection_id'];?>"><i class="fas fa-pencil"></i></a></td>
-      <td><a class="load-collection" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Browse" border="0" /></a></td>
-      <td><a class="load-word" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-download-16" alt="Download" border="0" /></a></td>
-      <td><a class="load-key" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>&key=1"><img src="lib.tools/images/trans.gif" class="icon-16 icon-key-16" alt="Key" border="0" /></a></td>
+      <td><a class="load-word" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><i class="fas fa-download"></i></a></td>
+      <td><a class="load-key" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>&key=1"><i class="fas fa-upload"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['grade_id'];?></a></td>

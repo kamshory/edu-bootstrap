@@ -1489,7 +1489,7 @@ function loadXmlData_word($xml_file, $key = 0) //NOSONAR
 				}
 				$option = removeparagraphtag($text_option);
 
-				$sort_order = $index_option + 1;
+				$sort_order = ((int) $index_option) + 1;
 				if ($score > 0) {
 					if ($answer_key == '') {
 						$answer_key = @$answer[$numbering][$option_index];

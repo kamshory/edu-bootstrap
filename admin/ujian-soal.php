@@ -1148,7 +1148,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     <a class="dropdown-item" href="ujian-soal.php?option=add&format=html&test_id=<?php echo $data['test_id'];?>">Tambah Soal HTML</a>
     <a class="dropdown-item" href="ujian-soal.php?test_id=<?php echo $data['test_id'];?>">Tampilkan Soal Ujian</a>
     <a class="dropdown-item" href="ujian-impor.php?test_id=<?php echo $data['test_id'];?>">Impor Soal Ujian</a>
-    <a class="dropdown-item" href="ujian-ekpor.php?test_id=<?php echo $data['test_id'];?>">Ekspor Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-ekspor.php?test_id=<?php echo $data['test_id'];?>">Ekspor Soal Ujian</a>
     <a class="dropdown-item" href="ujian-soal.php?option=analys&test_id=<?php echo $data['test_id'];?>">Analisa Soal Ujian</a>
     <a class="dropdown-item" href="ujian-laporan.php?option=detail&test_id=<?php echo $data['test_id'];?>">Laporan Hasil Ujian</a>
     <a class="dropdown-item" href="ujian.php?option=edit&test_id=<?php echo $data['test_id'];?>">Ubah Informasi Ujian</a>

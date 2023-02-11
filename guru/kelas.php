@@ -67,6 +67,9 @@ else
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 
 }
+else if (@$_GET['option'] == 'print') {
+	require_once dirname(__FILE__) . "/cetak-login-siswa.php";
+} 
 else
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
@@ -181,6 +184,7 @@ $paginationHTML = $pagination->buildHTML();
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
+	  <td width="16"><i class="fas fa-print"></i></td>
       <td width="25">No</td>
       <td>Kode </td>
       <td>Nama</td>
@@ -199,6 +203,7 @@ $paginationHTML = $pagination->buildHTML();
 	$no++;
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
+	  <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=print&class_id=<?php echo $data['class_id']; ?>" target="_blank"><i class="fas fa-print"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['class_code'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['name'];?></a></td>

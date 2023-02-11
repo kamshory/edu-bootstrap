@@ -160,7 +160,7 @@ if(isset($_GET['expand']))
 	FROM `edu_answer` 
 	LEFT JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
 	LEFT JOIN (`edu_question`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
-	where  `edu_answer`.`test_id` = '$test_id' $sql_filter
+	WHERE  `edu_answer`.`test_id` = '$test_id' $sql_filter
 	GROUP BY `edu_answer`.`answer_id` 
 	ORDER BY `edu_student`.`class_id`, `edu_answer`.`student_id` ASC, `edu_answer`.`start` ASC ";
 }
@@ -177,30 +177,17 @@ else
 
 
 	$sql = "SELECT * from (select 
-	`edu_answer`.`answer_id`,
-	`edu_answer`.`student_id`,
-	`edu_answer`.`test_id` ,
 	`edu_answer`.`start` , 
-	`edu_answer`.`end` ,
-	`edu_answer`.`true` ,
-	`edu_answer`.`false` ,
-	`edu_answer`.`initial_score` ,
-	`edu_answer`.`penalty` ,
-	`edu_answer`.`final_score` ,
 	`edu_answer`.`percent` ,
-	timediff(`edu_answer`.`end`,`edu_answer`.`start`) AS `timediff` , `edu_student`.`reg_number`,
-	(SELECT `edu_test`.`number_of_question` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_question`.`test_id`) AS `number_of_question`,
-	(SELECT `edu_test`.`duration` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_question`.`test_id`) AS `waktu_tersedia`,
-	((SELECT `edu_test`.`duration` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_answer`.`test_id`) - (UNIX_TIMESTAMP(`edu_answer`.`end`)-UNIX_TIMESTAMP(`edu_answer`.`start`))<0) AS `lewat`,
 	(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` AND `edu_class`.`school_id` = `edu_student`.`school_id`) AS `class`,
 	`edu_student`.`name` AS `student_name`, `edu_student`.`class_id`
 	FROM `edu_answer` 
 	LEFT JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
 	LEFT JOIN (`edu_question`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
-	where  `edu_answer`.`test_id` = '$test_id' $sql_filter
+	WHERE  `edu_answer`.`test_id` = '$test_id' $sql_filter
 	GROUP BY `edu_answer`.`answer_id` 
-	$grp ) AS `inv` group by concat(`inv`.`test_id`, '-', `inv`.`student_id`) 
-	ORDER BY `inv`.`class_id`, `inv`.`student_id` ASC, `inv`.`start` ASC ";
+	$grp ) AS `inv` GROUP BY concat(`inv`.`test_id`, '-', `inv`.`student_id`) 
+  ";
 	
 }
 $ke = array();
@@ -374,7 +361,7 @@ $answer = $data['answer'];
 <?php
 $sql2 = "SELECT `edu_option`.* , '$answer' like concat('%,',`edu_option`.`option_id`,']%') AS `my_answer`
 FROM `edu_option` 
-where  `edu_option`.`question_id` = '$qid' group by  `edu_option`.`option_id` sort_order by  `edu_option`.`sort_order` ASC ";
+WHERE  `edu_option`.`question_id` = '$qid' GROUP BY  `edu_option`.`option_id` sort_order by  `edu_option`.`sort_order` ASC ";
 $stmt2 = $database->executeQuery($sql2);
 if($stmt2->rowCount() > 0)
 {
@@ -429,9 +416,10 @@ else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
+$nt = "";
 $sql = "SELECT `edu_test`.* $nt
 FROM `edu_test` 
-where (`edu_test`.`active` = true OR `edu_test`.`active` = false)
+WHERE (`edu_test`.`active` = true OR `edu_test`.`active` = false)
 AND `edu_test`.`test_id` = '$test_id'
 ";
 $stmt = $database->executeQuery($sql);
@@ -567,9 +555,23 @@ if(isset($_GET['expand']))
 	FROM `edu_answer` 
 	LEFT JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
 	LEFT JOIN (`edu_question`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
-	where  `edu_answer`.`test_id` = '$test_id' $sql_filter
+	WHERE  `edu_answer`.`test_id` = '$test_id' $sql_filter
 	GROUP BY `edu_answer`.`answer_id` having 1 $sql_filter
 	ORDER BY `edu_student`.`class_id`, `edu_answer`.`student_id` ASC, `edu_answer`.`start` ASC ";
+
+  $sql_test = "SELECT `edu_answer`.* , `edu_answer`.`student_id` AS `student_id`, `edu_student`.`reg_number`,
+  timediff(`edu_answer`.`end`,`edu_answer`.`start`) AS `timediff` ,
+  (SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` AND `edu_class`.`school_id` = `edu_student`.`school_id`) AS `class`,
+  `edu_student`.`name` AS `student_name`, `edu_student`.`class_id` 
+
+  FROM `edu_answer` 
+  LEFT JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
+  WHERE  `edu_answer`.`test_id` = '$test_id' $sql_filter
+  GROUP BY `edu_answer`.`answer_id` having 1 $sql_filter
+
+  ";
+
+
 }
 else
 {
@@ -605,10 +607,38 @@ else
 	FROM `edu_answer` 
 	LEFT JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
 	LEFT JOIN (`edu_question`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
-	where  `edu_answer`.`test_id` = '$test_id' $sql_filter
+	WHERE  `edu_answer`.`test_id` = '$test_id' $sql_filter
 	GROUP BY `edu_answer`.`answer_id` having 1 $sql_filter
-	$grp ) AS `inv` group by concat(`inv`.`test_id`, '-', `inv`.`student_id`) 
+	$grp ) AS `inv` GROUP BY concat(`inv`.`test_id`, '-', `inv`.`student_id`) 
 	ORDER BY `inv`.`class_id`, `inv`.`student_id` ASC, `inv`.`start` ASC ";
+	
+  $sql_test = "SELECT * from (select 
+	`edu_answer`.`answer_id`,
+	`edu_answer`.`student_id`,
+	`edu_answer`.`test_id` ,
+	`edu_answer`.`start` , 
+	`edu_answer`.`end` ,
+	`edu_answer`.`true` ,
+	`edu_answer`.`false` ,
+	`edu_answer`.`initial_score` ,
+	`edu_answer`.`penalty` ,
+	`edu_answer`.`final_score` ,
+	`edu_answer`.`percent` ,
+	`edu_answer`.`active` ,
+	timediff(`edu_answer`.`end`,`edu_answer`.`start`) AS `timediff` , `edu_student`.`reg_number`,
+	(SELECT `edu_test`.`number_of_question` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_question`.`test_id`) AS `number_of_question`,
+	(SELECT `edu_test`.`duration` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_question`.`test_id`) AS `waktu_tersedia`,
+	((SELECT `edu_test`.`duration` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_answer`.`test_id`) - (UNIX_TIMESTAMP(`edu_answer`.`end`)-UNIX_TIMESTAMP(`edu_answer`.`start`))<0) AS `lewat`,
+	(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` AND `edu_class`.`school_id` = `edu_student`.`school_id`) AS `class`,
+	`edu_student`.`name` AS `student_name`, `edu_student`.`class_id` AS `class_id`, `edu_student`.`time_edit` AS `time_edit`
+	FROM `edu_answer` 
+	LEFT JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_answer`.`student_id`)
+	LEFT JOIN (`edu_question`) ON (`edu_answer`.`answer` like concat('%[',`edu_question`.`question_id`,',%' ))
+	WHERE  `edu_answer`.`test_id` = '$test_id' $sql_filter
+	GROUP BY `edu_answer`.`answer_id` having 1 $sql_filter
+	$grp ) AS `inv` GROUP BY concat(`inv`.`test_id`, '-', `inv`.`student_id`) 
+	ORDER BY `inv`.`class_id`, `inv`.`student_id` ASC, `inv`.`start` ASC 
+  ";
 	
 }
 $ke = array();
@@ -754,7 +784,7 @@ require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
   <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` DESC";
+    $sql2 = "SELECT * FROM `edu_school` WHERE 1 ORDER BY `time_create` DESC";
     echo $picoEdu->createFilterDb(
       $sql2,
       array(
