@@ -163,7 +163,7 @@ else if(isset($_POST['token']))
 	}
 }
 
-$cfg->page_title = "Token Ujian";
+$pageTitle = "Token Ujian";
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -173,7 +173,7 @@ $cfg->page_title = "Token Ujian";
 <meta name="theme-color" content="#3558BE">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#3558BE">
-<title><?php if(isset($cfg->page_title)) echo ltrim($cfg->page_title.' - ', ' - ');?><?php echo $cfg->app_name;?></title>
+<title><?php if(isset($pageTitle)) echo ltrim($pageTitle.' - ', ' - ');?><?php echo $cfg->app_name;?></title>
 <link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test-token.css" />
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery/jquery.min.js"></script>

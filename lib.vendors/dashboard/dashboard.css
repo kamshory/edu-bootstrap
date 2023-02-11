@@ -310,3 +310,8 @@ select{
 a:focus-visible{
   outline:none;
 }
+
+table td .btn.btn-sm{
+  padding: 2px 4px;
+  margin: -2px;
+}

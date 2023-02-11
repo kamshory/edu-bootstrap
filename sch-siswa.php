@@ -1,7 +1,7 @@
 <?php
 include_once dirname(__FILE__) . "/lib.inc/functions-pico.php";
 include_once dirname(__FILE__) . "/lib.inc/sessions.php";
-$cfg->page_title = "Siswa";
+$pageTitle = "Siswa";
 require_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 if (isset($_GET['school_id'])) {
   $school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);

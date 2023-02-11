@@ -1,6 +1,6 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/auth.php";
-$cfg->page_title = "Ujian Online";
+$pageTitle = "Ujian Online";
 
 if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 0)
 {

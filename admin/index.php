@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
-$cfg->page_title = "Halaman Depan Administrator";
+$pageTitle = "Halaman Depan Administrator";
 
 if(!empty(@$school_id)) {
     require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR

@@ -10,7 +10,7 @@ if(empty($real_school_id))
 	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
 	exit();
 }
-$cfg->page_title = "Monitoring Ujian";
+$pageTitle = "Monitoring Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET['id']))

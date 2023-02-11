@@ -8,7 +8,7 @@ if(empty($school_id))
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 
-$cfg->page_title = "Impor Soal Ujian";
+$pageTitle = "Impor Soal Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file']))

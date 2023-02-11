@@ -10,7 +10,7 @@ if(empty($real_school_id))
 	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
 	exit();
 }
-$cfg->page_title = "Guru";
+$pageTitle = "Guru";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST) && isset($_POST['save']))
 {

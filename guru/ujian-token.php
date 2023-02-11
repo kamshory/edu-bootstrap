@@ -1,7 +1,7 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 
-$cfg->page_title = "Token";
+$pageTitle = "Token";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST))
 {

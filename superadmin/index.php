@@ -14,6 +14,6 @@ if($adminLoggedIn->admin_level != 1)
 	require_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
-$cfg->page_title = "Super Admin";
+$pageTitle = "Super Admin";
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR

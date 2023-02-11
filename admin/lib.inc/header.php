@@ -5,8 +5,8 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title><?php if (isset($cfg->page_title)) {
-  echo ltrim($cfg->page_title.' - ', ' - ');
+<title><?php if (isset($pageTitle)) {
+  echo ltrim($pageTitle.' - ', ' - ');
 }?><?php echo $cfg->app_name;?></title>
 
 <link rel="stylesheet" href="<?php echo $cfg->base_url;?>lib.vendors/fontawesome/css/all.min.css">
@@ -74,7 +74,7 @@
         </div>
 
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2"><?php echo $cfg->page_title;?></h1>
+          <h1 class="h2"><?php echo $pageTitle;?></h1>
           <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group mr-2">
               <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='sinkronisasi.php'">Sinkronkan</button>

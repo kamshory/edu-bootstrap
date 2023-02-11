@@ -16,11 +16,11 @@ $cfg->app_name = "Try Out Gratis Ujian Nasional ".$cfg->app_name;
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/home.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/home.min.css">
-<meta property="og:title" content="<?php if(isset($cfg->page_title)) echo ltrim($cfg->page_title. ' - ', ' - ');?><?php echo $cfg->app_name;?>" />
+<meta property="og:title" content="<?php if(isset($pageTitle)) echo ltrim($pageTitle. ' - ', ' - ');?><?php echo $cfg->app_name;?>" />
 <meta property="og:type" content="website" />
 <meta name="og:description" content="<?php echo $cfg->meta_description;?>">
 <meta name="description" content="<?php echo $cfg->meta_description;?>">
-<title><?php if(isset($cfg->page_title)) echo ltrim($cfg->page_title. ' - ', ' - ');?><?php echo $cfg->app_name;?></title>
+<title><?php if(isset($pageTitle)) echo ltrim($pageTitle. ' - ', ' - ');?><?php echo $cfg->app_name;?></title>
 </head>
 
 <body>

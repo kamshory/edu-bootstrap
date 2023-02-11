@@ -5,7 +5,7 @@ if(empty($school_id))
 	require_once dirname(__FILE__)."/bukan-admin.php";
 	exit();
 }
-$cfg->page_title = "Profil Sekolah";
+$pageTitle = "Profil Sekolah";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['save']) && count(@$_POST))
 {

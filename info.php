@@ -2,7 +2,7 @@
 include_once dirname(__FILE__)."/lib.inc/functions-pico.php";
 include_once dirname(__FILE__)."/lib.inc/sessions.php";
 include_once dirname(__FILE__)."/lib.inc/dom.php";
-$cfg->page_title = "Infomasi";
+$pageTitle = "Infomasi";
 if(isset($_GET['info_id']))
 {
 	$info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
@@ -16,7 +16,7 @@ if(isset($_GET['info_id']))
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
-		$cfg->page_title = $data['name'];
+		$pageTitle = $data['name'];
 
 		$obj = parsehtmldata('<html><body>'.($data['content']).'</body></html>');
 		$arrparno = array();

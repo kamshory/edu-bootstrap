@@ -5,7 +5,7 @@ if(!isset($school_id) || empty($school_id))
 	require_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
-$cfg->page_title = "Sekolah";
+$pageTitle = "Sekolah";
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $sql = "SELECT `edu_school`.*,
 (SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) AS `country_id`,
@@ -23,7 +23,7 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 $school_name = $data['name'];
 $school_code = $data['school_code'];
-$cfg->page_title = "Tentang ".$school_name;
+$pageTitle = "Tentang ".$school_name;
 ?>
 <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
     <tr>

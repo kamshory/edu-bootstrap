@@ -5,7 +5,7 @@ if(empty($school_id))
 	require_once dirname(__FILE__)."/bukan-guru.php";
 	exit();
 }
-$cfg->page_title = "Bank Soal";
+$pageTitle = "Bank Soal";
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $grade_id = kh_filter_input(INPUT_GET, "grade_id", FILTER_SANITIZE_STRING_NEW);
 ?>

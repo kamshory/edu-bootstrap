@@ -12,7 +12,7 @@ if(empty($real_school_id))
 }
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-$cfg->page_title = "Soal Ujian";
+$pageTitle = "Soal Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $time_create = $time_edit = $picoEdu->getLocalDateTime();
 
@@ -398,7 +398,7 @@ $numbering = 'upper-alpha';
   </tr>
   <tr>
     <td>Pengacakan Pilihan</td>
-    <td><label><input type="checkbox" name="random" id="random" value="1"<?php if($data['random']) echo  PicoConst::INPUT_CHECKBOX_CHECKED;?> /> Diacak</label></td>
+    <td><label><input type="checkbox" name="random" id="random" value="1"<?php echo $picoEdu->trueFalse($data['random'],  PicoConst::INPUT_CHECKBOX_CHECKED, '');?> /> Diacak</label></td>
   </tr>
 </table>
 </div>
@@ -883,8 +883,7 @@ if ($stmt2->rowCount() > 0) {
 	foreach ($rows2 as $data2) {
 		?>
 <li>
-<span class="option-circle<?php if ($data2['score'])
-					echo ' option-circle-selected'; ?>"><?php
+<span class="option-circle<?php echo $picoEdu->trueFalse($data2['score'], ' option-circle-selected', ''); ?>"><?php
 						echo (int)$data2['score'] * 1;
 						?></span>
 <div class="list-option-item">
@@ -998,48 +997,11 @@ $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 </style>
 <script type="text/javascript">
 
-
 window.onload = function()
 {
 	$(document).on('change', '#searchform select', function(e){
 		$(this).closest('form').submit();
 	});
-	$(document).on('click', '.show-controls', function(e){
-		var obj = $(this);
-		if(obj.hasClass('menu-show'))
-		{
-			$('.show-controls').each(function(index, element) {
-				$(this).removeClass('menu-show');
-			});
-			$('.menu-control').css({display:'none'});
-		}
-		else
-		{
-			$('.show-controls').each(function(index, element) {
-				$(this).removeClass('menu-show');
-			});
-			var left = obj.offset().left + 40;
-			var top = obj.offset().top - 34;
-			var id = obj.attr('data-test-id');
-			obj.addClass('menu-show');
-			$('.menu-control').empty().append(buildMenu(id)).css({left:left, top:top, display:'block'});
-		}
-		e.preventDefault();
-	});
-}
-function buildMenu(id)
-{
-	var html = 
-	'<li><a href="ujian-soal.php?option=add&format=text&test_id='+id+'">Tambah Soal Teks</a></li>\r\n'+
-	'<li><a href="ujian-soal.php?option=add&test_id='+id+'">Tambah Soal HTML</a></li>\r\n'+
-	'<li><a href="ujian-soal.php?test_id='+id+'">Tampilkan Soal Ujian</a></li>\r\n'+
-	'<li><a href="ujian-impor.php?test_id='+id+'">Impor Soal Ujian</a></li>\r\n'+
-	'<li><a href="ujian-ekspor.php?test_id='+id+'">Ekspor Soal Ujian</a></li>\r\n'+
-	'<li><a href="ujian-soal.php?option=analys&test_id='+id+'">Analisa Soal Ujian</a></li>\r\n'+
-	'<li><a href="ujian-laporan.php?option=detail&test_id='+id+'">Laporan Hasil Ujian</a></li>\r\n'+
-	'<li><a href="ujian.php?option=edit&test_id='+id+'">Ubah Informasi Ujian</a></li>\r\n'
-	;
-	return html;
 }
 
 </script>
@@ -1119,9 +1081,6 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-
-
-
 $pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
@@ -1160,7 +1119,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
-      <td width="16"><i class="fas fa-pencil"></i></td>
+      <td width="16">&nbsp;</td>
       <td width="25">No</td>
       <td>Nama Ujian</td>
       <td>Pelajaran</td>
@@ -1180,7 +1139,22 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	$no++;
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
-      <td><a class="show-controls" data-test-id="<?php echo $data['test_id'];?>" href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-pencil"></i></a></td>
+      <td><div class="dropdown show">
+  <a class="btn btn-sm btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-list"></i>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="ujian-soal.php?option=add&format=text&test_id=<?php echo $data['test_id'];?>" target="_blank">Tambah Soal Teks</a>
+    <a class="dropdown-item" href="ujian-soal.php?option=add&format=html&test_id=<?php echo $data['test_id'];?>">Tambah Soal HTML</a>
+    <a class="dropdown-item" href="ujian-soal.php?test_id=<?php echo $data['test_id'];?>">Tampilkan Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-impor.php?test_id=<?php echo $data['test_id'];?>">Impor Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-ekpor.php?test_id=<?php echo $data['test_id'];?>">Ekspor Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-soal.php?option=analys&test_id=<?php echo $data['test_id'];?>">Analisa Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-laporan.php?option=detail&test_id=<?php echo $data['test_id'];?>">Laporan Hasil Ujian</a>
+    <a class="dropdown-item" href="ujian.php?option=edit&test_id=<?php echo $data['test_id'];?>">Ubah Informasi Ujian</a>
+  </div>
+</div>
+	</td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['subject'];?></a></td>

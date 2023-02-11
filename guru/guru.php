@@ -5,7 +5,7 @@ if(empty($school_id))
 	require_once dirname(__FILE__)."/bukan-guru.php";
 	exit();
 }
-$cfg->page_title = "Guru";
+$pageTitle = "Guru";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(@$_GET['option'] == 'detail')
 {

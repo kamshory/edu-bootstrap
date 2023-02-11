@@ -1,7 +1,7 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/functions-pico.php";
 include_once dirname(__FILE__)."/lib.inc/sessions.php";
-$cfg->page_title = "Tanggapan Sekolah";
+$pageTitle = "Tanggapan Sekolah";
 include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
 
 $sql = "SELECT `edu_school_response`.* 

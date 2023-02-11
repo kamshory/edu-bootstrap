@@ -11,7 +11,7 @@ if(empty($real_school_id))
 	exit();
 }
 
-$cfg->page_title = "Administrator";
+$pageTitle = "Administrator";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $my_admin = $adminLoggedIn->admin_id;
 

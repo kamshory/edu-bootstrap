@@ -6,7 +6,7 @@ if(empty($school_id))
 	exit();
 }
 
-$cfg->page_title = "Edu School Program";
+$pageTitle = "Edu School Program";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST))
 {

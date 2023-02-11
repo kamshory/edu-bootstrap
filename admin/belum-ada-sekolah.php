@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-$cfg->page_title = "Belum Ada Sekolah";
+$pageTitle = "Belum Ada Sekolah";
 require_once dirname(__FILE__) . "/lib.inc/header.php";
 ?>
 <p>Anda belum membuat sekolah. Silakan upload file untuk membuat sekolah.</p>

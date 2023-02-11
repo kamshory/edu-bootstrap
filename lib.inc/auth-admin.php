@@ -20,6 +20,8 @@ $real_school_id = "";
 $use_token = '';
 $admin_create = "";
 $admin_edit = "";
+$member_create = "";
+$member_edit = "";
 
 if(!empty($adminLoggedIn->admin_id))
 {

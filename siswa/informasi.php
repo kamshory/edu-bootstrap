@@ -7,7 +7,7 @@ if(!isset($school_id) || empty($school_id))
 }
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-$cfg->page_title = "Infomasi";
+$pageTitle = "Infomasi";
 if(!isset($school_id) || empty($school_id))
 {
 	require_once dirname(__FILE__)."/login-form.php";
@@ -27,7 +27,7 @@ if(isset($_GET['info_id']))
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
-		$cfg->page_title = $data['name'];
+		$pageTitle = $data['name'];
 
 		$obj = parseHtmlData('<html><body>'.($data['content']).'</body></html>');
 		$arrparno = array();

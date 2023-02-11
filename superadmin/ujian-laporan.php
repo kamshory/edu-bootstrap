@@ -5,7 +5,7 @@ if($adminLoggedIn->admin_level != 1)
 	require_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
-$cfg->page_title = "Hasil Ujian";
+$pageTitle = "Hasil Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(isset($_POST['set_active']) && isset($_POST['answerid']))

@@ -7,7 +7,7 @@ if($adminLoggedIn->admin_level != 1)
 }
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-$cfg->page_title = "Paket Soal";
+$pageTitle = "Paket Soal";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $time_create = $time_edit = $picoEdu->getLocalDateTime();
 

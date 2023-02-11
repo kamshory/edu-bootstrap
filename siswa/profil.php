@@ -5,7 +5,7 @@ if(!isset($school_id) || empty($school_id))
 	require_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
-$cfg->page_title = "Siswa";
+$pageTitle = "Siswa";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')

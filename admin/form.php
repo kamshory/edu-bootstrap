@@ -370,7 +370,7 @@ if(isset($field))
 $str .= "<"."?php
 require_once dirname(dirname(dirname(__FILE__))).\"/planetbiru/lib.inc/auth.php\";
 
-\$cfg->page_title = \"$module_title\";
+\$pageTitle = \"$module_title\";
 require_once dirname(dirname(__FILE__)).\"/lib.inc/cfg.pagination.php\";
 ";
 

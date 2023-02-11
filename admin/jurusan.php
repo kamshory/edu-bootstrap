@@ -11,7 +11,7 @@ if(empty(@$real_school_id))
 	exit();
 }
 
-$cfg->page_title = "Jurusan";
+$pageTitle = "Jurusan";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST))
 {

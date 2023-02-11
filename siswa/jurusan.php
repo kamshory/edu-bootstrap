@@ -6,7 +6,7 @@ if(!isset($school_id) || empty($school_id))
 	exit();
 }
 
-$cfg->page_title = "Jurusan";
+$pageTitle = "Jurusan";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(@$_GET['option'] == 'detail')
 {

@@ -103,7 +103,7 @@ class PicoDatabaseSyncConfig
 		$syncPath = $this->getPoolPath();
 		$fp = fopen($syncPath, 'a');
 		$l1 = fwrite($fp, $this->delimiter.self::NEW_LINE);
-		$l2 = fwrite($fp, $sql.";".self::NEW_LINE);
+		$l2 = fwrite($fp, trim($sql).";".self::NEW_LINE);
 		fclose($fp);
 		return $l1 + $l2;
 	}

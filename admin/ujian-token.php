@@ -1,7 +1,7 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 
-$cfg->page_title = "Token Ujian";
+$pageTitle = "Token Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST) && isset($_POST['save']))
 {

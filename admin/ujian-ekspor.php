@@ -13,7 +13,7 @@ if(empty($real_school_id))
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 
-$cfg->page_title = "Ekspor Soal Ujian";
+$pageTitle = "Ekspor Soal Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(isset($_POST['export']) && isset($_POST['test_id']))

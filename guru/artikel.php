@@ -8,7 +8,7 @@ if(empty($school_id))
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-$cfg->page_title = "Artikel";
+$pageTitle = "Artikel";
 if(isset($_POST['publish']) || isset($_POST['draff']))
 {
 	$option = kh_filter_input(INPUT_POST, "option", FILTER_SANITIZE_SPECIAL_CHARS);

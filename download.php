@@ -1,6 +1,6 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/auth.php";
-$cfg->page_title = "Unduh";
+$pageTitle = "Unduh";
 include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
 ?>
     <div class="main-content">

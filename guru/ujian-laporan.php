@@ -6,7 +6,7 @@ if(empty($school_id))
 	exit();
 }
 
-$cfg->page_title = "Hasil Ujian";
+$pageTitle = "Hasil Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 
 if(isset($_POST['set_active']) && isset($_POST['answer_id']))

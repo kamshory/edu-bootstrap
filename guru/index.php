@@ -5,7 +5,7 @@ if(empty($school_id))
 	require_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
-$cfg->page_title = "Halaman Depan Guru";
+$pageTitle = "Halaman Depan Guru";
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	?>
 

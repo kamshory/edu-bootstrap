@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
-$cfg->page_title = "Profil Guru";
+$pageTitle = "Profil Guru";
 if(count(@$_POST) && isset($_POST['save']))
 {
 	$reg_number_national = kh_filter_input(INPUT_POST, "reg_number_national", FILTER_SANITIZE_SPECIAL_CHARS);

@@ -6,7 +6,7 @@ if(!@$admin_id)
 require_once dirname(__FILE__)."/login-form.php";
 exit();
 }
-$cfg->page_title = "Peralatan";
+$pageTitle = "Peralatan";
 $dir2 = dirname(__FILE__)."/tmp";
 if(isset($_POST['clear']))
 {

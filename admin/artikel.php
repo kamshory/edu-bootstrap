@@ -12,7 +12,7 @@ if(empty($real_school_id))
 	exit();
 }
 
-$cfg->page_title = "Artikel";
+$pageTitle = "Artikel";
 
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['publish']) || isset($_POST['draff']))

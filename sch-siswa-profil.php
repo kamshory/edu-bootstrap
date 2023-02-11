@@ -1,6 +1,6 @@
 <?php
 require_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
-$cfg->page_title = "Siswa";
+$pageTitle = "Siswa";
 require_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 
 if (isset($_POST['save']) && @$_GET['option'] == 'edit') {

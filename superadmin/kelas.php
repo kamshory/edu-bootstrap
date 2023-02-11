@@ -5,7 +5,7 @@ if ($adminLoggedIn->admin_level != 1) {
 	exit();
 }
 
-$cfg->page_title = "Daftar Kelas";
+$pageTitle = "Daftar Kelas";
 require_once dirname(dirname(__FILE__)) . "/lib.inc/cfg.pagination.php";
 if (count(@$_POST) && isset($_POST['save'])) {
 	$class_id = kh_filter_input(INPUT_POST, "class_id", FILTER_SANITIZE_STRING_NEW);

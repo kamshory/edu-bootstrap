@@ -1,6 +1,6 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/auth-guru.php";
-$cfg->page_title = "Profil Guru";
+$pageTitle = "Profil Guru";
 if(count(@$_POST) && isset($_POST['save']))
 {
 	$reg_number = kh_filter_input(INPUT_POST, "reg_number", FILTER_SANITIZE_SPECIAL_CHARS);

@@ -8,7 +8,7 @@ if(empty($real_school_id)) {
 	require_once dirname(__FILE__) . "/belum-ada-sekolah.php";
 	exit();
 }
-$cfg->page_title = "Kelas";
+$pageTitle = "Kelas";
 require_once dirname(dirname(__FILE__)) . "/lib.inc/cfg.pagination.php";
 if (count(@$_POST) && isset($_POST['save'])) {
 	$class_id = kh_filter_input(INPUT_POST, "grade_id", FILTER_SANITIZE_STRING_NEW);

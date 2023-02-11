@@ -1,6 +1,6 @@
 <?php
 require_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
-$cfg->page_title = "Pilih Sekolah";
+$pageTitle = "Pilih Sekolah";
 require_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 if (@$_GET['option'] == 'select') {
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);

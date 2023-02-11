@@ -6,7 +6,7 @@ if($adminLoggedIn->admin_level != 1)
 	exit();
 }
 
-$cfg->page_title = "Daftar Paket";
+$pageTitle = "Daftar Paket";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 {

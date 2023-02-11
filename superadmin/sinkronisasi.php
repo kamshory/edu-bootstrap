@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
-$cfg->page_title = "Sinkronisasi Data";
+$pageTitle = "Sinkronisasi Data";
 
 if(@$_POST['action'] == 'save-config')
 {

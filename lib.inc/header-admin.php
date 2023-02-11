@@ -16,8 +16,8 @@ if(!isset($base_dir))
 <meta name="theme-color" content="#3558BE">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#3558BE">
-<title><?php if (isset($cfg->page_title)) {
-echo ltrim($cfg->page_title.' - ', ' - ');
+<title><?php if (isset($pageTitle)) {
+echo ltrim($pageTitle.' - ', ' - ');
 }?><?php echo $cfg->app_name;?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/css.min.css">
 <link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/favicon.png" />
@@ -50,8 +50,8 @@ var setTimeToken = '<?php echo $setTimeToken;?>';
     	<div class="mobile-assets">
             <a class="mobile-menu-trigger mobile-menu-trigger-right" href="#"></a>
             <a class="mobile-menu-trigger mobile-menu-trigger-left" href="#"></a>
-            <h1><?php if(isset($cfg->page_title)) {
-				echo $cfg->page_title;
+            <h1><?php if(isset($pageTitle)) {
+				echo $pageTitle;
 			} else {
 				echo $cfg->app_name;
 			}?></h1>

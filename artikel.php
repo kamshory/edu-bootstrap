@@ -1,7 +1,7 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/functions-pico.php";
 include_once dirname(__FILE__)."/lib.inc/sessions.php";
-$cfg->page_title = "Artikel";
+$pageTitle = "Artikel";
 include_once dirname(__FILE__)."/lib.inc/cfg.pagination.php";
 if(isset($_GET['school_id']) && !empty($_GET['school_id']))
 {

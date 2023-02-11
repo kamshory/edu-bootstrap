@@ -1,7 +1,7 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/functions-pico.php";
 include_once dirname(__FILE__)."/lib.inc/sessions.php";
-$cfg->page_title = "Guru";
+$pageTitle = "Guru";
 
 
 include_once dirname(__FILE__)."/lib.inc/cfg.pagination.php";

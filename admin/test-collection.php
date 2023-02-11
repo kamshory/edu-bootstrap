@@ -1,7 +1,7 @@
 <?php
 require_once dirname(dirname(dirname(__FILE__)))."/planetbiru/lib.inc/auth.php";
 
-$cfg->page_title = "Edu Test Collection";
+$pageTitle = "Edu Test Collection";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST))
 {
