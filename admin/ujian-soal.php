@@ -54,8 +54,6 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		$time_create = $picoEdu->getLocalDateTime();
 		$time_edit = $picoEdu->getLocalDateTime();
-		
-		
 	
 		$random = ((int) $data['random']);
 		$sort_order = ((int) $data['sort_order']);
@@ -289,7 +287,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 				$sql = "UPDATE `edu_option` 
 				SET `content` = '$option', `score` = '$score' 
 				WHERE `question_id` = '$question_id' AND `option_id` = '$id2'";
-				$stmt3 = $database->executeQuery($sql);
+				$stmt3 = $database->executeUpdate($sql, true);
 				if ($stmt3->rowCount() > 0) 
 				{
 					$sql = "UPDATE `edu_option` 

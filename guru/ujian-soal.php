@@ -261,8 +261,10 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 				$option = $picoEdu->brToNewLineEncoded($option);
 
 				$score = kh_filter_input(INPUT_POST, "score_" . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
-				$sql = "UPDATE `edu_option` SET `content` = '$option', `score` = '$score' WHERE `question_id` = '$question_id' AND `option_id` = '$id2'";
-				$stmt4 = $database->executeQuery($sql);
+				$sql = "UPDATE `edu_option` 
+				SET `content` = '$option', `score` = '$score' 
+				WHERE `question_id` = '$question_id' AND `option_id` = '$id2'";
+				$stmt4 = $database->executeUpdate($sql, true);
 				if ($stmt4->rowCount() > 0) 
 				{
 					$sql = "UPDATE `edu_option` SET `time_edit` = '$time_edit', `member_edit` = '$member_edit' 
