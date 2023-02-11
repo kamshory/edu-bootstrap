@@ -49,7 +49,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
     
     <form class="form-signin" method="post" action="login.php">
         <img class="mb-4" src="lib.style/images/logo-120.png" alt="" width="90" height="90">
-        <h1 class="h3 mb-3 font-weight-normal">Masuk Sebagai Admin</h1>
+        <h1 class="h3 mb-3 font-weight-normal">Masuk Sebagai Siswa</h1>
         <label for="inputEmail" class="sr-only">Username</label>
         <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>

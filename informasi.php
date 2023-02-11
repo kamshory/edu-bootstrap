@@ -147,14 +147,10 @@ if(isset($_GET['info_id']))
     </header>
 
     <main role="main">
-
-        
-
         <div class="album py-5 bg-light">
             <div class="container">
 
                 <div class="">
-
 					<div class="article-title"><h1><?php echo $data['name'];?></h1></div>
 					<div class="article-content"><?php echo $data['content'];?></div>
 					<div class="article-time">Dibuat <?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?></div>
@@ -166,12 +162,6 @@ if(isset($_GET['info_id']))
 				</div>
             </div>
         </div>
-
-
-        
-
-        
-
     </main>
 
     <footer class="text-muted">
