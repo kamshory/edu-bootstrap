@@ -494,7 +494,6 @@ function databasePrepareDownloadSyncFiles(clbk)
                 else
                 {
                     updateProgressBar('database', 'down', 3, 100);
-                    console.log('updateProgressBar')
                     databasePrepareExecuteQuery(clbk);
                 }
             }

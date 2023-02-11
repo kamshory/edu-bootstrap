@@ -178,6 +178,11 @@ body {
 	.table.responsive-tow-side-table tr td:first-child{
 		width:200px;
 	}
+
+  .modal .modal-body .table.responsive-tow-side-table tr td:first-child{
+		width:140px;
+	}
+
 	.table.responsive-tow-side-table tr td{
     padding-left:0px;
     padding-right:0px;
@@ -196,6 +201,11 @@ body {
 	.table.responsive-tow-side-table tr td:first-child{
 		width:40%;
 	}
+
+  .modal .modal-body .table.responsive-tow-side-table tr td:first-child{
+		width:30%;
+	}
+
 	.table.responsive-tow-side-table tr td{
     padding-left:0px;
     padding-right:0px;

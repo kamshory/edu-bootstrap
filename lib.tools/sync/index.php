@@ -1,19 +1,148 @@
 <?php
 include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-sync.php";
 
-if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database')
+if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database' || @$_GET['action'] == 'ping')
 {
-    $syncHubURL = "http://localhost/sync/";
     $syncHubURL = $database->getSystemVariable("sync_hub_url");
     $fileSyncUrl = rtrim($syncHubURL, "/")."/";
     $databaseSyncUrl = rtrim($syncHubURL, "/")."/";
 
-    $username = 'user';
     $username = $database->getSystemVariable("sync_hub_username");
 
-    $password = 'password';
-    $password = $database->getSystemVariable("sync_hub_password");
+    $password = $database->getSystemVariable("sync_hub_password");   
+}
+
+class SyncPing
+{
+    protected function buildURL($url, $httpQuery, $keepOriginal = true)
+    {
+        $original = array();
+        if($keepOriginal)
+        {
+            $parsed = parse_url($url);
+            if(isset($parsed['query']))
+            {
+                parse_str($parsed['query'], $original);
+            }
+        }
+        $combined = array_merge($original, $httpQuery);
+        
+        if(stripos($url, "?") !== false)
+        {
+            $arr = explode("?", $url);
+            $url = $arr[0];
+        }        
+        $url = $url."?".http_build_query($combined);
+        return $url;
+    }
+
+    /**
+     * Upload sync file to sync hub
+     * @param string $fileSyncUrl Synch hub URL
+     * @param string $username Sync username
+     * @param string $password Sync password
+     * @return array
+     */
+    public function ping($fileSyncUrl, $username, $password) //NOSONAR
+    {
+        $httpQuery = array(
+            'action'=>'ping'
+        );
+        $fileSyncUrl = $this->buildURL($fileSyncUrl, $httpQuery);
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
+        curl_setopt($ch, CURLOPT_URL, $fileSyncUrl);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        $server_output = curl_exec($ch);
+        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if($httpcode == 200)
+        {
+            try
+            {
+                $response = json_decode($server_output, true);
+                if ($response === null && json_last_error() !== JSON_ERROR_NONE) {
+                    $response = array(
+                        'response_code'=>'02',
+                        'response_text'=>'Respon tidak sesuai spesifikasi'
+                    );
+                }
+            }
+            catch(Exception $e)
+            {
+                $response = array(
+                    'response_code'=>'02',
+                    'response_text'=>'Respon tidak sesuai spesifikasi'
+                );
+            }
+            return $response;
+        }
+        else
+        {
+            return array(
+                'response_code'=>'01',
+                'response_text'=>'Server tidak ditemukan'
+            );
+        }
+    }
+}
+
+class PingException extends Exception
+{
+    private $previous;   
+    public function __construct($message, $code = 0, Exception $previous = null)
+    {
+        parent::__construct($message, $code);  
+        if (!is_null($previous))
+        {
+            $this -> previous = $previous;
+        }
+    }
     
+}
+if(@$_GET['action'] == 'ping')
+{
+    $ping = new SyncPing;
+    $response = new stdClass;
+    $success = false;
+    if(isset($_POST['test']))
+    {
+        $fileSyncUrl2 = trim(@$_POST['url']);
+        $username2 = trim(@$_POST['username']);
+        $password2 = trim(@$_POST['password']);
+        if($password2 == "")
+        {
+            $password2 = $password;
+        }
+    }
+    else
+    {
+        $fileSyncUrl2 = $fileSyncUrl;
+        $username2 = $username;
+        $password2 = $password;
+    }
+    try
+    {
+        $response = $ping->ping($fileSyncUrl2, $username2, $password2);
+        $success = $response['response_code'] == '00';
+    }
+    catch(PingException $e)
+    {
+        // Do nothing
+    }
+
+    header('Content-type: application/json'); //NOSONAR
+    echo json_encode(
+        array(
+            'success'=>$success,
+            'response'=>$response
+        )
+    );
+    exit();
 }
 
 if(@$_GET['type'] == 'file')

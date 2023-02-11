@@ -1,0 +1,24 @@
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_system_variable` 
+			SET `system_value` = 'http://localhost/sync/', `time_edit` = '2023-02-11 10:18:37' 
+			WHERE `system_variable_id` = 'sync_hub_url' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_system_variable` 
+			SET `system_value` = 'user', `time_edit` = '2023-02-11 10:18:37' 
+			WHERE `system_variable_id` = 'sync_hub_username' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_system_variable` 
+			SET `system_value` = 'dqwdwqd', `time_edit` = '2023-02-11 10:18:37' 
+			WHERE `system_variable_id` = 'sync_hub_password' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_system_variable` 
+			SET `system_value` = 'http://localhost/sync/', `time_edit` = '2023-02-11 10:20:20' 
+			WHERE `system_variable_id` = 'sync_hub_url' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_system_variable` 
+			SET `system_value` = 'user', `time_edit` = '2023-02-11 10:20:20' 
+			WHERE `system_variable_id` = 'sync_hub_username' ;
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_system_variable` 
+			SET `system_value` = 'password', `time_edit` = '2023-02-11 10:20:20' 
+			WHERE `system_variable_id` = 'sync_hub_password' ;

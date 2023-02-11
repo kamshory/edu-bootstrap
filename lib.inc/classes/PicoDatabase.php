@@ -412,7 +412,7 @@ class PicoDatabase
 			$sql = "UPDATE `edu_system_variable` 
 			SET `system_value` = '$value', `time_edit` = '$current_time' 
 			WHERE `system_variable_id` = '$variable_name' ";
-			$this->executeUpdate($sql, true);
+			$this->executeUpdate($sql, false);
 		}
 		else
 		{
@@ -420,7 +420,7 @@ class PicoDatabase
 			(`system_variable_id`, `system_value`, `time_create`, `time_edit`) VALUES
 			('$variable_name', '$value', '$current_time' , '$current_time')
 			";
-			$this->executeInsert($sql, true);
+			$this->executeInsert($sql, false);
 		}
 	}
 }
