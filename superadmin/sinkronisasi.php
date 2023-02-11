@@ -22,7 +22,6 @@ if(@$_POST['action'] == 'save-config')
     {
         $database->setSystemVariable("sync_hub_password", addslashes($password2));
     }
-
 }
 
 if(!empty($school_id)) 
