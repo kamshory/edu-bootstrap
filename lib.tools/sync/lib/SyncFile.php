@@ -529,7 +529,13 @@ class FileSyncUpload extends FileSyncMaster
                         $info = json_decode($line, true);
                        
                         if ($info['op'] == 'CREATEFILE') {
+                            
                             $path = $info['path'];
+                            if($this->useRelativePath)
+                            {
+                                $path = $this->getAbsolutePath($path);
+                            }
+
                             $this->uploadUserFile($path, $fileSyncUrl, $username, $password);
                         }
                     }
