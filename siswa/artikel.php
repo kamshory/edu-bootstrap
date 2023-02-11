@@ -48,13 +48,28 @@ else
 	LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 	WHERE `edu_article`.`school_id` = '$school_id' AND `edu_article`.`active` = true
 	ORDER BY `edu_article`.`article_id` DESC
+	LIMIT 0, 10
 	";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
 		?>
         <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
-        <div class="article-list">
+<style>
+	.article-item{
+		margin-bottom: 20px;
+	}
+	.card-text
+	{
+		position: relative;
+	}
+	.card-text img{
+		max-width: 100%;
+	}
+</style>
+
+        <div class="article-list row">
+		
         <?php
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		foreach($rows as $data)
@@ -113,26 +128,30 @@ else
 				$content = substr($content, 0, $pos+1);
 				$content = tidyHTML($content);
 			}
+			$content = trim($content);
+			if($content == "" || $content == '&nbsp;' && isset($obj->img))
+			{
+				foreach($obj->img as $imgno=>$img)
+				{
+					$content = '<img src="'.$img['src'].'">';
+				}
+			}
 		
 			?>
-            <div class="article-item">
-                <div class="article-title"><h3 data-active="<?php echo $data['active'];?>"><?php echo $data['title'];?></h3></div>
-                <div class="article-content"><?php echo $content;?></div>
-                <div class="article-time">Dibuat <strong><?php echo $data['time_create'];?></strong></div>
-                <div class="article-creator">Oleh <strong><?php echo $data['creator'];?></strong></div>
-                <div class="article-link">
-                	<a href="artikel.php?article_id=<?php echo $data['article_id'];?>">Baca</a>
-                    <?php
-					if(@$auth_teacher_id && @$auth_teacher_school_id && @$auth_teacher_school_id == @$data['school_id'] && @$auth_teacher_id = @$data['member_create'])
-					{
-						?>
-                        <a href="artikel.php?option=edit&article_id=<?php echo $data['article_id'];?>">Ubah</a>
-                        <a class="delete-post" data-id="<?php echo $data['article_id'];?>" href="artikel.php?option=delete&article_id=<?php echo $data['article_id'];?>">Hapus</a>
-                        <?php
-					}
-					?>
-                </div>
-            </div>
+
+			<div class="article-item col-sm-6">
+				<div class="card">
+					<div class="card-body">
+					<h5 class="card-title"><?php echo $data['title'];?></h5>
+					<p class="card-text"><?php echo $content;?></p>
+					<div class="article-time">Dibuat <strong><?php echo $data['time_create'];?></strong></div>
+					<div class="article-creator">Oleh <strong><?php echo $data['creator'];?></strong></div>
+					<a href="artikel.php?article_id=<?php echo $data['article_id'];?>" class="btn btn-primary"><i class="fas fa-book"></i> Selengkapnya</a>
+					</div>
+				</div>
+			</div>
+
+            
             <?php
 		}
 		?>

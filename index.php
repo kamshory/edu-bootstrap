@@ -189,11 +189,13 @@ else
 			LIMIT 0, 2
 			";
 			$stmt = $database->executeQuery($sql);
-			if($stmt->rowCount() > 0)
+			$numArticle = $stmt->rowCount();
+			if($numArticle > 0)
 			{
 			?>
 		<?php
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		
 		$content = "";
 		foreach($rows as $data)
 		{
@@ -211,7 +213,7 @@ else
 				}
 			}
 			?>
-			<div class="col-sm-6">
+			<div class="<?php echo $picoEdu->trueFalse($numArticle == 1, 'col-sm-12', 'col-sm-6');?>">
 					<div class="card">
 					<div class="card-body">
 						<h5 class="card-title"><?php echo $data['name'];?></h5>

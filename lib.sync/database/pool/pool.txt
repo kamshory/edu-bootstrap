@@ -1,0 +1,9 @@
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = 'Tabung', `content` = '<p class=\"bd-lead\">Get started with Bootstrap, the world&rsquo;s most popular framework for building responsive, mobile-first sites, with jsDelivr and a template starter page.</p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-11 15:34:28', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e500818a9499f5736' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = 'Sync Hub', `content` = '<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/article/063e62cae7969a506235/f5ea7c7e0357cb117c2d9ea41158c322.svg\" alt=\"\"></p>
+<p class=\"bd-lead\">Get started with Bootstrap, the world&rsquo;s most popular framework for building responsive, mobile-first sites, with jsDelivr and a template starter page.</p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-11 15:35:19', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e62cae7969a506235' AND `school_id` = '063ce682801be89951aa';
