@@ -132,7 +132,11 @@ class FileSynchronizer
 		{
 			if($this->useRelativePath)
 			{
-				$path = $this->getRelativePath($path);
+				$pathRel = $this->getRelativePath($path);
+			}
+			else
+			{
+				$pathRel = $path;
 			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
@@ -140,7 +144,7 @@ class FileSynchronizer
 			$syncContent = json_encode(array(
 				'op'=>'CREATEFILE',
 				'tm'=>$time,
-				'path'=>$path
+				'path'=>$pathRel
 			));
 			fwrite($fp, $syncContent.self::NEW_LINE);  
 			fclose($fp);  
@@ -160,7 +164,11 @@ class FileSynchronizer
 		{
 			if($this->useRelativePath)
 			{
-				$path = $this->getRelativePath($path);
+				$pathRel = $this->getRelativePath($path);
+			}
+			else
+			{
+				$pathRel = $path;
 			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
@@ -168,7 +176,7 @@ class FileSynchronizer
 			$syncContent = json_encode(array(
 				'op'=>'CREATEFILE',
 				'tm'=>$time,
-				'path'=>$path
+				'path'=>$pathRel
 			));
 			$ret = fwrite($fp, $syncContent.self::NEW_LINE);  
 			fclose($fp);
@@ -189,7 +197,11 @@ class FileSynchronizer
 		{
 			if($this->useRelativePath)
 			{
-				$path = $this->getRelativePath($path);
+				$pathRel = $this->getRelativePath($path);
+			}
+			else
+			{
+				$pathRel = $path;
 			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
@@ -197,7 +209,7 @@ class FileSynchronizer
 			$syncContent = json_encode(array(
 				'op'=>'DELETEFILE',
 				'tm'=>$time,
-				'path'=>$path
+				'path'=>$pathRel
 			));
 			fwrite($fp, $syncContent.self::NEW_LINE);  
 			fclose($fp);  
@@ -218,8 +230,13 @@ class FileSynchronizer
 		{
 			if($this->useRelativePath)
 			{
-				$oldPath = $this->getRelativePath($oldPath);
-				$newPath = $this->getRelativePath($newPath);
+				$oldPathRel = $this->getRelativePath($oldPath);
+				$newPathRel = $this->getRelativePath($newPath);
+			}
+			else
+			{
+				$oldPathRel = $oldPath;
+				$newPathRel = $newPath;
 			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
@@ -227,8 +244,8 @@ class FileSynchronizer
 			$syncContent = json_encode(array(
 				'op'=>'RENAMEFILE',
 				'tm'=>$time,
-				'path'=>$oldPath,
-				'to'=>$newPath
+				'path'=>$oldPathRel,
+				'to'=>$newPathRel
 			));
 			fwrite($fp, $syncContent.self::NEW_LINE);  
 			fclose($fp);  
@@ -276,7 +293,11 @@ class FileSynchronizer
 		{
 			if($this->useRelativePath)
 			{
-				$path = $this->getRelativePath($path);
+				$pathRel = $this->getRelativePath($path);
+			}
+			else
+			{
+				$pathRel = $path;
 			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
@@ -284,7 +305,7 @@ class FileSynchronizer
 			$syncContent = json_encode(array(
 				'op'=>'CREATEDIR',
 				'tm'=>$time,
-				'path'=>$path
+				'path'=>$pathRel
 			));
 			fwrite($fp, $syncContent.self::NEW_LINE);  
 			fclose($fp);  
@@ -304,7 +325,11 @@ class FileSynchronizer
 		{
 			if($this->useRelativePath)
 			{
-				$path = $this->getRelativePath($path);
+				$pathRel = $this->getRelativePath($path);
+			}
+			else
+			{
+				$pathRel = $path;
 			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
@@ -312,7 +337,7 @@ class FileSynchronizer
 			$syncContent = json_encode(array(
 				'op'=>'DELETEDIR',
 				'tm'=>$time,
-				'path'=>$path
+				'path'=>$pathRel
 			));
 			fwrite($fp, $syncContent.self::NEW_LINE);  
 			fclose($fp);  
