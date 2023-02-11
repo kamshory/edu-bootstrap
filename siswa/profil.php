@@ -25,7 +25,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$sql = "UPDATE `edu_student` SET 
 	`reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `ip_edit` = '$ip_edit'
 	WHERE `student_id` = '$auth_student_id' AND `school_id` = '$school_id' ";
-	$database->execute($sql);
+	$database->executeUpdate($sql, true);
 	if($email != '')
 	{
 		$sql = "UPDATE `edu_student` SET 

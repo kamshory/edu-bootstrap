@@ -104,14 +104,14 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 
 				$sql = "UPDATE `edu_token` SET `active` = false 
 				WHERE `edu_token`.`student_id` = '$auth_student_id' AND `edu_token`.`token` = '$token' ";
-				$database->execute($sql);
+				$database->executeUpdate($sql, true);
 				header("Location: ujian/index.php?test_id=$test_id");
 			}
 			else
 			{
 				$sql = "UPDATE `edu_token` SET `active` = false 
 				WHERE `edu_token`.`student_id` = '$auth_student_id' AND `edu_token`.`token` = '$token' ";
-				$database->execute($sql);
+				$database->executeUpdate($sql, true);
 				header("Location: ujian/index.php?test_id=$test_id");
 			}
 		}
@@ -153,7 +153,7 @@ else if(isset($_POST['token']))
 			{
 				$account_blocked = 1;
 				$sql = "UPDATE `edu_student` SET `blocked` = true WHERE `student_id` = '$auth_student_id' ";
-				$database->execute($sql);
+				$database->executeUpdate($sql, true);
 			}
 		}
 	}

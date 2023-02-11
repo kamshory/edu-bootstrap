@@ -65,7 +65,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 		{
 			$sql2 = "UPDATE `edu_member_school` SET `class_id` = '$class_id' 
 			WHERE `student_id` = '$student_id' AND `role` = 'S' ";
-			$database->execute($sql2);
+			$database->executeUpdate($sql2, true);
 		}
 		else
 		{
@@ -73,7 +73,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 			(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) VALUES
 			('$student_id', '$school_id', 'S', '$class_id', '$time_create', true)
 			";
-			$database->execute($sql2);
+			$database->executeInsert($sql2, true);
 		}
 		$token_student = md5($school_id.'-'.$member_id.'-'.time().'-'.mt_rand(111111, 999999));
 		$reg_number = '';
@@ -100,10 +100,10 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 		('$student_id', '$token_student', '$school_id', '$name', '$gender', '$birth_place', '$birth_day', '$phone', '$email', '$password',  
 		'$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', 0, 1)
 		";
-		$database->execute($sql);
+		$database->executeInsert($sql, true);
 		
 		$sql = "UPDATE `edu_student` SET `school_id` = '$school_id', `class_id` = '$class_id' WHERE `student_id` = '$student_id' ";
-		$database->execute($sql);
+		$database->executeUpdate($sql, true);
 		
 		if($ref == '')
 		{
@@ -192,7 +192,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 					// ubah sekolah
 					$sql = "UPDATE `edu_student` SET `school_id` = '$school_id', `class_id` = '$class_id'
 					WHERE `student_id` = '$student_id' ";
-					$database->execute($sql);
+					$database->executeUpdate($sql, true);
 					$ref = "$school_code/test/?option=login&test_id=$test_id";
 					header("Location: $ref");
 				}
@@ -227,12 +227,12 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 					(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) VALUES
 					('$student_id', '$school_id', 'S', '$class_id', '$time_create', true)
 					";
-					$database->execute($sql2);
+					$database->executeInsert($sql2, true);
 	
 					// ubah sekolah
 					$sql = "UPDATE `edu_student` SET `school_id` = '$school_id', `class_id` = '$class_id'
 					WHERE `student_id` = '$student_id' ";
-					$database->execute($sql);
+					$database->executeUpdate($sql, true);
 					$ref = "$school_code/test/?option=login&test_id=$test_id";
 					header("Location: $ref");
 				}

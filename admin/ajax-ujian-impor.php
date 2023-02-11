@@ -96,7 +96,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 							('$question_id', '$pertanyaan', '$test_id', true, '$sort_order', '$random', '$numbering', '$digest', '$competence',
 							'$time_create', '$member_create', '$time_edit', '$member_edit')
 							";
-							$stmt = $database->executeInsert($sql1, true);;
+							$stmt = $database->executeInsert($sql1, true);
 							
 							if($stmt->rowCount() > 0 && count(@$question->answer->option) > 0)
 							{

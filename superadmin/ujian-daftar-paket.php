@@ -52,7 +52,7 @@ if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 			$sql = "UPDATE `edu_test_collection` 
 			SET `number_of_question` = '$nquestion', `number_of_option` = '$noption', `file_md5` = '$md5', `file_sha1` = '$sha1'
 			WHERE `test_collection_id` = '$test_collection_id' ";
-			$database->execute($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 	header("Location: ".basename($_SERVER['REQUEST_URI'])); //NOSONAR
@@ -65,7 +65,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_collection_id']))
 	{
 		$test_collection_id = addslashes($val);
 		$sql = "UPDATE `edu_test_collection` SET `active` = true WHERE `test_collection_id` = '$test_collection_id' ";
-		$database->execute($sql);
+		$database->executeUpdate($sql, true);
 	}
 	header("Location: ".basename($_SERVER['REQUEST_URI'])); //NOSONAR
 	exit();
@@ -77,7 +77,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 	{
 		$test_collection_id = addslashes($val);
 		$sql = "UPDATE `edu_test_collection` SET `active` = false WHERE `test_collection_id` = '$test_collection_id' ";
-		$database->execute($sql);
+		$database->executeUpdate($sql, true);
 	}
 	header("Location: ".basename($_SERVER['REQUEST_URI'])); //NOSONAR
 	exit();
@@ -100,7 +100,7 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			$file_path = $data['file_path'];
 			$sql = "DELETE FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
-			$database->execute($sql);
+			$database->executeDelete($sql, true);
 			$real_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$file_path;
 			if(file_exists($real_path))
 			{
@@ -173,7 +173,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 		`time_create`, `time_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 		('$name', '$grade_id', '$file_name', '$file_path', '$file_size', '$file_md5', '$file_sha1', '$number_of_question', '$number_of_option',
 		'$time_create', '$time_edit', '$ip_create', '$ip_edit', '$active')";
-		$database->execute($sql);
+		$database->executeInsert($sql, true);
 		$id = $database->getDatabaseConnection()->lastInsertId();
 		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_collection_id=$id");
 	}
@@ -195,7 +195,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$sql = "UPDATE `edu_test_collection` SET 
 	`name` = '$name', `grade_id` = '$grade_id', `time_edit` = '$time_edit', `ip_edit` = '$ip_edit', `active` = '$active'
 	WHERE `test_collection_id` = '$test_collection_id'";
-	$database->execute($sql);
+	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_collection_id=$test_collection_id");
 }
 if(@$_GET['option'] == 'add')

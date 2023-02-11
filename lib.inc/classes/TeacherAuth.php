@@ -68,7 +68,7 @@ class TeacherAuth
 						`ip_last_activity` = '$ip', 
 						`time_last_activity` = '$now' 
 						WHERE `teacher_id` = '" . $this->teacher_id . "'";
-					$database->execute($sql);
+					$database->executeUpdate($sql, true);
 				}
 			}
 		}

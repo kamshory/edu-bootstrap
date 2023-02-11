@@ -147,7 +147,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 						'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 						";
 				
-						$stmt1 = $database->executeQuery($sql1);
+						$stmt1 = $database->executeInsert($sql1, true);
 						if($stmt1->rowCount() == 0)
 						{
 							$oke = $oke * 0;
@@ -241,7 +241,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 						('$question_id', '$pertanyaan', '$test_id', '1', '$sort_order', '$random', '$numbering', '$digest', '$competence',
 						'$time_create', '$member_create', '$time_edit', '$member_edit') 
 						";
-						$stmt1 = $database->executeQuery($sql1);
+						$stmt1 = $database->executeInsert($sql1, true);
 						if ($stmt1->rowCount() > 0 && count(@$question->answer->option) > 0) {
 
 							foreach ($question->answer->option as $index_option => $option) {

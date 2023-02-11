@@ -260,7 +260,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		`numbering` = '$numbering', 
 		`basic_competence` = '$basic_competence'
 		WHERE `question_id` = '$question_id'";
-		$stmt5 = $database->executeQuery($sql);
+		$stmt5 = $database->executeUpdate($sql, true);
 		if($stmt5->rowCount() > 0)
 		{
 			$sql = "UPDATE `edu_question` 

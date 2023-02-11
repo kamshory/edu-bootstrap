@@ -17,7 +17,7 @@ if(isset($_POST['set_active']) && isset($_POST['info_id']))
 		{
 			$info_id = addslashes($val);
 			$sql = "UPDATE `edu_info` SET `active` = true WHERE `info_id` = '$info_id'  ";
-			$database->execute($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -30,7 +30,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['info_id']))
 		{
 			$info_id = addslashes($val);
 			$sql = "UPDATE `edu_info` SET `active` = false WHERE `info_id` = '$info_id'  ";
-			$database->execute($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -43,7 +43,7 @@ if(isset($_POST['delete']) && isset($_POST['info_id']))
 		{
 			$info_id = addslashes($val);
 			$sql = "UPDATE `edu_info` SET `school_id` = '' WHERE `info_id` = '$info_id'  ";
-			$database->execute($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -72,7 +72,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		(`info_id`, `name`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES	
 		('$info_id', '$name', '$time', '$time', '$admin_id', '$admin_id', '$ip', '$ip', '$active')
 		";
-		$stmt = $database->executeQuery($sql);
+		$stmt = $database->executeInsert($sql, true);
 		if ($stmt->rowCount() > 0) {
 
 			$base_dir = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";

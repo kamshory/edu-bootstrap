@@ -466,22 +466,17 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									'$name', '$gender', '$birth_place', $db_fixed, '$phone', '$email', '$password', '$password_initial', 
 									'$address', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', 0, 1)
 									";
-
-
 									$database->executeInsert($sql, true);
 
 									$sql2 = "INSERT INTO `edu_member_school` 
 									(`member_id`, `school_id`, `role`, `class_id`, `time_create`, `active`) VALUES
 									('$student_id', '$school_id', 'S', '$class_id', '$time_create', true)
 									";
-
 									$database->executeInsert($sql2, true);
 
 									$sql3 = "UPDATE `edu_student` SET `school_id` = '$school_id' WHERE `student_id` = '$student_id' 
 									AND (`school_id` = '' OR `school_id` is null)
 									";
-
-
 									$database->executeUpdate($sql3, true);
 								} else {
 									break;
@@ -495,12 +490,9 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 							WHERE `edu_student`.`school_id` = '$school_id' ";
 							$database->executeUpdate($sql, true);
 
-
 							$sql1 = "UPDATE `edu_school` SET `prevent_change_school` = '1', `prevent_resign` = '1'
 							WHERE `school_id` = '$school_id' 
 							";
-
-							
 							$database->executeUpdate($sql1, true);
 						} catch (Exception $e) {
 							// Do nothing

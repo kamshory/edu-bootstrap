@@ -29,7 +29,7 @@ if(isset($_GET['username']) && isset($_GET['auth']))
 				`auth` = '$newauth'
 				where (`username` like '$un' AND `auth` like '$auth') 
 				";
-				$database->execute($sql);
+				$database->executeUpdate($sql, true);
 				$_SESSION['username'] = $un;
 				$_SESSION['password'] = md5($password);
 				header('Location: index.php');
@@ -52,7 +52,7 @@ if(isset($_POST['username']) && isset($_POST['send']))
 	$sql = "UPDATE `member` SET `auth` = '$auth'
 	where ((`email` like '$email' and '$email' != '') OR `username` like '$username' or (`phone` like '$phone' and '$phone' != '')) 
 	";
-	$database->execute($sql);
+	$database->executeUpdate($sql, true);
 	
 	$sql = "SELECT `username`, `member_id`, `email`, `auth`, `name`
 	FROM `member`

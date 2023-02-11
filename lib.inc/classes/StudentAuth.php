@@ -65,7 +65,7 @@ class StudenAuth
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
 					$now = $picoEdu->getLocalDateTime();
 					$sql = "UPDATE `edu_student` SET `ip_last_activity` = '$ip', `time_last_activity` = '$now' WHERE `student_id` = '" . $this->student_id . "'";
-					$database->execute($sql);
+					$database->executeUpdate($sql, true);
 				}
 			}
 		}

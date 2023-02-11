@@ -87,6 +87,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	WHERE `school_id` = '$school_id'
 	";
 	$database->executeUpdate($sql, true);
+	
 	$sql = "UPDATE `edu_school` SET `state_id` = state_name_to_id('$state_id', `country_id`) WHERE `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	
@@ -104,7 +105,7 @@ if(isset($_POST['set_active']) && isset($_POST['school_id']))
 		{
 			$school_id = addslashes($val);
 			$sql = "UPDATE `edu_school` SET `active` = true WHERE `school_id` = '$school_id'  ";
-			$database->execute($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }

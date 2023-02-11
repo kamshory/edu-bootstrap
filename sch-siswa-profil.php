@@ -20,22 +20,22 @@ if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
 	$sql = "UPDATE `edu_student` SET 
 	`reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit'
 	WHERE `student_id` = '$student_id' AND `school_id` = '$school_id' ";
-	$database->execute($sql);
+	$database->executeUpdate($sql, true);
 	if ($email != '') {
 		$sql = "UPDATE `edu_student` SET 
 		`email` = '$email'
 		WHERE `student_id` = '$student_id' AND `school_id` = '$school_id' ";
-		$database->execute($sql);
+		$database->executeUpdate($sql, true);
 	}
 	if ($password != '') {
 		$sql = "UPDATE `edu_student` SET 
 		`password` = md5(md5('$password')), `password_initial` = ''
 		WHERE `student_id` = '$student_id' AND `school_id` = '$school_id' ";
-		$database->execute($sql);
+		$database->executeUpdate($sql, true);
 		$sql = "UPDATE `member` SET 
 		`password` = md5(md5('$password'))
 		WHERE `member_id` = '$student_id'  ";
-		$database->execute($sql);
+		$database->executeUpdate($sql, true);
 		$_SESSION['password'] = md5($password);
 		$ksession->forcesave();
 	}

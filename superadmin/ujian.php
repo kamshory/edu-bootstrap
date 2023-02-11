@@ -96,7 +96,7 @@ if(isset($_POST['set_active']) && isset($_POST['test_id']))
 		{
 			$test_id = addslashes($val);
 			$sql = "UPDATE `edu_test` SET `active` = true WHERE `test_id` = '$test_id' ";
-			$database->execute($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }
@@ -109,7 +109,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_id']))
 		{
 			$test_id = addslashes($val);
 			$sql = "UPDATE `edu_test` SET `active` = false WHERE `test_id` = '$test_id' ";
-			$database->execute($sql);
+			$database->executeUpdate($sql, true);
 		}
 	}
 }

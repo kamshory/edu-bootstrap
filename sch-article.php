@@ -171,19 +171,19 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		(`school_id`, `title`, `content`, `open`, `class`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES	
 		('$school_id', '$title', '$content', '$open', '$class', '$time', '$time', '$admin_id', 'T', '$admin_id', 'T', '$ip', '$ip', '$active')
 		";
-		$stmt = $database->executeQuery($sql);
+		$stmt = $database->executeInsert($sql, true);
 		$article_id = $stmt->rowCount();
 		header("Location: artikel.php?option=detail&article_id=$article_id");
 	}
 	else if($option == 'edit')
 	{
 		$article_id = kh_filter_input(INPUT_POST, "article_id", FILTER_SANITIZE_STRING_NEW);
-		$sql = "UPDATE `edu_article` set
+		$sql = "UPDATE `edu_article` SET
 		`title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
 		`time_edit` = '$time', `member_edit` = '$admin_id', `role_edit` = 'T', `ip_edit` =  '$ip', `active` = '$active'
 		WHERE `article_id` = '$article_id' AND `school_id` = '$school_id' AND `member_create` = '$admin_id'
 		";
-		$database->execute($sql);
+		$stmt = $database->executeUpdate($sql, true);
 		header("Location: artikel.php?option=detail&article_id=$article_id");
 	}
 }

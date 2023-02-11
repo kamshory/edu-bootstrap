@@ -76,8 +76,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 
 		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 		$content = addslashes($content);
-		$sql = "UPDATE `edu_article` set
-		`title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
+		$sql = "UPDATE `edu_article` SET `title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
 		`time_edit` = '$time', `member_edit` = '$admin_id', `role_edit` = 'A', `ip_edit` =  '$ip', `active` = '$active'
 		WHERE `article_id` = '$article_id' AND `school_id` = '$school_id'
 		";

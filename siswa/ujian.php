@@ -137,7 +137,7 @@ else
 		SET `competence_score` = '".addslashes(json_encode($bc_score))."' 
 		WHERE `answer_id` = '".$data['answer_id']."' AND `student_id` = '".$data['student_id']."' 
 		";
-		$database->execute($sql);
+		$database->executeUpdate($sql, true);
 	}
 }
 if(count($bc_score))
