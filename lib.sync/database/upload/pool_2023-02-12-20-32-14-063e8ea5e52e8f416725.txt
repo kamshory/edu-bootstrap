@@ -4665,3 +4665,19 @@ UPDATE `edu_test` SET
 	`time_create` = '2023-02-12 19:56:43', `time_edit` = '2023-02-12 19:56:43', `member_create` = '063ce68285cc5b02bb04', `role_create` = 'T', 
 	`member_edit` = '063ce68285cc5b02bb04', `role_edit` = 'T', `ip_create` = '127.0.0.1', `ip_edit` = '127.0.0.1', `active` = '0'
 	WHERE `test_id` = '063e8e1ac7beae1b49e9' AND `school_id` = '063ce682801be89951aa' AND `teacher_id` = '063ce68285cc5b02bb04';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET 
+	`reg_number` = '1111121', `reg_number_national` = '1011209', `grade_id` = '11', `class_id` = '063ce682817a49da4041', `name` = 'Nona Melati', `gender` = 'W', `birth_place` = 'JAKARTA', `birth_day` = '2136-11-27', `phone` = '08123456791', `address` = '', `time_edit` = '2023-02-12 20:30:00', `admin_edit` = 'aaaaaaaaaaaaa', `ip_edit` = '127.0.0.1', `blocked` = '0', `active` = '1'
+	WHERE `student_id` = '6368282346';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET 
+		`email` = 'jhyg@planetbiru.com'
+		WHERE `student_id` = '6368282346';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET 
+	`reg_number` = '1111121', `reg_number_national` = '1011209', `grade_id` = '11', `class_id` = '063ce682817a49da4041', `name` = 'Nona Melati', `gender` = 'W', `birth_place` = 'JAKARTA', `birth_day` = '2136-11-27', `phone` = '08123456791', `address` = '', `time_edit` = '2023-02-12 20:31:51', `admin_edit` = 'aaaaaaaaaaaaa', `ip_edit` = '127.0.0.1', `blocked` = '0', `active` = '1'
+	WHERE `student_id` = '063ce68282f3bfae4fb6';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET 
+		`email` = 'dh@planetbiru.com'
+		WHERE `student_id` = '063ce68282f3bfae4fb6';

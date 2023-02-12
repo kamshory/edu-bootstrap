@@ -13,7 +13,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST) && isset($_POST['save']))
 {
 	$student_id = kh_filter_input(INPUT_POST, "student_id", FILTER_SANITIZE_STRING_NEW);
-	$student_id2 = kh_filter_input(INPUT_POST, "student_id2", FILTER_SANITIZE_NUMBER_UINT);
+	$student_id2 = kh_filter_input(INPUT_POST, "student_id2", FILTER_SANITIZE_STRING_NEW);
 	if(!isset($_POST['student_id']))
 	{
 		$student_id = $student_id2;
@@ -148,7 +148,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 				),
 				'selectCondition'=>array(
 					'source'=>'class_id',
-					'value'=>$class_id
+					'value'=>$data['class_id']
 				),
 				'caption'=>array(
 					'delimiter'=>PicoEdu::RAQUO,
