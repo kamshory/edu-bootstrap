@@ -700,7 +700,7 @@ $paginationHTML = $pagination->buildHTML();
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
-      <td width="16"><i class="fas fa-pencil"></i></td>
+      <td width="16"><i class="fas fa-list"></i></td>
       <td width="25">No</td>
       <td>Ujian</td>
       <td>Kelas</td>
@@ -718,7 +718,7 @@ $paginationHTML = $pagination->buildHTML();
 	$no++;
 	?>
     <tr>
-      <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-pencil"></i></a></td>
+      <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-list"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>

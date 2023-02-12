@@ -14,13 +14,13 @@ if(isset($_POST['username']) && isset($_POST['password']))
 									 
 	$sql = "SELECT `username`, `student_id`
 	FROM `edu_student`
-	where (
+	WHERE (
 		(`email` like '$email' AND `email` != '')
-		or 
+		OR 
 		(`reg_number` like '$reg_number' AND `reg_number` != '')
-		or 
+		OR 
 		(`username` like '$username' AND `username` != '')
-		or 
+		OR 
 		(`phone` like '$phone' AND `phone` != '')
 		) 
 		AND `password` like md5('$password')
@@ -114,7 +114,6 @@ else
 				</div>
 			</div>
 
-
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
@@ -151,7 +150,6 @@ else
 				</div>
 			</div>
 
-
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
@@ -175,64 +173,10 @@ else
 					</div>
 				</div>
 			</div>
-
 		</div>
 
-
-		<div class="card-container row container container-fluid d-flex justify-content-between">
-			<?php
-
-			$sql = "SELECT `edu_info`.* 
-			FROM `edu_info` 
-			WHERE `edu_info`.`active` = true
-			ORDER BY `edu_info`.`info_id` DESC
-			LIMIT 0, 2
-			";
-			$stmt = $database->executeQuery($sql);
-			$numArticle = $stmt->rowCount();
-			if($numArticle > 0)
-			{
-			?>
 		<?php
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-		
-		$content = "";
-		foreach($rows as $data)
-		{
-			$pars = extractParagraph($data['content']);
-			foreach($pars as $txt)
-			{
-				if(!empty($txt))
-				{
-					$content = $txt;
-					$content = preg_replace('/[\s]+/', ' ', $content);
-					if(strlen($content) > 100)
-					{
-						$content = substr($content, 0, 100)."&hellip;";
-					}
-				}
-			}
-			?>
-			<div class="<?php echo $picoEdu->trueFalse($numArticle == 1, 'col-sm-12', 'col-sm-6');?>">
-					<div class="card">
-					<div class="card-body">
-						<h5 class="card-title"><?php echo $data['name'];?></h5>
-						<p class="card-text"><?php echo $content;?></p>
-						<a href="informasi.php?info_id=<?php echo $data['info_id'];?>" class="btn btn-primary">Baca</a>
-					</div>
-					</div>
-				</div>
-				<?php
-		}
-		?>
-		<?php
-			}
-			?>
-
-				
-			</div>
-
-		<?php
+		include_once dirname(__FILE__)."/lib.inc/inc-artikle.php";
 		include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
 		exit();
 	}
@@ -249,8 +193,7 @@ else
 			$password = $_SESSION['teacher_password'];
 		}
 		
-		$teacherLoggedIn = new TeacherAuth($database, $username, $password, false);
-		
+		$teacherLoggedIn = new TeacherAuth($database, $username, $password, false);		
 		$teacher_id = '';
 		$school_id = "";
 		$auth_teacher_id = '';
@@ -279,7 +222,6 @@ else
 					</div>
 				</div>
 			</div>
-
 
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
@@ -317,7 +259,6 @@ else
 				</div>
 			</div>
 
-
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
@@ -344,6 +285,7 @@ else
 
 		</div>
 			<?php
+			include_once dirname(__FILE__)."/lib.inc/inc-artikle.php";
 			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
 			exit();
 		}
@@ -386,7 +328,6 @@ else
 					</div>
 				</div>
 			</div>
-
 
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
@@ -451,6 +392,7 @@ else
 
 		</div>
 			<?php
+			include_once dirname(__FILE__)."/lib.inc/inc-artikle.php";
 			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
 			exit();
 		}

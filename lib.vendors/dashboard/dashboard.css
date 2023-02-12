@@ -349,3 +349,7 @@ table[border="1"] td{
 .card-text img{
   max-width: 100%;
 }
+
+.article-item .card {
+  background-color: #fafafa;
+}

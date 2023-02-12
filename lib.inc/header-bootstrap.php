@@ -17,7 +17,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
-    <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="lib.style/album.css">
 
     <!-- Favicons -->
@@ -59,7 +58,7 @@
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container d-flex justify-content-between">
                 <a href="./" class="navbar-brand d-flex align-items-center">
-                    <strong><?php echo $cfg->app_name;?></strong>
+                    <?php echo $cfg->app_name;?>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
                     aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
