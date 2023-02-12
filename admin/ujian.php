@@ -378,6 +378,20 @@ label > span{
 }
 </style>
 <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.assets/script/test-creator.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap-4-autocomplete.min.js"></script>
+<?php
+$subjectList = $picoEdu->getSubjectList();
+?>
+<script type="text/javascript">
+	var src = <?php echo json_encode($subjectList);?>;
+	$(document).ready(function(){
+		$('#subject').autocomplete({
+			source: src,
+			highlightClass: 'text-primary',
+			treshold: 2,
+		});
+	});
+</script>
 
 <form name="formedu_test" id="formedu_test" action="" method="post" enctype="multipart/form-data">
   <input type="hidden" name="collection" id="collection" value="<?php echo $collection;?>" />
@@ -632,7 +646,7 @@ LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = 
 WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id' AND `edu_class`.`name` != '' 
 ORDER BY `edu_school_program`.`sort_order` ASC , `edu_class`.`sort_order` ASC 
 ";
-		$arrc = array();
+$arrc = array();
 $stmt = $database->executeQuery($sqlc);
 if($stmt->rowCount() > 0)
 {
@@ -656,6 +670,20 @@ label > span{
 }
 </style>
 <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.assets/script/test-creator.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap-4-autocomplete.min.js"></script>
+<?php
+$subjectList = $picoEdu->getSubjectList();
+?>
+<script type="text/javascript">
+	var src = <?php echo json_encode($subjectList);?>;
+	$(document).ready(function(){
+		$('#subject').autocomplete({
+			source: src,
+			highlightClass: 'text-primary',
+			treshold: 2,
+		});
+	});
+</script>
 
 <form name="formedu_test" id="formedu_test" action="" method="post" enctype="multipart/form-data">
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">

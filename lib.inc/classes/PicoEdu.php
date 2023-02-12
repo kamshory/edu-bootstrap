@@ -1071,4 +1071,45 @@ class PicoEdu //NOSONAR
 	{
 		return trim($pageTitle .' - '. $appName, ' ');
 	}
+
+	public function addSubject($subject)
+	{
+		$subject = trim($subject);
+		$subject_id = md5(stripslashes($subject));
+
+		$sql = "SELECT `edu_subject`.`subject_id` 
+		FROM `edu_subject`
+		WHERE `edu_subject`.`subject_id` = '$subject_id'
+		";
+
+		$stmt = $this->database->executeQuery($sql);
+
+		if(!$stmt->rowCount() > 0)
+		{
+			$sql = "INSERT INTO `edu_subject` 
+			(`subject_id`, `name`, `sort_order`) VALUES
+			('$subject_id', '$subject', 0)";
+			$stmt = $this->database->executeInsert($sql, true);
+		}
+	}
+
+	public function getSubjectList()
+	{
+		$sql = "SELECT `edu_subject`.*
+		FROM `edu_subject`
+		ORDER BY `sort_order` ASC, `name` ASC
+		";
+		$stmt = $this->database->executeQuery($sql);
+		if($stmt->rowCount() > 0)
+		{
+			$list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$ret = array();
+			foreach($list as $val)
+			{
+				$ret[$val['name']] = $val['subject_id'];
+			}
+			return $ret;
+		}
+		return new stdClass;
+	}
 }

@@ -368,6 +368,20 @@ label > span{
 }
 </style>
 <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.assets/script/test-creator.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap-4-autocomplete.min.js"></script>
+<?php
+$subjectList = $picoEdu->getSubjectList();
+?>
+<script type="text/javascript">
+	var src = <?php echo json_encode($subjectList);?>;
+	$(document).ready(function(){
+		$('#subject').autocomplete({
+			source: src,
+			highlightClass: 'text-primary',
+			treshold: 2,
+		});
+	});
+</script>
 
 <form name="formedu_test" id="formedu_test" action="" method="post" enctype="multipart/form-data">
   <input type="hidden" name="collection" id="collection" value="<?php echo $collection;?>" />
@@ -613,6 +627,20 @@ label > span{
 }
 </style>
 <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.assets/script/test-creator.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap-4-autocomplete.min.js"></script>
+<?php
+$subjectList = $picoEdu->getSubjectList();
+?>
+<script type="text/javascript">
+	var src = <?php echo json_encode($subjectList);?>;
+	$(document).ready(function(){
+		$('#subject').autocomplete({
+			source: src,
+			highlightClass: 'text-primary',
+			treshold: 2,
+		});
+	});
+</script>
 
 <form name="formedu_test" id="formedu_test" action="" method="post" enctype="multipart/form-data">
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
