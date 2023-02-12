@@ -160,7 +160,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 	('$test_id', '$school_id', '$name', '$class', '$school_program_id', '$subject', '$teacher_id', '$description', '$guidance', '$open', '$has_limits', '$trial_limits', '$threshold', '$assessment_methods', '$number_of_question', '$number_of_option', '$question_per_page', '$random', '$duration', '$has_alert', '$alert_time', '$alert_message', '$autosubmit', '$standard_score', '$penalty', '$sort_order', '$score_notification', '$publish_answer', $time_answer_publication, '$test_availability', $available_from, $available_to, '$time_create', '$time_edit', '$member_create', '$role_create', '$member_edit', '$role_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
-
+	$picoEdu->addSubject($subject);
 	$collection = kh_filter_input(INPUT_POST, "collection", FILTER_SANITIZE_STRING_NEW);
 	if(!empty($collection))
 	{
@@ -328,6 +328,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	`member_edit` = '$member_edit', `role_edit` = '$role_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
 	WHERE `test_id` = '$test_id2' AND `school_id` = '$school_id'";
 	$database->executeUpdate($sql, true);
+	$picoEdu->addSubject($subject);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id");
 }
 if(@$_GET['option'] == 'add')
