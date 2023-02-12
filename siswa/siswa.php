@@ -194,9 +194,6 @@ if($pagination->getTotalRecordWithLimit() > 0)
 {
 if($class_id == 0)
 {
-
-
-
 $pagination->createPagination('siswa.php', true); 
 $paginationHTML = $pagination->buildHTML();
 }

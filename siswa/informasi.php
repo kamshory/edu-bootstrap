@@ -120,8 +120,10 @@ if(isset($_GET['info_id']))
 else
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+
 ?>
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
+
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
     <span class="search-label">Informasi</span>
@@ -130,6 +132,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
     <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
+
 <div class="search-result">
 <?php
 $sql_filter = "";
@@ -162,11 +165,10 @@ if($pagination->getTotalRecordWithLimit() > 0)
 	?>
     <div class="main-content">
     	<div class="main-content-wrapper">
-        <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
-        <div class="article-list">
+        <div class="article-list row">
 	<?php
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	foreach($rows as $data)
+	foreach($rows as $idx=>$data)
 	{
 
 		$obj = parseHtmlData('<html><body>'.($data['content']).'</body></html>');
@@ -221,13 +223,27 @@ if($pagination->getTotalRecordWithLimit() > 0)
 			$content = substr($content, 0, $pos+1);
 			$content = tidyHTML($content);
 		}
-	
+		$cls = "";
+		if($pagination->getTotalRecordWithLimit() % 2 == 1 && $idx == $pagination->getTotalRecordWithLimit() - 1)
+		{
+			$cls = " col-sm-12";
+		}
+		else
+		{
+			$cls = " col-sm-6";
+		}
 		?>
-		<div class="article-item">
-			<div class="article-title"><h3><?php echo $data['name'];?></h3></div>
-			<div class="article-content"><?php echo $content;?></div>
-			<div class="article-link">
-				<a class="btn btn-primary" href="informasi.php?option=detail&info_id=<?php echo $data['info_id'];?>">Baca</a>
+		<div class="article-item<?php echo $cls;?>">
+			<div class="card h-100">
+				<div class="card-body d-flex flex-column align-items-stretch">
+				<h5 class="card-title"><?php echo $data['name'];?></h5>
+				<p class="card-text"><?php echo $content;?></p>
+				<div class="article-time">Dibuat <em><?php echo $data['time_create'];?></em></div>
+				<div class="article-creator">Oleh <em><?php echo $data['admin_edit_name'];?></em></div>
+				<div class="button-area">
+				<a href="informasi.php?info_id=<?php echo $data['info_id'];?>" class="btn btn-primary"><i class="fas fa-book"></i> Selengkapnya</a>
+				</div>
+				</div>
 			</div>
 		</div>
 		<?php

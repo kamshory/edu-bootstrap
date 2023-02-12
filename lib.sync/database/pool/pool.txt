@@ -103,3 +103,93 @@ UPDATE `edu_article` SET `title` = 'Sync Hub', `content` = '<p><img class=\"draw
 <p class=\"bd-lead\">Get started with Bootstrap, the world&rsquo;s most popular framework for building responsive, mobile-first sites, with jsDelivr and a template starter page. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>', `open` = '0', `class` = '', 
 		`time_edit` = '2023-02-11 20:27:37', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
 		WHERE `article_id` = '063e62cae7969a506235' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = 'Tabung', `content` = '<p class=\"bd-lead\">Get started with Bootstrap, the world&rsquo;s most popular framework for building responsive, mobile-first sites, with jsDelivr and a template starter page.</p>
+<p class=\"bd-lead\"><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/article/063e500818a9499f5736/1ad139112dde8f234c985bbede1c54c0.svg\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-12 06:33:53', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e500818a9499f5736' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_info`
+		(`info_id`, `name`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES	
+		('063e8515e7f44ab45262', 'Info 2', '2023-02-12 09:39:26', '2023-02-12 09:39:26', 'aaaaaaaaaaaaa', 'aaaaaaaaaaaaa', '127.0.0.1', '127.0.0.1', '1');
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_info` set
+			`content` = '<p>Several Bootstrap components utilize <code class=\"highlighter-rouge\">z-index</code>, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that&rsquo;s been designed to properly layer navigation, tooltips and popovers, modals, and more.</p>
+<p>These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components&mdash;tooltips, popovers, navbars, dropdowns, modals&mdash;so we can be reasonably consistent in the behaviors. There&rsquo;s no reason we couldn&rsquo;t have used <code class=\"highlighter-rouge\">100</code>+ or <code class=\"highlighter-rouge\">500</code>+.</p>'
+			WHERE `info_id` = '063e8515e7f44ab45262';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_info`
+		(`info_id`, `name`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES	
+		('063e85201dce83eaac21', 'Info 3', '2023-02-12 09:42:09', '2023-02-12 09:42:09', 'aaaaaaaaaaaaa', 'aaaaaaaaaaaaa', '127.0.0.1', '127.0.0.1', '1');
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_info` set
+			`content` = '<p>To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit <code class=\"highlighter-rouge\">z-index</code> values of <code class=\"highlighter-rouge\">1</code>, <code class=\"highlighter-rouge\">2</code>, and <code class=\"highlighter-rouge\">3</code> for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher <code class=\"highlighter-rouge\">z-index</code> value to show their border over the sibling elements.</p>'
+			WHERE `info_id` = '063e85201dce83eaac21';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e62cae7969a506235' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e500818a9499f5736' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e397123fb63638d6e' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e2ef9aed05f1956e2' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063da67d0dcf5af0f05e' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e62cae7969a506235' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e500818a9499f5736' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e397123fb63638d6e' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e2ef9aed05f1956e2' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063da67d0dcf5af0f05e' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = 'Renderer Persamaan', `content` = '<table style=\"width: 100%;\" border=\"1\">
+<tbody>
+<tr>
+<td>Renderer</td>
+<td>Kelebihan</td>
+<td>Kekurangan</td>
+</tr>
+<tr>
+<td>MathJax (SVG)</td>
+<td><ol>
+<li>Tampil dengan baik di semua browser yang mendukung SVG</li>
+<li>Kualitas gambar tidak berubah meskipun diperbesar maupun diperkecil</li>
+</ol></td>
+<td><ol>
+<li>Ukuran file sangat besar</li>
+<li>Tidak dapat diubah</li>
+</ol></td>
+</tr>
+<tr>
+<td>MathML (SVG)</td>
+<td><ol>
+<li>Tampil dengan baik di browser yang mendukung SVG dan MathML. Saat ini hanya Mozilla Firefox yang mendukungnya</li>
+<li>Kualitas gambar tidak berubah meskipun diperbesar maupun diperkecil</li>
+<li>Ukuran file sangat kecil</li>
+<li>Dapat diubah dan diberi style (warna, ketebalan, font, dan lain-lain)</li>
+</ol></td>
+<td><ol>
+<li>Tidak dapat ditampilkan oleh browser selain Mozilla Firefox</li>
+</ol></td>
+</tr>
+<tr>
+<td>MathML (PNG)</td>
+<td><ol>
+<li>Tampil dengan baik di semua browser tanpa terkecuali</li>
+<li>Ukuran file lebih kecil dibandingkan MathJax</li>
+</ol></td>
+<td><ol>
+<li>Kualitas gambar menurun jika diperbesar maupun diperkecil</li>
+<li>Tidak dapat diubah</li>
+<li>Hanya dapat dibuat dari browser yang mendukung SVG dan MathML. Saat ini hanya Mozilla Firefox yang mendukungnya namun setelah jadi PNG dapat tampil di semua browser</li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\" src=\"media.edu/school/063ce682801be89951aa/article/063e397123fb63638d6e/5609f347bd9a4caf9041c10cee456caf.svg\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-12 10:05:12', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e397123fb63638d6e' AND `school_id` = '063ce682801be89951aa';

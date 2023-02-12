@@ -9,7 +9,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
     <meta name="description" content="">
     <meta name="author" content="Planetbiru">
     <meta name="generator" content="Planetbiru">
-    <title>Pico Edu</title>
+    <title><?php echo $cfg->app_name;?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/bootstrap.min.css" rel="stylesheet">

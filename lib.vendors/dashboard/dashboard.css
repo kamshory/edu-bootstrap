@@ -329,3 +329,23 @@ table td .btn.btn-sm.dropdown-toggle{
 .article-content img{
   max-width:100%;
 }
+
+table[border="1"] td{
+  padding: 5px 10px;
+}
+
+.card.h-100 .card-body.align-items-stretch .button-area{
+  bottom:10px;
+
+}
+
+.article-item{
+  margin-bottom: 20px;
+}
+.card-text
+{
+  position: relative;
+}
+.card-text img{
+  max-width: 100%;
+}

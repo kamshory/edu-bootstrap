@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Planetbiru">
     <meta name="generator" content="Planetbiru">
-    <title>Pico Edu</title>
+    <title><?php echo $cfg->app_name;?></title>
 
 
     <link rel="stylesheet" href="<?php echo $cfg->base_url;?>lib.vendors/fontawesome/css/all.min.css">
@@ -58,8 +58,8 @@
         </div>
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container d-flex justify-content-between">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <strong>Pico Edu</strong>
+                <a href="./" class="navbar-brand d-flex align-items-center">
+                    <strong><?php echo $cfg->app_name;?></strong>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
                     aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
