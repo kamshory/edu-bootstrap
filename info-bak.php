@@ -187,19 +187,19 @@ if(isset($_GET['info_id']))
 
 
 
-    <script src="lib.vendors/jquery/jquery.min.js"
+    <script src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="lib.vendors/jquery/jquery.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"><\/script>')</script>
     '
-    <script src="lib.vendors/bootstrap/bootstrap.bundle.min.js"
+    <script src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
 
 
-    <script src="lib.vendors/dashboard/feather.min.js"></script>
-    <script src="lib.vendors/dashboard/Chart.min.js"></script>
-    <script src="lib.vendors/dashboard/dashboard.js"></script>
+    <script src="<?php echo $cfg->base_url;?>lib.vendors/dashboard/feather.min.js"></script>
+    <script src="<?php echo $cfg->base_url;?>lib.vendors/dashboard/Chart.min.js"></script>
+    <script src="<?php echo $cfg->base_url;?>lib.vendors/dashboard/dashboard.js"></script>
 
 </body>
 
