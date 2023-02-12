@@ -102,10 +102,10 @@ if(isset($_GET['info_id']))
             <div class="article-content"><?php echo $data['content'];?></div>
             <div class="article-time">Dibuat <?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?></div>
             <div class="article-creator">Oleh <?php echo $data['creator'];?></div>
-            <div class="article-link">
-            <a href="javascript:;" class="btn btn-primary download-word">Download</a>
-            <a href="informasi.php" class="btn btn-success">Semua</a>
-            </div>
+			<div class="article-link button-area">
+				<a class="btn btn-primary" href="javascript:;" class="download-word"><i class="fas fa-download"></i> Download</a>
+				<a class="btn btn-primary" href="informasi.php"><i class="fas fa-book"></i> Lihat Semua</a>
+			</div>
         </div>
         </div>
 		<?php

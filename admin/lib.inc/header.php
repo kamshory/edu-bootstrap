@@ -46,7 +46,7 @@
 
 <body>
 	<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="../">Pico Edu</a>
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="../"><?php echo $cfg->app_name;?></a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
       data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -76,7 +76,7 @@
           <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group mr-2">
               <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='sinkronisasi.php'">Sinkronkan</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='informasi.php'">Informasi</button>
             </div>
             <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"

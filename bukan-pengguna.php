@@ -13,7 +13,7 @@ include_once dirname(__FILE__) . "/lib.inc/sessions.php";
     <title><?php echo $cfg->app_name;?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/bootstrap.min.css">
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="favs/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="favs/favicon-32x32.png" sizes="32x32" type="image/png">

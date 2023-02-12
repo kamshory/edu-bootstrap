@@ -13,9 +13,9 @@ include_once dirname(__FILE__) . "/lib.inc/sessions.php";
     <title><?php echo $cfg->app_name;?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/bootstrap.min.css">
     <!-- Custom styles for this template -->
-    <link href="lib.style/signin.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.style/signin.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="favs/apple-touch-icon.png" sizes="180x180">

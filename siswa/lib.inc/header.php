@@ -14,13 +14,13 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.min.css">
 
 <!-- Favicons -->
-<link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>/avs/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="<?php echo $cfg->base_assets;?>/avs/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="<?php echo $cfg->base_assets;?>/avs/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="<?php echo $cfg->base_assets;?>/avs/manifest.json">
-<link rel="mask-icon" href="<?php echo $cfg->base_assets;?>/avs/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="<?php echo $cfg->base_assets;?>/avs/favicon.ico">
-<meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>/avs/browserconfig.xml">
+<link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>favs/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>favs/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>favs/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="<?php echo $cfg->base_assets;?>favs/manifest.json">
+<link rel="mask-icon" href="<?php echo $cfg->base_assets;?>favs/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>favs/favicon.ico">
+<meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>favs/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
 <!-- Custom styles for this template -->
