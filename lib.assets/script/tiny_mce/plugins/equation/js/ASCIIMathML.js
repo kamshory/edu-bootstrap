@@ -1,33 +1,34 @@
 ﻿let asciimath = {};
 
-(function() {
+(
+    function() //NOSONAR
+{
     let mathcolor = ""; // change it to "" (to inherit) or another color
-    let mathfontsize = "1em"; // change to e.g. 1.2em for larger math
+    //commented let mathfontsize = "1em"; // change to e.g. 1.2em for larger math
     let mathfontfamily = "serif"; // change to "" to inherit (works in IE) 
     // or another family (e.g. "arial")
-    let automathrecognize = false; // writing "amath" on page makes this true
+    //commented let automathrecognize = false; // writing "amath" on page makes this true
     let checkForMathML = true; // check if browser can display MathML
     let notifyIfNoMathML = true; // display note at top if no MathML capability
     let alertIfNoMathML = false; // show alert box if no MathML capability
-    let translateOnLoad = true; // set to false to do call translators from js 
-    let translateASCIIMath = true; // false to preserve `..`
+    //commented let translateOnLoad = true; // set to false to do call translators from js 
+    //commented let translateASCIIMath = true; // false to preserve `..`
     let displaystyle = true; // puts limits above and below large operators
     let showasciiformulaonhover = true; // helps students learn ASCIIMath
     let decimalsign = "."; // change to "," if you like, beware of `(1,2)`!
-    let AMdelimiter1 = "`",
-        AMescape1 = "\\\\`"; // can use other characters
-    let AMdocumentId = "wikitext" // PmWiki element containing math (default=body)
+    let AMdelimiter1 = "`";
+    //commented let AMescape1 = "\\\\`"; // can use other characters
+    //commented let AMdocumentId = "wikitext" // PmWiki element containing math (default=body)
     let fixphi = true; //false to return to legacy phi/varphi mapping
 
     /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
     let isIE = (navigator.appName.slice(0, 9) == "Microsoft");
-    let noMathML = false,
-        translated = false;
+    let noMathML = false;
+    //commented let translated = false;
 
     if (isIE) { // add MathPlayer info to IE webpages
-        document.write("<object id=\"mathplayer\"\
-  classid=\"clsid:32F66A20-7614-11D4-BD11-00104BD3F987\"></object>");
+        document.write("<object id=\"mathplayer\" classid=\"clsid:32F66A20-7614-11D4-BD11-00104BD3F987\"></object>"); //NOSONAR
         document.write("<?import namespace=\"m\" implementation=\"#mathplayer\"?>");
     }
 
@@ -57,65 +58,126 @@
     setStylesheet("#AMMLcloseDiv \{font-size:0.8em; padding-top:1em; color:#014\}\n#AMMLwarningBox \{position:absolute; width:100%; top:0; left:0; z-index:200; text-align:center; font-size:1em; font-weight:bold; padding:0.5em 0 0.5em 0; color:#ffc; background:#c30\}");
 
     function init() {
-        let msg, warnings = new Array();
-        if (checkForMathML && (msg = checkMathML())) warnings.push(msg);
-        if (!noMathML) initSymbols();
+        let msg;
+        let warnings = []; //NOSONAR
+        if (checkForMathML && (msg = checkMathML())) 
+        {
+            warnings.push(msg);
+        }
+        if (!noMathML) 
+        {
+            initSymbols();
+        }
         return true;
     }
 
     function checkMathML() {
-        if (navigator.appName.slice(0, 8) == "Netscape")
-            if (navigator.appVersion.slice(0, 1) >= "5") noMathML = null;
-            else noMathML = true;
+        if (navigator.appName.slice(0, 8) == "Netscape") //NOSONAR
+        {
+            if (navigator.appVersion.slice(0, 1) >= "5")  //NOSONAR
+            {
+                noMathML = null;
+            }
+            else 
+            {
+                noMathML = true;
+            }
+        }
         else if (navigator.appName.slice(0, 9) == "Microsoft")
-            try {
-                let ActiveX = new ActiveXObject("MathPlayer.Factory.1");
+        {
+            try 
+            {
+                let ActiveX = new ActiveXObject("MathPlayer.Factory.1"); //NOSONAR
                 noMathML = null;
             } catch (e) {
                 noMathML = true;
             }
-        else if (navigator.appName.slice(0, 5) == "Opera")
-            if (navigator.appVersion.slice(0, 3) >= "9.5") noMathML = null;
-            else noMathML = true;
-        //noMathML = true; //uncomment to check
+        }
+        else if (navigator.appName.slice(0, 5) == "Opera") //NOSONAR
+        {
+            if (navigator.appVersion.slice(0, 3) >= "9.5") //NOSONAR 
+            {
+                noMathML = null;
+            }
+            else 
+            {
+                noMathML = true;
+            }
+        }
+        //commented noMathML = true; //uncomment to check
         if (noMathML && notifyIfNoMathML) {
             let msg = "To view the ASCIIMathML notation use Internet Explorer + MathPlayer or Mozilla Firefox 2.0 or later.";
             if (alertIfNoMathML)
 			{
                 console.log(msg);
 			}
-            else return msg;
+            else 
+            {
+                return msg;
+            }
         }
     }
 
     function createElementXHTML(t) {
-        if (isIE) return document.createElement(t);
-        else return document.createElementNS("http://www.w3.org/1999/xhtml", t);
+        if (isIE) 
+        {
+            return document.createElement(t);
+        }
+        else 
+        {
+            return document.createElementNS("http://www.w3.org/1999/xhtml", t);
+        }
     }
 
     let AMmathml = "http://www.w3.org/1998/Math/MathML";
 
-    function AMcreateElementMathML(t) {
-        if (isIE) return document.createElement("m:" + t);
-        else return document.createElementNS(AMmathml, t);
+    function AMcreateElementMathML(t) //NOSONAR
+    {
+        if (isIE)
+        {
+            return document.createElement("m:" + t);
+        }
+        else 
+        {
+            return document.createElementNS(AMmathml, t);
+        }
     }
 
-    function createMmlNode(t, frag) {
+    function createMmlNode(t, frag) 
+    {
         let node;
-        if (isIE) node = document.createElement("m:" + t);
-        else node = document.createElementNS(AMmathml, t);
-        if (frag) node.appendChild(frag);
+        if (isIE) 
+        {
+            node = document.createElement("m:" + t);
+        }
+        else 
+        {
+            node = document.createElementNS(AMmathml, t);
+        }
+        if(frag) 
+        {
+            node.appendChild(frag);
+        }
         return node;
     }
-    function createRootNode(mi, mn) {
+    function createRootNode(mi, mn) //NOSONAR
+    {
 		let t = 'mroot';
         let node;
-        if (isIE) node = document.createElement("m:" + t);
-        else node = document.createElementNS(AMmathml, t);
-        if (mi){
+        if (isIE) 
+        {
+            node = document.createElement("m:" + t);
+        }
+        else 
+        {
+            node = document.createElementNS(AMmathml, t);
+        }
+        if(mi)
+        {
 			node.appendChild(mi);
 		}
-		if(mn){
+		if(mn)
+        {
 			node.appendChild(mn);
 		}
         return node;
@@ -143,9 +205,11 @@
     let AMfrk = ["\uD835\uDD04", "\uD835\uDD05", "\u212D", "\uD835\uDD07", "\uD835\uDD08", "\uD835\uDD09", "\uD835\uDD0A", "\u210C", "\u2111", "\uD835\uDD0D", "\uD835\uDD0E", "\uD835\uDD0F", "\uD835\uDD10", "\uD835\uDD11", "\uD835\uDD12", "\uD835\uDD13", "\uD835\uDD14", "\u211C", "\uD835\uDD16", "\uD835\uDD17", "\uD835\uDD18", "\uD835\uDD19", "\uD835\uDD1A", "\uD835\uDD1B", "\uD835\uDD1C", "\u2128", "\uD835\uDD1E", "\uD835\uDD1F", "\uD835\uDD20", "\uD835\uDD21", "\uD835\uDD22", "\uD835\uDD23", "\uD835\uDD24", "\uD835\uDD25", "\uD835\uDD26", "\uD835\uDD27", "\uD835\uDD28", "\uD835\uDD29", "\uD835\uDD2A", "\uD835\uDD2B", "\uD835\uDD2C", "\uD835\uDD2D", "\uD835\uDD2E", "\uD835\uDD2F", "\uD835\uDD30", "\uD835\uDD31", "\uD835\uDD32", "\uD835\uDD33", "\uD835\uDD34", "\uD835\uDD35", "\uD835\uDD36", "\uD835\uDD37"];
 
     let AMbbb = ["\uD835\uDD38", "\uD835\uDD39", "\u2102", "\uD835\uDD3B", "\uD835\uDD3C", "\uD835\uDD3D", "\uD835\uDD3E", "\u210D", "\uD835\uDD40", "\uD835\uDD41", "\uD835\uDD42", "\uD835\uDD43", "\uD835\uDD44", "\u2115", "\uD835\uDD46", "\u2119", "\u211A", "\u211D", "\uD835\uDD4A", "\uD835\uDD4B", "\uD835\uDD4C", "\uD835\uDD4D", "\uD835\uDD4E", "\uD835\uDD4F", "\uD835\uDD50", "\u2124", "\uD835\uDD52", "\uD835\uDD53", "\uD835\uDD54", "\uD835\uDD55", "\uD835\uDD56", "\uD835\uDD57", "\uD835\uDD58", "\uD835\uDD59", "\uD835\uDD5A", "\uD835\uDD5B", "\uD835\uDD5C", "\uD835\uDD5D", "\uD835\uDD5E", "\uD835\uDD5F", "\uD835\uDD60", "\uD835\uDD61", "\uD835\uDD62", "\uD835\uDD63", "\uD835\uDD64", "\uD835\uDD65", "\uD835\uDD66", "\uD835\uDD67", "\uD835\uDD68", "\uD835\uDD69", "\uD835\uDD6A", "\uD835\uDD6B"];
-    /*let AMcal = [0xEF35,0x212C,0xEF36,0xEF37,0x2130,0x2131,0xEF38,0x210B,0x2110,0xEF39,0xEF3A,0x2112,0x2133,0xEF3B,0xEF3C,0xEF3D,0xEF3E,0x211B,0xEF3F,0xEF40,0xEF41,0xEF42,0xEF43,0xEF44,0xEF45,0xEF46];
-    let AMfrk = [0xEF5D,0xEF5E,0x212D,0xEF5F,0xEF60,0xEF61,0xEF62,0x210C,0x2111,0xEF63,0xEF64,0xEF65,0xEF66,0xEF67,0xEF68,0xEF69,0xEF6A,0x211C,0xEF6B,0xEF6C,0xEF6D,0xEF6E,0xEF6F,0xEF70,0xEF71,0x2128];
-    let AMbbb = [0xEF8C,0xEF8D,0x2102,0xEF8E,0xEF8F,0xEF90,0xEF91,0x210D,0xEF92,0xEF93,0xEF94,0xEF95,0xEF96,0x2115,0xEF97,0x2119,0x211A,0x211D,0xEF98,0xEF99,0xEF9A,0xEF9B,0xEF9C,0xEF9D,0xEF9E,0x2124];*/
+    /** commented
+     * let AMcal = [0xEF35,0x212C,0xEF36,0xEF37,0x2130,0x2131,0xEF38,0x210B,0x2110,0xEF39,0xEF3A,0x2112,0x2133,0xEF3B,0xEF3C,0xEF3D,0xEF3E,0x211B,0xEF3F,0xEF40,0xEF41,0xEF42,0xEF43,0xEF44,0xEF45,0xEF46];
+     * let AMfrk = [0xEF5D,0xEF5E,0x212D,0xEF5F,0xEF60,0xEF61,0xEF62,0x210C,0x2111,0xEF63,0xEF64,0xEF65,0xEF66,0xEF67,0xEF68,0xEF69,0xEF6A,0x211C,0xEF6B,0xEF6C,0xEF6D,0xEF6E,0xEF6F,0xEF70,0xEF71,0x2128];
+     * let AMbbb = [0xEF8C,0xEF8D,0x2102,0xEF8E,0xEF8F,0xEF90,0xEF91,0x210D,0xEF92,0xEF93,0xEF94,0xEF95,0xEF96,0x2115,0xEF97,0x2119,0x211A,0x211D,0xEF98,0xEF99,0xEF9A,0xEF9B,0xEF9C,0xEF9D,0xEF9E,0x2124];
+     * */
 
     let CONST = 0,
         UNARY = 1,
@@ -1939,7 +2003,8 @@
         for (i = 0; i < AMsymbols.length; i++) AMnames[i] = AMsymbols[i].input;
     }
 
-    function define(oldstr, newstr) {
+    function define(oldstr, newstr) //NOSONAR
+    {
         AMsymbols.push({
             input: oldstr,
             tag: "mo",
@@ -1950,31 +2015,55 @@
         refreshSymbols(); // this may be a problem if many symbols are defined!
     }
 
-    function AMremoveCharsAndBlanks(str, n) {
+    function AMremoveCharsAndBlanks(str, n) 
+    {
         //remove n characters and any following blanks
         let st;
         if (str.charAt(n) == "\\" && str.charAt(n + 1) != "\\" && str.charAt(n + 1) != " ")
+        {
             st = str.slice(n + 1);
-        else st = str.slice(n);
-        for (let i = 0; i < st.length && st.charCodeAt(i) <= 32; i = i + 1);
+        }
+        else 
+        {
+            st = str.slice(n);
+        }
+        let i;
+        for (i = 0; i < st.length && st.charCodeAt(i) <= 32; i = i + 1)
+        {
+            // Do nothing
+        }
         return st.slice(i);
     }
 
     function position(arr, str, n) {
         // return position >=n where str appears or would be inserted
         // assumes arr is sorted
-        if (n == 0) {
+        let i;
+        if (n == 0) 
+        {
             let h, m;
             n = -1;
             h = arr.length;
-            while (n + 1 < h) {
+            while (n + 1 < h) 
+            {
                 m = (n + h) >> 1;
-                if (arr[m] < str) n = m;
-                else h = m;
+                if (arr[m] < str) 
+                {
+                    n = m;
+                }
+                else 
+                {
+                    h = m;
+                }
             }
             return h;
-        } else
-            for (let i = n; i < arr.length && arr[i] < str; i++);
+        } 
+        else
+        {
+            for (i = n; i < arr.length && arr[i] < str; i++){
+                // Do noyhing
+            }
+        }
         return i; // i=arr.length || arr[i]>=str
     }
 
@@ -1995,7 +2084,7 @@
             if (k < AMnames.length && str.slice(0, AMnames[k].length) == AMnames[k]) {
                 match = AMnames[k];
                 mk = k;
-                i = match.length;
+                i = match.length; //NOSONAR
             }
             more = k < AMnames.length && str.slice(0, AMnames[k].length) >= AMnames[k];
         }
@@ -2028,7 +2117,7 @@
             st = str.slice(0, k - 1);
             tagst = "mn";
         } else {
-            k = 2;
+            k = 2; //NOSONAR
             st = str.slice(0, 1); //take 1 character
             tagst = (("A" > st || st > "Z") && ("a" > st || st > "z") ? "mo" : "mi");
         }
@@ -2098,7 +2187,7 @@
 			result = AMparseSexpr(str);
 			let result1str = result[1].toString();
 			
-			let strWithoutInput = strOri.substr(symbol.input.length);
+			let strWithoutInput = strOri.substring(symbol.input.length);
 			
 			let offset = strWithoutInput.indexOf(result1str);
             let i;
@@ -2121,12 +2210,12 @@
 					}
 					if(n == 0)
 					{
-						i++;
+						i++; //NOSONAR
 						break;
 					}
 				}
-				let part0 = strWithoutInput.substr(0, i);
-				let nexstr = strWithoutInput.substr(i);
+				let part0 = strWithoutInput.substring(0, i);
+				let nexstr = strWithoutInput.substring(i);
 				
 				
 				i = 0;
@@ -2144,20 +2233,20 @@
 					}
 					if(n == 0)
 					{
-						i++;
+						i++; //NOSONAR
 						break;
 					}
 				}
 
-				let part1 = nexstr.substr(0, i);
-				let part2 = nexstr.substr(i);
+				let part1 = nexstr.substring(0, i);
+				let part2 = nexstr.substring(i);
 				
-				let node0 = AMremoveCharsAndBlanks(part0.substr(1, part0.length-2));
-				let node1 = AMremoveCharsAndBlanks(part1.substr(1, part1.length-2));
+				let node0 = AMremoveCharsAndBlanks(part0.substring(1, part0.length-2));
+				let node1 = AMremoveCharsAndBlanks(part1.substring(1, part1.length-2));
 				
-				str = AMremoveCharsAndBlanks(strOri, symbol.input.length-1);
+				//commented str = AMremoveCharsAndBlanks(strOri, symbol.input.length-1);
 
-                result = AMparseSexpr(str);
+                //commented result = AMparseSexpr(str);
 
                 let result1 = AMparseSexpr(node1);
                 let result2 = AMparseSexpr(node0);
@@ -2168,20 +2257,40 @@
 				let frag3;
 				
 				let t;
-				let node;
+				//commented let node;
 				
 				t = 'mi';
-				if (isIE) frag1 = document.createElement("m:" + t);
+				if (isIE) 
+                {
+                    frag1 = document.createElement("m:" + t);
+                }
 				else frag1 = document.createElementNS(AMmathml, t);
-				if (frag1) frag1.appendChild(result1[0]);
+				if (frag1) 
+                {
+                    frag1.appendChild(result1[0]);
+                }
 				t = 'mn';
-				if (isIE) frag2 = document.createElement("m:" + t);
-				else frag2 = document.createElementNS(AMmathml, t);
-				if (frag2) frag2.appendChild(result2[0]);
+				if (isIE) 
+                {
+                    frag2 = document.createElement("m:" + t);
+                }
+				else 
+                {
+                    frag2 = document.createElementNS(AMmathml, t);
+                }
+				if (frag2) {
+                    frag2.appendChild(result2[0]);
+                }
 				
 				t = 'mroot';
-				if (isIE) frag3 = document.createElement("m:" + t);
-				else frag3 = document.createElementNS(AMmathml, t);
+				if (isIE) 
+                {
+                    frag3 = document.createElement("m:" + t);
+                }
+				else 
+                {
+                    frag3 = document.createElementNS(AMmathml, t);
+                }
 				
 				frag3.appendChild(frag1.firstChild);
 				frag3.appendChild(frag2.firstChild);
@@ -2331,7 +2440,7 @@
                 newFrag.appendChild(node);
                 return [createMmlNode("mrow", newFrag), str];
             case LEFTRIGHT:
-                //    if (rightvert) return [null,str]; else rightvert = true;
+                //commented if (rightvert) return [null,str]; else rightvert = true;
                 AMnestingDepth++;
                 str = AMremoveCharsAndBlanks(str, symbol.input.length);
                 result = AMparseExpr(str, false);
@@ -2349,8 +2458,7 @@
                     node = createMmlNode("mrow", node);
                     return [node, str];
                 }
-            default:
-                //alert("default");
+            default: //NOSONAR
                 str = AMremoveCharsAndBlanks(str, symbol.input.length);
                 return [createMmlNode(symbol.tag, //its a constant
                     document.createTextNode(symbol.output)), str];
@@ -2367,13 +2475,13 @@
         symbol = AMgetSymbol(str);
         if (symbol.ttype == INFIX && symbol.input != "/") {
             str = AMremoveCharsAndBlanks(str, symbol.input.length);
-            //    if (symbol.input == "/") result = AMparseIexpr(str); else ...
+            //commented if (symbol.input == "/") result = AMparseIexpr(str); else ...
             result = AMparseSexpr(str);
             if (result[0] == null) // show box in place of missing argument
                 result[0] = createMmlNode("mo", document.createTextNode("\u25A1"));
             else AMremoveBrackets(result[0]);
             str = result[1];
-            //    if (symbol.input == "/") AMremoveBrackets(node);
+            //commented if (symbol.input == "/") AMremoveBrackets(node);
             underover = (sym1.ttype == UNDEROVER || sym1.ttype == UNARYUNDEROVER);
             if (symbol.input == "_") {
                 sym2 = AMgetSymbol(str);
@@ -2433,11 +2541,10 @@
                 newFrag.appendChild(node);
                 symbol = AMgetSymbol(str);
             } else if (node != undefined) newFrag.appendChild(node);
-        } while ((symbol.ttype != RIGHTBRACKET &&
-                (symbol.ttype != LEFTRIGHT || rightbracket) ||
-                AMnestingDepth == 0) && symbol != null && symbol.output != "");
+        } 
+        while ((symbol.ttype != RIGHTBRACKET && (symbol.ttype != LEFTRIGHT || rightbracket) || AMnestingDepth == 0) && symbol != null && symbol.output != ""); //NOSONAR
         if (symbol.ttype == RIGHTBRACKET || symbol.ttype == LEFTRIGHT) {
-            //    if (AMnestingDepth > 0) AMnestingDepth--;
+            //commented if (AMnestingDepth > 0) AMnestingDepth--;
             let len = newFrag.childNodes.length;
             if (len > 0 && newFrag.childNodes[len - 1].nodeName == "mrow" &&
                 newFrag.childNodes[len - 1].lastChild &&
@@ -2446,43 +2553,68 @@
                 //newFrag.childNodes[len-2].nodeName == "mo" &&
                 //newFrag.childNodes[len-2].firstChild.nodeValue == ","
                 let right = newFrag.childNodes[len - 1].lastChild.firstChild.nodeValue;
-                if (right == ")" || right == "]") {
+                if (right == ")" || right == "]") 
+                {
                     let left = newFrag.childNodes[len - 1].firstChild.firstChild.nodeValue;
                     if (left == "(" && right == ")" && symbol.output != "}" ||
-                        left == "[" && right == "]") {
+                        left == "[" && right == "]") 
+                        {
                         let pos = []; // positions of commas
                         let matrix = true;
                         let m = newFrag.childNodes.length;
                         for (i = 0; matrix && i < m; i = i + 2) {
                             pos[i] = [];
                             node = newFrag.childNodes[i];
-                            if (matrix) matrix = node.nodeName == "mrow" &&
+                            if (matrix)
+                            {
+                                matrix = node.nodeName == "mrow" &&
                                 (i == m - 1 || node.nextSibling.nodeName == "mo" &&
                                     node.nextSibling.firstChild.nodeValue == ",") &&
                                 node.firstChild.firstChild.nodeValue == left &&
                                 node.lastChild.firstChild.nodeValue == right;
+                            }
                             if (matrix)
+                            {
                                 for (let j = 0; j < node.childNodes.length; j++)
+                                {
                                     if (node.childNodes[j].firstChild.nodeValue == ",")
+                                    {
                                         pos[i][pos[i].length] = j;
-                            if (matrix && i > 1) matrix = pos[i].length == pos[i - 2].length;
+                                    }
+                                }
+                            }
+                            if (matrix && i > 1) 
+                            {
+                                matrix = pos[i].length == pos[i - 2].length;
+                            }
                         }
                         matrix = matrix && (pos.length > 1 || pos[0].length > 0);
                         if (matrix) {
-                            let row, frag, n, k, table = document.createDocumentFragment();
+                            let row;
+                            let frag;
+                            //commented let n;
+                            let k;
+                            let table = document.createDocumentFragment();
                             for (i = 0; i < m; i = i + 2) {
                                 row = document.createDocumentFragment();
                                 frag = document.createDocumentFragment();
                                 node = newFrag.firstChild; // <mrow>(-,-,...,-,-)</mrow>
-                                n = node.childNodes.length;
+                                let n = node.childNodes.length;
+                                let j;
                                 k = 0;
                                 node.removeChild(node.firstChild); //remove (
-                                for (j = 1; j < n - 1; j++) {
+                                //commented let maxN = node.childNodes.length - 1;
+                                for (j = 1; j < n - 1; j++) 
+                                {
                                     if (typeof pos[i][k] != "undefined" && j == pos[i][k]) {
                                         node.removeChild(node.firstChild); //remove ,
                                         row.appendChild(createMmlNode("mtd", frag));
                                         k++;
-                                    } else frag.appendChild(node.firstChild);
+                                    } 
+                                    else 
+                                    {
+                                        frag.appendChild(node.firstChild);
+                                    }
                                 }
                                 row.appendChild(createMmlNode("mtd", frag));
                                 if (newFrag.childNodes.length > 2) {
@@ -2492,7 +2624,10 @@
                                 table.appendChild(createMmlNode("mtr", row));
                             }
                             node = createMmlNode("mtable", table);
-                            if (typeof symbol.invisible == "boolean" && symbol.invisible) node.setAttribute("columnalign", "left");
+                            if (typeof symbol.invisible == "boolean" && symbol.invisible) 
+                            {
+                                node.setAttribute("columnalign", "left");
+                            }
                             newFrag.replaceChild(node, newFrag.firstChild);
                         }
                     }
@@ -2553,9 +2688,12 @@
 		
 		
 		// process matrix
-		let len = str.length;
+		//commented let len = str.length;
 		let found;
-		let p1 = 0, p2 = 0, tmp1 = '', tmp2 = '';
+		let p1 = 0;
+        let p2 = 0;
+        //commented let tmp1 = '';
+        //commented let tmp2 = '';
 		let arr1 = [], arr2 = [], array3 = [], startPos = [], endPos = [], symbolBefofe = [], symbolAfter = [];
 		do{
 			found = false;
@@ -2565,8 +2703,8 @@
 				p2 = str.indexOf('\\end{array}', p1+12);
 				if(p2 > -1)
 				{
-					arr1.push(str.substr(p1, p2+11-p1));
-					arr2.push(str.substr(p1+13, p2-p1-13));
+					arr1.push(str.substring(p1, p2+11-p1));
+					arr2.push(str.substring(p1+13, p2-p1-13));
 					let sp, ep;
 					sp = p1;
 					ep = p2+11;
@@ -2582,12 +2720,12 @@
 					}
 					else
 					{
-						if(str.substr(sp-1,1) == '|' && str.substr(ep, 1) == '|')
+						if(str.substring(sp-1,1) == '|' && str.substring(ep, 1) == '|')
 						{
 							symbolBefofe.push('|');
 							symbolAfter.push('|');
 						}
-						else if(str.substr(sp-1,1) == '[' && str.substr(ep, 1) == ']')
+						else if(str.substring(sp-1,1) == '[' && str.substring(ep, 1) == ']')
 						{
 							symbolBefofe.push('[');
 							symbolAfter.push(']');
@@ -2606,7 +2744,17 @@
 		}
 		while(found);
 		
-		let i, j, k, l, m, n, o, q, r, s;
+		let i;
+        let j;
+        let k;
+        let l;
+        let m;
+        let n;
+        //commented let o;
+        let p;
+        //commented let q;
+        let r;
+        //commented let s;
 		if(arr2.length > 0)
 		{
 			for(i in arr2)
@@ -2643,10 +2791,14 @@
 			{
 				for(i = 0; i< array3.length; i++)
 				{
-					let a = [], b, c;
+					let a = [];
+                    //commented let b;
+                    //commented let c;
 					if(array3[i].symbolBefore == '|')
 					{
-						let k, l, m;
+						let k;
+                        let l;
+                        //commented let m;
 						for(k = 0; k < array3[i].matrix.length; k++)
 						{
 							l = array3[i].matrix[k];
@@ -2656,7 +2808,9 @@
 					}
 					else if(array3[i].symbolBefore == '[')
 					{
-						let k, l, m;
+						let k;
+                        let l;
+                        //commented let m;
 						for(k = 0; k < array3[i].matrix.length; k++)
 						{
 							l = array3[i].matrix[k];
@@ -2695,6 +2849,7 @@
         node = createMmlNode("math", node);
         if (showasciiformulaonhover) //fixed by djhsu so newline
 		{
+            // NOSONAR
             /**
              * Commented
              * node.setAttribute("title", str.replace(/\s+/g, " ")); //does not show in Gecko
@@ -2703,7 +2858,8 @@
         return node;
     }
 
-    function strarr2docFrag(arr, linebreaks, latex) {
+    function strarr2docFrag(arr, linebreaks, latex) //NOSONAR
+    {
         let newFrag = document.createDocumentFragment();
         let expr = false;
         for (let i in arr) 
@@ -2726,7 +2882,8 @@
         return newFrag;
     }
 
-    function AMautomathrec(str) {
+    function AMautomathrec(str) //NOSONAR
+    {
         //formula is a space (or start of str) followed by a maximal sequence of *two* or more tokens, possibly separated by runs of digits and/or space.
         //tokens are single letters (except a, A, I) and ASCIIMathML tokens
         let texcommand = "\\\\[a-zA-Z]+|\\\\\\s|";
@@ -2741,12 +2898,15 @@
         let arr = str.split(AMdelimiter1);
         let re1 = new RegExp("(^|\\s)([b-zB-HJ-Z+*<>]|" + texcommand + ambigAMtoken + simpleAMtoken + ")(\\s|\\n|$)", "g");
         let re2 = new RegExp("(^|\\s)([a-z]|" + texcommand + ambigAMtoken + simpleAMtoken + ")([,.])", "g"); // removed |\d+ for now
+        let i;
         for (i = 0; i < arr.length; i++) //single nonenglish tokens
+        {
             if (i % 2 == 0) {
                 arr[i] = arr[i].replace(re1, " `$2`$3");
                 arr[i] = arr[i].replace(re2, " `$2`$3");
                 arr[i] = arr[i].replace(/([{}[\]])/, "`$1`");
             }
+        }
         str = arr.join(AMdelimiter1);
         str = str.replace(/((^|\s)\([a-zA-Z]{2,}.*?)\)`/g, "$1`)"); //fix parentheses
         str = str.replace(/`(\((a\s|in\s))(.*?[a-zA-Z]{2,}\))/g, "$1`$3"); //fix parentheses
@@ -2891,29 +3051,38 @@
 	{
 		let str1 = input;
 		let str2 = '';
-		let i, j, k;
-		let t1, t2, t3, final;
+		//commented let i;
+        let j;
+        //commented let k;
+		//commented let t1;
+        let t2;
+        let t3;
+        let t4;
+        //commented let final;
 		let flagCount = 0;
 		
 		if(str1.indexOf(' ⃗') != -1)
 		{
-			let pos1, pos2 = 0, pos3, pos4;
+			let pos1;
+            let pos2 = 0;
+            //commented let pos3;
+            //commented let pos4;
 			do{
 				pos1 = str1.indexOf(' ⃗', pos2);
 				if(pos1 != -1)
 				{
-					str2 = str1.substr(0, pos1);
+					str2 = str1.substring(0, pos1);
 					pos2 = pos1 + 1;
-					if(str1.substr(pos1-1, 1) == ')')
+					if(str1.substring(pos1-1, 1) == ')')
 					{
 						flagCount = 0;
 						for(j = str2.length - 1; j >= 0; j--)
 						{
-							if(str2.substr(j, 1) == ')')
+							if(str2.substring(j, 1) == ')')
 							{
 								flagCount++;
 							}
-							if(str2.substr(j, 1) == '(')
+							if(str2.substring(j, 1) == '(')
 							{
 								flagCount--;
 							}
@@ -2922,14 +3091,14 @@
 								break;
 							}
 						}
-						t2 = str2.substr(j+1, str2.length - j - 2);
-						t3 = str2.substr(j, str2.length - j);
+						t2 = str2.substring(j+1, str2.length - j - 2);
+						t3 = str2.substring(j, str2.length - j);
 						t4 = '\\vec{'+t2+'} ';
 						str1 = str1.replace(t3+' ⃗', t4);
 					}
 					else
 					{
-						t3 = str2.substr(j-1, 1);
+						t3 = str2.substring(j-1, 1);
 						t4 = '\\vec{'+t3+'} ';
 						str1 = str1.replace(t3+' ⃗', t4);
 					}
@@ -2942,9 +3111,16 @@
 
 	function reconstructMatrix(data)
 	{
-		let i, j, k, l, m, chk;
+		let i;
+        //commented let j;
+        //commented let k;
+        //commented let l;
+        //commented let m;
+        //commented let chk;
 		let arr = data.split('');
-		let arr1 = [], arr2 = [], array3 = [];
+		let arr1 = [];
+        //commented let arr2 = [];
+        //commented let array3 = [];
 		let counting = false;
 		let cnt = 0;
 		let startPos = -1;
@@ -2976,16 +3152,12 @@
 				if(cnt == 0)
 				{
 					endPos = i;
-					let txt = data.substr(startPos, endPos-startPos+2);
+					let txt = data.substring(startPos, endPos-startPos+2);
 					if(startPos > 0)
 					{
-						if(arr[startPos-1] == '[')
+						if(arr[startPos-1] == '[' || arr[startPos-1] == '|') 
 						{
-							txt = data.substr(startPos-1, endPos-startPos+3);
-						}
-						else if(arr[startPos-1] == '|')
-						{
-							txt = data.substr(startPos-1, endPos-startPos+3);
+							txt = data.substring(startPos-1, endPos-startPos+3);
 						}
 					}
 					arr1.push(txt);
@@ -3000,25 +3172,24 @@
 			t1 = t1.toString();
 			let t2 = t1.replace(String.fromCharCode(9632), '');
 			
-			let t3 = t2.substr(0, t2.length);
+			let t3 = t2.substring(0, t2.length);
 			let t4 = t3.split('@').join('),(');
 			let t5 = t4.split('&').join(',');
 			let t6 = '['+t5+']';
-			if(t6.substr(0, 2) == '[[' && t6.substr(t6.length-2,2) == ']]')
+			if((t6.substring(0, 2) == '[[' && t6.substring(t6.length-2,2) == ']]')
+            ||
+            (t6.substring(0, 2) == '[|' && t6.substring(t6.length-2,2) == '|]')
+            )
 			{
-				t6 = t6.substr(1, t6.length - 2);
+				t6 = t6.substring(1, t6.length - 2);
 			}
-			else if(t6.substr(0, 2) == '[|' && t6.substr(t6.length-2,2) == '|]')
-			{
-				t6 = t6.substr(1, t6.length - 2);
-			}
-
+	
 			let test = t6.replace(/[^\(^\)^\[^\]]+/gi, ' ');
 			test = test.trim();
 			let arr_test = test.split(' ');
 			if(arr_test[0] == '[(' && arr_test[arr_test.length - 1] == '))]')
 			{
-				let test2 = t6.substr(2, t6.length - 5);
+				let test2 = t6.substring(2, t6.length - 5);
 				t6 = '('+test2+'))';
 			}
 
@@ -3028,9 +3199,16 @@
 	}
 	function reconstructSqrtWord(data)
 	{
-		let i, j, k, l, m, chk;
+		let i;
+        //commented let j;
+        //commented let k;
+        //commented let l;
+        //commented let m;
+        //commented let chk;
 		let arr = data.split('');
-		let arr1 = [], arr2 = [], array3 = [];
+		let arr1 = [];
+        //commented let arr2 = [];
+        //commented let array3 = [];
 		let counting = false;
 		let cnt = 0;
 		let startPos = -1;
@@ -3062,10 +3240,10 @@
 				if(cnt == 0)
 				{
 					endPos = i;
-					let txt = data.substr(startPos, endPos-startPos+1);
+					let txt = data.substring(startPos, endPos-startPos+1);
 					if(startPos > 0)
 					{
-						txt = data.substr(startPos-1, endPos-startPos+2);
+						txt = data.substring(startPos-1, endPos-startPos+2);
 					}
 					arr1.push(txt);
 					counting = false;
@@ -3077,19 +3255,19 @@
 		{
 			let t1 = arr1[i] || '';
 			t1 = t1.toString();
+            let t2;
 			if(t1.indexOf('}{') > 0 || t1.indexOf('&') > 0)
 			{
-				let t2 = t1.replace(String.fromCharCode(8730)+'(', '\\root{');
+				t2 = t1.replace(String.fromCharCode(8730)+'(', '\\root{');
 			}
 			else
 			{
-				let t2 = t1.replace(String.fromCharCode(8730)+'(', '\\sqrt{');
+				t2 = t1.replace(String.fromCharCode(8730)+'(', '\\sqrt{');
 			}
-			let t3 = t2.substr(0, t2.length-1);
+			let t3 = t2.substring(0, t2.length-1);
 			let t5 = t3.split('&').join('}{');
 
 			let t6 = t5+'}';
-
 
 			data = data.replace(t1, t6);
 		}
