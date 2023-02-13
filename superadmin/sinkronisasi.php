@@ -136,7 +136,10 @@ if(!empty($school_id))
             });
             startSync('lib.tools/sync/', function(e3){
                 $('.sync-message').slideDown('fast', function(e4){
-
+                    $(".progress-bar").each(function(e5){
+                        $(this).addClass('bg-success');
+                        $(this).removeClass('bg-primary')
+                    });
                 });
             });
         }

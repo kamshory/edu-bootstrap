@@ -111,7 +111,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$user_data['language'] = $language;
 
 		if (!empty($name) && $username != '') {
-			$chk = $picoEdu->getExistsingUser($user_data);
+			$chk = $picoEdu->getExistsingUser($user_data, null);
 			$admin_id = addslashes($chk['member_id']);
 			$username = addslashes($chk['username']);
 

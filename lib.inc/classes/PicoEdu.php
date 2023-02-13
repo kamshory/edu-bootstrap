@@ -319,7 +319,6 @@ class PicoEdu //NOSONAR
 		);
 	}
 
-
 	public function getTextScoreFromString($answer, $compress = false) //NOSONAR
 	{
 		$result = array();

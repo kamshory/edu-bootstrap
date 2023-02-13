@@ -115,7 +115,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 								
 	if(!empty($name) && !empty($username))
 	{
-		$chk = $picoEdu->getExistsingUser($user_data);
+		$chk = $picoEdu->getExistsingUser($user_data, null);
 		$admin_id = addslashes($chk['member_id']);
 		$username = addslashes($chk['username']);
 		
