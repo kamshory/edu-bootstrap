@@ -108,6 +108,35 @@ let LatexDialog = {
 			tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
 			tinyMCEPopup.close();
 		}
+		else if(rendererSelector == 'mathjax-png')
+		{
+			let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
+			svgToPNG(data, function(base64EncodedURL){
+				let img2 = document.createElement('img');
+				img2.src = base64EncodedURL;
+				img2.setAttribute('alt', latex);
+				img2.setAttribute('data-latex', latex);
+				img2.setAttribute('data-renderer', rendererSelector);
+				img2.setAttribute('class', 'latex-image');
+				img2.style.verticalAlign='middle';
+				tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
+				tinyMCEPopup.close();
+			});			
+		}
+		else if(rendererSelector == 'mathjax-svg')
+		{
+			let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
+			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
+			let img2 = document.createElement('img');
+			img2.src = url;
+			img2.setAttribute('alt', latex);
+			img2.setAttribute('data-latex', latex);
+			img2.setAttribute('data-renderer', rendererSelector);
+			img2.setAttribute('class', 'latex-image');
+			img2.style.verticalAlign='middle';
+			tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
+			tinyMCEPopup.close();
+		}
 		else if(rendererSelector == 'mathml-svg')
 		{
 			let data = asciimath.latexToSVG(latex, true, true);
@@ -125,6 +154,18 @@ let LatexDialog = {
 		else
 		{
 			let data = asciimath.latexToSVG(latex, true, true);
+			svgToPNG(data, function(base64EncodedURL){
+				let img2 = document.createElement('img');
+				img2.src = base64EncodedURL;
+				img2.setAttribute('alt', latex);
+				img2.setAttribute('data-latex', latex);
+				img2.setAttribute('data-renderer', rendererSelector);
+				img2.setAttribute('class', 'latex-image');
+				img2.style.verticalAlign='middle';
+				tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
+				tinyMCEPopup.close();
+			});
+			/*
 			let DOMURL = window.URL || window.webkitURL || window;
 			let img = new Image();
 			let svg = new Blob([data], {type: 'image/svg+xml'});
@@ -148,6 +189,7 @@ let LatexDialog = {
 				tinyMCEPopup.close();
 			}			
 			img.src = url;
+			*/
 		}
 	}
 };
@@ -313,4 +355,27 @@ function handlePasteImage(e)
 			renderLatex(data);
 		}
 	}
+}
+
+/**
+ * Convert SVG document to PNG without resize it
+ * @param {string} svgData String of SVG document
+ * @param {function} onloadCallback Callback function when process has been finished
+ */
+function svgToPNG(svgData, onloadCallback)
+{
+	var DOMURL = window.URL || window.webkitURL || window;	
+	var img = new Image();
+	var svg = new Blob([svgData], {type: 'image/svg+xml'});
+	var url = DOMURL.createObjectURL(svg);
+	var canvas = document.createElement('canvas');
+	var ctx = canvas.getContext('2d');
+	img.onload = function() {
+		canvas.setAttribute('width', img.width);
+		canvas.setAttribute('height', img.height);
+		ctx.drawImage(img, 0, 0);
+		DOMURL.revokeObjectURL(url);
+		onloadCallback(canvas.toDataURL('png'));	
+	}
+	img.src = url;
 }

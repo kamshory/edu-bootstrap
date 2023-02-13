@@ -246,21 +246,20 @@ function insertEquation(includeLatex)
 			}
 		}
 	}
-	else if(rendererSelector == 'mathml-svg')
+	else if(rendererSelector == 'mathjax-png')
 	{
-		let data = asciimath.latexToSVG(latex, true, true);
-		if(includeLatex)
-		{
-			window.parent.uploadBase64ImageFromLatex('data:image/svg+xml;base64,'+Base64.encode(data), 2, 'svg', 'latex|'+latex);
-		}
-		else
-		{
-			window.parent.uploadBase64ImageFromLatex('data:image/svg+xml;base64,'+Base64.encode(data), 2, 'svg');
-		}
-	}
-	else 
-	{
-		let data = asciimath.latexToSVG(latex, true, true);
+		let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
+		svgToPNG(data, function(base64EncodedURL){
+			if(includeLatex)
+			{
+				window.parent.uploadBase64ImageFromLatex(base64EncodedURL, 2, 'png', 'latex|'+latex);
+			}
+			else
+			{
+				window.parent.uploadBase64ImageFromLatex(base64EncodedURL, 2, 'png');
+			}
+		});
+		/*
 		let DOMURL = window.URL || window.webkitURL || window;		
 		let img = new Image();
 		let svg = new Blob([data], {type: 'image/svg+xml'});
@@ -282,6 +281,78 @@ function insertEquation(includeLatex)
 			}
 		}
 		img.src = url;
+		*/
+	}
+	else if(rendererSelector == 'mathml-svg')
+	{
+		let data = asciimath.latexToSVG(latex, true, true);
+		if(includeLatex)
+		{
+			window.parent.uploadBase64ImageFromLatex('data:image/svg+xml;base64,'+Base64.encode(data), 2, 'svg', 'latex|'+latex);
+		}
+		else
+		{
+			window.parent.uploadBase64ImageFromLatex('data:image/svg+xml;base64,'+Base64.encode(data), 2, 'svg');
+		}
+	}
+	else 
+	{
+		let data = asciimath.latexToSVG(latex, true, true);
+		svgToPNG(data, function(base64EncodedURL){
+			if(includeLatex)
+			{
+				window.parent.uploadBase64ImageFromLatex(base64EncodedURL, 2, 'png', 'latex|'+latex);
+			}
+			else
+			{
+				window.parent.uploadBase64ImageFromLatex(base64EncodedURL, 2, 'png');
+			}
+		});
+		/*
+		let DOMURL = window.URL || window.webkitURL || window;		
+		let img = new Image();
+		let svg = new Blob([data], {type: 'image/svg+xml'});
+		let url = DOMURL.createObjectURL(svg);
+		let canvas = document.createElement('canvas');
+		let ctx = canvas.getContext('2d');		
+		img.onload = function() {
+			canvas.setAttribute('width', img.width);
+			canvas.setAttribute('height', img.height);
+			ctx.drawImage(img, 0, 0);
+			DOMURL.revokeObjectURL(url);
+			if(includeLatex)
+			{
+				window.parent.uploadBase64ImageFromLatex(canvas.toDataURL('png'), 2, 'png', 'latex|'+latex);
+			}
+			else
+			{
+				window.parent.uploadBase64ImageFromLatex(canvas.toDataURL('png'), 2, 'png');
+			}
+		}
+		img.src = url;
+		*/
 	}
 }
 
+/**
+ * Convert SVG document to PNG without resize it
+ * @param {string} svgData String of SVG document
+ * @param {function} onloadCallback Callback function when process has been finished
+ */
+function svgToPNG(svgData, onloadCallback)
+{
+	var DOMURL = window.URL || window.webkitURL || window;	
+	var img = new Image();
+	var svg = new Blob([svgData], {type: 'image/svg+xml'});
+	var url = DOMURL.createObjectURL(svg);
+	var canvas = document.createElement('canvas');
+	var ctx = canvas.getContext('2d');
+	img.onload = function() {
+		canvas.setAttribute('width', img.width);
+		canvas.setAttribute('height', img.height);
+		ctx.drawImage(img, 0, 0);
+		DOMURL.revokeObjectURL(url);
+		onloadCallback(canvas.toDataURL('png'));	
+	}
+	img.src = url;
+}
