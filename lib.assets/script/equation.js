@@ -1,6 +1,6 @@
 window.onload = function()
 {
-	var rendererSelector = 'browser-mathjax';
+	var rendererSelector = 'mathjax-svg';
 	document.getElementById('renderer').value = rendererSelector;
 };
 var generatePNG = true;
@@ -47,7 +47,7 @@ function insertEquation(includeLatex)
 			img.src = url;
 		}
 	}
-	else if(rendererSelector == 'browser-mathjax')
+	else if(rendererSelector == 'mathjax-svg')
 	{
 		if(latex != '')
 		{

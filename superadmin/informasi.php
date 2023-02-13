@@ -162,7 +162,7 @@ return filename.replace(/\.[^/.]+$/,'');
 var ascii_svg_server = '../lib.tools/asciisvg/svgimg.php';
 var equation_preview_url = '../../../../../../cgi-bin/equgen.cgi?' ;
 var equation_generator_url = '../../../../../../equgen.php?' ;
-var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'browser-png':'browser-mathjax';
+var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'mathml-png':'mathjax-svg';
 var quran_server = '../quran';
 $().ready(function() {
 	if($('textarea').length)
@@ -313,7 +313,7 @@ return filename.replace(/\.[^/.]+$/,'');
 var ascii_svg_server = '../lib.tools/asciisvg/svgimg.php';
 var equation_preview_url = '../../../../../../cgi-bin/equgen.cgi?' ;
 var equation_generator_url = '../../../../../../equgen.php?' ;
-var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'browser-png':'browser-mathjax';
+var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'mathml-png':'mathjax-svg';
 var quran_server = '../quran';
 $().ready(function() {
 	if($('textarea').length)

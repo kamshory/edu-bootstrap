@@ -34,7 +34,7 @@ let EquationDialog = {
 			$('.main-editor').append(html);
 			equation.updateAll();
 		}
-		document.getElementById('renderer').value = ed.getParam('equation_renderer_machine') || 'browser-mathjax';
+		document.getElementById('renderer').value = ed.getParam('equation_renderer_machine') || 'mathjax-svg';
 	},
 
 	insert : function() {
@@ -81,7 +81,7 @@ let EquationDialog = {
 					img.src = url;
 				}
 			}
-			else if(rendererSelector == 'browser-mathjax')
+			else if(rendererSelector == 'mathjax-svg')
 			{
 				let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
 				let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
@@ -97,7 +97,7 @@ let EquationDialog = {
 				tinyMCEPopup.close();
 	
 			}
-			else if(rendererSelector == 'browser-mathml')
+			else if(rendererSelector == 'mathml-svg')
 			{
 				let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
 

@@ -24,11 +24,11 @@ UPDATE `edu_option`
 					WHERE `question_id` = '063e70fb5c88a2d47d05' AND `option_id` = '063e70fb5ca13ad36e00';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-				SET `content` = '<img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"Al(s) + H_{2}SO_{4}(aq) &rarr; Al_{2}(SO_{4})_{3}(aq) + H_{2}(g)\" data-latex=\"Al(s) + H_{2}SO_{4}(aq) &rarr; Al_{2}(SO_{4})_{3}(aq) + H_{2}(g)\" data-renderer=\"browser-png\" src=\"media.edu/school/063ce682801be89951aa/test/063e70fb5bd7bc01a3a0/07ddbb255482a372281c07f00d5b8ce1.png\">', `score` = '0' 
+				SET `content` = '<img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"Al(s) + H_{2}SO_{4}(aq) &rarr; Al_{2}(SO_{4})_{3}(aq) + H_{2}(g)\" data-latex=\"Al(s) + H_{2}SO_{4}(aq) &rarr; Al_{2}(SO_{4})_{3}(aq) + H_{2}(g)\" data-renderer=\"mathml-png\" src=\"media.edu/school/063ce682801be89951aa/test/063e70fb5bd7bc01a3a0/07ddbb255482a372281c07f00d5b8ce1.png\">', `score` = '0' 
 				WHERE `question_id` = '063e70fb5c88a2d47d05' AND `option_id` = '063e70fb5c8c9b2b3551';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-				SET `content` = '<img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"2Al(s) + 3H_{2}SO_{4}(aq) &rarr; Al2(SO_{4})_{3}(aq) + 3H_{2}(g)\" data-latex=\"2Al(s) + 3H_{2}SO_{4}(aq) &rarr; Al2(SO_{4})_{3}(aq) + 3H_{2}(g)\" data-renderer=\"browser-png\" src=\"media.edu/school/063ce682801be89951aa/test/063e70fb5bd7bc01a3a0/bb9aaf8e7af41be3c12f05ee0127dc71.png\">', `score` = '0' 
+				SET `content` = '<img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"2Al(s) + 3H_{2}SO_{4}(aq) &rarr; Al2(SO_{4})_{3}(aq) + 3H_{2}(g)\" data-latex=\"2Al(s) + 3H_{2}SO_{4}(aq) &rarr; Al2(SO_{4})_{3}(aq) + 3H_{2}(g)\" data-renderer=\"mathml-png\" src=\"media.edu/school/063ce682801be89951aa/test/063e70fb5bd7bc01a3a0/bb9aaf8e7af41be3c12f05ee0127dc71.png\">', `score` = '0' 
 				WHERE `question_id` = '063e70fb5c88a2d47d05' AND `option_id` = '063e70fb5c9149a1937f';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
@@ -36,7 +36,7 @@ UPDATE `edu_option`
 					WHERE `question_id` = '063e70fb5c88a2d47d05' AND `option_id` = '063e70fb5c9149a1937f';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-				SET `content` = '<img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"Al_{2}O_{3}(s) + H_{2}SO_{4}(aq) &rarr; Al_{2}(SO_{4})3(aq) + H_{2}O(l)\" data-latex=\"Al_{2}O_{3}(s) + H_{2}SO_{4}(aq) &rarr; Al_{2}(SO_{4})3(aq) + H_{2}O(l)\" data-renderer=\"browser-png\" src=\"media.edu/school/063ce682801be89951aa/test/063e70fb5bd7bc01a3a0/42d0c4e41f3bd291c41185820075c307.png\">', `score` = '0' 
+				SET `content` = '<img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"Al_{2}O_{3}(s) + H_{2}SO_{4}(aq) &rarr; Al_{2}(SO_{4})3(aq) + H_{2}O(l)\" data-latex=\"Al_{2}O_{3}(s) + H_{2}SO_{4}(aq) &rarr; Al_{2}(SO_{4})3(aq) + H_{2}O(l)\" data-renderer=\"mathml-png\" src=\"media.edu/school/063ce682801be89951aa/test/063e70fb5bd7bc01a3a0/42d0c4e41f3bd291c41185820075c307.png\">', `score` = '0' 
 				WHERE `question_id` = '063e70fb5c88a2d47d05' AND `option_id` = '063e70fb5c96a4b6033e';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
@@ -44,7 +44,7 @@ UPDATE `edu_option`
 					WHERE `question_id` = '063e70fb5c88a2d47d05' AND `option_id` = '063e70fb5c96a4b6033e';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-				SET `content` = '<img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"Al_{2}O_{3}(s) + 3H_{2}SO_{4}(aq) &rarr; Al_{2}(SO_{4})_{3}(aq) + 3H_{2}O(l)\" data-latex=\"Al_{2}O_{3}(s) + 3H_{2}SO_{4}(aq) &rarr; Al_{2}(SO_{4})_{3}(aq) + 3H_{2}O(l)\" data-renderer=\"browser-png\" src=\"media.edu/school/063ce682801be89951aa/test/063e70fb5bd7bc01a3a0/54cad9bc236f826bd8d70db8b2cea26e.png\">', `score` = '1' 
+				SET `content` = '<img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"Al_{2}O_{3}(s) + 3H_{2}SO_{4}(aq) &rarr; Al_{2}(SO_{4})_{3}(aq) + 3H_{2}O(l)\" data-latex=\"Al_{2}O_{3}(s) + 3H_{2}SO_{4}(aq) &rarr; Al_{2}(SO_{4})_{3}(aq) + 3H_{2}O(l)\" data-renderer=\"mathml-png\" src=\"media.edu/school/063ce682801be89951aa/test/063e70fb5bd7bc01a3a0/54cad9bc236f826bd8d70db8b2cea26e.png\">', `score` = '1' 
 				WHERE `question_id` = '063e70fb5c88a2d47d05' AND `option_id` = '063e70fb5c9c179cc725';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
@@ -52,7 +52,7 @@ UPDATE `edu_option`
 					WHERE `question_id` = '063e70fb5c88a2d47d05' AND `option_id` = '063e70fb5c9c179cc725';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 
-				SET `content` = '<img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"2Al_{2}O_{3}(s) + H_{2}SO_{4}(aq) &rarr; 2Al_{2}(SO_{4})_{3}(aq) + 3H_{2}O(l)\" data-latex=\"2Al_{2}O_{3}(s) + H_{2}SO_{4}(aq) &rarr; 2Al_{2}(SO_{4})_{3}(aq) + 3H_{2}O(l)\" data-renderer=\"browser-png\" src=\"media.edu/school/063ce682801be89951aa/test/063e70fb5bd7bc01a3a0/b7b08eb8ab2db2f7a0aaa6dc10881bf6.png\">', `score` = '0' 
+				SET `content` = '<img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"2Al_{2}O_{3}(s) + H_{2}SO_{4}(aq) &rarr; 2Al_{2}(SO_{4})_{3}(aq) + 3H_{2}O(l)\" data-latex=\"2Al_{2}O_{3}(s) + H_{2}SO_{4}(aq) &rarr; 2Al_{2}(SO_{4})_{3}(aq) + 3H_{2}O(l)\" data-renderer=\"mathml-png\" src=\"media.edu/school/063ce682801be89951aa/test/063e70fb5bd7bc01a3a0/b7b08eb8ab2db2f7a0aaa6dc10881bf6.png\">', `score` = '0' 
 				WHERE `question_id` = '063e70fb5c88a2d47d05' AND `option_id` = '063e70fb5ca13ad36e00';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_option` 

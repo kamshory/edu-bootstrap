@@ -78,11 +78,11 @@ UPDATE `edu_school` set
 <p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/1ad139112dde8f234c985bbede1c54c0.svg\"></p>'
 	WHERE `school_id` = '063ce682801be89951aa';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-UPDATE `edu_article` SET `title` = '(Tanpa Judul)', `content` = '<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-latex=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-renderer=\"browser-png\" src=\"media.edu/school/063ce682801be89951aa/article/063e2ef9aed05f1956e2/5ba16f09fb4bf89c02eb617bfc21362b.png\"></p>', `open` = '0', `class` = '', 
+UPDATE `edu_article` SET `title` = '(Tanpa Judul)', `content` = '<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-latex=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-renderer=\"mathml-png\" src=\"media.edu/school/063ce682801be89951aa/article/063e2ef9aed05f1956e2/5ba16f09fb4bf89c02eb617bfc21362b.png\"></p>', `open` = '0', `class` = '', 
 		`time_edit` = '2023-02-11 19:03:16', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
 		WHERE `article_id` = '063e2ef9aed05f1956e2' AND `school_id` = '063ce682801be89951aa';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-UPDATE `edu_article` SET `title` = 'Update', `content` = '<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/article/063e2ef9aed05f1956e2/5ba16f09fb4bf89c02eb617bfc21362b.png\" alt=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-latex=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-renderer=\"browser-png\"></p>', `open` = '0', `class` = '', 
+UPDATE `edu_article` SET `title` = 'Update', `content` = '<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/article/063e2ef9aed05f1956e2/5ba16f09fb4bf89c02eb617bfc21362b.png\" alt=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-latex=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-renderer=\"mathml-png\"></p>', `open` = '0', `class` = '', 
 		`time_edit` = '2023-02-11 19:03:28', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
 		WHERE `article_id` = '063e2ef9aed05f1956e2' AND `school_id` = '063ce682801be89951aa';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
@@ -190,7 +190,7 @@ UPDATE `edu_article` SET `title` = 'Renderer Persamaan', `content` = '<table sty
 </tr>
 </tbody>
 </table>
-<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\" src=\"media.edu/school/063ce682801be89951aa/article/063e397123fb63638d6e/5609f347bd9a4caf9041c10cee456caf.svg\"></p>', `open` = '0', `class` = '', 
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"mathml-svg\" src=\"media.edu/school/063ce682801be89951aa/article/063e397123fb63638d6e/5609f347bd9a4caf9041c10cee456caf.svg\"></p>', `open` = '0', `class` = '', 
 		`time_edit` = '2023-02-12 10:05:12', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
 		WHERE `article_id` = '063e397123fb63638d6e' AND `school_id` = '063ce682801be89951aa';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
