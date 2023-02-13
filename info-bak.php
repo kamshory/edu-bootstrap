@@ -89,7 +89,7 @@ if(isset($_GET['info_id']))
     <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
     <!-- Custom styles for this template -->
@@ -192,7 +192,7 @@ if(isset($_GET['info_id']))
         crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"><\/script>')</script>
     '
-    <script src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.bundle.min.js"
+    <script src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
 

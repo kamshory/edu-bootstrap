@@ -27,6 +27,6 @@
         </div>
     </footer>
     <script src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"></script> 
-    <script src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.bundle.min.js"></script>             
+    <script src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>             
 </body>
 </html>
