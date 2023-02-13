@@ -12,23 +12,17 @@ if(empty($admin_id))
 class ImportExcel{
 
 	/**
-	 * Validate imported data
+	 * Check if school use national ID or not
 	 * @param \PHPExcel $objWorksheetSource Worksheet
-	 * @param string $school_sheet Sheet name for scholl
-	 * @param string $student_sheet Sheet name for student
-	 * @param string $student_id_col Lower case of column name name student ID
-	 * @param string $teacher_sheet Sheet name for teacher
-	 * @param string $teacher_id_col Lower case of column name name teacher ID
-	 * @return array Contain response_code and response_text
+	 * @param string $sheetNameSchool Sheet name for school
+	 * @return bool true if school use national ID and false if school is not use national ID
 	 */
-	public function validate($objWorksheetSource, $school_sheet, $student_sheet, $student_id_col, $teacher_sheet, $teacher_id_col)
+	public function isUseNationalId($objWorksheetSource, $sheetNameSchool)
 	{
-		$use_national_id = false;
-		$valid_data_student = true;
-		$valid_data_teacher = true;
+		$useNationalId = false;
 		try
 		{
-			$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName($school_sheet);
+			$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName($sheetNameSchool);
 			$highestRow = $objWorksheet->getHighestRow(); 
 			$highestColumn = $objWorksheet->getHighestColumn(); 
 			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
@@ -51,101 +45,59 @@ class ImportExcel{
 					|| strtolower($data['use_national_id']) == 'true'
 					)
 				{
-					$use_national_id = true;
+					$useNationalId = true;
 					break;
 				}
 			}
 		}
 		catch(Exception $e)
 		{
-
+			// Do nothing
 		}
+		return $useNationalId;
+	}
 
+	/**
+	 * Validate imported data
+	 * @param \PHPExcel $objWorksheetSource Worksheet
+	 * @param string $sheetNameSchool Sheet name for school
+	 * @param string $sheetNameStudent Sheet name for student
+	 * @param string $columnNameStudent Lower case of column name name student ID
+	 * @param string $sheetNameTeacher Sheet name for teacher
+	 * @param string $columnNameTeacher Lower case of column name name teacher ID
+	 * @return array Contain response_code and response_text
+	 */
+	public function validate($objWorksheetSource, $sheetNameSchool, $sheetNameStudent, $columnNameStudent, $sheetNameTeacher, $columnNameTeacher)
+	{
+		$useNationalId = $this->isUseNationalId($objWorksheetSource, $sheetNameSchool);
+		$validData1 = true;
+		$validData2 = true;		
 		$message = "Sukses";
 		$response_code = "00";
 
-		if($use_national_id)
+		if($useNationalId)
 		{
-			try
-			{
-				$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName($student_sheet);
-				$highestRow = $objWorksheet->getHighestRow(); 
-				$highestColumn = $objWorksheet->getHighestColumn(); 
-				$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
-				
-				$fieldArray = array();
-				$row = 1;
-				for ($col = 0; $col < $highestColumnIndex; ++$col) {
-					$fieldArray[$col] = strtolower($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
-				}
-				for($row = 2; $row <= $highestRow; ++$row) 
-				{
-					$data = array();
-					for ($col = 0; $col < $highestColumnIndex; ++$col) 
-					{
-						$data[$fieldArray[$col]] = $this->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
-					}
-					if(empty($data[$student_id_col]))
-					{
-						$valid_data_student = false;
-						break;
-					}
-				}
-			}
-			catch(Exception $e)
-			{
+			$validData1 = $this->validData($objWorksheetSource, $sheetNameStudent, $columnNameStudent);
+			$validData2 = $this->validData($objWorksheetSource, $sheetNameTeacher, $columnNameTeacher);		
 
-			}
-
-			try
+			if($useNationalId)
 			{
-				$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName($teacher_sheet);
-				$highestRow = $objWorksheet->getHighestRow(); 
-				$highestColumn = $objWorksheet->getHighestColumn(); 
-				$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
-				
-				$fieldArray = array();
-				$row = 1;
-				for ($col = 0; $col < $highestColumnIndex; ++$col) {
-					$fieldArray[$col] = strtolower($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
-				}
-				for($row = 2; $row <= $highestRow; ++$row) 
-				{
-					$data = array();
-					for ($col = 0; $col < $highestColumnIndex; ++$col) 
-					{
-						$data[$fieldArray[$col]] = $this->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
-					}
-					if(empty($data[$teacher_id_col]))
-					{
-						$valid_data_teacher = false;
-						break;
-					}
-				}
-			}
-			catch(Exception $e)
-			{
-
-			}
-
-			if($use_national_id)
-			{
-				if(!$valid_data_student && !$valid_data_teacher)
+				if(!$validData1 && !$validData2)
 				{
 					$message = "Data siswa dan guru tidak lengkap";
 					$response_code = "05";
 				}
-				else if(!$valid_data_student)
+				else if(!$validData1)
 				{
 					$message = "Data siswa tidak lengkap";
 					$response_code = "05";
 				}
-				else if(!$valid_data_teacher)
+				else if(!$validData2)
 				{
 					$message = "Data guru tidak lengkap";
 					$response_code = "05";
 				}
-				if($valid_data_student && $valid_data_teacher)
+				if($validData1 && $validData2)
 				{
 					$response_code = "00";
 				}
@@ -157,6 +109,43 @@ class ImportExcel{
 			'response_text'=>$message
 		);
 	}
+
+	public function validData($objWorksheetSource, $sheetName, $columnName)
+	{
+		$validData = true;
+		try
+		{
+			$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName($sheetName);
+			$highestRow = $objWorksheet->getHighestRow(); 
+			$highestColumn = $objWorksheet->getHighestColumn(); 
+			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
+			
+			$fieldArray = array();
+			$row = 1;
+			for ($col = 0; $col < $highestColumnIndex; ++$col) {
+				$fieldArray[$col] = strtolower($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
+			}
+			for($row = 2; $row <= $highestRow; ++$row) 
+			{
+				$data = array();
+				for ($col = 0; $col < $highestColumnIndex; ++$col) 
+				{
+					$data[$fieldArray[$col]] = $this->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
+				}
+				if(empty($data[$columnName]))
+				{
+					$validData = false;
+					break;
+				}
+			}
+		}
+		catch(Exception $e)
+		{
+			// Do nothing
+		}
+		return $validData;
+	}
+	
 	public function trimWhitespace($value)
 	{
 		return trim($value, " \r\n\t ");
@@ -238,7 +227,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 					$phone = addslashes($picoEdu->fixPhone(@$data['phone']));
 					$email = addslashes(@$data['email']);
 					$email = $picoEdu->filterEmailAddress($email);
-					$use_national_id = addslashes(@$data['use_national_id']);
+					$useNationalId = addslashes(@$data['use_national_id']);
 					$principal = addslashes(@$data['principal']);
 					$public_private = addslashes(@$data['public_private']);
 					$school_grade = addslashes(@$data['school_grade']);
@@ -259,7 +248,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 					(`school_id`, `school_code`, `token_school`, `name`, `use_national_id`, `school_grade_id`, `public_private`, `principal`, `address`, `phone`, 
 					`email`, `language`, `country_id`, `time_import_first`, `admin_import_first`, `ip_import_first`, 
 					`time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES
-					('$school_id', '$school_code', '$token_school', '$name', '$use_national_id', '$school_grade', '$public_private', '$principal', '$address', '$phone', 
+					('$school_id', '$school_code', '$token_school', '$name', '$useNationalId', '$school_grade', '$public_private', '$principal', '$address', '$phone', 
 					'$email', '$language', '$country_id', '$time_create', '$admin_create', '$ip_create', 
 					'$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', 1);
 					";
@@ -286,7 +275,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 				$sql = "SELECT `school_id` FROM `edu_school` WHERE `name` like '$name_school' ";
 				$stmt = $database->executeQuery($sql);
 				$data_school = $stmt->fetch(PDO::FETCH_ASSOC);
-				$use_national_id = $data_school['use_national_id'];
+				$useNationalId = $data_school['use_national_id'];
 				$school_id = $data_school['school_id'];
 			}
 			
@@ -608,7 +597,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 										continue;
 									}
 									$student_id = null;
-									if($use_national_id && !empty($reg_number_national))
+									if($useNationalId && !empty($reg_number_national))
 									{
 										$student_id = trim($reg_number_national);
 									}
@@ -733,7 +722,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$user_data['language'] = $language;
 								if (!empty($name) && !empty($email)) {
 									$teacher_id = null;
-									if($use_national_id && !empty($reg_number_national))
+									if($useNationalId && !empty($reg_number_national))
 									{
 										$teacher_id = trim($reg_number_national);
 									}

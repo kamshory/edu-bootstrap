@@ -22,7 +22,7 @@ $admin_create = "";
 $admin_edit = "";
 $member_create = "";
 $member_edit = "";
-
+$use_national_id = true;
 if(!empty($adminLoggedIn->admin_id))
 {
 	$admin_create 
@@ -41,4 +41,6 @@ if(!empty($adminLoggedIn->admin_id))
 	$school_name = $adminLoggedIn->school_name . '';
 	$school_code = $adminLoggedIn->school_code . '';
 	$use_token = $adminLoggedIn->use_token . '';
+	$use_national_id = $adminLoggedIn->use_national_id?true:false;
 }
+

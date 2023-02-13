@@ -1,28 +1,28 @@
-﻿var asciimath = {};
+﻿let asciimath = {};
 
 (function() {
-    var mathcolor = ""; // change it to "" (to inherit) or another color
-    var mathfontsize = "1em"; // change to e.g. 1.2em for larger math
-    var mathfontfamily = "serif"; // change to "" to inherit (works in IE) 
+    let mathcolor = ""; // change it to "" (to inherit) or another color
+    let mathfontsize = "1em"; // change to e.g. 1.2em for larger math
+    let mathfontfamily = "serif"; // change to "" to inherit (works in IE) 
     // or another family (e.g. "arial")
-    var automathrecognize = false; // writing "amath" on page makes this true
-    var checkForMathML = true; // check if browser can display MathML
-    var notifyIfNoMathML = true; // display note at top if no MathML capability
-    var alertIfNoMathML = false; // show alert box if no MathML capability
-    var translateOnLoad = true; // set to false to do call translators from js 
-    var translateASCIIMath = true; // false to preserve `..`
-    var displaystyle = true; // puts limits above and below large operators
-    var showasciiformulaonhover = true; // helps students learn ASCIIMath
-    var decimalsign = "."; // change to "," if you like, beware of `(1,2)`!
-    var AMdelimiter1 = "`",
+    let automathrecognize = false; // writing "amath" on page makes this true
+    let checkForMathML = true; // check if browser can display MathML
+    let notifyIfNoMathML = true; // display note at top if no MathML capability
+    let alertIfNoMathML = false; // show alert box if no MathML capability
+    let translateOnLoad = true; // set to false to do call translators from js 
+    let translateASCIIMath = true; // false to preserve `..`
+    let displaystyle = true; // puts limits above and below large operators
+    let showasciiformulaonhover = true; // helps students learn ASCIIMath
+    let decimalsign = "."; // change to "," if you like, beware of `(1,2)`!
+    let AMdelimiter1 = "`",
         AMescape1 = "\\\\`"; // can use other characters
-    var AMdocumentId = "wikitext" // PmWiki element containing math (default=body)
-    var fixphi = true; //false to return to legacy phi/varphi mapping
+    let AMdocumentId = "wikitext" // PmWiki element containing math (default=body)
+    let fixphi = true; //false to return to legacy phi/varphi mapping
 
     /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-    var isIE = (navigator.appName.slice(0, 9) == "Microsoft");
-    var noMathML = false,
+    let isIE = (navigator.appName.slice(0, 9) == "Microsoft");
+    let noMathML = false,
         translated = false;
 
     if (isIE) { // add MathPlayer info to IE webpages
@@ -33,8 +33,8 @@
 
     // Add a stylesheet, replacing any previous custom stylesheet (adapted from TW)
     function setStylesheet(s) {
-        var id = "AMMLcustomStyleSheet";
-        var n = document.getElementById(id);
+        let id = "AMMLcustomStyleSheet";
+        let n = document.getElementById(id);
         if (document.createStyleSheet) {
             // Test for IE's non-standard createStyleSheet method
             if (n)
@@ -57,7 +57,7 @@
     setStylesheet("#AMMLcloseDiv \{font-size:0.8em; padding-top:1em; color:#014\}\n#AMMLwarningBox \{position:absolute; width:100%; top:0; left:0; z-index:200; text-align:center; font-size:1em; font-weight:bold; padding:0.5em 0 0.5em 0; color:#ffc; background:#c30\}");
 
     function init() {
-        var msg, warnings = new Array();
+        let msg, warnings = new Array();
         if (checkForMathML && (msg = checkMathML())) warnings.push(msg);
         if (!noMathML) initSymbols();
         return true;
@@ -69,7 +69,7 @@
             else noMathML = true;
         else if (navigator.appName.slice(0, 9) == "Microsoft")
             try {
-                var ActiveX = new ActiveXObject("MathPlayer.Factory.1");
+                let ActiveX = new ActiveXObject("MathPlayer.Factory.1");
                 noMathML = null;
             } catch (e) {
                 noMathML = true;
@@ -79,7 +79,7 @@
             else noMathML = true;
         //noMathML = true; //uncomment to check
         if (noMathML && notifyIfNoMathML) {
-            var msg = "To view the ASCIIMathML notation use Internet Explorer + MathPlayer or Mozilla Firefox 2.0 or later.";
+            let msg = "To view the ASCIIMathML notation use Internet Explorer + MathPlayer or Mozilla Firefox 2.0 or later.";
             if (alertIfNoMathML)
 			{
                 console.log(msg);
@@ -93,7 +93,7 @@
         else return document.createElementNS("http://www.w3.org/1999/xhtml", t);
     }
 
-    var AMmathml = "http://www.w3.org/1998/Math/MathML";
+    let AMmathml = "http://www.w3.org/1998/Math/MathML";
 
     function AMcreateElementMathML(t) {
         if (isIE) return document.createElement("m:" + t);
@@ -101,15 +101,15 @@
     }
 
     function createMmlNode(t, frag) {
-        var node;
+        let node;
         if (isIE) node = document.createElement("m:" + t);
         else node = document.createElementNS(AMmathml, t);
         if (frag) node.appendChild(frag);
         return node;
     }
     function createRootNode(mi, mn) {
-		var t = 'mroot';
-        var node;
+		let t = 'mroot';
+        let node;
         if (isIE) node = document.createElement("m:" + t);
         else node = document.createElementNS(AMmathml, t);
         if (mi){
@@ -138,16 +138,16 @@
     }
 
     // character lists for Mozilla/Netscape fonts
-    var AMcal = ["\uD835\uDC9C", "\u212C", "\uD835\uDC9E", "\uD835\uDC9F", "\u2130", "\u2131", "\uD835\uDCA2", "\u210B", "\u2110", "\uD835\uDCA5", "\uD835\uDCA6", "\u2112", "\u2133", "\uD835\uDCA9", "\uD835\uDCAA", "\uD835\uDCAB", "\uD835\uDCAC", "\u211B", "\uD835\uDCAE", "\uD835\uDCAF", "\uD835\uDCB0", "\uD835\uDCB1", "\uD835\uDCB2", "\uD835\uDCB3", "\uD835\uDCB4", "\uD835\uDCB5", "\uD835\uDCB6", "\uD835\uDCB7", "\uD835\uDCB8", "\uD835\uDCB9", "\u212F", "\uD835\uDCBB", "\u210A", "\uD835\uDCBD", "\uD835\uDCBE", "\uD835\uDCBF", "\uD835\uDCC0", "\uD835\uDCC1", "\uD835\uDCC2", "\uD835\uDCC3", "\u2134", "\uD835\uDCC5", "\uD835\uDCC6", "\uD835\uDCC7", "\uD835\uDCC8", "\uD835\uDCC9", "\uD835\uDCCA", "\uD835\uDCCB", "\uD835\uDCCC", "\uD835\uDCCD", "\uD835\uDCCE", "\uD835\uDCCF"];
+    let AMcal = ["\uD835\uDC9C", "\u212C", "\uD835\uDC9E", "\uD835\uDC9F", "\u2130", "\u2131", "\uD835\uDCA2", "\u210B", "\u2110", "\uD835\uDCA5", "\uD835\uDCA6", "\u2112", "\u2133", "\uD835\uDCA9", "\uD835\uDCAA", "\uD835\uDCAB", "\uD835\uDCAC", "\u211B", "\uD835\uDCAE", "\uD835\uDCAF", "\uD835\uDCB0", "\uD835\uDCB1", "\uD835\uDCB2", "\uD835\uDCB3", "\uD835\uDCB4", "\uD835\uDCB5", "\uD835\uDCB6", "\uD835\uDCB7", "\uD835\uDCB8", "\uD835\uDCB9", "\u212F", "\uD835\uDCBB", "\u210A", "\uD835\uDCBD", "\uD835\uDCBE", "\uD835\uDCBF", "\uD835\uDCC0", "\uD835\uDCC1", "\uD835\uDCC2", "\uD835\uDCC3", "\u2134", "\uD835\uDCC5", "\uD835\uDCC6", "\uD835\uDCC7", "\uD835\uDCC8", "\uD835\uDCC9", "\uD835\uDCCA", "\uD835\uDCCB", "\uD835\uDCCC", "\uD835\uDCCD", "\uD835\uDCCE", "\uD835\uDCCF"];
 
-    var AMfrk = ["\uD835\uDD04", "\uD835\uDD05", "\u212D", "\uD835\uDD07", "\uD835\uDD08", "\uD835\uDD09", "\uD835\uDD0A", "\u210C", "\u2111", "\uD835\uDD0D", "\uD835\uDD0E", "\uD835\uDD0F", "\uD835\uDD10", "\uD835\uDD11", "\uD835\uDD12", "\uD835\uDD13", "\uD835\uDD14", "\u211C", "\uD835\uDD16", "\uD835\uDD17", "\uD835\uDD18", "\uD835\uDD19", "\uD835\uDD1A", "\uD835\uDD1B", "\uD835\uDD1C", "\u2128", "\uD835\uDD1E", "\uD835\uDD1F", "\uD835\uDD20", "\uD835\uDD21", "\uD835\uDD22", "\uD835\uDD23", "\uD835\uDD24", "\uD835\uDD25", "\uD835\uDD26", "\uD835\uDD27", "\uD835\uDD28", "\uD835\uDD29", "\uD835\uDD2A", "\uD835\uDD2B", "\uD835\uDD2C", "\uD835\uDD2D", "\uD835\uDD2E", "\uD835\uDD2F", "\uD835\uDD30", "\uD835\uDD31", "\uD835\uDD32", "\uD835\uDD33", "\uD835\uDD34", "\uD835\uDD35", "\uD835\uDD36", "\uD835\uDD37"];
+    let AMfrk = ["\uD835\uDD04", "\uD835\uDD05", "\u212D", "\uD835\uDD07", "\uD835\uDD08", "\uD835\uDD09", "\uD835\uDD0A", "\u210C", "\u2111", "\uD835\uDD0D", "\uD835\uDD0E", "\uD835\uDD0F", "\uD835\uDD10", "\uD835\uDD11", "\uD835\uDD12", "\uD835\uDD13", "\uD835\uDD14", "\u211C", "\uD835\uDD16", "\uD835\uDD17", "\uD835\uDD18", "\uD835\uDD19", "\uD835\uDD1A", "\uD835\uDD1B", "\uD835\uDD1C", "\u2128", "\uD835\uDD1E", "\uD835\uDD1F", "\uD835\uDD20", "\uD835\uDD21", "\uD835\uDD22", "\uD835\uDD23", "\uD835\uDD24", "\uD835\uDD25", "\uD835\uDD26", "\uD835\uDD27", "\uD835\uDD28", "\uD835\uDD29", "\uD835\uDD2A", "\uD835\uDD2B", "\uD835\uDD2C", "\uD835\uDD2D", "\uD835\uDD2E", "\uD835\uDD2F", "\uD835\uDD30", "\uD835\uDD31", "\uD835\uDD32", "\uD835\uDD33", "\uD835\uDD34", "\uD835\uDD35", "\uD835\uDD36", "\uD835\uDD37"];
 
-    var AMbbb = ["\uD835\uDD38", "\uD835\uDD39", "\u2102", "\uD835\uDD3B", "\uD835\uDD3C", "\uD835\uDD3D", "\uD835\uDD3E", "\u210D", "\uD835\uDD40", "\uD835\uDD41", "\uD835\uDD42", "\uD835\uDD43", "\uD835\uDD44", "\u2115", "\uD835\uDD46", "\u2119", "\u211A", "\u211D", "\uD835\uDD4A", "\uD835\uDD4B", "\uD835\uDD4C", "\uD835\uDD4D", "\uD835\uDD4E", "\uD835\uDD4F", "\uD835\uDD50", "\u2124", "\uD835\uDD52", "\uD835\uDD53", "\uD835\uDD54", "\uD835\uDD55", "\uD835\uDD56", "\uD835\uDD57", "\uD835\uDD58", "\uD835\uDD59", "\uD835\uDD5A", "\uD835\uDD5B", "\uD835\uDD5C", "\uD835\uDD5D", "\uD835\uDD5E", "\uD835\uDD5F", "\uD835\uDD60", "\uD835\uDD61", "\uD835\uDD62", "\uD835\uDD63", "\uD835\uDD64", "\uD835\uDD65", "\uD835\uDD66", "\uD835\uDD67", "\uD835\uDD68", "\uD835\uDD69", "\uD835\uDD6A", "\uD835\uDD6B"];
-    /*var AMcal = [0xEF35,0x212C,0xEF36,0xEF37,0x2130,0x2131,0xEF38,0x210B,0x2110,0xEF39,0xEF3A,0x2112,0x2133,0xEF3B,0xEF3C,0xEF3D,0xEF3E,0x211B,0xEF3F,0xEF40,0xEF41,0xEF42,0xEF43,0xEF44,0xEF45,0xEF46];
-    var AMfrk = [0xEF5D,0xEF5E,0x212D,0xEF5F,0xEF60,0xEF61,0xEF62,0x210C,0x2111,0xEF63,0xEF64,0xEF65,0xEF66,0xEF67,0xEF68,0xEF69,0xEF6A,0x211C,0xEF6B,0xEF6C,0xEF6D,0xEF6E,0xEF6F,0xEF70,0xEF71,0x2128];
-    var AMbbb = [0xEF8C,0xEF8D,0x2102,0xEF8E,0xEF8F,0xEF90,0xEF91,0x210D,0xEF92,0xEF93,0xEF94,0xEF95,0xEF96,0x2115,0xEF97,0x2119,0x211A,0x211D,0xEF98,0xEF99,0xEF9A,0xEF9B,0xEF9C,0xEF9D,0xEF9E,0x2124];*/
+    let AMbbb = ["\uD835\uDD38", "\uD835\uDD39", "\u2102", "\uD835\uDD3B", "\uD835\uDD3C", "\uD835\uDD3D", "\uD835\uDD3E", "\u210D", "\uD835\uDD40", "\uD835\uDD41", "\uD835\uDD42", "\uD835\uDD43", "\uD835\uDD44", "\u2115", "\uD835\uDD46", "\u2119", "\u211A", "\u211D", "\uD835\uDD4A", "\uD835\uDD4B", "\uD835\uDD4C", "\uD835\uDD4D", "\uD835\uDD4E", "\uD835\uDD4F", "\uD835\uDD50", "\u2124", "\uD835\uDD52", "\uD835\uDD53", "\uD835\uDD54", "\uD835\uDD55", "\uD835\uDD56", "\uD835\uDD57", "\uD835\uDD58", "\uD835\uDD59", "\uD835\uDD5A", "\uD835\uDD5B", "\uD835\uDD5C", "\uD835\uDD5D", "\uD835\uDD5E", "\uD835\uDD5F", "\uD835\uDD60", "\uD835\uDD61", "\uD835\uDD62", "\uD835\uDD63", "\uD835\uDD64", "\uD835\uDD65", "\uD835\uDD66", "\uD835\uDD67", "\uD835\uDD68", "\uD835\uDD69", "\uD835\uDD6A", "\uD835\uDD6B"];
+    /*let AMcal = [0xEF35,0x212C,0xEF36,0xEF37,0x2130,0x2131,0xEF38,0x210B,0x2110,0xEF39,0xEF3A,0x2112,0x2133,0xEF3B,0xEF3C,0xEF3D,0xEF3E,0x211B,0xEF3F,0xEF40,0xEF41,0xEF42,0xEF43,0xEF44,0xEF45,0xEF46];
+    let AMfrk = [0xEF5D,0xEF5E,0x212D,0xEF5F,0xEF60,0xEF61,0xEF62,0x210C,0x2111,0xEF63,0xEF64,0xEF65,0xEF66,0xEF67,0xEF68,0xEF69,0xEF6A,0x211C,0xEF6B,0xEF6C,0xEF6D,0xEF6E,0xEF6F,0xEF70,0xEF71,0x2128];
+    let AMbbb = [0xEF8C,0xEF8D,0x2102,0xEF8E,0xEF8F,0xEF90,0xEF91,0x210D,0xEF92,0xEF93,0xEF94,0xEF95,0xEF96,0x2115,0xEF97,0x2119,0x211A,0x211D,0xEF98,0xEF99,0xEF9A,0xEF9B,0xEF9C,0xEF9D,0xEF9E,0x2124];*/
 
-    var CONST = 0,
+    let CONST = 0,
         UNARY = 1,
         BINARY = 2,
         INFIX = 3,
@@ -164,7 +164,7 @@
         MATRIX = 14,
         UNARYUNDEROVER = 15; // token types
 
-    var AMquote = {
+    let AMquote = {
         input: "\"",
         tag: "mtext",
         output: "mbox",
@@ -172,7 +172,7 @@
         ttype: TEXT
     };
 
-    var AMsymbols = [
+    let AMsymbols = [
         //some greek symbols
         {
             input: "alpha",
@@ -1914,11 +1914,11 @@
         else return -1;
     }
 
-    var AMnames = []; //list of input symbols
+    let AMnames = []; //list of input symbols
 
     function initSymbols() {
-        var i;
-        var symlen = AMsymbols.length;
+        let i;
+        let symlen = AMsymbols.length;
         for (i = 0; i < symlen; i++) {
             if (AMsymbols[i].tex) {
                 AMsymbols.push({
@@ -1934,7 +1934,7 @@
     }
 
     function refreshSymbols() {
-        var i;
+        let i;
         AMsymbols.sort(compareNames);
         for (i = 0; i < AMsymbols.length; i++) AMnames[i] = AMsymbols[i].input;
     }
@@ -1952,11 +1952,11 @@
 
     function AMremoveCharsAndBlanks(str, n) {
         //remove n characters and any following blanks
-        var st;
+        let st;
         if (str.charAt(n) == "\\" && str.charAt(n + 1) != "\\" && str.charAt(n + 1) != " ")
             st = str.slice(n + 1);
         else st = str.slice(n);
-        for (var i = 0; i < st.length && st.charCodeAt(i) <= 32; i = i + 1);
+        for (let i = 0; i < st.length && st.charCodeAt(i) <= 32; i = i + 1);
         return st.slice(i);
     }
 
@@ -1964,7 +1964,7 @@
         // return position >=n where str appears or would be inserted
         // assumes arr is sorted
         if (n == 0) {
-            var h, m;
+            let h, m;
             n = -1;
             h = arr.length;
             while (n + 1 < h) {
@@ -1974,21 +1974,21 @@
             }
             return h;
         } else
-            for (var i = n; i < arr.length && arr[i] < str; i++);
+            for (let i = n; i < arr.length && arr[i] < str; i++);
         return i; // i=arr.length || arr[i]>=str
     }
 
     function AMgetSymbol(str) {
         //return maximal initial substring of str that appears in names
         //return null if there is none
-        var k = 0; //new pos
-        var j = 0; //old pos
-        var mk; //match pos
-        var st;
-        var tagst;
-        var match = "";
-        var more = true;
-        for (var i = 1; i <= str.length && more; i++) {
+        let k = 0; //new pos
+        let j = 0; //old pos
+        let mk; //match pos
+        let st;
+        let tagst;
+        let match = "";
+        let more = true;
+        for (let i = 1; i <= str.length && more; i++) {
             st = str.slice(0, i); //initial substring of length i
             j = k;
             k = position(AMnames, st, j);
@@ -2008,7 +2008,7 @@
         AMcurrentSymbol = CONST;
         k = 1;
         st = str.slice(0, 1);
-        var integ = true;
+        let integ = true;
         while ("0" <= st && st <= "9" && k <= str.length) {
             st = str.slice(k, k + 1);
             k++;
@@ -2051,7 +2051,7 @@
     }
 
     function AMremoveBrackets(node) {
-        var st;
+        let st;
         if (!node.hasChildNodes()) {
             return;
         }
@@ -2077,10 +2077,10 @@
     E ::= IE | I/I                       Expression
     Each terminal symbol is translated into a corresponding mathml node.*/
 
-    var AMnestingDepth, AMpreviousSymbol, AMcurrentSymbol;
+    let AMnestingDepth, AMpreviousSymbol, AMcurrentSymbol;
 
     function AMparseSexpr(str) { //parses str and returns [node,tailstr]
-        var symbol, node, result, i, st, // rightvert = false,
+        let symbol, node, result, i, st, // rightvert = false,
             newFrag = document.createDocumentFragment();
         str = AMremoveCharsAndBlanks(str, 0);
         symbol = AMgetSymbol(str); //either a token or a bracket or empty
@@ -2093,19 +2093,22 @@
         }
 		if(symbol.input == 'sqrt' && str.indexOf('sqrt[') == 0)
 		{
-			var strOri = str;
+			let strOri = str;
 			str = AMremoveCharsAndBlanks(str, symbol.input.length);
 			result = AMparseSexpr(str);
-			var result1str = result[1].toString();
+			let result1str = result[1].toString();
 			
-			var strWithoutInput = strOri.substr(symbol.input.length);
+			let strWithoutInput = strOri.substr(symbol.input.length);
 			
-			var offset = strWithoutInput.indexOf(result1str);
+			let offset = strWithoutInput.indexOf(result1str);
+            let i;
+            let arr;
+            let n;
 			if(offset > 2)
 			{
-				var i = 0;
-				var arr = strWithoutInput.split('');
-				var n = 0;
+				i = 0;
+				arr = strWithoutInput.split('');
+				n = 0;
 				for(i in arr)
 				{
 					if(arr[i] == '[')
@@ -2122,13 +2125,13 @@
 						break;
 					}
 				}
-				var part0 = strWithoutInput.substr(0, i);
-				var nexstr = strWithoutInput.substr(i);
+				let part0 = strWithoutInput.substr(0, i);
+				let nexstr = strWithoutInput.substr(i);
 				
 				
-				var i = 0;
-				var arr = nexstr.split('');
-				var n = 0;
+				i = 0;
+				arr = nexstr.split('');
+				n = 0;
 				for(i in arr)
 				{
 					if(arr[i] == '{')
@@ -2146,26 +2149,26 @@
 					}
 				}
 
-				var part1 = nexstr.substr(0, i);
-				var part2 = nexstr.substr(i);
+				let part1 = nexstr.substr(0, i);
+				let part2 = nexstr.substr(i);
 				
-				var node0 = AMremoveCharsAndBlanks(part0.substr(1, part0.length-2));
-				var node1 = AMremoveCharsAndBlanks(part1.substr(1, part1.length-2));
+				let node0 = AMremoveCharsAndBlanks(part0.substr(1, part0.length-2));
+				let node1 = AMremoveCharsAndBlanks(part1.substr(1, part1.length-2));
 				
 				str = AMremoveCharsAndBlanks(strOri, symbol.input.length-1);
 
                 result = AMparseSexpr(str);
 
-                var result1 = AMparseSexpr(node1);
-                var result2 = AMparseSexpr(node0);
+                let result1 = AMparseSexpr(node1);
+                let result2 = AMparseSexpr(node0);
 				
 				
-				var frag1;
-				var frag2;
-				var frag3;
+				let frag1;
+				let frag2;
+				let frag3;
 				
-				var t;
-				var node;
+				let t;
+				let node;
 				
 				t = 'mi';
 				if (isIE) frag1 = document.createElement("m:" + t);
@@ -2271,8 +2274,8 @@
                             if (result[0].childNodes[i].nodeName == "mi" || result[0].nodeName == "mi") {
                                 st = (result[0].nodeName == "mi" ? result[0].firstChild.nodeValue :
                                     result[0].childNodes[i].firstChild.nodeValue);
-                                var newst = [];
-                                for (var j = 0; j < st.length; j++)
+                                let newst = [];
+                                for (let j = 0; j < st.length; j++)
                                     if (st.charCodeAt(j) > 64 && st.charCodeAt(j) < 91)
                                         newst = newst + symbol.codes[st.charCodeAt(j) - 65];
                                     else if (st.charCodeAt(j) > 96 && st.charCodeAt(j) < 123)
@@ -2295,7 +2298,7 @@
                 if (result[0] == null) return [createMmlNode("mo",
                     document.createTextNode(symbol.input)), str];
                 AMremoveBrackets(result[0]);
-                var result2 = AMparseSexpr(result[1]);
+                let result2 = AMparseSexpr(result[1]);
                 if (result2[0] == null) return [createMmlNode("mo",
                     document.createTextNode(symbol.input)), str];
                 AMremoveBrackets(result2[0]);
@@ -2355,7 +2358,7 @@
     }
 
     function AMparseIexpr(str) {
-        var symbol, sym1, sym2, node, result, underover;
+        let symbol, sym1, sym2, node, result, underover;
         str = AMremoveCharsAndBlanks(str, 0);
         sym1 = AMgetSymbol(str);
         result = AMparseSexpr(str);
@@ -2376,7 +2379,7 @@
                 sym2 = AMgetSymbol(str);
                 if (sym2.input == "^") {
                     str = AMremoveCharsAndBlanks(str, sym2.input.length);
-                    var res2 = AMparseSexpr(str);
+                    let res2 = AMparseSexpr(str);
                     AMremoveBrackets(res2[0]);
                     str = res2[1];
                     node = createMmlNode((underover ? "munderover" : "msubsup"), node);
@@ -2408,7 +2411,7 @@
     }
 
     function AMparseExpr(str, rightbracket) {
-        var symbol, node, result, i,
+        let symbol, node, result, i,
             newFrag = document.createDocumentFragment();
         do {
             str = AMremoveCharsAndBlanks(str, 0);
@@ -2435,21 +2438,21 @@
                 AMnestingDepth == 0) && symbol != null && symbol.output != "");
         if (symbol.ttype == RIGHTBRACKET || symbol.ttype == LEFTRIGHT) {
             //    if (AMnestingDepth > 0) AMnestingDepth--;
-            var len = newFrag.childNodes.length;
+            let len = newFrag.childNodes.length;
             if (len > 0 && newFrag.childNodes[len - 1].nodeName == "mrow" &&
                 newFrag.childNodes[len - 1].lastChild &&
                 newFrag.childNodes[len - 1].lastChild.firstChild) { //matrix
                 //removed to allow row vectors: //&& len>1 && 
                 //newFrag.childNodes[len-2].nodeName == "mo" &&
                 //newFrag.childNodes[len-2].firstChild.nodeValue == ","
-                var right = newFrag.childNodes[len - 1].lastChild.firstChild.nodeValue;
+                let right = newFrag.childNodes[len - 1].lastChild.firstChild.nodeValue;
                 if (right == ")" || right == "]") {
-                    var left = newFrag.childNodes[len - 1].firstChild.firstChild.nodeValue;
+                    let left = newFrag.childNodes[len - 1].firstChild.firstChild.nodeValue;
                     if (left == "(" && right == ")" && symbol.output != "}" ||
                         left == "[" && right == "]") {
-                        var pos = []; // positions of commas
-                        var matrix = true;
-                        var m = newFrag.childNodes.length;
+                        let pos = []; // positions of commas
+                        let matrix = true;
+                        let m = newFrag.childNodes.length;
                         for (i = 0; matrix && i < m; i = i + 2) {
                             pos[i] = [];
                             node = newFrag.childNodes[i];
@@ -2459,14 +2462,14 @@
                                 node.firstChild.firstChild.nodeValue == left &&
                                 node.lastChild.firstChild.nodeValue == right;
                             if (matrix)
-                                for (var j = 0; j < node.childNodes.length; j++)
+                                for (let j = 0; j < node.childNodes.length; j++)
                                     if (node.childNodes[j].firstChild.nodeValue == ",")
                                         pos[i][pos[i].length] = j;
                             if (matrix && i > 1) matrix = pos[i].length == pos[i - 2].length;
                         }
                         matrix = matrix && (pos.length > 1 || pos[0].length > 0);
                         if (matrix) {
-                            var row, frag, n, k, table = document.createDocumentFragment();
+                            let row, frag, n, k, table = document.createDocumentFragment();
                             for (i = 0; i < m; i = i + 2) {
                                 row = document.createDocumentFragment();
                                 frag = document.createDocumentFragment();
@@ -2505,7 +2508,7 @@
     }
 
     function parseMath(str, latex, repair) {
-        var frag, node;
+        let frag, node;
         AMnestingDepth = 0;
 		
 		if(repair)
@@ -2550,10 +2553,10 @@
 		
 		
 		// process matrix
-		var len = str.length;
-		var found;
-		var p1 = 0, p2 = 0, tmp1 = '', tmp2 = '';
-		var arr1 = [], arr2 = [], array3 = [], startPos = [], endPos = [], symbolBefofe = [], symbolAfter = [];
+		let len = str.length;
+		let found;
+		let p1 = 0, p2 = 0, tmp1 = '', tmp2 = '';
+		let arr1 = [], arr2 = [], array3 = [], startPos = [], endPos = [], symbolBefofe = [], symbolAfter = [];
 		do{
 			found = false;
 			p1 = str.indexOf('\\begin{array}', p2);
@@ -2564,7 +2567,7 @@
 				{
 					arr1.push(str.substr(p1, p2+11-p1));
 					arr2.push(str.substr(p1+13, p2-p1-13));
-					var sp, ep;
+					let sp, ep;
 					sp = p1;
 					ep = p2+11;
 					startPos.push(sp);
@@ -2603,7 +2606,7 @@
 		}
 		while(found);
 		
-		var i, j, k, l, m, n, o, q, r, s;
+		let i, j, k, l, m, n, o, q, r, s;
 		if(arr2.length > 0)
 		{
 			for(i in arr2)
@@ -2625,7 +2628,7 @@
 					}
 				}
 				//
-				var objectArr = {
+				let objectArr = {
 				'matrix' : r,
 				'startPos' : startPos[i],
 				'endPos' : endPos[i],
@@ -2640,10 +2643,10 @@
 			{
 				for(i = 0; i< array3.length; i++)
 				{
-					var a = [], b, c;
+					let a = [], b, c;
 					if(array3[i].symbolBefore == '|')
 					{
-						var k, l, m;
+						let k, l, m;
 						for(k = 0; k < array3[i].matrix.length; k++)
 						{
 							l = array3[i].matrix[k];
@@ -2653,7 +2656,7 @@
 					}
 					else if(array3[i].symbolBefore == '[')
 					{
-						var k, l, m;
+						let k, l, m;
 						for(k = 0; k < array3[i].matrix.length; k++)
 						{
 							l = array3[i].matrix[k];
@@ -2663,7 +2666,7 @@
 					}
 					else if(array3[i].symbolBefore == '')
 					{
-						var k, l, m;
+						let k, l, m;
 						for(k = 0; k < array3[i].matrix.length; k++)
 						{
 							l = array3[i].matrix[k];
@@ -2692,15 +2695,18 @@
         node = createMmlNode("math", node);
         if (showasciiformulaonhover) //fixed by djhsu so newline
 		{
-            //node.setAttribute("title", str.replace(/\s+/g, " ")); //does not show in Gecko
+            /**
+             * Commented
+             * node.setAttribute("title", str.replace(/\s+/g, " ")); //does not show in Gecko
+            **/
 		}
         return node;
     }
 
     function strarr2docFrag(arr, linebreaks, latex) {
-        var newFrag = document.createDocumentFragment();
-        var expr = false;
-        for (var i = 0; i < arr.length; i++) 
+        let newFrag = document.createDocumentFragment();
+        let expr = false;
+        for (let i in arr) 
 		{
             if (expr) 
 			{
@@ -2708,9 +2714,9 @@
 			}
             else 
 			{
-                var arri = (linebreaks ? arr[i].split("\n\n") : [arr[i]]);
+                let arri = (linebreaks ? arr[i].split("\n\n") : [arr[i]]);
                 newFrag.appendChild(createElementXHTML("span").appendChild(document.createTextNode(arri[0])));
-                for (var j = 1; j < arri.length; j++) {
+                for (let j = 1; j < arri.length; j++) {
                     newFrag.appendChild(createElementXHTML("p"));
                     newFrag.appendChild(createElementXHTML("span").appendChild(document.createTextNode(arri[j])));
                 }
@@ -2723,18 +2729,18 @@
     function AMautomathrec(str) {
         //formula is a space (or start of str) followed by a maximal sequence of *two* or more tokens, possibly separated by runs of digits and/or space.
         //tokens are single letters (except a, A, I) and ASCIIMathML tokens
-        var texcommand = "\\\\[a-zA-Z]+|\\\\\\s|";
-        var ambigAMtoken = "\\b(?:oo|lim|ln|iiiint|oiiint|iiint|oiint|iint|oint|int|del|grad|aleph|prod|prop|sinh|cosh|tanh|cos|sec|pi|tt|fr|sf|sube|supe|sub|sup|det|mod|gcd|lcm|min|max|vec|ddot|ul|chi|eta|nu|mu)(?![a-z])|";
-        var englishAMtoken = "\\b(?:sum|ox|log|sin|tan|dim|hat|bar|dot)(?![a-z])|";
-        var secondenglishAMtoken = "|\\bI\\b|\\bin\\b|\\btext\\b"; // took if and or not out
-        var simpleAMtoken = "NN|ZZ|QQ|RR|CC|TT|AA|EE|sqrt|dx|dy|dz|dt|xx|vv|uu|nn|bb|cc|csc|cot|alpha|beta|delta|Delta|epsilon|gamma|Gamma|kappa|lambda|Lambda|omega|phi|Phi|Pi|psi|Psi|rho|sigma|Sigma|tau|theta|Theta|xi|Xi|zeta"; // uuu nnn?
-        var letter = "[a-zA-HJ-Z](?=(?:[^a-zA-Z]|$|" + ambigAMtoken + englishAMtoken + simpleAMtoken + "))|";
-        var token = letter + texcommand + "\\d+|[-()[\\]{}+=*&^_%\\\@/<>,\\|!:;'~]|\\.(?!(?:\x20|$))|" + ambigAMtoken + englishAMtoken + simpleAMtoken;
-        var re = new RegExp("(^|\\s)(((" + token + ")\\s?)((" + token + secondenglishAMtoken + ")\\s?)+)([,.?]?(?=\\s|$))", "g");
+        let texcommand = "\\\\[a-zA-Z]+|\\\\\\s|";
+        let ambigAMtoken = "\\b(?:oo|lim|ln|iiiint|oiiint|iiint|oiint|iint|oint|int|del|grad|aleph|prod|prop|sinh|cosh|tanh|cos|sec|pi|tt|fr|sf|sube|supe|sub|sup|det|mod|gcd|lcm|min|max|vec|ddot|ul|chi|eta|nu|mu)(?![a-z])|";
+        let englishAMtoken = "\\b(?:sum|ox|log|sin|tan|dim|hat|bar|dot)(?![a-z])|";
+        let secondenglishAMtoken = "|\\bI\\b|\\bin\\b|\\btext\\b"; // took if and or not out
+        let simpleAMtoken = "NN|ZZ|QQ|RR|CC|TT|AA|EE|sqrt|dx|dy|dz|dt|xx|vv|uu|nn|bb|cc|csc|cot|alpha|beta|delta|Delta|epsilon|gamma|Gamma|kappa|lambda|Lambda|omega|phi|Phi|Pi|psi|Psi|rho|sigma|Sigma|tau|theta|Theta|xi|Xi|zeta"; // uuu nnn?
+        let letter = "[a-zA-HJ-Z](?=(?:[^a-zA-Z]|$|" + ambigAMtoken + englishAMtoken + simpleAMtoken + "))|";
+        let token = letter + texcommand + "\\d+|[-()[\\]{}+=*&^_%\\\@/<>,\\|!:;'~]|\\.(?!(?:\x20|$))|" + ambigAMtoken + englishAMtoken + simpleAMtoken;
+        let re = new RegExp("(^|\\s)(((" + token + ")\\s?)((" + token + secondenglishAMtoken + ")\\s?)+)([,.?]?(?=\\s|$))", "g");
         str = str.replace(re, " `$2`$7");
-        var arr = str.split(AMdelimiter1);
-        var re1 = new RegExp("(^|\\s)([b-zB-HJ-Z+*<>]|" + texcommand + ambigAMtoken + simpleAMtoken + ")(\\s|\\n|$)", "g");
-        var re2 = new RegExp("(^|\\s)([a-z]|" + texcommand + ambigAMtoken + simpleAMtoken + ")([,.])", "g"); // removed |\d+ for now
+        let arr = str.split(AMdelimiter1);
+        let re1 = new RegExp("(^|\\s)([b-zB-HJ-Z+*<>]|" + texcommand + ambigAMtoken + simpleAMtoken + ")(\\s|\\n|$)", "g");
+        let re2 = new RegExp("(^|\\s)([a-z]|" + texcommand + ambigAMtoken + simpleAMtoken + ")([,.])", "g"); // removed |\d+ for now
         for (i = 0; i < arr.length; i++) //single nonenglish tokens
             if (i % 2 == 0) {
                 arr[i] = arr[i].replace(re1, " `$2`$3");
@@ -2752,15 +2758,15 @@
     }
 	function latexToMathML(latexString, latex, repair)
 	{
-		var elem = parseMath(latexString, latex, repair);
+		let elem = parseMath(latexString, latex, repair);
 		elem.setAttribute('xmlns', AMmathml);
 		return elem.outerHTML;
 	}
 	function latexToSVG(latexString, latex, repair)
 	{
-		var elem = parseMath(latexString, latex, repair);
+		let elem = parseMath(latexString, latex, repair);
 		elem.setAttribute('xmlns', AMmathml);
-		var span = document.createElement('span');
+		let span = document.createElement('span');
 		span.setAttribute('id', 'mathml');
 		span.style.fontFamily = 'Times';
 		span.style.fontSize = '16px';
@@ -2772,19 +2778,19 @@
 		span.style.top = '-100000px';
 		span.appendChild(elem);
 		document.body.appendChild(span);
-		var e = elem.getBoundingClientRect();
-		var s = span.getBoundingClientRect();
+		let e = elem.getBoundingClientRect();
+		let s = span.getBoundingClientRect();
 		document.body.removeChild(span);
-		var width = Math.ceil(e.width);
-		var height = Math.ceil(s.height);
+		let width = Math.ceil(e.width);
+		let height = Math.ceil(s.height);
 		
-		var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="'+width+'" height="'+height+'"><foreignObject width="100%" height="100%"><div xmlns="http://www.w3.org/1999/xhtml">'+elem.outerHTML+'</div></foreignObject></svg>';
+		let svg = '<svg xmlns="http://www.w3.org/2000/svg" width="'+width+'" height="'+height+'"><foreignObject width="100%" height="100%"><div xmlns="http://www.w3.org/1999/xhtml">'+elem.outerHTML+'</div></foreignObject></svg>';
 		return svg;
 	}
 
 
-	var map = {9618:32, 8289:32, 12310:40, 12311:41};
-	var sym = {
+	let map = {9618:32, 8289:32, 12310:40, 12311:41};
+	let sym = {
 		'∑':'sum', 
 		'√':'sqrt',
 		'⨌':'iiiint',
@@ -2820,13 +2826,13 @@
 		
 		'⅞':'frac{7}{8}'
 		};
-	var token = 
+	let token = 
 	"iiiint|oiiint|iiint|oiint|iint|oint|int|lim|ln|del|grad|aleph|prod|prop|sinh|cosh|tanh|cos|sec|pi|tt|fr|sf|sube|supe|sub|sup|det|mod|gcd|lcm|min|max|vec|ddot|ul|chi|eta|nu|mu|sum|ox|log|sin|tan|dim|hat|bar|dot";
 	
 			
 	function filterData(data)
 	{
-		var i, j, k, l;
+		let i, j, k, l;
 		
 		
 		for(i in map)
@@ -2836,7 +2842,7 @@
 			l = String.fromCharCode(j);
 			data = data.split(k).join(l);
 		}
-		var arr = token.split("|");
+		let arr = token.split("|");
 		for(i in arr)
 		{
 			data = data.split(arr[i]).join("\\"+arr[i]);
@@ -2883,15 +2889,15 @@
 	}
 	function reconstructVector(input)
 	{
-		var str1 = input;
-		var str2 = '';
-		var i, j, k;
-		var t1, t2, t3, final;
-		var flagCount = 0;
+		let str1 = input;
+		let str2 = '';
+		let i, j, k;
+		let t1, t2, t3, final;
+		let flagCount = 0;
 		
 		if(str1.indexOf(' ⃗') != -1)
 		{
-			var pos1, pos2 = 0, pos3, pos4;
+			let pos1, pos2 = 0, pos3, pos4;
 			do{
 				pos1 = str1.indexOf(' ⃗', pos2);
 				if(pos1 != -1)
@@ -2936,15 +2942,15 @@
 
 	function reconstructMatrix(data)
 	{
-		var i, j, k, l, m, chk;
-		var arr = data.split('');
-		var arr1 = [], arr2 = [], array3 = [];
-		var counting = false;
-		var cnt = 0;
-		var startPos = -1;
-		var endPos = -1;
-		var len = arr.length;
-		var h = 0;
+		let i, j, k, l, m, chk;
+		let arr = data.split('');
+		let arr1 = [], arr2 = [], array3 = [];
+		let counting = false;
+		let cnt = 0;
+		let startPos = -1;
+		let endPos = -1;
+		let len = arr.length;
+		let h = 0;
 		for(i in arr)
 		{
 			if(i < len-2)
@@ -2970,7 +2976,7 @@
 				if(cnt == 0)
 				{
 					endPos = i;
-					var txt = data.substr(startPos, endPos-startPos+2);
+					let txt = data.substr(startPos, endPos-startPos+2);
 					if(startPos > 0)
 					{
 						if(arr[startPos-1] == '[')
@@ -2990,14 +2996,14 @@
 		}
 		for(i in arr1)
 		{
-			var t1 = arr1[i] || '';
+			let t1 = arr1[i] || '';
 			t1 = t1.toString();
-			var t2 = t1.replace(String.fromCharCode(9632), '');
+			let t2 = t1.replace(String.fromCharCode(9632), '');
 			
-			var t3 = t2.substr(0, t2.length);
-			var t4 = t3.split('@').join('),(');
-			var t5 = t4.split('&').join(',');
-			var t6 = '['+t5+']';
+			let t3 = t2.substr(0, t2.length);
+			let t4 = t3.split('@').join('),(');
+			let t5 = t4.split('&').join(',');
+			let t6 = '['+t5+']';
 			if(t6.substr(0, 2) == '[[' && t6.substr(t6.length-2,2) == ']]')
 			{
 				t6 = t6.substr(1, t6.length - 2);
@@ -3007,12 +3013,12 @@
 				t6 = t6.substr(1, t6.length - 2);
 			}
 
-			var test = t6.replace(/[^\(^\)^\[^\]]+/gi, ' ');
+			let test = t6.replace(/[^\(^\)^\[^\]]+/gi, ' ');
 			test = test.trim();
-			var arr_test = test.split(' ');
+			let arr_test = test.split(' ');
 			if(arr_test[0] == '[(' && arr_test[arr_test.length - 1] == '))]')
 			{
-				var test2 = t6.substr(2, t6.length - 5);
+				let test2 = t6.substr(2, t6.length - 5);
 				t6 = '('+test2+'))';
 			}
 
@@ -3022,15 +3028,15 @@
 	}
 	function reconstructSqrtWord(data)
 	{
-		var i, j, k, l, m, chk;
-		var arr = data.split('');
-		var arr1 = [], arr2 = [], array3 = [];
-		var counting = false;
-		var cnt = 0;
-		var startPos = -1;
-		var endPos = -1;
-		var len = arr.length;
-		var h = 0;
+		let i, j, k, l, m, chk;
+		let arr = data.split('');
+		let arr1 = [], arr2 = [], array3 = [];
+		let counting = false;
+		let cnt = 0;
+		let startPos = -1;
+		let endPos = -1;
+		let len = arr.length;
+		let h = 0;
 		for(i in arr)
 		{
 			if(i < len-2)
@@ -3056,7 +3062,7 @@
 				if(cnt == 0)
 				{
 					endPos = i;
-					var txt = data.substr(startPos, endPos-startPos+1);
+					let txt = data.substr(startPos, endPos-startPos+1);
 					if(startPos > 0)
 					{
 						txt = data.substr(startPos-1, endPos-startPos+2);
@@ -3069,20 +3075,20 @@
 		}
 		for(i in arr1)
 		{
-			var t1 = arr1[i] || '';
+			let t1 = arr1[i] || '';
 			t1 = t1.toString();
 			if(t1.indexOf('}{') > 0 || t1.indexOf('&') > 0)
 			{
-				var t2 = t1.replace(String.fromCharCode(8730)+'(', '\\root{');
+				let t2 = t1.replace(String.fromCharCode(8730)+'(', '\\root{');
 			}
 			else
 			{
-				var t2 = t1.replace(String.fromCharCode(8730)+'(', '\\sqrt{');
+				let t2 = t1.replace(String.fromCharCode(8730)+'(', '\\sqrt{');
 			}
-			var t3 = t2.substr(0, t2.length-1);
-			var t5 = t3.split('&').join('}{');
+			let t3 = t2.substr(0, t2.length-1);
+			let t5 = t3.split('&').join('}{');
 
-			var t6 = t5+'}';
+			let t6 = t5+'}';
 
 
 			data = data.replace(t1, t6);

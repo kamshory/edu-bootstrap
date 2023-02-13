@@ -21,6 +21,7 @@ class AdminAuth
 	public $school_name = '';
 	public $school_code = '';
 	public $use_token = 0;
+	public $use_national_id = 0;
 
 	/**
 	 * Constructor of AdminAuth
@@ -34,17 +35,17 @@ class AdminAuth
 		global $picoEdu;
 		if ($username != '') {
 			$sql = "SELECT `edu_admin`.`admin_id`, `edu_admin`.`username`, `edu_admin`.`name`, `edu_admin`.`gender`, 
-		`edu_admin`.`birth_place`, `edu_admin`.`birth_day`, `edu_admin`.`email`, `edu_admin`.`phone`, 
-		`edu_admin`.`country_id`, `edu_admin`.`state_id`, `edu_admin`.`city_id`, `edu_admin`.`school_id`, 
-		`edu_school`.`name` AS `school_name`, `edu_school`.`school_code` AS `school_code`, 
-		`edu_school`.`school_id` AS `real_school_id`, `edu_school`.`use_token`, `edu_admin`.`admin_level`,
-		`edu_school`.`use_token`
-		FROM `edu_admin` 
-		LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_admin`.`school_id`)
-		WHERE `edu_admin`.`username` like '$username' AND `edu_admin`.`password` = md5('$password') 
-		AND `edu_admin`.`active` = true
-		AND `edu_admin`.`blocked` = false
-		";
+			`edu_admin`.`birth_place`, `edu_admin`.`birth_day`, `edu_admin`.`email`, `edu_admin`.`phone`, 
+			`edu_admin`.`country_id`, `edu_admin`.`state_id`, `edu_admin`.`city_id`, `edu_admin`.`school_id`, 
+			`edu_school`.`name` AS `school_name`, `edu_school`.`school_code` AS `school_code`, 
+			`edu_school`.`school_id` AS `real_school_id`, `edu_school`.`use_token`, `edu_admin`.`admin_level`,
+			`edu_school`.`use_token`, `edu_school`.`use_national_id`
+			FROM `edu_admin` 
+			LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_admin`.`school_id`)
+			WHERE `edu_admin`.`username` like '$username' AND `edu_admin`.`password` = md5('$password') 
+			AND `edu_admin`.`active` = true
+			AND `edu_admin`.`blocked` = false
+			";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount()) {
 				$adminLoggedIn = $stmt->fetchObject();
@@ -65,13 +66,13 @@ class AdminAuth
 				$this->school_name = $adminLoggedIn->school_name;
 				$this->school_code = $adminLoggedIn->school_code;
 				$this->use_token = $adminLoggedIn->use_token;
+				$this->use_national_id = $adminLoggedIn->use_national_id;
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
 					$now = $picoEdu->getLocalDateTime();
 					$sql = "UPDATE `edu_admin` SET `ip_last_activity` = '$ip', `time_last_activity` = '$now' WHERE `admin_id` = '" . $this->admin_id . "'";
 					$database->executeUpdate($sql, true);
 				}
-
 			}
 		}
 	}
