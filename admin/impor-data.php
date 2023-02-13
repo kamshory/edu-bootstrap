@@ -75,7 +75,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 					$phone = addslashes($picoEdu->fixPhone(@$data['phone']));
 					$email = addslashes(@$data['email']);
 					$email = $picoEdu->filterEmailAddress($email);
-
+					$use_national_id = addslashes(@$data['use_national_id']);
 					$principal = addslashes(@$data['principal']);
 					$public_private = addslashes(@$data['public_private']);
 					$school_grade = addslashes(@$data['school_grade']);
@@ -93,10 +93,10 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 					$school_id = $database->generateNewId();
 					
 					$sql = "INSERT INTO `edu_school` 
-					(`school_id`, `school_code`, `token_school`, `name`, `school_grade_id`, `public_private`, `principal`, `address`, `phone`, 
+					(`school_id`, `school_code`, `token_school`, `name`, `use_national_id`, `school_grade_id`, `public_private`, `principal`, `address`, `phone`, 
 					`email`, `language`, `country_id`, `time_import_first`, `admin_import_first`, `ip_import_first`, 
 					`time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES
-					('$school_id', '$school_code', '$token_school', '$name', '$school_grade', '$public_private', '$principal', '$address', '$phone', 
+					('$school_id', '$school_code', '$token_school', '$name', '$use_national_id', '$school_grade', '$public_private', '$principal', '$address', '$phone', 
 					'$email', '$language', '$country_id', '$time_create', '$admin_create', '$ip_create', 
 					'$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', 1);
 					";
@@ -123,6 +123,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 				$sql = "SELECT `school_id` FROM `edu_school` WHERE `name` like '$name_school' ";
 				$stmt = $database->executeQuery($sql);
 				$data_school = $stmt->fetch(PDO::FETCH_ASSOC);
+				$use_national_id = $data_school['use_national_id'];
 				$school_id = $data_school['school_id'];
 			}
 			
@@ -445,7 +446,12 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									if ($picoEdu->checkStudent($school_id, $reg_number, $reg_number_national, $name)) {
 										continue;
 									}
-									$chk = $picoEdu->getExistsingUser($user_data);
+									$student_id = null;
+									if($use_national_id && !empty($reg_number_national))
+									{
+										$student_id = trim($reg_number_national);
+									}
+									$chk = $picoEdu->getExistsingUser($user_data, $student_id);
 									$student_id = addslashes($chk['member_id']);
 									$username = addslashes($chk['username']);
 
@@ -565,7 +571,12 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$user_data['country_id'] = $country_id;
 								$user_data['language'] = $language;
 								if (!empty($name) && !empty($email)) {
-									$chk = $picoEdu->getExistsingUser($user_data);
+									$teacher_id = null;
+									if($use_national_id && !empty($reg_number_national))
+									{
+										$teacher_id = trim($reg_number_national);
+									}
+									$chk = $picoEdu->getExistsingUser($user_data, $teacher_id);
 									$teacher_id = addslashes($chk['member_id']);
 									$username = addslashes($chk['username']);
 									if ($picoEdu->checkTeacher($school_id, $reg_number, $reg_number_national, $name)) {

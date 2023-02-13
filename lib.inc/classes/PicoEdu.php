@@ -167,7 +167,7 @@ class PicoEdu //NOSONAR
 		return $email;
 	}
 
-	public function getExistsingUser($user_data)
+	public function getExistsingUser($user_data, $member_id = null)
 	{
 		$now = $this->getLocalDateTime();
 		$ip = $_SERVER['REMOTE_ADDR'];
@@ -213,7 +213,10 @@ class PicoEdu //NOSONAR
 				'email' => $data['email']
 			);
 		} else {
-			$member_id = $this->database->generateNewId();
+			if($member_id == null)
+			{
+				$member_id = $this->database->generateNewId();
+			}
 			$auth = md5($username . $email);
 			$sql = "INSERT INTO `member` 
 			(`member_id`, `name`, `username`, `email`, `gender`, `birth_day`, `password`, `auth`, `language`, `phone`, `country_id`, 

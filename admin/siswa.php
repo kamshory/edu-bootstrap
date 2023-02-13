@@ -89,11 +89,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$country_id = $data['country_id'];
 	$language = $data['language'];
-	
+	$use_national_id = $data['use_national_id'];
+
 	$token_student = md5($school_id.'-'.$reg_number.'-'.time().'-'.mt_rand(111111, 999999));
 	if(empty($email))
 	{
-		$email = $picoEdu->generateAltEmail('edu.planetbiru.com', 'st_'.$reg_number_national, 'st_'.$reg_number.'_'.$school_id, 'ph_'.$country_id.'_'.$phone);
+		$email = $picoEdu->generateAltEmail('local', 'st_'.$reg_number_national, 'st_'.$reg_number, 'ph_'.$phone);
 	}
 	
 	$user_data = array();
@@ -109,7 +110,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 	if(!empty($name) && !empty($email))
 	{
-		$chk = $picoEdu->getExistsingUser($user_data);
+		$student_id = null;
+		if($use_national_id && !empty($reg_number_national))
+		{
+			$student_id = trim($reg_number_national);
+		}
+		$chk = $picoEdu->getExistsingUser($user_data, $student_id);
 		$student_id = addslashes($chk['member_id']);
 		$username = addslashes($chk['username']);
 

@@ -86,8 +86,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$country_id = $data['country_id'];
 	$language = $data['language'];
-
-	$data = array();
+	$use_national_id = $data['use_national_id'];
 
 	$phone = $picoEdu->fixPhone($phone);
 	$email = $picoEdu->filterEmailAddress($email);
@@ -120,7 +119,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$user_data['country_id'] = $country_id;
 		$user_data['language'] = $language;
 		if (!empty($name) && !empty($email)) {
-			$chk = $picoEdu->getExistsingUser($user_data);
+			$teacher_id = null;
+			if($use_national_id && !empty($reg_number_national))
+			{
+				$teacher_id = trim($reg_number_national);
+			}
+			$chk = $picoEdu->getExistsingUser($user_data, $teacher_id);
 			$teacher_id = addslashes($chk['member_id']);
 			$username = addslashes($chk['username']);
 			if ($picoEdu->checkTeacher($school_id, $reg_number, $reg_number_national, $name)) {
