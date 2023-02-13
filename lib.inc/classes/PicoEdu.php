@@ -169,6 +169,7 @@ class PicoEdu //NOSONAR
 
 	public function getExistsingUser($user_data, $member_id = null)
 	{
+
 		$now = $this->getLocalDateTime();
 		$ip = $_SERVER['REMOTE_ADDR'];
 
@@ -197,9 +198,19 @@ class PicoEdu //NOSONAR
 			}
 		}
 		$username = addslashes($username);
+		$filter = "";
+		if($member_id == null || empty($member_id))
+		{
+			$member_id = $this->database->generateNewId();
+			$filter = " AND `member_id` LIKE '$member_id' ";
+		}
+		else
+		{
+			$filter = " AND `name` LIKE '$name' AND `birth_day` LIKE '$birth_day' ";
+		}
 		$sql = "SELECT `member`.* 
 			FROM `member` 
-			WHERE `name` like '$name' AND `birth_day` like '$birth_day' 
+			WHERE (1=1) $filter
 			";
 		
 		$stmt = $this->database->executeQuery($sql);
@@ -213,10 +224,6 @@ class PicoEdu //NOSONAR
 				'email' => $data['email']
 			);
 		} else {
-			if($member_id == null)
-			{
-				$member_id = $this->database->generateNewId();
-			}
 			$auth = md5($username . $email);
 			$sql = "INSERT INTO `member` 
 			(`member_id`, `name`, `username`, `email`, `gender`, `birth_day`, `password`, `auth`, `language`, `phone`, `country_id`, 
@@ -242,7 +249,7 @@ class PicoEdu //NOSONAR
 		if ($username != '') {
 			$sql = "SELECT `member_id`, `email`, `username`
 			FROM `member`
-			WHERE `username` like '$username'
+			WHERE `username` LIKE '$username'
 			";
 			$stmt = $this->database->executeQuery($sql);
 			if($stmt->rowCount() == 0)
@@ -567,7 +574,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT * FROM `edu_student` 
 		WHERE `school_id` = '$school_id' 
-		AND (`reg_number` like '$reg_number' AND `reg_number` != '') ";
+		AND (`reg_number` LIKE '$reg_number' AND `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
 		return $stmt->rowCount() > 0;
 	}
@@ -575,7 +582,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT * FROM `edu_teacher` 
 		WHERE `school_id` = '$school_id' 
-		AND (`reg_number` like '$reg_number' AND `reg_number` != '') ";
+		AND (`reg_number` LIKE '$reg_number' AND `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
 		return $stmt->rowCount() > 0;
 	}
@@ -912,7 +919,7 @@ class PicoEdu //NOSONAR
 
 		$sql = "SELECT `edu_school_program`.`school_program_id` 
 		FROM `edu_school_program`
-		WHERE `edu_school_program`.`name` like '$school_program'
+		WHERE `edu_school_program`.`name` LIKE '$school_program'
 		AND `edu_school_program`.`school_id` = '$school_id'
 		LIMIT 0, 1 ";
 
@@ -947,7 +954,7 @@ class PicoEdu //NOSONAR
 
 		$sql = "SELECT `edu_class`.`class_id` 
 		FROM `edu_class`
-		WHERE `edu_class`.`name` like '$class'
+		WHERE `edu_class`.`name` LIKE '$class'
 		AND `edu_class`.`school_id` = '$school_id'
 		LIMIT 0, 1 ";
 
