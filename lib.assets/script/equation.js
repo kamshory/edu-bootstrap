@@ -140,6 +140,11 @@ function insertEquation(includeLatex)
 	}
 }
 
+/**
+ * Convert SVG document to PNG without resize it
+ * @param {string} svgData String of SVG document
+ * @param {function} onloadCallback Callback function when process has been finished
+ */
 function svgToPNG(svgData, onloadCallback)
 {
 	var DOMURL = window.URL || window.webkitURL || window;	
