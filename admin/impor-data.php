@@ -5,6 +5,164 @@ if(!@$admin_id)
 	require_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
+
+/**
+ * Import data preprocessor
+ */
+class ImportExcel{
+
+	/**
+	 * Validate imported data
+	 * @param \PHPExcel $objWorksheetSource Worksheet
+	 * @param string $school_sheet Sheet name for scholl
+	 * @param string $student_sheet Sheet name for student
+	 * @param string $student_id_col Lower case of column name name student ID
+	 * @param string $teacher_sheet Sheet name for teacher
+	 * @param string $teacher_id_col Lower case of column name name teacher ID
+	 * @return array Contain response_code and response_text
+	 */
+	public function validate($objWorksheetSource, $school_sheet, $student_sheet, $student_id_col, $teacher_sheet, $teacher_id_col)
+	{
+		$use_national_id = false;
+		$valid_data_student = true;
+		$valid_data_teacher = true;
+		try
+		{
+			$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName($school_sheet);
+			$highestRow = $objWorksheet->getHighestRow(); 
+			$highestColumn = $objWorksheet->getHighestColumn(); 
+			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
+			
+			$fieldArray = array();
+			$row = 1;
+			for ($col = 0; $col < $highestColumnIndex; ++$col) {
+				$fieldArray[$col] = strtolower($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
+			}
+			for($row = 2; $row <= $highestRow; ++$row) 
+			{
+				$data = array();
+				for ($col = 0; $col < $highestColumnIndex; ++$col) 
+				{
+					$data[$fieldArray[$col]] = $this->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
+				}
+				if(strtolower($data['use_national_id']) == 'y' 
+					|| strtolower($data['use_national_id']) == 'yes'
+					|| strtolower($data['use_national_id']) == 'ya'
+					|| strtolower($data['use_national_id']) == 'true'
+					)
+				{
+					$use_national_id = true;
+					break;
+				}
+			}
+		}
+		catch(Exception $e)
+		{
+
+		}
+
+		$message = "Sukses";
+		$response_code = "00";
+
+		if($use_national_id)
+		{
+			try
+			{
+				$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName($student_sheet);
+				$highestRow = $objWorksheet->getHighestRow(); 
+				$highestColumn = $objWorksheet->getHighestColumn(); 
+				$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
+				
+				$fieldArray = array();
+				$row = 1;
+				for ($col = 0; $col < $highestColumnIndex; ++$col) {
+					$fieldArray[$col] = strtolower($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
+				}
+				for($row = 2; $row <= $highestRow; ++$row) 
+				{
+					$data = array();
+					for ($col = 0; $col < $highestColumnIndex; ++$col) 
+					{
+						$data[$fieldArray[$col]] = $this->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
+					}
+					if(empty($data[$student_id_col]))
+					{
+						$valid_data_student = false;
+						break;
+					}
+				}
+			}
+			catch(Exception $e)
+			{
+
+			}
+
+			try
+			{
+				$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName($teacher_sheet);
+				$highestRow = $objWorksheet->getHighestRow(); 
+				$highestColumn = $objWorksheet->getHighestColumn(); 
+				$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
+				
+				$fieldArray = array();
+				$row = 1;
+				for ($col = 0; $col < $highestColumnIndex; ++$col) {
+					$fieldArray[$col] = strtolower($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
+				}
+				for($row = 2; $row <= $highestRow; ++$row) 
+				{
+					$data = array();
+					for ($col = 0; $col < $highestColumnIndex; ++$col) 
+					{
+						$data[$fieldArray[$col]] = $this->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
+					}
+					if(empty($data[$teacher_id_col]))
+					{
+						$valid_data_teacher = false;
+						break;
+					}
+				}
+			}
+			catch(Exception $e)
+			{
+
+			}
+
+			if($use_national_id)
+			{
+				if(!$valid_data_student && !$valid_data_teacher)
+				{
+					$message = "Data siswa dan guru tidak lengkap";
+					$response_code = "05";
+				}
+				else if(!$valid_data_student)
+				{
+					$message = "Data siswa tidak lengkap";
+					$response_code = "05";
+				}
+				else if(!$valid_data_teacher)
+				{
+					$message = "Data guru tidak lengkap";
+					$response_code = "05";
+				}
+				if($valid_data_student && $valid_data_teacher)
+				{
+					$response_code = "00";
+				}
+			}
+			
+		}
+		return array(
+			'response_code'=>$response_code,
+			'response_text'=>$message
+		);
+	}
+	public function trimWhitespace($value)
+	{
+		return trim($value, " \r\n\t ");
+	}
+}
+
 if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 { 
 	$country_id = 'ID';
@@ -40,9 +198,14 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 			
 			// import data school
 			// mulai
-			$objWorksheet = PHPExcel_IOFactory::load($path);
+			$objWorksheetSource = PHPExcel_IOFactory::load($path);
+
+			$importExcel = new ImportExcel();
+
+			$response = $importExcel->validate($objWorksheetSource, 'SCHOOL', 'STUDENT', 'reg_number_national', 'TEACHER', 'reg_number_national');
+
 			try{
-				$objWorksheet = $objWorksheet->setActiveSheetIndexByName('SCHOOL');
+				$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName('SCHOOL');
 				$highestRow = $objWorksheet->getHighestRow(); 
 				$highestColumn = $objWorksheet->getHighestColumn(); 
 				$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
@@ -149,8 +312,6 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 				$sql = "SELECT * FROM `member` WHERE `member_id` = '$admin_id' ";
 				$stmt2 = $database->executeQuery($sql);
 
-
-
 				if ($stmt2->rowCount() == 0) {
 					$sqlInsert = $picoEdu->generateCreateMmeberFromAdmin($admin_id);
 					$stmt2 = $database->executeInsert($sqlInsert, true);
@@ -209,7 +370,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 						// mulai
 						$objWorksheet = PHPExcel_IOFactory::load($path);
 						try {
-							$objWorksheet = $objWorksheet->setActiveSheetIndexByName('ADMIN');
+							$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName('ADMIN');
 							$highestRow = $objWorksheet->getHighestRow();
 							$highestColumn = $objWorksheet->getHighestColumn();
 							$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
@@ -299,7 +460,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 						// mulai
 						$objWorksheet = PHPExcel_IOFactory::load($path);
 						try {
-							$objWorksheet = $objWorksheet->setActiveSheetIndexByName('CLASS');
+							$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName('CLASS');
 							$highestRow = $objWorksheet->getHighestRow();
 							$highestColumn = $objWorksheet->getHighestColumn();
 							$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
@@ -379,7 +540,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 						$objWorksheet = PHPExcel_IOFactory::load($path);
 						try {
-							$objWorksheet = $objWorksheet->setActiveSheetIndexByName('STUDENT');
+							$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName('STUDENT');
 							$highestRow = $objWorksheet->getHighestRow();
 							$highestColumn = $objWorksheet->getHighestColumn();
 							$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
@@ -511,7 +672,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 						// mulai
 						$objWorksheet = PHPExcel_IOFactory::load($path);
 						try {
-							$objWorksheet = $objWorksheet->setActiveSheetIndexByName('TEACHER');
+							$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName('TEACHER');
 							$highestRow = $objWorksheet->getHighestRow();
 							$highestColumn = $objWorksheet->getHighestColumn();
 							$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
