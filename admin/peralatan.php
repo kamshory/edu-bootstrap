@@ -1,7 +1,7 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 
-if(!@$admin_id)
+if(empty($admin_id))
 {
 require_once dirname(__FILE__)."/login-form.php";
 exit();
