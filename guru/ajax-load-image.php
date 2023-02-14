@@ -25,7 +25,12 @@ if($stmt->rowCount() > 0)
 		while (($file = readdir($dh)) !== false){
 			$arr = explode(".", $file);
 			$filename = "media.edu/school/".$school_id."/test/".$test_id."/".$file;
-			if(strtolower(end($arr)) == 'jpg' || strtolower(end($arr)) == 'jpeg' || strtolower(end($arr)) == 'png' || strtolower(end($arr)) == 'gif')
+			if(strtolower(end($arr)) == 'jpg' 
+			|| strtolower(end($arr)) == 'jpeg' 
+			|| strtolower(end($arr)) == 'png' 
+			|| strtolower(end($arr)) == 'gif'
+			|| strtolower(end($arr)) == 'svg'
+			)
 			{
 				?>
                 <div class="img-li"><a href="<?php echo $filename;?>" title="<?php echo basename($filename);?>" data-name="<?php echo basename($filename);?>"><img alt="" src="<?php echo $filename;?>" /></a></div>

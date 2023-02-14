@@ -165,7 +165,7 @@ class PicoEdu //NOSONAR
 		}
 		return $phone;
 	}
-	
+
 	public function generateAltEmail($server, $alt1, $alt2, $alt3)
 	{
 		$email = "";
@@ -320,6 +320,7 @@ class PicoEdu //NOSONAR
 		global $cfg;
 		return number_format($bilangan, $cfg->dec_precision, $cfg->dec_separator, $cfg->dec_thousands_separator);
 	}
+	
 	public function secondsToTime($seconds)
 	{
 		// extract hours
