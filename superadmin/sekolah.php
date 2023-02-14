@@ -80,7 +80,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	";
 	$database->executeUpdate($sql2, true);
 
-	$sql = "UPDATE `edu_school` set
+	$sql = "UPDATE `edu_school` SET
 	`school_code` = '$school_code', `name` = '$name', `school_grade_id` = '$school_grade_id', `public_private` = '$public_private', 
 	`open` = '$open', `principal` = '$principal', `address` = '$address', `phone` = '$phone', `email` = '$email', `country_id` = '$country_id',
 	`use_token` = '$use_token'

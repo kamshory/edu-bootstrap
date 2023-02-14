@@ -769,7 +769,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 						} catch (Exception $e) {
 							// Do nothing
 						}
-						$sql3 = "UPDATE `edu_school` set
+						$sql3 = "UPDATE `edu_school` SET
 						`time_import_last` = '$time_edit',
 						`admin_import_last` = '$admin_edit',
 						`ip_import_last` = '$ip_edit'

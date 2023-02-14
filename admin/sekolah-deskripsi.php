@@ -28,7 +28,7 @@ if(isset($_POST['save']))
 	$admin_create = $admin_edit = $adminLoggedIn->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	
-	$sql = "UPDATE `edu_school` set
+	$sql = "UPDATE `edu_school` SET
 	`description` = '$description'
 	WHERE `school_id` = '$school_id'
 	";

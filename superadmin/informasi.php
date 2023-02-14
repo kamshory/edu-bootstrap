@@ -93,7 +93,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 			$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 			$content = addslashes(UTF8ToEntities($content));
 
-			$sql = "UPDATE `edu_info` set
+			$sql = "UPDATE `edu_info` SET
 			`content` = '$content'
 			WHERE `info_id` = '$info_id'
 			";
@@ -118,7 +118,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
 		$content = addslashes(UTF8ToEntities($content));
 
-		$sql = "UPDATE `edu_info` set
+		$sql = "UPDATE `edu_info` SET
 		`name` = '$name', `content` = '$content', 
 		`time_edit` = '$time', `admin_edit` = '$admin_id', `ip_edit` =  '$ip', `active` = '$active'
 		WHERE `info_id` = '$info_id'

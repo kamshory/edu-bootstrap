@@ -19,10 +19,12 @@ class FileSynchronizer
 	 * Rolling name
 	 */
 	public string $prefix = 'pool_';
+
 	/**
 	 * File extenstion
 	 */
 	public string $extension = '.txt';
+
 	/**
 	 * Maximum file size
 	 */
@@ -63,10 +65,15 @@ class FileSynchronizer
 		$this->useRelativePath = $useRelativePath;
 	}
 
+	/**
+	 * Set flag use relative path
+	 * @param bool $useRelativePath use relative path
+	 */
 	public function setUseRelativePath($useRelativePath)
     {
         $this->useRelativePath = $useRelativePath;
     }
+	
 	/**
 	 * Generate 20 bytes unique ID
 	 * @return string 20 bytes
@@ -351,5 +358,4 @@ class FileSynchronizer
 		}
 		return $ret;
 	}
-
 }

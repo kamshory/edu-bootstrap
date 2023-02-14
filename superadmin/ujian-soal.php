@@ -638,9 +638,9 @@ foreach($rows as $data)
 	$sql2 = "SELECT `edu_option`.*,
 	(SELECT COUNT(DISTINCT `edu_answer`.`answer_id`) 
 		FROM `edu_answer` 
-		WHERE `edu_answer`.`answer` like concat('%,',`edu_option`.`option_id`,']%')
+		WHERE `edu_answer`.`answer` LIKE concat('%,',`edu_option`.`option_id`,']%')
 		GROUP BY `edu_answer`.`test_id`
-		limit 0,1
+		LIMIT 0, 1
 		) AS `pilih`
 	FROM `edu_option`
 	WHERE `edu_option`.`question_id` = '$question_id' ";

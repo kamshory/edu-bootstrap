@@ -14,15 +14,13 @@ if(isset($_POST['save']) && count(@$_POST))
 	$name = preg_replace("/[^A-Za-z\.\-\d_]/i", " ", $name); //NOSONAR
 	$name = trim($name, " ._- ");
 	$name = preg_replace('/(\s)+/', ' ', $name);
-	$name = trim($name, " ._- ");
-	
+	$name = trim($name, " ._- ");	
 	
 	$school_code = strtolower($name);
 	$school_code = preg_replace("/[^a-z\-\d]/i","-",$school_code);
 	$school_code = str_replace("---", "-", $school_code);
 	$school_code = str_replace("--", "-", $school_code);
 	$school_code = str_replace("--", "-", $school_code);
-	
 	$school_code = addslashes($school_code);
 
 	$school_grade_id = kh_filter_input(INPUT_POST, "school_grade_id", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -41,22 +39,21 @@ if(isset($_POST['save']) && count(@$_POST))
 	$prevent_resign = kh_filter_input(INPUT_POST, "prevent_resign", FILTER_SANITIZE_NUMBER_UINT);
 	$use_token = kh_filter_input(INPUT_POST, "use_token", FILTER_SANITIZE_NUMBER_UINT);
 
-
 	$sql1 = "UPDATE `edu_student` SET `prevent_change_school` = '$prevent_change_school', `prevent_resign` = '$prevent_resign'
 	WHERE `school_id` = '$school_id' 
 	";
-	$database->executeUpdate($sql1);
+	$database->executeUpdate($sql1, true);
 
 	$sql2 = "UPDATE `edu_school` SET `prevent_change_school` = '$prevent_change_school', `prevent_resign` = '$prevent_resign'
 	WHERE `school_id` = '$school_id' 
 	";
-	$database->exeexecuteUpdatecute($sql2);
+	$database->executeUpdate($sql2, true);
 
 	$time_create = $time_edit = $picoEdu->getLocalDateTime();
 	$admin_create = $admin_edit = $adminLoggedIn->admin_id;
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	
-	$sql = "UPDATE `edu_school` set
+	$sql = "UPDATE `edu_school` SET
 	`school_code` = '$school_code', `name` = '$name', `school_grade_id` = '$school_grade_id', `public_private` = '$public_private', 
 	`open` = '$open', `principal` = '$principal', `address` = '$address', `phone` = '$phone', `email` = '$email', `country_id` = '$country_id',
 	`use_token` = '$use_token'
@@ -66,7 +63,8 @@ if(isset($_POST['save']) && count(@$_POST))
 	$sql = "UPDATE `edu_school` SET `state_id` = state_name_to_id('$state_id', `country_id`) WHERE `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	
-	$sql = "UPDATE `edu_school` SET `city_id` = city_name_to_id('$city_id', `state_id`, `country_id`) WHERE `school_id` = '$school_id' ";
+	$sql = "UPDATE `edu_school` SET 
+	`city_id` = city_name_to_id('$city_id', `state_id`, `country_id`) WHERE `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF']));
 		
@@ -74,11 +72,15 @@ if(isset($_POST['save']) && count(@$_POST))
 
 if(isset($_POST['set_active']) && isset($_POST['school_id']))
 {
-	$picoEdu->changerecordstatus('active', $_POST['school_id'], "edu_school", 'school_id', 1);
+	$school_id = addslashes($_POST['school_id']);
+	$sql = "UPDATE `edu_school` SET `active` = true WHERE `school_id` = '$school_id'  ";
+	$database->executeUpdate($sql, true);
 }
 if(isset($_POST['set_inactive']) && isset($_POST['school_id']))
 {
-	$picoEdu->changerecordstatus('active', $_POST['school_id'], "edu_school", 'school_id', 0);
+	$school_id = addslashes($_POST['school_id']);
+	$sql = "UPDATE `edu_school` SET `active` = false WHERE `school_id` = '$school_id'  ";
+	$database->executeUpdate($sql, true);
 }
 
 
@@ -110,8 +112,6 @@ AND (`city`.`state_id` = '".$data['state_id']."' OR `city`.`state_id` = '' OR `c
 $stmt = $database->executeQuery($sql);
 $city_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
-
 ?>
 <script type="text/javascript">
 var state_list = <?php echo json_encode($state_list);?>;
@@ -127,7 +127,7 @@ function onChangeCountry()
 		dataType:"json",
 		data:{country_id:country_id},
 		success: function(data){
-			$('#state_id').replaceWith('<select name="state_id" id="state_id" required="required" data-full-width="true"></select>');
+			$('#state_id').replaceWith('<select class="form-control" name="state_id" id="state_id" required="required"></select>');
 			$('#state_id').empty();
 			var html = '';
 			html += '<option value="">'+'Pilih Provinsi'+'</option>';
@@ -146,7 +146,7 @@ function onChangeCountry()
 		dataType:"json",
 		data:{country_id:country_id},
 		success: function(data){
-			$('#city_id').replaceWith('<select name="city_id" id="city_id" required="required" data-full-width="true"></select>');
+			$('#city_id').replaceWith('<select class="form-control" name="city_id" id="city_id" required="required"></select>');
 			$('#city_id').empty();
 			var html = '';
 			html += '<option value="">'+'Pilih Kabupaten/Kota'+'</option>';
@@ -170,7 +170,7 @@ $(document).ready(function(e) {
 		{
 			if(confirm('Apakah Anda akan mengubah jenis masukan?'))
 			{
-				$(this).replaceWith('<input type="text" name="state_id" id="state_id" required="required" data-full-width="true">');
+				$(this).replaceWith('<input class="form-control" type="text" name="state_id" id="state_id" required="required">');
 				$('#state_id').select();
 			}
 		}
@@ -182,9 +182,9 @@ $(document).ready(function(e) {
 				url:'../lib.ajax/ajax-load-city-list.php',
 				type:'GET',
 				dataType:"json",
-				data:{state_name:state_name, country_id:country_id},
+				data:{state_id:state_name, country_id:country_id},
 				success: function(data){
-					$('#city_id').replaceWith('<select name="city_id" id="city_id" required="required" data-full-width="true"></select>');
+					$('#city_id').replaceWith('<select class="form-control" name="city_id" id="city_id" required="required"></select>');
 					$('#city_id').empty();
 					var html = '';
 					html += '<option value="">'+'Pilih Kabupaten/Kota'+'</option>';
@@ -205,7 +205,7 @@ $(document).ready(function(e) {
 		{
 			if(confirm('Apakah Anda akan mengubah jenis masukan?'))
 			{
-				$(this).replaceWith('<input type="text" name="city_id" id="city_id" required="required" data-full-width="true">');
+				$(this).replaceWith('<input class="form-control" type="text" name="city_id" id="city_id" required="required">');
 				$('#city_id').select();
 			}
 		}
@@ -226,12 +226,12 @@ $(document).ready(function(e) {
 		<td>Jenjang</td>
 		<td><select class="form-control input-select" name="school_grade_id" id="school_grade_id">
 		<option value=""></option>
-		<option value="1"<?php if($data['school_grade_id'] == '1') echo PicoConst::SELECT_OPTION_SELECTED;?>>Play Group</option>
-		<option value="2"<?php if($data['school_grade_id'] == '2') echo PicoConst::SELECT_OPTION_SELECTED;?>>Taman Kanak-Kanak</option>
-		<option value="3"<?php if($data['school_grade_id'] == '3') echo PicoConst::SELECT_OPTION_SELECTED;?>>Sekolah Dasar</option>
-		<option value="4"<?php if($data['school_grade_id'] == '4') echo PicoConst::SELECT_OPTION_SELECTED;?>>Sekolah Menengah Pertama</option>
-		<option value="5"<?php if($data['school_grade_id'] == '5') echo PicoConst::SELECT_OPTION_SELECTED;?>>Sekolah Menengah Atas</option>
-		<option value="6"<?php if($data['school_grade_id'] == '6') echo PicoConst::SELECT_OPTION_SELECTED;?>>Perguruan Tinggi</option>
+		<option value="1"<?php echo $picoEdu->trueFalse($data['school_grade_id'] == '1', PicoConst::SELECT_OPTION_SELECTED, '');?>>Play Group</option>
+		<option value="2"<?php echo $picoEdu->trueFalse($data['school_grade_id'] == '2', PicoConst::SELECT_OPTION_SELECTED, '');?>>Taman Kanak-Kanak</option>
+		<option value="3"<?php echo $picoEdu->trueFalse($data['school_grade_id'] == '3', PicoConst::SELECT_OPTION_SELECTED, '');?>>Sekolah Dasar</option>
+		<option value="4"<?php echo $picoEdu->trueFalse($data['school_grade_id'] == '4', PicoConst::SELECT_OPTION_SELECTED, '');?>>Sekolah Menengah Pertama</option>
+		<option value="5"<?php echo $picoEdu->trueFalse($data['school_grade_id'] == '5', PicoConst::SELECT_OPTION_SELECTED, '');?>>Sekolah Menengah Atas</option>
+		<option value="6"<?php echo $picoEdu->trueFalse($data['school_grade_id'] == '6', PicoConst::SELECT_OPTION_SELECTED, '');?>>Perguruan Tinggi</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -276,7 +276,7 @@ $(document).ready(function(e) {
 		<tr>
 		<td>Bahasa
 		</td><td>
-        <select class="form-control" name="language" id="language" data-full-width="true">
+        <select class="form-control" name="language" id="language">
 			<option value="en">English</option>
 			<option value="id">Bahasa Indonesia</option>
         </select>
@@ -287,19 +287,27 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="country_id" id="country_id">
 		<option value=""></option>
 		<?php
-        $sql = "SELECT * FROM `country` WHERE `active` = true ORDER BY `sort_order` ASC
+        $sql2 = "SELECT * FROM `country` WHERE `active` = true ORDER BY `sort_order` ASC
 		";
-		$stmt = $database->executeQuery($sql);
-		if ($stmt->rowCount() > 0) {
-
-			$rows2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
-			foreach($rows2 as $data2) {
-				?>
-            <option data-code="<?php echo $data2['phone_code']; ?>" value="<?php echo $data2['country_id']; ?>"<?php if ($data2['country_id'] == $data['country_id'])
-					echo PicoConst::SELECT_OPTION_SELECTED; ?>><?php echo $data2['name']; ?></option>
-            <?php
-			}
-		}
+		echo $picoEdu->createFilterDb(
+			$sql2,
+			array(
+				'attributeList'=>array(
+					array('attribute'=>'value', 'source'=>'country_id')
+				),
+				'selectCondition'=>array(
+					'source'=>'country_id',
+					'value'=>$data['country_id']
+				),
+				'caption'=>array(
+					'delimiter'=>PicoEdu::RAQUO,
+					'values'=>array(
+						'name'
+					)
+				)
+			)
+		);
+		
 		?>
 		</select></td>
 		</tr>
@@ -308,7 +316,10 @@ $(document).ready(function(e) {
 		</td><td><select class="form-control input-select" name="state_id" id="state_id">
 		<option value="">- Pilih Provinsi -</option>
 			<?php
-            $sql2 = "SELECT * FROM `state` WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' ORDER BY `type` ASC, `name` ASC
+            $sql2 = "SELECT * FROM `state` 
+			WHERE `active` = true AND `verify` = '1' AND `country_id` = '$data[country_id]' 
+			ORDER BY `type` ASC, `name` ASC
+			
             ";
 			echo $picoEdu->createFilterDb(
 				$sql2,
@@ -318,7 +329,7 @@ $(document).ready(function(e) {
 					),
 					'selectCondition'=>array(
 						'source'=>'state_id',
-						'value'=>$state_id
+						'value'=>$data['state_id']
 					),
 					'caption'=>array(
 						'delimiter'=>PicoEdu::RAQUO,
@@ -331,7 +342,7 @@ $(document).ready(function(e) {
             
 			
             ?>
-            <!--<option value="--">- Tambah Provinsi -</option>-->
+            <option value="--">- Tambah Provinsi -</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -349,7 +360,7 @@ $(document).ready(function(e) {
 					),
 					'selectCondition'=>array(
 						'source'=>'city_id',
-						'value'=>$city_id
+						'value'=>$data['city_id']
 					),
 					'caption'=>array(
 						'delimiter'=>PicoEdu::RAQUO,
@@ -361,7 +372,7 @@ $(document).ready(function(e) {
 			);
             
             ?>
-		<!--<option value="--">- Tambah Kabupaten/Kota -</option>-->
+		<option value="--">- Tambah Kabupaten/Kota -</option>
 		</select></td>
 		</tr>
 		<tr>

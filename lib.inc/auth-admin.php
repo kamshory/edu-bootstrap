@@ -13,6 +13,7 @@ if(isset($_SESSION['admin_password']))
 {
 	$password = $_SESSION['admin_password'];
 }
+
 $adminLoggedIn = new \AdminAuth($database, $username, $password, false);
 $admin_id = "";
 $school_id = "";
@@ -23,6 +24,7 @@ $admin_edit = "";
 $member_create = "";
 $member_edit = "";
 $use_national_id = true;
+
 if(!empty($adminLoggedIn->admin_id))
 {
 	$admin_create 

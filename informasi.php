@@ -206,7 +206,7 @@ $sql = "SELECT `edu_info`.*
 FROM `edu_info` 
 WHERE `edu_info`.`active` = true $sql_filter_info 
 ORDER BY `edu_info`.`info_id` DESC
-limit 0,20
+LIMIT 0, 20
 ";
 }
 $stmt = $database->executeQuery($sql);

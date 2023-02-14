@@ -257,7 +257,7 @@ if(empty($question_package))
 		$sql = "SELECT `question_id` , rand() AS `rand`
 		FROM `edu_question` WHERE `test_id` = '$test'
 		ORDER BY `rand` ASC
-		limit 0, $number_of_question
+		LIMIT 0, $number_of_question
 		";
 	}
 	else
@@ -265,12 +265,12 @@ if(empty($question_package))
 		$sql = "SELECT `question_id` , `sort_order`
 		FROM `edu_question` WHERE `test_id` = '$test'
 		ORDER BY `sort_order` ASC, `question_id` ASC
-		limit 0, $number_of_question
+		LIMIT 0, $number_of_question
 		";
 	}
 	$stmt = $database->executeQuery($sql);
 	$arr = array();
-						$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	foreach($rows as $dt)
 	{
 		$arr[] = $dt['question_id'];
