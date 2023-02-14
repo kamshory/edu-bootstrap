@@ -25,7 +25,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 	{
 		$start = kh_filter_input(INPUT_POST, "start", FILTER_SANITIZE_STRING_NEW);
 	}
-	$end = $picoEdu->getLocalDateTime();
+	$end = $database->getLocalDateTime();
 	
 	$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' ";
 
@@ -119,7 +119,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 		(`school_id`, `test_id`, `student_id`, `start`, `end`, `answer`, `true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) VALUES
 		('$school_id', '$test_id', '$student_id', '$start', '$end', '$answer_str', '$true', '$false', '$score', '$penalty', '$final_score', '$percent', '1') ";
 		$database->execute($sql);
-		$picoEdu->logoutTest($school_id, $student_id, $test_id, session_id(), $picoEdu->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
+		$picoEdu->logoutTest($school_id, $student_id, $test_id, session_id(), $database->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
 		include_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		?>
         <div class="info">Jawaban berhasil dikirim.</div>
@@ -146,7 +146,7 @@ $sql_filter .= "
 	)
 ";
 
-$now = $picoEdu->getLocalDateTime();
+$now = $database->getLocalDateTime();
 
 $sql = "SELECT `edu_test`.*  
 FROM `edu_test` 
@@ -248,7 +248,7 @@ if(empty($question_package))
 	$duration = $data['duration'];
 	$question_per_page = $data['question_per_page'];
 	$due_time = time()+$duration;
-	$_SESSION['session_test'][$student_id][$test]['start'] = $picoEdu->getLocalDateTime();
+	$_SESSION['session_test'][$student_id][$test]['start'] = $database->getLocalDateTime();
 	$_SESSION['session_test'][$student_id][$test]['due_time'] = $due_time;
 	$alert_message = $data['alert_message'];
 	
@@ -277,7 +277,7 @@ if(empty($question_package))
 	}
 	$question_package = $str = '['.implode('][', $arr).']';
 	$_SESSION['session_test'][$student_id][$test]['soal'] = $str;
-	$picoEdu->loginTest($school_id, $student_id, $test, session_id(), $picoEdu->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
+	$picoEdu->loginTest($school_id, $student_id, $test, session_id(), $database->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
 }
 
 if(isset($_SESSION['session_test'][$student_id][$test]))

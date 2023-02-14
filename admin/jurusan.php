@@ -24,8 +24,8 @@ if(count(@$_POST))
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
 	$sort_order = kh_filter_input(INPUT_POST, "sort_order", FILTER_SANITIZE_NUMBER_INT);
 	$default = kh_filter_input(INPUT_POST, "default", FILTER_SANITIZE_NUMBER_UINT);
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
-	$admin_create = $admin_edit = $adminLoggedIn->admin_id;
+	$time_create = $time_edit = $database->getLocalDateTime();
+	
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 }

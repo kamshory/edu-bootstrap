@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+if(!isset($cfg))
+{
+  exit();
+}
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>

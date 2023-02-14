@@ -52,7 +52,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$available_from = kh_filter_input(INPUT_POST, "available_from", FILTER_SANITIZE_STRING_NEW);
 	$available_to = kh_filter_input(INPUT_POST, "available_to", FILTER_SANITIZE_STRING_NEW);
 
-	$time_edit = $picoEdu->getLocalDateTime();
+	$time_edit = $database->getLocalDateTime();
 
 	$time_answer_publication = $picoEdu->fixInputTimeSQL($time_answer_publication);
 	$available_from = $picoEdu->fixInputTimeSQL($available_from);

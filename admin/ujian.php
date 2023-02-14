@@ -57,7 +57,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$available_from = kh_filter_input(INPUT_POST, "available_from", FILTER_SANITIZE_STRING_NEW);
 	$available_to = kh_filter_input(INPUT_POST, "available_to", FILTER_SANITIZE_STRING_NEW);
 
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	
 	$role_create = $role_edit = 'A';
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
@@ -167,7 +167,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$selection = kh_filter_input(INPUT_POST, "selection", FILTER_SANITIZE_STRING_NEW);
 		$selection_index = json_decode($selection);
 		require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-		$time_create = $time_edit = $picoEdu->getLocalDateTime();		
+		$time_create = $time_edit = $database->getLocalDateTime();		
 		
 		$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$collection' AND `active` = true ";
 		$stmt = $database->executeQuery($sql);

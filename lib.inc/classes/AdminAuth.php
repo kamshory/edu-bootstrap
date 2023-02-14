@@ -32,7 +32,6 @@ class AdminAuth
 	 */
 	public function __construct($database, $username, $password, $createlog = false)
 	{
-		global $picoEdu;
 		if ($username != '') {
 			$sql = "SELECT `edu_admin`.`admin_id`, `edu_admin`.`username`, `edu_admin`.`name`, `edu_admin`.`gender`, 
 			`edu_admin`.`birth_place`, `edu_admin`.`birth_day`, `edu_admin`.`email`, `edu_admin`.`phone`, 
@@ -69,7 +68,7 @@ class AdminAuth
 				$this->use_national_id = $adminLoggedIn->use_national_id;
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
-					$now = $picoEdu->getLocalDateTime();
+					$now = $database->getLocalDateTime();
 					$sql = "UPDATE `edu_admin` SET `ip_last_activity` = '$ip', `time_last_activity` = '$now' WHERE `admin_id` = '" . $this->admin_id . "'";
 					$database->executeUpdate($sql, true);
 				}

@@ -9,7 +9,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 $pageTitle = "Soal Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-$time_create = $time_edit = $picoEdu->getLocalDateTime();
+$time_create = $time_edit = $database->getLocalDateTime();
 
 
 if(@$_GET['option'] == 'delete')
@@ -45,8 +45,8 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
-		$time_create = $picoEdu->getLocalDateTime();
-		$time_edit = $picoEdu->getLocalDateTime();
+		$time_create = $database->getLocalDateTime();
+		$time_edit = $database->getLocalDateTime();
 	
 		$random = ((int) $data['random']);
 		$sort_order = ((int) $data['sort_order']);

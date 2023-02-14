@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+if(!isset($cfg))
+{
+  exit();
+}
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -56,9 +61,8 @@
   <div class="container-fluid">
     <div class="row">
       <?php
-	  require_once dirname(__FILE__) . '/menu.php';
-      $phpSelf = basename($_SERVER['PHP_SELF']);
-	  
+	    require_once dirname(__FILE__) . '/menu.php';
+      $phpSelf = basename($_SERVER['PHP_SELF']); 
       ?>
 
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
@@ -91,5 +95,4 @@
             </button>
           </div>
         </div>
-
 

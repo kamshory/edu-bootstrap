@@ -19,7 +19,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
-		$waktu = $picoEdu->getLocalDateTime();
+		$waktu = $database->getLocalDateTime();
 		$ip = addslashes($_SERVER['REMOTE_ADDR']);
 		$sessions_id = $data['sessions_id'];
 		$sql = "DELETE FROM `sessions` WHERE `id` = '$sessions_id' ";
@@ -39,7 +39,7 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
-		$waktu = $picoEdu->getLocalDateTime();
+		$waktu = $database->getLocalDateTime();
 		$ip = addslashes($_SERVER['REMOTE_ADDR']);
 		$sessions_id = $data['sessions_id'];
 		$siswa_id = $data['siswa_id'];

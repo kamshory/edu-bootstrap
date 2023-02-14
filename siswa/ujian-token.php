@@ -12,7 +12,7 @@ $test_id = 0;
 if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 {
 	$token = addslashes(@$_SESSION['vtoken']);
-	$now = $picoEdu->getLocalDateTime();
+	$now = $database->getLocalDateTime();
 	$sql = "SELECT `edu_token`.* , `edu_test`.*
 	FROM `edu_token`
 	INNER JOIN (`edu_test`) ON (`edu_test`.`test_id` = `edu_token`.`test_id`)
@@ -66,7 +66,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 				$duration = $data['duration'];
 				$question_per_page = $data['question_per_page'];
 				$due_time = time()+$duration;
-				$_SESSION['session_test'][$auth_student_id][$test_id]['start'] = $picoEdu->getLocalDateTime();
+				$_SESSION['session_test'][$auth_student_id][$test_id]['start'] = $database->getLocalDateTime();
 				$_SESSION['session_test'][$auth_student_id][$test_id]['due_time'] = $due_time;
 				$alert_message = $data['alert_message'];
 				
@@ -96,7 +96,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 				}
 				$question_package = $str = '['.implode('][', $arr).']';
 				$_SESSION['session_test'][$auth_student_id][$test_id]['soal'] = $str;
-				$picoEdu->loginTest($school_id, $auth_student_id, $test_id, session_id(), $picoEdu->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
+				$picoEdu->loginTest($school_id, $auth_student_id, $test_id, session_id(), $database->getLocalDateTime(), addslashes($_SERVER['REMOTE_ADDR']));
 
 				$sql = "UPDATE `edu_token` SET `active` = false 
 				WHERE `edu_token`.`student_id` = '$auth_student_id' AND `edu_token`.`token` = '$token' ";
@@ -126,7 +126,7 @@ else if(isset($_POST['token']))
 	$token = kh_filter_input(INPUT_POST, "token", FILTER_SANITIZE_NUMBER_UINT);
 	if($token != 0)
 	{
-		$now = $picoEdu->getLocalDateTime();
+		$now = $database->getLocalDateTime();
 		$sql = "SELECT * FROM `edu_token`
 		WHERE `student_id` = '$auth_student_id'
 		AND `token` = '$token' AND `active` = true AND `time_expire` > '$now'
@@ -144,7 +144,7 @@ else if(isset($_POST['token']))
 		else
 		{
 			$token_valid = 0;
-			if(!$picoEdu->logInvalidLogin($auth_student_id, 'T', $picoEdu->getLocalDateTime(), $cfg->max_invalid_signin_time, $cfg->max_invalid_signin_count))
+			if(!$picoEdu->logInvalidLogin($auth_student_id, 'T', $database->getLocalDateTime(), $cfg->max_invalid_signin_time, $cfg->max_invalid_signin_count))
 			{
 				$account_blocked = 1;
 				$sql = "UPDATE `edu_student` SET `blocked` = true WHERE `student_id` = '$auth_student_id' ";

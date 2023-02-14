@@ -9,7 +9,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 $pageTitle = "Paket Soal";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-$time_create = $time_edit = $picoEdu->getLocalDateTime();
+$time_create = $time_edit = $database->getLocalDateTime();
 
 
 if(@$_GET['option'] == 'export')

@@ -19,8 +19,8 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 		";
 		$stmt = $database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
-			$time_create = $picoEdu->getLocalDateTime();
-			$time_edit = $picoEdu->getLocalDateTime();
+			$time_create = $database->getLocalDateTime();
+			$time_edit = $database->getLocalDateTime();
 			
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			$random = ((int) $data['random']);

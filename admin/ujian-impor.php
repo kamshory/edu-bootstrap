@@ -19,7 +19,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file']))
 {
 	// sesuai dengan login masing-masning
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();	
+	$time_create = $time_edit = $database->getLocalDateTime();	
 	//
 	
 	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);

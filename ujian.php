@@ -16,7 +16,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 
 	$member_id = @$member_id . '';
 	$student_id = $member_id;
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$admin_create = $admin_edit = $member_id;
 	$ip_create = $ip_edit = addslashes($_SERVER['REMOTE_ADDR']);
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
@@ -127,7 +127,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 	else
 	{
 		$student_id = $member_id;
-		$time_create = $time_edit = $picoEdu->getLocalDateTime();
+		$time_create = $time_edit = $database->getLocalDateTime();
 		$admin_create = $admin_edit = $member_id;
 		$ip_create = $ip_edit = addslashes($_SERVER['REMOTE_ADDR']);
 		$sql = "SELECT `edu_test`.*, `edu_test`.`name` AS `test_name`, 

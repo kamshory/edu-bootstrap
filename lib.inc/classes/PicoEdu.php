@@ -766,11 +766,6 @@ class PicoEdu //NOSONAR
 		return '';
 	}
 
-	public function getLocalDateTime()
-	{
-		return date('Y-m-d H:i:s');
-	}
-
 	public static function arrayToObject($inputArray) {
 		if (!is_array($inputArray)) 
 		{
@@ -1127,7 +1122,7 @@ class PicoEdu //NOSONAR
 			$sql = "INSERT INTO `edu_subject` 
 			(`subject_id`, `name`, `sort_order`) VALUES
 			('$subject_id', '$subject', 0)";
-			$stmt = $this->database->executeInsert($sql, true);
+			$this->database->executeInsert($sql, true);
 		}
 	}
 

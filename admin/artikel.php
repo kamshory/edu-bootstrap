@@ -29,7 +29,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	$class = kh_filter_input(INPUT_POST, "class", FILTER_SANITIZE_STRING_NEW);
 	
 	$active = 0;
-	$time = $picoEdu->getLocalDateTime();
+	$time = $database->getLocalDateTime();
 	$ip = $_SERVER['REMOTE_ADDR'];
 	
 	if(isset($_POST['publish']))

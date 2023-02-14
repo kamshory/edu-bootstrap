@@ -156,7 +156,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 { 
 	$country_id = 'ID';
 	$admin_id = $adminLoggedIn->admin_id;
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$admin_create = $admin_edit = $admin_id;
 	/** Include PHPExcel_IOFactory */
@@ -391,7 +391,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									continue;
 								}
 
-								$time_create = $time_edit = $picoEdu->getLocalDateTime();
+								$time_create = $time_edit = $database->getLocalDateTime();
 								$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 								$admin_create = $admin_edit = $admin_id;
 
@@ -476,7 +476,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 								$token_class = md5($school_id . '-' . $name . '-' . time() . '-' . mt_rand(111111, 999999));
 
-								$time_create = $time_edit = $picoEdu->getLocalDateTime();
+								$time_create = $time_edit = $database->getLocalDateTime();
 								$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 								$admin_create = $admin_edit = $admin_id;
 								if (empty($name)) {
@@ -563,7 +563,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 								$token_student = md5($school_id . '-' . $reg_number . '-' . time() . '-' . mt_rand(111111, 999999));
 
-								$time_create = $time_edit = $picoEdu->getLocalDateTime();
+								$time_create = $time_edit = $database->getLocalDateTime();
 								$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 								$admin_create = $admin_edit = $admin_id;
 

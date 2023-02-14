@@ -13,7 +13,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	$selection = kh_filter_input(INPUT_POST, "selection", FILTER_SANITIZE_STRING_NEW);
 	$selection_index = json_decode($selection);
 	
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();		
+	$time_create = $time_edit = $database->getLocalDateTime();		
 	
 	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$collection' AND `active` = true ";
 	$stmt = $database->executeQuery($sql);

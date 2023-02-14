@@ -13,7 +13,7 @@ if(!empty(@$auth_student_id) && !empty(@$auth_school_id))
 if(@$_GET['option'] == 'answer' && isset($_GET['answer_id']))
 {
 $answer_id = kh_filter_input(INPUT_GET, "answer_id", FILTER_SANITIZE_STRING_NEW);
-$now = $picoEdu->getLocalDateTime();
+$now = $database->getLocalDateTime();
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 $sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, 

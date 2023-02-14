@@ -6,25 +6,42 @@ class PicoDatabaseServer
 	private $host = 'localhost';
 	private $port = 3306;
 	
+	/**
+	 * Constructor
+	 * @param string $driver Driver
+	 * @param string $host Server host
+	 * @param int $port Server port
+	 */
 	public function __construct($driver, $host, $port)
 	{
 		$this->driver = $driver;
 		$this->host = $host;
 		$this->port = $port;
 	}
+
+	/**
+	 * Get driver
+	 */
 	public function getDriver()
 	{
 		return $this->driver;
 	}
+
+	/**
+	 * Get server host
+	 */
 	public function getHost()
 	{
 		return $this->host;
 	}
+
+	/**
+	 * Get server port
+	 */
 	public function getPort()
 	{
 		return $this->port;
 	}
-	
 }
 
 class PicoDatabaseSyncConfig
@@ -375,15 +392,15 @@ class PicoDatabase
 
 	/**
 	 * Get system variable
-	 * @param string $variable_name Variable name
-	 * @param mixed $default_value Default value
+	 * @param string $variableName Variable name
+	 * @param mixed $defaultValue Default value
 	 * @return mixed System variable value of return default value if not exists
 	 */
-	public function getSystemVariable($variable_name, $default_value = null)
+	public function getSystemVariable($variableName, $defaultValue = null)
 	{
-		$variable_name = addslashes($variable_name);
+		$variableName = addslashes($variableName);
 		$sql = "SELECT * FROM `edu_system_variable` 
-		WHERE `system_variable_id` = '$variable_name' ";
+		WHERE `system_variable_id` = '$variableName' ";
 		$data = $this->executeQuery($sql)->fetch(PDO::FETCH_ASSOC);
 		if(isset($data) && is_array($data) && !empty($data))
 		{
@@ -391,37 +408,45 @@ class PicoDatabase
 		}
 		else
 		{
-			return $default_value;
+			return $defaultValue;
 		}
 	}
 
 	/**
 	 * Set system variable
-	 * @param string $variable_name Variable name
+	 * @param string $variableName Variable name
 	 * @param mixed $value Value to be set
 	 */
-	public function setSystemVariable($variable_name, $value)
+	public function setSystemVariable($variableName, $value)
 	{
-		$current_time = date('Y-m-d H:i:s');
-		$variable_name = addslashes($variable_name);
+		$currentTime = date('Y-m-d H:i:s');
+		$variableName = addslashes($variableName);
 		$value = addslashes($value);
 		$sql = "SELECT * FROM `edu_system_variable` 
-		WHERE `system_variable_id` = '$variable_name' ";
+		WHERE `system_variable_id` = '$variableName' ";
 		if($this->executeQuery($sql)->rowCount() > 0)
 		{
 			$sql = "UPDATE `edu_system_variable` 
-			SET `system_value` = '$value', `time_edit` = '$current_time' 
-			WHERE `system_variable_id` = '$variable_name' ";
+			SET `system_value` = '$value', `time_edit` = '$currentTime' 
+			WHERE `system_variable_id` = '$variableName' ";
 			$this->executeUpdate($sql, false);
 		}
 		else
 		{
 			$sql = "INSERT INTO `edu_system_variable` 
 			(`system_variable_id`, `system_value`, `time_create`, `time_edit`) VALUES
-			('$variable_name', '$value', '$current_time' , '$current_time')
+			('$variableName', '$value', '$currentTime' , '$currentTime')
 			";
 			$this->executeInsert($sql, false);
 		}
+	}
+
+	/**
+	 * Get local time
+	 */
+	public function getLocalDateTime()
+	{
+		return date('Y-m-d H:i:s');
 	}
 }
 

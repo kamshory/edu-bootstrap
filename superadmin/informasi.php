@@ -59,7 +59,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	}
 	
 	$active = 0;
-	$time = $picoEdu->getLocalDateTime();
+	$time = $database->getLocalDateTime();
 	$ip = $_SERVER['REMOTE_ADDR'];
 	
 	if(isset($_POST['publish']))

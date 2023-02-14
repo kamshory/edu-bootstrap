@@ -45,7 +45,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$prevent_change_school = kh_filter_input(INPUT_POST, "prevent_change_school", FILTER_SANITIZE_NUMBER_UINT);
 	$prevent_resign = kh_filter_input(INPUT_POST, "prevent_resign", FILTER_SANITIZE_NUMBER_UINT);
 	$use_token = kh_filter_input(INPUT_POST, "use_token", FILTER_SANITIZE_NUMBER_UINT);
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 

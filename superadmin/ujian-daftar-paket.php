@@ -163,7 +163,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 		}
 
 
-		$time_create = $time_edit = $picoEdu->getLocalDateTime();
+		$time_create = $time_edit = $database->getLocalDateTime();
 		$ip_create = $ip_edit = addslashes($_SERVER['REMOTE_ADDR']);
 		$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 	
@@ -188,7 +188,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$test_collection_id = kh_filter_input(INPUT_POST, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
 	$grade_id = kh_filter_input(INPUT_POST, "grade_id", FILTER_SANITIZE_NUMBER_INT);
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$ip_create = $ip_edit = addslashes($_SERVER['REMOTE_ADDR']);
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 
