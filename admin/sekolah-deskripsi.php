@@ -12,15 +12,15 @@ if(isset($_POST['save']))
 {
 	$description = kh_filter_input(INPUT_POST, "description");
 	
-	$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/description";
+	$school_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/description";
 	$base_src = "media.edu/school/$school_id/description";
 
 	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/description";
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
-	$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+	$fileSync->prepareDirectory($school_dir, $dirBase, $permission, true);
 
-	$description = extractImageData($description, $base_dir, $base_src, $fileSync);
+	$description = extractImageData($description, $school_dir, $base_src, $fileSync);
 	
 	$description = addslashes(UTF8ToEntities($description));
 	

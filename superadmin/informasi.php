@@ -76,21 +76,26 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$stmt = $database->executeInsert($sql, true);
 		if ($stmt->rowCount() > 0) {
 
-			$base_dir = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
+			$info_dir = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
 			$base_src = "media.edu/info/$info_id";
 
-			if (!file_exists($base_dir = dirname(dirname(__FILE__)) . "/media.edu")) {
+			$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
+			$dirBase = dirname(dirname(__FILE__));
+			$permission = 0755;
+			$fileSync->prepareDirectory($info_dir, $dirBase, $permission, true);
+
+			if (!file_exists($info_dir = dirname(dirname(__FILE__)) . "/media.edu")) {
 				mkdir(dirname(dirname(__FILE__)) . "/media.edu", 0755);
 			}
-			if (!file_exists($base_dir = dirname(dirname(__FILE__)) . "/media.edu/info")) {
+			if (!file_exists($info_dir = dirname(dirname(__FILE__)) . "/media.edu/info")) {
 				mkdir(dirname(dirname(__FILE__)) . "/media.edu/info", 0755);
 			}
-			if (!file_exists($base_dir = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id")) {
+			if (!file_exists($info_dir = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id")) {
 				mkdir(dirname(dirname(__FILE__)) . "/media.edu/info/$info_id", 0755);
 			}
 
 			$content = kh_filter_input(INPUT_POST, "content");
-			$content = extractImageData($content, $base_dir, $base_src, $fileSync);
+			$content = extractImageData($content, $info_dir, $base_src, $fileSync);
 			$content = addslashes(UTF8ToEntities($content));
 
 			$sql = "UPDATE `edu_info` SET
@@ -106,16 +111,16 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	{
 		$info_id = kh_filter_input(INPUT_POST, "info_id");
 		
-		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
+		$info_dir = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
 		$base_src = "media.edu/info/$info_id";
 
 		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
 		$dirBase = dirname(dirname(__FILE__));
 		$permission = 0755;
-		$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+		$fileSync->prepareDirectory($info_dir, $dirBase, $permission, true);
 		
 		$content = kh_filter_input(INPUT_POST, "content");
-		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
+		$content = extractImageData($content, $info_dir, $base_src, $fileSync);
 		$content = addslashes(UTF8ToEntities($content));
 
 		$sql = "UPDATE `edu_info` SET

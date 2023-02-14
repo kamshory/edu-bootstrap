@@ -10,10 +10,10 @@ $pageTitle = "Daftar Paket";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 {
-	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
+	$collection_dir = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
-	$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+	$fileSync->prepareDirectory($collection_dir, $dirBase, $permission, true);
 
 	$test_id = $_POST['test_collection_id'];
 	foreach($test_id as $key=>$val)
@@ -85,10 +85,10 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 {
 	$test_id = $_POST['test_collection_id'];
-	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
+	$collection_dir = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
-	$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+	$fileSync->prepareDirectory($collection_dir, $dirBase, $permission, true);
 
 	foreach($test_id as $key=>$val)
 	{
@@ -115,10 +115,10 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 {
-	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
+	$collection_dir = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
-	$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+	$fileSync->prepareDirectory($collection_dir, $dirBase, $permission, true);
 
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
 	$grade_id = kh_filter_input(INPUT_POST, "grade_id", FILTER_SANITIZE_NUMBER_INT);
@@ -180,10 +180,10 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
+	$collection_dir = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
-	$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+	$fileSync->prepareDirectory($collection_dir, $dirBase, $permission, true);
 
 	$test_collection_id = kh_filter_input(INPUT_POST, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);

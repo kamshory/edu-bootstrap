@@ -29,11 +29,11 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 			$raw_txt_data = kh_filter_input(INPUT_POST, "question_text", FILTER_DEFAULT);
 			$clear_data = parseRawQuestion($raw_txt_data);
 			
-			$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+			$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 			$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 			$dirBase = dirname(dirname(__FILE__));
 			$permission = 0755;
-			$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+			$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 
 			$base_src = "media.edu/school/$school_id/test/$test_id";
 			$database->executeTransaction("start transaction", true);
@@ -41,7 +41,7 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 			foreach ($clear_data as $question_no => $question) {
 				$object = parseQuestion($question);
 				if (isset($object['question']) && isset($object['numbering']) && isset($object['option'])) {
-					$content = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $base_dir, $base_src)))));
+					$content = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $test_dir, $base_src)))));
 
 
 					$content = $picoEdu->brToNewLineEncoded($content);
@@ -69,7 +69,7 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 					{
 						if (@is_array($object['option']) && count($object['option'])) {
 							foreach ($object['option'] as $option_no => $option) {
-								$content_option = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src)))));								
+								$content_option = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $test_dir, $base_src)))));								
 								$content_option = $picoEdu->brToNewLineEncoded($content_option);
 								$content_option = addslashes($content_option);
 								$order_option = $option_no + 1;

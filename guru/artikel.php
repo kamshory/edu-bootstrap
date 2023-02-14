@@ -39,15 +39,15 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$stmt = $database->executeInsert($sql, true);
 		if ($stmt->rowCount() > 0) {
 
-			$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
+			$article_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
 			$base_src = "media.edu/school/$school_id/article/$article_id";
 
 			$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
 			$dirBase = dirname(dirname(__FILE__));
 			$permission = 0755;
-			$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+			$fileSync->prepareDirectory($article_dir, $dirBase, $permission, true);
 
-			$content = extractImageData($content, $base_dir, $base_src, $fileSync);
+			$content = extractImageData($content, $article_dir, $base_src, $fileSync);
 			$content = addslashes($content);
 			$sql = "UPDATE `edu_article` SET `content` = '$content' WHERE `article_id` = '$article_id' ";
 			$database->executeUpdate($sql, true);
@@ -59,15 +59,15 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	{
 		$article_id = kh_filter_input(INPUT_POST, "article_id", FILTER_SANITIZE_STRING_NEW);
 
-		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
+		$article_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
 		$base_src = "media.edu/school/$school_id/article/$article_id";
 
 		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
 		$dirBase = dirname(dirname(__FILE__));
 		$permission = 0755;
-		$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+		$fileSync->prepareDirectory($article_dir, $dirBase, $permission, true);
 
-		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
+		$content = extractImageData($content, $article_dir, $base_src, $fileSync);
 		$content = addslashes($content);
 		$sql = "UPDATE `edu_article` SET
 		`title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 

@@ -170,7 +170,7 @@ class PicoDatabase
 
 	/**
 	 * Summary of __construct
-	 * @param PicoDatabaseServer $databaseServer
+	 * @param \PicoDatabaseServer $databaseServer
 	 * @param string $username
 	 * @param string $password
 	 * @param string $databaseName

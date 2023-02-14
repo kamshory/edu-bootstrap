@@ -19,7 +19,7 @@ if($stmt->rowCount() > 0)
 	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
-	$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+	$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 
 	if($dh = opendir($test_dir))
 	{

@@ -55,11 +55,11 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$clear_data = parseRawQuestion($xml_data);
 
 		
-		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+		$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 		$dirBase = dirname(dirname(__FILE__));
 		$permission = 0755;
-		$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+		$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 		
 		$base_src = "media.edu/school/$school_id/test/$test_id";
 		$database->executeTransaction("start transaction", true);
@@ -70,7 +70,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 			$object = parseQuestion($question);
 			if(isset($object['question']) && isset($object['numbering']) && isset($object['option']))
 			{
-				$content = addslashes(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $base_dir, $base_src)))));
+				$content = addslashes(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $test_dir, $base_src)))));
 				$content = $picoEdu->brToNewLineEncoded($content);
 				$numbering = addslashes($object['numbering']);
 				$digest = md5($object['question']);
@@ -94,7 +94,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 					{
 						foreach($object['option'] as $option_no=>$option)
 						{
-							$content_option = addslashes(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src)))));
+							$content_option = addslashes(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $test_dir, $base_src)))));
 							$content_option = $picoEdu->brToNewLineEncoded($content_option);
 							$order_option = $option_no+1;
 							$score_option = addslashes(@$option['value']*$score_standar); 

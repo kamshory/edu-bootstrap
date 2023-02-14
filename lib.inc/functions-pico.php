@@ -338,36 +338,6 @@ class DirectoryDestroyer
 		  $this->fileSync->deleteDirecory($dir, $sync);
 		}
 	}
-	
-	/*
-	Old code
-	public function destroy($fileSync)
-	{
-		$dir = $this->directory;
-		chmod(dirname($dir), 0777);
-		chmod($dir, 0777);
-		$this->removeDirectory($dir, $fileSync);
-		$fileSync->deleteDirecory($dir, true);
-		chmod(dirname($dir), 0755);
-	}
-	private function removeDirectory($dir, $fileSync)
-	{
-		$dir = rtrim($dir, "/");
-		$mydir = opendir($dir);
-		while (false !== ($file = readdir($mydir))) {
-			if ($file != "." && $file != "..") {
-				chmod($dir . "/" . $file, 0777);
-				if (is_dir($dir . "/" . $file)) {
-					chdir('.');
-					$this->removeDirectory($dir . "/" . $file, $fileSync);
-				} else {
-					$fileSync->deleteFile($dir . "/" . $file, false);
-				}
-			}
-		}
-		closedir($mydir);
-	}
-	*/
 }
 
 
