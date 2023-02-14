@@ -410,7 +410,7 @@ $sql = "SELECT `edu_admin`.* $nt,
 (SELECT `edu_admin1`.`name` FROM `edu_admin` AS `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) AS `admin_create`,
 (SELECT `edu_admin2`.`name` FROM `edu_admin` AS `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) AS `admin_edit`
 FROM `edu_admin` 
-where 1 
+WHERE (1=1) 
 AND `edu_admin`.`admin_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
@@ -533,7 +533,7 @@ $(document).ready(function(e) {
     <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` DESC";
+    $sql2 = "SELECT * FROM `edu_school` WHERE (1=1) ORDER BY `time_create` DESC";
 
 	echo $picoEdu->createFilterDb(
 		$sql2,

@@ -20,7 +20,7 @@ foreach($rows as $data)
 {
 $question_id = $data['question_id'];
 ?>
-<li><span><?php echo $data['content'];?><?php if($edit_mode){?><span class="edit-question-ctrl"><a href="<?php echo $basename;?>?option=edit&question_id=<?php echo $question_id;?>" target="_blank"><span></span></a></span><?php }?></span>
+<li><span><?php echo $data['content'];?><?php echo $picoEdu->trueFalse($edit_mode, '<span class="edit-question-ctrl"><a href="'.$basename.'?option=edit&question_id='.$question_id.'" target="_blank"><span></span></a></span>', '');?></span>
     <ol class="option-ol" style="list-style-type:<?php echo $data['numbering'];?>">
         <?php
         $sql2 = "SELECT * FROM `edu_option` WHERE `question_id` = '$question_id' ";
@@ -30,7 +30,7 @@ $question_id = $data['question_id'];
             $rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
             foreach($rows2 as $data2)
             {
-                ?><li class="option-li"><?php if($data2['score']>0){?><span class="score"></span><?php } ?><span><?php echo $data2['content'];?></span></li>
+                ?><li class="option-li"><?php echo $picoEdu->trueFalse($data2['score'] > 0, '<span class="score"></span>', '');?><span><?php echo $data2['content'];?></span></li>
                 <?php
 			}
 		}

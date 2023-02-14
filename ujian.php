@@ -280,7 +280,7 @@ $school_grade = array(
 		$sql = "SELECT `edu_test`.*, `edu_test`.`name` AS `test_name`, `edu_school`.`name` AS `school_name`, `edu_school`.`school_grade_id`
 		FROM `edu_test`
 		INNER JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_test`.`school_id`)
-		where 1 
+		WHERE (1=1)
 		AND `edu_test`.`open` = '1' AND `edu_test`.`active` = true
 		AND `edu_school`.`open` = '1' AND `edu_school`.`active` = true
 		ORDER BY `edu_school`.`school_grade_id` ASC, `edu_test`.`subject` ASC, `edu_test`.`name` ASC

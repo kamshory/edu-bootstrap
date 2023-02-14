@@ -6,9 +6,12 @@ require_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 if (isset($_GET['school_id'])) {
   $school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 }
-if (!@$student_id && !@$teacher_id) {
+if (empty(@$student_id) && empty(@$teacher_id)) 
+{
   include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
-  if(isset($school_id) && !empty($school_id)) {
+  
+  if(isset($school_id) && !empty($school_id)) 
+  {
     $sql = "SELECT `edu_school`.*, 
     (SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student`
     WHERE `edu_student`.`school_id` = `edu_school`.`school_id` AND `edu_student`.`gender` = 'M') AS `M`,
@@ -58,9 +61,9 @@ WHERE `edu_student`.`student_id` = '$edit_key'
 ";
 
   $stmt = $database->executeQuery($sql);
-  if ($stmt->rowCount() > 0) {
+  if ($stmt->rowCount() > 0) 
+  {
     $data = $stmt->fetch(PDO::FETCH_ASSOC);
-    ?>
     ?>
     <form name="formedu_student" action="" method="post" enctype="multipart/form-data">
       <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -93,7 +96,7 @@ WHERE `edu_student`.`student_id` = '$edit_key'
           <td><?php echo $picoEdu->getGenderName($data['gender']);?> </td>
         </tr>
         </table>
-<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+        <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
         <tr>
           <td></td>
           <td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo 'siswa.php'; ?>'" /></td>
