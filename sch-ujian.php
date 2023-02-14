@@ -694,8 +694,7 @@ if(!empty($auth_student_id) && !empty($auth_school_id)) {
 				?>
 			</select>
 			<span class="search-label">Ujian</span>
-			<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
-    ")))); ?>" />
+			<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
 			<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 		</form>
 	</div>
@@ -843,8 +842,7 @@ if(!empty($auth_student_id) && !empty($auth_school_id)) {
 				?>
 			</select>
 			<span class="search-label">Ujian</span>
-			<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
-    ")))); ?>" />
+			<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
 			<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 		</form>
 	</div>

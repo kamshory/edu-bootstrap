@@ -1121,4 +1121,12 @@ class PicoEdu //NOSONAR
 		}
 		return new stdClass;
 	}
+
+	/**
+	 * Get search query from URL
+	 */
+	public function getSearchQueryFromUrl()
+	{
+		return htmlspecialchars(rawurldecode((trim(@$_GET['q'])))); 
+	}
 }
