@@ -26,7 +26,7 @@ if(!empty($auth_student_id) && !empty($auth_school_id)) {
 		if ($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
-			<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/test.css" />
+			<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />
 			<style type="text/css">
 				.test-info {
 					padding: 10px;

@@ -52,7 +52,7 @@ if (@$_GET['option'] == 'detail') {
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/home-row-table.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/home-row-table.css" />
 		<div class="main-content">
 			<div class="main-content-wrapper">
 				<form name="formedu_school" action="" method="post" enctype="multipart/form-data">
@@ -136,7 +136,7 @@ if (@$_GET['option'] == 'detail') {
 } else {
 	include_once dirname(__FILE__) . "/lib.assets/theme/default/header-home.php";
 	?>
-	<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/home-row-table.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/home-row-table.css" />
 	<div class="main-content">
 		<div class="main-content-wrapper">
 			<div class="search-control">

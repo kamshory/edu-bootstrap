@@ -26,7 +26,7 @@ $configs->db_time_zone = "Asia/Jakarta";
 $twoLevelUp = dirname(dirname(__FILE__));
 
 $configs->sync_database_application_dir = $twoLevelUp;
-$configs->sync_database_base_dir = $twoLevelUp."/lib.sync/database/pool";
+$configs->sync_database_base_dir = $twoLevelUp."/volume.sync/database/pool";
 $configs->sync_database_pool_name = "pool";
 $configs->sync_database_rolling_prefix = "poll_";
 $configs->sync_database_extension = ".txt";
@@ -34,7 +34,7 @@ $configs->sync_database_maximum_length = 1000000;
 $configs->sync_database_delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
 
 $configs->sync_file_application_dir = $twoLevelUp;
-$configs->sync_file_base_dir = $twoLevelUp."/lib.sync/file/pool";
+$configs->sync_file_base_dir = $twoLevelUp."/volume.sync/file/pool";
 $configs->sync_file_pool_name = "pool";
 $configs->sync_file_rolling_prefix = "poll_";
 $configs->sync_file_extension = ".txt";

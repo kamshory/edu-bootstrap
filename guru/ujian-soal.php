@@ -445,15 +445,15 @@ else if(@$_GET['option'] == 'edit')
 			$data3 = $stmt3->fetch(PDO::FETCH_ASSOC);
 
 			?>
-			<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/test.css" />
+			<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />
 			<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 			<script type="text/javascript">
-			var base_assets = '<?php echo $cfg->base_assets; ?>';
+			var base_assets = '<?php echo $cfg->base_assets;?>';
 			var numbering = <?php echo json_encode($cfg->numbering); ?>;
 			var test_id = '<?php echo $data['test_id']; ?>';
 			var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$test_id/"); ?>;	
 			</script>
-			<script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/script/test-editor.js"></script>
+			<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-editor.js"></script>
 
 			<div class="dialogs">
 				<div id="split-dialog">
@@ -591,7 +591,7 @@ else if(isset($_GET['test_id']))
 	?>
 		
 		
-		<link rel="stylesheet" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/test.css">
+		<link rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css">
 		<script type="text/javascript">
 		var test_name = '<?php echo addslashes($data['name']); ?>';
 		</script>
@@ -800,12 +800,12 @@ else if(isset($_GET['test_id']))
 	}
 	} else {
 	?>
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/test.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />
 
 
-<script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/script/jquery.ui.touch-punch.js"></script>
-<script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/script/FileSaver.js"></script>
-<script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/script/html-docx.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/FileSaver.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/html-docx.js"></script>
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function () {
 	function setNoiseBackground(el, width, height, opacity) {

@@ -49,16 +49,16 @@ if(empty($user_id))
 $applicationRoot = dirname(dirname(__FILE__));
 $permission = 0755;
 
-$fileUploadBaseDir = $applicationRoot."/lib.sync/file/upload";
-$fileDownloadBaseDir = $applicationRoot."/lib.sync/file/download";
-$filePoolBaseDir = $applicationRoot."/lib.sync/file/pool";
+$fileUploadBaseDir = $applicationRoot."/volume.sync/file/upload";
+$fileDownloadBaseDir = $applicationRoot."/volume.sync/file/download";
+$filePoolBaseDir = $applicationRoot."/volume.sync/file/pool";
 $filePoolName = "pool";
 $filePoolRollingPrefix = "pool_";
 $filePoolExtension = ".txt";
 
-$databaseUploadBaseDir = $applicationRoot."/lib.sync/database/upload";
-$databaseDownloadBaseDir = $applicationRoot."/lib.sync/database/download";
-$databasePoolBaseDir = $applicationRoot."/lib.sync/database/pool";
+$databaseUploadBaseDir = $applicationRoot."/volume.sync/database/upload";
+$databaseDownloadBaseDir = $applicationRoot."/volume.sync/database/download";
+$databasePoolBaseDir = $applicationRoot."/volume.sync/database/pool";
 $databasePoolName = "pool";
 $databasePoolRollingPrefix = "pool_";
 $databasePoolExtension = ".txt";
