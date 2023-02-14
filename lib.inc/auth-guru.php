@@ -15,6 +15,8 @@ if(isset($_SESSION['teacher_password']))
 	$password = $_SESSION['teacher_password'];
 }
 
+require_once dirname(__FILE__) . "/classes/TeacherAuth.php";
+
 $teacher_id = "";
 $school_id = "";
 $auth_teacher_id = "";

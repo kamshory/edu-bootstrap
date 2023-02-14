@@ -994,7 +994,7 @@ function buildMenu(id)
   <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php
-			$sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` DESC";
+			$sql2 = "SELECT * FROM `edu_school` WHERE (1=1) ORDER BY `time_create` DESC";
 			echo $picoEdu->createFilterDb(
 				$sql2,
 				array(

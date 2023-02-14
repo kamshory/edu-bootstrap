@@ -157,12 +157,12 @@ $sql = "SELECT `edu_test`.* $nt,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`,
 (SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` GROUP BY `edu_question`.`test_id`)*1 AS `number_of_question`
 FROM `edu_test`
-where 1  $sql_filter
+WHERE (1=1)  $sql_filter
 ORDER BY `edu_test`.`test_id` DESC
 ";
 $sql_test = "SELECT `edu_test`.`test_id`
 FROM `edu_test`
-where 1  $sql_filter
+WHERE (1=1)  $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->setTotalRecord($stmt->rowCount());

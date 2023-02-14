@@ -1,6 +1,7 @@
 <?php
 require_once dirname(__FILE__)."/functions-pico.php";
 require_once dirname(__FILE__)."/sessions.php";
+
 $username = "";
 $password = "";
 
@@ -14,6 +15,7 @@ if(isset($_SESSION['student_password']))
 	$password = $_SESSION['student_password'];
 }
 
+require_once dirname(__FILE__) . "/classes/StudentAuth.php";
 $studentLoggedIn = new \StudenAuth($database, $username, $password, false);
 
 $member_id = "";

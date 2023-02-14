@@ -1,5 +1,4 @@
 <?php
-require_once dirname(dirname(__FILE__)) . "/lib.config/inc-cfg.php";
 
 mb_regex_encoding('UTF-8');
 function mb_replace($search, $replace, $subject, &$count = 0) //NOSONAR
@@ -623,12 +622,9 @@ function strip_only_tags($str, $tags, $stripContent = false)
 	return $str;
 }
 
+require_once dirname(dirname(__FILE__)) . "/lib.config/inc-cfg.php";
 require_once dirname(__FILE__) . "/classes/PicoDatabase.php";
 require_once dirname(__FILE__) . "/classes/PicoEdu.php";
-require_once dirname(__FILE__) . "/classes/MemberAuth.php";
-require_once dirname(__FILE__) . "/classes/AdminAuth.php";
-require_once dirname(__FILE__) . "/classes/TeacherAuth.php";
-require_once dirname(__FILE__) . "/classes/StudentAuth.php";
 require_once dirname(__FILE__) . "/classes/FileSynchronizer.php";
 require_once dirname(__FILE__) . "/classes/PicoConst.php";
 
