@@ -165,6 +165,7 @@ class PicoEdu //NOSONAR
 		}
 		return $phone;
 	}
+	
 	public function generateAltEmail($server, $alt1, $alt2, $alt3)
 	{
 		$email = "";
@@ -180,15 +181,14 @@ class PicoEdu //NOSONAR
 
 	public function getExistsingUser($user_data, $member_id = null)
 	{
+		$use_national_id = $member_id != null && !empty($member_id);
 
 		$now = $this->getLocalDateTime();
 		$ip = $_SERVER['REMOTE_ADDR'];
 
 		$name = $user_data['name'];
-
 		$name = trim(preg_replace("/[^a-zA-Z 0-9\.\-]+/", " ", $name), " -. ");
 		$name = trim(preg_replace(self::TRIM_EXTRA_SPACE, " ", $name));
-
 		$gender = $user_data['gender'];
 		$email = $this->trimWhitespace($user_data['email']);
 		$phone = $user_data['phone'];
@@ -197,20 +197,29 @@ class PicoEdu //NOSONAR
 		$language = $user_data['language'];
 		$country_id = $user_data['country_id'];
 
-		$uname = str_replace(" ", "", $name);
-		$uname = substr($uname, 0, 16);
-		$oke = false;
-		$username = "";
-		while ($oke === false || $oke == '') {
-			$username = $oke = $this->isValidUsername($uname);
-			if ($oke == '' || $oke === false) {
-				$uname = $uname . mt_rand(11, 99);
-				$username = $uname;
+		if(!$use_national_id)
+		{
+			$uname = str_replace(" ", "", $name);
+			$uname = substr($uname, 0, 16);
+			$oke = false;
+			$username = "";
+			while ($oke === false || $oke == '') {
+				$username = $oke = $this->isValidUsername($uname);
+				if ($oke == '' || $oke === false) {
+					$uname = $uname . mt_rand(11, 99);
+					$username = $uname;
+				}
 			}
+			$username = addslashes($username);
 		}
-		$username = addslashes($username);
+		else
+		{
+			$username = addslashes($member_id);
+		}
+
 		$filter = "";
-		if($member_id == null || empty($member_id))
+		
+		if(!$use_national_id)
 		{
 			$member_id = $this->database->generateNewId();
 			$filter = " AND `member_id` LIKE '$member_id' ";
@@ -219,6 +228,7 @@ class PicoEdu //NOSONAR
 		{
 			$filter = " AND `name` LIKE '$name' AND `birth_day` LIKE '$birth_day' ";
 		}
+
 		$sql = "SELECT `member`.* 
 			FROM `member` 
 			WHERE (1=1) $filter
@@ -254,6 +264,7 @@ class PicoEdu //NOSONAR
 			);
 		}
 	}
+
 	public function isValidUsername($name)
 	{
 		$username = $this->getValidUsername($name);
@@ -1152,5 +1163,7 @@ class PicoEdu //NOSONAR
 		return htmlspecialchars(rawurldecode((trim(@$_GET['q'])))); 
 	}
 
-	
+	/**
+	 * Get state ID
+	 */
 }
