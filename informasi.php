@@ -95,13 +95,13 @@ if(isset($_GET['info_id']))
     <link rel="stylesheet" type="text/css" href="lib.style/album.css">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="favs/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="favs/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="favs/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="favs/manifest.json">
-    <link rel="mask-icon" href="favs/safari-pinned-tab.svg" color="#563d7c">
-    <link rel="icon" href="favs/favicon.ico">
-    <meta name="msapplication-config" content="favs/browserconfig.xml">
+    <link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>lib.favs/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="<?php echo $cfg->base_assets;?>lib.favs/manifest.json">
+    <link rel="mask-icon" href="<?php echo $cfg->base_assets;?>lib.favs/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon.ico">
+    <meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>lib.favs/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
 
 
