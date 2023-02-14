@@ -88,6 +88,11 @@ class PicoEdu //NOSONAR
 		return false;
 	}
 
+	/**
+	 * Convert time to human readable string
+	 * @param int $tm Unix time stamp
+	 * @return string String of the time
+	 */
 	public function timeToText($tm) //NOSONAR
 	{
 		global $language_res;
@@ -136,6 +141,12 @@ class PicoEdu //NOSONAR
 		}
 		return $text;
 	}
+
+	/**
+	 * Get country name
+	 * @param string $country_id Country ID
+	 * @return string Country name
+	 */
 	public function getCountryName($country_id)
 	{
 		$sql = "SELECT `name` FROM `country` WHERE `country_id` = '$country_id' ";
@@ -1075,12 +1086,18 @@ class PicoEdu //NOSONAR
 		return $input;
 	}
 	
-	
+	/**
+	 * Get page title to be printed 
+	 */
 	public function printPageTitle($pageTitle, $appName)
 	{
 		return trim($pageTitle .' - '. $appName, ' ');
 	}
 
+	/**
+	 * Add subject to cache
+	 * @param string $subject Subject
+	 */
 	public function addSubject($subject)
 	{
 		$subject = trim($subject);
@@ -1102,6 +1119,10 @@ class PicoEdu //NOSONAR
 		}
 	}
 
+	/**
+	 * Get subject from cache as list
+	 * @return mixed 
+	 */
 	public function getSubjectList()
 	{
 		$sql = "SELECT `edu_subject`.*
@@ -1124,9 +1145,12 @@ class PicoEdu //NOSONAR
 
 	/**
 	 * Get search query from URL
+	 * @return string Search query
 	 */
 	public function getSearchQueryFromUrl()
 	{
 		return htmlspecialchars(rawurldecode((trim(@$_GET['q'])))); 
 	}
+
+	
 }
