@@ -1,0 +1,68 @@
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = 'Renderer Persamaan', `content` = '<table style=\"width: 100%;\" border=\"1\">
+<tbody>
+<tr>
+<td>Renderer</td>
+<td>Kelebihan</td>
+<td>Kekurangan</td>
+</tr>
+<tr>
+<td>MathJax (SVG)</td>
+<td><ol>
+<li>Tampil dengan baik di semua browser yang mendukung SVG</li>
+<li>Kualitas gambar tidak berubah meskipun diperbesar maupun diperkecil</li>
+</ol></td>
+<td><ol>
+<li>Ukuran file sangat besar</li>
+<li>Tidak dapat diubah</li>
+</ol></td>
+</tr>
+<tr>
+<td>MathML (SVG)</td>
+<td><ol>
+<li>Tampil dengan baik di browser yang mendukung SVG dan MathML. Saat ini hanya Mozilla Firefox yang mendukungnya</li>
+<li>Kualitas gambar tidak berubah meskipun diperbesar maupun diperkecil</li>
+<li>Ukuran file sangat kecil</li>
+<li>Dapat diubah dan diberi style (warna, ketebalan, font, dan lain-lain)</li>
+</ol></td>
+<td><ol>
+<li>Tidak dapat ditampilkan oleh browser selain Mozilla Firefox</li>
+</ol></td>
+</tr>
+<tr>
+<td>MathML (PNG)</td>
+<td><ol>
+<li>Tampil dengan baik di semua browser tanpa terkecuali</li>
+<li>Ukuran file lebih kecil dibandingkan MathJax</li>
+</ol></td>
+<td><ol>
+<li>Kualitas gambar menurun jika diperbesar maupun diperkecil</li>
+<li>Tidak dapat diubah</li>
+<li>Hanya dapat dibuat dari browser yang mendukung SVG dan MathML. Saat ini hanya Mozilla Firefox yang mendukungnya namun setelah jadi PNG dapat tampil di semua browser</li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/article/063e397123fb63638d6e/5609f347bd9a4caf9041c10cee456caf.svg\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"browser-mathml\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-14 09:08:12', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e397123fb63638d6e' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = false WHERE `article_id` = '063e62cae7969a506235' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = false WHERE `article_id` = '063e500818a9499f5736' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = false WHERE `article_id` = '063e397123fb63638d6e' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = false WHERE `article_id` = '063e2ef9aed05f1956e2' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = false WHERE `article_id` = '063da67d0dcf5af0f05e' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e62cae7969a506235' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e500818a9499f5736' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e397123fb63638d6e' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e2ef9aed05f1956e2' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063da67d0dcf5af0f05e' AND `school_id` = '063ce682801be89951aa';

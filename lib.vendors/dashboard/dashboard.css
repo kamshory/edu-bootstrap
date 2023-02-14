@@ -317,7 +317,7 @@ table td .btn.btn-sm.dropdown-toggle{
 }
 
 .btn-group-sm > .btn, .btn-tn {
-  padding: .15rem .3rem;
+  padding: .3rem .8rem;
   font-size: .875rem;
   line-height: 1.5;
   border-radius: .2rem;
