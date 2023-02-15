@@ -183,7 +183,7 @@ class PicoEdu //NOSONAR
 	{
 		$use_national_id = $member_id != null && !empty($member_id);
 
-		$now = $this->getLocalDateTime();
+		$now = $this->database->getLocalDateTime();
 		$ip = $_SERVER['REMOTE_ADDR'];
 
 		$name = $user_data['name'];
@@ -918,7 +918,7 @@ class PicoEdu //NOSONAR
 			$state_id = addslashes($data['state_id']);
 			$city_id = addslashes($data['city_id']);
 
-			$time_register = $this->getLocalDateTime();
+			$time_register = $this->database->getLocalDateTime();
 
 			return "
 			INSERT INTO `member` (`member_id`, `name`, `username`, `email`, `phone`, `gender`, `birth_day`, `birth_place`, `password`, `country_id`, `state_id`, `city_id`, `time_register`, `active`) VALUES 
@@ -950,7 +950,7 @@ class PicoEdu //NOSONAR
 		else
 		{
 			$school_program_id = $this->database->generateNewId();
-			$now = $this->getLocalDateTime();
+			$now = $this->database->getLocalDateTime();
 			$sql = "INSERT INTO `edu_school_program` 
 			(`school_program_id`, `school_id`, `name`, `time_create`, `time_edit`, `active`) VALUES
 			('$school_program_id', '$school_id', '$school_program', '$now', '$now', true)";
@@ -985,7 +985,7 @@ class PicoEdu //NOSONAR
 		else
 		{
 			$class_id = $this->database->generateNewId();
-			$now = $this->getLocalDateTime();
+			$now = $this->database->getLocalDateTime();
 			$sql = "INSERT INTO `edu_class` 
 			(`class_id`, `school_id`, `name`, `time_create`, `time_edit`, `active`) VALUES
 			('$class_id', '$school_id', '$class', '$now', '$now', true)";

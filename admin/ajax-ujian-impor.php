@@ -6,7 +6,6 @@ if(empty($school_id))
 }
 if(isset($_POST['from']) && isset($_POST['to']))
 {
-	
 	require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 	require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 	$collection = kh_filter_input(INPUT_POST, "from", FILTER_SANITIZE_STRING_NEW);
@@ -146,8 +145,6 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	}
 }
 
-
-
 $sql = "SELECT `edu_test`.*,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`,
 (SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `question`
@@ -189,5 +186,4 @@ if($stmt->rowCount() > 0)
   </table>
 <?php
 }
-
 ?>
