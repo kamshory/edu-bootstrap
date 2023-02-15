@@ -413,7 +413,7 @@ class WSClient {
 
 	/**
 	 * Get the value of clientData
-	 * @return stdClass
+	 * @return array
 	 */ 
 	public function getClientData()
 	{

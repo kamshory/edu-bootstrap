@@ -132,7 +132,7 @@ class WSUtil
 		{
 			if (!strstr(substr($sessionData, $offset), "|")) 
 			{
-				throw new Exception("invalid data, remaining: " . substr($sessionData, $offset));
+				throw new WSException("invalid data, remaining: " . substr($sessionData, $offset));
 			}
 			$pos = strpos($sessionData, "|", $offset);
 			$num = $pos - $offset;

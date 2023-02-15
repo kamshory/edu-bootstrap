@@ -17,6 +17,61 @@ class WSBrokerService extends WSServer implements WSInterface {
 		}
 	}
 
+	/**
+	 * Add student to member test list
+	 * @param stdClass $student
+	 */
+	private function memberTestAdd($student, $testId)
+	{
+		if(!empty($student->student_id))
+		{
+			$student_id = $student->student_id;
+			if(!isset($this->testMember[$testId]))
+			{
+				$this->testMember[$testId] = array();
+			}
+			if(!isset($this->testMember[$testId][$student_id]))
+			{
+				$this->testMember[$testId][$student_id] = array();
+			}
+			$this->testMember[$testId][$student_id][] = $student;
+		}
+	}
+
+	/**
+	 * Remove student from member test list
+	 * @param stdClass $student
+	 */
+	private function memberTestRemove($student, $testId)
+	{
+		if(!empty($student->student_id))
+		{
+			$student_id = $student->student_id;
+			if(isset($this->testMember[$testId]))
+			{
+				if(isset($this->testMember[$testId][$student_id]))
+				{
+					foreach($this->testMember[$testId] as $key=>$member)
+					{
+						if($member->resourceId == $student->resourceId)
+						{
+							unset($this->testMember[$testId][$key]);
+							break;
+						}
+					}
+				}
+				if(empty($this->testMember[$testId][$student_id]))
+				{
+					unset($this->testMember[$testId][$student_id]);
+				}
+			}
+			if(empty($this->testMember[$testId]))
+			{
+				$this->testMember = array();
+			}
+		}
+	}
+
 	private $testMember = array();
 
 	/**
@@ -25,7 +80,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 	 */
 	public function onOpen($wsClient)
 	{
-
+		$sessions = $wsClient->getSessions();
 		$query = $wsClient->getQuery();
 
 		if(@$query['group_id'] == "student" && @$query['module'] == "test" && !empty(@$query['test_id']))
@@ -33,32 +88,12 @@ class WSBrokerService extends WSServer implements WSInterface {
 			$clientData = $wsClient->getClientData();
 			if(isset($clientData['username']))
 			{
-				$username = isset($wsClient->getSessions()['student_username'])?$wsClient->getSessions()['student_username']:null;
-				$password = isset($wsClient->getSessions()['student_username'])?$wsClient->getSessions()['student_password']:null;
+				$username = isset($sessions['student_username'])?$sessions['student_username']:null;
+				$password = isset($sessions['student_username'])?$sessions['student_password']:null;
 				$student = $this->wsDatabase->getLoginStudent($username, $password, $wsClient->getResourceId());
-				if(!empty($student->student_id))
-				{
-					$test_id = $query['test_id'];
-					$student_id = $student->student_id;
-					/**
-					 * {
-					 * 		"test1":{
-					 * 			"student_id":{"student_id":"", "name":""}	
-					 * 
-					 * 		}
-					 * }
-					 * 
-					 */
-					if(!isset($this->testMember[$test_id]))
-					{
-						$this->testMember[$test_id] = array();
-					}
-					if(!isset($this->testMember[$test_id][$student_id]))
-					{
-						$this->testMember[$test_id][$student_id] = array();
-					}
-					$this->testMember[$test_id][$student_id][] = $student;
-				}
+				$testId = $query['test_id'];
+
+				$this->memberTestAdd($student, $testId);
 			}
 
 			$this->updateUserOnSystem();
@@ -75,8 +110,17 @@ class WSBrokerService extends WSServer implements WSInterface {
 			);
 			$this->sendBroadcast($wsClient, $response, array('teacher'), true);
 
-			
-			$wsClient->send(json_encode($logInData));
+			$response = json_encode(
+				array(
+					'command' => 'user-on-system', 
+					'data' => array(
+						array(
+							'test_member'=>$this->testMember
+						)
+					)
+				)
+			);
+			$wsClient->send(json_encode($response));
 		}
 	}
 
@@ -88,42 +132,18 @@ class WSBrokerService extends WSServer implements WSInterface {
 	public function onClose($wsClient)
 	{
 		$this->updateUserOnSystem();
-
+		$sessions = $wsClient->getSessions();
 
 		$query = $wsClient->getQuery();
 
 		if(@$query['group_id'] == "student" && @$query['module'] == "test" && !empty(@$query['test_id']))
 		{
-			$username = isset($wsClient->getSessions()['student_username'])?$wsClient->getSessions()['student_username']:null;
-			$password = isset($wsClient->getSessions()['student_username'])?$wsClient->getSessions()['student_password']:null;
+			
+			$username = isset($sessions['student_username'])?$sessions['student_username']:null;
+			$password = isset($sessions['student_username'])?$sessions['student_password']:null;
 			$student = $this->wsDatabase->getLoginStudent($username, $password);
- 			if(!empty($student->student_id))
-			{
-				$test_id = $query['test_id'];
-				$student_id = $student->student_id;
-				if(isset($this->testMember[$test_id]))
-				{
-					if(isset($this->testMember[$test_id][$student_id]))
-					{
-						foreach($this->testMember[$test_id] as $key=>$member)
-						{
-							if($member->resourceId == $wsClient->getResourceId())
-							{
-								unset($this->testMember[$test_id][$key]);
-								break;
-							}
-						}
-					}
-					if(empty($this->testMember[$test_id][$student_id]))
-					{
-						unset($this->testMember[$test_id][$student_id]);
-					}
-				}
-				if(empty($this->testMember[$test_id]))
-				{
-					$this->testMember = array();
-				}
-			}
+			$testId = $query['test_id'];
+ 			$this->memberTestRemove($student, $testId);
 		}
 
 
