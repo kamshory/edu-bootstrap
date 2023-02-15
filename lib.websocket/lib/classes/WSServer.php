@@ -438,10 +438,11 @@ class WSServer implements WSInterface {
 	 */
 	public function sendBroadcast($wsClient, $message, $receiverGroups = null, $meeToo = false)
 	{
-		foreach($this->chatClients as $client) 
+		foreach($this->chatClients as $key=>$client) 
 		{
 			if($meeToo || $receiverGroups == null || empty($receiverGroups) || ($wsClient != null && $wsClient->getResourceId() != $client->getResourceId() && ($this->groupReceive($receiverGroups, $client->getGroupId()))))
 			{
+				echo "$key\r\n";
 				$client->send($message);
 			}
 		}

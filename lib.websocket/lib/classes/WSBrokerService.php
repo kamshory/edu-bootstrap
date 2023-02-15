@@ -76,6 +76,25 @@ class WSBrokerService extends WSServer implements WSInterface {
 
 	private $testMember = array();
 
+	private function uniqueMember($array)
+	{
+		/**
+		 * Commented
+		$array = json_decode(json_encode($array), true);
+		foreach($array as $key=>$value)
+		{
+			foreach($value as $k=>$v)
+			{
+				unset($array[$key][$k]["resourceId"]);
+			}
+			$array[$key] = array_unique(array_values($array[$key]));
+			print_r($array[$key]);
+		}
+		$array = json_decode(json_encode($array), false);
+		*/
+		return $array;
+	}
+
 	/**
 	 * Method when a new client is connected
 	 * @param \WSClient $wsClient Chat client
@@ -85,11 +104,11 @@ class WSBrokerService extends WSServer implements WSInterface {
 		$this->wsDatabase->connect();
 		$sessions = $wsClient->getSessions();
 		$query = $wsClient->getQuery();
-		print_r($wsClient->getClientData());
+		$clientData = $wsClient->getClientData();
+		
 
-		if(@$query['group_id'] == "student" && @$query['module'] == "test" && !empty(@$query['test_id']))
+		if($clientData['group_id'] == "student" && @$query['module'] == "test" && !empty(@$query['test_id']))
 		{
-			$clientData = $wsClient->getClientData();
 			if(isset($clientData['username']))
 			{
 				$username = isset($sessions['student_username'])?$sessions['student_username']:null;
@@ -121,14 +140,30 @@ class WSBrokerService extends WSServer implements WSInterface {
 					'command' => 'user-on-system', 
 					'data' => array(
 						array(
-							'test_member'=>$this->testMember
+							'test_member'=>$this->uniqueMember($this->testMember)
 						)
 					)
 				)
 			);
+
 			$this->sendBroadcast($wsClient, $response, array('admin', 'teacher'), false);
 			
 			
+		}
+		if(@$clientData['group_id'] == "admin" && !empty(@$query['test_id']))
+		{
+			$response = json_encode(
+				array(
+					'command' => 'user-on-system', 
+					'data' => array(
+						array(
+							'test_member'=>$this->uniqueMember($this->testMember)
+						)
+					)
+				)
+			);
+			
+			$wsClient->send($response);
 		}
 		$this->wsDatabase->disconnect();
 	}
@@ -162,7 +197,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 					 'command' => 'user-on-system', 
 					 'data' => array(
 						 array(
-							 'test_member'=>$this->testMember
+							 'test_member'=>$this->uniqueMember($this->testMember)
 						 )
 					 )
 				 )

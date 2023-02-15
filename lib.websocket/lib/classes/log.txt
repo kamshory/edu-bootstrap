@@ -635,3 +635,36 @@ Client = Array
  Message = '{"command":"load-message","data":[{"partner_id":"Malik","receiver_id":"Malik"}]}'
 
 
+Client = Array
+(
+    [login_time] => 2023-02-15 21:24:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = 'PING'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-15 21:23:43
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = 'PING'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-15 21:45:57
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = 'PING'
+
+

@@ -209,6 +209,7 @@
         };
 
         this.open = function (reconnectAttempt) {
+            console.log('OPEN URL')
             ws = new WebSocket(self.url, protocols || []);
             ws.binaryType = this.binaryType;
 
