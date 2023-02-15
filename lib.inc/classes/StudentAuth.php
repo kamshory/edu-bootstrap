@@ -29,7 +29,6 @@ class StudenAuth
 	 */
 	public function __construct($database, $username, $password, $createlog = false)
 	{
-		global $cfg;
 		global $picoEdu;
 		if ($username != '') {
 			$sql = "SELECT `edu_student`.`student_id`, `edu_student`.`username`, `edu_student`.`name`, `edu_student`.`gender`, 

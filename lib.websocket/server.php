@@ -6,7 +6,8 @@ $host = '127.0.0.1';
 $port = 8888;
 
 $app = new MyApp();
+$wsDatabase = new \WSDatabase("mysql", "localhost", 3306, "root", "alto1234", "mini_picopi", "Asia/Jakarta");
 
-$wss = new WSBrokerService($host, $port, $app, 'prostConstructClient');
+$wss = new WSBrokerService($wsDatabase, $host, $port, $app, 'prostConstructClient');
 $ret = $wss->run();
 

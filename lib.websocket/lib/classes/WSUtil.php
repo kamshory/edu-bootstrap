@@ -1,5 +1,5 @@
 <?php
-class Utility
+class WSUtil
 {
 	/**
 	* Parse request header
@@ -114,7 +114,7 @@ class Utility
 			$session_text = file_get_contents($path);
 			if($session_text != '')
 			{
-				return Utility::sessionDecode($session_text);
+				return self::sessionDecode($session_text);
 			}
 		}
 		return array();

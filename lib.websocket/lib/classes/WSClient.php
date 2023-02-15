@@ -1,7 +1,7 @@
 <?php
 class WSClient {
 	private $socket;
-	private $remoteConnection;
+	private $WSRemoteConnection;
 	private $headers = array();
 	private $cookies = array();
 	private $sessions = array();
@@ -24,18 +24,18 @@ class WSClient {
 	 * @param string $resourceId, 
 	 * @param Socket $socket
 	 * @param string $headers
-	 * @param \RemoteConnection $remoteConnection
+	 * @param \WSRemoteConnection $WSRemoteConnection
 	 * @param SessionParams $sessionParams 
 	 * @param object $callbackObject,
 	 * @param string $callbackPostConstruct
 	 */
-	public function __construct($resourceId, $socket, $headers, $remoteConnection, $sessionParams, $callbackObject, $callbackPostConstruct)
+	public function __construct($resourceId, $socket, $headers, $WSRemoteConnection, $sessionParams, $callbackObject, $callbackPostConstruct)
 	{
 		$this->resourceId = $resourceId;
 		$this->socket = $socket;
-		$this->remoteConnection = $remoteConnection;
+		$this->WSRemoteConnection = $WSRemoteConnection;
 		
-		$headerInfo = Utility::parseRawHeaders($headers);
+		$headerInfo = WSUtil::parseRawHeaders($headers);
 
 		$this->parseHeaders($headerInfo);	
 		
@@ -43,7 +43,7 @@ class WSClient {
 		
 		if(isset($this->headers['cookie']))
 		{
-			$this->cookies = Utility::parseRawCookies($this->headers['cookie']);
+			$this->cookies = WSUtil::parseRawCookies($this->headers['cookie']);
 		}
 
 		if($sessionParams === null)
@@ -60,7 +60,7 @@ class WSClient {
 			$this->setSessionID($this->cookies[$sessionName]);
 		}
 
-		$this->setSessions(Utility::getSessions($this->getSessionID(), $this->getSessionParams()));
+		$this->setSessions(WSUtil::getSessions($this->getSessionID(), $this->getSessionParams()));
 		
 		if($callbackObject != null && $callbackPostConstruct != null)
 		{
@@ -113,7 +113,7 @@ class WSClient {
 
 	public function send($message)
 	{
-		$maskedMessage = Utility::mask($message);
+		$maskedMessage = WSUtil::mask($message);
 		@socket_write($this->socket, $maskedMessage, strlen($maskedMessage));
 	}
 
@@ -205,21 +205,21 @@ class WSClient {
 	}
 
 	/**
-	 * Get the value of remoteConnection
+	 * Get the value of WSRemoteConnection
 	 */ 
 	public function getRemoteConnection()
 	{
-		return $this->remoteConnection;
+		return $this->WSRemoteConnection;
 	}
 
 	/**
-	 * Set the value of remoteConnection
+	 * Set the value of WSRemoteConnection
 	 *
 	 * @return  self
 	 */ 
-	public function setRemoteConnection($remoteConnection)
+	public function setRemoteConnection($WSRemoteConnection)
 	{
-		$this->remoteConnection = $remoteConnection;
+		$this->WSRemoteConnection = $WSRemoteConnection;
 
 		return $this;
 	}

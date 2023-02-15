@@ -1,6 +1,7 @@
 <?php
 class WSServer implements WSInterface {
 	protected $chatClients = array();
+	protected $wsDatabase;
 	private $host = '127.0.0.1';
 	private $port = 8888;
 	private $masterSocket = NULL;
@@ -20,8 +21,9 @@ class WSServer implements WSInterface {
 	protected $callbackObject;
 	protected $callbackPostConstruct;
 
-	public function __construct($host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null)
+	public function __construct($wsDatabase, $host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null)
 	{
+		$this->wsDatabase = $wsDatabase;
 		$this->host = $host;
 		$this->port = $port;
 
@@ -66,7 +68,7 @@ class WSServer implements WSInterface {
 		$this->userOnSystem[$clientIndex] = $wsClient;
 	}
 	
-	public function run()
+	public function run() //NOSONAR
 	{
 		if($this->socketOk)
 		{
@@ -92,18 +94,18 @@ class WSServer implements WSInterface {
 					{
 						$index++;
 						socket_getpeername($clientSocket, $remoteAddress, $remotePort); //get ip address of connected socket
-						$chatClient = new \WSClient(
+						$wsClient = new \WSClient(
 							$index, 
 							$clientSocket, 
 							$header, 
-							new \RemoteConnection($remoteAddress, $remotePort), 
+							new \WSRemoteConnection($remoteAddress, $remotePort), 
 							new \SessionParams($this->sessionCookieName, $this->sessionSavePath, $this->sessionFilePrefix), 
 							$this->callbackObject, 
 							$this->callbackPostConstruct
 						);
 						$this->clientSockets[$index] = $clientSocket; //add socket to client array
-						$this->chatClients[$index] = $chatClient;
-						$this->onOpen($chatClient);
+						$this->chatClients[$index] = $wsClient;
+						$this->onOpen($wsClient);
 						$foundSocket = array_search($this->masterSocket, $changed);
 						unset($changed[$foundSocket]);
 					
@@ -185,12 +187,76 @@ class WSServer implements WSInterface {
 		return true;
 	}
 
+	/**
+	 * Get first frame head
+	 */
+	private function getFirstFrameHead($type)
+	{
+		$ffh = 0;
+		if($type == 'text')
+        {
+			// first byte indicates FIN, Text-Frame (10000001):
+			$ffh = 129;
+		}
+        else if($type == 'close')
+		{
+			// first byte indicates FIN, Close Frame(10001000):
+			$ffh = 136;
+        }
+
+        else if($type == 'ping')
+        {
+			// first byte indicates FIN, Ping frame (10001001):
+			$ffh = 137;
+		}
+        else if($type == 'pong')
+        {
+			 // first byte indicates FIN, Pong frame (10001010):
+			 $ffh = 138;
+		}
+		return $ffh;
+	}
+
+	/**
+	 * Get data type from opcode
+	 */
+	private function getDataType($opcode)
+	{
+        $decodedDataType = '';    
+		if($opcode == 1){
+			// text frame
+			$decodedDataType = 'text';
+		}
+		else if($opcode == 2){
+			// connection close frame
+			$decodedDataType = 'binary';
+		}
+		
+		else if($opcode == 8){
+			// connection close frame
+			$decodedDataType = 'close';
+		}
+		
+		else if($opcode == 9){
+				// ping frame
+			$decodedDataType = 'ping';
+		}
+		
+		else if($opcode == 10){
+			// pong frame
+			$decodedDataType = 'pong';
+		}
+        
+		return $decodedDataType;
+
+	}
+
 	 /**
      * Encodes a frame/message according the the WebSocket protocol standard.     
      * @param $payload
      * @param $type
      * @param $masked
-     * @throws \RuntimeException
+     * @throws \WSException
      * @return string
      */
     public function hybi10Encode($payload, $type = 'text', $masked = true)
@@ -198,29 +264,7 @@ class WSServer implements WSInterface {
         $frameHead = array();
         $payloadLength = strlen($payload);
 
-        switch ($type) 
-        {
-            case 'text':
-                // first byte indicates FIN, Text-Frame (10000001):
-                $frameHead[0] = 129;
-                break;
-
-            case 'close':
-                // first byte indicates FIN, Close Frame(10001000):
-                $frameHead[0] = 136;
-                break;
-
-            case 'ping':
-                // first byte indicates FIN, Ping frame (10001001):
-                $frameHead[0] = 137;
-                break;
-
-            case 'pong':
-                // first byte indicates FIN, Pong frame (10001010):
-                $frameHead[0] = 138;
-                break;
-        }
-
+        $frameHead[0] = $this->getFirstFrameHead($type);
         // set mask and payload length (using 1, 3 or 9 bytes)
         if ($payloadLength > 65535) 
         {
@@ -234,7 +278,7 @@ class WSServer implements WSInterface {
             if ($frameHead[2] > 127) 
             {
                 // $this->close(1004);
-                throw new \RuntimeException('Invalid payload. Could not encode frame.');
+                throw new \WSException('Invalid payload. Could not encode frame.');
             }
         } 
 		elseif ($payloadLength > 125) 
@@ -254,7 +298,7 @@ class WSServer implements WSInterface {
         {
             $frameHead[$i] = chr($frameHead[$i]);
         }
-        if ($masked === true) 
+        if($masked === true) 
         {
             // generate a random mask:
             $mask = array();
@@ -296,30 +340,10 @@ class WSServer implements WSInterface {
         // close connection if unmasked frame is received:
         if ($isMasked === false) 
         {
+			// Do nothing
         }
-
-        switch ($opcode) 
-        {
-            // text frame:
-            case 1:
-                $decodedData['type'] = 'text';
-                break;
-            case 2:
-                $decodedData['type'] = 'binary';
-                break;
-            // connection close frame:
-            case 8:
-                $decodedData['type'] = 'close';
-                break;
-            // ping frame:
-            case 9:
-                $decodedData['type'] = 'ping';
-                break;
-            // pong frame:
-            case 10:
-                $decodedData['type'] = 'pong';
-                break;
-        }
+        
+		$decodedData['type'] = $this->getDataType($opcode);
 
         if ($payloadLength === 126) 
         {

@@ -1,9 +1,9 @@
 <?php
 
 class WSBrokerService extends WSServer implements WSInterface {
-	public function __construct($host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null)
+	public function __construct($wsDatabase, $host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null)
 	{
-		parent::__construct($host, $port, $callbackObject, $callbackPostConstruct);
+		parent::__construct($wsDatabase, $host, $port, $callbackObject, $callbackPostConstruct);
 	}
 	public function updateUserOnSystem()
 	{
@@ -16,6 +16,9 @@ class WSBrokerService extends WSServer implements WSInterface {
 			}
 		}
 	}
+
+	private $testMember = array();
+
 	/**
 	 * Method when a new client is connected
 	 * @param \WSClient $wsClient Chat client
@@ -23,12 +26,41 @@ class WSBrokerService extends WSServer implements WSInterface {
 	public function onOpen($wsClient)
 	{
 
-		$groupId = $wsClient->getGroupId();
-		$path = $wsClient->getPath();
+		$query = $wsClient->getQuery();
 
-		$clientData = $wsClient->getClientData();
-		if(isset($clientData['username']))
+		if(@$query['group_id'] == "student" && @$query['module'] == "test" && !empty(@$query['test_id']))
 		{
+			$clientData = $wsClient->getClientData();
+			if(isset($clientData['username']))
+			{
+				$username = isset($wsClient->getSessions()['student_username'])?$wsClient->getSessions()['student_username']:null;
+				$password = isset($wsClient->getSessions()['student_username'])?$wsClient->getSessions()['student_password']:null;
+				$student = $this->wsDatabase->getLoginStudent($username, $password, $wsClient->getResourceId());
+				if(!empty($student->student_id))
+				{
+					$test_id = $query['test_id'];
+					$student_id = $student->student_id;
+					/**
+					 * {
+					 * 		"test1":{
+					 * 			"student_id":{"student_id":"", "name":""}	
+					 * 
+					 * 		}
+					 * }
+					 * 
+					 */
+					if(!isset($this->testMember[$test_id]))
+					{
+						$this->testMember[$test_id] = array();
+					}
+					if(!isset($this->testMember[$test_id][$student_id]))
+					{
+						$this->testMember[$test_id][$student_id] = array();
+					}
+					$this->testMember[$test_id][$student_id][] = $student;
+				}
+			}
+
 			$this->updateUserOnSystem();
 			// Send user list
 			$response = json_encode(
@@ -36,29 +68,14 @@ class WSBrokerService extends WSServer implements WSInterface {
 					'command' => 'user-on-system', 
 					'data' => array(
 						array(
-							'users'=>$this->userOnSystem
+							'test_member'=>$this->testMember
 						)
 					)
 				)
 			);
-			$this->sendBroadcast($wsClient, $response, null, true);
+			$this->sendBroadcast($wsClient, $response, array('teacher'), true);
 
-			// Send new user		
-			$response = json_encode(
-				array(
-					'command' => 'user-login', 
-					'data' => array(
-						$wsClient->getSessions()
-					)
-				)
-			);
-			$this->sendBroadcast($wsClient, $response, null, true);
-			$logInData = array(
-				'command'=>'log-in',
-				'data'=>array(
-					array('my_id'=>$clientData['username'])
-				)
-			);
+			
 			$wsClient->send(json_encode($logInData));
 		}
 	}
@@ -71,13 +88,52 @@ class WSBrokerService extends WSServer implements WSInterface {
 	public function onClose($wsClient)
 	{
 		$this->updateUserOnSystem();
+
+
+		$query = $wsClient->getQuery();
+
+		if(@$query['group_id'] == "student" && @$query['module'] == "test" && !empty(@$query['test_id']))
+		{
+			$username = isset($wsClient->getSessions()['student_username'])?$wsClient->getSessions()['student_username']:null;
+			$password = isset($wsClient->getSessions()['student_username'])?$wsClient->getSessions()['student_password']:null;
+			$student = $this->wsDatabase->getLoginStudent($username, $password);
+ 			if(!empty($student->student_id))
+			{
+				$test_id = $query['test_id'];
+				$student_id = $student->student_id;
+				if(isset($this->testMember[$test_id]))
+				{
+					if(isset($this->testMember[$test_id][$student_id]))
+					{
+						foreach($this->testMember[$test_id] as $key=>$member)
+						{
+							if($member->resourceId == $wsClient->getResourceId())
+							{
+								unset($this->testMember[$test_id][$key]);
+								break;
+							}
+						}
+					}
+					if(empty($this->testMember[$test_id][$student_id]))
+					{
+						unset($this->testMember[$test_id][$student_id]);
+					}
+				}
+				if(empty($this->testMember[$test_id]))
+				{
+					$this->testMember = array();
+				}
+			}
+		}
+
+
 		// Send user list
 		$response = json_encode(
 			array(
 				'command' => 'user-on-system', 
 				'data' => array(
 					array(
-						'users'=>$this->userOnSystem
+						'test_member'=>$this->testMember
 					)
 				)
 			)
