@@ -194,7 +194,6 @@ class WSDatabase
         $student = new stdClass;
 
         $student->student_id = "";
-        $student->username = "";
         $student->name = "";
         $student->gender = "";
         $student->class_id = "";
@@ -207,10 +206,8 @@ class WSDatabase
             `edu_student`.`username`, 
             `edu_student`.`name`, 
             `edu_student`.`gender`, 
-			`edu_student`.`school_id`, `edu_student`.`class_id`,
-			`edu_school`.`name` AS `school_name`, `edu_school`.`school_code` AS `school_code`
+			`edu_student`.`school_id`, `edu_student`.`class_id`
 			FROM `edu_student` 
-			LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_student`.`school_id`)
 			WHERE `edu_student`.`username` like '$username' AND `edu_student`.`password` = md5('$password') 
 			AND `edu_student`.`active` = true
 			AND `edu_student`.`blocked` = false
@@ -220,7 +217,6 @@ class WSDatabase
 			if ($stmt->rowCount() > 0) {
 				$studentLoggedIn = $stmt->fetchObject();
 				$student->student_id = $studentLoggedIn->student_id;
-				$student->username = ($studentLoggedIn->username != '') ? $studentLoggedIn->username : $studentLoggedIn->member_id;
 				$student->name = trim($studentLoggedIn->name);
 				$student->gender = $studentLoggedIn->gender;
 				$student->class_id = $studentLoggedIn->class_id;

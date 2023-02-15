@@ -66,6 +66,7 @@ class WSClient {
 		{
 			$this->clientData = call_user_func(array($callbackObject, $callbackPostConstruct), $this); 
 		}
+		$this->groupId = $this->clientData['group_id'];
 	}
 
 	private function parseHeaders($headerInfo)

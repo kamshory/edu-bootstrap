@@ -78,20 +78,22 @@ class WSBrokerService extends WSServer implements WSInterface {
 
 	private function uniqueMember($array)
 	{
-		/**
-		 * Commented
+		
 		$array = json_decode(json_encode($array), true);
-		foreach($array as $key=>$value)
+		foreach($array as $testID=>$value)
 		{
-			foreach($value as $k=>$v)
+			foreach($value as $studentId=>$v)
 			{
-				unset($array[$key][$k]["resourceId"]);
+				
+				
+				$array[$testID][$studentId] = array_values($array[$testID][$studentId])[0];
+				unset($array[$testID][$studentId]["resourceId"]);
 			}
-			$array[$key] = array_unique(array_values($array[$key]));
-			print_r($array[$key]);
+			
+			$array[$testID] = array_values($array[$testID]);
 		}
 		$array = json_decode(json_encode($array), false);
-		*/
+		
 		return $array;
 	}
 
@@ -138,6 +140,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 			$response = json_encode(
 				array(
 					'command' => 'user-on-system', 
+					
 					'data' => array(
 						array(
 							'test_member'=>$this->uniqueMember($this->testMember)
@@ -155,6 +158,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 			$response = json_encode(
 				array(
 					'command' => 'user-on-system', 
+					'group_id' => $wsClient->getClientData()['group_id'],
 					'data' => array(
 						array(
 							'test_member'=>$this->uniqueMember($this->testMember)

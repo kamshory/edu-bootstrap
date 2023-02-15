@@ -668,3 +668,14 @@ Client = Array
  Message = 'PING'
 
 
+Client = Array
+(
+    [login_time] => 2023-02-15 21:57:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = 'PING'
+
+
