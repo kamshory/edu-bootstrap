@@ -431,4 +431,24 @@ class WSClient {
 
 		return $this;
 	}
+
+	/**
+	 * Get the value of cookies
+	 */ 
+	public function getCookies()
+	{
+		return $this->cookies;
+	}
+
+	/**
+	 * Set the value of cookies
+	 *
+	 * @return  self
+	 */ 
+	public function setCookies($cookies)
+	{
+		$this->cookies = $cookies;
+
+		return $this;
+	}
 }

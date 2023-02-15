@@ -11,7 +11,7 @@ class WSDatabase
 
     private string $databaseDriver = "mysql";
     private string $databaseHost = "localhost";
-    private string $databasePort = 3066;
+    private int $databasePort = 3066;
     
 	/**
 	 * Constructor
@@ -28,13 +28,11 @@ class WSDatabase
 		$this->databaseDriver = $databaseDriver;
         $this->databaseHost = $databaseHost;
         $this->databasePort = $databasePort;
-
 		$this->username = $username;
 		$this->password = $password;
 		$this->databaseName = $databaseName;
 		$this->timezone = $timezone;	
 	}
-
 
 	/**
 	 * Connect to database
@@ -75,6 +73,20 @@ class WSDatabase
 	public function getDatabaseConnection()
 	{
 		return $this->conn;
+	}
+
+	public function disconnect()
+	{
+		try
+		{
+			$this->conn = new PDO(''); //NOSONAR
+			$this->conn->query('KILL CONNECTION_ID()'); //NOSONAR
+			$this->conn = null; //NOSONAR
+		}
+		catch(Exception $e)
+		{
+
+		}
 	}
 
 	/**
@@ -203,6 +215,7 @@ class WSDatabase
 			AND `edu_student`.`active` = true
 			AND `edu_student`.`blocked` = false
 			";
+	
 			$stmt = $this->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
 				$studentLoggedIn = $stmt->fetchObject();

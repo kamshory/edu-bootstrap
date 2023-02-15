@@ -34,8 +34,9 @@ class WSBrokerService extends WSServer implements WSInterface {
 			{
 				$this->testMember[$testId][$student_id] = array();
 			}
-			$this->testMember[$testId][$student_id][] = $student;
+			$this->testMember[$testId][$student_id][$student->resourceId] = $student;
 		}
+
 	}
 
 	/**
@@ -51,11 +52,11 @@ class WSBrokerService extends WSServer implements WSInterface {
 			{
 				if(isset($this->testMember[$testId][$student_id]))
 				{
-					foreach($this->testMember[$testId] as $key=>$member)
+					foreach($this->testMember[$testId][$student_id] as $key=>$member)
 					{
 						if($member->resourceId == $student->resourceId)
 						{
-							unset($this->testMember[$testId][$key]);
+							unset($this->testMember[$testId][$student_id][$key]);
 							break;
 						}
 					}
@@ -70,6 +71,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 				$this->testMember = array();
 			}
 		}
+		
 	}
 
 	private $testMember = array();
@@ -80,8 +82,10 @@ class WSBrokerService extends WSServer implements WSInterface {
 	 */
 	public function onOpen($wsClient)
 	{
+		$this->wsDatabase->connect();
 		$sessions = $wsClient->getSessions();
 		$query = $wsClient->getQuery();
+		print_r($wsClient->getClientData());
 
 		if(@$query['group_id'] == "student" && @$query['module'] == "test" && !empty(@$query['test_id']))
 		{
@@ -90,10 +94,24 @@ class WSBrokerService extends WSServer implements WSInterface {
 			{
 				$username = isset($sessions['student_username'])?$sessions['student_username']:null;
 				$password = isset($sessions['student_username'])?$sessions['student_password']:null;
-				$student = $this->wsDatabase->getLoginStudent($username, $password, $wsClient->getResourceId());
-				$testId = $query['test_id'];
+				if(!empty($username))
+				{
+					$student = $this->wsDatabase->getLoginStudent($username, $password, $wsClient->getResourceId());
+					$testId = $query['test_id'];
+					$this->memberTestAdd($student, $testId);
 
-				$this->memberTestAdd($student, $testId);
+					$response = json_encode(
+						array(
+							'command' => 'log-in', 
+							'data' => array(
+								array(
+									'data'=>$student
+								)
+							)
+						)
+					);
+					$wsClient->send($response);
+				}
 			}
 
 			$this->updateUserOnSystem();
@@ -108,20 +126,11 @@ class WSBrokerService extends WSServer implements WSInterface {
 					)
 				)
 			);
-			$this->sendBroadcast($wsClient, $response, array('teacher'), true);
-
-			$response = json_encode(
-				array(
-					'command' => 'user-on-system', 
-					'data' => array(
-						array(
-							'test_member'=>$this->testMember
-						)
-					)
-				)
-			);
-			$wsClient->send(json_encode($response));
+			$this->sendBroadcast($wsClient, $response, array('admin', 'teacher'), false);
+			
+			
 		}
+		$this->wsDatabase->disconnect();
 	}
 
 	
@@ -131,6 +140,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 	 */
 	public function onClose($wsClient)
 	{
+		$this->wsDatabase->connect();
 		$this->updateUserOnSystem();
 		$sessions = $wsClient->getSessions();
 
@@ -141,29 +151,31 @@ class WSBrokerService extends WSServer implements WSInterface {
 			
 			$username = isset($sessions['student_username'])?$sessions['student_username']:null;
 			$password = isset($sessions['student_username'])?$sessions['student_password']:null;
-			$student = $this->wsDatabase->getLoginStudent($username, $password);
+			$student = $this->wsDatabase->getLoginStudent($username, $password, $wsClient->getResourceId());
 			$testId = $query['test_id'];
  			$this->memberTestRemove($student, $testId);
+
+			 $this->updateUserOnSystem();
+			 // Send user list
+			 $response = json_encode(
+				 array(
+					 'command' => 'user-on-system', 
+					 'data' => array(
+						 array(
+							 'test_member'=>$this->testMember
+						 )
+					 )
+				 )
+			 );
+			 $this->sendBroadcast($wsClient, $response, array('admin', 'teacher'), false);
 		}
-
-
-		// Send user list
-		$response = json_encode(
-			array(
-				'command' => 'user-on-system', 
-				'data' => array(
-					array(
-						'test_member'=>$this->testMember
-					)
-				)
-			)
-		);
-		$this->sendBroadcast($wsClient, $response, null, true);
+		
+		$this->wsDatabase->disconnect();
 	}
 	/**
 	 * Method when a client send the message
-	 * @param $wsClient Chat client
-	 * @param $receivedText Text sent by the client
+	 * @param \WSClient $wsClient Chat client
+	 * @param string $receivedText Text sent by the client
 	 */
 	public function onMessage($wsClient, $receivedText)
 	{
