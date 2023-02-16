@@ -1,10 +1,10 @@
 <?php
 class WSServer implements WSInterface {
-	protected $chatClients = array();
+	protected $wsClients = array();
 	protected $wsDatabase;
 	private $host = '127.0.0.1';
 	private $port = 8888;
-	private $masterSocket = NULL;
+	private $masterSocket = null;
 	private $clientSockets = array();
 	private $dataChunk = 128;
 	private $maxHeaderSize = 2048;
@@ -61,11 +61,23 @@ class WSServer implements WSInterface {
 	/**
 	 * Set user on system
 	 * @param string $clientIndex Client index
-	 * @param \WSClient $wsClient Chat client
+	 * @param array $clientData
 	 */
-	protected function setUserOnSystem($clientIndex, $wsClient)
+	protected function setUserOnSystem($clientIndex, $clientData)
 	{
-		$this->userOnSystem[$clientIndex] = $wsClient;
+		$this->userOnSystem[$clientIndex] = $clientData;
+	}
+
+	protected function updateUserOnSystem()
+	{
+		$this->resetUserOnSystem();
+		foreach($this->wsClients as $client)
+		{
+			if(isset($client->getClientData()['username']))
+			{
+				$this->setUserOnSystem($client->getClientData()['username'], $client->getClientData());
+			}
+		}
 	}
 	
 	public function run() //NOSONAR
@@ -104,7 +116,7 @@ class WSServer implements WSInterface {
 							$this->callbackPostConstruct
 						);
 						$this->clientSockets[$index] = $clientSocket; //add socket to client array
-						$this->chatClients[$index] = $wsClient;
+						$this->wsClients[$index] = $wsClient;
 						$this->onOpen($wsClient);
 						$foundSocket = array_search($this->masterSocket, $changed);
 						unset($changed[$foundSocket]);
@@ -152,15 +164,14 @@ class WSServer implements WSInterface {
 								}
 								else
 								{
-									$this->onMessage($this->chatClients[$index], $decodedData['payload']);
+									$this->onMessage($this->wsClients[$index], $decodedData['payload']);
 									break;
 								}
 							}
 							else
 							{
 								break;
-							}
-							
+							}						
 						}
 						$buf2 = @socket_read($changeSocket, $this->dataChunk, PHP_NORMAL_READ);
 						if ($buf2 === false) 
@@ -168,11 +179,11 @@ class WSServer implements WSInterface {
 							// check disconnected client
 							// remove client for $clientSockets array
 							$foundSocket = array_search($changeSocket, $this->clientSockets);
-							if(isset($this->chatClients[$foundSocket]))
+							if(isset($this->wsClients[$foundSocket]))
 							{
-								$closeClient = $this->chatClients[$foundSocket];
+								$closeClient = $this->wsClients[$foundSocket];
 								unset($this->clientSockets[$foundSocket]);
-								unset($this->chatClients[$foundSocket]);
+								unset($this->wsClients[$foundSocket]);
 								$this->onClose($closeClient);
 							}
 						}
@@ -259,7 +270,7 @@ class WSServer implements WSInterface {
      * @throws \WSException
      * @return string
      */
-    public function hybi10Encode($payload, $type = 'text', $masked = true)
+    public function hybi10Encode($payload, $type = 'text', $masked = true) //NOSONAR
     {
         $frameHead = array();
         $payloadLength = strlen($payload);
@@ -277,7 +288,6 @@ class WSServer implements WSInterface {
             // most significant bit MUST be 0 (close connection if frame too big)
             if ($frameHead[2] > 127) 
             {
-                // $this->close(1004);
                 throw new \WSException('Invalid payload. Could not encode frame.');
             }
         } 
@@ -438,7 +448,7 @@ class WSServer implements WSInterface {
 	 */
 	public function sendBroadcast($wsClient, $message, $receiverGroups = null, $meeToo = false)
 	{
-		foreach($this->chatClients as $client) 
+		foreach($this->wsClients as $client) 
 		{
 			if(
 				$meeToo 
@@ -461,7 +471,7 @@ class WSServer implements WSInterface {
 
 	public function sendMessage($textMessage, $receiver)
 	{
-		foreach($this->chatClients as $client) 
+		foreach($this->wsClients as $client) 
 		{
 			if(in_array($client->getUsername(), $receiver))
 			{
@@ -469,6 +479,8 @@ class WSServer implements WSInterface {
 			}
 		}
 	}
+
+
 	
 }
 

@@ -2,6 +2,7 @@
 
 class MyApp {
 
+	const DATE_TIME_FORMAT = 'Y-m-d H:i:s';
    /**
 	 * Method when a new client is login
 	 * @param \WSClient $clientChat Chat client
@@ -15,7 +16,7 @@ class MyApp {
 		if(isset($sessions['admin_username']) && !empty($sessions['admin_username']))
 		{
 			$clientData = array(
-				'login_time'=>date('Y-m-d H:i:s'), 
+				'login_time'=>date(self::DATE_TIME_FORMAT), 
 				'username'=>$sessions['admin_username'], 
 				'group_id'=>'admin'
 			);
@@ -23,7 +24,7 @@ class MyApp {
 		else if(isset($sessions['teacher_username']) && !empty($sessions['teacher_username']))
 		{
 			$clientData = array(
-				'login_time'=>date('Y-m-d H:i:s'), 
+				'login_time'=>date(self::DATE_TIME_FORMAT), 
 				'username'=>$sessions['teacher_username'], 
 				'group_id'=>'teacher'
 			);
@@ -31,7 +32,7 @@ class MyApp {
 		else if(isset($sessions['student_username']) && !empty($sessions['student_username']))
 		{
 			$clientData = array(
-				'login_time'=>date('Y-m-d H:i:s'), 
+				'login_time'=>date(self::DATE_TIME_FORMAT), 
 				'username'=>$sessions['student_username'], 
 				'group_id'=>'student'
 			);

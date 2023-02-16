@@ -221,38 +221,6 @@ class WSUtil
 		} 
 		return $header . $text;
 	}
-	/*
-	 * Convert UTF-8 to 8 bits HTML Entity code
-	 * @param $string String to be converted
-	 * @return string 8 bits HTML Entity code
-	 */
-	function utf8ToEntities($content) {
-
-		if(!mb_check_encoding($content, 'UTF-8')
 	
-			|| !($content === mb_convert_encoding(mb_convert_encoding($content, 'UTF-32', 'UTF-8' ), 'UTF-8', 'UTF-32'))) {
-	
-	
-	
-			$content = mb_convert_encoding($content, 'UTF-8');
-	
-	
-	
-			if (mb_check_encoding($content, 'UTF-8')) {
-	
-				// log('Converted to UTF-8');
-	
-			} else {
-	
-				// log('Could not converted to UTF-8');
-	
-			}
-	
-		}
-	
-		return $content;
-	
-	}
-
 	
 }

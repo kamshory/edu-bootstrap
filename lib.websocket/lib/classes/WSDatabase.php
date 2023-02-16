@@ -85,7 +85,7 @@ class WSDatabase
 		}
 		catch(Exception $e)
 		{
-
+			// Do nothing
 		}
 	}
 
@@ -124,21 +124,6 @@ class WSDatabase
 	}
 
 	/**
-	 * Generate 20 bytes unique ID
-	 * @return string 20 bytes
-	 */
-	public function generateNewId()
-	{
-		$uuid = uniqid();
-		if((strlen($uuid) % 2) == 1)
-		{
-			$uuid = '0'.$uuid;
-		}
-		$random = sprintf('%06x', mt_rand(0, 16777215));
-		return sprintf('%s%s', $uuid, $random);
-	}
-
-	/**
 	 * Get system variable
 	 * @param string $variable_name Variable name
 	 * @param mixed $default_value Default value
@@ -157,35 +142,6 @@ class WSDatabase
 		else
 		{
 			return $default_value;
-		}
-	}
-
-	/**
-	 * Set system variable
-	 * @param string $variable_name Variable name
-	 * @param mixed $value Value to be set
-	 */
-	public function setSystemVariable($variable_name, $value)
-	{
-		$current_time = date('Y-m-d H:i:s');
-		$variable_name = addslashes($variable_name);
-		$value = addslashes($value);
-		$sql = "SELECT * FROM `edu_system_variable` 
-		WHERE `system_variable_id` = '$variable_name' ";
-		if($this->executeQuery($sql)->rowCount() > 0)
-		{
-			$sql = "UPDATE `edu_system_variable` 
-			SET `system_value` = '$value', `time_edit` = '$current_time' 
-			WHERE `system_variable_id` = '$variable_name' ";
-			$this->executeQuery($sql);
-		}
-		else
-		{
-			$sql = "INSERT INTO `edu_system_variable` 
-			(`system_variable_id`, `system_value`, `time_create`, `time_edit`) VALUES
-			('$variable_name', '$value', '$current_time' , '$current_time')
-			";
-			$this->executeQuery($sql);
 		}
 	}
 
@@ -229,30 +185,6 @@ class WSDatabase
 
 
 	/**
-	 * Set the value of username
-	 *
-	 * @return  self
-	 */ 
-	public function setUsername($username)
-	{
-		$this->username = $username;
-
-		return $this;
-	}
-
-	/**
-	 * Set the value of password
-	 *
-	 * @return  self
-	 */ 
-	public function setPassword($password)
-	{
-		$this->password = $password;
-
-		return $this;
-	}
-
-	/**
 	 * Get the value of databaseName
 	 */ 
 	public function getDatabaseName()
@@ -280,36 +212,12 @@ class WSDatabase
 		return $this->timezone;
 	}
 
-	/**
-	 * Set the value of timezone
-	 *
-	 * @return  self
-	 */ 
-	public function setTimezone($timezone)
-	{
-		$this->timezone = $timezone;
-
-		return $this;
-	}
-
     /**
      * Get the value of databaseDriver
      */ 
     public function getDatabaseDriver()
     {
         return $this->databaseDriver;
-    }
-
-    /**
-     * Set the value of databaseDriver
-     *
-     * @return  self
-     */ 
-    public function setDatabaseDriver($databaseDriver)
-    {
-        $this->databaseDriver = $databaseDriver;
-
-        return $this;
     }
 
     /**
@@ -321,18 +229,6 @@ class WSDatabase
     }
 
     /**
-     * Set the value of databaseHost
-     *
-     * @return  self
-     */ 
-    public function setDatabaseHost($databaseHost)
-    {
-        $this->databaseHost = $databaseHost;
-
-        return $this;
-    }
-
-    /**
      * Get the value of databasePort
      */ 
     public function getDatabasePort()
@@ -340,15 +236,4 @@ class WSDatabase
         return $this->databasePort;
     }
 
-    /**
-     * Set the value of databasePort
-     *
-     * @return  self
-     */ 
-    public function setDatabasePort($databasePort)
-    {
-        $this->databasePort = $databasePort;
-
-        return $this;
-    }
 }

@@ -1,7 +1,8 @@
 <?php
-class WSClient {
+class WSClient //NOSONAR
+{
 	private $socket;
-	private $WSRemoteConnection;
+	private $wsRemoteConnection;
 	private $headers = array();
 	private $cookies = array();
 	private $sessions = array();
@@ -25,16 +26,16 @@ class WSClient {
 	 * @param string $resourceId, 
 	 * @param Socket $socket
 	 * @param string $headers
-	 * @param \WSRemoteConnection $WSRemoteConnection
+	 * @param \WSRemoteConnection $wsRemoteConnection
 	 * @param SessionParams $sessionParams 
 	 * @param object $callbackObject,
 	 * @param string $callbackPostConstruct
 	 */
-	public function __construct($resourceId, $socket, $headers, $WSRemoteConnection, $sessionParams, $callbackObject, $callbackPostConstruct)
+	public function __construct($resourceId, $socket, $headers, $wsRemoteConnection, $sessionParams, $callbackObject, $callbackPostConstruct)
 	{
 		$this->resourceId = $resourceId;
 		$this->socket = $socket;
-		$this->WSRemoteConnection = $WSRemoteConnection;
+		$this->wsRemoteConnection = $wsRemoteConnection;
 		
 		$headerInfo = WSUtil::parseRawHeaders($headers);
 
@@ -155,13 +156,11 @@ class WSClient {
 			socket_write($this->socket, $upgrade, strlen($upgrade));
 		}
 	}
-	
 
 	public function login()
 	{
 		return true;
 	}
-
 
 
 	/**
@@ -195,36 +194,11 @@ class WSClient {
 	}
 
 	/**
-	 * Set the value of headerInfo
-	 * @param array $headerInfo
-	 *
-	 * @return  self
-	 */ 
-	public function setHeaderInfo($headerInfo)
-	{
-		$this->headerInfo = $headerInfo;
-
-		return $this;
-	}
-
-	/**
-	 * Get the value of WSRemoteConnection
+	 * Get the value of \WSRemoteConnection
 	 */ 
 	public function getRemoteConnection()
 	{
-		return $this->WSRemoteConnection;
-	}
-
-	/**
-	 * Set the value of WSRemoteConnection
-	 *
-	 * @return  self
-	 */ 
-	public function setRemoteConnection($WSRemoteConnection)
-	{
-		$this->WSRemoteConnection = $WSRemoteConnection;
-
-		return $this;
+		return $this->wsRemoteConnection;
 	}
 
 	/**
@@ -258,36 +232,12 @@ class WSClient {
 	}
 
 	/**
-	 * Set the value of httpVersion
-	 *
-	 * @return  self
-	 */ 
-	public function setHttpVersion($httpVersion)
-	{
-		$this->httpVersion = $httpVersion;
-
-		return $this;
-	}
-
-	/**
 	 * Get the value of method
 	 * @return string
 	 */ 
 	public function getMethod()
 	{
 		return $this->method;
-	}
-
-	/**
-	 * Set the value of method
-	 *
-	 * @return  self
-	 */ 
-	public function setMethod($method)
-	{
-		$this->method = $method;
-
-		return $this;
 	}
 
 	/**
@@ -300,36 +250,12 @@ class WSClient {
 	}
 
 	/**
-	 * Set the value of uri
-	 *
-	 * @return  self
-	 */ 
-	public function setUri($uri)
-	{
-		$this->uri = $uri;
-
-		return $this;
-	}
-
-	/**
 	 * Get the value of groupId
 	 * @return string
 	 */ 
 	public function getGroupId()
 	{
 		return $this->groupId;
-	}
-
-	/**
-	 * Set the value of groupId
-	 *
-	 * @return  self
-	 */ 
-	public function setGroupId($groupId)
-	{
-		$this->groupId = $groupId;
-
-		return $this;
 	}
 
 	/**
@@ -340,17 +266,6 @@ class WSClient {
 		return $this->path;
 	}
 
-	/**
-	 * Set the value of path
-	 *
-	 * @return  self
-	 */ 
-	public function setPath($path)
-	{
-		$this->path = $path;
-
-		return $this;
-	}
 
 	/**
 	 * Get the value of query
@@ -361,17 +276,6 @@ class WSClient {
 		return $this->query;
 	}
 
-	/**
-	 * Set the value of query
-	 *
-	 * @return  self
-	 */ 
-	public function setQuery($query)
-	{
-		$this->query = $query;
-
-		return $this;
-	}
 
 	/**
 	 * Get the value of sessionID
@@ -444,18 +348,6 @@ class WSClient {
 	}
 
 	/**
-	 * Set the value of cookies
-	 *
-	 * @return  self
-	 */ 
-	public function setCookies($cookies)
-	{
-		$this->cookies = $cookies;
-
-		return $this;
-	}
-
-	/**
 	 * Get the value of username
 	 */ 
 	public function getUsername()
@@ -463,15 +355,4 @@ class WSClient {
 		return $this->username;
 	}
 
-	/**
-	 * Set the value of username
-	 *
-	 * @return  self
-	 */ 
-	public function setUsername($username)
-	{
-		$this->username = $username;
-
-		return $this;
-	}
 }

@@ -6,17 +6,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 	{
 		parent::__construct($wsDatabase, $host, $port, $callbackObject, $callbackPostConstruct, $messageOnStarted);
 	}
-	public function updateUserOnSystem()
-	{
-		$this->resetUserOnSystem();
-		foreach($this->chatClients as $client)
-		{
-			if(isset($client->getClientData()['username']))
-			{
-				$this->setUserOnSystem($client->getClientData()['username'], $client->getClientData());
-			}
-		}
-	}
+	
 
 	/**
 	 * Add student to member test list
@@ -44,7 +34,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 	 * Remove student from member test list
 	 * @param stdClass $student
 	 */
-	private function memberTestRemove($student, $testId)
+	private function memberTestRemove($student, $testId) //NOSONAR
 	{
 		if(!empty($student->student_id))
 		{
