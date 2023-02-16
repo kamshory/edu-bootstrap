@@ -438,7 +438,7 @@ class WSServer implements WSInterface {
 	 */
 	public function sendBroadcast($wsClient, $message, $receiverGroups = null, $meeToo = false)
 	{
-		foreach($this->chatClients as $key=>$client) 
+		foreach($this->chatClients as $client) 
 		{
 			if(
 				$meeToo 
@@ -446,7 +446,7 @@ class WSServer implements WSInterface {
 				|| empty($receiverGroups) 
 				|| ($wsClient->getResourceId() != $client->getResourceId() && ($this->groupReceive($receiverGroups, $client->getGroupId()))))
 			{
-				$client->send($message);
+				$client->sendMessage($message);
 			}
 		}
 	}
@@ -457,6 +457,17 @@ class WSServer implements WSInterface {
 		&& is_array($receiverGroups) 
 		&& isset($groupId) 
 		&& in_array($groupId, $receiverGroups);
+	}
+
+	public function sendMessage($textMessage, $receiver)
+	{
+		foreach($this->chatClients as $client) 
+		{
+			if(in_array($client->getUsername(), $receiver))
+			{
+				$client->sendMessage($textMessage);
+			}
+		}
 	}
 	
 }

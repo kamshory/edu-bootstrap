@@ -17,6 +17,7 @@ class WSClient {
 	private $port = 0;
 	private $headerInfo = array();
 	private $groupId = "";
+	private $username = "";
 	public $sessionParams;
 	
 	
@@ -67,6 +68,7 @@ class WSClient {
 			$this->clientData = call_user_func(array($callbackObject, $callbackPostConstruct), $this); 
 		}
 		$this->groupId = $this->clientData['group_id'];
+		$this->username = $this->clientData['username'];
 	}
 
 	private function parseHeaders($headerInfo)
@@ -112,7 +114,7 @@ class WSClient {
 	}
 
 
-	public function send($message)
+	public function sendMessage($message)
 	{
 		$maskedMessage = WSUtil::mask($message);
 		@socket_write($this->socket, $maskedMessage, strlen($maskedMessage));
@@ -449,6 +451,26 @@ class WSClient {
 	public function setCookies($cookies)
 	{
 		$this->cookies = $cookies;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of username
+	 */ 
+	public function getUsername()
+	{
+		return $this->username;
+	}
+
+	/**
+	 * Set the value of username
+	 *
+	 * @return  self
+	 */ 
+	public function setUsername($username)
+	{
+		$this->username = $username;
 
 		return $this;
 	}
