@@ -9,11 +9,11 @@ class PicoEdu //NOSONAR
 	const TRIM_EXTRA_SPACE = "/\s+/";
 	const TRIM_NON_NUMERIC = "/[^0-9]/i";
 
-	public \PicoDatabase $database;
+	public $database;
 
 	/**
 	 * Constuctor of PicoEdu
-	 * @param PicoDatabase $database Database
+	 * @param \PicoDatabase $database Database
 	 */
 	public function __construct(PicoDatabase $database)
 	{
@@ -136,14 +136,46 @@ class PicoEdu //NOSONAR
 		}
 		return $text;
 	}
+
+	/**
+	 * Get country name of given ID
+	 * @param string $name
+	 * @return string Country name if exists of null if not exists
+	 */
 	public function getCountryName($country_id)
 	{
 		$sql = "SELECT `name` FROM `country` WHERE `country_id` = '$country_id' ";
 		$stmt = $this->database->executeQuery($sql);
+		if($stmt->rowCount() == 0)
+		{
+			return null;
+		}
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		return @$data['name'];
 	}
 
+	/**
+	 * Get country ID of given name
+	 * @param string $name
+	 * @return string Country ID if exists of null if not exists
+	 */
+	public function getCountryId($name)
+	{
+		$sql = "SELECT `country_id` FROM `country` WHERE `name` like '$name' ";
+		$stmt = $this->database->executeQuery($sql);
+		if($stmt->rowCount() == 0)
+		{
+			return null;
+		}
+		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		return @$data['country_id'];
+	}
+
+	/**
+	 * Fix phone number
+	 * @param string $phone Phone number
+	 * @return string Valid phone number
+	 */
 	public function fixPhone($phone)
 	{
 		if (substr($phone, 0, 1) != '0' && substr($phone, 0, 1) != '+' && substr($phone, 0, 2) != '62') {
@@ -154,6 +186,15 @@ class PicoEdu //NOSONAR
 		}
 		return $phone;
 	}
+
+	/**
+	 * Generate alternative email address (dummy)
+	 * @param string $server Server
+	 * @param string $alt1 Alternate ID 1
+	 * @param string $alt2 Alternate ID 2
+	 * @param string $alt3 Alternate ID 3
+	 * @return string Dummy email address
+	 */
 	public function generateAltEmail($server, $alt1, $alt2, $alt3)
 	{
 		$email = "";
@@ -167,6 +208,11 @@ class PicoEdu //NOSONAR
 		return $email;
 	}
 
+	/**
+	 * Get existsing user data and create new if not exists
+	 * @param array $user_data
+	 * @return array User data
+	 */
 	public function getExistsingUser($user_data)
 	{
 		$now = $this->getLocalDateTime();
@@ -233,6 +279,11 @@ class PicoEdu //NOSONAR
 			);
 		}
 	}
+
+	/**
+	 * Check if username is valid or not
+	 * @return string|bool String valid username or false if username given is invalid
+	 */
 	public function isValidUsername($name)
 	{
 		$username = $this->getValidUsername($name);
@@ -250,6 +301,11 @@ class PicoEdu //NOSONAR
 		return false;
 	}
 	
+	/**
+	 * Get class list
+	 * @param string $school_id School ID
+	 * @return array Array contain class list of a school
+	 */
 	public function getArrayClass($school_id)
 	{
 		$sql = "SELECT `class_id`, `name` FROM `edu_class` WHERE `school_id` = '$school_id' ";

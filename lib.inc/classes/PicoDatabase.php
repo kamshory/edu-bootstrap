@@ -259,7 +259,7 @@ class PicoDatabase
 		}
 		catch(\PDOException $e)
 		{
-			//echo $e->getMessage()."\r\nERROR &raquo; $sql";
+			// Do nothing
 		}
 	}
 
