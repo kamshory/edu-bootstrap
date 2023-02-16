@@ -65,4 +65,72 @@ UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e397123fb63638
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063e2ef9aed05f1956e2' AND `school_id` = '063ce682801be89951aa';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+<<<<<<< Updated upstream
 UPDATE `edu_article` SET `active` = true WHERE `article_id` = '063da67d0dcf5af0f05e' AND `school_id` = '063ce682801be89951aa';
+=======
+INSERT INTO `edu_answer` 
+			(`answer_id`, `school_id`, `test_id`, `student_id`, `start`, `end`, `answer`, `competence_score`, 
+			`true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) VALUES
+			('063e77584ebbfa36e215', '063ce682801be89951aa', '063e72fd28d55827baa4', '063ce6828483ec450b85', '2023-02-11 17:58:01', '2023-02-11 18:01:24', '[063e72fd293238a58a7e,0],[063e72fd2a4d6dc018d6,0],[063e72fd2a6bad5c9dc2,0],[063e72fd2bcfe34d4ad4,0],[063e72fd2a83bfdd8b4d,0],[063e72fd2910e55ed0f0,0],[063e72fd2ced60cae916,0],[063e72fd2be8cab9b929,0],[063e72fd29f89a9b137c,0],[063e72fd2d41ad468854,0]', 'null', 
+			'0', '10', '0', '0', '0', '0', '1');
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_answer` 
+			(`answer_id`, `school_id`, `test_id`, `student_id`, `start`, `end`, `answer`, `competence_score`, 
+			`true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) VALUES
+			('063e77667b124f0f4ad4', '063ce682801be89951aa', '063e72fd28d55827baa4', '063ce6828483ec450b85', '2023-02-11 17:58:01', '2023-02-11 18:05:11', '[063e72fd293238a58a7e,0],[063e72fd2a4d6dc018d6,0],[063e72fd2a6bad5c9dc2,0],[063e72fd2bcfe34d4ad4,0],[063e72fd2a83bfdd8b4d,0],[063e72fd2910e55ed0f0,0],[063e72fd2ced60cae916,0],[063e72fd2be8cab9b929,0],[063e72fd29f89a9b137c,0],[063e72fd2d41ad468854,0]', '{}', 
+			'0', '10', '0', '0', '0', '0', '1');
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_answer` 
+			(`answer_id`, `school_id`, `test_id`, `student_id`, `start`, `end`, `answer`, `competence_score`, 
+			`true`, `false`, `initial_score`, `penalty`, `final_score`, `percent`, `active`) VALUES
+			('063e7769575c680c9efb', '063ce682801be89951aa', '063e72fd28d55827baa4', '063ce6828483ec450b85', '2023-02-11 17:58:01', '2023-02-11 18:05:57', '[063e72fd293238a58a7e,0],[063e72fd2a4d6dc018d6,0],[063e72fd2a6bad5c9dc2,0],[063e72fd2bcfe34d4ad4,0],[063e72fd2a83bfdd8b4d,0],[063e72fd2910e55ed0f0,0],[063e72fd2ced60cae916,0],[063e72fd2be8cab9b929,0],[063e72fd29f89a9b137c,0],[063e72fd2d41ad468854,0]', '{}', 
+			'0', '10', '0', '0', '0', '0', '1');
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_answer` 
+				SET `competence_score` = 'null' 
+				WHERE `answer_id` = '063e7769575c680c9efb' AND `student_id` = '063ce6828483ec450b85';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` set
+	`description` = '<p><img class=\"ascii-svg\" src=\"lib.tools/asciisvg/svgimg.php?sscr=-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cred%2C1%2Cnone\" style=\"width: 300px; height: 200px; vertical-align: middle; float: none;\" data-sscr=\"-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cred%2C1%2Cnone\"></p>
+<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/1ad139112dde8f234c985bbede1c54c0.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = '(Tanpa Judul)', `content` = '<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-latex=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-renderer=\"browser-png\" src=\"media.edu/school/063ce682801be89951aa/article/063e2ef9aed05f1956e2/5ba16f09fb4bf89c02eb617bfc21362b.png\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-11 19:03:16', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e2ef9aed05f1956e2' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = 'Update', `content` = '<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/article/063e2ef9aed05f1956e2/5ba16f09fb4bf89c02eb617bfc21362b.png\" alt=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-latex=\"\\int_{x=1}^{32} \\frac{\\sin(x)}{\\cos(3x)} + 1 dx\" data-renderer=\"browser-png\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-11 19:03:28', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e2ef9aed05f1956e2' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = 'Sync Hub', `content` = '<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/article/063e62cae7969a506235/f5ea7c7e0357cb117c2d9ea41158c322.svg\" alt=\"\"></p>
+<p class=\"bd-lead\">Get started with Bootstrap, the world&rsquo;s most popular framework for building responsive, mobile-first sites, with jsDelivr and a template starter page.</p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-11 20:26:34', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e62cae7969a506235' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = 'Sync Hub', `content` = '<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/article/063e62cae7969a506235/f5ea7c7e0357cb117c2d9ea41158c322.svg\" alt=\"\"></p>
+<p class=\"bd-lead\">Get started with Bootstrap, the world&rsquo;s most popular framework for building responsive,</p>
+<p class=\"bd-lead\">&nbsp;</p>
+<p class=\"bd-lead\">&nbsp;</p>
+<p class=\"bd-lead\">mobile-first sites, with jsDelivr and a template starter page.</p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-11 20:26:58', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e62cae7969a506235' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = 'Sync Hub', `content` = '<p><img class=\"draw-image\" src=\"media.edu/school/063ce682801be89951aa/article/063e62cae7969a506235/f5ea7c7e0357cb117c2d9ea41158c322.svg\" alt=\"\"></p>
+<p class=\"bd-lead\">Get started with Bootstrap, the world&rsquo;s most popular framework for building responsive, mobile-first sites, with jsDelivr and a template starter page. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-11 20:27:37', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063e62cae7969a506235' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_test` SET 
+	`name` = 'Ujian Nasional Matematika Paket 01', `class` = '', `school_program_id` = '063ce68281203e741899', `subject` = 'Matematika', `teacher_id` = '063ce68285cc5b02bb04', 
+	`description` = '', `guidance` = 'Pilihlah jawaban yang paling tepat!', `open` = '0', `has_limits` = '1', `trial_limits` = '1', 
+	`threshold` = '75', `assessment_methods` = 'H', `number_of_question` = '10', 
+	`number_of_option` = '5', `question_per_page` = '10', `random` = '1', `duration` = '0', 
+	`has_alert` = '0', `alert_time` = '300', `alert_message` = 'Lihat waktu sisa Anda. Silakan periksa kembali jawaban Anda. Segera kirimkan jawaban sebelum waktunya habis.', `autosubmit` = '0', 
+	`standard_score` = '1', `penalty` = '0', 
+	`score_notification` = '0', `publish_answer` = '0', `time_answer_publication` = null, 
+	`test_availability` = 'F', `available_from` = null, `available_to` = null, 
+	`time_create` = '2023-02-16 14:52:55', `time_edit` = '2023-02-16 14:52:55', `member_create` = 'aaaaaaaaaaaaa', `role_create` = 'A', 
+	`member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_create` = '127.0.0.1', `ip_edit` = '127.0.0.1', `active` = '0'
+	WHERE `test_id` = '063e8e1ac7beae1b49e9' AND `school_id` = '063ce682801be89951aa';
+>>>>>>> Stashed changes
