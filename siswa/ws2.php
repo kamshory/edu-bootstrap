@@ -14,8 +14,6 @@ $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Chat</title>
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="stylesheet" href="chat.css?rand=<?php echo mt_rand(1,99999999);?>">
-<link rel="stylesheet" href="icon.css">
 <script src="ws.js"></script>
 
 <script type="text/javascript">

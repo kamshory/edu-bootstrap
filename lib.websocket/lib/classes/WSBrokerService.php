@@ -109,7 +109,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 		$clientData = $wsClient->getClientData();
 		
 
-		if($clientData['group_id'] == "student" && @$query['module'] == "test" && !empty(@$query['test_id']))
+		if($wsClient->getGroupId() == "student" && @$query['module'] == "test" && !empty(@$query['test_id']))
 		{
 			if(isset($clientData['username']))
 			{
@@ -149,11 +149,10 @@ class WSBrokerService extends WSServer implements WSInterface {
 				)
 			);
 
-			$this->sendBroadcast($wsClient, $response, array('admin', 'teacher'), false);
-			
+			$this->sendBroadcast($wsClient, $response, array('admin', 'teacher'), false);			
 			
 		}
-		if(@$clientData['group_id'] == "admin" && !empty(@$query['test_id']))
+		if(($wsClient->getGroupId() == "admin" || $wsClient->getGroupId() == "teacher") && !empty(@$query['test_id']))
 		{
 			$response = json_encode(
 				array(
@@ -185,28 +184,27 @@ class WSBrokerService extends WSServer implements WSInterface {
 
 		$query = $wsClient->getQuery();
 
-		if(@$query['group_id'] == "student" && @$query['module'] == "test" && !empty(@$query['test_id']))
-		{
-			
+		if($wsClient->getGroupId() == "student" && @$query['module'] == "test" && !empty(@$query['test_id']))
+		{			
 			$username = isset($sessions['student_username'])?$sessions['student_username']:null;
 			$password = isset($sessions['student_username'])?$sessions['student_password']:null;
 			$student = $this->wsDatabase->getLoginStudent($username, $password, $wsClient->getResourceId());
 			$testId = $query['test_id'];
  			$this->memberTestRemove($student, $testId);
 
-			 $this->updateUserOnSystem();
-			 // Send user list
-			 $response = json_encode(
-				 array(
-					 'command' => 'user-on-system', 
-					 'data' => array(
-						 array(
-							 'test_member'=>$this->uniqueMember($this->testMember)
-						 )
-					 )
-				 )
-			 );
-			 $this->sendBroadcast($wsClient, $response, array('admin', 'teacher'), false);
+			$this->updateUserOnSystem();
+			// Send user list
+			$response = json_encode(
+				array(
+					'command' => 'user-on-system', 
+					'data' => array(
+						array(
+							'test_member'=>$this->uniqueMember($this->testMember)
+						)
+					)
+				)
+			);
+			$this->sendBroadcast($wsClient, $response, array('admin', 'teacher'), false);
 		}
 		
 		$this->wsDatabase->disconnect();
