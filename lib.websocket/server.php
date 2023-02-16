@@ -8,6 +8,6 @@ $port = 8888;
 $app = new MyApp();
 $wsDatabase = new \WSDatabase("mysql", "localhost", 3306, "root", "alto1234", "mini_picopi", "Asia/Jakarta");
 
-$wss = new WSBrokerService($wsDatabase, $host, $port, $app, 'prostConstructClient', "Message started on port $port\r\n");
+$wss = new \WSBrokerService($wsDatabase, $host, $port, $app, 'prostConstructClient', "Message started on port $port\r\n");
 $ret = $wss->run();
 

@@ -1,13 +1,15 @@
 let pChat = new planetChat(websocketURL);
 
-pChat.onOpen = function(e){
+pChat.onOpen = function(e) {
 };
+
 pChat.onError = function(e) {
 };
-pChat.onClose = function(e) {
 
+pChat.onClose = function(e) {
 };
-pChat.onMessage = function(e){
+
+pChat.onMessage = function(e) {
     let message = e.data;
     try
     {
@@ -26,8 +28,8 @@ pChat.onMessage = function(e){
 
     }
 };
-function showMessage(title, message, icon)
-{
+
+function showMessage(title, message, icon) {
     $('#test-alert .modal-body').empty().append($('<p>').text(message));
     $('#test-alert .modal-title').text(' '+title);
     if(icon)
@@ -39,8 +41,8 @@ function showMessage(title, message, icon)
         $('#test-alert').modal('hide');
     }, 5000);
 }
-function kickStudent(title, message, icon)
-{
+
+function kickStudent(title, message, icon) {
     $('#test-alert .modal-body').empty().append($('<p>').text(message));
     $('#test-alert .modal-title').text(' '+title);
     if(icon)

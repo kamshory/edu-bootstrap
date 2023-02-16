@@ -420,6 +420,7 @@ class WSServer implements WSInterface {
 	{
 		
 	}
+	
 	/**
 	 * Method when a new client is disconnected
 	 * @param $wsClient Chat client
@@ -429,6 +430,7 @@ class WSServer implements WSInterface {
 	public function onClose($wsClient)
 	{
 	}
+
 	/**
 	 * Method when a client send the message
 	 * @param $wsClient Chat client
@@ -439,6 +441,7 @@ class WSServer implements WSInterface {
 	public function onMessage($wsClient, $receivedText)
 	{
 	}
+
 	/**
 	 * Method to send the broadcast message to all client
 	 * @param \WSClient $wsClient Chat client

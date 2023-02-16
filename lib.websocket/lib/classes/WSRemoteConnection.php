@@ -1,7 +1,9 @@
 <?php
 class WSRemoteConnection {
+    
     private $host = "";
     private $port = 0;
+
     public function __construct($host, $port)
     {
         $this->host = $host;
@@ -17,5 +19,4 @@ class WSRemoteConnection {
     {
         return $this->port;
     }
-    
 }

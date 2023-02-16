@@ -4,7 +4,6 @@ if(!isset($cfg))
   exit();
 }
 
-
 $structure = array(
     array(
         'caption'=>'Depan',
@@ -117,8 +116,6 @@ $structure = array(
 );
 
 require_once dirname(dirname(dirname(__FILE__))) . "/lib.inc/classes/MainMenu.php";
-
-
 
 $maniMenu = new MainMenu();
 echo $maniMenu->show($structure, basename($_SERVER['PHP_SELF']));

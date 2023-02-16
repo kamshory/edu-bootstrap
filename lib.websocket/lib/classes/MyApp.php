@@ -40,8 +40,7 @@ class MyApp {
 		else 
 		{
 			$clientData = array('username'=>'', 'group_id'=>'');
-		}	
-		
+		}		
 		return $clientData;
 	}
 

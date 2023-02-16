@@ -57,25 +57,11 @@ $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="msapplication-navbutton-color" content="#3558BE">
-<meta name="theme-color" content="#3558BE">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#3558BE">
-<title>Memerlukan Sinkronisasi</title>
-<link type="text/css" rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/login.css">
-<link rel="shortcut icon" type="image/x-ico" href="<?php echo $cfg->base_assets;?>favicon.ico" />
-</head>
-<body>
-<div class="all">
-<div class="header">
-<h1><?php echo $cfg->app_name;?></h1>
-</div>
-<div class="content">
+?><?php
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
+$pageTitle = "Pengguna Tidak Terdaftar";
+require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+?>
 <?php
 if(@$_GET['option'] == 'email-taken')
 {
@@ -116,10 +102,9 @@ else
 <?php
 }
 ?>
-</div>
-</div>
-</body>
-</html>
+<?php
+require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+?>
 <?php
 }
 ?>

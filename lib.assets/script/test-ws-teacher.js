@@ -39,7 +39,8 @@ function appendTestMember(data, selector)
 {
     let div1 = $('<div>');
     div1
-        .addClass('col-lg-3')
+        .addClass('col-xl-3')
+        .addClass('col-lg-4')
         .addClass('col-md-6')
         .addClass('col-sm-12')
         .attr({'data-id': data.username});

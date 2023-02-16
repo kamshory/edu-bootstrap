@@ -14,8 +14,7 @@ class WSUtil
 		$rawHeaders = str_replace("\r", "\r\n", $rawHeaders);
 		$rawHeaders = str_replace("\r\n\n", "\r\n", $rawHeaders);
 		$arr = explode("\r\n", $rawHeaders);
-		$headers = array();
-		
+		$headers = array();	
 		$firstLine = $arr[0];
 		$arr4 = explode(" ", $firstLine);
 		$method = @$arr4[0];
@@ -23,6 +22,7 @@ class WSUtil
 		$path = '/';
 		$requestURL = '/';
 		$query = array();
+
 		if(isset($arr4[1]))
 		{
 			$requestURL = $arr4[1];
@@ -54,6 +54,7 @@ class WSUtil
 			'headers'=>$headers
 		);
 	}
+
 	/**
 	* Parse raw cookies
 	* @param string $cookieString Raw cookies from client
@@ -73,6 +74,7 @@ class WSUtil
 		}
 		return $cookieData;
 	} 
+
 	/**
 	* Read cookie
 	* @param array $cookieData Associated array of the cookie
@@ -94,6 +96,7 @@ class WSUtil
 			return $v;
 		}
 	}
+
 	/**
 	* Get session data
 	* @param \SessionParams $sessionParams Session parameters
@@ -119,6 +122,7 @@ class WSUtil
 		}
 		return array();
 	}
+
 	/**
 	* Decode session data
 	* @param string $sessionData Raw session data
@@ -144,6 +148,7 @@ class WSUtil
 		}
 		return $return_data;
 	}
+
 	/**
 	* Decode binary session data
 	* @param string $sessionData Raw session data
@@ -165,7 +170,6 @@ class WSUtil
 		}
 		return $return_data;
 	}
-	
 
 	/**
 	 * Unmask incoming framed message

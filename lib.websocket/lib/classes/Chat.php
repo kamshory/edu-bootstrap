@@ -8,7 +8,7 @@ class Chat extends WSServer implements WSInterface {
 	public function updateUserOnSystem()
 	{
 		$this->resetUserOnSystem();
-		foreach($this->chatClients as $client)
+		foreach($this->wsClients as $client)
 		{
 			if(isset($client->getClientData()['username']))
 			{
@@ -55,7 +55,7 @@ class Chat extends WSServer implements WSInterface {
 					array('my_id'=>$clientData['username'])
 				)
 			);
-			$clientChat->send(json_encode($logInData));
+			$clientChat->sendMessage(json_encode($logInData));
 		}
 	}
 
@@ -209,7 +209,7 @@ class Chat extends WSServer implements WSInterface {
 		$json_message['data'][0]['partner_uri'] = $clientChat->getClientData()['username'];
 		$json_message['data'][0]['avatar'] = $clientChat->getClientData()['avatar'];
 		
-		foreach($this->chatClients as $client)
+		foreach($this->wsClients as $client)
 		{
 			if($client->getClientData()['username'] == $receiver)
 			{
@@ -231,7 +231,7 @@ class Chat extends WSServer implements WSInterface {
 		$json_message['data'][0]['partner_uri'] = $clientChat->getClientData()['username'];
 		$json_message['data'][0]['avatar'] = $clientChat->getClientData()['avatar'];
 		
-		foreach($this->chatClients as $client)
+		foreach($this->wsClients as $client)
 		{
 			if($client->getClientData()['username'] == $receiver)
 			{
@@ -253,7 +253,7 @@ class Chat extends WSServer implements WSInterface {
 		$json_message['data'][0]['partner_uri'] = $clientChat->getClientData()['username'];
 		$json_message['data'][0]['avatar'] = $clientChat->getClientData()['avatar'];
 		
-		foreach($this->chatClients as $client)
+		foreach($this->wsClients as $client)
 		{
 			if($client->getClientData()['username'] == $receiver || $client->getClientData()['username'] == $sender_id)
 			{
@@ -275,7 +275,7 @@ class Chat extends WSServer implements WSInterface {
 		$json_message['data'][0]['partner_uri'] = $clientChat->getClientData()['username'];
 		$json_message['data'][0]['avatar'] = $clientChat->getClientData()['avatar'];
 		
-		foreach($this->chatClients as $client)
+		foreach($this->wsClients as $client)
 		{
 			if($client->getClientData()['username'] == $receiver || $client->getClientData()['username'] == $sender_id)
 			{
@@ -297,7 +297,7 @@ class Chat extends WSServer implements WSInterface {
 		$json_message['data'][0]['partner_uri'] = $clientChat->getClientData()['username'];
 		$json_message['data'][0]['avatar'] = $clientChat->getClientData()['avatar'];
 		
-		foreach($this->chatClients as $client)
+		foreach($this->wsClients as $client)
 		{
 			if($client->getClientData()['username'] == $receiver || $client->getClientData()['username'] == $sender_id)
 			{
@@ -346,7 +346,7 @@ class Chat extends WSServer implements WSInterface {
 											)
 										);
 
-										foreach($this->chatClients as $client) 
+										foreach($this->wsClients as $client) 
 										{
 											$current_user_data = $client->getClientData();
 											$member_id = $current_user_data['username'];
@@ -417,7 +417,7 @@ class Chat extends WSServer implements WSInterface {
 												)
 											)
 										);
-										foreach($this->chatClients as $client) 
+										foreach($this->wsClients as $client) 
 										{
 											$current_user_data = $client->getClientData();
 											$member_id = $current_user_data['username'];
@@ -498,7 +498,7 @@ class Chat extends WSServer implements WSInterface {
 											)
 										);
 	
-										foreach($this->chatClients as $client) 
+										foreach($this->wsClients as $client) 
 										{
 											$current_user_data = $client->getClientData();
 											$member_id = $current_user_data['username'];
@@ -564,7 +564,7 @@ class Chat extends WSServer implements WSInterface {
 		$json_message['data'][0]['partner_uri'] = $clientChat->getClientData()['username'];
 		$json_message['data'][0]['avatar'] = $clientChat->getClientData()['avatar'];
 		
-		foreach($this->chatClients as $client)
+		foreach($this->wsClients as $client)
 		{
 			if($client->getClientData()['username'] == $receiver)
 			{
@@ -575,7 +575,7 @@ class Chat extends WSServer implements WSInterface {
 		$json_message['data'][0]['partner_name'] = @$this->userOnSystem[$receiver]['full_name'];
 		$json_message['data'][0]['partner_uri'] = @$this->userOnSystem[$receiver]['username'];
 		$json_message['data'][0]['avatar'] = @$this->userOnSystem[$receiver]['avatar'];
-		foreach($this->chatClients as $client)
+		foreach($this->wsClients as $client)
 		{
 
 			if($client->getClientData()['username'] == $clientChat->getClientData()['username'])
@@ -588,7 +588,7 @@ class Chat extends WSServer implements WSInterface {
 	public function forwardWebRTCInfo($clientChat, $json_message)
 	{
 		$receiver = $json_message['data'][0]['receiver_id'];
-		foreach($this->chatClients as $client)
+		foreach($this->wsClients as $client)
 		{
 			if($client->getClientData()['username'] == $receiver)
 			{

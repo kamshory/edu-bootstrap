@@ -6,7 +6,6 @@ class WSBrokerService extends WSServer implements WSInterface {
 	{
 		parent::__construct($wsDatabase, $host, $port, $callbackObject, $callbackPostConstruct, $messageOnStarted);
 	}
-	
 
 	/**
 	 * Add student to member test list
@@ -27,7 +26,6 @@ class WSBrokerService extends WSServer implements WSInterface {
 			}
 			$this->testMember[$testId][$student_id][$student->resourceId] = $student;
 		}
-
 	}
 
 	/**
@@ -214,7 +212,4 @@ class WSBrokerService extends WSServer implements WSInterface {
 			}
 		}
 	}
-	
-
-	
 }

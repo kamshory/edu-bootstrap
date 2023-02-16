@@ -114,7 +114,6 @@ class WSClient //NOSONAR
 		$this->port = $port;	
 	}
 
-
 	public function sendMessage($message)
 	{
 		$maskedMessage = WSUtil::mask($message);
@@ -275,7 +274,6 @@ class WSClient //NOSONAR
 	{
 		return $this->query;
 	}
-
 
 	/**
 	 * Get the value of sessionID
