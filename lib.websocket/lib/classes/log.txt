@@ -152,3 +152,58 @@ Client = Array
  Message = '{"command":"message","receiver":["Budi Raharjo"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
 
 
+Client = Array
+(
+    [login_time] => 2023-02-16 09:26:47
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = 'PING'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 09:29:07
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = 'PING'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 09:29:33
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = 'PING'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 11:35:29
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = 'PING'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 12:50:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = 'PING'
+
+
