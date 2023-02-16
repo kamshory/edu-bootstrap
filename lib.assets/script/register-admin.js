@@ -1,7 +1,7 @@
 	function onChangeCountry()
 	{
-		var country_id = $('#country_id').val();
-		var prefix = $('#country_id option:selected').attr('data-code');
+		let country_id = $('#country_id').val();
+		let prefix = $('#country_id option:selected').attr('data-code');
 		updatePhobeBackground(prefix);
 		$('#phone_code').val(prefix);
 		$.ajax({
@@ -12,9 +12,9 @@
 			success: function(data){
 				$('#state_id').replaceWith('<select name="state_id" id="state_id" required="required" data-full-width="true"></select>');
 				$('#state_id').empty();
-				var html = '';
+				let html = '';
 				html += '<option value="">- Pilih Provinsi -</option>';
-				var i, j;
+				let i;
 				for(i in data)
 				{
 					html += '<option value="'+data[i].l+'">'+data[i].l+'</option>';
@@ -34,9 +34,9 @@
 			success: function(data){
 				$('#city_id').replaceWith('<select name="city_id" id="city_id" required="required" data-full-width="true"></select>');
 				$('#city_id').empty();
-				var html = '';
+				let html = '';
 				html += '<option value="">- Pilih Kabupaten/Kota -</option>';
-				var i, j;
+				let i;
 				for(i in data)
 				{
 					html += '<option value="'+data[i].l+'">'+data[i].l+'</option>';
@@ -54,8 +54,8 @@
 			onChangeCountry();
 		});
 		$(document).on('change', 'select#state_id', function(e){
-			var val = $(this).val();
-			var _this = this;
+			let val = $(this).val();
+			let _this = this;
 			if(val == '--')
 			{
 				if(confirm('Apakah Anda akan mengubah jenis masukan?')){
@@ -65,8 +65,8 @@
 			}
 			else
 			{
-				var state_name = val;
-				var country_id = $('#country_id').val();
+				let state_name = val;
+				let country_id = $('#country_id').val();
 				$.ajax({
 					url:'../lib.ajax/ajax-load-city-list.php',
 					type:'GET',
@@ -75,9 +75,9 @@
 					success: function(data){
 						$('#city_id').replaceWith('<select name="city_id" id="city_id" required="required" data-full-width="true"></select>');
 						$('#city_id').empty();
-						var html = '';
+						let html = '';
 						html += '<option value="">- Pilih Kota -</option>';
-						var i, j;
+						let i;
 						for(i in data)
 						{
 							html += '<option value="'+data[i].l+'">'+data[i].l+'</option>';
@@ -92,8 +92,8 @@
 			}
 		});
 		$(document).on('change', 'select#city_id', function(e){
-			var val = $(this).val();
-			var _this = this;
+			let val = $(this).val();
+			let _this = this;
 			if(val == '--')
 			{
 				if(confirm('Apakah Anda akan mengubah jenis masukan?')){
@@ -108,8 +108,8 @@
 
 function updatePhobeBackground(code)
 {
-	var canvas = document.getElementById("phonebg");
-	var ctx = canvas.getContext("2d");
+	let canvas = document.getElementById("phonebg");
+	let ctx = canvas.getContext("2d");
 	ctx.clearRect(0,0,40,36);
 
 	ctx.beginPath();
@@ -131,18 +131,18 @@ function updatePhobeBackground(code)
 	ctx.font = "12px Arial";    
 	ctx.textAlign = "end";      
 	ctx.fillText(code, 36, 20);   
-	var dataURL = canvas.toDataURL();  
+	let dataURL = canvas.toDataURL();  
 	$('#phone').css({'background-image':'url('+dataURL+')', 'background-position':'-4px center', 'background-repeat':'no-repeat', 'padding-left':'40px'});             
 }
 if(typeof Language == 'undefined')
 {
-	var Language = {};
+	let Language = {}; //NOSONAR
 }
 function initRegisterForm()
 {
 	$(document).on('blur', '.registerform input[name="username"]', function(){
-		var that = $(this);
-		var val = that.val();
+		let that = $(this);
+		let val = that.val();
 		$.ajax({
 			url:'../lib.ajax/ajax-check-username.php',
 			data:{username:val},
@@ -185,8 +185,8 @@ function initRegisterForm()
 		});
 	});
 	$(document).on('blur', '.registerform input[name="email"]', function(){
-		var that = $(this);
-		var val = that.val();
+		let that = $(this);
+		let val = that.val();
 		$.ajax({
 			url:'../lib.ajax/ajax-check-email.php',
 			data:{email:val},
@@ -212,8 +212,8 @@ function initRegisterForm()
 		});
 	});
 	$(document).on('blur', '.registerform input[name="name"]', function(){
-		var that = $(this);
-		var val = that.val();
+		let that = $(this);
+		let val = that.val();
 		$.ajax({
 			url:'../lib.ajax/ajax-check-name.php',
 			data:{name:val},
@@ -234,15 +234,16 @@ function initRegisterForm()
 	});
 }
 
-function checkThisForm(frm){
-	var that = $(frm);
-	var validForm = 1;
+function checkThisForm(frm) //NOSONAR
+{
+	let that = $(frm);
+	let validForm = 1;
 	that.find(':input').each(function(index, element) {
 		if($(this).hasClass('input-error'))
 		{
 			validForm = validForm * 0;
 		}
-		var required = $(this).is('[required]');
+		let required = $(this).is('[required]');
 		if(required)
 		{
 			if($(this).is('select') || $(this).is('input[type="text"]') || $(this).is('input[type="password"]')  || $(this).is('input[type="text"]') )

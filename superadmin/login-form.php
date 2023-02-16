@@ -12,7 +12,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
 <meta name="apple-mobile-web-app-status-bar-style" content="#3558BE">
 <title>Masuk ke <?php echo $cfg->app_name;?></title>
 <link type="text/css" rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/login.css">
-<link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/favicon.png" />
+<link rel="shortcut icon" type="image/x-ico" href="<?php echo $cfg->base_assets;?>favicon.ico" />
 </head>
 <body>
 <div class="all">

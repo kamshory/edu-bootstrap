@@ -21,6 +21,7 @@ AND (`city`.`state_id` = '$state_id' OR `city`.`state_id` = '' OR `city`.`state_
 AND `city`.`active` = true AND `city`.`verify` = '1'
 ORDER BY `city`.`type` ASC, `city`.`name` ASC
 ";
+
 $city_list = array();
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)

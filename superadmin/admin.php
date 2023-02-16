@@ -23,7 +23,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$email = kh_filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
 	$phone = kh_filter_input(INPUT_POST, "phone", FILTER_SANITIZE_SPECIAL_CHARS);
 	$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
@@ -94,7 +94,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$phone = $picoEdu->fixPhone($phone);
 		$email = $picoEdu->filterEmailAddress($email);
 
-		$time_create = $time_edit = $picoEdu->getLocalDateTime();
+		$time_create = $time_edit = $database->getLocalDateTime();
 		$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 
 		$token_admin = md5($phone . "-" . $email . "-" . time() . "-" . mt_rand(111111, 999999));
@@ -111,7 +111,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$user_data['language'] = $language;
 
 		if (!empty($name) && $username != '') {
-			$chk = $picoEdu->getExistsingUser($user_data);
+			$chk = $picoEdu->getExistsingUser($user_data, null);
 			$admin_id = addslashes($chk['member_id']);
 			$username = addslashes($chk['username']);
 
@@ -410,7 +410,7 @@ $sql = "SELECT `edu_admin`.* $nt,
 (SELECT `edu_admin1`.`name` FROM `edu_admin` AS `edu_admin1` WHERE `edu_admin1`.`admin_id` = `edu_admin`.`admin_create` limit 0,1) AS `admin_create`,
 (SELECT `edu_admin2`.`name` FROM `edu_admin` AS `edu_admin2` WHERE `edu_admin2`.`admin_id` = `edu_admin`.`admin_edit` limit 0,1) AS `admin_edit`
 FROM `edu_admin` 
-where 1 
+WHERE (1=1) 
 AND `edu_admin`.`admin_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
@@ -533,7 +533,7 @@ $(document).ready(function(e) {
     <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` DESC";
+    $sql2 = "SELECT * FROM `edu_school` WHERE (1=1) ORDER BY `time_create` DESC";
 
 	echo $picoEdu->createFilterDb(
 		$sql2,
@@ -558,8 +558,7 @@ $(document).ready(function(e) {
     ?>
     </select>
    <span class="search-label">Admin</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
- "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
   <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

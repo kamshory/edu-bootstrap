@@ -13,6 +13,8 @@ if(isset($_SESSION['admin_password']))
 {
 	$password = $_SESSION['admin_password'];
 }
+
+require_once dirname(__FILE__) . "/classes/AdminAuth.php";
 $adminLoggedIn = new \AdminAuth($database, $username, $password, false);
 $admin_id = "";
 $school_id = "";
@@ -22,6 +24,7 @@ $admin_create = "";
 $admin_edit = "";
 $member_create = "";
 $member_edit = "";
+$use_national_id = true;
 
 if(!empty($adminLoggedIn->admin_id))
 {
@@ -41,4 +44,6 @@ if(!empty($adminLoggedIn->admin_id))
 	$school_name = $adminLoggedIn->school_name . '';
 	$school_code = $adminLoggedIn->school_code . '';
 	$use_token = $adminLoggedIn->use_token . '';
+	$use_national_id = $adminLoggedIn->use_national_id?true:false;
 }
+

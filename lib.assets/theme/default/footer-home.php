@@ -56,7 +56,7 @@
 		FROM `edu_info` 
 		WHERE `edu_info`.`active` = true
 		ORDER BY `edu_info`.`info_id` DESC
-		limit 0, 10
+		LIMIT 0, 10
 		";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)

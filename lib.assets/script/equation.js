@@ -1,6 +1,6 @@
 window.onload = function()
 {
-	var rendererSelector = 'browser-mathjax';
+	var rendererSelector = 'mathjax-svg';
 	document.getElementById('renderer').value = rendererSelector;
 };
 var generatePNG = true;
@@ -47,7 +47,7 @@ function insertEquation(includeLatex)
 			img.src = url;
 		}
 	}
-	else if(rendererSelector == 'browser-mathjax')
+	else if(rendererSelector == 'mathjax-svg')
 	{
 		if(latex != '')
 		{
@@ -62,6 +62,24 @@ function insertEquation(includeLatex)
 			{
 				window.parent.uploadBase64ImageFromLatex(url, 1, 'svg');
 			}
+		}
+	}
+	else if(rendererSelector == 'mathjax-png')
+	{
+		if(latex != '')
+		{
+			let img = document.createElement('img');
+			let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
+			svgToPNG(data, function(base64EncodedURL){
+				if(includeLatex)
+				{
+					window.parent.uploadBase64ImageFromLatex(base64EncodedURL, 1, 'png', 'latex|'+latex);
+				}
+				else
+				{
+					window.parent.uploadBase64ImageFromLatex(base64EncodedURL, 1, 'png');
+				}
+			});
 		}
 	}
   	else if(rendererSelector == 'browser-svg')
@@ -80,6 +98,18 @@ function insertEquation(includeLatex)
 	else
 	{
 		var data = asciimath.latexToSVG(latex, true, true);
+		svgToPNG(data, function(base64EncodedURL){
+			if(includeLatex)
+			{
+				window.parent.uploadBase64ImageFromLatex(base64EncodedURL, 1, 'png', 'latex|'+latex);
+			}
+			else
+			{
+				window.parent.uploadBase64ImageFromLatex(base64EncodedURL, 1, 'png');
+			}
+		});
+
+		/**
 		
 		var DOMURL = window.URL || window.webkitURL || window;
 		
@@ -106,5 +136,29 @@ function insertEquation(includeLatex)
 		}
 		
 		img.src = url;
+		*/
 	}
+}
+
+/**
+ * Convert SVG document to PNG without resize it
+ * @param {string} svgData String of SVG document
+ * @param {function} onloadCallback Callback function when process has been finished
+ */
+function svgToPNG(svgData, onloadCallback)
+{
+	var DOMURL = window.URL || window.webkitURL || window;	
+	var img = new Image();
+	var svg = new Blob([svgData], {type: 'image/svg+xml'});
+	var url = DOMURL.createObjectURL(svg);
+	var canvas = document.createElement('canvas');
+	var ctx = canvas.getContext('2d');
+	img.onload = function() {
+		canvas.setAttribute('width', img.width);
+		canvas.setAttribute('height', img.height);
+		ctx.drawImage(img, 0, 0);
+		DOMURL.revokeObjectURL(url);
+		onloadCallback(canvas.toDataURL('png'));	
+	}
+	img.src = url;
 }

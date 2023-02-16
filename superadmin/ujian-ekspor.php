@@ -136,8 +136,7 @@ window.onload = function()
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
     <span class="search-label">Ujian</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
-    "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
     <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
@@ -158,12 +157,12 @@ $sql = "SELECT `edu_test`.* $nt,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`,
 (SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` GROUP BY `edu_question`.`test_id`)*1 AS `number_of_question`
 FROM `edu_test`
-where 1  $sql_filter
+WHERE (1=1)  $sql_filter
 ORDER BY `edu_test`.`test_id` DESC
 ";
 $sql_test = "SELECT `edu_test`.`test_id`
 FROM `edu_test`
-where 1  $sql_filter
+WHERE (1=1)  $sql_filter
 ";
 $stmt = $database->executeQuery($sql_test);
 $pagination->setTotalRecord($stmt->rowCount());

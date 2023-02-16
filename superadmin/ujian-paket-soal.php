@@ -9,7 +9,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 $pageTitle = "Paket Soal";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-$time_create = $time_edit = $picoEdu->getLocalDateTime();
+$time_create = $time_edit = $database->getLocalDateTime();
 
 
 if(@$_GET['option'] == 'export')
@@ -861,7 +861,7 @@ return filename.replace(/\.[^/.]+$/, "");
 var ascii_svg_server = 'lib.tools/asciisvg/svgimg.php';
 var equation_preview_url = '../../../../../../cgi-bin/equgen.cgi?' ;
 var equation_generator_url = '../../../../../../equgen.php?' ;
-var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'browser-png':'browser-mathjax';
+var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'mathml-png':'mathjax-svg';
 var quran_server = '../quran';
 $().ready(function() {
 	$('textarea.htmleditor').tinymce({
@@ -1413,8 +1413,7 @@ $(document).ready(function(e) {
 	?>
     </select>
     <span class="search-label">Nama</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
- "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
   <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

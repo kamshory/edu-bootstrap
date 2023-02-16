@@ -68,7 +68,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 <meta name="apple-mobile-web-app-status-bar-style" content="#3558BE">
 <title>Memerlukan Sinkronisasi</title>
 <link type="text/css" rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/login.css">
-<link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/favicon.png" />
+<link rel="shortcut icon" type="image/x-ico" href="<?php echo $cfg->base_assets;?>favicon.ico" />
 </head>
 <body>
 <div class="all">

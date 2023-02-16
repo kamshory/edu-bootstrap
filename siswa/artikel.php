@@ -41,36 +41,56 @@ if(isset($_GET['article_id']))
 else
 {
 	require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+	?>
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
+<div class="search-control">
+<form id="searchform" name="form1" method="get" action="">
+    <span class="search-label">Informasi</span>
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
+</form>
+</div>
+
+<div class="search-result">
+<?php
+
+$sql_filter = "";
+
+if($pagination->getQuery()){
+	$pagination->appendQueryName('q');
+	$sql_filter .= " AND (`edu_article`.`title` like '%".addslashes($pagination->getQuery())."%' )";
+}
+
+$nt = '';
+
+
 	$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 	FROM `edu_article` 
 	LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
-	WHERE `edu_article`.`school_id` = '$school_id' AND `edu_article`.`active` = true
+	WHERE `edu_article`.`school_id` = '$school_id' AND `edu_article`.`active` = true $sql_filter
 	ORDER BY `edu_article`.`article_id` DESC
-	LIMIT 0, 10
 	";
-	$stmt = $database->executeQuery($sql);
-	if($stmt->rowCount() > 0)
+	$sql_test = "SELECT `edu_article`.`article_id`
+	FROM `edu_article` 
+	WHERE `edu_article`.`school_id` = '$school_id' AND `edu_article`.`active` = true $sql_filter
+	";
+	
+	$stmt = $database->executeQuery($sql_test);
+	$pagination->setTotalRecord($stmt->rowCount());
+	$stmt = $database->executeQuery($sql . $pagination->getLimitSql());
+	$pagination->setTotalRecordWithLimit($stmt->rowCount());
+	if($pagination->getTotalRecordWithLimit() > 0)
 	{
-		?>
-        <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
-<style>
-	.article-item{
-		margin-bottom: 20px;
-	}
-	.card-text
-	{
-		position: relative;
-	}
-	.card-text img{
-		max-width: 100%;
-	}
-</style>
+		$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+		$paginationHTML = $pagination->buildHTML();	
 
-        <div class="article-list row">
-		
-    <?php
+		?>
+		<div class="main-content">
+			<div class="main-content-wrapper">
+			<div class="article-list row">
+		<?php
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	foreach($rows as $data)
+	foreach($rows as $idx=>$data)
 	{
 
 		$obj = parseHtmlData('<html><body>'.($data['content']).'</body></html>');
@@ -134,11 +154,19 @@ else
 				$content = '<img src="'.$img['src'].'">';
 			}
 		}
-	
+		$cls = "";
+		if($pagination->getTotalRecordWithLimit() % 2 == 1 && $idx == $pagination->getTotalRecordWithLimit() - 1)
+		{
+			$cls = " col-sm-12";
+		}
+		else
+		{
+			$cls = " col-sm-6";
+		}
 		?>
 
-		<div class="article-item col-sm-6">
-			<div class="card">
+		<div class="article-item<?php echo $cls;?>">
+			<div class="card h-100">
 				<div class="card-body d-flex flex-column align-items-stretch">
 				<h5 class="card-title"><?php echo $data['title'];?></h5>
 				<p class="card-text"><?php echo $content;?></p>
@@ -155,6 +183,13 @@ else
 	}
 	?>
 	</div>
+	</div>
+	</div>
+
+	<div class="d-flex search-pagination search-pagination-bottom">
+<div class="col-md-6 col-sm-12 search-pagination-control"><?php echo $paginationHTML;?></div>
+<div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
+</div>
 	<?php
 		
 	}

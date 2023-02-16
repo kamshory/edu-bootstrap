@@ -52,93 +52,22 @@ let LatexDialog = {
 		img.setAttribute('class', 'latex-image');
 		img.style.verticalAlign='middle';
 		document.getElementById('latex-input').value = latex;
-		document.getElementById('renderer').value = ed.getParam('equation_renderer_machine') || 'browser-mathjax';
+		document.getElementById('renderer').value = ed.getParam('equation_renderer_machine') || 'mathjax-svg';
 	},
 
 	insert : function() {
 		// Insert the contents from the input into the document
-		let ed = tinyMCEPopup.editor;
 		let rendererSelector = document.getElementById('renderer').value;
 		let latex = document.getElementById('latex-input').value;
 		latex = latex.trim();
-		if(rendererSelector == 'server-png')
+		if(latex.length > 0)
 		{
-			if(latex.length > 0)
+			if(rendererSelector == 'mathjax-svg')
 			{
-				latex = asciimath.reconstructSqrtWord(latex);
-				latex = asciimath.filterData(latex);
-				latex = asciimath.reconstructMatrix(latex);
-
-				let urlGenerator = ed.getParam('equation_generator_url') || '../../../../../../cgi-bin/equgen.cgi';
-				let url = urlGenerator+''+latex;
-	
-				let img = new Image();
-				let canvas = document.createElement('canvas');
-				let ctx = canvas.getContext('2d');
-				img.onload = function() {
-					canvas.setAttribute('width', img.width);
-					canvas.setAttribute('height', img.height);
-					ctx.drawImage(img, 0, 0);
-					let dataURL = canvas.toDataURL('png');
-					let img2 = document.createElement('img');
-					img2.src = dataURL;
-					img2.setAttribute('alt', latex);
-					img2.setAttribute('data-latex', latex);
-					img2.setAttribute('data-renderer', rendererSelector);
-					img2.setAttribute('class', 'latex-image');
-					img2.style.verticalAlign='middle';
-					tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
-					tinyMCEPopup.close();
-				}
-				
-				img.src = url;
-			}
-		}
-		else if(rendererSelector == 'browser-mathjax')
-		{
-			let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
-			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
-			let img2 = document.createElement('img');
-			img2.src = url;
-			img2.setAttribute('alt', latex);
-			img2.setAttribute('data-latex', latex);
-			img2.setAttribute('data-renderer', rendererSelector);
-			img2.setAttribute('class', 'latex-image');
-			img2.style.verticalAlign='middle';
-			tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
-			tinyMCEPopup.close();
-		}
-		else if(rendererSelector == 'browser-mathml')
-		{
-			let data = asciimath.latexToSVG(latex, true, true);
-			let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
-			let img2 = document.createElement('img');
-			img2.src = url;
-			img2.setAttribute('alt', latex);
-			img2.setAttribute('data-latex', latex);
-			img2.setAttribute('data-renderer', rendererSelector);
-			img2.setAttribute('class', 'latex-image');
-			img2.style.verticalAlign='middle';
-			tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
-			tinyMCEPopup.close();
-		}
-		else
-		{
-			let data = asciimath.latexToSVG(latex, true, true);
-			let DOMURL = window.URL || window.webkitURL || window;
-			let img = new Image();
-			let svg = new Blob([data], {type: 'image/svg+xml'});
-			let url = DOMURL.createObjectURL(svg);			
-			let canvas = document.createElement('canvas');
-			let ctx = canvas.getContext('2d');
-			img.onload = function() {
-				canvas.setAttribute('width', img.width);
-				canvas.setAttribute('height', img.height);
-				ctx.drawImage(img, 0, 0);
-				DOMURL.revokeObjectURL(url);
-				let url2 = canvas.toDataURL('png');
+				let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
+				let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
 				let img2 = document.createElement('img');
-				img2.src = url2;
+				img2.src = url;
 				img2.setAttribute('alt', latex);
 				img2.setAttribute('data-latex', latex);
 				img2.setAttribute('data-renderer', rendererSelector);
@@ -146,8 +75,51 @@ let LatexDialog = {
 				img2.style.verticalAlign='middle';
 				tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
 				tinyMCEPopup.close();
-			}			
-			img.src = url;
+			}
+			else if(rendererSelector == 'mathjax-png')
+			{
+				let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
+				svgToPNG(data, function(base64EncodedURL){
+					let img2 = document.createElement('img');
+					img2.src = base64EncodedURL;
+					img2.setAttribute('alt', latex);
+					img2.setAttribute('data-latex', latex);
+					img2.setAttribute('data-renderer', rendererSelector);
+					img2.setAttribute('class', 'latex-image');
+					img2.style.verticalAlign='middle';
+					tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
+					tinyMCEPopup.close();
+				});			
+			}
+			else if(rendererSelector == 'mathml-svg')
+			{
+				let data = asciimath.latexToSVG(latex, true, true);
+				let url = 'data:image/svg+xml;base64,'+Base64.encode(data);
+				let img2 = document.createElement('img');
+				img2.src = url;
+				img2.setAttribute('alt', latex);
+				img2.setAttribute('data-latex', latex);
+				img2.setAttribute('data-renderer', rendererSelector);
+				img2.setAttribute('class', 'latex-image');
+				img2.style.verticalAlign='middle';
+				tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
+				tinyMCEPopup.close();
+			}
+			else
+			{
+				let data = asciimath.latexToSVG(latex, true, true);
+				svgToPNG(data, function(base64EncodedURL){
+					let img2 = document.createElement('img');
+					img2.src = base64EncodedURL;
+					img2.setAttribute('alt', latex);
+					img2.setAttribute('data-latex', latex);
+					img2.setAttribute('data-renderer', rendererSelector);
+					img2.setAttribute('class', 'latex-image');
+					img2.style.verticalAlign='middle';
+					tinyMCEPopup.editor.execCommand('mceInsertContent', false, img2.outerHTML);
+					tinyMCEPopup.close();
+				});
+			}
 		}
 	}
 };
@@ -199,30 +171,13 @@ window.onload = function(e)
 	data = asciimath.reconstructVector(data);
 	renderLatex(data);
 }
+
 function renderLatex(latex){
 	latex = latex.trim();
-	let ed = tinyMCEPopup.editor;
-	let urlPreview = ed.getParam('equation_preview_url') || '../../../../../../cgi-bin/equgen.cgi';
 	let rendererSelector = document.getElementById('renderer').value;
-	if(rendererSelector == 'server-png')
+	if(latex != '')
 	{
-		if(latex != '')
-		{
-			let img = document.createElement('img');
-			img.src = urlPreview+latex;
-			img.setAttribute('alt', latex);
-			img.setAttribute('class', 'latex-image');
-			img.style.verticalAlign='middle';
-			document.getElementById('image-container').innerHTML = img.outerHTML;
-		}
-		else
-		{
-			document.getElementById('image-container').innerHTML = '';
-		}
-	}
-	else if(rendererSelector == 'browser-mathjax')
-	{
-		if(latex != '')
+		if(rendererSelector == 'mathjax-svg' || rendererSelector == 'mathjax-png')
 		{
 			let img = document.createElement('img');
 			let data = MathJax.tex2svg(latex).firstElementChild.outerHTML+'';
@@ -231,23 +186,23 @@ function renderLatex(latex){
 			img.setAttribute('alt', latex);
 			img.setAttribute('class', 'latex-image');
 			img.style.verticalAlign='middle';
-			document.getElementById('image-container').innerHTML = img.outerHTML;
+			document.getElementById('image-container').innerHTML = img.outerHTML;		
 		}
 		else
 		{
-			document.getElementById('image-container').innerHTML = '';
+			let svg = asciimath.latexToSVG(latex);
+			let url = 'data:image/svg+xml;base64,'+Base64.encode(svg);
+			let img = document.createElement('img');
+			img.src = url;
+			img.setAttribute('alt', latex);
+			img.setAttribute('class', 'latex-image');
+			img.style.verticalAlign='middle';
+			document.getElementById('image-container').innerHTML = img.outerHTML;
 		}
 	}
 	else
 	{
-		let svg = asciimath.latexToSVG(latex);
-		let url = 'data:image/svg+xml;base64,'+Base64.encode(svg);
-		let img = document.createElement('img');
-		img.src = url;
-		img.setAttribute('alt', latex);
-		img.setAttribute('class', 'latex-image');
-		img.style.verticalAlign='middle';
-		document.getElementById('image-container').innerHTML = img.outerHTML;
+		document.getElementById('image-container').innerHTML = '';
 	}
 }
 function contains(arr, text)
@@ -261,6 +216,7 @@ function contains(arr, text)
 	}
 	return false;
 }
+
 function isContetRTF(types)
 {
 	return contains(types, 'text/html') || contains(types, 'text/rtf');
@@ -273,7 +229,7 @@ function handlePasteImage(e)
 		let data;
 		if(isContetRTF(e.clipboardData.types))
 		{
-			document.getElementById('renderer').value = 'browser-png';
+			document.getElementById('renderer').value = 'mathml-png';
 			let data = e.clipboardData.getData('text/plain');
 			try{
 				data = asciimath.reconstructSqrtWord(data);
@@ -313,4 +269,27 @@ function handlePasteImage(e)
 			renderLatex(data);
 		}
 	}
+}
+
+/**
+ * Convert SVG document to PNG without resize it
+ * @param {string} svgData String of SVG document
+ * @param {function} onloadCallback Callback function when process has been finished
+ */
+function svgToPNG(svgData, onloadCallback)
+{
+	let DOMURL = window.URL || window.webkitURL || window;	
+	let img = new Image();
+	let svg = new Blob([svgData], {type: 'image/svg+xml'});
+	let url = DOMURL.createObjectURL(svg);
+	let canvas = document.createElement('canvas');
+	let ctx = canvas.getContext('2d');
+	img.onload = function() {
+		canvas.setAttribute('width', img.width);
+		canvas.setAttribute('height', img.height);
+		ctx.drawImage(img, 0, 0);
+		DOMURL.revokeObjectURL(url);
+		onloadCallback(canvas.toDataURL('png'));	
+	}
+	img.src = url;
 }

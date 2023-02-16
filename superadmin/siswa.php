@@ -13,7 +13,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST) && isset($_POST['save']))
 {
 	$student_id = kh_filter_input(INPUT_POST, "student_id", FILTER_SANITIZE_STRING_NEW);
-	$student_id2 = kh_filter_input(INPUT_POST, "student_id2", FILTER_SANITIZE_NUMBER_UINT);
+	$student_id2 = kh_filter_input(INPUT_POST, "student_id2", FILTER_SANITIZE_STRING_NEW);
 	if(!isset($_POST['student_id']))
 	{
 		$student_id = $student_id2;
@@ -33,7 +33,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$religion_id = kh_filter_input(INPUT_POST, "religion_id", FILTER_SANITIZE_SPECIAL_CHARS);
 	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 }
 
@@ -148,7 +148,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 				),
 				'selectCondition'=>array(
 					'source'=>'class_id',
-					'value'=>$class_id
+					'value'=>$data['class_id']
 				),
 				'caption'=>array(
 					'delimiter'=>PicoEdu::RAQUO,
@@ -375,7 +375,7 @@ $(document).ready(function(e) {
     <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` DESC";
+    $sql2 = "SELECT * FROM `edu_school` WHERE (1=1) ORDER BY `time_create` DESC";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -430,8 +430,7 @@ $(document).ready(function(e) {
 	}
 	?>
     <span class="search-label">Nama Siswa</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
- "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
   <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

@@ -7,7 +7,7 @@ if(empty($school_id))
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 
-$time_create = $time_edit = $picoEdu->getLocalDateTime();
+$time_create = $time_edit = $database->getLocalDateTime();
 
 if(isset($_POST['data']))
 {

@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#3558BE">
 <base href="<?php echo $cfg->base_url;?>">
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery/jquery.min.js"></script>
-<link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/favicon.png" />
+<link rel="shortcut icon" type="image/x-ico" href="<?php echo $cfg->base_assets;?>favicon.ico" />
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/js/home.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/home.min.css">

@@ -158,7 +158,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	$school_id = $auth_teacher_school_id;
 	
 	$active = 0;
-	$time = $picoEdu->getLocalDateTime();
+	$time = $database->getLocalDateTime();
 	$ip = $_SERVER['REMOTE_ADDR'];
 	
 	if(isset($_POST['publish']))

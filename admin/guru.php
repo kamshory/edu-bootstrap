@@ -30,8 +30,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$email = kh_filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
 	$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
 	$address = kh_filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
-	$admin_create = $admin_edit = $adminLoggedIn->admin_id;
+	$time_create = $time_edit = $database->getLocalDateTime();	
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
@@ -87,8 +86,6 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$country_id = $data['country_id'];
 	$language = $data['language'];
 
-	$data = array();
-
 	$phone = $picoEdu->fixPhone($phone);
 	$email = $picoEdu->filterEmailAddress($email);
 	$gender = $picoEdu->mapGender($gender);
@@ -120,7 +117,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$user_data['country_id'] = $country_id;
 		$user_data['language'] = $language;
 		if (!empty($name) && !empty($email)) {
-			$chk = $picoEdu->getExistsingUser($user_data);
+			$teacher_id = null;
+			if($use_national_id && !empty($reg_number_national))
+			{
+				$teacher_id = trim($reg_number_national);
+			}
+			$chk = $picoEdu->getExistsingUser($user_data, $teacher_id);
 			$teacher_id = addslashes($chk['member_id']);
 			$username = addslashes($chk['username']);
 			if ($picoEdu->checkTeacher($school_id, $reg_number, $reg_number_national, $name)) {
@@ -192,19 +194,19 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>No.Induk</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>NUPTK</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" autocomplete="off" <?php echo $picoEdu->trueFalse($use_national_id, ' required="required"', '');?> /></td>
 		</tr>
 		<tr>
 		<td>Nama</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
-		<td><select class="form-control input-select" name="gender" id="gender">
+		<td><select class="form-control input-select" name="gender" id="gender" required="required">
 		<option value=""></option>
 		<option value="M">Laki-Laki</option>
 		<option value="W">Perempuan</option>
@@ -248,7 +250,8 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
-		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> 
+		<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -275,19 +278,19 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>No.Induk</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" value="<?php echo $data['reg_number'];?>" autocomplete="off" /><input type="hidden" name="teacher_id2" id="teacher_id2" value="<?php echo $data['teacher_id'];?>" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" value="<?php echo $data['reg_number'];?>" autocomplete="off" /><input type="hidden" name="teacher_id2" id="teacher_id2" value="<?php echo $data['teacher_id'];?>" required="required" /></td>
 		</tr>
 		<tr>
 		<td>NUPTK</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo $data['reg_number_national'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo $data['reg_number_national'];?>" autocomplete="off" <?php echo $picoEdu->trueFalse($use_national_id, ' required="required"', '');?> /></td>
 		</tr>
 		<tr>
 		<td>Nama</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
-		<td><select class="form-control input-select" name="gender" id="gender">
+		<td><select class="form-control input-select" name="gender" id="gender" required="required">
 		<option value=""></option>
 		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', PicoConst::SELECT_OPTION_SELECTED);?>>Laki-Laki</option>
 		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', PicoConst::SELECT_OPTION_SELECTED);?>>Perempuan</option>
@@ -469,8 +472,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
   <span class="search-label">Nama Guru</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
- "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
   <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

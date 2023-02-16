@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+if(!isset($cfg))
+{
+  exit();
+}
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/css/bootstrap.min.css">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>favs/apple-touch-icon.png" sizes="180x180">
@@ -27,7 +32,7 @@
 <link href="<?php echo $cfg->base_url;?>lib.vendors/dashboard/dashboard.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.style/style.css">
 <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script>
   $(document).ready(function(){
@@ -46,7 +51,7 @@
 
 <body>
 	<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="../">Pico Edu</a>
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="../"><?php echo $cfg->app_name;?></a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
       data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -56,9 +61,8 @@
   <div class="container-fluid">
     <div class="row">
       <?php
-	  require_once dirname(__FILE__) . '/menu.php';
-      $phpSelf = basename($_SERVER['PHP_SELF']);
-	  
+	    require_once dirname(__FILE__) . '/menu.php';
+      $phpSelf = basename($_SERVER['PHP_SELF']); 
       ?>
 
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
@@ -76,7 +80,7 @@
           <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group mr-2">
               <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='sinkronisasi.php'">Sinkronkan</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='informasi.php'">Informasi</button>
             </div>
             <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -91,5 +95,4 @@
             </button>
           </div>
         </div>
-
 

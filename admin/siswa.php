@@ -35,7 +35,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$religion_id = kh_filter_input(INPUT_POST, "religion_id", FILTER_SANITIZE_SPECIAL_CHARS);
 	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 }
 
@@ -89,11 +89,11 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	$country_id = $data['country_id'];
 	$language = $data['language'];
-	
+
 	$token_student = md5($school_id.'-'.$reg_number.'-'.time().'-'.mt_rand(111111, 999999));
 	if(empty($email))
 	{
-		$email = $picoEdu->generateAltEmail('edu.planetbiru.com', 'st_'.$reg_number_national, 'st_'.$reg_number.'_'.$school_id, 'ph_'.$country_id.'_'.$phone);
+		$email = $picoEdu->generateAltEmail('local', 'st_'.$reg_number_national, 'st_'.$reg_number, 'ph_'.$phone);
 	}
 	
 	$user_data = array();
@@ -109,7 +109,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 	if(!empty($name) && !empty($email))
 	{
-		$chk = $picoEdu->getExistsingUser($user_data);
+		$student_id = null;
+		if($use_national_id && !empty($reg_number_national))
+		{
+			$student_id = trim($reg_number_national);
+		}
+		$chk = $picoEdu->getExistsingUser($user_data, $student_id);
 		$student_id = addslashes($chk['member_id']);
 		$username = addslashes($chk['username']);
 
@@ -164,15 +169,15 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>NIS</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>NISN</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" autocomplete="off" <?php echo $picoEdu->trueFalse($use_national_id, ' required="required"', '');?> /></td>
 		</tr>
 		<tr>
 		<td>Tingkat</td>
-		<td><select class="form-control input-select" name="grade_id" id="grade_id">
+		<td><select class="form-control input-select" name="grade_id" id="grade_id" required="required">
 		<option value=""></option>
 		<?php
 		echo $picoEdu->createGradeOption(null);
@@ -181,7 +186,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>Kelas</td>
-		<td><select class="form-control input-select" name="class_id" id="class_id">
+		<td><select class="form-control input-select" name="class_id" id="class_id" required="required">
 		<option value=""></option>
 		<?php 
 		$sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` ASC ";
@@ -193,7 +198,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 				),
 				'selectCondition'=>array(
 					'source'=>'class_id',
-					'value'=>$data['class_id']
+					'value'=>null
 				),
 				'caption'=>array(
 					'delimiter'=>PicoEdu::RAQUO,
@@ -209,11 +214,11 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>Nama</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
-		<td><select class="form-control input-select" name="gender" id="gender">
+		<td><select class="form-control input-select" name="gender" id="gender" required="required" required="required">
 		<option value=""></option>
 		<option value="M">Laki-Laki</option>
 		<option value="W">Perempuan</option>
@@ -284,15 +289,16 @@ if($stmt->rowCount() > 0)
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>NIS</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" value="<?php echo $data['reg_number'];?>" autocomplete="off" /><input type="hidden" name="student_id2" id="student_id2" value="<?php echo $data['student_id'];?>" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" value="<?php echo $data['reg_number'];?>" autocomplete="off" required="required" />
+		<input type="hidden" name="student_id2" id="student_id2" value="<?php echo $data['student_id'];?>" /></td>
 		</tr>
 		<tr>
 		<td>NISN</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo $data['reg_number_national'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo $data['reg_number_national'];?>" autocomplete="off" <?php echo $picoEdu->trueFalse($use_national_id, ' required="required"', '');?> /></td>
 		</tr>
 		<tr>
 		<td>Tingkat</td>
-		<td><select class="form-control input-select" name="grade_id" id="grade_id">
+		<td><select class="form-control input-select" name="grade_id" id="grade_id" required="required">
 		<option value=""></option>
 		<?php
 		echo $picoEdu->createGradeOption($data['grade_id']);
@@ -301,7 +307,7 @@ if($stmt->rowCount() > 0)
 		</tr>
 		<tr>
 		<td>Kelas</td>
-		<td><select class="form-control input-select" name="class_id" id="class_id">
+		<td><select class="form-control input-select" name="class_id" id="class_id" required="required">
 		<option value=""></option>
 		<?php 
 		$sql2 = "SELECT * FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' ORDER BY `sort_order` ASC ";
@@ -329,11 +335,11 @@ if($stmt->rowCount() > 0)
 		</tr>
 		<tr>
 		<td>Nama</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
-		<td><select class="form-control input-select" name="gender" id="gender">
+		<td><select class="form-control input-select" name="gender" id="gender" required="required">
 		<option value=""></option>
 		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', PicoConst::SELECT_OPTION_SELECTED);?>>Laki-Laki</option>
 		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', PicoConst::SELECT_OPTION_SELECTED);?>>Perempuan</option>
@@ -558,8 +564,7 @@ $(document).ready(function(e) {
     ?>
     </select>
     <span class="search-label">Nama Siswa</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
- "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
   <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

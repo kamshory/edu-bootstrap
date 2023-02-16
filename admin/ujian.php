@@ -57,7 +57,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$available_from = kh_filter_input(INPUT_POST, "available_from", FILTER_SANITIZE_STRING_NEW);
 	$available_to = kh_filter_input(INPUT_POST, "available_to", FILTER_SANITIZE_STRING_NEW);
 
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	
 	$role_create = $role_edit = 'A';
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
@@ -160,14 +160,14 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 	('$test_id', '$school_id', '$name', '$class', '$school_program_id', '$subject', '$teacher_id', '$description', '$guidance', '$open', '$has_limits', '$trial_limits', '$threshold', '$assessment_methods', '$number_of_question', '$number_of_option', '$question_per_page', '$random', '$duration', '$has_alert', '$alert_time', '$alert_message', '$autosubmit', '$standard_score', '$penalty', '$sort_order', '$score_notification', '$publish_answer', $time_answer_publication, '$test_availability', $available_from, $available_to, '$time_create', '$time_edit', '$member_create', '$role_create', '$member_edit', '$role_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
-
+	$picoEdu->addSubject($subject);
 	$collection = kh_filter_input(INPUT_POST, "collection", FILTER_SANITIZE_STRING_NEW);
 	if(!empty($collection))
 	{
 		$selection = kh_filter_input(INPUT_POST, "selection", FILTER_SANITIZE_STRING_NEW);
 		$selection_index = json_decode($selection);
 		require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-		$time_create = $time_edit = $picoEdu->getLocalDateTime();		
+		$time_create = $time_edit = $database->getLocalDateTime();		
 		
 		$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$collection' AND `active` = true ";
 		$stmt = $database->executeQuery($sql);
@@ -197,7 +197,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 					$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 					$dirBase = dirname(dirname(__FILE__));
 					$permission = 0755;
-					$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+					$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 					
 					$base_src = "media.edu/school/$school_id/test/$test_id";
 					
@@ -328,6 +328,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	`member_edit` = '$member_edit', `role_edit` = '$role_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `active` = '$active'
 	WHERE `test_id` = '$test_id2' AND `school_id` = '$school_id'";
 	$database->executeUpdate($sql, true);
+	$picoEdu->addSubject($subject);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id");
 }
 if(@$_GET['option'] == 'add')
@@ -378,6 +379,20 @@ label > span{
 }
 </style>
 <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.assets/script/test-creator.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap-4-autocomplete.min.js"></script>
+<?php
+$subjectList = $picoEdu->getSubjectList();
+?>
+<script type="text/javascript">
+	var src = <?php echo json_encode($subjectList);?>;
+	$(document).ready(function(){
+		$('#subject').autocomplete({
+			source: src,
+			highlightClass: 'text-primary',
+			treshold: 2,
+		});
+	});
+</script>
 
 <form name="formedu_test" id="formedu_test" action="" method="post" enctype="multipart/form-data">
   <input type="hidden" name="collection" id="collection" value="<?php echo $collection;?>" />
@@ -632,7 +647,7 @@ LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = 
 WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id' AND `edu_class`.`name` != '' 
 ORDER BY `edu_school_program`.`sort_order` ASC , `edu_class`.`sort_order` ASC 
 ";
-		$arrc = array();
+$arrc = array();
 $stmt = $database->executeQuery($sqlc);
 if($stmt->rowCount() > 0)
 {
@@ -656,6 +671,20 @@ label > span{
 }
 </style>
 <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.assets/script/test-creator.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap-4-autocomplete.min.js"></script>
+<?php
+$subjectList = $picoEdu->getSubjectList();
+?>
+<script type="text/javascript">
+	var src = <?php echo json_encode($subjectList);?>;
+	$(document).ready(function(){
+		$('#subject').autocomplete({
+			source: src,
+			highlightClass: 'text-primary',
+			treshold: 2,
+		});
+	});
+</script>
 
 <form name="formedu_test" id="formedu_test" action="" method="post" enctype="multipart/form-data">
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -1184,8 +1213,7 @@ window.onload = function()
 	?>
     </select>
     <span class="search-label">Ujian</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
-    "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
     <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

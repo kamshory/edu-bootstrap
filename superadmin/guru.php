@@ -26,7 +26,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$email = kh_filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
 	$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
 	$address = kh_filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
@@ -78,7 +78,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "SELECT `school_id` FROM `edu_teacher` WHERE `teacher_id` = '$teacher_id2'  ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if ($stmt->rowCount() > 0) 
+	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		$initial = $data['school_id'];
 
@@ -365,7 +366,7 @@ $(document).ready(function(e) {
     <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php 
-    $sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` DESC";
+    $sql2 = "SELECT * FROM `edu_school` WHERE (1=1) ORDER BY `time_create` DESC";
     echo $picoEdu->createFilterDb(
 		$sql2,
 		array(
@@ -387,8 +388,7 @@ $(document).ready(function(e) {
     ?>
     </select>
     <span class="search-label">Nama Guru</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
- "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
   <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

@@ -88,6 +88,11 @@ class PicoEdu //NOSONAR
 		return false;
 	}
 
+	/**
+	 * Convert time to human readable string
+	 * @param int $tm Unix time stamp
+	 * @return string String of the time
+	 */
 	public function timeToText($tm) //NOSONAR
 	{
 		global $language_res;
@@ -141,6 +146,9 @@ class PicoEdu //NOSONAR
 	 * Get country name of given ID
 	 * @param string $name
 	 * @return string Country name if exists of null if not exists
+	 * Get country name
+	 * @param string $country_id Country ID
+	 * @return string Country name
 	 */
 	public function getCountryName($country_id)
 	{
@@ -213,16 +221,16 @@ class PicoEdu //NOSONAR
 	 * @param array $user_data
 	 * @return array User data
 	 */
-	public function getExistsingUser($user_data)
+	public function getExistsingUser($user_data, $member_id = null)
 	{
-		$now = $this->getLocalDateTime();
+		$use_national_id = $member_id != null && !empty($member_id);
+
+		$now = $this->database->getLocalDateTime();
 		$ip = $_SERVER['REMOTE_ADDR'];
 
 		$name = $user_data['name'];
-
 		$name = trim(preg_replace("/[^a-zA-Z 0-9\.\-]+/", " ", $name), " -. ");
 		$name = trim(preg_replace(self::TRIM_EXTRA_SPACE, " ", $name));
-
 		$gender = $user_data['gender'];
 		$email = $this->trimWhitespace($user_data['email']);
 		$phone = $user_data['phone'];
@@ -231,21 +239,41 @@ class PicoEdu //NOSONAR
 		$language = $user_data['language'];
 		$country_id = $user_data['country_id'];
 
-		$uname = str_replace(" ", "", $name);
-		$uname = substr($uname, 0, 16);
-		$oke = false;
-		$username = "";
-		while ($oke === false || $oke == '') {
-			$username = $oke = $this->isValidUsername($uname);
-			if ($oke == '' || $oke === false) {
-				$uname = $uname . mt_rand(11, 99);
-				$username = $uname;
+		if(!$use_national_id)
+		{
+			$uname = str_replace(" ", "", $name);
+			$uname = substr($uname, 0, 16);
+			$oke = false;
+			$username = "";
+			while ($oke === false || $oke == '') {
+				$username = $oke = $this->isValidUsername($uname);
+				if ($oke == '' || $oke === false) {
+					$uname = $uname . mt_rand(11, 99);
+					$username = $uname;
+				}
 			}
+			$username = addslashes($username);
 		}
-		$username = addslashes($username);
+		else
+		{
+			$username = addslashes($member_id);
+		}
+
+		$filter = "";
+		
+		if(!$use_national_id)
+		{
+			$member_id = $this->database->generateNewId();
+			$filter = " AND `member_id` LIKE '$member_id' ";
+		}
+		else
+		{
+			$filter = " AND `name` LIKE '$name' AND `birth_day` LIKE '$birth_day' ";
+		}
+
 		$sql = "SELECT `member`.* 
 			FROM `member` 
-			WHERE `name` like '$name' AND `birth_day` like '$birth_day' 
+			WHERE (1=1) $filter
 			";
 		
 		$stmt = $this->database->executeQuery($sql);
@@ -259,7 +287,6 @@ class PicoEdu //NOSONAR
 				'email' => $data['email']
 			);
 		} else {
-			$member_id = $this->database->generateNewId();
 			$auth = md5($username . $email);
 			$sql = "INSERT INTO `member` 
 			(`member_id`, `name`, `username`, `email`, `gender`, `birth_day`, `password`, `auth`, `language`, `phone`, `country_id`, 
@@ -290,7 +317,7 @@ class PicoEdu //NOSONAR
 		if ($username != '') {
 			$sql = "SELECT `member_id`, `email`, `username`
 			FROM `member`
-			WHERE `username` like '$username'
+			WHERE `username` LIKE '$username'
 			";
 			$stmt = $this->database->executeQuery($sql);
 			if($stmt->rowCount() == 0)
@@ -344,6 +371,7 @@ class PicoEdu //NOSONAR
 		global $cfg;
 		return number_format($bilangan, $cfg->dec_precision, $cfg->dec_separator, $cfg->dec_thousands_separator);
 	}
+	
 	public function secondsToTime($seconds)
 	{
 		// extract hours
@@ -364,7 +392,6 @@ class PicoEdu //NOSONAR
 			"s" => sprintf('%02d', $seconds),
 		);
 	}
-
 
 	public function getTextScoreFromString($answer, $compress = false) //NOSONAR
 	{
@@ -620,7 +647,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT * FROM `edu_student` 
 		WHERE `school_id` = '$school_id' 
-		AND (`reg_number` like '$reg_number' AND `reg_number` != '') ";
+		AND (`reg_number` LIKE '$reg_number' AND `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
 		return $stmt->rowCount() > 0;
 	}
@@ -628,7 +655,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT * FROM `edu_teacher` 
 		WHERE `school_id` = '$school_id' 
-		AND (`reg_number` like '$reg_number' AND `reg_number` != '') ";
+		AND (`reg_number` LIKE '$reg_number' AND `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
 		return $stmt->rowCount() > 0;
 	}
@@ -790,11 +817,6 @@ class PicoEdu //NOSONAR
 		return '';
 	}
 
-	public function getLocalDateTime()
-	{
-		return date('Y-m-d H:i:s');
-	}
-
 	public static function arrayToObject($inputArray) {
 		if (!is_array($inputArray)) 
 		{
@@ -947,7 +969,7 @@ class PicoEdu //NOSONAR
 			$state_id = addslashes($data['state_id']);
 			$city_id = addslashes($data['city_id']);
 
-			$time_register = $this->getLocalDateTime();
+			$time_register = $this->database->getLocalDateTime();
 
 			return "
 			INSERT INTO `member` (`member_id`, `name`, `username`, `email`, `phone`, `gender`, `birth_day`, `birth_place`, `password`, `country_id`, `state_id`, `city_id`, `time_register`, `active`) VALUES 
@@ -965,7 +987,7 @@ class PicoEdu //NOSONAR
 
 		$sql = "SELECT `edu_school_program`.`school_program_id` 
 		FROM `edu_school_program`
-		WHERE `edu_school_program`.`name` like '$school_program'
+		WHERE `edu_school_program`.`name` LIKE '$school_program'
 		AND `edu_school_program`.`school_id` = '$school_id'
 		LIMIT 0, 1 ";
 
@@ -979,7 +1001,7 @@ class PicoEdu //NOSONAR
 		else
 		{
 			$school_program_id = $this->database->generateNewId();
-			$now = $this->getLocalDateTime();
+			$now = $this->database->getLocalDateTime();
 			$sql = "INSERT INTO `edu_school_program` 
 			(`school_program_id`, `school_id`, `name`, `time_create`, `time_edit`, `active`) VALUES
 			('$school_program_id', '$school_id', '$school_program', '$now', '$now', true)";
@@ -1000,7 +1022,7 @@ class PicoEdu //NOSONAR
 
 		$sql = "SELECT `edu_class`.`class_id` 
 		FROM `edu_class`
-		WHERE `edu_class`.`name` like '$class'
+		WHERE `edu_class`.`name` LIKE '$class'
 		AND `edu_class`.`school_id` = '$school_id'
 		LIMIT 0, 1 ";
 
@@ -1014,7 +1036,7 @@ class PicoEdu //NOSONAR
 		else
 		{
 			$class_id = $this->database->generateNewId();
-			$now = $this->getLocalDateTime();
+			$now = $this->database->getLocalDateTime();
 			$sql = "INSERT INTO `edu_class` 
 			(`class_id`, `school_id`, `name`, `time_create`, `time_edit`, `active`) VALUES
 			('$class_id', '$school_id', '$class', '$now', '$now', true)";
@@ -1122,9 +1144,73 @@ class PicoEdu //NOSONAR
 		return $input;
 	}
 	
-	
+	/**
+	 * Get page title to be printed 
+	 */
 	public function printPageTitle($pageTitle, $appName)
 	{
 		return trim($pageTitle .' - '. $appName, ' ');
 	}
+
+	/**
+	 * Add subject to cache
+	 * @param string $subject Subject
+	 */
+	public function addSubject($subject)
+	{
+		$subject = trim($subject);
+		$subject_id = md5(stripslashes($subject));
+
+		$sql = "SELECT `edu_subject`.`subject_id` 
+		FROM `edu_subject`
+		WHERE `edu_subject`.`subject_id` = '$subject_id'
+		";
+
+		$stmt = $this->database->executeQuery($sql);
+
+		if(!$stmt->rowCount() > 0)
+		{
+			$sql = "INSERT INTO `edu_subject` 
+			(`subject_id`, `name`, `sort_order`) VALUES
+			('$subject_id', '$subject', 0)";
+			$this->database->executeInsert($sql, true);
+		}
+	}
+
+	/**
+	 * Get subject from cache as list
+	 * @return mixed 
+	 */
+	public function getSubjectList()
+	{
+		$sql = "SELECT `edu_subject`.*
+		FROM `edu_subject`
+		ORDER BY `sort_order` ASC, `name` ASC
+		";
+		$stmt = $this->database->executeQuery($sql);
+		if($stmt->rowCount() > 0)
+		{
+			$list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$ret = array();
+			foreach($list as $val)
+			{
+				$ret[$val['name']] = $val['subject_id'];
+			}
+			return $ret;
+		}
+		return new stdClass;
+	}
+
+	/**
+	 * Get search query from URL
+	 * @return string Search query
+	 */
+	public function getSearchQueryFromUrl()
+	{
+		return htmlspecialchars(rawurldecode((trim(@$_GET['q'])))); 
+	}
+
+	/**
+	 * Get state ID
+	 */
 }

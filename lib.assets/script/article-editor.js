@@ -21,7 +21,7 @@ function removefileextension(filename){
 let ascii_svg_server = 'lib.tools/asciisvg/svgimg.php';
 let equation_preview_url = '../../../../../../cgi-bin/equgen.cgi?' ;
 let equation_generator_url = '../../../../../../equgen.php?' ;
-let equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'browser-png':'browser-mathjax';
+let equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'mathml-png':'mathjax-svg';
 let quran_server = '../quran';
 $(document).ready(function() {
 	if($('textarea').length)

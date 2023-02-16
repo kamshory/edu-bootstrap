@@ -14,7 +14,7 @@ require_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 if(!empty($auth_student_id) && !empty($auth_school_id)) {
 	if (@$_GET['option'] == 'answer' && isset($_GET['answer_id'])) {
 		$answer_id = kh_filter_input(INPUT_GET, "answer_id", FILTER_SANITIZE_STRING_NEW);
-		$now = $picoEdu->getLocalDateTime();
+		$now = $database->getLocalDateTime();
 		include_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 
 		$sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, `edu_answer`.`start`, `edu_answer`.`end`
@@ -26,7 +26,7 @@ if(!empty($auth_student_id) && !empty($auth_school_id)) {
 		if ($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
-			<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/test.css" />
+			<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />
 			<style type="text/css">
 				.test-info {
 					padding: 10px;
@@ -694,8 +694,7 @@ if(!empty($auth_student_id) && !empty($auth_school_id)) {
 				?>
 			</select>
 			<span class="search-label">Ujian</span>
-			<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
-    ")))); ?>" />
+			<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
 			<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 		</form>
 	</div>
@@ -843,8 +842,7 @@ if(!empty($auth_student_id) && !empty($auth_school_id)) {
 				?>
 			</select>
 			<span class="search-label">Ujian</span>
-			<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
-    ")))); ?>" />
+			<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
 			<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 		</form>
 	</div>

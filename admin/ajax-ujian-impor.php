@@ -6,7 +6,6 @@ if(empty($school_id))
 }
 if(isset($_POST['from']) && isset($_POST['to']))
 {
-	
 	require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 	require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 	$collection = kh_filter_input(INPUT_POST, "from", FILTER_SANITIZE_STRING_NEW);
@@ -14,7 +13,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	$selection = kh_filter_input(INPUT_POST, "selection", FILTER_SANITIZE_STRING_NEW);
 	$selection_index = json_decode($selection);
 	
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();	
+	$time_create = $time_edit = $database->getLocalDateTime();	
 	
 	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$collection' AND `active` = true ";
 	$stmt = $database->executeQuery($sql);
@@ -43,7 +42,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 				$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 				$dirBase = dirname(dirname(__FILE__));
 				$permission = 0755;
-				$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+				$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 				
 				$base_src = "media.edu/school/$school_id/test/$test_id";
 				
@@ -146,8 +145,6 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	}
 }
 
-
-
 $sql = "SELECT `edu_test`.*,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`,
 (SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `question`
@@ -189,5 +186,4 @@ if($stmt->rowCount() > 0)
   </table>
 <?php
 }
-
 ?>

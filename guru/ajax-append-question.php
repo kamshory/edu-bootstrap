@@ -23,19 +23,19 @@ if(!empty($school_id))
 			if($stmt->rowCount() > 0)
 			{
 			    $data = $stmt->fetch(PDO::FETCH_ASSOC);
-				$time_create = $picoEdu->getLocalDateTime();
-				$time_edit = $picoEdu->getLocalDateTime();
+				$time_create = $database->getLocalDateTime();
+				$time_edit = $database->getLocalDateTime();
 				$random = ((int) $data['random']);
 				$sort_order = ((int) $data['sort_order']);
 				$score_standar = $data['standard_score'];
 				$raw_txt_data = kh_filter_input(INPUT_POST, "question_text", FILTER_DEFAULT);
 				$clear_data = parseRawQuestion($raw_txt_data);
 				
-				$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+				$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 				$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 				$dirBase = dirname(dirname(__FILE__));
 				$permission = 0755;
-				$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+				$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 				
 				$base_src = "media.edu/school/$school_id/test/$test_id";
 				$database->executeTransaction("start transaction", true);
@@ -45,7 +45,7 @@ if(!empty($school_id))
 					$object = parseQuestion($question);
 					if(isset($object['question']) && isset($object['numbering']) && isset($object['option']))
 					{
-						$content = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $base_dir, $base_src)))));
+						$content = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $test_dir, $base_src)))));
 						$content = addslashes($picoEdu->brToNewLineEncoded($content));
 						$numbering = addslashes($object['numbering']);
 						$digest = md5($object['question']);
@@ -70,7 +70,7 @@ if(!empty($school_id))
 							{
 								foreach($object['option'] as $option_no=>$option)
 								{
-									$content_option = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src)))));
+									$content_option = fixing_table(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $test_dir, $base_src)))));
 									$content_option = addslashes($picoEdu->brToNewLineEncoded($content_option));
 									$order_option = $option_no+1;
 									$score_option = addslashes(@$option['value']*$score_standar); 

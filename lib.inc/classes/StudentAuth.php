@@ -1,6 +1,5 @@
 <?php
 
-
 class StudenAuth
 {
 	public $student_id = 0;
@@ -29,7 +28,6 @@ class StudenAuth
 	 */
 	public function __construct($database, $username, $password, $createlog = false)
 	{
-		global $picoEdu;
 		if ($username != '') {
 			$sql = "SELECT `edu_student`.`student_id`, `edu_student`.`username`, `edu_student`.`name`, `edu_student`.`gender`, 
 			`edu_student`.`birth_place`, `edu_student`.`birth_day`, `edu_student`.`email`, `edu_student`.`phone`, `edu_student`.`country_id`, 
@@ -62,7 +60,7 @@ class StudenAuth
 				$this->use_token = $studentLoggedIn->use_token;
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
-					$now = $picoEdu->getLocalDateTime();
+					$now = $database->getLocalDateTime();
 					$sql = "UPDATE `edu_student` SET `ip_last_activity` = '$ip', `time_last_activity` = '$now' WHERE `student_id` = '" . $this->student_id . "'";
 					$database->executeUpdate($sql, true);
 				}

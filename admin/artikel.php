@@ -29,7 +29,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	$class = kh_filter_input(INPUT_POST, "class", FILTER_SANITIZE_STRING_NEW);
 	
 	$active = 0;
-	$time = $picoEdu->getLocalDateTime();
+	$time = $database->getLocalDateTime();
 	$ip = $_SERVER['REMOTE_ADDR'];
 	
 	if(isset($_POST['publish']))
@@ -48,15 +48,15 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		";
 		$database->executeInsert($sql, true);
 
-		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
+		$article_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
 		$base_src = "media.edu/school/$school_id/article/$article_id";
 
 		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
 		$dirBase = dirname(dirname(__FILE__));
 		$permission = 0755;
-		$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+		$fileSync->prepareDirectory($article_dir, $dirBase, $permission, true);
 			
-		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
+		$content = extractImageData($content, $article_dir, $base_src, $fileSync);
 		$content = addslashes(UTF8ToEntities($content));
 		$sql = "UPDATE `edu_article` SET `content` = '$content' WHERE `article_id` = '$article_id' ";
 		$database->executeUpdate($sql, true);
@@ -66,15 +66,15 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	{
 		$article_id = kh_filter_input(INPUT_POST, "article_id", FILTER_SANITIZE_STRING_NEW);
 
-		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
+		$article_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
 		$base_src = "media.edu/school/$school_id/article/$article_id";
 
 		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
 		$dirBase = dirname(dirname(__FILE__));
 		$permission = 0755;
-		$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+		$fileSync->prepareDirectory($article_dir, $dirBase, $permission, true);
 
-		$content = extractImageData($content, $base_dir, $base_src, $fileSync);
+		$content = extractImageData($content, $article_dir, $base_src, $fileSync);
 		$content = addslashes($content);
 		$sql = "UPDATE `edu_article` SET `title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
 		`time_edit` = '$time', `member_edit` = '$admin_id', `role_edit` = 'A', `ip_edit` =  '$ip', `active` = '$active'
@@ -356,8 +356,7 @@ $(document).ready(function(e) {
     ?>
     </select>
     <span class="search-label">Judul Artikel</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
- "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
   <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
@@ -395,9 +394,6 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-
-
-
 $pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>

@@ -1,4 +1,9 @@
 <?php
+if(!isset($cfg))
+{
+  exit();
+}
+
 
 $structure = array(
     array(

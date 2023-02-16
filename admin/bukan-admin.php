@@ -11,4 +11,3 @@ include_once dirname(dirname(__FILE__))."/lib.inc/header-bootstrap.php";
 include_once dirname(dirname(__FILE__))."/lib.inc/footer-bootstrap.php";
 exit();
 ?>
-				

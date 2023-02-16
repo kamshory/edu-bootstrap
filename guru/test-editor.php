@@ -45,6 +45,7 @@ var equationURLGenerator = '<?php echo $cfg->equation_url_generator;?>';
 </script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-maker.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/FileSaver.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/lz-string.min.js"></script>
 <link rel="shortcut icon" type="image/jpeg" href="../favicon.ico"/>
 </head>
 <body>
@@ -79,23 +80,23 @@ var equationURLGenerator = '<?php echo $cfg->equation_url_generator;?>';
 </div>
 
 	<div id="main">
-	<div id="editor-area">
-    	<div id="editor-inner">
-            <div class="title-bar"><?php echo $data['name'];?></div>
-            <div class="progressbar-fixed"><div class="progressbar-fixed-inner"></div></div>
-            <textarea id="input" name="input" spellcheck="false" placeholder="Tulis soal ujian di sini"></textarea>
-        </div>
-    </div>
-    <div id="preview-area">
-    	<div id="preview-inner">
-            <div class="title-bar">Tinjauan Soal</div>
-        	<div id="preview">
-            	<div id="preview1"></div>
-                <div id="question-separator"></div>
-            	<div id="preview2"></div>
+        <div id="editor-area">
+            <div id="editor-inner">
+                <div class="title-bar"><?php echo $data['name'];?></div>
+                <div class="progressbar-fixed"><div class="progressbar-fixed-inner"></div></div>
+                <textarea id="input" name="input" spellcheck="false" placeholder="Tulis soal ujian di sini"></textarea>
             </div>
         </div>
-    </div>
+        <div id="preview-area">
+            <div id="preview-inner">
+                <div class="title-bar">Tinjauan Soal</div>
+                <div id="preview">
+                    <div id="preview1"></div>
+                    <div id="question-separator"></div>
+                    <div id="preview2"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="footer">
@@ -106,7 +107,7 @@ var equationURLGenerator = '<?php echo $cfg->equation_url_generator;?>';
 <input type="file" id="file" name="file">
 </div>
 <div class="frm2" id="frm2" style="width:1px; height:1px; position:absolute; left:-10000px; top:-10000px;">
-<input type="file" id="image" name="image" accept="image/*">
+<input type="file" id="image" name="image">
 </div>
 <div class="frm3" id="frm3" style="width:1px; height:1px; position:absolute; left:-10000px; top:-10000px;">
 <input type="file" id="audio" name="file" accept="audio/*">

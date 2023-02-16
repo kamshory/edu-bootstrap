@@ -14,7 +14,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 $pageTitle = "Soal Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-$time_create = $time_edit = $picoEdu->getLocalDateTime();
+$time_create = $time_edit = $database->getLocalDateTime();
 
 
 if(@$_GET['option'] == 'delete')
@@ -52,8 +52,8 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
-		$time_create = $picoEdu->getLocalDateTime();
-		$time_edit = $picoEdu->getLocalDateTime();
+		$time_create = $database->getLocalDateTime();
+		$time_edit = $database->getLocalDateTime();
 	
 		$random = ((int) $data['random']);
 		$sort_order = ((int) $data['sort_order']);
@@ -63,11 +63,11 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$clear_data = parseRawQuestion($xml_data);
 
 		
-		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+		$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 		$dirBase = dirname(dirname(__FILE__));
 		$permission = 0755;
-		$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+		$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 		
 		$base_src = "media.edu/school/$school_id/test/$test_id";
 		$database->executeTransaction("start transaction", true);
@@ -78,7 +78,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 			$object = parseQuestion($question);
 			if(isset($object['question']) && isset($object['numbering']) && isset($object['option']))
 			{
-				$content = addslashes(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $base_dir, $base_src)))));
+				$content = addslashes(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $test_dir, $base_src)))));
 				$content = $picoEdu->brToNewLineEncoded($content);
 				$numbering = addslashes($object['numbering']);
 				$digest = md5($object['question']);
@@ -103,7 +103,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 					{
 						foreach($object['option'] as $option_no=>$option)
 						{
-							$content_option = addslashes(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src)))));
+							$content_option = addslashes(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $test_dir, $base_src)))));
 							$content_option = $picoEdu->brToNewLineEncoded($content_option);
 							$order_option = $option_no+1;
 							$score_option = addslashes(@$option['value']*$score_standar); 
@@ -173,8 +173,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	{
 		$sort_order = 1;
 	}
-	$time_create = $picoEdu->getLocalDateTime();
-	$time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $database->getLocalDateTime();
+	$time_edit = $database->getLocalDateTime();
 	
 	$digest = md5($question);
 	$sql3 = "SELECT * FROM `edu_question` WHERE `digest` = '$digest' AND `test_id` = '$test_id' ";
@@ -465,15 +465,15 @@ else if(@$_GET['option'] == 'edit')
 			$data3 = $stmt3->fetch(PDO::FETCH_ASSOC);
 
 			?>
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/test.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript">
-var base_assets = '<?php echo $cfg->base_assets; ?>';
+var base_assets = '<?php echo $cfg->base_assets;?>';
 var numbering = <?php echo json_encode($cfg->numbering); ?>;
 var test_id = '<?php echo $data['test_id']; ?>';
 var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$test_id/"); ?>;	
 </script>
-<script type="text/javascript" src="<?php echo $cfg->base_assets; ?>lib.assets/script/test-editor.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-editor.js"></script>
 
 <div class="dialogs">
 	<div id="split-dialog">
@@ -1038,8 +1038,7 @@ window.onload = function()
 	?>
     </select>
     <span class="search-label">Ujian</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
-    "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
     <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

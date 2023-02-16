@@ -1,15 +1,162 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-if(!@$admin_id)
+if(empty($admin_id))
 {
 	require_once dirname(__FILE__)."/login-form.php";
 	exit();
 }
+
+/**
+ * Import data preprocessor
+ */
+class ImportExcel{
+
+	/**
+	 * Check if school use national ID or not
+	 * @param \PHPExcel $objWorksheetSource Worksheet
+	 * @param string $sheetNameSchool Sheet name for school
+	 * @return bool true if school use national ID and false if school is not use national ID
+	 */
+	public function isUseNationalId($objWorksheetSource, $sheetNameSchool)
+	{
+		$useNationalId = false;
+		try
+		{
+			$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName($sheetNameSchool);
+			$highestRow = $objWorksheet->getHighestRow(); 
+			$highestColumn = $objWorksheet->getHighestColumn(); 
+			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
+			
+			$fieldArray = array();
+			$row = 1;
+			for ($col = 0; $col < $highestColumnIndex; ++$col) {
+				$fieldArray[$col] = strtolower($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
+			}
+			for($row = 2; $row <= $highestRow; ++$row) 
+			{
+				$data = array();
+				for ($col = 0; $col < $highestColumnIndex; ++$col) 
+				{
+					$data[$fieldArray[$col]] = $this->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
+				}
+				if(strtolower($data['use_national_id']) == 'y' 
+					|| strtolower($data['use_national_id']) == 'yes'
+					|| strtolower($data['use_national_id']) == 'ya'
+					|| strtolower($data['use_national_id']) == 'true'
+					)
+				{
+					$useNationalId = true;
+					break;
+				}
+			}
+		}
+		catch(Exception $e)
+		{
+			// Do nothing
+		}
+		return $useNationalId;
+	}
+
+	/**
+	 * Validate imported data
+	 * @param \PHPExcel $objWorksheetSource Worksheet
+	 * @param string $sheetNameSchool Sheet name for school
+	 * @param string $sheetNameStudent Sheet name for student
+	 * @param string $columnNameStudent Lower case of column name name student ID
+	 * @param string $sheetNameTeacher Sheet name for teacher
+	 * @param string $columnNameTeacher Lower case of column name name teacher ID
+	 * @return array Contain response_code and response_text
+	 */
+	public function validate($objWorksheetSource, $sheetNameSchool, $sheetNameStudent, $columnNameStudent, $sheetNameTeacher, $columnNameTeacher)
+	{
+		$useNationalId = $this->isUseNationalId($objWorksheetSource, $sheetNameSchool);
+		$validData1 = true;
+		$validData2 = true;		
+		$message = "Sukses";
+		$response_code = "00";
+
+		if($useNationalId)
+		{
+			$validData1 = $this->validData($objWorksheetSource, $sheetNameStudent, $columnNameStudent);
+			$validData2 = $this->validData($objWorksheetSource, $sheetNameTeacher, $columnNameTeacher);		
+
+			if($useNationalId)
+			{
+				if(!$validData1 && !$validData2)
+				{
+					$message = "Data siswa dan guru tidak lengkap";
+					$response_code = "05";
+				}
+				else if(!$validData1)
+				{
+					$message = "Data siswa tidak lengkap";
+					$response_code = "05";
+				}
+				else if(!$validData2)
+				{
+					$message = "Data guru tidak lengkap";
+					$response_code = "05";
+				}
+				if($validData1 && $validData2)
+				{
+					$response_code = "00";
+				}
+			}
+			
+		}
+		return array(
+			'response_code'=>$response_code,
+			'response_text'=>$message
+		);
+	}
+
+	public function validData($objWorksheetSource, $sheetName, $columnName)
+	{
+		$validData = true;
+		try
+		{
+			$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName($sheetName);
+			$highestRow = $objWorksheet->getHighestRow(); 
+			$highestColumn = $objWorksheet->getHighestColumn(); 
+			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
+			
+			$fieldArray = array();
+			$row = 1;
+			for ($col = 0; $col < $highestColumnIndex; ++$col) {
+				$fieldArray[$col] = strtolower($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
+			}
+			for($row = 2; $row <= $highestRow; ++$row) 
+			{
+				$data = array();
+				for ($col = 0; $col < $highestColumnIndex; ++$col) 
+				{
+					$data[$fieldArray[$col]] = $this->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
+				}
+				if(empty($data[$columnName]))
+				{
+					$validData = false;
+					break;
+				}
+			}
+		}
+		catch(Exception $e)
+		{
+			// Do nothing
+		}
+		return $validData;
+	}
+	
+	public function trimWhitespace($value)
+	{
+		return trim($value, " \r\n\t ");
+	}
+}
+
 if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 { 
 	$country_id = 'ID';
 	$admin_id = $adminLoggedIn->admin_id;
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$admin_create = $admin_edit = $admin_id;
 	/** Include PHPExcel_IOFactory */
@@ -40,9 +187,14 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 			
 			// import data school
 			// mulai
-			$objWorksheet = PHPExcel_IOFactory::load($path);
+			$objWorksheetSource = PHPExcel_IOFactory::load($path);
+
+			$importExcel = new ImportExcel();
+
+			$response = $importExcel->validate($objWorksheetSource, 'SCHOOL', 'STUDENT', 'reg_number_national', 'TEACHER', 'reg_number_national');
+
 			try{
-				$objWorksheet = $objWorksheet->setActiveSheetIndexByName('SCHOOL');
+				$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName('SCHOOL');
 				$highestRow = $objWorksheet->getHighestRow(); 
 				$highestColumn = $objWorksheet->getHighestColumn(); 
 				$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
@@ -75,7 +227,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 					$phone = addslashes($picoEdu->fixPhone(@$data['phone']));
 					$email = addslashes(@$data['email']);
 					$email = $picoEdu->filterEmailAddress($email);
-
+					$useNationalId = addslashes(@$data['use_national_id']);
 					$principal = addslashes(@$data['principal']);
 					$public_private = addslashes(@$data['public_private']);
 					$school_grade = addslashes(@$data['school_grade']);
@@ -93,10 +245,10 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 					$school_id = $database->generateNewId();
 					
 					$sql = "INSERT INTO `edu_school` 
-					(`school_id`, `school_code`, `token_school`, `name`, `school_grade_id`, `public_private`, `principal`, `address`, `phone`, 
+					(`school_id`, `school_code`, `token_school`, `name`, `use_national_id`, `school_grade_id`, `public_private`, `principal`, `address`, `phone`, 
 					`email`, `language`, `country_id`, `time_import_first`, `admin_import_first`, `ip_import_first`, 
 					`time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES
-					('$school_id', '$school_code', '$token_school', '$name', '$school_grade', '$public_private', '$principal', '$address', '$phone', 
+					('$school_id', '$school_code', '$token_school', '$name', '$useNationalId', '$school_grade', '$public_private', '$principal', '$address', '$phone', 
 					'$email', '$language', '$country_id', '$time_create', '$admin_create', '$ip_create', 
 					'$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', 1);
 					";
@@ -123,6 +275,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 				$sql = "SELECT `school_id` FROM `edu_school` WHERE `name` like '$name_school' ";
 				$stmt = $database->executeQuery($sql);
 				$data_school = $stmt->fetch(PDO::FETCH_ASSOC);
+				$useNationalId = $data_school['use_national_id'];
 				$school_id = $data_school['school_id'];
 			}
 			
@@ -147,8 +300,6 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 				// add me first
 				$sql = "SELECT * FROM `member` WHERE `member_id` = '$admin_id' ";
 				$stmt2 = $database->executeQuery($sql);
-
-
 
 				if ($stmt2->rowCount() == 0) {
 					$sqlInsert = $picoEdu->generateCreateMmeberFromAdmin($admin_id);
@@ -208,7 +359,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 						// mulai
 						$objWorksheet = PHPExcel_IOFactory::load($path);
 						try {
-							$objWorksheet = $objWorksheet->setActiveSheetIndexByName('ADMIN');
+							$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName('ADMIN');
 							$highestRow = $objWorksheet->getHighestRow();
 							$highestColumn = $objWorksheet->getHighestColumn();
 							$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
@@ -240,7 +391,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									continue;
 								}
 
-								$time_create = $time_edit = $picoEdu->getLocalDateTime();
+								$time_create = $time_edit = $database->getLocalDateTime();
 								$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 								$admin_create = $admin_edit = $admin_id;
 
@@ -298,7 +449,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 						// mulai
 						$objWorksheet = PHPExcel_IOFactory::load($path);
 						try {
-							$objWorksheet = $objWorksheet->setActiveSheetIndexByName('CLASS');
+							$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName('CLASS');
 							$highestRow = $objWorksheet->getHighestRow();
 							$highestColumn = $objWorksheet->getHighestColumn();
 							$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
@@ -325,7 +476,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 								$token_class = md5($school_id . '-' . $name . '-' . time() . '-' . mt_rand(111111, 999999));
 
-								$time_create = $time_edit = $picoEdu->getLocalDateTime();
+								$time_create = $time_edit = $database->getLocalDateTime();
 								$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 								$admin_create = $admin_edit = $admin_id;
 								if (empty($name)) {
@@ -378,7 +529,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 						$objWorksheet = PHPExcel_IOFactory::load($path);
 						try {
-							$objWorksheet = $objWorksheet->setActiveSheetIndexByName('STUDENT');
+							$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName('STUDENT');
 							$highestRow = $objWorksheet->getHighestRow();
 							$highestColumn = $objWorksheet->getHighestColumn();
 							$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
@@ -412,7 +563,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 								$token_student = md5($school_id . '-' . $reg_number . '-' . time() . '-' . mt_rand(111111, 999999));
 
-								$time_create = $time_edit = $picoEdu->getLocalDateTime();
+								$time_create = $time_edit = $database->getLocalDateTime();
 								$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 								$admin_create = $admin_edit = $admin_id;
 
@@ -445,7 +596,12 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									if ($picoEdu->checkStudent($school_id, $reg_number, $reg_number_national, $name)) {
 										continue;
 									}
-									$chk = $picoEdu->getExistsingUser($user_data);
+									$student_id = null;
+									if($useNationalId && !empty($reg_number_national))
+									{
+										$student_id = trim($reg_number_national);
+									}
+									$chk = $picoEdu->getExistsingUser($user_data, $student_id);
 									$student_id = addslashes($chk['member_id']);
 									$username = addslashes($chk['username']);
 
@@ -505,7 +661,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 						// mulai
 						$objWorksheet = PHPExcel_IOFactory::load($path);
 						try {
-							$objWorksheet = $objWorksheet->setActiveSheetIndexByName('TEACHER');
+							$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName('TEACHER');
 							$highestRow = $objWorksheet->getHighestRow();
 							$highestColumn = $objWorksheet->getHighestColumn();
 							$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
@@ -565,7 +721,12 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$user_data['country_id'] = $country_id;
 								$user_data['language'] = $language;
 								if (!empty($name) && !empty($email)) {
-									$chk = $picoEdu->getExistsingUser($user_data);
+									$teacher_id = null;
+									if($useNationalId && !empty($reg_number_national))
+									{
+										$teacher_id = trim($reg_number_national);
+									}
+									$chk = $picoEdu->getExistsingUser($user_data, $teacher_id);
 									$teacher_id = addslashes($chk['member_id']);
 									$username = addslashes($chk['username']);
 									if ($picoEdu->checkTeacher($school_id, $reg_number, $reg_number_national, $name)) {
@@ -608,7 +769,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 						} catch (Exception $e) {
 							// Do nothing
 						}
-						$sql3 = "UPDATE `edu_school` set
+						$sql3 = "UPDATE `edu_school` SET
 						`time_import_last` = '$time_edit',
 						`admin_import_last` = '$admin_edit',
 						`ip_import_last` = '$ip_edit'

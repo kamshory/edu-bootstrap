@@ -7,27 +7,26 @@
     <meta name="description" content="">
     <meta name="author" content="Planetbiru">
     <meta name="generator" content="Planetbiru">
-    <title>Pico Edu</title>
+    <title><?php echo $cfg->app_name;?></title>
 
 
     <link rel="stylesheet" href="<?php echo $cfg->base_url;?>lib.vendors/fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/css/bootstrap.min.css">
 
-    <!-- Custom styles for this template -->
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="lib.style/album.css">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="favs/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="favs/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="favs/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="favs/manifest.json">
-    <link rel="mask-icon" href="favs/safari-pinned-tab.svg" color="#563d7c">
-    <link rel="icon" href="favs/favicon.ico">
-    <meta name="msapplication-config" content="favs/browserconfig.xml">
+    <link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>lib.favs/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="<?php echo $cfg->base_assets;?>lib.favs/manifest.json">
+    <link rel="mask-icon" href="<?php echo $cfg->base_assets;?>lib.favs/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon.ico">
+    <meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>lib.favs/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
 
 </head>
@@ -58,8 +57,8 @@
         </div>
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container d-flex justify-content-between">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <strong>Pico Edu</strong>
+                <a href="./" class="navbar-brand d-flex align-items-center">
+                    <?php echo $cfg->app_name;?>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
                     aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">

@@ -25,8 +25,8 @@ if(count(@$_POST) && isset($_POST['save']))
 	$email = kh_filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
 	$phone = kh_filter_input(INPUT_POST, "phone", FILTER_SANITIZE_SPECIAL_CHARS);
 	$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
-	$admin_create = $admin_edit = $adminLoggedIn->admin_id;
+	$time_create = $time_edit = $database->getLocalDateTime();
+	
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$blocked = kh_filter_input(INPUT_POST, "blocked", FILTER_SANITIZE_NUMBER_UINT);
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
@@ -97,7 +97,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$phone = $picoEdu->fixPhone($phone);
 	$email = $picoEdu->filterEmailAddress($email);
 
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	
 	$token_admin = md5($phone."-".$email."-".time()."-".mt_rand(111111, 999999));
@@ -115,7 +115,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 								
 	if(!empty($name) && !empty($username))
 	{
-		$chk = $picoEdu->getExistsingUser($user_data);
+		$chk = $picoEdu->getExistsingUser($user_data, null);
 		$admin_id = addslashes($chk['member_id']);
 		$username = addslashes($chk['username']);
 		
@@ -442,8 +442,7 @@ else
 	<div class="search-control">
 	<form id="searchform" name="form1" method="get" action="">
 	<span class="search-label">Admin</span>
-		<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
-	"))));?>" />
+		<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
 	<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 	</form>
 	</div>

@@ -35,7 +35,7 @@ else
 ?>
 <title><?php echo $picoEdu->printPageTitle($pageTitle, $cfg->app_name);?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/css.min.css">
-<link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/favicon.png" />
+<link rel="shortcut icon" type="image/x-ico" href="<?php echo $cfg->base_assets;?>favicon.ico" />
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/js.js"></script>
 <?php

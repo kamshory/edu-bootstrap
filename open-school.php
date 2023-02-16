@@ -5,17 +5,17 @@ require_once dirname(__FILE__) . "/lib.inc/cfg.pagination.php";
 if (@$_GET['option'] == 'select') {
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "
-	select `edu_school3`.* from(
+	SELECT `edu_school3`.* from(
 	
-	select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
+		SELECT `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 	`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
 	FROM `edu_member_school`
 	INNER JOIN (`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 	WHERE `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S'
 	
-	union
+	UNION
 	
-	select `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
+	SELECT `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
 	`edu_school2`.`principal`, `edu_school2`.`active`, `edu_school2`.`open`
 	FROM `edu_school` AS `edu_school2`
 	WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 
@@ -45,14 +45,14 @@ if (@$_GET['option'] == 'detail') {
 	(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) AS `admin_create`,
 	(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) AS `admin_edit`
 	FROM `edu_school` 
-	where 1
+	WHERE 1
 	AND `edu_school`.`school_id` = '$edit_key'
 ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/home-row-table.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/home-row-table.css" />
 		<div class="main-content">
 			<div class="main-content-wrapper">
 				<form name="formedu_school" action="" method="post" enctype="multipart/form-data">
@@ -136,13 +136,12 @@ if (@$_GET['option'] == 'detail') {
 } else {
 	include_once dirname(__FILE__) . "/lib.assets/theme/default/header-home.php";
 	?>
-	<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/home-row-table.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/home-row-table.css" />
 	<div class="main-content">
 		<div class="main-content-wrapper">
 			<div class="search-control">
 				<form id="searchform" name="form1" method="get" action="">
-					<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
-    ")))); ?>" />
+					<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
 					<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success def-button" />
 				</form>
 			</div>
@@ -159,17 +158,17 @@ if (@$_GET['option'] == 'detail') {
 				$nt = '';
 
 				$sql = "
-				select `edu_school3`.* from(
+				SELECT `edu_school3`.* FROM (
 
-				select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
+				SELECT `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 				`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
 				FROM `edu_member_school`
 				INNER JOIN (`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 				WHERE `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S'
 
-				union
+				UNION
 
-				select `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
+				SELECT `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
 				`edu_school2`.`principal`, `edu_school2`.`active`, `edu_school2`.`open`
 				FROM `edu_school` AS `edu_school2`
 				WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 
@@ -179,17 +178,17 @@ if (@$_GET['option'] == 'detail') {
 				";
 				
 				$sql_test = "
-				select `edu_school3`.* from(
+				SELECT `edu_school3`.* FROM (
 
-				select `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
+				SELECT `edu_school1`.`school_id`, `edu_school1`.`name`, `edu_school1`.`school_grade_id`, `edu_school1`.`public_private`, 
 				`edu_school1`.`principal`, `edu_school1`.`active`, `edu_school1`.`open`
 				FROM `edu_member_school`
 				INNER JOIN (`edu_school` AS `edu_school1`) ON (`edu_school1`.`school_id` = `edu_member_school`.`school_id`)
 				WHERE `edu_member_school`.`member_id` = '$member_id' AND `edu_member_school`.`role` = 'S'
 
-				union
+				UNION
 
-				select `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
+				SELECT `edu_school2`.`school_id`, `edu_school2`.`name`, `edu_school2`.`school_grade_id`, `edu_school2`.`public_private`, 
 				`edu_school2`.`principal`, `edu_school2`.`active`, `edu_school2`.`open`
 				FROM `edu_school` AS `edu_school2`
 				WHERE `edu_school2`.`open` = '1' AND `edu_school2`.`active` = true 

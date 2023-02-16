@@ -12,7 +12,6 @@ if(isset($_GET['article_id']) && !empty($_GET['article_id']))
 {
 	$article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
 	$sql_filter_article = " AND `edu_article`.`article_id` = '$article_id' ";
-
 	if(isset($school_id))
 	{
 		$sql_filter_article .= " AND `edu_article`.`school_id` = '$school_id' ";

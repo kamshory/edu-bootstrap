@@ -263,7 +263,7 @@ else
 $start = @$_SESSION['session_test'][$student_id][$test_id]['start'];
 if($start == '' || $start == '0000-00-00 00:00:00')
 {
-	$start = $picoEdu->getLocalDateTime();
+	$start = $database->getLocalDateTime();
 	$_SESSION['session_test'][$student_id][$test_id]['start'] = $start;
 }
 ?>

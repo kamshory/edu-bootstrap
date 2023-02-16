@@ -31,7 +31,7 @@ tinyMCE.activeEditor.windowManager.open({url:ajaxFilemanagerURL,width:780,height
 var ascii_svg_server = 'lib.tools/asciisvg/svgimg.php';
 var equation_preview_url = '../../../../../../cgi-bin/equgen.cgi?' ;
 var equation_generator_url = '../../../../../../equgen.php?' ;
-var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'browser-png':'browser-mathjax';
+var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'mathml-png':'mathjax-svg';
 var quran_server = '../quran';
 $(document).ready(function() {
 	$('textarea.htmleditor').tinymce({

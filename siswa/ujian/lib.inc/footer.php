@@ -1,3 +1,9 @@
+<?php
+if(!isset($cfg))
+{
+  exit();
+}
+?>
     <!-- content end -->
     </div>
     

@@ -16,7 +16,7 @@ if(isset($_GET['school_id']) && @$_GET['option'] == 'register' && @$member_id > 
 
 	$member_id = @$member_id . '';
 	$student_id = $member_id;
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$admin_create = $admin_edit = $member_id;
 	$ip_create = $ip_edit = addslashes($_SERVER['REMOTE_ADDR']);
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
@@ -127,7 +127,7 @@ if(isset($_GET['test_id']) && @$_GET['option'] == 'join' && isset($_GET['registe
 	else
 	{
 		$student_id = $member_id;
-		$time_create = $time_edit = $picoEdu->getLocalDateTime();
+		$time_create = $time_edit = $database->getLocalDateTime();
 		$admin_create = $admin_edit = $member_id;
 		$ip_create = $ip_edit = addslashes($_SERVER['REMOTE_ADDR']);
 		$sql = "SELECT `edu_test`.*, `edu_test`.`name` AS `test_name`, 
@@ -280,7 +280,7 @@ $school_grade = array(
 		$sql = "SELECT `edu_test`.*, `edu_test`.`name` AS `test_name`, `edu_school`.`name` AS `school_name`, `edu_school`.`school_grade_id`
 		FROM `edu_test`
 		INNER JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_test`.`school_id`)
-		where 1 
+		WHERE (1=1)
 		AND `edu_test`.`open` = '1' AND `edu_test`.`active` = true
 		AND `edu_school`.`open` = '1' AND `edu_school`.`active` = true
 		ORDER BY `edu_school`.`school_grade_id` ASC, `edu_test`.`subject` ASC, `edu_test`.`name` ASC

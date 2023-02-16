@@ -45,7 +45,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$prevent_change_school = kh_filter_input(INPUT_POST, "prevent_change_school", FILTER_SANITIZE_NUMBER_UINT);
 	$prevent_resign = kh_filter_input(INPUT_POST, "prevent_resign", FILTER_SANITIZE_NUMBER_UINT);
 	$use_token = kh_filter_input(INPUT_POST, "use_token", FILTER_SANITIZE_NUMBER_UINT);
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$active = kh_filter_input(INPUT_POST, "active", FILTER_SANITIZE_NUMBER_UINT);
 
@@ -80,7 +80,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	";
 	$database->executeUpdate($sql2, true);
 
-	$sql = "UPDATE `edu_school` set
+	$sql = "UPDATE `edu_school` SET
 	`school_code` = '$school_code', `name` = '$name', `school_grade_id` = '$school_grade_id', `public_private` = '$public_private', 
 	`open` = '$open', `principal` = '$principal', `address` = '$address', `phone` = '$phone', `email` = '$email', `country_id` = '$country_id',
 	`use_token` = '$use_token'
@@ -896,8 +896,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
     <span class="search-label">Nama Sekolah</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
-    "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
     <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

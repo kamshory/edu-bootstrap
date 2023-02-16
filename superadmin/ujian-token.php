@@ -24,7 +24,7 @@ if(count(@$_POST) && isset($_POST['save']))
 	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$class_id = kh_filter_input(INPUT_POST, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$student_id = kh_filter_input(INPUT_POST, "student_id", FILTER_SANITIZE_STRING_NEW);
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();
+	$time_create = $time_edit = $database->getLocalDateTime();
 	$time_expire = kh_filter_input(INPUT_POST, "time_expire", FILTER_SANITIZE_STRING_NEW);
 	$admin_edit = $admin_id;
 	$active = 1;
@@ -47,7 +47,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['token_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
-	$now = $picoEdu->getLocalDateTime();
+	$now = $database->getLocalDateTime();
 	$oneday = date(PicoConst::DATE_TIME_MYSQL, time()-86400);
 	$sql = "DELETE FROM `edu_token` WHERE `time_expire` < '$oneday'
 	";
@@ -342,7 +342,7 @@ else
 {
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
-$now = $picoEdu->getLocalDateTime();
+$now = $database->getLocalDateTime();
 $oneday = date(PicoConst::DATE_TIME_MYSQL, time()-86400);
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 if(isset($_POST['cleanup']))
@@ -446,8 +446,7 @@ function printToken(frm)
 	?>
 </select>
 <span class="search-label">Token</span>
-<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
-"))));?>" />
+<input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
 <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

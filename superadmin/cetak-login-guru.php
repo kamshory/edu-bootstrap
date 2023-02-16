@@ -11,7 +11,7 @@ if($adminLoggedIn->admin_level != 1)
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <base href="<?php echo $cfg->base_url;?>">
-<link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/favicon.png" />
+<link rel="shortcut icon" type="image/x-ico" href="<?php echo $cfg->base_assets;?>favicon.ico" />
 <title>Username dan Password Guru - <?php echo $cfg->app_name;?></title>
 <style type="text/css">
 body{

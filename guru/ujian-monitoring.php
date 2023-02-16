@@ -18,7 +18,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
-		$waktu = $picoEdu->getLocalDateTime();
+		$waktu = $database->getLocalDateTime();
 		$ip = addslashes($_SERVER['REMOTE_ADDR']);
 		$sessions_id = $data['sessions_id'];
 		$sql = "DELETE FROM `sessions` WHERE `id` = '$sessions_id' ";
@@ -38,7 +38,7 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
-		$waktu = $picoEdu->getLocalDateTime();
+		$waktu = $database->getLocalDateTime();
 		$ip = addslashes($_SERVER['REMOTE_ADDR']);
 		$sessions_id = $data['sessions_id'];
 		$siswa_id = $data['siswa_id'];
@@ -235,8 +235,7 @@ window.onload = function()
 	?>
     </select>
     <span class="search-label">Ujian</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
-    "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
     <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

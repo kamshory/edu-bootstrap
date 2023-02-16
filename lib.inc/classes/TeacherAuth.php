@@ -1,7 +1,5 @@
 <?php
 
-
-
 class TeacherAuth
 {
 	public $teacher_id = '';
@@ -63,7 +61,7 @@ class TeacherAuth
 				$this->use_token = $teacherLoggedIn->use_token;
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
-					$now = $picoEdu->getLocalDateTime();
+					$now = $database->getLocalDateTime();
 					$sql = "UPDATE `edu_teacher` SET 
 						`ip_last_activity` = '$ip', 
 						`time_last_activity` = '$now' 

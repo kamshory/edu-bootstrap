@@ -150,8 +150,7 @@ $(document).ready(function(e) {
 	</span>
 	<span class="bring-together">
     <span class="search-label">Nama Siswa</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
- "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
 	</span>
   <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
@@ -194,9 +193,6 @@ if($pagination->getTotalRecordWithLimit() > 0)
 {
 if($class_id == 0)
 {
-
-
-
 $pagination->createPagination('siswa.php', true); 
 $paginationHTML = $pagination->buildHTML();
 }

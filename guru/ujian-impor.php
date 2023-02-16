@@ -14,7 +14,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file']))
 {
 	// sesuai dengan login masing-masning
-	$time_create = $time_edit = $picoEdu->getLocalDateTime();	
+	$time_create = $time_edit = $database->getLocalDateTime();	
 	
 	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$picoEdu->sortQuestion($test_id);
@@ -38,7 +38,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 		$dirBase = dirname(dirname(__FILE__));
 		$permission = 0755;
-		$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+		$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 		
 		$base_src = "media.edu/school/$school_id/test/$test_id";
 		
@@ -449,8 +449,7 @@ window.onload = function()
 	?>
     </select>
     <span class="search-label">Ujian</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
-    "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
     <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

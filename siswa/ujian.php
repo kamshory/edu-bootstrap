@@ -13,7 +13,7 @@ if(!empty(@$auth_student_id) && !empty(@$auth_school_id))
 if(@$_GET['option'] == 'answer' && isset($_GET['answer_id']))
 {
 $answer_id = kh_filter_input(INPUT_GET, "answer_id", FILTER_SANITIZE_STRING_NEW);
-$now = $picoEdu->getLocalDateTime();
+$now = $database->getLocalDateTime();
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 $sql = "SELECT `edu_test`.* , `edu_answer`.`final_score`, `edu_answer`.`percent`, 
@@ -623,8 +623,7 @@ window.onload = function()
     </select>
 
     <span class="search-label">Ujian</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q']," 	
-    "))));?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
     <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>
@@ -700,7 +699,7 @@ $paginationHTML = $pagination->buildHTML();
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
-      <td width="16"><i class="fas fa-pencil"></i></td>
+      <td width="16"><i class="fas fa-list"></i></td>
       <td width="25">No</td>
       <td>Ujian</td>
       <td>Kelas</td>
@@ -718,7 +717,7 @@ $paginationHTML = $pagination->buildHTML();
 	$no++;
 	?>
     <tr>
-      <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-pencil"></i></a></td>
+      <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-list"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>

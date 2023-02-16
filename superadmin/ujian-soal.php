@@ -9,7 +9,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 $pageTitle = "Soal Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
-$time_create = $time_edit = $picoEdu->getLocalDateTime();
+$time_create = $time_edit = $database->getLocalDateTime();
 
 
 if(@$_GET['option'] == 'delete')
@@ -45,8 +45,8 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(PDO::FETCH_ASSOC);
-		$time_create = $picoEdu->getLocalDateTime();
-		$time_edit = $picoEdu->getLocalDateTime();
+		$time_create = $database->getLocalDateTime();
+		$time_edit = $database->getLocalDateTime();
 	
 		$random = ((int) $data['random']);
 		$sort_order = ((int) $data['sort_order']);
@@ -56,10 +56,10 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$clear_data = parseRawQuestion($xml_data);
 
 		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school";
-		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+		$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 		$dirBase = dirname(dirname(__FILE__));
 		$permission = 0755;
-		$fileSync->prepareDirectory($dir2prepared, $dirBase, $permission, true);
+		$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 	
 		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 
@@ -216,10 +216,10 @@ if(@$_GET['option'] == 'edit')
 			$data3 = $stmt3->fetch(PDO::FETCH_ASSOC);
 
 			?>
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets; ?>lib.assets/theme/default/css/test.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript">
-var base_assets = '<?php echo $cfg->base_assets; ?>';
+var base_assets = '<?php echo $cfg->base_assets;?>';
 var numbering = <?php echo json_encode($cfg->numbering); ?>;
 var test_id = '<?php echo $data['test_id']; ?>';
 var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$test_id/"); ?>;	
@@ -239,7 +239,7 @@ return filename.replace(/\.[^/.]+$/, "");
 var ascii_svg_server = 'lib.tools/asciisvg/svgimg.php';
 var equation_preview_url = '../../../../../../cgi-bin/equgen.cgi?' ;
 var equation_generator_url = '../../../../../../equgen.php?' ;
-var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'browser-png':'browser-mathjax';
+var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'mathml-png':'mathjax-svg';
 var quran_server = '../quran';
 $().ready(function() {
 	$('textarea.htmleditor').tinymce({
@@ -638,9 +638,9 @@ foreach($rows as $data)
 	$sql2 = "SELECT `edu_option`.*,
 	(SELECT COUNT(DISTINCT `edu_answer`.`answer_id`) 
 		FROM `edu_answer` 
-		WHERE `edu_answer`.`answer` like concat('%,',`edu_option`.`option_id`,']%')
+		WHERE `edu_answer`.`answer` LIKE concat('%,',`edu_option`.`option_id`,']%')
 		GROUP BY `edu_answer`.`test_id`
-		limit 0,1
+		LIMIT 0, 1
 		) AS `pilih`
 	FROM `edu_option`
 	WHERE `edu_option`.`question_id` = '$question_id' ";
@@ -994,7 +994,7 @@ function buildMenu(id)
   <select class="form-control input-select" name="school_id" id="school_id">
     <option value="">- Pilih Sekolah -</option>
     <?php
-			$sql2 = "SELECT * FROM `edu_school` where 1 ORDER BY `time_create` DESC";
+			$sql2 = "SELECT * FROM `edu_school` WHERE (1=1) ORDER BY `time_create` DESC";
 			echo $picoEdu->createFilterDb(
 				$sql2,
 				array(
@@ -1047,8 +1047,7 @@ function buildMenu(id)
 			}
 			?>
     <span class="search-label">Ujian</span>
-    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode((trim(@$_GET['q'], " 	
-    ")))); ?>" />
+    <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
     <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
 </form>
 </div>

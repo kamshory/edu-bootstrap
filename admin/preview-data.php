@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-if(!@$admin_id)
+if(empty($admin_id))
 {
 	require_once dirname(__FILE__)."/login-form.php";
 	exit();
@@ -263,7 +263,7 @@ try {
 
         $token_student = md5($school_id . '-' . $reg_number . '-' . time() . '-' . mt_rand(111111, 999999));
 
-        $time_create = $time_edit = $picoEdu->getLocalDateTime();
+        $time_create = $time_edit = $database->getLocalDateTime();
         $ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
         $admin_create = $admin_edit = $admin_id;
 

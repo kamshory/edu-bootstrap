@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+if(!isset($cfg))
+{
+  exit();
+}
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,23 +16,23 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/css/bootstrap.min.css">
 
 <!-- Favicons -->
-<link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>/avs/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="<?php echo $cfg->base_assets;?>/avs/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="<?php echo $cfg->base_assets;?>/avs/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="<?php echo $cfg->base_assets;?>/avs/manifest.json">
-<link rel="mask-icon" href="<?php echo $cfg->base_assets;?>/avs/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="<?php echo $cfg->base_assets;?>/avs/favicon.ico">
-<meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>/avs/browserconfig.xml">
+<link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>favs/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>favs/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>favs/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="<?php echo $cfg->base_assets;?>favs/manifest.json">
+<link rel="mask-icon" href="<?php echo $cfg->base_assets;?>favs/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>favs/favicon.ico">
+<meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>favs/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
 <!-- Custom styles for this template -->
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.vendors/dashboard/dashboard.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.style/style.css">
 <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script>
   $(document).ready(function(){
@@ -46,7 +51,7 @@
 
 <body>
 	<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="../">Pico Edu</a>
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="../"><?php echo $cfg->app_name;?></a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
       data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -76,7 +81,7 @@
           <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group mr-2">
               <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='sinkronisasi.php'">Sinkronkan</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='informasi.php'">Informasi</button>
             </div>
             <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
