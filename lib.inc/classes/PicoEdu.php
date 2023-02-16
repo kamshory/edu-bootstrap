@@ -1210,7 +1210,17 @@ class PicoEdu //NOSONAR
 		return htmlspecialchars(rawurldecode((trim(@$_GET['q'])))); 
 	}
 
-	/**
-	 * Get state ID
-	 */
+	
+	public function getWebsocketHost()
+	{
+		
+		$host = isset($_SERVER['HTTP_HOST'])?$_SERVER['HTTP_HOST']:$_SERVER['SERVER_NAME'];
+		if($host == '::1')
+		{
+			$host = '127.0.0.1'; // Many browser not support ::1
+		}
+		global $cfg;
+		return 'ws://'.$host.':'.$cfg->ws_port;
+		
+	}
 }

@@ -473,7 +473,7 @@ class WSServer implements WSInterface {
 	{
 		foreach($this->wsClients as $client) 
 		{
-			if(in_array($client->getUsername(), $receiver))
+			if(in_array($client->getClientData()['username'], $receiver))
 			{
 				$client->sendMessage($textMessage);
 			}

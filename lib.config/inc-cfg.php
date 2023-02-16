@@ -44,6 +44,8 @@ $configs->sync_file_use_relative_path = true;
 
 $cfg = new stdClass();
 
+$cfg->ws_port = 8888;
+
 $cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
 $cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
 

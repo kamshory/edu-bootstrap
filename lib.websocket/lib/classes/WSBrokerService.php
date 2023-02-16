@@ -90,7 +90,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 		$sessions = $wsClient->getSessions();
 		$query = $wsClient->getQuery();
 		$clientData = $wsClient->getClientData();	
-
+		
 		if($wsClient->getGroupId() == "student" && @$query['module'] == "test" && !empty(@$query['test_id']))
 		{
 			if(isset($clientData['username']))
@@ -121,7 +121,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 			// Send user list
 			$response = json_encode(
 				array(
-					'command' => 'user-on-system', 					
+					'command' => 'test-member', 					
 					'data' => array(
 						array(
 							'test_member'=>$this->uniqueMember($this->testMember)
@@ -135,7 +135,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 		{
 			$response = json_encode(
 				array(
-					'command' => 'user-on-system', 
+					'command' => 'test-member', 
 					'group_id' => $wsClient->getClientData()['group_id'],
 					'data' => array(
 						array(
@@ -173,7 +173,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 			// Send user list
 			$response = json_encode(
 				array(
-					'command' => 'user-on-system', 
+					'command' => 'test-member', 
 					'data' => array(
 						array(
 							'test_member'=>$this->uniqueMember($this->testMember)
@@ -181,6 +181,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 					)
 				)
 			);
+		
 			$this->sendBroadcast($wsClient, $response, array('admin', 'teacher'), false);
 		}		
 		$this->wsDatabase->disconnect();
@@ -198,12 +199,13 @@ class WSBrokerService extends WSServer implements WSInterface {
 		$fp = fopen(dirname(__FILE__)."/log.txt", "a"); fputs($fp, "Client = ".print_r($wsClient->getClientData(), true)."\r\n\r\n Message = '".($receivedText)."'\r\n\r\n\r\n"); fclose($fp);
 	
 		$command = $json_message['command'];
+		
 		if($command == "broadcast")
 		{
 			$receiverGroup = $json_message['receiver_group'];
 			$this->sendBroadcast($wsClient, $receivedText, $receiverGroup, true);
 		}
-		else if($command == "message")
+		else if($command == "message" || $command == "kick")
 		{
 			$receiver = $json_message['receiver'];
 			if(is_array($receiver))

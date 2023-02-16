@@ -70,6 +70,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 }
 else
 {
+	include_once dirname(__FILE__)."/lib.inc/auth-siswa.php";
 	$username = '';
 	$password = '';
 	$loged_in = false;
@@ -82,7 +83,7 @@ else
 		$password = $_SESSION['student_password'];
 	}
 	
-	$studentLoggedIn = new StudenAuth($database, $username, $password, false);
+	$studentLoggedIn = new StudentAuth($database, $username, $password, false);
 	
 	$student_id = '';
 	$school_id = '';
@@ -183,6 +184,7 @@ else
 	
 	if(!$loged_in)
 	{
+		include_once dirname(__FILE__)."/lib.inc/auth-guru.php";
 		if(isset($_SESSION['teacher_username']))
 		{
 			$username = $_SESSION['teacher_username'];
@@ -293,6 +295,7 @@ else
 	
 	if(!$loged_in)
 	{
+		include_once dirname(__FILE__)."/lib.inc/auth-admin.php";
 		if(isset($_SESSION['admin_username']))
 		{
 			$username = $_SESSION['admin_username'];

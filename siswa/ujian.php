@@ -431,6 +431,37 @@ if($stmt->rowCount() > 0)
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
+
+<script>
+    let testId = '<?php echo $test_id;?>';
+    let websocketURL = '<?php echo $picoEdu->getWebsocketHost();?>/?module=test&test_id='+testId;
+</script>
+<script src="../lib.assets/script/test-ws.js"></script>
+<script src="../lib.assets/script/test-ws-student.js"></script>
+
+
+
+<div class="modal fade" id="test-alert" tabindex="-1" role="dialog" aria-labelledby="test-alert-title" aria-hidden="true">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="test-alert-title">Pesan Pengawas</h5>
+      </div>
+		<div class="modal-body">
+		
+
+		</div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama Ujian</td>
@@ -572,7 +603,7 @@ require_once dirname(__FILE__)."/ujian-token.php";
 }
 else
 {
-if(!$use_token || @$_GET['option'] == 'list')
+if(true)//!$use_token || @$_GET['option'] == 'list')
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);

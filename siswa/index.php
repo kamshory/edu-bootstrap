@@ -5,7 +5,7 @@ if(isset($school_id) && !empty($school_id))
 {
 	require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	?>
-    
+    <p>Selamat datang <?php echo $studentLoggedIn->name ?></p>
     <?php
 	require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }

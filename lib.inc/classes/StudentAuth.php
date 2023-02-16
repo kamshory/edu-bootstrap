@@ -1,6 +1,6 @@
 <?php
 
-class StudenAuth
+class StudentAuth
 {
 	public $student_id = 0;
 	public $username = '';
@@ -20,7 +20,7 @@ class StudenAuth
 	public $use_token = 0;
 
 	/**
-	 * Constructor of StudenAuth
+	 * Constructor of StudentAuth
 	 * @param \PicoDatabase $database
 	 * @param string $username
 	 * @param string $password

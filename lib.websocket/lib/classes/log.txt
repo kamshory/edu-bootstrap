@@ -690,3 +690,4659 @@ Client = Array
  Message = 'PING'
 
 
+Client = Array
+(
+    [login_time] => 2023-02-16 16:40:22
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = 'PING'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:40:22
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = 'PING'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:53:32
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":{},"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:53:58
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":{},"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:53:58
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":{},"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:53:58
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":{},"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:54:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":{},"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:55:37
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":{"recipient":"063ce682832341ea3ce0"},"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:56:50
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":{"recipient":"063ce682832341ea3ce0"},"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:56:50
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":{"recipient":"063ce682832341ea3ce0"},"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:57:20
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682832341ea3ce0"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:57:20
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682832341ea3ce0"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:57:20
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:58:39
+    [username] => Angga Permana
+    [group_id] => student
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:58:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:59:14
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 16:59:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:00:19
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:00:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:02:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:02:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:02:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:02:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:02:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:02:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:02:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682823743dfd5b1"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:05:35
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682832341ea3ce0"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:05:35
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682832341ea3ce0"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:05:35
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682832341ea3ce0"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:05:35
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682832341ea3ce0"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:05:35
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682832341ea3ce0"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:05:35
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["063ce682832341ea3ce0"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:05:52
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:05:52
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:05:52
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:06:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:06:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:06:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:06:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:06:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:06:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:06:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:06:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:06:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:06:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":[{"message":"Jangan berisik"}]}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:07:51
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:08:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:09:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:09
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:09
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:09
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:09
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:32
+    [username] => Angga Permana
+    [group_id] => student
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:32
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:32
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:32
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:32
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:32
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:32
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:32
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:32
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:10:32
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:11:31
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:20
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:20
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:20
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:20
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:31:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:32:37
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:32:37
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:33:01
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:33:01
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:33:01
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:33:01
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:33:01
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:33:01
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:33:01
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:41:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:41:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:41:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:41:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:41:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:41:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:41:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 17:41:26
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Jangan berisik"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Anissa Widiya"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Anissa Widiya"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Anissa Widiya"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Anissa Widiya"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Anissa Widiya"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Anissa Widiya"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Anissa Widiya"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Anissa Widiya"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Anissa Widiya"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Anissa Widiya"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Bimantara"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Anissa Widiya"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [username] => 
+    [group_id] => 
+)
+
+
+ Message = '{"command":"message","receiver":["Angga Permana"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:11
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:11
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:11
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:11
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:11
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:36:40
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:37:14
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:37:14
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:37:14
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:37:14
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:37:14
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:37:14
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:37:54
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:38:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:39:19
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:39:19
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:39:19
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:39:19
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:39:30
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:39:30
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:39:30
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:40:05
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:40:05
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:40:05
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:40:05
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:40:05
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:45:53
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:45:56
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:45:56
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:45:56
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:45:56
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:45:56
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:45:56
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:45:56
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:46:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:46:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:46:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:46:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"message":"Harap jangan berisik!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:46:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:46:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:46:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:46:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:46:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:46:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:46:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:46:39
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:49:11
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:49:11
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:49:11
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:49:11
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:49:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:49:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:49:16
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:50:24
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:50:24
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:50:24
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:50:24
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:50:24
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:50:59
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:55:23
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:55:23
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:55:23
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:56:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:56:30
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:56:30
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:56:30
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:56:30
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:56:30
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:56:30
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:56:30
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:57:07
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:57:07
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:57:07
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:57:07
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:57:07
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:57:50
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:58:19
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 18:58:19
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:06:52
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:06:52
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:06:52
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:09:58
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:09:58
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Pesan Pengawas","message":"Harap jangan berisik!","icon":"fa-message"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:09:58
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Pesan Pengawas","message":"Harap jangan berisik!","icon":"fa-message"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Pesan Pengawas","message":"Harap jangan berisik!","icon":"fa-message"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Pesan Pengawas","message":"Harap jangan berisik!","icon":"fa-message"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Pesan Pengawas","message":"Harap jangan berisik!","icon":"fa-message"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Pesan Pengawas","message":"Harap jangan berisik!","icon":"fa-message"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Pesan Pengawas","message":"Harap jangan berisik!","icon":"fa-message"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:11:13
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:12:35
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:12:35
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Pesan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:12:35
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Pesan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:12:35
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Pesan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:13:02
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:13:02
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:13:02
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:13:02
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:13:02
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:13:02
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:13:02
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-16 19:15:27
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+

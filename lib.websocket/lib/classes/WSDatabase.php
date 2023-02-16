@@ -151,6 +151,7 @@ class WSDatabase
 
         $student->student_id = "";
         $student->name = "";
+        $student->username = "";
         $student->gender = "";
         $student->class_id = "";
         $student->school_id = "";
@@ -173,6 +174,7 @@ class WSDatabase
 			if ($stmt->rowCount() > 0) {
 				$studentLoggedIn = $stmt->fetchObject();
 				$student->student_id = $studentLoggedIn->student_id;
+				$student->username = $studentLoggedIn->username;
 				$student->name = trim($studentLoggedIn->name);
 				$student->gender = $studentLoggedIn->gender;
 				$student->class_id = $studentLoggedIn->class_id;

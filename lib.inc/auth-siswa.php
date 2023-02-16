@@ -16,7 +16,7 @@ if(isset($_SESSION['student_password']))
 }
 
 require_once dirname(__FILE__) . "/classes/StudentAuth.php";
-$studentLoggedIn = new \StudenAuth($database, $username, $password, false);
+$studentLoggedIn = new \StudentAuth($database, $username, $password, false);
 
 $member_id = "";
 $student_id = "";
