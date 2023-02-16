@@ -66,9 +66,9 @@ class WSClient {
 		if($callbackObject != null && $callbackPostConstruct != null)
 		{
 			$this->clientData = call_user_func(array($callbackObject, $callbackPostConstruct), $this); 
+			$this->groupId = $this->clientData['group_id'];
+			$this->username = $this->clientData['username'];
 		}
-		$this->groupId = $this->clientData['group_id'];
-		$this->username = $this->clientData['username'];
 	}
 
 	private function parseHeaders($headerInfo)

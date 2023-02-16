@@ -3,15 +3,15 @@
 class WSDatabase
 {
 
-	private string $username = "";
-	private string $password = "";
-	private string $databaseName = "";
-	private string $timezone = "00:00";
-	private \PDO $conn;
+	private $username = "";
+	private $password = "";
+	private $databaseName = "";
+	private $timezone = "00:00";
+	private $conn;
 
-    private string $databaseDriver = "mysql";
-    private string $databaseHost = "localhost";
-    private int $databasePort = 3066;
+    private $databaseDriver = "mysql";
+    private $databaseHost = "localhost";
+    private $databasePort = 3066;
     
 	/**
 	 * Constructor
@@ -110,7 +110,7 @@ class WSDatabase
 	 * @param string $sql Query string to be executed
 	 * @return PDOStatement
 	 */
-	public function executeQuery($sql) : \PDOStatement
+	public function executeQuery($sql)
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {

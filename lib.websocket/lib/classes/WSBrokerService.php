@@ -2,9 +2,9 @@
 
 class WSBrokerService extends WSServer implements WSInterface {
 	private $testMember = array();
-	public function __construct($wsDatabase, $host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null)
+	public function __construct($wsDatabase, $host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null, $messageOnStarted = "")
 	{
-		parent::__construct($wsDatabase, $host, $port, $callbackObject, $callbackPostConstruct);
+		parent::__construct($wsDatabase, $host, $port, $callbackObject, $callbackPostConstruct, $messageOnStarted);
 	}
 	public function updateUserOnSystem()
 	{

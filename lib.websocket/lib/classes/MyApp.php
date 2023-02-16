@@ -38,9 +38,8 @@ class MyApp {
 		}
 		else 
 		{
-			$clientData = array();
-		}
-		
+			$clientData = array('username'=>'', 'group_id'=>'');
+		}	
 		
 		return $clientData;
 	}

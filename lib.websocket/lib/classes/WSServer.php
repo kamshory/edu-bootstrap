@@ -21,7 +21,7 @@ class WSServer implements WSInterface {
 	protected $callbackObject;
 	protected $callbackPostConstruct;
 
-	public function __construct($wsDatabase, $host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null)
+	public function __construct($wsDatabase, $host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null, $messageOnStarted = "")
 	{
 		$this->wsDatabase = $wsDatabase;
 		$this->host = $host;
@@ -40,9 +40,9 @@ class WSServer implements WSInterface {
 		$this->callbackObject = $callbackObject;
 		$this->callbackPostConstruct = $callbackPostConstruct;
 		
-		if($this->socketOk)
+		if($this->socketOk && !empty($messageOnStarted))
 		{
-			echo "Service started at ".$this->port."\r\n";
+			echo $messageOnStarted;
 		}
 	}
 
