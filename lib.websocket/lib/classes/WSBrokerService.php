@@ -71,15 +71,11 @@ class WSBrokerService extends WSServer implements WSInterface {
 			{
 				$this->testMember = array();
 			}
-		}
-		
+		}	
 	}
 
-
-
 	private function uniqueMember($array)
-	{
-		
+	{	
 		$array = json_decode(json_encode($array), true);
 		foreach($array as $testID=>$value)
 		{
@@ -87,12 +83,10 @@ class WSBrokerService extends WSServer implements WSInterface {
 			{				
 				$array[$testID][$studentId] = array_values($array[$testID][$studentId])[0];
 				unset($array[$testID][$studentId]["resourceId"]);
-			}
-			
+			}		
 			$array[$testID] = array_values($array[$testID]);
 		}
 		$array = json_decode(json_encode($array), false);
-		
 		return $array;
 	}
 
@@ -198,10 +192,10 @@ class WSBrokerService extends WSServer implements WSInterface {
 				)
 			);
 			$this->sendBroadcast($wsClient, $response, array('admin', 'teacher'), false);
-		}
-		
+		}		
 		$this->wsDatabase->disconnect();
 	}
+
 	/**
 	 * Method when a client send the message
 	 * @param \WSClient $wsClient Chat client
@@ -229,12 +223,6 @@ class WSBrokerService extends WSServer implements WSInterface {
 		}
 	}
 	
-	
-	public function loadMessage($wsClient, $json_message)
-	{
-		// TODO Add your code
-	}
-	
-	
+
 	
 }
