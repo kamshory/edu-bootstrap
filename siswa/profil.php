@@ -24,20 +24,21 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$sql = "UPDATE `edu_student` SET 
 	`reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `ip_edit` = '$ip_edit'
-	WHERE `student_id` = '$auth_student_id' AND `school_id` = '$school_id' ";
+	WHERE `student_id` = '$auth_student_id' ";
 	$database->executeUpdate($sql, true);
 	if($email != '')
 	{
 		$sql = "UPDATE `edu_student` SET 
 		`email` = '$email'
-		WHERE `student_id` = '$auth_student_id' AND `school_id` = '$school_id' ";
+		WHERE `student_id` = '$auth_student_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
+		$password2save = md5(md5($password));
 		$sql = "UPDATE `edu_student` SET 
-		`password` = md5(md5('$password')), `password_initial` = ''
-		WHERE `student_id` = '$auth_student_id' AND `school_id` = '$school_id' ";
+		`password` = '$password2save', `password_initial` = ''
+		WHERE `student_id` = '$auth_student_id' ";
 		$database->executeUpdate($sql, true);
 		$_SESSION['student_password'] = md5($password);
 	}

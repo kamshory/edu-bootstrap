@@ -1,0 +1,52 @@
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_teacher` SET 
+	`reg_number_national` = '29010101014', `name` = 'Aisyah', `gender` = 'W', 
+	`birth_place` = 'BANDUNG', `birth_day` = '2128-12-31', `phone` = '0861131326', `address` = '', 
+	`time_edit` = '2023-02-17 18:16:55', `ip_edit` = '127.0.0.1'
+	WHERE `teacher_id` = '063ce68285cc5b02bb04' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_teacher` SET 
+		`email` = 'gsetgtweg@planetbiru.com'
+		WHERE `teacher_id` = '063ce68285cc5b02bb04' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_teacher` SET 
+	`reg_number_national` = '29010101014', `name` = 'Aisyah', `gender` = 'W', 
+	`birth_place` = 'BANDUNG', `birth_day` = '2128-12-31', `phone` = '0861131326', `address` = '', 
+	`time_edit` = '2023-02-17 18:17:46', `ip_edit` = '127.0.0.1'
+	WHERE `teacher_id` = '063ce68285cc5b02bb04' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_teacher` SET 
+		`email` = 'gggg@planetbiru.com'
+		WHERE `teacher_id` = '063ce68285cc5b02bb04' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_teacher` SET 
+	`reg_number_national` = '29010101014', `name` = 'Aisyah', `gender` = 'W', 
+	`birth_place` = 'BANDUNG', `birth_day` = '2128-12-31', `phone` = '0861131326', `address` = '', 
+	`time_edit` = '2023-02-17 18:20:28', `ip_edit` = '127.0.0.1'
+	WHERE `teacher_id` = '063ce68285cc5b02bb04';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_teacher` SET 
+		`email` = 'gggg@planetbiru.com'
+		WHERE `teacher_id` = '063ce68285cc5b02bb04';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_teacher` SET 
+		`password` = 'be01a34e219125577806ef80adf809cb', `password_initial` = ''
+		WHERE `teacher_id` = '063ce68285cc5b02bb04';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `member` SET 
+		`password` = md5(md5('7a7e7a'))
+		WHERE `member_id` = '063ce68285cc5b02bb04';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_teacher` SET 
+	`reg_number_national` = '29010101014', `name` = 'Aisyah', `gender` = 'W', 
+	`birth_place` = 'BANDUNG', `birth_day` = '2128-12-31', `phone` = '0861131326', `address` = '', 
+	`time_edit` = '2023-02-17 18:21:27', `ip_edit` = '127.0.0.1'
+	WHERE `teacher_id` = '063ce68285cc5b02bb04';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_teacher` SET 
+		`email` = 'gggg@planetbiru.com'
+		WHERE `teacher_id` = '063ce68285cc5b02bb04';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_teacher` SET 
+		`password` = 'be01a34e219125577806ef80adf809cb', `password_initial` = ''
+		WHERE `teacher_id` = '063ce68285cc5b02bb04';

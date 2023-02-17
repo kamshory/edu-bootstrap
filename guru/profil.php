@@ -22,24 +22,21 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	`reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', 
 	`birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', 
 	`time_edit` = '$time_edit', `ip_edit` = '$ip_edit'
-	WHERE `teacher_id` = '$teacher_id' AND `school_id` = '$school_id' ";
+	WHERE `teacher_id` = '$teacher_id' ";
 	$database->executeUpdate($sql, true);
 	if($email != '')
 	{
 		$sql = "UPDATE `edu_teacher` SET 
 		`email` = '$email'
-		WHERE `teacher_id` = '$teacher_id' AND `school_id` = '$school_id' ";
+		WHERE `teacher_id` = '$teacher_id' ";
 		$database->executeUpdate($sql, true);
 	}
 	if($password != '')
 	{
+		$password2save = md5(md5($password));
 		$sql = "UPDATE `edu_teacher` SET 
-		`password` = md5(md5('$password')), `password_initial` = ''
-		WHERE `teacher_id` = '$teacher_id' AND `school_id` = '$school_id' ";
-		$database->executeUpdate($sql, true);
-		$sql = "UPDATE `member` SET 
-		`password` = md5(md5('$password'))
-		WHERE `member_id` = '$teacher_id'  ";
+		`password` = '$password2save', `password_initial` = ''
+		WHERE `teacher_id` = '$teacher_id' ";
 		$database->executeUpdate($sql, true);
 		$_SESSION['password'] = md5($password);
 	}

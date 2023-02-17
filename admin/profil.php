@@ -42,9 +42,10 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 
 	if($password != '')
 	{
+		$password2save = md5(md5($password));
 		$sql = "UPDATE `edu_admin` SET 
-		`password` = md5(md5('$password'))
-		WHERE `admint_id` = '$admin_id' AND `school_id` = '$school_id' ";
+		`password` = '$password2save'
+		WHERE `admint_id` = '$admin_id' ";
 		$database->executeUpdate($sql, true);
 		$_SESSION['password'] = md5($password);
 	}
