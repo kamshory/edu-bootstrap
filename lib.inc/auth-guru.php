@@ -31,7 +31,7 @@ $admin_edit = "";
 
 $teacherLoggedIn = new \TeacherAuth($database, $username, $password, false);
 
-if($teacherLoggedIn->teacher_id)
+if(!empty($teacherLoggedIn->getTeacherId()))
 {
 	$teacher_id 
 		= $auth_teacher_id 
@@ -39,12 +39,12 @@ if($teacherLoggedIn->teacher_id)
 		= $member_edit
 		= $teacher_create
 		= $teacher_edit
-		= $teacherLoggedIn->teacher_id . "";
+		= $teacherLoggedIn->getTeacherId() . "";
 	$school_id 
 		= $auth_school_id 
 		= $auth_teacher_school_id 
-		= $teacherLoggedIn->school_id . "";
-	$school_code = $teacherLoggedIn->school_code . "";
-	$school_name = $teacherLoggedIn->school_name . "";
-	$use_token = $teacherLoggedIn->use_token;
+		= $teacherLoggedIn->getSchoolId();
+	$school_code = $teacherLoggedIn->getSchoolCode();
+	$school_name = $teacherLoggedIn->getSchoolName();
+	$use_token = $teacherLoggedIn->getUseToken();
 }

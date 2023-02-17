@@ -442,7 +442,8 @@ class PicoDatabase
 	}
 
 	/**
-	 * Get local time
+	 * Get local date time
+	 * @return string Local date time
 	 */
 	public function getLocalDateTime()
 	{

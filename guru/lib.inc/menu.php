@@ -75,6 +75,11 @@ $structure = array(
                     'link'=>'ujian.php'                       
                 ),
                 array(
+                    'caption'=>'Pelaksanaan Ujian',
+                    'icon'=>'fa-graduation-cap',
+                    'link'=>'ujian-pelaksanaan.php'                       
+                ),
+                array(
                     'caption'=>'Soal',
                     'icon'=>'fa-list',
                     'link'=>'ujian-soal.php'                       

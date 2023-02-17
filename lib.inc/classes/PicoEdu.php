@@ -1220,7 +1220,6 @@ class PicoEdu //NOSONAR
 			$host = '127.0.0.1'; // Many browser not support ::1
 		}
 		global $cfg;
-		return 'ws://'.$host.':'.$cfg->ws_port;
-		
+		return 'ws://'.$host.':'.$cfg->ws_port;		
 	}
 }

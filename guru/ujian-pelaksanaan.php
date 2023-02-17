@@ -1,17 +1,10 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-admin.php";
+	require_once dirname(__FILE__)."/bukan-guru.php";
 	exit();
 }
-if(empty($real_school_id))
-{
-	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
-	exit();
-}
-
-$real_school_id = @$real_school_id . '';
 
 $pageTitle = "Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
@@ -500,7 +493,6 @@ else
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
-$teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <script type="text/javascript">
@@ -525,8 +517,7 @@ window.onload = function()
 <form id="searchform" name="form1" method="get" action="">
     <span class="search-label">Kelas</span> 
     <select class="form-control input-select" name="class_id" id="class_id">
-    
-	<option value="">- Pilih Kelas -</option>
+    <option value="">- Pilih Kelas -</option>
     <?php 
 	$sql2 = "SELECT * FROM `edu_class` WHERE `school_id` = '$school_id' ";
 	echo $picoEdu->createFilterDb(
@@ -547,34 +538,7 @@ window.onload = function()
 			)
 		)
 	);
-	
-	?>
-    </select>
-    <span class="search-label">Guru</span>
-    <select class="form-control input-select" name="teacher_id" id="teacher_id">
-    <option value="">- Pilih Guru -</option>
-    <?php 
-	$sql2 = "SELECT * FROM `edu_teacher` WHERE `school_id` = '$school_id' AND `active` = true ORDER BY `name` ASC ";	
-	echo $picoEdu->createFilterDb(
-		$sql2,
-		array(
-			'attributeList'=>array(
-				array('attribute'=>'value', 'source'=>'teacher_id')
-			),
-			'selectCondition'=>array(
-				'source'=>'teacher_id',
-				'value'=>$teacher_id
-			),
-			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
-				'values'=>array(
-					'reg_number',
-					'name'
-				)
-			)
-		)
-	);
-	
+
 	?>
     </select>
     <span class="search-label">Ujian</span>
@@ -587,19 +551,15 @@ window.onload = function()
 $sql_filter = "";
 
 if($pagination->getQuery()){
-	$pagination->appendQueryName('q');
-	$sql_filter .= " AND (`edu_test`.`name` like '%".addslashes($pagination->getQuery())."%' )";
+$pagination->appendQueryName('q');
+$sql_filter .= " AND (`edu_test`.`name` like '%".addslashes($pagination->getQuery())."%' )";
 }
 if($class_id != '')
 {
 	$pagination->appendQueryName('class_id');
 	$sql_filter .= " and (concat(',',`edu_test`.`class`,',') like '%,$class_id,%')";
 }
-if($teacher_id != 0)
-{
-	$sql_filter .= " AND `edu_test`.`teacher_id` = '$teacher_id' ";
-	$pagination->appendQueryName('teacher_id');
-}
+
 
 $nt = '';
 
@@ -607,20 +567,22 @@ $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`
 FROM `edu_test`
-WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 ORDER BY `edu_test`.`test_id` DESC
 ";
 $sql_test = "SELECT `edu_test`.*
 FROM `edu_test`
-WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
+WHERE `edu_test`.`school_id` = '$school_id' AND `edu_test`.`teacher_id` = '$auth_teacher_id' $sql_filter
 ";
-
 $stmt = $database->executeQuery($sql_test);
 $pagination->setTotalRecord($stmt->rowCount());
 $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
+
+
+
 $pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
@@ -649,7 +611,7 @@ $paginationHTML = $pagination->buildHTML();
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
   <thead>
     <tr>
-      <td width="16"><i class="fas fa-graduation-cap"></i></td>
+	  <td width="16"><i class="fas fa-graduation-cap"></i></td>
       <td width="25">No</td>
       <td>Ujian</td>
       <td>Kelas</td>
@@ -670,7 +632,7 @@ $paginationHTML = $pagination->buildHTML();
 	$no++;
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=execution&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-graduation-cap"></i></a></td>
+	  <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=execution&test_id=<?php echo $data['test_id'];?>"><i class="fas fa-graduation-cap"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
       <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
@@ -692,7 +654,12 @@ $paginationHTML = $pagination->buildHTML();
 <div class="col-md-6 col-sm-12 search-pagination-label"><?php echo $pagination->getResultInfo();?></div>
 </div>
 
-
+<div class="button-area">
+  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn com-button btn-primary" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-warning" />
+  <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-danger delete-button" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
+  <input type="button" name="add" id="add" value="Tambah" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
+  </div>
 </form>
 <?php
 }
@@ -705,7 +672,7 @@ else if(@$_GET['q'] != '')
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="warning">Data tidak ditemukan. <a href="ujian.php?option=add">Klik di sini untuk membuat baru.</a></div>
 <?php
 }
 ?>
