@@ -83,3 +83,19 @@ UPDATE `edu_student` SET
 UPDATE `edu_student` SET 
 		`email` = 'dhdfh@planetbiru.com'
 		WHERE `student_id` = '063ce682823743dfd5b1';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = 'Volume Tabung', `content` = '<p>Volume tabung di atas adalah 945,48 mL</p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"mathml-png\" src=\"media.edu/school/063ce682801be89951aa/article/063da67d0dcf5af0f05e/35310254dca906659d2a9f8d4c3074f9.png\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-17 23:29:33', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063da67d0dcf5af0f05e' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = 'Volume Tabung', `content` = '<p>Volume tabung di atas adalah 945,48 mL</p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" src=\"media.edu/school/063ce682801be89951aa/article/063da67d0dcf5af0f05e/35310254dca906659d2a9f8d4c3074f9.png\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"mathml-png\"></p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"f(x) = a_{0} + \\sum_{n=1}^{\\infinity} \\(a_{n} \\cos(\\pin\\frac{x}{L})\\)\" data-latex=\"f(x) = a_{0} + \\sum_{n=1}^{\\infinity} \\(a_{n} \\cos(\\pin\\frac{x}{L})\\)\" data-renderer=\"mathml-png\" src=\"media.edu/school/063ce682801be89951aa/article/063da67d0dcf5af0f05e/a0590be9b62f7f8d8290cba974d28ffb.png\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-17 23:35:53', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063da67d0dcf5af0f05e' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET
+	`description` = '<p><img class=\"ascii-svg\" src=\"lib.tools/asciisvg/svgimg.php?sscr=-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cred%2C1%2Cnone\" style=\"width: 300px; height: 200px; vertical-align: middle; float: none;\" data-sscr=\"-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cred%2C1%2Cnone\"></p>
+<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/cd1f73eede756e5ba3b0fc079e8e233c.svg\"></p>'
+	WHERE `school_id` = '063ce682801be89951aa';

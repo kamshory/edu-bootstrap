@@ -306,10 +306,10 @@ return doc;
 <div class="article-content"><?php echo $data['content'];?></div>
 <div class="article-time">Dibuat <strong><?php echo $data['time_create'];?></strong></div>
 <div class="article-creator">Oleh <strong><?php echo $data['creator'];?></strong></div>
-<div class="article-link">
-	<a href="artikel.php">Lihat Semua</a>
-	<a href="artikel.php?option=edit&article_id=<?php echo $data['article_id'];?>">Ubah</a>
-	<a href="javascript:;" class="download-word">Download</a>
+<div class="button-area article-link">
+	<a class="btn btn-primary" href="artikel.php">Lihat Semua</a>
+	<a class="btn btn-primary" href="artikel.php?option=edit&article_id=<?php echo $data['article_id'];?>">Ubah</a>
+	<a class="btn btn-success" href="javascript:;" class="download-word">Download</a>
 </div>
 <?php
 	}
