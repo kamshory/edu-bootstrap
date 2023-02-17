@@ -64,3 +64,22 @@ UPDATE `edu_admin` SET `picture_rand` = '372495' WHERE `admin_id` = 'aaaaaaaaaaa
 UPDATE `edu_admin` SET `picture_rand` = '269804' WHERE `admin_id` = 'aaaaaaaaaaaaa';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_admin` SET `picture_rand` = '859056' WHERE `admin_id` = 'aaaaaaaaaaaaa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET `picture_rand` = '188365' WHERE `student_id` = '063ce6828483ec450b85';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_article` SET `title` = 'Volume Tabung', `content` = '<p>Volume tabung di atas adalah 945,48 mL</p>
+<p><img class=\"latex-image\" style=\"vertical-align: middle;\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) )\" data-renderer=\"mathml-svg\" src=\"media.edu/school/063ce682801be89951aa/article/063da67d0dcf5af0f05e/5609f347bd9a4caf9041c10cee456caf.svg\"></p>', `open` = '0', `class` = '', 
+		`time_edit` = '2023-02-17 19:17:58', `member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_edit` =  '127.0.0.1', `active` = '1'
+		WHERE `article_id` = '063da67d0dcf5af0f05e' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET `picture_rand` = '779374' WHERE `student_id` = '063ce682823743dfd5b1';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET `picture_rand` = '609273' WHERE `student_id` = '063ce682823743dfd5b1';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET 
+	`reg_number_national` = '1011201', `name` = 'Agung Ramadhan', `gender` = 'M', `birth_place` = 'JAKARTA', `birth_day` = '2135-11-19', `phone` = '08123456783', `address` = '', `time_edit` = '2023-02-17 20:12:42', `ip_edit` = '::1'
+	WHERE `student_id` = '063ce682823743dfd5b1';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET 
+		`email` = 'dhdfh@planetbiru.com'
+		WHERE `student_id` = '063ce682823743dfd5b1';
