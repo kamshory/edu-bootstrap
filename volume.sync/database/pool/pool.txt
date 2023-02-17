@@ -50,3 +50,17 @@ UPDATE `edu_teacher` SET
 UPDATE `edu_teacher` SET 
 		`password` = 'be01a34e219125577806ef80adf809cb', `password_initial` = ''
 		WHERE `teacher_id` = '063ce68285cc5b02bb04';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_admin` SET `picture_rand` = '254206' WHERE `admin_id` = 'aaaaaaaaaaaaa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_admin` SET `picture_rand` = '330067' WHERE `admin_id` = 'aaaaaaaaaaaaa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_admin` SET `picture_rand` = '200095' WHERE `admin_id` = 'aaaaaaaaaaaaa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_admin` SET `picture_rand` = '992899' WHERE `admin_id` = 'aaaaaaaaaaaaa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_admin` SET `picture_rand` = '372495' WHERE `admin_id` = 'aaaaaaaaaaaaa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_admin` SET `picture_rand` = '269804' WHERE `admin_id` = 'aaaaaaaaaaaaa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_admin` SET `picture_rand` = '859056' WHERE `admin_id` = 'aaaaaaaaaaaaa';
