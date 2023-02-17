@@ -19,13 +19,13 @@ if(!isset($cfg))
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/css/bootstrap.min.css">
 
 <!-- Favicons -->
-<link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>favs/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="<?php echo $cfg->base_assets;?>favs/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="<?php echo $cfg->base_assets;?>favs/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="<?php echo $cfg->base_assets;?>favs/manifest.json">
-<link rel="mask-icon" href="<?php echo $cfg->base_assets;?>favs/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="<?php echo $cfg->base_assets;?>favs/favicon.ico">
-<meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>favs/browserconfig.xml">
+<link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>lib.favs/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="<?php echo $cfg->base_assets;?>lib.favs/manifest.json">
+<link rel="mask-icon" href="<?php echo $cfg->base_assets;?>lib.favs/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon.ico">
+<meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>lib.favs/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
 <!-- Custom styles for this template -->
@@ -78,11 +78,17 @@ if(!isset($cfg))
 
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2"><?php echo $pageTitle;?></h1>
-          <div class="btn-toolbar mb-2 mb-md-0">
-            <div class="btn-group mr-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='artikel.php'">Artikel</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='informasi.php'">Informasi</button>
-            </div>
+          <div class="btn-toolbar mb-2 mb-md-0">           
+            <div class="dropdown btn-group">         
+              <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <?php echo $studentLoggedIn->name;?>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="profil.php">Profil</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="logout.php">Keluar </a>
+              </div>
+            </div>          
           </div>
         </div>
 
