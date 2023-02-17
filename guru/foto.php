@@ -56,7 +56,7 @@ if (@$_POST['option'] == 'upload-image') {
 
         
         imagejpeg($jpeg2, $path2, 70);
-		$fileSync->createFile($path, true);
+		$fileSync->createFile($path2, true);
 
     }
     exit();
