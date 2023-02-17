@@ -1,7 +1,7 @@
 <?php
-include_once dirname(__FILE__)."/lib.inc/auth.php";
+include_once dirname(__FILE__)."/lib.inc/auth-member.php";
 $pageTitle = "Tentang";
-include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
+include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
 ?>
 
 <div class="main-content">
@@ -16,5 +16,5 @@ include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
 </div>
 
 <?php
-include_once dirname(__FILE__)."/lib.assets/theme/default/footer-home.php";
+include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
 ?>

@@ -1,7 +1,7 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/auth.php";
 $pageTitle = "Unduh";
-include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
+include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
 ?>
     <div class="main-content">
     	<div class="main-content-wrapper">
@@ -20,6 +20,6 @@ include_once dirname(__FILE__)."/lib.assets/theme/default/header-home.php";
     </div>
     </div>
 <?php
-include_once dirname(__FILE__)."/lib.assets/theme/default/footer-home.php";
+include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
 ?>
 
