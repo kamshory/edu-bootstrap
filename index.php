@@ -177,7 +177,7 @@ else
 		</div>
 
 		<?php
-		include_once dirname(__FILE__)."/lib.inc/inc-artikle.php";
+		include_once dirname(__FILE__)."/lib.inc/inc-informasi.php";
 		include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
 		exit();
 	}
@@ -287,7 +287,7 @@ else
 
 		</div>
 			<?php
-			include_once dirname(__FILE__)."/lib.inc/inc-artikle.php";
+			include_once dirname(__FILE__)."/lib.inc/inc-informasi.php";
 			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
 			exit();
 		}
@@ -395,7 +395,7 @@ else
 
 		</div>
 			<?php
-			include_once dirname(__FILE__)."/lib.inc/inc-artikle.php";
+			include_once dirname(__FILE__)."/lib.inc/inc-informasi.php";
 			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
 			exit();
 		}
