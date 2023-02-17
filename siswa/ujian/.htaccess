@@ -6,38 +6,43 @@ RewriteEngine on
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule lib.tools/(.*) ../lib.tools/$1
+RewriteRule lib.tools/(.*) ../../lib.tools/$1
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule lib.assets/(.*) ../lib.assets/$1
+RewriteRule lib.assets/(.*) ../../lib.assets/$1
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule lib.vendors/(.*) ../lib.vendors/$1
+RewriteRule lib.vendors/(.*) ../../lib.vendors/$1
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule lib.style/(.*) ../lib.style/$1
+RewriteRule lib.style/(.*) ../../lib.style/$1
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule media.edu/(.*) ../media.edu/$1
+RewriteRule media.edu/(.*) ../../media.edu/$1
+
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule eq/Fonts/(.*) ../lib.assets/script/tiny_mce/plugins/equation/eq/Fonts/$1
+RewriteRule lib.tools/filemanager/media.edu/(.*) ../../media.edu/$1
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule user.avatar/student/(.*)/(.*) ../lib.assets/avatar/student/$2
+RewriteRule eq/Fonts/(.*) ../../lib.assets/script/tiny_mce/plugins/equation/eq/Fonts/$1
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule user.avatar/teacher/(.*)/(.*) ../lib.assets/avatar/teacher/$2
+RewriteRule user.avatar/student/(.*)/(.*) ../../lib.assets/avatar/student/$2
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule user.avatar/admin/(.*)/(.*) ../lib.assets/avatar/admin/$2
+RewriteRule user.avatar/teacher/(.*)/(.*) ../../lib.assets/avatar/teacher/$2
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule user.avatar/admin/(.*)/(.*) ../../lib.assets/avatar/admin/$2
 
 </IfModule>

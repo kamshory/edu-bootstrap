@@ -353,3 +353,35 @@ table[border="1"] td{
 .article-item .card {
   background-color: #fafafa;
 }
+
+.avatar-uploaded {
+  margin: auto;
+  width: 320px;
+  position: relative;
+}
+
+.avatar-uploaded .upload-controller {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+}
+
+.avatar-uploaded .upload-controller i {
+  color: #eeeeee;
+  font-size: 2rem;
+  text-shadow: 0px 0px 2px #CCCCCC;
+}
+
+.avatar-cropper {
+  display: none;
+  width: 320px;
+  margin: auto;
+}
+
+.cr-slider-wrap {
+  margin: auto;
+}
+
+.avatar-cropper-preview {
+  text-align: center;
+}

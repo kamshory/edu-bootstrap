@@ -40,7 +40,14 @@ RewriteRule cgi-bin/(.*) ../cgi-bin/$1
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule user.avatar/student/(.*)/(.*) ..lib.assets/avatar/student/$2
+RewriteRule user.avatar/student/(.*)/(.*) ../lib.assets/avatar/student/$2
 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule user.avatar/teacher/(.*)/(.*) ../lib.assets/avatar/teacher/$2
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule user.avatar/admin/(.*)/(.*) ../lib.assets/avatar/admin/$2
 
 </IfModule>
