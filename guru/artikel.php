@@ -170,14 +170,13 @@ var defaultdir = 'lib.content/media/article/';
 <textarea id="content" name="content" style="width:100%; height:300px; box-sizing:border-box;"></textarea>
 <input type="hidden" name="class" id="classlist" value="" />
 </div>
-<div class="input-block">
-<input type="submit" id="publish" name="publish" value="Publikasikan" />
-<input type="submit" id="draff" name="draff" value="Simpan Konsep" />
-<button type="button" class="btn btn-tn btn-primary" id="select-class">
-Atur Kelas
-</button>
+<div class="button-area">
 <input type="hidden" name="option" id="option" value="add" />
-<input type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input class="btn btn-success" type="submit" id="publish" name="publish" value="Publikasikan" />
+<input class="btn btn-secondary" type="submit" id="draff" name="draff" value="Simpan Konsep" />
+<input type="button" class="btn btn-primary" id="select-class" value="Atur Kelas" />
+<input class="btn btn-warning" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+
 </div>
 </form>
 <?php
@@ -223,15 +222,13 @@ var defaultdir = 'lib.content/media/article/';
 <textarea id="content" name="content" style="width:100%; height:300px; box-sizing:border-box;"><?php echo $data['content'];?></textarea>
 <input type="hidden" name="class" id="classlist" value="<?php echo $data['class'];?>" />
 </div>
-<div class="input-block">
-<input type="submit" id="publish" name="publish" value="Publikasikan" />
-<input type="submit" id="draff" name="draff" value="Simpan Konsep" />
-<button type="button" class="btn btn-tn btn-primary" id="select-class">
-Atur Kelas
-</button>
-<input type="hidden" name="option" id="option" value="edit" />
+<div class="button-area">
 <input type="hidden" name="article_id" id="article_id" value="<?php echo $article_id;?>" />
-<input type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input type="hidden" name="option" id="option" value="edit" />
+<input class="btn btn-success" type="submit" id="publish" name="publish" value="Publikasikan" />
+<input class="btn btn-secondary" type="submit" id="draff" name="draff" value="Simpan Konsep" />
+<input type="button" class="btn btn-primary" id="select-class" value="Atur Kelas" />
+<input class="btn btn-warning" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
 </div>
 </form>
 <?php

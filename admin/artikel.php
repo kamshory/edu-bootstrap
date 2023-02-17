@@ -169,7 +169,7 @@ var defaultdir = 'lib.content/media/article/';
 </div>
 <div class="input-block button-area">
 <input class="btn btn-success" type="submit" id="publish" name="publish" value="Publikasikan" />
-<input class="btn btn-success" type="submit" id="draff" name="draff" value="Simpan Konsep" />
+<input class="btn btn-secondary" type="submit" id="draff" name="draff" value="Simpan Konsep" />
 <input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
 <input class="btn btn-primary" type="hidden" name="option" id="option" value="add" />
 <input class="btn btn-warning" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
@@ -221,7 +221,7 @@ var defaultdir = 'lib.content/media/article/';
 </div>
 <div class="input-block button-area">
 <input class="btn btn-success" type="submit" id="publish" name="publish" value="Publikasikan" />
-<input class="btn btn-success" type="submit" id="draff" name="draff" value="Simpan Konsep" />
+<input class="btn btn-secondary" type="submit" id="draff" name="draff" value="Simpan Konsep" />
 <input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
 <input class="btn btn-primary" type="hidden" name="option" id="option" value="edit" />
 <input class="btn btn-primary" type="hidden" name="article_id" id="article_id" value="<?php echo $article_id;?>" />
