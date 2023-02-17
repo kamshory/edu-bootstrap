@@ -156,7 +156,7 @@ class WSDatabase
         $student->class_id = "";
         $student->school_id = "";
         $student->resourceId = $resourceId;
-
+		$student->image = '';
         if ($username != '') {
 			$sql = "SELECT 
             `edu_student`.`student_id`, 
@@ -179,6 +179,7 @@ class WSDatabase
 				$student->gender = $studentLoggedIn->gender;
 				$student->class_id = $studentLoggedIn->class_id;
 				$student->school_id = $studentLoggedIn->school_id;
+				$student->image = 'media.edu/school/'.$studentLoggedIn->school_id.'/user.avatar/student/'.$studentLoggedIn->student_id.'/img-300x300.jpg';
 			}
 		}
 

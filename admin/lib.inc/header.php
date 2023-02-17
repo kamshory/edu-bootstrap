@@ -82,17 +82,17 @@ if(!isset($cfg))
               <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='sinkronisasi.php'">Sinkronkan</button>
               <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='informasi.php'">Informasi</button>
             </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-calendar">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-              This week
-            </button>
+            <div class="dropdown btn-group">         
+              <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <?php echo $adminLoggedIn->name;?>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="profil.php">Profil</a>
+              <a class="dropdown-item" href="foto.php">Foto</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="logout.php">Keluar </a>
+              </div>
+            </div>    
           </div>
         </div>
 

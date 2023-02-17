@@ -471,3 +471,245 @@ Client = Array
  Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
 
 
+Client = Array
+(
+    [login_time] => 2023-02-17 14:08:43
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:08:43
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:08:43
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:10:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:10:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:10:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:10:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:10:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:10:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:12:08
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:12:08
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:12:08
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:12:08
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:12:08
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:12:36
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:27:34
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:28:25
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:29:04
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:58:58
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:59:00
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 14:59:23
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 15:00:57
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
+
+

@@ -38,4 +38,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule cgi-bin/(.*) ../cgi-bin/$1
 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule user.avatar/student/(.*)/(.*) ..lib.assets/avatar/student/$2
+
+
 </IfModule>

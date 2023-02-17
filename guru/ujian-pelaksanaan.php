@@ -55,6 +55,45 @@ if($stmt->rowCount() > 0)
 
 
 </div>
+<style>
+    .row.test-member .card{
+        margin-bottom: 20px;
+    }
+
+	.btn-test-info {
+
+		padding: 2px 2px;
+		width: 22px;
+		height: 22px;
+		line-height: 1;
+		vertical-align: middle;
+		border-radius: 50%;
+		margin-top: -4px
+	}
+
+	.test-member .card-title{
+		width:calc(100% - 90px);
+		margin-left:10px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 1.1rem;
+	}
+	.test-member .card-body{
+		padding:1.6rem;
+		margin: -1rem;
+	}
+
+
+	.img-300x300 img{
+		width:80px;
+		height: 80px;
+	}
+	.img-300x300{
+		width:80px;
+	}
+	
+</style>
 
 <script>
     let testId = '<?php echo $test_id;?>';

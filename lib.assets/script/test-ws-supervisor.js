@@ -81,6 +81,8 @@ function appendTestMember(data, selector)
     div2.append(div3);
     div1.append(div2);
     div1.appendTo(selector);
+
+    div2.prepend($('<div>').addClass('img-300x300').append($('<img>').attr({'src':data.image})))
 }
 
 pChat.sendMessageToStudent = function(title, message, recipient){

@@ -53,7 +53,32 @@ if($stmt->rowCount() > 0)
 		margin-top: -4px
 	}
 
+
+	.test-member .card-body{
+		padding:1.6rem;
+		margin: -1rem;
+		text-align: center;
+	}
+
+	.card-title{
+		text-align: center;
+	}
+
+	.img-300x300 img{
+		width:80px;
+		height: 80px;
+	}
+	.img-300x300{
+		text-align: center;
+		padding: 1rem;
+		background-color: #ececec;;
+		border-top-left-radius: .2rem;
+		border-top-right-radius: .2rem;
+	}
+	
 </style>
+
+
 <h4><?php echo $data['name'];?> <button type="button" class="btn btn-sm btn-secondary btn-test-info" data-toggle="modal" data-target="#detail-test-modal">
   <i class="fas fa-info"></i>
 </button></h4>

@@ -84,7 +84,8 @@ if(!isset($cfg))
               <?php echo $studentLoggedIn->name;?>
               </button>
               <div class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item" href="profil.php">Profil</a>
+              <a class="dropdown-item" href="profil.php">Profil</a>
+              <a class="dropdown-item" href="foto.php">Foto</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="logout.php">Keluar </a>
               </div>
