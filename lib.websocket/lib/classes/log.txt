@@ -713,3 +713,25 @@ Client = Array
  Message = '{"command":"kick","receiver":["Agung Ramadhan"],"data":{"title":"Tindakan Pengawas","message":"Anda dikeluarkan dari ujian!","icon":"fa-remove"}}'
 
 
+Client = Array
+(
+    [login_time] => 2023-02-17 17:49:06
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+
+Client = Array
+(
+    [login_time] => 2023-02-17 18:06:17
+    [username] => admin
+    [group_id] => admin
+)
+
+
+ Message = '{"command":"message","receiver":["Agung Ramadhan"],"data":{"title":"Peringatan Pengawas","message":"Harap jangan berisik!","icon":"fa-warning"}}'
+
+

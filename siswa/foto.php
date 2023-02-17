@@ -60,6 +60,9 @@ if(@$_POST['option'] == 'upload-image')
         imagejpeg($jpeg2, $path2, 70);
 		$fileSync->createFile($path2, true);
 
+		$rand = sprintf("%06d", mt_rand(0, 999999));
+        $sql = "UPDATE `edu_student` SET `picture_rand` = '$rand' WHERE `student_id` = '$student_id' ";
+        $database->executeUpdate($sql, true);
     }
 	exit();
 }
@@ -76,15 +79,15 @@ $sql = "SELECT `edu_student`.* , `edu_school`.`name` AS `school_name`, `edu_scho
 FROM `edu_student` 
 LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_student`.`school_id`)
 WHERE `edu_student`.`school_id` = '$school_id'
-AND `edu_student`.`student_id` = '$auth_student_id'
+AND `edu_student`.`student_id` = '$student_id'
 ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-
-$avatar_url = "media.edu/school/$school_id/user.avatar/student/$student_id/img-300x300.jpg";
+$rand = $data['picture_rand'];
+$avatar_url = "media.edu/school/$school_id/user.avatar/student/$student_id/img-300x300.jpg?rand=$rand";
 ?>
 	<script src="lib.assets/script/croppie.js"></script>
     <link rel="stylesheet" href="lib.assets/croppie.css" />

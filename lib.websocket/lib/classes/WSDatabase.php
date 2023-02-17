@@ -163,7 +163,8 @@ class WSDatabase
             `edu_student`.`username`, 
             `edu_student`.`name`, 
             `edu_student`.`gender`, 
-			`edu_student`.`school_id`, `edu_student`.`class_id`
+			`edu_student`.`school_id`, `edu_student`.`class_id`,
+			`edu_student`.`picture_rand`
 			FROM `edu_student` 
 			WHERE `edu_student`.`username` like '$username' AND `edu_student`.`password` = md5('$password') 
 			AND `edu_student`.`active` = true
@@ -179,13 +180,17 @@ class WSDatabase
 				$student->gender = $studentLoggedIn->gender;
 				$student->class_id = $studentLoggedIn->class_id;
 				$student->school_id = $studentLoggedIn->school_id;
-				$student->image = 'media.edu/school/'.$studentLoggedIn->school_id.'/user.avatar/student/'.$studentLoggedIn->student_id.'/img-300x300.jpg';
+				$student->image = $this->getImageUrl($studentLoggedIn->school_id, $studentLoggedIn->student_id, $studentLoggedIn->picture_rand);
 			}
 		}
 
         return $student;
     }
 
+	public function getImageUrl($school_id, $student_id, $rand)
+	{
+		return 'media.edu/school/'.$school_id.'/user.avatar/student/'.$student_id.'/img-300x300.jpg?rand='.$rand;
+	}
 
 	/**
 	 * Get the value of databaseName
