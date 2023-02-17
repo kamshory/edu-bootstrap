@@ -87,11 +87,11 @@ if(!isset($cfg))
               <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <?php echo $adminLoggedIn->name;?>
               </button>
-              <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="profil.php">Profil</a>
-              <a class="dropdown-item" href="foto.php">Foto</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="seting.php">Seting</a>
+              <div class="dropdown-menu  dropdown-menu-right">
+                <a class="dropdown-item" href="profil.php">Profil Admin</a>
+                <a class="dropdown-item" href="foto.php">Foto Admin</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="pengaturan.php">Pengaturan</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="logout.php">Keluar </a>
               </div>

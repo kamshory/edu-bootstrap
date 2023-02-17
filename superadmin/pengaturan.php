@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
-$pageTitle = "Seting";
+$pageTitle = "Pengaturan";
 if(@$_POST['save'] != '')
 {
     $fileSyncUrl2 = trim(@$_POST['url']);
