@@ -2,21 +2,21 @@
 
 class TeacherAuth
 {
-	public $teacherId = '';
+	public $teacher_id = '';
 	public $username = '';
 	public $name = '';
 	public $gender = 'M';
-	public $birthPlace = '';
-	public $birthDay = '';
+	public $birth_place = '';
+	public $birth_day = '';
 	public $email = '';
 	public $phone = '';
-	public $countryId = '';
-	public $stateId = '';
-	public $cityId = '';
-	public $schoolId = "";
-	public $schoolName = '';
-	public $schoolCode = '';
-	public $useToken = 0;
+	public $country_id = '';
+	public $state_id = '';
+	public $city_id = '';
+	public $school_id = "";
+	public $school_name = '';
+	public $school_code = '';
+	public $use_token = 0;
 
 	/**
 	 * Constructor of TeacherAuth
@@ -42,28 +42,28 @@ class TeacherAuth
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
 				$teacherLoggedIn = $stmt->fetchObject();
-				$this->teacherId = $teacherLoggedIn->teacher_id;
+				$this->teacher_id = $teacherLoggedIn->teacher_id;
 				$this->username = ($teacherLoggedIn->username != '') ? $teacherLoggedIn->username : $teacherLoggedIn->member_id;
 				$this->name = trim($teacherLoggedIn->name);
 				$this->gender = $teacherLoggedIn->gender;
-				$this->birthPlace = $teacherLoggedIn->birth_place;
-				$this->birthDay = $teacherLoggedIn->birth_day;
+				$this->birth_place = $teacherLoggedIn->birth_place;
+				$this->birth_day = $teacherLoggedIn->birth_day;
 				$this->email = $teacherLoggedIn->email;
 				$this->phone = $teacherLoggedIn->phone;
-				$this->countryId = $teacherLoggedIn->country_id;
-				$this->stateId = $teacherLoggedIn->state_id;
-				$this->cityId = $teacherLoggedIn->city_id;
-				$this->schoolId = $teacherLoggedIn->school_id;
-				$this->schoolName = $teacherLoggedIn->school_name;
-				$this->schoolCode = $teacherLoggedIn->school_code;
-				$this->useToken = $teacherLoggedIn->use_token;
+				$this->country_id = $teacherLoggedIn->country_id;
+				$this->state_id = $teacherLoggedIn->state_id;
+				$this->city_id = $teacherLoggedIn->city_id;
+				$this->school_id = $teacherLoggedIn->school_id;
+				$this->school_name = $teacherLoggedIn->school_name;
+				$this->school_code = $teacherLoggedIn->school_code;
+				$this->use_token = $teacherLoggedIn->use_token;
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
 					$now = $database->getLocalDateTime();
 					$sql = "UPDATE `edu_teacher` SET 
 						`ip_last_activity` = '$ip', 
 						`time_last_activity` = '$now' 
-						WHERE `teacher_id` = '" . $this->teacherId . "'";
+						WHERE `teacher_id` = '" . $this->teacher_id . "'";
 					$database->executeUpdate($sql, true);
 				}
 			}
@@ -76,7 +76,7 @@ class TeacherAuth
 	 */ 
 	public function getTeacherId()
 	{
-		return $this->teacherId;
+		return $this->teacher_id;
 	}
 
 	/**
@@ -106,24 +106,22 @@ class TeacherAuth
 		return $this->gender;
 	}
 
-
-
 	/**
-	 * Get the value of birthPlace
+	 * Get the value of birth_place
 	 * @return string
 	 */ 
 	public function getBirthPlace()
 	{
-		return $this->birthPlace;
+		return $this->birth_place;
 	}
 
 	/**
-	 * Get the value of birthDay
+	 * Get the value of birth_day
 	 * @return string
 	 */ 
 	public function getBirthDay()
 	{
-		return $this->birthDay;
+		return $this->birth_day;
 	}
 
 	/**
@@ -145,65 +143,65 @@ class TeacherAuth
 	}
 
 	/**
-	 * Get the value of countryId
+	 * Get the value of country_id
 	 * @return string
 	 */ 
 	public function getCountryId()
 	{
-		return $this->countryId;
+		return $this->country_id;
 	}
 
 	/**
-	 * Get the value of stateId
+	 * Get the value of state_id
 	 * @return string
 	 */ 
 	public function getStateId()
 	{
-		return $this->stateId;
+		return $this->state_id;
 	}
 
 	/**
-	 * Get the value of cityId
+	 * Get the value of city_id
 	 * @return string
 	 */ 
 	public function getCityId()
 	{
-		return $this->cityId;
+		return $this->city_id;
 	}
 
 	/**
-	 * Get the value of schoolId
+	 * Get the value of school_id
 	 * @return string
 	 */ 
 	public function getSchoolId()
 	{
-		return $this->schoolId;
+		return $this->school_id;
 	}
 
 	/**
-	 * Get the value of schoolName
+	 * Get the value of school_name
 	 * @return string
 	 */ 
 	public function getSchoolName()
 	{
-		return $this->schoolName;
+		return $this->school_name;
 	}
 
 	/**
-	 * Get the value of schoolCode
+	 * Get the value of school_code
 	 * @return string
 	 */ 
 	public function getSchoolCode()
 	{
-		return $this->schoolCode;
+		return $this->school_code;
 	}
 
 	/**
-	 * Get the value of useToken
+	 * Get the value of use_token
 	 * @return bool|int
 	 */ 
 	public function getUseToken()
 	{
-		return $this->useToken;
+		return $this->use_token;
 	}
 }
