@@ -1,6 +1,7 @@
 <?php
 require_once dirname(__FILE__)."/functions-pico.php";
 require_once dirname(__FILE__)."/sessions.php";
+require_once dirname(__FILE__) . "/classes/AdminAuth.php";
 
 
 $username = "";
@@ -31,14 +32,16 @@ if(empty($memberLoggedIn->admin_id))
     }
     require_once dirname(__FILE__) . "/classes/TeacherAuth.php";
     $memberLoggedIn = new \TeacherAuth($database, $username, $password, false);
-    if(empty($memberLoggedIn->teacher_id))
+    if(!empty($memberLoggedIn->getTeacherId()))
     {
-        $user_id = $memberLoggedIn->teacher_id;
+        $user_id = $memberLoggedIn->getTeacherId();
+        
     }
 }
 else
 {
     $user_id = $memberLoggedIn->admin_id;
+
 }
 
 if(empty($user_id))

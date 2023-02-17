@@ -103,6 +103,7 @@ if(!empty($school_id))
         function doPing(args, clbkSuccess, clbkFailed)
         {
             args = args || {};
+            console.log(args)
             $.ajax({
                     url: 'lib.tools/sync/?action=ping',
                     data: args,
@@ -110,6 +111,7 @@ if(!empty($school_id))
                     dataType:'json',
                     success:function(response)
                     {
+                        console.log(response)
                         if(response.success)
                         {
                             clbkSuccess(response);
