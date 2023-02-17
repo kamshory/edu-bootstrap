@@ -105,7 +105,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
                 ?>
                 <tr>
                   <td><a class="import-question" data-test-id="<?php echo $data['test_id'];?>" href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
-                  <td><a class="import-question" data-test-id="<?php echo $data['test_id'];?>" href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
+                  <td><a class="import-question" data-test-id="<?php echo $data['test_id'];?>" href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
                   <td><a class="import-question" data-test-id="<?php echo $data['test_id'];?>" href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['subject'];?></a></td>
                   <td><a target="_blank" href="ujian-soal.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['question'];?></a></td>
                  </tr>

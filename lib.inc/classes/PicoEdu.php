@@ -1222,4 +1222,34 @@ class PicoEdu //NOSONAR
 		global $cfg;
 		return 'ws://'.$host.':'.$cfg->ws_port;		
 	}
+
+	public function selectOptionNumbering($selected = null)
+	{
+		global $cfg;
+		$numberring = $cfg->numbering;
+		foreach($numberring as $key=>$val)
+		{
+			while(count($numberring[$key]) > 4)
+			{
+				array_pop($numberring[$key]);
+			}
+			$numberring[$key][] = "&#8230;";
+		}
+		$html = "";
+		$sel = "";
+		foreach($numberring as $key => $val)
+		{
+			$label = implode(", ", $val);
+			if($selected != null && $selected = $key)
+			{
+				$sel = " selected=\"selected\"";
+			}
+			else
+			{
+				$sel = "";
+			}
+			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$label</option>";
+		}
+		return $html;
+	}
 }

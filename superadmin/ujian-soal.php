@@ -434,18 +434,7 @@ tinyMCE.activeEditor.windowManager.open({url:ajaxFilemanagerURL,width:780,height
   <tr>
     <td width="160">Tipe Pilihan</td>
     <td><select name="numbering" id="numbering" data-required="true" required="required">
-      <option value="upper-alpha"<?php if ($data['numbering'] == 'upper-alpha')
-					  echo PicoConst::SELECT_OPTION_SELECTED; ?>>A, B, C, D, ...</option>
-      <option value="lower-alpha"<?php if ($data['numbering'] == 'lower-alpha')
-					  echo PicoConst::SELECT_OPTION_SELECTED; ?>>a, b, c, d, ...</option>
-      <option value="upper-roman"<?php if ($data['numbering'] == 'upper-roman')
-					  echo PicoConst::SELECT_OPTION_SELECTED; ?>>I, II, III, IV, ...</option>
-      <option value="lower-roman"<?php if ($data['numbering'] == 'lower-roman')
-					  echo PicoConst::SELECT_OPTION_SELECTED; ?>>i, ii, iii, iv, ...</option>
-      <option value="decimal"<?php if ($data['numbering'] == 'decimal')
-					  echo PicoConst::SELECT_OPTION_SELECTED; ?>>1, 2, 3, 4, ...</option>
-      <option value="decimal-leading-zero"<?php if ($data['numbering'] == 'decimal-leading-zero')
-					  echo PicoConst::SELECT_OPTION_SELECTED; ?>>01, 02, 03, 04, ...</option>
+	<?php echo $picoEdu->selectOptionNumbering($data['numbering']);?>
     </select></td>
   </tr>
   <tr>
@@ -1157,7 +1146,7 @@ function buildMenu(id)
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['name']; ?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['subject']; ?></a></td>
       <td><?php $class = $picoEdu->textClass($array_class, $data['class']);
-						  $class_sort = $picoEdu->textClass($array_class, $data['class'], 2); ?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class); ?>"><?php echo $class_sort; ?></a></td>
+						  $class_sort = $picoEdu->textClass($array_class, $data['class'], 2); ?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort; ?></a></td>
       <td><?php if ($data['number_of_question']) { ?><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?test_id=<?php echo $data['test_id']; ?>"><?php echo $data['number_of_question']; ?> soal</a><?php } else {
 							  echo '-';
 						  } ?> </td>

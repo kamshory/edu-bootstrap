@@ -1078,12 +1078,7 @@ if(isset($data->file))
   <tr>
     <td>Tipe Pilihan</td>
     <td><select name="numbering" id="numbering" data-required="true" required="required">
-      <option value="upper-alpha"<?php if($data->numbering=='upper-alpha') echo PicoConst::SELECT_OPTION_SELECTED;?>>A, B, C, D, ...</option>
-      <option value="lower-alpha"<?php if($data->numbering=='lower-alpha') echo PicoConst::SELECT_OPTION_SELECTED;?>>a, b, c, d, ...</option>
-      <option value="upper-roman"<?php if($data->numbering=='upper-roman') echo PicoConst::SELECT_OPTION_SELECTED;?>>I, II, III, IV, ...</option>
-      <option value="lower-roman"<?php if($data->numbering=='lower-roman') echo PicoConst::SELECT_OPTION_SELECTED;?>>i, ii, iii, iv, ...</option>
-      <option value="decimal"<?php if($data->numbering=='decimal') echo PicoConst::SELECT_OPTION_SELECTED;?>>1, 2, 3, 4, ...</option>
-      <option value="decimal-leading-zero"<?php if($data->numbering=='decimal-leading-zero') echo PicoConst::SELECT_OPTION_SELECTED;?>>01, 02, 03, 04, ...</option>
+	<?php echo $picoEdu->selectOptionNumbering($data->numbering);?>
     </select></td>
   </tr>
   <tr>

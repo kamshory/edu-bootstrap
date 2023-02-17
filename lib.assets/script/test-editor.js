@@ -17,7 +17,7 @@ if(url.indexOf('data:') != -1)
 	url = '';
 }
 url = url.substr(baseTestURLLength);
-var ajaxFilemanagerURL = "lib.tools/filemanager/?test_id="+test_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
+let ajaxFilemanagerURL = "lib.tools/filemanager/?test_id="+test_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
 switch (type){
 case "image":break;
 case "media":break;
@@ -28,11 +28,11 @@ return false;
 }
 tinyMCE.activeEditor.windowManager.open({url:ajaxFilemanagerURL,width:780,height:440,resizable:true,maximizable:true,inline:"yes",close_previous:"no"},{window:win,input:field_name});
 }
-var ascii_svg_server = 'lib.tools/asciisvg/svgimg.php';
-var equation_preview_url = '../../../../../../cgi-bin/equgen.cgi?' ;
-var equation_generator_url = '../../../../../../equgen.php?' ;
-var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'mathml-png':'mathjax-svg';
-var quran_server = '../quran';
+let ascii_svg_server = 'lib.tools/asciisvg/svgimg.php';
+let equation_preview_url = '../../../../../../cgi-bin/equgen.cgi?' ;
+let equation_generator_url = '../../../../../../equgen.php?' ;
+let equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'mathml-png':'mathjax-svg';
+let quran_server = '../quran';
 $(document).ready(function() {
 	$('textarea.htmleditor').tinymce({
 		// Location of TinyMCE script
@@ -79,9 +79,9 @@ $(document).ready(function() {
 	});
 	setTimeout(function(){
 		$('textarea.htmleditor').each(function(index, element) {
-			var id = $(this).attr('id');
-			var iframe = document.getElementById(id+'_ifr');
-			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+			let id = $(this).attr('id');
+			let iframe = document.getElementById(id+'_ifr');
+			let innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 			// innerDoc.addEventListener('paste', pasteHandler);
             
         });
@@ -89,10 +89,10 @@ $(document).ready(function() {
 	
 	
 	$(document).on('change', '#numbering', function(){
-		var val = $(this).val();
+		let val = $(this).val();
 		$('.option-item').each(function(index, element) {
-            var idx = parseInt($(this).attr('data-index'));
-			var label = numbering[val][idx];
+            let idx = parseInt($(this).attr('data-index'));
+			let label = numbering[val][idx];
 			$(this).find('.option-label').text(label);
         });
 	});
@@ -101,7 +101,7 @@ $(document).ready(function() {
 
 function pasteHandler(e)
 {
-	var cbData;
+	let cbData;
 	if(e.clipboardData) 
 	{
 		cbData = e.clipboardData;
@@ -112,12 +112,12 @@ function pasteHandler(e)
 	}
 	if(e.msConvertURL)
 	{
-		var fileList = cbData.files;
+		let fileList = cbData.files;
 		if(fileList.length > 0)
 		{
-			for(var i = 0; i < fileList.length; i++)
+			for(let i = 0; i < fileList.length; i++)
 			{
-				var blob = fileList[i];
+				let blob = fileList[i];
 				readPastedBlob(blob);
 			}
 		}
@@ -128,11 +128,11 @@ function pasteHandler(e)
 		{
 			return;
 		}
-		for(var i = 0; i < cbData.items.length; i++)
+		for(let i = 0; i < cbData.items.length; i++)
 		{
 			if(cbData.items[i].type.indexOf('image') !== -1)
 			{
-				var blob = cbData.items[i].getAsFile();
+				let blob = cbData.items[i].getAsFile();
 				readPastedBlob(blob);
 			}
 		}
@@ -153,7 +153,7 @@ function pasteHandler(e)
 	{
 		if(window.navigator.userAgent.toString().indexOf('Firefox') == -1)
 		{
-		var image = "<img src='" + source + "' data-mce-selected='1'></img>";
+		let image = "<img src='" + source + "' data-mce-selected='1'></img>";
 		window.tinyMCE.execCommand('mceInsertContent', false, image);
 		}
 	}
@@ -163,9 +163,9 @@ function pasteHandler(e)
 function simpansoal(frm){
 	console.log('aaaaa')
 	// cek isian
-	var emptyeditor = 0;
+	let emptyeditor = 0;
 	$('.htmleditor').each(function(index){
-	var val = $(this).html();
+	let val = $(this).html();
 	if(val=='')
 	{
 		emptyeditor++;
@@ -178,10 +178,10 @@ function simpansoal(frm){
 		return false;
 	}
 	
-	var val_total = 0;
-	var val_over = 0;
+	let val_total = 0;
+	let val_over = 0;
 	$('.score').each(function(index){
-	var val = parseInt($(this).val());
+	let val = parseInt($(this).val());
 	if($(this).val() == '')
 	{
 		val = 0;
@@ -204,8 +204,8 @@ function simpansoal(frm){
 		return false;
 	}
 	
-	var args = $(frm).serialize();
-	var data = 'save=save&'+args;
+	let args = $(frm).serialize();
+	let data = 'save=save&'+args;
 	$.ajax({
 		url:'ajax-add-question.php', 
 		data:{'data':data}, 

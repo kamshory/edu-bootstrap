@@ -71,8 +71,8 @@ function buildClassOption(list, value, schoolProgramId)
 }
 function selectClass()
 {
-	let classListStr = $('#formedu_test #classlist').val();
-	let schoolProgramId = $('#formedu_test #school_program_id').val();
+	let classListStr = $('#classlist').val();
+	let schoolProgramId = $('#school_program_id').val();
 	$('#class-list-container').empty().append(buildClassOption(classList, classListStr, schoolProgramId));
 	$('#select-class-modal').modal('show');
 }
@@ -90,10 +90,6 @@ $(document).ready(function(e) {
 		e2.preventDefault();
 	}); 
 
-	$('#apply-class-list').on('click', function(e2){
-
-	});
-
 	$('#update-class').on('click', function(e){
 		let arr = [];
 		$('.class-list .class-item').each(function(index, element) {
@@ -103,7 +99,7 @@ $(document).ready(function(e) {
 				arr.push(input.val());
 			}
 		});
-		$('#formedu_test #classlist').val(arr.join(','));
+		$('#classlist').val(arr.join(','));
 		$('#select-class-modal').modal('hide');
 	});
 		

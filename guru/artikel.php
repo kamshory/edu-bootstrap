@@ -179,6 +179,26 @@ var defaultdir = 'lib.content/media/article/';
 
 </div>
 </form>
+<!-- Modal -->
+<div class="modal fade" id="select-class-modal" tabindex="-1" role="dialog" aria-labelledby="selectClassTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="selectClassTitle">Pilih Kelas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="class-list-container"></div>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-primary" id="update-class">Terapkan</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?php
 }
 else if(@$_GET['option'] == 'edit' && isset($_GET['article_id']))
@@ -191,6 +211,7 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 </script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/article-editor.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-creator.js"></script>
 
 <?php
 $article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
@@ -231,6 +252,27 @@ var defaultdir = 'lib.content/media/article/';
 <input class="btn btn-warning" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
 </div>
 </form>
+
+<!-- Modal -->
+<div class="modal fade" id="select-class-modal" tabindex="-1" role="dialog" aria-labelledby="selectClassTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="selectClassTitle">Pilih Kelas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="class-list-container"></div>
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-primary" id="update-class">Terapkan</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?php
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
@@ -245,6 +287,7 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 </script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/article-editor.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-creator.js"></script>
 
 <?php
 $article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
@@ -338,6 +381,7 @@ else
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
+$array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <script type="text/javascript">
 $(document).ready(function(e) {
@@ -437,6 +481,7 @@ $paginationHTML = $pagination->buildHTML();
       <td width="16"><i class="fas fa-pencil"></i></td>
       <td width="25">No</td>
       <td>Judul</td>
+	  <td>Kelas</td>
       <td width="200" nowrap="nowrap">Ditulis Oleh</td>
       <td width="140" nowrap="nowrap">Ditulis Pada</td>
       <td width="40">Aktif</td>
@@ -485,6 +530,7 @@ $paginationHTML = $pagination->buildHTML();
       </td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&article_id=<?php echo $data['article_id'];?>"><?php echo $data['title'];?></a></td>
+      <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&article_id=<?php echo $data['article_id'];?>"><?php echo $data['creator'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&article_id=<?php echo $data['article_id'];?>"><?php echo translateDate(date('d M Y H:i', strtotime($data['time_create'])));?></a></td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>

@@ -68,10 +68,8 @@ $(document).ready(function() {
 			let innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 		}, 2000);
 	}
-	$(document).on('click', '#select-class', function(e){
-		selectClass();
-		e.preventDefault();
-	}); 
+
+	
 });
 	
 	
@@ -169,62 +167,4 @@ function pasteHandler(e)
 		}
 	}
 }
-function buildClassOption(list, value){
-	let i, j, k;
-	let html = '';
-	let sel = '';
-	let vals = value.split(",");
-	html += '<ul class="class-list">';
-	
-	for(i in list)
-	{
-		if($.inArray(list[i].class_id, vals) != -1)
-		{
-			sel = ' class-item-selected';
-		}
-		else 
-		{
-			sel = '';
-		}
-		html += '<li class="class-item'+sel+'" data-class-id="'+list[i].class_id+'"><a href="javascript:;">'+list[i].name+'</a></li>'; 
-	}
-	
-	html += '</ul>';
-	return html;
-}
-function selectClass()
-{
-	let val = $('#articleform #classlist').val();
-	let html = ''+
-	'<div class="overlay-dialog-area">\r\n'+
-	'	<h3>Select Class</h3>\r\n'+
-	'    <div class="select-class-area">\r\n'+
-	buildClassOption(classList, val)+
-	'    </div>\r\n'+
-	'    <div class="button-area" style="text-align:center">\r\n'+
-	'    	<input type="button" class="btn com-button btn-success" id="update-class" value="Terapkan" />\r\n'+
-	'    	<input type="button" class="btn com-button btn-success" id="cancel-class" value="Batalkan" />\r\n'+
-	'    </div>\r\n'+
-	'</div>\r\n';
-	overlayDialog(html, 400, 360);
-	$('.class-item').each(function(index, element) {
-        $(this).find('a').on('click', function(e){
-			$(this).parent().toggleClass('class-item-selected');
-			e.preventDefault();
-		});
-    });
-	$('#update-class').on('click', function(e){
-		let arr = [];
-		$('.class-item').each(function(index, element) {
-			if($(this).hasClass('class-item-selected'))
-			{
-				arr.push($(this).attr('data-class-id'));
-			}
-		});
-		$('#articleform #classlist').val(arr.join(','));
-		closeOverlayDialog();
-	});
-	$('#cancel-class').on('click', function(e){
-		closeOverlayDialog();
-	});
-}
+

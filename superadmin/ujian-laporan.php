@@ -106,7 +106,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
   </tr>
   <tr>
     <td colspan="2">Kelas</td>
-    <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
+    <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
   </tr>
   <tr>
     <td colspan="2">Mata Pelajaran</td>
@@ -238,7 +238,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
       <td align="right"><?php echo $no;?> </td>
       <td><?php echo $data['reg_number'];?> </td>
       <td><?php echo $data['student_name'];?> </td>
-      <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
+      <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
       <td align="right"><?php echo $ke[$data['student_id']];?> </td>
       <td nowrap><?php echo date(PicoConst::DATE_TIME_MYSQL, strtotime($data['start']));?> </td>
       <td nowrap><?php echo $data['timediff'];?> </td>
@@ -300,7 +300,7 @@ $info = $stmt->fetch(PDO::FETCH_ASSOC);
   </tr>
   <tr>
     <td>Kelas</td>
-    <td><?php $class = $picoEdu->textClass($array_class, $info['class']); $class_sort = $picoEdu->textClass($array_class, $info['class'], 2);?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class);?>"><?php echo $class_sort;?></a></td>
+    <td><?php $class = $picoEdu->textClass($array_class, $info['class']); $class_sort = $picoEdu->textClass($array_class, $info['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
     <td>Sekor Benar</td>
     <td><?php echo $info['standard_score'];?> </td>
     <td>Pengumuman Hasil</td>
@@ -938,7 +938,7 @@ window.onload = function()
         <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['school_name']; ?></a></td>
         <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['name']; ?></a></td>
         <td><?php $class = $picoEdu->textClass($array_class, $data['class']);
-        $class_sort = $picoEdu->textClass($array_class, $data['class'], 2); ?><a href="#" class="class-list-control" data-class="<?php echo htmlspecialchars($class); ?>"><?php echo $class_sort; ?></a></td>
+        $class_sort = $picoEdu->textClass($array_class, $data['class'], 2); ?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort; ?></a></td>
         <td><?php echo translateDate(date('d M Y H:i', strtotime($data['last_test']))); ?> </td>
         <td align="right"><?php echo $data['number_of_question']; ?> </td>
         <td align="right"><?php echo $data['number_of_student']; ?> </td>
