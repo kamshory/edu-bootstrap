@@ -229,7 +229,8 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td></td>
-		<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> 
+		<input type="button" name="showall" id="showall" value="Batalkan" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -274,7 +275,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</td>
 		</tr>
 		<tr><td></td>
-		<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> 
+		<input type="button" name="showall" id="showall" value="Batalkan" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -370,7 +372,8 @@ echo $picoEdu->getGradeName($data['grade_id']);
 		</tr>
 		<tr>
 		<td></td>
-		<td><input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_collection_id=<?php echo $data['test_collection_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_collection_id=<?php echo $data['test_collection_id'];?>'" /> 
+		<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -500,9 +503,6 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-
-
-
 $pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
@@ -560,11 +560,9 @@ $paginationHTML = $pagination->buildHTML();
     <i class="fas fa-list"></i>
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="ujian-soal.php?test_collection_id=<?php echo $data['test_collection_id'];?>">Tampilkan Soal Ujian</a>
-    <a class="dropdown-item" href="ujian-ekspor.php?test_collection_id=<?php echo $data['test_collection_id'];?>">Ekspor Soal Ujian</a>
-    <a class="dropdown-item" href="ujian-soal.php?option=analys&test_collection_id=<?php echo $data['test_collection_id'];?>">Analisa Soal Ujian</a>
-    <a class="dropdown-item" href="ujian-laporan.php?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>">Laporan Hasil Ujian</a>
-    <a class="dropdown-item" href="ujian.php?option=edit&test_collection_id=<?php echo $data['test_collection_id'];?>">Ubah Informasi Ujian</a>
+    <a class="dropdown-item" href="<?php echo basename($_SERVER['PHP_SELF']);?>?test_collection_id=<?php echo $data['test_collection_id'];?>">Tampilkan Soal Ujian</a>
+    <a class="dropdown-item" href="<?php echo basename($_SERVER['PHP_SELF']);?>?test_collection_id=<?php echo $data['test_collection_id'];?>">Ekspor Soal Ujian</a>
+    <a class="dropdown-item" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=analys&test_collection_id=<?php echo $data['test_collection_id'];?>">Analisa Soal Ujian</a>
   </div>
 </div>	
 	  

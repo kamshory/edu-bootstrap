@@ -682,11 +682,14 @@ $file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/"
 $s = file_get_contents($file_path);
 $test_data = simplexml_load_string($s);
 
+
+
 $files = array();
 $questions = array();
 $options = array();
 
-$data3['collection'] = count($test_data['item']);
+
+$data3['collection'] = count($test_data->item);
 $data3['standard_score'] = 0;
 $data3['number_of_option'] = 0;
 
