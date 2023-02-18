@@ -161,7 +161,7 @@ Bila kedua pernyataan itu bernilai benar, maka kesimpulan yang dapat diambil, ad
 <item>
 	<question>
 		<text>&lt;p&gt;Dengan merasionalkan penyebut dari &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI0MyI+PGZvcmVpZ25PYmplY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGRpdiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCI+PG1hdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTgvTWF0aC9NYXRoTUwiPjxtc3R5bGUgbWF0aHZhcmlhbnQ9InNlcmlmIiBkaXNwbGF5c3R5bGU9InRydWUiPjxtZnJhYz48bXJvdz48bXNxcnQ+PG1yb3c+PG1uPjM8L21uPjwvbXJvdz48L21zcXJ0Pjxtbz4tPC9tbz48bW4+MjwvbW4+PC9tcm93Pjxtcm93Pjxtc3FydD48bXJvdz48bW4+MzwvbW4+PC9tcm93PjwvbXNxcnQ+PG1vPis8L21vPjxtbj4yPC9tbj48L21yb3c+PC9tZnJhYz48L21zdHlsZT48L21hdGg+PC9kaXY+PC9mb3JlaWduT2JqZWN0Pjwvc3ZnPg==&quot; alt=&quot;\frac{\sqrt{3} - 2}{\sqrt{3} + 2}&quot; data-latex=&quot;\frac{\sqrt{3} - 2}{\sqrt{3} + 2}&quot; data-renderer=&quot;mathml-svg&quot; /&gt;, bentuk sederhananya adalah...&lt;/p&gt;</text>
-		<numbering>decimal-leading-zero</numbering>
+		<numbering>upper-alpha</numbering>
 		<competence></competence>
 		<random></random>
 		<file>

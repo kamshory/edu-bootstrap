@@ -1240,7 +1240,7 @@ class PicoEdu //NOSONAR
 		foreach($numberring as $key => $val)
 		{
 			$label = implode(", ", $val);
-			if($selected != null && $selected = $key)
+			if($selected != null && $selected == $key)
 			{
 				$sel = " selected=\"selected\"";
 			}

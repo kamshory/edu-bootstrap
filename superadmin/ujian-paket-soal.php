@@ -1050,6 +1050,7 @@ if(isset($data->file))
 		$data->text = str_ireplace($search, ' src="'.$replace.$content.'"', $data->text);
 	}
 }
+
 ?>
 
 <form id="form2" name="form2" method="post" action="">

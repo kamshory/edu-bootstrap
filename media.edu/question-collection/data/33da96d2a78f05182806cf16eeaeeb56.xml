@@ -2,7 +2,7 @@
 <test>
 <item>
 	<question>
-		<text>&lt;p&gt;Hasil dari 4&lt;sup&gt;-2&lt;/sup&gt; + 2&lt;sup&gt;-4&lt;/sup&gt; adalah...&lt;/p&gt;</text>
+		<text>&lt;p&gt;Hasil dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAWCAYAAAB9oOpzAAACOklEQVRYR+1Xu0oEQRD0PkBF/QFRcwU1ES8wExUx85UKopiYKGjoA7wPEH/AVyaCoCYGHgaKoLFiZKgY+AFadUzDuMzePJw97mAHilvmenumq6t7ZgtN+TAyUIjMSwf8bQEzQBuwC2xGXiMrd4twfABUOIlNzBp8dgLLwBhwARSBclbRRPLbBT/XQHdWxCT3+YOJPuA5UgBZuTmB4zPgOIQYqmEvZWdXmB9N/EfFTCj1ZBWQzS8TkzZEySyhVuAOuA0hxrYJ/f9eRWKSLB8ftbBlCe2rpA4rYsbx22LqMQzqBpgEQnqDkDKP9z89omPD5qCsXQYDWQGmlTFVuw74lG1aFRSTxPBUuQQGgJCmKe9TKSSFwb47EsxNcpQcWCEp51ryJJn3mAtVqSjGeCpRVmScx1YIMXx/KRGYqx8fYkzc7WByAwg9aeV9qq6kO2F2p1SW2bRcA3JIsJPJf4lhUgYVnBasZiTEsAmdKhmyBBqNGJbSExDtaiDEPMDpgiojEinEDOGZx1hIE7ZljdLt14x61POrNveIZ9vNmX3tBeCl0rVx2/ZWqUe5CqcZZ1VSzHKztuicej7S5r61ZJn2R1IOge3YyUtrVI1QSnICrmqkUDFy7FtVUc3ARAwX/ABmY0rTYZe+zVeu8VI+UlLtDmtZTUzEsMb5MfUFjFikbF3Aw8CHGPlANbkPPa7/+IrixCP4aqY+xERaMt1NPRHDKwPHW+ZROyxQT8Q4bLd2JjkxKVznxOTE+JXhL0naY6uk5A+EAAAAAElFTkSuQmCC&quot; alt=&quot;4^{-2} + 2^{-4}&quot; data-latex=&quot;4^{-2} + 2^{-4}&quot; data-renderer=&quot;mathml-png&quot; /&gt; adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
 		<competence></competence>
 		<random></random>
@@ -10,23 +10,23 @@
 <answer>
 	<option>
 		<value>0</value>
-		<score></score>
-		<text>&lt;p&gt;-1/16&lt;/p&gt;</text>
+		<score>0</score>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAnCAYAAABuf0pMAAABeUlEQVRYR2NkGGDAOMD2M9DKAV5Aj+UBsQchD1LbAcJAC6cCcTgQ7xwIB6wAWtoOxO5A7DQQDoCFeNmoA0ZDYKBDoBWaFVXoXQ6ALHYDYhOoxXeB9B182ZHaBREhD2PIjzpgNARGQwAWAjugVSi+bIRcv/8nOb9h18A4GgWjITAsQgDWEl4ETOjbcOQOkJoiaBV9BkhHwNRRGgKg9v8SIBYEYlsgPoLFAfpAsf1A3AHEoKx8EVkNJQ4A+UIOiLuAGFQuYHMAzPIsoDyoyU6z6hiXA0CWCgAxzh4SJSGA7BtsDgDF+xsgng7EQtD4B+kB8UEhAga0dIAN0PzDUAt7gPQ9IAaJbQLiSiCeSS8HoKcNUL0DAuBooWUIKAHNBzVKI4EYOQGCHPABiMFZkRoOgMU1ukUg80GWgeRBvWVYFICixRuIwWUGJQ4AZbFOIDYDYlA5AAKgfL4Ayccgy5uBOBMqDyqE6mGWU+oAqJmUUZSEAGU2Q3WPOgAAijFFKKZmI2MAAAAASUVORK5CYII=&quot; alt=&quot;-1/16&quot; data-latex=&quot;-1/16&quot; data-renderer=&quot;mathml-png&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
-		<score></score>
+		<score>0</score>
 		<text>&lt;p&gt;-1/8&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
-		<score></score>
-		<text>&lt;p&gt;1/6&lt;/p&gt;</text>
+		<score>0</score>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAnCAYAAADZwrJrAAABAklEQVQ4T+WUMQ4BQRSG7RHQK4hap3MBhZpeInEAJA4g1DQqEQUXENQ6Gj1OwBn4ftlJxrA2GxU7yZfdnffP2zf/zj4vEWF4EbSJd+I0CUYwhaWdzBWXCc4gCSXYBomrBDIwgFuY2E7y12L5fIEazIOsKxDoQ9H3Wbo1TMyirz934HGJTWadsrDhxcYN14kGE3XIQcoEXTd0lldwguGnVmCEO0TNd6bbmfXqHuThGiZWRonOoIajrqQ/RW/R3FOv0yff+xs7cM3Cwq9fi1/EbebUvsxocaP/8lGuXfOR542zOYk78LDPFptAhXl1T5WhxSql64r1bBZoc/J6bJf1i0f0DgvaNiiJlpOxAAAAAElFTkSuQmCC&quot; alt=&quot;1/6&quot; data-latex=&quot;1/6&quot; data-renderer=&quot;mathml-png&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
-		<score></score>
-		<text>&lt;p&gt;1/8&lt;/p&gt;</text>
+		<score>1</score>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAnCAYAAADZwrJrAAABBUlEQVQ4T2NkIAEwkqCWAZtiYaABU4F4ERBvQzYMXbEXUHIJEAsCsS0QH8GlOAIoIQfEXUD8n5BiZEOGtWJQOL8B4kggXoEr6PSBEp1AbAYNZ5C6nUC8AKaJ4ujGmVxGjMmgVEYIMI6Y0ACFBChpNgMxKOOCcvd7aGqrBdJvQQqQQ2MHNOyygPQ9ILaBJs9dQBokhqIYFNbeQIxcsJQB+U5A7IHNZJBTwqEmKwFpkKl5MAPQIwWUjUCKYQAlayErTgeqSEEyGeTmTUDcAcSgUgrDzejlWytQTSYQCxHjQZDiKpih6EGH7EGYM6YDFVejm4weKXeBCmbB3IuuGCkQsDMHSXoGAFEmOShggP20AAAAAElFTkSuQmCC&quot; alt=&quot;1/8&quot; data-latex=&quot;1/8&quot; data-renderer=&quot;mathml-png&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 </answer>
 </item>
@@ -600,8 +600,8 @@ Sebangun dengan segitiga PQR dengan panjang sisinya 25 cm, 60 cm dan 65 cm. Perb
 <item>
 	<question>
 		<text>&lt;p&gt;Perhatikan gambar di bawah!&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;draw-image&quot; src=&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQ1IiBoZWlnaHQ9IjE2MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KIDxnIGlkPSJMYXllcl8xIj4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMDAwIiBkPSJtMzQuODksMTQ5LjcxOTk3bDAsLTEzM2wxOTYuMDAwMDQsMTMzbC0xOTYuMDAwMDQsMHoiIGlkPSJzdmdfMSIvPgogIDx0ZXh0IGZpbGw9IiMwMDAwMDAiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIwIiB4PSIwIiB5PSI4OCIgaWQ9InN2Z18yIiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iTm90byBTYW5zIEpQIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIHhtbDpzcGFjZT0icHJlc2VydmUiPjkgY208L3RleHQ+CiAgPHRleHQgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjAiIHg9IjE1MCIgeT0iODgiIGlkPSJzdmdfMyIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9Ik5vdG8gU2FucyBKUCIgdGV4dC1hbmNob3I9InN0YXJ0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4xNSBjbTwvdGV4dD4KICA8dGV4dCBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMCIgeD0iMTciIHk9IjE2MCIgaWQ9InN2Z180IiBmb250LXNpemU9IjE2IiBmb250LWZhbWlseT0iTm90byBTYW5zIEpQIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIHhtbDpzcGFjZT0icHJlc2VydmUiPkU8L3RleHQ+CiAgPHRleHQgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjAiIHg9IjIzNiIgeT0iMTYwIiBpZD0ic3ZnXzUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJOb3RvIFNhbnMgSlAiIHRleHQtYW5jaG9yPSJzdGFydCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+RjwvdGV4dD4KICA8dGV4dCBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMCIgeD0iMTciIHk9IjE0IiBpZD0ic3ZnXzYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJOb3RvIFNhbnMgSlAiIHRleHQtYW5jaG9yPSJzdGFydCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+RDwvdGV4dD4KIDwvZz4KCjwvc3ZnPg==&quot; alt=&quot;&quot; /&gt;&lt;br /&gt; Panjang EF adalah...&lt;/p&gt;</text>
-		<numbering>decimal-leading-zero</numbering>
+&lt;p&gt;&lt;img class=&quot;draw-image&quot; src=&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQ1IiBoZWlnaHQ9IjE2MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KIDxnIGlkPSJMYXllcl8xIj4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggaWQ9InN2Z18xIiBkPSJtMzMuODksMTQ5LjcxOTk3bDAsLTEzM2wxOTYuMDAwMDQsMTMzbC0xOTYuMDAwMDQsMHoiIHN0cm9rZT0iIzAwMCIgZmlsbD0iI2ZmZiIvPgogIDx0ZXh0IHhtbDpzcGFjZT0icHJlc2VydmUiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9Ik5vdG8gU2FucyBKUCIgZm9udC1zaXplPSIxNiIgaWQ9InN2Z18yIiB5PSI4OCIgeD0iMCIgc3Ryb2tlLXdpZHRoPSIwIiBzdHJva2U9IiMwMDAiIGZpbGw9IiMwMDAwMDAiPjkgY208L3RleHQ+CiAgPHRleHQgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgdGV4dC1hbmNob3I9InN0YXJ0IiBmb250LWZhbWlseT0iTm90byBTYW5zIEpQIiBmb250LXNpemU9IjE2IiBpZD0ic3ZnXzMiIHk9Ijg4IiB4PSIxNTAiIHN0cm9rZS13aWR0aD0iMCIgc3Ryb2tlPSIjMDAwIiBmaWxsPSIjMDAwMDAwIj4xNSBjbTwvdGV4dD4KICA8dGV4dCB4bWw6c3BhY2U9InByZXNlcnZlIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIGZvbnQtZmFtaWx5PSJOb3RvIFNhbnMgSlAiIGZvbnQtc2l6ZT0iMTYiIGlkPSJzdmdfNCIgeT0iMTYwIiB4PSIxNyIgc3Ryb2tlLXdpZHRoPSIwIiBzdHJva2U9IiMwMDAiIGZpbGw9IiMwMDAwMDAiPkU8L3RleHQ+CiAgPHRleHQgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgdGV4dC1hbmNob3I9InN0YXJ0IiBmb250LWZhbWlseT0iTm90byBTYW5zIEpQIiBmb250LXNpemU9IjE2IiBpZD0ic3ZnXzUiIHk9IjE2MCIgeD0iMjM2IiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZT0iIzAwMCIgZmlsbD0iIzAwMDAwMCI+RjwvdGV4dD4KICA8dGV4dCB4bWw6c3BhY2U9InByZXNlcnZlIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIGZvbnQtZmFtaWx5PSJOb3RvIFNhbnMgSlAiIGZvbnQtc2l6ZT0iMTYiIGlkPSJzdmdfNiIgeT0iMTQiIHg9IjE3IiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZT0iIzAwMCIgZmlsbD0iIzAwMDAwMCI+RDwvdGV4dD4KIDwvZz4KCjwvc3ZnPg==&quot; alt=&quot;&quot; /&gt;&lt;br /&gt; Panjang EF adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
 		<competence></competence>
 		<random></random>
 		<file>
