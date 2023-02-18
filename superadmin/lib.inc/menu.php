@@ -88,6 +88,11 @@ $structure = array(
                 'caption'=>'Bank Soal',
                 'icon'=>'fa-box',
                 'link'=>'ujian-bank-soal.php'                       
+            ),
+            array(
+                'caption'=>'Paket Soal',
+                'icon'=>'fa-box',
+                'link'=>'ujian-paket-soal.php'                       
             )
         )
     ),
