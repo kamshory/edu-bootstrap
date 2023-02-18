@@ -330,7 +330,7 @@ if($stmt->rowCount() > 0)
 				<tr>
 					<td></td>
 					<td><input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=edit&class_id=<?php echo $data['class_id']; ?>'" /> 
-					<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>'" /></td>
+					<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>'" /></td>
 				</tr>
 			</table>
 		</form>

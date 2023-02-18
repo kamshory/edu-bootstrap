@@ -224,7 +224,7 @@ if(!empty($school_id))
     <button class="btn btn-primary" id="config-sync" data-toggle="modal" data-target="#configModal">Konfigurasi</button>
     </div>
     <div class="sync-message">
-        <div class="alert alert-primary"><span class="fas fa-check"></span> Proses sinkronisasi data telah selesai.</div>
+        <div class="alert alert-primary"><span class="fas fa-check"></span> Proses sinkronisasi data telah selesai. Anda dapat menutup halaman ini dengan aman.</div>
     </div>
 
 

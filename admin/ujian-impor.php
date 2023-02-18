@@ -401,7 +401,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     <tr>
       <td></td>
       <td><input type="submit" name="import" id="import" class="btn btn-success" value="Impor Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_id=<?php echo $data['test_id'];?>'" />
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
     </tr>
   </table>
 </form>

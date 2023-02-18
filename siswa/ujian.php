@@ -590,7 +590,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
         <?php
 		}
 		?>
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-primary" onclick="window.location='ujian.php'" /></td>
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='ujian.php'" /></td>
 		</tr>
 	</table>
     <?php

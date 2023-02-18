@@ -182,9 +182,9 @@ $().ready(function() {
 		equation_generator_url : equation_generator_url, 
         equation_renderer_machine : equation_renderer_machine, 
 		quran_server : quran_server, 
-		plugins : "autolink,lists,style,table,advhr,advimage,advlink,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist,quran,latex,equation,chem,asciisvg,chart,chart",
+		plugins : "autolink,lists,style,table,advhr,advimage,advlink,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist,quran,latex,equation,chem,asciisvg,chart,chart,draw",
 		theme_advanced_buttons1:"pasteword,pastetext,undo,redo,search,bold,italic,underline,strikethrough,formatselect,fontselect,fontsizeselect,justifyleft,justifycenter,justifyright,justifyfull,ltr,rtl,numlist,bullist,indent,outdent,blockquote",
-		theme_advanced_buttons2:"visualaid,forecolor,backcolor,removeformat,anchor,link,unlink,image,media,charmap,quran,sup,sub,latex,equation,chem,asciisvg,chart,chart,hr,table,row_props,cell_props,col_after,col_before,row_after,row_before,merge_cells,split_cells,delete_col,delete_row,delete_table,quran,arabiceditor,code,preview",
+		theme_advanced_buttons2:"visualaid,forecolor,backcolor,removeformat,anchor,link,unlink,image,media,charmap,quran,sup,sub,latex,equation,chem,asciisvg,chart,draw,hr,table,row_props,cell_props,col_after,col_before,row_after,row_before,merge_cells,split_cells,delete_col,delete_row,delete_table,quran,arabiceditor,code,preview",
 		theme_advanced_buttons3:"",
 		theme_advanced_buttons4:"",
 		theme_advanced_toolbar_location : "top",
@@ -270,11 +270,11 @@ var defaultdir = 'lib.content/media/info/';
 <textarea id="content" name="content" style="width:100%; height:300px; box-sizing:border-box;"></textarea>
 <input type="hidden" name="class" id="classlist" value="" />
 </div>
-<div class="input-block">
-<input type="submit" id="publish" name="publish" value="Publikasikan" />
-<input type="submit" id="draff" name="draff" value="Simpan Konsep" />
+<div class="button-area">
+<input class="btn btn-success" type="submit" id="publish" name="publish" value="Publikasikan" />
+<input class="btn btn-success" type="submit" id="draff" name="draff" value="Simpan Konsep" />
 <input type="hidden" name="option" id="option" value="add" />
-<input type="button" id="cancel" name="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input class="btn btn-secondary" type="button" id="cancel" name="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
 </div>
 </form>
 <?php
@@ -422,12 +422,12 @@ var info_id = '<?php echo $info_id;?>';
 <textarea id="content" name="content" style="width:100%; height:300px; box-sizing:border-box;"><?php echo htmlspecialchars($data['content']);?></textarea>
 <input type="hidden" name="class" id="classlist" value="<?php echo $data['class'];?>" />
 </div>
-<div class="input-block">
-<input type="submit" id="publish" name="publish" value="Publikasikan" />
-<input type="submit" id="draff" name="draff" value="Simpan Konsep" />
+<div class="button-area">
+<input class="btn btn-success" type="submit" id="publish" name="publish" value="Publikasikan" />
+<input class="btn btn-success" type="submit" id="draff" name="draff" value="Simpan Konsep" />
 <input type="hidden" name="option" id="option" value="edit" />
 <input type="hidden" name="info_id" id="info_id" value="<?php echo $info_id;?>" />
-<input type="button" id="cancel" name="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input class="btn btn-secondary" type="button" id="cancel" name="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
 </div>
 </form>
 <?php

@@ -159,7 +159,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
-		<td><input type="button" name="edit" id="edit" class="btn btn-primary" value="Pilih" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=select&school_id=<?php echo $data['school_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="edit" id="edit" class="btn btn-primary" value="Pilih" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=select&school_id=<?php echo $data['school_id'];?>'" /> 
+		<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
