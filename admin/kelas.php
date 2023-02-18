@@ -86,7 +86,7 @@ if (@$_GET['option'] == 'add') {
 		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 			<tr>
 				<td>Kode Kelas</td>
-				<td><input type="text" class="form-control input-text input-text-long" name="class_code" id="class_code" autocomplete="off" /></td>
+				<td><input type="text" class="form-control input-text" name="class_code" id="class_code" autocomplete="off" /></td>
 			</tr>
 			<tr>
 				<td>Tingkat
@@ -134,11 +134,11 @@ if (@$_GET['option'] == 'add') {
 			<tr>
 				<td>Nama Kelas
 				</td>
-				<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" /></td>
+				<td><input type="text" class="form-control input-text" name="name" id="name" autocomplete="off" /></td>
 			</tr>
 			<tr>
 				<td>Order</td>
-				<td><input type="number" class="form-control input-text input-text-long" name="sort_order" id="sort_order" autocomplete="off" /></td>
+				<td><input type="number" class="form-control input-text" name="sort_order" id="sort_order" autocomplete="off" /></td>
 			</tr>
 			<tr>
 				<td>Aktif</td>
@@ -175,7 +175,7 @@ else if (@$_GET['option'] == 'edit')
 			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td>Kode Kelas</td>
-					<td><input type="text" class="form-control input-text input-text-long" name="class_code" id="class_code" value="<?php echo $data['class_code']; ?>" autocomplete="off" /><input type="hidden" name="class_id2" id="class_id2" value="<?php echo $data['class_id']; ?>" /></td>
+					<td><input type="text" class="form-control input-text" name="class_code" id="class_code" value="<?php echo $data['class_code']; ?>" autocomplete="off" /><input type="hidden" name="class_id2" id="class_id2" value="<?php echo $data['class_id']; ?>" /></td>
 				</tr>
 				<tr>
 					<td>Tingkat</td>
@@ -222,11 +222,11 @@ else if (@$_GET['option'] == 'edit')
 				<tr>
 					<td>Nama Kelas
 					</td>
-					<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name']; ?>" autocomplete="off" /></td>
+					<td><input type="text" class="form-control input-text" name="name" id="name" value="<?php echo $data['name']; ?>" autocomplete="off" /></td>
 				</tr>
 				<tr>
 					<td>Order</td>
-					<td><input type="number" class="form-control input-text input-text-long" name="sort_order" id="sort_order" value="<?php echo $data['sort_order'];?>" autocomplete="off" /></td>
+					<td><input type="number" class="form-control input-text" name="sort_order" id="sort_order" value="<?php echo $data['sort_order'];?>" autocomplete="off" /></td>
 				</tr>
 				<tr>
 					<td>Aktif</td>

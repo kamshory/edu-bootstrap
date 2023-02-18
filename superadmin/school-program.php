@@ -95,7 +95,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">Nama</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="name" id="name" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Order</td>
@@ -140,7 +140,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">Nama</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" />
+		<td><input type="text" class="form-control input-text" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" />
 		  <input type="hidden" name="school_program_id2" id="school_program_id2" value="<?php echo $data['school_program_id'];?>" /></td>
 		</tr>
 		<tr>

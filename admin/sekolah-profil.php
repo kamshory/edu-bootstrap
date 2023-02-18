@@ -219,7 +219,7 @@ $(document).ready(function(e) {
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" />
+		<td><input type="text" class="form-control input-text" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" />
         <input type="hidden" name="school_id2" id="school_id2" value="<?php echo $data['school_id'];?>" /></td>
 		</tr>
 		<tr>
@@ -247,7 +247,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Kepala Sekolah
-		</td><td><input type="text" class="form-control input-text input-text-long" name="principal" id="principal" value="<?php echo $data['principal'];?>" autocomplete="off" /></td>
+		</td><td><input type="text" class="form-control input-text" name="principal" id="principal" value="<?php echo $data['principal'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Alamat</td>
@@ -255,11 +255,11 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Telepon
-		</td><td><input type="tel" class="form-control input-text input-text-long" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
+		</td><td><input type="tel" class="form-control input-text" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><input type="email" class="form-control input-text input-text-long" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
+		<td><input type="email" class="form-control input-text" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
 		</tr>
 		<tr>
 		<td>Bahasa

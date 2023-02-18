@@ -1794,14 +1794,14 @@ function transferFile() {
 		'<table width="100%" border="0" cellspacing="0" cellpadding="0" class="dialog-table">' +
 		'<tr>' +
 		'<td width="30%">URL</td>' +
-		'<td><input type="text" name="source" class="form-control input-text input-text-long" id="source" data-needed="true" autocomplete="off" /></td>' +
+		'<td><input type="text" name="source" class="form-control input-text" id="source" data-needed="true" autocomplete="off" /></td>' +
 		'</tr>' +
 		'<tr>' +
 		'<td>Target Location</td>' +
-		'<td><input type="text" name="target" class="form-control input-text input-text-long" id="target" data-needed="true" autocomplete="off" /></td>' +
+		'<td><input type="text" name="target" class="form-control input-text" id="target" data-needed="true" autocomplete="off" /></td>' +
 		'</tr>' +
 		'<td>File Name</td>' +
-		'<td><input type="text" name="filename" class="form-control input-text input-text-long" id="filename" data-needed="true" autocomplete="off" /></td>' +
+		'<td><input type="text" name="filename" class="form-control input-text" id="filename" data-needed="true" autocomplete="off" /></td>' +
 		'</tr>' +
 		'</table>' +
 		'</form>';

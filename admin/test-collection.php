@@ -70,7 +70,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">Name</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="name" id="name" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Grade</td>
@@ -83,11 +83,11 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>File Name</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="file_name" id="file_name" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="file_name" id="file_name" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>File Path</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="file_path" id="file_path" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="file_path" id="file_path" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>File Size</td>
@@ -95,11 +95,11 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>File MD5</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="file_md5" id="file_md5" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="file_md5" id="file_md5" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>File SHA1</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="file_sha1" id="file_sha1" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="file_sha1" id="file_sha1" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Time Create</td>
@@ -111,11 +111,11 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>IP Create</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="ip_create" id="ip_create" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="ip_create" id="ip_create" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>IP Edit</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="ip_edit" id="ip_edit" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="ip_edit" id="ip_edit" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Taken</td>
@@ -154,7 +154,7 @@ $stmt = $database->executeQuery($sql);
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td width="200">Name</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /><input type="hidden" name="test_collection_id2" id="test_collection_id2" value="<?php echo $data['test_collection_id'];?>" /></td>
+		<td><input type="text" class="form-control input-text" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /><input type="hidden" name="test_collection_id2" id="test_collection_id2" value="<?php echo $data['test_collection_id'];?>" /></td>
 		</tr>
 		<tr>
 		<td>Grade</td>
@@ -165,11 +165,11 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>File Name</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="file_name" id="file_name" value="<?php echo $data['file_name'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="file_name" id="file_name" value="<?php echo $data['file_name'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>File Path</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="file_path" id="file_path" value="<?php echo $data['file_path'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="file_path" id="file_path" value="<?php echo $data['file_path'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>File Size</td>
@@ -177,11 +177,11 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>File MD5</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="file_md5" id="file_md5" value="<?php echo $data['file_md5'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="file_md5" id="file_md5" value="<?php echo $data['file_md5'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>File SHA1</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="file_sha1" id="file_sha1" value="<?php echo $data['file_sha1'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="file_sha1" id="file_sha1" value="<?php echo $data['file_sha1'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Time Create</td>
@@ -193,11 +193,11 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>IP Create</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="ip_create" id="ip_create" value="<?php echo $data['ip_create'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="ip_create" id="ip_create" value="<?php echo $data['ip_create'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>IP Edit</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="ip_edit" id="ip_edit" value="<?php echo $data['ip_edit'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="ip_edit" id="ip_edit" value="<?php echo $data['ip_edit'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Taken</td>

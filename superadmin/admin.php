@@ -221,7 +221,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>Username</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="username" id="username" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="username" id="username" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Level Admin</td>
@@ -232,7 +232,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>Nama</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="name" id="name" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
@@ -244,7 +244,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>Tempat Lahir</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="birth_place" id="birth_place" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="birth_place" id="birth_place" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Tanggal Lahir</td>
@@ -252,15 +252,15 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><input type="email" class="form-control input-text input-text-long" name="email" id="email" autocomplete="off" data-type="email" /></td>
+		<td><input type="email" class="form-control input-text" name="email" id="email" autocomplete="off" data-type="email" /></td>
 		</tr>
 		<tr>
 		<td>Phone</td>
-		<td><input type="tel" class="form-control input-text input-text-long" name="phone" id="phone" autocomplete="off" /></td>
+		<td><input type="tel" class="form-control input-text" name="phone" id="phone" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Password</td>
-		<td><input type="password" class="form-control input-text input-text-long" name="password" id="password" autocomplete="off" /></td>
+		<td><input type="password" class="form-control input-text" name="password" id="password" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Blokir</td>
@@ -329,7 +329,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Username</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="username" id="username" value="<?php echo $data['username'];?>" autocomplete="off" />
+		<td><input type="text" class="form-control input-text" name="username" id="username" value="<?php echo $data['username'];?>" autocomplete="off" />
 		  <input type="hidden" name="admin_id2" id="admin_id2" value="<?php echo $data['admin_id'];?>" /></td>
 		</tr>
 		<tr>
@@ -341,7 +341,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Nama</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
@@ -353,7 +353,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Tempat Lahir</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="birth_place" id="birth_place" value="<?php echo $data['birth_place'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="birth_place" id="birth_place" value="<?php echo $data['birth_place'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Tanggal Lahir</td>
@@ -361,15 +361,15 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><input type="email" class="form-control input-text input-text-long" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
+		<td><input type="email" class="form-control input-text" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
 		</tr>
 		<tr>
 		<td>Phone</td>
-		<td><input type="tel" class="form-control input-text input-text-long" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
+		<td><input type="tel" class="form-control input-text" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Password</td>
-		<td><input type="password" class="form-control input-text input-text-long" name="password" id="password" autocomplete="off" /></td>
+		<td><input type="password" class="form-control input-text" name="password" id="password" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Blokir</td>

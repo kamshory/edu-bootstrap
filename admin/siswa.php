@@ -169,11 +169,11 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>NIS</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" autocomplete="off" required="required" /></td>
+		<td><input type="text" class="form-control input-text" name="reg_number" id="reg_number" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>NISN</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" autocomplete="off" <?php echo $picoEdu->trueFalse($use_national_id, ' required="required"', '');?> /></td>
+		<td><input type="text" class="form-control input-text" name="reg_number_national" id="reg_number_national" autocomplete="off" <?php echo $picoEdu->trueFalse($use_national_id, ' required="required"', '');?> /></td>
 		</tr>
 		<tr>
 		<td>Tingkat</td>
@@ -214,7 +214,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>Nama</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" autocomplete="off" required="required" /></td>
+		<td><input type="text" class="form-control input-text" name="name" id="name" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
@@ -226,7 +226,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>Tempat Lahir</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="birth_place" id="birth_place" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="birth_place" id="birth_place" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Tanggal Lahir</td>
@@ -234,19 +234,19 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 		</tr>
 		<tr>
 		<td>Telepon
-		</td><td><input type="tel" class="form-control input-text input-text-long" name="phone" id="phone" autocomplete="off" /></td>
+		</td><td><input type="tel" class="form-control input-text" name="phone" id="phone" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><input type="email" class="form-control input-text input-text-long" name="email" id="email" autocomplete="off" data-type="email" /></td>
+		<td><input type="email" class="form-control input-text" name="email" id="email" autocomplete="off" data-type="email" /></td>
 		</tr>
 		<tr>
 		<td>Password</td>
-		<td><input type="password" class="form-control input-text input-text-long" name="password" id="password" autocomplete="off" /></td>
+		<td><input type="password" class="form-control input-text" name="password" id="password" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Alamat</td>
-		<td><textarea name="address" class="form-control input-text input-text-long" id="address" autocomplete="off"></textarea></td>
+		<td><textarea name="address" class="form-control input-text" id="address" autocomplete="off"></textarea></td>
 		</tr>
 		<tr>
 		<td>Blokir</td>
@@ -289,12 +289,12 @@ if($stmt->rowCount() > 0)
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>NIS</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number" id="reg_number" value="<?php echo $data['reg_number'];?>" autocomplete="off" required="required" />
+		<td><input type="text" class="form-control input-text" name="reg_number" id="reg_number" value="<?php echo $data['reg_number'];?>" autocomplete="off" required="required" />
 		<input type="hidden" name="student_id2" id="student_id2" value="<?php echo $data['student_id'];?>" /></td>
 		</tr>
 		<tr>
 		<td>NISN</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="reg_number_national" id="reg_number_national" value="<?php echo $data['reg_number_national'];?>" autocomplete="off" <?php echo $picoEdu->trueFalse($use_national_id, ' required="required"', '');?> /></td>
+		<td><input type="text" class="form-control input-text" name="reg_number_national" id="reg_number_national" value="<?php echo $data['reg_number_national'];?>" autocomplete="off" <?php echo $picoEdu->trueFalse($use_national_id, ' required="required"', '');?> /></td>
 		</tr>
 		<tr>
 		<td>Tingkat</td>
@@ -335,7 +335,7 @@ if($stmt->rowCount() > 0)
 		</tr>
 		<tr>
 		<td>Nama</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" required="required" /></td>
+		<td><input type="text" class="form-control input-text" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" required="required" /></td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
@@ -347,7 +347,7 @@ if($stmt->rowCount() > 0)
 		</tr>
 		<tr>
 		<td>Tempat Lahir</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="birth_place" id="birth_place" value="<?php echo $data['birth_place'];?>" autocomplete="off" /></td>
+		<td><input type="text" class="form-control input-text" name="birth_place" id="birth_place" value="<?php echo $data['birth_place'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Tanggal Lahir</td>
@@ -355,19 +355,19 @@ if($stmt->rowCount() > 0)
 		</tr>
 		<tr>
 		<td>Telepon
-		</td><td><input type="tel" class="form-control input-text input-text-long" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
+		</td><td><input type="tel" class="form-control input-text" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><input type="email" class="form-control input-text input-text-long" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
+		<td><input type="email" class="form-control input-text" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
 		</tr>
 		<tr>
 		<td>Password</td>
-		<td><input type="password" class="form-control input-text input-text-long" name="password" id="password" autocomplete="off" /></td>
+		<td><input type="password" class="form-control input-text" name="password" id="password" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Alamat</td>
-		<td><textarea name="address" class="form-control input-text input-text-long" id="address" autocomplete="off"><?php echo $data['address'];?></textarea></td>
+		<td><textarea name="address" class="form-control input-text" id="address" autocomplete="off"><?php echo $data['address'];?></textarea></td>
 		</tr>
 		<tr>
 		<td>Blokir</td>

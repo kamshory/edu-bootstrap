@@ -238,7 +238,7 @@ $subjectList = $picoEdu->getSubjectList();
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td>Nama Ujian</td>
-		<td><input type="text" class="form-control input-text input-text-long" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" required="required" />
+		<td><input type="text" class="form-control input-text" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" required="required" />
 		  <input type="hidden" name="test_id2" id="test_id2" value="<?php echo $data['test_id'];?>" /></td>
 		</tr>
 		<tr>
@@ -279,7 +279,7 @@ $subjectList = $picoEdu->getSubjectList();
 		</tr>
 		<tr>
 		<td>Mata Pelajaran
-		</td><td><input type="text" class="form-control input-text input-text-long" name="subject" id="subject" value="<?php echo $data['subject'];?>" autocomplete="off" /></td>
+		</td><td><input type="text" class="form-control input-text" name="subject" id="subject" value="<?php echo $data['subject'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Guru</td>
@@ -311,11 +311,11 @@ $subjectList = $picoEdu->getSubjectList();
 		</tr>
 		<tr>
 		<td>Keterangan
-		</td><td><textarea name="description" class="form-control input-text input-text-long" id="description" autocomplete="off"><?php echo $data['description'];?></textarea></td>
+		</td><td><textarea name="description" class="form-control input-text" id="description" autocomplete="off"><?php echo $data['description'];?></textarea></td>
 		</tr>
 		<tr>
 		<td>Petunjuk
-		</td><td><textarea name="guidance" class="form-control input-text input-text-long" id="guidance" autocomplete="off"><?php echo $data['guidance'];?></textarea></td>
+		</td><td><textarea name="guidance" class="form-control input-text" id="guidance" autocomplete="off"><?php echo $data['guidance'];?></textarea></td>
 		</tr>
 		<tr>
 		<td>Terbuka
@@ -377,7 +377,7 @@ $subjectList = $picoEdu->getSubjectList();
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_alert" data-condition="<?php echo $data['has_alert'];?>" data-show-condition="1" data-hide-condition="0">
 		<td>Pesan Peringatan</td>
-		<td><textarea name="alert_message" class="form-control input-text input-text-long" id="alert_message" autocomplete="off"><?php echo $data['alert_message'];?></textarea></td>
+		<td><textarea name="alert_message" class="form-control input-text" id="alert_message" autocomplete="off"><?php echo $data['alert_message'];?></textarea></td>
 		</tr>
 		<tr>
 		<td>Otomatis Kirim Jawaban</td>

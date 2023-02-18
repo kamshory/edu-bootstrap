@@ -107,3 +107,5 @@ UPDATE `edu_school` SET
 UPDATE `edu_school` SET `state_id` = '1680' WHERE `school_id` = '063ce682801be89951aa';
 ------------------------912284ba5a823ba425efba890f57a4e2c88e8369
 UPDATE `edu_school` SET `city_id` = '48622' WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_admin` SET `picture_rand` = '019048' WHERE `admin_id` = 'aaaaaaaaaaaaa';
