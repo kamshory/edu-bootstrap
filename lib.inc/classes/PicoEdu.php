@@ -1109,13 +1109,9 @@ class PicoEdu //NOSONAR
 		return trim(implode(' ', $rowclass)); 
 	}
 
-	/**
-	 * Get school grade name
-	 * @param string $grade_id School grade ID
-	 */
-	public function getSchoolGradeName($grade_id)
+	public function getSchoolGradeList()
 	{
-		$arr = array(
+		return array(
 			'1'=>'Play Group',
 			'2'=>'Taman Kanak-Kanak',
 			'3'=>'SD Sederajat',
@@ -1123,6 +1119,53 @@ class PicoEdu //NOSONAR
 			'5'=>'SMA Sederajat',
 			'6'=>'Perguruan Tinggi'
 		);
+	}
+
+	public function getSchoolGradeOption($selected = null)
+	{
+		$html = "";
+		$arr = $this->getSchoolGradeList();
+		foreach($arr as $key => $val)
+		{
+			if($selected != null && $selected == $key)
+			{
+				$sel = " selected=\"selected\"";
+			}
+			else
+			{
+				$sel = "";
+			}
+			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$val</option>";
+		}
+		return $html;
+	}
+
+	public function getSchoolTypeOption($selected = null)
+	{
+		$html = "";
+		$arr = array('U'=>'Negeri', 'I'=>'Swasta');
+		foreach($arr as $key => $val)
+		{
+			if($selected != null && $selected == $key)
+			{
+				$sel = " selected=\"selected\"";
+			}
+			else
+			{
+				$sel = "";
+			}
+			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$val</option>";
+		}
+		return $html;
+	}
+
+	/**
+	 * Get school grade name
+	 * @param string $grade_id School grade ID
+	 */
+	public function getSchoolGradeName($grade_id)
+	{
+		$arr = $this->getSchoolGradeList();
 		return isset($arr[$grade_id]) ? $arr[$grade_id] : '';
 	}
 

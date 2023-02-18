@@ -359,7 +359,7 @@ $(document).ready(function(e) {
 				)
 			);
             ?>
-            <!--<option value="--">- Tambah Provinsi -</option>-->
+            <option value="--">- Tambah Provinsi -</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -388,7 +388,7 @@ $(document).ready(function(e) {
 				)
 			);
             ?>
-		<!--<option value="--">- Tambah Kabupaten/Kota -</option>-->
+		<option value="--">- Tambah Kabupaten/Kota -</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -421,7 +421,6 @@ $(document).ready(function(e) {
 </form>
 <?php
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
-
 }
 else if(@$_GET['option'] == 'edit')
 {
@@ -568,20 +567,18 @@ $(document).ready(function(e) {
 		<td>Jenjang</td>
 		<td><select class="form-control input-select" name="school_grade_id" id="school_grade_id">
 		<option value=""></option>
-		<option value="1"<?php if($data['school_grade_id'] == '1') echo PicoConst::SELECT_OPTION_SELECTED;?>>Play Group</option>
-		<option value="2"<?php if($data['school_grade_id'] == '2') echo PicoConst::SELECT_OPTION_SELECTED;?>>Taman Kanak-Kanak</option>
-		<option value="3"<?php if($data['school_grade_id'] == '3') echo PicoConst::SELECT_OPTION_SELECTED;?>>Sekolah Dasar</option>
-		<option value="4"<?php if($data['school_grade_id'] == '4') echo PicoConst::SELECT_OPTION_SELECTED;?>>Sekolah Menengah Pertama</option>
-		<option value="5"<?php if($data['school_grade_id'] == '5') echo PicoConst::SELECT_OPTION_SELECTED;?>>Sekolah Menengah Atas</option>
-		<option value="6"<?php if($data['school_grade_id'] == '6') echo PicoConst::SELECT_OPTION_SELECTED;?>>Perguruan Tinggi</option>
+		<?php
+		echo $picoEdu->getSchoolGradeOption($data['school_grade_id']);
+		?>
 		</select></td>
 		</tr>
 		<tr>
 		<td>Negeri/Swasta</td>
 		<td><select class="form-control input-select" name="public_private" id="public_private">
 		<option value=""></option>
-		<option value="U"<?php if($data['public_private'] == 'U') echo PicoConst::SELECT_OPTION_SELECTED;?>>Negeri</option>
-		<option value="I"<?php if($data['public_private'] == 'I') echo PicoConst::SELECT_OPTION_SELECTED;?>>Swasta</option>
+		<?php
+		echo $picoEdu->getSchoolTypeOption($data['public_private']);
+		?>
 		</select></td>
 		</tr>
 		<tr>
@@ -668,7 +665,7 @@ $(document).ready(function(e) {
 				)
 			);
             ?>
-            <!--<option value="--">- Tambah Provinsi -</option>-->
+            <option value="--">- Tambah Provinsi -</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -697,7 +694,7 @@ $(document).ready(function(e) {
 				)
 			);
             ?>
-		<!--<option value="--">- Tambah Kabupaten/Kota -</option>-->
+		<option value="--">- Tambah Kabupaten/Kota -</option>
 		</select></td>
 		</tr>
 		<tr>

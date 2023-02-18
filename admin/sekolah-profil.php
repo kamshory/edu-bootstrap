@@ -226,35 +226,23 @@ $(document).ready(function(e) {
 		<td>Jenjang</td>
 		<td><select class="form-control input-select" name="school_grade_id" id="school_grade_id">
 		<option value=""></option>
-		<option value="1"<?php echo $picoEdu->trueFalse($data['school_grade_id'] == '1', PicoConst::SELECT_OPTION_SELECTED, '');?>>Play Group</option>
-		<option value="2"<?php echo $picoEdu->trueFalse($data['school_grade_id'] == '2', PicoConst::SELECT_OPTION_SELECTED, '');?>>Taman Kanak-Kanak</option>
-		<option value="3"<?php echo $picoEdu->trueFalse($data['school_grade_id'] == '3', PicoConst::SELECT_OPTION_SELECTED, '');?>>Sekolah Dasar</option>
-		<option value="4"<?php echo $picoEdu->trueFalse($data['school_grade_id'] == '4', PicoConst::SELECT_OPTION_SELECTED, '');?>>Sekolah Menengah Pertama</option>
-		<option value="5"<?php echo $picoEdu->trueFalse($data['school_grade_id'] == '5', PicoConst::SELECT_OPTION_SELECTED, '');?>>Sekolah Menengah Atas</option>
-		<option value="6"<?php echo $picoEdu->trueFalse($data['school_grade_id'] == '6', PicoConst::SELECT_OPTION_SELECTED, '');?>>Perguruan Tinggi</option>
+		<?php
+		echo $picoEdu->getSchoolGradeOption($data['school_grade_id']);
+		?>
 		</select></td>
 		</tr>
 		<tr>
 		<td>Negeri/Swasta</td>
 		<td><select class="form-control input-select" name="public_private" id="public_private">
 		<option value=""></option>
-		<option value="U"<?php 
-		if ($data['public_private'] == 'U') {
-			echo PicoConst::SELECT_OPTION_SELECTED;
-		}
-		?>>Negeri</option>
-		<option value="I"<?php if ($data['public_private'] == 'I') {
-			echo PicoConst::SELECT_OPTION_SELECTED;
-		}
-		?>>Swasta</option>
+		<?php
+		echo $picoEdu->getSchoolTypeOption($data['public_private']);
+		?>
 		</select></td>
 		</tr>
 		<tr>
 		<td>Terbuka</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php if ($data['open'] == 1) {
-		echo PicoConst::INPUT_CHECKBOX_CHECKED;
-		}
-		?>> Terbuka</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php echo $picoEdu->ifMatch($data['open'], 1, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Terbuka</label>
 		</td>
 		</tr>
 		<tr>
