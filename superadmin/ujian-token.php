@@ -247,8 +247,8 @@ $(document).ready(function(e) {
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
-		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" onclick="return confirm('Apakah Anda yahin akan membuat token ini?')" /> 
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" onclick="return confirm('Apakah Anda yahin akan membuat token ini?')" /> 
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -323,7 +323,7 @@ $stmt = $database->executeQuery($sql);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
-		<td><input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&token_id=<?php echo $data['token_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&token_id=<?php echo $data['token_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -447,7 +447,7 @@ function printToken(frm)
 </select>
 <span class="search-label">Token</span>
 <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
-<input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
+<input type="submit" name="search" id="search" value="Cari" class="btn btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -595,10 +595,10 @@ if($test_id == 0 && $class_id == 0)
 }
 ?>
 <div class="button-area">
-  <input type="button" name="print" id="print" value="Cetak" class="btn com-button btn-success" onclick="printToken($(this).closest('form'))" />
-  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-warning" onclick="return confirm('Apakah Anda akan menonaktifkan token ini?')" />
-  <input type="button" name="add" id="add" value="Tambah" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
-  <input type="submit" name="cleanup" id="cleanup" value="Hapus Token Salah" class="btn com-button btn-success" onclick="return confirm('Apakah Anda akan menghapus semua token salah yang dimasukkan siswa?')" />
+  <input type="button" name="print" id="print" value="Cetak" class="btn btn-success" onclick="printToken($(this).closest('form'))" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn btn-warning" onclick="return confirm('Apakah Anda akan menonaktifkan token ini?')" />
+  <input type="button" name="add" id="add" value="Tambah" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
+  <input type="submit" name="cleanup" id="cleanup" value="Hapus Token Salah" class="btn btn-success" onclick="return confirm('Apakah Anda akan menghapus semua token salah yang dimasukkan siswa?')" />
   </div>
 </form>
 <?php

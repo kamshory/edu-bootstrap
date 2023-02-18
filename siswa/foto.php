@@ -106,7 +106,7 @@ $avatar_url = "media.edu/school/$school_id/user.avatar/student/$student_id/img-3
             </div>
             <div class="avatar-cropper-preview">
                 <button class="btn btn-success crop-image">Simpan</button>
-                <button class="btn btn-warning">Batalkan</button>
+                <button class="btn btn-secondary">Batalkan</button>
             </div>
         </div>
 	</div>

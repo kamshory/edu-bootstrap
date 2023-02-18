@@ -15,7 +15,7 @@ header("Location: index.php");
     <meta name="description" content="">
     <meta name="author" content="Planetbiru">
     <meta name="generator" content="Planetbiru">
-    <title>Pico Edu</title>
+    <title><?php echo $cfg->app_name;?></title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/css/bootstrap.min.css">
@@ -36,7 +36,7 @@ header("Location: index.php");
 
 <body class="text-center">
     <form class="form-signin" method="post" action="">
-        <img class="mb-4" src="lib.style/images/logo-120.png" alt="" width="90" height="90">
+        <img class="mb-4" src="<?php echo $cfg->base_assets;?>lib.assets/images/logo-120.png" alt="" width="90" height="90">
         <h1 class="h3 mb-3 font-weight-normal">Keluar</h1>
         <a class="btn btn-success btn-block" href="logout.php?confirm-logout=yes">Ya</a>
         <a class="btn btn-primary btn-block" href="index.php">Tidak</a>

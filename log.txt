@@ -1,0 +1,42 @@
+2023-02-18 10:05:05 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063f04679afd4898aeed', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Tio </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Dio </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Rio </td><td> Makassar </td><td> 356735 </td><td> djfsdjf@khsk </td></tr></tbody></table>img:8b5e4e16281efc1ded7ae0bbad10b948.png#middle##latex%7C%5Cint_%7Bx%3D0%7D%5E%7B23%7D%20%5Csin(2x)%20dx<br />
+Data di atas adalah data..<br />
+', '063efb3f5c66ef66ef54', '81', '1', '1', 'upper-alpha', '36f5a2e5a1e1881d55fe9f3bdf7f3019', 
+					'2023-02-18 10:31:05', 'aaaaaaaaaaaaa', '2023-02-18 10:31:05', 'aaaaaaaaaaaaa', true)
+					
+2023-02-18 10:05:05 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063f04679b0e89fd3d36', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063efb3f5c66ef66ef54', '82', '1', '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+					'2023-02-18 10:31:05', 'aaaaaaaaaaaaa', '2023-02-18 10:31:05', 'aaaaaaaaaaaaa', true)
+					
+2023-02-18 10:05:05 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063f04679b150691bdc9', 'Berikut ini adalah sebuah tabel<br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr></tbody></table>Data di atas adalah data..<br />
+', '063efb3f5c66ef66ef54', '83', '1', '1', 'upper-alpha', 'be479923d31fd2f27dd20284477a8e06', 
+					'2023-02-18 10:31:05', 'aaaaaaaaaaaaa', '2023-02-18 10:31:05', 'aaaaaaaaaaaaa', true)
+					
+2023-02-18 10:05:05 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063f04679b22e9678f3d', 'Berikut ini adalah sebuah tabel<br />
+<img src=\"media.edu/school/063ce682801be89951aa/test/063efb3f5c66ef66ef54/2329cf7a0b2a8ad11e07ef5d3c85c996.png\" alt=\"2329cf7a0b2a8ad11e07ef5d3c85c996.png\" style=\"vertical-align:middle\" data-latex=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \" class=\"latex-image\" alt=\"f(x)=a_0+\\sum_(n=1)^&infin; (a_n  \\cos (n&pi;x/L)+b_n  \\sin (n&pi;x/L) ) \"><br />
+<table border=\"1\"><thead><tr><td> No </td><td> Nama </td><td> Alamat </td><td> Telepon </td><td> Email </td></tr></thead><tbody><tr><td> 1 </td><td> Test </td><td> Bandung </td><td> 088888 </td><td> wryw@ueuwfh </td></tr><tr><td> 2 </td><td> Tos </td><td> Jakarta </td><td> 375823 </td><td> sdgs@krgh </td></tr><tr><td> 3 </td><td> Didi </td><td> Surabaya </td><td> 3532587 </td><td> sdfhs@hguf </td></tr></tbody></table>Data di atas merupakan data...<br />
+', '063efb3f5c66ef66ef54', '84', '1', '1', 'upper-alpha', 'a339695d452928168d18bf3a4ace44b7', 
+					'2023-02-18 10:31:05', 'aaaaaaaaaaaaa', '2023-02-18 10:31:05', 'aaaaaaaaaaaaa', true)
+					
+2023-02-18 10:05:05 INSERT INTO `edu_question` 
+					(`question_id`, `content`, `test_id`, `sort_order`, `multiple_choice`, `random`, `numbering`, `digest`, 
+					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
+					('063f04679b2adf526eaf', 'Perhatikan tabel berikut:<br />
+<table border=\"1\"><thead><tr><td> 1 </td><td> 2 </td><td> 3 </td></tr></thead><tbody><tr><td> 4 </td><td> 5 </td><td> 6 </td></tr><tr><td> 7 </td><td> 8 </td><td> 9 </td></tr></tbody></table>Data di atas adalah data yang...<br />
+', '063efb3f5c66ef66ef54', '85', '1', '1', 'upper-alpha', 'aeee4e72d93edaabf1a7162e07deaca9', 
+					'2023-02-18 10:31:05', 'aaaaaaaaaaaaa', '2023-02-18 10:31:05', 'aaaaaaaaaaaaa', true)
+					

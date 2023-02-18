@@ -172,7 +172,7 @@ var defaultdir = 'lib.content/media/article/';
 <input class="btn btn-success" type="submit" id="draff" name="draff" value="Simpan Konsep" />
 <input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
 <input class="btn btn-primary" type="hidden" name="option" id="option" value="add" />
-<input class="btn btn-warning" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input class="btn btn-secondary" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
 </div>
 </form>
 <?php
@@ -225,7 +225,7 @@ var defaultdir = 'lib.content/media/article/';
 <input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
 <input class="btn btn-primary" type="hidden" name="option" id="option" value="edit" />
 <input class="btn btn-primary" type="hidden" name="article_id" id="article_id" value="<?php echo $article_id;?>" />
-<input class="btn btn-warning" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input class="btn btn-secondary" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
 </div>
 </form>
 <?php
@@ -357,7 +357,7 @@ $(document).ready(function(e) {
     </select>
     <span class="search-label">Judul Artikel</span>
     <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
-  <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
+  <input type="submit" name="search" id="search" value="Cari" class="btn btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -475,10 +475,10 @@ $paginationHTML = $pagination->buildHTML();
 </div>
 
 <div class="button-area">
-  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn com-button btn-primary" />
-  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-warning" />
-  <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-danger delete-button" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
-  <input type="button" name="add" id="add" value="Tambah" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
+  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn btn-primary" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn btn-warning" />
+  <input type="submit" name="delete" id="delete" value="Hapus" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
+  <input type="button" name="add" id="add" value="Tambah" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
   </div>
 </form>
 <?php

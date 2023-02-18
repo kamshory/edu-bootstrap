@@ -26,7 +26,7 @@ else
 <input type="text" class="input-text" name="filepath" id="filepath" value="<?php echo htmlspecialchars(path_encode($filepath, $fmanConfig->rootdir));?>" autocomplete="off" />
 </td>
 <td width="64" align="right">
-  <input type="button" name="open" id="open" value="Open" class="btn com-button btn-success" onclick="openFile($('#filepath').val())" />
+  <input type="button" name="open" id="open" value="Open" class="btn btn-success" onclick="openFile($('#filepath').val())" />
   </td>
   </tr>
   </table>

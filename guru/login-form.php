@@ -9,7 +9,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
     <meta name="description" content="">
     <meta name="author" content="Planetbiru">
     <meta name="generator" content="Planetbiru">
-    <title>Pico Edu</title>
+    <title><?php echo $cfg->app_name;?></title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/css/bootstrap.min.css">
@@ -48,7 +48,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
 <body class="text-center">
     
     <form class="form-signin" method="post" action="login.php">
-        <img class="mb-4" src="lib.style/images/logo-120.png" alt="" width="90" height="90">
+        <img class="mb-4" src="<?php echo $cfg->base_assets;?>lib.assets/images/logo-120.png" alt="" width="90" height="90">
         <h1 class="h3 mb-3 font-weight-normal">Masuk Sebagai Guru</h1>
         <label for="inputEmail" class="sr-only">Username</label>
         <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Username" required autofocus>

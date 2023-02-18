@@ -113,7 +113,7 @@ Status <select name="status" id="status">
 	<option value="3"<?php echo $picoEdu->ifMatch($status, '3', PicoConst::SELECT_OPTION_SELECTED);?>>Dikeluarkan</option>
 	<option value="4"<?php echo $picoEdu->ifMatch($status, '4', PicoConst::SELECT_OPTION_SELECTED);?>>Diblokir</option>
 </select>
-<input type="submit" id="show" class="btn com-button btn-success" value="Tampilkan" />
+<input type="submit" id="show" class="btn btn-primary" value="Tampilkan" />
 </div>
 </form>
 
@@ -188,7 +188,7 @@ require_once dirname(__FILE__)."/ajax-test-monitoring.php";
 ?>
 </div>
 <div class="button-area">
-<input type="button" name="show-all" id="show-all" value="Semua Ujian" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input type="button" name="show-all" id="show-all" value="Semua Ujian" class="btn btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
 </div>
 <?php
 }
@@ -236,7 +236,7 @@ window.onload = function()
     </select>
     <span class="search-label">Ujian</span>
     <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn btn-success" />
 </form>
 </div>
 <div class="search-result">

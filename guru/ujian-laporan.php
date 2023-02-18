@@ -714,9 +714,9 @@ window.onload = function()
     <span class="search-label">Siswa</span>
     <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode(stripslashes(trim(@$_GET['q']," 	
     "))));?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
-  <input type="button" name="ekspor1" id="ekspor1" value="Ekspor Persiswa" class="btn com-button btn-success" />
-  <input type="button" name="ekspor2" id="ekspor2" value="Ekspor Perujian" class="btn com-button btn-success" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn btn-success" />
+  <input type="button" name="ekspor1" id="ekspor1" value="Ekspor Persiswa" class="btn btn-success" />
+  <input type="button" name="ekspor2" id="ekspor2" value="Ekspor Perujian" class="btn btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -912,14 +912,14 @@ $paginationHTML = $pagination->buildHTML();
 </div>
 
 <div class="button-area">
-  <input type="submit" name="set_active" id="set_active" value="Aktif" class="btn com-button btn-success" />
-  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktif" class="btn com-button btn-success" />
-  <input type="submit" name="recalculation" id="recalculation" value="Hitung Ulang KD" class="btn com-button btn-success" onclick="return confirm('Perhitungan ulang nilai kompetensi dasar hanya dapat dilakukan jika soal ujian belum dihapus. Apakah Anda yakin untuk menghitung ulang nilai kompetensi dasar?');"/>
-  <input type="submit" name="delete" id="delete" value="Hapus" class="btn com-button btn-danger delete-button" onclick="return confirm('Apakah Anda yakin untuk menghapus data ini?');" />
+  <input type="submit" name="set_active" id="set_active" value="Aktif" class="btn btn-success" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktif" class="btn btn-success" />
+  <input type="submit" name="recalculation" id="recalculation" value="Hitung Ulang KD" class="btn btn-success" onclick="return confirm('Perhitungan ulang nilai kompetensi dasar hanya dapat dilakukan jika soal ujian belum dihapus. Apakah Anda yakin untuk menghitung ulang nilai kompetensi dasar?');"/>
+  <input type="submit" name="delete" id="delete" value="Hapus" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin untuk menghapus data ini?');" />
 	<?php
     if(!isset($_GET['expand'])){
     ?>
-    <input type="button" name="show-all" id="show-all" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo $q1;?>'" />
+    <input type="button" name="show-all" id="show-all" value="Tampilkan Semua" class="btn btn-primary" onclick="window.location='<?php echo $q1;?>'" />
     <?php
     }
     else
@@ -927,13 +927,13 @@ $paginationHTML = $pagination->buildHTML();
     if($assessment_methods == 'N')
     {
     ?>
-    <input type="button" name="show-newest" id="show-newest" value="Tampilkan Nilai Terbaru" class="btn com-button btn-success" onclick="window.location='<?php echo $q2;?>'" />
+    <input type="button" name="show-newest" id="show-newest" value="Tampilkan Nilai Terbaru" class="btn btn-success" onclick="window.location='<?php echo $q2;?>'" />
     <?php
     }
     else
     {
     ?>
-    <input type="button" name="show-highest" id="show-highest" value="Tampilkan Nilai Tertinggi" class="btn com-button btn-success" onclick="window.location='<?php echo $q2;?>'" />
+    <input type="button" name="show-highest" id="show-highest" value="Tampilkan Nilai Tertinggi" class="btn btn-success" onclick="window.location='<?php echo $q2;?>'" />
     <?php
     }
 	}
@@ -998,7 +998,7 @@ $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
     <span class="search-label">Ujian</span>
     <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo htmlspecialchars(rawurldecode(stripslashes(trim(@$_GET['q']," 	
     "))));?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn btn-success" />
 </form>
 <script type="text/javascript">
 window.onload = function()

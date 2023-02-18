@@ -135,7 +135,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
-		<td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -197,7 +197,7 @@ $(document).ready(function(e) {
     </select>
     <span class="search-label">Nama Siswa</span>
     <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
-  <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
+  <input type="submit" name="search" id="search" value="Cari" class="btn btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -302,7 +302,7 @@ $paginationHTML = $pagination->buildHTML();
 </div>
 
 <div class="button-area">
-  <input type="button" name="print" id="print" value="Cetak Password" class="btn com-button btn-success" onclick="window.open('<?php echo basename($_SERVER['PHP_SELF']);?>?option=print-password<?php echo ($class_id)?("&class_id=$class_id"):"";?>')" />
+  <input type="button" name="print" id="print" value="Cetak Password" class="btn btn-success" onclick="window.open('<?php echo basename($_SERVER['PHP_SELF']);?>?option=print-password<?php echo ($class_id)?("&class_id=$class_id"):"";?>')" />
   </div>
 
 </form>

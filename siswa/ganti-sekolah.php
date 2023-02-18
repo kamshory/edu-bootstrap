@@ -130,8 +130,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<tr>
 		<td></td>
 		<td>
-        <input type="button" name="select" id="select" class="btn com-button btn-success" value="Pilih" onClick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=select&school_id=<?php echo $data['school_id'];?>'" /> 
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onClick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+        <input type="button" name="select" id="select" class="btn btn-success" value="Pilih" onClick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=select&school_id=<?php echo $data['school_id'];?>'" /> 
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-primary" onClick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
         </td>
 		</tr>
 	</table>
@@ -155,7 +155,7 @@ require_once dirname((__FILE__))."/lib.inc/header.php";
 <form id="searchform" name="form1" method="get" action="">
     <span class="search-label">Sekolah</span>
     <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn btn-success" />
 </form>
 </div>
 <div class="search-result">

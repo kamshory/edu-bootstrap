@@ -1159,8 +1159,8 @@ $i++;
 
 <div class="button-area">
 <input type="hidden" name="test_collection_id" id="test_collection_id" value="<?php echo $test_collection_id;?>" />
-<input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" />
-<input type="button" name="showall" id="showall" class="btn com-button btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?test_collection_id=<?php echo $test_collection_id;?>'" />
+<input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" />
+<input type="button" name="showall" id="showall" class="btn btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?test_collection_id=<?php echo $test_collection_id;?>'" />
 <input type="hidden" name="number_of_option" value="<?php echo $count_option;?>" />
 </div>
 
@@ -1311,9 +1311,9 @@ if($stmt->rowCount() > 0)
         </div>
         </div>
         <div class="button-area">
-        <input type="button" name="urutkan_soal" id="urutkan_soal" class="btn com-button btn-success" value="Urutkan Soal" onclick="activateSortOrder()" />
-        <input type="button" name="export" id="export" class="btn com-button btn-success" value="Ekspor Soal" onclick="window.location='ujian-paket-soal.php?option=export&test_collection_id=<?php echo $test_collection_id;?>'" />
-        <input type="button" name="add" id="add" class="btn com-button btn-success" value="Tambah Soal" onclick="window.location='ujian-paket-soal.php?option=add&test_collection_id=<?php echo $test_collection_id;?>'" />
+        <input type="button" name="urutkan_soal" id="urutkan_soal" class="btn btn-success" value="Urutkan Soal" onclick="activateSortOrder()" />
+        <input type="button" name="export" id="export" class="btn btn-success" value="Ekspor Soal" onclick="window.location='ujian-paket-soal.php?option=export&test_collection_id=<?php echo $test_collection_id;?>'" />
+        <input type="button" name="add" id="add" class="btn btn-success" value="Tambah Soal" onclick="window.location='ujian-paket-soal.php?option=add&test_collection_id=<?php echo $test_collection_id;?>'" />
         </div>
         <?php
 	}
@@ -1409,7 +1409,7 @@ $(document).ready(function(e) {
     </select>
     <span class="search-label">Nama</span>
     <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
-  <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
+  <input type="submit" name="search" id="search" value="Cari" class="btn btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -1526,8 +1526,8 @@ $paginationHTML = $pagination->buildHTML();
 </div>
 
 <div class="button-area">
-  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn com-button btn-primary" />
-  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn com-button btn-warning" />
+  <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn btn-primary" />
+  <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn btn-warning" />
   </div>
 </form>
 <?php

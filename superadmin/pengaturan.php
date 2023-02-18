@@ -172,8 +172,8 @@ if(!empty($school_id))
         </table>
         <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
             <tr><td></td>
-            <td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> 
-            <input type="button" name="showall" id="showall" value="Batalkan" class="btn com-button btn-primary" onclick="window.location='./'" /></td>
+            <td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> 
+            <input type="button" name="showall" id="showall" value="Batalkan" class="btn btn-primary" onclick="window.location='./'" /></td>
             </tr>
         </table>
         </form>

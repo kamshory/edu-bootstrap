@@ -103,7 +103,7 @@ $avatar_url = "media.edu/user.avatar/admin/$admin_id/img-300x300.jpg?rand=$rand"
             </div>
             <div class="avatar-cropper-preview">
                 <button class="btn btn-success crop-image">Simpan</button>
-                <button class="btn btn-warning">Batalkan</button>
+                <button class="btn btn-secondary">Batalkan</button>
             </div>
         </div>
 	</div>

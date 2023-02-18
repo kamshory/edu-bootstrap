@@ -586,11 +586,11 @@ $array_class = $picoEdu->getArrayClass($school_id);
 		if(!$use_token)
 		{
 		?>
-        <input type="button" name="join" id="join" class="btn com-button btn-success" value="Ikuti Ujian" onclick="window.location='ujian/?option=login&test_id=<?php echo $data['test_id'];?>'" /> 
+        <input type="button" name="join" id="join" class="btn btn-success" value="Ikuti Ujian" onclick="window.location='ujian/?option=login&test_id=<?php echo $data['test_id'];?>'" /> 
         <?php
 		}
 		?>
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn com-button btn-primary" onclick="window.location='ujian.php'" /></td>
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-primary" onclick="window.location='ujian.php'" /></td>
 		</tr>
 	</table>
     <?php
@@ -655,7 +655,7 @@ window.onload = function()
 
     <span class="search-label">Ujian</span>
     <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn btn-success" />
 </form>
 </div>
 

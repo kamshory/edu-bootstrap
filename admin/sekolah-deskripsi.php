@@ -79,8 +79,8 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 <textarea class="wysiwyg-editor" name="description" id="description"><?php echo htmlspecialchars($data['description']);?></textarea>
 </div>
 <div class="input-block button-area-responsive">
-<input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> 
-<input type="button" name="showall" id="showall" value="Kembali" class="btn com-button btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> 
+<input type="button" name="showall" id="showall" value="Batalkan" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
 </div>
 </form>
 <?php
@@ -125,7 +125,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 <div class="page-title"><h3><?php echo $data['name'];?></h3></div>
 <div class="page-content"><?php echo($data['description']!='')?$data['description']:'<p>[Tulis keterangan tentang sekolah. Klik tombol &quot;Ubah&quot; di bawah ini.]</p>';?></div>
 <div class="input-block button-area-responsive">
-<input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit'" />
+<input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit'" />
 </div>
 </form>
 <?php

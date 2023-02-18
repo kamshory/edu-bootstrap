@@ -393,7 +393,8 @@ $(document).ready(function(e) {
 	</table>
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr><td></td>
-		<td><input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan" class="btn com-button btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> 
+		<input type="button" name="showall" id="showall" value="Batalkan" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -572,10 +573,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<tr>
 		<td></td>
 		<td>
-        <input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit'" />
-        <input type="button" name="switch" id="switch" class="btn com-button btn-success" value="Ganti Sekolah" onclick="window.location='ganti-sekolah.php'" />
-        <input type="button" name="import-data" id="import-data" class="btn com-button btn-success" value="Impor Data" onclick="window.location='impor-data.php'" />
-        <input type="button" name="public" id="public" class="btn com-button btn-success" value="Halaman Umum" onclick="window.open('../<?php echo $data['school_code'];?>')" />
+        <input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit'" />
         </td>
 		</tr>
 	</table>

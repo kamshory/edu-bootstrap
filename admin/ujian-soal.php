@@ -425,9 +425,9 @@ for($i=1;$i<=$data['number_of_option']; $i++)
 </fieldset>
 </div>
 <div class="button-area">
-<input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" />
-<input type="button" name="text-mode" id="text-mode" class="btn com-button btn-success" value="Modus Teks" onclick="if(confirm('Apakah Anda akan mengganti modus menjadi teks?')) window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&format=text&test_id=<?php echo $test_id;?>'" />
-<input type="button" name="showall" id="showall" class="btn com-button btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?test_id=<?php echo $test_id;?>'" />
+<input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" />
+<input type="button" name="text-mode" id="text-mode" class="btn btn-success" value="Modus Teks" onclick="if(confirm('Apakah Anda akan mengganti modus menjadi teks?')) window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&format=text&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="showall" id="showall" class="btn btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?test_id=<?php echo $test_id;?>'" />
 </div>
 
 </form>
@@ -562,10 +562,10 @@ if ($stmt2->rowCount() > 0) {
 
 
 <div class="button-area">
-<input type="submit" name="save" id="save" class="btn com-button btn-success" value="Simpan" />
-<input type="button" name="add" id="add" class="btn com-button btn-success" value="Tambah Soal (Teks)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=add&format=text&test_id=<?php echo $test_id; ?>'" />
-<input type="button" name="add" id="add" class="btn com-button btn-success" value="Tambah Soal (HTML)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=add&test_id=<?php echo $test_id; ?>'" />
-<input type="button" name="showall" id="showall" class="btn com-button btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?test_id=<?php echo $test_id; ?>'" />
+<input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" />
+<input type="button" name="add" id="add" class="btn btn-success" value="Tambah Soal (Teks)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=add&format=text&test_id=<?php echo $test_id; ?>'" />
+<input type="button" name="add" id="add" class="btn btn-success" value="Tambah Soal (HTML)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=add&test_id=<?php echo $test_id; ?>'" />
+<input type="button" name="showall" id="showall" class="btn btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?test_id=<?php echo $test_id; ?>'" />
 </div>
 
 </form>
@@ -791,7 +791,7 @@ else
 </table>
 
 <div class="button-area">
-	<input type="button" class="btn com-button btn-success" name="export" id="export" value="Ekspor" onclick="window.open('ujian-analisa.php?test_id=<?php echo $test_id;?>');" />
+	<input type="button" class="btn btn-success" name="export" id="export" value="Ekspor" onclick="window.open('ujian-analisa.php?test_id=<?php echo $test_id;?>');" />
 </div>
 
 <div class="dialogs" style="display:none;">
@@ -896,17 +896,17 @@ if ($stmt2->rowCount() > 0) {
 
 
 <div class="button-area">
-<input type="button" name="urutkan_soal" id="urutkan_soal" class="btn com-button btn-success" value="Urutkan Soal" onclick="activateSortOrder()" />
-<input type="button" name="distribusi_soal" id="distribusi_soal" class="btn com-button btn-success" value="Distribusi KD" onclick="distribution(<?php echo $test_id;?>)" />
-<input type="button" name="export" id="export" class="btn com-button btn-success" value="Ekspor Soal" onclick="window.location='ujian-ekspor.php?test_id=<?php echo $test_id;?>'" />
-<input type="button" name="import" id="import" class="btn com-button btn-success" value="Impor Soal" onclick="window.location='ujian-impor.php?test_id=<?php echo $test_id;?>'" />
-<input type="button" name="collection" id="collection" class="btn com-button btn-success" value="Bank Soal" onclick="window.location='ujian-bank-soal.php'" />
-<input type="button" name="analys" id="analys" class="btn com-button btn-success" value="Analisa Butir Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=analys&test_id=<?php echo $test_id;?>'" />
-<input type="button" name="add" id="add" class="btn com-button btn-success" value="Tambah Soal (HTML)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&test_id=<?php echo $test_id;?>'" />
-<input type="button" name="add" id="add" class="btn com-button btn-success" value="Tambah Soal (Teks)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&format=text&test_id=<?php echo $test_id;?>'" />
-<input type="button" name="download-word" id="download-word" class="btn com-button btn-success" value="Download Format Word" onclick="downloadInWord()" />
-<input type="button" name="show" id="show" class="btn com-button btn-success" value="Tampilkan Informasi Ujian" onclick="window.location='ujian.php?option=detail&test_id=<?php echo $test_id;?>'" />
-<input type="button" name="edit" id="edit" class="btn com-button btn-success" value="Ubah Informasi Ujian" onclick="window.location='ujian.php?option=edit&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="urutkan_soal" id="urutkan_soal" class="btn btn-primary" value="Urutkan Soal" onclick="activateSortOrder()" />
+<input type="button" name="distribusi_soal" id="distribusi_soal" class="btn btn-primary" value="Distribusi KD" onclick="distribution(<?php echo $test_id;?>)" />
+<input type="button" name="export" id="export" class="btn btn-primary" value="Ekspor Soal" onclick="window.location='ujian-ekspor.php?test_id=<?php echo $test_id;?>'" />
+<input type="button" name="import" id="import" class="btn btn-primary" value="Impor Soal" onclick="window.location='ujian-impor.php?test_id=<?php echo $test_id;?>'" />
+<input type="button" name="collection" id="collection" class="btn btn-primary" value="Bank Soal" onclick="window.location='ujian-bank-soal.php'" />
+<input type="button" name="analys" id="analys" class="btn btn-primary" value="Analisa Butir Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=analys&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="add" id="add" class="btn btn-primary" value="Tambah Soal (HTML)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="add" id="add" class="btn btn-primary" value="Tambah Soal (Teks)" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&format=text&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="download-word" id="download-word" class="btn btn-success" value="Download Format Word" onclick="downloadInWord()" />
+<input type="button" name="show" id="show" class="btn btn-primary" value="Tampilkan Informasi Ujian" onclick="window.location='ujian.php?option=detail&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah Informasi Ujian" onclick="window.location='ujian.php?option=edit&test_id=<?php echo $test_id;?>'" />
 </div>
 <?php
 }
@@ -1023,7 +1023,7 @@ window.onload = function()
     </select>
     <span class="search-label">Ujian</span>
     <input type="text" name="q" id="q" autocomplete="off" class="form-control input-text input-text-search" value="<?php echo $picoEdu->getSearchQueryFromUrl();?>" />
-    <input type="submit" name="search" id="search" value="Cari" class="btn com-button btn-success" />
+    <input type="submit" name="search" id="search" value="Cari" class="btn btn-success" />
 </form>
 </div>
 <div class="search-result">
@@ -1146,7 +1146,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	  $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['teacher'];?></a></td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo ($data['open'])?'Terbuka':'Tertutup';?></a></td>
-      <td><?php if($data['number_of_question']){ ?><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?test_id=<?php echo $data['test_id'];?>"><?php echo $data['number_of_question'];?> soal</a><?php } else { echo '-';} ?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['number_of_question'] > 0, '<a href="'.basename($_SERVER['PHP_SELF']).'?test_id='.$data['test_id'].'">'.$data['number_of_question'].' soal</a>', ' - '); ?> </td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
