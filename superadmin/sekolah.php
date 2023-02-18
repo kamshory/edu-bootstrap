@@ -11,7 +11,7 @@ $pageTitle = "Sekolah";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 if(count(@$_POST) && isset($_POST['save']))
 {
-	$school_id = kh_filter_input(INPUT_POST, "school_id2", FILTER_SANITIZE_NUMBER_INT);
+	$school_id = kh_filter_input(INPUT_POST, "school_id2", FILTER_SANITIZE_STRING_NEW);
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
 
 	$name = preg_replace("/[^A-Za-z\.\-\d_]/i"," ",$name);
@@ -61,10 +61,10 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	('$school_code', '$token_school', '$name', '$description', '$school_type_id', '$school_grade_id', '$public_private', '$open', '$principal', '$address', '$phone', '$email', '$language', '$country_id', '$prevent_change_school', '$prevent_resign', '$use_token', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
 	$school_id = $database->getDatabaseConnection()->lastInsertId();
-	$sql = "UPDATE `edu_school` SET `state_id` = state_name_to_id('$state_id', `country_id`) WHERE `school_id` = '$school_id' ";
+	$sql = "UPDATE `edu_school` SET `state_id` = '$state_id' WHERE `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	
-	$sql = "UPDATE `edu_school` SET `city_id` = city_name_to_id('$city_id', `state_id`, `country_id`) WHERE `school_id` = '$school_id' ";
+	$sql = "UPDATE `edu_school` SET `city_id` = '$city_id' WHERE `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	header("Location:".basename($_SERVER['PHP_SELF'])."?option=detail&school_id=$school_id");
 }
@@ -88,10 +88,10 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	";
 	$database->executeUpdate($sql, true);
 	
-	$sql = "UPDATE `edu_school` SET `state_id` = state_name_to_id('$state_id', `country_id`) WHERE `school_id` = '$school_id' ";
+	$sql = "UPDATE `edu_school` SET `state_id` = '$state_id' WHERE `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	
-	$sql = "UPDATE `edu_school` SET `city_id` = city_name_to_id('$city_id', `state_id`, `country_id`) WHERE `school_id` = '$school_id' ";
+	$sql = "UPDATE `edu_school` SET `city_id` = '$city_id' WHERE `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&school_id=$school_id");
 }
@@ -164,7 +164,7 @@ function onChangeCountry()
 			var i, j;
 			for(i in data)
 			{
-				html += '<option value="'+data[i].l+'">'+data[i].l+'</option>';
+				html += '<option value="'+data[i].v+'">'+data[i].l+'</option>';
 			}
 			html += '<option value="--">'+'Tambah Provinsi'+'</option>';
 			$('#state_id').append(html);
@@ -183,7 +183,7 @@ function onChangeCountry()
 			var i, j;
 			for(i in data)
 			{
-				html += '<option value="'+data[i].l+'">'+data[i].l+'</option>';
+				html += '<option value="'+data[i].v+'">'+data[i].l+'</option>';
 			}
 			html += '<option value="--">'+'Tambah Kabupaten/Kota'+'</option>';
 			$('#city_id').append(html);
@@ -221,7 +221,7 @@ $(document).ready(function(e) {
 					var i, j;
 					for(i in data)
 					{
-						html += '<option value="'+data[i].l+'">'+data[i].l+'</option>';
+						html += '<option value="'+data[i].v+'">'+data[i].l+'</option>';
 					}
 					html += '<option value="--">'+'Tambah Kabupaten/Kota'+'</option>';
 					$('#city_id').append(html);
@@ -477,7 +477,7 @@ function onChangeCountry()
 			var i, j;
 			for(i in data)
 			{
-				html += '<option value="'+data[i].l+'">'+data[i].l+'</option>';
+				html += '<option value="'+data[i].v+'">'+data[i].l+'</option>';
 			}
 			html += '<option value="--">'+'Tambah Provinsi'+'</option>';
 			$('#state_id').append(html);
@@ -496,7 +496,7 @@ function onChangeCountry()
 			var i, j;
 			for(i in data)
 			{
-				html += '<option value="'+data[i].l+'">'+data[i].l+'</option>';
+				html += '<option value="'+data[i].v+'">'+data[i].l+'</option>';
 			}
 			html += '<option value="--">'+'Tambah Kabupaten/Kota'+'</option>';
 			$('#city_id').append(html);
@@ -534,7 +534,7 @@ $(document).ready(function(e) {
 					var i, j;
 					for(i in data)
 					{
-						html += '<option value="'+data[i].l+'">'+data[i].l+'</option>';
+						html += '<option value="'+data[i].v+'">'+data[i].l+'</option>';
 					}
 					html += '<option value="--">'+'Tambah Kabupaten/Kota'+'</option>';
 					$('#city_id').append(html);

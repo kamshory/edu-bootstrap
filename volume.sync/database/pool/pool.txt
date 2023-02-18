@@ -11,3 +11,99 @@ UPDATE `edu_test` SET
 	`time_create` = '2023-02-18 11:17:43', `time_edit` = '2023-02-18 11:17:43', `member_create` = 'aaaaaaaaaaaaa', `role_create` = 'A', 
 	`member_edit` = 'aaaaaaaaaaaaa', `role_edit` = 'A', `ip_create` = '127.0.0.1', `ip_edit` = '127.0.0.1', `active` = '0'
 	WHERE `test_id` = '063f04f18dd5e88daeaa' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET `prevent_change_school` = '1', `prevent_resign` = '1'
+	WHERE `school_id` = '6368280189951';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `prevent_change_school` = '1', `prevent_resign` = '1'
+	WHERE `school_id` = '6368280189951';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET
+	`school_code` = 'sma-planet-edu-jakarta', `name` = 'SMA Planet Edu Jakarta', `school_grade_id` = '5', `public_private` = 'U', 
+	`open` = '0', `principal` = 'Drs. Mukidi', `address` = 'JAKARTA', `phone` = '0210000011', `email` = '', `country_id` = 'ID',
+	`use_token` = '1'
+	WHERE `school_id` = '6368280189951';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `state_id` = state_name_to_id('1681', `country_id`) WHERE `school_id` = '6368280189951';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `city_id` = city_name_to_id('Balikpapan', `state_id`, `country_id`) WHERE `school_id` = '6368280189951';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET `prevent_change_school` = '1', `prevent_resign` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `prevent_change_school` = '1', `prevent_resign` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET
+	`school_code` = 'sma-planet-edu-jakarta', `name` = 'SMA Planet Edu Jakarta', `school_grade_id` = '5', `public_private` = 'U', 
+	`open` = '0', `principal` = 'Drs. Mukidi', `address` = 'JAKARTA', `phone` = '0210000011', `email` = '', `country_id` = 'ID',
+	`use_token` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `state_id` = state_name_to_id('1680', `country_id`) WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `city_id` = city_name_to_id('Kabupaten Sukamara', `state_id`, `country_id`) WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET `prevent_change_school` = '1', `prevent_resign` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `prevent_change_school` = '1', `prevent_resign` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET
+	`school_code` = 'sma-planet-edu-jakarta', `name` = 'SMA Planet Edu Jakarta', `school_grade_id` = '5', `public_private` = 'U', 
+	`open` = '0', `principal` = 'Drs. Mukidi', `address` = 'JAKARTA', `phone` = '0210000011', `email` = '', `country_id` = 'ID',
+	`use_token` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `state_id` = state_name_to_id('1680', `country_id`) WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `city_id` = city_name_to_id('Palangka Raya', `state_id`, `country_id`) WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET `prevent_change_school` = '1', `prevent_resign` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `prevent_change_school` = '1', `prevent_resign` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET
+	`school_code` = 'sma-planet-edu-jakarta', `name` = 'SMA Planet Edu Jakarta', `school_grade_id` = '5', `public_private` = 'U', 
+	`open` = '0', `principal` = 'Drs. Mukidi', `address` = 'JAKARTA', `phone` = '0210000011', `email` = '', `country_id` = 'ID',
+	`use_token` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `state_id` = state_name_to_id('1679', `country_id`) WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `city_id` = 'Kabupaten Tanah Laut' WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET `prevent_change_school` = '1', `prevent_resign` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `prevent_change_school` = '1', `prevent_resign` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET
+	`school_code` = 'sma-planet-edu-jakarta', `name` = 'SMA Planet Edu Jakarta', `school_grade_id` = '5', `public_private` = 'U', 
+	`open` = '0', `principal` = 'Drs. Mukidi', `address` = 'JAKARTA', `phone` = '0210000011', `email` = '', `country_id` = 'ID',
+	`use_token` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `state_id` = state_name_to_id('1678', `country_id`) WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `city_id` = '48589' WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET `prevent_change_school` = '1', `prevent_resign` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `prevent_change_school` = '1', `prevent_resign` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET
+	`school_code` = 'sma-planet-edu-jakarta', `name` = 'SMA Planet Edu Jakarta', `school_grade_id` = '5', `public_private` = 'U', 
+	`open` = '0', `principal` = 'Drs. Mukidi', `address` = 'JAKARTA', `phone` = '0210000011', `email` = '', `country_id` = 'ID',
+	`use_token` = '1'
+	WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `state_id` = '1680' WHERE `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_school` SET `city_id` = '48622' WHERE `school_id` = '063ce682801be89951aa';

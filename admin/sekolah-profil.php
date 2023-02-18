@@ -60,11 +60,11 @@ if(isset($_POST['save']) && count(@$_POST))
 	WHERE `school_id` = '$school_id'
 	";
 	$database->executeUpdate($sql, true);
-	$sql = "UPDATE `edu_school` SET `state_id` = state_name_to_id('$state_id', `country_id`) WHERE `school_id` = '$school_id' ";
+	$sql = "UPDATE `edu_school` SET `state_id` = '$state_id' WHERE `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	
 	$sql = "UPDATE `edu_school` SET 
-	`city_id` = city_name_to_id('$city_id', `state_id`, `country_id`) WHERE `school_id` = '$school_id' ";
+	`city_id` = '$city_id' WHERE `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
 	header("Location: ".basename($_SERVER['PHP_SELF']));
 		
@@ -134,7 +134,7 @@ function onChangeCountry()
 			var i, j;
 			for(i in data)
 			{
-				html += '<option value="'+data[i].l+'">'+data[i].l+'</option>';
+				html += '<option value="'+data[i].v+'">'+data[i].l+'</option>';
 			}
 			html += '<option value="--">'+'Tambah Provinsi'+'</option>';
 			$('#state_id').append(html);
@@ -153,7 +153,7 @@ function onChangeCountry()
 			var i, j;
 			for(i in data)
 			{
-				html += '<option value="'+data[i].l+'">'+data[i].l+'</option>';
+				html += '<option value="'+data[i].v+'">'+data[i].l+'</option>';
 			}
 			html += '<option value="--">'+'Tambah Kabupaten/Kota'+'</option>';
 			$('#city_id').append(html);
@@ -191,7 +191,7 @@ $(document).ready(function(e) {
 					var i, j;
 					for(i in data)
 					{
-						html += '<option value="'+data[i].l+'">'+data[i].l+'</option>';
+						html += '<option value="'+data[i].v+'">'+data[i].l+'</option>';
 					}
 					html += '<option value="--">'+'Tambah Kabupaten/Kota'+'</option>';
 					$('#city_id').append(html);
