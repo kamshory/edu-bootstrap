@@ -157,7 +157,7 @@ function onChangeCountry()
 		dataType:"json",
 		data:{country_id:country_id},
 		success: function(data){
-			$('#state_id').replaceWith('<select name="state_id" id="state_id" required="required" data-full-width="true"></select>');
+			$('#state_id').replaceWith('<select class="form-control" name="state_id" id="state_id" required="required"></select>');
 			$('#state_id').empty();
 			var html = '';
 			html += '<option value="">'+'Pilih Provinsi'+'</option>';
@@ -176,7 +176,7 @@ function onChangeCountry()
 		dataType:"json",
 		data:{country_id:country_id},
 		success: function(data){
-			$('#city_id').replaceWith('<select name="city_id" id="city_id" required="required" data-full-width="true"></select>');
+			$('#city_id').replaceWith('<select class="form-control" name="city_id" id="city_id" required="required"></select>');
 			$('#city_id').empty();
 			var html = '';
 			html += '<option value="">'+'Pilih Kabupaten/Kota'+'</option>';
@@ -200,7 +200,7 @@ $(document).ready(function(e) {
 		{
 			if(confirm('Apakah Anda akan mengubah jenis masukan?'))
 			{
-				$(this).replaceWith('<input type="text" name="state_id" id="state_id" required="required" data-full-width="true">');
+				$(this).replaceWith('<input class="form-control" type="text" name="state_id" id="state_id" required="required">');
 				$('#state_id').select();
 			}
 		}
@@ -212,9 +212,9 @@ $(document).ready(function(e) {
 				url:'../lib.ajax/ajax-load-city-list.php',
 				type:'GET',
 				dataType:"json",
-				data:{state_name:state_name, country_id:country_id},
+				data:{state_id:state_name, country_id:country_id},
 				success: function(data){
-					$('#city_id').replaceWith('<select name="city_id" id="city_id" required="required" data-full-width="true"></select>');
+					$('#city_id').replaceWith('<select class="form-control" name="city_id" id="city_id" required="required"></select>');
 					$('#city_id').empty();
 					var html = '';
 					html += '<option value="">'+'Pilih Kabupaten/Kota'+'</option>';
@@ -235,7 +235,7 @@ $(document).ready(function(e) {
 		{
 			if(confirm('Apakah Anda akan mengubah jenis masukan?'))
 			{
-				$(this).replaceWith('<input type="text" name="city_id" id="city_id" required="required" data-full-width="true">');
+				$(this).replaceWith('<input class="form-control" type="text" name="city_id" id="city_id" required="required">');
 				$('#city_id').select();
 			}
 		}
@@ -470,7 +470,7 @@ function onChangeCountry()
 		dataType:"json",
 		data:{country_id:country_id},
 		success: function(data){
-			$('#state_id').replaceWith('<select name="state_id" id="state_id" required="required" data-full-width="true"></select>');
+			$('#state_id').replaceWith('<select class="form-control" name="state_id" id="state_id" required="required"></select>');
 			$('#state_id').empty();
 			var html = '';
 			html += '<option value="">'+'Pilih Provinsi'+'</option>';
@@ -489,7 +489,7 @@ function onChangeCountry()
 		dataType:"json",
 		data:{country_id:country_id},
 		success: function(data){
-			$('#city_id').replaceWith('<select name="city_id" id="city_id" required="required" data-full-width="true"></select>');
+			$('#city_id').replaceWith('<select class="form-control" name="city_id" id="city_id" required="required"></select>');
 			$('#city_id').empty();
 			var html = '';
 			html += '<option value="">'+'Pilih Kabupaten/Kota'+'</option>';
@@ -513,7 +513,7 @@ $(document).ready(function(e) {
 		{
 			if(confirm('Apakah Anda akan mengubah jenis masukan?'))
 			{
-				$(this).replaceWith('<input type="text" name="state_id" id="state_id" required="required" data-full-width="true">');
+				$(this).replaceWith('<input class="form-control" type="text" name="state_id" id="state_id" required="required">');
 				$('#state_id').select();
 			}
 		}
@@ -525,9 +525,9 @@ $(document).ready(function(e) {
 				url:'../lib.ajax/ajax-load-city-list.php',
 				type:'GET',
 				dataType:"json",
-				data:{state_name:state_name, country_id:country_id},
+				data:{state_id:state_name, country_id:country_id},
 				success: function(data){
-					$('#city_id').replaceWith('<select name="city_id" id="city_id" required="required" data-full-width="true"></select>');
+					$('#city_id').replaceWith('<select class="form-control" name="city_id" id="city_id" required="required"></select>');
 					$('#city_id').empty();
 					var html = '';
 					html += '<option value="">'+'Pilih Kabupaten/Kota'+'</option>';
@@ -548,7 +548,7 @@ $(document).ready(function(e) {
 		{
 			if(confirm('Apakah Anda akan mengubah jenis masukan?'))
 			{
-				$(this).replaceWith('<input type="text" name="city_id" id="city_id" required="required" data-full-width="true">');
+				$(this).replaceWith('<input class="form-control" type="text" name="city_id" id="city_id" required="required">');
 				$('#city_id').select();
 			}
 		}
@@ -556,7 +556,6 @@ $(document).ready(function(e) {
 	var prefix = $('#country_id option:selected').attr('data-code');
 	$('#phone_code').val(prefix);
 });
-
 </script>
 <form name="formedu_school" id="formedu_school" action="" method="post" enctype="multipart/form-data">
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
