@@ -59,7 +59,8 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 					('$question_id', '$content', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
 					'$time_create', '$member_create', '$time_edit', '$member_edit', true)
 					";
-					$picoEdu->log($sql1);
+					
+					
 					$stmt = $database->executeInsert($sql1, true);
 					if ($stmt->rowCount() == 0) 
 					{
