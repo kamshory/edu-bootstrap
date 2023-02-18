@@ -143,7 +143,7 @@ if (@$_GET['option'] == 'add') {
 	$edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_class`.* 
 	FROM `edu_class` 
-	where 1
+	WHERE 1
 	AND `edu_class`.`class_id` = '$edit_key'
 	";
 	$stmt = $database->executeQuery($sql);

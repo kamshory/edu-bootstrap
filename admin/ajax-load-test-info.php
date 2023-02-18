@@ -36,7 +36,7 @@ if(isset($_GET['test_id']))
 	(SELECT `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_create`) AS `member_create`,
 	(SELECT `member`.`name` FROM `member` WHERE `member`.`member_id` = `edu_test`.`member_edit`) AS `member_edit`
 	FROM `edu_test` 
-	where 1
+	WHERE 1
 	AND `edu_test`.`test_id` = '$test_id' AND `edu_test`.`school_id` = '$school_id' 
 	";
 	$stmt = $database->executeQuery($sql);

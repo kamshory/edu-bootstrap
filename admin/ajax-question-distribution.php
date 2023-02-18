@@ -30,7 +30,7 @@ if(isset($_POST['save']) && isset($_POST['test_id']) && isset($_POST['data']))
 else
 {
 	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
-	if($test_id)
+	if(!empty($test_id))
 	{
 		$randobj = array();
 		$sql = "SELECT `edu_test`.`random_distribution`

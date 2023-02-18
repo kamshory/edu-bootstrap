@@ -248,7 +248,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "admin_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_admin`.* 
 FROM `edu_admin` 
-where 1=1 
+WHERE 1=1 
 AND `edu_admin`.`school_id` = '$school_id' 
 AND `edu_admin`.`admin_id` = '$edit_key' 
 AND (`admin_level` != '1' OR `admin_id` = '$my_admin')

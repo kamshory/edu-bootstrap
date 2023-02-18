@@ -285,7 +285,7 @@ class PicoDatabase
 	 * @param string $sql Query string to be executed
 	 * @return PDOStatement
 	 */
-	public function executeQuery($sql) : \PDOStatement
+	public function executeQuery($sql) : PDOStatement
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -327,7 +327,7 @@ class PicoDatabase
 	 * @param bool $sync Flag synchronizing
 	 * @return PDOStatement
 	 */
-	public function executeInsert($sql, $sync) : \PDOStatement
+	public function executeInsert($sql, $sync) : PDOStatement
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
@@ -338,7 +338,7 @@ class PicoDatabase
 	 * @param bool $sync Flag synchronizing
 	 * @return PDOStatement|bool
 	 */
-	public function executeUpdate($sql, $sync) : \PDOStatement
+	public function executeUpdate($sql, $sync) : PDOStatement
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
@@ -349,7 +349,7 @@ class PicoDatabase
 	 * @param bool $sync Flag synchronizing
 	 * @return PDOStatement
 	 */
-	public function executeDelete($sql, $sync) : \PDOStatement
+	public function executeDelete($sql, $sync) : PDOStatement
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
@@ -360,7 +360,7 @@ class PicoDatabase
 	 * @param bool $sync Flag synchronizing
 	 * @return PDOStatement
 	 */
-	public function executeTransaction($sql, $sync) : \PDOStatement
+	public function executeTransaction($sql, $sync) : PDOStatement
 	{
 		return $this->executeAndSync($sql, $sync);
 	}

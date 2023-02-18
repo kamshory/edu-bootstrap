@@ -58,8 +58,7 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 					`time_create`, `member_create`, `time_edit`, `member_edit`, `active`) VALUES
 					('$question_id', '$content', '$test_id', '$sort_order', '1', '$random', '$numbering', '$digest', 
 					'$time_create', '$member_create', '$time_edit', '$member_edit', true)
-					";
-					
+					";				
 					
 					$stmt = $database->executeInsert($sql1, true);
 					if ($stmt->rowCount() == 0) 
