@@ -1129,13 +1129,13 @@ class PicoEdu //NOSONAR
 		{
 			if($selected != null && $selected == $key)
 			{
-				$sel = " selected=\"selected\"";
+				$sel = PicoConst::SELECT_OPTION_SELECTED;
 			}
 			else
 			{
 				$sel = "";
 			}
-			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$val</option>";
+			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$val</option>"; //NOSONAR
 		}
 		return $html;
 	}
@@ -1148,13 +1148,13 @@ class PicoEdu //NOSONAR
 		{
 			if($selected != null && $selected == $key)
 			{
-				$sel = " selected=\"selected\"";
+				$sel = PicoConst::SELECT_OPTION_SELECTED;
 			}
 			else
 			{
 				$sel = "";
 			}
-			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$val</option>";
+			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$val</option>"; //NOSONAR
 		}
 		return $html;
 	}
@@ -1285,7 +1285,7 @@ class PicoEdu //NOSONAR
 			$label = implode(", ", $val);
 			if($selected != null && $selected == $key)
 			{
-				$sel = " selected=\"selected\"";
+				$sel = PicoConst::SELECT_OPTION_SELECTED;
 			}
 			else
 			{

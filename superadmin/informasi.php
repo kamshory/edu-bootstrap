@@ -604,7 +604,7 @@ $paginationHTML = $pagination->buildHTML();
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&info_id=<?php echo $data['info_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo ($data['admin_edit_name']);?></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['admin_edit_name'];?></a></td>
       <td nowrap="nowrap"><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['time_edit'];?></a></td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>

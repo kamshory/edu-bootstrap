@@ -1,6 +1,6 @@
 <?php
 
-class BrowserCache{
+class BrowserCache {
     public function __construct()
     {
         //Do nothing
