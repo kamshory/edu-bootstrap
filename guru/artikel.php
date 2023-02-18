@@ -307,7 +307,7 @@ if($stmt->rowCount() > 0)
 {
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	?>
-	<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/FileSaver.js"></script>
 <script type="text/javascript">
 $(document).ready(function(e) {
@@ -361,17 +361,17 @@ return doc;
 	<div class="article-content"><?php echo $data['content'];?></div>
 	<div class="article-time">Dibuat <strong><?php echo $data['time_create'];?></strong></div>
 	<div class="article-creator">Oleh <strong><?php echo $data['creator'];?></strong></div>
-	<div class="article-link">
-		<a href="artikel.php">Lihat Semua</a>
+	<div class="button-area">
+		<a class="btn btn-primary" href="artikel.php">Lihat Semua</a>
 		<?php
 		if($teacher_id && $school_id && $school_id == $data['school_id'] && $teacher_id == $data['member_create'])
 		{
 			?>
-			<a href="artikel.php?option=edit&article_id=<?php echo $data['article_id'];?>">Ubah</a>
+			<a class="btn btn-primary" href="artikel.php?option=edit&article_id=<?php echo $data['article_id'];?>">Ubah</a>
 			<?php
 		}
 		?>
-		<a href="javascript:;" class="download-word">Download</a>
+		<a class="btn btn-primary" href="javascript:;" class="download-word">Download</a>
 	</div>
 	<?php
 }
