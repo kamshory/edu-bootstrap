@@ -7,7 +7,7 @@ if($adminLoggedIn->admin_level != 1)
 }
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-$pageTitle = "Paket Soal";
+$pageTitle = "Kelola Paket Soal";
 require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
 $time_create = $time_edit = $database->getLocalDateTime();
 
@@ -690,8 +690,8 @@ $options = array();
 
 
 $data3['collection'] = count($test_data->item);
-$data3['standard_score'] = 0;
-$data3['number_of_option'] = 0;
+//$data3['standard_score'] = 0;
+//$data3['number_of_option'] = 0;
 
 $sort_order = 0;
 $nquestion = 0;
@@ -1058,15 +1058,15 @@ if(isset($data->file))
 <table width="100%" border="0">
   <tr>
     <td width="160">Nama Ujian</td>
-    <td><?php echo ($data3['name']);?> </td>
+    <td><?php echo $data3['name'];?> </td>
   </tr>
   <tr>
     <td>Koleksi Soal</td>
-    <td><?php echo ($data3['collection']);?> soal <a href="ujian-paket-soal.php?test_collection_id=<?php echo ($data3['test_collection_id']);?>">Lihat</a></td>
+    <td><?php echo $data3['collection'];?> soal <a href="kelola-paket-soal.php?test_collection_id=<?php echo $data3['test_collection_id'];?>">Lihat</a></td>
   </tr>
   <tr>
     <td>Jumlah Pilihan</td>
-    <td><?php echo ($data3['number_of_option']);?> pilihan</td>
+    <td><?php echo $data3['number_of_option'];?> pilihan</td>
   </tr>
 </table>
  </div>
@@ -1077,7 +1077,7 @@ if(isset($data->file))
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td width="160">Kompetensi Dasar</td>
-    <td><input type="text" class="form-control input-text input-text-short" name="basic_competence" id="basic_competence" value="<?php echo @$data->competence;?>" /></td>
+    <td><input type="text" class="input-text input-text-short" name="basic_competence" id="basic_competence" value="<?php echo @$data->competence;?>" /></td>
   </tr>
   <tr>
     <td>Tipe Pilihan</td>
@@ -1087,12 +1087,13 @@ if(isset($data->file))
   </tr>
   <tr>
     <td>Pengacakan Pilihan</td>
-    <td><label><input type="checkbox" name="random" id="random" value="1"<?php if($data->random) echo PicoConst::INPUT_CHECKBOX_CHECKED;?> /> Diacak</label></td>
+    <td><label><input type="checkbox" name="random" id="random" value="1"<?php echo $picoEdu->trueFalse(isset($data->random) && $data->random, PicoConst::INPUT_CHECKBOX_CHECKED, '');?> /> Diacak</label></td>
   </tr>
 </table>
 </div>
 <div class="question-editor">
-<textarea spellcheck="false" class="htmleditor" name="question" id="question" style="width:100%;"><?php echo htmlspecialchars(($data->text));?></textarea><input type="hidden" name="question_index" id="question_index" value="<?php echo $question_index;?>" />
+<textarea spellcheck="false" class="htmleditor" name="question" id="question" style="width:100%;"><?php echo $picoEdu->trueFalse(isset($data->text), htmlspecialchars($data->text), '');?></textarea>
+<input type="hidden" name="question_index" id="question_index" value="<?php echo $question_index;?>" />
 </div>
 </fieldset>
 </div>
@@ -1102,6 +1103,12 @@ if(isset($data->file))
 <legend>Pilihan Jawaban</legend>
 
 <?php
+
+if(!isset($data3['standard_score']))
+{
+	$data3['standard_score'] = 1;
+}
+
 $numbering = $picoEdu->trimWhitespace($data->numbering);
 $i = 0;
 $count_option = count($data_options);
@@ -1148,7 +1155,7 @@ for($jj = 0; $jj < $count_option; $jj++)
 ?>
 <div class="option-item" data-index="<?php echo $i;?>">
 <div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i];?></span> | Nilai 
-<input type="number" min="0" max="<?php echo $data3['standard_score'];?>" class="form-control input-text input-text-short" name="score[<?php echo $i;?>]" id="score_<?php echo $i;?>" value="<?php echo $data2->value;?>" autocomplete="off" /> (Nilai Maksimum <?php echo $data3['standard_score'];?>)</div>
+<input type="number" min="0" max="<?php echo $data3['standard_score'];?>" class="input-text input-text-short" name="score[<?php echo $i;?>]" id="score_<?php echo $i;?>" value="<?php echo $data2->value;?>" autocomplete="off" /> (Nilai Maksimum <?php echo $data3['standard_score'];?>)</div>
 <div class="option-editor">
 <textarea spellcheck="false" class="htmleditor" name="option[<?php echo $i;?>]" id="option_<?php echo $i;?>" style="width:100%;"><?php echo htmlspecialchars(($data2->text));?></textarea>
 </div>
@@ -1200,6 +1207,7 @@ if($stmt->rowCount() > 0)
         
         
         <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery.ui.touch-punch.js"></script>
+        <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.vendors/sortable/sortable.js"></script>
         <script type="text/javascript">
         
         // Background
@@ -1226,21 +1234,15 @@ if($stmt->rowCount() > 0)
         }, false);
         
         function activateSortOrder()
-        {
-            $("#sortable").sortable({
-                placeholder: "ui-state-highlight",
-                forcePlaceholderSize: true,
-                revert: true,
-                change:function(event, ui)
-                {
-                },
-                stop: function(event, ui)
-                {
-                    var array_question = [];
+        {		
+			Sortable.create(sortable, {
+				nimation: 100,
+				onChange:function(evt){
+					var array_question = [];
                     $("#sortable > li").each(function(index, element) {
                     array_question.push($(this).attr('data-question-index'));
                     });
-                    $.post('ujian-paket-soal.php', {array_question:array_question.join(','), sort:'yes',test_collection_id:test_collection_id}, function(answer){
+					$.post('kelola-paket-soal.php', {array_question:array_question.join(','), sort:'yes',test_collection_id:test_collection_id}, function(answer){
 						console.log(answer);
 						var idx = 0;
 						$("#sortable > li").each(function(index, element) {
@@ -1248,9 +1250,8 @@ if($stmt->rowCount() > 0)
 							idx++;
 						});
                     });
-                }
-            });
-            $("#sortable").disableSelection();
+				}
+			});
         }
         window.onload=function(){
 			$('.test-question').attr('id', 'sortable');
@@ -1266,14 +1267,14 @@ if($stmt->rowCount() > 0)
             });
 			$(document).on('click', '.editquestion', function(e){
 				var index = $(this).closest('li').attr('data-question-index');
-				window.location = 'ujian-paket-soal.php?option=edit&test_collection_id='+test_collection_id+'&question_index='+index;
+				window.location = 'kelola-paket-soal.php?option=edit&test_collection_id='+test_collection_id+'&question_index='+index;
 				e.preventDefault();
 			});
 			$(document).on('click', '.deletequestion', function(e){
 				var index = $(this).closest('li').attr('data-question-index');
 				if(confirm('Apakah Anda akan menghapus soal ini?'))
 				{
-					window.location = 'ujian-paket-soal.php?option=delete&test_collection_id='+test_collection_id+'&question_index='+index;
+					window.location = 'kelola-paket-soal.php?option=delete&test_collection_id='+test_collection_id+'&question_index='+index;
 				}
 				e.preventDefault();
 			});
@@ -1316,8 +1317,8 @@ if($stmt->rowCount() > 0)
         </div>
         <div class="button-area">
         <input type="button" name="urutkan_soal" id="urutkan_soal" class="btn btn-success" value="Urutkan Soal" onclick="activateSortOrder()" />
-        <input type="button" name="export" id="export" class="btn btn-success" value="Ekspor Soal" onclick="window.location='ujian-paket-soal.php?option=export&test_collection_id=<?php echo $test_collection_id;?>'" />
-        <input type="button" name="add" id="add" class="btn btn-success" value="Tambah Soal" onclick="window.location='ujian-paket-soal.php?option=add&test_collection_id=<?php echo $test_collection_id;?>'" />
+        <input type="button" name="export" id="export" class="btn btn-success" value="Ekspor Soal" onclick="window.location='kelola-paket-soal.php?option=export&test_collection_id=<?php echo $test_collection_id;?>'" />
+        <input type="button" name="add" id="add" class="btn btn-success" value="Tambah Soal" onclick="window.location='kelola-paket-soal.php?option=add&test_collection_id=<?php echo $test_collection_id;?>'" />
         </div>
         <?php
 	}
@@ -1479,7 +1480,7 @@ $paginationHTML = $pagination->buildHTML();
   <thead>
     <tr>
       <td width="16"><input type="checkbox" name="control-test_collection_id" id="control-test_collection_id" class="checkbox-selector" data-target=".test_collection_id" value="1"></td>
-      <td width="16"><i class="fas fa-pencil"></i></td>
+      <td width="16"><i class="fas fa-list"></i></td>
       <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Browse" border="0" /></td>
       <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-download-16" alt="Download" border="0" /></td>
       <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-key-16" alt="Key" border="0" /></td>
@@ -1504,7 +1505,7 @@ $paginationHTML = $pagination->buildHTML();
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="test_collection_id[]" id="test_collection_id" value="<?php echo $data['test_collection_id'];?>" class="test_collection_id" /></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_collection_id=<?php echo $data['test_collection_id'];?>"><i class="fas fa-pencil"></i></a></td>
+      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_collection_id=<?php echo $data['test_collection_id'];?>"><i class="fas fa-list"></i></a></td>
       <td><a class="load-collection" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Browse" border="0" /></a></td>
       <td><a class="load-word" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-download-16" alt="Download" border="0" /></a></td>
       <td><a class="load-key" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>&key=1"><img src="lib.tools/images/trans.gif" class="icon-16 icon-key-16" alt="Key" border="0" /></a></td>

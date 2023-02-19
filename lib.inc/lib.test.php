@@ -1421,10 +1421,10 @@ function loadXmlData($xml_file) //NOSONAR
 				} else {
 					$cs = '';
 				}
-				$options[] = "<li><span class=\"option-circle$cs\">$score</span><div class=\"list-option-item\"><div class=\"option-content\">" . $option . "</div></div></li>";
+				$options[] = "<li class=\"list-option\" ><span class=\"option-circle$cs\">$score</span><div class=\"list-option-item\"><div class=\"option-content\">" . $option . "</div></div></li>";
 			}
 		}
-		$questions[] = "<li data-question-index=\"$index\"><div class=\"question\"><span class=\"competence-control\">" . $competence . "</span><a class=\"select-question\" href=\"javascript:;\" data-index=\"$index\" data-selected=\"true\"><span></span></a>" . $pertanyaan . "<ol style=\"list-style-type:$numbering\">" . implode("\r\n", $options) . "</ol></div></li>";
+		$questions[] = "<li class=\"list-question\" data-question-index=\"$index\"><div class=\"question\"><span class=\"competence-control\">" . $competence . "</span><a class=\"select-question\" href=\"javascript:;\" data-index=\"$index\" data-selected=\"true\"><span></span></a>" . $pertanyaan . "<ol style=\"list-style-type:$numbering\">" . implode("\r\n", $options) . "</ol></div></li>";
 		$index++;
 	}
 	$text_all = "<ol class=\"test-question\">" . implode("\r\n", $questions) . "</ol>";

@@ -76,16 +76,16 @@ if($imageinterlace==0) {
 </tr>
 <tr>
 <td class="tdr">Maximum Image Width</td>
-<td><input type="text" name="maximagewidth" id="maximagewidth" value="<?php echo getfmprofile('maximagewidth',$authblogid,600);?>" class="form-control input-text input-text-short" autocomplete="off" /></td>
+<td><input type="text" name="maximagewidth" id="maximagewidth" value="<?php echo getfmprofile('maximagewidth',$authblogid,600);?>" class="input-text input-text-short" autocomplete="off" /></td>
 </tr>
 <tr>
 <td class="tdr">Maximum Image Height</td>
-<td><input type="text" name="maximageheight" id="maximageheight" value="<?php echo getfmprofile('maximageheight',$authblogid,800);?>" class="form-control input-text input-text-short" autocomplete="off" /></td>
+<td><input type="text" name="maximageheight" id="maximageheight" value="<?php echo getfmprofile('maximageheight',$authblogid,800);?>" class="input-text input-text-short" autocomplete="off" /></td>
 </tr>
 
 <tr>
 <td class="tdr">Image Quality</td>
-<td><input type="text" name="imagequality" id="imagequality" value="<?php echo getfmprofile('imagequality',$authblogid,80);?>" class="form-control input-text input-text-short" autocomplete="off" /></td>
+<td><input type="text" name="imagequality" id="imagequality" value="<?php echo getfmprofile('imagequality',$authblogid,80);?>" class="input-text input-text-short" autocomplete="off" /></td>
 </tr>
 </table>
 </form>

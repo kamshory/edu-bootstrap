@@ -90,9 +90,14 @@ $structure = array(
                 'link'=>'ujian-bank-soal.php'                       
             ),
             array(
-                'caption'=>'Paket Soal',
+                'caption'=>'Daftar Paket Soal',
                 'icon'=>'fa-box',
-                'link'=>'ujian-paket-soal.php'                       
+                'link'=>'daftar-paket-soal.php'                       
+            ),
+            array(
+                'caption'=>'Kelola Paket Soal',
+                'icon'=>'fa-box',
+                'link'=>'kelola-paket-soal.php'                       
             )
         )
     ),

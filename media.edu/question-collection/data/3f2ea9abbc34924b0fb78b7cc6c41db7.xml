@@ -2,6 +2,39 @@
 <test>
 <item>
 	<question>
+		<text>&lt;p&gt;Ema : &quot;Begitulah Bu, kalau bermenantu dari keluarga kaya baru. Pantang baginya merendahkan diri mendatangi kita. Paling-paling kita disuruhnya untuk menghormati dia.&quot;&lt;br&gt;
+Ibu : &quot;Dasar orang kaya, bagaimana pun ibu tetap tidak mau mengalah. Apalagi kita dari pihak laki-laki.&quot;&lt;br&gt;&lt;br&gt;
+Watak ibu dari penggalan drama di atas adalah...&lt;/p&gt;</text>
+		<numbering>upper-alpha</numbering>
+		<competence></competence>
+		<random></random>
+	</question>
+<answer>
+	<option>
+		<value>1</value>
+		<score></score>
+		<text>&lt;p&gt;keras&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<score></score>
+		<text>&lt;p&gt;pemarah&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<score></score>
+		<text>&lt;p&gt;pemarah&lt;/p&gt;</text>
+	</option>
+	<option>
+		<value>0</value>
+		<score></score>
+		<text>&lt;p&gt;sombong&lt;/p&gt;</text>
+	</option>
+</answer>
+</item>
+
+<item>
+	<question>
 		<text>&lt;p&gt;Pentingnya Hutan&lt;br&gt;&lt;br&gt;
 Pada musim hujan sering terjadi banjir. Salah satu penyebab terjadinya banjir adalah rusaknya lingkungan alam. Kerusakan lingkungan alam menjadikan tanah kritis dan tandus sehingga tidak dapat ditanami. Semua itu terjadi karena penebangan hutan secara besar-besaran dengan sistem tebang habis. Kenyataan ini sering dilakukan oleh para investor asing sebagai pemegang Hak Penguasaan Hutan (HPH), yang mestinya menggunakan sistem tebang pilih, agar pepohonan di hutan tidak punah. Akan tetapi, kenyataannya mereka sering melanggar ketentuan pemerintah untuk mendapatkan keuntungan yang besar. Maka, yang terjadi adalah penggundulan hutan yang sewenang-wenang.&lt;br&gt;
 Kerusakan alam yang disebabkan oleh penggundulan hutan dapat menimbulkan bencana banjir. Pohon-pohon di hutan sebenarnya berfungsi sebagai penahan atau pelindung lapisan tanah agartidak terkikis dan terbawa oleh air hujan. Hal ini dapat kita bandingkan dengan tanggul yang dibuat orang di tebing-tebing sungai. Tanggul tersebut berfungsi sebagai pelindung tanah agartidak terkikis oleh air hujan.&lt;br&gt;
@@ -1232,39 +1265,6 @@ Watak ayah dalam penggalan cerita di atas adalah...&lt;/p&gt;</text>
 		<value>1</value>
 		<score></score>
 		<text>&lt;p&gt;disiplin&lt;/p&gt;</text>
-	</option>
-</answer>
-</item>
-
-<item>
-	<question>
-		<text>&lt;p&gt;Ema : &quot;Begitulah Bu, kalau bermenantu dari keluarga kaya baru. Pantang baginya merendahkan diri mendatangi kita. Paling-paling kita disuruhnya untuk menghormati dia.&quot;&lt;br&gt;
-Ibu : &quot;Dasar orang kaya, bagaimana pun ibu tetap tidak mau mengalah. Apalagi kita dari pihak laki-laki.&quot;&lt;br&gt;&lt;br&gt;
-Watak ibu dari penggalan drama di atas adalah...&lt;/p&gt;</text>
-		<numbering>upper-alpha</numbering>
-		<competence></competence>
-		<random></random>
-	</question>
-<answer>
-	<option>
-		<value>1</value>
-		<score></score>
-		<text>&lt;p&gt;keras&lt;/p&gt;</text>
-	</option>
-	<option>
-		<value>0</value>
-		<score></score>
-		<text>&lt;p&gt;pemarah&lt;/p&gt;</text>
-	</option>
-	<option>
-		<value>0</value>
-		<score></score>
-		<text>&lt;p&gt;pemarah&lt;/p&gt;</text>
-	</option>
-	<option>
-		<value>0</value>
-		<score></score>
-		<text>&lt;p&gt;sombong&lt;/p&gt;</text>
 	</option>
 </answer>
 </item>
