@@ -1,22 +1,70 @@
 <?php
 
-class PicoDatabaseServer
+class PicoDatabaseCredentials
 {
 	private $driver = 'mysql';
 	private $host = 'localhost';
 	private $port = 3306;
-	
+
+	private string $username = "";
+	private string $password = "";
+	private string $databaseName = "";
+	private string $timezone = "00:00";
+
 	/**
 	 * Constructor
 	 * @param string $driver Driver
 	 * @param string $host Server host
 	 * @param int $port Server port
 	 */
-	public function __construct($driver, $host, $port)
+	public function __construct($driver = null, $host = null, $port = 0, $username = null, $password = null, $databaseName = null, $timezone = null)
 	{
-		$this->driver = $driver;
-		$this->host = $host;
-		$this->port = $port;
+		if($driver != null)
+		{
+			$this->driver = $driver;
+		}
+		if($host != null)
+		{
+			$this->host = $host;
+		}
+		if($port != 0)
+		{
+			$this->port = $port;
+		}
+		if($username != null)
+		{
+			$this->username = $username;
+		}
+		if($password != null)
+		{
+			$this->password = $password;
+		}
+		if($databaseName != null)
+		{
+			$this->databaseName = $databaseName;
+		}
+		if($timezone != null)
+		{
+			$this->timezone = $timezone;
+		}	
+	}
+
+	/**
+	 * Load ini file
+	 * @param string $path Configuration path
+	 * @return PicoDatabaseCredentials
+	 */
+	public function load($path)
+	{
+		$obj = parse_ini_file($path);
+		$this->driver = $obj['driver'];
+		$this->host = $obj['host'];
+		$this->port = $obj['port'];
+		$this->username = $obj['username'];
+		$this->password = $obj['password'];
+		$this->databaseName = $obj['database_name'];
+		$this->timezone = $obj['timezone'];	
+		return $this;
 	}
 
 	/**
@@ -42,7 +90,42 @@ class PicoDatabaseServer
 	{
 		return $this->port;
 	}
+
+	/**
+	 * Get the value of username
+	 */ 
+	public function getUsername()
+	{
+		return $this->username;
+	}
+
+	/**
+	 * Get the value of password
+	 */ 
+	public function getPassword()
+	{
+		return $this->password;
+	}
+
+	
+
+	/**
+	 * Get the value of databaseName
+	 */ 
+	public function getDatabaseName()
+	{
+		return $this->databaseName;
+	}
+
+	/**
+	 * Get the value of timezone
+	 */ 
+	public function getTimezone()
+	{
+		return $this->timezone;
+	}
 }
+
 
 class PicoDatabaseSyncConfig
 {
@@ -177,37 +260,29 @@ class PicoDatabaseSyncConfig
 class PicoDatabase
 {
 
-	private string $username = "";
-	private string $password = "";
-	private string $databaseName = "";
-	private string $timezone = "00:00";
 	private \PDO $conn;
-	private \PicoDatabaseServer $databaseServer;
+	private \PicoDatabaseCredentials $databaseServer;
 	private \PicoDatabaseSyncConfig $databaseSyncConfig;
 
 	/**
 	 * Summary of __construct
-	 * @param \PicoDatabaseServer $databaseServer
+	 * @param \PicoDatabaseCredentials $databaseServer
 	 * @param string $username
 	 * @param string $password
 	 * @param string $databaseName
 	 * @param string $timezone
 	 * @param \PicoDatabaseSyncConfig $databaseSyncConfig
 	 */
-	public function __construct($databaseServer, $username, $password, $databaseName, $timezone, $databaseSyncConfig) //NOSONAR
+	public function __construct($databaseServer, $databaseSyncConfig) //NOSONAR
 	{
 		$this->databaseServer = $databaseServer;
 		$this->databaseSyncConfig = $databaseSyncConfig;
 
-		$this->username = $username;
-		$this->password = $password;
-		$this->databaseName = $databaseName;
-		$this->timezone = $timezone;	
 	}
 
 	/**
 	 * Get database server information
-	 * @return PicoDatabaseServer Database server information
+	 * @return PicoDatabaseCredentials Database server information
 	 */
 	public function getDatabaseServer()
 	{
@@ -230,15 +305,15 @@ class PicoDatabase
 	public function connect()
 	{
 		$ret = false;
-		date_default_timezone_set($this->timezone);
+		date_default_timezone_set($this->databaseServer->getTimezone());
 		$timezoneOffset = date("P");
 		try {
-			$connectionString = $this->databaseServer->getDriver() . ':host=' . $this->databaseServer->getHost() . '; port=' . $this->databaseServer->getPort() . '; dbname=' . $this->databaseName;
+			$connectionString = $this->databaseServer->getDriver() . ':host=' . $this->databaseServer->getHost() . '; port=' . $this->databaseServer->getPort() . '; dbname=' . $this->databaseServer->getDatabaseName();
 
 			$this->conn = new \PDO(
 				$connectionString, 
-				$this->username, 
-				$this->password,
+				$this->databaseServer->getUsername(), 
+				$this->databaseServer->getPassword(),
 				array(
 					\PDO::MYSQL_ATTR_INIT_COMMAND =>"SET time_zone = '$timezoneOffset';",
 					\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
@@ -449,5 +524,7 @@ class PicoDatabase
 	{
 		return date('Y-m-d H:i:s');
 	}
+
+	
 }
 

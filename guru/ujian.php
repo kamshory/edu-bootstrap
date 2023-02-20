@@ -491,10 +491,7 @@ $subjectList = $picoEdu->getSubjectList();
 		<td>Waktu Peringatan</td>
 		<td>
         <select class="form-control" name="alert_time" id="alert_time">
-        	<option value="120">2 menit</option>
-        	<option value="300">5 menit</option>
-        	<option value="600">10 menit</option>
-        	<option value="900">15 menit</option>
+		<?php echo $picoEdu->selectOptionAlertTime(null);?>
         </select>
         </td>
 		</tr>
@@ -749,10 +746,7 @@ $subjectList = $picoEdu->getSubjectList();
 		<tr class="toggle-tr" data-toggle="has_alert" data-condition="<?php echo $data['has_alert'];?>" data-show-condition="1" data-hide-condition="0">
 		<td>Waktu Peringatan</td>
 		<td><select class="form-control" name="alert_time" id="alert_time">
-        	<option value="120"<?php echo $picoEdu->ifMatch($data['alert_time'], 120,  PicoConst::SELECT_OPTION_SELECTED);?>>2 menit</option>
-        	<option value="300"<?php echo $picoEdu->ifMatch($data['alert_time'], 300,  PicoConst::SELECT_OPTION_SELECTED);?>>5 menit</option>
-        	<option value="600"<?php echo $picoEdu->ifMatch($data['alert_time'], 600,  PicoConst::SELECT_OPTION_SELECTED);?>>10 menit</option>
-        	<option value="900"<?php echo $picoEdu->ifMatch($data['alert_time'], 900,  PicoConst::SELECT_OPTION_SELECTED);?>>15 menit</option>
+        	<?php echo $picoEdu->selectOptionAlertTime($data['alert_time']);?>
         </select>
         </td>
 		</tr>

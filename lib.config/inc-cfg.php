@@ -14,14 +14,16 @@ define('DB_PREF', '');
 */
 
 $configs = new stdClass();
+$databaseConfigs = new stdClass();
 
-$configs->db_type = "mysql";
-$configs->db_host = "localhost";
-$configs->db_port = 3306;
-$configs->db_user = "root";
-$configs->db_pass = "alto1234";
-$configs->db_name = "mini_picopi";
-$configs->db_time_zone = "Asia/Jakarta";
+$databaseConfigs->db_type = "mysql";
+$databaseConfigs->db_host = "localhost";
+$databaseConfigs->db_port = 3306;
+$databaseConfigs->db_user = "root";
+$databaseConfigs->db_pass = "alto1234";
+$databaseConfigs->db_name = "mini_picopi";
+$databaseConfigs->db_time_zone = "Asia/Jakarta";
+$databaseConfigs->config_file = "db.ini";
 
 $twoLevelUp = dirname(dirname(__FILE__));
 
@@ -46,8 +48,8 @@ $cfg = new stdClass();
 
 $cfg->ws_port = 8888;
 
-$cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
-$cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/";
+$cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/"; //NOSONAR
+$cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/"; //NOSONAR
 
 $cfg->app_name = "Planet Edu";
 $cfg->mail_noreply = "noreply@planetbiru.com";
@@ -57,8 +59,8 @@ $cfg->main_domain = "www.planetbiru.com";
 
 $cfg->cdn_jquery = $cfg->base_assets."lib.assets/script/jquery/jquery.min.js";
 
-$cfg->base_avatar = "http://".$_SERVER['SERVER_NAME']."/media.images/";
-$cfg->base_images = "http://".$_SERVER['SERVER_NAME']."/media.edu/";
+$cfg->base_avatar = "http://".$_SERVER['SERVER_NAME']."/media.images/"; //NOSONAR
+$cfg->base_images = "http://".$_SERVER['SERVER_NAME']."/media.edu/"; //NOSONAR
 $cfg->meta_description = "Planet Edu merupakan sekolah virtual yang dapat dimanfaatkan oleh sekolah, guru dan siswa untuk pengayaan materi dan ujian online. Planet Edu bukanlan sistem informasi akademik karena sebenarnya Planet Edu merupakan media sosial yang mendukung pendidikan.";
 
 

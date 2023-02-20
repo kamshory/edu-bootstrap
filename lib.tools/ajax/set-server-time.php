@@ -30,13 +30,13 @@ if(isset($_SERVER['HTTP_X_COMMAND_FOR_SERVER']))
 			if($localtime1 != "")
 			{
 				// get time zone from database
-				// $configs->db_host;
-				// $configs->db_user;
-				// $configs->db_pass;
-				// $configs->db_name;
+				// $databaseConfigs->db_host;
+				// $databaseConfigs->db_user;
+				// $databaseConfigs->db_pass;
+				// $databaseConfigs->db_name;
 				
-				mysql_connect($configs->db_host, $configs->db_user, $configs->db_pass); 
-				mysql_select_db($configs->db_name);
+				mysql_connect($databaseConfigs->db_host, $databaseConfigs->db_user, $databaseConfigs->db_pass); 
+				mysql_select_db($databaseConfigs->db_name);
 				
 				$sql = "SELECT * FROM `config` WHERE `config_id` = 'server_time_zone' ";
 				$res = mysql_query($sql);

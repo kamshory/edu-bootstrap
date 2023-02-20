@@ -1309,7 +1309,6 @@ class PicoEdu //NOSONAR
 		$sel = "";
 		foreach($alertTimeArray as $key => $val)
 		{
-			$label = implode(", ", $val);
 			if($selected != null && $selected == $key)
 			{
 				$sel = PicoConst::SELECT_OPTION_SELECTED;
@@ -1318,7 +1317,7 @@ class PicoEdu //NOSONAR
 			{
 				$sel = "";
 			}
-			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$label</option>";
+			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$val</option>";
 		}
 		return $html;
 	}

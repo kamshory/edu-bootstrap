@@ -522,7 +522,6 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td>IP Ubah</td>
 		<td><?php echo $data['ip_edit'];?> </td>
 		</tr>
-
 		<tr>
 		<td>Impor Pertama</td>
 		<td></td>

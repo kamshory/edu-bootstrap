@@ -599,15 +599,7 @@ require_once dirname(__FILE__) . "/classes/FileSynchronizer.php";
 require_once dirname(__FILE__) . "/classes/PicoConst.php";
 
 $database = new PicoDatabase(
-	new PicoDatabaseServer(
-		$configs->db_type,
-		$configs->db_host,
-		$configs->db_port
-	),
-	$configs->db_user,
-	$configs->db_pass,
-	$configs->db_name,
-	$configs->db_time_zone,
+	(new PicoDatabaseCredentials())->load($databaseConfigs->config_file),
 	new PicoDatabaseSyncConfig(
 		$configs->sync_database_application_dir,
 		$configs->sync_database_base_dir,
