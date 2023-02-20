@@ -13,6 +13,9 @@ if(!defined('DB_PREF'))
 define('DB_PREF', '');
 */
 
+$oneLevelUp = dirname(dirname(__FILE__));
+$twoLevelUp = dirname(dirname(dirname(__FILE__)));
+
 $configs = new stdClass();
 $databaseConfigs = new stdClass();
 
@@ -23,24 +26,23 @@ $databaseConfigs->db_user = "root";
 $databaseConfigs->db_pass = "alto1234";
 $databaseConfigs->db_name = "mini_picopi";
 $databaseConfigs->db_time_zone = "Asia/Jakarta";
-$databaseConfigs->config_file = "db.ini";
+$databaseConfigs->config_file = $twoLevelUp."/db.ini";
 
-$twoLevelUp = dirname(dirname(__FILE__));
 
-$configs->sync_database_application_dir = $twoLevelUp;
-$configs->sync_database_base_dir = $twoLevelUp."/volume.sync/database/pool";
+$configs->sync_database_application_dir = $oneLevelUp;
+$configs->sync_database_base_dir = $oneLevelUp."/volume.sync/database/pool";
 $configs->sync_database_pool_name = "pool";
 $configs->sync_database_rolling_prefix = "poll_";
 $configs->sync_database_extension = ".txt";
 $configs->sync_database_maximum_length = 1000000;
 $configs->sync_database_delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
 
-$configs->sync_file_application_dir = $twoLevelUp;
-$configs->sync_file_base_dir = $twoLevelUp."/volume.sync/file/pool";
+$configs->sync_file_application_dir = $oneLevelUp;
+$configs->sync_file_base_dir = $oneLevelUp."/volume.sync/file/pool";
 $configs->sync_file_pool_name = "pool";
 $configs->sync_file_rolling_prefix = "poll_";
 $configs->sync_file_extension = ".txt";
-$configs->sync_file_maximum_length = 100000;
+$configs->sync_file_maximum_length = 50000;
 $configs->sync_file_use_relative_path = true;
 
 
