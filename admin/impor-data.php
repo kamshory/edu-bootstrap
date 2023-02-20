@@ -978,52 +978,36 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 Modul ini digunakan untuk mengimpor data sekolah, kelas, siswa, dan guru. Contoh data dapat didownload <a href="planetedu.xlsx">di sini</a>. Apabila terjadi kesalahan saat melakukan import data, segera hapus data tersebut sebelum mengimpor data yang lain.</div>
 <p>Pilih file</p>
 <style type="text/css">
-.input-file{
-	display:inline-block;
-	position:relative;
-	border:1px solid #DDDDDD;
-	background-color:#FFFFFF;
-	width:200px;
-	max-width:100%;
-	overflow:hidden;
-	vertical-align:bottom;
-
+.input-group > *:first-child{
+	border-top-right-radius: 0 0;
+	border-bottom-right-radius: 0 0;
 }
-input[type="button"].input-file-button{
-	width:50px;
-	border-width:0 1px 0 0;
+.input-group > *:last-child{
+	border-top-left-radius: 0 0;
+	border-bottom-left-radius: 0 0;
 }
-.input-file-label{
-	display: inline-block;
-    width: calc(100% - 56px);
-    box-sizing: border-box;
-    padding-top: 1px;
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-bottom: 3px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    vertical-align: bottom;
-    line-height: 1.5;
+.input-file-label.form-control[readonly]{
+	background-color: #FFFFFF;
 }
 </style>
 <form action="" method="post" enctype="multipart/form-data" name="form1">
+	
   <input type="file" name="file" id="file" accept=".xlsx" style="position:absolute; left:-10000px; top:-10000px;">
-  <span class="input-file" id="input-file-data">
-  	<input type="button" class="input-file-button" value="Pilih" />
-    <span class="input-file-label"></span>
-  </span>
-  <input type="submit" name="upload" id="upload" value="Upload File">
-  <input type="button" name="cancel" id="cancel" value="Batalkan" onclick="window.location='sekolah.php'">
+  <div class="input-group mb-3" id="input-file-data">
+  	<input type="button" class="btn btn-secondary input-file-button" value="Pilih File" />
+    <input type="text" class="input-file-label form-control" readonly>
+  </div>
+  <input class="btn btn-success" type="submit" name="upload" id="upload" value="Upload File">
+  <input class="btn btn-secondary" type="button" name="cancel" id="cancel" value="Batalkan" onclick="window.location='sekolah.php'">
 </form>
 <script type="text/javascript">
 $(document).ready(function(e) {
 	$(document).on('change', 'input[type="file"]', function(e){
 		var files = $(this)[0].files;
 		var fileName = files[0].name;
-		$(this).closest('form').find('.input-file .input-file-label').text(fileName);
+		$(this).closest('form').find('.input-file-label').val(fileName);
 	});
-    $(document).on('click', '.input-file input.input-file-button', function(e){
+    $(document).on('click', 'input.input-file-button', function(e){
 		$(this).closest('form').find('input[type="file"]').click();
 	});
 });
