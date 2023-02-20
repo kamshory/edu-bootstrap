@@ -1295,4 +1295,31 @@ class PicoEdu //NOSONAR
 		}
 		return $html;
 	}
+
+	public function selectOptionAlertTime($selected = null)
+	{
+		$alertTimeArray = array(
+			'120'=>'2 menit',
+			'300'=>'5 menit',
+			'600'=>'10 menit',
+			'900'=>'15 menit'
+		);
+		
+		$html = "";
+		$sel = "";
+		foreach($alertTimeArray as $key => $val)
+		{
+			$label = implode(", ", $val);
+			if($selected != null && $selected == $key)
+			{
+				$sel = PicoConst::SELECT_OPTION_SELECTED;
+			}
+			else
+			{
+				$sel = "";
+			}
+			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$label</option>";
+		}
+		return $html;
+	}
 }
