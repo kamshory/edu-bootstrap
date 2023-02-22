@@ -1,0 +1,8 @@
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+INSERT INTO `edu_admin` 
+		(`admin_id`, `token_admin`, `school_id`, `name`, `gender`, `birth_place`, `birth_day`, `phone`, `email`, `password`, 
+		`time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `blocked`, `active`) VALUES
+		('aaaaaaaaaaaaa', 'ddf7bf1964e0708f25c7c663f6f4a395', '063ce682801be89951aa', 'admin', 'M', 'Jambi', '', '081266612126', 'admin@planetbiru.com', 'c3284d0f94606de1fd2af172aba15bf3',  
+		'', '', 'aaaaaaaaaaaaa', 'aaaaaaaaaaaaa', '127.0.0.1', '127.0.0.1', 0, 1);
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_admin` SET `school_id` = '063ce682801be89951aa' WHERE `admin_id` = 'aaaaaaaaaaaaa';

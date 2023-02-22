@@ -7,8 +7,9 @@
                 <h1>Pico Edu</h1>
                 <p class="lead text-muted">Pico edu adalah sebuah perangkat mandiri yang dapat berjalan secara luring tanpa membutuhkan internet.</p>
                 <p>
+                    <a href="index.php" class="btn btn-primary my-2">Depan</a>
                     <a href="pembelian.php" class="btn btn-primary my-2">Pembelian</a>
-                    <a href="pemasangan.php" class="btn btn-secondary my-2">Pemasangan</a>
+                    <a href="pemasangan.php" class="btn btn-primary my-2">Pemasangan</a>
                 </p>
             </div>
         </section>
