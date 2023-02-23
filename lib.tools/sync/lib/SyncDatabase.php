@@ -26,6 +26,8 @@ class DatabaseSyncMaster
     protected $poolRollingPrefix = '';
     protected $poolFileExtension = '';
 
+    protected string $application = 'picoedu';
+
     /**
      * Constructor of DatabaseSyncMaster
      * @param \PicoDatabase $database Database
@@ -108,6 +110,7 @@ class DatabaseSyncMaster
     protected function uploadSyncFile($path, $record, $fileSyncUrl, $username, $password)
     {
         $httpQuery = array(
+            'application'=>$this->application,
             'sync_type'=>'database',
             'action'=>'upload-sync-file'
         );
@@ -301,6 +304,26 @@ class DatabaseSyncMaster
         }        
         $url = $url."?".http_build_query($combined);
         return $url;
+    }
+
+     /**
+     * Get the value of application
+     */ 
+    public function getApplication()
+    {
+        return $this->application;
+    }
+
+    /**
+     * Set the value of application
+     *
+     * @return  self
+     */ 
+    public function setApplication($application)
+    {
+        $this->application = $application;
+
+        return $this;
     }
 }
 
@@ -497,6 +520,7 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
     private function getSyncRecordListFromRemote($lastSync, $fileSyncUrl, $username, $password) 
     {
         $httpQuery = array(
+            'application'=>$this->application,
             'sync_type'=>'database',
             'action'=>'list-record',
             'last_sync'=>$lastSync
@@ -675,6 +699,8 @@ class DatabaseSyncDownload extends DatabaseSyncMaster
         }
         return true;
     }
+
+   
 }
 
 

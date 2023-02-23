@@ -6,14 +6,17 @@ if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database' || @$_GET['action'] 
     $syncHubURL = $database->getSystemVariable("sync_hub_url");
     $fileSyncUrl = rtrim($syncHubURL, "/")."/";
     $databaseSyncUrl = rtrim($syncHubURL, "/")."/";
-
     $username = $database->getSystemVariable("sync_hub_username");
-
     $password = $database->getSystemVariable("sync_hub_password");   
 }
 
 class SyncPing
 {
+    private $application = "";
+    public function __construct($application)
+    {
+        $this->application = $application;
+    }
     protected function buildURL($url, $httpQuery, $keepOriginal = true)
     {
         $original = array();
@@ -106,7 +109,7 @@ class PingException extends Exception
 }
 if(@$_GET['action'] == 'ping')
 {
-    $ping = new SyncPing;
+    $ping = new SyncPing($cfg->app_code);
     $response = new stdClass;
     $success = false;
     if(isset($_POST['test']))
@@ -151,6 +154,7 @@ if(@$_GET['type'] == 'file')
     if(@$_GET['direction'] == 'down')
     {
         $fileSyncDownload = new \FileSyncDownload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
+        $fileSyncDownload->setApplication($cfg->app_code);
         $fileSyncDownload->setUseRelativePath($configs->sync_file_use_relative_path);
         if(@$_GET['step'] == '1')
         {
@@ -242,6 +246,7 @@ if(@$_GET['type'] == 'file')
     if(@$_GET['direction'] == 'up')
     {
         $fileSyncUpload = new \FileSyncUpload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
+        $fileSyncUpload->setApplication($cfg->app_code);
         $fileSyncUpload->setUseRelativePath($configs->sync_file_use_relative_path);
         if(@$_GET['step'] == '1')
         {
@@ -349,6 +354,7 @@ if(@$_GET['type'] == 'database')
     if(@$_GET['direction'] == 'down')
     {
         $databaseSyncDownload = new \DatabaseSyncDownload($database, $applicationRoot, $databaseUploadBaseDir, $databaseDownloadBaseDir, $databasePoolBaseDir, $databasePoolName, $databasePoolRollingPrefix, $databasePoolExtension);
+        $databaseSyncDownload->setApplication($cfg->app_code);
         if(@$_GET['step'] == '1')
         {
             $success = $databaseSyncDownload->databaseDownloadInformation($databaseSyncUrl, $username, $password);
@@ -435,6 +441,7 @@ if(@$_GET['type'] == 'database')
     if(@$_GET['direction'] == 'up')
     {
         $databaseSyncUpload = new \DatabaseSyncUpload($database, $applicationRoot, $databaseUploadBaseDir, $databaseDownloadBaseDir, $databasePoolBaseDir, $databasePoolName, $databasePoolRollingPrefix, $databasePoolExtension);
+        $databaseSyncUpload->setApplication($cfg->app_code);
         if(@$_GET['step'] == '1')
         {
             $success = $databaseSyncUpload->syncLocalQueryToDatabase();

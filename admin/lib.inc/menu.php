@@ -168,7 +168,6 @@ $structure = array(
                 )
             )
         )
-
 );
 
 require_once dirname(dirname(dirname(__FILE__))) . "/lib.inc/classes/MainMenu.php";

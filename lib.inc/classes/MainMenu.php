@@ -91,9 +91,11 @@ $html .=
             $captionSubmenu = $submenu['caption'];
             $linkSubmenu = $submenu['link'];
             $icon = ' ' . trim($submenu['icon']);
+            $active = $selectedMenu == $linkSubmenu ? ' active':'';
+
             
 $html .= 
-'               <a href="'.$linkSubmenu.'" class="list-group-item list-group-item-action py-2 ripple" aria-current="true"><i class="fas'.$icon.' fa-fw me-3"></i><span>'.$captionSubmenu.'</span></a>
+'               <a href="'.$linkSubmenu.'" class="list-group-item list-group-item-action py-2 ripple'.$active.'" aria-current="true"><i class="fas'.$icon.' fa-fw me-3"></i><span>'.$captionSubmenu.'</span></a>
 ';
         }
 $html .= 

@@ -24,6 +24,8 @@ class FileSyncMaster
     protected string $poolFileExtension = '';
     protected bool $useRelativePath;
 
+    protected string $application = 'picoedu';
+
     /**
      * Constructor of FileSyncMaster
      * @param \PicoDatabase $database Database
@@ -117,6 +119,7 @@ class FileSyncMaster
     protected function uploadSyncFile($path, $record, $fileSyncUrl, $username, $password) //NOSONAR
     {
         $httpQuery = array(
+            'application'=>$this->application,
             'sync_type'=>'file',
             'action'=>'upload-sync-file'
         );
@@ -181,6 +184,7 @@ class FileSyncMaster
     protected function uploadUserFile($absolutePath, $fileSyncUrl, $username, $password) //NOSONAR
     {
         $httpQuery = array(
+            'application'=>$this->application,
             'sync_type'=>'file',
             'action'=>'upload-user-file'
         );
@@ -407,6 +411,26 @@ class FileSyncMaster
 		return sprintf('%s%s', $uuid, $random);
 	}
 
+    /**
+     * Get the value of application
+     */ 
+    public function getApplication()
+    {
+        return $this->application;
+    }
+
+    /**
+     * Set the value of application
+     *
+     * @return  self
+     */ 
+    public function setApplication($application)
+    {
+        $this->application = $application;
+
+        return $this;
+    }
+
 }
 
 class FileSyncUpload extends FileSyncMaster
@@ -631,6 +655,7 @@ class FileSyncDownload extends FileSyncMaster
     private function getSyncRecordListFromRemote($lastSync, $fileSyncUrl, $username, $password) //NOSONAR
     {
         $httpQuery = array(
+            'application'=>$this->application,
             'sync_type'=>'file',
             'action'=>'list-record',
             'last_sync'=>$lastSync
@@ -1003,6 +1028,8 @@ class FileSyncDownload extends FileSyncMaster
             }
         }
     }
+
+    
 }
 
 
