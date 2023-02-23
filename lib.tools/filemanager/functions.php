@@ -1,5 +1,5 @@
 <?php
-class listFile
+class ListFile
 {
 	public $location;
 	public $result_file = array();
@@ -12,11 +12,10 @@ class listFile
 			$this->findAll($location);
 		}
 	}
-	public function findAll($location)
+	public function findAll($location) //NOSONAR
 	{
 		global $fmanConfig;
 		if (file_exists($location) && ($handle = opendir($location))) {
-			$i = 0;
 			while (false !== ($ufile = readdir($handle))) {
 				$fn = "$location/$ufile";
 				if ($ufile == "." || $ufile == "..") {
