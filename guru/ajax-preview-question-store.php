@@ -18,7 +18,7 @@ if($stmt->rowCount() > 0)
 	{
 		$text_all = loadXmlData($file_path);
 
-		require_once dirname(dirname(__FILE__))."/lib.inc/cache.php";
+		$browserCache = new \Pico\BrowserCache();
 		$browserCache->setMaxAge(3600);	
 
 		?>

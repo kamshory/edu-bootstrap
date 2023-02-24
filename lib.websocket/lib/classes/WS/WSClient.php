@@ -288,6 +288,7 @@ class WSClient //NOSONAR
 
 	/**
 	 * Get the value of sessions
+	 * @return array
 	 */ 
 	public function getSessions()
 	{

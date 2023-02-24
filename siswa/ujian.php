@@ -594,7 +594,7 @@ else if(@$_GET['option'] == 'enter-token')
 }
 else
 {
-if(true)//!$use_token || @$_GET['option'] == 'list')
+if(!$use_token || @$_GET['option'] == 'list')
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);

@@ -1,4 +1,5 @@
 <?php
+namespace Pico;
 
 class BrowserCache {
     public function __construct()
@@ -13,4 +14,3 @@ class BrowserCache {
         header("Cache-Control: max-age=$age");
     }
 }
-$browserCache = new \BrowserCache();
