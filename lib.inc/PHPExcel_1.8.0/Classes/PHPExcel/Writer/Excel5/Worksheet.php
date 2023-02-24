@@ -2877,7 +2877,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
 				$options |= $dataValidation->getAllowBlank() << 8;
 
 				// show drop down
-				$options |= (!$dataValidation->getShowDropdown()) << 9;
+				$options |= (!$dataValidation->getShowDropDown()) << 9;
 
 				// show input message
 				$options |= $dataValidation->getShowInputMessage() << 18;
