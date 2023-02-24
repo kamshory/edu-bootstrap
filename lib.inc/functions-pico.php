@@ -104,28 +104,6 @@ if (!defined('FILTER_SANITIZE_NUMERIC')) {
 	define('FILTER_SANITIZE_NUMERIC', 530);
 }
 
-function userImageURL100($member_id, $member_gender, $picture_hash)
-{
-	global $cfg;
-	if (@$picture_hash != "" || @$picture_hash) {
-		return $cfg->base_avatar . $member_id . "/uimage-100.jpg?hash=" . $picture_hash;
-	} else if (@$member_gender != "") {
-		return $cfg->base_avatar . "__default/$member_gender/uimage-100.jpg";
-	} else {
-		return $cfg->base_avatar . "uimage-100.jpg";
-	}
-}
-function userImageURL50($member_id, $member_gender, $picture_hash)
-{
-	global $cfg;
-	if (@$picture_hash != "" || @$picture_hash) {
-		return $cfg->base_avatar . $member_id . "/uimage-50.jpg?hash=" . $picture_hash;
-	} else if (@$member_gender != "") {
-		return $cfg->base_avatar . "__default/$member_gender/uimage-50.jpg";
-	} else {
-		return $cfg->base_avatar . "uimage-50.jpg";
-	}
-}
 function dmstoreal($deg, $min, $sec)
 {
 	return $deg + ((($min / 60) + ($sec)) / 3600);
@@ -230,7 +208,7 @@ function scrap($url)
 	}
 	function excel2MySQLDate($int)
 	{
-		return date('Y-m-d', (24141 + $int) * 86400);
+		return date('Y-m-d H:i:s', ($int - 25569) * 86400);
 	}
 	
 	function liststyle($style, $index = 1) //NOSONAR
