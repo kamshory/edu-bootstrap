@@ -4,13 +4,13 @@ namespace Pico;
 
 class PicoDatabaseSyncConfig
 {
-	private string $applicationDir = '';
-	private string $baseDir = '';
-	private string $poolName = '';
-	private string $rollingPrefix = '';
-	private string $extension = '';
-	private int $maximumlength = 1000000;
-	private string $delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
+	private $applicationDir = '';
+	private $baseDir = '';
+	private $poolName = '';
+	private $rollingPrefix = '';
+	private $extension = '';
+	private $maximumlength = 1000000;
+	private $delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
 	const NEW_LINE = "\r\n";
 
 	/**

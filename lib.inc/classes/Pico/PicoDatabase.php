@@ -4,9 +4,9 @@ namespace Pico;
 class PicoDatabase
 {
 
-	private \PDO $conn;
-	private \Pico\PicoDatabaseCredentials $databaseServer;
-	private \Pico\PicoDatabaseSyncConfig $databaseSyncConfig;
+	private $conn;
+	private $databaseServer;
+	private $databaseSyncConfig;
 
 	/**
 	 * Summary of __construct
@@ -104,7 +104,7 @@ class PicoDatabase
 	 * @param string $sql Query string to be executed
 	 * @return \PDOStatement
 	 */
-	public function executeQuery($sql) : \PDOStatement
+	public function executeQuery($sql) 
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
@@ -146,7 +146,7 @@ class PicoDatabase
 	 * @param bool $sync Flag synchronizing
 	 * @return \PDOStatement
 	 */
-	public function executeInsert($sql, $sync) : \PDOStatement
+	public function executeInsert($sql, $sync) 
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
@@ -157,7 +157,7 @@ class PicoDatabase
 	 * @param bool $sync Flag synchronizing
 	 * @return \PDOStatement|bool
 	 */
-	public function executeUpdate($sql, $sync) : \PDOStatement
+	public function executeUpdate($sql, $sync) 
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
@@ -168,7 +168,7 @@ class PicoDatabase
 	 * @param bool $sync Flag synchronizing
 	 * @return \PDOStatement
 	 */
-	public function executeDelete($sql, $sync) : \PDOStatement
+	public function executeDelete($sql, $sync) 
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
@@ -179,7 +179,7 @@ class PicoDatabase
 	 * @param bool $sync Flag synchronizing
 	 * @return \PDOStatement
 	 */
-	public function executeTransaction($sql, $sync) : \PDOStatement
+	public function executeTransaction($sql, $sync) 
 	{
 		return $this->executeAndSync($sql, $sync);
 	}

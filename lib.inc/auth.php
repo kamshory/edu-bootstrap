@@ -16,7 +16,7 @@ if(isset($_SESSION['password']))
 $password = $_SESSION['password'];
 }
 $member_id = "";
-$memberLoggedIn = new MemberAuth($database, $username, $password, false);
+$memberLoggedIn = new \Pico\MemberAuth($database, $username, $password, false);
 if(!empty($memberLoggedIn->member_id))
 {
 	$member_id = $memberLoggedIn->member_id;

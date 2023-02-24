@@ -9,10 +9,10 @@ class PicoDatabaseCredentials
 	private $host = 'localhost';
 	private $port = 3306;
 
-	private string $username = "";
-	private string $password = "";
-	private string $databaseName = "";
-	private string $timezone = "00:00";
+	private $username = "";
+	private $password = "";
+	private $databaseName = "";
+	private $timezone = "00:00";
 
 	/**
 	 * Constructor
