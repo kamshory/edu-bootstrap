@@ -8,12 +8,12 @@ if(!isset($school_id) || empty($school_id))
 
 if(@$_POST['option'] == 'upload-image')
 {
-	$avatar_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/user.avatar/student//$student_id";
-	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/user.avatar/student//$student_id";
+	$avatar_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/user.avatar/student/$student_id";
+	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/user.avatar/student/$student_id";
 	$dirBase = dirname(dirname(__FILE__));
 	$permission = 0755;
 	$fileSync->prepareDirectory($avatar_dir, $dirBase, $permission, true);	
-	$base_src = "media.edu/school/$school_id/user.avatar/student//$student_id";
+	$base_src = "media.edu/school/$school_id/user.avatar/student/$student_id";
 	$path = $avatar_dir."/img-300x300.jpg";
 	if (isset($_POST['image'])) {
         $path = $avatar_dir . "/img-300x300.jpg";
