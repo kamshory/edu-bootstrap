@@ -1,4 +1,0 @@
-{"op":"DELETEFILE","tm":1677135698,"path":"\/media.edu\/school\/063ce682801be89951aa\/article\/063e62cae7969a506235\/new-file.txt"}
-{"op":"DELETEFILE","tm":1677135698,"path":"\/media.edu\/school\/063ce682801be89951aa\/article\/063e62cae7969a506235\/new-file-2.txt"}
-{"op":"DELETEFILE","tm":1677135698,"path":"\/media.edu\/school\/063ce682801be89951aa\/article\/063e62cae7969a506235\/new-file-3.txt"}
-{"op":"DELETEFILE","tm":1677135698,"path":"\/media.edu\/school\/063ce682801be89951aa\/article\/063e62cae7969a506235\/new-file-4.txt"}

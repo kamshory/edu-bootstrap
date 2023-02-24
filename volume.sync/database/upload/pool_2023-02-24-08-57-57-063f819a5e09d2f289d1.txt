@@ -1,0 +1,11 @@
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET 
+	`reg_number` = '1111126', `reg_number_national` = '1011214', `grade_id` = '10', 
+	`class_id` = '063ce68280e52755ca2a', `name` = 'Caca Melani', `gender` = 'W', `birth_place` = 'SURABAYA', 
+	`birth_day` = '2137-12-02', `phone` = '08123456796', `address` = '', `time_edit` = '2023-02-24 08:57:50', 
+	`admin_edit` = 'aaaaaaaaaaaaa', `ip_edit` = '127.0.0.1', `blocked` = '0', `active` = '1'
+	WHERE `student_id` = '063ce682836d2326547b' AND `school_id` = '063ce682801be89951aa';
+------------------------912284ba5a823ba425efba890f57a4e2c88e8369
+UPDATE `edu_student` SET 
+		`email` = 'egwuef@planetbiru.com'
+		WHERE `student_id` = '063ce682836d2326547b' AND `school_id` = '063ce682801be89951aa';

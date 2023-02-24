@@ -77,7 +77,7 @@ if(@$_GET['option'] == 'createfile')
 		$path = $dir2."/".$name;
 		if(!file_exists($path)){
 			$created = $fileSync->createFileWithContent($path, '', true);
-			if($created)
+			if($created !== false)
 			{
 				echo 'SUCCESS';
 			}
