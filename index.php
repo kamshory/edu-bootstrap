@@ -83,7 +83,7 @@ else
 		$password = $_SESSION['student_password'];
 	}
 	
-	$studentLoggedIn = new \Pico\StudentAuth($database, $username, $password, false);
+	$studentLoggedIn = new \Pico\AuthStudent($database, $username, $password, false);
 	
 	$student_id = '';
 	$school_id = '';
@@ -195,7 +195,7 @@ else
 			$password = $_SESSION['teacher_password'];
 		}
 		
-		$teacherLoggedIn = new \Pico\TeacherAuth($database, $username, $password, false);		
+		$teacherLoggedIn = new \Pico\AuthTeacher($database, $username, $password, false);		
 		$teacher_id = '';
 		$school_id = "";
 		$auth_teacher_id = '';
@@ -305,7 +305,7 @@ else
 		{
 			$password = $_SESSION['admin_password'];
 		}
-		$adminLoggedIn = new \Pico\AdminAuth($database, $username, $password, false);
+		$adminLoggedIn = new \Pico\AuthAdmin($database, $username, $password, false);
 		$admin_id = "";
 		$school_id = "";
 		$real_school_id = "";

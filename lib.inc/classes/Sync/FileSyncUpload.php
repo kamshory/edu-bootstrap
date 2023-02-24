@@ -128,7 +128,6 @@ class FileSyncUpload extends \Sync\FileSyncMaster
                             {
                                 $path = $this->getAbsolutePath($path);
                             }
-
                             $this->uploadUserFile($path, $fileSyncUrl, $username, $password);
                         }
                     }
@@ -141,7 +140,6 @@ class FileSyncUpload extends \Sync\FileSyncMaster
         {
             // Do nothing
         }
-        return true;
-        
+        return true;        
     }
 }

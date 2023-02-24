@@ -1,7 +1,7 @@
 <?php
 namespace Pico;
 
-class StudentAuth
+class AuthStudent
 {
 	public $student_id = 0;
 	public $username = '';
