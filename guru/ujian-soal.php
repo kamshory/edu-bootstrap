@@ -1266,19 +1266,19 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	$no++;
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
-      <td><div class="dro\PDOwn show">
-  <a class="btn btn-sm btn-secondary dro\PDOwn-toggle" href="#" role="button" id="dro\PDOwnMenuLink" data-toggle="dro\PDOwn" aria-haspopup="true" aria-expanded="false">
+      <td><div class="dropdown show">
+  <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <i class="fas fa-list"></i>
   </a>
-  <div class="dro\PDOwn-menu" aria-labelledby="dro\PDOwnMenuLink">
-    <a class="dro\PDOwn-item" href="ujian-soal.php?option=add&format=text&test_id=<?php echo $data['test_id'];?>" target="_blank">Tambah Soal Teks</a>
-    <a class="dro\PDOwn-item" href="ujian-soal.php?option=add&format=html&test_id=<?php echo $data['test_id'];?>">Tambah Soal HTML</a>
-    <a class="dro\PDOwn-item" href="ujian-soal.php?test_id=<?php echo $data['test_id'];?>">Tampilkan Soal Ujian</a>
-    <a class="dro\PDOwn-item" href="ujian-impor.php?test_id=<?php echo $data['test_id'];?>">Impor Soal Ujian</a>
-    <a class="dro\PDOwn-item" href="ujian-ekspor.php?test_id=<?php echo $data['test_id'];?>">Ekspor Soal Ujian</a>
-    <a class="dro\PDOwn-item" href="ujian-soal.php?option=analys&test_id=<?php echo $data['test_id'];?>">Analisa Soal Ujian</a>
-    <a class="dro\PDOwn-item" href="ujian-laporan.php?option=detail&test_id=<?php echo $data['test_id'];?>">Laporan Hasil Ujian</a>
-    <a class="dro\PDOwn-item" href="ujian.php?option=edit&test_id=<?php echo $data['test_id'];?>">Ubah Informasi Ujian</a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="ujian-soal.php?option=add&format=text&test_id=<?php echo $data['test_id'];?>" target="_blank">Tambah Soal Teks</a>
+    <a class="dropdown-item" href="ujian-soal.php?option=add&format=html&test_id=<?php echo $data['test_id'];?>">Tambah Soal HTML</a>
+    <a class="dropdown-item" href="ujian-soal.php?test_id=<?php echo $data['test_id'];?>">Tampilkan Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-impor.php?test_id=<?php echo $data['test_id'];?>">Impor Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-ekspor.php?test_id=<?php echo $data['test_id'];?>">Ekspor Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-soal.php?option=analys&test_id=<?php echo $data['test_id'];?>">Analisa Soal Ujian</a>
+    <a class="dropdown-item" href="ujian-laporan.php?option=detail&test_id=<?php echo $data['test_id'];?>">Laporan Hasil Ujian</a>
+    <a class="dropdown-item" href="ujian.php?option=edit&test_id=<?php echo $data['test_id'];?>">Ubah Informasi Ujian</a>
   </div>
 </div></td>
       <td align="right"><?php echo $no;?> </td>
