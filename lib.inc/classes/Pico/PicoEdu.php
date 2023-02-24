@@ -1259,6 +1259,11 @@ class PicoEdu //NOSONAR
 	{
 		
 		$host = isset($_SERVER['HTTP_HOST'])?$_SERVER['HTTP_HOST']:$_SERVER['SERVER_NAME'];
+		if(stripos($host,":") !== false)
+		{
+			$arr = explode(":", $host);
+			$host = $arr[0];
+		}
 		if($host == '::1')
 		{
 			$host = '127.0.0.1'; // Many browser not support ::1
