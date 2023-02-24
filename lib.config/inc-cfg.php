@@ -16,8 +16,8 @@ define('DB_PREF', '');
 $oneLevelUp = dirname(dirname(__FILE__));
 $twoLevelUp = dirname(dirname(dirname(__FILE__)));
 
-$configs = new stdClass();
-$databaseConfigs = new stdClass();
+$configs = new \stdClass();
+$databaseConfigs = new \stdClass();
 
 $databaseConfigs->db_type = "mysql";
 $databaseConfigs->db_host = "localhost";
@@ -46,7 +46,7 @@ $configs->sync_file_maximum_length = 50000;
 $configs->sync_file_use_relative_path = true;
 
 
-$cfg = new stdClass();
+$cfg = new \stdClass();
 $cfg->app_code = 'picoedu';
 $cfg->ws_port = 8888;
 

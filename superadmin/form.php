@@ -68,7 +68,7 @@ function createEnumOption($database, $table, $field, $defaultValue=null)
 	$sql = "show columns FROM `$table` WHERE `Field` like '$field' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$enum = $data['Type'];
 		$off = strpos($enum, "(");
 		$enum = substr($enum, $off + 1, strlen($enum) - $off - 2);
@@ -177,7 +177,7 @@ foreach($array as $k=>$v)
 {
 	if($v == $st)
 	{
-		$sel = PicoConst::SELECT_OPTION_SELECTED;
+		$sel = \Pico\PicoConst::SELECT_OPTION_SELECTED;
 	}
 	else
 	{
@@ -285,7 +285,7 @@ foreach($array as $k=>$v)
 {
 	if($v == $st)
 	{
-		$sel = PicoConst::SELECT_OPTION_SELECTED;
+		$sel = \Pico\PicoConst::SELECT_OPTION_SELECTED;
 	}
 	else
 	{
@@ -1087,7 +1087,7 @@ function submitForm(frm)
   </thead>
   <tbody>
     <?php
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	
 	foreach($rows as $data)
 	{

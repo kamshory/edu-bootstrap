@@ -11,7 +11,7 @@ AND `active` = true
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	$activity = time()-strtotime($data['last_activity_time']);
 	$seen = time()-strtotime($data['last_seen_time']);
 	if ($seen <= 60) {

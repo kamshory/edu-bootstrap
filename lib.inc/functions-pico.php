@@ -4,6 +4,7 @@
 require_once dirname(dirname(__FILE__)) . "/lib.config/inc-cfg.php";
 require_once dirname(__FILE__) . "/autoload.php";
 
+
 /*
 Old code
 require_once dirname(__FILE__) . "/classes/PicoDatabase.php";
@@ -168,12 +169,12 @@ function scrap($url)
 		$sql = "show columns FROM `$table` ";
 		$stmt = $database->executeQuery($sql);
 		$arr = array();
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 		foreach($rows as $data)
 		{
 			if (in_array($data['Field'], $fields)) 
 			{
-				$obj = new StdClass();
+				$obj = new \stdClass();
 				$obj->field = $data['Field'];
 				$obj->value = $data['Default'];
 				$arr[] = $obj;
@@ -605,9 +606,9 @@ function strip_only_tags($str, $tags, $stripContent = false)
 }
 
 
-$database = new PicoDatabase(
-	(new PicoDatabaseCredentials())->load($databaseConfigs->config_file),
-	new PicoDatabaseSyncConfig(
+$database = new \Pico\PicoDatabase(
+	(new \Pico\PicoDatabaseCredentials())->load($databaseConfigs->config_file),
+	new \Pico\PicoDatabaseSyncConfig(
 		$configs->sync_database_application_dir,
 		$configs->sync_database_base_dir,
 		$configs->sync_database_pool_name,
@@ -620,7 +621,7 @@ $database = new PicoDatabase(
 
 $database->connect();
 
-$fileSync = new FileSynchronizer(
+$fileSync = new \Pico\FileSynchronizer(
 	$configs->sync_file_application_dir,
 	$configs->sync_file_base_dir,
 	$configs->sync_file_pool_name,
@@ -630,7 +631,7 @@ $fileSync = new FileSynchronizer(
 	$configs->sync_file_use_relative_path
 );
 
-$picoEdu = new PicoEdu($database);
+$picoEdu = new \Pico\PicoEdu($database);
 
 $ip_create = $_SERVER['REMOTE_ADDR'];
 $ip_edit = $ip_create;

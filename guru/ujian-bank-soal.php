@@ -43,7 +43,7 @@ $grade_id = kh_filter_input(INPUT_GET, "grade_id", FILTER_SANITIZE_STRING_NEW);
 				$stmt2 = $database->executeQuery($sql);
 				if($stmt2->rowCount() > 0)
 				{
-					$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+					$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 					foreach($rows2 as $data2)
 					{
 					?>
@@ -90,7 +90,7 @@ $grade_id = kh_filter_input(INPUT_GET, "grade_id", FILTER_SANITIZE_STRING_NEW);
                 <tbody>
                 <?php
                 $no=0;
-				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+				$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
                 foreach($rows as $data)
                 {
                 $no++;

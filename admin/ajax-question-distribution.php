@@ -40,7 +40,7 @@ else
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$saveddata = $data['random_distribution'];
 			$randobj = array();
 			if($saveddata != '')
@@ -63,7 +63,7 @@ else
 			";
 			$stmt = $database->executeQuery($sql);
 			$questions = array();
-			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 			foreach($rows as $data)
 			{
 				$arr = explode('.', $data['basic_competence'], 2);		

@@ -21,7 +21,7 @@ if(isset($_POST['export']) && isset($_POST['test_id']))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$name = $data['name'];
 		$filename = strtolower(str_replace(' ', '-', $name)).'.xml';
 		header("Content-Type: text/xml");
@@ -44,7 +44,7 @@ WHERE `edu_test`.`test_id` = '$edit_key'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <?php
 $array_class = $picoEdu->getArrayClass($school_id);
@@ -224,7 +224,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

@@ -20,7 +20,7 @@ if($stmt->rowCount() > 0)
 	<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 	<div class="article-list">
 	<?php
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 

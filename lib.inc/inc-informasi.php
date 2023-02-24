@@ -10,7 +10,7 @@
     $numArticle = $stmt->rowCount();
     if($numArticle > 0)
     {
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         $content = "";
         foreach($rows as $data)
         {

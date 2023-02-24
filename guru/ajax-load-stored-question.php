@@ -16,7 +16,7 @@ if($stmt->rowCount() > 0)
 ?>
 <ol class="question-ol">
 <?php
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 foreach($rows as $data)
 {
 $question_id = $data['question_id'];
@@ -28,7 +28,7 @@ $question_id = $data['question_id'];
         $stmt2 = $database->executeQuery($sql2);
         if($stmt2->rowCount() > 0)
         {
-            $rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+            $rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
             foreach($rows2 as $data2)
             {
                 ?><li class="option-li"><?php echo $picoEdu->trueFalse($data2['score'] > 0, '<span class="score"></span>', '');?><span><?php echo $data2['content'];?></span></li>

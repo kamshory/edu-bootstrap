@@ -19,7 +19,7 @@ if(@$_GET['option'] == 'export')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data3 = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data3 = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$basename = $data3['file_path'];
 		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 		header("Content-Type: text/xml");
@@ -271,7 +271,7 @@ if(isset($_POST['sort']))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data3 = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data3 = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$basename = $data3['file_path'];
 		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 		
@@ -384,7 +384,7 @@ if(@$_GET['option'] == 'delete')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data3 = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data3 = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$basename = $data3['file_path'];
 		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 		
@@ -502,7 +502,7 @@ if(isset($_POST['save']) && (@$_GET['option'] == 'edit' || @$_GET['option'] == '
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data3 = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data3 = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$basename = $data3['file_path'];
 		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 		
@@ -675,7 +675,7 @@ $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 
-$data3 = $stmt->fetch(PDO::FETCH_ASSOC);
+$data3 = $stmt->fetch(\PDO::FETCH_ASSOC);
 $basename = $data3['file_path'];
 $file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 
@@ -1087,7 +1087,7 @@ if(isset($data->file))
   </tr>
   <tr>
     <td>Pengacakan Pilihan</td>
-    <td><label><input type="checkbox" name="random" id="random" value="1"<?php echo $picoEdu->trueFalse(isset($data->random) && $data->random, PicoConst::INPUT_CHECKBOX_CHECKED, '');?> /> Diacak</label></td>
+    <td><label><input type="checkbox" name="random" id="random" value="1"<?php echo $picoEdu->trueFalse(isset($data->random) && $data->random, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED, '');?> /> Diacak</label></td>
   </tr>
 </table>
 </div>
@@ -1195,7 +1195,7 @@ $sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	$basename = $data['file_path'];
 	$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 	if(file_exists($file_path))
@@ -1498,7 +1498,7 @@ $paginationHTML = $pagination->buildHTML();
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

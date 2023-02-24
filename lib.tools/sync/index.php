@@ -10,91 +10,8 @@ if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database' || @$_GET['action'] 
     $password = $database->getSystemVariable("sync_hub_password");   
 }
 
-class SyncPing
-{
-    private $application = "";
-    public function __construct($application)
-    {
-        $this->application = $application;
-    }
-    protected function buildURL($url, $httpQuery, $keepOriginal = true)
-    {
-        $original = array();
-        if($keepOriginal)
-        {
-            $parsed = parse_url($url);
-            if(isset($parsed['query']))
-            {
-                parse_str($parsed['query'], $original);
-            }
-        }
-        $combined = array_merge($original, $httpQuery);
-        
-        if(stripos($url, "?") !== false)
-        {
-            $arr = explode("?", $url);
-            $url = $arr[0];
-        }        
-        $url = $url."?".http_build_query($combined);
-        return $url;
-    }
 
-    /**
-     * Upload sync file to sync hub
-     * @param string $fileSyncUrl Synch hub URL
-     * @param string $username Sync username
-     * @param string $password Sync password
-     * @return array
-     */
-    public function ping($fileSyncUrl, $username, $password) //NOSONAR
-    {
-        $httpQuery = array(
-            'action'=>'ping'
-        );
-        $fileSyncUrl = $this->buildURL($fileSyncUrl, $httpQuery);
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
-        curl_setopt($ch, CURLOPT_URL, $fileSyncUrl);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_HEADER, false);
-        $server_output = curl_exec($ch);
-        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-
-        if($httpcode == 200)
-        {
-            try
-            {
-                $response = json_decode($server_output, true);
-                if ($response === null && json_last_error() !== JSON_ERROR_NONE) {
-                    $response = array(
-                        'response_code'=>'02',
-                        'response_text'=>'Respon tidak sesuai spesifikasi'
-                    );
-                }
-            }
-            catch(Exception $e)
-            {
-                $response = array(
-                    'response_code'=>'02',
-                    'response_text'=>'Respon tidak sesuai spesifikasi'
-                );
-            }
-            return $response;
-        }
-        else
-        {
-            return array(
-                'response_code'=>'01',
-                'response_text'=>'Server tidak ditemukan'
-            );
-        }
-    }
-}
-
-class PingException extends Exception
+class PingException extends \Exception
 {
     private $previous;   
     public function __construct($message, $code = 0, Exception $previous = null)
@@ -109,8 +26,8 @@ class PingException extends Exception
 }
 if(@$_GET['action'] == 'ping')
 {
-    $ping = new SyncPing($cfg->app_code);
-    $response = new stdClass;
+    $ping = new \Sync\SyncPing($cfg->app_code);
+    $response = new \stdClass;
     $success = false;
     if(isset($_POST['test']))
     {
@@ -150,10 +67,9 @@ if(@$_GET['action'] == 'ping')
 
 if(@$_GET['type'] == 'file')
 {
-    include_once dirname(__FILE__)."/lib/SyncFile.php";
     if(@$_GET['direction'] == 'down')
     {
-        $fileSyncDownload = new \FileSyncDownload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
+        $fileSyncDownload = new \Sync\FileSyncDownload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
         $fileSyncDownload->setApplication($cfg->app_code);
         $fileSyncDownload->setUseRelativePath($configs->sync_file_use_relative_path);
         if(@$_GET['step'] == '1')
@@ -245,7 +161,7 @@ if(@$_GET['type'] == 'file')
 
     if(@$_GET['direction'] == 'up')
     {
-        $fileSyncUpload = new \FileSyncUpload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
+        $fileSyncUpload = new \Sync\FileSyncUpload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
         $fileSyncUpload->setApplication($cfg->app_code);
         $fileSyncUpload->setUseRelativePath($configs->sync_file_use_relative_path);
         if(@$_GET['step'] == '1')
@@ -350,10 +266,9 @@ if(@$_GET['type'] == 'file')
 
 if(@$_GET['type'] == 'database')
 {
-    include_once dirname(__FILE__)."/lib/SyncDatabase.php";
     if(@$_GET['direction'] == 'down')
     {
-        $databaseSyncDownload = new \DatabaseSyncDownload($database, $applicationRoot, $databaseUploadBaseDir, $databaseDownloadBaseDir, $databasePoolBaseDir, $databasePoolName, $databasePoolRollingPrefix, $databasePoolExtension);
+        $databaseSyncDownload = new \Sync\DatabaseSyncDownload($database, $applicationRoot, $databaseUploadBaseDir, $databaseDownloadBaseDir, $databasePoolBaseDir, $databasePoolName, $databasePoolRollingPrefix, $databasePoolExtension);
         $databaseSyncDownload->setApplication($cfg->app_code);
         if(@$_GET['step'] == '1')
         {
@@ -440,7 +355,7 @@ if(@$_GET['type'] == 'database')
     }
     if(@$_GET['direction'] == 'up')
     {
-        $databaseSyncUpload = new \DatabaseSyncUpload($database, $applicationRoot, $databaseUploadBaseDir, $databaseDownloadBaseDir, $databasePoolBaseDir, $databasePoolName, $databasePoolRollingPrefix, $databasePoolExtension);
+        $databaseSyncUpload = new \Sync\DatabaseSyncUpload($database, $applicationRoot, $databaseUploadBaseDir, $databaseDownloadBaseDir, $databasePoolBaseDir, $databasePoolName, $databasePoolRollingPrefix, $databasePoolExtension);
         $databaseSyncUpload->setApplication($cfg->app_code);
         if(@$_GET['step'] == '1')
         {

@@ -10,7 +10,7 @@ $sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = 
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 $max_upload_file = ini_get('max_file_uploads');
 if($max_upload_file == 0)
 {

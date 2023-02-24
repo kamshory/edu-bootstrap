@@ -1,8 +1,6 @@
 <?php
 require_once dirname(__FILE__)."/functions-pico.php";
 require_once dirname(__FILE__)."/sessions.php";
-require_once dirname(__FILE__) . "/classes/AdminAuth.php";
-
 
 $username = "";
 $password = "";
@@ -16,9 +14,8 @@ if(isset($_SESSION['admin_password']))
 {
 	$password = $_SESSION['admin_password'];
 }
-require_once dirname(__FILE__) . "/classes/TeacherAuth.php";
 
-$memberLoggedIn = new \AdminAuth($database, $username, $password, false);
+$memberLoggedIn = new \Pico\AdminAuth($database, $username, $password, false);
 
 if(empty($memberLoggedIn->admin_id))
 {
@@ -30,8 +27,7 @@ if(empty($memberLoggedIn->admin_id))
     {
         $password = $_SESSION['teacher_password'];
     }
-    require_once dirname(__FILE__) . "/classes/TeacherAuth.php";
-    $memberLoggedIn = new \TeacherAuth($database, $username, $password, false);
+    $memberLoggedIn = new \Pico\TeacherAuth($database, $username, $password, false);
     if(!empty($memberLoggedIn->getTeacherId()))
     {
         $user_id = $memberLoggedIn->getTeacherId();

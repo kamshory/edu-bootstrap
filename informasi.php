@@ -15,7 +15,7 @@ if(isset($_GET['info_id']))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$pageTitle = $data['name'];
 
 		$obj = parsehtmldata('<html><body>'.($data['content']).'</body></html>');
@@ -77,7 +77,7 @@ if(isset($_GET['info_id']))
                 <div class="">
 					<div class="article-title"><h1><?php echo $data['name'];?></h1></div>
 					<div class="article-content"><?php echo $data['content'];?></div>
-					<div class="article-time">Dibuat <?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?></div>
+					<div class="article-time">Dibuat <?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?></div>
 					<div class="article-creator">Oleh <?php echo $data['creator'];?></div>
 					<div class="article-link">
 						<button class="btn btn-success download-word">Download</button>

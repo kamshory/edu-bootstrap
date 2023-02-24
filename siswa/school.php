@@ -15,7 +15,7 @@ WHERE `edu_school`.`school_id` = '$school_id'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 $school_name = $data['name'];
 $school_code = $data['school_code'];
 $pageTitle = "Tentang ".$school_name;

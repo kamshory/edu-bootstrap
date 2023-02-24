@@ -1,6 +1,6 @@
 <?php
 
-
+namespace Pico;
 
 class AdminAuth
 {

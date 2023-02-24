@@ -82,15 +82,15 @@ if(!isset($cfg))
             <div class="btn-group mr-2">
               <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='sinkronisasi.php'">Sinkronkan</button>
             </div>
-            <div class="dropdown btn-group">         
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="dro\PDOwn btn-group">         
+              <button class="btn btn-sm btn-outline-secondary dro\PDOwn-toggle" type="button" id="dro\PDOwnMenuButton" data-toggle="dro\PDOwn" aria-haspopup="true" aria-expanded="false">
               <?php echo $teacherLoggedIn->name;?>
               </button>
-              <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="profil.php">Profil</a>
-              <a class="dropdown-item" href="foto.php">Foto</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="logout.php">Keluar </a>
+              <div class="dro\PDOwn-menu dro\PDOwn-menu-right">
+              <a class="dro\PDOwn-item" href="profil.php">Profil</a>
+              <a class="dro\PDOwn-item" href="foto.php">Foto</a>
+                <div class="dro\PDOwn-divider"></div>
+                <a class="dro\PDOwn-item" href="logout.php">Keluar </a>
               </div>
             </div>    
           </div>

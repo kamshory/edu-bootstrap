@@ -64,7 +64,7 @@
 		?>
        <ul>
        <?php
-       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+       $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	   foreach($rows as $data)
 	   {
 		   ?>
@@ -92,7 +92,7 @@
 		?>
        <ul>
        <?php
-	   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	   $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	   foreach($rows as $data)
 	   {
 			$period = translateDate(date('F Y', strtotime($data['month'].'-01')));

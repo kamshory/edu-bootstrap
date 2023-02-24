@@ -84,7 +84,7 @@ AND `edu_student`.`student_id` = '$student_id'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 
 $rand = $data['picture_rand'];
 $avatar_url = "media.edu/school/$school_id/user.avatar/student/$student_id/img-300x300.jpg?rand=$rand";

@@ -1,4 +1,5 @@
 <?php
+namespace Pico;
 
 class PicoEdu //NOSONAR
 {
@@ -98,7 +99,7 @@ class PicoEdu //NOSONAR
 		global $language_res;
 		global $language_id;
 		$text = '';
-		$fulltime = date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, time() - $tm);
+		$fulltime = date(\Pico\PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, time() - $tm);
 		if ($tm < 1) {
 			$text = self::SPAN_OPEN . $language_res[$language_id]['txt_left_now'] . self::SPAN_CLOSE;
 		} else if ($tm >= 1 && $tm < 60) {
@@ -158,7 +159,7 @@ class PicoEdu //NOSONAR
 		{
 			return null;
 		}
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		return @$data['name'];
 	}
 
@@ -175,7 +176,7 @@ class PicoEdu //NOSONAR
 		{
 			return null;
 		}
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		return @$data['country_id'];
 	}
 
@@ -278,7 +279,7 @@ class PicoEdu //NOSONAR
 		
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount()) {
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			return array(
 				'member_id' => $data['member_id'],
 				'name' => $data['name'],
@@ -338,7 +339,7 @@ class PicoEdu //NOSONAR
 		$sql = "SELECT `class_id`, `name` FROM `edu_class` WHERE `school_id` = '$school_id' ";
 		$stmt = $this->database->executeQuery($sql);
 		$ret = array();
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 		foreach ($rows as $data) {
 			$ret[$data['class_id']] = $data['name'];
 		}
@@ -416,7 +417,7 @@ class PicoEdu //NOSONAR
 					";
 					$stmt = $this->database->executeQuery($sql2);
 					if ($stmt->rowCount() > 0) {
-						$data2 = $stmt->fetch(PDO::FETCH_ASSOC);
+						$data2 = $stmt->fetch(\PDO::FETCH_ASSOC);
 						$basic_competence = $data2['basic_competence'];
 						$basic_competence = preg_replace(self::TRIM_NON_NUMERIC, ".", $basic_competence);
 						$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
@@ -475,7 +476,7 @@ class PicoEdu //NOSONAR
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
 			$result = array();
-			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 			foreach ($rows as $data) {
 				$basic_competence = $data['basic_competence'];
 				$basic_competence = preg_replace(self::TRIM_NON_NUMERIC, ".", $basic_competence);
@@ -547,7 +548,7 @@ class PicoEdu //NOSONAR
 		$sql = "SELECT * FROM `profile` WHERE `name` = '$name' AND `school_id` = '$school' ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			return $data['value'];
 		} else {
 			return $default;
@@ -563,7 +564,7 @@ class PicoEdu //NOSONAR
 		$sql = "SELECT `version_id` FROM `version` WHERE `active` = true AND `current_version` = '1' ";
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount() > 0) {
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$version_id = $data['version_id'];
 			if ($version_id == "") {
 				$version_id = "1.0.0";
@@ -584,7 +585,7 @@ class PicoEdu //NOSONAR
 		$active_token = array();
 		$new_token = array();
 		$temporary_token = array();
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 		foreach ($rows as $data) {
 			$active_token[] = $data['token'];
 		}
@@ -601,7 +602,7 @@ class PicoEdu //NOSONAR
 	}
 	public function logInvalidLogin($member_id, $signin_type, $time, $time_limit, $count_limit)
 	{
-		$start_time = date(PicoConst::DATE_TIME_MYSQL, strtotime($time) - $time_limit);
+		$start_time = date(\Pico\PicoConst::DATE_TIME_MYSQL, strtotime($time) - $time_limit);
 
 		$sql = "DELETE FROM `edu_invalid_signin` 
 		WHERE `member_id` = '$member_id' AND `signin_type` = '$signin_type' AND `signin_time` < '$start_time'
@@ -666,7 +667,7 @@ class PicoEdu //NOSONAR
 		$stmt = $this->database->executeQuery($sql);
 		$result = array();
 		if ($stmt->rowCount() > 0) {
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			if ($data['answer'] != '') {
 				$data['answer'] = str_replace(",]", ",0]", $data['answer']);
 				$json = '[' . $data['answer'] . ']';
@@ -687,7 +688,7 @@ class PicoEdu //NOSONAR
 						";
 						$stmt2 = $this->database->executeQuery($sql2);
 						if ($stmt2->rowCount() > 0) {
-							$data2 = $stmt2->fetch(PDO::FETCH_ASSOC);
+							$data2 = $stmt2->fetch(\PDO::FETCH_ASSOC);
 
 							$basic_competence = $data2['basic_competence'];
 							$basic_competence = preg_replace(self::TRIM_NON_NUMERIC, ".", $basic_competence);
@@ -798,7 +799,7 @@ class PicoEdu //NOSONAR
 		$arr = array();
 		for($i = 1; $i<=12; $i++)
 		{
-			$sel = $i == $grade ? PicoConst::SELECT_OPTION_SELECTED : '';
+			$sel = $i == $grade ? \Pico\PicoConst::SELECT_OPTION_SELECTED : '';
 			$arr[] = '<option value="'.$i.'" '.$sel.'>Tingkat '.$i.'</option>';
 		}
 
@@ -823,12 +824,12 @@ class PicoEdu //NOSONAR
 			return $inputArray;
 		}
 	
-		$object = new stdClass();
+		$object = new \stdClass();
 		if (is_array($inputArray) && count($inputArray) > 0) {
 			foreach ($inputArray as $name=>$value) {
 				$name = strtolower(trim($name));
 				if (!empty($name)) {
-					$object->$name = PicoEdu::arrayToObject($value);
+					$object->$name = \Pico\PicoEdu::arrayToObject($value);
 				}
 			}
 		return $object;
@@ -882,7 +883,7 @@ class PicoEdu //NOSONAR
 		$sql = "SELECT `question_id` FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` ASC ";
 		$stmt = $this->database->executeQuery($sql);
 		$ret = array();
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 		foreach ($rows as $data) {
 			$ret[] = $data['question_id'];
 		}
@@ -906,7 +907,7 @@ class PicoEdu //NOSONAR
 		if($stmt->rowCount() > 0)
 		{
 			$attributes = array();
-			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 			foreach($rows as $data)
 			{
 				$attributes = array();
@@ -946,7 +947,7 @@ class PicoEdu //NOSONAR
 		$stmt = $this->database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 
 			$member_id = addslashes($data['admin_id']);
 			$name = addslashes($data['name']);
@@ -995,7 +996,7 @@ class PicoEdu //NOSONAR
 
 		if($stmt->rowCount() > 0)
 		{
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			return $data['school_program_id'];
 		}
 		else
@@ -1030,7 +1031,7 @@ class PicoEdu //NOSONAR
 
 		if($stmt->rowCount() > 0)
 		{
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			return $data['class_id'];
 		}
 		else
@@ -1129,7 +1130,7 @@ class PicoEdu //NOSONAR
 		{
 			if($selected != null && $selected == $key)
 			{
-				$sel = PicoConst::SELECT_OPTION_SELECTED;
+				$sel = \Pico\PicoConst::SELECT_OPTION_SELECTED;
 			}
 			else
 			{
@@ -1148,7 +1149,7 @@ class PicoEdu //NOSONAR
 		{
 			if($selected != null && $selected == $key)
 			{
-				$sel = PicoConst::SELECT_OPTION_SELECTED;
+				$sel = \Pico\PicoConst::SELECT_OPTION_SELECTED;
 			}
 			else
 			{
@@ -1233,7 +1234,7 @@ class PicoEdu //NOSONAR
 		$stmt = $this->database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
-			$list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$list = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 			$ret = array();
 			foreach($list as $val)
 			{
@@ -1241,7 +1242,7 @@ class PicoEdu //NOSONAR
 			}
 			return $ret;
 		}
-		return new stdClass;
+		return new \stdClass;
 	}
 
 	/**
@@ -1285,7 +1286,7 @@ class PicoEdu //NOSONAR
 			$label = implode(", ", $val);
 			if($selected != null && $selected == $key)
 			{
-				$sel = PicoConst::SELECT_OPTION_SELECTED;
+				$sel = \Pico\PicoConst::SELECT_OPTION_SELECTED;
 			}
 			else
 			{
@@ -1311,7 +1312,7 @@ class PicoEdu //NOSONAR
 		{
 			if($selected != null && $selected == $key)
 			{
-				$sel = PicoConst::SELECT_OPTION_SELECTED;
+				$sel = \Pico\PicoConst::SELECT_OPTION_SELECTED;
 			}
 			else
 			{

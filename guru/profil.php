@@ -54,7 +54,7 @@ AND `edu_teacher`.`teacher_id` = '$teacher_id'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_teacher" id="formedu_teacher" action="" method="post" enctype="multipart/form-data">
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -75,8 +75,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td>Jenis Kelamin</td>
 		<td><select class="form-control input-select" name="gender" id="gender">
 		<option value=""></option>
-		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', PicoConst::SELECT_OPTION_SELECTED);?>>Laki-Laki</option>
-		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', PicoConst::SELECT_OPTION_SELECTED);?>>Perempuan</option>
+		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Laki-Laki</option>
+		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Perempuan</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -135,7 +135,7 @@ AND `edu_teacher`.`teacher_id` = '$teacher_id'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_teacher" action="" method="post" enctype="multipart/form-data">
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -188,11 +188,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
+		<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
+		<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 		</tr>
 	</table>
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">

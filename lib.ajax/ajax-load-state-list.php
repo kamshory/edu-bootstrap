@@ -11,6 +11,6 @@ $list = array();
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-	$list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$list = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 }
 echo json_encode($list);

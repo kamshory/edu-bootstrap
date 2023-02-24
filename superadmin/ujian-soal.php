@@ -20,7 +20,7 @@ if(@$_GET['option'] == 'delete')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$id = $data['question_id'];
 		$test_id = $data['test_id'];
 		$sql = "DELETE FROM `edu_option` WHERE `question_id` = '$id' ";
@@ -44,7 +44,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$time_create = $database->getLocalDateTime();
 		$time_edit = $database->getLocalDateTime();
 	
@@ -142,7 +142,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$dt = $stmt->fetch(PDO::FETCH_ASSOC);
+		$dt = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$test_id = $dt['test_id'];
 		
 		$direktori = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
@@ -163,7 +163,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$sql = "SELECT * FROM `edu_option` WHERE `question_id` = '$question_id' ";
 		$stmtx = $database->executeQuery($sql);
 		if ($stmtx->rowCount() > 0) {
-			$rowsx = $stmtx->fetchAll(PDO::FETCH_ASSOC);
+			$rowsx = $stmtx->fetchAll(\PDO::FETCH_ASSOC);
 			foreach ($rowsx as $dt) {
 				$id2 = $dt['option_id'];
 
@@ -205,7 +205,7 @@ if(@$_GET['option'] == 'edit')
 	$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$test_id = $data['test_id'];
 
 		$sql = "SELECT `edu_test`.* ,
@@ -213,7 +213,7 @@ if(@$_GET['option'] == 'edit')
 		FROM `edu_test` WHERE `test_id` = '$test_id' ";
 		$stmt3 = $database->executeQuery($sql);
 		if ($stmt3->rowCount() > 0) {
-			$data3 = $stmt3->fetch(PDO::FETCH_ASSOC);
+			$data3 = $stmt3->fetch(\PDO::FETCH_ASSOC);
 
 			?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />
@@ -441,7 +441,7 @@ tinyMCE.activeEditor.windowManager.open({url:ajaxFilemanagerURL,width:780,height
     <td>Pengacakan Pilihan</td>
     <td><label><input type="checkbox" name="random" id="random" value="1"<?php if ($data['random'])
 						{
-							echo PicoConst::INPUT_CHECKBOX_CHECKED;
+							echo \Pico\PicoConst::INPUT_CHECKBOX_CHECKED;
 						} ?> /> Diacak</label></td>
   </tr>
 </table>
@@ -462,7 +462,7 @@ $sql = "SELECT * FROM `edu_option` WHERE `question_id` = '$question_id' ";
 $i = 0;
 $stmt2 = $database->executeQuery($sql);
 if ($stmt2->rowCount() > 0) {
-$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 foreach ($rows2 as $data2) {
 ?>
 <div class="option-item" data-index="<?php echo $i; ?>">
@@ -507,7 +507,7 @@ FROM `edu_test` WHERE `test_id` = '$test_id'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 
 ?>
 
@@ -583,7 +583,7 @@ $total_menjawab = 0;
 $total_benar = 0;
 $total_salah = 0;
 $total_persen = 0;
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 foreach($rows as $data)
 {
 	$no++;
@@ -640,7 +640,7 @@ foreach($rows as $data)
 	$menjawab = 0;
 	$stmt2 = $database->executeQuery($sql2);
 	if ($stmt2->rowCount() > 0) {
-		$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+		$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 		foreach ($rows2 as $data2) {
 			$option[$j] = $data2['pilih'];
 			if ($data2['score'] > $score) {
@@ -799,7 +799,7 @@ ORDER BY `sort_order` ASC, `question_id` ASC
 ";
 $stmt = $database->executeQuery($sql);
 if ($stmt->rowCount() > 0) {
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 foreach($rows as $data){
 ?>
 <li data-question-id="<?php echo $data['question_id']; ?>">
@@ -818,7 +818,7 @@ $sql2 = "SELECT * FROM `edu_option` WHERE `question_id` = '$question_id' ";
 $stmt2 = $database->executeQuery($sql2);
 if ($stmt2->rowCount() > 0) 
 {
-$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 foreach ($rows2 as $data2) {
 ?>
 <li>
@@ -995,7 +995,7 @@ function buildMenu(id)
 						'value'=>$school_id
 					),
 					'caption'=>array(
-						'delimiter'=>PicoEdu::RAQUO,
+						'delimiter'=>\Pico\PicoEdu::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -1023,7 +1023,7 @@ function buildMenu(id)
 								'value'=>$class_id
 							),
 							'caption'=>array(
-								'delimiter'=>PicoEdu::RAQUO,
+								'delimiter'=>\Pico\PicoEdu::RAQUO,
 								'values'=>array(
 									'name'
 								)
@@ -1124,21 +1124,21 @@ function buildMenu(id)
 						<tbody>
 						<?php
 					$no = $pagination->getOffset();
-					$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+					$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 					foreach ($rows as $data) {
 						$no++;
 						?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
-      <td><div class="dropdown show">
-  <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <td><div class="dro\PDOwn show">
+  <a class="btn btn-sm btn-secondary dro\PDOwn-toggle" href="#" role="button" id="dro\PDOwnMenuLink" data-toggle="dro\PDOwn" aria-haspopup="true" aria-expanded="false">
     <i class="fas fa-list"></i>
   </a>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="ujian-soal.php?test_id=<?php echo $data['test_id'];?>">Tampilkan Soal Ujian</a>
-    <a class="dropdown-item" href="ujian-ekspor.php?test_id=<?php echo $data['test_id'];?>">Ekspor Soal Ujian</a>
-    <a class="dropdown-item" href="ujian-soal.php?option=analys&test_id=<?php echo $data['test_id'];?>">Analisa Soal Ujian</a>
-    <a class="dropdown-item" href="ujian-laporan.php?option=detail&test_id=<?php echo $data['test_id'];?>">Laporan Hasil Ujian</a>
-    <a class="dropdown-item" href="ujian.php?option=edit&test_id=<?php echo $data['test_id'];?>">Ubah Informasi Ujian</a>
+  <div class="dro\PDOwn-menu" aria-labelledby="dro\PDOwnMenuLink">
+    <a class="dro\PDOwn-item" href="ujian-soal.php?test_id=<?php echo $data['test_id'];?>">Tampilkan Soal Ujian</a>
+    <a class="dro\PDOwn-item" href="ujian-ekspor.php?test_id=<?php echo $data['test_id'];?>">Ekspor Soal Ujian</a>
+    <a class="dro\PDOwn-item" href="ujian-soal.php?option=analys&test_id=<?php echo $data['test_id'];?>">Analisa Soal Ujian</a>
+    <a class="dro\PDOwn-item" href="ujian-laporan.php?option=detail&test_id=<?php echo $data['test_id'];?>">Laporan Hasil Ujian</a>
+    <a class="dro\PDOwn-item" href="ujian.php?option=edit&test_id=<?php echo $data['test_id'];?>">Ubah Informasi Ujian</a>
   </div>
 </div></td>
       <td align="right"><?php echo $no; ?> </td>

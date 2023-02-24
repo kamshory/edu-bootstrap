@@ -8,7 +8,7 @@ if(!empty($school_id))
     $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);$question_id = $data['question_id'];
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);$question_id = $data['question_id'];
 ?>
 <ol class="question-test">
 	<li class="listoption" value="<?php echo $number;?>">
@@ -20,7 +20,7 @@ if(!empty($school_id))
 			$stmt2 = $database->executeQuery($sql2);
             if($stmt2->rowCount() > 0)
             {
-                $rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+                $rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
                 foreach($rows2 as $data2)
 				{
 					?>

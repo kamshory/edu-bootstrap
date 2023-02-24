@@ -25,7 +25,7 @@ WHERE `edu_answer`.`answer_id` = '$answer_id' AND `edu_answer`.`student_id` = '$
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 $test_id = $data['test_id'];
 ?>
 <style type="text/css">
@@ -57,11 +57,11 @@ $test_id = $data['test_id'];
         </tr>
         <tr>
         <td>Mulai Ujian
-        </td><td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['start'])));?> </td>
+        </td><td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['start'])));?> </td>
         </tr>
         <tr>
         <td>Selesai Ujian
-        </td><td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['end'])));?> </td>
+        </td><td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['end'])));?> </td>
         </tr>
         <tr>
         <td>Nilai Akhir
@@ -105,7 +105,7 @@ else
 	";
 	$stmtx = $database->executeQuery($sql);
 	if ($stmtx->rowCount() > 0) {
-		$rowsx = $stmtx->fetchAll(PDO::FETCH_ASSOC);
+		$rowsx = $stmtx->fetchAll(\PDO::FETCH_ASSOC);
 		foreach ($rowsx as $dt) {
 			$bc = $dt['basic_competence'];
 			if (strlen($bc) > 0) {
@@ -215,7 +215,7 @@ if($stmt1->rowCount() > 0)
 <?php
 $i=0;
 $no = $pagination->getOffset();
-$rows1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+$rows1 = $stmt1->fetchAll(\PDO::FETCH_ASSOC);
 foreach($rows1 as $data)
 {
 	$j=$i%2;
@@ -239,7 +239,7 @@ foreach($rows1 as $data)
 	<div class="option">
 	<ol class="listoption" style="list-style-type:<?php echo $data['numbering'];?>">
 	<?php
-	$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+	$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows2 as $data2)
 	{
 	?>
@@ -307,7 +307,7 @@ WHERE `edu_test`.`test_id` = '$test_id' AND `edu_answer`.`student_id` = '$auth_s
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <style type="text/css">
 .test-info{
@@ -379,7 +379,7 @@ if($stmt->rowCount() > 0)
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;
@@ -428,7 +428,7 @@ WHERE `edu_test`.`test_id` = '$test_id' AND `edu_test`.`school_id` = '$school_id
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 
@@ -641,7 +641,7 @@ window.onload = function()
 				'value'=>$teacher_id
 			),
 			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoEdu::RAQUO,
 				'values'=>array(
 					'reg_number',
 					'name'
@@ -742,7 +742,7 @@ $paginationHTML = $pagination->buildHTML();
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

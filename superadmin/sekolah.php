@@ -351,7 +351,7 @@ $(document).ready(function(e) {
 						'value'=>$data['state_id']
 					),
 					'caption'=>array(
-						'delimiter'=>PicoEdu::RAQUO,
+						'delimiter'=>\Pico\PicoEdu::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -380,7 +380,7 @@ $(document).ready(function(e) {
 						'value'=>$data['city_id']
 					),
 					'caption'=>array(
-						'delimiter'=>PicoEdu::RAQUO,
+						'delimiter'=>\Pico\PicoEdu::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -436,14 +436,14 @@ WHERE `edu_school`.`school_id` = '$school_id'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 
 $sql = "SELECT `state`.`state_id` AS `v`, `state`.`name` AS `l`
 FROM `state` WHERE `state`.`country_id` = '".$data['country_id']."' 
 ";
 $stmtx = $database->executeQuery($sql);
 if ($stmtx->rowCount() > 0) {
-	$state_list = $stmtx->fetchAll(PDO::FETCH_ASSOC);
+	$state_list = $stmtx->fetchAll(\PDO::FETCH_ASSOC);
 }
 $sql = "SELECT `city`.`city_id` AS `v`, `city`.`name` AS `l`
 FROM `city` WHERE `city`.`country_id` = '".$data['country_id']."' 
@@ -451,7 +451,7 @@ AND (`city`.`state_id` = '".$data['state_id']."' OR `city`.`state_id` = '' OR `c
 ";
 $stmtx = $database->executeQuery($sql);
 if ($stmtx->rowCount() > 0) {
-	$city_list = $stmtx->fetchAll(PDO::FETCH_ASSOC);
+	$city_list = $stmtx->fetchAll(\PDO::FETCH_ASSOC);
 }
 
 ?>
@@ -583,7 +583,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Terbuka</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php echo $picoEdu->ifMatch($data['open'], 1, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Terbuka</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php echo $picoEdu->ifMatch($data['open'], 1, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Terbuka</label>
 		</td>
 		</tr>
 		<tr>
@@ -629,7 +629,7 @@ $(document).ready(function(e) {
 					'value'=>$data['country_id']
 				),
 				'caption'=>array(
-					'delimiter'=>PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -657,7 +657,7 @@ $(document).ready(function(e) {
 						'value'=>$data['state_id']
 					),
 					'caption'=>array(
-						'delimiter'=>PicoEdu::RAQUO,
+						'delimiter'=>\Pico\PicoEdu::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -686,7 +686,7 @@ $(document).ready(function(e) {
 						'value'=>$data['city_id']
 					),
 					'caption'=>array(
-						'delimiter'=>PicoEdu::RAQUO,
+						'delimiter'=>\Pico\PicoEdu::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -699,17 +699,17 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Cegah Siswa Pindah</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="prevent_change_school" value="1" id="prevent_change_school"<?php if($data['prevent_change_school']==1) echo PicoConst::INPUT_CHECKBOX_CHECKED;?>> Ya</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="prevent_change_school" value="1" id="prevent_change_school"<?php if($data['prevent_change_school']==1) echo \Pico\PicoConst::INPUT_CHECKBOX_CHECKED;?>> Ya</label>
 		</td>
 		</tr>
 		<tr>
 		<td>Cegah Siswa Keluar</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="prevent_resign" value="1" id="prevent_resign"<?php if($data['prevent_resign']==1) echo PicoConst::INPUT_CHECKBOX_CHECKED;?>> Ya</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="prevent_resign" value="1" id="prevent_resign"<?php if($data['prevent_resign']==1) echo \Pico\PicoConst::INPUT_CHECKBOX_CHECKED;?>> Ya</label>
 		</td>
 		</tr>
 		<tr>
 		<td>Sistem Token</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="use_token" value="1" id="use_token"<?php if($data['use_token']==1) echo PicoConst::INPUT_CHECKBOX_CHECKED;?>> Ya</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="use_token" value="1" id="use_token"<?php if($data['use_token']==1) echo \Pico\PicoConst::INPUT_CHECKBOX_CHECKED;?>> Ya</label>
 		</td>
 		</tr>
 	</table>
@@ -751,7 +751,7 @@ WHERE `edu_school`.`school_id` = '$school_id'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_school" action="" method="post" enctype="multipart/form-data">
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -984,7 +984,7 @@ $paginationHTML = $pagination->buildHTML();
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

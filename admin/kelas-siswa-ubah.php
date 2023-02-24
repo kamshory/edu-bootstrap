@@ -61,7 +61,7 @@ if(isset($_POST['setclass']) && isset($_POST['students']) && isset($_POST['class
 	$sql = "SELECT `grade_id` FROM `edu_class` WHERE `class_id` = '$class_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$grade_id = $data['grade_id'];
 		$students_str = @$_POST['students'];
 		if (isset($students_str)) {
@@ -151,7 +151,7 @@ if(@$_GET['option'] == 'edit')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_student" id="formedu_student" action="" method="post" enctype="multipart/form-data">
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -189,7 +189,7 @@ if(@$_GET['option'] == 'edit')
 					'value'=>$data['class_id']
 				),
 				'caption'=>array(
-					'delimiter'=>PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -208,8 +208,8 @@ if(@$_GET['option'] == 'edit')
 		<td>Jenis Kelamin</td>
 		<td><select class="form-control input-select" name="gender" id="gender">
 		<option value=""></option>
-		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', PicoConst::SELECT_OPTION_SELECTED);?>>Laki-Laki</option>
-		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', PicoConst::SELECT_OPTION_SELECTED);?>>Perempuan</option>
+		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Laki-Laki</option>
+		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Perempuan</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -238,12 +238,12 @@ if(@$_GET['option'] == 'edit')
 		</tr>
 		<tr>
 		<td>Blokir</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="blocked" value="1" id="blocked"<?php echo $picoEdu->ifMatch($data['blocked'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Blokir</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="blocked" value="1" id="blocked"<?php echo $picoEdu->ifMatch($data['blocked'], true, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Blokir</label>
 		</td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
 		</td>
 		</tr>
 		</table>
@@ -280,7 +280,7 @@ AND `edu_student`.`student_id` = '$edit_key'
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_student" action="" method="post" enctype="multipart/form-data">
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -334,11 +334,11 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
+		<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
+		<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
@@ -444,7 +444,7 @@ $(document).ready(function(e) {
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -519,7 +519,7 @@ $paginationHTML = $pagination->buildHTML();
 							'value'=>$class_id
 						),
 						'caption'=>array(
-							'delimiter'=>PicoEdu::RAQUO,
+							'delimiter'=>\Pico\PicoEdu::RAQUO,
 							'values'=>array(
 								'name'
 							)
@@ -572,7 +572,7 @@ $paginationHTML = $pagination->buildHTML();
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

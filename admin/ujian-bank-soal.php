@@ -49,7 +49,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 				
 				if($stmt->rowCount() > 0)
 				{
-					$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+					$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 					foreach($rows as $data)
 					{
 					?>
@@ -98,7 +98,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
                 <tbody>
                 <?php
                 $no=0;
-                $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 				foreach($rows as $data)
 				{
                 $no++;

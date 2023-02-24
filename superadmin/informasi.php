@@ -288,7 +288,7 @@ $sql = "SELECT * FROM `edu_info` WHERE `info_id` = '$info_id'";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
@@ -447,7 +447,7 @@ else if(isset($_GET['info_id']))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		?>
 		<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/FileSaver.js"></script>
 		<script type="text/javascript">
@@ -594,7 +594,7 @@ $paginationHTML = $pagination->buildHTML();
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

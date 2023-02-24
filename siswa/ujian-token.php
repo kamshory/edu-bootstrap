@@ -22,7 +22,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$token_valid = 1;
 		$token_data = $data;
 		$test_id = $token_data['test_id'];
@@ -47,7 +47,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 			else
 			{
 				$proses = false;
-				$dt = $stmt->fetch(PDO::FETCH_ASSOC);
+				$dt = $stmt->fetch(\PDO::FETCH_ASSOC);
 				$test_id_terakhir = $dt['start'];
 				header("Location: ujian/index.php?test_id=$test_id");
 			}
@@ -89,7 +89,7 @@ if(isset($_SESSION['vtoken']) && isset($_POST['enter_to_test']))
 				$arr = array();
 				$stmtx = $database->executeQuery($sql);
 				if ($stmtx->rowCount() > 0) {
-					$rowsx = $stmtx->fetchAll(PDO::FETCH_ASSOC);
+					$rowsx = $stmtx->fetchAll(\PDO::FETCH_ASSOC);
 					foreach ($rowsx as $dt) {
 						$arr[] = $dt['question_id'];
 					}
@@ -135,7 +135,7 @@ else if(isset($_POST['token']))
 		if($stmt->rowCount() > 0)
 		{
 			$token_valid = 1;
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$token_data = $data;
 			$test_id = $token_data['test_id'];
 			$step = 1;
@@ -204,7 +204,7 @@ $pageTitle = "Token Ujian";
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		?>
         <form name="" method="post" enctype="multipart/form-data">
 		<div class="label-center">

@@ -1,4 +1,5 @@
 <?php
+namespace Pico;
 class FileSynchronizer
 {
 	const NEW_LINE = "\r\n";

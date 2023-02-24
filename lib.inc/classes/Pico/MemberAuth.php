@@ -1,5 +1,5 @@
 <?php
-
+namespace Pico;
 
 class MemberAuth
 {

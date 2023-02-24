@@ -22,7 +22,7 @@ if(!empty($school_id))
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)
 			{
-			    $data = $stmt->fetch(PDO::FETCH_ASSOC);
+			    $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 				$time_create = $database->getLocalDateTime();
 				$time_edit = $database->getLocalDateTime();
 				$random = ((int) $data['random']);
@@ -112,7 +112,7 @@ if(!empty($school_id))
 				?>
 				<ol class="question-ol">
 				<?php
-				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+				$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 				foreach($rows as $data)
 				{
 				$question_id = $data['question_id'];
@@ -124,7 +124,7 @@ if(!empty($school_id))
 						$stmt2 = $database->executeQuery($sql2);
 						if($stmt2->rowCount() > 0)
 						{
-							$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+							$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 							foreach($rows2 as $data2)
 							{
 								?><li class="option-li"><?php if($data2['score']>0){?><span class="score"></span><?php } ?><?php echo $data2['content'];?></li>

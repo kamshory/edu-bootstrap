@@ -21,7 +21,7 @@ WHERE `edu_school_program`.`school_program_id` = '$edit_key' AND `school_id` = '
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_school_program" action="" method="post" enctype="multipart/form-data">
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -152,7 +152,7 @@ $paginationHTML = $pagination->buildHTML();
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

@@ -174,7 +174,7 @@ WHERE `edu_test`.`test_id` = '$edit_key'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 $school_id = $data['school_id'];
 
 ?>
@@ -199,7 +199,7 @@ $arrc = array();
 $stmt = $database->executeQuery($sqlc);
 if($stmt->rowCount() > 0)
 {
-	$arrc = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$arrc = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 }
 ?>
 <script type="text/javascript">
@@ -259,7 +259,7 @@ $subjectList = $picoEdu->getSubjectList();
 					'value'=>$data['school_program_id']
 				),
 				'caption'=>array(
-					'delimiter'=>PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -298,7 +298,7 @@ $subjectList = $picoEdu->getSubjectList();
 					'value'=>$data['teacher_id']
 				),
 				'caption'=>array(
-					'delimiter'=>PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoEdu::RAQUO,
 					'values'=>array(
 						'reg_number',
 						'name'
@@ -319,11 +319,11 @@ $subjectList = $picoEdu->getSubjectList();
 		</tr>
 		<tr>
 		<td>Terbuka
-		</td><td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php echo $picoEdu->ifMatch($data['open'], 1, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Terbuka</label>
+		</td><td><label><input type="checkbox" class="input-checkbox" name="open" value="1" id="open"<?php echo $picoEdu->ifMatch($data['open'], 1, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Terbuka</label>
 		</tr>
 		<tr>
 		<td>Dibatasi</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="has_limits" value="1" id="has_limits"<?php echo $picoEdu->ifMatch($data['has_limits'], 1, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Dibatasi</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="has_limits" value="1" id="has_limits"<?php echo $picoEdu->ifMatch($data['has_limits'], 1, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Dibatasi</label>
 		</td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_limits" data-condition="<?php echo $data['has_limits'];?>" data-show-condition="1" data-hide-condition="0">
@@ -338,8 +338,8 @@ $subjectList = $picoEdu->getSubjectList();
 		<td>Metode Penilaian</td>
 		<td><select class="form-control input-select" name="assessment_methods" id="assessment_methods">
 		<option value=""></option>
-		<option value="H"<?php echo $picoEdu->ifMatch($data['assessment_methods'], 'H', PicoConst::SELECT_OPTION_SELECTED);?>>Tertinggi</option>
-		<option value="N"<?php echo $picoEdu->ifMatch($data['assessment_methods'], 'N', PicoConst::SELECT_OPTION_SELECTED);?>>Terbaru</option>
+		<option value="H"<?php echo $picoEdu->ifMatch($data['assessment_methods'], 'H', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Tertinggi</option>
+		<option value="N"<?php echo $picoEdu->ifMatch($data['assessment_methods'], 'N', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Terbaru</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -354,7 +354,7 @@ $subjectList = $picoEdu->getSubjectList();
 		</tr>
 		<tr>
 		<td>Pengacakan Soal</td>
-        <td><label><input type="checkbox" class="input-checkbox" name="random" value="1" id="random"<?php echo $picoEdu->trueFalse($data['random']==1, PicoConst::INPUT_CHECKBOX_CHECKED, '');?>> Soal Diacak</label></td>
+        <td><label><input type="checkbox" class="input-checkbox" name="random" value="1" id="random"<?php echo $picoEdu->trueFalse($data['random']==1, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED, '');?>> Soal Diacak</label></td>
 		</tr>
 		<tr>
 		<td>Durasi
@@ -362,7 +362,7 @@ $subjectList = $picoEdu->getSubjectList();
 		</tr>
 		<tr>
 		<td>Beri Peringatan</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="has_alert" value="1" id="has_alert"<?php echo $picoEdu->trueFalse($data['has_alert']==1, PicoConst::INPUT_CHECKBOX_CHECKED, '');?>> Beri Peringatan</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="has_alert" value="1" id="has_alert"<?php echo $picoEdu->trueFalse($data['has_alert']==1, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED, '');?>> Beri Peringatan</label>
 		</td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="has_alert" data-condition="<?php echo $data['has_alert'];?>" data-show-condition="1" data-hide-condition="0">
@@ -378,7 +378,7 @@ $subjectList = $picoEdu->getSubjectList();
 		</tr>
 		<tr>
 		<td>Otomatis Kirim Jawaban</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="autosubmit" value="1" id="autosubmit"<?php echo $picoEdu->ifMatch($data['autosubmit'], 1, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Otomatis</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="autosubmit" value="1" id="autosubmit"<?php echo $picoEdu->ifMatch($data['autosubmit'], 1, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Otomatis</label>
 		</td>
 		</tr>
 		<tr>
@@ -391,11 +391,11 @@ $subjectList = $picoEdu->getSubjectList();
 		</tr>
 		<tr>
 		<td>Notifikasi Nilai</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="score_notification" value="1" id="score_notification"<?php echo $picoEdu->ifMatch($data['score_notification'], 1, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Notifikasi Nilai</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="score_notification" value="1" id="score_notification"<?php echo $picoEdu->ifMatch($data['score_notification'], 1, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Notifikasi Nilai</label>
 		</tr>
 		<tr>
 		<td>Umumkan Kunci Jawaban</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="publish_answer" value="1" id="publish_answer"<?php echo $picoEdu->ifMatch($data['publish_answer'], 1, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Umumkan Kunci Jawaban</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="publish_answer" value="1" id="publish_answer"<?php echo $picoEdu->ifMatch($data['publish_answer'], 1, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Umumkan Kunci Jawaban</label>
 		</td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="publish_answer" data-condition="<?php echo $data['publish_answer'];?>" data-show-condition="1" data-hide-condition="0">
@@ -406,8 +406,8 @@ $subjectList = $picoEdu->getSubjectList();
 		<td>Ketersediaan Ujian
 		</td><td><select class="form-control input-select" name="test_availability" id="test_availability">
 		<option value=""></option>
-		<option value="F"<?php echo $picoEdu->ifMatch($data['test_availability'], 'F', PicoConst::SELECT_OPTION_SELECTED);?>>Selamanya</option>
-		<option value="L"<?php echo $picoEdu->ifMatch($data['test_availability'], 'L', PicoConst::SELECT_OPTION_SELECTED);?>>Terbatas</option>
+		<option value="F"<?php echo $picoEdu->ifMatch($data['test_availability'], 'F', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Selamanya</option>
+		<option value="L"<?php echo $picoEdu->ifMatch($data['test_availability'], 'L', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Terbatas</option>
 		</select></td>
 		</tr>
 		<tr class="toggle-tr" data-toggle="test_availability" data-condition="<?php echo $data['test_availability'];?>" data-show-condition="L" data-hide-condition="F">
@@ -420,7 +420,7 @@ $subjectList = $picoEdu->getSubjectList();
 		</tr>
 		<tr>
 		<td>Aktif
-		</td><td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
+		</td><td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
 		</td>
 		</tr>
 	</table>
@@ -478,7 +478,7 @@ WHERE `edu_test`.`test_id` = '$edit_key'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_test" action="" method="post" enctype="multipart/form-data">
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -626,11 +626,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
+		<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
+		<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
@@ -713,7 +713,7 @@ window.onload = function()
 				'value'=>$school_id
 			),
 			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -742,7 +742,7 @@ window.onload = function()
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -842,7 +842,7 @@ $paginationHTML = $pagination->buildHTML();
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

@@ -27,7 +27,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$_SESSION['admin_username'] = $data['username'];
 		$_SESSION['admin_password'] = $password;
 		if(isset($_POST['ref']))

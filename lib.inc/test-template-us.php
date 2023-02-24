@@ -153,7 +153,7 @@ $segmen = 0;
 $no = $offset;
 $inc = 0;
 $arr_soal = array();
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 foreach($rows as $data)
 {
 	$soal = $data['question_id'];
@@ -195,7 +195,7 @@ foreach($rows as $data)
 	$i=1;
 	$stmt2 = $database->executeQuery($sql2);
 			if ($stmt2->rowCount() > 0) {
-				$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+				$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 				foreach ($rows2 as $data2) {
 					$answer = @$_SESSION['answer_tmp'][$student_id][$test_id]['answer_' . $data2['question_id']];
 					?>
@@ -217,7 +217,7 @@ foreach($rows as $data)
 	?>
     	<div class="option-item">
         	<div class="option-ctrl">
-            	<label><input type="radio" data-test="<?php echo $test_id;?>" data-question="<?php echo $soal;?>" name="answer_<?php echo $data['question_id'];?>" id="answer_<?php echo $data['question_id'];?>" class="radio_answer" value=""<?php echo $picoEdu->ifMatch($answer, '', PicoConst::INPUT_CHECKBOX_CHECKED);?>>
+            	<label><input type="radio" data-test="<?php echo $test_id;?>" data-question="<?php echo $soal;?>" name="answer_<?php echo $data['question_id'];?>" id="answer_<?php echo $data['question_id'];?>" class="radio_answer" value=""<?php echo $picoEdu->ifMatch($answer, '', \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>>
                 <?php echo liststyle($data['numbering'], $i);?>
                 </label>
             </div>

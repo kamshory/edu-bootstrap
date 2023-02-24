@@ -135,7 +135,7 @@ WHERE `edu_school_program`.`school_program_id` = '$edit_key' AND `school_id` = '
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_school_program" id="formedu_school_program" action="" method="post" enctype="multipart/form-data" onsubmit="return checkForm(this, 'Wajib')">
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -150,12 +150,12 @@ $stmt = $database->executeQuery($sql);
 		</tr>
 		<tr>
 		<td>Default</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="default" value="1" id="default"<?php echo $picoEdu->ifMatch($data['default'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Default</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="default" value="1" id="default"<?php echo $picoEdu->ifMatch($data['default'], true, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Default</label>
 		</td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
 		</td>
 		</tr>
 	</table>
@@ -189,7 +189,7 @@ WHERE `edu_school_program`.`school_program_id` = '$edit_key' AND `school_id` = '
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_school_program" action="" method="post" enctype="multipart/form-data">
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -321,7 +321,7 @@ $paginationHTML = $pagination->buildHTML();
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

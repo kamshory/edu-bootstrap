@@ -41,7 +41,7 @@ if($number_of_question)
 	$question_set = array();
 	$questions = array();
 	if ($stmt1->rowCount() > 0) {
-		$rows1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+		$rows1 = $stmt1->fetchAll(\PDO::FETCH_ASSOC);
 		foreach($rows1 as $data1)
 		{
 			$soal = $data1['question_id'];
@@ -62,7 +62,7 @@ if($number_of_question)
 			$options = array();
 			$stmt2 = $database->executeQuery($sql2);
 			if ($stmt2->rowCount() > 0) {
-				$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+				$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 				foreach ($rows2 as $data2) {
 					$answer = @$_SESSION['answer_tmp'][$student_id][$test_id]['answer_' . $data2['question_id']];
 					$option = new StdClass();

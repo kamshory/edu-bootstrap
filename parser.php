@@ -74,7 +74,7 @@ if(file_exists(dirname(__FILE__)."/sch-".$modul_name))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$school_id = $data['school_id'];
 		$_GET['school_id'] = $school_id;
 	}
