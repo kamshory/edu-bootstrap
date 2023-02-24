@@ -50,7 +50,7 @@ WHERE `edu_school`.`school_id` = '$school_id'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <style type="text/css">
 #description{
@@ -108,7 +108,7 @@ WHERE `edu_school`.`school_id` = '$school_id'
 	$stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <style type="text/css">
 @media screen and (max-width:599px)

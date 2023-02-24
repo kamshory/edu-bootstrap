@@ -48,7 +48,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['token_id']))
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$now = $database->getLocalDateTime();
-	$oneday = date(PicoConst::DATE_TIME_MYSQL, time()-86400);
+	$oneday = date(\Pico\PicoConst::DATE_TIME_MYSQL, time()-86400);
 	$sql = "DELETE FROM `edu_token` WHERE `time_expire` < '$oneday'
 	";
 	$database->executeDelete($sql, true);
@@ -66,7 +66,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			$students = array();
 			if($stmt->rowCount() > 0)
 			{
-				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+				$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 				foreach($rows as $data)
 				{
 					$students[] = $data['student_id'];
@@ -161,7 +161,7 @@ $(document).ready(function(e) {
 					'value'=>$school_id
 				),
 				'caption'=>array(
-					'delimiter'=>PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -192,7 +192,7 @@ $(document).ready(function(e) {
 					'value'=>null
 				),
 				'caption'=>array(
-					'delimiter'=>PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -222,7 +222,7 @@ $(document).ready(function(e) {
 					'value'=>null
 				),
 				'caption'=>array(
-					'delimiter'=>PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -241,7 +241,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Kedaluarsa</td>
-		<td><input type="text" class="form-control input-text input-text-datetime" name="time_expire" id="time_expire" value="<?php echo date(PicoConst::DATE_TIME_MYSQL, time()+3600);?>" autocomplete="off" required="required" /></td>
+		<td><input type="text" class="form-control input-text input-text-datetime" name="time_expire" id="time_expire" value="<?php echo date(\Pico\PicoConst::DATE_TIME_MYSQL, time()+3600);?>" autocomplete="off" required="required" /></td>
 		</tr>
 	</table>
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -275,7 +275,7 @@ AND `edu_token`.`token_id` = '$edit_key'
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_token" action="" method="post" enctype="multipart/form-data">
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -343,7 +343,7 @@ else
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $now = $database->getLocalDateTime();
-$oneday = date(PicoConst::DATE_TIME_MYSQL, time()-86400);
+$oneday = date(\Pico\PicoConst::DATE_TIME_MYSQL, time()-86400);
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 if(isset($_POST['cleanup']))
 {
@@ -407,7 +407,7 @@ function printToken(frm)
 				'value'=>$test_id
 			),
 			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -435,7 +435,7 @@ function printToken(frm)
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -552,7 +552,7 @@ if($test_id == 0 && $class_id == 0)
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

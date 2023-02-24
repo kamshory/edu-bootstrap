@@ -84,7 +84,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$sql = "SELECT * FROM `edu_school` WHERE `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$country_id = $data['country_id'];
 		$language = $data['language'];
 
@@ -143,7 +143,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$sql = "SELECT * FROM `edu_school` WHERE `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$initial = $data['school_id'];
 
 		$sql = "UPDATE `edu_admin` SET 
@@ -207,7 +207,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 					'value'=>null
 				),
 				'caption'=>array(
-					'delimiter'=>PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -296,7 +296,7 @@ WHERE `edu_admin`.`admin_id` = '$edit_key'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_admin" id="formedu_admin" action="" method="post" enctype="multipart/form-data">
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -317,7 +317,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 					'value'=>$data['school_id']
 				),
 				'caption'=>array(
-					'delimiter'=>PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoEdu::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -335,8 +335,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<tr>
 		<td>Level Admin</td>
 		<td><select class="form-control input-select" name="admin_level" id="admin_level">
-		<option value="2"<?php echo $picoEdu->ifMatch($data['admin_level'], '2', PicoConst::SELECT_OPTION_SELECTED);?>>Administrator</option>
-		<option value="1"<?php echo $picoEdu->ifMatch($data['admin_level'], '1', PicoConst::SELECT_OPTION_SELECTED);?>>Super Administrator</option>
+		<option value="2"<?php echo $picoEdu->ifMatch($data['admin_level'], '2', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Administrator</option>
+		<option value="1"<?php echo $picoEdu->ifMatch($data['admin_level'], '1', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Super Administrator</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -347,8 +347,8 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		<td>Jenis Kelamin</td>
 		<td><select class="form-control input-select" name="gender" id="gender">
 		<option value=""></option>
-		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', PicoConst::SELECT_OPTION_SELECTED);?>>Laki-Laki</option>
-		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', PicoConst::SELECT_OPTION_SELECTED);?>>Perempuan</option>
+		<option value="M"<?php echo $picoEdu->ifMatch($data['gender'], 'M', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Laki-Laki</option>
+		<option value="W"<?php echo $picoEdu->ifMatch($data['gender'], 'W', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Perempuan</option>
 		</select></td>
 		</tr>
 		<tr>
@@ -373,12 +373,12 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Blokir</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="blocked" value="1" id="blocked"<?php echo $picoEdu->ifMatch($data['blocked'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Blokir</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="blocked" value="1" id="blocked"<?php echo $picoEdu->ifMatch($data['blocked'], true, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Blokir</label>
 		</td>
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
 		</td>
 		</tr>
 	</table>
@@ -416,7 +416,7 @@ AND `edu_admin`.`admin_id` = '$edit_key'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_admin" action="" method="post" enctype="multipart/form-data">
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -466,11 +466,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Dibuat</td>
-		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
+		<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Diubah</td>
-		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
+		<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>
@@ -546,7 +546,7 @@ $(document).ready(function(e) {
 				'value'=>$school_id
 			),
 			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -638,7 +638,7 @@ $paginationHTML = $pagination->buildHTML();
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

@@ -19,7 +19,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$basename = $data['file_path'];
 		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 		if(file_exists($file_path))
@@ -33,7 +33,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 			$stmt = $database->executeQuery($sql);
 			if($stmt->rowCount() > 0)
 			{
-				$data = $stmt->fetch(PDO::FETCH_ASSOC);		
+				$data = $stmt->fetch(\PDO::FETCH_ASSOC);		
 				$random = ((int) $data['random']);
 				$sort_order = ((int) $data['sort_order']);
 				$score_standar = $data['standard_score'];
@@ -168,7 +168,7 @@ if($stmt->rowCount() > 0)
 	<tbody>
 	<?php
 	$no=0;
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

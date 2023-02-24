@@ -15,8 +15,7 @@ if(isset($_SESSION['student_password']))
 	$password = $_SESSION['student_password'];
 }
 
-require_once dirname(__FILE__) . "/classes/StudentAuth.php";
-$studentLoggedIn = new \StudentAuth($database, $username, $password, false);
+$studentLoggedIn = new \Pico\StudentAuth($database, $username, $password, false);
 
 $member_id = "";
 $student_id = "";

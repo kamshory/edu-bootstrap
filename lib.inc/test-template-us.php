@@ -10,15 +10,21 @@ $dur_obj = $picoEdu->secondsToTime($data['duration']);
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/jqu/assets/font/open-sans/index.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test-student.min.css" />
 <link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/lib.assets/theme/default/css/images/favicon.png" />
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/jqu/assets/css/style.min.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/jqu/assets/font/icon.css" />
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/jqu/assets/js/jquery.unand.min.js"></script>
+
+
 <script type="application/javascript">
 var mui;
 $(document).ready(function(e) {
 	mui = new mobileUI('*');
 });
 </script>
+<script>
+	let testId = '<?php echo $test_id;?>';
+	let websocketURL = '<?php echo $picoEdu->getWebsocketHost();?>/?module=test&test_id='+testId;
+</script>
+<script src="<?php echo $cfg->base_assets;?>lib.assets/script/test-ws.js"></script>
+<script src="<?php echo $cfg->base_assets;?>lib.assets/script/test-ws-student.js"></script>
+
 <title><?php echo $data['name'];?> - <?php echo $cfg->app_name;?></title>
 </head>
 <body>
@@ -74,7 +80,7 @@ $(document).ready(function(e) {
 	?>
 <script type="text/javascript">
 var alert_time = <?php echo $alert_time;?>;
-var test = <?php echo $test_id;?>;
+var test = '<?php echo $test_id;?>';
 var autosubmit = <?php echo $autosubmit*1;?>;
 var due_time = <?php echo @$_SESSION['session_test'][$student_id][$test_id]['due_time']-time();?>;
 </script>
@@ -153,7 +159,7 @@ $segmen = 0;
 $no = $offset;
 $inc = 0;
 $arr_soal = array();
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 foreach($rows as $data)
 {
 	$soal = $data['question_id'];
@@ -195,7 +201,7 @@ foreach($rows as $data)
 	$i=1;
 	$stmt2 = $database->executeQuery($sql2);
 			if ($stmt2->rowCount() > 0) {
-				$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+				$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 				foreach ($rows2 as $data2) {
 					$answer = @$_SESSION['answer_tmp'][$student_id][$test_id]['answer_' . $data2['question_id']];
 					?>
@@ -217,7 +223,7 @@ foreach($rows as $data)
 	?>
     	<div class="option-item">
         	<div class="option-ctrl">
-            	<label><input type="radio" data-test="<?php echo $test_id;?>" data-question="<?php echo $soal;?>" name="answer_<?php echo $data['question_id'];?>" id="answer_<?php echo $data['question_id'];?>" class="radio_answer" value=""<?php echo $picoEdu->ifMatch($answer, '', PicoConst::INPUT_CHECKBOX_CHECKED);?>>
+            	<label><input type="radio" data-test="<?php echo $test_id;?>" data-question="<?php echo $soal;?>" name="answer_<?php echo $data['question_id'];?>" id="answer_<?php echo $data['question_id'];?>" class="radio_answer" value=""<?php echo $picoEdu->ifMatch($answer, '', \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>>
                 <?php echo liststyle($data['numbering'], $i);?>
                 </label>
             </div>

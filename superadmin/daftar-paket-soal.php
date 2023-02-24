@@ -25,7 +25,7 @@ if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$file_path = $data['file_path'];
 			$real_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$file_path;
 			$md5 = md5_file($real_path);
@@ -97,7 +97,7 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 		$stmt = $database->executeQuery($sql);
 		if($stmt->rowCount() > 0)
 		{
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$file_path = $data['file_path'];
 			$sql = "DELETE FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 			$database->executeDelete($sql, true);
@@ -250,7 +250,7 @@ WHERE `edu_test_collection`.`test_collection_id` = '$edit_key'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_test_collection" id="formedu_test_collection" action="" method="post" enctype="multipart/form-data" onsubmit="return checkForm(this, 'Wajib')">
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
@@ -271,7 +271,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Aktif</td>
-		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
+		<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active"<?php echo $picoEdu->ifMatch($data['active'], true, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label>
 		</td>
 		</tr>
 		<tr><td></td>
@@ -303,7 +303,7 @@ WHERE `edu_test_collection`.`test_collection_id` = '$edit_key'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formedu_test_collection" action="" method="post" enctype="multipart/form-data">
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
@@ -546,7 +546,7 @@ $paginationHTML = $pagination->buildHTML();
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

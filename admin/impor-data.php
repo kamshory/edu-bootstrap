@@ -274,7 +274,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 			{
 				$sql = "SELECT `school_id` FROM `edu_school` WHERE `name` like '$name_school' ";
 				$stmt = $database->executeQuery($sql);
-				$data_school = $stmt->fetch(PDO::FETCH_ASSOC);
+				$data_school = $stmt->fetch(\PDO::FETCH_ASSOC);
 				$useNationalId = $data_school['use_national_id'];
 				$school_id = $data_school['school_id'];
 			}
@@ -310,7 +310,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 				}
 
 				if ($stmt2->rowCount() > 0) {
-					$data2 = $stmt2->fetch(PDO::FETCH_ASSOC);
+					$data2 = $stmt2->fetch(\PDO::FETCH_ASSOC);
 					$username = addslashes($data2['username']);
 
 					$name = $picoEdu->filterSanitizeName($data2['name']);
@@ -335,7 +335,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 							";
 							try {
 								$database->executeUpdate($sql2, true);
-							} catch (PDOException $e) {
+							} catch (\PDOException $e) {
 								// Do nothing
 							}
 
@@ -345,7 +345,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 							";
 							try {
 								$database->executeInsert($sql2, true);
-							} catch (PDOException $e) {
+							} catch (\PDOException $e) {
 								// Do nothing
 							}
 						}
@@ -826,7 +826,7 @@ WHERE `edu_school`.`school_id` = '$edit_key'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <form name="formschool" action="" method="post" enctype="multipart/form-data">
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -893,7 +893,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Waktu</td>
-		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_import_first'])));?> </td>
+		<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_import_first'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin</td>
@@ -910,7 +910,7 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 		</tr>
 		<tr>
 		<td>Waktu</td>
-		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_import_last'])));?> </td>
+		<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_import_last'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin</td>
@@ -924,11 +924,11 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
 		<tr>
 		<td>Waktu Buat</td>
-		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
+		<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 		</tr>
 		<tr>
 		<td>Waktu Ubah</td>
-		<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
+		<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 		</tr>
 		<tr>
 		<td>Admin Buat</td>

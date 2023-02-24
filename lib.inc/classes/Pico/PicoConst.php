@@ -1,4 +1,6 @@
 <?php
+namespace Pico;
+
 class PicoConst {
 	const DATE_TIME_MYSQL = 'Y-m-d H:i:s';
 	const FULL_DATE_TIME_INDONESIA_FORMAT = 'j M Y H:i';

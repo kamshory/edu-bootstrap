@@ -27,7 +27,7 @@ if(@$_GET['option'] == 'delete')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$dt = $stmt->fetch(PDO::FETCH_ASSOC);
+		$dt = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$id = $dt['question_id'];
 		$test_id = $dt['test_id'];
 		$sql = "DELETE FROM `edu_option` WHERE `question_id` = '$id' ";
@@ -51,7 +51,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$time_create = $database->getLocalDateTime();
 		$time_edit = $database->getLocalDateTime();
 	
@@ -166,7 +166,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$stmt1 = $database->executeQuery($sql1);
 	if($stmt1->rowCount() > 0)
 	{
-		$data1 = $stmt1->fetch(PDO::FETCH_ASSOC);
+		$data1 = $stmt1->fetch(\PDO::FETCH_ASSOC);
 		$sort_order = $data1['sort_order'] + 1;
 	}
 	else
@@ -243,7 +243,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$dt = $stmt->fetch(PDO::FETCH_ASSOC);
+		$dt = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$test_id = $dt['test_id'];
 	
 		$direktori = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
@@ -273,7 +273,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$stmt2 = $database->executeQuery($sql);
 		if ($stmt2->rowCount() > 0) {
 			
-			$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+			$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 
 			foreach ($rows2 as $dt) {
 				$id2 = $dt['option_id'];
@@ -328,7 +328,7 @@ FROM `edu_test` WHERE `test_id` = '$test_id' ";
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <div class="test-info">
 <table width="100%" border="0">
@@ -393,7 +393,7 @@ $numbering = 'upper-alpha';
   </tr>
   <tr>
     <td>Pengacakan Pilihan</td>
-    <td><label><input type="checkbox" name="random" id="random" value="1"<?php echo $picoEdu->trueFalse($data['random'],  PicoConst::INPUT_CHECKBOX_CHECKED, '');?> /> Diacak</label></td>
+    <td><label><input type="checkbox" name="random" id="random" value="1"<?php echo $picoEdu->trueFalse($data['random'],  \Pico\PicoConst::INPUT_CHECKBOX_CHECKED, '');?> /> Diacak</label></td>
   </tr>
 </table>
 </div>
@@ -448,7 +448,7 @@ else if(@$_GET['option'] == 'edit')
 	$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$test_id = $data['test_id'];
 
 		$sql = "SELECT `edu_test`.* ,
@@ -457,7 +457,7 @@ else if(@$_GET['option'] == 'edit')
 
 		$stmt3 = $database->executeQuery($sql);
 		if ($stmt3->rowCount() > 0) {
-			$data3 = $stmt3->fetch(PDO::FETCH_ASSOC);
+			$data3 = $stmt3->fetch(\PDO::FETCH_ASSOC);
 
 			?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />
@@ -522,7 +522,7 @@ var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$tes
   <tr>
     <td>Pengacakan Pilihan</td>
     <td><label><input type="checkbox" name="random" id="random" value="1"<?php if ($data['random'])
-						echo PicoConst::INPUT_CHECKBOX_CHECKED; ?> /> Diacak</label></td>
+						echo \Pico\PicoConst::INPUT_CHECKBOX_CHECKED; ?> /> Diacak</label></td>
   </tr>
 </table>
 </div>
@@ -542,7 +542,7 @@ $sql = "SELECT * FROM `edu_option` WHERE `question_id` = '$question_id' ";
 $stmt2 = $database->executeQuery($sql);
 $i = 0;
 if ($stmt2->rowCount() > 0) {
-	$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+	$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 	foreach ($rows2 as $data2) {
 	$i++;
 			?>
@@ -593,7 +593,7 @@ FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = '$school_id'
 $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 
 <script type="text/javascript">
@@ -673,7 +673,7 @@ $total_menjawab = 0;
 $total_benar = 0;
 $total_salah = 0;
 $total_persen = 0;
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 foreach($rows as $data)
 {
 	$no++;
@@ -732,7 +732,7 @@ foreach($rows as $data)
 
 	$stmt2 = $database->executeQuery($sql);
 	if ($stmt2->rowCount() > 0) {
-										$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+										$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 		foreach ($rows2 as $data2) {
 			$option[$j] = $data2['pilih'];
 			if ($data2['score'] > $score) {
@@ -844,7 +844,7 @@ ORDER BY `sort_order` ASC, `question_id` ASC
 $stmt = $database->executeQuery($sql);
 
 if ($stmt->rowCount() > 0) {
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 foreach ($rows as $data) {
 ?>
 <li data-question-id="<?php echo $data['question_id']; ?>">
@@ -863,7 +863,7 @@ $question_id = $data['question_id'];
 $sql = "SELECT * FROM `edu_option` WHERE `question_id` = '$question_id' ";
 $stmt2 = $database->executeQuery($sql);
 if ($stmt2->rowCount() > 0) {
-	$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+	$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 	foreach ($rows2 as $data2) {
 		?>
 <li>
@@ -1011,7 +1011,7 @@ window.onload = function()
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -1116,7 +1116,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

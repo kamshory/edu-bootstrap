@@ -17,7 +17,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$waktu = $database->getLocalDateTime();
 		$ip = addslashes($_SERVER['REMOTE_ADDR']);
 		$sessions_id = $data['sessions_id'];
@@ -37,7 +37,7 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$waktu = $database->getLocalDateTime();
 		$ip = addslashes($_SERVER['REMOTE_ADDR']);
 		$sessions_id = $data['sessions_id'];
@@ -63,7 +63,7 @@ FROM `edu_test` WHERE `test_id` = '$test_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <div class="test-info">
 <table width="100%" border="0">
@@ -108,10 +108,10 @@ $data = $stmt->fetch(PDO::FETCH_ASSOC);
 <div style="padding-bottom:5px;">
 Status <select name="status" id="status">
 	<option value="">Semua</option>
-	<option value="1"<?php echo $picoEdu->ifMatch($status, '1', PicoConst::SELECT_OPTION_SELECTED);?>>Ujian</option>
-	<option value="2"<?php echo $picoEdu->ifMatch($status, '2', PicoConst::SELECT_OPTION_SELECTED);?>>Selesai</option>
-	<option value="3"<?php echo $picoEdu->ifMatch($status, '3', PicoConst::SELECT_OPTION_SELECTED);?>>Dikeluarkan</option>
-	<option value="4"<?php echo $picoEdu->ifMatch($status, '4', PicoConst::SELECT_OPTION_SELECTED);?>>Diblokir</option>
+	<option value="1"<?php echo $picoEdu->ifMatch($status, '1', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Ujian</option>
+	<option value="2"<?php echo $picoEdu->ifMatch($status, '2', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Selesai</option>
+	<option value="3"<?php echo $picoEdu->ifMatch($status, '3', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Dikeluarkan</option>
+	<option value="4"<?php echo $picoEdu->ifMatch($status, '4', \Pico\PicoConst::SELECT_OPTION_SELECTED);?>>Diblokir</option>
 </select>
 <input type="submit" id="show" class="btn btn-primary" value="Tampilkan" />
 </div>
@@ -224,7 +224,7 @@ window.onload = function()
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -314,7 +314,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
     <tbody>
     <?php
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$no++;

@@ -1,4 +1,6 @@
 <?php
+namespace Pico;
+
 class MainMenu
 {
     public function __construct()

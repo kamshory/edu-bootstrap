@@ -14,8 +14,7 @@ if(isset($_SESSION['admin_password']))
 	$password = $_SESSION['admin_password'];
 }
 
-require_once dirname(__FILE__) . "/classes/MemberAuth.php";
-$adminLoggedIn = new \MemberAuth($database, $username, $password, false);
+$adminLoggedIn = new \Pico\MemberAuth($database, $username, $password, false);
 $member_id = "";
 $school_id = "";
 $real_school_id = "";

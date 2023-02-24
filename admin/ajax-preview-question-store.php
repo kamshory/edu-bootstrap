@@ -10,14 +10,14 @@ $sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' A
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	$basename = $data['file_path'];
 	$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 	if(file_exists($file_path))
 	{
 		$text_all = loadXmlData($file_path);
 
-		require_once dirname(dirname(__FILE__))."/lib.inc/cache.php";
+		$browserCache = new \Pico\BrowserCache();
 		$browserCache->setMaxAge(3600);
 
 		?>

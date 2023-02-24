@@ -91,7 +91,7 @@ if(@$_GET['option'] == 'export' && isset($_GET['test_id']))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$assessment_methods = $data['assessment_methods'];
 
 		header("Content-Type: application/vnd.xls");
@@ -269,7 +269,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	<?php
 	$i=0;
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$j=$i%2;
@@ -289,7 +289,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
       <td><?php echo $data['student_name'];?> </td>
       <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
       <td align="right"><?php echo $ke[$data['student_id']];?> </td>
-      <td nowrap><?php echo date(PicoConst::DATE_TIME_MYSQL, strtotime($data['start']));?> </td>
+      <td nowrap><?php echo date(\Pico\PicoConst::DATE_TIME_MYSQL, strtotime($data['start']));?> </td>
       <td nowrap><?php echo $data['timediff'];?> </td>
       <td align="right"><?php echo $data['true'];?> </td>
       <td align="right"><?php echo $data['false'];?> </td>
@@ -357,7 +357,7 @@ WHERE `edu_answer`.`answer_id` = '$answer_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$info = $stmt->fetch(PDO::FETCH_ASSOC);
+$info = $stmt->fetch(\PDO::FETCH_ASSOC);
 $test_id = $info['test_id'];
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />
@@ -369,7 +369,7 @@ $test_id = $info['test_id'];
     <td width="10%">Metode Penilaian</td>
     <td width="15%"><?php echo $picoEdu->selectFromMap($info['assessment_methods'], array('H'=>"Nilai Tertinggi", 'N'=>"Nilai Terbaru"));?> </td>
     <td width="10%">Dibuka</td>
-    <td width="15%"><?php echo $picoEdu->trueFalse($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '', translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_from']))), '-');?> </td>
+    <td width="15%"><?php echo $picoEdu->trueFalse($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '', translateDate(date(\Pico\PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_from']))), '-');?> </td>
     <td width="10%">Benar</td>
     <td width="15%"><?php echo $info['true'];?> </td>
   </tr>
@@ -379,7 +379,7 @@ $test_id = $info['test_id'];
     <td>Jumlah Soal</td>
     <td><?php echo $info['number_of_question'];?> </td>
     <td>Ditutup</td>
-    <td><?php echo $picoEdu->trueFalse($info['available_to'] != '0000-00-00 00:00:00' && $info['available_to'] != '', translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_to']))), '-');?> </td>
+    <td><?php echo $picoEdu->trueFalse($info['available_to'] != '0000-00-00 00:00:00' && $info['available_to'] != '', translateDate(date(\Pico\PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_to']))), '-');?> </td>
     <td>Salah</td>
     <td><?php echo $info['false'];?> </td>
   </tr>
@@ -389,7 +389,7 @@ $test_id = $info['test_id'];
     <td>Sekor Benar</td>
     <td><?php echo $info['standard_score'];?> </td>
     <td>Pengumuman Hasil</td>
-    <td><?php echo $picoEdu->trueFalse($info['publish_answer'], translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['time_answer_publication']))), '-');?> </td>
+    <td><?php echo $picoEdu->trueFalse($info['publish_answer'], translateDate(date(\Pico\PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['time_answer_publication']))), '-');?> </td>
     <td>Nilai Awal</td>
     <td><?php echo $info['initial_score'];?> </td>
   </tr>
@@ -399,7 +399,7 @@ $test_id = $info['test_id'];
     <td>Penalti</td>
     <td><?php echo $info['penalty'];?> </td>
     <td>Tanggal Ujian</td>
-    <td><?php echo translateDate(date(PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['start'])));?> </td>
+    <td><?php echo translateDate(date(\Pico\PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['start'])));?> </td>
     <td>Nilai Akhir</td>
     <td><?php echo $info['final_score'];?> </td>
   </tr>
@@ -447,7 +447,7 @@ else
 	";
 	$stmtx = $database->executeQuery($sql);
 	if ($stmtx->rowCount() > 0) {
-		$rowsx = $stmtx->fetchAll(PDO::FETCH_ASSOC);
+		$rowsx = $stmtx->fetchAll(\PDO::FETCH_ASSOC);
 		foreach ($rowsx as $dt) {
 			$bc = $dt['basic_competence'];
 			if (strlen($bc) > 0) {
@@ -553,7 +553,7 @@ if($stmt->rowCount() > 0)
 <?php
 $i=0;
 $no = $pagination->getOffset();
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 foreach($rows as $data)
 {
 $j=$i%2;
@@ -576,7 +576,7 @@ if($stmt2->rowCount() > 0)
 <div class="option">
 <ol class="listoption" style="list-style-type:<?php echo $data['numbering'];?>">
 <?php
-$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 foreach($rows2 as $data2)
 {
 ?>
@@ -674,7 +674,7 @@ window.onload = function()
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -709,7 +709,7 @@ $threshold = 0;
 $assessment_methods = '';
 $stmtx = $database->executeQuery($sql);
 if ($stmtx->rowCount() > 0) {
-	$data = $stmtx->fetch(PDO::FETCH_ASSOC);
+	$data = $stmtx->fetch(\PDO::FETCH_ASSOC);
 	$threshold = $data['threshold'];
 	$assessment_methods = $data['assessment_methods'];
 }
@@ -897,7 +897,7 @@ $paginationHTML = $pagination->buildHTML();
 	<?php
 	$i=0;
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$j=$i%2;
@@ -1012,7 +1012,7 @@ $teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NE
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -1038,7 +1038,7 @@ $teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NE
 				'value'=>$teacher_id
 			),
 			'caption'=>array(
-				'delimiter'=>PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoEdu::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -1137,7 +1137,7 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	<?php
 	$i=0;
 	$no = $pagination->getOffset();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
 	$j=$i%2;

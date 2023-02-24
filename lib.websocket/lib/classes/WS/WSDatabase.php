@@ -1,4 +1,5 @@
 <?php
+namespace WS;
 
 class WSDatabase
 {
@@ -68,7 +69,7 @@ class WSDatabase
 
 	/**
 	 * Get database connection
-	 * @return PDO Represents a connection between PHP and a database server.
+	 * @return \PDO Represents a connection between PHP and a database server.
 	 */
 	public function getDatabaseConnection()
 	{
@@ -79,11 +80,11 @@ class WSDatabase
 	{
 		try
 		{
-			$this->conn = new PDO(''); //NOSONAR
+			$this->conn = new \PDO(''); //NOSONAR
 			$this->conn->query('KILL CONNECTION_ID()'); //NOSONAR
 			$this->conn = null; //NOSONAR
 		}
-		catch(Exception $e)
+		catch(\Exception $e)
 		{
 			// Do nothing
 		}
@@ -108,7 +109,7 @@ class WSDatabase
 	/**
 	 * Execute query
 	 * @param string $sql Query string to be executed
-	 * @return PDOStatement
+	 * @return \PDOStatement
 	 */
 	public function executeQuery($sql)
 	{
@@ -134,7 +135,7 @@ class WSDatabase
 		$variable_name = addslashes($variable_name);
 		$sql = "SELECT * FROM `edu_system_variable` 
 		WHERE `system_variable_id` = '$variable_name' ";
-		$data = $this->executeQuery($sql)->fetch(PDO::FETCH_ASSOC);
+		$data = $this->executeQuery($sql)->fetch(\PDO::FETCH_ASSOC);
 		if(isset($data) && is_array($data) && !empty($data))
 		{
 			return $data['system_value'];
@@ -147,7 +148,7 @@ class WSDatabase
 
     public function getLoginStudent($username, $password, $resourceId)
     {
-        $student = new stdClass;
+        $student = new \stdClass;
 
         $student->student_id = "";
         $student->name = "";

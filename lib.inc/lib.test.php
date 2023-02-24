@@ -333,7 +333,7 @@ function export_question($database, $question_id, $base_dir = "") //NOSONAR
 	global $arr_files;
 	$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	$content = $data['content'];
 	$numbering = $data['numbering'];
 	$random = ((int) $data['random']);
@@ -380,7 +380,7 @@ function export_question($database, $question_id, $base_dir = "") //NOSONAR
 		<answer>
 		";
 	if ($stmt->rowCount() > 0) {
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 		foreach ($rows as $data) {
 			$content = $data['content'];
 			$score = $data['score'] * 1;
@@ -428,7 +428,7 @@ function exportTest($database, $test_id, $base_dir = "")
 	$sql = "SELECT `question_id` FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` ASC, `question_id` ASC ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 		foreach ($rows as $data) {
 			$question = export_question($database, $data['question_id'], $base_dir);
 			$html .= "

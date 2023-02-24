@@ -1,4 +1,6 @@
 <?php
+namespace WS;
+
 class WSClient //NOSONAR
 {
 	private $socket;
@@ -24,10 +26,10 @@ class WSClient //NOSONAR
 	
 	/**
 	 * @param string $resourceId, 
-	 * @param Socket $socket
+	 * @param \Socket $socket
 	 * @param string $headers
-	 * @param \WSRemoteConnection $wsRemoteConnection
-	 * @param SessionParams $sessionParams 
+	 * @param \WS\WSRemoteConnection $wsRemoteConnection
+	 * @param \WS\SessionParams $sessionParams 
 	 * @param object $callbackObject,
 	 * @param string $callbackPostConstruct
 	 */
@@ -37,7 +39,7 @@ class WSClient //NOSONAR
 		$this->socket = $socket;
 		$this->wsRemoteConnection = $wsRemoteConnection;
 		
-		$headerInfo = WSUtil::parseRawHeaders($headers);
+		$headerInfo = \WS\WSUtil::parseRawHeaders($headers);
 
 		$this->parseHeaders($headerInfo);	
 		
@@ -45,12 +47,12 @@ class WSClient //NOSONAR
 		
 		if(isset($this->headers['cookie']))
 		{
-			$this->cookies = WSUtil::parseRawCookies($this->headers['cookie']);
+			$this->cookies = \WS\WSUtil::parseRawCookies($this->headers['cookie']);
 		}
 
 		if($sessionParams === null)
 		{
-			$this->setSessionParams(new SessionParams(null, session_save_path(), null));
+			$this->setSessionParams(new \WS\SessionParams(null, session_save_path(), null));
 		}
 		else
 		{
@@ -62,7 +64,7 @@ class WSClient //NOSONAR
 			$this->setSessionID($this->cookies[$sessionName]);
 		}
 
-		$this->setSessions(WSUtil::getSessions($this->getSessionID(), $this->getSessionParams()));
+		$this->setSessions(\WS\WSUtil::getSessions($this->getSessionID(), $this->getSessionParams()));
 		
 		if($callbackObject != null && $callbackPostConstruct != null)
 		{
@@ -116,7 +118,7 @@ class WSClient //NOSONAR
 
 	public function sendMessage($message)
 	{
-		$maskedMessage = WSUtil::mask($message);
+		$maskedMessage = \WS\WSUtil::mask($message);
 		@socket_write($this->socket, $maskedMessage, strlen($maskedMessage));
 	}
 
@@ -164,7 +166,7 @@ class WSClient //NOSONAR
 
 	/**
 	 * Get the value of sessionParams
-	 * @return \SessionParams
+	 * @return \WS\SessionParams
 	 */ 
 	public function getSessionParams()
 	{
@@ -173,7 +175,7 @@ class WSClient //NOSONAR
 
 	/**
 	 * Set the value of sessionParams
-	 * @param \SessionParams $sessionParams
+	 * @param \WS\SessionParams $sessionParams
 	 * @return  self
 	 */ 
 	public function setSessionParams($sessionParams)
@@ -207,18 +209,6 @@ class WSClient //NOSONAR
 	public function getResourceId()
 	{
 		return $this->resourceId;
-	}
-
-	/**
-	 * Set the value of resourceId
-	 *
-	 * @return  self
-	 */ 
-	public function setResourceId($resourceId)
-	{
-		$this->resourceId = $resourceId;
-
-		return $this;
 	}
 
 	/**
@@ -298,6 +288,7 @@ class WSClient //NOSONAR
 
 	/**
 	 * Get the value of sessions
+	 * @return array
 	 */ 
 	public function getSessions()
 	{

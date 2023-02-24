@@ -20,7 +20,7 @@ WHERE `edu_school`.`school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
 if ($stmt->rowCount() > 0) {
-  $data = $stmt->fetch(PDO::FETCH_ASSOC);
+  $data = $stmt->fetch(\PDO::FETCH_ASSOC);
   ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,7 +106,7 @@ h3{
   ORDER BY `edu_student`.`reg_number` ASC ";
     $stmt = $database->executeQuery($sql);
     if ($stmt->rowCount() > 0) {
-      $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
       foreach($rows as $data) 
       {
         ?>

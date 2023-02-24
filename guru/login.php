@@ -29,7 +29,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$_SESSION['teacher_username'] = $data['username'];
 		$_SESSION['teacher_password'] = $password;
 		

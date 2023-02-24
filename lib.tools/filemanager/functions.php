@@ -42,7 +42,7 @@ class ListFile
 					$obj['extension'] = $ft->extension;
 					$obj['permission'] = substr(sprintf('%o', fileperms($fn)), -4);
 					$fti = filemtime($fn);
-					$obj['filemtime'] = '<span title="' . date(PicoConst::DATE_TIME_MYSQL, $fti) . '">' . date('y-m-d', $fti) . '</span>';
+					$obj['filemtime'] = '<span title="' . date(\Pico\PicoConst::DATE_TIME_MYSQL, $fti) . '">' . date('y-m-d', $fti) . '</span>';
 
 					if ((stripos($obj['type'], 'image') !== false || stripos($obj['type'], 'application/x-shockwave-flash') !== false) && $obj['filesize'] <= $fmanConfig->thumbnail_max_size) {
 						try {
@@ -73,7 +73,7 @@ class ListFile
 					$obj['type'] = 'dir';
 					$obj['permission'] = substr(sprintf('%o', fileperms($fn)), -4);
 					$fti = filemtime($fn);
-					$obj['filemtime'] = '<span title="' . date(PicoConst::DATE_TIME_MYSQL, $fti) . '">' . date('y-m-d', $fti) . '</span>';
+					$obj['filemtime'] = '<span title="' . date(\Pico\PicoConst::DATE_TIME_MYSQL, $fti) . '">' . date('y-m-d', $fti) . '</span>';
 					$this->result_dir[] = $obj;
 
 
@@ -206,7 +206,7 @@ function chmoddir($dir, $perms)
 
 function getMIMEType($filename) //NOSONAR
 {
-	$obj = new StdClass();
+	$obj = new \stdClass();
 	$arr = array(
 		'323' => 'text/h323',
 		'3gp' => 'video/3gp',
@@ -663,7 +663,7 @@ function compressImageFile($path, $authblogid)
 
 function imageResizeMax($source, $destination, $maxwidth, $maxheight, $interlace = false, $quality = 80)  //NOSONAR
 {
-	$image = new StdClass();
+	$image = new \stdClass();
 	global $fileSync;
 	$imageinfo = getimagesize($source);
 	if (empty($imageinfo)) {

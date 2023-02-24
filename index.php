@@ -30,7 +30,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$_SESSION['student_username'] = $data['username'];
 		$_SESSION['student_password'] = $password;
 		
@@ -83,7 +83,7 @@ else
 		$password = $_SESSION['student_password'];
 	}
 	
-	$studentLoggedIn = new StudentAuth($database, $username, $password, false);
+	$studentLoggedIn = new \Pico\StudentAuth($database, $username, $password, false);
 	
 	$student_id = '';
 	$school_id = '';
@@ -103,7 +103,7 @@ else
 
 	if(!empty($student_id))
 	{
-		include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
+		include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php"; //NOSONAR
 		?>
 		
 		<div class="card-container row container container-fluid d-flex justify-content-between">
@@ -177,8 +177,8 @@ else
 		</div>
 
 		<?php
-		include_once dirname(__FILE__)."/lib.inc/inc-informasi.php";
-		include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
+		include_once dirname(__FILE__)."/lib.inc/inc-informasi.php"; //NOSONAR
+		include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php"; //NOSONAR
 		exit();
 	}
 	
@@ -195,7 +195,7 @@ else
 			$password = $_SESSION['teacher_password'];
 		}
 		
-		$teacherLoggedIn = new TeacherAuth($database, $username, $password, false);		
+		$teacherLoggedIn = new \Pico\TeacherAuth($database, $username, $password, false);		
 		$teacher_id = '';
 		$school_id = "";
 		$auth_teacher_id = '';
@@ -214,7 +214,7 @@ else
 		}
 		if(!empty($teacher_id))
 		{
-			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
+			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php"; //NOSONAR
 			?>
 			<div class="card-container row container container-fluid d-flex justify-content-between">
 			<div class="col-md-3 col-sm-6">
@@ -287,8 +287,8 @@ else
 
 		</div>
 			<?php
-			include_once dirname(__FILE__)."/lib.inc/inc-informasi.php";
-			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
+			include_once dirname(__FILE__)."/lib.inc/inc-informasi.php"; //NOSONAR
+			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php"; //NOSONAR
 			exit();
 		}
 	}
@@ -305,7 +305,7 @@ else
 		{
 			$password = $_SESSION['admin_password'];
 		}
-		$adminLoggedIn = new AdminAuth($database, $username, $password, false);
+		$adminLoggedIn = new \Pico\AdminAuth($database, $username, $password, false);
 		$admin_id = "";
 		$school_id = "";
 		$real_school_id = "";
@@ -321,7 +321,7 @@ else
 		}
 		if(!empty($admin_id))
 		{
-			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
+			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php"; //NOSONAR
 			?>
 			<div class="card-container row container container-fluid d-flex justify-content-between">
 			<div class="col-md-3 col-sm-6">
@@ -395,8 +395,8 @@ else
 
 		</div>
 			<?php
-			include_once dirname(__FILE__)."/lib.inc/inc-informasi.php";
-			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
+			include_once dirname(__FILE__)."/lib.inc/inc-informasi.php"; //NOSONAR
+			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php"; //NOSONAR
 			exit();
 		}
 	}

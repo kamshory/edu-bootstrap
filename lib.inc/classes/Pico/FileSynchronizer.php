@@ -1,36 +1,37 @@
 <?php
+namespace Pico;
 class FileSynchronizer
 {
 	const NEW_LINE = "\r\n";
 
-	public string $applicationDir = '';
+	public $applicationDir = '';
 
 	/**
 	 * Base directory
 	 */
-	public string $baseDir = '';
+	public $baseDir = '';
 
 	/**
 	 * Pooling file name
 	 */
-	public string $fileName = 'pool.txt';
+	public $fileName = 'pool.txt';
 
 	/**
 	 * Rolling name
 	 */
-	public string $prefix = 'pool_';
+	public $prefix = 'pool_';
 
 	/**
 	 * File extenstion
 	 */
-	public string $extension = '.txt';
+	public $extension = '.txt';
 
 	/**
 	 * Maximum file size
 	 */
-	private int $maximumlength = 20000;
+	private $maximumlength = 20000;
 
-	private bool $useRelativePath = false;
+	private $useRelativePath = false;
 	
 	/**
 	 * Constructor of FileSynchronizer

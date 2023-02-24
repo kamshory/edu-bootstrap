@@ -17,7 +17,7 @@ if(empty(@$auth_student_id) || empty(@$auth_school_id))
 	
 if(@$_GET['option'] == 'login')
 {
-	header("Location: ".$cfg->base_url."siswa/ujian/index.php?confirm-login-to-test=yes&test_id=$test_id");
+	header("Location: ".$cfg->base_url."siswa/ujian/index.php?confirm-login-to-test=yes&test_id=$test_id"); //NOSONAR
 	exit();
 }
 
@@ -26,14 +26,14 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 	$start = addslashes(@$_SESSION['session_test'][$auth_student_id][$test_id]['start']);
 	if($start == '' || $start == '0000-00-00 00:00:00')
 	{
-		$start = kh_filter_input(INPUT_POST, "time_start", FILTER_SANITIZE_STRING);
+		$start = kh_filter_input(INPUT_POST, "time_start", FILTER_SANITIZE_STRING_NEW);
 	}
-	$end = date('Y-m-d H:i:s');
+	$end = date('Y-m-d H:i:s'); //NOSONAR
 	
 	$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' ";
 	$stmt = $database->executeQuery($sql);
 	if ($stmt->rowCount() > 0) {
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$test_id_name = $data['name'];
 		if ($data['standard_score'] == 0) {
 			$data['standard_score'] = 1;
@@ -65,7 +65,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 			$stmt2 = $database->executeQuery($sql);
 			if($stmt2->rowCount() > 0)
 			{
-				$dt = $stmt2->fetch(PDO::FETCH_ASSOC);
+				$dt = $stmt2->fetch(\PDO::FETCH_ASSOC);
 				if ($dt['score'] > 0) {
 					$true++;
 					$score += $dt['score'];
@@ -178,7 +178,7 @@ $sql_filter
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 $question_per_page = $data['question_per_page'];
 $alert_message = $data['alert_message'];
 $has_alert = $data['has_alert'];
@@ -216,7 +216,7 @@ $stmt = $database->executeQuery($sql);
 $ntest = $stmt->rowCount();
 if($ntest)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <p>Anda telah mengerjakan ujian <strong><?php echo $data['name'];?></strong>. <a href="ujian.php?option=history&test_id=<?php echo $test_id;?>">Klik di sini untuk kembali</a>
 </p>
@@ -325,7 +325,7 @@ else if(@$_GET['login-to-test']=="yes")
 		else
 		{
 			$proses = false;
-			$dt = $stmt->fetch(PDO::FETCH_ASSOC);
+			$dt = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$test_id_terakhir = $dt['start'];
 			header("Location: ".basename($_SERVER['PHP_SELF'])."?option=limited");
 		}
@@ -370,7 +370,7 @@ else if(@$_GET['login-to-test']=="yes")
 				$arr = array();
 				if($stmt->rowCount() > 0)
 				{
-					$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+					$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 					foreach($rows as $dt)
 					{
 						$arr[] = $dt['question_id'];

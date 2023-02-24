@@ -8,6 +8,27 @@
 <title><?php echo $data['name'];?> - <?php echo $cfg->app_name;?></title>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test-un.min.css" />
+
+<script>
+	let testId = '<?php echo $test_id;?>';
+	let websocketURL = '<?php echo $picoEdu->getWebsocketHost();?>/?module=test&test_id='+testId;
+</script>
+<script src="../lib.assets/script/test-ws.js"></script>
+<script src="../lib.assets/script/test-ws-student.js"></script>
+
+<div class="modal fade" id="test-alert" tabindex="-1" role="dialog" aria-labelledby="test-alert-title" aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+	<div class="modal-content">
+	<div class="modal-header">
+		<h5 class="modal-title" id="test-alert-title">Pesan Pengawas</h5>
+	</div>
+		<div class="modal-body">
+		</div>
+	</div>
+</div>
+</div>
+
+
 </head>
 <body>
 <?php
@@ -41,7 +62,7 @@ if($number_of_question)
 	$question_set = array();
 	$questions = array();
 	if ($stmt1->rowCount() > 0) {
-		$rows1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+		$rows1 = $stmt1->fetchAll(\PDO::FETCH_ASSOC);
 		foreach($rows1 as $data1)
 		{
 			$soal = $data1['question_id'];
@@ -62,7 +83,7 @@ if($number_of_question)
 			$options = array();
 			$stmt2 = $database->executeQuery($sql2);
 			if ($stmt2->rowCount() > 0) {
-				$rows2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+				$rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 				foreach ($rows2 as $data2) {
 					$answer = @$_SESSION['answer_tmp'][$student_id][$test_id]['answer_' . $data2['question_id']];
 					$option = new StdClass();

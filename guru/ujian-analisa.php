@@ -14,7 +14,7 @@ if(!empty($school_id))
 		$stmt = $database->executeQuery($sql); 
 		if($stmt->rowCount() > 0)
 		{
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			header("Content-Type: application/vnd.xls");
 			header("Content-Disposition: attachment; filename=\"" . $data['name'] . ".xls\"");
 			?>
@@ -66,7 +66,7 @@ $total_menjawab = 0;
 $total_benar = 0;
 $total_salah = 0;
 $total_persen = 0;
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 foreach($rows as $data){
 	$no++;
 	$question_id = $data['question_id'];
@@ -117,7 +117,7 @@ foreach($rows as $data){
 	$menjawab = 0;
 
 
-	$rows2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$rows2 = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows2 as $data2){
 		$option[$j] = $data2['pilih'];
 		if ($data2['score'] > $score) {

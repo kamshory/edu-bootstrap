@@ -146,9 +146,9 @@ $structure = array(
 
 );
 
-require_once dirname(dirname(dirname(__FILE__))) . "/lib.inc/classes/MainMenu.php";
 
 
 
-$maniMenu = new MainMenu();
+
+$maniMenu = new \Pico\MainMenu();
 echo $maniMenu->show($structure, basename($_SERVER['PHP_SELF']));

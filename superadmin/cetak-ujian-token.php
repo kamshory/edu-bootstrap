@@ -98,7 +98,7 @@ WHERE `edu_token`.`token_id` in ($tokens)
 ORDER BY `edu_student`.`reg_number` ASC ";
 $stmt = $database->executeQuery($sql);
     if ($stmt->rowCount() > 0) {
-      $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
       foreach ($rows as $data) {
         ?>
 

@@ -31,7 +31,7 @@ if(isset($_POST['sync']))
 				$stmt3 = $database->executeQuery($sql);
 				if($stmt3->rowCount() > 0)
 				{
-					$data = $stmt3->fetch(PDO::FETCH_ASSOC);
+					$data = $stmt3->fetch(\PDO::FETCH_ASSOC);
 					$_SESSION['username'] = $data['username'];
 					$_SESSION['password'] = md5($password);
 					header("Location: profil.php");
@@ -56,7 +56,7 @@ WHERE `edu_student`.`student_id` = '$auth_student_id' AND `edu_student`.`email` 
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-$data = $stmt->fetch(PDO::FETCH_ASSOC);
+$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?><?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
 $pageTitle = "Pengguna Tidak Terdaftar";

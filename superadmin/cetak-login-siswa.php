@@ -25,7 +25,7 @@ $stmt = $database->executeQuery($sql);
 
 if($stmt->rowCount() > 0)
 {
-  $data = $stmt->fetch(PDO::FETCH_ASSOC);
+  $data = $stmt->fetch(\PDO::FETCH_ASSOC);
   $class_id = $data['class_id'];
 }
 else
@@ -39,7 +39,7 @@ $stmt = $database->executeQuery($sql);
 
 if($stmt->rowCount() > 0)
 {
-  $data = $stmt->fetch(PDO::FETCH_ASSOC);
+  $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 }
 }
 ?><!DOCTYPE html>
@@ -149,7 +149,7 @@ ORDER BY `edu_student`.`name` ASC ";
 $stmt = $database->executeQuery($sql);
 
 if ($stmt->rowCount() > 0) {
-  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
   foreach($rows as $data) {
     ?>
 

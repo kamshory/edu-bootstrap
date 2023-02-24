@@ -1,5 +1,18 @@
 <?php
 
+
+require_once dirname(dirname(__FILE__)) . "/lib.config/inc-cfg.php";
+require_once dirname(__FILE__) . "/autoload.php";
+
+
+/*
+Old code
+require_once dirname(__FILE__) . "/classes/PicoDatabase.php";
+require_once dirname(__FILE__) . "/classes/PicoEdu.php";
+require_once dirname(__FILE__) . "/classes/FileSynchronizer.php";
+require_once dirname(__FILE__) . "/classes/PicoConst.php";
+*/
+
 mb_regex_encoding('UTF-8');
 function mb_replace($search, $replace, $subject, &$count = 0) //NOSONAR
 {
@@ -91,28 +104,6 @@ if (!defined('FILTER_SANITIZE_NUMERIC')) {
 	define('FILTER_SANITIZE_NUMERIC', 530);
 }
 
-function userImageURL100($member_id, $member_gender, $picture_hash)
-{
-	global $cfg;
-	if (@$picture_hash != "" || @$picture_hash) {
-		return $cfg->base_avatar . $member_id . "/uimage-100.jpg?hash=" . $picture_hash;
-	} else if (@$member_gender != "") {
-		return $cfg->base_avatar . "__default/$member_gender/uimage-100.jpg";
-	} else {
-		return $cfg->base_avatar . "uimage-100.jpg";
-	}
-}
-function userImageURL50($member_id, $member_gender, $picture_hash)
-{
-	global $cfg;
-	if (@$picture_hash != "" || @$picture_hash) {
-		return $cfg->base_avatar . $member_id . "/uimage-50.jpg?hash=" . $picture_hash;
-	} else if (@$member_gender != "") {
-		return $cfg->base_avatar . "__default/$member_gender/uimage-50.jpg";
-	} else {
-		return $cfg->base_avatar . "uimage-50.jpg";
-	}
-}
 function dmstoreal($deg, $min, $sec)
 {
 	return $deg + ((($min / 60) + ($sec)) / 3600);
@@ -156,12 +147,12 @@ function scrap($url)
 		$sql = "show columns FROM `$table` ";
 		$stmt = $database->executeQuery($sql);
 		$arr = array();
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 		foreach($rows as $data)
 		{
 			if (in_array($data['Field'], $fields)) 
 			{
-				$obj = new StdClass();
+				$obj = new \stdClass();
 				$obj->field = $data['Field'];
 				$obj->value = $data['Default'];
 				$arr[] = $obj;
@@ -217,7 +208,7 @@ function scrap($url)
 	}
 	function excel2MySQLDate($int)
 	{
-		return date('Y-m-d', (24141 + $int) * 86400);
+		return date('Y-m-d H:i:s', ($int - 25569) * 86400);
 	}
 	
 	function liststyle($style, $index = 1) //NOSONAR
@@ -592,15 +583,10 @@ function strip_only_tags($str, $tags, $stripContent = false)
 	return $str;
 }
 
-require_once dirname(dirname(__FILE__)) . "/lib.config/inc-cfg.php";
-require_once dirname(__FILE__) . "/classes/PicoDatabase.php";
-require_once dirname(__FILE__) . "/classes/PicoEdu.php";
-require_once dirname(__FILE__) . "/classes/FileSynchronizer.php";
-require_once dirname(__FILE__) . "/classes/PicoConst.php";
 
-$database = new PicoDatabase(
-	(new PicoDatabaseCredentials())->load($databaseConfigs->config_file),
-	new PicoDatabaseSyncConfig(
+$database = new \Pico\PicoDatabase(
+	(new \Pico\PicoDatabaseCredentials())->load($databaseConfigs->config_file),
+	new \Pico\PicoDatabaseSyncConfig(
 		$configs->sync_database_application_dir,
 		$configs->sync_database_base_dir,
 		$configs->sync_database_pool_name,
@@ -613,7 +599,7 @@ $database = new PicoDatabase(
 
 $database->connect();
 
-$fileSync = new FileSynchronizer(
+$fileSync = new \Pico\FileSynchronizer(
 	$configs->sync_file_application_dir,
 	$configs->sync_file_base_dir,
 	$configs->sync_file_pool_name,
@@ -623,7 +609,7 @@ $fileSync = new FileSynchronizer(
 	$configs->sync_file_use_relative_path
 );
 
-$picoEdu = new PicoEdu($database);
+$picoEdu = new \Pico\PicoEdu($database);
 
 $ip_create = $_SERVER['REMOTE_ADDR'];
 $ip_edit = $ip_create;

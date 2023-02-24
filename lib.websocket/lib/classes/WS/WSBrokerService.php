@@ -1,6 +1,7 @@
 <?php
+namespace WS;
 
-class WSBrokerService extends WSServer implements WSInterface {
+class WSBrokerService extends \WS\WSServer implements \WS\WSInterface {
 	private $testMember = array();
 	public function __construct($wsDatabase, $host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null, $messageOnStarted = "")
 	{
@@ -9,7 +10,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 
 	/**
 	 * Add student to member test list
-	 * @param stdClass $student
+	 * @param \stdClass $student
 	 */
 	private function memberTestAdd($student, $testId)
 	{
@@ -30,7 +31,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 
 	/**
 	 * Remove student from member test list
-	 * @param stdClass $student
+	 * @param \stdClass $student
 	 */
 	private function memberTestRemove($student, $testId) //NOSONAR
 	{
@@ -80,7 +81,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 
 	/**
 	 * Method when a new client is connected
-	 * @param \WSClient $wsClient Chat client
+	 * @param \WS\WSClient $wsClient Chat client
 	 */
 	public function onOpen($wsClient)
 	{
@@ -187,7 +188,7 @@ class WSBrokerService extends WSServer implements WSInterface {
 
 	/**
 	 * Method when a client send the message
-	 * @param \WSClient $wsClient Chat client
+	 * @param \WS\WSClient $wsClient Chat client
 	 * @param string $receivedText Text sent by the client
 	 */
 	public function onMessage($wsClient, $receivedText)

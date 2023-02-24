@@ -61,7 +61,7 @@ to websocket.
 If the server accepts, it sends a 101 response header, containing
 "Sec-WebSocket-Accept"
 \*============================================================================*/
-function websocket_open($host = '', $port = 80, $headers = array(), &$error_string = '', $timeout = 10, $ssl = false)
+function websocket_open($host = '', $port = 80, $headers = array(), &$error_string = '', $timeout = 10, $ssl = false) //NOSONAR
 {
     $host = $host ? $host : "127.0.0.1";
     $port = $port < 1 ? 80 : $port;
@@ -142,7 +142,7 @@ Data to transport to server
 final (optional)
 indicate if this block is the final data block of this request. Default true
 \*============================================================================*/
-function websocket_write($sp, $data, $final = true)
+function websocket_write($sp, $data, $final = true) //NOSONAR
 {
     // Assamble header: FINal 0x80 | Opcode 0x02
     $header = chr(($final ? 0x80 : 0) | 0x02); // 0x02 binary

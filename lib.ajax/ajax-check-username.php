@@ -20,7 +20,7 @@ if(isset($_POST['username']))
 		$json = array('registered'=>0, 'corrected'=>$username, 'valid'=>true);
 		if($stmt->rowCount() > 0)
 		{
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$json = array('registered'=>1, 'corrected'=>$username, 'valid'=>false);
 		}
 	}

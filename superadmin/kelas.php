@@ -102,7 +102,7 @@ if (@$_GET['option'] == 'add') {
 							'value'=>null
 						),
 						'caption'=>array(
-							'delimiter'=>PicoEdu::RAQUO,
+							'delimiter'=>\Pico\PicoEdu::RAQUO,
 							'values'=>array(
 								'name'
 							)
@@ -149,7 +149,7 @@ if (@$_GET['option'] == 'add') {
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	?>
 		<form name="formedu_class" id="formedu_class" action="" method="post" enctype="multipart/form-data">
 			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -189,7 +189,7 @@ if (@$_GET['option'] == 'add') {
 										'value'=>$data['school_program_id']
 									),
 									'caption'=>array(
-										'delimiter'=>PicoEdu::RAQUO,
+										'delimiter'=>\Pico\PicoEdu::RAQUO,
 										'values'=>array(
 											'name'
 										)
@@ -212,7 +212,7 @@ if (@$_GET['option'] == 'add') {
 				</tr>
 				<tr>
 					<td>Aktif</td>
-					<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active" <?php echo $picoEdu->ifMatch($data['active'], true, PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label></td>
+					<td><label><input type="checkbox" class="input-checkbox" name="active" value="1" id="active" <?php echo $picoEdu->ifMatch($data['active'], true, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Aktif</label></td>
 				</tr>
 			</table>
 		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -246,7 +246,7 @@ WHERE `edu_class`.`class_id` = '$edit_key'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	?>
 		<form name="formedu_class" action="" method="post" enctype="multipart/form-data">
 			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -277,11 +277,11 @@ if($stmt->rowCount() > 0)
 				</tr>
 				<tr>
 					<td>Time Create</td>
-					<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
+					<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_create'])));?> </td>
 				</tr>
 				<tr>
 					<td>Time Edit</td>
-					<td><?php echo translateDate(date(PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
+					<td><?php echo translateDate(date(\Pico\PicoConst::SHORT_DATE_TIME_INDONESIA_FORMAT, strtotime($data['time_edit'])));?> </td>
 				</tr>
 				<tr>
 					<td>Admin Create</td>
@@ -352,7 +352,7 @@ if($stmt->rowCount() > 0)
 							'value'=>$school_id
 						),
 						'caption'=>array(
-							'delimiter'=>PicoEdu::RAQUO,
+							'delimiter'=>\Pico\PicoEdu::RAQUO,
 							'values'=>array(
 								'name'
 							)
@@ -449,7 +449,7 @@ if($stmt->rowCount() > 0)
 					<tbody>
 						<?php
 						$no = $pagination->getOffset();
-						$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+						$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 						foreach($rows as $data) {
 							$no++;
 						?>

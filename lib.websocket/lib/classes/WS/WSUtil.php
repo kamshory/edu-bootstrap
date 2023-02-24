@@ -1,4 +1,5 @@
 <?php
+namespace WS;
 class WSUtil
 {
 	/**
@@ -99,7 +100,7 @@ class WSUtil
 
 	/**
 	* Get session data
-	* @param \SessionParams $sessionParams Session parameters
+	* @param \WS\SessionParams $sessionParams Session parameters
 	* @return array Asociated array contain session
 	*/
 	public static function getSessions($sessionID, $sessionParams)

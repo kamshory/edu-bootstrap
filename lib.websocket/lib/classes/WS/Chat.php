@@ -1,4 +1,5 @@
 <?php
+namespace WS;
 
 class Chat extends WSServer implements WSInterface {
 	public function __construct($host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null)

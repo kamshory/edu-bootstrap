@@ -10,7 +10,7 @@ if($state_id == 0 && $state_name != '')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$state_id = $data['state_id'];
 	}
 }
@@ -26,6 +26,6 @@ $city_list = array();
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-	$city_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$city_list = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 }
 echo json_encode($city_list);

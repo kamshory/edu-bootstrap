@@ -15,8 +15,6 @@ if(isset($_SESSION['teacher_password']))
 	$password = $_SESSION['teacher_password'];
 }
 
-require_once dirname(__FILE__) . "/classes/TeacherAuth.php";
-
 $teacher_id = "";
 $school_id = "";
 $auth_teacher_id = "";
@@ -29,7 +27,7 @@ $member_edit = "";
 $admin_create = "";
 $admin_edit = "";
 
-$teacherLoggedIn = new \TeacherAuth($database, $username, $password, false);
+$teacherLoggedIn = new \Pico\TeacherAuth($database, $username, $password, false);
 
 if(!empty($teacherLoggedIn->teacher_id))
 {

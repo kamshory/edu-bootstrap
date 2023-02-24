@@ -14,7 +14,7 @@ if(isset($_POST['email']))
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$json = array('registered'=>1);
 	}
 	echo json_encode($json);

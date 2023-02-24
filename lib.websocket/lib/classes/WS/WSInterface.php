@@ -1,4 +1,6 @@
 <?php
+namespace WS;
+
 interface WSInterface { 
    public function onOpen($clientChat); 
 

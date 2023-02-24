@@ -1,4 +1,5 @@
 <?php
+namespace Pico;
 
 class TeacherAuth
 {
@@ -20,7 +21,7 @@ class TeacherAuth
 
 	/**
 	 * Constructor of TeacherAuth
-	 * @param \PicoDatabase $database
+	 * @param \Pico\PicoDatabase $database
 	 * @param string $username
 	 * @param string $password
 	 * @param bool $createlog
@@ -42,20 +43,20 @@ class TeacherAuth
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
 				$teacherLoggedIn = $stmt->fetchObject();
-				$this->teacher_id = $teacherLoggedIn->teacher_id;
-				$this->username = ($teacherLoggedIn->username != '') ? $teacherLoggedIn->username : $teacherLoggedIn->member_id;
-				$this->name = trim($teacherLoggedIn->name);
-				$this->gender = $teacherLoggedIn->gender;
-				$this->birth_place = $teacherLoggedIn->birth_place;
-				$this->birth_day = $teacherLoggedIn->birth_day;
-				$this->email = $teacherLoggedIn->email;
-				$this->phone = $teacherLoggedIn->phone;
-				$this->country_id = $teacherLoggedIn->country_id;
-				$this->state_id = $teacherLoggedIn->state_id;
-				$this->city_id = $teacherLoggedIn->city_id;
-				$this->school_id = $teacherLoggedIn->school_id;
-				$this->school_name = $teacherLoggedIn->school_name;
-				$this->school_code = $teacherLoggedIn->school_code;
+				$this->teacher_id = $teacherLoggedIn->teacher_id . "";
+				$this->username = ($teacherLoggedIn->username != '') ? $teacherLoggedIn->username . "" : $teacherLoggedIn->member_id . "";
+				$this->name = trim($teacherLoggedIn->name . "");
+				$this->gender = $teacherLoggedIn->gender . "";
+				$this->birth_place = $teacherLoggedIn->birth_place . "";
+				$this->birth_day = $teacherLoggedIn->birth_day . "";
+				$this->email = $teacherLoggedIn->email . "";
+				$this->phone = $teacherLoggedIn->phone . "";
+				$this->country_id = $teacherLoggedIn->country_id . "";
+				$this->state_id = $teacherLoggedIn->state_id . "";
+				$this->city_id = $teacherLoggedIn->city_id . "";
+				$this->school_id = $teacherLoggedIn->school_id . "";
+				$this->school_name = $teacherLoggedIn->school_name . "";
+				$this->school_code = $teacherLoggedIn->school_code . "";
 				$this->use_token = $teacherLoggedIn->use_token;
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);

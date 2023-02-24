@@ -1,4 +1,6 @@
 <?php
+namespace WS;
+
 class WSRemoteConnection {
     
     private $host = "";
