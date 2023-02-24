@@ -1,5 +1,0 @@
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-UPDATE `edu_school` SET
-	`description` = '<p><img class=\"ascii-svg\" src=\"lib.tools/asciisvg/svgimg.php?sscr=-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cred%2C1%2Cnone\" style=\"width: 300px; height: 200px; vertical-align: middle; float: none;\" data-sscr=\"-7.5%2C7.5%2C-5%2C5%2C1%2C1%2C1%2C1%2C1%2C300%2C200%2Cfunc%2C4*sin(x)%20%2B%20(cos(5x)%2F2)%2Cnull%2C0%2C0%2C-6%2C6%2Cred%2C1%2Cnone\"></p>
-<p><img class=\"draw-image\" alt=\"\" src=\"media.edu/school/063ce682801be89951aa/description/30b7d933a7d3b64fa59ccd2f3b006bae.svg\"></p>'
-	WHERE `school_id` = '063ce682801be89951aa';

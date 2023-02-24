@@ -1,2 +1,0 @@
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-UPDATE `edu_admin` SET `picture_rand` = '046165' WHERE `admin_id` = 'aaaaaaaaaaaaa';

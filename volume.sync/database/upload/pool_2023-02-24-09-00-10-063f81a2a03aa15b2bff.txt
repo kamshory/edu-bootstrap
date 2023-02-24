@@ -1,4 +1,0 @@
-------------------------912284ba5a823ba425efba890f57a4e2c88e8369
-UPDATE `edu_school_program` SET 
-	`name` = 'IPA', `sort_order` = '3', `default` = '0', `time_create` = '2023-02-24 09:00:02', `time_edit` = '2023-02-24 09:00:02', `admin_create` = 'aaaaaaaaaaaaa', `admin_edit` = 'aaaaaaaaaaaaa', `ip_create` = '127.0.0.1', `ip_edit` = '127.0.0.1', `active` = '1'
-	WHERE `school_program_id` = '063ce68281203e741899';
