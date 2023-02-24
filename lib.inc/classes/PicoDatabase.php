@@ -16,6 +16,10 @@ class PicoDatabaseCredentials
 	 * @param string $driver Driver
 	 * @param string $host Server host
 	 * @param int $port Server port
+	 * @param string $username
+	 * @param string $password
+	 * @param string $databaseName
+	 * @param string $timezone
 	 */
 	public function __construct($driver = null, $host = null, $port = 0, $username = null, $password = null, $databaseName = null, $timezone = null)
 	{
