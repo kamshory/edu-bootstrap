@@ -47,15 +47,6 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 if(@$_GET['option'] == 'edit')
 {
 require_once dirname((__FILE__))."/lib.inc/header.php";
-if(@!$mobileBrowser)
-{
-?>
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/script/jquery-ui/jquery-ui.min.css">
-
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery-ui/jquery-ui.datetimepicker.addon.min.js"></script>
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/init-datetime.js"></script>
-<?php
-}
 $sql = "SELECT `edu_student`.* 
 FROM `edu_student` 
 WHERE `edu_student`.`school_id` = '$school_id'
