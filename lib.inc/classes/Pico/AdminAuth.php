@@ -48,22 +48,22 @@ class AdminAuth
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount()) {
 				$adminLoggedIn = $stmt->fetchObject();
-				$this->admin_id = $adminLoggedIn->admin_id;
+				$this->admin_id = $adminLoggedIn->admin_id . "";
 				$this->admin_level = $adminLoggedIn->admin_level;
-				$this->username = ($adminLoggedIn->username != '') ? $adminLoggedIn->username : $adminLoggedIn->member_id;
-				$this->name = trim($adminLoggedIn->name);
-				$this->gender = $adminLoggedIn->gender;
-				$this->birth_place = $adminLoggedIn->birth_place;
-				$this->birth_day = $adminLoggedIn->birth_day;
-				$this->email = $adminLoggedIn->email;
-				$this->phone = $adminLoggedIn->phone;
-				$this->country_id = $adminLoggedIn->country_id;
-				$this->state_id = $adminLoggedIn->state_id;
-				$this->city_id = $adminLoggedIn->city_id;
-				$this->school_id = $adminLoggedIn->school_id;
-				$this->real_school_id = $adminLoggedIn->real_school_id;
-				$this->school_name = $adminLoggedIn->school_name;
-				$this->school_code = $adminLoggedIn->school_code;
+				$this->username = ($adminLoggedIn->username != '') ? $adminLoggedIn->username . "" : $adminLoggedIn->member_id . "";
+				$this->name = trim($adminLoggedIn->name . "");
+				$this->gender = $adminLoggedIn->gender . "";
+				$this->birth_place = $adminLoggedIn->birth_place . "";
+				$this->birth_day = $adminLoggedIn->birth_day . "";
+				$this->email = $adminLoggedIn->email . "";
+				$this->phone = $adminLoggedIn->phone . "";
+				$this->country_id = $adminLoggedIn->country_id . "";
+				$this->state_id = $adminLoggedIn->state_id . "";
+				$this->city_id = $adminLoggedIn->city_id . "";
+				$this->school_id = $adminLoggedIn->school_id . "";
+				$this->real_school_id = $adminLoggedIn->real_school_id . "";
+				$this->school_name = $adminLoggedIn->school_name . "";
+				$this->school_code = $adminLoggedIn->school_code . "";
 				$this->use_token = $adminLoggedIn->use_token;
 				$this->use_national_id = $adminLoggedIn->use_national_id;
 				if ($createlog) {

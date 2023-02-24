@@ -65,7 +65,7 @@ var setTimeToken = '<?php echo $setTimeToken;?>';
     	<div class="mobile-assets">
             <a class="mobile-menu-trigger mobile-menu-trigger-right" href="#"></a>
             <a class="mobile-menu-trigger mobile-menu-trigger-left" href="#"></a>
-            <h1><?php if(isset($pageTitle)) echo $pageTitle; else echo $cfg->app_name;?></h1>
+            <h1><?php echo $picoEdu->trueFalse(isset($pageTitle), $pageTitle, $cfg->app_name);?></h1>
         </div>    
     	<div class="menu menu-left">
     	  <ul>

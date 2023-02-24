@@ -72,7 +72,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 			$object = parseQuestion($question);
 			if(isset($object['question']) && isset($object['numbering']) && isset($object['option']))
 			{
-				$content = addslashes(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $base_dir, $base_src)))));
+				$content = addslashes(nl2br(UTF8ToEntities(filterHtml(addImages(@$object['question'], $base_dir, $base_src)))));
 				$numbering = addslashes($object['numbering']);
 				$digest = md5($object['question']);
 				$sort_order++;
@@ -94,7 +94,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 					{
 						foreach($object['option'] as $option_no=>$option)
 						{
-							$isi_option = addslashes(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $base_dir, $base_src)))));
+							$isi_option = addslashes(nl2br(UTF8ToEntities(filterHtml(addImages($option['text'], $base_dir, $base_src)))));
 							$order_option = $option_no+1;
 							$score_option = addslashes(@$option['value']*$score_standar); 
 							if($score_option == 0) 

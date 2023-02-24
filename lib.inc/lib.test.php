@@ -497,16 +497,16 @@ function getYoutubeParams($url)
 	}
 	return $params;
 }
-function filter_html($text)
+function filterHtml($text)
 {
 	return strip_tags($text, '<iframe><img><audio><video>');
 }
 
-function first_index($array)
+function firstIndex($array)
 {
 	return $array[0];
 }
-function last_index($array)
+function lastIndex($array)
 {
 	return $array[count($array) - 1];
 }
@@ -596,7 +596,7 @@ function getNumType($lines)
 		'decimal' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
 		'decimal-leading-zero' => array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')
 	);
-	foreach($numberingList as $key1=>$type)
+	foreach($numberingList as $type)
 	{
 		$arrType = array();
 		$lastLine = -1;
@@ -622,11 +622,8 @@ function matchNumberingType($arrType, $numberingList)
 {
 	foreach($numberingList as $key1=>$type)
 	{
-		if (count($arrType) > 1) {
-			if($type[0] == $arrType[0] && $type[1] == $arrType[1])
-			{
-				return $key1;
-			}
+		if (count($arrType) > 1 && $type[0] == $arrType[0] && $type[1] == $arrType[1]) {
+			return $key1;
 		}
 	}
 	return false;

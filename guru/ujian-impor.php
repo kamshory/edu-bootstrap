@@ -128,7 +128,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 
 					if(isset($object['question']) && isset($object['numbering']) && isset($object['option']))
 					{
-						$content = addslashes(nl2br(UTF8ToEntities(filter_html(addImages(@$object['question'], $test_dir, $base_src, $temp_dir)))));
+						$content = addslashes(nl2br(UTF8ToEntities(filterHtml(addImages(@$object['question'], $test_dir, $base_src, $temp_dir)))));
 						$numbering = addslashes($object['numbering']);
 						$digest = md5($object['question']);
 						$sort_order++;
@@ -152,7 +152,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 							{
 								foreach($object['option'] as $option_no=>$option)
 								{
-									$isi_option = addslashes(nl2br(UTF8ToEntities(filter_html(addImages($option['text'], $test_dir, $base_src, $temp_dir)))));
+									$isi_option = addslashes(nl2br(UTF8ToEntities(filterHtml(addImages($option['text'], $test_dir, $base_src, $temp_dir)))));
 									$order_option = $option_no+1;
 									$score_option = addslashes(@$option['value']*$score_standar); 
 									if($score_option == 0) 
