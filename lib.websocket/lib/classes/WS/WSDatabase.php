@@ -1,4 +1,5 @@
 <?php
+namespace WS;
 
 class WSDatabase
 {
@@ -83,7 +84,7 @@ class WSDatabase
 			$this->conn->query('KILL CONNECTION_ID()'); //NOSONAR
 			$this->conn = null; //NOSONAR
 		}
-		catch(Exception $e)
+		catch(\Exception $e)
 		{
 			// Do nothing
 		}
@@ -147,7 +148,7 @@ class WSDatabase
 
     public function getLoginStudent($username, $password, $resourceId)
     {
-        $student = new stdClass;
+        $student = new \stdClass;
 
         $student->student_id = "";
         $student->name = "";

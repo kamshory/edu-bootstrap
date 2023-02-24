@@ -65,7 +65,7 @@ $test_id = $data['test_id'];
         </tr>
         <tr>
         <td>Nilai Akhir
-        </td><td><?php echo ($data['final_score']);?> </td>
+        </td><td><?php echo $data['final_score'];?> </td>
         </tr>
         <tr>
         <td>Persen
@@ -248,13 +248,13 @@ foreach($rows1 as $data)
 	if($data['publish_answer'] && $data['time_answer_publication'] <= $now)
 	{
 	?>
-	<span class="option-circle<?php if($data2['score']) echo ' option-circle-selected';?>"><?php
+	<span class="option-circle<?php echo $picoEdu->trueFalse($data2['score'], ' option-circle-selected', '');?>"><?php
 	echo $data2['score']*1;
 	?></span>
 	<?php
 	}
 	?>
-	<div class="list-option-item<?php echo ($data2['my_answer'])?' list-option-item-selected':'';?>">
+	<div class="list-option-item<?php echo $picoEdu->trueFalse($data2['my_answer'], ' list-option-item-selected', '');?>">
 	<div class="option-content">
 	<?php
 	echo $data2['content'];
@@ -417,189 +417,180 @@ require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
-$nt = '';
-$sql = "SELECT `edu_test`.* $nt,
-(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher_id`
-FROM `edu_test` 
-WHERE `edu_test`.`test_id` = '$test_id' AND `edu_test`.`school_id` = '$school_id'
-";
-$stmt = $database->executeQuery($sql);
-if($stmt->rowCount() > 0)
-{
-$data = $stmt->fetch(\PDO::FETCH_ASSOC);
-$array_class = $picoEdu->getArrayClass($school_id);
-?>
+	require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
+	$nt = '';
+	$sql = "SELECT `edu_test`.* $nt,
+	(SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher_id`
+	FROM `edu_test` 
+	WHERE `edu_test`.`test_id` = '$test_id' AND `edu_test`.`school_id` = '$school_id'
+	";
+	$stmt = $database->executeQuery($sql);
+	if($stmt->rowCount() > 0)
+	{
+	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
+	$array_class = $picoEdu->getArrayClass($school_id);
+	?>
 
-<script>
-    let testId = '<?php echo $test_id;?>';
-    let websocketURL = '<?php echo $picoEdu->getWebsocketHost();?>/?module=test&test_id='+testId;
-</script>
-<script src="../lib.assets/script/test-ws.js"></script>
-<script src="../lib.assets/script/test-ws-student.js"></script>
+	<script>
+		let testId = '<?php echo $test_id;?>';
+		let websocketURL = '<?php echo $picoEdu->getWebsocketHost();?>/?module=test&test_id='+testId;
+	</script>
+	<script src="../lib.assets/script/test-ws.js"></script>
+	<script src="../lib.assets/script/test-ws-student.js"></script>
 
-
-
-<div class="modal fade" id="test-alert" tabindex="-1" role="dialog" aria-labelledby="test-alert-title" aria-hidden="true">
-  <div class="modal-dialog modal-md" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="test-alert-title">Pesan Pengawas</h5>
-      </div>
-		<div class="modal-body">
-		
-
+	<div class="modal fade" id="test-alert" tabindex="-1" role="dialog" aria-labelledby="test-alert-title" aria-hidden="true">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="test-alert-title">Pesan Pengawas</h5>
 		</div>
-
-    </div>
-  </div>
-</div>
-
-
-
+			<div class="modal-body">
+			</div>
+		</div>
+	</div>
+	</div>
 
 
 
-
-  <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
-		<tr>
-		<td>Nama Ujian</td>
-		<td><?php echo $data['name'];?> </td>
-		</tr>
-		<tr>
-		<td>Kelas
-		</td><td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
-		</tr>
-		<tr>
-		<td>Mata Pelajaran
-		</td><td><?php echo $data['subject'];?> </td>
-		</tr>
-		<tr>
-		<td>Guru
-		</td><td><?php echo $data['teacher_id'];?> </td>
-		</tr>
-		<tr>
-		<td>Keterangan
-		</td><td><?php echo $data['description'];?> </td>
-		</tr>
-		<tr>
-		<td>Petunjuk
-		</td><td><?php echo $data['guidance'];?> </td>
-		</tr>
-		<tr>
-		<td>Terbuka
-		</td><td><?php echo $picoEdu->trueFalse($data['open'], 'Ya', 'Tidak');?> </td>
-		</tr>
-		<tr>
-		<td>Dibatasi</td>
-		<td><?php echo $picoEdu->trueFalse($data['has_limits'], 'Ya', 'Tidak');?> </td>
-		</tr>
-        <?php
-		if($data['has_limits'])
-		{
-		?>
-		<tr>
-		<td>Batas Percobaan</td>
-		<td><?php echo $data['trial_limits'];?> </td>
-		</tr>
-        <?php
-		}
-		?>
-		<tr>
-		<td>Nilai Kelulusan
-		</td><td><?php echo $data['threshold'];?> </td>
-		</tr>
-		<tr>
-		<td>Metode Penilaian</td>
-		<td><?php echo $picoEdu->selectFromMap($data['assessment_methods'], array('H'=>"Nilai Tertinggi", 'N'=>"Nilai Terbaru"));?> </td>
-		</tr>
-		<tr>
-		<td>Jumlah Soal</td><td><?php echo $data['number_of_question'];?> </td>
-		</tr>
-		<tr>
-		<td>Jumlah Pilihan</td><td><?php echo $data['number_of_option'];?> </td>
-		</tr>
-		<tr>
-		<td>Soal Perhalaman</td>
-		<td><?php echo $data['question_per_page'];?> </td>
-		</tr>
-		<tr>
-		<td>Durasi
-		</td><td><?php echo gmdate('H:i:s', $data['duration']);?> </td>
-		</tr>
-        <?php
-		if($data['has_alert'])
-		{
-		?>
-        <?php
-		}
-		?>
-		<tr>
-		<td>Otomatis Kirim Jawaban</td>
-		<td><?php echo $picoEdu->trueFalse($data['autosubmit'], 'Ya', 'Tidak');?> </td>
-		</tr>
-		<tr>
-		<td>Nilai Standard</td>
-		<td><?php echo $data['standard_score'];?> </td>
-		</tr>
-		<tr>
-		<td>Penalti
-		</td><td><?php echo $data['penalty'];?> </td>
-		</tr>
-        <?php
-		if($data['publish_answer'])
-		{
-		?>
-		<tr>
-		<td>Pengumuman Kunci Jawaban</td>
-		<td><?php echo $data['time_answer_publication'];?> </td>
-		</tr>
-        <?php
-		}
-		?>
-		<tr>
-		<td>Ketersediaan Ujian
-		</td><td><?php echo $picoEdu->selectFromMap($data['test_availability'], array('F'=>'Selamanya', 'L'=>'Terbatas'));?> </td>
-		</tr>
-        <?php
-		if($data['test_availability'] == 'L')
-		{
-		?>
-		<tr>
-		<td>Tersedia Mulai</td>
-		<td><?php echo $data['available_from'];?> </td>
-		</tr>
-		<tr>
-		<td>Tersedia Hingga</td>
-		<td><?php echo $data['available_to'];?> </td>
-		</tr>
-        <?php
-		}
-		?>
-	</table>
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
-		<tr>
-		<td></td>
-		<td>
-        <?php
-		if(!$use_token)
-		{
-		?>
-        <input type="button" name="join" id="join" class="btn btn-success" value="Ikuti Ujian" onclick="window.location='ujian/?option=login&test_id=<?php echo $data['test_id'];?>'" /> 
-        <?php
-		}
-		?>
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='ujian.php'" /></td>
-		</tr>
-	</table>
-    <?php
-}
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+			<tr>
+			<td>Nama Ujian</td>
+			<td><?php echo $data['name'];?> </td>
+			</tr>
+			<tr>
+			<td>Kelas
+			</td><td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
+			</tr>
+			<tr>
+			<td>Mata Pelajaran
+			</td><td><?php echo $data['subject'];?> </td>
+			</tr>
+			<tr>
+			<td>Guru
+			</td><td><?php echo $data['teacher_id'];?> </td>
+			</tr>
+			<tr>
+			<td>Keterangan
+			</td><td><?php echo $data['description'];?> </td>
+			</tr>
+			<tr>
+			<td>Petunjuk
+			</td><td><?php echo $data['guidance'];?> </td>
+			</tr>
+			<tr>
+			<td>Terbuka
+			</td><td><?php echo $picoEdu->trueFalse($data['open'], 'Ya', 'Tidak');?> </td>
+			</tr>
+			<tr>
+			<td>Dibatasi</td>
+			<td><?php echo $picoEdu->trueFalse($data['has_limits'], 'Ya', 'Tidak');?> </td>
+			</tr>
+			<?php
+			if($data['has_limits'])
+			{
+			?>
+			<tr>
+			<td>Batas Percobaan</td>
+			<td><?php echo $data['trial_limits'];?> </td>
+			</tr>
+			<?php
+			}
+			?>
+			<tr>
+			<td>Nilai Kelulusan
+			</td><td><?php echo $data['threshold'];?> </td>
+			</tr>
+			<tr>
+			<td>Metode Penilaian</td>
+			<td><?php echo $picoEdu->selectFromMap($data['assessment_methods'], array('H'=>"Nilai Tertinggi", 'N'=>"Nilai Terbaru"));?> </td>
+			</tr>
+			<tr>
+			<td>Jumlah Soal</td><td><?php echo $data['number_of_question'];?> </td>
+			</tr>
+			<tr>
+			<td>Jumlah Pilihan</td><td><?php echo $data['number_of_option'];?> </td>
+			</tr>
+			<tr>
+			<td>Soal Perhalaman</td>
+			<td><?php echo $data['question_per_page'];?> </td>
+			</tr>
+			<tr>
+			<td>Durasi
+			</td><td><?php echo gmdate('H:i:s', $data['duration']);?> </td>
+			</tr>
+			<?php
+			if($data['has_alert'])
+			{
+			?>
+			<?php
+			}
+			?>
+			<tr>
+			<td>Otomatis Kirim Jawaban</td>
+			<td><?php echo $picoEdu->trueFalse($data['autosubmit'], 'Ya', 'Tidak');?> </td>
+			</tr>
+			<tr>
+			<td>Nilai Standard</td>
+			<td><?php echo $data['standard_score'];?> </td>
+			</tr>
+			<tr>
+			<td>Penalti
+			</td><td><?php echo $data['penalty'];?> </td>
+			</tr>
+			<?php
+			if($data['publish_answer'])
+			{
+			?>
+			<tr>
+			<td>Pengumuman Kunci Jawaban</td>
+			<td><?php echo $data['time_answer_publication'];?> </td>
+			</tr>
+			<?php
+			}
+			?>
+			<tr>
+			<td>Ketersediaan Ujian
+			</td><td><?php echo $picoEdu->selectFromMap($data['test_availability'], array('F'=>'Selamanya', 'L'=>'Terbatas'));?> </td>
+			</tr>
+			<?php
+			if($data['test_availability'] == 'L')
+			{
+			?>
+			<tr>
+			<td>Tersedia Mulai</td>
+			<td><?php echo $data['available_from'];?> </td>
+			</tr>
+			<tr>
+			<td>Tersedia Hingga</td>
+			<td><?php echo $data['available_to'];?> </td>
+			</tr>
+			<?php
+			}
+			?>
+		</table>
+		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
+			<tr>
+			<td></td>
+			<td>
+			<?php
+			if(!$use_token)
+			{
+			?>
+			<input type="button" name="join" id="join" class="btn btn-success" value="Ikuti Ujian" onclick="window.location='ujian/?option=login&test_id=<?php echo $data['test_id'];?>'" /> 
+			<?php
+			}
+			?>
+			<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='ujian.php'" /></td>
+			</tr>
+		</table>
+		<?php
+	}
+	require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else if(@$_GET['option'] == 'enter-token')
 {
-require_once dirname(__FILE__)."/ujian-token.php";
+	require_once dirname(__FILE__)."/ujian-token.php";
 }
 else
 {
@@ -754,7 +745,7 @@ $paginationHTML = $pagination->buildHTML();
       <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
       <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['school_program'];?></a></td>
       <td><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['subject'];?></a></td>
-      <td><?php if($data['ntest']){?><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['ntest'];?> &times;</a><?php } else echo '-';?> </td>
+      <td><?php if($data['ntest']){?><a href="ujian.php?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['ntest'];?> &times;</a><?php } else {echo '-';}?> </td>
       </tr>
     <?php
 	}

@@ -103,7 +103,7 @@ else
 
 	if(!empty($student_id))
 	{
-		include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
+		include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php"; //NOSONAR
 		?>
 		
 		<div class="card-container row container container-fluid d-flex justify-content-between">
@@ -177,8 +177,8 @@ else
 		</div>
 
 		<?php
-		include_once dirname(__FILE__)."/lib.inc/inc-informasi.php";
-		include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
+		include_once dirname(__FILE__)."/lib.inc/inc-informasi.php"; //NOSONAR
+		include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php"; //NOSONAR
 		exit();
 	}
 	
@@ -214,7 +214,7 @@ else
 		}
 		if(!empty($teacher_id))
 		{
-			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
+			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php"; //NOSONAR
 			?>
 			<div class="card-container row container container-fluid d-flex justify-content-between">
 			<div class="col-md-3 col-sm-6">
@@ -287,8 +287,8 @@ else
 
 		</div>
 			<?php
-			include_once dirname(__FILE__)."/lib.inc/inc-informasi.php";
-			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
+			include_once dirname(__FILE__)."/lib.inc/inc-informasi.php"; //NOSONAR
+			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php"; //NOSONAR
 			exit();
 		}
 	}
@@ -321,7 +321,7 @@ else
 		}
 		if(!empty($admin_id))
 		{
-			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
+			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php"; //NOSONAR
 			?>
 			<div class="card-container row container container-fluid d-flex justify-content-between">
 			<div class="col-md-3 col-sm-6">
@@ -395,8 +395,8 @@ else
 
 		</div>
 			<?php
-			include_once dirname(__FILE__)."/lib.inc/inc-informasi.php";
-			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
+			include_once dirname(__FILE__)."/lib.inc/inc-informasi.php"; //NOSONAR
+			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php"; //NOSONAR
 			exit();
 		}
 	}

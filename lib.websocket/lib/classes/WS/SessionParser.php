@@ -1,11 +1,12 @@
 <?php
+namespace WS;
 
 class SessionParser {
 
 	const DATE_TIME_FORMAT = 'Y-m-d H:i:s';
    /**
 	 * Method when a new client is login
-	 * @param \WSClient $clientChat Chat client
+	 * @param \WS\WSClient $clientChat Chat client
 	 * @return array
 	 */
 	public function prostConstructClient($clientChat)

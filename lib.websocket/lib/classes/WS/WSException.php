@@ -1,4 +1,5 @@
 <?php
+namespace WS;
 
 class WSException extends \Exception
 {

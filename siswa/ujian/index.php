@@ -17,7 +17,7 @@ if(empty(@$auth_student_id) || empty(@$auth_school_id))
 	
 if(@$_GET['option'] == 'login')
 {
-	header("Location: ".$cfg->base_url."siswa/ujian/index.php?confirm-login-to-test=yes&test_id=$test_id");
+	header("Location: ".$cfg->base_url."siswa/ujian/index.php?confirm-login-to-test=yes&test_id=$test_id"); //NOSONAR
 	exit();
 }
 
@@ -26,9 +26,9 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 	$start = addslashes(@$_SESSION['session_test'][$auth_student_id][$test_id]['start']);
 	if($start == '' || $start == '0000-00-00 00:00:00')
 	{
-		$start = kh_filter_input(INPUT_POST, "time_start", FILTER_SANITIZE_STRING);
+		$start = kh_filter_input(INPUT_POST, "time_start", FILTER_SANITIZE_STRING_NEW);
 	}
-	$end = date('Y-m-d H:i:s');
+	$end = date('Y-m-d H:i:s'); //NOSONAR
 	
 	$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' ";
 	$stmt = $database->executeQuery($sql);

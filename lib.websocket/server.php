@@ -8,8 +8,8 @@ $configs = (new \Pico\PicoDatabaseCredentials())->load(dirname(dirname(dirname(_
 $host = '127.0.0.1';
 $port = 8888;
 
-$app = new \SessionParser();
-$wsDatabase = new \WSDatabase(
+$app = new \WS\SessionParser();
+$wsDatabase = new \WS\WSDatabase(
     $configs->getDriver(), 
     $configs->getHost(), 
     $configs->getPort(), 
@@ -19,6 +19,6 @@ $wsDatabase = new \WSDatabase(
     $configs->getTimezone()
 );
 
-$wss = new \WSBrokerService($wsDatabase, $host, $port, $app, 'prostConstructClient', "Message started on port $port\r\n");
+$wss = new \WS\WSBrokerService($wsDatabase, $host, $port, $app, 'prostConstructClient', "Message started on port $port\r\n");
 $ret = $wss->run();
 

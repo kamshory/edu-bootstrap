@@ -1,5 +1,7 @@
 <?php
-class WSServer implements \WSInterface {
+namespace WS;
+
+class WSServer implements \WS\WSInterface {
 	protected $wsClients = array();
 	protected $wsDatabase;
 	private $host = '127.0.0.1';
@@ -106,12 +108,12 @@ class WSServer implements \WSInterface {
 					{
 						$index++;
 						socket_getpeername($clientSocket, $remoteAddress, $remotePort); //get ip address of connected socket
-						$wsClient = new \WSClient(
+						$wsClient = new \WS\WSClient(
 							$index, 
 							$clientSocket, 
 							$header, 
-							new \WSRemoteConnection($remoteAddress, $remotePort), 
-							new \SessionParams($this->sessionCookieName, $this->sessionSavePath, $this->sessionFilePrefix), 
+							new \WS\WSRemoteConnection($remoteAddress, $remotePort), 
+							new \WS\SessionParams($this->sessionCookieName, $this->sessionSavePath, $this->sessionFilePrefix), 
 							$this->callbackObject, 
 							$this->callbackPostConstruct
 						);
@@ -267,7 +269,7 @@ class WSServer implements \WSInterface {
      * @param $payload
      * @param $type
      * @param $masked
-     * @throws \WSException
+     * @throws \WS\WSException
      * @return string
      */
     public function hybi10Encode($payload, $type = 'text', $masked = true) //NOSONAR
@@ -288,7 +290,7 @@ class WSServer implements \WSInterface {
             // most significant bit MUST be 0 (close connection if frame too big)
             if ($frameHead[2] > 127) 
             {
-                throw new \WSException('Invalid payload. Could not encode frame.');
+                throw new \WS\WSException('Invalid payload. Could not encode frame.');
             }
         } 
 		elseif ($payloadLength > 125) 
@@ -414,7 +416,7 @@ class WSServer implements \WSInterface {
 
 	/**
 	 * Method when a new client is connected
-	 * @param \WSClient $wsClient Chat client
+	 * @param \WS\WSClient $wsClient Chat client
 	 */
 	public function onOpen($wsClient)
 	{
@@ -444,7 +446,7 @@ class WSServer implements \WSInterface {
 
 	/**
 	 * Method to send the broadcast message to all client
-	 * @param \WSClient $wsClient Chat client
+	 * @param \WS\WSClient $wsClient Chat client
 	 * @param string $message Message to sent to all client
 	 * @param array $receiverGroups Receiver
 	 * @param bool $meeToo
