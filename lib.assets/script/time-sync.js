@@ -50,7 +50,6 @@ window.onload = function()
 			window.location.reload();
 		}
 		else if (xhr.status !== 200) {
-			console.log(xhr.status);
 		}
 		else
 		{
