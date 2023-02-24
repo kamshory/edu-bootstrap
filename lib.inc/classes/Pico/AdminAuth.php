@@ -25,7 +25,7 @@ class AdminAuth
 
 	/**
 	 * Constructor of AdminAuth
-	 * @param \PicoDatabase $database
+	 * @param \Pico\PicoDatabase $database
 	 * @param string $username
 	 * @param string $password
 	 * @param bool $createlog

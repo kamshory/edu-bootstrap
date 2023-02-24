@@ -14,7 +14,7 @@ class PicoEdu //NOSONAR
 
 	/**
 	 * Constuctor of PicoEdu
-	 * @param \PicoDatabase $database Database
+	 * @param \Pico\PicoDatabase $database Database
 	 */
 	public function __construct(PicoDatabase $database)
 	{
