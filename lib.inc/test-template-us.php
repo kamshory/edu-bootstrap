@@ -10,15 +10,21 @@ $dur_obj = $picoEdu->secondsToTime($data['duration']);
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/jqu/assets/font/open-sans/index.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test-student.min.css" />
 <link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/lib.assets/theme/default/css/images/favicon.png" />
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/jqu/assets/css/style.min.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/jqu/assets/font/icon.css" />
-<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/jqu/assets/js/jquery.unand.min.js"></script>
+
+
 <script type="application/javascript">
 var mui;
 $(document).ready(function(e) {
 	mui = new mobileUI('*');
 });
 </script>
+<script>
+	let testId = '<?php echo $test_id;?>';
+	let websocketURL = '<?php echo $picoEdu->getWebsocketHost();?>/?module=test&test_id='+testId;
+</script>
+<script src="<?php echo $cfg->base_assets;?>lib.assets/script/test-ws.js"></script>
+<script src="<?php echo $cfg->base_assets;?>lib.assets/script/test-ws-student.js"></script>
+
 <title><?php echo $data['name'];?> - <?php echo $cfg->app_name;?></title>
 </head>
 <body>
@@ -74,7 +80,7 @@ $(document).ready(function(e) {
 	?>
 <script type="text/javascript">
 var alert_time = <?php echo $alert_time;?>;
-var test = <?php echo $test_id;?>;
+var test = '<?php echo $test_id;?>';
 var autosubmit = <?php echo $autosubmit*1;?>;
 var due_time = <?php echo @$_SESSION['session_test'][$student_id][$test_id]['due_time']-time();?>;
 </script>
