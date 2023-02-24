@@ -16,8 +16,8 @@ define('DB_PREF', '');
 $oneLevelUp = dirname(dirname(__FILE__));
 $twoLevelUp = dirname(dirname(dirname(__FILE__)));
 
-$configs = new \stdClass();
-$databaseConfigs = new \stdClass();
+$configs = new stdClass();
+$databaseConfigs = new stdClass();
 
 $databaseConfigs->db_type = "mysql";
 $databaseConfigs->db_host = "localhost";
@@ -27,7 +27,6 @@ $databaseConfigs->db_pass = "alto1234";
 $databaseConfigs->db_name = "mini_picopi";
 $databaseConfigs->db_time_zone = "Asia/Jakarta";
 $databaseConfigs->config_file = $twoLevelUp."/db.ini";
-
 
 $configs->sync_database_application_dir = $oneLevelUp;
 $configs->sync_database_base_dir = $oneLevelUp."/volume.sync/database/pool";
@@ -45,9 +44,8 @@ $configs->sync_file_extension = ".txt";
 $configs->sync_file_maximum_length = 50000;
 $configs->sync_file_use_relative_path = true;
 
+$cfg = new stdClass();
 
-$cfg = new \stdClass();
-$cfg->app_code = 'picoedu';
 $cfg->ws_port = 8888;
 
 $cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/"; //NOSONAR

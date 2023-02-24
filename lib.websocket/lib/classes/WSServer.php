@@ -1,5 +1,5 @@
 <?php
-class WSServer implements WSInterface {
+class WSServer implements \WSInterface {
 	protected $wsClients = array();
 	protected $wsDatabase;
 	private $host = '127.0.0.1';
@@ -482,9 +482,6 @@ class WSServer implements WSInterface {
 			}
 		}
 	}
-
-
-	
 }
 
 

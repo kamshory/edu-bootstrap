@@ -8,7 +8,7 @@ $configs = (new \Pico\PicoDatabaseCredentials())->load(dirname(dirname(dirname(_
 $host = '127.0.0.1';
 $port = 8888;
 
-$app = new MyApp();
+$app = new \SessionParser();
 $wsDatabase = new \WSDatabase(
     $configs->getDriver(), 
     $configs->getHost(), 

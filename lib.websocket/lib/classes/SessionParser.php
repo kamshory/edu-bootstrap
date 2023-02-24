@@ -1,6 +1,6 @@
 <?php
 
-class MyApp {
+class SessionParser {
 
 	const DATE_TIME_FORMAT = 'Y-m-d H:i:s';
    /**

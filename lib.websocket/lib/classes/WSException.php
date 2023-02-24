@@ -1,10 +1,15 @@
 <?php
 
-class WSException extends Exception
+class WSException extends \Exception
 {
     private $previous;
     
-    public function __construct($message, $code = 0, Exception $previous = null)
+    /**
+     * @param string $message
+     * @param int $code
+     * @param \Exception $previous
+     */
+    public function __construct($message, $code = 0, $previous = null)
     {
         parent::__construct($message, $code);       
         if (!is_null($previous))
