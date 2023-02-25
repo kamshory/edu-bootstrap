@@ -23,8 +23,6 @@ if($stmt->rowCount() > 0)
 	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $data)
 	{
-
-	
 		?>
 		<div class="article-item" style="margin-bottom:10px; border-bottom:1px dotted #777777;">
 			<div class="article-title"><h3><?php echo $data['school'];?></h3></div>

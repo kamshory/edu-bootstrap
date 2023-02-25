@@ -1,7 +1,7 @@
 <?php
 namespace Pico;
 
-class MemberAuth
+class AuthMember
 {
 	public $member_id = '';
 	public $username = '';

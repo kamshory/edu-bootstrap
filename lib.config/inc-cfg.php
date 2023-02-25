@@ -45,7 +45,7 @@ $configs->sync_file_maximum_length = 50000;
 $configs->sync_file_use_relative_path = true;
 
 $cfg = new stdClass();
-
+$cfg->app_code = "picoedu";
 $cfg->ws_port = 8888;
 
 $cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/"; //NOSONAR

@@ -27,7 +27,7 @@ $member_edit = "";
 $admin_create = "";
 $admin_edit = "";
 
-$teacherLoggedIn = new \Pico\TeacherAuth($database, $username, $password, false);
+$teacherLoggedIn = new \Pico\AuthTeacher($database, $username, $password, false);
 
 if(!empty($teacherLoggedIn->teacher_id))
 {

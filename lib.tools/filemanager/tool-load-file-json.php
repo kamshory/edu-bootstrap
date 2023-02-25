@@ -39,7 +39,7 @@ if(file_exists($dir2))
 
 				$obj['type'] = $ft->mime;
 				$fti = filemtime($fn);
-				$obj['filemtime'] = date(PicoConst::DATE_TIME_MYSQL, $fti);
+				$obj['filemtime'] = date(\Pico\PicoConst::DATE_TIME_MYSQL, $fti);
 				if(stripos($obj['type'], 'image') !== false && $obj['filesize'] <= $fmanConfig->thumbnail_max_size)
 				{
 					try

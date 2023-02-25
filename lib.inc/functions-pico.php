@@ -1,17 +1,6 @@
 <?php
-
-
 require_once dirname(dirname(__FILE__)) . "/lib.config/inc-cfg.php";
 require_once dirname(__FILE__) . "/autoload.php";
-
-
-/*
-Old code
-require_once dirname(__FILE__) . "/classes/PicoDatabase.php";
-require_once dirname(__FILE__) . "/classes/PicoEdu.php";
-require_once dirname(__FILE__) . "/classes/FileSynchronizer.php";
-require_once dirname(__FILE__) . "/classes/PicoConst.php";
-*/
 
 mb_regex_encoding('UTF-8');
 function mb_replace($search, $replace, $subject, &$count = 0) //NOSONAR
@@ -121,8 +110,6 @@ function real2dms($val)
 	$s = date("s", $tm);
 	return array($h, $m, $s);
 }
-
-
 
 function scrap($url)
 {

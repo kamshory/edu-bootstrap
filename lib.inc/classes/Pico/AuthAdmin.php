@@ -1,8 +1,7 @@
 <?php
-
 namespace Pico;
 
-class AdminAuth
+class AuthAdmin
 {
 	public $admin_id = "";
 	public $admin_level = 0;
