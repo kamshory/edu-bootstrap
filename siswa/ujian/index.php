@@ -1,4 +1,5 @@
 <?php
+echo "AAAAAAAAAAA";
 require_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-siswa.php";
 require_once dirname(dirname(dirname(__FILE__)))."/lib.inc/mobile-detector.php";
 $auth_student_id = @$auth_student_id . '';
