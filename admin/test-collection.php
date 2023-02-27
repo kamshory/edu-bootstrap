@@ -2,7 +2,7 @@
 require_once dirname(dirname(dirname(__FILE__)))."/planetbiru/lib.inc/auth.php";
 
 $pageTitle = "Edu Test Collection";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(count(@$_POST))
 {
 	$test_collection_id = kh_filter_input(INPUT_POST, "test_collection_id", FILTER_SANITIZE_STRING_NEW);

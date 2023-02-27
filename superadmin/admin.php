@@ -10,7 +10,7 @@ if($adminLoggedIn->admin_level != 1)
 
 $pageTitle = "Administrator";
 
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(count(@$_POST) && isset($_POST['save']))
 {
 	$admin_id = $admin_id2 = kh_filter_input(INPUT_POST, "admin_id2", FILTER_SANITIZE_STRING_NEW);

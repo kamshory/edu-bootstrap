@@ -2,7 +2,7 @@
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
 
 $pageTitle = "Token";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(count(@$_POST))
 {
 	$token_id = kh_filter_input(INPUT_POST, "token_id", FILTER_SANITIZE_NUMBER_INT);

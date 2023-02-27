@@ -12,7 +12,7 @@ if(empty($real_school_id))
 }
 
 $pageTitle = "Administrator";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 $my_admin = $adminLoggedIn->admin_id;
 
 if(count(@$_POST) && isset($_POST['save']))

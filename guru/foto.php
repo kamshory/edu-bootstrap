@@ -67,7 +67,6 @@ if (@$_POST['option'] == 'upload-image') {
 }
 
 $pageTitle = "Foto";
-require_once dirname(dirname(__FILE__)) . "/lib.inc/cfg.pagination.php";
 
 require_once dirname((__FILE__)) . "/lib.inc/header.php";
 $nt = '';

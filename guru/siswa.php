@@ -6,7 +6,7 @@ if(empty($school_id))
 	exit();
 }
 $pageTitle = "Siswa";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 
 if(@$_GET['option'] == 'detail')
 {

@@ -7,7 +7,7 @@ if(!isset($school_id) || empty($school_id))
 	exit();
 }
 $pageTitle = "Keterangan Sekolah";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(isset($_POST['save']))
 {
 	$description = kh_filter_input(INPUT_POST, "description");

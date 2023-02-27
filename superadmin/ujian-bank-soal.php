@@ -7,7 +7,7 @@ if($adminLoggedIn->admin_level != 1)
 }
 
 $pageTitle = "Bank Soal";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 
 ?>

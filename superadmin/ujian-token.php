@@ -8,7 +8,7 @@ if($adminLoggedIn->admin_level != 1)
 
 
 $pageTitle = "Token Ujian";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(count(@$_POST) && isset($_POST['save']))
 {
 	if(isset($_POST['school_id']))

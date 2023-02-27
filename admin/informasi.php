@@ -7,7 +7,7 @@ if(!isset($school_id) || empty($school_id))
 	exit();
 }
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 $pageTitle = "Infomasi";
 if(!isset($school_id) || empty($school_id))
 {

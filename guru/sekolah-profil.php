@@ -6,7 +6,7 @@ if(empty($school_id))
 	exit();
 }
 $pageTitle = "Profil Sekolah";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,

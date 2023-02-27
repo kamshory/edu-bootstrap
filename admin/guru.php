@@ -11,7 +11,7 @@ if(empty($real_school_id))
 	exit();
 }
 $pageTitle = "Guru";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(count(@$_POST) && isset($_POST['save']))
 {
 	$teacher_id = kh_filter_input(INPUT_POST, "teacher_id", FILTER_SANITIZE_STRING_NEW);

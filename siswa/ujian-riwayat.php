@@ -7,7 +7,7 @@ if(empty($school_id))
 }
 
 $pageTitle = "Riwayat Ujian";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 
 if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET['id']))
 {

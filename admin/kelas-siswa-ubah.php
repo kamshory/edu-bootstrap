@@ -11,7 +11,7 @@ if(empty($real_school_id))
 	exit();
 }
 $pageTitle = "Perubahan Kelas Siswa";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(isset($_POST['setclass']) && isset($_POST['students']))
 {
 	$students = $_POST['students'];

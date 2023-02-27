@@ -7,7 +7,7 @@ if(empty($school_id))
 }
 
 $pageTitle = "Jurusan";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 
 if(@$_GET['option'] == 'detail')
 {

@@ -800,7 +800,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 }
 
 $pageTitle = "Impor Data";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 
 if(@$_GET['option'] == 'success')
 {

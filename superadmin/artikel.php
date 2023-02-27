@@ -14,7 +14,7 @@ if(empty($real_school_id))
 
 $pageTitle = "Artikel";
 
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(isset($_POST['publish']) || isset($_POST['draff']))
 {
 	$option = kh_filter_input(INPUT_POST, "option", FILTER_SANITIZE_SPECIAL_CHARS);

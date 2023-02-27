@@ -8,7 +8,7 @@ if($adminLoggedIn->admin_level != 1)
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 $pageTitle = "Kelola Paket Soal";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 $time_create = $time_edit = $database->getLocalDateTime();
 
 
@@ -660,7 +660,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 	exit();
 }
 
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 
 
 if(@$_GET['option'] == 'edit' || @$_GET['option'] == 'add')

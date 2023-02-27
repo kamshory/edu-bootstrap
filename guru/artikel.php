@@ -7,7 +7,7 @@ if(empty($school_id))
 }
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 $pageTitle = "Artikel";
 if(isset($_POST['publish']) || isset($_POST['draff']))
 {

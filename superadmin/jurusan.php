@@ -7,7 +7,7 @@ if($adminLoggedIn->admin_level != 1)
 }
 
 $pageTitle = "Jurusan";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(count(@$_POST) && isset($_POST['save']))
 {
 	$school_program_id = kh_filter_input(INPUT_POST, "school_program_id", FILTER_SANITIZE_STRING_NEW);

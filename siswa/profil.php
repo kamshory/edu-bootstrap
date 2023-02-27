@@ -6,7 +6,7 @@ if(!isset($school_id) || empty($school_id))
 	exit();
 }
 $pageTitle = "Siswa";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {

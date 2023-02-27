@@ -6,7 +6,7 @@ if(empty($school_id))
 	exit();
 }
 $pageTitle = "Pilih Sekolah";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(@$_GET['option'] == 'select')
 {
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);

@@ -7,7 +7,7 @@ if(empty($school_id))
 }
 
 $pageTitle = "Edu School Program";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(count(@$_POST))
 {
 	$school_program_id = kh_filter_input(INPUT_POST, "school_program_id", FILTER_SANITIZE_STRING_NEW);

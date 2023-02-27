@@ -7,7 +7,7 @@ if($adminLoggedIn->admin_level != 1)
 }
 $pageTitle = "Informasi";
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 
 if(isset($_POST['set_active']) && isset($_POST['info_id']))
 {

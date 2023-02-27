@@ -7,7 +7,7 @@ if($adminLoggedIn->admin_level != 1)
 }
 
 $pageTitle = "Daftar Paket Soal";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 {
 	$collection_dir = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR

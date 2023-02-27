@@ -8,7 +8,7 @@ if($adminLoggedIn->admin_level != 1)
 
 
 $pageTitle = "Sekolah";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(count(@$_POST) && isset($_POST['save']))
 {
 	$school_id = kh_filter_input(INPUT_POST, "school_id2", FILTER_SANITIZE_STRING_NEW);

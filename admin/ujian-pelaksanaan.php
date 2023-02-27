@@ -15,7 +15,7 @@ $real_school_id = @$real_school_id . '';
 
 $pageTitle = "Ujian";
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 
 if(@$_GET['option'] == 'execution')
 {

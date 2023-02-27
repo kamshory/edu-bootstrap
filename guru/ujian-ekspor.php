@@ -9,7 +9,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 
 $pageTitle = "Ekspor Soal Ujian";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 
 if(isset($_POST['export']) && isset($_POST['test_id']))
 {

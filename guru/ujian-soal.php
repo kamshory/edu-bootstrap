@@ -8,7 +8,7 @@ if(empty($school_id))
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
 $pageTitle = "Soal Ujian";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 $time_create = $time_edit = $database->getLocalDateTime();
 
 if(@$_GET['option'] == 'delete')
@@ -288,7 +288,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	}
 }
 
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(@$_GET['option'] == 'add')
 {
 	if(@$_GET['format']=='text')

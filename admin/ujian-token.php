@@ -2,7 +2,7 @@
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 
 $pageTitle = "Token Ujian";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 if(count(@$_POST) && isset($_POST['save']))
 {
 	$token_id = kh_filter_input(INPUT_POST, "token_id", FILTER_SANITIZE_NUMBER_INT);

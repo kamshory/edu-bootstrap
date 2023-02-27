@@ -68,7 +68,7 @@ if(@$_POST['option'] == 'upload-image')
 }
 
 $pageTitle = "Foto";
-require_once dirname(dirname(__FILE__))."/lib.inc/cfg.pagination.php";
+$pagination = new \Pico\PicoPagination();
 
 require_once dirname((__FILE__))."/lib.inc/header.php";
 $nt = '';
