@@ -119,15 +119,9 @@ class FileSyncUpload extends \Sync\FileSyncMaster
                 $handle = fopen($syncFilePath, "r");
                 if ($handle) {
                     while (($line = fgets($handle)) !== false) {
-                        $info = json_decode($line, true);
-                       
-                        if ($info['op'] == 'CREATEFILE') {
-                            
-                            $path = $info['path'];
-                            if($this->useRelativePath)
-                            {
-                                $path = $this->getAbsolutePath($path);
-                            }
+                        $info = json_decode($line, true);                      
+                        if ($info['op'] == 'CREATEFILE') {                           
+                            $path = $this->getPath($info);
                             $this->uploadUserFile($path, $fileSyncUrl, $username, $password);
                         }
                     }
@@ -141,5 +135,21 @@ class FileSyncUpload extends \Sync\FileSyncMaster
             // Do nothing
         }
         return true;        
+    }
+    
+    /**
+     * Get apth
+     *
+     * @param array $info
+     * @return string
+     */
+    public function getPath($info)
+    {
+        $path = $info['path'];
+        if($this->useRelativePath)
+        {
+            $path = $this->getAbsolutePath($path);
+        }
+        return $path;
     }
 }

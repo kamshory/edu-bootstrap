@@ -1,7 +1,7 @@
 <?php
 namespace Sync;
 
-class FileSyncMaster
+class FileSyncMaster //NOSONAR
 {
     protected \Pico\PicoDatabase $database;
     protected string $applicationRoot = '';

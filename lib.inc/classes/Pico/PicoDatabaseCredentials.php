@@ -59,7 +59,7 @@ class PicoDatabaseCredentials
 	/**
 	 * Load ini file
 	 * @param string $path Configuration path
-	 * @return PicoDatabaseCredentials
+	 * @return \Pico\PicoDatabaseCredentials
 	 */
 	public function load($path)
 	{

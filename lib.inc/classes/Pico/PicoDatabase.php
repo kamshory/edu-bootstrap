@@ -102,7 +102,7 @@ class PicoDatabase
 	/**
 	 * Execute query
 	 * @param string $sql Query string to be executed
-	 * @return \PDOStatement
+	 * @return \PDOStatement|bool
 	 */
 	public function executeQuery($sql) 
 	{
@@ -144,7 +144,7 @@ class PicoDatabase
 	 * Execute query and sync to hub
 	 * @param string $sql Query string to be executed
 	 * @param bool $sync Flag synchronizing
-	 * @return \PDOStatement
+	 * @return \PDOStatement|bool
 	 */
 	public function executeInsert($sql, $sync) 
 	{
@@ -166,7 +166,7 @@ class PicoDatabase
 	 * Execute delete query
 	 * @param string $sql Query string to be executed
 	 * @param bool $sync Flag synchronizing
-	 * @return \PDOStatement
+	 * @return \PDOStatement|bool
 	 */
 	public function executeDelete($sql, $sync) 
 	{
@@ -177,7 +177,7 @@ class PicoDatabase
 	 * Execute transaction query
 	 * @param string $sql Query string to be executed
 	 * @param bool $sync Flag synchronizing
-	 * @return \PDOStatement
+	 * @return \PDOStatement|bool
 	 */
 	public function executeTransaction($sql, $sync) 
 	{

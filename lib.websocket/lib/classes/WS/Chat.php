@@ -102,7 +102,7 @@ class Chat extends WSServer implements WSInterface {
 	 * @param $clientChat Chat client
 	 * @param $receivedText Text sent by the client
 	 */
-	public function onMessage($clientChat, $receivedText)
+	public function onMessage($clientChat, $receivedText) //NOSONAR
 	{
 		$json_message = json_decode($receivedText, true); 
 				
