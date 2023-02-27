@@ -4,7 +4,6 @@ if(!isset($cfg))
   exit();
 }
 
-
 $structure = array(
     array(
         'caption'=>'Depan',
@@ -130,10 +129,6 @@ $structure = array(
     )
 
 );
-
-
-
-
 
 $maniMenu = new \Pico\MainMenu();
 echo $maniMenu->show($structure, basename($_SERVER['PHP_SELF']));
