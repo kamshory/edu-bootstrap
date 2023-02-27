@@ -1,6 +1,9 @@
 <?php
 namespace Pico;
-class PicoDOM {
+class PicoDOM //NOSONAR
+{
+    const BR_CLOSED = "<br />";
+    const BR_OPEN = "<br>";
     public static function tidyHTML($buffer)
     {
         $buffer = utf8ToEntities($buffer);
@@ -67,7 +70,7 @@ class PicoDOM {
         $j = 0;
         for ($i = 0; $i < $par->length; $i++) {
             $p = trim(utf8ToEntities(htmlspecialchars($par->item($i)->nodeValue)), " \r\n ");
-            $p = trim(preg_replace('/\s+/', ' ', $p));
+            $p = trim(preg_replace('/\s+/', ' ', $p)); //NOSONAR
             if (!empty($p)) {
                 $ret->p[$j] = $p;
                 $j++;
@@ -924,16 +927,16 @@ class PicoDOM {
 
         $base_src = ltrim(rtrim($base_src, "/") . "/", "/");
         $temp = preg_replace('/\s+/', ' ', $text);
-        $temp = str_replace("<br>", " <br> ", $temp);
-        $temp = str_replace("<br />", " <br /> ", $temp);
+        $temp = str_replace(self::BR_OPEN, " <br> ", $temp);
+        $temp = str_replace(self::BR_CLOSED, " <br /> ", $temp);
         $temp = trim(preg_replace("/\s+/", " ", $temp));
         $arr = explode(" ", $temp);
         $arr_find = array();
         $arr_replace = array();
         foreach ($arr as $val) {
             if (stripos($val, "img:") === 0) {
-                $val2 = trim(str_replace("<br>", "", $val));
-                $val2 = trim(str_replace("<br />", "", $val2));
+                $val2 = trim(str_replace(self::BR_OPEN, "", $val));
+                $val2 = trim(str_replace(self::BR_CLOSED, "", $val2));
                 $arr2 = explode(":", $val2, 2);
 
                 $img = trim($arr2[1]);
@@ -977,8 +980,8 @@ class PicoDOM {
                 }
             }
             if (stripos($val, "video:") === 0) {
-                $val2 = trim(str_replace("<br>", "", $val));
-                $val2 = trim(str_replace("<br />", "", $val2));
+                $val2 = trim(str_replace(self::BR_OPEN, "", $val));
+                $val2 = trim(str_replace(self::BR_CLOSED, "", $val2));
                 $arr2 = explode(":", $val2, 2);
 
                 $img = trim($arr2[1]);
@@ -1027,8 +1030,8 @@ class PicoDOM {
                 }
             }
             if (stripos($val, "iframe:") === 0) {
-                $val2 = trim(str_replace("<br>", "", $val));
-                $val2 = trim(str_replace("<br />", "", $val2));
+                $val2 = trim(str_replace(self::BR_OPEN, "", $val));
+                $val2 = trim(str_replace(self::BR_CLOSED, "", $val2));
                 $arr2 = explode(":", $val2, 2);
 
                 $img = trim($arr2[1]);
@@ -1077,8 +1080,8 @@ class PicoDOM {
                 }
             }
             if (stripos($val, "audio:") === 0) {
-                $val2 = trim(str_replace("<br>", "", $val));
-                $val2 = trim(str_replace("<br />", "", $val2));
+                $val2 = trim(str_replace(self::BR_OPEN, "", $val));
+                $val2 = trim(str_replace(self::BR_CLOSED, "", $val2));
                 $arr2 = explode(":", $val2, 2);
 
                 $img = trim($arr2[1]);
@@ -1127,8 +1130,8 @@ class PicoDOM {
                 }
             }
             if (stripos($val, "youtube:") === 0) {
-                $val2 = trim(str_replace("<br>", "", $val));
-                $val2 = trim(str_replace("<br />", "", $val2));
+                $val2 = trim(str_replace(self::BR_OPEN, "", $val));
+                $val2 = trim(str_replace(self::BR_CLOSED, "", $val2));
                 $arr2 = explode(":", $val2, 2);
 
                 $img = trim($arr2[1]);
@@ -1145,15 +1148,15 @@ class PicoDOM {
                     $style_element = str_replace(' style=""', '', $style_element);
                 }
                 $arr_find[] = $val2;
-                $params = \Pico\RichText::getYoutubeParams($img);
+                $params = self::getYoutubeParams($img);
                 $video_id = $params['video_id'];
                 $time = $params['time'];
                 $arr_replace[] = '<iframe type="text/html" marginwidth="0" marginheight="0" scrolling="no" src="https://www.youtube.com/embed/' . $video_id . '?html5=1&playsinline=1&allowfullscreen=true&rel=0&version=3&autoplay=0&start=' . $time . '" allowfullscreen="" height="281" width="500"' . $style_element . '></iframe>';
             }
         }
 
-        $text = str_replace("<br>", "\r\n", $text);
-        $text = str_replace("<br />", "\r\n", $text);
+        $text = str_replace(self::BR_OPEN, "\r\n", $text);
+        $text = str_replace(self::BR_CLOSED, "\r\n", $text);
         $text = htmlspecialchars($text);
         if (count($arr_replace)) {
             $text = str_replace($arr_find, $arr_replace, $text);
@@ -1177,6 +1180,66 @@ class PicoDOM {
         }
         return $text;
     }
+
+    public static function getYoutubeParams($url)
+	{
+		$s = $url;
+		$params = array(
+			'video_id' => '',
+			'time' => '0',
+			'url' => ''
+		);
+		if (stripos($s, "://") !== false && stripos($s, "youtube.com") !== false) {
+			$s = htmlspecialchars_decode($s);
+			$data = parse_url($s);
+			parse_str(@$data['query'], $args);
+			$vid = @$args['v'];
+			$sstart = @$args['start'];
+
+			$ff = @$data['fragment'];
+			parse_str(@$ff, $fragment);
+			if ($sstart == '' && @$fragment['t']) {
+				$sstart = @$fragment['t'];
+			}
+
+			$sstart = str_ireplace(array("h", "m", "s"), array(" ", " ", ""), $sstart);
+			$arr = explode(" ", $sstart);
+			$arr2 = array_reverse($arr);
+			$t = $arr2[0] + (@$arr2[1] * 60) + (@$arr2[2] * 3600);
+			$time = $t;
+
+			$yurl = "https://www.youtube.com/embed/$vid?html5=1&amp;playsinline=1&amp;allowfullscreen=true&amp;rel=0&amp;version=3&amp;autoplay=1&amp;start=$time";
+
+			$params['url'] = $yurl;
+			$params['video_id'] = $vid;
+			$params['time'] = $time;
+		} else if (stripos($s, "://") !== false && stripos($s, "youtu.be") !== false) {
+			$s = htmlspecialchars_decode($s);
+			$data = parse_url($s);
+			$vid = trim(@$data['path'], "/");
+			parse_str(@$data['query'], $args);
+			$sstart = @$args['t'];
+			$sstart = str_ireplace(array("h", "m", "s"), array(" ", " ", ""), $sstart);
+			$arr = explode(" ", $sstart);
+			$arr2 = array_reverse($arr);
+			$t = $arr2[0] + (@$arr2[1] * 60) + (@$arr2[2] * 3600);
+			$time = $t;
+			$yurl = "https://www.youtube.com/embed/$vid?html5=1&amp;playsinline=1&amp;allowfullscreen=true&amp;rel=0&amp;version=3&amp;autoplay=1&amp;start=$time";
+			$params['url'] = $yurl;
+			$params['video_id'] = $vid;
+			$params['time'] = $time;
+		} else if (stripos($s, "://") !== false && stripos($s, "ytimg.com") !== false) {
+			$s = htmlspecialchars_decode($s);
+			$data = parse_url($s);
+			$str = trim(@$data['path'], "/");
+			$arr = explode("/", $str);
+			$vid = @$arr[1];
+			$yurl = "https://www.youtube.com/embed/$vid?html5=1&amp;playsinline=1&amp;allowfullscreen=true&amp;rel=0&amp;version=3&amp;autoplay=1";
+			$params['url'] = $yurl;
+			$params['video_id'] = $vid;
+		}
+		return $params;
+	}
 
     public static function removeParagraphTag($text)
     {

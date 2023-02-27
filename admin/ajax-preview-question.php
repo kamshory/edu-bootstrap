@@ -4,9 +4,9 @@ if(!empty(@$school_id)) {
 	require_once dirname(dirname(__FILE__)) . "/lib.inc/lib.test.php";
 	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$xml_data = kh_filter_input(INPUT_POST, "text", FILTER_DEFAULT);
-
+	$picoTest = new \Pico\PicoTest();
 	if (!empty($test_id) && $xml_data != '') {
-		$clear_data = parseRawQuestion($xml_data);
+		$clear_data = $picoTest->parseRawQuestion($xml_data);
 
 		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 		$base_src = "media.edu/school/$school_id/test/$test_id";
@@ -15,8 +15,8 @@ if(!empty(@$school_id)) {
 			<?php
 			foreach ($clear_data as $question_no => $question) {
 
-				$object = parseQuestion($question);
-				$isi = nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages(@$object['question'], $base_dir, $base_src))));
+				$object = $picoTest->parseQuestion($question);
+				$isi = nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages(@$object['question'], $base_dir, $base_src))));
 				// Commented $isi = fixing_table($isi);
 			?>
 				<li class="question-li">
@@ -31,7 +31,7 @@ if(!empty(@$school_id)) {
 									echo ' option-circle-selected'; 
 									}?>"></span>
 									<?php
-									$isi_pilihan = nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages($option['text'], $base_dir, $base_src))));
+									$isi_pilihan = nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages($option['text'], $base_dir, $base_src))));
 									// Commented $isi_pilihan = fixing_table($isi_pilihan);
 									echo $isi_pilihan;
 									?>

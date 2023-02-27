@@ -16,6 +16,7 @@ if($stmt->rowCount() > 0)
 	$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 	if(file_exists($file_path))
 	{
+		$picoTest = new \Pico\PicoTest();
 		$text_all = $picoTest->loadXmlData_word($file_path, $key);
 
 		$expires = 0;

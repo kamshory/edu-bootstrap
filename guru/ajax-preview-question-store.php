@@ -11,6 +11,7 @@ $sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$id' A
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
+	$picoTest = new \Pico\PicoTest();
 	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	$basename = $data['file_path'];
 	$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;

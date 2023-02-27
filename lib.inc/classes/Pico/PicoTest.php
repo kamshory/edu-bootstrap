@@ -258,7 +258,7 @@ class PicoTest
     }
 
 
-    public function extract_image($html, $base_dir) //NOSONAR
+    public function extractImage($html, $base_dir) //NOSONAR
     {
         global $cfg;
         $files = array();
@@ -479,7 +479,7 @@ class PicoTest
         $file1 = "";
         $file2 = "";
         if ($content != "") {
-            $parsed_data = $this->extract_image($content, $base_dir);
+            $parsed_data = $this->extractImage($content, $base_dir);
             $files = $parsed_data->files;
             $content = htmlspecialchars($parsed_data->html);
     
@@ -522,7 +522,7 @@ class PicoTest
     
                 $file2 = "";
                 if ($content != '') {
-                    $parsed_data = $this->extract_image($content, $base_dir);
+                    $parsed_data = $this->extractImage($content, $base_dir);
                     $files = $parsed_data->files;
                     $content = htmlspecialchars($parsed_data->html);
                     if (count($files) > 0) {
