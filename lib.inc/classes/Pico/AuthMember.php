@@ -27,8 +27,12 @@ class AuthMember
 	public $state_id = '';
 	public $city_id = '';
 
+	private $database;
+	private $password;
+	private $createlog = false;
+
 	/**
-	 * Constructor of MemberAuth
+	 * Constructor of TeacherAuth
 	 * @param \Pico\PicoDatabase $database
 	 * @param string $username
 	 * @param string $password
@@ -36,6 +40,18 @@ class AuthMember
 	 */
 	public function __construct($database, $username, $password, $createlog = false)
 	{
+		$this->database = $database;
+		$this->username = $username;
+		$this->password = $password;
+		$this->createlog = $createlog;
+	}
+
+	public function login()
+	{
+		$database = $this->database;
+		$username = $this->username;
+		$password = $this->password;
+		$createlog = $this->createlog;
 		global $cfg;
 		$sql = "SELECT `member_id`, `username`, `name`, `gender`, `birth_place`, `birth_day`, `email`, `phone`, `url`, `show_compass`,
 		`autoplay_360`, `autorotate_360`, `img_360_compress`, `picture_hash`, `background`, `language`, `country_id`, `state_id`, `city_id`, `circle_avatar`
@@ -66,5 +82,6 @@ class AuthMember
 				$database->executeUpdate($sql, false);
 			}
 		}
+		return $this;
 	}
 }

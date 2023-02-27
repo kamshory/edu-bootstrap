@@ -22,8 +22,12 @@ class AuthAdmin
 	public $use_token = 0;
 	public $use_national_id = 0;
 
+	private $database;
+	private $password;
+	private $createlog = false;
+
 	/**
-	 * Constructor of AdminAuth
+	 * Constructor of TeacherAuth
 	 * @param \Pico\PicoDatabase $database
 	 * @param string $username
 	 * @param string $password
@@ -31,6 +35,18 @@ class AuthAdmin
 	 */
 	public function __construct($database, $username, $password, $createlog = false)
 	{
+		$this->database = $database;
+		$this->username = $username;
+		$this->password = $password;
+		$this->createlog = $createlog;
+	}
+
+	public function login()
+	{
+		$database = $this->database;
+		$username = $this->username;
+		$password = $this->password;
+		$createlog = $this->createlog;
 		if ($username != '') {
 			$sql = "SELECT `edu_admin`.`admin_id`, `edu_admin`.`username`, `edu_admin`.`name`, `edu_admin`.`gender`, 
 			`edu_admin`.`birth_place`, `edu_admin`.`birth_day`, `edu_admin`.`email`, `edu_admin`.`phone`, 
@@ -73,5 +89,6 @@ class AuthAdmin
 				}
 			}
 		}
+		return $this;
 	}
 }

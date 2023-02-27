@@ -98,6 +98,7 @@ if(isset($_POST['set_active']) && isset($_POST['article_id']))
 		}
 	}
 }
+
 if(isset($_POST['set_inactive']) && isset($_POST['article_id']))
 {
 	$articles = $_POST['article_id'];
@@ -111,6 +112,7 @@ if(isset($_POST['set_inactive']) && isset($_POST['article_id']))
 		}
 	}
 }
+
 if(isset($_POST['delete']) && isset($_POST['article_id']))
 {
 	$articles = $_POST['article_id'];
@@ -131,7 +133,6 @@ if(isset($_POST['delete']) && isset($_POST['article_id']))
 		}
 	}
 }
-
 
 if(@$_GET['option'] == 'add')
 {

@@ -30,7 +30,7 @@ function generateTable($header, $body)
     $table .= '</tbody>';
 
     $table .= '</table>';
-    $table = tidyHTML($table);
+    $table = \Pico\PicoDOM::tidyHTML($table);
     return $table;
 }
 

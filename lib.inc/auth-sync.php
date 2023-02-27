@@ -15,7 +15,7 @@ if(isset($_SESSION['admin_password']))
 	$password = $_SESSION['admin_password'];
 }
 
-$memberLoggedIn = new \Pico\AuthAdmin($database, $username, $password, false);
+$memberLoggedIn = (new \Pico\AuthAdmin($database, $username, $password, false))->login();
 
 if(empty($memberLoggedIn->admin_id))
 {
@@ -27,7 +27,7 @@ if(empty($memberLoggedIn->admin_id))
     {
         $password = $_SESSION['teacher_password'];
     }
-    $memberLoggedIn = new \Pico\AuthTeacher($database, $username, $password, false);
+    $memberLoggedIn = (new \Pico\AuthTeacher($database, $username, $password, false))->login();
     if(!empty($memberLoggedIn->getTeacherId()))
     {
         $user_id = $memberLoggedIn->getTeacherId();

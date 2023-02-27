@@ -19,6 +19,10 @@ class AuthTeacher
 	public $school_code = '';
 	public $use_token = 0;
 
+	private $database;
+	private $password;
+	private $createlog = false;
+
 	/**
 	 * Constructor of TeacherAuth
 	 * @param \Pico\PicoDatabase $database
@@ -28,6 +32,19 @@ class AuthTeacher
 	 */
 	public function __construct($database, $username, $password, $createlog = false)
 	{
+		$this->database = $database;
+		$this->username = $username;
+		$this->password = $password;
+		$this->createlog = $createlog;
+	}
+
+	public function login()
+	{
+		$database = $this->database;
+		$username = $this->username;
+		$password = $this->password;
+		$createlog = $this->createlog;
+		
 		if ($username != '') {
 			$sql = "SELECT `edu_teacher`.`teacher_id`, `edu_teacher`.`username`, `edu_teacher`.`name`, `edu_teacher`.`gender`, 
 				`edu_teacher`.`birth_place`, `edu_teacher`.`birth_day`, `edu_teacher`.`email`, `edu_teacher`.`phone`, 
@@ -68,6 +85,7 @@ class AuthTeacher
 					$database->executeUpdate($sql, true);
 				}
 			}
+			return $this;
 		}
 	}
 

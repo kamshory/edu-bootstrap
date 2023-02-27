@@ -20,8 +20,12 @@ class AuthStudent
 	public $school_code = '';
 	public $use_token = 0;
 
+	private $database;
+	private $password;
+	private $createlog = false;
+
 	/**
-	 * Constructor of StudentAuth
+	 * Constructor of TeacherAuth
 	 * @param \Pico\PicoDatabase $database
 	 * @param string $username
 	 * @param string $password
@@ -29,6 +33,18 @@ class AuthStudent
 	 */
 	public function __construct($database, $username, $password, $createlog = false)
 	{
+		$this->database = $database;
+		$this->username = $username;
+		$this->password = $password;
+		$this->createlog = $createlog;
+	}
+
+	public function login()
+	{
+		$database = $this->database;
+		$username = $this->username;
+		$password = $this->password;
+		$createlog = $this->createlog;
 		if ($username != '') {
 			$sql = "SELECT `edu_student`.`student_id`, `edu_student`.`username`, `edu_student`.`name`, `edu_student`.`gender`, 
 			`edu_student`.`birth_place`, `edu_student`.`birth_day`, `edu_student`.`email`, `edu_student`.`phone`, `edu_student`.`country_id`, 
@@ -67,5 +83,6 @@ class AuthStudent
 				}
 			}
 		}
+		return $this;
 	}
 }
