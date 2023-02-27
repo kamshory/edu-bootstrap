@@ -1338,4 +1338,16 @@ class PicoEdu //NOSONAR
 		return basename($_SERVER['PHP_SELF']);
 	}
 
+	public function delTree($dir, $fileSync)
+	{
+		$files = array_diff(scandir($dir), array('.', '..'));
+		foreach ($files as $file) {
+			if (@is_dir("$dir/$file")) {
+				$this->delTree("$dir/$file", $fileSync);
+			} else {
+				$fileSync->deleteFile("$dir/$file", true);
+			}
+		}
+		return $fileSync->deleteDirecory($dir, true);
+	}
 }

@@ -1,7 +1,7 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/functions-pico.php";
 include_once dirname(__FILE__)."/lib.inc/sessions.php";
-include_once dirname(__FILE__)."/lib.inc/dom.php";
+
 $pageTitle = "Infomasi";
 if(isset($_GET['info_id']))
 {
@@ -81,7 +81,7 @@ if(isset($_GET['info_id']))
 					<div class="article-creator">Oleh <?php echo $data['creator'];?></div>
 					<div class="article-link">
 						<button class="btn btn-success download-word">Download</button>
-						<button class="btn btn-primary" onclick="window.location='informasi.php';">Semua</button>
+						<button class="btn btn-primary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>';">Semua</button>
 					</div>
 				</div>            
 		<?php

@@ -16,7 +16,7 @@ if(!empty(@$school_id)) {
 			foreach ($clear_data as $question_no => $question) {
 
 				$object = parseQuestion($question);
-				$isi = nl2br(UTF8ToEntities(filterHtml(addImages(@$object['question'], $base_dir, $base_src))));
+				$isi = nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages(@$object['question'], $base_dir, $base_src))));
 				// Commented $isi = fixing_table($isi);
 			?>
 				<li class="question-li">
@@ -31,7 +31,7 @@ if(!empty(@$school_id)) {
 									echo ' option-circle-selected'; 
 									}?>"></span>
 									<?php
-									$isi_pilihan = nl2br(UTF8ToEntities(filterHtml(addImages($option['text'], $base_dir, $base_src))));
+									$isi_pilihan = nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages($option['text'], $base_dir, $base_src))));
 									// Commented $isi_pilihan = fixing_table($isi_pilihan);
 									echo $isi_pilihan;
 									?>

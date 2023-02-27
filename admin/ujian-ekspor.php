@@ -10,7 +10,7 @@ if(empty($real_school_id))
 	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
 	exit();
 }
-require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 
 $pageTitle = "Ekspor Soal Ujian";

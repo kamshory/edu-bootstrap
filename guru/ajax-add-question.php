@@ -4,7 +4,7 @@ if(empty($school_id))
 {
 	exit();
 }
-require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 
 $time_create = $time_edit = $database->getLocalDateTime();
@@ -32,7 +32,7 @@ if(isset($_POST['question']))
 		$prefiks = "media.edu/school/$school_id/test/$test_id";
 
 		$question = kh_filter_input(INPUT_POST, "question");
-		$question = UTF8ToEntities($question);
+		$question = utf8ToEntities($question);
 		$question = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 
 		$question = $picoEdu->brToNewLineEncoded($question);
@@ -59,7 +59,7 @@ if(isset($_POST['question']))
 				$id2 = $i;
 				
 				$option = kh_filter_input(INPUT_POST, "option_".$id2);
-				$option = UTF8ToEntities($option);
+				$option = utf8ToEntities($option);
 				$option = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($option, $direktori, $prefiks, $fileSync)));
 
 				$option = $picoEdu->brToNewLineEncoded($option);

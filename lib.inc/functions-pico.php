@@ -41,7 +41,7 @@ function mb_replace($search, $replace, $subject, &$count = 0) //NOSONAR
 	}
 	return $subject;
 }
-function UTF8ToEntities($string)
+function utf8ToEntities($string)
 {
 	return mb_convert_encoding($string, 'HTML-ENTITIES', 'UTF-8');
 }

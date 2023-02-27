@@ -6,7 +6,7 @@ if($adminLoggedIn->admin_level != 1)
 	exit();
 }
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+
 $pageTitle = "Soal Ujian";
 $pagination = new \Pico\PicoPagination();
 $time_create = $time_edit = $database->getLocalDateTime();
@@ -72,7 +72,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 			$object = parseQuestion($question);
 			if(isset($object['question']) && isset($object['numbering']) && isset($object['option']))
 			{
-				$content = addslashes(nl2br(UTF8ToEntities(filterHtml(addImages(@$object['question'], $base_dir, $base_src)))));
+				$content = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages(@$object['question'], $base_dir, $base_src)))));
 				$numbering = addslashes($object['numbering']);
 				$digest = md5($object['question']);
 				$sort_order++;
@@ -94,7 +94,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 					{
 						foreach($object['option'] as $option_no=>$option)
 						{
-							$isi_option = addslashes(nl2br(UTF8ToEntities(filterHtml(addImages($option['text'], $base_dir, $base_src)))));
+							$isi_option = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages($option['text'], $base_dir, $base_src)))));
 							$order_option = $option_no+1;
 							$score_option = addslashes(@$option['value']*$score_standar); 
 							if($score_option == 0) 
@@ -149,7 +149,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$prefiks = "media.edu/school/$school_id/test/$test_id";
 	
 		$question = kh_filter_input(INPUT_POST, "question");
-		$question = UTF8ToEntities($question);
+		$question = utf8ToEntities($question);
 		$question = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 		
 		$sql = "UPDATE `edu_question` SET `content` = '$question' , `random` = '$random', `numbering` = '$numbering' WHERE `question_id` = '$question_id' ";
@@ -168,7 +168,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 				$id2 = $dt['option_id'];
 
 				$option = kh_filter_input(INPUT_POST, "option_" . $id2);
-				$option = UTF8ToEntities($option);
+				$option = utf8ToEntities($option);
 				$option = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($option, $direktori, $prefiks, $fileSync)));
 
 				$score = kh_filter_input(INPUT_POST, "score_" . $id2, FILTER_SANITIZE_NUMBER_FLOAT);

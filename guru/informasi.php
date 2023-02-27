@@ -6,7 +6,7 @@ if(empty($school_id))
 	exit();
 }
 
-require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+
 $pagination = new \Pico\PicoPagination();
 $pageTitle = "Infomasi";
 if(!isset($school_id) || empty($school_id))

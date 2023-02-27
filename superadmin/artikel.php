@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+
 if(!isset($school_id) || empty($school_id))
 {
 	require_once dirname(__FILE__)."/bukan-admin.php";
@@ -57,7 +57,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$fileSync->prepareDirectory($article_dir, $dirBase, $permission, true);
 			
 		$content = \Pico\PicoDOM::extractImageData($content, $article_dir, $base_src, $fileSync);
-		$content = addslashes(UTF8ToEntities($content));
+		$content = addslashes(utf8ToEntities($content));
 		$sql = "UPDATE `edu_article` SET `content` = '$content' WHERE `article_id` = '$article_id' ";
 		$database->executeUpdate($sql, true);
 		header("Location: ".$picoEdu->gateBaseSelfName()."?option=edit&article_id=$article_id");

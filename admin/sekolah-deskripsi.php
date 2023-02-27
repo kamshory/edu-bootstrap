@@ -1,6 +1,6 @@
 <?php
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+
 if(!isset($school_id) || empty($school_id))
 {
 	require_once dirname(__FILE__)."/bukan-admin.php";
@@ -22,7 +22,7 @@ if(isset($_POST['save']))
 
 	$description = \Pico\PicoDOM::extractImageData($description, $school_dir, $base_src, $fileSync);
 	
-	$description = addslashes(UTF8ToEntities($description));
+	$description = addslashes(utf8ToEntities($description));
 	
 	$time_create = $time_edit = $database->getLocalDateTime();
 	

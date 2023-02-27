@@ -6,7 +6,7 @@ if(empty($school_id))
 }
 if(isset($_POST['from']) && isset($_POST['to']))
 {
-	require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+	
 	require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 	$collection = kh_filter_input(INPUT_POST, "from", FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_POST, "to", FILTER_SANITIZE_STRING_NEW);

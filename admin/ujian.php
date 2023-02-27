@@ -166,7 +166,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	{
 		$selection = kh_filter_input(INPUT_POST, "selection", FILTER_SANITIZE_STRING_NEW);
 		$selection_index = json_decode($selection);
-		require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+		
 		$time_create = $time_edit = $database->getLocalDateTime();		
 		
 		$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$collection' AND `active` = true ";

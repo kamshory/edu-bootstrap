@@ -6,7 +6,7 @@ if($adminLoggedIn->admin_level != 1)
 	exit();
 }
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+
 $pageTitle = "Kelola Paket Soal";
 $pagination = new \Pico\PicoPagination();
 $time_create = $time_edit = $database->getLocalDateTime();
@@ -516,7 +516,7 @@ if(isset($_POST['save']) && (@$_GET['option'] == 'edit' || @$_GET['option'] == '
 			$question_array[$ii] = $test_data->item[$ii];
 		}
 		$question_text = kh_filter_input(INPUT_POST, "question");
-		$question_text = UTF8ToEntities($question_text);
+		$question_text = utf8ToEntities($question_text);
 		$numbering = kh_filter_input(INPUT_POST, "numbering", FILTER_SANITIZE_STRING_NEW);
 		$competence = trim(kh_filter_input(INPUT_POST, "basic_competence", FILTER_SANITIZE_STRING_NEW));
 		$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
@@ -701,7 +701,7 @@ $numbering = kh_filter_input(INPUT_POST, "numbering", FILTER_SANITIZE_STRING_NEW
 $competence = trim(kh_filter_input(INPUT_POST, "basic_competence", FILTER_SANITIZE_STRING_NEW));
 $random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
 $question_text = kh_filter_input(INPUT_POST, "question");
-$question_text = UTF8ToEntities($question_text);
+$question_text = utf8ToEntities($question_text);
 $question_text = htmlspecialchars($question_text);
 	
 
@@ -1197,7 +1197,7 @@ if($stmt->rowCount() > 0)
 	$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 	if(file_exists($file_path))
 	{
-		$text_all = loadXmlData($file_path);
+		$text_all = $picoTest->loadXmlData($file_path);
 
 		?>
         <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test.css" />

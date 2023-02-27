@@ -18,7 +18,7 @@ if(!empty($test_id) && $xml_data!= '')
 	{
 		
 		$object = parseQuestion($question);
-		$isi = nl2br(filterHtml(addImages(@$object['question'], $base_dir, $base_src)));
+		$isi = nl2br(\Pico\PicoDOM::filterHtml(addImages(@$object['question'], $base_dir, $base_src)));
 		?>
         <li class="question-li">
         <p><?php echo $isi;?></p>
@@ -31,7 +31,7 @@ if(!empty($test_id) && $xml_data!= '')
 			?><li style="list-style-type:<?php echo $object['numbering'];?>" class="option-li">
             <span class="option-circle<?php echo $picoEdu->ifMatch($option['value'] > 0, ' option-circle-selected', '');?>"></span>
             <?php
-			$isi_pilihan = nl2br(UTF8ToEntities(filterHtml(addImages($option['text'], $base_dir, $base_src))));
+			$isi_pilihan = nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages($option['text'], $base_dir, $base_src))));
 			echo $isi_pilihan;
 			?>
             </li>

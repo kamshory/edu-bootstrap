@@ -252,4 +252,64 @@ class RichText{
 		}
 		return $ret;
 	}
+
+	public static function getYoutubeParams($url)
+	{
+		$s = $url;
+		$params = array(
+			'video_id' => '',
+			'time' => '0',
+			'url' => ''
+		);
+		if (stripos($s, "://") !== false && stripos($s, "youtube.com") !== false) {
+			$s = htmlspecialchars_decode($s);
+			$data = parse_url($s);
+			parse_str(@$data['query'], $args);
+			$vid = @$args['v'];
+			$sstart = @$args['start'];
+
+			$ff = @$data['fragment'];
+			parse_str(@$ff, $fragment);
+			if ($sstart == '' && @$fragment['t']) {
+				$sstart = @$fragment['t'];
+			}
+
+			$sstart = str_ireplace(array("h", "m", "s"), array(" ", " ", ""), $sstart);
+			$arr = explode(" ", $sstart);
+			$arr2 = array_reverse($arr);
+			$t = $arr2[0] + (@$arr2[1] * 60) + (@$arr2[2] * 3600);
+			$time = $t;
+
+			$yurl = "https://www.youtube.com/embed/$vid?html5=1&amp;playsinline=1&amp;allowfullscreen=true&amp;rel=0&amp;version=3&amp;autoplay=1&amp;start=$time";
+
+			$params['url'] = $yurl;
+			$params['video_id'] = $vid;
+			$params['time'] = $time;
+		} else if (stripos($s, "://") !== false && stripos($s, "youtu.be") !== false) {
+			$s = htmlspecialchars_decode($s);
+			$data = parse_url($s);
+			$vid = trim(@$data['path'], "/");
+			parse_str(@$data['query'], $args);
+			$sstart = @$args['t'];
+			$sstart = str_ireplace(array("h", "m", "s"), array(" ", " ", ""), $sstart);
+			$arr = explode(" ", $sstart);
+			$arr2 = array_reverse($arr);
+			$t = $arr2[0] + (@$arr2[1] * 60) + (@$arr2[2] * 3600);
+			$time = $t;
+			$yurl = "https://www.youtube.com/embed/$vid?html5=1&amp;playsinline=1&amp;allowfullscreen=true&amp;rel=0&amp;version=3&amp;autoplay=1&amp;start=$time";
+			$params['url'] = $yurl;
+			$params['video_id'] = $vid;
+			$params['time'] = $time;
+		} else if (stripos($s, "://") !== false && stripos($s, "ytimg.com") !== false) {
+			$s = htmlspecialchars_decode($s);
+			$data = parse_url($s);
+			$str = trim(@$data['path'], "/");
+			$arr = explode("/", $str);
+			$vid = @$arr[1];
+			$yurl = "https://www.youtube.com/embed/$vid?html5=1&amp;playsinline=1&amp;allowfullscreen=true&amp;rel=0&amp;version=3&amp;autoplay=1";
+			$params['url'] = $yurl;
+			$params['video_id'] = $vid;
+		}
+		return $params;
+	}
 }

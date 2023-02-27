@@ -6,7 +6,7 @@ if($adminLoggedIn->admin_level != 1)
 	exit();
 }
 $pageTitle = "Informasi";
-require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+
 $pagination = new \Pico\PicoPagination();
 
 if(isset($_POST['set_active']) && isset($_POST['info_id']))
@@ -96,7 +96,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 
 			$content = kh_filter_input(INPUT_POST, "content");
 			$content = \Pico\PicoDOM::extractImageData($content, $info_dir, $base_src, $fileSync);
-			$content = addslashes(UTF8ToEntities($content));
+			$content = addslashes(utf8ToEntities($content));
 
 			$sql = "UPDATE `edu_info` SET
 			`content` = '$content'
@@ -121,7 +121,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		
 		$content = kh_filter_input(INPUT_POST, "content");
 		$content = \Pico\PicoDOM::extractImageData($content, $info_dir, $base_src, $fileSync);
-		$content = addslashes(UTF8ToEntities($content));
+		$content = addslashes(utf8ToEntities($content));
 
 		$sql = "UPDATE `edu_info` SET
 		`name` = '$name', `content` = '$content', 

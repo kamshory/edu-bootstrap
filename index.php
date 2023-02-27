@@ -1,6 +1,6 @@
 <?php
 include_once dirname(__FILE__)."/lib.inc/functions-pico.php";
-include_once dirname(__FILE__)."/lib.inc/dom.php";
+
 include_once dirname(__FILE__)."/lib.inc/sessions.php";
 if(isset($_POST['username']) && isset($_POST['password']))
 {
@@ -43,7 +43,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 			}
 			else
 			{
-				header('Location: index.php'); //NOSONAR
+				header('Location: '.$picoEdu->gateBaseSelfName()); //NOSONAR
 			}
 		}
 		else if(isset($_SERVER['HTTP_REFERER']))
@@ -55,12 +55,12 @@ if(isset($_POST['username']) && isset($_POST['password']))
 			}
 			else
 			{
-				header('Location: index.php'); //NOSONAR
+				header('Location: '.$picoEdu->gateBaseSelfName()); //NOSONAR
 			}
 		}
 		else
 		{
-			header('Location: index.php'); //NOSONAR
+			header('Location: '.$picoEdu->gateBaseSelfName()); //NOSONAR
 		}
 	}
 	else

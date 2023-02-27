@@ -3,7 +3,7 @@ namespace Pico;
 class PicoDOM {
     public static function tidyHTML($buffer)
     {
-        $buffer = UTF8ToEntities($buffer);
+        $buffer = utf8ToEntities($buffer);
         $buff = "<html><body>" . $buffer . "</body></html>";
         try {
             $domDoc = new \DOMDocument();
@@ -47,7 +47,7 @@ class PicoDOM {
     {
         $ret = new \stdClass();
         $dom = new \DOMDocument("1.0", "UTF-8");
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         @$dom->loadHTML(mb_convert_encoding($data, 'HTML-ENTITIES', 'UTF-8'));
         $doc = new \stdClass();
         $doc->xmlVersion = "1.0";
@@ -66,7 +66,7 @@ class PicoDOM {
         $par = @$xpath->evaluate("/html/body//p"); //NOSONAR
         $j = 0;
         for ($i = 0; $i < $par->length; $i++) {
-            $p = trim(UTF8ToEntities(htmlspecialchars($par->item($i)->nodeValue)), " \r\n ");
+            $p = trim(utf8ToEntities(htmlspecialchars($par->item($i)->nodeValue)), " \r\n ");
             $p = trim(preg_replace('/\s+/', ' ', $p));
             if (!empty($p)) {
                 $ret->p[$j] = $p;
@@ -97,7 +97,7 @@ class PicoDOM {
     public static function filterHtmlTags($content)
     {
         global $picoEdu;
-        $content = UTF8ToEntities($content);
+        $content = utf8ToEntities($content);
         if ($picoEdu->getProfile("filter_javascript", -1, 0)) {
             $content = strip_only_tags($content, "script", true);
         }
@@ -200,7 +200,7 @@ class PicoDOM {
     {
         $data = self::cerrarTag("script", $data);
         $dom = new \DOMDocument("1.0", "UTF-8");
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         @$dom->loadHTML(mb_convert_encoding($data, 'HTML-ENTITIES', 'UTF-8'));
         $doc = new \stdClass();
         $doc->xmlVersion = "1.0";
@@ -229,7 +229,7 @@ class PicoDOM {
         }
         $dom->encoding = "utf-8";
         $data = $dom->saveHTML();
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         if (stripos($data, '<body') !== false) //NOSONAR
         {
             $data = self::getTagNode($data, 'body');
@@ -244,7 +244,7 @@ class PicoDOM {
     public static function replaceUrlPrefix($data, $search, $replace, $base = "") //NOSONAR
     {
         $dom = new \DOMDocument("1.0", "UTF-8");
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         @$dom->loadHTML(mb_convert_encoding($data, 'HTML-ENTITIES', 'UTF-8'));
         $doc = new \stdClass();
         $doc->xmlVersion = "1.0";
@@ -376,7 +376,7 @@ class PicoDOM {
         }
         $dom->encoding = "utf-8";
         $data = $dom->saveHTML();
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         if (stripos($data, '<body') !== false)
         {
             $data = self::getTagNode($data, 'body');
@@ -391,7 +391,7 @@ class PicoDOM {
     public static function replaceBase($data, $base, $target = null) //NOSONAR
     {
         $dom = new \DOMDocument("1.0", "UTF-8");
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         @$dom->loadHTML(mb_convert_encoding($data, 'HTML-ENTITIES', 'UTF-8'));
         $doc = new \stdClass();
         $doc->xmlVersion = "1.0";
@@ -531,7 +531,7 @@ class PicoDOM {
         }
         $dom->encoding = "utf-8";
         $data = $dom->saveHTML();
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         if (stripos($data, '<body') !== false)
         {
             $data = self::getTagNode($data, 'body');
@@ -546,7 +546,7 @@ class PicoDOM {
     public static function replaceBaseFile($data, $base, $target = null, $onlystartedwith = null) //NOSONAR
     {
         $dom = new \DOMDocument("1.0", "UTF-8");
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         @$dom->loadHTML(mb_convert_encoding($data, 'HTML-ENTITIES', 'UTF-8'));
         $doc = new \stdClass();
         $doc->xmlVersion = "1.0";
@@ -727,7 +727,7 @@ class PicoDOM {
         }
         $dom->encoding = "utf-8";
         $data = $dom->saveHTML();
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         if (stripos($data, '<body') !== false)
         {
             $data = self::getTagNode($data, 'body');
@@ -743,7 +743,7 @@ class PicoDOM {
     {
         $data = self::cerrarTag("script", $data);
         $dom = new \DOMDocument("1.0", "UTF-8");
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         @$dom->loadHTML(mb_convert_encoding($data, 'HTML-ENTITIES', 'UTF-8'));
         $xpath = new \DOMXPath($dom);
         $blockclasses = @$xpath->evaluate("/html/body//p"); //NOSONAR
@@ -772,7 +772,7 @@ class PicoDOM {
     public static function extractImageData($data, $directory, $prefix, $fileSync) //NOSONAR
     {
         $dom = new \DOMDocument("1.0", "UTF-8");
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         @$dom->loadHTML(mb_convert_encoding($data, 'HTML-ENTITIES', 'UTF-8'));
         $doc = new \stdClass();
         $doc->xmlVersion = "1.0";
@@ -845,7 +845,7 @@ class PicoDOM {
 
         $dom->encoding = "utf-8";
         $data = $dom->saveHTML();
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         if (stripos($data, '<body') !== false)
         {
             $data = self::getTagNode($data, 'body');
@@ -888,7 +888,7 @@ class PicoDOM {
     {
         $result = array();
         $dom = new \DOMDocument("1.0", "UTF-8");
-        $data = UTF8ToEntities($data);
+        $data = utf8ToEntities($data);
         @$dom->loadHTML(mb_convert_encoding($data, 'HTML-ENTITIES', 'UTF-8'));
         $doc = new \stdClass();
         $doc->xmlVersion = "1.0";
@@ -901,5 +901,19 @@ class PicoDOM {
             $result[$i] = $par->textContent;
         }
         return $result;
+    }
+
+    public static function filterHtml($text)
+    {
+        return strip_tags($text, '<iframe><img><audio><video>');
+    }
+
+    public static function firstIndex($array)
+    {
+        return $array[0];
+    }
+    public static function lastIndex($array)
+    {
+        return $array[count($array) - 1];
     }
 }

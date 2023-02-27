@@ -16,7 +16,7 @@ if($stmt->rowCount() > 0)
 	$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
 	if(file_exists($file_path))
 	{
-		$text_all = loadXmlData($file_path);
+		$text_all = $picoTest->loadXmlData($file_path);
 
 		$browserCache = new \Pico\BrowserCache();
 		$browserCache->setMaxAge(3600);	

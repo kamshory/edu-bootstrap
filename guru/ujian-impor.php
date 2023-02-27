@@ -5,7 +5,7 @@ if(empty($school_id))
 	require_once dirname(__FILE__)."/bukan-guru.php";
 	exit();
 }
-require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 
 $pageTitle = "Impor Soal Ujian";
@@ -128,7 +128,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 
 					if(isset($object['question']) && isset($object['numbering']) && isset($object['option']))
 					{
-						$content = addslashes(nl2br(UTF8ToEntities(filterHtml(addImages(@$object['question'], $test_dir, $base_src, $temp_dir)))));
+						$content = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages(@$object['question'], $test_dir, $base_src, $temp_dir)))));
 						$numbering = addslashes($object['numbering']);
 						$digest = md5($object['question']);
 						$sort_order++;
@@ -152,7 +152,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 							{
 								foreach($object['option'] as $option_no=>$option)
 								{
-									$isi_option = addslashes(nl2br(UTF8ToEntities(filterHtml(addImages($option['text'], $test_dir, $base_src, $temp_dir)))));
+									$isi_option = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages($option['text'], $test_dir, $base_src, $temp_dir)))));
 									$order_option = $option_no+1;
 									$score_option = addslashes(@$option['value']*$score_standar); 
 									if($score_option == 0) 

@@ -7,7 +7,7 @@ if($adminLoggedIn->admin_level != 1)
 }
 
 
-require_once dirname(dirname(__FILE__))."/lib.inc/dom.php";
+
 require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 
 $pageTitle = "Ekspor Soal Ujian";
