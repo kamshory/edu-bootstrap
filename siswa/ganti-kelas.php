@@ -102,8 +102,8 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
-		<td><input type="button" name="select" id="select" class="btn btn-success" value="Pilih" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=select&class_id=<?php echo $data['class_id'];?>'" /> 
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="select" id="select" class="btn btn-success" value="Pilih" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=select&class_id=<?php echo $data['class_id'];?>'" /> 
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -112,7 +112,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
+<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
 require_once dirname(dirname(__FILE__))."/lib.inc/footer.php";

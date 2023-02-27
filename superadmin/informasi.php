@@ -105,7 +105,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 			$database->executeUpdate($sql, true);
 		}
 		
-		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&info_id=$info_id");
+		header("Location: ".$picoEdu->gateBaseSelfName()."?option=edit&info_id=$info_id");
 	}
 	else if($option == 'edit')
 	{
@@ -129,7 +129,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		WHERE `info_id` = '$info_id'
 		";
 		$database->executeUpdate($sql, true);
-		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&info_id=$info_id");
+		header("Location: ".$picoEdu->gateBaseSelfName()."?option=detail&info_id=$info_id");
 	}
 }
 
@@ -274,7 +274,7 @@ var defaultdir = 'lib.content/media/info/';
 <input class="btn btn-success" type="submit" id="publish" name="publish" value="Publikasikan" />
 <input class="btn btn-success" type="submit" id="draff" name="draff" value="Simpan Konsep" />
 <input type="hidden" name="option" id="option" value="add" />
-<input class="btn btn-secondary" type="button" id="cancel" name="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input class="btn btn-secondary" type="button" id="cancel" name="cancel" value="Batalkan" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" />
 </div>
 </form>
 <?php
@@ -427,7 +427,7 @@ var info_id = '<?php echo $info_id;?>';
 <input class="btn btn-success" type="submit" id="draff" name="draff" value="Simpan Konsep" />
 <input type="hidden" name="option" id="option" value="edit" />
 <input type="hidden" name="info_id" id="info_id" value="<?php echo $info_id;?>" />
-<input class="btn btn-secondary" type="button" id="cancel" name="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input class="btn btn-secondary" type="button" id="cancel" name="cancel" value="Batalkan" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" />
 </div>
 </form>
 <?php
@@ -510,7 +510,7 @@ else if(isset($_GET['info_id']))
 		<div class="article-time">Dibuat <strong><?php echo $data['time_create'];?></strong></div>
 		<div class="article-creator">Oleh <strong><?php echo $data['creator'];?></strong></div>
 		<div class="article-link">
-			<a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Lihat Semua</a>
+			<a href="<?php echo $picoEdu->gateBaseSelfName();?>">Lihat Semua</a>
 			<a href="javascript:;" class="download-word">Download</a>
 			<a href="informasi.php?option=edit&info_id=<?php echo $data['info_id'];?>">Ubah</a>
 			<a class="delete-post" data-id="<?php echo $data['info_id'];?>" href="informasi.php?option=delete&info_id=<?php echo $data['info_id'];?>">Hapus</a>
@@ -560,7 +560,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 
 
-$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+$pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
 <form name="form1" method="post" action="">
@@ -601,11 +601,11 @@ $paginationHTML = $pagination->buildHTML();
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="info_id[]" id="info_id" value="<?php echo $data['info_id'];?>" class="info_id" /></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&info_id=<?php echo $data['info_id'];?>"><i class="fas fa-pencil"></i></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=edit&info_id=<?php echo $data['info_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['admin_edit_name'];?></a></td>
-      <td nowrap="nowrap"><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['time_edit'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['name'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['admin_edit_name'];?></a></td>
+      <td nowrap="nowrap"><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&info_id=<?php echo $data['info_id'];?>"><?php echo $data['time_edit'];?></a></td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
@@ -623,7 +623,7 @@ $paginationHTML = $pagination->buildHTML();
   <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn btn-primary" />
   <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn btn-warning" />
   <input type="submit" name="delete" id="delete" value="Hapus" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
-  <input type="button" name="add" id="add" value="Tambah" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
+  <input type="button" name="add" id="add" value="Tambah" class="btn btn-primary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=add'" />
   </div>
 </form>
 <?php
@@ -637,7 +637,7 @@ else if(@$_GET['q'] != '')
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=add">Klik di sini untuk membuat baru.</a></div>
 <?php
 }
 ?>

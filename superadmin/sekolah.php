@@ -66,7 +66,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	
 	$sql = "UPDATE `edu_school` SET `city_id` = '$city_id' WHERE `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
-	header("Location:".basename($_SERVER['PHP_SELF'])."?option=detail&school_id=$school_id");
+	header("Location:".$picoEdu->gateBaseSelfName()."?option=detail&school_id=$school_id");
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
@@ -93,7 +93,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	
 	$sql = "UPDATE `edu_school` SET `city_id` = '$city_id' WHERE `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
-	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&school_id=$school_id");
+	header("Location: ".$picoEdu->gateBaseSelfName()."?option=detail&school_id=$school_id");
 }
 
 if(isset($_POST['set_active']) && isset($_POST['school_id']))
@@ -414,7 +414,7 @@ $(document).ready(function(e) {
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr><td></td>
 		<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> 
-        <input type="button" name="showall" id="showall" value="Batalkan" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+        <input type="button" name="showall" id="showall" value="Batalkan" class="btn btn-secondary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" /></td>
 		</tr>
 	</table>
 <?php getDefaultValues($database, 'edu_school', array('school_type_id','school_grade_id','public_private','open','language','country_id','prevent_change_school','prevent_resign','use_token','active')); ?>
@@ -716,7 +716,7 @@ $(document).ready(function(e) {
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr><td></td>
 		<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> 
-		<input type="button" name="showall" id="showall" value="Batalkan" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<input type="button" name="showall" id="showall" value="Batalkan" class="btn btn-secondary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -725,7 +725,7 @@ $(document).ready(function(e) {
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
+<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
@@ -871,8 +871,8 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	</table>
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<td></td>
-		<td><input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_id=<?php echo $data['school_id'];?>'" /> 
-		<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=edit&school_id=<?php echo $data['school_id'];?>'" /> 
+		<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -881,7 +881,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
+<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
@@ -933,7 +933,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 
 
-$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+$pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
 <form name="form1" method="post" action="">
@@ -991,13 +991,13 @@ $paginationHTML = $pagination->buildHTML();
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="school_id[]" id="school_id" value="<?php echo $data['school_id'];?>" class="school_id" /></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&school_id=<?php echo $data['school_id'];?>"><i class="fas fa-pencil"></i></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=edit&school_id=<?php echo $data['school_id'];?>"><i class="fas fa-pencil"></i></a></td>
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->selectFromMap($data['public_private'], array('U'=>'Negeri', 'I'=>'Swasta'));?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['name'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->selectFromMap($data['public_private'], array('U'=>'Negeri', 'I'=>'Swasta'));?></a></td>
       <td><?php echo $picoEdu->trueFalse($data['open'], 'Ya', 'Tidak');?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['principal'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['principal'];?></a></td>
       <td><?php echo $data['state_id'];?> </td>
       <td><?php echo $data['city_id'];?> </td>
       <td><a href="siswa.php?school_id=<?php echo $data['school_id'];?>"><?php echo $data['student'];?></a></td>
@@ -1019,7 +1019,7 @@ $paginationHTML = $pagination->buildHTML();
   <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn btn-primary" />
   <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn btn-warning" />
   <input type="submit" name="delete" id="delete" value="Hapus" class="btn btn-danger" onclick="return confirm('Menghapus data sekolah menyebabkan seluruh data sekolah tersebut tidak dapat diakses lagi. Data sekolah yang dihapus tidak dapat dikembalikan dan meskipun super administrator membuat sekolah baru dengan nama yang sama. Apakah Anda yakin akan menghapus baris yang dipilih?');" />
-  <input type="button" name="add" id="add" value="Tambah" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
+  <input type="button" name="add" id="add" value="Tambah" class="btn btn-primary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=add'" />
   </div>
 </form>
 <?php

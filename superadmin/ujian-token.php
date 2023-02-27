@@ -87,7 +87,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 				'$admin_create', '$admin_edit', '$active')";
 				$database->executeInsert($sql, true);
 			}
-			header("Location: ".basename($_SERVER['PHP_SELF'])."?class_id=$class_id&test_id=$test_id");
+			header("Location: ".$picoEdu->gateBaseSelfName()."?class_id=$class_id&test_id=$test_id");
 		}
 		else
 		{
@@ -102,7 +102,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			('$token_id', '$token', '$school_id', '$class_id', '$student_id', '$test_id', '$time_create', '$time_edit', '$time_expire', 
 			'$admin_create', '$admin_edit', '$active')";
 			$database->executeInsert($sql, true);
-			header("Location: ".basename($_SERVER['PHP_SELF'])."?class_id=$class_id&test_id=$test_id");
+			header("Location: ".$picoEdu->gateBaseSelfName()."?class_id=$class_id&test_id=$test_id");
 		}
 	}
 }
@@ -118,7 +118,7 @@ else if(@$_GET['option'] == 'add')
 <script type="text/javascript">
 $(document).ready(function(e) {
     $(document).on('change', '#school_id', function(e){
-		window.location = '<?php echo basename($_SERVER['PHP_SELF']);?>?option=add&school_id='+$(this).val();
+		window.location = '<?php echo $picoEdu->gateBaseSelfName();?>?option=add&school_id='+$(this).val();
 	});
     $(document).on('change', '#class_id', function(e){
 		var class_id = $(this).val();
@@ -248,7 +248,7 @@ $(document).ready(function(e) {
 		<tr>
 		<td></td>
 		<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" onclick="return confirm('Apakah Anda yahin akan membuat token ini?')" /> 
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -323,7 +323,7 @@ $stmt = $database->executeQuery($sql);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr>
 		<td></td>
-		<td><input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&token_id=<?php echo $data['token_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<td><input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=edit&token_id=<?php echo $data['token_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -332,7 +332,7 @@ $stmt = $database->executeQuery($sql);
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
+<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
@@ -381,7 +381,7 @@ function printToken(frm)
     });
 	if(tokens.length)
 	{
-		window.open('<?php echo basename($_SERVER['PHP_SELF']);?>?option=print&tokens='+tokens.join(','));
+		window.open('<?php echo $picoEdu->gateBaseSelfName();?>?option=print&tokens='+tokens.join(','));
 	}
 }
 </script>
@@ -499,7 +499,7 @@ if($test_id == 0 && $class_id == 0)
 
 
 
-$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+$pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
 }
 ?>
@@ -560,12 +560,12 @@ if($test_id == 0 && $class_id == 0)
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="token_id[]" id="token_id" value="<?php echo $data['token_id'];?>" class="token_id" /></td>
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['token'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['test_name'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['class_name'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['student_name'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['time_create'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['time_expire'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['token'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['test_name'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['class_name'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['student_name'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['time_create'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&token_id=<?php echo $data['token_id'];?>"><?php echo $data['time_expire'];?></a></td>
       <td><?php
       if($data['teacher_create'])
 	  {
@@ -597,7 +597,7 @@ if($test_id == 0 && $class_id == 0)
 <div class="button-area">
   <input type="button" name="print" id="print" value="Cetak" class="btn btn-success" onclick="printToken($(this).closest('form'))" />
   <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn btn-warning" onclick="return confirm('Apakah Anda akan menonaktifkan token ini?')" />
-  <input type="button" name="add" id="add" value="Tambah" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
+  <input type="button" name="add" id="add" value="Tambah" class="btn btn-primary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=add'" />
   <input type="submit" name="cleanup" id="cleanup" value="Hapus Token Salah" class="btn btn-success" onclick="return confirm('Apakah Anda akan menghapus semua token salah yang dimasukkan siswa?')" />
   </div>
 </form>
@@ -612,7 +612,7 @@ else if(@$_GET['q'] != '')
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=add">Klik di sini untuk membuat baru.</a></div>
 <?php
 }
 ?>

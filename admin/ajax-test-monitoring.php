@@ -133,8 +133,8 @@ if($stmt->rowCount() > 0)
       <td><?php echo $data['ip_exit'];?> </td>
       <td><?php echo $arr_status[$data['status']];?> </td>
       <td><?php echo $data['member_edit'];?> </td>
-      <td><?php if($data['status'] == '1'){?><a class="kick-student" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=kick-student&id=<?php echo $data['test_member_id'];?>&test_id=<?php echo $test_id;?>" data-id="<?php echo $data['test_member_id'];?>" data-name-student="<?php echo $data['name_student'];?>">Keluarkan</a><?php }?> </td>
-      <td><?php if($data['status'] == '1'){?><a class="block-student" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=kick-student&id=<?php echo $data['test_member_id'];?>&test_id=<?php echo $test_id;?>" data-id="<?php echo $data['test_member_id'];?>" data-name-student="<?php echo $data['name_student'];?>">Blokir</a><?php }?> </td>
+      <td><?php if($data['status'] == '1'){?><a class="kick-student" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=kick-student&id=<?php echo $data['test_member_id'];?>&test_id=<?php echo $test_id;?>" data-id="<?php echo $data['test_member_id'];?>" data-name-student="<?php echo $data['name_student'];?>">Keluarkan</a><?php }?> </td>
+      <td><?php if($data['status'] == '1'){?><a class="block-student" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=kick-student&id=<?php echo $data['test_member_id'];?>&test_id=<?php echo $test_id;?>" data-id="<?php echo $data['test_member_id'];?>" data-name-student="<?php echo $data['name_student'];?>">Blokir</a><?php }?> </td>
     </tr>
 
 <?php

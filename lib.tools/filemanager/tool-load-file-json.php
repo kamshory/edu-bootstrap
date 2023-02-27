@@ -121,7 +121,7 @@ if(count($arrfile))
 		}
 	}
 }
-if(basename($_SERVER['PHP_SELF']) == basename(__FILE__))
+if($picoEdu->gateBaseSelfName() == basename(__FILE__))
 {
 header("Content-Type:text/plain; charset=utf-8");
 }

@@ -130,8 +130,8 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		<tr>
 		<td></td>
 		<td>
-        <input type="button" name="select" id="select" class="btn btn-success" value="Pilih" onClick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=select&school_id=<?php echo $data['school_id'];?>'" /> 
-        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onClick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+        <input type="button" name="select" id="select" class="btn btn-success" value="Pilih" onClick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=select&school_id=<?php echo $data['school_id'];?>'" /> 
+        <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onClick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" />
         </td>
 		</tr>
 	</table>
@@ -141,7 +141,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
+<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
 require_once dirname((__FILE__))."/lib.inc/footer.php";
@@ -205,7 +205,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 
 
-$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+$pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
 <form name="form1" method="post" action="">
@@ -243,10 +243,10 @@ $paginationHTML = $pagination->buildHTML();
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data, $data['school_id'] == $auth_school_id);?>">
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->selectFromMap($data['public_private'], array('U'=>'Negeri', 'I'=>'Swasta'));?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['principal'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['name'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->getSchoolGradeName($data['school_grade_id']);?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $picoEdu->selectFromMap($data['public_private'], array('U'=>'Negeri', 'I'=>'Swasta'));?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&school_id=<?php echo $data['school_id'];?>"><?php echo $data['principal'];?></a></td>
       </tr>
     <?php
 	}

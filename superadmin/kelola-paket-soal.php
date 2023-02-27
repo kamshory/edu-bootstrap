@@ -137,7 +137,7 @@ if(@$_GET['option'] == 'delete')
 		$xml_data_str = "<"."?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<test>".implode("\r\n", $xml_question)."</test>";
 		$fileSync->createFileWithContent($file_path, $xml_data_str, true);
 	}
-	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&test_collection_id=$test_collection_id");
+	header("Location: ".$picoEdu->gateBaseSelfName()."?option=edit&test_collection_id=$test_collection_id");
 	exit();
 }
 */
@@ -490,7 +490,7 @@ if(@$_GET['option'] == 'delete')
 		$xml_data_str = "<"."?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<test>".implode("\r\n", $xml_question)."</test>";
 		$fileSync->createFileWithContent($file_path, $xml_data_str, true);
 	}
-	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&test_collection_id=$test_collection_id");
+	header("Location: ".$picoEdu->gateBaseSelfName()."?option=edit&test_collection_id=$test_collection_id");
 	exit();
 }
 if(isset($_POST['save']) && (@$_GET['option'] == 'edit' || @$_GET['option'] == 'add'))
@@ -631,7 +631,7 @@ if(isset($_POST['save']) && (@$_GET['option'] == 'edit' || @$_GET['option'] == '
 		$xml_data_str = "<"."?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<test>".implode("\r\n", $xml_question)."</test>";
 		$fileSync->createFileWithContent($file_path, $xml_data_str, true);
 	}
-	header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&test_collection_id=$test_collection_id");
+	header("Location: ".$picoEdu->gateBaseSelfName()."?option=edit&test_collection_id=$test_collection_id");
 	exit();
 }
 
@@ -1168,7 +1168,7 @@ $i++;
 <div class="button-area">
 <input type="hidden" name="test_collection_id" id="test_collection_id" value="<?php echo $test_collection_id;?>" />
 <input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" />
-<input type="button" name="showall" id="showall" class="btn btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?test_collection_id=<?php echo $test_collection_id;?>'" />
+<input type="button" name="showall" id="showall" class="btn btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?test_collection_id=<?php echo $test_collection_id;?>'" />
 <input type="hidden" name="number_of_option" value="<?php echo $count_option;?>" />
 </div>
 
@@ -1178,7 +1178,7 @@ $i++;
 else
 {
 ?>
-<div class="warning">Ujian tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>
+<div class="warning">Ujian tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>
 <?php
 }
 
@@ -1450,7 +1450,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 
 
-$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+$pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
 <style type="text/css">
@@ -1502,18 +1502,18 @@ $paginationHTML = $pagination->buildHTML();
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="test_collection_id[]" id="test_collection_id" value="<?php echo $data['test_collection_id'];?>" class="test_collection_id" /></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&test_collection_id=<?php echo $data['test_collection_id'];?>"><i class="fas fa-list"></i></a></td>
-      <td><a class="load-collection" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Browse" border="0" /></a></td>
-      <td><a class="load-word" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-download-16" alt="Download" border="0" /></a></td>
-      <td><a class="load-key" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>&key=1"><img src="lib.tools/images/trans.gif" class="icon-16 icon-key-16" alt="Key" border="0" /></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=edit&test_collection_id=<?php echo $data['test_collection_id'];?>"><i class="fas fa-list"></i></a></td>
+      <td><a class="load-collection" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Browse" border="0" /></a></td>
+      <td><a class="load-word" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-download-16" alt="Download" border="0" /></a></td>
+      <td><a class="load-key" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>&key=1"><img src="lib.tools/images/trans.gif" class="icon-16 icon-key-16" alt="Key" border="0" /></a></td>
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['name'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['grade_id'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['file_name'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['file_size'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['taken'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['number_of_question'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['number_of_option'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['name'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['grade_id'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['file_name'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['file_size'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['taken'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['number_of_question'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['number_of_option'];?></a></td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php

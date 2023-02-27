@@ -18,7 +18,7 @@ if(isset($_POST['clear']))
 			$fileSync->deleteFile("$dir2/$ufile", true);
 		}
 	}
-	header("Location: ".basename($_SERVER['PHP_SELF']));
+	header("Location: ".$picoEdu->gateBaseSelfName());
 }
 
 

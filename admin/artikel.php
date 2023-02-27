@@ -60,7 +60,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$content = addslashes(UTF8ToEntities($content));
 		$sql = "UPDATE `edu_article` SET `content` = '$content' WHERE `article_id` = '$article_id' ";
 		$database->executeUpdate($sql, true);
-		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=edit&article_id=$article_id");
+		header("Location: ".$picoEdu->gateBaseSelfName()."?option=edit&article_id=$article_id");
 	}
 	else if($option == 'edit')
 	{
@@ -81,7 +81,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		WHERE `article_id` = '$article_id' AND `school_id` = '$school_id'
 		";
 		$database->executeUpdate($sql, true);
-		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&article_id=$article_id");
+		header("Location: ".$picoEdu->gateBaseSelfName()."?option=detail&article_id=$article_id");
 	}
 }
 
@@ -173,7 +173,7 @@ var defaultdir = 'lib.content/media/article/';
 <input class="btn btn-secondary" type="submit" id="draff" name="draff" value="Simpan Konsep" />
 <input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
 <input class="btn btn-primary" type="hidden" name="option" id="option" value="add" />
-<input class="btn btn-secondary" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input class="btn btn-secondary" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" />
 </div>
 </form>
 <!-- Modal -->
@@ -247,7 +247,7 @@ var defaultdir = 'lib.content/media/article/';
 <input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
 <input class="btn btn-primary" type="hidden" name="option" id="option" value="edit" />
 <input class="btn btn-primary" type="hidden" name="article_id" id="article_id" value="<?php echo $article_id;?>" />
-<input class="btn btn-secondary" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input class="btn btn-secondary" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" />
 </div>
 </form>
 <!-- Modal -->
@@ -295,53 +295,18 @@ if($stmt->rowCount() > 0)
 	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	?>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/FileSaver.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/article-downloader.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/html-docx.min.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function(e) {
-$(document).on('click', '.delete-post', function(e){
-	var article_id = $(this).attr('data-id');
-	if(confirm('Apakah Anda akan menghapus artikel ini?'))
-	{
-		$.post('ajax-delete-artikel.php', {article_id:article_id, option:'delete'}, function(asnwer){
-			window.location = 'artikel.php';
-		});
-	}
-	e.preventDefault();
-});
 $(document).on('click', '.download-word', function(e){
-	var title = $('.article-title').text();
-	var content = $('.article-content').html();
-	var creator = $('.article-creator').text();
-	var html = '<div><h1>'+title+'</h1>\r\n<div>'+creator+'</div>'+ content+'</div>';
-	var doc = $(html);
-	doc = convertImagesToBase64(doc);
-	var content = doc.html(); 
-	var style = '<style type="text/css">body{font-family:"Times New Roman", Times, serif; font-size:16px; position:relative;} table[border="1"]{border-collapse:collapse; box-sizing:border-box; max-width:100%;} table[border="1"] td{padding:4px 5px;} table[border="0"] td{padding:4px 0;} p, li{line-height:1.5;} a{color:#000000; text-decoration:none;} h1{font-size:30px;} h2{font-size:26px;} h3{font-size:22px;} h4{font-size:16px;}</style>';
-	content = '<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>'+title+'</title>'+style+'</head><body style="position:relative;">'+content+'</body></html>';
-	var converted = new Blob([content], {type:'text/html'});
-	saveAs(converted, title+'.html');
+	downloadArticle();
 	e.preventDefault();
 });
 });
-function convertImagesToBase64 (doc) {
-var regularImages = doc.find('img');
-var canvas = document.createElement('canvas');
-var ctx = canvas.getContext('2d');
-[].forEach.call(regularImages, function (obj) {
-	var imgElement = obj;
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	canvas.width = imgElement.width;
-	canvas.height = imgElement.height;
-	ctx.drawImage(imgElement, 0, 0, imgElement.width, imgElement.height);
-	var dataURL = canvas.toDataURL();
-	imgElement.setAttribute('src', dataURL);
-	imgElement.style.width = canvas.width+'px';
-	imgElement.style.maxWidth = '100%';
-	imgElement.style.height = 'auto';
-	imgElement.removeAttribute('height');
-});
-canvas.remove();
-return doc;
-}
+
+
 </script>
 <div class="article-title"><h3 data-active="<?php echo $data['active'];?>"><?php echo $data['title'];?></h3></div>
 <div class="article-content"><?php echo $data['content'];?></div>
@@ -350,7 +315,7 @@ return doc;
 <div class="button-area article-link">
 	<a class="btn btn-primary" href="artikel.php">Lihat Semua</a>
 	<a class="btn btn-primary" href="artikel.php?option=edit&article_id=<?php echo $data['article_id'];?>">Ubah</a>
-	<a class="btn btn-primary" href="javascript:;" class="download-word">Download</a>
+	<a class="btn btn-primary download-word" href="javascript:;">Download</a>
 </div>
 <?php
 	}
@@ -436,7 +401,7 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+$pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
 <form name="form1" method="post" action="">
@@ -483,11 +448,11 @@ $paginationHTML = $pagination->buildHTML();
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="article_id[]" id="article_id" value="<?php echo $data['article_id'];?>" class="article_id" /></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit&article_id=<?php echo $data['article_id'];?>"><i class="fas fa-pencil"></i></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=edit&article_id=<?php echo $data['article_id'];?>"><i class="fas fa-pencil"></i></td>
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&article_id=<?php echo $data['article_id'];?>"><?php echo $data['title'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&article_id=<?php echo $data['article_id'];?>"><?php echo $data['title'];?></a></td>
 	  <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&article_id=<?php echo $data['article_id'];?>"><?php 
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&article_id=<?php echo $data['article_id'];?>"><?php 
 	  if($data['teacher_create'])
 	  {
 		echo $data['teacher_create'];
@@ -497,7 +462,7 @@ $paginationHTML = $pagination->buildHTML();
 		echo $data['admin_create'];
 	  }
 	  ?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&article_id=<?php echo $data['article_id'];?>"><?php echo translateDate(date('d M Y H:i', strtotime($data['time_create'])));?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&article_id=<?php echo $data['article_id'];?>"><?php echo translateDate(date('d M Y H:i', strtotime($data['time_create'])));?></a></td>
       <td><?php echo $picoEdu->trueFalse($data['active'], 'Ya', 'Tidak');?> </td>
      </tr>
     <?php
@@ -515,7 +480,7 @@ $paginationHTML = $pagination->buildHTML();
   <input type="submit" name="set_active" id="set_active" value="Aktifkan" class="btn btn-primary" />
   <input type="submit" name="set_inactive" id="set_inactive" value="Nonaktifkan" class="btn btn-warning" />
   <input type="submit" name="delete" id="delete" value="Hapus" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin akan menghapus baris yang dipilih?');" />
-  <input type="button" name="add" id="add" value="Tambah" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=add'" />
+  <input type="button" name="add" id="add" value="Tambah" class="btn btn-primary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=add'" />
   </div>
 </form>
 <?php
@@ -529,7 +494,7 @@ else if(@$_GET['q'] != '')
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=add">Klik di sini untuk membuat baru.</a></div>
 <?php
 }
 ?>

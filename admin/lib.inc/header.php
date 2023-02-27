@@ -62,7 +62,7 @@ if(!isset($cfg))
     <div class="row">
       <?php
 	    require_once dirname(__FILE__) . '/menu.php';
-      $phpSelf = basename($_SERVER['PHP_SELF']); 
+      $phpSelf = $picoEdu->gateBaseSelfName(); 
       ?>
 
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">

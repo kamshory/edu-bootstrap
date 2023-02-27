@@ -784,13 +784,13 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 				
 				
 				$fileSync->deleteFile($path, true);
-				header("Location: ".basename($_SERVER['PHP_SELF'])."?option=success&school_id=$school_id");
+				header("Location: ".$picoEdu->gateBaseSelfName()."?option=success&school_id=$school_id");
 			}
 			else
 			{
 				$fileSync->deleteFile($path, true);
 				// delete file
-				header("Location: ".basename($_SERVER['PHP_SELF'])."?option=duplicated");
+				header("Location: ".$picoEdu->gateBaseSelfName()."?option=duplicated");
 			}
 			$fileSync->deleteFile($path, true);
 			// delete file
@@ -950,7 +950,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		<tr>
 		<td></td>
 		<td><input type="button" name="update" id="update" value="Ubah Data" class="btn btn-primary" onclick="window.location='sekolah-profil.php?option=edit'" />		  
-		<input type="button" name="import" id="import" value="Impor Data" class="btn btn-primary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<input type="button" name="import" id="import" value="Impor Data" class="btn btn-primary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -964,7 +964,7 @@ else if(@$_GET['option'] == 'duplicated')
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
-<div class="warning">GAGAL! Data sekolah dengan name yang sama telah dimasukkan sebelumnya. Mohon periksa kembali data yang Anda masukkan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Impor lagi</a>.</div>
+<div class="warning">GAGAL! Data sekolah dengan name yang sama telah dimasukkan sebelumnya. Mohon periksa kembali data yang Anda masukkan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Impor lagi</a>.</div>
 <?php
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }

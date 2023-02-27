@@ -160,7 +160,7 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-	$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+	$pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 	$paginationHTML = $pagination->buildHTML();	
 	?>
     <div class="main-content">
@@ -267,7 +267,7 @@ else if(@$_GET['q'] != '')
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=add">Klik di sini untuk membuat baru.</a></div>
 <?php
 }
 ?>

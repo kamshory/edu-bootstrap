@@ -643,14 +643,14 @@ window.onload = function()
 		var test_id = '<?php echo $test_id;?>';
 		var class_id = $('#class_id').val();
 		var q = $('#q').val();
-		var url = '<?php echo basename($_SERVER['PHP_SELF']);?>?option=export&test_id='+test_id+'&class_id='+class_id;
+		var url = '<?php echo $picoEdu->gateBaseSelfName();?>?option=export&test_id='+test_id+'&class_id='+class_id;
 		window.open(url);
 	});
     $(document).on('click', '#ekspor2', function(e){
 		var test_id = '<?php echo $test_id;?>';
 		var class_id = $('#class_id').val();
 		var q = $('#q').val();
-		var url = '<?php echo basename($_SERVER['PHP_SELF']);?>?option=export&expand=1&test_id='+test_id+'&class_id='+class_id;
+		var url = '<?php echo $picoEdu->gateBaseSelfName();?>?option=export&expand=1&test_id='+test_id+'&class_id='+class_id;
 		window.open(url);
 	});
 }
@@ -697,8 +697,8 @@ window.onload = function()
 <div class="search-result">
 
 <?php
-$q1 = basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id&expand=1";
-$q2 = basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id";
+$q1 = $picoEdu->gateBaseSelfName()."?option=detail&test_id=$test_id&expand=1";
+$q2 = $picoEdu->gateBaseSelfName()."?option=detail&test_id=$test_id";
 $nt ='';
 $sql = "SELECT `edu_test`.* $nt
 FROM `edu_test` 
@@ -846,7 +846,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 
 
-$pagination->createPagination(basename($_SERVER['PHP_SELF']), true);
+$pagination->createPagination($picoEdu->gateBaseSelfName(), true);
 $paginationHTML = $pagination->buildHTML();
 
 
@@ -912,8 +912,8 @@ $paginationHTML = $pagination->buildHTML();
     <tr class="row-data<?php echo $picoEdu->trueFalse($data['lewat'], ' data-error', '');?>">
       <td><input type="checkbox" name="answer_id[]" id="answer_id" value="<?php echo $data['answer_id'];?>" class="answer_id" /></td>
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=answerdetail&answer_id=<?php echo $data['answer_id'];?>"><?php echo $data['reg_number'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=answerdetail&answer_id=<?php echo $data['answer_id'];?>"><?php echo $data['student_name'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=answerdetail&answer_id=<?php echo $data['answer_id'];?>"><?php echo $data['reg_number'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=answerdetail&answer_id=<?php echo $data['answer_id'];?>"><?php echo $data['student_name'];?></a></td>
       <td><?php echo $data['class'];?> </td>
       <td align="right"><?php echo $ke[$data['student_id']];?> </td>
       <td nowrap><?php echo translateDate(date('d M Y H:i:s',strtotime($data['start'])));?> </td>
@@ -1106,7 +1106,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 
 
-$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+$pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
 <?php
@@ -1144,10 +1144,10 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	$no++;
 	?>
     <tr class="row-data">
-        <td width="16"><a title="Per Ujian" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=export&test_id=<?php echo $data['test_id'];?>&expand=1"><img alt="Excel" src="lib.tools/images/excel.png" /></a></td>
-        <td width="16"><a title="Per Siswa" href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=export&test_id=<?php echo $data['test_id'];?>"><img alt="Excel" src="lib.tools/images/excel.png" /></a></td>
+        <td width="16"><a title="Per Ujian" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=export&test_id=<?php echo $data['test_id'];?>&expand=1"><img alt="Excel" src="lib.tools/images/excel.png" /></a></td>
+        <td width="16"><a title="Per Siswa" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=export&test_id=<?php echo $data['test_id'];?>"><img alt="Excel" src="lib.tools/images/excel.png" /></a></td>
         <td align="right"><?php echo $no;?> </td>
-        <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
+        <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
         <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
         <td><?php echo translateDate(date('d M Y H:i', strtotime($data['last_test'])));?> </td>
         <td align="right"><?php echo $data['number_of_question'];?> </td>

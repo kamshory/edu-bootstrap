@@ -279,7 +279,7 @@ foreach($rows1 as $data)
 </ol>
 
 <div class="button-area">
-	<input type="button" value="Tampilkan Semua Ujian" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+	<input type="button" value="Tampilkan Semua Ujian" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" />
 </div>
 <?php
 }
@@ -288,7 +288,7 @@ else
 {
 ?>
 <div class="warning">
-Ujian tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali</a>.
+Ujian tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali</a>.
 </div>
 <?php
 }
@@ -409,7 +409,7 @@ else
 {
 ?>
 <div class="warning">
-Ujian tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali</a>.
+Ujian tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali</a>.
 </div>
 <?php
 }
@@ -690,7 +690,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 
 
-$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+$pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
 <form name="form1" method="post" action="">
@@ -783,8 +783,8 @@ else if($use_token)
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
 <ul class="list-rounded">
-  <li><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=enter-token">Masuk Ujian</a></li>
-  <li><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=list">Daftar Ujian</a></li>
+  <li><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=enter-token">Masuk Ujian</a></li>
+  <li><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=list">Daftar Ujian</a></li>
 </ul>
 <?php
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR

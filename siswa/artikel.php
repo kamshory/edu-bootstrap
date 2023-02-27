@@ -79,7 +79,7 @@ if($pagination->getQuery()){
 	$pagination->setTotalRecordWithLimit($stmt->rowCount());
 	if($pagination->getTotalRecordWithLimit() > 0)
 	{
-		$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+		$pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 		$paginationHTML = $pagination->buildHTML();	
 
 		?>

@@ -67,7 +67,7 @@ $cfg->app_name = "Try Out Gratis Ujian Nasional ".$cfg->app_name;
     	</div>
     	<div class="banner">
         	<?php
-			if(basename($_SERVER['PHP_SELF']) == 'index.php')
+			if($picoEdu->gateBaseSelfName() == 'index.php')
 			{
 			?>
         	<img src="<?php echo $cfg->base_assets;?>tryout/images/banner.jpg">

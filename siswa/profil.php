@@ -41,7 +41,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$database->executeUpdate($sql, true);
 		$_SESSION['student_password'] = md5($password);
 	}
-	header("Location: ".basename($_SERVER['PHP_SELF']));
+	header("Location: ".$picoEdu->gateBaseSelfName());
 }
 if(@$_GET['option'] == 'edit')
 {
@@ -101,7 +101,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<tr><td></td>
 		<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> 
-		<input type="button" name="showall" id="showall" value="Batalkan" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" /></td>
+		<input type="button" name="showall" id="showall" value="Batalkan" class="btn btn-secondary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" /></td>
 		</tr>
 	</table>
 </form>
@@ -110,7 +110,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
+<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
 require_once dirname((__FILE__))."/lib.inc/footer.php";
@@ -207,7 +207,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 		<td></td>
 		<td>
-        <input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=edit'" />
+        <input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=edit'" />
         </td>
 		</tr>
 	</table>
@@ -217,7 +217,7 @@ echo $picoEdu->getGradeName($data['grade_id']);
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']);?>">Klik di sini untuk kembali.</a></div>	
+<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
 require_once dirname((__FILE__))."/lib.inc/footer.php";

@@ -30,7 +30,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 		$database->executeDelete($sql, true);
 		$sql = "UPDATE `edu_peserta_test` SET `waktu_keluar` = '$waktu', `ip_keluar` = '$ip', `login_edit` = '$admin_id', `status` = '3' WHERE `id` = '$id'";	
 		$database->executeUpdate($sql, true);
-		header("Location: ".basename($_SERVER['PHP_SELF'])."?option=detail&test_id=$test_id");
+		header("Location: ".$picoEdu->gateBaseSelfName()."?option=detail&test_id=$test_id");
 	}
 }
 if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET['id']))
@@ -193,7 +193,7 @@ require_once dirname(__FILE__)."/ajax-test-monitoring.php";
 ?>
 </div>
 <div class="button-area">
-<input type="button" name="show-all" id="show-all" value="Semua Ujian" class="btn btn-success" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'" />
+<input type="button" name="show-all" id="show-all" value="Semua Ujian" class="btn btn-success" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" />
 </div>
 <?php
 }
@@ -317,7 +317,7 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 
 
-$pagination->createPagination(basename($_SERVER['PHP_SELF']), true); 
+$pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
 <?php
@@ -354,12 +354,12 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	?>
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td align="right"><?php echo $no;?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
       <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['subject'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['teacher_id'];?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo gmdate('H:i:s', $data['duration']);?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']);?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo ($data['open'])?'Terbuka':'Tertutup';?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['subject'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['teacher_id'];?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo gmdate('H:i:s', $data['duration']);?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo ($data['open'])?'Terbuka':'Tertutup';?></a></td>
       <td><?php if($data['number_of_question']){ ?><a href="data-question-ujian.php?test_id=<?php echo $data['test_id'];?>"><?php echo $data['number_of_question'];?> soal</a><?php } else { echo '-';} ?> </td>
       <td><?php if($data['student']){ ?><a href="data-question-ujian.php?test_id=<?php echo $data['test_id'];?>"><?php echo $data['student'];?> orang</a><?php } else { echo '-';} ?> </td>
      </tr>

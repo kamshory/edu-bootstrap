@@ -62,7 +62,7 @@ if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
 	`class_code` = '$class_code', `grade_id` = '$grade_id', `school_program_id` = '$school_program_id', `name` = '$name', `time_create` = '$time_create', `time_edit` = '$time_edit', `admin_create` = '$admin_create', `admin_edit` = '$admin_edit', `ip_create` = '$ip_create', `ip_edit` = '$ip_edit', `sort_order` = '$sort_order', `active` = '$active'
 	WHERE `class_id` = '$class_id2'  ";
 	$database->executeUpdate($sql, true);
-	header("Location: " . basename($_SERVER['PHP_SELF']) . "?option=detail&class_id=$class_id");
+	header("Location: " . $picoEdu->gateBaseSelfName() . "?option=detail&class_id=$class_id");
 }
 if (@$_GET['option'] == 'add') {
 	require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
@@ -133,7 +133,7 @@ if (@$_GET['option'] == 'add') {
 <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 	<tr>
 		<td></td>
-		<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>'" /></td>
+		<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" /></td>
 	</tr>
 </table>
 	</form>
@@ -157,7 +157,7 @@ if (@$_GET['option'] == 'add') {
 			<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td>Kode Kelas</td>
-					<td><input type="text" class="form-control input-text" name="class_code" id="class_code" value="<?php echo $data['class_code']; ?>" autocomplete="off" /><input type="hidden" name="class_id2" id="class_id2" value="<?php echo $data['class_id']; ?>" /></td>
+					<td><input type="text" class="form-control input-text" name="class_code" id="class_code" value="<?php echo $data['class_code']; ?>" autocomplete="off" /><input type="hidden" name="class_id2" id="class_id2" value="<?php echo $data['class_id'];?>" /></td>
 				</tr>
 				<tr>
 					<td>Tingkat
@@ -220,14 +220,14 @@ if (@$_GET['option'] == 'add') {
 		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td></td>
-					<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>'" /></td>
+					<td><input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" /></td>
 				</tr>
 			</table>
 		</form>
 	<?php
 	} else {
 	?>
-		<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']); ?>">Klik di sini untuk kembali.</a></div>
+		<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>
 	<?php
 	}
 	require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
@@ -314,14 +314,14 @@ if($stmt->rowCount() > 0)
 		<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
 				<tr>
 					<td></td>
-					<td><input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?option=edit&class_id=<?php echo $data['class_id']; ?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>'" /></td>
+					<td><input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=edit&class_id=<?php echo $data['class_id'];?>'" /> <input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" /></td>
 				</tr>
 			</table>
 		</form>
 	<?php
 	} else {
 	?>
-		<div class="warning">Data tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']); ?>">Klik di sini untuk kembali.</a></div>
+		<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>
 	<?php
 	}
 	require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
@@ -407,7 +407,7 @@ if($stmt->rowCount() > 0)
 			
 			
 
-			$pagination->createPagination(basename($_SERVER['PHP_SELF']), true);
+			$pagination->createPagination($picoEdu->gateBaseSelfName(), true);
 		$paginationHTML = $pagination->buildHTML();
 
 		?>
@@ -456,18 +456,18 @@ if($stmt->rowCount() > 0)
 							$no++;
 						?>
 							<tr class="<?php echo $picoEdu->getRowClass($data);?>">
-								<td><input type="checkbox" name="class_id[]" id="class_id" value="<?php echo $data['class_id']; ?>" class="class_id" /></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=edit&school_id=<?php echo $data['class_id']; ?>&class_id=<?php echo $data['class_id']; ?>"><i class="fas fa-pencil"></i></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=print&school_id=<?php echo $data['school_id']; ?>&class_id=<?php echo $data['class_id']; ?>"><i class="fas fa-print"></i></a></td>
+								<td><input type="checkbox" name="class_id[]" id="class_id" value="<?php echo $data['class_id'];?>" class="class_id" /></td>
+								<td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=edit&school_id=<?php echo $data['class_id'];?>&class_id=<?php echo $data['class_id'];?>"><i class="fas fa-pencil"></i></a></td>
+								<td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=print&school_id=<?php echo $data['school_id']; ?>&class_id=<?php echo $data['class_id'];?>"><i class="fas fa-print"></i></a></td>
 								<td align="right"><?php echo $no;?> </td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['school_name']; ?></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['class_code']; ?></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['name']; ?></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['grade_id']; ?></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['school_program']; ?></a></td>
-								<td><a href="siswa.php?class_id=<?php echo $data['class_id']; ?>"><?php echo $data['num_student']; ?></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo $data['sort_order'];?></a></td>
-								<td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&class_id=<?php echo $data['class_id']; ?>"><?php echo ($data['active']) ? 'Ya' : 'Tidak'; ?></a></td>
+								<td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['school_name']; ?></a></td>
+								<td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['class_code']; ?></a></td>
+								<td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['name']; ?></a></td>
+								<td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['grade_id']; ?></a></td>
+								<td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['school_program']; ?></a></td>
+								<td><a href="siswa.php?class_id=<?php echo $data['class_id'];?>"><?php echo $data['num_student']; ?></a></td>
+								<td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo $data['sort_order'];?></a></td>
+								<td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&class_id=<?php echo $data['class_id'];?>"><?php echo ($data['active']) ? 'Ya' : 'Tidak'; ?></a></td>
 								</tr>
 							<?php
 						}

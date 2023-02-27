@@ -289,7 +289,7 @@ $pageTitle = "Token Ujian";
                     <input type="submit" class="btn" name="enter" id="enter" value="Masuk Ujian">
                 </div>
             	<div class="form-control">
-                    <input type="button" class="btn3" name="back" id="back" value="Kembali" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>'">
+                    <input type="button" class="btn3" name="back" id="back" value="Kembali" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'">
                 </div>
             </form>
         </div>

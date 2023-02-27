@@ -147,7 +147,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 			window.localStorage.removeItem('<?php echo $storage_key; ?>-answer-set');
 			window.localStorage.removeItem('<?php echo $storage_key; ?>-current-index');
 			window.localStorage.removeItem('jwb_'+test);
-			window.location = '<?php echo $cfg->base_url . "siswa/ujian/" . basename($_SERVER['PHP_SELF']); ?>?option=sent&test_id=<?php echo $test_id; ?>';
+			window.location = '<?php echo $cfg->base_url . "siswa/ujian/" . $picoEdu->gateBaseSelfName(); ?>?option=sent&test_id=<?php echo $test_id; ?>';
 			</script>
 			<?php
 			require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
@@ -280,7 +280,7 @@ Informasi Singkat Ujian
     </tr>
 </table>
 <div class="button-area">
-<input type="button" value="Masuk Ke Ujian" onclick="window.location='<?php echo $cfg->base_url."/siswa/ujian/".basename($_SERVER['PHP_SELF'])."?login-to-test=yes&test_id=".$data['test_id'];?>'">
+<input type="button" value="Masuk Ke Ujian" onclick="window.location='<?php echo $cfg->base_url."/siswa/ujian/".$picoEdu->gateBaseSelfName()."?login-to-test=yes&test_id=".$data['test_id'];?>'">
 <input type="button" value="Batal" onclick="window.location='<?php echo $cfg->base_url."/siswa/ujian.php";?>'">
 </div>
 <?php
@@ -328,7 +328,7 @@ else if(@$_GET['login-to-test']=="yes")
 			$proses = false;
 			$dt = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$test_id_terakhir = $dt['start'];
-			header("Location: ".basename($_SERVER['PHP_SELF'])."?option=limited");
+			header("Location: ".$picoEdu->gateBaseSelfName()."?option=limited");
 		}
 	}
 	else
@@ -380,11 +380,11 @@ else if(@$_GET['login-to-test']=="yes")
 				$question_package = $str = '['.implode('][', $arr).']';
 				$_SESSION['session_test'][$auth_student_id][$test_id]['soal'] = $str;
 				$picoEdu->loginTest($school_id, $auth_student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
-				header("Location: ".basename($_SERVER['PHP_SELF'])."?test_id=$test_id");
+				header("Location: ".$picoEdu->gateBaseSelfName()."?test_id=$test_id");
 			}
 			else
 			{
-				header("Location: ".basename($_SERVER['PHP_SELF'])."?test_id=$test_id");
+				header("Location: ".$picoEdu->gateBaseSelfName()."?test_id=$test_id");
 			}
 		}
 	}

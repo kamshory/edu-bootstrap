@@ -1327,4 +1327,15 @@ class PicoEdu //NOSONAR
 		}
 		return $html;
 	}
+
+	/**
+	 * Get actual file name accessed by client
+	 *
+	 * @return string
+	 */
+	public function gateBaseSelfName()
+	{
+		return basename($_SERVER['PHP_SELF']);
+	}
+
 }

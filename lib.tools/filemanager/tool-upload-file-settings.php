@@ -31,7 +31,7 @@ if(isset($_POST['change-state']))
 if(@$_GET['show-form'])
 {
 ?>
-<form name="uploadsetting" id="uploadsetting" action="<?php echo basename($_SERVER['PHP_SELF']);?>" method="post" enctype="multipart/form-data">
+<form name="uploadsetting" id="uploadsetting" action="<?php echo $picoEdu->gateBaseSelfName();?>" method="post" enctype="multipart/form-data">
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="dialog-table">
 <tr>
 <td class="tdr" width="50%">Compress Image Automatically</td>

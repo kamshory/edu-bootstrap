@@ -27,7 +27,7 @@ if(@$_GET['option'] == 'delete')
 		$database->executeDelete($sql, true);
 		$sql = "DELETE FROM `edu_question` WHERE `question_id` = '$id' ";
 		$database->executeDelete($sql, true);
-		header("Location: ".basename($_SERVER['PHP_SELF'])."?test_id=$test_id");
+		header("Location: ".$picoEdu->gateBaseSelfName()."?test_id=$test_id");
 	}
 }
 
@@ -477,14 +477,14 @@ foreach ($rows2 as $data2) {
 
 <div class="button-area">
 <input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" />
-<input type="button" name="showall" id="showall" class="btn btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']); ?>?test_id=<?php echo $test_id; ?>'" />
+<input type="button" name="showall" id="showall" class="btn btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?test_id=<?php echo $test_id; ?>'" />
 </div>
 
 </form>
 <?php
 } else {
 ?>
-<div class="warning">Ujian tidak ditemukan. <a href="<?php echo basename($_SERVER['PHP_SELF']); ?>">Klik di sini untuk kembali.</a></div>
+<div class="warning">Ujian tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>
 <?php
 }
 }
@@ -799,8 +799,8 @@ foreach($rows as $data){
 ?>
 <li data-question-id="<?php echo $data['question_id']; ?>">
 <div class="question-edit-ctrl">
-<a class="btn btn-primary" href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=edit&question_id=<?php echo $data['question_id']; ?>&ref=<?php echo base64_encode($_SERVER['REQUEST_URI']); ?>">Ubah Soal</a> 
-<a class="btn btn-danger deletequestion" href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=delete&question_id=<?php echo $data['question_id']; ?>&digest=<?php echo $data['digest']; ?>">Hapus Soal</a> </div>
+<a class="btn btn-primary" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=edit&question_id=<?php echo $data['question_id']; ?>&ref=<?php echo base64_encode($_SERVER['REQUEST_URI']); ?>">Ubah Soal</a> 
+<a class="btn btn-danger deletequestion" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=delete&question_id=<?php echo $data['question_id']; ?>&digest=<?php echo $data['digest']; ?>">Hapus Soal</a> </div>
 <div class="question">
 <?php
 echo $data['content'];
@@ -850,7 +850,7 @@ echo $data2['content'];
 <div class="button-area">
 <input type="button" name="urutkan_soal" id="urutkan_soal" class="btn btn-primary" value="Urutkan Soal" onclick="activateSortOrder()" />
 <input type="button" name="export" id="export" class="btn btn-primary" value="Ekspor Soal" onclick="window.location='ujian-ekspor.php?test_id=<?php echo $test_id;?>'" />
-<input type="button" name="analys" id="analys" class="btn btn-primary" value="Analisa Butir Soal" onclick="window.location='<?php echo basename($_SERVER['PHP_SELF']);?>?option=analys&test_id=<?php echo $test_id;?>'" />
+<input type="button" name="analys" id="analys" class="btn btn-primary" value="Analisa Butir Soal" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=analys&test_id=<?php echo $test_id;?>'" />
 <input type="button" name="show" id="show" class="btn btn-primary" value="Tampilkan Informasi Ujian" onclick="window.location='ujian.php?option=detail&test_id=<?php echo $test_id;?>'" />
 <input type="button" name="edit" id="edit" class="btn btn-primary" value="Ubah Informasi Ujian" onclick="window.location='ujian.php?option=edit&test_id=<?php echo $test_id;?>'" />
 </div>
@@ -1079,7 +1079,7 @@ function buildMenu(id)
 					
 					
 
-					$pagination->createPagination(basename($_SERVER['PHP_SELF']), true);
+					$pagination->createPagination($picoEdu->gateBaseSelfName(), true);
 					$paginationHTML = $pagination->buildHTML();
 
 										?>
@@ -1137,12 +1137,12 @@ function buildMenu(id)
   </div>
 </div></td>
       <td align="right"><?php echo $no; ?> </td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['school_name']; ?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['name']; ?></a></td>
-      <td><a href="<?php echo basename($_SERVER['PHP_SELF']); ?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['subject']; ?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['school_name']; ?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['name']; ?></a></td>
+      <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['subject']; ?></a></td>
       <td><?php $class = $picoEdu->textClass($array_class, $data['class']);
 	  $class_sort = $picoEdu->textClass($array_class, $data['class'], 2); ?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort; ?></a></td>
-      <td><?php echo $picoEdu->trueFalse($data['number_of_question'] > 0, '<a href="'.basename($_SERVER['PHP_SELF']).'?test_id='.$data['test_id'].'">'.$data['number_of_question'].' soal</a>', ' - '); ?> </td>
+      <td><?php echo $picoEdu->trueFalse($data['number_of_question'] > 0, '<a href="'.$picoEdu->gateBaseSelfName().'?test_id='.$data['test_id'].'">'.$data['number_of_question'].' soal</a>', ' - '); ?> </td>
       </tr>
     <?php
 	}
