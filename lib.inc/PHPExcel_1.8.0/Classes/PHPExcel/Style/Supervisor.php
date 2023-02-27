@@ -45,7 +45,7 @@ abstract class PHPExcel_Style_Supervisor
 	/**
 	 * Parent. Only used for supervisor
 	 *
-	 * @var PHPExcel_Style
+	 * @var PHPExcel
 	 */
 	protected $_parent;
 
