@@ -114,7 +114,7 @@ class PHPExcel_Reader_CSV extends PHPExcel_Reader_Abstract implements PHPExcel_R
 	 */
 	protected function _isValidFormat()
 	{
-		return TRUE;
+		return true;
 	}
 
 	/**
@@ -201,7 +201,7 @@ class PHPExcel_Reader_CSV extends PHPExcel_Reader_Abstract implements PHPExcel_R
 		$worksheetInfo[0]['totalColumns'] = 0;
 
 		// Loop through each line of the file in turn
-		while (($rowData = fgetcsv($fileHandle, 0, $this->_delimiter, $this->_enclosure)) !== FALSE) {
+		while (($rowData = fgetcsv($fileHandle, 0, $this->_delimiter, $this->_enclosure)) !== false) {
 			$worksheetInfo[0]['totalRows']++;
 			$worksheetInfo[0]['lastColumnIndex'] = max($worksheetInfo[0]['lastColumnIndex'], count($rowData) - 1);
 		}
@@ -272,7 +272,7 @@ class PHPExcel_Reader_CSV extends PHPExcel_Reader_Abstract implements PHPExcel_R
 		}
 
 		// Loop through each line of the file in turn
-		while (($rowData = fgetcsv($fileHandle, 0, $this->_delimiter, $this->_enclosure)) !== FALSE) {
+		while (($rowData = fgetcsv($fileHandle, 0, $this->_delimiter, $this->_enclosure)) !== false) {
 			$columnLetter = 'A';
 			foreach($rowData as $rowDatum) {
 				if ($rowDatum != '' && $this->_readFilter->readCell($columnLetter, $currentRow)) {
@@ -393,7 +393,7 @@ class PHPExcel_Reader_CSV extends PHPExcel_Reader_Abstract implements PHPExcel_R
 	 *
 	 * @param boolean $contiguous
 	 */
-	public function setContiguous($contiguous = FALSE)
+	public function setContiguous($contiguous = false)
 	{
 		$this->_contiguous = (bool) $contiguous;
 		if (!$contiguous) {

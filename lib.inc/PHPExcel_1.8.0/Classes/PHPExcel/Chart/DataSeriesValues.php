@@ -258,11 +258,11 @@ class PHPExcel_Chart_DataSeriesValues
 	 *
 	 * @param	array	$dataValues
 	 * @param	boolean	$refreshDataSource
-	 *					TRUE - refresh the value of _dataSource based on the values of $dataValues
+	 *					true - refresh the value of _dataSource based on the values of $dataValues
 	 *					FALSE - don't change the value of _dataSource
 	 * @return	PHPExcel_Chart_DataSeriesValues
 	 */
-	public function setDataValues($dataValues = array(), $refreshDataSource = TRUE) {
+	public function setDataValues($dataValues = array(), $refreshDataSource = true) {
 		$this->_dataValues = PHPExcel_Calculation_Functions::flattenArray($dataValues);
 		$this->_pointCount = count($dataValues);
 
@@ -274,16 +274,16 @@ class PHPExcel_Chart_DataSeriesValues
 	}
 
 	private function _stripNulls($var) {
-		return $var !== NULL;
+		return $var !== null;
 	}
 
-	public function refresh(PHPExcel_Worksheet $worksheet, $flatten = TRUE) {
-        if ($this->_dataSource !== NULL) {
+	public function refresh(PHPExcel_Worksheet $worksheet, $flatten = true) {
+        if ($this->_dataSource !== null) {
         	$calcEngine = PHPExcel_Calculation::getInstance($worksheet->getParent());
 			$newDataValues = PHPExcel_Calculation::_unwrapResult(
 			    $calcEngine->_calculateFormulaValue(
 			        '='.$this->_dataSource,
-			        NULL,
+			        null,
 			        $worksheet->getCell('A1')
 			    )
 			);

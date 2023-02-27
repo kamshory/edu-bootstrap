@@ -66,7 +66,7 @@ class PHPExcel_Calculation_Token_Stack {
 	 * @param  mixed  $value
 	 * @param  mixed  $reference
 	 */
-	public function push($type, $value, $reference = NULL) {
+	public function push($type, $value, $reference = null) {
 		$this->_stack[$this->_count++] = array('type'		=> $type,
 											   'value'		=> $value,
 											   'reference'	=> $reference
@@ -88,7 +88,7 @@ class PHPExcel_Calculation_Token_Stack {
 		if ($this->_count > 0) {
 			return $this->_stack[--$this->_count];
 		}
-		return NULL;
+		return null;
 	}	//	function pop()
 
 	/**
@@ -99,7 +99,7 @@ class PHPExcel_Calculation_Token_Stack {
 	 */
 	public function last($n = 1) {
 		if ($this->_count - $n < 0) {
-			return NULL;
+			return null;
 		}
 		return $this->_stack[$this->_count - $n];
 	}	//	function last()

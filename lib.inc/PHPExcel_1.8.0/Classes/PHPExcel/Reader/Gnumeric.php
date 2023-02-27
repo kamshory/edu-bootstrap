@@ -374,7 +374,7 @@ class PHPExcel_Reader_Gnumeric extends PHPExcel_Reader_Abstract implements PHPEx
 
 			if ((!$this->_readDataOnly) && (isset($sheet->PrintInformation))) {
 				if (isset($sheet->PrintInformation->Margins)) {
-					foreach($sheet->PrintInformation->Margins->children('gnm',TRUE) as $key => $margin) {
+					foreach($sheet->PrintInformation->Margins->children('gnm',true) as $key => $margin) {
 						$marginAttributes = $margin->attributes();
 						$marginSize = 72 / 100;	//	Default
 						switch($marginAttributes['PrefUnit']) {
@@ -417,7 +417,7 @@ class PHPExcel_Reader_Gnumeric extends PHPExcel_Reader_Abstract implements PHPEx
 				$column = PHPExcel_Cell::stringFromColumnIndex($column);
 
 				// Read cell?
-				if ($this->getReadFilter() !== NULL) {
+				if ($this->getReadFilter() !== null) {
 					if (!$this->getReadFilter()->readCell($column, $row, $worksheetName)) {
 						continue;
 					}
@@ -457,7 +457,7 @@ class PHPExcel_Reader_Gnumeric extends PHPExcel_Reader_Abstract implements PHPEx
 							break;
 						case '20' :		//	Boolean
 							$type = PHPExcel_Cell_DataType::TYPE_BOOL;
-							$cell = ($cell == 'TRUE') ? True : False;
+							$cell = ($cell == 'TRUE') ? true : false;
 							break;
 						case '30' :		//	Integer
 							$cell = intval($cell);
@@ -478,7 +478,7 @@ class PHPExcel_Reader_Gnumeric extends PHPExcel_Reader_Abstract implements PHPEx
 			}
 
 			if ((!$this->_readDataOnly) && (isset($sheet->Objects))) {
-				foreach($sheet->Objects->children('gnm',TRUE) as $key => $comment) {
+				foreach($sheet->Objects->children('gnm',true) as $key => $comment) {
 					$commentAttributes = $comment->attributes();
 					//	Only comment objects are handled at the moment
 					if ($commentAttributes->Text) {
@@ -761,7 +761,7 @@ class PHPExcel_Reader_Gnumeric extends PHPExcel_Reader_Abstract implements PHPEx
 			//	Handle Merged Cells in this worksheet
 			if (isset($sheet->MergedRegions)) {
 				foreach($sheet->MergedRegions->Merge as $mergeCells) {
-					if (strpos($mergeCells,':') !== FALSE) {
+					if (strpos($mergeCells,':') !== false) {
 						$objPHPExcel->getActiveSheet()->mergeCells($mergeCells);
 					}
 				}

@@ -220,8 +220,8 @@ class PHPExcel_Writer_Excel2007_Chart extends PHPExcel_Writer_Excel2007_WriterPa
 	 * @throws 	PHPExcel_Writer_Exception
 	 */
 	private function _writePlotArea(PHPExcel_Chart_PlotArea $plotArea,
-									PHPExcel_Chart_Title $xAxisLabel = NULL,
-									PHPExcel_Chart_Title $yAxisLabel = NULL,
+									PHPExcel_Chart_Title $xAxisLabel = null,
+									PHPExcel_Chart_Title $yAxisLabel = null,
 									$objWriter,
 									PHPExcel_Worksheet $pSheet)
 	{
@@ -238,7 +238,7 @@ class PHPExcel_Writer_Excel2007_Chart extends PHPExcel_Writer_Excel2007_WriterPa
 			$this->_writeLayout($layout, $objWriter);
 
 			$chartTypes = self::_getChartType($plotArea);
-			$catIsMultiLevelSeries = $valIsMultiLevelSeries = FALSE;
+			$catIsMultiLevelSeries = $valIsMultiLevelSeries = false;
 			$plotGroupingType = '';
 			foreach($chartTypes as $chartType) {
 				$objWriter->startElement('c:'.$chartType);
@@ -994,7 +994,7 @@ class PHPExcel_Writer_Excel2007_Chart extends PHPExcel_Writer_Excel2007_WriterPa
 						($groupType != PHPExcel_Chart_DataSeries::TYPE_PIECHART_3D) &&
 						($groupType != PHPExcel_Chart_DataSeries::TYPE_DONUTCHART)) {
 
-						if (($plotSeriesValues->getFormatCode() !== NULL) &&
+						if (($plotSeriesValues->getFormatCode() !== null) &&
 							($plotSeriesValues->getFormatCode() !== '')) {
 							$objWriter->startElement('c:formatCode');
 								$objWriter->writeRawData( $plotSeriesValues->getFormatCode() );
@@ -1080,7 +1080,7 @@ class PHPExcel_Writer_Excel2007_Chart extends PHPExcel_Writer_Excel2007_WriterPa
 	 * @param 	PHPExcel_Shared_XMLWriter 	$objWriter 		XML Writer
 	 * @throws 	PHPExcel_Writer_Exception
 	 */
-	private function _writeLayout(PHPExcel_Chart_Layout $layout = NULL, $objWriter)
+	private function _writeLayout(PHPExcel_Chart_Layout $layout = null, $objWriter)
 	{
 		$objWriter->startElement('c:layout');
 

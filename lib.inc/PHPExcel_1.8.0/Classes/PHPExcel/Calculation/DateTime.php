@@ -294,17 +294,17 @@ class PHPExcel_Calculation_DateTime {
 		$month	= PHPExcel_Calculation_Functions::flattenSingleValue($month);
 		$day	= PHPExcel_Calculation_Functions::flattenSingleValue($day);
 
-		if (($month !== NULL) && (!is_numeric($month))) {
+		if (($month !== null) && (!is_numeric($month))) {
             $month = PHPExcel_Shared_Date::monthStringToNumber($month);
 		}
 
-		if (($day !== NULL) && (!is_numeric($day))) {
+		if (($day !== null) && (!is_numeric($day))) {
             $day = PHPExcel_Shared_Date::dayStringToNumber($day);
 		}
 
-		$year	= ($year !== NULL)	? PHPExcel_Shared_String::testStringAsNumeric($year) : 0;
-		$month	= ($month !== NULL)	? PHPExcel_Shared_String::testStringAsNumeric($month) : 0;
-		$day	= ($day !== NULL)	? PHPExcel_Shared_String::testStringAsNumeric($day) : 0;
+		$year	= ($year !== null)	? PHPExcel_Shared_String::testStringAsNumeric($year) : 0;
+		$month	= ($month !== null)	? PHPExcel_Shared_String::testStringAsNumeric($month) : 0;
+		$day	= ($day !== null)	? PHPExcel_Shared_String::testStringAsNumeric($day) : 0;
 		if ((!is_numeric($year)) ||
 			(!is_numeric($month)) ||
 			(!is_numeric($day))) {
@@ -1005,7 +1005,7 @@ class PHPExcel_Calculation_DateTime {
 		if (!empty($dateArgs)) {
 			$holidayCountedArray = $holidayDates = array();
 			foreach ($dateArgs as $holidayDate) {
-				if (($holidayDate !== NULL) && (trim($holidayDate) > '')) {
+				if (($holidayDate !== null) && (trim($holidayDate) > '')) {
 					if (is_string($holidayDate = self::_getDateValue($holidayDate))) {
 						return PHPExcel_Calculation_Functions::VALUE();
 					}

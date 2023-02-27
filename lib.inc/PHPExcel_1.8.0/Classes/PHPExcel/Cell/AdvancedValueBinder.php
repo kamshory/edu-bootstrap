@@ -66,10 +66,10 @@ class PHPExcel_Cell_AdvancedValueBinder extends PHPExcel_Cell_DefaultValueBinder
         if ($dataType === PHPExcel_Cell_DataType::TYPE_STRING && !$value instanceof PHPExcel_RichText) {
             //    Test for booleans using locale-setting
             if ($value == PHPExcel_Calculation::getTRUE()) {
-                $cell->setValueExplicit( TRUE, PHPExcel_Cell_DataType::TYPE_BOOL);
+                $cell->setValueExplicit( true, PHPExcel_Cell_DataType::TYPE_BOOL);
                 return true;
             } elseif($value == PHPExcel_Calculation::getFALSE()) {
-                $cell->setValueExplicit( FALSE, PHPExcel_Cell_DataType::TYPE_BOOL);
+                $cell->setValueExplicit( false, PHPExcel_Cell_DataType::TYPE_BOOL);
                 return true;
             }
 
@@ -176,12 +176,12 @@ class PHPExcel_Cell_AdvancedValueBinder extends PHPExcel_Cell_DefaultValueBinder
             }
 
             // Check for newline character "\n"
-            if (strpos($value, "\n") !== FALSE) {
+            if (strpos($value, "\n") !== false) {
                 $value = PHPExcel_Shared_String::SanitizeUTF8($value);
                 $cell->setValueExplicit($value, PHPExcel_Cell_DataType::TYPE_STRING);
                 // Set style
                 $cell->getWorksheet()->getStyle( $cell->getCoordinate() )
-                    ->getAlignment()->setWrapText(TRUE);
+                    ->getAlignment()->setWrapText(true);
                 return true;
             }
         }

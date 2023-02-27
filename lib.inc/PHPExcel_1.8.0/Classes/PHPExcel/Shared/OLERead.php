@@ -82,7 +82,7 @@ class PHPExcel_Shared_OLERead {
 
 		// Get the file identifier
 		// Don't bother reading the whole file until we know it's a valid OLE file
-		$this->data = file_get_contents($sFileName, FALSE, NULL, 0, 8);
+		$this->data = file_get_contents($sFileName, false, null, 0, 8);
 
 		// Check OLE identifier
 		if ($this->data != self::IDENTIFIER_OLE) {
@@ -172,7 +172,7 @@ class PHPExcel_Shared_OLERead {
 	 */
 	public function getStream($stream)
 	{
-		if ($stream === NULL) {
+		if ($stream === null) {
 			return null;
 		}
 

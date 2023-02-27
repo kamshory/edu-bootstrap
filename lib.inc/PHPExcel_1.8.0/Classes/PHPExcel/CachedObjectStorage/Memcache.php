@@ -69,8 +69,8 @@ class PHPExcel_CachedObjectStorage_Memcache extends PHPExcel_CachedObjectStorage
 			$this->_currentObject->detach();
 
 			$obj = serialize($this->_currentObject);
-			if (!$this->_memcache->replace($this->_cachePrefix.$this->_currentObjectID.'.cache',$obj,NULL,$this->_cacheTime)) {
-				if (!$this->_memcache->add($this->_cachePrefix.$this->_currentObjectID.'.cache',$obj,NULL,$this->_cacheTime)) {
+			if (!$this->_memcache->replace($this->_cachePrefix.$this->_currentObjectID.'.cache',$obj,null,$this->_cacheTime)) {
+				if (!$this->_memcache->add($this->_cachePrefix.$this->_currentObjectID.'.cache',$obj,null,$this->_cacheTime)) {
 					$this->__destruct();
 					throw new PHPExcel_Exception('Failed to store cell '.$this->_currentObjectID.' in MemCache');
 				}
@@ -215,7 +215,7 @@ class PHPExcel_CachedObjectStorage_Memcache extends PHPExcel_CachedObjectStorage
 					parent::deleteCacheData($cellID);
 					throw new PHPExcel_Exception('Cell entry '.$cellID.' no longer exists in MemCache');
 				}
-				if (!$this->_memcache->add($newCachePrefix.$cellID.'.cache',$obj,NULL,$this->_cacheTime)) {
+				if (!$this->_memcache->add($newCachePrefix.$cellID.'.cache',$obj,null,$this->_cacheTime)) {
 					$this->__destruct();
 					throw new PHPExcel_Exception('Failed to store cell '.$cellID.' in MemCache');
 				}

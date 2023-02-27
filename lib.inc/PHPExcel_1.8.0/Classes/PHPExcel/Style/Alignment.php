@@ -78,14 +78,14 @@ class PHPExcel_Style_Alignment extends PHPExcel_Style_Supervisor implements PHPE
 	 *
 	 * @var boolean
 	 */
-	protected $_wrapText		= FALSE;
+	protected $_wrapText		= false;
 
 	/**
 	 * Shrink to fit
 	 *
 	 * @var boolean
 	 */
-	protected $_shrinkToFit	= FALSE;
+	protected $_shrinkToFit	= false;
 
 	/**
 	 * Indent - only possible with horizontal alignment left and right
@@ -104,15 +104,15 @@ class PHPExcel_Style_Alignment extends PHPExcel_Style_Supervisor implements PHPE
 	 *									Leave this value at default unless you understand exactly what
 	 *										its ramifications are
 	 */
-	public function __construct($isSupervisor = FALSE, $isConditional = FALSE)
+	public function __construct($isSupervisor = false, $isConditional = false)
 	{
 		// Supervisor?
 		parent::__construct($isSupervisor);
 
 		if ($isConditional) {
-			$this->_horizontal		= NULL;
-			$this->_vertical		= NULL;
-			$this->_textRotation	= NULL;
+			$this->_horizontal		= null;
+			$this->_vertical		= null;
+			$this->_textRotation	= null;
 		}
 	}
 
@@ -156,7 +156,7 @@ class PHPExcel_Style_Alignment extends PHPExcel_Style_Supervisor implements PHPE
 	 * @throws	PHPExcel_Exception
 	 * @return PHPExcel_Style_Alignment
 	 */
-	public function applyFromArray($pStyles = NULL) {
+	public function applyFromArray($pStyles = null) {
 		if (is_array($pStyles)) {
 			if ($this->_isSupervisor) {
 				$this->getActiveSheet()->getStyle($this->getSelectedCells())
@@ -310,9 +310,9 @@ class PHPExcel_Style_Alignment extends PHPExcel_Style_Supervisor implements PHPE
 	 * @param boolean $pValue
 	 * @return PHPExcel_Style_Alignment
 	 */
-	public function setWrapText($pValue = FALSE) {
+	public function setWrapText($pValue = false) {
 		if ($pValue == '') {
-			$pValue = FALSE;
+			$pValue = false;
 		}
 		if ($this->_isSupervisor) {
 			$styleArray = $this->getStyleArray(array('wrap' => $pValue));
@@ -341,9 +341,9 @@ class PHPExcel_Style_Alignment extends PHPExcel_Style_Supervisor implements PHPE
 	 * @param boolean $pValue
 	 * @return PHPExcel_Style_Alignment
 	 */
-	public function setShrinkToFit($pValue = FALSE) {
+	public function setShrinkToFit($pValue = false) {
 		if ($pValue == '') {
-			$pValue = FALSE;
+			$pValue = false;
 		}
 		if ($this->_isSupervisor) {
 			$styleArray = $this->getStyleArray(array('shrinkToFit' => $pValue));

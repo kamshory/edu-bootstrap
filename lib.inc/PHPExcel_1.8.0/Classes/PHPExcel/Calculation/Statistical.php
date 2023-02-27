@@ -1957,9 +1957,9 @@ class PHPExcel_Calculation_Statistical {
 	 * @param	boolean				A logical value specifying whether to return additional regression statistics.
 	 * @return	array
 	 */
-	public static function LINEST($yValues, $xValues = NULL, $const = TRUE, $stats = FALSE) {
-		$const	= (is_null($const))	? TRUE :	(boolean) PHPExcel_Calculation_Functions::flattenSingleValue($const);
-		$stats	= (is_null($stats))	? FALSE :	(boolean) PHPExcel_Calculation_Functions::flattenSingleValue($stats);
+	public static function LINEST($yValues, $xValues = null, $const = true, $stats = false) {
+		$const	= (is_null($const))	? true :	(boolean) PHPExcel_Calculation_Functions::flattenSingleValue($const);
+		$stats	= (is_null($stats))	? false :	(boolean) PHPExcel_Calculation_Functions::flattenSingleValue($stats);
 		if (is_null($xValues)) $xValues = range(1,count(PHPExcel_Calculation_Functions::flattenArray($yValues)));
 
 		if (!self::_checkTrendArrays($yValues,$xValues)) {
@@ -3635,7 +3635,7 @@ class PHPExcel_Calculation_Statistical {
 	 * @return	float
 	 *
 	 */
-	public static function ZTEST($dataSet, $m0, $sigma = NULL) {
+	public static function ZTEST($dataSet, $m0, $sigma = null) {
 		$dataSet	= PHPExcel_Calculation_Functions::flattenArrayIndexed($dataSet);
 		$m0			= PHPExcel_Calculation_Functions::flattenSingleValue($m0);
 		$sigma		= PHPExcel_Calculation_Functions::flattenSingleValue($sigma);

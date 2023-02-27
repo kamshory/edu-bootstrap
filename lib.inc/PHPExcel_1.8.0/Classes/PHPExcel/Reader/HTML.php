@@ -117,12 +117,12 @@ class PHPExcel_Reader_HTML extends PHPExcel_Reader_Abstract implements PHPExcel_
 	{
 		//	Reading 2048 bytes should be enough to validate that the format is HTML
 		$data = fread($this->_fileHandle, 2048);
-		if ((strpos($data, '<') !== FALSE) &&
+		if ((strpos($data, '<') !== false) &&
 			(strlen($data) !== strlen(strip_tags($data)))) {
-			return TRUE;
+			return true;
 		}
 
-		return FALSE;
+		return false;
 	}
 
 	/**
@@ -425,7 +425,7 @@ class PHPExcel_Reader_HTML extends PHPExcel_Reader_Abstract implements PHPExcel_
 		$dom = new domDocument;
 		//	Reload the HTML file into the DOM object
 		$loaded = $dom->loadHTMLFile($pFilename, PHPExcel_Settings::getLibXmlLoaderOptions());
-		if ($loaded === FALSE) {
+		if ($loaded === false) {
 			throw new PHPExcel_Reader_Exception('Failed to load ',$pFilename,' as a DOM Document');
 		}
 

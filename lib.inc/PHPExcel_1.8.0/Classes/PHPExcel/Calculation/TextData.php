@@ -106,7 +106,7 @@ class PHPExcel_Calculation_TextData {
 		if (is_string($stringValue) || is_numeric($stringValue)) {
 			return str_replace(self::$_invalidChars,'',trim($stringValue,"\x00..\x1F"));
 		}
-		return NULL;
+		return null;
 	}	//	function TRIMNONPRINTABLE()
 
 
@@ -126,7 +126,7 @@ class PHPExcel_Calculation_TextData {
 		if (is_string($stringValue) || is_numeric($stringValue)) {
 			return trim(preg_replace('/ +/',' ',trim($stringValue,' ')));
 		}
-		return NULL;
+		return null;
 	}	//	function TRIMSPACES()
 
 
@@ -137,7 +137,7 @@ class PHPExcel_Calculation_TextData {
 	 * @return	int
 	 */
 	public static function ASCIICODE($characters) {
-		if (($characters === NULL) || ($characters === ''))
+		if (($characters === null) || ($characters === ''))
 			return PHPExcel_Calculation_Functions::VALUE();
 		$characters	= PHPExcel_Calculation_Functions::flattenSingleValue($characters);
 		if (is_bool($characters)) {
@@ -302,7 +302,7 @@ class PHPExcel_Calculation_TextData {
 	 * @param	boolean		$no_commas
 	 * @return	boolean
 	 */
-	public static function FIXEDFORMAT($value, $decimals = 2, $no_commas = FALSE) {
+	public static function FIXEDFORMAT($value, $decimals = 2, $no_commas = false) {
 		$value		= PHPExcel_Calculation_Functions::flattenSingleValue($value);
 		$decimals	= PHPExcel_Calculation_Functions::flattenSingleValue($decimals);
 		$no_commas	= PHPExcel_Calculation_Functions::flattenSingleValue($no_commas);

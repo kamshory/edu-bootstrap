@@ -158,10 +158,10 @@ class PHPExcel_Worksheet_SheetView
 	 * @throws 	PHPExcel_Exception
 	 * @return PHPExcel_Worksheet_SheetView
 	 */
-	public function setView($pValue = NULL) {
+	public function setView($pValue = null) {
 		//	MS Excel 2007 allows setting the view to 'normal', 'pageLayout' or 'pageBreakPreview'
 		//		via the user interface
-		if ($pValue === NULL)
+		if ($pValue === null)
 			$pValue = self::SHEETVIEW_NORMAL;
 		if (in_array($pValue, self::$_sheetViewTypes)) {
 			$this->_sheetviewType = $pValue;

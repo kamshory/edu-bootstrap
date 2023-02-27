@@ -96,14 +96,14 @@ class PHPExcel_Style_Fill extends PHPExcel_Style_Supervisor implements PHPExcel_
 	 *									Leave this value at default unless you understand exactly what
 	 *										its ramifications are
 	 */
-	public function __construct($isSupervisor = FALSE, $isConditional = FALSE)
+	public function __construct($isSupervisor = false, $isConditional = false)
 	{
 		// Supervisor?
 		parent::__construct($isSupervisor);
 
 		// Initialise values
 		if ($isConditional) {
-			$this->_fillType = NULL;
+			$this->_fillType = null;
 		}
 		$this->_startColor			= new PHPExcel_Style_Color(PHPExcel_Style_Color::COLOR_WHITE, $isSupervisor, $isConditional);
 		$this->_endColor			= new PHPExcel_Style_Color(PHPExcel_Style_Color::COLOR_BLACK, $isSupervisor, $isConditional);

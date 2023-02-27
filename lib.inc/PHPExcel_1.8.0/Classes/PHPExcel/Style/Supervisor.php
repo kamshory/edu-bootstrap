@@ -56,7 +56,7 @@ abstract class PHPExcel_Style_Supervisor
 	 *									Leave this value at default unless you understand exactly what
 	 *										its ramifications are
 	 */
-	public function __construct($isSupervisor = FALSE)
+	public function __construct($isSupervisor = false)
 	{
 		// Supervisor?
 		$this->_isSupervisor = $isSupervisor;
@@ -68,7 +68,7 @@ abstract class PHPExcel_Style_Supervisor
 	 * @param PHPExcel $parent
 	 * @return PHPExcel_Style_Supervisor
 	 */
-	public function bindParent($parent, $parentPropertyName=NULL)
+	public function bindParent($parent, $parentPropertyName=null)
 	{
 		$this->_parent = $parent;
 		return $this;

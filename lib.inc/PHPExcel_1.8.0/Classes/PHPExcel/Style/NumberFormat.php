@@ -113,13 +113,13 @@ class PHPExcel_Style_NumberFormat extends PHPExcel_Style_Supervisor implements P
 	 *									Leave this value at default unless you understand exactly what
 	 *										its ramifications are
 	 */
-	public function __construct($isSupervisor = FALSE, $isConditional = FALSE)
+	public function __construct($isSupervisor = false, $isConditional = false)
 	{
 		// Supervisor?
 		parent::__construct($isSupervisor);
 
 		if ($isConditional) {
-			$this->_formatCode = NULL;
+			$this->_formatCode = null;
 		}
 	}
 

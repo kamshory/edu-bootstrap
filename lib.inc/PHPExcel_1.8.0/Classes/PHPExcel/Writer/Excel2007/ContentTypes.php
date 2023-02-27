@@ -43,7 +43,7 @@ class PHPExcel_Writer_Excel2007_ContentTypes extends PHPExcel_Writer_Excel2007_W
 	 * @return 	string 						XML Output
 	 * @throws 	PHPExcel_Writer_Exception
 	 */
-	public function writeContentTypes(PHPExcel $pPHPExcel = null, $includeCharts = FALSE)
+	public function writeContentTypes(PHPExcel $pPHPExcel = null, $includeCharts = false)
 	{
 		// Create XML writer
 		$objWriter = null;

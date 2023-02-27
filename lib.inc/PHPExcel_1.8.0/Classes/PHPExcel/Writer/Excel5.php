@@ -121,7 +121,7 @@ class PHPExcel_Writer_Excel5 extends PHPExcel_Writer_Abstract implements PHPExce
 		$this->_phpExcel->garbageCollect();
 
 		$saveDebugLog = PHPExcel_Calculation::getInstance($this->_phpExcel)->getDebugLog()->getWriteDebugLog();
-		PHPExcel_Calculation::getInstance($this->_phpExcel)->getDebugLog()->setWriteDebugLog(FALSE);
+		PHPExcel_Calculation::getInstance($this->_phpExcel)->getDebugLog()->setWriteDebugLog(false);
 		$saveDateReturnType = PHPExcel_Calculation_Functions::getReturnDateType();
 		PHPExcel_Calculation_Functions::setReturnDateType(PHPExcel_Calculation_Functions::RETURNDATE_EXCEL);
 
@@ -608,7 +608,7 @@ class PHPExcel_Writer_Excel5 extends PHPExcel_Writer_Abstract implements PHPExce
 							   'type' 	=> array('pack' => 'V', 'data' => 0x03),
 							   'data'	=> array('pack' => 'V', 'data' => 0x000C0000));
 		$dataSection_NumProps++;
-		// GKPIDDSI_SCALE : FALSE
+		// GKPIDDSI_SCALE : false
 		$dataSection[] = array('summary'=> array('pack' => 'V', 'data' => 0x0B),
 							   'offset' => array('pack' => 'V'),
 							   'type' 	=> array('pack' => 'V', 'data' => 0x0B),
@@ -620,7 +620,7 @@ class PHPExcel_Writer_Excel5 extends PHPExcel_Writer_Abstract implements PHPExce
 							   'type' 	=> array('pack' => 'V', 'data' => 0x0B),
 							   'data'	=> array('data' => false));
 		$dataSection_NumProps++;
-		// GKPIDDSI_SHAREDOC : FALSE
+		// GKPIDDSI_SHAREDOC : false
 		$dataSection[] = array('summary'=> array('pack' => 'V', 'data' => 0x13),
 							   'offset' => array('pack' => 'V'),
 							   'type' 	=> array('pack' => 'V', 'data' => 0x0B),

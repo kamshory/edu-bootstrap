@@ -593,7 +593,7 @@ class PHPExcel_Reader_Excel2003XML extends PHPExcel_Reader_Abstract implements P
 						}
 						$cellRange = $columnID.$rowID;
 
-						if ($this->getReadFilter() !== NULL) {
+						if ($this->getReadFilter() !== null) {
 							if (!$this->getReadFilter()->readCell($columnID, $rowID, $worksheetName)) {
 								continue;
 							}
@@ -753,7 +753,7 @@ class PHPExcel_Reader_Excel2003XML extends PHPExcel_Reader_Abstract implements P
 //								print_r($this->_styles[$style]);
 //								echo '<br />';
 								if (!$objPHPExcel->getActiveSheet()->cellExists($columnID.$rowID)) {
-									$objPHPExcel->getActiveSheet()->getCell($columnID.$rowID)->setValue(NULL);
+									$objPHPExcel->getActiveSheet()->getCell($columnID.$rowID)->setValue(null);
 								}
 								$objPHPExcel->getActiveSheet()->getStyle($cellRange)->applyFromArray($this->_styles[$style]);
 							}

@@ -60,7 +60,7 @@ class PHPExcel_Writer_HTML extends PHPExcel_Writer_Abstract implements PHPExcel_
 	 *
 	 * @var boolean
 	 */
-	private $_embedImages	= FALSE;
+	private $_embedImages	= false;
 
 	/**
 	 * Use inline CSS?
@@ -153,7 +153,7 @@ class PHPExcel_Writer_HTML extends PHPExcel_Writer_Abstract implements PHPExcel_
 		$this->_phpExcel->garbageCollect();
 
 		$saveDebugLog = PHPExcel_Calculation::getInstance($this->_phpExcel)->getDebugLog()->getWriteDebugLog();
-		PHPExcel_Calculation::getInstance($this->_phpExcel)->getDebugLog()->setWriteDebugLog(FALSE);
+		PHPExcel_Calculation::getInstance($this->_phpExcel)->getDebugLog()->setWriteDebugLog(false);
 		$saveArrayReturnType = PHPExcel_Calculation::getArrayReturnType();
 		PHPExcel_Calculation::setArrayReturnType(PHPExcel_Calculation::RETURN_ARRAY_AS_VALUE);
 
@@ -288,7 +288,7 @@ class PHPExcel_Writer_HTML extends PHPExcel_Writer_Abstract implements PHPExcel_
 	}
 
 	/**
-	 * Write all sheets (resets sheetIndex to NULL)
+	 * Write all sheets (resets sheetIndex to null)
 	 */
 	public function writeAllSheets() {
 		$this->_sheetIndex = null;

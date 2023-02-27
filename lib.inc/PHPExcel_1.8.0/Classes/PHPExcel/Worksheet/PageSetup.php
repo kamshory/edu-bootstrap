@@ -214,7 +214,7 @@ class PHPExcel_Worksheet_PageSetup
 	  *
 	  * @var boolean
 	  */
-	private $_fitToPage		= FALSE;
+	private $_fitToPage		= false;
 
 	/**
 	  * Fit To Height
@@ -251,28 +251,28 @@ class PHPExcel_Worksheet_PageSetup
 	 *
 	 * @var boolean
 	 */
-	private $_horizontalCentered = FALSE;
+	private $_horizontalCentered = false;
 
 	/**
 	 * Center page vertically
 	 *
 	 * @var boolean
 	 */
-	private $_verticalCentered = FALSE;
+	private $_verticalCentered = false;
 
 	/**
 	 * Print area
 	 *
 	 * @var string
 	 */
-	private $_printArea = NULL;
+	private $_printArea = null;
 
 	/**
 	 * First page number
 	 *
 	 * @var int
 	 */
-	private $_firstPageNumber = NULL;
+	private $_firstPageNumber = null;
 
     /**
      * Create a new PHPExcel_Worksheet_PageSetup
@@ -370,7 +370,7 @@ class PHPExcel_Worksheet_PageSetup
 	 * @param boolean $pValue
 	 * @return PHPExcel_Worksheet_PageSetup
 	 */
-	public function setFitToPage($pValue = TRUE) {
+	public function setFitToPage($pValue = true) {
 		$this->_fitToPage = $pValue;
 		return $this;
 	}
@@ -391,10 +391,10 @@ class PHPExcel_Worksheet_PageSetup
 	 * @param boolean $pUpdate Update fitToPage so it applies rather than scaling
 	 * @return PHPExcel_Worksheet_PageSetup
 	 */
-	public function setFitToHeight($pValue = 1, $pUpdate = TRUE) {
+	public function setFitToHeight($pValue = 1, $pUpdate = true) {
 		$this->_fitToHeight = $pValue;
 		if ($pUpdate) {
-			$this->_fitToPage = TRUE;
+			$this->_fitToPage = true;
 		}
 		return $this;
 	}
@@ -415,10 +415,10 @@ class PHPExcel_Worksheet_PageSetup
 	 * @param boolean $pUpdate Update fitToPage so it applies rather than scaling
 	 * @return PHPExcel_Worksheet_PageSetup
 	 */
-	public function setFitToWidth($pValue = 1, $pUpdate = TRUE) {
+	public function setFitToWidth($pValue = 1, $pUpdate = true) {
 		$this->_fitToWidth = $pValue;
 		if ($pUpdate) {
-			$this->_fitToPage = TRUE;
+			$this->_fitToPage = true;
 		}
 		return $this;
 	}
@@ -610,7 +610,7 @@ class PHPExcel_Worksheet_PageSetup
 	 */
 	public function clearPrintArea($index = 0) {
 		if ($index == 0) {
-			$this->_printArea = NULL;
+			$this->_printArea = null;
 		} else {
 			$printAreas = explode(',',$this->_printArea);
 			if (isset($printAreas[$index-1])) {

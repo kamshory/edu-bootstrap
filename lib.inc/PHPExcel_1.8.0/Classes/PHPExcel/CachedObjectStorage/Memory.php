@@ -71,7 +71,7 @@ class PHPExcel_CachedObjectStorage_Memory extends PHPExcel_CachedObjectStorage_C
 	public function getCacheData($pCoord) {
 		//	Check if the entry that has been requested actually exists
 		if (!isset($this->_cellCache[$pCoord])) {
-			$this->_currentObjectID = NULL;
+			$this->_currentObjectID = null;
 			//	Return null if requested entry doesn't exist in cache
 			return null;
 		}

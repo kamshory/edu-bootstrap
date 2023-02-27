@@ -519,7 +519,7 @@ class PHPExcel_Chart
 
 
 	public function refresh() {
-		if ($this->_worksheet !== NULL) {
+		if ($this->_worksheet !== null) {
 			$this->_plotArea->refresh($this->_worksheet);
 		}
 	}

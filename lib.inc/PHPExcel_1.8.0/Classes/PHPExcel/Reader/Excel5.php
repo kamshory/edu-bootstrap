@@ -961,7 +961,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 			if ($this->_version == self::XLS_BIFF8) {
 				foreach ($this->_sharedFormulaParts as $cell => $baseCell) {
 					list($column, $row) = PHPExcel_Cell::coordinateFromString($cell);
-					if (($this->getReadFilter() !== NULL) && $this->getReadFilter()->readCell($column, $row, $this->_phpSheet->getTitle()) ) {
+					if (($this->getReadFilter() !== null) && $this->getReadFilter()->readCell($column, $row, $this->_phpSheet->getTitle()) ) {
 						$formula = $this->_getFormulaFromStructure($this->_sharedFormulas[$baseCell], $cell);
 						$this->_phpSheet->getCell($cell)->setValueExplicit('=' . $formula, PHPExcel_Cell_DataType::TYPE_FORMULA);
 					}
@@ -1009,7 +1009,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 						$sheetName = trim($explodes[0], "'");
 
 						if (count($explodes) == 2) {
-							if (strpos($explodes[1], ':') === FALSE) {
+							if (strpos($explodes[1], ':') === false) {
 								$explodes[1] = $explodes[1] . ':' . $explodes[1];
 							}
 							$extractedRanges[] = str_replace('$', '', $explodes[1]); // C7:J66
@@ -3583,7 +3583,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 		$columnString = PHPExcel_Cell::stringFromColumnIndex($column);
 
 		// Read cell?
-		if (($this->getReadFilter() !== NULL) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
+		if (($this->getReadFilter() !== null) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
 			// offset: 4; size: 2; index to XF record
 			$xfIndex = self::_GetInt2d($recordData, 4);
 
@@ -3628,7 +3628,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 		$columnString = PHPExcel_Cell::stringFromColumnIndex($column);
 
 		// Read cell?
-		if (($this->getReadFilter() !== NULL) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
+		if (($this->getReadFilter() !== null) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
 			// offset: 4; size: 2; index to XF record
 			$xfIndex = self::_GetInt2d($recordData, 4);
 
@@ -3715,7 +3715,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 			$columnString = PHPExcel_Cell::stringFromColumnIndex($colFirst + $i);
 
 			// Read cell?
-			if (($this->getReadFilter() !== NULL) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
+			if (($this->getReadFilter() !== null) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
 
 				// offset: var; size: 2; index to XF record
 				$xfIndex = self::_GetInt2d($recordData, $offset);
@@ -3761,7 +3761,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 		$columnString = PHPExcel_Cell::stringFromColumnIndex($column);
 
 		// Read cell?
-		if (($this->getReadFilter() !== NULL) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
+		if (($this->getReadFilter() !== null) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
 			// offset 4; size: 2; index to XF record
 			$xfIndex = self::_GetInt2d($recordData, 4);
 
@@ -3828,7 +3828,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 		}
 
 		// Read cell?
-		if (($this->getReadFilter() !== NULL) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
+		if (($this->getReadFilter() !== null) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
 
 			if ($isPartOfSharedFormula) {
 				// formula is added to this cell after the sheet has been read
@@ -4005,7 +4005,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 		$columnString = PHPExcel_Cell::stringFromColumnIndex($column);
 
 		// Read cell?
-		if (($this->getReadFilter() !== NULL) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
+		if (($this->getReadFilter() !== null) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
 			// offset: 4; size: 2; index to XF record
 			$xfIndex = self::_GetInt2d($recordData, 4);
 
@@ -4069,7 +4069,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 				$columnString = PHPExcel_Cell::stringFromColumnIndex($fc + $i);
 
 				// Read cell?
-				if (($this->getReadFilter() !== NULL) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
+				if (($this->getReadFilter() !== null) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
 					$xfIndex = self::_GetInt2d($recordData, 4 + 2 * $i);
 					$this->_phpSheet->getCell($columnString . ($row + 1))->setXfIndex($this->_mapCellXfIndex[$xfIndex]);
 				}
@@ -4106,7 +4106,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 		$columnString = PHPExcel_Cell::stringFromColumnIndex($column);
 
 		// Read cell?
-		if (($this->getReadFilter() !== NULL) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
+		if (($this->getReadFilter() !== null) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
 			// offset: 4; size: 2; XF index
 			$xfIndex = self::_GetInt2d($recordData, 4);
 
@@ -4149,7 +4149,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 		$columnString = PHPExcel_Cell::stringFromColumnIndex($col);
 
 		// Read cell?
-		if (($this->getReadFilter() !== NULL) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
+		if (($this->getReadFilter() !== null) && $this->getReadFilter()->readCell($columnString, $row + 1, $this->_phpSheet->getTitle()) ) {
 			// offset: 4; size: 2; XF index
 			$xfIndex = self::_GetInt2d($recordData, 4);
 
@@ -4432,7 +4432,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 	private function _includeCellRangeFiltered($cellRangeAddress)
 	{
 		$includeCellRange = true;
-		if ($this->getReadFilter() !== NULL) {
+		if ($this->getReadFilter() !== null) {
 			$includeCellRange = false;
 			$rangeBoundaries = PHPExcel_Cell::getRangeBoundaries($cellRangeAddress);
 			$rangeBoundaries[1][0]++;
@@ -4469,7 +4469,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 		if ($this->_version == self::XLS_BIFF8 && !$this->_readDataOnly) {
 			$cellRangeAddressList = $this->_readBIFF8CellRangeAddressList($recordData);
 			foreach ($cellRangeAddressList['cellRangeAddresses'] as $cellRangeAddress) {
-				if ((strpos($cellRangeAddress,':') !== FALSE) &&
+				if ((strpos($cellRangeAddress,':') !== false) &&
 					($this->_includeCellRangeFiltered($cellRangeAddress))) {
 					$this->_phpSheet->mergeCells($cellRangeAddress);
 				}

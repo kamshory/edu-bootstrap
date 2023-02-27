@@ -1113,7 +1113,7 @@ class PHPExcel_Calculation_Engineering {
 	 *								If places is negative, BIN2HEX returns the #NUM! error value.
 	 * @return	string
 	 */
-	public static function BINTOHEX($x, $places=NULL) {
+	public static function BINTOHEX($x, $places=null) {
 		$x	= PHPExcel_Calculation_Functions::flattenSingleValue($x);
 		$places	= PHPExcel_Calculation_Functions::flattenSingleValue($places);
 
@@ -1167,7 +1167,7 @@ class PHPExcel_Calculation_Engineering {
 	 *								If places is negative, BIN2OCT returns the #NUM! error value.
 	 * @return	string
 	 */
-	public static function BINTOOCT($x, $places=NULL) {
+	public static function BINTOOCT($x, $places=null) {
 		$x	= PHPExcel_Calculation_Functions::flattenSingleValue($x);
 		$places	= PHPExcel_Calculation_Functions::flattenSingleValue($places);
 
@@ -1225,7 +1225,7 @@ class PHPExcel_Calculation_Engineering {
 	 *								If places is zero or negative, DEC2BIN returns the #NUM! error value.
 	 * @return	string
 	 */
-	public static function DECTOBIN($x, $places=NULL) {
+	public static function DECTOBIN($x, $places=null) {
 		$x	= PHPExcel_Calculation_Functions::flattenSingleValue($x);
 		$places	= PHPExcel_Calculation_Functions::flattenSingleValue($places);
 
@@ -2265,7 +2265,7 @@ class PHPExcel_Calculation_Engineering {
 	 *								If omitted, ERF integrates between zero and lower_limit
 	 *	@return	float
 	 */
-	public static function ERF($lower, $upper = NULL) {
+	public static function ERF($lower, $upper = null) {
 		$lower	= PHPExcel_Calculation_Functions::flattenSingleValue($lower);
 		$upper	= PHPExcel_Calculation_Functions::flattenSingleValue($upper);
 
@@ -2361,7 +2361,7 @@ class PHPExcel_Calculation_Engineering {
 	 *	@param	string	$group	The group whose units of measure you want to retrieve
 	 *	@return	array
 	 */
-	public static function getConversionGroupUnits($group = NULL) {
+	public static function getConversionGroupUnits($group = null) {
 		$conversionGroups = array();
 		foreach(self::$_conversionUnits as $conversionUnit => $conversionGroup) {
 			if ((is_null($group)) || ($conversionGroup['Group'] == $group)) {
@@ -2378,7 +2378,7 @@ class PHPExcel_Calculation_Engineering {
 	 *	@param	string	$group	The group whose units of measure you want to retrieve
 	 *	@return	array
 	 */
-	public static function getConversionGroupUnitDetails($group = NULL) {
+	public static function getConversionGroupUnitDetails($group = null) {
 		$conversionGroups = array();
 		foreach(self::$_conversionUnits as $conversionUnit => $conversionGroup) {
 			if ((is_null($group)) || ($conversionGroup['Group'] == $group)) {

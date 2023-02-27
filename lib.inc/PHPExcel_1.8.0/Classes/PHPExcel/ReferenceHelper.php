@@ -55,7 +55,7 @@ class PHPExcel_ReferenceHelper
 	 * @return PHPExcel_ReferenceHelper
 	 */
 	public static function getInstance() {
-		if (!isset(self::$_instance) || (self::$_instance === NULL)) {
+		if (!isset(self::$_instance) || (self::$_instance === null)) {
 			self::$_instance = new PHPExcel_ReferenceHelper();
 		}
 
@@ -151,7 +151,7 @@ class PHPExcel_ReferenceHelper
 			($cellColumnIndex < $beforeColumnIndex)) {
 			return true;
 		}
-		return FALSE;
+		return false;
 	}
 
 	/**
@@ -380,7 +380,7 @@ class PHPExcel_ReferenceHelper
 	 * @param   PHPExcel_Worksheet  $pSheet     The worksheet that we're editing
 	 * @throws  PHPExcel_Exception
 	 */
-	public function insertNewBefore($pBefore = 'A1', $pNumCols = 0, $pNumRows = 0, PHPExcel_Worksheet $pSheet = NULL)
+	public function insertNewBefore($pBefore = 'A1', $pNumCols = 0, $pNumRows = 0, PHPExcel_Worksheet $pSheet = null)
 	{
 		$remove = ($pNumCols < 0 || $pNumRows < 0);
 		$aCellCollection = $pSheet->getCellCollection();
@@ -821,7 +821,7 @@ class PHPExcel_ReferenceHelper
 		foreach ($pPhpExcel->getWorksheetIterator() as $sheet) {
 			foreach ($sheet->getCellCollection(false) as $cellID) {
 				$cell = $sheet->getCell($cellID);
-				if (($cell !== NULL) && ($cell->getDataType() == PHPExcel_Cell_DataType::TYPE_FORMULA)) {
+				if (($cell !== null) && ($cell->getDataType() == PHPExcel_Cell_DataType::TYPE_FORMULA)) {
 					$formula = $cell->getValue();
 					if (strpos($formula, $oldName) !== false) {
 						$formula = str_replace("'" . $oldName . "'!", "'" . $newName . "'!", $formula);

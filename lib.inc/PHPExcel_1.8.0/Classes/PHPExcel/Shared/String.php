@@ -524,7 +524,7 @@ class PHPExcel_Shared_String
 	 * @author  Rasmus Andersson {@link http://rasmusandersson.se/}
 	 * @author vadik56
 	 */
-	public static function utf16_decode($str, $bom_be = TRUE) {
+	public static function utf16_decode($str, $bom_be = true) {
 		if( strlen($str) < 2 ) return $str;
 		$c0 = ord($str{0});
 		$c1 = ord($str{1});

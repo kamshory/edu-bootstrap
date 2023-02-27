@@ -159,7 +159,7 @@ class PHPExcel_Chart_Renderer_jpgraph
 
 	private function _getCaption($captionElement) {
 		//	Read any caption
-		$caption = (!is_null($captionElement)) ? $captionElement->getCaption() : NULL;
+		$caption = (!is_null($captionElement)) ? $captionElement->getCaption() : null;
 		//	Test if we have a title caption to display
 		if (!is_null($caption)) {
 			//	If we do, it could be a plain string or an array

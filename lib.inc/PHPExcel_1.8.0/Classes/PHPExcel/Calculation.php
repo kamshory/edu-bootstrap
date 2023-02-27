@@ -3520,7 +3520,7 @@ class PHPExcel_Calculation {
 	}	//	function _validateBinaryOperand()
 
 
-	private function _executeBinaryComparisonOperation($cellID, $operand1, $operand2, $operation, &$stack, $recursingArrays=FALSE) {
+	private function _executeBinaryComparisonOperation($cellID, $operand1, $operand2, $operation, &$stack, $recursingArrays=false) {
 		//	If we're dealing with matrix operations, we want a matrix result
 		if ((is_array($operand1)) || (is_array($operand2))) {
 			$result = array();
@@ -3641,8 +3641,8 @@ class PHPExcel_Calculation {
 
 	private function _executeNumericBinaryOperation($cellID,$operand1,$operand2,$operation,$matrixFunction,&$stack) {
 		//	Validate the two operands
-		if (!$this->_validateBinaryOperand($cellID,$operand1,$stack)) return FALSE;
-		if (!$this->_validateBinaryOperand($cellID,$operand2,$stack)) return FALSE;
+		if (!$this->_validateBinaryOperand($cellID,$operand1,$stack)) return false;
+		if (!$this->_validateBinaryOperand($cellID,$operand2,$stack)) return false;
 
 		//	If either of the operands is a matrix, we need to treat them both as matrices
 		//		(converting the other operand to a matrix if need be); then perform the required
@@ -3687,7 +3687,7 @@ class PHPExcel_Calculation {
 							//	Trap for Divide by Zero error
 							$stack->push('Value','#DIV/0!');
 							$this->_debugLog->writeDebugLog('Evaluation Result is ', $this->_showTypeDetails('#DIV/0!'));
-							return FALSE;
+							return false;
 						} else {
 							$result = $operand1 / $operand2;
 						}

@@ -44,7 +44,7 @@ class PHPExcel_Writer_Excel2007 extends PHPExcel_Writer_Abstract implements PHPE
      *
 	 * @var boolean
 	 */
-	protected $_preCalculateFormulas = FALSE;
+	protected $_preCalculateFormulas = false;
 
 	/**
 	 * Office2003 compatibility
@@ -187,7 +187,7 @@ class PHPExcel_Writer_Excel2007 extends PHPExcel_Writer_Abstract implements PHPE
 	 */
 	public function save($pFilename = null)
 	{
-		if ($this->_spreadSheet !== NULL) {
+		if ($this->_spreadSheet !== null) {
 			// garbage collect
 			$this->_spreadSheet->garbageCollect();
 
@@ -201,7 +201,7 @@ class PHPExcel_Writer_Excel2007 extends PHPExcel_Writer_Abstract implements PHPE
 			}
 
 			$saveDebugLog = PHPExcel_Calculation::getInstance($this->_spreadSheet)->getDebugLog()->getWriteDebugLog();
-			PHPExcel_Calculation::getInstance($this->_spreadSheet)->getDebugLog()->setWriteDebugLog(FALSE);
+			PHPExcel_Calculation::getInstance($this->_spreadSheet)->getDebugLog()->setWriteDebugLog(false);
 			$saveDateReturnType = PHPExcel_Calculation_Functions::getReturnDateType();
 			PHPExcel_Calculation_Functions::setReturnDateType(PHPExcel_Calculation_Functions::RETURNDATE_EXCEL);
 
@@ -282,7 +282,7 @@ class PHPExcel_Writer_Excel2007 extends PHPExcel_Writer_Abstract implements PHPE
 			$objZip->addFromString('docProps/app.xml', 				$this->getWriterPart('DocProps')->writeDocPropsApp($this->_spreadSheet));
 			$objZip->addFromString('docProps/core.xml', 			$this->getWriterPart('DocProps')->writeDocPropsCore($this->_spreadSheet));
 			$customPropertiesPart = $this->getWriterPart('DocProps')->writeDocPropsCustom($this->_spreadSheet);
-			if ($customPropertiesPart !== NULL) {
+			if ($customPropertiesPart !== null) {
 				$objZip->addFromString('docProps/custom.xml', 		$customPropertiesPart);
 			}
 

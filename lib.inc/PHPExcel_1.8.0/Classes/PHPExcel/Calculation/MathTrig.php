@@ -97,12 +97,12 @@ class PHPExcel_Calculation_MathTrig {
 	 * @param	float	$yCoordinate		The y-coordinate of the point.
 	 * @return	float	The inverse tangent of the specified x- and y-coordinates.
 	 */
-	public static function ATAN2($xCoordinate = NULL, $yCoordinate = NULL) {
+	public static function ATAN2($xCoordinate = null, $yCoordinate = null) {
 		$xCoordinate	= PHPExcel_Calculation_Functions::flattenSingleValue($xCoordinate);
 		$yCoordinate	= PHPExcel_Calculation_Functions::flattenSingleValue($yCoordinate);
 
-		$xCoordinate	= ($xCoordinate !== NULL)	? $xCoordinate : 0.0;
-		$yCoordinate	= ($yCoordinate !== NULL)	? $yCoordinate : 0.0;
+		$xCoordinate	= ($xCoordinate !== null)	? $xCoordinate : 0.0;
+		$yCoordinate	= ($yCoordinate !== null)	? $yCoordinate : 0.0;
 
 		if (((is_numeric($xCoordinate)) || (is_bool($xCoordinate))) &&
 			((is_numeric($yCoordinate)))  || (is_bool($yCoordinate))) {
@@ -136,7 +136,7 @@ class PHPExcel_Calculation_MathTrig {
 	 * @param	float	$significance	The multiple to which you want to round.
 	 * @return	float	Rounded Number
 	 */
-	public static function CEILING($number, $significance = NULL) {
+	public static function CEILING($number, $significance = null) {
 		$number			= PHPExcel_Calculation_Functions::flattenSingleValue($number);
 		$significance	= PHPExcel_Calculation_Functions::flattenSingleValue($significance);
 
@@ -307,7 +307,7 @@ class PHPExcel_Calculation_MathTrig {
 	 * @param	float	$significance	Significance
 	 * @return	float	Rounded Number
 	 */
-	public static function FLOOR($number, $significance = NULL) {
+	public static function FLOOR($number, $significance = null) {
 		$number			= PHPExcel_Calculation_Functions::flattenSingleValue($number);
 		$significance	= PHPExcel_Calculation_Functions::flattenSingleValue($significance);
 
@@ -499,7 +499,7 @@ class PHPExcel_Calculation_MathTrig {
 	 * @param	float	$base		The base of the logarithm. If base is omitted, it is assumed to be 10.
 	 * @return	float
 	 */
-	public static function LOG_BASE($number = NULL, $base = 10) {
+	public static function LOG_BASE($number = null, $base = 10) {
 		$number	= PHPExcel_Calculation_Functions::flattenSingleValue($number);
 		$base	= (is_null($base)) ? 10 : (float) PHPExcel_Calculation_Functions::flattenSingleValue($base);
 

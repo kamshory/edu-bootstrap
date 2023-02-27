@@ -42,7 +42,7 @@ abstract class PHPExcel_Reader_Abstract implements PHPExcel_Reader_IReader
 	 *
 	 * @var	boolean
 	 */
-	protected $_readDataOnly = FALSE;
+	protected $_readDataOnly = false;
 
 	/**
 	 * Read charts that are defined in the workbook?
@@ -50,7 +50,7 @@ abstract class PHPExcel_Reader_Abstract implements PHPExcel_Reader_IReader
 	 *
 	 * @var	boolean
 	 */
-	protected $_includeCharts = FALSE;
+	protected $_includeCharts = false;
 
 	/**
 	 * Restrict which sheets should be loaded?
@@ -58,16 +58,16 @@ abstract class PHPExcel_Reader_Abstract implements PHPExcel_Reader_IReader
 	 *
 	 * @var array of string
 	 */
-	protected $_loadSheetsOnly = NULL;
+	protected $_loadSheetsOnly = null;
 
 	/**
 	 * PHPExcel_Reader_IReadFilter instance
 	 *
 	 * @var PHPExcel_Reader_IReadFilter
 	 */
-	protected $_readFilter = NULL;
+	protected $_readFilter = null;
 
-	protected $_fileHandle = NULL;
+	protected $_fileHandle = null;
 
 
 	/**
@@ -90,7 +90,7 @@ abstract class PHPExcel_Reader_Abstract implements PHPExcel_Reader_IReader
 	 *
 	 * @return	PHPExcel_Reader_IReader
 	 */
-	public function setReadDataOnly($pValue = FALSE) {
+	public function setReadDataOnly($pValue = false) {
 		$this->_readDataOnly = $pValue;
 		return $this;
 	}
@@ -117,7 +117,7 @@ abstract class PHPExcel_Reader_Abstract implements PHPExcel_Reader_IReader
 	 *
 	 * @return	PHPExcel_Reader_IReader
 	 */
-	public function setIncludeCharts($pValue = FALSE) {
+	public function setIncludeCharts($pValue = false) {
 		$this->_includeCharts = (boolean) $pValue;
 		return $this;
 	}
@@ -139,11 +139,11 @@ abstract class PHPExcel_Reader_Abstract implements PHPExcel_Reader_IReader
 	 *
 	 * @param mixed $value
 	 *		This should be either an array of worksheet names to be loaded, or a string containing a single worksheet name.
-	 *		If NULL, then it tells the Reader to read all worksheets in the workbook
+	 *		If null, then it tells the Reader to read all worksheets in the workbook
 	 *
 	 * @return PHPExcel_Reader_IReader
 	 */
-	public function setLoadSheetsOnly($value = NULL)
+	public function setLoadSheetsOnly($value = null)
 	{
 		$this->_loadSheetsOnly = is_array($value) ?
 			$value : array($value);
@@ -158,7 +158,7 @@ abstract class PHPExcel_Reader_Abstract implements PHPExcel_Reader_IReader
 	 */
 	public function setLoadAllSheets()
 	{
-		$this->_loadSheetsOnly = NULL;
+		$this->_loadSheetsOnly = null;
 		return $this;
 	}
 
@@ -198,7 +198,7 @@ abstract class PHPExcel_Reader_Abstract implements PHPExcel_Reader_IReader
 
 		// Open file
 		$this->_fileHandle = fopen($pFilename, 'r');
-		if ($this->_fileHandle === FALSE) {
+		if ($this->_fileHandle === false) {
 			throw new PHPExcel_Reader_Exception("Could not open file " . $pFilename . " for reading.");
 		}
 	}
@@ -216,7 +216,7 @@ abstract class PHPExcel_Reader_Abstract implements PHPExcel_Reader_IReader
 		try {
 			$this->_openFile($pFilename);
 		} catch (Exception $e) {
-			return FALSE;
+			return false;
 		}
 
 		$readable = $this->_isValidFormat();

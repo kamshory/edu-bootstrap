@@ -48,7 +48,7 @@ class PHPExcel_Cell
 	 *
 	 *	@var	PHPExcel_Cell_IValueBinder
 	 */
-	private static $_valueBinder = NULL;
+	private static $_valueBinder = null;
 
 	/**
 	 *	Value of the cell
@@ -67,7 +67,7 @@ class PHPExcel_Cell
 	 *
 	 *	@var mixed
 	 */
-	private $_calculatedValue = NULL;
+	private $_calculatedValue = null;
 
 	/**
 	 *	Type of the cell data
@@ -109,7 +109,7 @@ class PHPExcel_Cell
 	}
 
 	public function detach() {
-		$this->_parent = NULL;
+		$this->_parent = null;
 	}
 
 	public function attach(PHPExcel_CachedObjectStorage_CacheBase $parent) {
@@ -127,7 +127,7 @@ class PHPExcel_Cell
 	 *	@param	PHPExcel_Worksheet	$pSheet
 	 *	@throws	PHPExcel_Exception
 	 */
-	public function __construct($pValue = NULL, $pDataType = NULL, PHPExcel_Worksheet $pSheet = NULL)
+	public function __construct($pValue = null, $pDataType = null, PHPExcel_Worksheet $pSheet = null)
 	{
 		// Initialise cell value
 		$this->_value = $pValue;
@@ -136,7 +136,7 @@ class PHPExcel_Cell
 		$this->_parent = $pSheet->getCellCacheController();
 
 		// Set datatype?
-		if ($pDataType !== NULL) {
+		if ($pDataType !== null) {
 			if ($pDataType == PHPExcel_Cell_DataType::TYPE_STRING2)
 				$pDataType = PHPExcel_Cell_DataType::TYPE_STRING;
 			$this->_dataType = $pDataType;
@@ -213,7 +213,7 @@ class PHPExcel_Cell
 	 *	@return	PHPExcel_Cell
 	 *	@throws	PHPExcel_Exception
 	 */
-	public function setValue($pValue = NULL)
+	public function setValue($pValue = null)
 	{
 		if (!self::getValueBinder()->bindValue($this, $pValue)) {
 			throw new PHPExcel_Exception("Value could not be bound to cell.");
@@ -229,7 +229,7 @@ class PHPExcel_Cell
 	 *	@return	PHPExcel_Cell
 	 *	@throws	PHPExcel_Exception
 	 */
-	public function setValueExplicit($pValue = NULL, $pDataType = PHPExcel_Cell_DataType::TYPE_STRING)
+	public function setValueExplicit($pValue = null, $pDataType = PHPExcel_Cell_DataType::TYPE_STRING)
 	{
 		// set the value according to data type
 		switch ($pDataType) {
@@ -274,7 +274,7 @@ class PHPExcel_Cell
 	 *	@return	mixed
 	 *	@throws	PHPExcel_Exception
 	 */
-	public function getCalculatedValue($resetLog = TRUE)
+	public function getCalculatedValue($resetLog = true)
 	{
 //echo 'Cell '.$this->getCoordinate().' value is a '.$this->_dataType.' with a value of '.$this->getValue().PHP_EOL;
 		if ($this->_dataType == PHPExcel_Cell_DataType::TYPE_FORMULA) {
@@ -291,7 +291,7 @@ class PHPExcel_Cell
 					}
 				}
 			} catch ( PHPExcel_Exception $ex ) {
-				if (($ex->getMessage() === 'Unable to access External Workbook') && ($this->_calculatedValue !== NULL)) {
+				if (($ex->getMessage() === 'Unable to access External Workbook') && ($this->_calculatedValue !== null)) {
 //echo 'Returning fallback value of '.$this->_calculatedValue.' for cell '.$this->getCoordinate().PHP_EOL;
 					return $this->_calculatedValue; // Fallback for calculations referencing external files.
 				}
@@ -322,9 +322,9 @@ class PHPExcel_Cell
 	 *	@param	mixed $pValue	Value
 	 *	@return	PHPExcel_Cell
 	 */
-	public function setCalculatedValue($pValue = NULL)
+	public function setCalculatedValue($pValue = null)
 	{
-		if ($pValue !== NULL) {
+		if ($pValue !== null) {
 			$this->_calculatedValue = (is_numeric($pValue)) ? (float) $pValue : $pValue;
 		}
 
@@ -419,7 +419,7 @@ class PHPExcel_Cell
 	 *	@return	PHPExcel_Cell
 	 *	@throws	PHPExcel_Exception
 	 */
-	public function setDataValidation(PHPExcel_Cell_DataValidation $pDataValidation = NULL)
+	public function setDataValidation(PHPExcel_Cell_DataValidation $pDataValidation = null)
 	{
 		if (!isset($this->_parent)) {
 			throw new PHPExcel_Exception('Cannot set data validation for cell that is not bound to a worksheet');
@@ -467,7 +467,7 @@ class PHPExcel_Cell
 	 *	@return	PHPExcel_Cell
 	 *	@throws	PHPExcel_Exception
 	 */
-	public function setHyperlink(PHPExcel_Cell_Hyperlink $pHyperlink = NULL)
+	public function setHyperlink(PHPExcel_Cell_Hyperlink $pHyperlink = null)
 	{
 		if (!isset($this->_parent)) {
 			throw new PHPExcel_Exception('Cannot set hyperlink for cell that is not bound to a worksheet');
@@ -549,7 +549,7 @@ class PHPExcel_Cell
 	{
 		if (preg_match("/^([$]?[A-Z]{1,3})([$]?\d{1,7})$/", $pCoordinateString, $matches)) {
 			return array($matches[1],$matches[2]);
-		} elseif ((strpos($pCoordinateString,':') !== FALSE) || (strpos($pCoordinateString,',') !== FALSE)) {
+		} elseif ((strpos($pCoordinateString,':') !== false) || (strpos($pCoordinateString,',') !== false)) {
 			throw new PHPExcel_Exception('Cell coordinate string can not be a range of cells');
 		} elseif ($pCoordinateString == '') {
 			throw new PHPExcel_Exception('Cell coordinate can not be zero-length string');
@@ -568,7 +568,7 @@ class PHPExcel_Cell
 	 */
 	public static function absoluteReference($pCoordinateString = 'A1')
 	{
-		if (strpos($pCoordinateString,':') === FALSE && strpos($pCoordinateString,',') === FALSE) {
+		if (strpos($pCoordinateString,':') === false && strpos($pCoordinateString,',') === false) {
 			// Split out any worksheet name from the reference
 			$worksheet = '';
 			$cellAddress = explode('!',$pCoordinateString);
@@ -598,7 +598,7 @@ class PHPExcel_Cell
 	 */
 	public static function absoluteCoordinate($pCoordinateString = 'A1')
 	{
-		if (strpos($pCoordinateString,':') === FALSE && strpos($pCoordinateString,',') === FALSE) {
+		if (strpos($pCoordinateString,':') === false && strpos($pCoordinateString,',') === false) {
 			// Split out any worksheet name from the coordinate
 			$worksheet = '';
 			$cellAddress = explode('!',$pCoordinateString);
@@ -683,7 +683,7 @@ class PHPExcel_Cell
 		$pRange = strtoupper($pRange);
 
 		// Extract range
-		if (strpos($pRange, ':') === FALSE) {
+		if (strpos($pRange, ':') === false) {
 			$rangeA = $rangeB = $pRange;
 		} else {
 			list($rangeA, $rangeB) = explode(':', $pRange);
@@ -732,7 +732,7 @@ class PHPExcel_Cell
 		$pRange = strtoupper($pRange);
 
 		// Extract range
-		if (strpos($pRange, ':') === FALSE) {
+		if (strpos($pRange, ':') === false) {
 			$rangeA = $rangeB = $pRange;
 		} else {
 			list($rangeA, $rangeB) = explode(':', $pRange);
@@ -827,7 +827,7 @@ class PHPExcel_Cell
 		$cellBlocks = explode(' ', str_replace('$', '', strtoupper($pRange)));
 		foreach ($cellBlocks as $cellBlock) {
 			// Single cell?
-			if (strpos($cellBlock,':') === FALSE && strpos($cellBlock,',') === FALSE) {
+			if (strpos($cellBlock,':') === false && strpos($cellBlock,',') === false) {
 				$returnValue[] = $cellBlock;
 				continue;
 			}
@@ -901,7 +901,7 @@ class PHPExcel_Cell
 	 * @return PHPExcel_Cell_IValueBinder
 	 */
 	public static function getValueBinder() {
-		if (self::$_valueBinder === NULL) {
+		if (self::$_valueBinder === null) {
 			self::$_valueBinder = new PHPExcel_Cell_DefaultValueBinder();
 		}
 
@@ -914,8 +914,8 @@ class PHPExcel_Cell
 	 * @param PHPExcel_Cell_IValueBinder $binder
 	 * @throws PHPExcel_Exception
 	 */
-	public static function setValueBinder(PHPExcel_Cell_IValueBinder $binder = NULL) {
-		if ($binder === NULL) {
+	public static function setValueBinder(PHPExcel_Cell_IValueBinder $binder = null) {
+		if ($binder === null) {
 			throw new PHPExcel_Exception("A PHPExcel_Cell_IValueBinder is required for PHPExcel to function correctly.");
 		}
 

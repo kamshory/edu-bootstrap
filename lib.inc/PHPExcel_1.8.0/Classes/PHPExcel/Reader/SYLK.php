@@ -92,16 +92,16 @@ class PHPExcel_Reader_SYLK extends PHPExcel_Reader_Abstract implements PHPExcel_
 		// Count delimiters in file
 		$delimiterCount = substr_count($data, ';');
 		if ($delimiterCount < 1) {
-			return FALSE;
+			return false;
 		}
 
 		// Analyze first line looking for ID; signature
 		$lines = explode("\n", $data);
 		if (substr($lines[0],0,4) != 'ID;P') {
-			return FALSE;
+			return false;
 		}
 
-		return TRUE;
+		return true;
 	}
 
 	/**
@@ -154,7 +154,7 @@ class PHPExcel_Reader_SYLK extends PHPExcel_Reader_Abstract implements PHPExcel_
 
 		// loop through one row (line) at a time in the file
 		$rowIndex = 0;
-		while (($rowData = fgets($fileHandle)) !== FALSE) {
+		while (($rowData = fgets($fileHandle)) !== false) {
 			$columnIndex = 0;
 
 			// convert SYLK encoded $rowData to UTF-8
@@ -243,7 +243,7 @@ class PHPExcel_Reader_SYLK extends PHPExcel_Reader_Abstract implements PHPExcel_
 		$column = $row = '';
 
 		// loop through one row (line) at a time in the file
-		while (($rowData = fgets($fileHandle)) !== FALSE) {
+		while (($rowData = fgets($fileHandle)) !== false) {
 
 			// convert SYLK encoded $rowData to UTF-8
 			$rowData = PHPExcel_Shared_String::SYLKtoUTF8($rowData);

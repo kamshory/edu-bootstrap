@@ -64,8 +64,8 @@ class PHPExcel_Reader_Excel2007_Chart
 		$namespacesChartMeta = $chartElements->getNamespaces(true);
 		$chartElementsC = $chartElements->children($namespacesChartMeta['c']);
 
-		$XaxisLabel = $YaxisLabel = $legend = $title = NULL;
-		$dispBlanksAs = $plotVisOnly = NULL;
+		$XaxisLabel = $YaxisLabel = $legend = $title = null;
+		$dispBlanksAs = $plotVisOnly = null;
 
 		foreach($chartElementsC as $chartElementKey => $chartElement) {
 			switch ($chartElementKey) {
@@ -158,7 +158,7 @@ class PHPExcel_Reader_Excel2007_Chart
 												break;
 										}
 									}
-									if ($plotAreaLayout == NULL) {
+									if ($plotAreaLayout == null) {
 										$plotAreaLayout = new PHPExcel_Chart_Layout();
 									}
 									$plotArea = new PHPExcel_Chart_PlotArea($plotAreaLayout,$plotSeries);
@@ -245,7 +245,7 @@ class PHPExcel_Reader_Excel2007_Chart
 
 
 	private static function _chartDataSeries($chartDetail,$namespacesChartMeta,$plotType) {
-		$multiSeriesType = NULL;
+		$multiSeriesType = null;
 		$smoothLine = false;
 		$seriesLabel = $seriesCategory = $seriesValues = $plotOrder = array();
 
@@ -256,7 +256,7 @@ class PHPExcel_Reader_Excel2007_Chart
 					$multiSeriesType = self::_getAttribute($chartDetail->grouping, 'val', 'string');
 					break;
 				case "ser":
-					$marker = NULL;
+					$marker = null;
 					foreach($seriesDetails as $seriesKey => $seriesDetail) {
 						switch ($seriesKey) {
 							case "idx":
@@ -348,7 +348,7 @@ class PHPExcel_Reader_Excel2007_Chart
 		}
 
 		if (empty($seriesVal)) {
-			$seriesVal = NULL;
+			$seriesVal = null;
 		}
 
 		return array( 'formatCode'	=> $formatCode,

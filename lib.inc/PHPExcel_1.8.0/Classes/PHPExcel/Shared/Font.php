@@ -197,12 +197,12 @@ class PHPExcel_Shared_Font
 	public static function setAutoSizeMethod($pValue = self::AUTOSIZE_METHOD_APPROX)
 	{
 		if (!in_array($pValue,self::$_autoSizeMethods)) {
-			return FALSE;
+			return false;
 		}
 
 		self::$autoSizeMethod = $pValue;
 
-		return TRUE;
+		return true;
 	}
 
 	/**

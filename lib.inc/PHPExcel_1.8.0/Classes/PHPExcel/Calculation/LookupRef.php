@@ -295,14 +295,14 @@ class PHPExcel_Calculation_LookupRef {
 	 * @todo	Support for the optional a1 parameter introduced in Excel 2010
 	 *
 	 */
-	public static function INDIRECT($cellAddress = NULL, PHPExcel_Cell $pCell = NULL) {
+	public static function INDIRECT($cellAddress = null, PHPExcel_Cell $pCell = null) {
 		$cellAddress	= PHPExcel_Calculation_Functions::flattenSingleValue($cellAddress);
 		if (is_null($cellAddress) || $cellAddress === '') {
 			return PHPExcel_Calculation_Functions::REF();
 		}
 
 		$cellAddress1 = $cellAddress;
-		$cellAddress2 = NULL;
+		$cellAddress2 = null;
 		if (strpos($cellAddress,':') !== false) {
 			list($cellAddress1,$cellAddress2) = explode(':',$cellAddress);
 		}
@@ -313,7 +313,7 @@ class PHPExcel_Calculation_LookupRef {
 				return PHPExcel_Calculation_Functions::REF();
 			}
 
-			if (strpos($cellAddress,'!') !== FALSE) {
+			if (strpos($cellAddress,'!') !== false) {
 				list($sheetName, $cellAddress) = explode('!',$cellAddress);
 				$sheetName = trim($sheetName, "'");
 				$pSheet = $pCell->getWorksheet()->getParent()->getSheetByName($sheetName);
@@ -321,10 +321,10 @@ class PHPExcel_Calculation_LookupRef {
 				$pSheet = $pCell->getWorksheet();
 			}
 
-			return PHPExcel_Calculation::getInstance()->extractNamedRange($cellAddress, $pSheet, FALSE);
+			return PHPExcel_Calculation::getInstance()->extractNamedRange($cellAddress, $pSheet, false);
 		}
 
-		if (strpos($cellAddress,'!') !== FALSE) {
+		if (strpos($cellAddress,'!') !== false) {
 			list($sheetName,$cellAddress) = explode('!',$cellAddress);
 			$sheetName = trim($sheetName, "'");
 			$pSheet = $pCell->getWorksheet()->getParent()->getSheetByName($sheetName);
@@ -332,7 +332,7 @@ class PHPExcel_Calculation_LookupRef {
 			$pSheet = $pCell->getWorksheet();
 		}
 
-		return PHPExcel_Calculation::getInstance()->extractCellRange($cellAddress, $pSheet, FALSE);
+		return PHPExcel_Calculation::getInstance()->extractCellRange($cellAddress, $pSheet, false);
 	}	//	function INDIRECT()
 
 
@@ -376,7 +376,7 @@ class PHPExcel_Calculation_LookupRef {
 			return PHPExcel_Calculation_Functions::REF();
 		}
 
-		$sheetName = NULL;
+		$sheetName = null;
 		if (strpos($cellAddress,"!")) {
 			list($sheetName,$cellAddress) = explode("!",$cellAddress);
 			$sheetName = trim($sheetName, "'");
@@ -420,7 +420,7 @@ class PHPExcel_Calculation_LookupRef {
 			$cellAddress .= ':'.$endCellColumn.$endCellRow;
 		}
 
-		if ($sheetName !== NULL) {
+		if ($sheetName !== null) {
 			$pSheet = $pCell->getWorksheet()->getParent()->getSheetByName($sheetName);
 		} else {
 			$pSheet = $pCell->getWorksheet();

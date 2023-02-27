@@ -135,13 +135,13 @@ class PHPExcel_CachedObjectStorage_SQLite3 extends PHPExcel_CachedObjectStorage_
 
 		$this->_selectQuery->bindValue('id',$pCoord,SQLITE3_TEXT);
 		$cellResult = $this->_selectQuery->execute();
-		if ($cellResult === FALSE) {
+		if ($cellResult === false) {
 			throw new PHPExcel_Exception($this->_DBHandle->lastErrorMsg());
 		}
 		$cellData = $cellResult->fetchArray(SQLITE3_ASSOC);
-		if ($cellData === FALSE) {
+		if ($cellData === false) {
 			//	Return null if requested entry doesn't exist in cache
-			return NULL;
+			return null;
 		}
 
 		//	Set current entry to the requested entry
@@ -170,12 +170,12 @@ class PHPExcel_CachedObjectStorage_SQLite3 extends PHPExcel_CachedObjectStorage_
 		//	Check if the requested entry exists in the cache
 		$this->_selectQuery->bindValue('id',$pCoord,SQLITE3_TEXT);
 		$cellResult = $this->_selectQuery->execute();
-		if ($cellResult === FALSE) {
+		if ($cellResult === false) {
 			throw new PHPExcel_Exception($this->_DBHandle->lastErrorMsg());
 		}
 		$cellData = $cellResult->fetchArray(SQLITE3_ASSOC);
 
-		return ($cellData === FALSE) ? FALSE : true;
+		return ($cellData === false) ? false : true;
 	}	//	function isDataSet()
 
 
@@ -188,16 +188,16 @@ class PHPExcel_CachedObjectStorage_SQLite3 extends PHPExcel_CachedObjectStorage_
 	public function deleteCacheData($pCoord) {
 		if ($pCoord === $this->_currentObjectID) {
 			$this->_currentObject->detach();
-			$this->_currentObjectID = $this->_currentObject = NULL;
+			$this->_currentObjectID = $this->_currentObject = null;
 		}
 
 		//	Check if the requested entry exists in the cache
 		$this->_deleteQuery->bindValue('id',$pCoord,SQLITE3_TEXT);
 		$result = $this->_deleteQuery->execute();
-		if ($result === FALSE)
+		if ($result === false)
 			throw new PHPExcel_Exception($this->_DBHandle->lastErrorMsg());
 
-		$this->_currentCellIsDirty = FALSE;
+		$this->_currentCellIsDirty = false;
 	}	//	function deleteCacheData()
 
 
@@ -335,7 +335,7 @@ class PHPExcel_CachedObjectStorage_SQLite3 extends PHPExcel_CachedObjectStorage_
 	 * @return	boolean
 	 */
 	public static function cacheMethodIsAvailable() {
-		if (!class_exists('SQLite3',FALSE)) {
+		if (!class_exists('SQLite3',false)) {
 			return false;
 		}
 

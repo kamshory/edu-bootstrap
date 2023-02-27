@@ -77,7 +77,7 @@ class PHPExcel_Reader_OOCalc extends PHPExcel_Reader_Abstract implements PHPExce
         $zipClass = PHPExcel_Settings::getZipClass();
 
 		// Check if zip class exists
-//		if (!class_exists($zipClass, FALSE)) {
+//		if (!class_exists($zipClass, false)) {
 //			throw new PHPExcel_Reader_Exception($zipClass . " library is not enabled");
 //		}
 
@@ -109,7 +109,7 @@ class PHPExcel_Reader_OOCalc extends PHPExcel_Reader_Abstract implements PHPExce
 			return ($mimeType === 'application/vnd.oasis.opendocument.spreadsheet');
 		}
 
-		return FALSE;
+		return false;
 	}
 
 
@@ -480,7 +480,7 @@ class PHPExcel_Reader_OOCalc extends PHPExcel_Reader_Abstract implements PHPExce
 									$rowDataTableAttributes['number-rows-repeated'] : 1;
 							$columnID = 'A';
 							foreach($rowData as $key => $cellData) {
-								if ($this->getReadFilter() !== NULL) {
+								if ($this->getReadFilter() !== null) {
 									if (!$this->getReadFilter()->readCell($columnID, $rowID, $worksheetName)) {
 										continue;
 									}
@@ -607,12 +607,12 @@ class PHPExcel_Reader_OOCalc extends PHPExcel_Reader_Abstract implements PHPExce
 												break;
 									}
 //									echo 'Data value is '.$dataValue.'<br />';
-//									if ($hyperlink !== NULL) {
+//									if ($hyperlink !== null) {
 //										echo 'Hyperlink is '.$hyperlink.'<br />';
 //									}
 								} else {
 									$type = PHPExcel_Cell_DataType::TYPE_NULL;
-									$dataValue = NULL;
+									$dataValue = null;
 								}
 
 								if ($hasCalculatedValue) {
@@ -639,7 +639,7 @@ class PHPExcel_Reader_OOCalc extends PHPExcel_Reader_Abstract implements PHPExce
 
 								$colRepeats = (isset($cellDataTableAttributes['number-columns-repeated'])) ?
 									$cellDataTableAttributes['number-columns-repeated'] : 1;
-								if ($type !== NULL) {
+								if ($type !== null) {
 									for ($i = 0; $i < $colRepeats; ++$i) {
 										if ($i > 0) {
 											++$columnID;
@@ -652,12 +652,12 @@ class PHPExcel_Reader_OOCalc extends PHPExcel_Reader_Abstract implements PHPExce
 //													echo 'Forumla result is '.$dataValue.'<br />';
 													$objPHPExcel->getActiveSheet()->getCell($columnID.$rID)->setCalculatedValue($dataValue);
 												}
-												if ($formatting !== NULL) {
+												if ($formatting !== null) {
 													$objPHPExcel->getActiveSheet()->getStyle($columnID.$rID)->getNumberFormat()->setFormatCode($formatting);
 												} else {
 													$objPHPExcel->getActiveSheet()->getStyle($columnID.$rID)->getNumberFormat()->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_GENERAL);
 												}
-												if ($hyperlink !== NULL) {
+												if ($hyperlink !== null) {
 													$objPHPExcel->getActiveSheet()->getCell($columnID.$rID)->getHyperlink()->setUrl($hyperlink);
 												}
 											}

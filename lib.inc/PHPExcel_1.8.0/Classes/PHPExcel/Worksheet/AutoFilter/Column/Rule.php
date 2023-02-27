@@ -234,7 +234,7 @@ class PHPExcel_Worksheet_AutoFilter_Column_Rule
 	 *
 	 * @var PHPExcel_Worksheet_AutoFilter_Column
 	 */
-	private $_parent = NULL;
+	private $_parent = null;
 
 
 	/**
@@ -272,7 +272,7 @@ class PHPExcel_Worksheet_AutoFilter_Column_Rule
 	 *
 	 * @param PHPExcel_Worksheet_AutoFilter_Column $pParent
 	 */
-	public function __construct(PHPExcel_Worksheet_AutoFilter_Column $pParent = NULL)
+	public function __construct(PHPExcel_Worksheet_AutoFilter_Column $pParent = null)
 	{
 		$this->_parent = $pParent;
 	}
@@ -387,8 +387,8 @@ class PHPExcel_Worksheet_AutoFilter_Column_Rule
 	 *	@throws	PHPExcel_Exception
 	 *	@return PHPExcel_Worksheet_AutoFilter_Column_Rule
 	 */
-	public function setGrouping($pGrouping = NULL) {
-		if (($pGrouping !== NULL) &&
+	public function setGrouping($pGrouping = null) {
+		if (($pGrouping !== null) &&
 			(!in_array($pGrouping,self::$_dateTimeGroups)) &&
 			(!in_array($pGrouping,self::$_dynamicTypes)) &&
 			(!in_array($pGrouping,self::$_topTenType))) {
@@ -409,13 +409,13 @@ class PHPExcel_Worksheet_AutoFilter_Column_Rule
 	 *	@throws	PHPExcel_Exception
 	 *	@return PHPExcel_Worksheet_AutoFilter_Column_Rule
 	 */
-	public function setRule($pOperator = self::AUTOFILTER_COLUMN_RULE_EQUAL, $pValue = '', $pGrouping = NULL) {
+	public function setRule($pOperator = self::AUTOFILTER_COLUMN_RULE_EQUAL, $pValue = '', $pGrouping = null) {
 		$this->setOperator($pOperator);
 		$this->setValue($pValue);
 		//	Only set grouping if it's been passed in as a user-supplied argument,
 		//		otherwise we're calculating it when we setValue() and don't want to overwrite that
 		//		If the user supplies an argumnet for grouping, then on their own head be it
-		if ($pGrouping !== NULL)
+		if ($pGrouping !== null)
 			$this->setGrouping($pGrouping);
 
 		return $this;
@@ -436,7 +436,7 @@ class PHPExcel_Worksheet_AutoFilter_Column_Rule
 	 * @param PHPExcel_Worksheet_AutoFilter_Column
 	 * @return PHPExcel_Worksheet_AutoFilter_Column_Rule
 	 */
-	public function setParent(PHPExcel_Worksheet_AutoFilter_Column $pParent = NULL) {
+	public function setParent(PHPExcel_Worksheet_AutoFilter_Column $pParent = null) {
 		$this->_parent = $pParent;
 
 		return $this;
@@ -451,7 +451,7 @@ class PHPExcel_Worksheet_AutoFilter_Column_Rule
 			if (is_object($value)) {
 				if ($key == '_parent') {
 					//	Detach from autofilter column parent
-					$this->$key = NULL;
+					$this->$key = null;
 				} else {
 					$this->$key = clone $value;
 				}

@@ -34,7 +34,7 @@ class PHPExcel_Shared_OLE_PPS_Root extends PHPExcel_Shared_OLE_PPS
 	 * Directory for temporary files
 	 * @var string
 	 */
-	protected $_tmp_dir		= NULL;
+	protected $_tmp_dir		= null;
 
 	/**
 	 * @param integer $time_1st A timestamp
@@ -79,7 +79,7 @@ class PHPExcel_Shared_OLE_PPS_Root extends PHPExcel_Shared_OLE_PPS
 		if (is_resource($filename)) {
 		    $this->_FILEH_ = $filename;
 		} else if ($filename == '-' || $filename == '') {
-			if ($this->_tmp_dir === NULL)
+			if ($this->_tmp_dir === null)
 				$this->_tmp_dir = PHPExcel_Shared_File::sys_get_temp_dir();
 			$this->_tmp_filename = tempnam($this->_tmp_dir, "OLE_PPS_Root");
 			$this->_FILEH_ = fopen($this->_tmp_filename,"w+b");

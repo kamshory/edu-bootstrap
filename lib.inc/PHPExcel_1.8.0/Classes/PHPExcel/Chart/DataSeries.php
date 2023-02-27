@@ -342,23 +342,23 @@ class PHPExcel_Chart_DataSeries
 	 * @param boolean $smoothLine
      * @return PHPExcel_Chart_DataSeries
 	 */
-	public function setSmoothLine($smoothLine = TRUE) {
+	public function setSmoothLine($smoothLine = true) {
 		$this->_smoothLine = $smoothLine;
         return $this;
 	}
 
 	public function refresh(PHPExcel_Worksheet $worksheet) {
 	    foreach($this->_plotValues as $plotValues) {
-			if ($plotValues !== NULL)
-				$plotValues->refresh($worksheet, TRUE);
+			if ($plotValues !== null)
+				$plotValues->refresh($worksheet, true);
 		}
 		foreach($this->_plotLabel as $plotValues) {
-			if ($plotValues !== NULL)
-				$plotValues->refresh($worksheet, TRUE);
+			if ($plotValues !== null)
+				$plotValues->refresh($worksheet, true);
 		}
 		foreach($this->_plotCategory as $plotValues) {
-			if ($plotValues !== NULL)
-				$plotValues->refresh($worksheet, FALSE);
+			if ($plotValues !== null)
+				$plotValues->refresh($worksheet, false);
 		}
 	}
 

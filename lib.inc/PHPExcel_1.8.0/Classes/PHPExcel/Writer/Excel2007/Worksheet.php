@@ -44,7 +44,7 @@ class PHPExcel_Writer_Excel2007_Worksheet extends PHPExcel_Writer_Excel2007_Writ
 	 * @return	string					XML Output
 	 * @throws	PHPExcel_Writer_Exception
 	 */
-	public function writeWorksheet($pSheet = null, $pStringTable = null, $includeCharts = FALSE)
+	public function writeWorksheet($pSheet = null, $pStringTable = null, $includeCharts = false)
 	{
 		if (!is_null($pSheet)) {
 			// Create XML writer
@@ -205,7 +205,7 @@ class PHPExcel_Writer_Excel2007_Worksheet extends PHPExcel_Writer_Excel2007_Writ
 	 * @param	PHPExcel_Worksheet					$pSheet			Worksheet
 	 * @throws	PHPExcel_Writer_Exception
 	 */
-	private function _writeSheetViews(PHPExcel_Shared_XMLWriter $objWriter = NULL, PHPExcel_Worksheet $pSheet = NULL)
+	private function _writeSheetViews(PHPExcel_Shared_XMLWriter $objWriter = null, PHPExcel_Worksheet $pSheet = null)
 	{
 		// sheetViews
 		$objWriter->startElement('sheetViews');
@@ -787,11 +787,11 @@ class PHPExcel_Writer_Excel2007_Worksheet extends PHPExcel_Writer_Excel2007_Writ
 										//	Dynamic Filter Rule
 										$objWriter->writeAttribute('type', $rule->getGrouping());
 										$val = $column->getAttribute('val');
-										if ($val !== NULL) {
+										if ($val !== null) {
 											$objWriter->writeAttribute('val', $val);
 										}
 										$maxVal = $column->getAttribute('maxVal');
-										if ($maxVal !== NULL) {
+										if ($maxVal !== null) {
 											$objWriter->writeAttribute('maxVal', $maxVal);
 										}
 									} elseif($rule->getRuleType() === PHPExcel_Worksheet_AutoFilter_Column_Rule::AUTOFILTER_RULETYPE_TOPTENFILTER) {
@@ -1172,7 +1172,7 @@ class PHPExcel_Writer_Excel2007_Worksheet extends PHPExcel_Writer_Excel2007_Writ
 	 * @param	boolean						$includeCharts	Flag indicating if we should include drawing details for charts
 	 * @throws	PHPExcel_Writer_Exception
 	 */
-	private function _writeDrawings(PHPExcel_Shared_XMLWriter $objWriter = null, PHPExcel_Worksheet $pSheet = null, $includeCharts = FALSE)
+	private function _writeDrawings(PHPExcel_Shared_XMLWriter $objWriter = null, PHPExcel_Worksheet $pSheet = null, $includeCharts = false)
 	{
 		$chartCount = ($includeCharts) ? $pSheet->getChartCollection()->count() : 0;
 		// If sheet contains drawings, add the relationships

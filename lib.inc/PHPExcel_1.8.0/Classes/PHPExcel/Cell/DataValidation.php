@@ -162,10 +162,10 @@ class PHPExcel_Cell_DataValidation
         $this->_type              = PHPExcel_Cell_DataValidation::TYPE_NONE;
         $this->_errorStyle        = PHPExcel_Cell_DataValidation::STYLE_STOP;
         $this->_operator          = '';
-        $this->_allowBlank        = FALSE;
-        $this->_showDropDown      = FALSE;
-        $this->_showInputMessage  = FALSE;
-        $this->_showErrorMessage  = FALSE;
+        $this->_allowBlank        = false;
+        $this->_showDropDown      = false;
+        $this->_showInputMessage  = false;
+        $this->_showErrorMessage  = false;
         $this->_errorTitle        = '';
         $this->_error             = '';
         $this->_promptTitle       = '';

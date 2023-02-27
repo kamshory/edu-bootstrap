@@ -128,7 +128,7 @@ class PHPExcel_Style_Borders extends PHPExcel_Style_Supervisor implements PHPExc
 	 *									Leave this value at default unless you understand exactly what
 	 *										its ramifications are
      */
-    public function __construct($isSupervisor = FALSE, $isConditional = FALSE)
+    public function __construct($isSupervisor = false, $isConditional = false)
     {
     	// Supervisor?
 		parent::__construct($isSupervisor);
@@ -144,11 +144,11 @@ class PHPExcel_Style_Borders extends PHPExcel_Style_Supervisor implements PHPExc
 		// Specially for supervisor
 		if ($isSupervisor) {
 			// Initialize pseudo-borders
-			$this->_allBorders			= new PHPExcel_Style_Border(TRUE);
-			$this->_outline				= new PHPExcel_Style_Border(TRUE);
-			$this->_inside				= new PHPExcel_Style_Border(TRUE);
-			$this->_vertical			= new PHPExcel_Style_Border(TRUE);
-			$this->_horizontal			= new PHPExcel_Style_Border(TRUE);
+			$this->_allBorders			= new PHPExcel_Style_Border(true);
+			$this->_outline				= new PHPExcel_Style_Border(true);
+			$this->_inside				= new PHPExcel_Style_Border(true);
+			$this->_vertical			= new PHPExcel_Style_Border(true);
+			$this->_horizontal			= new PHPExcel_Style_Border(true);
 
 			// bind parent if we are a supervisor
 			$this->_left->bindParent($this, '_left');

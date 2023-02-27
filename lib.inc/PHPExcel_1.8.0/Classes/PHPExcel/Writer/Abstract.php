@@ -41,7 +41,7 @@ abstract class PHPExcel_Writer_Abstract implements PHPExcel_Writer_IWriter
 	 *
 	 * @var	boolean
 	 */
-	protected $_includeCharts = FALSE;
+	protected $_includeCharts = false;
 
 	/**
 	 * Pre-calculate formulas
@@ -50,14 +50,14 @@ abstract class PHPExcel_Writer_Abstract implements PHPExcel_Writer_IWriter
 	 *
 	 * @var boolean
 	 */
-	protected $_preCalculateFormulas = TRUE;
+	protected $_preCalculateFormulas = true;
 
 	/**
 	 * Use disk caching where possible?
 	 *
 	 * @var boolean
 	 */
-	protected $_useDiskCaching = FALSE;
+	protected $_useDiskCaching = false;
 
 	/**
 	 * Disk caching directory
@@ -85,7 +85,7 @@ abstract class PHPExcel_Writer_Abstract implements PHPExcel_Writer_IWriter
 	 * @param	boolean	$pValue
 	 * @return	PHPExcel_Writer_IWriter
 	 */
-	public function setIncludeCharts($pValue = FALSE) {
+	public function setIncludeCharts($pValue = false) {
 		$this->_includeCharts = (boolean) $pValue;
 		return $this;
 	}
@@ -112,7 +112,7 @@ abstract class PHPExcel_Writer_Abstract implements PHPExcel_Writer_IWriter
      * @param boolean $pValue	Pre-Calculate Formulas?
 	 * @return	PHPExcel_Writer_IWriter
      */
-    public function setPreCalculateFormulas($pValue = TRUE) {
+    public function setPreCalculateFormulas($pValue = true) {
     	$this->_preCalculateFormulas = (boolean) $pValue;
 		return $this;
     }
@@ -134,10 +134,10 @@ abstract class PHPExcel_Writer_Abstract implements PHPExcel_Writer_IWriter
 	 * @throws	PHPExcel_Writer_Exception	when directory does not exist
 	 * @return PHPExcel_Writer_Excel2007
 	 */
-	public function setUseDiskCaching($pValue = FALSE, $pDirectory = NULL) {
+	public function setUseDiskCaching($pValue = false, $pDirectory = null) {
 		$this->_useDiskCaching = $pValue;
 
-		if ($pDirectory !== NULL) {
+		if ($pDirectory !== null) {
     		if (is_dir($pDirectory)) {
     			$this->_diskCachingDirectory = $pDirectory;
     		} else {

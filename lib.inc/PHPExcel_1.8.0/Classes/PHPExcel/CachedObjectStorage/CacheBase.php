@@ -328,7 +328,7 @@ abstract class PHPExcel_CachedObjectStorage_CacheBase {
         $this->_storeData();
 
 		$this->_parent = $parent;
-		if (($this->_currentObject !== NULL) && (is_object($this->_currentObject))) {
+		if (($this->_currentObject !== null) && (is_object($this->_currentObject))) {
 			$this->_currentObject->attach($this);
 		}
 	}	//	function copyCellCollection()

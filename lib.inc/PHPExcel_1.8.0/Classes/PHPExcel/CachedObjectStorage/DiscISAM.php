@@ -40,21 +40,21 @@ class PHPExcel_CachedObjectStorage_DiscISAM extends PHPExcel_CachedObjectStorage
 	 *
 	 * @var string
 	 */
-	private $_fileName = NULL;
+	private $_fileName = null;
 
 	/**
 	 * File handle for this cache file
 	 *
 	 * @var resource
 	 */
-	private $_fileHandle = NULL;
+	private $_fileHandle = null;
 
 	/**
 	 * Directory/Folder where the cache file is located
 	 *
 	 * @var string
 	 */
-	private $_cacheDirectory = NULL;
+	private $_cacheDirectory = null;
 
 
     /**
@@ -192,7 +192,7 @@ class PHPExcel_CachedObjectStorage_DiscISAM extends PHPExcel_CachedObjectStorage
 	 * @param	array of mixed		$arguments	Additional initialisation arguments
 	 */
 	public function __construct(PHPExcel_Worksheet $parent, $arguments) {
-		$this->_cacheDirectory	= ((isset($arguments['dir'])) && ($arguments['dir'] !== NULL))
+		$this->_cacheDirectory	= ((isset($arguments['dir'])) && ($arguments['dir'] !== null))
 									? $arguments['dir']
 									: PHPExcel_Shared_File::sys_get_temp_dir();
 
