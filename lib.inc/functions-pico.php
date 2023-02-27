@@ -129,194 +129,164 @@ function scrap($url)
 
 
 
-	function getDefaultValues($database, $table, $fields)
-	{
-		$sql = "show columns FROM `$table` ";
-		$stmt = $database->executeQuery($sql);
-		$arr = array();
-		$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-		foreach($rows as $data)
-		{
-			if (in_array($data['Field'], $fields)) 
-			{
-				$obj = new \stdClass();
-				$obj->field = $data['Field'];
-				$obj->value = $data['Default'];
-				$arr[] = $obj;
-			}
-		}
-	?>
-		<script type="text/javascript">
-			$(document).ready(function(e) {
-				var defdata = <?php echo json_encode($arr); ?>;
-				var i;
-				for (i in defdata) {
-					var obj = $(':input[name=' + defdata[i]['field'] + ']');
-					var val = defdata[i]['value'];
-					if (obj.attr('type') == 'time' && val.indexOf(':') == -1) {
-						var date = new Date(null);
-						date.setSeconds(val);;
-						obj.val(date.toISOString().substr(11, 8));
-					} else if (obj.attr('type') == 'radio') {
-						$('[name=' + defdata[i]['field'] + '][value=' + val + ']').attr('checked', 'checked');
-					} else if (obj.find('option') > 0) {
-						obj.find('option[value=' + val + ']').attr('selected', 'selected');
-					} else if (obj.attr('type') == 'checkbox' && val != null && val != 0 && val != "0") {
-						$('[name=' + defdata[i]['field'] + ']').attr('checked', 'checked');
-					} else if (obj.attr('type') != 'password' && obj.attr('type') != 'checkbox' && obj.attr('type') != 'radio') {
-						obj.val(defdata[i]['value']);
-					}
-				}
-			});
-		</script>
-	<?php
-	}
-
-	function translateDate($string)
-	{
-		$arr1_en = array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',  'September', 'October', 'November', 'December');
-		$arr1_id = array('Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'Nopember', 'Desember');
-
-		$arr2_en = array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
-		$arr2_id = array('Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nop', 'Des');
-
-		$arr3_en = array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
-		$arr3_id = array('Minggu', 'Senin',  'Selasa',  'Rabu',      'Kamis',    'Jumat',  'Sabtu');
-
-		$arr4_en = array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
-		$arr4_id = array('Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab');
-
-		$string = str_replace($arr1_en, $arr1_id, $string);
-		$string = str_replace($arr3_en, $arr3_id, $string);
-		$string = str_replace($arr2_en, $arr2_id, $string);
-		$string = str_replace($arr4_en, $arr4_id, $string);
-
-		return $string;
-	}
-	function excel2MySQLDate($int)
-	{
-		return date('Y-m-d H:i:s', ($int - 25569) * 86400);
-	}
-	
-	function liststyle($style, $index = 1) //NOSONAR
-	{
-		switch ($style) //NOSONAR
-		{
-			case "armenian":
-				break;
-			case "circle":
-				break;
-			case "cjk-ideographic":
-				break;
-			case "decimal":
-				return $index;
-			case "decimal-leading-zero":
-				return sprintf("%02d", $index);
-			case "disc":
-			case "georgian":
-				break;
-			case "hebrew":
-				break;
-			case "hiragana":
-			case "hiragana-iroha":
-			case "katakana":
-				break;
-			case "katakana-iroha";
-				break;
-			case "lower-alpha":
-				return chr(96 + $index);
-			case "lower-greek":
-				break;
-			case "lower-latin":
-				return chr(96 + $index);
-			case "lower-roman":
-				return strtolower(ar_rom($index));
-			case "square":
-				break;
-			case "upper-alpha":
-				return chr(64 + $index);
-			case "upper-latin":
-				return chr(64 + $index);
-			case "upper-roman":
-				return strtoupper(ar_rom($index));
-		}
-	}
-	function ar_rom($ar, $br = "\r\n")
-	{
-		$lin = '';
-		$num = '';
-		$rom = array(
-			array('no' => 1000000, 'lin' => '_', 'num' => 'M'),
-			array('no' => 900000, 'lin' => '_', 'num' => 'CM'),
-			array('no' => 500000, 'lin' => '_', 'num' => 'D'),
-			array('no' => 400000, 'lin' => '_', 'num' => 'CD'),
-			array('no' => 100000, 'lin' => '_', 'num' => 'C'),
-			array('no' => 90000, 'lin' => '_', 'num' => 'XC'),
-			array('no' => 50000, 'lin' => '_', 'num' => 'L'),
-			array('no' => 40000, 'lin' => '_', 'num' => 'XL'),
-			array('no' => 10000, 'lin' => '_', 'num' => 'X'),
-			array('no' => 9000, 'lin' => '_', 'num' => 'IX'),
-			array('no' => 5000, 'lin' => '_', 'num' => 'V'),
-			array('no' => 4000, 'lin' => '_', 'num' => 'IV'),
-			array('no' => 1000, 'lin' => ' ', 'num' => 'M'),
-			array('no' => 900, 'lin' => ' ', 'num' => 'CM'),
-			array('no' => 500, 'lin' => ' ', 'num' => 'D'),
-			array('no' => 400, 'lin' => ' ', 'num' => 'CD'),
-			array('no' => 100, 'lin' => ' ', 'num' => 'C'),
-			array('no' => 90, 'lin' => ' ', 'num' => 'XC'),
-			array('no' => 50, 'lin' => ' ', 'num' => 'L'),
-			array('no' => 40, 'lin' => ' ', 'num' => 'XL'),
-			array('no' => 10, 'lin' => ' ', 'num' => 'X'),
-			array('no' => 9, 'lin' => ' ', 'num' => 'IX'),
-			array('no' => 5, 'lin' => ' ', 'num' => 'V'),
-			array('no' => 4, 'lin' => ' ', 'num' => 'IV'),
-			array('no' => 1, 'lin' => ' ', 'num' => 'I'),
-		);
-		foreach ($rom as $v) {
-			while ($ar >= $v['no']) {
-				$ar = $ar - $v['no'];
-				$lin .= $v['lin'];
-				$num .= $v['num'];
-			}
-		}
-		if (strpos($lin, '_') === false) {
-			return $num;
-		} else {
-			return $lin . $br . $num;
-		}
-	}
-
-
-class DirectoryDestroyer
+function getDefaultValues($database, $table, $fields)
 {
-	public $fileSync = null;
-	public function __construct($fileSync)
+	$sql = "show columns FROM `$table` ";
+	$stmt = $database->executeQuery($sql);
+	$arr = array();
+	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+	foreach($rows as $data)
 	{
-		$this->fileSync = $fileSync;
-	}
-
-	public function destroy($dir, $sync) {
-		if (is_dir($dir)) {
-		  $objects = scandir($dir);
-		  foreach ($objects as $object) 
-		  {
-			if ($object != "." && $object != "..") 
-			{
-			  if (filetype($dir."/".$object) == "dir") 
-				{
-					$this->destroy($dir."/".$object, $sync); 
-				}
-			  else 
-			  {
-				$this->fileSync->deleteFile($dir."/".$object, $sync);
-			  }
-			}
-		  }
-		  reset($objects);
-		  $this->fileSync->deleteDirecory($dir, $sync);
+		if (in_array($data['Field'], $fields)) 
+		{
+			$obj = new \stdClass();
+			$obj->field = $data['Field'];
+			$obj->value = $data['Default'];
+			$arr[] = $obj;
 		}
+	}
+?>
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			var defdata = <?php echo json_encode($arr); ?>;
+			var i;
+			for (i in defdata) {
+				var obj = $(':input[name=' + defdata[i]['field'] + ']');
+				var val = defdata[i]['value'];
+				if (obj.attr('type') == 'time' && val.indexOf(':') == -1) {
+					var date = new Date(null);
+					date.setSeconds(val);;
+					obj.val(date.toISOString().substr(11, 8));
+				} else if (obj.attr('type') == 'radio') {
+					$('[name=' + defdata[i]['field'] + '][value=' + val + ']').attr('checked', 'checked');
+				} else if (obj.find('option') > 0) {
+					obj.find('option[value=' + val + ']').attr('selected', 'selected');
+				} else if (obj.attr('type') == 'checkbox' && val != null && val != 0 && val != "0") {
+					$('[name=' + defdata[i]['field'] + ']').attr('checked', 'checked');
+				} else if (obj.attr('type') != 'password' && obj.attr('type') != 'checkbox' && obj.attr('type') != 'radio') {
+					obj.val(defdata[i]['value']);
+				}
+			}
+		});
+	</script>
+<?php
+}
+
+function translateDate($string)
+{
+	$arr1_en = array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',  'September', 'October', 'November', 'December');
+	$arr1_id = array('Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'Nopember', 'Desember');
+
+	$arr2_en = array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
+	$arr2_id = array('Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nop', 'Des');
+
+	$arr3_en = array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+	$arr3_id = array('Minggu', 'Senin',  'Selasa',  'Rabu',      'Kamis',    'Jumat',  'Sabtu');
+
+	$arr4_en = array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
+	$arr4_id = array('Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab');
+
+	$string = str_replace($arr1_en, $arr1_id, $string);
+	$string = str_replace($arr3_en, $arr3_id, $string);
+	$string = str_replace($arr2_en, $arr2_id, $string);
+	$string = str_replace($arr4_en, $arr4_id, $string);
+
+	return $string;
+}
+function excel2MySQLDate($int)
+{
+	return date('Y-m-d H:i:s', ($int - 25569) * 86400);
+}
+
+function liststyle($style, $index = 1) //NOSONAR
+{
+	switch ($style) //NOSONAR
+	{
+		case "armenian":
+			break;
+		case "circle":
+			break;
+		case "cjk-ideographic":
+			break;
+		case "decimal":
+			return $index;
+		case "decimal-leading-zero":
+			return sprintf("%02d", $index);
+		case "disc":
+		case "georgian":
+			break;
+		case "hebrew":
+			break;
+		case "hiragana":
+		case "hiragana-iroha":
+		case "katakana":
+			break;
+		case "katakana-iroha";
+			break;
+		case "lower-alpha":
+			return chr(96 + $index);
+		case "lower-greek":
+			break;
+		case "lower-latin":
+			return chr(96 + $index);
+		case "lower-roman":
+			return strtolower(ar_rom($index));
+		case "square":
+			break;
+		case "upper-alpha":
+			return chr(64 + $index);
+		case "upper-latin":
+			return chr(64 + $index);
+		case "upper-roman":
+			return strtoupper(ar_rom($index));
 	}
 }
+function ar_rom($ar, $br = "\r\n")
+{
+	$lin = '';
+	$num = '';
+	$rom = array(
+		array('no' => 1000000, 'lin' => '_', 'num' => 'M'),
+		array('no' => 900000, 'lin' => '_', 'num' => 'CM'),
+		array('no' => 500000, 'lin' => '_', 'num' => 'D'),
+		array('no' => 400000, 'lin' => '_', 'num' => 'CD'),
+		array('no' => 100000, 'lin' => '_', 'num' => 'C'),
+		array('no' => 90000, 'lin' => '_', 'num' => 'XC'),
+		array('no' => 50000, 'lin' => '_', 'num' => 'L'),
+		array('no' => 40000, 'lin' => '_', 'num' => 'XL'),
+		array('no' => 10000, 'lin' => '_', 'num' => 'X'),
+		array('no' => 9000, 'lin' => '_', 'num' => 'IX'),
+		array('no' => 5000, 'lin' => '_', 'num' => 'V'),
+		array('no' => 4000, 'lin' => '_', 'num' => 'IV'),
+		array('no' => 1000, 'lin' => ' ', 'num' => 'M'),
+		array('no' => 900, 'lin' => ' ', 'num' => 'CM'),
+		array('no' => 500, 'lin' => ' ', 'num' => 'D'),
+		array('no' => 400, 'lin' => ' ', 'num' => 'CD'),
+		array('no' => 100, 'lin' => ' ', 'num' => 'C'),
+		array('no' => 90, 'lin' => ' ', 'num' => 'XC'),
+		array('no' => 50, 'lin' => ' ', 'num' => 'L'),
+		array('no' => 40, 'lin' => ' ', 'num' => 'XL'),
+		array('no' => 10, 'lin' => ' ', 'num' => 'X'),
+		array('no' => 9, 'lin' => ' ', 'num' => 'IX'),
+		array('no' => 5, 'lin' => ' ', 'num' => 'V'),
+		array('no' => 4, 'lin' => ' ', 'num' => 'IV'),
+		array('no' => 1, 'lin' => ' ', 'num' => 'I'),
+	);
+	foreach ($rom as $v) {
+		while ($ar >= $v['no']) {
+			$ar = $ar - $v['no'];
+			$lin .= $v['lin'];
+			$num .= $v['num'];
+		}
+	}
+	if (strpos($lin, '_') === false) {
+		return $num;
+	} else {
+		return $lin . $br . $num;
+	}
+}
+
+
 
 
 /**

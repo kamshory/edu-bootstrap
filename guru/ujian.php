@@ -132,7 +132,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 				$sql = "DELETE FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = '$school_id' AND `teacher_id` = '$auth_teacher_id'";
 				$database->executeDelete($sql, true);
 				$dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-				$destroyer = new DirectoryDestroyer($fileSync);
+				$destroyer = new \Pico\DirectoryDestroyer($fileSync);
 				$destroyer->destroy($dir, true);
 				$database->executeTransaction("commit", true);
 			}
