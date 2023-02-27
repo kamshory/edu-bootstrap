@@ -28,8 +28,7 @@ if(@$_POST['option'] == 'upload-image')
         $white = imagecolorallocate($jpeg, 255, 255, 255);
 		imagefilledrectangle($jpeg, 0, 0, 300, 300, $white);
 		$png = imagecreatefromstring(base64_decode($img));
-		imagecopy($jpeg, $png, 0, 0, 0, 0, 300, 300);
-		
+		imagecopy($jpeg, $png, 0, 0, 0, 0, 300, 300);	
 
         imagejpeg($jpeg, $path, 70);
         $fileSync->createFile($path, true);      
@@ -55,7 +54,6 @@ if(@$_POST['option'] == 'upload-image')
             $src_width,
             $src_height
         );
-
         
         imagejpeg($jpeg2, $path2, 70);
 		$fileSync->createFile($path2, true);
@@ -169,5 +167,4 @@ $avatar_url = "media.edu/user.avatar/admin/$admin_id/img-300x300.jpg?rand=$rand"
 <?php
 }
 require_once dirname((__FILE__))."/lib.inc/footer.php";
-
 ?>
