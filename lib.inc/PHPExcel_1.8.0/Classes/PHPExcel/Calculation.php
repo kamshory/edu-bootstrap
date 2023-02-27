@@ -255,7 +255,7 @@ class PHPExcel_Calculation {
 	 * @var string[]
 	 *
 	 */
-	public static $_localeBoolean = array(	'true'	=> 'true',
+	public static $_localeBoolean = array(	'TRUE'	=> 'TRUE',
 											'FALSE'	=> 'FALSE',
 											'NULL'	=> 'NULL'
 										  );
@@ -268,7 +268,7 @@ class PHPExcel_Calculation {
 	 * @var string[]
 	 *
 	 */
-	private static $_ExcelConstants = array('true'	=> true,
+	private static $_ExcelConstants = array('TRUE'	=> true,
 											'FALSE'	=> false,
 											'NULL'	=> null
 										   );
@@ -1601,8 +1601,8 @@ class PHPExcel_Calculation {
 												 'functionCall'		=>	'PHPExcel_Calculation_Statistical::TRIMMEAN',
 												 'argumentCount'	=>	'2'
 												),
-				'true'					=> array('category'			=>	PHPExcel_Calculation_Function::CATEGORY_LOGICAL,
-												 'functionCall'		=>	'PHPExcel_Calculation_Logical::true',
+				'TRUE'					=> array('category'			=>	PHPExcel_Calculation_Function::CATEGORY_LOGICAL,
+												 'functionCall'		=>	'PHPExcel_Calculation_Logical::TRUE',
 												 'argumentCount'	=>	'0'
 												),
 				'TRUNC'					=> array('category'			=>	PHPExcel_Calculation_Function::CATEGORY_MATH_AND_TRIG,
@@ -1822,13 +1822,13 @@ class PHPExcel_Calculation {
 
 
 	/**
-	 * Return the locale-specific translation of true
+	 * Return the locale-specific translation of TRUE
 	 *
 	 * @access	public
-	 * @return	 string		locale-specific translation of true
+	 * @return	 string		locale-specific translation of TRUE
 	 */
 	public static function getTRUE() {
-		return self::$_localeBoolean['true'];
+		return self::$_localeBoolean['TRUE'];
 	}
 
 	/**
@@ -1971,7 +1971,7 @@ class PHPExcel_Calculation {
 			//	initialise language/locale settings
 			self::$_localeFunctions = array();
 			self::$_localeArgumentSeparator = ',';
-			self::$_localeBoolean = array('true' => 'true', 'FALSE' => 'FALSE', 'NULL' => 'NULL');
+			self::$_localeBoolean = array('TRUE' => 'TRUE', 'FALSE' => 'FALSE', 'NULL' => 'NULL');
 			//	Default is English, if user isn't requesting english, then read the necessary data from the locale files
 			if ($locale != 'en_us') {
 				//	Search for a file with a list of function names for locale
@@ -1996,8 +1996,8 @@ class PHPExcel_Calculation {
 						}
 					}
 				}
-				//	Default the true and FALSE constants to the locale names of the true() and FALSE() functions
-				if (isset(self::$_localeFunctions['true'])) { self::$_localeBoolean['true'] = self::$_localeFunctions['true']; }
+				//	Default the TRUE and FALSE constants to the locale names of the TRUE() and FALSE() functions
+				if (isset(self::$_localeFunctions['TRUE'])) { self::$_localeBoolean['TRUE'] = self::$_localeFunctions['TRUE']; }
 				if (isset(self::$_localeFunctions['FALSE'])) { self::$_localeBoolean['FALSE'] = self::$_localeFunctions['FALSE']; }
 
 				$configFile = PHPEXCEL_ROOT . 'PHPExcel'.DIRECTORY_SEPARATOR.'locale'.DIRECTORY_SEPARATOR.str_replace('_',DIRECTORY_SEPARATOR,$locale).DIRECTORY_SEPARATOR.'config';
@@ -2596,7 +2596,7 @@ class PHPExcel_Calculation {
 			} elseif(is_string($value) && (trim($value,'"') == $value)) {
 				return '"'.$value.'"';
 			} elseif(is_bool($value)) {
-				return ($value) ? self::$_localeBoolean['true'] : self::$_localeBoolean['FALSE'];
+				return ($value) ? self::$_localeBoolean['TRUE'] : self::$_localeBoolean['FALSE'];
 			}
 		}
 		return PHPExcel_Calculation_Functions::flattenSingleValue($value);
@@ -3201,10 +3201,10 @@ class PHPExcel_Calculation {
 						//		(converting the other operand to a matrix if need be); then perform the required
 						//		matrix operation
 						if (is_bool($operand1)) {
-							$operand1 = ($operand1) ? self::$_localeBoolean['true'] : self::$_localeBoolean['FALSE'];
+							$operand1 = ($operand1) ? self::$_localeBoolean['TRUE'] : self::$_localeBoolean['FALSE'];
 						}
 						if (is_bool($operand2)) {
-							$operand2 = ($operand2) ? self::$_localeBoolean['true'] : self::$_localeBoolean['FALSE'];
+							$operand2 = ($operand2) ? self::$_localeBoolean['TRUE'] : self::$_localeBoolean['FALSE'];
 						}
 						if ((is_array($operand1)) || (is_array($operand2))) {
 							//	Ensure that both operands are arrays/matrices
