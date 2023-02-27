@@ -189,7 +189,7 @@ class PHPExcel_Calculation {
 	 * An array of the nested cell references accessed by the calculation engine, used for the debug log
 	 *
 	 * @access	private
-	 * @var array of string
+	 * @var PHPExcel_CalcEngine_CyclicReferenceStack
 	 *
 	 */
 	private $_cyclicReferenceStack;
@@ -1715,7 +1715,7 @@ class PHPExcel_Calculation {
 									)
 			);
 
-
+	private $_debugLog;
 
 
 	private function __construct(PHPExcel $workbook = null) {
@@ -2674,15 +2674,15 @@ class PHPExcel_Calculation {
 			//	Trap for mismatched braces and trigger an appropriate error
 			if ($openCount < $closeCount) {
 				if ($openCount > 0) {
-					return $this->_raiseFormulaError("Formula Error: Mismatched matrix braces '}'");
+					return self::_raiseFormulaError("Formula Error: Mismatched matrix braces '}'");
 				} else {
-					return $this->_raiseFormulaError("Formula Error: Unexpected '}' encountered");
+					return self::_raiseFormulaError("Formula Error: Unexpected '}' encountered");
 				}
 			} elseif ($openCount > $closeCount) {
 				if ($closeCount > 0) {
-					return $this->_raiseFormulaError("Formula Error: Mismatched matrix braces '{'");
+					return self::_raiseFormulaError("Formula Error: Mismatched matrix braces '{'");
 				} else {
-					return $this->_raiseFormulaError("Formula Error: Unexpected '{' encountered");
+					return self::_raiseFormulaError("Formula Error: Unexpected '{' encountered");
 				}
 			}
 		}
@@ -3714,6 +3714,7 @@ class PHPExcel_Calculation {
 		$this->_cyclicReferenceStack->clear();
 		if (!$this->suppressFormulaErrors) throw new PHPExcel_Calculation_Exception($errorMessage);
 		trigger_error($errorMessage, E_USER_ERROR);
+		return null;
 	}	//	function _raiseFormulaError()
 
 
