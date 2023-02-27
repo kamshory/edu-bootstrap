@@ -102,7 +102,7 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
         }
         else
         {
-            throw new DatabaseSyncException("File not found");
+            throw new \Sync\DatabaseSyncException("File not found");
         }
     }
 
@@ -114,7 +114,7 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
      * @param string $username Sync username
      * @param string $password Sync password
      * @return string Data from file downloaded
-     * @throws DatabaseSyncException
+     * @throws \Sync\DatabaseSyncException
      */
     public function downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password)
     {
