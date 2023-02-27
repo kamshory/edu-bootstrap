@@ -289,7 +289,7 @@ class PHPExcel_CachedObjectStorage_APC extends PHPExcel_CachedObjectStorage_Cach
             return FALSE;
         }
 
-        return TRUE;
+        return true;
     }
 
 }

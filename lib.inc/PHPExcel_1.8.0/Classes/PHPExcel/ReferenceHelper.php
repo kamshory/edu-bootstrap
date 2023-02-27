@@ -145,11 +145,11 @@ class PHPExcel_ReferenceHelper
 		if ($pNumRows < 0 &&
 			($cellRow >= ($beforeRow + $pNumRows)) &&
 			($cellRow < $beforeRow)) {
-			return TRUE;
+			return true;
 		} elseif ($pNumCols < 0 &&
 			($cellColumnIndex >= ($beforeColumnIndex + $pNumCols)) &&
 			($cellColumnIndex < $beforeColumnIndex)) {
-			return TRUE;
+			return true;
 		}
 		return FALSE;
 	}

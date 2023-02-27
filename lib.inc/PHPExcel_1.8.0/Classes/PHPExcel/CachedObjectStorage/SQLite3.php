@@ -164,7 +164,7 @@ class PHPExcel_CachedObjectStorage_SQLite3 extends PHPExcel_CachedObjectStorage_
 	 */
 	public function isDataSet($pCoord) {
 		if ($pCoord === $this->_currentObjectID) {
-			return TRUE;
+			return true;
 		}
 
 		//	Check if the requested entry exists in the cache
@@ -175,7 +175,7 @@ class PHPExcel_CachedObjectStorage_SQLite3 extends PHPExcel_CachedObjectStorage_
 		}
 		$cellData = $cellResult->fetchArray(SQLITE3_ASSOC);
 
-		return ($cellData === FALSE) ? FALSE : TRUE;
+		return ($cellData === FALSE) ? FALSE : true;
 	}	//	function isDataSet()
 
 
@@ -224,7 +224,7 @@ class PHPExcel_CachedObjectStorage_SQLite3 extends PHPExcel_CachedObjectStorage_
 		if ($result === false)
 			throw new PHPExcel_Exception($this->_DBHandle->lastErrorMsg());
 
-		return TRUE;
+		return true;
 	}	//	function moveCell()
 
 

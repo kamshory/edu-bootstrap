@@ -128,7 +128,7 @@ abstract class PHPExcel_CachedObjectStorage_CacheBase {
 			unset($this->_cellCache[$fromAddress]);
 		}
 
-		return TRUE;
+		return true;
 	}	//	function moveCell()
 
 

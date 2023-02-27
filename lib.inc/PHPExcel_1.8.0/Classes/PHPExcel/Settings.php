@@ -124,7 +124,7 @@ class PHPExcel_Settings
         if (($zipClass === self::PCLZIP) ||
             ($zipClass === self::ZIPARCHIVE)) {
             self::$_zipClass = $zipClass;
-            return TRUE;
+            return true;
         }
         return FALSE;
     } // function setZipClass()
@@ -227,7 +227,7 @@ class PHPExcel_Settings
 
         self::$_chartRendererName = $libraryName;
 
-        return TRUE;
+        return true;
     } // function setChartRendererName()
 
 
@@ -244,7 +244,7 @@ class PHPExcel_Settings
         }
         self::$_chartRendererPath = $libraryBaseDir;
 
-        return TRUE;
+        return true;
     } // function setChartRendererPath()
 
 
@@ -310,7 +310,7 @@ class PHPExcel_Settings
 
         self::$_pdfRendererName = $libraryName;
 
-        return TRUE;
+        return true;
     } // function setPdfRendererName()
 
 
@@ -327,7 +327,7 @@ class PHPExcel_Settings
         }
         self::$_pdfRendererPath = $libraryBaseDir;
 
-        return TRUE;
+        return true;
     } // function setPdfRendererPath()
 
 
@@ -381,7 +381,8 @@ class PHPExcel_Settings
         if (is_null(self::$_libXmlLoaderOptions)) {
             self::setLibXmlLoaderOptions(LIBXML_DTDLOAD | LIBXML_DTDATTR);
         }
+        $options = self::$_libXmlLoaderOptions;
         @libxml_disable_entity_loader($options == (LIBXML_DTDLOAD | LIBXML_DTDATTR));
-        return self::$_libXmlLoaderOptions;
+        return $options;
     } // function getLibXmlLoaderOptions
 }
