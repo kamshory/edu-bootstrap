@@ -242,7 +242,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 										$fileSync->createFileWithContent($test_dir."/".$name_file_repaired, $data_file, true);
 									}
 								}
-								$pertanyaan = htmlspecialchars_decode(htmlentities(replaceBase($text_pertanyaan, $base_src."/"), ENT_QUOTES, "UTF-8"), ENT_QUOTES);
+								$pertanyaan = htmlspecialchars_decode(htmlentities(\Pico\PicoDOM::replaceBase($text_pertanyaan, $base_src."/"), ENT_QUOTES, "UTF-8"), ENT_QUOTES);
 								$pertanyaan = str_replace($array_search, $array_replace, $pertanyaan);
 								$digest = md5($pertanyaan);
 								$pertanyaan = addslashes($pertanyaan);
@@ -284,7 +284,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 												$fileSync->createFileWithContent($test_dir."/".$name_file_repaired, $data_file, true);
 											}
 										}
-										$option = htmlspecialchars_decode(htmlentities(replaceBase($text_option, $base_src."/"), ENT_QUOTES, "UTF-8"), ENT_QUOTES);
+										$option = htmlspecialchars_decode(htmlentities(\Pico\PicoDOM::replaceBase($text_option, $base_src."/"), ENT_QUOTES, "UTF-8"), ENT_QUOTES);
 										$option = str_replace($array_search, $array_replace, $option);
 										$digest = md5($option);
 										$option = addslashes($option);

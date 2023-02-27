@@ -95,7 +95,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 			}
 
 			$content = kh_filter_input(INPUT_POST, "content");
-			$content = extractImageData($content, $info_dir, $base_src, $fileSync);
+			$content = \Pico\PicoDOM::extractImageData($content, $info_dir, $base_src, $fileSync);
 			$content = addslashes(UTF8ToEntities($content));
 
 			$sql = "UPDATE `edu_info` SET
@@ -120,7 +120,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$fileSync->prepareDirectory($info_dir, $dirBase, $permission, true);
 		
 		$content = kh_filter_input(INPUT_POST, "content");
-		$content = extractImageData($content, $info_dir, $base_src, $fileSync);
+		$content = \Pico\PicoDOM::extractImageData($content, $info_dir, $base_src, $fileSync);
 		$content = addslashes(UTF8ToEntities($content));
 
 		$sql = "UPDATE `edu_info` SET

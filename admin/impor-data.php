@@ -800,7 +800,6 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 }
 
 $pageTitle = "Impor Data";
-$pagination = new \Pico\PicoPagination();
 
 if(@$_GET['option'] == 'success')
 {

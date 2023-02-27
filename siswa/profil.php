@@ -6,7 +6,6 @@ if(!isset($school_id) || empty($school_id))
 	exit();
 }
 $pageTitle = "Siswa";
-$pagination = new \Pico\PicoPagination();
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {

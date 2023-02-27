@@ -93,7 +93,7 @@ $nt = '';
 	foreach($rows as $idx=>$data)
 	{
 
-		$obj = parseHtmlData('<html><body>'.($data['content']).'</body></html>');
+		$obj = \Pico\PicoDOM::parseHtmlData('<html><body>'.($data['content']).'</body></html>');
 		$arrparno = array();
 		$arrparlen = array();
 		$cntmax = ""; // do not remove
@@ -144,7 +144,7 @@ $nt = '';
 				$pos = $maxlen;
 			}
 			$content = substr($content, 0, $pos+1);
-			$content = tidyHTML($content);
+			$content = \Pico\PicoDOM::tidyHTML($content);
 		}
 		$content = trim($content);
 		if($content == "" || $content == '&nbsp;' && isset($obj->img))

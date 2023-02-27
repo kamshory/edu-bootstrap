@@ -20,7 +20,7 @@ if(isset($_POST['save']))
 	$permission = 0755;
 	$fileSync->prepareDirectory($school_dir, $dirBase, $permission, true);
 
-	$description = extractImageData($description, $school_dir, $base_src, $fileSync);
+	$description = \Pico\PicoDOM::extractImageData($description, $school_dir, $base_src, $fileSync);
 	
 	$description = addslashes(UTF8ToEntities($description));
 	

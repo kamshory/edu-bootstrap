@@ -150,7 +150,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	
 		$question = kh_filter_input(INPUT_POST, "question");
 		$question = UTF8ToEntities($question);
-		$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks, $fileSync))); 	
+		$question = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 		
 		$sql = "UPDATE `edu_question` SET `content` = '$question' , `random` = '$random', `numbering` = '$numbering' WHERE `question_id` = '$question_id' ";
 		$stmt2 = $database->executeUpdate($sql, true);
@@ -169,7 +169,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 
 				$option = kh_filter_input(INPUT_POST, "option_" . $id2);
 				$option = UTF8ToEntities($option);
-				$option = addslashes(removeparagraphtag(extractImageData($option, $direktori, $prefiks, $fileSync)));
+				$option = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($option, $direktori, $prefiks, $fileSync)));
 
 				$score = kh_filter_input(INPUT_POST, "score_" . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
 				$sql = "UPDATE `edu_option` 
@@ -192,11 +192,6 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		}
 	}
 }
-
-
-$pagination = new \Pico\PicoPagination();
-
-
 
 if(@$_GET['option'] == 'edit')
 {
@@ -592,7 +587,7 @@ foreach($rows as $data)
 	{
 		$data['content'] = "<p>".$data['content']."</p>";
 	}
-	$obj = parseHtmlData('<html><body>'.($data['content']).'</body></html>');
+	$obj = \Pico\PicoDOM::parseHtmlData('<html><body>'.($data['content']).'</body></html>');
 	$arrparno = array();
 	$arrparlen = array();
 	$cntmax = ""; // do not remove

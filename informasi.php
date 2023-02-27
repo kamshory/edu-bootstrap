@@ -18,7 +18,7 @@ if(isset($_GET['info_id']))
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$pageTitle = $data['name'];
 
-		$obj = parsehtmldata('<html><body>'.($data['content']).'</body></html>');
+		$obj = \Pico\PicoDOM::parseHtmlData('<html><body>'.($data['content']).'</body></html>');
 		$arrparno = array();
 		$arrparlen = array();
 		$cntmax = ""; // do not remove
@@ -68,7 +68,7 @@ if(isset($_GET['info_id']))
 				$pos = $maxlen;
 			}
 			$content = substr($content, 0, $pos+1);
-			$content = tidyHTML($content);
+			$content = \Pico\PicoDOM::tidyHTML($content);
 		}
 	
 		$cfg->meta_description = htmlspecialchars(strip_tags($content));

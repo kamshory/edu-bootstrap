@@ -660,9 +660,6 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 	exit();
 }
 
-$pagination = new \Pico\PicoPagination();
-
-
 if(@$_GET['option'] == 'edit' || @$_GET['option'] == 'add')
 {
 if(isset($_GET['test_collection_id']) && (@$_GET['option'] == 'add' || isset($_GET['question_index'])))

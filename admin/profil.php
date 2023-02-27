@@ -6,7 +6,6 @@ if(empty($admin_id))
 	exit();
 }
 $pageTitle = "Profil Administrator";
-$pagination = new \Pico\PicoPagination();
 if(count(@$_POST))
 {
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);

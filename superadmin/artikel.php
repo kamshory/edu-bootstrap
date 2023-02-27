@@ -56,7 +56,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$permission = 0755;
 		$fileSync->prepareDirectory($article_dir, $dirBase, $permission, true);
 			
-		$content = extractImageData($content, $article_dir, $base_src, $fileSync);
+		$content = \Pico\PicoDOM::extractImageData($content, $article_dir, $base_src, $fileSync);
 		$content = addslashes(UTF8ToEntities($content));
 		$sql = "UPDATE `edu_article` SET `content` = '$content' WHERE `article_id` = '$article_id' ";
 		$database->executeUpdate($sql, true);
@@ -74,7 +74,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$permission = 0755;
 		$fileSync->prepareDirectory($article_dir, $dirBase, $permission, true);
 
-		$content = extractImageData($content, $article_dir, $base_src, $fileSync);
+		$content = \Pico\PicoDOM::extractImageData($content, $article_dir, $base_src, $fileSync);
 		$content = addslashes($content);
 		$sql = "UPDATE `edu_article` SET `title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
 		`time_edit` = '$time', `member_edit` = '$admin_id', `role_edit` = 'A', `ip_edit` =  '$ip', `active` = '$active'

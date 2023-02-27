@@ -143,7 +143,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 	$question = kh_filter_input(INPUT_POST, "question");
 	$question = UTF8ToEntities($question);
-	$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks, $fileSync))); 	
+	$question = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 	$question = $picoEdu->brToNewLineEncoded($question);
 	$picoEdu->sortQuestion($test_id);
 	$sql1 = "SELECT `edu_test`.*, 
@@ -184,7 +184,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 					
 				$option = kh_filter_input(INPUT_POST, "option_".$id2);
 				$option = UTF8ToEntities($option);
-				$option = addslashes(removeparagraphtag(extractImageData($option, $direktori, $prefiks, $fileSync)));
+				$option = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($option, $direktori, $prefiks, $fileSync)));
 				$option = $picoEdu->brToNewLineEncoded($option);
 						
 				$score = kh_filter_input(INPUT_POST, "score_".$id2, FILTER_SANITIZE_NUMBER_FLOAT);
@@ -235,7 +235,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	
 		$question = kh_filter_input(INPUT_POST, "question");
 		$question = UTF8ToEntities($question);
-		$question = addslashes(removeparagraphtag(extractImageData($question, $direktori, $prefiks, $fileSync))); 	
+		$question = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 		$question = $picoEdu->brToNewLineEncoded($question);
 		
 		$sql = "UPDATE `edu_question` 
@@ -257,7 +257,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 
 				$option = kh_filter_input(INPUT_POST, "option_" . $id2);
 				$option = UTF8ToEntities($option);
-				$option = addslashes(removeparagraphtag(extractImageData($option, $direktori, $prefiks, $fileSync)));
+				$option = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($option, $direktori, $prefiks, $fileSync)));
 				$option = $picoEdu->brToNewLineEncoded($option);
 
 				$score = kh_filter_input(INPUT_POST, "score_" . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
@@ -288,7 +288,6 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	}
 }
 
-$pagination = new \Pico\PicoPagination();
 if(@$_GET['option'] == 'add')
 {
 	if(@$_GET['format']=='text')
@@ -652,7 +651,7 @@ else if(isset($_GET['test_id']))
 				if (stripos($data['content'], "<p") === false) {
 					$data['content'] = "<p>" . $data['content'] . "</p>";
 				}
-				$obj = parseHtmlData('<html><body>' . ($data['content']) . '</body></html>');
+				$obj = \Pico\PicoDOM::parseHtmlData('<html><body>' . ($data['content']) . '</body></html>');
 				$arrparno = array();
 				$arrparlen = array();
 				$cntmax = ""; // do not remove

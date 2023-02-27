@@ -228,7 +228,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 								$fileSync->createFileWithContent($test_dir."/".$name_file_repaired, $data_file, true);
 							}
 						}
-						$pertanyaan = htmlspecialchars_decode(replaceBase($text_pertanyaan, $base_src."/"));
+						$pertanyaan = htmlspecialchars_decode(\Pico\PicoDOM::replaceBase($text_pertanyaan, $base_src."/"));
 						$pertanyaan = str_replace($array_search, $array_replace, $pertanyaan);
 						$digest = md5($pertanyaan);
 						$pertanyaan = addslashes($pertanyaan);
@@ -266,7 +266,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 										$fileSync->createFileWithContent($test_dir . "/" . $name_file_repaired, $data_file, true);
 									}
 								}
-								$option = htmlspecialchars_decode(replaceBase($text_option, $base_src . "/"));
+								$option = htmlspecialchars_decode(\Pico\PicoDOM::replaceBase($text_option, $base_src . "/"));
 								$option = str_replace($array_search, $array_replace, $option);
 								$digest = md5($option);
 								$option = addslashes($option);

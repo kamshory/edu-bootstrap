@@ -6,7 +6,7 @@ if(empty($school_id))
 	exit();
 }
 $pageTitle = "Profil Sekolah";
-$pagination = new \Pico\PicoPagination();
+
 if(isset($_POST['save']) && count(@$_POST))
 {
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);

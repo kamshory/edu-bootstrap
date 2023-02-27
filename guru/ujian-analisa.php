@@ -73,7 +73,7 @@ foreach($rows as $data){
 	if (stripos($data['content'], "<p") === false) {
 		$data['content'] = "<p>" . $data['content'] . "</p>";
 	}
-	$obj = parseHtmlData('<html><body>' . ($data['content']) . '</body></html>');
+	$obj = \Pico\PicoDOM::parseHtmlData('<html><body>' . ($data['content']) . '</body></html>');
 	$arrparno = array();
 	$arrparlen = array();
 	$cntmax = ""; // do not remove
