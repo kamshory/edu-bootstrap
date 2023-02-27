@@ -9,7 +9,7 @@ if($adminLoggedIn->admin_level != 1)
 
 $pageTitle = "Token Ujian";
 $pagination = new \Pico\PicoPagination();
-if(count(@$_POST) && isset($_POST['save']))
+if(isset($_POST['save']))
 {
 	if(isset($_POST['school_id']))
 	{
