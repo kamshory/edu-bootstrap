@@ -60,9 +60,7 @@ if($pagination->getQuery()){
 	$pagination->appendQueryName('q');
 	$sql_filter .= " AND (`edu_article`.`title` like '%".addslashes($pagination->getQuery())."%' )";
 }
-
-$nt = '';
-
+	$nt = '';
 
 	$sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 	FROM `edu_article` 
@@ -92,7 +90,6 @@ $nt = '';
 	$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	foreach($rows as $idx=>$data)
 	{
-
 		$obj = \Pico\PicoDOM::parseHtmlData('<html><body>'.($data['content']).'</body></html>');
 		$arrparno = array();
 		$arrparlen = array();
@@ -195,5 +192,4 @@ $nt = '';
 	}
 	require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
-
 ?>
