@@ -46,7 +46,7 @@ if(!empty($school_id))
 					$object = $picoTest->parseQuestion($question);
 					if(isset($object['question']) && isset($object['numbering']) && isset($object['option']))
 					{
-						$content = $picoTest->fixTable(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages(@$object['question'], $test_dir, $base_src)))));
+						$content = $picoTest->fixTable(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages(@$object['question'], $test_dir, $base_src)))));
 						$content = addslashes($picoEdu->brToNewLineEncoded($content));
 						$numbering = addslashes($object['numbering']);
 						$digest = md5($object['question']);
@@ -71,7 +71,7 @@ if(!empty($school_id))
 							{
 								foreach($object['option'] as $option_no=>$option)
 								{
-									$content_option = $picoTest->fixTable(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages($option['text'], $test_dir, $base_src)))));
+									$content_option = $picoTest->fixTable(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages($option['text'], $test_dir, $base_src)))));
 									$content_option = addslashes($picoEdu->brToNewLineEncoded($content_option));
 									$order_option = $option_no+1;
 									$score_option = addslashes(@$option['value']*$score_standar); 

@@ -57,7 +57,7 @@ class PicoTest
                             $files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
                         }
                     }
-                    $option = removeparagraphtag($text_option);
+                    $option = \Pico\PicoDOM::removeParagraphTag($text_option);
     
                     $sort_order = ((int) $index_option) + 1;
                     if ($score > 0) {

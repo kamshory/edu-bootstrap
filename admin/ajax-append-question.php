@@ -42,7 +42,7 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 			foreach ($clear_data as $question_no => $question) {
 				$object = $picoTest->parseQuestion($question);
 				if (isset($object['question']) && isset($object['numbering']) && isset($object['option'])) {
-					$content = $picoTest->fixTable(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages(@$object['question'], $test_dir, $base_src)))));
+					$content = $picoTest->fixTable(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages(@$object['question'], $test_dir, $base_src)))));
 
 
 					$content = $picoEdu->brToNewLineEncoded($content);
@@ -70,7 +70,7 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 					{
 						if (@is_array($object['option']) && count($object['option'])) {
 							foreach ($object['option'] as $option_no => $option) {
-								$content_option = $picoTest->fixTable(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages($option['text'], $test_dir, $base_src)))));								
+								$content_option = $picoTest->fixTable(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages($option['text'], $test_dir, $base_src)))));								
 								$content_option = $picoEdu->brToNewLineEncoded($content_option);
 								$content_option = addslashes($content_option);
 								$order_option = $option_no + 1;

@@ -37,7 +37,7 @@ if(isset($_POST['question']))
 
 		$question = kh_filter_input(INPUT_POST, "question");
 		$question = utf8ToEntities($question);
-		$question = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($question, $directory, $prefiks, $fileSync))); 	
+		$question = addslashes(\Pico\PicoDOM::removeParagraphTag(\Pico\PicoDOM::extractImageData($question, $directory, $prefiks, $fileSync))); 	
 		$question = $picoEdu->brToNewLineEncoded($question);
 		
 		$digest = md5($question);
@@ -66,7 +66,7 @@ if(isset($_POST['question']))
 				
 				$option = kh_filter_input(INPUT_POST, "option_".$id2);
 				$option = utf8ToEntities($option);
-				$option = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($option, $directory, $prefiks, $fileSync)));
+				$option = addslashes(\Pico\PicoDOM::removeParagraphTag(\Pico\PicoDOM::extractImageData($option, $directory, $prefiks, $fileSync)));
 				$option = $picoEdu->brToNewLineEncoded($option);
 					
 				$score = kh_filter_input(INPUT_POST, "score_".$id2, FILTER_SANITIZE_NUMBER_FLOAT);

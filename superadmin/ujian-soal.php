@@ -44,6 +44,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
+		$picoTest = new \Pico\PicoTest();
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$time_create = $database->getLocalDateTime();
 		$time_edit = $database->getLocalDateTime();
@@ -53,7 +54,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$score_standar = $data['standard_score'];
 		
 		$xml_data = kh_filter_input(INPUT_POST, "question_text", FILTER_DEFAULT);
-		$clear_data = parseRawQuestion($xml_data);
+		$clear_data = $picoTest->parseRawQuestion($xml_data);
 
 		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school";
 		$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
@@ -69,10 +70,10 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		
 		foreach($clear_data as $question_no=>$question)
 		{
-			$object = parseQuestion($question);
+			$object = $picoTest->parseQuestion($question);
 			if(isset($object['question']) && isset($object['numbering']) && isset($object['option']))
 			{
-				$content = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages(@$object['question'], $base_dir, $base_src)))));
+				$content = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages(@$object['question'], $base_dir, $base_src)))));
 				$numbering = addslashes($object['numbering']);
 				$digest = md5($object['question']);
 				$sort_order++;
@@ -94,7 +95,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 					{
 						foreach($object['option'] as $option_no=>$option)
 						{
-							$isi_option = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages($option['text'], $base_dir, $base_src)))));
+							$isi_option = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages($option['text'], $base_dir, $base_src)))));
 							$order_option = $option_no+1;
 							$score_option = addslashes(@$option['value']*$score_standar); 
 							if($score_option == 0) 
@@ -150,7 +151,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	
 		$question = kh_filter_input(INPUT_POST, "question");
 		$question = utf8ToEntities($question);
-		$question = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($question, $direktori, $prefiks, $fileSync))); 	
+		$question = addslashes(\Pico\PicoDOM::removeParagraphTag(\Pico\PicoDOM::extractImageData($question, $direktori, $prefiks, $fileSync))); 	
 		
 		$sql = "UPDATE `edu_question` SET `content` = '$question' , `random` = '$random', `numbering` = '$numbering' WHERE `question_id` = '$question_id' ";
 		$stmt2 = $database->executeUpdate($sql, true);
@@ -169,7 +170,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 
 				$option = kh_filter_input(INPUT_POST, "option_" . $id2);
 				$option = utf8ToEntities($option);
-				$option = addslashes(removeparagraphtag(\Pico\PicoDOM::extractImageData($option, $direktori, $prefiks, $fileSync)));
+				$option = addslashes(\Pico\PicoDOM::removeParagraphTag(\Pico\PicoDOM::extractImageData($option, $direktori, $prefiks, $fileSync)));
 
 				$score = kh_filter_input(INPUT_POST, "score_" . $id2, FILTER_SANITIZE_NUMBER_FLOAT);
 				$sql = "UPDATE `edu_option` 
