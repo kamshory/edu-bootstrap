@@ -106,7 +106,7 @@ class FileSyncDownload extends FileSyncMaster
         }
         else
         {
-            throw new \Sync\FileSyncException("File not found");
+            throw new \Sync\SyncException("File not found");
         }
     }
 
@@ -118,7 +118,7 @@ class FileSyncDownload extends FileSyncMaster
      * @param string $username Sync username
      * @param string $password Sync password
      * @return string Data from file downloaded
-     * @throws \Sync\FileSyncException
+     * @throws \Sync\SyncException
      */
     public function downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password) //NOSONAR
     {
@@ -138,7 +138,7 @@ class FileSyncDownload extends FileSyncMaster
         }
         else
         {
-            throw new \Sync\FileSyncException("File not found", $httpcode);
+            throw new \Sync\SyncException("File not found", $httpcode);
         }
     }
     
@@ -204,7 +204,7 @@ class FileSyncDownload extends FileSyncMaster
                 return true;
             }
         }
-        catch(\Sync\FileSyncException $e)
+        catch(\Sync\SyncException $e)
         {
             $this->updateSyncRecord($recordId, 1);
         }
@@ -224,7 +224,7 @@ class FileSyncDownload extends FileSyncMaster
                 return true;
             }
         }
-        catch(\Sync\FileSyncException $e)
+        catch(\Sync\SyncException $e)
         {
            // DO nothing
         }
@@ -313,7 +313,7 @@ class FileSyncDownload extends FileSyncMaster
             touch($localPath, $tm);
             chmod($localPath, $permission);
         }
-        catch(\Sync\FileSyncException $e)
+        catch(\Sync\SyncException $e)
         {
             //NOSONAR
         }
@@ -373,7 +373,7 @@ class FileSyncDownload extends FileSyncMaster
                 file_put_contents($newName, $response);
                 touch($newName, $tm);
             }
-            catch(\Sync\FileSyncException $e)
+            catch(\Sync\SyncException $e)
             {
                 //NOSONAR
             }
