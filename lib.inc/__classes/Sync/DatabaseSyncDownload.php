@@ -72,6 +72,7 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
      * @param string $username Sync username
      * @param string $password Sync password
      * @return array List of sync file from last sync
+     * @throws \Sync\SyncException
      */
     private function getSyncRecordListFromRemote($lastSync, $fileSyncUrl, $username, $password) 
     {
@@ -157,7 +158,7 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
                 $this->updatePathAndStatus($recordId, $absolutePath, $relativePath, 1);
             }
         }
-        catch(SyncException $e)
+        catch(\Sync\SyncException $e)
         {
             $this->updateSyncRecord($recordId, 1);
         }

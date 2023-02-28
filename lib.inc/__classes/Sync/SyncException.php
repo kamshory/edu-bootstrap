@@ -3,6 +3,7 @@ namespace Sync;
 
 class SyncException extends \Exception
 {
+    
     private $previous;   
     public function __construct($message, $code = 0, \Exception $previous = null)
     {
@@ -12,5 +13,4 @@ class SyncException extends \Exception
             $this -> previous = $previous;
         }
     }
-    
 }
