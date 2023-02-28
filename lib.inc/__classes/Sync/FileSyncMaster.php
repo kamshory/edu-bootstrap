@@ -3,17 +3,17 @@ namespace Sync;
 
 class FileSyncMaster //NOSONAR
 {
-    protected \Pico\PicoDatabase $database;
-    protected string $applicationRoot = '';
-    protected string $uploadBaseDir = '';
-    protected string $downloadBaseDir = '';
-    protected string $poolBaseDir = '';
-    protected string $poolFileName = '';
-    protected string $poolRollingPrefix = '';
-    protected string $poolFileExtension = '';
-    protected bool $useRelativePath;
+    protected $database;
+    protected $applicationRoot = '';
+    protected $uploadBaseDir = '';
+    protected $downloadBaseDir = '';
+    protected $poolBaseDir = '';
+    protected $poolFileName = '';
+    protected $poolRollingPrefix = '';
+    protected $poolFileExtension = '';
+    protected $useRelativePath;
 
-    protected string $application = 'picoedu';
+    protected $application = 'picoedu';
 
     /**
      * Constructor of FileSyncMaster
@@ -156,7 +156,7 @@ class FileSyncMaster //NOSONAR
         }
         else
         {
-            throw new \Sync\FileSyncException("Upload file has been failed", $httpcode);
+            throw new \Sync\SyncException("Upload file has been failed", $httpcode);
         }
     }
 
@@ -210,7 +210,7 @@ class FileSyncMaster //NOSONAR
         }
         else
         {
-            throw new \Sync\FileSyncException("Upload file has been failed", $httpcode);
+            throw new \Sync\SyncException("Upload file has been failed", $httpcode);
         }
     }
 
