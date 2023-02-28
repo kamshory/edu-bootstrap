@@ -2,7 +2,6 @@
 require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
-	require_once dirname(__FILE__)."/bukan-super-admin.php";
 	exit();
 }
 if(isset($_POST['sort']))
