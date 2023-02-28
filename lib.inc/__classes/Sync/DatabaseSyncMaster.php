@@ -101,7 +101,7 @@ class DatabaseSyncMaster
             'action'=>'upload-sync-file'
         );
         $fileSyncUrl = $this->buildURL($fileSyncUrl, $httpQuery);
-         ob_start();
+        ob_start();
         if(function_exists('curl_file_create')) 
         { 
             $cFile = curl_file_create($path);
@@ -140,7 +140,6 @@ class DatabaseSyncMaster
         $server_output = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-
         ob_end_clean();
 
         if($httpcode)
@@ -222,8 +221,6 @@ class DatabaseSyncMaster
             return $this->applicationRoot.$path;
         }
     }
-
-    
 
     protected function updatePathAndStatus($recordId, $absolutePath, $relativePath, $status)
     {
@@ -308,7 +305,6 @@ class DatabaseSyncMaster
     public function setApplication($application)
     {
         $this->application = $application;
-
         return $this;
     }
 }
