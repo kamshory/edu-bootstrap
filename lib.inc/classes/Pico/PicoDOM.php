@@ -1,9 +1,13 @@
 <?php
+
 namespace Pico;
+
 class PicoDOM //NOSONAR
 {
     const BR_CLOSED = "<br />";
+    const BR_CLOSE_WITH_SPACE = " <br /> ";
     const BR_OPEN = "<br>";
+    const BR_OPEN_WITH_SPACE = " <br> ";
     public static function tidyHTML($buffer)
     {
         $buffer = utf8ToEntities($buffer);
@@ -14,9 +18,7 @@ class PicoDOM //NOSONAR
             if ($dom) {
                 $domDoc->formatOutput = true;
                 return self::getTagNode($domDoc->saveHTML(), "body");
-            }
-            else
-            {
+            } else {
                 return $buffer;
             }
         } catch (\Exception $e) {
@@ -27,8 +29,7 @@ class PicoDOM //NOSONAR
     public static function getTagNode($data, $tag)
     {
         $result = $data;
-        if (strlen($data)) 
-        {
+        if (strlen($data)) {
             $closetag = "</" . $tag . ">";
             $opentag = "<" . $tag;
             $pos1 = stripos($data, $opentag, 0);
@@ -162,21 +163,17 @@ class PicoDOM //NOSONAR
         $indice = 0;
         while ($indice < strlen($xml)) {
             $pos = stripos($xml, "<$tag", $indice);
-            if ($pos !== false) 
-            {
+            if ($pos !== false) {
                 $posCierre = stripos($xml, ">", $pos);
                 if ($xml[$posCierre - 1] == "/") {
                     $xml = substr_replace($xml, "></$tag>", $posCierre - 1, 2);
                 }
                 $indice = $posCierre;
-            } 
-            else 
-            {
+            } else {
                 break;
             }
         }
-        if(self::brokenTags($xml) && stripos($xml, "<$tag", 0) !== false) 
-        {
+        if (self::brokenTags($xml) && stripos($xml, "<$tag", 0) !== false) {
             $xml .= "</$tag>";
         }
         return $xml;
@@ -190,8 +187,7 @@ class PicoDOM //NOSONAR
         $closed = array_map('strtolower', $v2[0]);
         foreach ($open as $tag) {
             $end_tag = preg_replace("/<(.*)/", "</$1>", $tag);
-            if (!in_array($end_tag, $closed)) 
-            {
+            if (!in_array($end_tag, $closed)) {
                 return true;
             }
             unset($closed[array_search($end_tag, $closed)]);
@@ -236,8 +232,7 @@ class PicoDOM //NOSONAR
         if (stripos($data, '<body') !== false) //NOSONAR
         {
             $data = self::getTagNode($data, 'body');
-        }
-        else if (stripos($data, '<head') !== false) //NOSONAR
+        } else if (stripos($data, '<head') !== false) //NOSONAR
         {
             $data = self::getTagNode($data, 'head');
         }
@@ -380,12 +375,9 @@ class PicoDOM //NOSONAR
         $dom->encoding = "utf-8";
         $data = $dom->saveHTML();
         $data = utf8ToEntities($data);
-        if (stripos($data, '<body') !== false)
-        {
+        if (stripos($data, '<body') !== false) {
             $data = self::getTagNode($data, 'body');
-        }
-        else if (stripos($data, '<head') !== false)
-        {
+        } else if (stripos($data, '<head') !== false) {
             $data = self::getTagNode($data, 'head');
         }
         return $data;
@@ -406,8 +398,7 @@ class PicoDOM //NOSONAR
             $href = $hrefs->item($i);
             $url = $href->getAttribute('href');
             $href->removeAttribute('target');
-            if ($target)
-            {
+            if ($target) {
                 $href->setAttribute("target", $target);
             }
             if (stripos($url, "://") === false && strlen($base)) {
@@ -426,9 +417,7 @@ class PicoDOM //NOSONAR
             if (stripos($url, "://") === false && strlen($base) && stripos($url, "data:") !== 0) //NOSONAR
             {
                 $newURL = $base . $url;
-            } 
-            else 
-            {
+            } else {
                 $newURL = $url;
             }
             $src->removeAttribute('src');
@@ -535,12 +524,9 @@ class PicoDOM //NOSONAR
         $dom->encoding = "utf-8";
         $data = $dom->saveHTML();
         $data = utf8ToEntities($data);
-        if (stripos($data, '<body') !== false)
-        {
+        if (stripos($data, '<body') !== false) {
             $data = self::getTagNode($data, 'body');
-        }
-        else if (stripos($data, '<head') !== false)
-        {
+        } else if (stripos($data, '<head') !== false) {
             $data = self::getTagNode($data, 'head');
         }
         return $data;
@@ -561,8 +547,7 @@ class PicoDOM //NOSONAR
             $href = $hrefs->item($i);
             $url = $href->getAttribute('href');
             $href->removeAttribute('target');
-            if ($target)
-            {
+            if ($target) {
                 $href->setAttribute("target", $target);
             }
             if (stripos($url, "://") === false && strlen($base) && (stripos($url, $onlystartedwith) === 0 || !$onlystartedwith)) {
@@ -731,12 +716,9 @@ class PicoDOM //NOSONAR
         $dom->encoding = "utf-8";
         $data = $dom->saveHTML();
         $data = utf8ToEntities($data);
-        if (stripos($data, '<body') !== false)
-        {
+        if (stripos($data, '<body') !== false) {
             $data = self::getTagNode($data, 'body');
-        }
-        else if (stripos($data, '<head') !== false)
-        {
+        } else if (stripos($data, '<head') !== false) {
             $data = self::getTagNode($data, 'head');
         }
         return $data;
@@ -760,12 +742,9 @@ class PicoDOM //NOSONAR
         }
         $dom->encoding = "utf-8";
         $data = $dom->saveHTML();
-        if (stripos($data, '<body') !== false)
-        {
+        if (stripos($data, '<body') !== false) {
             $data = self::getTagNode($data, 'body');
-        }
-        else if (stripos($data, '<head') !== false)
-        {
+        } else if (stripos($data, '<head') !== false) {
             $data = self::getTagNode($data, 'head');
         }
         return $data;
@@ -849,12 +828,9 @@ class PicoDOM //NOSONAR
         $dom->encoding = "utf-8";
         $data = $dom->saveHTML();
         $data = utf8ToEntities($data);
-        if (stripos($data, '<body') !== false)
-        {
+        if (stripos($data, '<body') !== false) {
             $data = self::getTagNode($data, 'body');
-        }
-        else if (stripos($data, '<head') !== false)
-        {
+        } else if (stripos($data, '<head') !== false) {
             $data = self::getTagNode($data, 'head');
         }
         return $data;
@@ -868,23 +844,19 @@ class PicoDOM //NOSONAR
             $closetag = "</" . $tag . ">";
             $opentag = "<" . $tag;
             $pos1 = stripos($data, $opentag, 0);
-            if ($pos1 === false)
-            {
+            if ($pos1 === false) {
                 $result = $data;
             } else {
                 $pos1 = stripos($data, ">", $pos1 + strlen($tag) - 1) + 1;
                 $pos2 = stripos($data, $closetag);
                 if ($pos1 === false || $pos2 === false) {
                     $result = $data;
+                } else {
+                    $result = substr($data, $pos1, ($pos2 - $pos1));
                 }
-                else
-                {
-                    $result = substr($data, $pos1, ($pos2 - $pos1));	
-                } 
             }
         }
         return $result;
-        
     }
 
     public static function extractParagraph($data)
@@ -905,7 +877,7 @@ class PicoDOM //NOSONAR
         }
         return $result;
     }
-    
+
 
     public static function filterHtml($text)
     {
@@ -927,8 +899,8 @@ class PicoDOM //NOSONAR
 
         $base_src = ltrim(rtrim($base_src, "/") . "/", "/");
         $temp = preg_replace('/\s+/', ' ', $text);
-        $temp = str_replace(self::BR_OPEN, " <br> ", $temp);
-        $temp = str_replace(self::BR_CLOSED, " <br /> ", $temp);
+        $temp = str_replace(self::BR_OPEN, self::BR_OPEN_WITH_SPACE, $temp);
+        $temp = str_replace(self::BR_CLOSED, self::BR_CLOSE_WITH_SPACE, $temp);
         $temp = trim(preg_replace("/\s+/", " ", $temp));
         $arr = explode(" ", $temp);
         $arr_find = array();
@@ -1182,64 +1154,64 @@ class PicoDOM //NOSONAR
     }
 
     public static function getYoutubeParams($url)
-	{
-		$s = $url;
-		$params = array(
-			'video_id' => '',
-			'time' => '0',
-			'url' => ''
-		);
-		if (stripos($s, "://") !== false && stripos($s, "youtube.com") !== false) {
-			$s = htmlspecialchars_decode($s);
-			$data = parse_url($s);
-			parse_str(@$data['query'], $args);
-			$vid = @$args['v'];
-			$sstart = @$args['start'];
+    {
+        $s = $url;
+        $params = array(
+            'video_id' => '',
+            'time' => '0',
+            'url' => ''
+        );
+        if (stripos($s, "://") !== false && stripos($s, "youtube.com") !== false) {
+            $s = htmlspecialchars_decode($s);
+            $data = parse_url($s);
+            parse_str(@$data['query'], $args);
+            $vid = @$args['v'];
+            $sstart = @$args['start'];
 
-			$ff = @$data['fragment'];
-			parse_str(@$ff, $fragment);
-			if ($sstart == '' && @$fragment['t']) {
-				$sstart = @$fragment['t'];
-			}
+            $ff = @$data['fragment'];
+            parse_str(@$ff, $fragment);
+            if ($sstart == '' && @$fragment['t']) {
+                $sstart = @$fragment['t'];
+            }
 
-			$sstart = str_ireplace(array("h", "m", "s"), array(" ", " ", ""), $sstart);
-			$arr = explode(" ", $sstart);
-			$arr2 = array_reverse($arr);
-			$t = $arr2[0] + (@$arr2[1] * 60) + (@$arr2[2] * 3600);
-			$time = $t;
+            $sstart = str_ireplace(array("h", "m", "s"), array(" ", " ", ""), $sstart);
+            $arr = explode(" ", $sstart);
+            $arr2 = array_reverse($arr);
+            $t = $arr2[0] + (@$arr2[1] * 60) + (@$arr2[2] * 3600);
+            $time = $t;
 
-			$yurl = "https://www.youtube.com/embed/$vid?html5=1&amp;playsinline=1&amp;allowfullscreen=true&amp;rel=0&amp;version=3&amp;autoplay=1&amp;start=$time";
+            $yurl = "https://www.youtube.com/embed/$vid?html5=1&amp;playsinline=1&amp;allowfullscreen=true&amp;rel=0&amp;version=3&amp;autoplay=1&amp;start=$time";
 
-			$params['url'] = $yurl;
-			$params['video_id'] = $vid;
-			$params['time'] = $time;
-		} else if (stripos($s, "://") !== false && stripos($s, "youtu.be") !== false) {
-			$s = htmlspecialchars_decode($s);
-			$data = parse_url($s);
-			$vid = trim(@$data['path'], "/");
-			parse_str(@$data['query'], $args);
-			$sstart = @$args['t'];
-			$sstart = str_ireplace(array("h", "m", "s"), array(" ", " ", ""), $sstart);
-			$arr = explode(" ", $sstart);
-			$arr2 = array_reverse($arr);
-			$t = $arr2[0] + (@$arr2[1] * 60) + (@$arr2[2] * 3600);
-			$time = $t;
-			$yurl = "https://www.youtube.com/embed/$vid?html5=1&amp;playsinline=1&amp;allowfullscreen=true&amp;rel=0&amp;version=3&amp;autoplay=1&amp;start=$time";
-			$params['url'] = $yurl;
-			$params['video_id'] = $vid;
-			$params['time'] = $time;
-		} else if (stripos($s, "://") !== false && stripos($s, "ytimg.com") !== false) {
-			$s = htmlspecialchars_decode($s);
-			$data = parse_url($s);
-			$str = trim(@$data['path'], "/");
-			$arr = explode("/", $str);
-			$vid = @$arr[1];
-			$yurl = "https://www.youtube.com/embed/$vid?html5=1&amp;playsinline=1&amp;allowfullscreen=true&amp;rel=0&amp;version=3&amp;autoplay=1";
-			$params['url'] = $yurl;
-			$params['video_id'] = $vid;
-		}
-		return $params;
-	}
+            $params['url'] = $yurl;
+            $params['video_id'] = $vid;
+            $params['time'] = $time;
+        } else if (stripos($s, "://") !== false && stripos($s, "youtu.be") !== false) {
+            $s = htmlspecialchars_decode($s);
+            $data = parse_url($s);
+            $vid = trim(@$data['path'], "/");
+            parse_str(@$data['query'], $args);
+            $sstart = @$args['t'];
+            $sstart = str_ireplace(array("h", "m", "s"), array(" ", " ", ""), $sstart);
+            $arr = explode(" ", $sstart);
+            $arr2 = array_reverse($arr);
+            $t = $arr2[0] + (@$arr2[1] * 60) + (@$arr2[2] * 3600);
+            $time = $t;
+            $yurl = "https://www.youtube.com/embed/$vid?html5=1&amp;playsinline=1&amp;allowfullscreen=true&amp;rel=0&amp;version=3&amp;autoplay=1&amp;start=$time";
+            $params['url'] = $yurl;
+            $params['video_id'] = $vid;
+            $params['time'] = $time;
+        } else if (stripos($s, "://") !== false && stripos($s, "ytimg.com") !== false) {
+            $s = htmlspecialchars_decode($s);
+            $data = parse_url($s);
+            $str = trim(@$data['path'], "/");
+            $arr = explode("/", $str);
+            $vid = @$arr[1];
+            $yurl = "https://www.youtube.com/embed/$vid?html5=1&amp;playsinline=1&amp;allowfullscreen=true&amp;rel=0&amp;version=3&amp;autoplay=1";
+            $params['url'] = $yurl;
+            $params['video_id'] = $vid;
+        }
+        return $params;
+    }
 
     public static function removeParagraphTag($text)
     {
@@ -1259,9 +1231,7 @@ class PicoDOM //NOSONAR
             }
             $ret = $text;
         }
-        */ 
-        else 
-        {
+        */ else {
             $ret = $text;
         }
         return $ret;
