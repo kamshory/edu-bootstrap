@@ -13,7 +13,6 @@ WHERE `edu_test`.`test_id` = '$test_id'
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
-	
 	$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 	$dirBase = dirname(dirname(__FILE__));
