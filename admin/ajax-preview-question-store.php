@@ -18,8 +18,7 @@ if($stmt->rowCount() > 0)
 		$picoTest = new \Pico\PicoTest();
 		$text_all = $picoTest->loadXmlData($file_path);
 
-		$browserCache = new \Pico\BrowserCache();
-		$browserCache->setMaxAge(3600);
+		\Pico\BrowserCache::setMaxAge(3600);
 
 		?>
         <div class="title">

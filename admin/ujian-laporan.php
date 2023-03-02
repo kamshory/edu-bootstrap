@@ -674,7 +674,7 @@ window.onload = function()
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>\Pico\PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoConst::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -1012,7 +1012,7 @@ $teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NE
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>\Pico\PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoConst::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -1038,7 +1038,7 @@ $teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NE
 				'value'=>$teacher_id
 			),
 			'caption'=>array(
-				'delimiter'=>\Pico\PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoConst::RAQUO,
 				'values'=>array(
 					'name'
 				)

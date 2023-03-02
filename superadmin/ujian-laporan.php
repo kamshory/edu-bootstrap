@@ -482,7 +482,7 @@ window.onload = function()
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>\Pico\PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoConst::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -796,7 +796,7 @@ require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
           'value'=>$school_id
         ),
         'caption'=>array(
-          'delimiter'=>\Pico\PicoEdu::RAQUO,
+          'delimiter'=>\Pico\PicoConst::RAQUO,
           'values'=>array(
             'name'
           )
@@ -824,7 +824,7 @@ require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
               'value'=>$class_id
             ),
             'caption'=>array(
-              'delimiter'=>\Pico\PicoEdu::RAQUO,
+              'delimiter'=>\Pico\PicoConst::RAQUO,
               'values'=>array(
                 'name'
               )

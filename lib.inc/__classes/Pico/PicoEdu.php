@@ -3,12 +3,10 @@ namespace Pico;
 
 class PicoEdu //NOSONAR
 {
-	const RAQUO = ' &raquo; ';
 	const SPAN_OPEN = '<span>';
 	const SPAN_CLOSE = '</span>';
 	const SPAN_TITLE = '<span title="';
-	const TRIM_EXTRA_SPACE = "/\s+/";
-	const TRIM_NON_NUMERIC = "/[^0-9]/i";
+
 
 	public $database;
 
@@ -46,7 +44,7 @@ class PicoEdu //NOSONAR
 	 */
 	public function checkValidName($fullName)
 	{
-		$fullName = trim(preg_replace(self::TRIM_EXTRA_SPACE, " ", $fullName));
+		$fullName = trim(preg_replace(\Pico\PicoConst::TRIM_EXTRA_SPACE, " ", $fullName));
 		$arr_name = explode(" ", $fullName);
 		$valid_name = 1;
 		foreach ($arr_name as $name) {
@@ -56,7 +54,7 @@ class PicoEdu //NOSONAR
 				' ',
 				$name
 			);
-			$name = trim(preg_replace(self::TRIM_EXTRA_SPACE, " ", $name));
+			$name = trim(preg_replace(\Pico\PicoConst::TRIM_EXTRA_SPACE, " ", $name));
 			$arr_part = explode(" ", $name);
 			foreach ($arr_part as $val2) {
 				if (strlen($val2) > 4 && $this->containingLowercase($val2)) {
@@ -231,7 +229,7 @@ class PicoEdu //NOSONAR
 
 		$name = $user_data['name'];
 		$name = trim(preg_replace("/[^a-zA-Z 0-9\.\-]+/", " ", $name), " -. ");
-		$name = trim(preg_replace(self::TRIM_EXTRA_SPACE, " ", $name));
+		$name = trim(preg_replace(\Pico\PicoConst::TRIM_EXTRA_SPACE, " ", $name));
 		$gender = $user_data['gender'];
 		$email = $this->trimWhitespace($user_data['email']);
 		$phone = $user_data['phone'];
@@ -419,7 +417,7 @@ class PicoEdu //NOSONAR
 					if ($stmt->rowCount() > 0) {
 						$data2 = $stmt->fetch(\PDO::FETCH_ASSOC);
 						$basic_competence = $data2['basic_competence'];
-						$basic_competence = preg_replace(self::TRIM_NON_NUMERIC, ".", $basic_competence);
+						$basic_competence = preg_replace(\Pico\PicoConst::TRIM_NON_NUMERIC, ".", $basic_competence);
 						$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
 						$score = $data2['score'];
 						$index = 0;
@@ -479,7 +477,7 @@ class PicoEdu //NOSONAR
 			$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 			foreach ($rows as $data) {
 				$basic_competence = $data['basic_competence'];
-				$basic_competence = preg_replace(self::TRIM_NON_NUMERIC, ".", $basic_competence);
+				$basic_competence = preg_replace(\Pico\PicoConst::TRIM_NON_NUMERIC, ".", $basic_competence);
 				$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
 				if (stripos($basic_competence, ".") !== false) {
 					$sp = explode(".", $basic_competence);
@@ -632,7 +630,7 @@ class PicoEdu //NOSONAR
 	}
 	public function filterEmailAddress($email)
 	{
-		$email = trim(preg_replace(self::TRIM_EXTRA_SPACE, "", $email));
+		$email = trim(preg_replace(\Pico\PicoConst::TRIM_EXTRA_SPACE, "", $email));
 		if (
 			stripos($email, '@domain.com') !== false ||
 			stripos($email, '@example.com') !== false ||
@@ -691,7 +689,7 @@ class PicoEdu //NOSONAR
 							$data2 = $stmt2->fetch(\PDO::FETCH_ASSOC);
 
 							$basic_competence = $data2['basic_competence'];
-							$basic_competence = preg_replace(self::TRIM_NON_NUMERIC, ".", $basic_competence);
+							$basic_competence = preg_replace(\Pico\PicoConst::TRIM_NON_NUMERIC, ".", $basic_competence);
 							$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
 							$score = $data2['score'];
 							$index = 0;
@@ -852,7 +850,7 @@ class PicoEdu //NOSONAR
 	public function filterSanitizeDoubleSpace($value)
 	{
 		$value = addslashes($value);
-		$value = trim(preg_replace(self::TRIM_EXTRA_SPACE, " ", $value));
+		$value = trim(preg_replace(\Pico\PicoConst::TRIM_EXTRA_SPACE, " ", $value));
 		return $this->trimPunctuation($value);
 	}
 

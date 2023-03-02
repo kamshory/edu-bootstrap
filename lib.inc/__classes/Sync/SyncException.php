@@ -10,7 +10,7 @@ class SyncException extends \Exception
         parent::__construct($message, $code);  
         if (!is_null($previous))
         {
-            $this -> previous = $previous;
+            $this->previous = $previous;
         }
     }
 }

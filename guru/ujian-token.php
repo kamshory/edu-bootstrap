@@ -147,7 +147,7 @@ $(document).ready(function(e) {
 					'value'=>$data['test_id']
 				),
 				'caption'=>array(
-					'delimiter'=>\Pico\PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoConst::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -178,7 +178,7 @@ $(document).ready(function(e) {
 					'value'=>$data['class_id']
 				),
 				'caption'=>array(
-					'delimiter'=>\Pico\PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoConst::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -363,7 +363,7 @@ function printToken(frm)
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>\Pico\PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoConst::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -392,7 +392,7 @@ function printToken(frm)
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>\Pico\PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoConst::RAQUO,
 				'values'=>array(
 					'name'
 				)

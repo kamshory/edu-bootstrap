@@ -12,7 +12,6 @@ class FileSyncMaster //NOSONAR
     protected $poolRollingPrefix = '';
     protected $poolFileExtension = '';
     protected $useRelativePath;
-
     protected $application = 'picoedu';
 
     /**

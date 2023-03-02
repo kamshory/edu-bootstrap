@@ -207,7 +207,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 					'value'=>null
 				),
 				'caption'=>array(
-					'delimiter'=>\Pico\PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoConst::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -317,7 +317,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 					'value'=>$data['school_id']
 				),
 				'caption'=>array(
-					'delimiter'=>\Pico\PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoConst::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -546,7 +546,7 @@ $(document).ready(function(e) {
 				'value'=>$school_id
 			),
 			'caption'=>array(
-				'delimiter'=>\Pico\PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoConst::RAQUO,
 				'values'=>array(
 					'name'
 				)

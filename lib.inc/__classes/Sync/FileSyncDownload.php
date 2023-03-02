@@ -1,8 +1,6 @@
 <?php
 namespace Sync;
 
-
-
 class FileSyncDownload extends FileSyncMaster
 {
     /**

@@ -419,7 +419,7 @@ $subjectList = $picoEdu->getSubjectList();
 					'value'=>null
 				),
 				'caption'=>array(
-					'delimiter'=>\Pico\PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoConst::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -459,7 +459,7 @@ $subjectList = $picoEdu->getSubjectList();
 					'value'=>null
 				),
 				'caption'=>array(
-					'delimiter'=>\Pico\PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoConst::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -707,7 +707,7 @@ $subjectList = $picoEdu->getSubjectList();
 					'value'=>$data['school_program_id']
 				),
 				'caption'=>array(
-					'delimiter'=>\Pico\PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoConst::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -748,7 +748,7 @@ $subjectList = $picoEdu->getSubjectList();
 					'value'=>$data['teacher_id']
 				),
 				'caption'=>array(
-					'delimiter'=>\Pico\PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoConst::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -1169,7 +1169,7 @@ window.onload = function()
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>\Pico\PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoConst::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -1195,7 +1195,7 @@ window.onload = function()
 				'value'=>$teacher_id
 			),
 			'caption'=>array(
-				'delimiter'=>\Pico\PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoConst::RAQUO,
 				'values'=>array(
 					'reg_number',
 					'name'

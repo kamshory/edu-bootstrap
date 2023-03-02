@@ -991,7 +991,7 @@ function buildMenu(id)
 						'value'=>$school_id
 					),
 					'caption'=>array(
-						'delimiter'=>\Pico\PicoEdu::RAQUO,
+						'delimiter'=>\Pico\PicoConst::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -1019,7 +1019,7 @@ function buildMenu(id)
 								'value'=>$class_id
 							),
 							'caption'=>array(
-								'delimiter'=>\Pico\PicoEdu::RAQUO,
+								'delimiter'=>\Pico\PicoConst::RAQUO,
 								'values'=>array(
 									'name'
 								)

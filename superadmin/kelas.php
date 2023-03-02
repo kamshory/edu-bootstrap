@@ -104,7 +104,7 @@ if (@$_GET['option'] == 'add') {
 							'value'=>null
 						),
 						'caption'=>array(
-							'delimiter'=>\Pico\PicoEdu::RAQUO,
+							'delimiter'=>\Pico\PicoConst::RAQUO,
 							'values'=>array(
 								'name'
 							)
@@ -191,7 +191,7 @@ if (@$_GET['option'] == 'add') {
 										'value'=>$data['school_program_id']
 									),
 									'caption'=>array(
-										'delimiter'=>\Pico\PicoEdu::RAQUO,
+										'delimiter'=>\Pico\PicoConst::RAQUO,
 										'values'=>array(
 											'name'
 										)
@@ -354,7 +354,7 @@ if($stmt->rowCount() > 0)
 							'value'=>$school_id
 						),
 						'caption'=>array(
-							'delimiter'=>\Pico\PicoEdu::RAQUO,
+							'delimiter'=>\Pico\PicoConst::RAQUO,
 							'values'=>array(
 								'name'
 							)

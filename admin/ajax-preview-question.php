@@ -17,7 +17,6 @@ if(!empty(@$school_id)) {
 
 				$object = $picoTest->parseQuestion($question);
 				$isi = nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages(@$object['question'], $base_dir, $base_src))));
-				// Commented $isi = fixing_table($isi);
 			?>
 				<li class="question-li">
 					<p><?php echo $isi; ?></p>
@@ -32,7 +31,6 @@ if(!empty(@$school_id)) {
 									}?>"></span>
 									<?php
 									$isi_pilihan = nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages($option['text'], $base_dir, $base_src))));
-									// Commented $isi_pilihan = fixing_table($isi_pilihan);
 									echo $isi_pilihan;
 									?>
 								</li>

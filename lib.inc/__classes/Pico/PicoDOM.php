@@ -139,11 +139,6 @@ class PicoDOM //NOSONAR
 
         $aDisabledAttributes = @implode('|', $aDisabledAttributes);
         $sSource = preg_replace('/<(.*?)>/ie', "'<' . preg_replace(array('/javascript:[^\"\']*/i', '/(" . $aDisabledAttributes . ")[ \\t\\n]*=[ \\t\\n]*[\"\'][^\"\']*[\"\']/i', '/\s+/'), array('', '', ' '), stripslashes('\\1')) . '>'", $sSource);
-        /**
-         * Old logic
-         * $sSource = preg_replace('/\s(' . $aDisabledAttributes . ').*?([\s\>])/', '\\2', $sSource);
-         * $sSource = preg_replace('@[a-z]*=""@is', '', $sSource); 
-         */
         return $sSource;
     }
 

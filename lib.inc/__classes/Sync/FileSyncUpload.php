@@ -1,5 +1,4 @@
 <?php
-
 namespace Sync;
 
 class FileSyncUpload extends \Sync\FileSyncMaster

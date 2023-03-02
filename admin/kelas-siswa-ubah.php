@@ -189,7 +189,7 @@ if(@$_GET['option'] == 'edit')
 					'value'=>$data['class_id']
 				),
 				'caption'=>array(
-					'delimiter'=>\Pico\PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoConst::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -444,7 +444,7 @@ $(document).ready(function(e) {
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>\Pico\PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoConst::RAQUO,
 				'values'=>array(
 					'name'
 				)
@@ -519,7 +519,7 @@ $paginationHTML = $pagination->buildHTML();
 							'value'=>$class_id
 						),
 						'caption'=>array(
-							'delimiter'=>\Pico\PicoEdu::RAQUO,
+							'delimiter'=>\Pico\PicoConst::RAQUO,
 							'values'=>array(
 								'name'
 							)

@@ -201,7 +201,7 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 					'value'=>null
 				),
 				'caption'=>array(
-					'delimiter'=>\Pico\PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoConst::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -322,7 +322,7 @@ if($stmt->rowCount() > 0)
 					'value'=>$data['class_id']
 				),
 				'caption'=>array(
-					'delimiter'=>\Pico\PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoConst::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -553,7 +553,7 @@ $(document).ready(function(e) {
 				'value'=>$class_id
 			),
 			'caption'=>array(
-				'delimiter'=>\Pico\PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoConst::RAQUO,
 				'values'=>array(
 					'name'
 				)

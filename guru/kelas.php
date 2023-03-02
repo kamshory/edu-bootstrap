@@ -101,7 +101,7 @@ $school_program_id = kh_filter_input(INPUT_GET, "school_program_id", FILTER_SANI
 				'value'=>$school_program_id
 			),
 			'caption'=>array(
-				'delimiter'=>\Pico\PicoEdu::RAQUO,
+				'delimiter'=>\Pico\PicoConst::RAQUO,
 				'values'=>array(
 					'name'
 				)

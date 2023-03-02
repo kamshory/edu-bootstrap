@@ -26,10 +26,9 @@ class AuthMember
 	public $country_id = '';
 	public $state_id = '';
 	public $city_id = '';
-
-	private $database;
 	private $password;
 	private $createlog = false;
+	private $database;
 
 	/**
 	 * Constructor of TeacherAuth

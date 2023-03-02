@@ -8,7 +8,7 @@ if(isset($_POST['sort']))
 	{
 		$sort_order = $key+1;
 		$val = addslashes($val);
-		$sql = "UPDATE `edu_question` SET `sort_order` = '$sort_order' WHERE `question_id` = '$val'";
+		$sql = "UPDATE `edu_question` SET `sort_order` = '$sort_order' WHERE `question_id` = '$val' ";
 		$database->executeUpdate($sql, true);
 	}
 }

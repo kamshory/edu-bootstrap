@@ -11,7 +11,7 @@ class PicoDatabaseSyncConfig
 	private $extension = '';
 	private $maximumlength = 1000000;
 	private $delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
-	const NEW_LINE = "\r\n";
+	
 
 	/**
 	 * Constructor of PicoDatabaseSyncConfig
@@ -77,8 +77,8 @@ class PicoDatabaseSyncConfig
 	{
 		$syncPath = $this->getPoolPath();
 		$fp = fopen($syncPath, 'a');
-		$l1 = fwrite($fp, $this->delimiter.self::NEW_LINE);
-		$l2 = fwrite($fp, trim($sql).";".self::NEW_LINE);
+		$l1 = fwrite($fp, $this->delimiter.\Pico\PicoConst::NEW_LINE);
+		$l2 = fwrite($fp, trim($sql).";".\Pico\PicoConst::NEW_LINE);
 		fclose($fp);
 		return $l1 + $l2;
 	}

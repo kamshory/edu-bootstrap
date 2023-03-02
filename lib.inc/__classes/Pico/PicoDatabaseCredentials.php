@@ -8,7 +8,6 @@ class PicoDatabaseCredentials
 	private $driver = 'mysql';
 	private $host = 'localhost';
 	private $port = 3306;
-
 	private $username = "";
 	private $password = "";
 	private $databaseName = "";
@@ -113,8 +112,6 @@ class PicoDatabaseCredentials
 	{
 		return $this->password;
 	}
-
-	
 
 	/**
 	 * Get the value of databaseName

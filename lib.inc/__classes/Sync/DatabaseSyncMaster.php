@@ -11,7 +11,6 @@ class DatabaseSyncMaster
     protected $poolFileName = '';
     protected $poolRollingPrefix = '';
     protected $poolFileExtension = '';
-
     protected string $application = 'picoedu';
 
     /**

@@ -21,10 +21,9 @@ class AuthAdmin
 	public $school_code = '';
 	public $use_token = 0;
 	public $use_national_id = 0;
-
 	private $database;
-	private $password;
 	private $createlog = false;
+	private $password;
 
 	/**
 	 * Constructor of TeacherAuth

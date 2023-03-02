@@ -19,10 +19,9 @@ class AuthStudent
 	public $school_name = '';
 	public $school_code = '';
 	public $use_token = 0;
-
-	private $database;
 	private $password;
 	private $createlog = false;
+	private $database;
 
 	/**
 	 * Constructor of TeacherAuth

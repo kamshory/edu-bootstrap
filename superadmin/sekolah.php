@@ -351,7 +351,7 @@ $(document).ready(function(e) {
 						'value'=>$data['state_id']
 					),
 					'caption'=>array(
-						'delimiter'=>\Pico\PicoEdu::RAQUO,
+						'delimiter'=>\Pico\PicoConst::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -380,7 +380,7 @@ $(document).ready(function(e) {
 						'value'=>$data['city_id']
 					),
 					'caption'=>array(
-						'delimiter'=>\Pico\PicoEdu::RAQUO,
+						'delimiter'=>\Pico\PicoConst::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -629,7 +629,7 @@ $(document).ready(function(e) {
 					'value'=>$data['country_id']
 				),
 				'caption'=>array(
-					'delimiter'=>\Pico\PicoEdu::RAQUO,
+					'delimiter'=>\Pico\PicoConst::RAQUO,
 					'values'=>array(
 						'name'
 					)
@@ -657,7 +657,7 @@ $(document).ready(function(e) {
 						'value'=>$data['state_id']
 					),
 					'caption'=>array(
-						'delimiter'=>\Pico\PicoEdu::RAQUO,
+						'delimiter'=>\Pico\PicoConst::RAQUO,
 						'values'=>array(
 							'name'
 						)
@@ -686,7 +686,7 @@ $(document).ready(function(e) {
 						'value'=>$data['city_id']
 					),
 					'caption'=>array(
-						'delimiter'=>\Pico\PicoEdu::RAQUO,
+						'delimiter'=>\Pico\PicoConst::RAQUO,
 						'values'=>array(
 							'name'
 						)
