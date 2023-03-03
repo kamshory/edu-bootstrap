@@ -9,8 +9,7 @@ $tokens = kh_filter_input(INPUT_GET, "tokens", FILTER_SANITIZE_STRING_NEW);
 $arr = explode(",", $tokens);
 foreach($arr as $key=>$val)
 {
-  $val = preg_replace("/[^\d]/i", "", $val);
-  $arr[$key] = abs($val*1);
+  $arr[$key] = "'".addslashes($val)."'";
 }
 $edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
