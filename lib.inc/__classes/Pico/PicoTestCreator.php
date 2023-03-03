@@ -1,7 +1,7 @@
 <?php
 
 namespace Pico;
-class PicoTest
+class PicoTestCreator
 {
     public function loadXmlData_word($xml_file, $key = 0) //NOSONAR
     {
@@ -141,8 +141,7 @@ class PicoTest
             $text_all = str_replace(' src="' . $name . '"', ' src="data:' . $data['type'] . ';' . $data['encoding'] . ',' . $data['data'] . '"', $text_all);
         }
         return $text_all;
-    }
-    
+    }   
     public function replaceImageData($html, $base_dir) //NOSONAR
     {
         global $cfg;
@@ -167,7 +166,6 @@ class PicoTest
             if ($skip) {
                 continue;
             }
-    
     
             if (stripos($src, "data:") === 0) //NOSONAR
             {
@@ -347,7 +345,6 @@ class PicoTest
             $obj->type = $content_type;
             $obj->encoding = 'base64';
             $obj->data = base64_encode($data);
-    
             $files[] = $obj;
         }
     

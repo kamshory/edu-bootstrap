@@ -7,7 +7,7 @@ $test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
 $xml_data = kh_filter_input(INPUT_POST, "text", FILTER_DEFAULT);
 if(!empty($test_id) && $xml_data!= '')
 {
-	$picoTest = new \Pico\PicoTest();
+	$picoTest = new \Pico\PicoTestCreator();
 	$clear_data = $picoTest->parseRawQuestion($xml_data);
 
 	$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";

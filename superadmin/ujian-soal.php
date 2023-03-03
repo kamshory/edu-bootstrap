@@ -44,7 +44,7 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-		$picoTest = new \Pico\PicoTest();
+		$picoTest = new \Pico\PicoTestCreator();
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$time_create = $database->getLocalDateTime();
 		$time_edit = $database->getLocalDateTime();

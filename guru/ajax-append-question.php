@@ -6,7 +6,7 @@ if(!empty($school_id))
 	$basename = "ujian-soal.php";
 	if(isset($_POST['question_text']) && isset($_POST['test_id']) && @$_POST['option']=='add')
 	{
-		$picoTest = new \Pico\PicoTest();
+		$picoTest = new \Pico\PicoTestCreator();
 		$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
 		$edit_mode = kh_filter_input(INPUT_POST, "edit_mode", FILTER_SANITIZE_NUMBER_UINT);
 		$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = '$school_id' AND `teacher_id` = '$teacher_id' ";
