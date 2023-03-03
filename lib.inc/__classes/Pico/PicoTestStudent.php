@@ -46,13 +46,5 @@ class PicoTestStudent
     public $ip_edit = '';
     public $active = false;
 
-    public function load($dcod)
-    {
-        $prop = get_object_vars($dcod);
-        foreach ($prop as $key => $lock) {
-            if (property_exists($this, $key)) {              
-                $this->$key = $dcod->$key;
-            }
-        }
-    }
+    
 }

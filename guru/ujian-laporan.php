@@ -945,13 +945,13 @@ $paginationHTML = $pagination->buildHTML();
 else if(strlen(@$_GET['q'] != ''))
 {
 ?>
-<div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi lagi dengan kata kunci yang lain.</div>
+<div class="alert alert-warning">Pencarian tidak menemukan hasil. Silakan ulangi lagi dengan kata kunci yang lain.</div>
 <?php
 }
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan.</div>
+<div class="alert alert-warning">Data tidak ditemukan.</div>
 <?php
 }
 ?>
@@ -1118,13 +1118,13 @@ $array_class = $picoEdu->getArrayClass($school_id);
 else if(strlen(@$_GET['q'] != ''))
 {
 ?>
-<div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi lagi dengan kata kunci yang lain.</div>
+<div class="alert alert-warning">Pencarian tidak menemukan hasil. Silakan ulangi lagi dengan kata kunci yang lain.</div>
 <?php
 }
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan.</div>
+<div class="alert alert-warning">Data tidak ditemukan.</div>
 <?php
 }
 ?>

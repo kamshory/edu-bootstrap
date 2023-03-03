@@ -287,7 +287,7 @@ foreach($rows1 as $data)
 else
 {
 ?>
-<div class="warning">
+<div class="alert alert-warning">
 Ujian tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali</a>.
 </div>
 <?php
@@ -408,7 +408,7 @@ if($stmt->rowCount() > 0)
 else
 {
 ?>
-<div class="warning">
+<div class="alert alert-warning">
 Ujian tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali</a>.
 </div>
 <?php
@@ -764,13 +764,13 @@ $paginationHTML = $pagination->buildHTML();
 else if(@$_GET['q'] != '')
 {
 ?>
-<div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
+<div class="alert alert-warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
 <?php
 }
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan.</div>
+<div class="alert alert-warning">Data tidak ditemukan.</div>
 <?php
 }
 ?>

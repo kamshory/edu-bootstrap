@@ -15,20 +15,20 @@ class PicoPagination
     private $total_record = 0;
     private $total_record_with_limit = 0;
 
-    private $str_first = '&laquo;';
-    private $str_last = '&raquo;';
-    private $str_prev = '&lsaquo;';
-    private $str_next = '&rsaquo;';
-    private $str_noresult = 'Pencarian tidak menemukan hasil.';
-    private $str_nodata = 'Data tidak ditemukan.';
-    private $str_nodata_add = 'Data tidak ditemukan. <a href="%s">Klik di sini untuk membuat baru</a>.';
-    private $str_keyword = 'Kata kunci';
-    private $str_search = 'Cari';
-    private $str_soundlike = 'Cari seperti';
-    private $str_record = ' Baris ';
-    private $str_from = ' dari ';
-    private $str_to = ' hingga ';
-    private $str_of = ' dari ';
+    private $str_first = '&laquo;'; //NOSONAR
+    private $str_last = '&raquo;'; //NOSONAR
+    private $str_prev = '&lsaquo;'; //NOSONAR
+    private $str_next = '&rsaquo;'; //NOSONAR
+    private $str_noresult = 'Pencarian tidak menemukan hasil.'; //NOSONAR
+    private $str_nodata = 'Data tidak ditemukan.'; //NOSONAR
+    private $str_nodata_add = 'Data tidak ditemukan. <a href="%s">Klik di sini untuk membuat baru</a>.'; //NOSONAR
+    private $str_keyword = 'Kata kunci'; //NOSONAR
+    private $str_search = 'Cari'; //NOSONAR
+    private $str_soundlike = 'Cari seperti'; //NOSONAR
+    private $str_record = ' Baris '; //NOSONAR
+    private $str_from = ' dari '; //NOSONAR
+    private $str_to = ' hingga '; //NOSONAR
+    private $str_of = ' dari '; //NOSONAR
 
     private $query = '';
     private $query_edit = '';
@@ -211,4 +211,6 @@ class PicoPagination
 		return "";
 	}
  
+
+   
 }

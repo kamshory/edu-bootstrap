@@ -391,7 +391,7 @@ $(document).ready(function(e) {
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
+<div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
@@ -570,7 +570,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 else
 {
 ?>
-<div class="warning">Anda tidak terdaftar sebagai Administrator sekolah. <a href="impor-data.php">Klik di sini untuk import data.</a></div>	
+<div class="alert alert-warning">Anda tidak terdaftar sebagai Administrator sekolah. <a href="impor-data.php">Klik di sini untuk import data.</a></div>	
 <?php
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR

@@ -56,7 +56,7 @@ editor.modal = {
     html: `
       <h1>Configuration</h1>
       <div id="configuration">
-        <button class="warning">Erase all data</button>
+        <button class="alert alert-warning">Erase all data</button>
         </div>
       </div>`,
     js: function(el){

@@ -332,7 +332,7 @@ $stmt = $database->executeQuery($sql);
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
+<div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
@@ -353,13 +353,13 @@ if(isset($_POST['cleanup']))
 	if($num_deleted > 0)
 	{
 	?>
-    <div class="info">Sebanyak <?php echo $num_deleted;?> token salah yang dimasukkan siswa telah berhasil dihapus.</div>
+    <div class="alert alert-success">Sebanyak <?php echo $num_deleted;?> token salah yang dimasukkan siswa telah berhasil dihapus.</div>
     <?php
 	}
 	else
 	{
 	?>
-    <div class="info">Tidak ada token salah yang dimasukkan siswa.</div>
+    <div class="alert alert-success">Tidak ada token salah yang dimasukkan siswa.</div>
     <?php
 	}
 }
@@ -606,13 +606,13 @@ if($test_id == 0 && $class_id == 0)
 else if(@$_GET['q'] != '')
 {
 ?>
-<div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
+<div class="alert alert-warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
 <?php
 }
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=add">Klik di sini untuk membuat baru.</a></div>
 <?php
 }
 ?>

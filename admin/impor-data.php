@@ -964,7 +964,7 @@ else if(@$_GET['option'] == 'duplicated')
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
-<div class="warning">GAGAL! Data sekolah dengan name yang sama telah dimasukkan sebelumnya. Mohon periksa kembali data yang Anda masukkan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Impor lagi</a>.</div>
+<div class="alert alert-warning">GAGAL! Data sekolah dengan name yang sama telah dimasukkan sebelumnya. Mohon periksa kembali data yang Anda masukkan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Impor lagi</a>.</div>
 <?php
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
@@ -973,7 +973,7 @@ else
 	
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
-<div class="info">
+<div class="alert alert-success">
 Modul ini digunakan untuk mengimpor data sekolah, kelas, siswa, dan guru. Contoh data dapat didownload <a href="planetedu.xlsx">di sini</a>. Apabila terjadi kesalahan saat melakukan import data, segera hapus data tersebut sebelum mengimpor data yang lain.</div>
 <p>Pilih file</p>
 <style type="text/css">

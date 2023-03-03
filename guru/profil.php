@@ -116,7 +116,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="profil.php">Klik di sini untuk kembali.</a></div>	
+<div class="alert alert-warning">Data tidak ditemukan. <a href="profil.php">Klik di sini untuk kembali.</a></div>	
 <?php
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
@@ -209,7 +209,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 else
 {
 ?>
-<div class="warning">Anda tidak terdaftar sebagai guru. <a href="../">Klik di sini untuk kembali.</a></div>	
+<div class="alert alert-warning">Anda tidak terdaftar sebagai guru. <a href="../">Klik di sini untuk kembali.</a></div>	
 <?php
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR

@@ -437,7 +437,7 @@ for($i=1;$i<=$data['number_of_option']; $i++)
 else
 {
 ?>
-<div class="warning">Ujian tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>
+<div class="alert alert-warning">Ujian tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>
 <?php
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
@@ -577,7 +577,7 @@ if ($stmt2->rowCount() > 0) {
 else
 {
 ?>
-<div class="warning">Ujian tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>
+<div class="alert alert-warning">Ujian tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>
 <?php
 }
 
@@ -918,7 +918,7 @@ if ($stmt2->rowCount() > 0) {
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali</a>.</div>
+<div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali</a>.</div>
 <?php	
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
@@ -1167,13 +1167,13 @@ $array_class = $picoEdu->getArrayClass($school_id);
 else if(@$_GET['q'] != '')
 {
 ?>
-<div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
+<div class="alert alert-warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
 <?php
 }
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="ujian.php?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="alert alert-warning">Data tidak ditemukan. <a href="ujian.php?option=add">Klik di sini untuk membuat baru.</a></div>
 <?php
 }
 ?>

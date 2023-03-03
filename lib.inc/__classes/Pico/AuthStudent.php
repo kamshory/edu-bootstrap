@@ -14,7 +14,7 @@ class AuthStudent
 	public $country_id = '';
 	public $state_id = '';
 	public $city_id = '';
-	public $class_id = 0;
+	public $class_id = '';
 	public $school_id = "";
 	public $school_name = '';
 	public $school_code = '';

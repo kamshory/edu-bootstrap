@@ -85,7 +85,7 @@ if(stripos($size['mime'], 'image')===0)
 	{
 	?>
     <div class="image-editor-sidebar-inner">
-    <div class="warning">GD module is not installed on this server.</div>
+    <div class="alert alert-warning">GD module is not installed on this server.</div>
     </div>
     <?php
 	}

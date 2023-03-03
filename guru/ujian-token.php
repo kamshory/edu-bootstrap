@@ -5,8 +5,8 @@ $pageTitle = "Token";
 $pagination = new \Pico\PicoPagination();
 if(count(@$_POST))
 {
-	$token_id = kh_filter_input(INPUT_POST, "token_id", FILTER_SANITIZE_NUMBER_INT);
-	$token_id2 = kh_filter_input(INPUT_POST, "token_id2", FILTER_SANITIZE_NUMBER_INT);
+	$token_id = kh_filter_input(INPUT_POST, "token_id", FILTER_SANITIZE_STRING_NEW);
+	$token_id2 = kh_filter_input(INPUT_POST, "token_id2", FILTER_SANITIZE_STRING_NEW);
 	if(!isset($_POST['token_id']))
 	{
 		$token_id = $token_id2;
@@ -44,9 +44,9 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$sql = "UPDATE `edu_token` SET `active` = false WHERE `time_expire` < '$now'
 	";
 	$database->executeUpdate($sql, true);
-	if($class_id)
+	if(!empty($class_id))
 	{
-		if($student_id == 0)
+		if(empty($student_id))
 		{
 			// membuat token untuk semua siswa
 			$sql = "SELECT `student_id` FROM `edu_student` WHERE `class_id` = '$class_id' AND `active` = true
@@ -86,7 +86,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			$token = $tokens[0];
 			$token_id = $database->generateNewId();
 			$sql = "INSERT INTO `edu_token` 
-			(`token_id1, `token`, `school_id`, `class_id`, `student_id`, `test_id`, `time_create`, `time_edit`, `time_expire`, 
+			(`token_id`, `token`, `school_id`, `class_id`, `student_id`, `test_id`, `time_create`, `time_edit`, `time_expire`, 
 			`teacher_create`, `teacher_edit`, `active`) VALUES
 			('$token_id', '$token', '$school_id', '$class_id', '$student_id', '$test_id', '$time_create', '$time_edit', '$time_expire', 
 			'$member_create', '$member_edit', '$active')";
@@ -97,7 +97,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 }
 if(@$_GET['option'] == 'print')
 {
-require_once dirname(__FILE__)."/cetak-ujian-token.php";
+	require_once dirname(__FILE__)."/cetak-ujian-token.php";
 }
 else if(@$_GET['option'] == 'add')
 {
@@ -131,9 +131,8 @@ $(document).ready(function(e) {
 		<td><select class="form-control input-select" name="test_id" id="test_id" required="required">
 		<option value=""></option>
 		<?php 
-		$sql = "SELECT * FROM `edu_test`
+		$sql2 = "SELECT * FROM `edu_test`
 		WHERE `school_id` = '$school_id' AND `teacher_id` = '$teacher_id'
-		AND (`test_availability` = 'F' OR `available_to` > '$now')
 		ORDER BY `test_id` DESC
 		";
 		echo $picoEdu->createFilterDb(
@@ -197,7 +196,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Kedaluarsa</td>
-		<td><input type="text" class="form-control input-text input-text-datetime" name="time_expire" id="time_expire" value="<?php echo date(\Pico\PicoConst::DATE_TIME_MYSQL, time()+3600);?>" autocomplete="off" required="required" /></td>
+		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="time_expire" id="time_expire" value="<?php echo date(\Pico\PicoConst::DATE_TIME_MYSQL, time()+3600);?>" autocomplete="off" required="required" /></td>
 		</tr>
 	</table>
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -216,7 +215,7 @@ require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 else if(@$_GET['option'] == 'detail')
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, "token_id", FILTER_SANITIZE_NUMBER_INT);
+$edit_key = kh_filter_input(INPUT_GET, "token_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_token`.* $nt,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_create`) AS `creator_name`,
@@ -288,7 +287,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
+<div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
@@ -309,13 +308,13 @@ if(isset($_POST['cleanup']))
 	if($num_deleted)
 	{
 	?>
-    <div class="info">Sebanyak <?php echo $num_deleted;?> token salah yang dimasukkan siswa telah berhasil dihapus.</div>
+    <div class="alert alert-success">Sebanyak <?php echo $num_deleted;?> token salah yang dimasukkan siswa telah berhasil dihapus.</div>
     <?php
 	}
 	else
 	{
 	?>
-    <div class="info">Tidak ada token salah yang dimasukkan siswa.</div>
+    <div class="alert alert-success">Tidak ada token salah yang dimasukkan siswa.</div>
     <?php
 	}
 }
@@ -344,7 +343,7 @@ function printToken(frm)
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
 <span class="search-label">Ujian</span>
-<select name="test_id" id="test_id">
+<select class="form-control" name="test_id" id="test_id">
 	<option value=""></option>
     <?php
 	$sql2 = "SELECT * FROM `edu_test`
@@ -360,7 +359,7 @@ function printToken(frm)
 			),
 			'selectCondition'=>array(
 				'source'=>'test_id',
-				'value'=>$class_id
+				'value'=>$test_id
 			),
 			'caption'=>array(
 				'delimiter'=>\Pico\PicoConst::RAQUO,
@@ -374,7 +373,7 @@ function printToken(frm)
 	?>
 </select>
 <span class="search-label">Kelas</span>
-<select name="class_id" id="class_id">
+<select class="form-control" name="class_id" id="class_id">
 	<option value=""></option>
     <?php
 	$sql2 = "SELECT * FROM `edu_class`
@@ -564,13 +563,13 @@ if($test_id == 0 && $class_id == 0)
 else if(@$_GET['q'] != '')
 {
 ?>
-<div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
+<div class="alert alert-warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
 <?php
 }
 else
 {
 ?>
-<div class="warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=add">Klik di sini untuk membuat baru.</a></div>
 <?php
 }
 ?>

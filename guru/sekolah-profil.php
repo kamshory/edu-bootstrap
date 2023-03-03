@@ -78,7 +78,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 else
 {
 ?>
-<div class="warning">Anda tidak terdaftar sebagai guru.</div>	
+<div class="alert alert-warning">Anda tidak terdaftar sebagai guru.</div>	
 <?php
 }
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR

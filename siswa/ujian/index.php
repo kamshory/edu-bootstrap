@@ -141,7 +141,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 			require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 			
 			?>
-			<div class="info">Jawaban berhasil dikirim.</div>
+			<div class="alert alert-success">Jawaban berhasil dikirim.</div>
 			<script type="text/javascript">
 			var test = '<?php echo $test_id; ?>';
 			window.localStorage.removeItem('<?php echo $storage_key; ?>-answer-set');
@@ -210,7 +210,7 @@ if(@$_GET['option'] == 'sent')
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
-<div class="info">
+<div class="alert alert-success">
 <?php
 $sql = "SELECT * FROM `edu_answer` WHERE `student_id` = '$auth_student_id' AND `test_id` = '$test_id' ORDER BY `start` DESC ";
 $stmt = $database->executeQuery($sql);
@@ -292,7 +292,7 @@ else if(@$_GET['option'] == 'limited')
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
-<div class="warning">
+<div class="alert alert-warning">
 <p>Anda telah melaksanakan ujian sebanyak <strong><?php echo $ntest;?></strong> kali. Ujian terahir pada tanggal<strong> <?php echo translatedate(date('j F Y', strtotime($test_id_terakhir)));?></strong> jam <strong><?php echo date('H:i:s', strtotime($test_id_terakhir));?></strong>. <a href="../">Klik di sini untuk kembali</a>
 </p>
 </div>
@@ -407,7 +407,7 @@ else
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
-<div class="info">
+<div class="alert alert-success">
 <p>Ujian ini tidak tersedia untuk Anda. <a href="../ujian.php">Klik di sini untuk kembali</a></p>
 </div>
 <?php

@@ -80,6 +80,11 @@ $structure = array(
                     'link'=>'ujian-pelaksanaan.php'                       
                 ),
                 array(
+                    'caption'=>'Token Ujian',
+                    'icon'=>'fa-graduation-cap',
+                    'link'=>'ujian-token.php'                       
+                ),
+                array(
                     'caption'=>'Soal',
                     'icon'=>'fa-list',
                     'link'=>'ujian-soal.php'                       

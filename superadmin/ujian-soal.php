@@ -485,7 +485,7 @@ foreach ($rows2 as $data2) {
 <?php
 } else {
 ?>
-<div class="warning">Ujian tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>
+<div class="alert alert-warning">Ujian tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>
 <?php
 }
 }
@@ -1160,11 +1160,11 @@ function buildMenu(id)
 <?php
 				} else if (@$_GET['q'] != '') {
 					?>
-<div class="warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
+<div class="alert alert-warning">Pencarian tidak menemukan hasil. Silakan ulangi dengan kata kunci yang lain.</div>
 <?php
 				} else {
 					?>
-<div class="warning">Data tidak ditemukan. </div>
+<div class="alert alert-warning">Data tidak ditemukan. </div>
 <?php
 				}
 				?>
