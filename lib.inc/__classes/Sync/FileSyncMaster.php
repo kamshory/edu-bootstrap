@@ -12,7 +12,7 @@ class FileSyncMaster //NOSONAR
     protected $poolRollingPrefix = '';
     protected $poolFileExtension = '';
     protected $useRelativePath;
-    protected $application = 'picoedu';
+    protected $application = \Pico\PicoConst::PICO_EDU;
 
     /**
      * Constructor of FileSyncMaster

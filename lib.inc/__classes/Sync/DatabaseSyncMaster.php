@@ -11,7 +11,7 @@ class DatabaseSyncMaster
     protected $poolFileName = '';
     protected $poolRollingPrefix = '';
     protected $poolFileExtension = '';
-    protected string $application = 'picoedu';
+    protected $application = \Pico\PicoConst::PICO_EDU;
 
     /**
      * Constructor of DatabaseSyncMaster
