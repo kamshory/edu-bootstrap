@@ -1,7 +1,7 @@
 <?php
 namespace Sync;
 
-class FileSyncDownload extends FileSyncMaster
+class FileSyncDownload extends \Sync\FileSyncMaster
 {
     /**
      * Constructor of FileSyncDownload
@@ -78,7 +78,7 @@ class FileSyncDownload extends FileSyncMaster
     private function getSyncRecordListFromRemote($lastSync, $fileSyncUrl, $username, $password) //NOSONAR
     {
         $httpQuery = array(
-            'application'=>$this->application,
+            'application_id'=>$this->application,
             'sync_type'=>'file',
             'action'=>'list-record',
             'last_sync'=>$lastSync

@@ -107,7 +107,7 @@ class FileSyncMaster //NOSONAR
     protected function uploadSyncFile($path, $record, $fileSyncUrl, $username, $password) //NOSONAR
     {
         $httpQuery = array(
-            'application'=>$this->application,
+            'application_id'=>$this->application,
             'sync_type'=>'file',
             'action'=>'upload-sync-file'
         );
@@ -172,7 +172,7 @@ class FileSyncMaster //NOSONAR
     protected function uploadUserFile($absolutePath, $fileSyncUrl, $username, $password) //NOSONAR
     {
         $httpQuery = array(
-            'application'=>$this->application,
+            'application_id'=>$this->application,
             'sync_type'=>'file',
             'action'=>'upload-user-file'
         );

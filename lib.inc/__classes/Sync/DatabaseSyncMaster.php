@@ -38,9 +38,10 @@ class DatabaseSyncMaster
             $this->poolFileExtension = $poolFileExtension;
         }
     }
+
     /**
      * List directory content
-     * @param mixed $base
+     * @param mixed $base Base directory
      * @return array|bool
      */
     protected function glob($base)
@@ -95,7 +96,7 @@ class DatabaseSyncMaster
     protected function uploadSyncFile($path, $record, $fileSyncUrl, $username, $password)
     {
         $httpQuery = array(
-            'application'=>$this->application,
+            'application_id'=>$this->application,
             'sync_type'=>'database',
             'action'=>'upload-sync-file'
         );
@@ -130,12 +131,14 @@ class DatabaseSyncMaster
         );
         
         $ch = curl_init();
+
         curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
         curl_setopt($ch, CURLOPT_URL, $fileSyncUrl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+        
         $server_output = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
@@ -179,6 +182,7 @@ class DatabaseSyncMaster
         }
         return array();
     }
+
     public function updateSyncRecord($sync_database_id, $status)
     {
         $sql = "UPDATE `edu_sync_database` SET `status` = '$status' WHERE `sync_database_id` = '$sync_database_id' ";
@@ -243,6 +247,7 @@ class DatabaseSyncMaster
         }
         return null;
     }
+
     protected function prepareDirectory($dir)
     {
         if(!file_exists($dir))
@@ -288,7 +293,7 @@ class DatabaseSyncMaster
         return $url;
     }
 
-     /**
+    /**
      * Get the value of application
      */ 
     public function getApplication()

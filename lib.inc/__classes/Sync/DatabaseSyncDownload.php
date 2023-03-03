@@ -77,18 +77,19 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
     private function getSyncRecordListFromRemote($lastSync, $fileSyncUrl, $username, $password) 
     {
         $httpQuery = array(
-            'application'=>$this->application,
+            'application_id'=>$this->application,
             'sync_type'=>'database',
             'action'=>'list-record',
             'last_sync'=>$lastSync
         );
+
         $fileSyncUrl = $this->buildURL($fileSyncUrl, $httpQuery);
         $ch = curl_init();
+        
         curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
         curl_setopt($ch, CURLOPT_URL, $fileSyncUrl);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
-
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $server_output = curl_exec($ch);
@@ -121,11 +122,13 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
     {
         $url = rtrim($fileSyncUrl, "/")."/".ltrim($relativePath, "/");
         $ch = curl_init();
+
         curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
         $server_output = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
@@ -176,9 +179,9 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
             $relative_path = addslashes($record['relative_path']);
             $time_upload = addslashes($record['time_upload']);
             $time_download = date('Y-m-d H:i:s');
-
             $localPath = $this->downloadBaseDir . "/" . $baseName;
             $localPath = addslashes($localPath);
+            
             $sql = "INSERT INTO `edu_sync_database`
             (`sync_database_id`, `file_path`, `relative_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
             ('$sync_database_id', '$localPath', '$relative_path', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
@@ -256,8 +259,6 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
         }
         return true;
     }
-
-   
 }
 
 

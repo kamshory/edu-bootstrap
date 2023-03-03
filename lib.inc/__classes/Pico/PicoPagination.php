@@ -15,20 +15,20 @@ class PicoPagination
     private $total_record = 0;
     private $total_record_with_limit = 0;
 
-    private $str_first = '&laquo;';//'<span class="pagination-icon first"></span>';//$lang_pack['pagination_first'];
-    private $str_last = '&raquo;';//'<span class="pagination-icon last"></span>';//$lang_pack['pagination_last'];
-    private $str_prev = '&lsaquo;';//'<span class="pagination-icon prev"></span>';//$lang_pack['pagination_prev'];
-    private $str_next = '&rsaquo;';//'<span class="pagination-icon next"></span>';//$lang_pack['pagination_next'];
-    private $str_noresult = 'Pencarian tidak menemukan hasil.';//$lang_pack['pagination_noresult'];
-    private $str_nodata = 'Data tidak ditemukan.';//$lang_pack['pagination_nodata'];
-    private $str_nodata_add = 'Data tidak ditemukan. <a href="%s">Klik di sini untuk membuat baru</a>.';//$lang_pack['pagination_nodata_add'];
-    private $str_keyword = 'Kata kunci';//$lang_pack['search_label'];
-    private $str_search = 'Cari';//$lang_pack['search_button_search'];
-    private $str_soundlike = 'Cari seperti';//$lang_pack['search_button_soundlike'];
-    private $str_record = ' Baris ';//$lang_pack['pagination_record'];
-    private $str_from = ' dari ';//$lang_pack['pagination_from'];
-    private $str_to = ' hingga ';//$lang_pack['pagination_to'];
-    private $str_of = ' dari ';//$lang_pack['pagination_of'];
+    private $str_first = '&laquo;';
+    private $str_last = '&raquo;';
+    private $str_prev = '&lsaquo;';
+    private $str_next = '&rsaquo;';
+    private $str_noresult = 'Pencarian tidak menemukan hasil.';
+    private $str_nodata = 'Data tidak ditemukan.';
+    private $str_nodata_add = 'Data tidak ditemukan. <a href="%s">Klik di sini untuk membuat baru</a>.';
+    private $str_keyword = 'Kata kunci';
+    private $str_search = 'Cari';
+    private $str_soundlike = 'Cari seperti';
+    private $str_record = ' Baris ';
+    private $str_from = ' dari ';
+    private $str_to = ' hingga ';
+    private $str_of = ' dari ';
 
     private $query = '';
     private $query_edit = '';
@@ -102,7 +102,6 @@ class PicoPagination
         $numberofpage = $this->num_page;
         $offset = $this->offset;
         $arrayget = $this->array_get;
-        $showfirstandlast = true;
 
         $firstCaption = $this->str_first;
         $lastCaption = $this->str_last;

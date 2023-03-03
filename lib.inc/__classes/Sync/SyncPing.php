@@ -8,6 +8,7 @@ class SyncPing
     {
         $this->application = $application;
     }
+    
     protected function buildURL($url, $httpQuery, $keepOriginal = true)
     {
         $original = array();
