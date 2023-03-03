@@ -37,7 +37,6 @@ class FileSyncDownload extends FileSyncMaster
         try
         {
             $response = $this->getSyncRecordListFromRemote($lastSync, $fileSyncUrl, $username, $password);
-
             if($response['response_code'] == '00')
             {
                 $recordList = $response['data'];
