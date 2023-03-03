@@ -93,7 +93,6 @@ if(@$_GET['option'] == 'export' && isset($_GET['test_id']))
 	{
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$assessment_methods = $data['assessment_methods'];
-
 		header("Content-Type: application/vnd.xls");
 		header("Content-Disposition: attachment; filename=\"".str_replace(" ", "-", strtolower($data['name'])).".xls\"");
 

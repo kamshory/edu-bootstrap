@@ -35,7 +35,6 @@ if(isset($_POST['set_inactive']) && isset($_POST['token_id']))
 	}
 }
 
-
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$now = $database->getLocalDateTime();
@@ -48,16 +47,20 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$database->executeUpdate($sql, true);
 	if($class_id)
 	{
-		if($student_id == 0)
+		if(empty($student_id))
 		{
 			// membuat token untuk semua siswa
 			$sql = "SELECT `student_id` FROM `edu_student` WHERE `class_id` = '$class_id' AND `active` = true
 			";
 			$students = array();
-			$stmt = $database->executeQuery($sql);
-			if($stmt->row)
+			$stmtx = $database->executeQuery($sql);
+			if($stmtx->rowCount() > 0)
 			{
-				$students[] = $data['student_id'];
+				$rowsx = $stmtx->fetchAll(\PDO::FETCH_ASSOC);
+				foreach($rowsx as $data)
+				{
+					$students[] = $data['student_id'];
+				}
 			}
 			$count = count($students);
 			$tokens = $picoEdu->generateToken($count, 6);
@@ -65,7 +68,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			{
 				$token = $val;
 				$student_id = $students[$idx];
-				$token_id = $picoEdu->generateNewId();
+				$token_id = $database->generateNewId();
 				$sql = "INSERT INTO `edu_token` 
 				(`token_id`, `token`, `school_id`, `class_id`, `student_id`, `test_id`, `time_create`, `time_edit`, `time_expire`, 
 				`admin_create`, `admin_edit`, `active`) VALUES
@@ -91,12 +94,12 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		}
 	}
 }
-if(@$_GET['option'] == 'print')
-{
-require_once dirname(__FILE__)."/cetak-ujian-token.php";
-} else if (@$_GET['option'] == 'add') {
+if(@$_GET['option'] == 'print') {
+	require_once dirname(__FILE__)."/cetak-ujian-token.php";
+} 
+else if (@$_GET['option'] == 'add') {
 	require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
-	?>
+?>
 <script type="text/javascript">
 $(document).ready(function(e) {
     $(document).on('change', '#class_id', function(e){
@@ -147,9 +150,7 @@ $(document).ready(function(e) {
 					)
 				)
 			)
-		);
-		
-		
+		);	
 		?>
 		</select></td>
 		</tr>
@@ -181,7 +182,7 @@ $(document).ready(function(e) {
 			)
 		);
 	
-			?>
+		?>
 		</select></td>
 		</tr>
 		<tr>
@@ -192,7 +193,7 @@ $(document).ready(function(e) {
 		</tr>
 		<tr>
 		<td>Kedaluarsa</td>
-		<td><input type="text" class="form-control input-text input-text-datetime" name="time_expire" id="time_expire" value="<?php echo date(\Pico\PicoConst::DATE_TIME_MYSQL, time() + 3600); ?>" autocomplete="off" required="required" /></td>
+		<td><input type="datetime-local" class="form-control input-text input-text-datetime" name="time_expire" id="time_expire" value="<?php echo date(\Pico\PicoConst::DATE_TIME_MYSQL, time() + 3600); ?>" autocomplete="off" required="required" /></td>
 		</tr>
 	</table>
 	<table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -205,22 +206,22 @@ $(document).ready(function(e) {
 </form>
 <?php getDefaultValues($database, 'edu_token', array('active')); ?>
 <?php
-				require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
+		require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
 
 		} else if (@$_GET['option'] == 'detail') {
 			require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
 			$edit_key = kh_filter_input(INPUT_GET, "token_id", FILTER_SANITIZE_NUMBER_INT);
 			$nt = '';
 			$sql = "SELECT `edu_token`.* $nt,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_create`) AS `creator_name`,
-(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_edit`) AS `editor_name`,
-(SELECT `edu_student`.`name` FROM `edu_student` WHERE `edu_student`.`student_id` = `edu_token`.`student_id`) AS `student_name`,
-(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_token`.`class_id`) AS `class_name`,
-(SELECT `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) AS `test_name`
-FROM `edu_token` 
-WHERE `school_id` = '$school_id'
-AND `edu_token`.`token_id` = '$edit_key'
-";
+			(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_create`) AS `creator_name`,
+			(SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_token`.`admin_edit`) AS `editor_name`,
+			(SELECT `edu_student`.`name` FROM `edu_student` WHERE `edu_student`.`student_id` = `edu_token`.`student_id`) AS `student_name`,
+			(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_token`.`class_id`) AS `class_name`,
+			(SELECT `edu_test`.`name` FROM `edu_test` WHERE `edu_test`.`test_id` = `edu_token`.`test_id`) AS `test_name`
+			FROM `edu_token` 
+			WHERE `school_id` = '$school_id'
+			AND `edu_token`.`token_id` = '$edit_key'
+			";
 			$stmt = $database->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
 				$data = $stmt->fetch(\PDO::FETCH_ASSOC);
@@ -328,12 +329,11 @@ function printToken(frm)
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
 <span class="search-label">Ujian</span>
-<select name="test_id" id="test_id">
+<select class="form-control" name="test_id" id="test_id">
 	<option value=""></option>
     <?php
 	$sql2 = "SELECT * FROM `edu_test`
 	WHERE `school_id` = '$school_id'
-	AND (`test_availability` = 'F' OR `available_to` > '$now')
 	ORDER BY `test_id` DESC
 	";
 	echo $picoEdu->createFilterDb(
@@ -344,7 +344,7 @@ function printToken(frm)
 			),
 			'selectCondition'=>array(
 				'source'=>'test_id',
-				'value'=>$class_id
+				'value'=>$test_id
 			),
 			'caption'=>array(
 				'delimiter'=>\Pico\PicoConst::RAQUO,
@@ -357,7 +357,7 @@ function printToken(frm)
 	?>
 </select>
 <span class="search-label">Kelas</span>
-<select name="class_id" id="class_id">
+<select class="form-control" name="class_id" id="class_id">
 	<option value=""></option>
     <?php
 		$sql2 = "SELECT * FROM `edu_class`
@@ -381,8 +381,7 @@ function printToken(frm)
 					)
 				)
 			)
-		);
-	
+		);	
 		?>
 </select>
 <span class="search-label">Token</span>
@@ -393,7 +392,6 @@ function printToken(frm)
 <div class="search-result">
 <?php
 $sql_filter = "";
-
 if($pagination->getQuery()) {
 	$pagination->appendQueryName('q');
 	$sql_filter .= " AND (`edu_token`.`token` like '%" . addslashes($pagination->getQuery()) . "%' )";
@@ -432,14 +430,10 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0) {
 	if ($test_id == 0 && $class_id == 0) {
-		
-		
-
 		$pagination->createPagination($picoEdu->gateBaseSelfName(), true);
 		$paginationHTML = $pagination->buildHTML();
-
 	}
-					?>
+?>
 <form name="form1" method="post" action="">
 <style type="text/css">
 @media screen and (min-width:600px)
