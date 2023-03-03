@@ -20,7 +20,6 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 {
 	// sesuai dengan login masing-masning
 	$time_create = $time_edit = $database->getLocalDateTime();	
-	//
 	
 	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$picoEdu->sortQuestion($test_id);
@@ -33,12 +32,12 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
+		$picoTest = new \Pico\PicoTestCreator();
 
 		$random = ((int) $data['random']);
 		$sort_order = ((int) $data['sort_order']);
 		$score_standar = $data['standard_score'];
-
 		
 		$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
@@ -124,16 +123,16 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 			if(stripos($xml_data, '<?xml') === false)
 			{
 				// Format Plain				
-				$clear_data = parseRawQuestion($xml_data);
+				$clear_data = $picoTest->parseRawQuestion($xml_data);
 				$database->executeTransaction("start transaction", true);
 				$oke = 1;
 				foreach($clear_data as $question_no=>$question)
 				{
-					$object = parseQuestion($question);
+					$object = $picoTest->parseQuestion($question);
 
 					if(isset($object['question']) && isset($object['numbering']) && isset($object['option']))
 					{
-						$content = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages(@$object['question'], $test_dir, $base_src, $temp_dir)))));
+						$content = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages(@$object['question'], $test_dir, $base_src, $temp_dir)))));
 						$numbering = addslashes($object['numbering']);
 						$digest = md5($object['question']);
 						$sort_order++;
@@ -158,7 +157,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 							{
 								foreach($object['option'] as $option_no=>$option)
 								{
-									$isi_option = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages($option['text'], $test_dir, $base_src, $temp_dir)))));
+									$isi_option = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages($option['text'], $test_dir, $base_src, $temp_dir)))));
 									$order_option = $option_no+1;
 									$score_option = addslashes(@$option['value']*$score_standar); 
 									if($score_option == 0) 

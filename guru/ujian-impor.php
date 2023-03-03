@@ -28,6 +28,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
+		$picoTest = new \Pico\PicoTestCreator();
 
 		$random = ((int) $data['random']);
 		$sort_order = ((int) $data['sort_order']);
@@ -119,16 +120,16 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 			if(stripos($xml_data, '<?xml') === false)
 			{
 				// Format Plain				
-				$clear_data = parseRawQuestion($xml_data);
+				$clear_data = $picoTest->parseRawQuestion($xml_data);
 				$database->executeTransaction("start transaction", true);
 				$oke = 1;
 				foreach($clear_data as $question_no=>$question)
 				{
-					$object = parseQuestion($question);
+					$object = $picoTest->parseQuestion($question);
 
 					if(isset($object['question']) && isset($object['numbering']) && isset($object['option']))
 					{
-						$content = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages(@$object['question'], $test_dir, $base_src, $temp_dir)))));
+						$content = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages(@$object['question'], $test_dir, $base_src, $temp_dir)))));
 						$numbering = addslashes($object['numbering']);
 						$digest = md5($object['question']);
 						$sort_order++;
@@ -152,7 +153,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 							{
 								foreach($object['option'] as $option_no=>$option)
 								{
-									$isi_option = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(addImages($option['text'], $test_dir, $base_src, $temp_dir)))));
+									$isi_option = addslashes(nl2br(utf8ToEntities(\Pico\PicoDOM::filterHtml(\Pico\PicoDOM::addImages($option['text'], $test_dir, $base_src, $temp_dir)))));
 									$order_option = $option_no+1;
 									$score_option = addslashes(@$option['value']*$score_standar); 
 									if($score_option == 0) 
@@ -488,9 +489,6 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-
-
-
 $pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
