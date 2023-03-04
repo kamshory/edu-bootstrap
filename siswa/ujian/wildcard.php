@@ -2,19 +2,18 @@
 require_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-siswa.php";
 $arg1 = "";
 $arg2 = "";
-if(isset($_GET) && !empty($_GET))
+require_once dirname(dirname(__FILE__))."/lib.inc/query-parser.php";
+
+$testStudent = new \Pico\PicoTest($database);
+$test_id = addslashes($_GET['arg1']);
+$token = addslashes($_GET['arg2']);
+$eligible = false;
+try
 {
-    if(isset($_GET['arg1']))
-    {
-        $arg1 = trim($_GET['arg1']);
-    }
-    if(isset($_GET['arg2']))
-    {
-        $arg2 = trim($_GET['arg2']);
-    }
+    $eligible = $testStudent->eligible($test_id, $studentLoggedIn, $token);
 }
-if(!isset($school_id) || empty($school_id))
+catch(\Exception $e)
 {
-	require_once dirname(__FILE__)."/lib.inc/login-form.php";
-	exit();
+    print_r($e->getMessage());
+    print_r($e->getCode()); 
 }

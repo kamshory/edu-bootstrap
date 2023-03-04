@@ -22,6 +22,7 @@ class PicoTest
      * @param \Pico\AuthStudent
      * @param string $token
      * @return bool
+     * @throws \Pico\PicoTestException
      */
     public function eligible($test_id, $student, $token = "")
     {
@@ -33,25 +34,35 @@ class PicoTest
             if (stripos($test->class, $student->class_id) !== false) {
                 $eligible = true;
             } else {
-                $this->message = "Ujian ini bukan untuk Anda";
+                throw new \Pico\PicoTestException("Ujian ini bukan untuk Anda", \Pico\PicoTestException::TEST_NOT_FOR_YOU);
             }
         }
         if ($eligible) {
             $now = time();
             if ($test->test_availability == 'L' && (strtotime($test->available_from) > $now || strtotime($test->available_to) < $now)) {
                 $eligible = false;
-                $this->message = "Ujian ini tersedia antara " . $test->available_from . " hingga " . $test->available_to;
+                throw new \Pico\PicoTestException("Ujian ini tersedia antara " . $test->available_from . " hingga " . $test->available_to, \Pico\PicoTestException::TEST_NOT_IN_PERIOD);
             }
         }
         if($eligible && $student->use_token) {
             if(!empty($token))
             {
-                
+                $tokenObj = $this->getToken($token, $test_id, $student->student_id);
+                if(empty($tokenObj->token_id))
+                {
+                    $eligible = false;
+                    throw new \Pico\PicoTestException("Token yang Anda masukkan salah", \Pico\PicoTestException::TOKEN_INVALID);
+                }
+                else if(strtotime($tokenObj->time_expire) < time())
+                {
+                    $eligible = false;
+                    throw new \Pico\PicoTestException("Token yang Anda masukkan kedaluarsa", \Pico\PicoTestException::TOKEN_EXPIRE);
+                }
             }
             else
             {
                 $eligible = false;
-                $this->message = "Anda wajib memasukkan token ujian";
+                throw new \Pico\PicoTestException("Anda wajib memasukkan token ujian", \Pico\PicoTestException::TOKEN_REQUIRED);
             }
         }
         return $eligible;
@@ -65,18 +76,55 @@ class PicoTest
     public function getTest($test_id)
     {
         $test_id = addslashes($test_id);
-        $sql = "SELECT `edu_test`.* FROM `edu_test` WHERE `edu_test`.`test_id` = '$test_id' ";
+        $sql = "SELECT `edu_test`.* 
+        FROM `edu_test` 
+        WHERE `edu_test`.`test_id` = '$test_id' 
+        ";
         $obj = $this->database->executeQuery($sql)->fetchObject();
 
-        $test = new \Pico\PicoTestStudent();
-
-        $prop = get_object_vars($obj);
-        foreach ($prop as $key => $lock) {
-            if (property_exists($test, $key)) {
-                $test->$key = $obj->$key;
+        $testObj = new \Pico\PicoTestStudent();
+        if(!is_null($obj) && $obj !== false)
+        {
+            $prop = get_object_vars($obj);
+            foreach ($prop as $key => $lock) {
+                if (property_exists($testObj, $key)) {
+                    $testObj->$key = $obj->$key;
+                }
             }
         }
-        return $test;
+        
+        return $testObj;
+    }
+
+    /**
+     * Get token object
+     * @param string $token
+     * @param string $test_id
+     * @param string $student_id
+     * @return \Pico\PicoTestToken
+     */
+    public function getToken($token, $test_id, $student_id)
+    {
+        $token = addslashes($token);
+        $sql = "SELECT `edu_token`.* 
+        FROM `edu_token`
+        WHERE `edu_token`.`token` = '$token' 
+        AND `edu_token`.`test_id` = '$test_id' 
+        AND `edu_token`.`student_id` = '$student_id' 
+        ";
+        $obj = $this->database->executeQuery($sql)->fetchObject();
+
+        $tokenObj = new \Pico\PicoTestToken();
+        if(!is_null($obj) && $obj !== false)
+        {
+            $prop = get_object_vars($obj);
+            foreach ($prop as $key => $lock) {
+                if (property_exists($tokenObj, $key)) {
+                    $tokenObj->$key = $obj->$key;
+                }
+            }
+        }
+        return $tokenObj;
     }
 
     /**
