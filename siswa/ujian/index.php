@@ -109,7 +109,6 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 		$storage_key = md5($auth_student_id . "-" . $test_id . "|" . $question_set);
 		$storage_key;
 
-		print_r($proses); 
 
 		if ($proses) {
 			$_SESSION['session_test'][$auth_student_id][$test_id] = null;

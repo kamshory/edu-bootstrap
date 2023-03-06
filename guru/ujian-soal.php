@@ -1030,12 +1030,11 @@ echo $data2['content'];
 ?>
 </ol>
 <?php
-								}
+}
 ?>
 
 </div>
 </div>
-
 
 </li>
 <?php
