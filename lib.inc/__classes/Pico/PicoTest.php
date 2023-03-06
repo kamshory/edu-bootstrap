@@ -100,12 +100,14 @@ class PicoTest
     public function getToken($token, $testId, $studentId)
     {
         $token = addslashes($token);
+
         $sql = "SELECT `edu_token`.* 
         FROM `edu_token`
         WHERE `edu_token`.`token` = '$token' 
         AND `edu_token`.`test_id` = '$testId' 
         AND `edu_token`.`student_id` = '$studentId' 
         ";
+        
         $obj = $this->database->executeQuery($sql)->fetchObject();
 
         $tokenObj = new \Pico\EduToken();
