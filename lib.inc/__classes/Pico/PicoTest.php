@@ -19,14 +19,13 @@ class PicoTest
     /**
      * Eligible
      * @param \Pico\AuthStudent
-     * @param string $testID
+     * @param \Pico\PicoTestStudent $test
      * @param string $token
      * @return bool
      * @throws \Pico\PicoTestException
      */
-    public function eligible($student, $testID, $token = "") //NOSONAR
+    public function eligible($student, $test, $token = "") //NOSONAR
     {
-        $test = $this->getTest($testID);
         $eligible = false;
         if (empty($student->student_id)) {
             throw new \Pico\PicoTestException("Anda harus masuk sebagai siswa", \Pico\PicoTestException::LOGIN_REQUIRED);
@@ -49,7 +48,7 @@ class PicoTest
         }
         if ($eligible && $student->use_token) {
             if (!empty($token)) {
-                $tokenObj = $this->getToken($token, $testID, $student->student_id);
+                $tokenObj = $this->getToken($token, $test->test_id, $student->student_id);
                 if (empty($tokenObj->token_id)) {
                     $eligible = false;
                     throw new \Pico\PicoTestException("Token yang Anda masukkan salah", \Pico\PicoTestException::TOKEN_INVALID);
