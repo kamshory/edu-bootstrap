@@ -3,13 +3,15 @@ require_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-siswa.php";
 $arg1 = "";
 $arg2 = "";
 require_once dirname(__FILE__)."/lib.inc/query-parser.php";
-$testStudent = new \Pico\PicoTest($database);
-$test_id = addslashes($_GET['arg1']);
-$token = addslashes($_GET['arg2']);
+$picoTest = new \Pico\PicoTest($database);
+$test_id = addslashes($_GET['test_id']);
+$token = addslashes($_GET['token']);
 $eligible = false;
+$eduTest = $picoTest->getTest($test_id);
 try
 {
-    $eligible = $testStudent->eligible($studentLoggedIn, $test_id, $token);
+    $eligible = $picoTest->eligible($studentLoggedIn, $eduTest, $token);
+    require_once dirname(__FILE__)."/lib.inc/test-page.php";
 }
 catch(\Exception $e)
 {
