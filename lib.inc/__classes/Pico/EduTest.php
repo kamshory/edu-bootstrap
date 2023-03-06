@@ -2,7 +2,7 @@
 
 namespace Pico;
 
-class PicoTestStudent
+class EduTest
 {
     public $test_id = '';
     public $school_id = '';

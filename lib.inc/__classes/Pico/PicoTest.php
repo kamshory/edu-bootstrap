@@ -19,7 +19,7 @@ class PicoTest
     /**
      * Eligible
      * @param \Pico\AuthStudent
-     * @param \Pico\PicoTestStudent $test
+     * @param \Pico\EduTest $test
      * @param string $token
      * @return bool
      * @throws \Pico\PicoTestException
@@ -67,7 +67,7 @@ class PicoTest
     /**
      * Get test object
      * @param string $testID
-     * @return \Pico\PicoTestStudent
+     * @return \Pico\EduTest
      */
     public function getTest($testID)
     {
@@ -78,7 +78,7 @@ class PicoTest
         ";
         $obj = $this->database->executeQuery($sql)->fetchObject();
 
-        $testObj = new \Pico\PicoTestStudent();
+        $testObj = new \Pico\EduTest();
         if (!is_null($obj) && $obj !== false) {
             $prop = get_object_vars($obj);
             foreach ($prop as $key => $lock) {
@@ -87,7 +87,6 @@ class PicoTest
                 }
             }
         }
-
         return $testObj;
     }
 
@@ -96,7 +95,7 @@ class PicoTest
      * @param string $token
      * @param string $testId
      * @param string $studentId
-     * @return \Pico\PicoTestToken
+     * @return \Pico\EduToken
      */
     public function getToken($token, $testId, $studentId)
     {
@@ -109,7 +108,7 @@ class PicoTest
         ";
         $obj = $this->database->executeQuery($sql)->fetchObject();
 
-        $tokenObj = new \Pico\PicoTestToken();
+        $tokenObj = new \Pico\EduToken();
         if (!is_null($obj) && $obj !== false) {
             $prop = get_object_vars($obj);
             foreach ($prop as $key => $lock) {
