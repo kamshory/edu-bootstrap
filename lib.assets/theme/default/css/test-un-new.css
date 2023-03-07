@@ -300,3 +300,10 @@ a.download:hover {
     top: -8px; 
     width:32px;
   }
+
+  .test-question-area{
+    position: relative;
+  }
+  .test-question-area img{
+    max-width: 100%;
+  }
