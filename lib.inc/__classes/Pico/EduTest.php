@@ -2,6 +2,10 @@
 
 namespace Pico;
 
+
+
+
+
 class EduTest
 {
     public $test_id = '';
@@ -27,6 +31,8 @@ class EduTest
     public $alert_time = 0;
     public $alert_message = '';
     public $standard_score = '';
+    public $random_distribution = false;
+    public $competence_distribution = '';
     public $penalty = 0;
     public $order = 0;
     public $score_notification = '';

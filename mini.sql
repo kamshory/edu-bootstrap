@@ -1584,7 +1584,7 @@ CREATE TABLE `edu_test` (
   `alert_time` bigint(20) DEFAULT 300,
   `alert_message` text DEFAULT NULL,
   `standard_score` double DEFAULT 1,
-  `random_distribution` longtext DEFAULT NULL,
+  `competence_distribution` longtext DEFAULT NULL,
   `penalty` double DEFAULT 0,
   `sort_order` int(11) DEFAULT NULL,
   `score_notification` tinyint(1) DEFAULT 0,

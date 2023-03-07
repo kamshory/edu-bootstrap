@@ -11,7 +11,7 @@ $eduTest = $picoTest->getTest($test_id);
 try
 {
     $eligible = $picoTest->eligible($studentLoggedIn, $eduTest, $token);
-    require_once dirname(__FILE__)."/lib.inc/test-page.php";
+    require_once dirname(__FILE__)."/lib.inc/test-page-handler.php";
 }
 catch(\Exception $e)
 {

@@ -139,12 +139,16 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$numbering = kh_filter_input(INPUT_POST, "numbering", FILTER_SANITIZE_STRING_NEW);
 	$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
 	
-	$direktori = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 	$prefiks = "media.edu/school/$school_id/test/$test_id";
+	$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+	$dirBase = dirname(dirname(__FILE__));
+	$permission = 0755;
+	$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 
 	$question = kh_filter_input(INPUT_POST, "question");
 	$question = utf8ToEntities($question);
-	$question = addslashes(\Pico\PicoDOM::removeParagraphTag(\Pico\PicoDOM::extractImageData($question, $direktori, $prefiks, $fileSync))); 	
+	$question = addslashes(\Pico\PicoDOM::removeParagraphTag(\Pico\PicoDOM::extractImageData($question, $test_dir, $prefiks, $fileSync))); 	
 	$question = $picoEdu->brToNewLineEncoded($question);
 	$picoEdu->sortQuestion($test_id);
 	$sql1 = "SELECT `edu_test`.*, 
@@ -185,7 +189,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 					
 				$option = kh_filter_input(INPUT_POST, "option_".$id2);
 				$option = utf8ToEntities($option);
-				$option = addslashes(\Pico\PicoDOM::removeParagraphTag(\Pico\PicoDOM::extractImageData($option, $direktori, $prefiks, $fileSync)));
+				$option = addslashes(\Pico\PicoDOM::removeParagraphTag(\Pico\PicoDOM::extractImageData($option, $test_dir, $prefiks, $fileSync)));
 				$option = $picoEdu->brToNewLineEncoded($option);
 						
 				$score = kh_filter_input(INPUT_POST, "score_".$id2, FILTER_SANITIZE_NUMBER_FLOAT);
@@ -231,12 +235,16 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$dt = $stmt1->fetch(\PDO::FETCH_ASSOC);
 		$test_id = $dt['test_id'];
 		
-		$direktori = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 		$prefiks = "media.edu/school/$school_id/test/$test_id";
+		$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+		$dirBase = dirname(dirname(__FILE__));
+		$permission = 0755;
+		$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 	
 		$question = kh_filter_input(INPUT_POST, "question");
 		$question = utf8ToEntities($question);
-		$question = addslashes(\Pico\PicoDOM::removeParagraphTag(\Pico\PicoDOM::extractImageData($question, $direktori, $prefiks, $fileSync))); 	
+		$question = addslashes(\Pico\PicoDOM::removeParagraphTag(\Pico\PicoDOM::extractImageData($question, $test_dir, $prefiks, $fileSync))); 	
 		$question = $picoEdu->brToNewLineEncoded($question);
 		
 		$sql = "UPDATE `edu_question` 
@@ -258,7 +266,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 
 				$option = kh_filter_input(INPUT_POST, "option_" . $id2);
 				$option = utf8ToEntities($option);
-				$option = addslashes(\Pico\PicoDOM::removeParagraphTag(\Pico\PicoDOM::extractImageData($option, $direktori, $prefiks, $fileSync)));
+				$option = addslashes(\Pico\PicoDOM::removeParagraphTag(\Pico\PicoDOM::extractImageData($option, $test_dir, $prefiks, $fileSync)));
 				$option = $picoEdu->brToNewLineEncoded($option);
 
 				$score = kh_filter_input(INPUT_POST, "score_" . $id2, FILTER_SANITIZE_NUMBER_FLOAT);

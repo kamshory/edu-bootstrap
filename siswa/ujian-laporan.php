@@ -412,10 +412,10 @@ $test_id = $info['test_id'];
 </table>
 </div>
 <?php
-$random_distribution = array();
-if(strlen($info['random_distribution']) > 5)
+$competence_distribution = array();
+if(strlen($info['competence_distribution']) > 5)
 {
-	$bca = json_decode($info['random_distribution'], true);
+	$bca = json_decode($info['competence_distribution'], true);
 	$bc_array = array();
 	foreach($bca as $key=>$val)
 	{
@@ -430,7 +430,7 @@ if(strlen($info['random_distribution']) > 5)
 	ksort($bc_array);
 	foreach($bc_array as $key=>$val)
 	{
-		$random_distribution[] = array($val[0], $val[1]);
+		$competence_distribution[] = array($val[0], $val[1]);
 	}
 }
 else
@@ -458,7 +458,7 @@ else
 	ksort($bc_array);
 	foreach($bc_array as $key=>$val)
 	{
-		$random_distribution[] = array($val['basic_competence'], $val['num_question']);
+		$competence_distribution[] = array($val['basic_competence'], $val['num_question']);
 	}
 	
 }
@@ -492,7 +492,7 @@ foreach($bc_score as $key=>$val)
     	<tr>
         <td>Kompetensi Dasar</td>
         <?php
-		foreach($random_distribution as $key=>$value)
+		foreach($competence_distribution as $key=>$value)
 		{
 			?>
             <td align="right"><?php echo $value[0];?> </td>
@@ -505,7 +505,7 @@ foreach($bc_score as $key=>$val)
     	<tr>
         <td>Jumlah Soal</td>
         <?php
-		foreach($random_distribution as $key=>$value)
+		foreach($competence_distribution as $key=>$value)
 		{
 			?>
             <td align="right"><?php echo $value[1];?> </td>
@@ -516,7 +516,7 @@ foreach($bc_score as $key=>$val)
     	<tr>
         <td>Nilai</td>
         <?php
-		foreach($random_distribution as $key=>$value)
+		foreach($competence_distribution as $key=>$value)
 		{
 			$score = @$bc_score_value[$value[0]] * 1;
 			?>

@@ -48,7 +48,7 @@ class PicoTest
         }
         if ($eligible && $student->use_token) {
             if (!empty($token)) {
-                $tokenObj = $this->getToken($token, $test->test_id, $student->student_id);
+                $tokenObj = $this->getToken($token, $test, $student->student_id);
                 if (empty($tokenObj->token_id)) {
                     $eligible = false;
                     throw new \Pico\PicoTestException("Token yang Anda masukkan salah", \Pico\PicoTestException::TOKEN_INVALID);
@@ -134,116 +134,134 @@ class PicoTest
     /**
      * Get question
      *
-     * @param string $testId
+     * @param string $list
      * @return array
      */
-    public function getQuestion($testId, $random = false, $max = 0)
+    public function getQuestion($list)
     {
-        $sql = "SELECT `edu_question`.*
-        FROM `edu_question` WHERE `test_id` = '$testId'
-        ORDER BY `sort_order` ASC, `question_id` ASC
-        ";    
+        $listQuestion = explode(",", $list);
+        $result = array();
+        foreach($listQuestion as $key=>$val)
+        {
+            $questionId = addslashes($val);
+            $sql = "SELECT `question_id`, `basic_competence`, `multiple_choice`, `random`, `numbering`, `content`
+            FROM `edu_question` WHERE `question_id` = '$questionId'       
+            ";    
+            $stmt = $this->database->executeQuery($sql);
+            if($stmt->rowCount() > 0)
+            {
+                $data = $stmt->fetch(\PDO::FETCH_ASSOC);
+                $data['number'] = (int) $key + 1;
+
+                $questionId = addslashes($val);
+                $sql = "SELECT `option_id`, `sort_order`, `content`
+                FROM `edu_option` WHERE `question_id` = '$questionId'       
+                ";    
+                $stmtOption = $this->database->executeQuery($sql);
+                if($stmtOption->rowCount() > 0)
+                {
+                    $dataOption = $stmtOption->fetchAll(\PDO::FETCH_ASSOC);
+                    if($data['random'])
+                    {
+                        shuffle($dataOption);
+                    }
+                    $dataOption[] = array(
+                        'option_id'=>'', 
+                        'sort_order'=>count($dataOption), 
+                        'content'=>'Tidak menjawab'
+                    );
+                    $data['option'] = $dataOption;
+                }
+                $result[] = $data;
+            }
+        }
+        return $result;
+    }
+
+    /**
+     * Get question list
+     * @param \Pico\AuthStudent $studentLoggedIn
+     * @param \Pico\EduTest $eduTest
+     * @param string $token
+     */
+    public function getQuestionList($studentLoggedIn, $eduTest, $token)
+    {
+        $saved = $this->getSavedQuestionList($studentLoggedIn, $eduTest, $token);
+        if($saved == null)
+        {
+            $saved = $this->generateQuestionList($eduTest);
+        }
+        return $saved;
+    }
+
+    /**
+     * Get question list
+     * @param \Pico\EduTest $eduTest
+     * @return string
+     */
+    public function generateQuestionList($eduTest)
+    {
+        $testId = addslashes($eduTest->test_id);
+        $sql = "SELECT `edu_question`.`question_id`, `edu_question`.`basic_competence` 
+        FROM `edu_question` 
+        WHERE `edu_question`.`test_id` = '$testId' 
+        AND `edu_question`.`active` = true
+        ";
+
         $stmt = $this->database->executeQuery($sql);
         if($stmt->rowCount() > 0)
         {
-            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+            $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+            foreach($data as $key=>$val)
+            {
+                $data[$key]['number'] = (int)$key+1;
+            }
         }
-        return array();
+        else
+        {
+            $data = array();
+        }
+        $testData['number_of_question'] = $eduTest->number_of_question;
+        $testData['random_distribution'] = $eduTest->random_distribution;
+        $testData['random'] = $eduTest->random;
+        $testData['data'] = $data;
+
+        $obj = new \Pico\PicoSortQuestion($testData);
+        $obj->process();    
+        $random = $obj->getRandom();
+        $result = array();
+        foreach($random as $key=>$val)
+        {
+            $result[] = $val['question_id'];
+        }
+        return implode(",", $result);
     }
 
-    public function loadQuestion($testId, $studentId)
+    /**
+     * Get question list
+     * @param \Pico\AuthStudent $studentLoggedIn
+     * @param \Pico\EduTest $eduTest
+     * @param string $token
+     * @return string|null
+     */
+    public function getSavedQuestionList($studentLoggedIn, $eduTest, $token)
     {
-        $sql = "SELECT `edu_test`.*  
-        FROM `edu_test` 
-        WHERE `edu_test`.`active` = true
-        AND `edu_test`.`test_id` = '$testId' 
+        $studentId = addslashes($studentLoggedIn->student_id);
+        $testId = addslashes($eduTest->test_id);
+        $sql = "SELECT `edu_answer`.`question_list` 
+        FROM `edu_answer` 
+        WHERE `edu_answer`.`student_id` = '$studentId'
+        AND `edu_answer`.`test_id` = '$testId' 
+        AND `edu_answer`.`finish` = false
         ";
         $stmt = $this->database->executeQuery($sql);
         if($stmt->rowCount() > 0)
         {
             $data = $stmt->fetch(\PDO::FETCH_ASSOC);
-            $question_per_page = $data['question_per_page'];
-            $alert_message = $data['alert_message'];
-            $has_alert = $data['has_alert'];
-            $alert_time = $data['alert_time'];
-            $autosubmit = 0;
-            if(isset($data['autosubmit']))
-            {
-                $autosubmit = $data['autosubmit'];
-            }
-            $curtime = date('Y-m-d H:is');
-
-            $question_package = addslashes($question_package);
-            $sql = "SELECT `edu_question`.* , instr('$question_package', `edu_question`.`question_id`) AS `sort_order`
-            FROM `edu_question`
-            where '$question_package' like concat('%[',`edu_question`.`question_id`,']%') 
-            ORDER BY `sort_order` ASC
-            ";
-            $stmt = $this->database->executeQuery($sql);
-            $number_of_question = $stmt->rowCount();
-            $no_halaman_awal = 0;
-            $no_halaman_akhir = 0;
-
-            if($number_of_question)
-            {
-                $offset_maksimum = floor($number_of_question/$question_per_page);
-                $jumlah_halaman = floor($number_of_question/$question_per_page);
-                if($offset_maksimum == $number_of_question/$question_per_page)
-                {
-                    $offset_maksimum = ($number_of_question/$question_per_page) - 1;
-                }
-                $question_per_page = $question_per_page * 1;
-                
-                $sql = "SELECT `edu_question`.* , instr('$question_package', `edu_question`.`question_id`) AS `sort_order`
-                FROM `edu_question`
-                where '$question_package' like concat('%[',`edu_question`.`question_id`,']%') 
-                ORDER BY `sort_order`
-                ";
-                $stmt1 = $this->database->executeQuery($sql);
-                $question_set = array();
-                $questions = array();
-                if ($stmt1->rowCount() > 0) {
-                    $rows1 = $stmt1->fetchAll(\PDO::FETCH_ASSOC);
-                    foreach($rows1 as $data1)
-                    {
-                        $soal = $data1['question_id'];
-                        $question_set[] = $soal;
-                        if ($data['random']) {
-                            $sql2 = "SELECT `edu_option`.* , rand() AS `rand`
-                            FROM `edu_option`
-                            WHERE `edu_option`.`question_id` = '$soal'
-                            ORDER BY `rand` ASC
-                            ";
-                        } else {
-                            $sql2 = "SELECT `edu_option`.* , rand() AS `rand`
-                            FROM `edu_option`
-                            WHERE `edu_option`.`question_id` = '$soal'
-                            ORDER BY `sort_order` ASC
-                            ";
-                        }
-                        $options = array();
-                        $stmt2 = $this->database->executeQuery($sql2);
-                        if ($stmt2->rowCount() > 0) {
-                            $rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
-                            foreach ($rows2 as $data2) {
-                                $answer = @$_SESSION['answer_tmp'][$studentId][$testId]['answer_' . $data2['question_id']];
-                                $option = new \stdClass();
-                                $option->option_id = $data2['option_id'];
-                                $option->text = $data2['content'];
-                                $options[] = $option;
-                            }
-                        }
-                        $question = new \stdClass();
-                        $question->question_id = $data1['question_id'];
-                        $question->text = $data1['content'];
-                        $question->numbering = $data1['numbering'];
-                        $question->random = $data1['random'];
-                        $question->options = $options;
-                        $questions[] = $question;
-                    }
-                }
-            }
-            $storage_key = md5($studentId."-".$testId."|".implode(",",$question_set)); 
+            return $data['question_list'];
         }
+        return null;
     }
+
+   
 }
