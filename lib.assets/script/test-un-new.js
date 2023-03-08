@@ -172,7 +172,6 @@ function markDoubtful(testData, index, selector1, selector2, answer) {
     let questionId = question.question_id;
     if (typeof answer[questionId] != 'undefined') {
         let doubtful = (answer[questionId].doubtful || false);
-        let objSelector = selector2 + ' li[data-index="' + index + '"]';
         let li = $(selector2 + ' li[data-index="' + index + '"]');
         li.attr({ 'data-doubtful': doubtful ? 'true' : 'false' });
         $('body').attr('data-doubtful', doubtful ? 'true' : 'false');
