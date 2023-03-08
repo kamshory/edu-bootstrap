@@ -1,7 +1,7 @@
 <?php
 namespace WS;
 
-class WSBrokerService extends \WS\WSServer implements \WS\WSInterface {
+class WSTestService extends \WS\WSServer implements \WS\WSInterface {
 	private $testMember = array();
 	public function __construct($wsDatabase, $host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null, $messageOnStarted = "")
 	{
@@ -202,21 +202,33 @@ class WSBrokerService extends \WS\WSServer implements \WS\WSInterface {
 		if($command == "broadcast")
 		{
 			$receiverGroup = $json_message['receiver_group'];
+			$json_message['sender'] = array(
+				'username'=>$wsClient->getUsername(), 
+				'name'=>$wsClient->getName()
+			);
+			$receivedText = json_encode($json_message);
 			$this->sendBroadcast($wsClient, $receivedText, $receiverGroup, true);
 		}
 		else if($command == "help")
 		{
 			$receiverGroup = $json_message['receiver_group'];
-			$json = json_decode($receivedText, true);
-			$json['sender'] = array('username'=>$wsClient->getUsername(), 'name'=>$wsClient->getName());
-			$receivedText = json_encode($json);
-			$this->sendBroadcast($wsClient, $receivedText, $receiverGroup, true);
+			$json_message['sender'] = array(
+				'username'=>$wsClient->getUsername(), 
+				'name'=>$wsClient->getName()
+			);
+			$receivedText = json_encode($json_message);
+			$this->sendBroadcast($wsClient, $receivedText, $receiverGroup, false);
 		}
 		else if($command == "message" || $command == "kick")
 		{
 			$receiver = $json_message['receiver'];
 			if(is_array($receiver))
 			{
+				$json_message['sender'] = array(
+					'username'=>$wsClient->getUsername(), 
+					'name'=>$wsClient->getName()
+				);
+				$receivedText = json_encode($json_message);
 				$this->sendMessage($receivedText, $receiver);
 			}
 		}

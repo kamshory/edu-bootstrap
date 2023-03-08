@@ -30,19 +30,29 @@ catch (e) {
 }
 
 $(document).ready(function () {
+
     $(document).on('click', selector2 + ' li a', function (e) {
         e.preventDefault();
         let a = $(this);
         a.parent().siblings().removeClass('active');
         a.parent().addClass('active');
-        let index = a.parent().attr('data-index');
-        window.localStorage.setItem(keyIndex, index)
+        let indexStr = a.parent().attr('data-index');
+        let index = parseInt(indexStr);
+        if(isNaN(index))
+        {
+            index = 0;
+        }
+
+        lastIndex = index;
+
+        window.localStorage.setItem(keyIndex, index);      
 
         renderQuestion(testData, index, selector1, answer);
         setAnswer(testData, index, selector1, selector2, answer);
         setActiveNumber(testData, index, selector1, selector2, answer);
         markDoubtful(testData, index, selector1, selector2, answer);
     });
+
     $(document).on('change', selector1 + ' .test-option-area .option-control input', function (e) {
         e.preventDefault();
         let input = $(this);
@@ -57,6 +67,7 @@ $(document).ready(function () {
         window.localStorage.setItem(keyAnswer, JSON.stringify(answer));
         setActiveNumber(testData, index, selector1, selector2, answer);
     });
+
     $(document).on('click', '.button-doubtful', function (e) {
         doubtfulAnswer();
     });
@@ -64,6 +75,7 @@ $(document).ready(function () {
     $(document).on('click', '.button-prev', function (e) {
         prev();
     });
+
     $(document).on('click', '.button-next', function (e) {
         next();
     });
@@ -94,7 +106,6 @@ $(document).ready(function () {
         });
     });
 
-
     renderQuestion(testData, lastIndex, selector1, answer);
     renderQuestionSelector(testData, lastIndex, selector2, answer);
 
@@ -112,6 +123,7 @@ function updateQuestionSelector(optionId) {
     window.localStorage.setItem(keyAnswer, JSON.stringify(answer));
     setActiveNumber(testData, lastIndex, selector1, selector2, answer);
 }
+
 function doubtfulAnswer() {
     let question = testData[lastIndex];
     let questionId = question.question_id;
@@ -122,6 +134,7 @@ function doubtfulAnswer() {
     setActiveNumber(testData, lastIndex, selector1, selector2, answer);
     markDoubtful(testData, lastIndex, selector1, selector2, answer);
 }
+
 function prev() {
     if (lastIndex > 0) {
         lastIndex--;
@@ -144,8 +157,10 @@ function changeIndex(testData, index, selector1, selector2, answer) {
     setActiveNumber(testData, index, selector1, selector2, answer);
     markDoubtful(testData, index, selector1, selector2, answer);
 }
+
 function setActiveNumber(testData, index, selector1, selector2, answer) {
-    let li = $(selector2 + ' li').filter('[data-index="' + index + '"]');
+    let listSelector = selector2 + ' li[data-index="' + index + '"]';
+    let li = $(listSelector);
     li.siblings().removeClass('active');
     li.addClass('active');
     let question = testData[index];
@@ -156,23 +171,27 @@ function setActiveNumber(testData, index, selector1, selector2, answer) {
         li.attr({ 'data-answered': answered ? 'true' : 'false' });
     }
 }
+
 function setAnswer(testData, index, selector1, selector2, answer) {
     let question = testData[index];
     let questionId = question.question_id;
     if (typeof answer[questionId] != 'undefined') {
         let optionId = answer[questionId].answerId || '';
         let optionArea = $(selector1);
-        if (optionId != '' && optionArea.find('#' + 'option_' + optionId).length) {
-            optionArea.find('#' + 'option_' + optionId)[0].checked = true;
+        let inputSelector = '#' + 'option_' + optionId;
+        if (optionId != '' && optionArea.find(inputSelector).length) {
+            optionArea.find(inputSelector)[0].checked = true;
         }
     }
 }
+
 function markDoubtful(testData, index, selector1, selector2, answer) {
     let question = testData[index];
     let questionId = question.question_id;
     if (typeof answer[questionId] != 'undefined') {
         let doubtful = (answer[questionId].doubtful || false);
-        let li = $(selector2 + ' li[data-index="' + index + '"]');
+        let listSelector = selector2 + ' li[data-index="' + index + '"]';
+        let li = $(listSelector);
         li.attr({ 'data-doubtful': doubtful ? 'true' : 'false' });
         $('body').attr('data-doubtful', doubtful ? 'true' : 'false');
 
@@ -181,6 +200,7 @@ function markDoubtful(testData, index, selector1, selector2, answer) {
         li.attr({ 'data-answered': answered ? 'true' : 'false' });
     }
 }
+
 function renderQuestion(testData, index, selector, answer) {
     let question = testData[index];
     let questionId = question.question_id;
@@ -207,12 +227,13 @@ function renderQuestion(testData, index, selector, answer) {
         testOption.append(inputControl).append(option.content);
         optionArea.append(testOption);
     }
-
 }
+
 function getNumber(numberingList, numbering, number) {
     let type = numberingList[numbering];
     return type[parseInt(number)];
 }
+
 function renderQuestionSelector(testData, index, selector, answer) {
     let ul = $('<ul />');
     for (let i in testData) {
