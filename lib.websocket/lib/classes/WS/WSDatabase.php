@@ -16,13 +16,13 @@ class WSDatabase
 
 	/**
 	 * Constructor
-	 * @param string $databaseDriver
-	 * @param string $databaseHost
-	 * @param int $databasePort
-	 * @param string $username
-	 * @param string $password
-	 * @param string $databaseName
-	 * @param string $timeZone
+	 * @param string $databaseDriver Driver
+	 * @param string $databaseHost Server host
+	 * @param int $databasePort Server port
+	 * @param string $username Database username
+	 * @param string $password Database user password
+	 * @param string $databaseName Database name
+	 * @param string $timeZone Application time zone
 	 */
 	public function __construct($databaseDriver, $databaseHost, $databasePort, $username, $password, $databaseName, $timeZone)
 	{
@@ -74,6 +74,11 @@ class WSDatabase
 		return $this->conn;
 	}
 
+	/**
+	 * Disconnect database
+	 *
+	 * @return void
+	 */
 	public function disconnect()
 	{
 		try {
@@ -134,6 +139,14 @@ class WSDatabase
 		}
 	}
 
+	/**
+	 * Get student login information
+	 *
+	 * @param string $username
+	 * @param string $password
+	 * @param mixed $resourceId
+	 * @return object
+	 */
 	public function getLoginStudent($username, $password, $resourceId)
 	{
 		$student = new \stdClass;
@@ -176,6 +189,14 @@ class WSDatabase
 		return $student;
 	}
 
+	/**
+	 * Get student image URL
+	 *
+	 * @param string $school_id
+	 * @param string $student_id
+	 * @param string $rand
+	 * @return string
+	 */
 	public function getImageUrl($school_id, $student_id, $rand)
 	{
 		return 'media.edu/school/' . $school_id . '/user.avatar/student/' . $student_id . '/img-300x300.jpg?rand=' . $rand;
@@ -183,6 +204,7 @@ class WSDatabase
 
 	/**
 	 * Get the value of databaseName
+	 * @return string
 	 */
 	public function getDatabaseName()
 	{
@@ -203,6 +225,7 @@ class WSDatabase
 
 	/**
 	 * Get the value of databaseDriver
+	 * @return string
 	 */
 	public function getDatabaseDriver()
 	{
@@ -211,6 +234,7 @@ class WSDatabase
 
 	/**
 	 * Get the value of databaseHost
+	 * @return string
 	 */
 	public function getDatabaseHost()
 	{
@@ -219,6 +243,7 @@ class WSDatabase
 
 	/**
 	 * Get the value of databasePort
+	 * @return int
 	 */
 	public function getDatabasePort()
 	{
@@ -228,6 +253,7 @@ class WSDatabase
 
 	/**
 	 * Get the value of timeZone
+	 * @return string
 	 */
 	public function getTimeZone()
 	{

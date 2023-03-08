@@ -15,6 +15,7 @@ define('DB_PREF', '');
 
 $oneLevelUp = dirname(dirname(__FILE__));
 $twoLevelUp = dirname(dirname(dirname(__FILE__)));
+require_once dirname(__FILE__)."/ws-cfg.php";
 
 $configs = new stdClass();
 $databaseConfigs = new stdClass();
@@ -44,9 +45,10 @@ $configs->sync_file_extension = ".txt";
 $configs->sync_file_maximum_length = 50000;
 $configs->sync_file_use_relative_path = true;
 
+
 $cfg = new stdClass();
 $cfg->app_code = "picoedu";
-$cfg->ws_port = 8888;
+$cfg->ws_port = $wsConfig->ws_port;
 
 $cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/"; //NOSONAR
 $cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/"; //NOSONAR
