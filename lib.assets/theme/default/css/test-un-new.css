@@ -171,9 +171,6 @@ a.download:hover {
     width: 100%;
 }
 
-.test-area{
-}
-
 .test-wrapper{
     min-height: calc(100vh - 150px);
     padding: 20px;
@@ -210,7 +207,7 @@ a.download:hover {
 }
 
 .selector-area ul li a{
-    background-color: #1e6595;
+    background-color: #6e6e6e;
     color: #FFFFFF;
     display: block;
     width: 32px;
@@ -220,6 +217,22 @@ a.download:hover {
     text-align: center;
     padding: 8px 0px;
     border-radius: 50%;
+}
+.selector-area ul li a{
+    
+    box-sizing: border-box;
+}
+.selector-area ul li[data-answered="true"] a{
+    background-color: #28a745;
+}
+.selector-area ul li[data-answered="true"][data-doubtful="false"] a{
+    background-color: #28a745;
+}
+.selector-area ul li[data-answered="true"][data-doubtful="true"] a{
+    background-color: #ffc107;
+}
+.selector-area ul li.active a{
+    box-shadow: inset 0 0 0 2px rgb(0, 108, 0);
 }
 
 
@@ -274,11 +287,11 @@ a.download:hover {
   .test-option-area input[type="radio"]:checked + label:before {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
-    box-shadow: inset 0 0 0 0.2em #DDDDDD, inset 0 0 0 1em #53ba56;
+    box-shadow: inset 0 0 0 0.2em #DDDDDD, inset 0 0 0 1em #28a745;
   }
 
   [data-doubtful="true"] .test-option-area input[type="radio"]:checked + label:before{
-    box-shadow: inset 0 0 0 0.2em #DDDDDD, inset 0 0 0 1em #ffc107; !important;
+    box-shadow: inset 0 0 0 0.2em #DDDDDD, inset 0 0 0 1em #ffc107 !important;
   }
 
   .test-option-area label > span{
@@ -305,5 +318,8 @@ a.download:hover {
     position: relative;
   }
   .test-question-area img{
-    max-width: 100%;
+    max-width: 100% !important;
+  }
+  .test-question-area table{
+    max-width: 100% !important;
   }

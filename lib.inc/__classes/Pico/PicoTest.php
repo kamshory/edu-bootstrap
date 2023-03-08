@@ -177,6 +177,17 @@ class PicoTest
         }
         return $result;
     }
+    /**
+     * Undocumented function
+     *
+     * @param \Pico\EduTest $eduTest
+     * @param array $question
+     * @return array
+     */
+    public function getTestData($eduTest, $question)
+    {
+        return array('test'=>$eduTest, 'data'=>$question);
+    }
 
     /**
      * Get question list

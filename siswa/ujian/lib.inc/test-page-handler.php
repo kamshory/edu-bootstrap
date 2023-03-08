@@ -2,7 +2,8 @@
 
 $list = $picoTest->getQuestionList($studentLoggedIn, $eduTest, $token);
 $question = $picoTest->getQuestion($list);
-$testDataJSON = json_encode($question);
+$testDataFinal = $picoTest->getTestData($eduTest, $question);
+$testDataJSON = json_encode($testDataFinal);
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,140 +29,13 @@ $testDataJSON = json_encode($question);
     <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
-        let numberingList = {
-            'upper-alpha' : ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
-            'lower-alpha' : ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'],
-            'upper-roman' : ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'],
-            'lower-roman' : ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'vii', 'ix', 'x'],
-            'decimal' : ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
-            'decimal-leading-zero' : ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
-        };
         let testDataJSON = <?php echo $testDataJSON;?>;
         let testStudentId = '<?php echo $studentLoggedIn->student_id.$eduTest->test_id;?>';
-        let keyIndex = 'picoedu_last_index_'+testStudentId;
-        let keyAnswer = 'picoedu_answer_'+testStudentId;
-        let lastIndexStr = window.localStorage.getItem(keyIndex) || '0';
-        let lastIndex = parseInt(lastIndexStr);
-        if(isNaN(lastIndex))
-        {
-            lastIndex = 0;
-        }
-        let selector1 = '.test-wrapper';
-        let selector2 = '.selector-wrapper';
-        let answerStr = window.localStorage.getItem(keyAnswer) || '{}';
-        let answer = {};
-        try
-        {
-            answer = JSON.parse(answerStr);
-        }
-        catch(e)
-        {
-            answer = {};
-        }
-
-        $(document).ready(function(){
-            $(document).on('click', selector2 + ' li a', function(e){
-                e.preventDefault();
-                let a = $(this);
-                a.parent().siblings().removeClass('active');
-                a.parent().addClass('active')
-                let index = a.attr('data-index');
-                window.localStorage.setItem(keyIndex, index)
-                renderQuestion(testDataJSON, index, selector1, answer);
-            });
-            $(document).on('change', selector1 + ' .test-option-area .option-control input', function(e){
-                e.preventDefault();
-                let input = $(this);
-                input.parent().siblings().removeClass('active');
-                input.parent().addClass('active')
-                let index = input.attr('data-index');
-                let questionId = input.attr('data-question-id');
-                let optionId = input.val();
-    
-                answer[questionId] = (typeof answer[questionId] == 'undefined') ? {} : answer[questionId];
-                answer[questionId].answerId = optionId;
-
-                window.localStorage.setItem(keyAnswer, JSON.stringify(answer));               
-            });
-            $(document).on('click', '.button-doubtful', function(e){
-                let question = testDataJSON[lastIndex];
-                let questionId = question.question_id;
-                answer[questionId] = (typeof answer[questionId] == 'undefined') ? {} : answer[questionId];
-                let doubtful = answer[questionId].doubtful || false;
-                answer[questionId].doubtful = !doubtful;
-                window.localStorage.setItem(keyAnswer, JSON.stringify(answer));   
-                markDoubtful(testDataJSON, lastIndex, selector1, answer);
-            });
-
-            renderQuestion(testDataJSON, lastIndex, selector1, answer);
-            
-            renderQuestionSelector(testDataJSON, lastIndex, selector2, answer);
-        });
-        function markDoubtful(testDataJSON, index, selector, answer)
-        {
-            let question = testDataJSON[index];
-            let questionId = question.question_id;
-            console.log(questionId)
-            console.log(answer)
-            let doubtful = answer[questionId].doubtful;
-            console.log(doubtful);
-            $('body').attr('data-doubtful', doubtful?'true':'false');
-        }
-        function renderQuestion(testDataJSON, index, selector, answer)
-        {
-            let question = testDataJSON[index];
-            let sel = $(selector);
-            let optionArea = sel.find('.test-option-area');
-            let questionArea = sel.find('.test-question-area');
-            optionArea.empty();
-            questionArea.empty();
-            questionArea.append(question.content);
-            for(let i in question.option){
-                let option = question.option[i];
-                let testOption = $('<div />');
-                let inputControl = $('<div />');
-                testOption.addClass('test-option');
-                inputControl.addClass('option-control');
-                let input = $('<input />');
-                let label = $('<label />');
-                let span1 = $('<span />');
-                input.attr({'type':'radio', 'data-index':index, 'data-question-id':question.question_id, 'name':'option_'+question.question_id, 'id':'option_'+option.option_id, 'value':option.option_id});
-                label.attr({'for':'option_'+option.option_id});
-                span1.text(getNumber(numberingList, question.numbering, i));
-                label.append(span1);
-                inputControl.append(input).append(label);
-                testOption.append(inputControl).append(option.content);
-                optionArea.append(testOption);
-            }
-            let optionId = answer[question.question_id].answerId || '';
-            if(optionId != '' && optionArea.find('#'+'option_'+optionId).length)
-            {
-                optionArea.find('#'+'option_'+optionId)[0].checked = true;
-            }
-            markDoubtful(testDataJSON, index, selector, answer);
-        }
-        function getNumber(numberingList, numbering, number)
-        {
-            let type = numberingList[numbering];
-            return type[parseInt(number)];
-        }
-        function renderQuestionSelector(testDataJSON, index, selector, answer)
-        {
-            let ul = $('<ul />');
-            for(let i in testDataJSON)
-            {
-                let j = parseInt(i) + 1;
-                let li = $('<li />');
-                let a = $('<a />');
-                a.attr({'href':'#', 'data-index':i});
-                a.text(j);
-                li.append(a);
-                ul.append(li);
-            }
-            $(selector).empty().append(ul);
-        }
+		let testId = '<?php echo $eduTest->test_id;?>';
+		let websocketURL = '<?php echo $picoEdu->getWebsocketHost();?>/?module=test&test_id='+testId;
+	</script>
+    <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-un-new.js">
     </script>
-
 </head>
 
 <body className="snippet-body">
@@ -201,37 +75,25 @@ $testDataJSON = json_encode($question);
                             </div>                           
                         </div>
                         <div class="test-nav">
-                            <a class="btn btn-primary" href="#">Sebelumnya</a>
-                            <a class="btn btn-warning button-doubtful" href="#">Ragu-Ragu</a>
-                            <a class="btn btn-primary" href="#">Sesudahnya</a>                               
+                            <a class="btn btn-primary button-prev" href="#">Sebelumnya</a>
+                            <a class="btn btn-warning button-doubtful" href="#">Ragu</a>
+                            <a class="btn btn-primary button-next" href="#">Sesudahnya</a>                               
                         </div>
                     </div>
                     <div class="col col-3 selector-area">
                         
                         <div class="selector-wrapper">
                             <ul>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">6</a></li>
-                                <li><a href="#">7</a></li>
-                                <li><a href="#">8</a></li>
-                                <li><a href="#">9</a></li>
-                                <li><a href="#">10</a></li>
-                                <li><a href="#">11</a></li>
-                                <li><a href="#">12</a></li>
-                                <li><a href="#">13</a></li>
-                                <li><a href="#">14</a></li>
-                                <li><a href="#">15</a></li>
-                                <li><a href="#">16</a></li>
-                                <li><a href="#">17</a></li>
-                                <li><a href="#">18</a></li>
-                                <li><a href="#">19</a></li>
-                                <li><a href="#">20</a></li>
+                                
                             </ul>
+
+                            
                         </div>
+                        <button class="btn btn-primary button-hand-paper"><i class="fas fa-hand-paper"></i></button>
+                        <button class="btn btn-primary"><i class="fas fa-file"></i></button>
+                        <button class="btn btn-primary"><i class="fas fa-pencil"></i></button>
+                        <button class="btn btn-primary"><i class="fas fa-toilet"></i></button>
+                        <button class="btn btn-success">Kirim Hasil</button>
                     </div>
                 </div>
                 
@@ -240,25 +102,25 @@ $testDataJSON = json_encode($question);
             </div>
         </div>
     </div>
-    <script type="text/javascript">$(document).ready(function () {
-            $("#sidebarCollapse").on("click", function () {
-                $("#sidebar").toggleClass("active");
-            });
+    <script type="text/javascript">
+    
+    
+    </script>
+	<script src="lib.assets/script/test-ws.js"></script>
+	<script src="lib.assets/script/test-ws-student.js"></script>
 
+	<div class="modal fade" id="test-alert" tabindex="-1" role="dialog" aria-labelledby="test-alert-title" aria-hidden="true">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="test-alert-title">Pesan Pengawas</h5>
+		</div>
+			<div class="modal-body">
+			</div>
+		</div>
+	</div>
+	</div>
 
-        $(document).on("keydown", 'body', function(event) {
-            let key = event.key;
-            key = key.toUpperCase();
-            $('.test-option-area .option-control').each(function(ev){
-                if($(this).find('label').text().trim() == key)
-                {
-                    $(this).find('input')[0].checked = true;
-                }
-            });
-
-            
-        });
-        });</script>
     <script type="text/javascript">
         var myLink = document.querySelectorAll('a[href="#"]');
         myLink.forEach(function (link) {

@@ -21,6 +21,7 @@ class WSClient //NOSONAR
 	private $headerInfo = array();
 	private $groupId = "";
 	private $username = "";
+	private $name = "";
 	public $sessionParams;
 	
 	
@@ -344,4 +345,24 @@ class WSClient //NOSONAR
 		return $this->username;
 	}
 
+
+	/**
+	 * Get the value of name
+	 */ 
+	public function getName()
+	{
+		return $this->name;
+	}
+
+	/**
+	 * Set the value of name
+	 *
+	 * @return  self
+	 */ 
+	public function setName($name)
+	{
+		$this->name = $name;
+
+		return $this;
+	}
 }

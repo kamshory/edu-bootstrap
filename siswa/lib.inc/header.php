@@ -44,7 +44,6 @@ if(!isset($cfg))
       });
     });
   }
-    
   );
 </script>
 </head>

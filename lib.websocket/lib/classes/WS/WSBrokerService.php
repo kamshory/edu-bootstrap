@@ -99,6 +99,8 @@ class WSBrokerService extends \WS\WSServer implements \WS\WSInterface {
 				if(!empty($username))
 				{
 					$student = $this->wsDatabase->getLoginStudent($username, $password, $wsClient->getResourceId());
+					$wsClient->setName($student->name);
+					
 					$testId = $query['test_id'];
 					$this->memberTestAdd($student, $testId);
 
@@ -200,6 +202,14 @@ class WSBrokerService extends \WS\WSServer implements \WS\WSInterface {
 		if($command == "broadcast")
 		{
 			$receiverGroup = $json_message['receiver_group'];
+			$this->sendBroadcast($wsClient, $receivedText, $receiverGroup, true);
+		}
+		else if($command == "help")
+		{
+			$receiverGroup = $json_message['receiver_group'];
+			$json = json_decode($receivedText, true);
+			$json['sender'] = array('username'=>$wsClient->getUsername(), 'name'=>$wsClient->getName());
+			$receivedText = json_encode($json);
 			$this->sendBroadcast($wsClient, $receivedText, $receiverGroup, true);
 		}
 		else if($command == "message" || $command == "kick")

@@ -9,7 +9,7 @@ class SessionParser {
 	 * @param \WS\WSClient $clientChat Chat client
 	 * @return array
 	 */
-	public function prostConstructClient($clientChat)
+	public function postConstructClient($clientChat)
 	{
 		// Here are the client data
 		// You can define it yourself

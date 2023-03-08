@@ -19,6 +19,6 @@ $wsDatabase = new \WS\WSDatabase(
     $configs->getTimezone()
 );
 
-$wss = new \WS\WSBrokerService($wsDatabase, $host, $port, $app, 'prostConstructClient', "Message started on port $port\r\n");
+$wss = new \WS\WSBrokerService($wsDatabase, $host, $port, $app, 'postConstructClient', "Message started on port $port\r\n");
 $ret = $wss->run();
 

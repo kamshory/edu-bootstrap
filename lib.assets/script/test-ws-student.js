@@ -56,5 +56,17 @@ function kickStudent(title, message, icon) {
 }
 
 $(document).ready(function(e){
+    $(document).on('click', '.button-hand-paper', function(e1){
+        e1.preventDefault();
+        let json = {
+            command:'help',
+            receiver_group:['teacher', 'admin'],
+            data:{
+                type:'toilet',
+                message:'Toilet'
+            }
+        };
+        pChat.send(JSON.stringify(json));
+    })
    
 });
