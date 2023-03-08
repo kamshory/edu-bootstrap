@@ -70,8 +70,7 @@ $testDataJSON = json_encode($testDataFinal);
                         <div class="test-wrapper">
                             <div class="test-question-area">
                             </div>
-                            <div class="test-option-area">
-                             
+                            <div class="test-option-area">                           
                             </div>                           
                         </div>
                         <div class="test-nav">
@@ -80,19 +79,17 @@ $testDataJSON = json_encode($testDataFinal);
                             <a class="btn btn-primary button-next" href="#">Sesudahnya</a>                               
                         </div>
                     </div>
-                    <div class="col col-3 selector-area">
-                        
+                    <div class="col col-3 selector-area">                       
                         <div class="selector-wrapper">
-                            <ul>
-                                
-                            </ul>
-
-                            
+                            <ul>                               
+                            </ul>                         
                         </div>
-                        <button class="btn btn-primary button-hand-paper"><i class="fas fa-hand-paper"></i></button>
-                        <button class="btn btn-primary"><i class="fas fa-file"></i></button>
-                        <button class="btn btn-primary"><i class="fas fa-pencil"></i></button>
-                        <button class="btn btn-primary"><i class="fas fa-toilet"></i></button>
+                        <button class="btn btn-danger button-help" data-type="medical"><i class="fas fa-suitcase-medical"></i></button>
+                        <button class="btn btn-primary button-help" data-type="help"><i class="fas fa-hand-paper"></i></button>
+                        <button class="btn btn-primary button-help" data-type="paper"><i class="fas fa-file"></i></button>
+                        <button class="btn btn-primary button-help" data-type="pencil"><i class="fas fa-pencil"></i></button>
+                        <button class="btn btn-primary button-help" data-type="toilet"><i class="fas fa-toilet"></i></button>
+                        
                         <button class="btn btn-success">Kirim Hasil</button>
                     </div>
                 </div>

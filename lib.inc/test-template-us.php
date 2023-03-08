@@ -11,7 +11,6 @@ $dur_obj = $picoEdu->secondsToTime($data['duration']);
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test-student.min.css" />
 <link rel="shortcut icon" type="image/jpeg" href="<?php echo $cfg->base_assets;?>lib.assets/lib.assets/theme/default/css/images/favicon.png" />
 
-
 <script type="application/javascript">
 var mui;
 $(document).ready(function(e) {
