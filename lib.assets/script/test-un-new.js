@@ -72,7 +72,6 @@ $(document).ready(function () {
         $("#sidebar").toggleClass("active");
     });
 
-
     $(document).on("keydown", 'body', function (event) {
 
         let key = event.key;
