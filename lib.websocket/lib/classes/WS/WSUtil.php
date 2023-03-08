@@ -227,5 +227,4 @@ class WSUtil
 		return $header . $text;
 	}
 	
-	
 }

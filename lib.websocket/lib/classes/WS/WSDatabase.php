@@ -1,19 +1,19 @@
 <?php
+
 namespace WS;
 
 class WSDatabase
 {
-
 	private $username = "";
 	private $password = "";
 	private $databaseName = "";
-	private $timezone = "00:00";
+	private $timeZone = "Asia/Jakarta";
 	private $conn;
 
-    private $databaseDriver = "mysql";
-    private $databaseHost = "localhost";
-    private $databasePort = 3066;
-    
+	private $databaseDriver = "mysql";
+	private $databaseHost = "localhost";
+	private $databasePort = 3066;
+
 	/**
 	 * Constructor
 	 * @param string $databaseDriver
@@ -22,17 +22,17 @@ class WSDatabase
 	 * @param string $username
 	 * @param string $password
 	 * @param string $databaseName
-	 * @param string $timezone
+	 * @param string $timeZone
 	 */
-	public function __construct($databaseDriver, $databaseHost, $databasePort, $username, $password, $databaseName, $timezone) //NOSONAR
+	public function __construct($databaseDriver, $databaseHost, $databasePort, $username, $password, $databaseName, $timeZone)
 	{
 		$this->databaseDriver = $databaseDriver;
-        $this->databaseHost = $databaseHost;
-        $this->databasePort = $databasePort;
+		$this->databaseHost = $databaseHost;
+		$this->databasePort = $databasePort;
 		$this->username = $username;
 		$this->password = $password;
 		$this->databaseName = $databaseName;
-		$this->timezone = $timezone;	
+		$this->timeZone = $timeZone;
 	}
 
 	/**
@@ -42,24 +42,22 @@ class WSDatabase
 	public function connect()
 	{
 		$ret = false;
-		date_default_timezone_set($this->timezone);
+		date_default_timezone_set($this->getTimeZone());
 		$timezoneOffset = date("P");
 		try {
 			$connectionString = $this->databaseDriver . ':host=' . $this->databaseHost . '; port=' . $this->databasePort . '; dbname=' . $this->databaseName;
 
 			$this->conn = new \PDO(
-				$connectionString, 
-				$this->username, 
+				$connectionString,
+				$this->username,
 				$this->password,
 				array(
-					\PDO::MYSQL_ATTR_INIT_COMMAND =>"SET time_zone = '$timezoneOffset';",
+					\PDO::MYSQL_ATTR_INIT_COMMAND => "SET time_zone = '$timezoneOffset';",
 					\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
-					)
+				)
 			);
 
 			$ret = true;
-
-
 		} catch (\PDOException $e) {
 			echo "Connection error " . $e->getMessage();
 			$ret = false;
@@ -78,14 +76,11 @@ class WSDatabase
 
 	public function disconnect()
 	{
-		try
-		{
+		try {
 			$this->conn = new \PDO(''); //NOSONAR
 			$this->conn->query('KILL CONNECTION_ID()'); //NOSONAR
 			$this->conn = null; //NOSONAR
-		}
-		catch(\Exception $e)
-		{
+		} catch (\Exception $e) {
 			// Do nothing
 		}
 	}
@@ -99,9 +94,7 @@ class WSDatabase
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
-		}
-		catch(\PDOException $e)
-		{
+		} catch (\PDOException $e) {
 			// Do nothing
 		}
 	}
@@ -116,49 +109,44 @@ class WSDatabase
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
-		}
-		catch(\PDOException $e)
-		{
-			echo $e->getMessage()."\r\nERROR &raquo; $sql";
+		} catch (\PDOException $e) {
+			echo $e->getMessage() . "\r\nERROR &raquo; $sql";
 		}
 		return $stmt;
 	}
 
 	/**
 	 * Get system variable
-	 * @param string $variable_name Variable name
-	 * @param mixed $default_value Default value
+	 * @param string $variableName Variable name
+	 * @param mixed $defaultValue Default value
 	 * @return mixed System variable value of return default value if not exists
 	 */
-	public function getSystemVariable($variable_name, $default_value = null)
+	public function getSystemVariable($variableName, $defaultValue = null)
 	{
-		$variable_name = addslashes($variable_name);
+		$variableName = addslashes($variableName);
 		$sql = "SELECT * FROM `edu_system_variable` 
-		WHERE `system_variable_id` = '$variable_name' ";
+		WHERE `system_variable_id` = '$variableName' ";
 		$data = $this->executeQuery($sql)->fetch(\PDO::FETCH_ASSOC);
-		if(isset($data) && is_array($data) && !empty($data))
-		{
+		if (isset($data) && is_array($data) && !empty($data)) {
 			return $data['system_value'];
-		}
-		else
-		{
-			return $default_value;
+		} else {
+			return $defaultValue;
 		}
 	}
 
-    public function getLoginStudent($username, $password, $resourceId)
-    {
-        $student = new \stdClass;
+	public function getLoginStudent($username, $password, $resourceId)
+	{
+		$student = new \stdClass;
 
-        $student->student_id = "";
-        $student->name = "";
-        $student->username = "";
-        $student->gender = "";
-        $student->class_id = "";
-        $student->school_id = "";
-        $student->resourceId = $resourceId;
+		$student->student_id = "";
+		$student->name = "";
+		$student->username = "";
+		$student->gender = "";
+		$student->class_id = "";
+		$student->school_id = "";
+		$student->resourceId = $resourceId;
 		$student->image = '';
-        if ($username != '') {
+		if ($username != '') {
 			$sql = "SELECT 
             `edu_student`.`student_id`, 
             `edu_student`.`username`, 
@@ -171,7 +159,7 @@ class WSDatabase
 			AND `edu_student`.`active` = true
 			AND `edu_student`.`blocked` = false
 			";
-	
+
 			$stmt = $this->executeQuery($sql);
 			if ($stmt->rowCount() > 0) {
 				$studentLoggedIn = $stmt->fetchObject();
@@ -185,17 +173,17 @@ class WSDatabase
 			}
 		}
 
-        return $student;
-    }
+		return $student;
+	}
 
 	public function getImageUrl($school_id, $student_id, $rand)
 	{
-		return 'media.edu/school/'.$school_id.'/user.avatar/student/'.$student_id.'/img-300x300.jpg?rand='.$rand;
+		return 'media.edu/school/' . $school_id . '/user.avatar/student/' . $student_id . '/img-300x300.jpg?rand=' . $rand;
 	}
 
 	/**
 	 * Get the value of databaseName
-	 */ 
+	 */
 	public function getDatabaseName()
 	{
 		return $this->databaseName;
@@ -204,8 +192,8 @@ class WSDatabase
 	/**
 	 * Set the value of databaseName
 	 *
-	 * @return  self
-	 */ 
+	 * @return self
+	 */
 	public function setDatabaseName($databaseName)
 	{
 		$this->databaseName = $databaseName;
@@ -214,35 +202,35 @@ class WSDatabase
 	}
 
 	/**
-	 * Get the value of timezone
-	 */ 
-	public function getTimezone()
+	 * Get the value of databaseDriver
+	 */
+	public function getDatabaseDriver()
 	{
-		return $this->timezone;
+		return $this->databaseDriver;
 	}
 
-    /**
-     * Get the value of databaseDriver
-     */ 
-    public function getDatabaseDriver()
-    {
-        return $this->databaseDriver;
-    }
+	/**
+	 * Get the value of databaseHost
+	 */
+	public function getDatabaseHost()
+	{
+		return $this->databaseHost;
+	}
 
-    /**
-     * Get the value of databaseHost
-     */ 
-    public function getDatabaseHost()
-    {
-        return $this->databaseHost;
-    }
+	/**
+	 * Get the value of databasePort
+	 */
+	public function getDatabasePort()
+	{
+		return $this->databasePort;
+	}
 
-    /**
-     * Get the value of databasePort
-     */ 
-    public function getDatabasePort()
-    {
-        return $this->databasePort;
-    }
 
+	/**
+	 * Get the value of timeZone
+	 */
+	public function getTimeZone()
+	{
+		return $this->timeZone;
+	}
 }

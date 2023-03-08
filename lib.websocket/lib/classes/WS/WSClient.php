@@ -26,8 +26,8 @@ class WSClient //NOSONAR
 	
 	
 	/**
-	 * @param string $resourceId, 
-	 * @param \Socket $socket
+	 * @param string $resourceId Resource ID 
+	 * @param \Socket $socket 
 	 * @param string $headers
 	 * @param \WS\WSRemoteConnection $wsRemoteConnection
 	 * @param \WS\SessionParams $sessionParams 
@@ -75,6 +75,12 @@ class WSClient //NOSONAR
 		}
 	}
 
+	/**
+	 * Parse header info
+	 *
+	 * @param array $headerInfo
+	 * @return void
+	 */
 	private function parseHeaders($headerInfo)
 	{
 		$port = 0;
@@ -117,6 +123,12 @@ class WSClient //NOSONAR
 		$this->port = $port;	
 	}
 
+	/**
+	 * Send message
+	 *
+	 * @param string $message
+	 * @return void
+	 */
 	public function sendMessage($message)
 	{
 		$maskedMessage = \WS\WSUtil::mask($message);
@@ -177,7 +189,7 @@ class WSClient //NOSONAR
 	/**
 	 * Set the value of sessionParams
 	 * @param \WS\SessionParams $sessionParams
-	 * @return  self
+	 * @return self
 	 */ 
 	public function setSessionParams($sessionParams)
 	{
@@ -278,7 +290,7 @@ class WSClient //NOSONAR
 	/**
 	 * Set the value of sessionID
 	 *
-	 * @return  self
+	 * @return self
 	 */ 
 	public function setSessionID($sessionID)
 	{
@@ -299,7 +311,7 @@ class WSClient //NOSONAR
 	/**
 	 * Set the value of sessions
 	 *
-	 * @return  self
+	 * @return self
 	 */ 
 	public function setSessions($sessions)
 	{
@@ -320,7 +332,7 @@ class WSClient //NOSONAR
 	/**
 	 * Set the value of clientData
 	 *
-	 * @return  self
+	 * @return self
 	 */ 
 	public function setClientData($clientData)
 	{
@@ -357,7 +369,7 @@ class WSClient //NOSONAR
 	/**
 	 * Set the value of name
 	 *
-	 * @return  self
+	 * @return self
 	 */ 
 	public function setName($name)
 	{

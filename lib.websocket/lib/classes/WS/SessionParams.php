@@ -18,7 +18,11 @@ class SessionParams
     private $sessionFilePrefix = 'sess_';
     
     /**
-     * Constructor
+     * Constructor of \WS\SessionParams
+     *
+     * @param string $sessionCookieName Session cookie name
+     * @param string $sessionSavePath Session save path
+     * @param string $sessionFilePrefix Session file prefix
      */
     public function __construct($sessionCookieName = null, $sessionSavePath = null, $sessionFilePrefix = null)
     {
@@ -67,7 +71,4 @@ class SessionParams
     {
         return $this->sessionFilePrefix;
     }
-
-    
-    
 }

@@ -23,6 +23,16 @@ class WSServer implements \WS\WSInterface {
 	protected $callbackObject;
 	protected $callbackPostConstruct;
 
+	/**
+	 * Conctructor of WSServer
+	 *
+	 * @param \WS\WSDatabase $wsDatabase
+	 * @param string $host
+	 * @param integer $port
+	 * @param mixed $callbackObject
+	 * @param string $callbackPostConstruct
+	 * @param string $messageOnStarted
+	 */
 	public function __construct($wsDatabase, $host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null, $messageOnStarted = "")
 	{
 		$this->wsDatabase = $wsDatabase;
@@ -48,7 +58,7 @@ class WSServer implements \WS\WSInterface {
 		}
 	}
 
-		/**
+	/**
 	 * Destructor
 	 */
 	public function __destruct()
@@ -56,6 +66,10 @@ class WSServer implements \WS\WSInterface {
 		socket_close($this->masterSocket);
 	}
 
+	/**
+	 * Reset user on system
+	 * @return void
+	 */
 	protected function resetUserOnSystem()
 	{
 		$this->userOnSystem = array();
@@ -70,6 +84,10 @@ class WSServer implements \WS\WSInterface {
 		$this->userOnSystem[$clientIndex] = $clientData;
 	}
 
+	/**
+	 * Reset user on system
+	 * @return void
+	 */
 	protected function updateUserOnSystem()
 	{
 		$this->resetUserOnSystem();
@@ -81,7 +99,10 @@ class WSServer implements \WS\WSInterface {
 			}
 		}
 	}
-	
+
+	/**
+	 * Run service
+	 */
 	public function run() //NOSONAR
 	{
 		if($this->socketOk)
@@ -428,6 +449,7 @@ class WSServer implements \WS\WSInterface {
 	 * @param $wsClient Chat client
 	 * @param $ip Remote adddress or IP address of the client 
 	 * @param $port Remot port or port number of the client
+	 * @return void
 	 */
 	public function onClose($wsClient)
 	{
@@ -450,6 +472,7 @@ class WSServer implements \WS\WSInterface {
 	 * @param string $message Message to sent to all client
 	 * @param array $receiverGroups Receiver
 	 * @param bool $meeToo
+	 * @return void
 	 */
 	public function sendBroadcast($wsClient, $message, $receiverGroups = null, $meeToo = false)
 	{
@@ -466,6 +489,13 @@ class WSServer implements \WS\WSInterface {
 		}
 	}
 
+	/**
+	 * Check if receiver is in group or not
+	 *
+	 * @param array $receiverGroups
+	 * @param string $groupId
+	 * @return bool
+	 */
 	public function groupReceive($receiverGroups, $groupId)
 	{
 		return isset($receiverGroups) 
@@ -474,11 +504,19 @@ class WSServer implements \WS\WSInterface {
 		&& in_array($groupId, $receiverGroups);
 	}
 
+	/**
+	 * Send message
+	 *
+	 * @param string $textMessage
+	 * @param array $receiver
+	 * @return void
+	 */
 	public function sendMessage($textMessage, $receiver)
 	{
 		foreach($this->wsClients as $client) 
 		{
-			if(in_array($client->getClientData()['username'], $receiver))
+			$clientData = $client->getClientData();
+			if(in_array($clientData['username'], $receiver))
 			{
 				$client->sendMessage($textMessage);
 			}

@@ -11,19 +11,19 @@ class PicoDatabaseCredentials
 	private $username = "";
 	private $password = "";
 	private $databaseName = "";
-	private $timezone = "00:00";
+	private $timeZone = "Asia/Jakarta";
 
 	/**
 	 * Constructor
 	 * @param string $driver Driver
 	 * @param string $host Server host
 	 * @param int $port Server port
-	 * @param string $username
-	 * @param string $password
-	 * @param string $databaseName
-	 * @param string $timezone
+	 * @param string $username Database username
+	 * @param string $password Database user password
+	 * @param string $databaseName Database name
+	 * @param string $timeZone Application time zone
 	 */
-	public function __construct($driver = null, $host = null, $port = 0, $username = null, $password = null, $databaseName = null, $timezone = null)
+	public function __construct($driver = null, $host = null, $port = 0, $username = null, $password = null, $databaseName = null, $timeZone = null)
 	{
 		if($driver != null)
 		{
@@ -49,9 +49,9 @@ class PicoDatabaseCredentials
 		{
 			$this->databaseName = $databaseName;
 		}
-		if($timezone != null)
+		if($timeZone != null)
 		{
-			$this->timezone = $timezone;
+			$this->timeZone = $timeZone;
 		}	
 	}
 
@@ -121,11 +121,13 @@ class PicoDatabaseCredentials
 		return $this->databaseName;
 	}
 
+	
+
 	/**
-	 * Get the value of timezone
+	 * Get the value of timeZone
 	 */ 
-	public function getTimezone()
+	public function getTimeZone()
 	{
-		return $this->timezone;
+		return $this->timeZone;
 	}
 }

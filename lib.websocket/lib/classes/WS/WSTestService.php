@@ -63,6 +63,12 @@ class WSTestService extends \WS\WSServer implements \WS\WSInterface {
 		}	
 	}
 
+	/**
+	 * Remove duplicated member
+	 *
+	 * @param array $array
+	 * @return array
+	 */
 	private function uniqueMember($array)
 	{	
 		$array = json_decode(json_encode($array), true);
@@ -75,8 +81,7 @@ class WSTestService extends \WS\WSServer implements \WS\WSInterface {
 			}		
 			$array[$testID] = array_values($array[$testID]);
 		}
-		$array = json_decode(json_encode($array), false);
-		return $array;
+		return json_decode(json_encode($array), false);
 	}
 
 	/**

@@ -410,7 +410,7 @@ class FileSyncMaster //NOSONAR
     /**
      * Set the value of application
      *
-     * @return  self
+     * @return self
      */ 
     public function setApplication($application)
     {
