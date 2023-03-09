@@ -67,14 +67,6 @@ $cfg->meta_description = "Planet Edu merupakan sekolah virtual yang dapat dimanf
 
 
 $cfg->cdn_jquery = $cfg->base_assets."lib.assets/script/jquery/jquery.min.js";
-
-/**
-Old config
-$cfg->base_avatar = "http://".$_SERVER['SERVER_NAME']."/media.images/";
-$cfg->base_images = "http://".$_SERVER['SERVER_NAME']."/media.images/";
-$cfg->base_url = 'http://'.$_SERVER['SERVER_NAME'].'/';
-*/
-
 $cfg->base_avatar = "/media.images/";
 $cfg->base_images = "/media.images/";
 
