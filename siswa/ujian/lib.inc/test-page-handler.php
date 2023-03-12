@@ -58,9 +58,9 @@ $testDataJSON = json_encode($testDataFinal);
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"> <a class="nav-link" href="#">Depan</a></li>
+                        <li class="nav-item active"> <a class="nav-link" href="./">Depan</a></li>
                         <li class="nav-item"> <a class="nav-link" href="#">Informasi</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="#">Keluar</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="logout.php">Keluar</a></li>
                     </ul>
                 </div>
             </nav>

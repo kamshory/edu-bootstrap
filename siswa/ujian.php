@@ -573,14 +573,7 @@ else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 			<tr>
 			<td></td>
 			<td>
-			<?php
-			if(!$use_token)
-			{
-			?>
-			<input type="button" name="join" id="join" class="btn btn-success" value="Ikuti Ujian" onclick="window.location='ujian/?option=login&test_id=<?php echo $data['test_id'];?>'" /> 
-			<?php
-			}
-			?>
+			<input type="button" name="join" id="join" class="btn btn-success" value="Ikuti Ujian" onclick="window.location='ujian/<?php echo $data['test_id'];?>'" /> 
 			<input type="button" name="showall" id="showall" value="Tampilkan Semua" class="btn btn-secondary" onclick="window.location='ujian.php'" /></td>
 			</tr>
 		</table>

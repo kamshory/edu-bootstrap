@@ -17,18 +17,18 @@ class EduTest
     public $trial_limits = 1;
     public $threshold = '';
     public $assessment_methods = '';
-    public $number_of_question = '';
-    public $number_of_option = '';
-    public $question_per_page = '';
+    public $number_of_question = 0;
+    public $number_of_option = 0;
+    public $question_per_page = 0;
     public $random = false;
     public $duration = 0;
     public $has_alert = false;
     public $alert_time = 0;
     public $alert_message = '';
-    public $standard_score = '';
+    public $standard_score = 0.0;
     public $random_distribution = false;
     public $competence_distribution = '';
-    public $penalty = 0;
+    public $penalty = 0.0;
     public $order = 0;
     public $score_notification = '';
     public $publish_answer = false;
@@ -46,6 +46,5 @@ class EduTest
     public $ip_create = '';
     public $ip_edit = '';
     public $active = false;
-
     
 }

@@ -81,7 +81,8 @@ class PicoTest
             $prop = get_object_vars($obj);
             foreach ($prop as $key => $lock) {
                 if (property_exists($testObj, $key)) {
-                    $testObj->$key = $obj->$key;
+                    $type = \Pico\PicoType::getType($testObj->$key);
+                    $testObj->$key = \Pico\PicoType::valueOf($obj->$key, $type);
                 }
             }
         }
@@ -91,20 +92,26 @@ class PicoTest
     /**
      * Get token object
      * @param string $token
-     * @param string $testId
+     * @param \Pico\EduTest|null $test
      * @param string $studentId
      * @return \Pico\EduToken
      */
     public function getToken($token, $test, $studentId)
     {
-        $testId = addslashes($test->test_id);
+        $filter = "";
+        if($test != null)
+        {
+            $testId = addslashes($test->test_id);
+            $filter .= " AND `edu_token`.`test_id` = '$testId' 
+            ";
+        }
         $token = addslashes($token);
 
         $sql = "SELECT `edu_token`.* 
         FROM `edu_token`
         WHERE `edu_token`.`token` = '$token' 
-        AND `edu_token`.`test_id` = '$testId' 
         AND `edu_token`.`student_id` = '$studentId' 
+        $filter
         ";      
         $obj = $this->database->executeQuery($sql)->fetchObject();
         $tokenObj = new \Pico\EduToken();
@@ -112,7 +119,8 @@ class PicoTest
             $prop = get_object_vars($obj);
             foreach ($prop as $key => $lock) {
                 if (property_exists($tokenObj, $key)) {
-                    $tokenObj->$key = $obj->$key;
+                    $type = \Pico\PicoType::getType($tokenObj->$key);
+                    $tokenObj->$key = \Pico\PicoType::valueOf($obj->$key, $type);
                 }
             }
         }
@@ -214,7 +222,6 @@ class PicoTest
         WHERE `edu_question`.`test_id` = '$testId' 
         AND `edu_question`.`active` = true
         ";
-
         $stmt = $this->database->executeQuery($sql);
         if($stmt->rowCount() > 0)
         {

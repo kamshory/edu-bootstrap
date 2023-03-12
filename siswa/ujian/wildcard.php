@@ -15,7 +15,5 @@ try
 }
 catch(\Exception $e)
 {
-    //print_r($e->getMessage());
-    //print_r($e->getCode()); 
     require_once dirname(__FILE__)."/lib.inc/exception-handler.php";
 }

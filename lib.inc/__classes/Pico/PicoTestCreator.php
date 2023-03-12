@@ -741,8 +741,6 @@ class PicoTestCreator
             }
             $question_text = $this->detectTable($question_text);
 
-            
-
             $result = array(
                 'question' => $question_text,
                 'numbering' => $numbering_type,
@@ -942,6 +940,5 @@ class PicoTestCreator
         }
         return $line;
     }
-
     
 }

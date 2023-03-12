@@ -2,6 +2,7 @@
 namespace Pico;
 
 class PicoSortQuestion{
+    
     private $unsorted = array();
     private $unsortedOri = array();
     private $unsortedData = array();

@@ -48,6 +48,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 		else if(isset($_SERVER['HTTP_REFERER']))
 		{
 			$ref = $_SERVER['HTTP_REFERER'];
+			
 			if(stripos($ref, 'login.php') === false)
 			{
 				header('Location: '.$ref);

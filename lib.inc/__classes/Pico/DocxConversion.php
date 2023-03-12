@@ -1,9 +1,10 @@
 <?php
+
 namespace Pico;
 
 class DocxConversion
 {
-	private $filename;
+	private $filename = '';
 
 	public function __construct($filePath)
 	{
@@ -33,8 +34,7 @@ class DocxConversion
 
 		$zip = zip_open($this->filename);
 
-		if (!$zip || is_numeric($zip)) 
-		{
+		if (!$zip || is_numeric($zip)) {
 			return false;
 		}
 
@@ -83,8 +83,7 @@ class DocxConversion
 	}
 
 	/*************************power point files*****************************/
-	public function pptxToText($input_file)
-	{
+	public function pptxToText($input_file) {
 		$zip_handle = new \ZipArchive;
 		$output_text = "";
 		if (true === $zip_handle->open($input_file)) {

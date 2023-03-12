@@ -15,6 +15,5 @@ class EduToken {
     public $admin_edit = "";
     public $teacher_create = "";
     public $teacher_edit = "";
-    public $active = 0;
-  
+    public $active = false;
 }
