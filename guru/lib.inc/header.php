@@ -26,7 +26,7 @@ if(!isset($cfg))
 <link rel="mask-icon" href="<?php echo $cfg->base_assets;?>lib.favs/safari-pinned-tab.svg" color="#563d7c">
 <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon.ico">
 <meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>lib.favs/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
+<meta name="theme-color" content="#3558BE">
 
 <!-- Custom styles for this template -->
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.vendors/dashboard/dashboard.css">

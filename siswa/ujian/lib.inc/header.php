@@ -19,7 +19,6 @@ if(!isset($cfg))
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/js.js"></script>
 </head>
-
 <body>
 <div class="all">
 	<div class="header">
