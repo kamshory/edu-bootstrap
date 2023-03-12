@@ -1,5 +1,6 @@
 <?php
 namespace Pico;
+
 class PicoSortQuestion{
     private $unsorted = array();
     private $unsortedOri = array();

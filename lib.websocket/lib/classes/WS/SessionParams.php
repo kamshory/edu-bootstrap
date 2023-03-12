@@ -1,5 +1,6 @@
 <?php
 namespace WS;
+
 class SessionParams
 {
     /**

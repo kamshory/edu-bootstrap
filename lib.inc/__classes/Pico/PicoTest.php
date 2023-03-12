@@ -1,5 +1,4 @@
 <?php
-
 namespace Pico;
 
 class PicoTest
@@ -19,8 +18,8 @@ class PicoTest
     /**
      * Eligible
      * @param \Pico\AuthStudent
-     * @param \Pico\EduTest $test
-     * @param string $token
+     * @param \Pico\EduTest $test Test
+     * @param string $token Token
      * @return bool
      * @throws \Pico\PicoTestException
      */
@@ -106,10 +105,8 @@ class PicoTest
         WHERE `edu_token`.`token` = '$token' 
         AND `edu_token`.`test_id` = '$testId' 
         AND `edu_token`.`student_id` = '$studentId' 
-        ";
-        
+        ";      
         $obj = $this->database->executeQuery($sql)->fetchObject();
-
         $tokenObj = new \Pico\EduToken();
         if (!is_null($obj) && $obj !== false) {
             $prop = get_object_vars($obj);
@@ -152,7 +149,6 @@ class PicoTest
             {
                 $data = $stmt->fetch(\PDO::FETCH_ASSOC);
                 $data['number'] = (int) $key + 1;
-
                 $questionId = addslashes($val);
                 $sql = "SELECT `option_id`, `sort_order`, `content`
                 FROM `edu_option` WHERE `question_id` = '$questionId'       
@@ -177,11 +173,12 @@ class PicoTest
         }
         return $result;
     }
+
     /**
      * Undocumented function
      *
-     * @param \Pico\EduTest $eduTest
-     * @param array $question
+     * @param \Pico\EduTest $eduTest Test
+     * @param array $question Question
      * @return array
      */
     public function getTestData($eduTest, $question)
@@ -193,11 +190,10 @@ class PicoTest
      * Get question list
      * @param \Pico\AuthStudent $studentLoggedIn
      * @param \Pico\EduTest $eduTest
-     * @param string $token
      */
-    public function getQuestionList($studentLoggedIn, $eduTest, $token)
+    public function getQuestionList($studentLoggedIn, $eduTest)
     {
-        $saved = $this->getSavedQuestionList($studentLoggedIn, $eduTest, $token);
+        $saved = $this->getSavedQuestionList($studentLoggedIn, $eduTest);
         if($saved == null)
         {
             $saved = $this->generateQuestionList($eduTest);
@@ -252,10 +248,9 @@ class PicoTest
      * Get question list
      * @param \Pico\AuthStudent $studentLoggedIn
      * @param \Pico\EduTest $eduTest
-     * @param string $token
      * @return string|null
      */
-    public function getSavedQuestionList($studentLoggedIn, $eduTest, $token)
+    public function getSavedQuestionList($studentLoggedIn, $eduTest)
     {
         $studentId = addslashes($studentLoggedIn->student_id);
         $testId = addslashes($eduTest->test_id);
@@ -273,6 +268,4 @@ class PicoTest
         }
         return null;
     }
-
-   
 }

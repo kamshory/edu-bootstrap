@@ -101,7 +101,6 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 			} else {
 				$database->executeTransaction("rollback", true);
 			}
-
 		}
 	}
 }

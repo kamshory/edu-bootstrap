@@ -1,5 +1,4 @@
 <?php
-
 namespace WS;
 
 class WSDatabase

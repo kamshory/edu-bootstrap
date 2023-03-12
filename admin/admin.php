@@ -82,7 +82,6 @@ if(isset($_POST['delete']) && isset($_POST['admin_id']))
 	}
 }
 
-
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$sql = "SELECT * FROM `edu_school` WHERE `school_id` = '$school_id' ";
@@ -136,7 +135,6 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$database->executeInsert($sql2, true);
 		header("Location: ".$picoEdu->gateBaseSelfName()."?option=detail&admin_id=$admin_id");
 	}
-
 }
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')

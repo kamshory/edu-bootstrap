@@ -1,6 +1,6 @@
 <?php
-
 namespace Pico;
+
 class PicoTestCreator
 {
     public function loadXmlData_word($xml_file, $key = 0) //NOSONAR
@@ -227,13 +227,11 @@ class PicoTestCreator
                 }
             }
             unset($obj);
-            $obj = new \stdClass();
-    
+            $obj = new \stdClass();  
             $obj->name = $base_name;
             $obj->type = $content_type;
             $obj->encoding = 'base64';
-            $obj->data = base64_encode($data);
-    
+            $obj->data = base64_encode($data);   
             $files[] = $obj;
         }
     
@@ -244,18 +242,13 @@ class PicoTestCreator
             $data = \Pico\PicoDOM::getDataInTag($data, 'body');
         } else if (stripos($data, '<head') !== false) {
             $data = \Pico\PicoDOM::getDataInTag($data, 'head');
-        }
-    
+        }  
         unset($obj);
-        $obj = new \stdClass();
-    
+        $obj = new \stdClass();  
         $obj->html = $data;
-        $obj->files = $files;
-    
+        $obj->files = $files;  
         return $obj;
     }
-
-
     public function extractImage($html, $base_dir) //NOSONAR
     {
         global $cfg;
@@ -339,8 +332,7 @@ class PicoTestCreator
                 }
             }
             unset($obj);
-            $obj = new \stdClass();
-    
+            $obj = new \stdClass();   
             $obj->name = $base_name;
             $obj->type = $content_type;
             $obj->encoding = 'base64';
@@ -362,8 +354,7 @@ class PicoTestCreator
             }
             if ($skip) {
                 continue;
-            }
-    
+            }  
     
             if (stripos($src, "data:") === 0) {
                 $arr = explode(",", $src, 2);
@@ -664,21 +655,6 @@ class PicoTestCreator
 
         $lineslength = count($lines);
         if ($lineslength > 2) {
-            /*
-            Old code
-            foreach ($lines as $key => $val) {
-                $lines[$key] = trim($val, $whiteSpaceTrimmer); //NOSONAR
-            }
-            $i = 1;
-            do {
-                $numbering = getNumberingType($lines[$i], $lines[$i + 1]);
-                $i++;
-                if ($i >= $lineslength - 2) {
-                    break;
-                }
-            } while ($numbering == '');
-            //$numbering_type = $numbering;
-            */
             $numbering_type = $this->getNumType($lines);
 
             $k = -1;

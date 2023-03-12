@@ -173,7 +173,9 @@ a.download:hover {
 }
 
 .test-wrapper {
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 160px);
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -183,7 +185,7 @@ a.download:hover {
     text-align: center;
     display: block;
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0px 0px 0px;
 }
 
 .test-area .test-nav a {
@@ -218,10 +220,6 @@ a.download:hover {
     text-align: center;
     padding: 8px 0px;
     border-radius: 50%;
-}
-
-.selector-area ul li a {
-
     box-sizing: border-box;
 }
 
@@ -240,8 +238,6 @@ a.download:hover {
 .selector-area ul li.active a {
     box-shadow: inset 0 0 0 2px rgb(0, 108, 0);
 }
-
-
 
 .test-option-area {
     line-height: 1.7;
@@ -279,7 +275,7 @@ a.download:hover {
     height: 1.8em;
     text-align: center;
     color: #FCFCFC;
-    font-family: Times;
+    font-family: "Times";
     border-radius: 50%;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -311,7 +307,7 @@ a.download:hover {
     position: absolute;
     z-index: 1;
     margin-left: -0.96rem;
-    top: .24rem;
+    top: 0.24rem;
     display: block;
     width: 1.8rem;
     height: 1.8rem;
@@ -342,4 +338,8 @@ a.download:hover {
 
 .test-wrapper table[border="1"] td {
     padding: 2px 8px;
+}
+
+.button-area {
+    padding: 10px 0;
 }

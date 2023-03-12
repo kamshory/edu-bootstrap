@@ -14,7 +14,7 @@
         $content = "";
         foreach($rows as $data)
         {
-            $pars = extractParagraph($data['content']);
+            $pars = \Pico\PicoDOM::extractParagraph($data['content']);
             foreach($pars as $txt)
             {
                 if(!empty($txt))

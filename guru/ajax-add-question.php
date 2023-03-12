@@ -15,6 +15,7 @@ if(isset($_POST['data']))
 }
 if(isset($_POST['question']))
 {
+	$ret = array();
 	$test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
 	$picoEdu->sortQuestion($test_id);
 	$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` DESC";

@@ -1,6 +1,6 @@
 <?php
 
-$list = $picoTest->getQuestionList($studentLoggedIn, $eduTest, $token);
+$list = $picoTest->getQuestionList($studentLoggedIn, $eduTest);
 $question = $picoTest->getQuestion($list);
 $testDataFinal = $picoTest->getTestData($eduTest, $question);
 $testDataJSON = json_encode($testDataFinal);
@@ -84,13 +84,15 @@ $testDataJSON = json_encode($testDataFinal);
                             <ul>                               
                             </ul>                         
                         </div>
-                        <button class="btn btn-danger button-help" data-type="medical"><i class="fas fa-suitcase-medical"></i></button>
-                        <button class="btn btn-primary button-help" data-type="paper"><i class="fas fa-file"></i></button>
-                        <button class="btn btn-primary button-help" data-type="pencil"><i class="fas fa-pencil"></i></button>
-                        <button class="btn btn-primary button-help" data-type="toilet"><i class="fas fa-toilet"></i></button>
-                        <button class="btn btn-primary button-help" data-type="help"><i class="fas fa-hand-paper"></i></button>
-                        
-                        <button class="btn btn-success">Kirim Hasil</button>
+                        <div class="button-area">
+                            <button class="btn btn-danger button-help" data-type="medical"><i class="fas fa-suitcase-medical"></i></button>
+                            <button class="btn btn-primary button-help" data-type="paper"><i class="fas fa-file"></i></button>
+                            <button class="btn btn-primary button-help" data-type="pencil"><i class="fas fa-pencil"></i></button>
+                            <button class="btn btn-primary button-help" data-type="toilet"><i class="fas fa-toilet"></i></button>
+                            <button class="btn btn-primary button-help" data-type="help"><i class="fas fa-hand-paper"></i></button>
+                            
+                            <button class="btn btn-success">Kirim Hasil</button>
+                        </div>
                     </div>
                 </div>
                 

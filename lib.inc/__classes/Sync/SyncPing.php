@@ -84,4 +84,12 @@ class SyncPing
             );
         }
     }
+
+    /**
+     * Get the value of application
+     */ 
+    public function getApplication()
+    {
+        return $this->application;
+    }
 }

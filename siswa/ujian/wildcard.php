@@ -4,8 +4,8 @@ $arg1 = "";
 $arg2 = "";
 require_once dirname(__FILE__)."/lib.inc/query-parser.php";
 $picoTest = new \Pico\PicoTest($database);
-$test_id = addslashes($_GET['test_id']);
-$token = addslashes($_GET['token']);
+$test_id = addslashes(isset($_GET['test_id'])?$_GET['test_id']:'');
+$token = addslashes(isset($_GET['token'])?$_GET['token']:'');
 $eligible = false;
 $eduTest = $picoTest->getTest($test_id);
 try
@@ -15,8 +15,7 @@ try
 }
 catch(\Exception $e)
 {
-    print_r($e->getMessage());
-    print_r($e->getCode()); 
+    //print_r($e->getMessage());
+    //print_r($e->getCode()); 
     require_once dirname(__FILE__)."/lib.inc/exception-handler.php";
-
 }

@@ -1,10 +1,5 @@
 <?php
-
 namespace Pico;
-
-
-
-
 
 class EduTest
 {

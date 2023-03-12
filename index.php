@@ -83,7 +83,7 @@ else
 		$password = $_SESSION['student_password'];
 	}
 	
-	$studentLoggedIn = new \Pico\AuthStudent($database, $username, $password, false);
+	$studentLoggedIn = (new \Pico\AuthStudent($database, $username, $password, false))->login();
 	
 	$student_id = '';
 	$school_id = '';

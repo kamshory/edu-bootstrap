@@ -1,5 +1,4 @@
 <?php
-
 namespace Pico;
 
 class BrowserCache

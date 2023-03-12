@@ -1,7 +1,5 @@
 <?php
-
 namespace Pico;
-
 
 class PicoDatabaseCredentials
 {
@@ -69,7 +67,7 @@ class PicoDatabaseCredentials
 		$this->username = $obj['username'];
 		$this->password = $obj['password'];
 		$this->databaseName = $obj['database_name'];
-		$this->timezone = $obj['timezone'];	
+		$this->timeZone = $obj['timezone'];	
 		return $this;
 	}
 

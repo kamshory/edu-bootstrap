@@ -1,6 +1,5 @@
 <?php
 namespace Pico;
-
 class PicoEdu //NOSONAR
 {
 	const SPAN_OPEN = '<span>';
