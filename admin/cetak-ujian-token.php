@@ -50,9 +50,6 @@ if ($stmt->rowCount() > 0) {
     }
 
   }
-
-
-
   ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,14 +146,15 @@ h3{
   </div>
 <table width="100%" border="1" cellspacing="0" cellpadding="0" class="main-table">
   <tr>
-    <td width="25%">Ujian</td>
-    <td width="25%">NIS</td>
-    <td width="25%">Nama</td>
-    <td width="10%">Token</td>
-    <td width="15%">Kedaluarsa</td>
+  <td colspan="4"><?php echo $data['test_name'];?> </td>
   </tr>
   <tr>
-    <td><?php echo $data['test_name'];?> </td>
+    <td width="25%">NIS</td>
+    <td width="35%">Nama</td>
+    <td width="15%">Token</td>
+    <td width="25%">Kedaluarsa</td>
+  </tr>
+  <tr>
     <td><?php echo $data['reg_number'];?> </td>
     <td><?php echo $data['student_name'];?> </td>
     <td><?php echo $data['token'];?> </td>
@@ -171,7 +169,6 @@ h3{
 </div>
 </body>
 </html>
-<?php
-    
+<?php 
 }
 ?>
