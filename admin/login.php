@@ -7,19 +7,20 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	$phone = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
 	$email = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_EMAIL);
 	$password = md5(kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD));
-									 
+	$passwordHash = md5($password);
+
 	$_SESSION['admin_username'] = $username;
 	$_SESSION['admin_password'] = $password;
 	$sql = "SELECT `username`, `admin_id` AS `member_id`, `admin_id` AS `admin_id`
 	FROM `edu_admin`
 	where (
-		(`email` like '$email' AND `email` != '')
-		or 
-		(`username` like '$username' AND `username` != '')
-		or 
-		(`phone` like '$phone' AND `phone` != '')
+		(`email` LIKE '$email' AND `email` != '')
+		OR 
+		(`username` LIKE '$username' AND `username` != '')
+		OR 
+		(`phone` LIKE '$phone' AND `phone` != '')
 		) 
-		AND `password` like md5('$password')
+		AND `password` LIKE '$passwordHash'
 		AND `active` = true
 		AND `blocked` = false
 	";

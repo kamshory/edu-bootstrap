@@ -117,13 +117,14 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		$chk = $picoEdu->getExistsingUser($user_data, $student_id);
 		$student_id = addslashes($chk['member_id']);
 		$username = addslashes($chk['username']);
+		$passwordHash = md5(md5($password));
 
 		$sql = "INSERT INTO `edu_student` 
 		(`student_id`, `token_student`, `school_id`, `reg_number`, `reg_number_national`, `class_id`, `grade_id`,
 		`name`, `gender`, `birth_place`, `birth_day`, `phone`, `email`, `password`, `password_initial`, 
 		`address`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `blocked`, `active`) VALUES
 		('$student_id', '$token_student', '$school_id', '$reg_number', '$reg_number_national', '$class_id', '$grade_id',
-		'$name', '$gender', '$birth_place', '$birth_day', '$phone', '$email', md5(md5('$password')), '$password', 
+		'$name', '$gender', '$birth_place', '$birth_day', '$phone', '$email', '$passwordHash', '$password', 
 		'$address', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', 0, 1)
 		";
 		$database->executeInsert($sql, true);
@@ -144,6 +145,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	`birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', 
 	`admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
 	WHERE `student_id` = '$student_id2' AND `school_id` = '$school_id' ";
+	$passwordHash = md5(md5($password));
 	$database->executeUpdate($sql, true);
 	if($email != '')
 	{
@@ -155,7 +157,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	if($password != '')
 	{
 		$sql = "UPDATE `edu_student` SET 
-		`password` = md5(md5('$password')), `password_initial` = '$password'
+		`password` = '$passwordHash', `password_initial` = '$password'
 		WHERE `student_id` = '$student_id2' AND `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
@@ -574,7 +576,7 @@ $sql_filter = "";
 
 if($pagination->getQuery()){
 $pagination->appendQueryName('q');
-$sql_filter .= " AND (`edu_student`.`name` like '%".addslashes($pagination->getQuery())."%' OR `edu_student`.`reg_number` like '".addslashes($pagination->getQuery())."' OR `edu_student`.`reg_number_national` like '".addslashes($pagination->getQuery())."')";
+$sql_filter .= " AND (`edu_student`.`name` LIKE '%".addslashes($pagination->getQuery())."%' OR `edu_student`.`reg_number` LIKE '".addslashes($pagination->getQuery())."' OR `edu_student`.`reg_number_national` LIKE '".addslashes($pagination->getQuery())."')";
 }
 if($class_id != 0)
 {

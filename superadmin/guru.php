@@ -83,6 +83,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$initial = $data['school_id'];
 
+		$passwordHash = md5(md5($password));
+
 		$sql = "UPDATE `edu_teacher` SET 
 			`school_id` = '$school_id', `reg_number` = '$reg_number', `reg_number_national` = '$reg_number_national', `name` = '$name', 
 			`gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', 
@@ -98,7 +100,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		}
 		if ($password != '') {
 			$sql = "UPDATE `edu_teacher` SET 
-				`password` = md5(md5('$password')), `password_initial` = '$password'
+				`password` = '$passwordHash', `password_initial` = '$password'
 				WHERE `teacher_id` = '$teacher_id2'  ";
 			$database->executeUpdate($sql, true);
 		}

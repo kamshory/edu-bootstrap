@@ -46,6 +46,9 @@ class AuthAdmin
 		$username = $this->username;
 		$password = $this->password;
 		$createlog = $this->createlog;
+
+		$passwordHash = md5($password);
+
 		if ($username != '') {
 			$sql = "SELECT `edu_admin`.`admin_id`, `edu_admin`.`username`, `edu_admin`.`name`, `edu_admin`.`gender`, 
 			`edu_admin`.`birth_place`, `edu_admin`.`birth_day`, `edu_admin`.`email`, `edu_admin`.`phone`, 
@@ -55,7 +58,7 @@ class AuthAdmin
 			`edu_school`.`use_token`, `edu_school`.`use_national_id`
 			FROM `edu_admin` 
 			LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_admin`.`school_id`)
-			WHERE `edu_admin`.`username` like '$username' AND `edu_admin`.`password` = md5('$password') 
+			WHERE `edu_admin`.`username` LIKE '$username' AND `edu_admin`.`password` = '$passwordHash' 
 			AND `edu_admin`.`active` = true
 			AND `edu_admin`.`blocked` = false
 			";

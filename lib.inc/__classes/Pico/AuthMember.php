@@ -51,11 +51,13 @@ class AuthMember
 		$username = $this->username;
 		$password = $this->password;
 		$createlog = $this->createlog;
+		$passwordHash = md5($password);
+
 		global $cfg;
 		$sql = "SELECT `member_id`, `username`, `name`, `gender`, `birth_place`, `birth_day`, `email`, `phone`, `url`, `show_compass`,
 		`autoplay_360`, `autorotate_360`, `img_360_compress`, `picture_hash`, `background`, `language`, `country_id`, `state_id`, `city_id`, `circle_avatar`
 		FROM `member` 
-		WHERE `username` = '$username' AND `password` = md5('$password') 
+		WHERE `username` = '$username' AND `password` = '$passwordHash' 
 		AND `active` = true
 		AND `blocked` = false
 		";

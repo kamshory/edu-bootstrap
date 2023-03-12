@@ -158,6 +158,9 @@ class WSDatabase
 		$student->school_id = "";
 		$student->resourceId = $resourceId;
 		$student->image = '';
+
+		$passwordHash = md5($password);
+
 		if ($username != '') {
 			$sql = "SELECT 
             `edu_student`.`student_id`, 
@@ -167,7 +170,7 @@ class WSDatabase
 			`edu_student`.`school_id`, `edu_student`.`class_id`,
 			`edu_student`.`picture_rand`
 			FROM `edu_student` 
-			WHERE `edu_student`.`username` like '$username' AND `edu_student`.`password` = md5('$password') 
+			WHERE `edu_student`.`username` LIKE '$username' AND `edu_student`.`password` = '$passwordHash' 
 			AND `edu_student`.`active` = true
 			AND `edu_student`.`blocked` = false
 			";

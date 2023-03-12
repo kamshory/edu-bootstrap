@@ -43,6 +43,8 @@ class AuthTeacher
 		$username = $this->username;
 		$password = $this->password;
 		$createlog = $this->createlog;
+
+		$passwordHash = md5($password);
 		
 		if ($username != '') {
 			$sql = "SELECT `edu_teacher`.`teacher_id`, `edu_teacher`.`username`, `edu_teacher`.`name`, `edu_teacher`.`gender`, 
@@ -51,8 +53,8 @@ class AuthTeacher
 				`edu_school`.`name` AS `school_name`, `edu_school`.`school_code` AS `school_code`, `edu_school`.`use_token`
 				FROM `edu_teacher` 
 				LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_teacher`.`school_id`)
-				WHERE `edu_teacher`.`username` like '$username' 
-				AND `edu_teacher`.`password` = md5('$password') 
+				WHERE `edu_teacher`.`username` LIKE '$username' 
+				AND `edu_teacher`.`password` = '$passwordHash' 
 				AND `edu_teacher`.`active` = true
 				AND `edu_teacher`.`blocked` = false
 				";

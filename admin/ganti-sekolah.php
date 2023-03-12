@@ -192,7 +192,7 @@ $sql_filter = "";
 
 if($pagination->getQuery()){
 $pagination->appendQueryName('q');
-$sql_filter .= " AND (`edu_school`.`name` like '%".addslashes($pagination->getQuery())."%' )";
+$sql_filter .= " AND (`edu_school`.`name` LIKE '%".addslashes($pagination->getQuery())."%' )";
 }
 
 

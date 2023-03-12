@@ -161,6 +161,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	`admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
 	WHERE `teacher_id` = '$teacher_id2' AND `school_id` = '$school_id' ";
 	$database->executeUpdate($sql, true);
+
+	$passwordHash = md5(md5($password));
 	
 	if($phone != '')
 	{
@@ -179,7 +181,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	if($password != '')
 	{
 		$sql = "UPDATE `edu_teacher` SET 
-		`password` = md5(md5('$password')), `password_initial` = '$password'
+		`password` = '$passwordHash', `password_initial` = '$password'
 		WHERE `teacher_id` = '$teacher_id2' AND `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}
@@ -482,7 +484,7 @@ $sql_filter = "";
 
 if($pagination->getQuery()){
 $pagination->appendQueryName('q');
-$sql_filter .= " AND (`edu_teacher`.`name` like '%".addslashes($pagination->getQuery())."%' )";
+$sql_filter .= " AND (`edu_teacher`.`name` LIKE '%".addslashes($pagination->getQuery())."%' )";
 }
 
 $nt = '';

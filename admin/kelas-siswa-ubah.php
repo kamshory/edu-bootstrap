@@ -132,8 +132,9 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	}
 	if($password != '')
 	{
+		$passwordHash = md5(md5($password));
 		$sql = "UPDATE `edu_student` SET 
-		`password` = md5(md5('$password')), `password_initial` = '$password'
+		`password` = '$passwordHash', `password_initial` = '$password'
 		WHERE `student_id` = '$student_id2' AND `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 	}

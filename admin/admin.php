@@ -111,18 +111,22 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 	$user_data['address'] = $address;
 	$user_data['country_id'] = $country_id;
 	$user_data['language'] = $language;
+
+
 								
 	if(!empty($name) && !empty($username))
 	{
 		$chk = $picoEdu->getExistsingUser($user_data, null);
 		$admin_id = addslashes($chk['member_id']);
 		$username = addslashes($chk['username']);
+
+		$passwordHash = md5(md5($password));
 		
 		$sql = "INSERT INTO `edu_admin` 
 		(`admin_id`, `school_id`, `username`, `name`, `token_admin`, `email`, `phone`, `password`, 
 		`password_initial`, `gender`, `birth_day`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, 
 		`ip_create`, `ip_edit`, `blocked`, `active`) VALUES 
-		('$admin_id', '$school_id', '$username', '$name', '$token_admin', '$email', '$phone', md5(md5('$password')), 
+		('$admin_id', '$school_id', '$username', '$name', '$token_admin', '$email', '$phone', '$passwordHash', 
 		'$password', '$gender', '$birth_day', '$time_create', '$time_edit', '$admin_create', '$admin_edit', 
 		'$ip_create', '$ip_edit', '0', '1');
 		";
@@ -139,6 +143,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
+	$passwordHash = md5(md5($password));
+
 	$sql = "UPDATE `edu_admin` SET 
 	`name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', 
 	`time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
@@ -164,7 +170,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	if($password != '')
 	{
 		$sql = "UPDATE `edu_admin` SET 
-		`password` = md5(md5('$password'))
+		`password` = '$passwordHash'
 		WHERE `admin_id` = '$admin_id2' AND (`admin_level` != '1' OR `admin_id` = '$my_admin') ";
 		$database->executeUpdate($sql, true);
 	}
@@ -452,7 +458,7 @@ else
 	if($pagination->getQuery())
 	{
 		$pagination->appendQueryName('q');
-		$sql_filter .= " AND (`edu_admin`.`name` like '%".addslashes($pagination->getQuery())."%' )";
+		$sql_filter .= " AND (`edu_admin`.`name` LIKE '%".addslashes($pagination->getQuery())."%' )";
 	}
 	$sql_filter .= " AND (`admin_level` != '1' OR `admin_id` = '$my_admin') ";
 

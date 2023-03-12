@@ -115,11 +115,13 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			$admin_id = addslashes($chk['member_id']);
 			$username = addslashes($chk['username']);
 
+			$passwordHash = md5(md5($password));
+
 			$sql = "INSERT INTO `edu_admin` 
 			(`admin_id`, `school_id`, `username`, `admin_level`, `name`, `token_admin`, `email`, `phone`, `password`, 
 			`password_initial`, `gender`, `birth_day`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, 
 			`ip_create`, `ip_edit`, `blocked`, `active`) VALUES 
-			('$admin_id', '$school_id', '$username', '$admin_level', '$name', '$token_admin', '$email', '$phone', md5(md5('$password')), 
+			('$admin_id', '$school_id', '$username', '$admin_level', '$name', '$token_admin', '$email', '$phone', '$passwordHash', 
 			'$password', '$gender', '$birth_day', '$time_create', '$time_edit', '$admin_create', '$admin_edit', 
 			'$ip_create', '$ip_edit', '0', '1');
 			";
@@ -161,6 +163,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		`phone` = '$phone' WHERE `admin_id` = '$admin_id2' ";
 		$database->executeUpdate($sql, true);
 
+		$passwordHash = md5(md5($password));
+
 		if ($username != '') {
 			$sql = "UPDATE `edu_admin` SET 
 			`username` = '$username'
@@ -170,7 +174,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 
 		if ($password != '') {
 			$sql = "UPDATE `edu_admin` SET 
-			`password` = md5(md5('$password'))
+			`password` = '$passwordHash'
 			WHERE `admin_id` = '$admin_id2' ";
 			$database->executeUpdate($sql, true);
 		}

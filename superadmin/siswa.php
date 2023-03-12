@@ -86,6 +86,9 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	`reg_number` = '$reg_number', `reg_number_national` = '$reg_number_national', `grade_id` = '$grade_id', `class_id` = '$class_id', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `admin_edit` = '$admin_edit', `ip_edit` = '$ip_edit', `blocked` = '$blocked', `active` = '$active'
 	WHERE `student_id` = '$student_id2'  ";
 	$database->executeUpdate($sql, true);
+
+	$passwordHash = md5(md5($password));
+
 	if($email != '')
 	{
 		$sql = "UPDATE `edu_student` SET 
@@ -96,7 +99,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	if($password != '')
 	{
 		$sql = "UPDATE `edu_student` SET 
-		`password` = md5(md5('$password')), `password_initial` = '$password'
+		`password` = '$passwordHash', `password_initial` = '$password'
 		WHERE `student_id` = '$student_id2'  ";
 		$database->executeUpdate($sql, true);
 	}

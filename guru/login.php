@@ -10,19 +10,20 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	$password = md5(kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD));
 	$_SESSION['teacher_username'] = $username;
 	$_SESSION['teacher_password'] = $password;
-									 
+	$passwordHash = md5($password);
+
 	$sql = "SELECT `username`, `teacher_id`
 	FROM `edu_teacher`
 	where (
-		(`email` like '$email' AND `email` != '')
-		or 
-		(`reg_number` like '$reg_number' AND `reg_number` != '')
-		or 
-		(`username` like '$username' AND `username` != '')
-		or 
-		(`phone` like '$phone' AND `phone` != '')
+		(`email` LIKE '$email' AND `email` != '')
+		OR 
+		(`reg_number` LIKE '$reg_number' AND `reg_number` != '')
+		OR 
+		(`username` LIKE '$username' AND `username` != '')
+		OR 
+		(`phone` LIKE '$phone' AND `phone` != '')
 		) 
-		AND `password` like md5('$password')
+		AND `password` LIKE '$passwordHash'
 		AND `active` = true
 		AND `blocked` = false
 	";

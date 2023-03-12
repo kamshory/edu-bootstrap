@@ -12,21 +12,32 @@ if(isset($_POST['sync']))
 	{
 		$sql = "SELECT `edu_student`.*
 		FROM `edu_student` 
-		WHERE `edu_student`.`student_id` = '$auth_student_id' AND `edu_student`.`email` like '$email' AND `edu_student`.`auth` like '$auth' ";
+		WHERE `edu_student`.`student_id` = '$auth_student_id' 
+		AND `edu_student`.`email` LIKE '$email' 
+		AND `edu_student`.`auth` LIKE '$auth' ";
 		$stmt1 = $database->executeQuery($sql);
+
+		$passwordHash = md5(md5($password));
+
 		if($stmt1->rowCount() > 0)
 		{
-			$sql = "SELECT * FROM `member` WHERE `email` like '$email' AND `member_id` != '$auth_student_id' ";
+			$sql = "SELECT * 
+			FROM `member` 
+			WHERE `email` LIKE '$email' 
+			AND `member_id` != '$auth_student_id' 
+			";
 			$stmt2 = $database->executeQuery($sql);
 			if($stmt2->rowCount() == 0)
 			{
-			
-				$sql = "UPDATE `member` SET `email` = '$email', `password` = md5(md5('$password')), `active` = true, `blocked` = false 
+				$passwordHash = md5(md5($password));
+				$sql = "UPDATE `member` SET `email` = '$email', `password` = '$passwordHash', `active` = true, `blocked` = false 
 				WHERE `member_id` = '$auth_student_id' ";
 				$database->executeUpdate($sql, true);
 				$sql = "SELECT `username`, `member_id`
 				FROM `member`
-				WHERE `email` like '$email' AND `password` like md5(md5('$password'))
+				WHERE `email` LIKE '$email' 
+				AND `password` LIKE '$passwordHash'
+				)
 				";
 				$stmt3 = $database->executeQuery($sql);
 				if($stmt3->rowCount() > 0)

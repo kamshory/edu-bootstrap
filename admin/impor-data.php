@@ -272,7 +272,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 			
 			if(empty($school_id))
 			{
-				$sql = "SELECT `school_id` FROM `edu_school` WHERE `name` like '$name_school' ";
+				$sql = "SELECT `school_id` FROM `edu_school` WHERE `name` LIKE '$name_school' ";
 				$stmt = $database->executeQuery($sql);
 				$data_school = $stmt->fetch(\PDO::FETCH_ASSOC);
 				$useNationalId = $data_school['use_national_id'];
@@ -411,6 +411,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									$chk = $picoEdu->getExistsingUser($user_data);
 									$admin_id = addslashes($chk['member_id']);
 									$username = addslashes($chk['username']);
+									$passwordHash = md5(md5($password));
 
 									$db_fixed = 'NULL';
 									if(!empty($birth_day))
@@ -422,7 +423,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									(`admin_id`, `school_id`, `admin_level`, `username`, `name`, `token_admin`, `email`, `phone`, `password`, 
 									`password_initial`, `gender`, `birth_day`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, 
 									`ip_create`, `ip_edit`, `blocked`, `active`) VALUES 
-									('$admin_id', '$school_id', '2', '$username', '$name', '$token_admin', '$email', '$phone', md5(md5('$password')), 
+									('$admin_id', '$school_id', '2', '$username', '$name', '$token_admin', '$email', '$phone', '$passwordHash', 
 									'$password', '$gender', $db_fixed, '$time_create', '$time_edit', '$admin_create', '$admin_edit', 
 									'$ip_create', '$ip_edit', '0', '1');
 									";
