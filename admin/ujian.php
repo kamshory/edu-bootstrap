@@ -808,7 +808,7 @@ $subjectList = $picoEdu->getSubjectList();
 		</tr>
 		<tr>
 		<td>Durasi
-		</td><td><input type="text" data-type="duration" class="form-control input-text input-text-medium" name="duration" id="duration" value="<?php echo $data['duration']/60;?>" autocomplete="off" /></td>
+		</td><td><input type="text" data-type="duration" class="form-control input-text input-text-medium" name="duration" id="duration" value="<?php echo $data['duration'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Beri Peringatan</td>
