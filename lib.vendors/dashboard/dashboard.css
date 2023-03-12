@@ -385,3 +385,9 @@ table[border="1"] td{
 .avatar-cropper-preview {
   text-align: center;
 }
+
+input[data-type="duration"]{
+	background:url(images/duration-bg.png) no-repeat right center;
+	padding-right:60px;
+	box-sizing:border-box;
+}

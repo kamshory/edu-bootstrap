@@ -181,11 +181,6 @@ $school_id = $data['school_id'];
 
 ?>
 <style type="text/css">
-input#duration{
-	background:url(lib.assets/theme/default/css/images/duration-bg.png) no-repeat right center;
-	padding-right:60px;
-	box-sizing:border-box;
-}
 .toggle-tr{
 	display:none;
 }
