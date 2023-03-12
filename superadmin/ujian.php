@@ -38,6 +38,8 @@ if(count(@$_POST) && isset($_POST['save']))
 	$number_of_option = kh_filter_input(INPUT_POST, "number_of_option", FILTER_SANITIZE_NUMBER_UINT);
 	$question_per_page = kh_filter_input(INPUT_POST, "question_per_page", FILTER_SANITIZE_NUMBER_UINT);
 	$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
+	$random_option = kh_filter_input(INPUT_POST, "random_option", FILTER_SANITIZE_NUMBER_UINT);
+	$random_distribution = kh_filter_input(INPUT_POST, "random_distribution", FILTER_SANITIZE_NUMBER_UINT);
 	$autosubmit = kh_filter_input(INPUT_POST, "autosubmit", FILTER_SANITIZE_NUMBER_UINT);	
 	
 	$sort_order = 0;
@@ -151,7 +153,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	`name` = '$name', `class` = '$class', `school_program_id` = '$school_program_id', `subject` = '$subject', `teacher_id` = '$teacher_id', `description` = '$description', 
 	`guidance` = '$guidance', `open` = '$open', `has_limits` = '$has_limits', `trial_limits` = '$trial_limits', `threshold` = '$threshold', 
 	`assessment_methods` = '$assessment_methods', `number_of_question` = '$number_of_question', `number_of_option` = '$number_of_option', 
-	`question_per_page` = '$question_per_page', `random` = '$random', `duration` = '$duration', `has_alert` = '$has_alert', 
+	`question_per_page` = '$question_per_page', `random` = '$random', `random_option` = '$random_option', `random_distribution` = '$random_distribution', `duration` = '$duration', `has_alert` = '$has_alert', 
 	`alert_time` = '$alert_time', `alert_message` = '$alert_message', `autosubmit` = '$autosubmit', `standard_score` = '$standard_score', 
 	`penalty` = '$penalty', `score_notification` = '$score_notification', `publish_answer` = '$publish_answer', 
 	`time_answer_publication` = $time_answer_publication, `test_availability` = '$test_availability', 
@@ -357,6 +359,14 @@ $subjectList = $picoEdu->getSubjectList();
         <td><label><input type="checkbox" class="input-checkbox" name="random" value="1" id="random"<?php echo $picoEdu->trueFalse($data['random']==1, \Pico\PicoConst::INPUT_CHECKBOX_CHECKED, '');?>> Soal Diacak</label></td>
 		</tr>
 		<tr>
+		<td>Pengacakan Distribusi</td>
+        <td><label><input type="checkbox" class="input-checkbox" name="random_distribution" value="1" id="random_distribution"<?php echo $picoEdu->ifMatch($data['random_distribution'], true,  \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Pengacakan Distribusi</label></td>
+		</tr>
+		<tr>
+		<td>Pengacakan Pilihan</td>
+        <td><label><input type="checkbox" class="input-checkbox" name="random_option" value="1" id="random_option"<?php echo $picoEdu->ifMatch($data['random_option'], true,  \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Pilihan Diacak</label></td>
+		</tr>
+		<tr>
 		<td>Durasi
 		</td><td><input type="text" data-type="duration" class="form-control input-text input-text-medium" name="duration" id="duration" value="<?php echo $data['duration'];?>" autocomplete="off" /></td>
 		</tr>
@@ -550,6 +560,14 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		<tr>
 		<td>Soal Diacak
 		</td><td><?php echo $picoEdu->trueFalse($data['random'], 'Ya', 'Tidak');?> </td>
+		</tr>
+		<tr>
+		<td>Pengacakan Distribusi</td>
+        <td><?php echo $picoEdu->trueFalse($data['random_distribution'], 'Ya', 'Tidak');?></td>
+		</tr>
+		<tr>
+		<td>Pengacakan Pilihan</td>
+        <td><?php echo $picoEdu->trueFalse($data['random_option'], 'Ya', 'Tidak');?></td>
 		</tr>
 		<tr>
 		<td>Durasi
