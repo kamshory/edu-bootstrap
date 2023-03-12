@@ -25,7 +25,6 @@ if(isset($_POST['token']) && isset($_POST['test_id']))
 }
 else if(isset($_POST['token']))
 {
-    echo "HERE";
     $picoTest = new \Pico\PicoTest($database);
     $token = addslashes($_POST['token']);
     $eduToken = $picoTest->getToken($token, null, $student_id);
