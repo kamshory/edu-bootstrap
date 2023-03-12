@@ -201,12 +201,23 @@ class PicoSortQuestion{
                     $result[] = $rand[$i];
                 }
             }
-            
-           
         }
-        if($this->testData['random'])
+        else if($this->testData['random'])
         {
-
+            $rand = $this->testData['data'];
+            shuffle($rand);
+            for($i = 0; $i<$this->numberOfQuestion; $i++)
+            {
+                $result[] = $rand[$i];
+            }
+        }
+        else 
+        {
+            $rand = $this->testData['data'];
+            for($i = 0; $i<$this->numberOfQuestion; $i++)
+            {
+                $result[] = $rand[$i];
+            }
         }
         return $result;
     }

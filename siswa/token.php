@@ -11,17 +11,12 @@ if(isset($_POST['token']) && isset($_POST['test_id']))
     $test_id = addslashes($_POST['test_id']);
     $token = addslashes($_POST['token']);
     $eduTest = $picoTest->getTest($test_id);
-
     $eduToken = $picoTest->getToken($token, $eduTest, $student_id);
     if(!empty($eduToken->token_id))
     {
         header("Location: ujian/".$test_id."/".$token);
+        exit();
     }
-    else
-    {
-        header("Location: ".$_SERVER['REQUEST_URI']);
-    }
-    exit();
 }
 else if(isset($_POST['token']))
 {
@@ -32,14 +27,7 @@ else if(isset($_POST['token']))
     if(!empty($eduToken->token_id))
     {
         header("Location: ujian/".$test_id."/".$token);
+        exit();
     }
-    else
-    {
-        header("Location: ".$_SERVER['REQUEST_URI']);
-    }
-    exit();
 }
-else
-{
-    header("Location: ".$_SERVER['REQUEST_URI']);
-}
+header("Location: ".$_SERVER['REQUEST_URI']);

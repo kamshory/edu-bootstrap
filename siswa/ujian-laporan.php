@@ -286,8 +286,8 @@ $array_class = $picoEdu->getArrayClass($school_id);
       <td align="right"><?php echo $ke[$data['student_id']];?> </td>
       <td nowrap><?php echo date(\Pico\PicoConst::DATE_TIME_MYSQL, strtotime($data['start']));?> </td>
       <td nowrap><?php echo $data['timediff'];?> </td>
-      <td align="right"><?php echo $data['true'];?> </td>
-      <td align="right"><?php echo $data['false'];?> </td>
+      <td align="right"><?php echo $data['answer_true'];?> </td>
+      <td align="right"><?php echo $data['answer_false'];?> </td>
       <td align="right"><?php echo $picoEdu->numberFormatTrans($data['final_score'], true);?> </td>
       <td align="right"><?php echo $picoEdu->numberFormatTrans($data['percent'], true);?> </td>
       <td align="right"><?php echo $picoEdu->numberFormatTrans($threshold, true);?> </td>
@@ -367,7 +367,7 @@ $test_id = $info['test_id'];
     <td width="10%">Dibuka</td>
     <td width="15%"><?php echo $picoEdu->trueFalse($info['available_from'] != '0000-00-00 00:00:00' && $info['available_from'] != '', translateDate(date(\Pico\PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_from']))), '-');?> </td>
     <td width="10%">Benar</td>
-    <td width="15%"><?php echo $info['true'];?> </td>
+    <td width="15%"><?php echo $info['answer_true'];?> </td>
   </tr>
   <tr>
     <td>Nama Siswa</td>
@@ -377,7 +377,7 @@ $test_id = $info['test_id'];
     <td>Ditutup</td>
     <td><?php echo $picoEdu->trueFalse($info['available_to'] != '0000-00-00 00:00:00' && $info['available_to'] != '', translateDate(date(\Pico\PicoConst::FULL_DATE_TIME_INDONESIA_FORMAT, strtotime($info['available_to']))), '-');?> </td>
     <td>Salah</td>
-    <td><?php echo $info['false'];?> </td>
+    <td><?php echo $info['answer_false'];?> </td>
   </tr>
   <tr>
     <td>Kelas</td>
@@ -884,8 +884,8 @@ $paginationHTML = $pagination->buildHTML();
       <td nowrap><?php echo translateDate(date('d M Y H:i:s',strtotime($data['start'])));?> </td>
       <td nowrap><?php echo $data['timediff'];?> </td>
       <td align="right"><?php echo $data['number_of_question'];?> </td>
-      <td align="right"><?php echo $data['true'];?> </td>
-      <td align="right"><?php echo $data['false'];?> </td>
+      <td align="right"><?php echo $data['answer_true'];?> </td>
+      <td align="right"><?php echo $data['answer_false'];?> </td>
       <td align="right"><?php echo $data['final_score'];?> </td>
       <td align="right"><?php echo $picoEdu->numberFormatTrans($data['percent'], true);?> </td>
       <td align="right"><?php echo $picoEdu->numberFormatTrans($threshold, true);?> </td>

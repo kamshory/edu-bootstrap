@@ -390,8 +390,8 @@ if($stmt->rowCount() > 0)
       <td><a href="ujian.php?option=answer&answer_id=<?php echo $data['answer_id'];?>"><?php echo translateDate(date('d M Y H:i:s', strtotime($data['start'])));?></a></td>
       <td><?php echo gmdate('H:i:s', strtotime($data['end']) - strtotime($data['start']));?> </td>
       <td><?php if($data['number_of_question']){ echo $data['number_of_question']; } else { echo '-';} ?> </td>
-      <td><?php echo $data['true'];?> </td>
-      <td><?php echo $data['false'];?> </td>
+      <td><?php echo $data['answer_true'];?> </td>
+      <td><?php echo $data['answer_false'];?> </td>
       <td><?php echo $data['initial_score'];?> </td>
       <td><?php echo $data['penalty'];?> </td>
       <td><?php echo $data['final_score'];?> </td>

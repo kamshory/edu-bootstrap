@@ -79,7 +79,7 @@ class PicoTest
         $testObj = new \Pico\EduTest();
         if (!is_null($obj) && $obj !== false) {
             $prop = get_object_vars($obj);
-            foreach ($prop as $key => $lock) {
+            foreach ($prop as $key => $value) {
                 if (property_exists($testObj, $key)) {
                     $type = \Pico\PicoType::getType($testObj->$key);
                     $testObj->$key = \Pico\PicoType::valueOf($obj->$key, $type);
@@ -117,7 +117,7 @@ class PicoTest
         $tokenObj = new \Pico\EduToken();
         if (!is_null($obj) && $obj !== false) {
             $prop = get_object_vars($obj);
-            foreach ($prop as $key => $lock) {
+            foreach ($prop as $key => $value) {
                 if (property_exists($tokenObj, $key)) {
                     $type = \Pico\PicoType::getType($tokenObj->$key);
                     $tokenObj->$key = \Pico\PicoType::valueOf($obj->$key, $type);
@@ -140,9 +140,10 @@ class PicoTest
      * Get question
      *
      * @param string $list
+     * @param \Pico\EduTest $test
      * @return array
      */
-    public function getQuestion($list)
+    public function getQuestion($list, $test)
     {
         $listQuestion = explode(",", $list);
         $result = array();
@@ -165,7 +166,7 @@ class PicoTest
                 if($stmtOption->rowCount() > 0)
                 {
                     $dataOption = $stmtOption->fetchAll(\PDO::FETCH_ASSOC);
-                    if($data['random'])
+                    if($data['random'] && $test->random_option)
                     {
                         shuffle($dataOption);
                     }
@@ -198,15 +199,60 @@ class PicoTest
      * Get question list
      * @param \Pico\AuthStudent $studentLoggedIn
      * @param \Pico\EduTest $eduTest
+     * @param array $eduTestAnswer
+     * @return string
      */
-    public function getQuestionList($studentLoggedIn, $eduTest)
+    public function getQuestionList($studentLoggedIn, $eduTest, $eduTestAnswer)
     {
-        $saved = $this->getSavedQuestionList($studentLoggedIn, $eduTest);
+        $saved = $this->getSavedQuestionList($studentLoggedIn, $eduTest, $eduTestAnswer);
         if($saved == null)
         {
             $saved = $this->generateQuestionList($eduTest);
         }
         return $saved;
+    }
+
+    /**
+     * Get test answer of student
+     *
+     * @param \Pico\AuthStudent $studentLoggedIn
+     * @param \Pico\EduTest $eduTest
+     * @return array|null
+     */
+    public function getTestAnswer($studentLoggedIn, $eduTest)
+    {
+        $studentId = addslashes($studentLoggedIn->student_id);
+        $testId = addslashes($eduTest->test_id);
+        $sql = "SELECT `edu_answer`.*
+        FROM `edu_answer` 
+        WHERE `edu_answer`.`student_id` = '$studentId'
+        AND `edu_answer`.`test_id` = '$testId' 
+        AND `edu_answer`.`finish` = false
+        ";
+        $stmt = $this->database->executeQuery($sql);
+        if($stmt->rowCount() > 0)
+        {
+            return $stmt->fetch(\PDO::FETCH_ASSOC);
+        }
+        return null;
+    }
+
+    public function createTestAnswer($studentLoggedIn, $eduTest, $list)
+    {
+        $answer_id = $this->database->generateNewId();
+        $school_id = $studentLoggedIn->school_id;
+        $student_id = $studentLoggedIn->student_id;
+        $start = "'".date('Y-m-d H:i:s')."'";
+        $end = "null";
+
+        $test_id = $eduTest->test_id;
+        $question_list = addslashes($list);
+        
+        $sql = "INSERT INTO `edu_answer` 
+        (`answer_id`, `school_id`, `test_id`, `student_id`, `start`, `end`, `question_list`, `answer`, `answer_true`, `answer_false`, `initial_score`, `penalty`, `final_score`, `competence_score`, `percent`, `finish`, `active`) VALUES
+        ('$answer_id', '$school_id', '$test_id', '$student_id', $start, $end, '$question_list', NULL, 0, 0, 0, 0, 0, NULL, 0, false, true);
+        ";
+        $this->database->executeInsert($sql, true);
     }
 
     /**
@@ -255,23 +301,14 @@ class PicoTest
      * Get question list
      * @param \Pico\AuthStudent $studentLoggedIn
      * @param \Pico\EduTest $eduTest
+     * @param array $eduTestAnswer
      * @return string|null
      */
-    public function getSavedQuestionList($studentLoggedIn, $eduTest)
+    public function getSavedQuestionList($studentLoggedIn, $eduTest, $eduTestAnswer)
     {
-        $studentId = addslashes($studentLoggedIn->student_id);
-        $testId = addslashes($eduTest->test_id);
-        $sql = "SELECT `edu_answer`.`question_list` 
-        FROM `edu_answer` 
-        WHERE `edu_answer`.`student_id` = '$studentId'
-        AND `edu_answer`.`test_id` = '$testId' 
-        AND `edu_answer`.`finish` = false
-        ";
-        $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0)
+        if($eduTestAnswer != null && $studentLoggedIn->student_id == $eduTestAnswer['student_id'] && $eduTest->test_id == $eduTestAnswer['test_id'])
         {
-            $data = $stmt->fetch(\PDO::FETCH_ASSOC);
-            return $data['question_list'];
+            return $eduTestAnswer['question_list'];
         }
         return null;
     }

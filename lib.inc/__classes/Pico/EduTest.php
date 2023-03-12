@@ -21,6 +21,7 @@ class EduTest
     public $number_of_option = 0;
     public $question_per_page = 0;
     public $random = false;
+    public $random_option = false;
     public $duration = 0;
     public $has_alert = false;
     public $alert_time = 0;

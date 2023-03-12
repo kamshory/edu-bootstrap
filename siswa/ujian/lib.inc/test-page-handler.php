@@ -1,9 +1,18 @@
 <?php
+$testAnswer = $picoTest->getTestAnswer($studentLoggedIn, $eduTest);
+$list = $picoTest->getQuestionList($studentLoggedIn, $eduTest, $testAnswer);
 
-$list = $picoTest->getQuestionList($studentLoggedIn, $eduTest);
-$question = $picoTest->getQuestion($list);
+if($testAnswer == null)
+{
+    $picoTest->createTestAnswer($studentLoggedIn, $eduTest, $list);
+}
+
+$question = $picoTest->getQuestion($list, $eduTest);
 $testDataFinal = $picoTest->getTestData($eduTest, $question);
 $testDataJSON = json_encode($testDataFinal);
+
+
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
