@@ -45,6 +45,8 @@ if(count(@$_POST) && isset($_POST['save']))
 	$number_of_option = kh_filter_input(INPUT_POST, "number_of_option", FILTER_SANITIZE_NUMBER_UINT);
 	$question_per_page = kh_filter_input(INPUT_POST, "question_per_page", FILTER_SANITIZE_NUMBER_UINT);
 	$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
+	$random_option = kh_filter_input(INPUT_POST, "random_option", FILTER_SANITIZE_NUMBER_UINT);
+	$random_distribution = kh_filter_input(INPUT_POST, "random_distribution", FILTER_SANITIZE_NUMBER_UINT);
 	$autosubmit = kh_filter_input(INPUT_POST, "autosubmit", FILTER_SANITIZE_NUMBER_UINT);
 	$has_alert = kh_filter_input(INPUT_POST, "has_alert", FILTER_SANITIZE_NUMBER_UINT);
 	$alert_message = kh_filter_input(INPUT_POST, "alert_message", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -157,8 +159,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$test_id = $database->generateNewId();
 	$sql = "INSERT INTO `edu_test` 
-	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
-	('$test_id', '$school_id', '$name', '$class', '$school_program_id', '$subject', '$teacher_id', '$description', '$guidance', '$open', '$has_limits', '$trial_limits', '$threshold', '$assessment_methods', '$number_of_question', '$number_of_option', '$question_per_page', '$random', '$duration', '$has_alert', '$alert_time', '$alert_message', '$autosubmit', '$standard_score', '$penalty', '$sort_order', '$score_notification', '$publish_answer', $time_answer_publication, '$test_availability', $available_from, $available_to, '$time_create', '$time_edit', '$member_create', '$role_create', '$member_edit', '$role_edit', '$ip_create', '$ip_edit', '$active')";
+	(`test_id`, `school_id`, `name`, `class`, `school_program_id`, `subject`, `teacher_id`, `description`, `guidance`, `open`, `has_limits`, `trial_limits`, `threshold`, `assessment_methods`, `number_of_question`, `number_of_option`, `question_per_page`, `random`, `random_option`, `random_distribution`, `duration`, `has_alert`, `alert_time`, `alert_message`, `autosubmit`, `standard_score`, `penalty`, `sort_order`, `score_notification`, `publish_answer`, `time_answer_publication`, `test_availability`, `available_from`, `available_to`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, `role_edit`, `ip_create`, `ip_edit`, `active`) VALUES
+	('$test_id', '$school_id', '$name', '$class', '$school_program_id', '$subject', '$teacher_id', '$description', '$guidance', '$open', '$has_limits', '$trial_limits', '$threshold', '$assessment_methods', '$number_of_question', '$number_of_option', '$question_per_page', '$random', '$random_option', '$random_distribution', '$duration', '$has_alert', '$alert_time', '$alert_message', '$autosubmit', '$standard_score', '$penalty', '$sort_order', '$score_notification', '$publish_answer', $time_answer_publication, '$test_availability', $available_from, $available_to, '$time_create', '$time_edit', '$member_create', '$role_create', '$member_edit', '$role_edit', '$ip_create', '$ip_edit', '$active')";
 	$database->executeInsert($sql, true);
 	$picoEdu->addSubject($subject);
 	$collection = kh_filter_input(INPUT_POST, "collection", FILTER_SANITIZE_STRING_NEW);
@@ -189,6 +191,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 					$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 					
 					$random = ((int) $data['random']);
+					$random_option = ((int) $data['random_option']);
+					$random_distribution = ((int) $data['random_distribution']);
 					$sort_order = ((int) $data['sort_order']);
 					$score_standar = $data['standard_score'];
 	
@@ -319,7 +323,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	`name` = '$name', `class` = '$class', `school_program_id` = '$school_program_id', `subject` = '$subject', `teacher_id` = '$teacher_id', 
 	`description` = '$description', `guidance` = '$guidance', `open` = '$open', `has_limits` = '$has_limits', `trial_limits` = '$trial_limits', 
 	`threshold` = '$threshold', `assessment_methods` = '$assessment_methods', `number_of_question` = '$number_of_question', 
-	`number_of_option` = '$number_of_option', `question_per_page` = '$question_per_page', `random` = '$random', `duration` = '$duration', 
+	`number_of_option` = '$number_of_option', `question_per_page` = '$question_per_page', `random` = '$random', 
+	`random_option` = '$random_option', `random_distribution` = '$random_distribution', `duration` = '$duration', 
 	`has_alert` = '$has_alert', `alert_time` = '$alert_time', `alert_message` = '$alert_message', `autosubmit` = '$autosubmit', 
 	`standard_score` = '$standard_score', `penalty` = '$penalty', 
 	`score_notification` = '$score_notification', `publish_answer` = '$publish_answer', `time_answer_publication` = $time_answer_publication, 
@@ -804,6 +809,10 @@ $subjectList = $picoEdu->getSubjectList();
 		</tr>
 		<tr>
 		<td>Pengacakan Soal</td>
+        <td><label><input type="checkbox" class="input-checkbox" name="random" value="1" id="random"<?php echo $picoEdu->ifMatch($data['random'], true,  \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Soal Diacak</label></td>
+		</tr>
+		<tr>
+		<td>Pengacakan Pilihan</td>
         <td><label><input type="checkbox" class="input-checkbox" name="random" value="1" id="random"<?php echo $picoEdu->ifMatch($data['random'], true,  \Pico\PicoConst::INPUT_CHECKBOX_CHECKED);?>> Soal Diacak</label></td>
 		</tr>
 		<tr>
