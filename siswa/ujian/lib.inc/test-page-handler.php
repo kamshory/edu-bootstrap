@@ -18,7 +18,7 @@ $testDataJSON = json_encode($testDataFinal);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ujian</title>
+    <title><?php echo $eduTest->name;?></title>
     <base href="<?php echo $cfg->base_assets;?>siswa">
     <link rel="stylesheet" href="<?php echo $cfg->base_url;?>lib.vendors/fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
@@ -67,9 +67,9 @@ $testDataJSON = json_encode($testDataFinal);
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"> <a class="nav-link" href="./">Depan</a></li>
+                        <li class="nav-item active"> <a class="nav-link" href="siswa/">Depan</a></li>
                         <li class="nav-item"> <a class="nav-link" href="#">Informasi</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="logout.php">Keluar</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="siswa/logout.php">Keluar</a></li>
                     </ul>
                 </div>
             </nav>
