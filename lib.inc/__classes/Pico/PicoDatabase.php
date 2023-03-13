@@ -235,8 +235,9 @@ class PicoDatabase
 	 * Set system variable
 	 * @param string $variableName Variable name
 	 * @param mixed $value Value to be set
+	 * @param bool $sync Flag to synchronize data
 	 */
-	public function setSystemVariable($variableName, $value)
+	public function setSystemVariable($variableName, $value, $sync = false)
 	{
 		$currentTime = date('Y-m-d H:i:s');
 		$variableName = addslashes($variableName);
@@ -248,7 +249,7 @@ class PicoDatabase
 			$sql = "UPDATE `edu_system_variable` 
 			SET `system_value` = '$value', `time_edit` = '$currentTime' 
 			WHERE `system_variable_id` = '$variableName' ";
-			$this->executeUpdate($sql, false);
+			$this->executeUpdate($sql, $sync);
 		}
 		else
 		{
@@ -256,7 +257,7 @@ class PicoDatabase
 			(`system_variable_id`, `system_value`, `time_create`, `time_edit`) VALUES
 			('$variableName', '$value', '$currentTime' , '$currentTime')
 			";
-			$this->executeInsert($sql, false);
+			$this->executeInsert($sql, $sync);
 		}
 	}
 

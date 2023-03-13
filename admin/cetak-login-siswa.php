@@ -5,7 +5,7 @@ if(empty($school_id))
   require_once dirname(__FILE__)."/bukan-admin.php";
   exit();
 }
-$url = $database->getSystemVariable('base_url_student');
+$url = rtrim($database->getSystemVariable('base_url_student'), "/")."/";
 require_once dirname(dirname(__FILE__)) . "/lib.inc/phpqrcode/phpqrcode.php";
 ob_start();
 QRCode::png($url, null);

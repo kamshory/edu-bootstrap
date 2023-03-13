@@ -32,7 +32,7 @@ if ($stmt->rowCount() > 0) {
   ORDER BY `edu_student`.`reg_number` ASC ";
   $stmt = $database->executeQuery($sql);
   
-  $url = $database->getSystemVariable('base_url_test');
+  $url = rtrim($database->getSystemVariable('base_url_test'), "/");
 
   if ($stmt->rowCount() > 0) {
     $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);

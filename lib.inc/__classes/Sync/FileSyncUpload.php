@@ -115,18 +115,21 @@ class FileSyncUpload extends \Sync\FileSyncMaster
             if ($record != null) 
             {
                 $syncFilePath = $record['file_path'];
-                $handle = fopen($syncFilePath, "r");
-                if ($handle) {
-                    while (($line = fgets($handle)) !== false) {
-                        $info = json_decode($line, true);                      
-                        if ($info['op'] == 'CREATEFILE') {                           
-                            $path = $this->getPath($info);
-                            $this->uploadUserFile($path, $fileSyncUrl, $username, $password);
+                if(file_exists($syncFilePath))
+                {
+                    $handle = fopen($syncFilePath, "r");
+                    if ($handle) {
+                        while (($line = fgets($handle)) !== false) {
+                            $info = json_decode($line, true);                      
+                            if ($info['op'] == 'CREATEFILE') {                           
+                                $path = $this->getPath($info);
+                                $this->uploadUserFile($path, $fileSyncUrl, $username, $password);
+                            }
                         }
-                    }
-                }               
-                $this->updateSyncRecord($recordId, 1);
-                return true;
+                    }               
+                    $this->updateSyncRecord($recordId, 1);
+                    return true;
+                }
             }
         }
         catch(\Sync\SyncException $e)

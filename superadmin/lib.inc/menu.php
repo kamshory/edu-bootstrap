@@ -117,6 +117,17 @@ $structure = array(
         )
     ),
     array(
+        'caption'=>'Konfigurasi',
+        'link'=>'konfigurasi.php',
+        'submenu'=>array(
+            array(
+                'caption'=>'Konfigurasi',
+                'icon'=>'fa-cog',
+                'link'=>'konfigurasi.php'                       
+            )
+        )
+    ),
+    array(
         'caption'=>'Keluar',
         'link'=>'logout.php',
         'submenu'=>array(
