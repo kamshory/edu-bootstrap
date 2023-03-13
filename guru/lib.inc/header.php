@@ -84,7 +84,14 @@ if(!isset($cfg))
             {
             ?>
             <div class="btn-group mr-2">
+              <?php 
+              if($cfg->sync_enable)
+              {
+              ?>
               <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='sinkronisasi.php'">Sinkronkan</button>
+              <?php
+              }
+              ?>
             </div>
             <div class="dropdown btn-group">         
               <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

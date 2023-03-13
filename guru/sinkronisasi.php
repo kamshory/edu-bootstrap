@@ -2,6 +2,13 @@
 require_once dirname(dirname(__FILE__)) . "/lib.inc/auth-guru.php";
 $pageTitle = "Sinkronisasi Data";
 
+if(!$cfg->sync_enable)
+{
+    require_once dirname(__FILE__) . "/lib.inc/header.php";
+    require_once dirname(__FILE__) . "/lib.inc/footer.php";
+    exit();
+}
+
 if(@$_POST['action'] == 'save-config')
 {
     $fileSyncUrl2 = trim(@$_POST['url']);

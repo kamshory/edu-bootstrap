@@ -31,7 +31,11 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
     <form name="formedu_config" id="formedu_config" action="" method="post" enctype="multipart/form-data">
         <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
-        <tr>
+            <tr>
+                <td>Nama Perangkat</td>
+                <td><input type="text" class="form-control input-text" name="device_name" id="device_name" value="<?php echo $database->getSystemVariable('device_name'); ?>" autocomplete="off" /></td>
+            </tr>
+            <tr>
                 <td>URL Dasar</td>
                 <td><input type="text" class="form-control input-text" name="base_url" id="base_url" value="<?php echo $database->getSystemVariable('base_url'); ?>" autocomplete="off" /></td>
             </tr>
