@@ -97,6 +97,7 @@ $cfg->dec_thousands_separator = ",";// Old code getProfile('dec_thousands_separa
 $cfg->dec_precision = 2;
 $cfg->dec_separator = ".";
 $cfg->dec_thousands_separator = ",";
-$cfg->sync_enable = true;
+$cfg->sync_data_enable = true;
+$cfg->sync_time_enable = false;
 
 $pageTitle = "";

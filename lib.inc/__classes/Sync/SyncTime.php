@@ -20,7 +20,7 @@ class SyncTime extends \Sync\SyncMaster
     public function syncTime($fileSyncUrl, $username, $password, $database) //NOSONAR
     {
         $httpQuery = array(
-            'action'=>'sync-tyme'
+            'sync_type'=>'time'
         );
         $fileSyncUrl = $this->buildURL($fileSyncUrl, $httpQuery);
 

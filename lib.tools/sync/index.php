@@ -1,6 +1,6 @@
 <?php
 include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-sync.php";
-if(!$cfg->sync_enable)
+if(!$cfg->sync_data_enable)
 {
     exit();
 }
@@ -61,22 +61,31 @@ if(@$_GET['action'] == 'ping')
 }
 if(@$_GET['action'] == 'sync-time')
 {
-    $syncTime = new \Sync\SyncTime($cfg->app_code);
     $response = new \stdClass;
     $success = false;
 
-    $fileSyncUrl2 = $fileSyncUrl;
-    $username2 = $username;
-    $password2 = $password;
+    if($cfg->sync_time_enable)
+    {
+        $syncTime = new \Sync\SyncTime($cfg->app_code);
 
-    try
-    {
-        $response = $syncTime->syncTime($fileSyncUrl2, $username2, $password2, $database);
-        $success = $response['response_code'] == '00';
+        $fileSyncUrl2 = $fileSyncUrl;
+        $username2 = $username;
+        $password2 = $password;
+
+        try
+        {
+            $response = $syncTime->syncTime($fileSyncUrl2, $username2, $password2, $database);
+            $success = $response['response_code'] == '00';
+        }
+        catch(\Sync\SyncException $e)
+        {
+            // Do nothing
+        }
     }
-    catch(\Sync\SyncException $e)
+    else
     {
-        // Do nothing
+        $response->response_code = '00';
+        $response->response_text = 'Sukses';
     }
 
     header('Content-type: application/json'); //NOSONAR

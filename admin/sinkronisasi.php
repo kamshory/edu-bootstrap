@@ -2,7 +2,7 @@
 require_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
 $pageTitle = "Sinkronisasi Data";
 
-if(!$cfg->sync_enable)
+if(!$cfg->sync_data_enable)
 {
     require_once dirname(__FILE__) . "/lib.inc/header.php";
     require_once dirname(__FILE__) . "/lib.inc/footer.php";
@@ -236,6 +236,17 @@ if(!empty($school_id))
 
 
     <div class="sync-area">
+        
+        <div class="sync-container">
+            <h4>Sinkronisasi Waktu</h4>
+            <div class="sync-item" data-type="time" data-direction="sync" data-step="1">
+                <div class="sync-label">Sinkronisasi waktu dan daerah waktu</div>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+
         <div class="sync-container">
             <h4>Sinkronisasi File</h4>
             <div class="sync-item" data-type="file" data-direction="down" data-step="1">

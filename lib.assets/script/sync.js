@@ -10,7 +10,7 @@ let syncPath = '';
 function startSync(path, clbk)
 {
     syncPath = path;
-    fileDownloadInformation(clbk);
+    syncTime(clbk);
 }
 
 function getFileSyncId(source)
@@ -67,6 +67,32 @@ function updateProgressBar(type, direction, step, value)
     let pb = $(selector).find('.progress-bar');     
     pb.css({'width':percent+'%'});
     pb.attr('aria-valuenow', percent);
+}
+
+/**
+ * Download informasi dari sync hub
+ */
+function syncTime(clbk)
+{
+    $.ajax({
+        url:syncPath,
+        data:{
+            action:'sync-time'
+        },
+        type:'GET',
+        dataType:'json',
+        success:function(response)
+        {
+            if(response.success)
+            {
+                if(response.success)
+                {
+                    fileDownloadInformation(clbk);
+                    updateProgressBar('time', 'sync', 1, 100);
+                }
+            }
+        }
+    });
 }
 
 /**

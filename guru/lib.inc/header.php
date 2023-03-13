@@ -85,7 +85,7 @@ if(!isset($cfg))
             ?>
             <div class="btn-group mr-2">
               <?php 
-              if($cfg->sync_enable)
+              if($cfg->sync_data_enable)
               {
               ?>
               <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location='sinkronisasi.php'">Sinkronkan</button>
