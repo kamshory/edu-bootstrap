@@ -5,7 +5,11 @@ if(!$cfg->sync_enable)
     exit();
 }
 
-if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database' || @$_GET['action'] == 'ping')
+if(@$_GET['type'] == 'file' 
+|| @$_GET['type'] == 'database' 
+|| @$_GET['action'] == 'ping'
+|| @$_GET['action'] == 'sync-time'
+)
 {
     $syncHubURL = $database->getSystemVariable("sync_hub_url");
     $fileSyncUrl = rtrim($syncHubURL, "/")."/";
@@ -41,7 +45,7 @@ if(@$_GET['action'] == 'ping')
         $response = $ping->ping($fileSyncUrl2, $username2, $password2);
         $success = $response['response_code'] == '00';
     }
-    catch(\Sync\PingException $e)
+    catch(\Sync\SyncException $e)
     {
         // Do nothing
     }
@@ -55,7 +59,36 @@ if(@$_GET['action'] == 'ping')
     );
     exit();
 }
+if(@$_GET['action'] == 'sync-time')
+{
+    $syncTime = new \Sync\SyncTime($cfg->app_code);
+    $response = new \stdClass;
+    $success = false;
 
+    $fileSyncUrl2 = $fileSyncUrl;
+    $username2 = $username;
+    $password2 = $password;
+
+    try
+    {
+        $response = $syncTime->syncTime($fileSyncUrl2, $username2, $password2, $database);
+        $success = $response['response_code'] == '00';
+    }
+    catch(\Sync\SyncException $e)
+    {
+        // Do nothing
+    }
+
+    header('Content-type: application/json'); //NOSONAR
+    echo json_encode(
+        array(
+            'success'=>$success,
+            'response'=>$response
+        )
+    );
+    exit();
+
+}
 if(@$_GET['type'] == 'file')
 {
     header('Content-type: application/json'); //NOSONAR
@@ -411,6 +444,3 @@ if(@$_GET['type'] == 'database')
         }
     }
 }
-
-
-

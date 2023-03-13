@@ -5,21 +5,21 @@ class PicoDatabase
 {
 
 	private $conn;
-	private $databaseServer;
+	private $databaseCredentials;
 	private $databaseSyncConfig;
 
 	/**
 	 * Summary of __construct
-	 * @param PicoDatabaseCredentials $databaseServer
+	 * @param PicoDatabaseCredentials $databaseCredentials
 	 * @param string $username
 	 * @param string $password
 	 * @param string $databaseName
 	 * @param string $timezone
 	 * @param PicoDatabaseSyncConfig $databaseSyncConfig
 	 */
-	public function __construct($databaseServer, $databaseSyncConfig) //NOSONAR
+	public function __construct($databaseCredentials, $databaseSyncConfig) //NOSONAR
 	{
-		$this->databaseServer = $databaseServer;
+		$this->databaseCredentials = $databaseCredentials;
 		$this->databaseSyncConfig = $databaseSyncConfig;
 
 	}
@@ -30,7 +30,7 @@ class PicoDatabase
 	 */
 	public function getDatabaseServer()
 	{
-		return $this->databaseServer;
+		return $this->databaseCredentials;
 	}
 
 	/**
@@ -49,15 +49,15 @@ class PicoDatabase
 	public function connect()
 	{
 		$ret = false;
-		date_default_timezone_set($this->databaseServer->getTimezone());
+		date_default_timezone_set($this->databaseCredentials->getTimezone());
 		$timezoneOffset = date("P");
 		try {
-			$connectionString = $this->databaseServer->getDriver() . ':host=' . $this->databaseServer->getHost() . '; port=' . $this->databaseServer->getPort() . '; dbname=' . $this->databaseServer->getDatabaseName();
+			$connectionString = $this->databaseCredentials->getDriver() . ':host=' . $this->databaseCredentials->getHost() . '; port=' . $this->databaseCredentials->getPort() . '; dbname=' . $this->databaseCredentials->getDatabaseName();
 
 			$this->conn = new \PDO(
 				$connectionString, 
-				$this->databaseServer->getUsername(), 
-				$this->databaseServer->getPassword(),
+				$this->databaseCredentials->getUsername(), 
+				$this->databaseCredentials->getPassword(),
 				array(
 					\PDO::MYSQL_ATTR_INIT_COMMAND =>"SET time_zone = '$timezoneOffset';",
 					\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
@@ -271,5 +271,14 @@ class PicoDatabase
 	}
 
 	
+
+	/**
+	 * Get the value of databaseCredentials
+	 * @return \Pico\PicoDatabaseCredentials
+	 */ 
+	public function getDatabaseCredentials()
+	{
+		return $this->databaseCredentials;
+	}
 }
 

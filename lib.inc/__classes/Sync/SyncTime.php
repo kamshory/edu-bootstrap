@@ -1,7 +1,7 @@
 <?php
 namespace Sync;
 
-class SyncPing extends \Sync\SyncMaster
+class SyncTime extends \Sync\SyncMaster
 {
     private $application = "";
     public function __construct($application)
@@ -14,12 +14,13 @@ class SyncPing extends \Sync\SyncMaster
      * @param string $fileSyncUrl Synch hub URL
      * @param string $username Sync username
      * @param string $password Sync password
+     * @param \Pico\PicoDatabase $database
      * @return array
      */
-    public function ping($fileSyncUrl, $username, $password) //NOSONAR
+    public function syncTime($fileSyncUrl, $username, $password, $database) //NOSONAR
     {
         $httpQuery = array(
-            'action'=>'ping'
+            'action'=>'sync-tyme'
         );
         $fileSyncUrl = $this->buildURL($fileSyncUrl, $httpQuery);
 
@@ -29,8 +30,17 @@ class SyncPing extends \Sync\SyncMaster
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
+
+        $post = array(
+            'timezone' => $database->getDatabaseCredentials()->getTimeZone(),
+            'time' => time()
+        );
+        
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+
         $server_output = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        
         curl_close($ch);
 
         if($httpcode == 200)
