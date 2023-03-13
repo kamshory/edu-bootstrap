@@ -1,5 +1,9 @@
 <?php
 include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-sync.php";
+if(!$cfg->sync_enable)
+{
+    exit();
+}
 
 if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database' || @$_GET['action'] == 'ping')
 {
@@ -11,19 +15,6 @@ if(@$_GET['type'] == 'file' || @$_GET['type'] == 'database' || @$_GET['action'] 
 }
 
 
-class PingException extends \Exception
-{
-    private $previous;   
-    public function __construct($message, $code = 0, Exception $previous = null)
-    {
-        parent::__construct($message, $code);  
-        if (!is_null($previous))
-        {
-            $this -> previous = $previous;
-        }
-    }
-    
-}
 if(@$_GET['action'] == 'ping')
 {
     $ping = new \Sync\SyncPing($cfg->app_code);
@@ -50,7 +41,7 @@ if(@$_GET['action'] == 'ping')
         $response = $ping->ping($fileSyncUrl2, $username2, $password2);
         $success = $response['response_code'] == '00';
     }
-    catch(PingException $e)
+    catch(\Sync\PingException $e)
     {
         // Do nothing
     }
@@ -67,6 +58,7 @@ if(@$_GET['action'] == 'ping')
 
 if(@$_GET['type'] == 'file')
 {
+    header('Content-type: application/json'); //NOSONAR
     if(@$_GET['direction'] == 'down')
     {
         $fileSyncDownload = new \Sync\FileSyncDownload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
@@ -266,6 +258,7 @@ if(@$_GET['type'] == 'file')
 
 if(@$_GET['type'] == 'database')
 {
+    header('Content-type: application/json'); //NOSONAR
     if(@$_GET['direction'] == 'down')
     {
         $databaseSyncDownload = new \Sync\DatabaseSyncDownload($database, $applicationRoot, $databaseUploadBaseDir, $databaseDownloadBaseDir, $databasePoolBaseDir, $databasePoolName, $databasePoolRollingPrefix, $databasePoolExtension);
