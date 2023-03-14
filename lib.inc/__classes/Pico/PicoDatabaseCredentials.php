@@ -61,6 +61,14 @@ class PicoDatabaseCredentials
 	public function load($path)
 	{
 		$obj = parse_ini_file($path);
+		if($obj['timezone_system'])
+		{
+			$timeZone = ini_get('date.timezone');
+			if(!empty($timeZone))
+			{
+				$obj['timezone'] = $timeZone;
+			}
+		}
 		$this->driver = $obj['driver'];
 		$this->host = $obj['host'];
 		$this->port = $obj['port'];

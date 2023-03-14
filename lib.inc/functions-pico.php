@@ -540,7 +540,6 @@ function strip_only_tags($str, $tags, $stripContent = false)
 	return $str;
 }
 
-
 $database = new \Pico\PicoDatabase(
 	(new \Pico\PicoDatabaseCredentials())->load($databaseConfigs->config_file),
 	new \Pico\PicoDatabaseSyncConfig(
