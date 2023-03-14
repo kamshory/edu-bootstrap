@@ -1,5 +1,7 @@
 <?php
+
 $testAnswer = $picoTest->getTestAnswer($studentLoggedIn, $eduTest);
+
 $list = $picoTest->getQuestionList($studentLoggedIn, $eduTest, $testAnswer);
 
 if($testAnswer == null)
@@ -10,8 +12,6 @@ if($testAnswer == null)
 $question = $picoTest->getQuestion($list, $eduTest);
 $testDataFinal = $picoTest->getTestData($eduTest, $question);
 $testDataJSON = json_encode($testDataFinal);
-
-
 
 ?><!DOCTYPE html>
 <html lang="en">
