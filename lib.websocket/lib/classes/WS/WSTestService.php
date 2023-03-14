@@ -6,6 +6,16 @@ class WSTestService extends \WS\WSServer implements \WS\WSInterface
 {
 	private $testMember = array();
 
+	/**
+	 * Constructor of WSTestService
+	 *
+	 * @param \WS\WSDatabase $wsDatabase
+	 * @param string $host
+	 * @param int $port
+	 * @param object $callbackObject
+	 * @param string $callbackPostConstruct
+	 * @param string $messageOnStarted
+	 */
 	public function __construct($wsDatabase, $host = '127.0.0.1', $port = 8888, $callbackObject = null, $callbackPostConstruct = null, $messageOnStarted = "")
 	{
 		parent::__construct($wsDatabase, $host, $port, $callbackObject, $callbackPostConstruct, $messageOnStarted);
@@ -14,6 +24,7 @@ class WSTestService extends \WS\WSServer implements \WS\WSInterface
 	/**
 	 * Add student to member test list
 	 * @param \stdClass $student
+	 * @param string $testId
 	 */
 	private function memberTestAdd($student, $testId)
 	{
@@ -32,6 +43,7 @@ class WSTestService extends \WS\WSServer implements \WS\WSInterface
 	/**
 	 * Remove student from member test list
 	 * @param \stdClass $student
+	 * @param string $testId
 	 */
 	private function memberTestRemove($student, $testId) //NOSONAR
 	{
@@ -125,10 +137,11 @@ class WSTestService extends \WS\WSServer implements \WS\WSInterface
 			);
 			$this->sendBroadcast($wsClient, $response, array('admin', 'teacher'), false);
 		} else if (!empty(@$query['test_id'])) {
+			
 			$response = json_encode(
 				array(
 					'command' => 'test-member',
-					'group_id' => $wsClient->getClientData()['group_id'],
+					'group_id' => $clientData['group_id'],
 					'data' => array(
 						array(
 							'test_member' => $this->uniqueMember($this->testMember)
@@ -182,6 +195,7 @@ class WSTestService extends \WS\WSServer implements \WS\WSInterface
 	 * Method when a client send the message
 	 * @param \WS\WSClient $wsClient Chat client
 	 * @param string $receivedText Text sent by the client
+	 * @return void
 	 */
 	public function onMessage($wsClient, $receivedText)
 	{

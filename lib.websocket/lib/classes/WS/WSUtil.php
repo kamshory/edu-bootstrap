@@ -74,7 +74,8 @@ class WSUtil
 	/**
 	 * Read cookie
 	 * @param array $cookieData Associated array of the cookie
-	 * @return string name Cooke name
+	 * @param string $name Cooke name
+	 * @return string Cookie data
 	 */
 	public static function readCookie($cookieData, $name)
 	{
@@ -92,6 +93,8 @@ class WSUtil
 
 	/**
 	 * Get session data
+	 * 
+	 * @param string $sessionID Session ID
 	 * @param \WS\WSSessionParams $sessionParams Session parameters
 	 * @return array Asociated array contain session
 	 */
