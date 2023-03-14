@@ -106,7 +106,7 @@ if(@$_GET['type'] == 'file')
     {
         $fileSyncDownload = new \Sync\FileSyncDownload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
         $fileSyncDownload->setApplication($cfg->app_code);
-        $fileSyncDownload->setUseRelativePath($configs->sync_file_use_relative_path);
+        $fileSyncDownload->setUseRelativePath($syncConfigs->sync_file_use_relative_path);
         if(@$_GET['step'] == '1')
         {
             $success = $fileSyncDownload->fileDownloadInformation($fileSyncUrl, $username, $password);
@@ -198,7 +198,7 @@ if(@$_GET['type'] == 'file')
     {
         $fileSyncUpload = new \Sync\FileSyncUpload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
         $fileSyncUpload->setApplication($cfg->app_code);
-        $fileSyncUpload->setUseRelativePath($configs->sync_file_use_relative_path);
+        $fileSyncUpload->setUseRelativePath($syncConfigs->sync_file_use_relative_path);
         if(@$_GET['step'] == '1')
         {
             $fileSyncUpload->fileUploadPreparation();

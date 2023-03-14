@@ -543,26 +543,26 @@ function strip_only_tags($str, $tags, $stripContent = false)
 $database = new \Pico\PicoDatabase(
 	(new \Pico\PicoDatabaseCredentials())->load($databaseConfigs->config_file),
 	new \Pico\PicoDatabaseSyncConfig(
-		$configs->sync_database_application_dir,
-		$configs->sync_database_base_dir,
-		$configs->sync_database_pool_name,
-		$configs->sync_database_rolling_prefix,
-		$configs->sync_database_extension,
-		$configs->sync_database_maximum_length,
-		$configs->sync_database_delimiter
+		$syncConfigs->sync_database_application_dir,
+		$syncConfigs->sync_database_base_dir,
+		$syncConfigs->sync_database_pool_name,
+		$syncConfigs->sync_database_rolling_prefix,
+		$syncConfigs->sync_database_extension,
+		$syncConfigs->sync_database_maximum_length,
+		$syncConfigs->sync_database_delimiter
 	)
 );
 
 $database->connect();
 
 $fileSync = new \Pico\FileSynchronizer(
-	$configs->sync_file_application_dir,
-	$configs->sync_file_base_dir,
-	$configs->sync_file_pool_name,
-	$configs->sync_file_rolling_prefix,
-	$configs->sync_file_extension,
-	$configs->sync_file_maximum_length,
-	$configs->sync_file_use_relative_path
+	$syncConfigs->sync_file_application_dir,
+	$syncConfigs->sync_file_base_dir,
+	$syncConfigs->sync_file_pool_name,
+	$syncConfigs->sync_file_rolling_prefix,
+	$syncConfigs->sync_file_extension,
+	$syncConfigs->sync_file_maximum_length,
+	$syncConfigs->sync_file_use_relative_path
 );
 
 $picoEdu = new \Pico\PicoEdu($database);

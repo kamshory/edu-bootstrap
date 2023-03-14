@@ -4,7 +4,7 @@ $oneLevelUp = dirname(dirname(__FILE__));
 $twoLevelUp = dirname(dirname(dirname(__FILE__)));
 require_once dirname(__FILE__)."/ws-cfg.php";
 
-$configs = new stdClass();
+$syncConfigs = new stdClass();
 $databaseConfigs = new stdClass();
 
 $databaseConfigs->db_type = "mysql";
@@ -16,21 +16,21 @@ $databaseConfigs->db_name = "mini_picopi";
 $databaseConfigs->db_time_zone = "Asia/Jakarta";
 $databaseConfigs->config_file = $twoLevelUp."/db.ini";
 
-$configs->sync_database_application_dir = $oneLevelUp;
-$configs->sync_database_base_dir = $oneLevelUp."/volume.sync/database/pool";
-$configs->sync_database_pool_name = "pool";
-$configs->sync_database_rolling_prefix = "poll_";
-$configs->sync_database_extension = ".txt";
-$configs->sync_database_maximum_length = 1000000;
-$configs->sync_database_delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
+$syncConfigs->sync_database_application_dir = $oneLevelUp;
+$syncConfigs->sync_database_base_dir = $oneLevelUp."/volume.sync/database/pool";
+$syncConfigs->sync_database_pool_name = "pool";
+$syncConfigs->sync_database_rolling_prefix = "poll_";
+$syncConfigs->sync_database_extension = ".txt";
+$syncConfigs->sync_database_maximum_length = 1000000;
+$syncConfigs->sync_database_delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
 
-$configs->sync_file_application_dir = $oneLevelUp;
-$configs->sync_file_base_dir = $oneLevelUp."/volume.sync/file/pool";
-$configs->sync_file_pool_name = "pool";
-$configs->sync_file_rolling_prefix = "poll_";
-$configs->sync_file_extension = ".txt";
-$configs->sync_file_maximum_length = 50000;
-$configs->sync_file_use_relative_path = true;
+$syncConfigs->sync_file_application_dir = $oneLevelUp;
+$syncConfigs->sync_file_base_dir = $oneLevelUp."/volume.sync/file/pool";
+$syncConfigs->sync_file_pool_name = "pool";
+$syncConfigs->sync_file_rolling_prefix = "poll_";
+$syncConfigs->sync_file_extension = ".txt";
+$syncConfigs->sync_file_maximum_length = 50000;
+$syncConfigs->sync_file_use_relative_path = true;
 
 
 $cfg = new stdClass();
