@@ -4,7 +4,16 @@ namespace Pico;
 
 class PicoTest
 {
+    /**
+     * Database object
+     *
+     * @var \Pico\PicoDatabase
+     */
     private $database;
+
+    /**
+     * Message
+     */
     private $message = "";
 
     /**

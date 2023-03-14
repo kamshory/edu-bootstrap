@@ -9,7 +9,11 @@ class PicoEdu //NOSONAR
 	const SPAN_TITLE = '<span title="';
 
 
-	public $database;
+	/**
+	 * Database object
+	 * @var \Pico\PicoDatabase
+	 */
+	private $database;
 
 	/**
 	 * Constuctor of PicoEdu
