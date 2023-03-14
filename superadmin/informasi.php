@@ -507,13 +507,13 @@ else if(isset($_GET['info_id']))
 		</style>
 		<div class="article-title"><h3 data-active="<?php echo $data['active'];?>"><?php echo $data['name'];?></h3></div>
 		<div class="article-content"><?php echo $data['content'];?></div>
-		<div class="article-time">Dibuat <strong><?php echo $data['time_create'];?></strong></div>
-		<div class="article-creator">Oleh <strong><?php echo $data['creator'];?></strong></div>
-		<div class="article-link">
-			<a href="<?php echo $picoEdu->gateBaseSelfName();?>">Lihat Semua</a>
-			<a href="javascript:;" class="download-word">Download</a>
-			<a href="informasi.php?option=edit&info_id=<?php echo $data['info_id'];?>">Ubah</a>
-			<a class="delete-post" data-id="<?php echo $data['info_id'];?>" href="informasi.php?option=delete&info_id=<?php echo $data['info_id'];?>">Hapus</a>
+		<div class="article-time">Dibuat <em><?php echo $data['time_create'];?></em></div>
+		<div class="article-creator">Oleh <em><?php echo $data['creator'];?></em></div>
+		<div class="button-area">
+			<a class="btn btn-primary" href="javascript:;" class="download-word"><i class="fas fa-file-download"></i> Download</a>
+			<a class="btn btn-primary" href="<?php echo $picoEdu->gateBaseSelfName();?>"><i class="fas fa-list"></i> Lihat Semua</a>
+			<a class="btn btn-primary" href="informasi.php?option=edit&info_id=<?php echo $data['info_id'];?>"><i class="fas fa-pencil"></i> Ubah</a>
+			<a class="btn btn-primary btn-danger" data-id="<?php echo $data['info_id'];?>" href="informasi.php?option=delete&info_id=<?php echo $data['info_id'];?>"><i class="fas fa-remove"></i> Hapus</a>
 		</div>
 		<?php
 	}

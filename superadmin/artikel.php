@@ -305,8 +305,8 @@ return doc;
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 <div class="article-title"><h3 data-active="<?php echo $data['active'];?>"><?php echo $data['title'];?></h3></div>
 <div class="article-content"><?php echo $data['content'];?></div>
-<div class="article-time">Dibuat <strong><?php echo $data['time_create'];?></strong></div>
-<div class="article-creator">Oleh <strong><?php echo $data['creator'];?></strong></div>
+<div class="article-time">Dibuat <em><?php echo $data['time_create'];?></em></div>
+<div class="article-creator">Oleh <em><?php echo $data['creator'];?></em></div>
 <div class="article-link">
 	<a href="artikel.php">Lihat Semua</a>
 	<a href="artikel.php?option=edit&article_id=<?php echo $data['article_id'];?>">Ubah</a>

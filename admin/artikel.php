@@ -242,12 +242,12 @@ var defaultdir = 'lib.content/media/article/';
 <input type="hidden" name="class" id="classlist" value="<?php echo $data['class'];?>" />
 </div>
 <div class="input-block button-area">
-<input class="btn btn-success" type="submit" id="publish" name="publish" value="Publikasikan" />
-<input class="btn btn-secondary" type="submit" id="draff" name="draff" value="Simpan Konsep" />
-<input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
-<input class="btn btn-primary" type="hidden" name="option" id="option" value="edit" />
-<input class="btn btn-primary" type="hidden" name="article_id" id="article_id" value="<?php echo $article_id;?>" />
-<input class="btn btn-secondary" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" />
+	<input class="btn btn-success" type="submit" id="publish" name="publish" value="Publikasikan" />
+	<input class="btn btn-secondary" type="submit" id="draff" name="draff" value="Simpan Konsep" />
+	<input class="btn btn-primary" type="button" id="select-class" value="Atur Kelas" />
+	<input class="btn btn-primary" type="hidden" name="option" id="option" value="edit" />
+	<input class="btn btn-primary" type="hidden" name="article_id" id="article_id" value="<?php echo $article_id;?>" />
+	<input class="btn btn-secondary" type="button" id="cancel" value="Batalkan" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>'" />
 </div>
 </form>
 <!-- Modal -->
@@ -310,8 +310,8 @@ $(document).on('click', '.download-word', function(e){
 </script>
 <div class="article-title"><h3 data-active="<?php echo $data['active'];?>"><?php echo $data['title'];?></h3></div>
 <div class="article-content"><?php echo $data['content'];?></div>
-<div class="article-time">Dibuat <strong><?php echo $data['time_create'];?></strong></div>
-<div class="article-creator">Oleh <strong><?php echo $data['creator'];?></strong></div>
+<div class="article-time">Dibuat <em><?php echo $data['time_create'];?></em></div>
+<div class="article-creator">Oleh <em><?php echo $data['creator'];?></em></div>
 <div class="button-area article-link">
 	<a class="btn btn-primary" href="artikel.php">Lihat Semua</a>
 	<a class="btn btn-primary" href="artikel.php?option=edit&article_id=<?php echo $data['article_id'];?>">Ubah</a>
