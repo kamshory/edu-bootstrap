@@ -10,7 +10,7 @@
     <title><?php echo $cfg->app_name;?></title>
 
 
-    <link rel="stylesheet" href="<?php echo $cfg->base_url;?>lib.vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.vendors/fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 
     <!-- Bootstrap core CSS -->

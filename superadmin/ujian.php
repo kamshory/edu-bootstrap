@@ -215,8 +215,8 @@ label > span{
 	width:100%;
 }
 </style>
-<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.assets/script/test-creator.js"></script>
-<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/bootstrap-4-autocomplete.min.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-creator.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/bootstrap-4-autocomplete.min.js"></script>
 <?php
 $subjectList = $picoEdu->getSubjectList();
 ?>

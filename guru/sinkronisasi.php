@@ -155,7 +155,7 @@ if(!empty($school_id))
         }
     </script>
 
-    <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.assets/script/sync.js"></script>
+    <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/sync.js"></script>
     
 <!-- Modal -->
 <?php

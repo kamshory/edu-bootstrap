@@ -12,11 +12,11 @@ if(!isset($cfg))
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title><?php echo $picoEdu->printPageTitle($pageTitle, $cfg->app_name);?></title>
 
-<link rel="stylesheet" href="<?php echo $cfg->base_url;?>lib.vendors/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.vendors/fontawesome/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/css/bootstrap.min.css">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>lib.favs/apple-touch-icon.png" sizes="180x180">
@@ -29,10 +29,10 @@ if(!isset($cfg))
 <meta name="theme-color" content="#3558BE">
 
 <!-- Custom styles for this template -->
-<link href="<?php echo $cfg->base_url;?>lib.vendors/dashboard/dashboard.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.style/style.css">
-<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+<link href="<?php echo $cfg->base_assets;?>lib.vendors/dashboard/dashboard.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.style/style.css">
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.vendors/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script>
   $(document).ready(function(){

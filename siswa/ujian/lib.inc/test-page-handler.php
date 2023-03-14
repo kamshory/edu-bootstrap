@@ -20,12 +20,12 @@ $testDataJSON = json_encode($testDataFinal);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $eduTest->name;?></title>
     <base href="<?php echo $cfg->base_assets;?>siswa">
-    <link rel="stylesheet" href="<?php echo $cfg->base_url;?>lib.vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.vendors/fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_url;?>lib.assets/theme/default/css/test-un-new.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/test-un-new.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>lib.favs/apple-touch-icon.png" sizes="180x180">
@@ -35,8 +35,8 @@ $testDataJSON = json_encode($testDataFinal);
     <link rel="mask-icon" href="<?php echo $cfg->base_assets;?>lib.favs/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon.ico">
     <meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>lib.favs/browserconfig.xml">
-    <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="<?php echo $cfg->base_url;?>lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.vendors/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
         let testDataJSON = <?php echo $testDataJSON;?>;
         let testStudentId = '<?php echo $studentLoggedIn->student_id.$eduTest->test_id;?>';

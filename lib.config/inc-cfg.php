@@ -1,17 +1,4 @@
 <?php
-/**
-Old config
-if(!defined('DB_HOST'))
-define('DB_HOST', 'localhost');
-if(!defined('DB_NAME'))
-define('DB_NAME', 'mini_edu');
-if(!defined('DB_USER'))
-define('DB_USER', 'mini_edu');
-if(!defined('DB_PASS'))
-define('DB_PASS', '*Y8&76R46uyHuhUIiojY#4@r');
-if(!defined('DB_PREF'))
-define('DB_PREF', '');
-*/
 
 $oneLevelUp = dirname(dirname(__FILE__));
 $twoLevelUp = dirname(dirname(dirname(__FILE__)));
@@ -55,24 +42,10 @@ $cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/"; //NOSON
 
 $cfg->app_name = "Planet Edu";
 $cfg->mail_noreply = "noreply@planetbiru.com";
-$cfg->mail_update_profile = "noreply@planetbiru.com";
-$cfg->main_url = "https://www.planetbiru.com";
 $cfg->main_domain = "www.planetbiru.com";
 
-$cfg->cdn_jquery = $cfg->base_assets."lib.assets/script/jquery/jquery.min.js";
-
-$cfg->base_avatar = "http://".$_SERVER['SERVER_NAME']."/media.images/"; //NOSONAR
-$cfg->base_images = "http://".$_SERVER['SERVER_NAME']."/media.edu/"; //NOSONAR
 $cfg->meta_description = "Planet Edu merupakan sekolah virtual yang dapat dimanfaatkan oleh sekolah, guru dan siswa untuk pengayaan materi dan ujian online. Planet Edu bukanlan sistem informasi akademik karena sebenarnya Planet Edu merupakan media sosial yang mendukung pendidikan.";
 
-
-$cfg->cdn_jquery = $cfg->base_assets."lib.assets/script/jquery/jquery.min.js";
-$cfg->base_avatar = "/media.images/";
-$cfg->base_images = "/media.images/";
-
-
-$cfg->language_id = 'id';
-date_default_timezone_set('Asia/Jakarta');
 
 $cfg->numbering = array(
 	"upper-alpha"=>array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'),

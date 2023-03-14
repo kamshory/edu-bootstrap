@@ -9,7 +9,6 @@ $pageTitle = "Siswa";
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$reg_number_national = kh_filter_input(INPUT_POST, "reg_number_national", FILTER_SANITIZE_SPECIAL_CHARS);
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
 	$gender = kh_filter_input(INPUT_POST, "gender", FILTER_SANITIZE_SPECIAL_CHARS);
 	$birth_place = kh_filter_input(INPUT_POST, "birth_place", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -22,7 +21,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$time_create = $time_edit = $database->getLocalDateTime();
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$sql = "UPDATE `edu_student` SET 
-	`reg_number_national` = '$reg_number_national', `name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `ip_edit` = '$ip_edit'
+	`name` = '$name', `gender` = '$gender', `birth_place` = '$birth_place', `birth_day` = '$birth_day', `phone` = '$phone', `address` = '$address', `time_edit` = '$time_edit', `ip_edit` = '$ip_edit'
 	WHERE `student_id` = '$auth_student_id' ";
 	$database->executeUpdate($sql, true);
 	if($email != '')
@@ -61,10 +60,6 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		<tr>
 		<td>Nama</td>
 		<td><input type="text" class="form-control input-text" name="name" id="name" value="<?php echo $data['name'];?>" autocomplete="off" /></td>
-		</tr>
-		<tr>
-		<td>NISN</td>
-		<td><input type="text" class="form-control input-text" name="reg_number_national" id="reg_number_national" value="<?php echo $data['reg_number_national'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
 		<td>Jenis Kelamin</td>
@@ -123,7 +118,7 @@ $nt = '';
 $sql = "SELECT `edu_student`.* , `edu_school`.`name` AS `school_name`, `edu_school`.`open` AS `school_open`,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) AS `admin_create`,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) AS `admin_edit`,
-(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) AS `class_id`
+(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` LIMIT 0, 1) AS `class_id`
 FROM `edu_student` 
 LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_student`.`school_id`)
 WHERE `edu_student`.`school_id` = '$school_id'
@@ -162,9 +157,9 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		<tr>
 		<td>Tingkat</td>
 		<td><?php 
-echo $picoEdu->getGradeName($data['grade_id']);
-?>
-<td>
+		echo $picoEdu->getGradeName($data['grade_id']);
+		?>
+		<td>
 		</tr>
 		<tr>
 		<td>Kelas</td>
