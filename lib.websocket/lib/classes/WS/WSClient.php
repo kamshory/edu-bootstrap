@@ -150,7 +150,7 @@ class WSClient //NOSONAR
 				. "WebSocket-Location: ws://$host:$port\r\n"
 				. "Sec-WebSocket-Accept: $secAccept\r\n"
 				. "Access-Control-Allow-Origin: *\r\n"
-				. "X-Engine: PlanetChat\r\n\r\n";
+				. "X-Engine: PicoEdu\r\n\r\n";
 			socket_write($this->socket, $upgrade, strlen($upgrade));
 		}
 	}

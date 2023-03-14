@@ -171,7 +171,8 @@ class WSDatabase
 			`edu_student`.`class_id`,
 			`edu_student`.`picture_rand`
 			FROM `edu_student` 
-			WHERE `edu_student`.`username` LIKE '$username' AND `edu_student`.`password` = '$passwordHash' 
+			WHERE `edu_student`.`username` LIKE '$username' 
+			AND `edu_student`.`password` = '$passwordHash' 
 			AND `edu_student`.`active` = true
 			AND `edu_student`.`blocked` = false
 			";
@@ -252,7 +253,6 @@ class WSDatabase
 	{
 		return $this->databasePort;
 	}
-
 
 	/**
 	 * Get the value of timeZone
