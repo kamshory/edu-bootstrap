@@ -1,4 +1,5 @@
 <?php
+
 namespace Pico;
 
 class PicoDatabase
@@ -21,7 +22,6 @@ class PicoDatabase
 	{
 		$this->databaseCredentials = $databaseCredentials;
 		$this->databaseSyncConfig = $databaseSyncConfig;
-
 	}
 
 	/**
@@ -55,18 +55,16 @@ class PicoDatabase
 			$connectionString = $this->databaseCredentials->getDriver() . ':host=' . $this->databaseCredentials->getHost() . '; port=' . $this->databaseCredentials->getPort() . '; dbname=' . $this->databaseCredentials->getDatabaseName();
 
 			$this->conn = new \PDO(
-				$connectionString, 
-				$this->databaseCredentials->getUsername(), 
+				$connectionString,
+				$this->databaseCredentials->getUsername(),
 				$this->databaseCredentials->getPassword(),
 				array(
-					\PDO::MYSQL_ATTR_INIT_COMMAND =>"SET time_zone = '$timezoneOffset';",
+					\PDO::MYSQL_ATTR_INIT_COMMAND => "SET time_zone = '$timezoneOffset';",
 					\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
-					)
+				)
 			);
 
 			$ret = true;
-
-
 		} catch (\PDOException $e) {
 			echo "Connection error " . $e->getMessage();
 			$ret = false;
@@ -92,9 +90,7 @@ class PicoDatabase
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
-		}
-		catch(\PDOException $e)
-		{
+		} catch (\PDOException $e) {
 			// Do nothing
 		}
 	}
@@ -104,15 +100,13 @@ class PicoDatabase
 	 * @param string $sql Query string to be executed
 	 * @return \PDOStatement|bool
 	 */
-	public function executeQuery($sql) 
+	public function executeQuery($sql)
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
-		}
-		catch(\PDOException $e)
-		{
-			echo $e->getMessage()."\r\nERROR &raquo; $sql";
+		} catch (\PDOException $e) {
+			echo $e->getMessage() . "\r\nERROR &raquo; $sql";
 		}
 		return $stmt;
 	}
@@ -128,13 +122,10 @@ class PicoDatabase
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
+		} catch (\PDOException $e) {
+			echo $e->getMessage() . "\r\nERROR &raquo; $sql";
 		}
-		catch(\PDOException $e)
-		{
-			echo $e->getMessage()."\r\nERROR &raquo; $sql";
-		}
-		if($sync)
-		{
+		if ($sync) {
 			$this->createSync($sql);
 		}
 		return $stmt;
@@ -146,7 +137,7 @@ class PicoDatabase
 	 * @param bool $sync Flag synchronizing
 	 * @return \PDOStatement|bool
 	 */
-	public function executeInsert($sql, $sync) 
+	public function executeInsert($sql, $sync)
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
@@ -157,7 +148,7 @@ class PicoDatabase
 	 * @param bool $sync Flag synchronizing
 	 * @return \PDOStatement|bool
 	 */
-	public function executeUpdate($sql, $sync) 
+	public function executeUpdate($sql, $sync)
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
@@ -168,7 +159,7 @@ class PicoDatabase
 	 * @param bool $sync Flag synchronizing
 	 * @return \PDOStatement|bool
 	 */
-	public function executeDelete($sql, $sync) 
+	public function executeDelete($sql, $sync)
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
@@ -179,7 +170,7 @@ class PicoDatabase
 	 * @param bool $sync Flag synchronizing
 	 * @return \PDOStatement|bool
 	 */
-	public function executeTransaction($sql, $sync) 
+	public function executeTransaction($sql, $sync)
 	{
 		return $this->executeAndSync($sql, $sync);
 	}
@@ -201,9 +192,8 @@ class PicoDatabase
 	public function generateNewId()
 	{
 		$uuid = uniqid();
-		if((strlen($uuid) % 2) == 1)
-		{
-			$uuid = '0'.$uuid;
+		if ((strlen($uuid) % 2) == 1) {
+			$uuid = '0' . $uuid;
 		}
 		$random = sprintf('%06x', mt_rand(0, 16777215));
 		return sprintf('%s%s', $uuid, $random);
@@ -221,12 +211,9 @@ class PicoDatabase
 		$sql = "SELECT * FROM `edu_system_variable` 
 		WHERE `system_variable_id` = '$variableName' ";
 		$data = $this->executeQuery($sql)->fetch(\PDO::FETCH_ASSOC);
-		if(isset($data) && is_array($data) && !empty($data))
-		{
+		if (isset($data) && is_array($data) && !empty($data)) {
 			return $data['system_value'];
-		}
-		else
-		{
+		} else {
 			return $defaultValue;
 		}
 	}
@@ -244,15 +231,12 @@ class PicoDatabase
 		$value = addslashes($value);
 		$sql = "SELECT * FROM `edu_system_variable` 
 		WHERE `system_variable_id` = '$variableName' ";
-		if($this->executeQuery($sql)->rowCount() > 0)
-		{
+		if ($this->executeQuery($sql)->rowCount() > 0) {
 			$sql = "UPDATE `edu_system_variable` 
 			SET `system_value` = '$value', `time_edit` = '$currentTime' 
 			WHERE `system_variable_id` = '$variableName' ";
 			$this->executeUpdate($sql, $sync);
-		}
-		else
-		{
+		} else {
 			$sql = "INSERT INTO `edu_system_variable` 
 			(`system_variable_id`, `system_value`, `time_create`, `time_edit`) VALUES
 			('$variableName', '$value', '$currentTime' , '$currentTime')
@@ -270,15 +254,12 @@ class PicoDatabase
 		return date('Y-m-d H:i:s');
 	}
 
-	
-
 	/**
 	 * Get the value of databaseCredentials
 	 * @return \Pico\PicoDatabaseCredentials
-	 */ 
+	 */
 	public function getDatabaseCredentials()
 	{
 		return $this->databaseCredentials;
 	}
 }
-

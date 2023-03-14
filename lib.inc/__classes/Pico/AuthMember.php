@@ -1,4 +1,5 @@
 <?php
+
 namespace Pico;
 
 class AuthMember
@@ -75,7 +76,7 @@ class AuthMember
 			$this->country_id = $memberLoggedIn->country_id;
 			$this->state_id = $memberLoggedIn->state_id;
 			$this->city_id = $memberLoggedIn->city_id;
-		
+
 			if ($createlog) {
 				$ip = addslashes($_SERVER['REMOTE_ADDR']);
 				$now = $database->getLocalDateTime();

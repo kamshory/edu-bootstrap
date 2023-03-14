@@ -1,4 +1,5 @@
 <?php
+
 namespace Sync;
 
 class DatabaseSyncMaster extends \Sync\SyncMaster
@@ -33,8 +34,7 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
         $this->poolBaseDir = $poolBaseDir;
         $this->poolFileName = $poolFileName;
         $this->poolRollingPrefix = $poolRollingPrefix;
-        if($poolFileExtension != null)
-        {
+        if ($poolFileExtension != null) {
             $this->poolFileExtension = $poolFileExtension;
         }
     }
@@ -46,7 +46,7 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
      */
     protected function glob($base)
     {
-        $basePath = $base."/*.*";
+        $basePath = $base . "/*.*";
         return glob($basePath);
     }
 
@@ -60,12 +60,10 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
      */
     protected function rollingLastPoolingFile($fileList, $poolBaseDir, $poolFileName, $poolFileExtension)
     {
-        $pathToRemove = $poolBaseDir ."/". $poolFileName . $poolFileExtension;
-        foreach($fileList as $key=>$val)
-        {
-            if($val == $pathToRemove)
-            {
-                $newPath = $this->poolBaseDir . "/" . $this->poolRollingPrefix.date('Y-m-d-H-i-s')."-".$this->generateNewId().$this->poolFileExtension;
+        $pathToRemove = $poolBaseDir . "/" . $poolFileName . $poolFileExtension;
+        foreach ($fileList as $key => $val) {
+            if ($val == $pathToRemove) {
+                $newPath = $this->poolBaseDir . "/" . $this->poolRollingPrefix . date('Y-m-d-H-i-s') . "-" . $this->generateNewId() . $this->poolFileExtension;
                 rename($val, $newPath);
                 $fileList[$key] = $newPath;
             }
@@ -96,18 +94,15 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
     protected function uploadSyncFile($path, $record, $fileSyncUrl, $username, $password)
     {
         $httpQuery = array(
-            'application_id'=>$this->application,
-            'sync_type'=>'database',
-            'action'=>'upload-sync-file'
+            'application_id' => $this->application,
+            'sync_type' => 'database',
+            'action' => 'upload-sync-file'
         );
         $fileSyncUrl = $this->buildURL($fileSyncUrl, $httpQuery);
         ob_start();
-        if(function_exists('curl_file_create')) 
-        { 
+        if (function_exists('curl_file_create')) {
             $cFile = curl_file_create($path);
-        } 
-        else 
-        {  
+        } else {
             $cFile = '@' . realpath($path);
         }
 
@@ -118,7 +113,7 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
         $file_size = $record['file_size'];
         $time_create = $record['time_create'];
         $time_upload = $record['time_upload'];
-        
+
         $post = array(
             'sync_database_id' => $sync_database_id,
             'file_path' => $file_path,
@@ -129,27 +124,24 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
             'time_upload' => $time_upload,
             'file_contents' => $cFile
         );
-        
+
         $ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
+        curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
         curl_setopt($ch, CURLOPT_URL, $fileSyncUrl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-        
+
         $server_output = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
         ob_end_clean();
 
-        if($httpcode)
-        {
+        if ($httpcode) {
             return json_decode($server_output);
-        }
-        else
-        {
+        } else {
             throw new \Sync\SyncException("Upload failed", $httpcode);
         }
     }
@@ -163,21 +155,18 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
     protected function getSyncRecordListFromDatabase($direction, $status)
     {
         $filter = "";
-        if(is_array($status) && count($status) > 0)
-        {
+        if (is_array($status) && count($status) > 0) {
             $vals = array();
-            foreach($status as $val)
-            {
+            foreach ($status as $val) {
                 $val = addslashes($val);
                 $vals[] = "`status` = '$val'";
             }
-            $filter = " AND (".implode(" OR ", $vals).") ";
+            $filter = " AND (" . implode(" OR ", $vals) . ") ";
         }
         $sql = "SELECT * FROM `edu_sync_database` WHERE `sync_direction` = '$direction' $filter ORDER BY  `edu_sync_database`.`time_create` ASC ";
 
         $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0)
-        {
+        if ($stmt->rowCount() > 0) {
             return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }
         return array();
@@ -197,12 +186,9 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
     public function getRelativePath($path)
     {
         $post = stripos($path, $this->applicationRoot);
-        if($post === 0)
-        {
+        if ($post === 0) {
             return substr($path, strlen($this->applicationRoot));
-        } 
-        else 
-        {
+        } else {
             return $path;
         }
     }
@@ -215,13 +201,10 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
     public function getAbsolutePath($path)
     {
         $post = stripos($path, $this->applicationRoot);
-        if($post === 0)
-        {
+        if ($post === 0) {
             return $path;
-        } 
-        else 
-        {
-            return $this->applicationRoot.$path;
+        } else {
+            return $this->applicationRoot . $path;
         }
     }
 
@@ -241,8 +224,7 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
         $recordId = addslashes($recordId);
         $sql = "SELECT * FROM `edu_sync_database` WHERE `sync_database_id` = '$recordId' ";
         $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0)
-        {
+        if ($stmt->rowCount() > 0) {
             return $stmt->fetch(\PDO::FETCH_ASSOC);
         }
         return null;
@@ -250,32 +232,30 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
 
     protected function prepareDirectory($dir)
     {
-        if(!file_exists($dir))
-        {
+        if (!file_exists($dir)) {
             $this->database->getDatabaseSyncConfig()->prepareDirectory($dir, $this->applicationRoot, 0755);
         }
     }
 
     /**
-	 * Generate 20 bytes unique ID
-	 * @return string 20 bytes
-	 */
-	public function generateNewId()
-	{
-		$uuid = uniqid();
-		if((strlen($uuid) % 2) == 1)
-		{
-			$uuid = '0'.$uuid;
-		}
-		$random = sprintf('%06x', mt_rand(0, 16777215));
-		return sprintf('%s%s', $uuid, $random);
-	}
+     * Generate 20 bytes unique ID
+     * @return string 20 bytes
+     */
+    public function generateNewId()
+    {
+        $uuid = uniqid();
+        if ((strlen($uuid) % 2) == 1) {
+            $uuid = '0' . $uuid;
+        }
+        $random = sprintf('%06x', mt_rand(0, 16777215));
+        return sprintf('%s%s', $uuid, $random);
+    }
 
-    
+
 
     /**
      * Get the value of application
-     */ 
+     */
     public function getApplication()
     {
         return $this->application;
@@ -285,7 +265,7 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
      * Set the value of application
      *
      * @return self
-     */ 
+     */
     public function setApplication($application)
     {
         $this->application = $application;

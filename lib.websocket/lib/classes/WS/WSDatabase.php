@@ -167,7 +167,8 @@ class WSDatabase
             `edu_student`.`username`, 
             `edu_student`.`name`, 
             `edu_student`.`gender`, 
-			`edu_student`.`school_id`, `edu_student`.`class_id`,
+			`edu_student`.`school_id`, 
+			`edu_student`.`class_id`,
 			`edu_student`.`picture_rand`
 			FROM `edu_student` 
 			WHERE `edu_student`.`username` LIKE '$username' AND `edu_student`.`password` = '$passwordHash' 

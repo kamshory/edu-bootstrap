@@ -1,8 +1,10 @@
 <?php
+
 namespace Pico;
 
-class PicoConst {
-	
+class PicoConst
+{
+
 	const DATE_TIME_MYSQL = 'Y-m-d H:i:s';
 	const FULL_DATE_TIME_INDONESIA_FORMAT = 'j M Y H:i';
 	const SHORT_DATE_TIME_INDONESIA_FORMAT = 'j F Y H:i';
@@ -16,6 +18,4 @@ class PicoConst {
 	const TRIM_EXTRA_SPACE = "/\s+/";
 	const TRIM_NON_NUMERIC = "/[^0-9]/i";
 	const PICO_EDU = "picoedu";
-
-
 }

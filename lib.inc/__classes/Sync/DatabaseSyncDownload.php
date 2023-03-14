@@ -1,4 +1,5 @@
 <?php
+
 namespace Sync;
 
 class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
@@ -16,29 +17,25 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
      */
     public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
-        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
+        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);
     }
-    
+
     /**
      * (step 1, 2 and 3)
      */
     public function databaseDownloadInformation($url, $username, $password)
     {
         $lastSync = $this->getLastSyncTime();
-        if($lastSync === null)
-        {
+        if ($lastSync === null) {
             $lastSync = '0000-00-00 00:00:00';
         }
         try {
             $response = $this->getSyncRecordListFromRemote($lastSync, $url, $username, $password);
-            if($response['response_code'] == '00')
-            {
+            if ($response['response_code'] == '00') {
                 $recordList = $response['data'];
                 return $this->createDownloadSyncRecord($recordList);
             }
-        }
-        catch(\Exception $e)
-        {
+        } catch (\Exception $e) {
             // Do nothing
         }
         return true;
@@ -57,8 +54,7 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
     {
         $sql = "SELECT * FROM `edu_sync_database` WHERE `sync_direction` = 'down' AND `status` > 0 ORDER BY `time_create` DESC LIMIT 0,1 ";
         $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0)
-        {
+        if ($stmt->rowCount() > 0) {
             $data = $stmt->fetch(\PDO::FETCH_ASSOC);
             return $data['time_create'];
         }
@@ -74,41 +70,38 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
      * @return array List of sync file from last sync
      * @throws \Sync\SyncException
      */
-    private function getSyncRecordListFromRemote($lastSync, $fileSyncUrl, $username, $password) 
+    private function getSyncRecordListFromRemote($lastSync, $fileSyncUrl, $username, $password)
     {
         $httpQuery = array(
-            'application_id'=>$this->application,
-            'sync_type'=>'database',
-            'action'=>'list-record',
-            'last_sync'=>$lastSync
+            'application_id' => $this->application,
+            'sync_type' => 'database',
+            'action' => 'list-record',
+            'last_sync' => $lastSync
         );
 
         $fileSyncUrl = $this->buildURL($fileSyncUrl, $httpQuery);
         $ch = curl_init();
-        
-        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
+
+        curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
         curl_setopt($ch, CURLOPT_URL, $fileSyncUrl);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $server_output = curl_exec($ch);
- 
+
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         curl_close($ch);
-        
-        if($httpcode)
-        {
+
+        if ($httpcode) {
             return json_decode($server_output, true);
-        }
-        else
-        {
+        } else {
             throw new \Sync\SyncException("File not found");
         }
     }
 
-     /**
+    /**
      * Download file from remote host and copy it into local path
      * @param string $remotePath Remote path
      * @param string $localPath Local path
@@ -120,10 +113,10 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
      */
     public function downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password)
     {
-        $url = rtrim($fileSyncUrl, "/")."/".ltrim($relativePath, "/");
+        $url = rtrim($fileSyncUrl, "/") . "/" . ltrim($relativePath, "/");
         $ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
+        curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
@@ -132,23 +125,18 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
         $server_output = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-        if($httpcode == 200)
-        {
+        if ($httpcode == 200) {
             return $server_output;
-        }
-        else
-        {
+        } else {
             throw new SyncException("File not found", $httpcode);
         }
     }
-    
+
     public function databaseDownloadSyncFiles($recordId, $permission, $fileSyncUrl, $username, $password)
-    {     
-        try
-        {
+    {
+        try {
             $record = $this->getSyncRecord($recordId);
-            if ($record != null) 
-            {
+            if ($record != null) {
                 $relativePath = $record['relative_path'];
                 $absolutePath = $this->downloadBaseDir . "/" . basename($relativePath);
                 $content = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
@@ -160,18 +148,14 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
                 $relativePath = addslashes($relativePath);
                 $this->updatePathAndStatus($recordId, $absolutePath, $relativePath, 1);
             }
-        }
-        catch(\Sync\SyncException $e)
-        {
+        } catch (\Sync\SyncException $e) {
             $this->updateSyncRecord($recordId, 1);
         }
         return true;
-        
     }
     private function createDownloadSyncRecord($recordList)
     {
-        foreach($recordList as $record)
-        {
+        foreach ($recordList as $record) {
             $fileSize = ((int) $record['file_size']);
             $sync_database_id = addslashes($record['sync_database_id']);
             $time_create = addslashes($record['time_create']);
@@ -181,12 +165,12 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
             $time_download = date('Y-m-d H:i:s');
             $localPath = $this->downloadBaseDir . "/" . $baseName;
             $localPath = addslashes($localPath);
-            
+
             $sql = "INSERT INTO `edu_sync_database`
             (`sync_database_id`, `file_path`, `relative_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
             ('$sync_database_id', '$localPath', '$relative_path', '$baseName', '$fileSize', 'down', '$time_create', '$time_upload', '$time_download', 0)";
             $this->database->execute($sql);
-         }
+        }
         return true;
     }
 
@@ -198,21 +182,17 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
     {
         $syncFilePath = $record['file_path'];
         $delimiter = trim($this->database->getDatabaseSyncConfig()->getDelimiter());
-        if(file_exists($syncFilePath))
-        {
+        if (file_exists($syncFilePath)) {
             $handle = fopen($syncFilePath, "r");
             if ($handle) {
                 $buff = "";
                 while (($line = fgets($handle)) !== false) {
                     $chk = trim($line);
-                    if($chk == $delimiter)
-                    {
+                    if ($chk == $delimiter) {
                         $this->executeQuery($buff);
                         $buff = "";
-                    }
-                    else
-                    {
-                        $buff .= $line."\r\n";
+                    } else {
+                        $buff .= $line . "\r\n";
                     }
                 }
                 fclose($handle);
@@ -241,19 +221,15 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
     private function executeQuery($sql)
     {
         $sql = trim($sql);
-        if(!empty($sql))
-        {
+        if (!empty($sql)) {
             /**
              * Old code
              * $this->database->execute($sql);
-            */
+             */
             $stmt = $this->database->getDatabaseConnection()->prepare($sql);
-            try 
-            {
+            try {
                 $stmt->execute();
-            }
-            catch(\PDOException $e)
-            {
+            } catch (\PDOException $e) {
                 // Do nothing
             }
         }

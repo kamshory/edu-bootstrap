@@ -1,4 +1,5 @@
 <?php
+
 namespace Pico;
 
 class AuthTeacher
@@ -45,7 +46,7 @@ class AuthTeacher
 		$createlog = $this->createlog;
 
 		$passwordHash = md5($password);
-		
+
 		if ($username != '') {
 			$sql = "SELECT `edu_teacher`.`teacher_id`, `edu_teacher`.`username`, `edu_teacher`.`name`, `edu_teacher`.`gender`, 
 				`edu_teacher`.`birth_place`, `edu_teacher`.`birth_day`, `edu_teacher`.`email`, `edu_teacher`.`phone`, 
@@ -93,7 +94,7 @@ class AuthTeacher
 	/**
 	 * Get the value of teacher_id
 	 * @return string
-	 */ 
+	 */
 	public function getTeacherId()
 	{
 		return $this->teacher_id;
@@ -102,7 +103,7 @@ class AuthTeacher
 	/**
 	 * Get the value of username
 	 * @return string
-	 */ 
+	 */
 	public function getUsername()
 	{
 		return $this->username;
@@ -111,7 +112,7 @@ class AuthTeacher
 	/**
 	 * Get the value of name
 	 * @return string
-	 */ 
+	 */
 	public function getName()
 	{
 		return $this->name;
@@ -120,7 +121,7 @@ class AuthTeacher
 	/**
 	 * Get the value of gender
 	 * @return string
-	 */ 
+	 */
 	public function getGender()
 	{
 		return $this->gender;
@@ -129,7 +130,7 @@ class AuthTeacher
 	/**
 	 * Get the value of birth_place
 	 * @return string
-	 */ 
+	 */
 	public function getBirthPlace()
 	{
 		return $this->birth_place;
@@ -138,7 +139,7 @@ class AuthTeacher
 	/**
 	 * Get the value of birth_day
 	 * @return string
-	 */ 
+	 */
 	public function getBirthDay()
 	{
 		return $this->birth_day;
@@ -147,7 +148,7 @@ class AuthTeacher
 	/**
 	 * Get the value of email
 	 * @return string
-	 */ 
+	 */
 	public function getEmail()
 	{
 		return $this->email;
@@ -156,7 +157,7 @@ class AuthTeacher
 	/**
 	 * Get the value of phone
 	 * @return string
-	 */ 
+	 */
 	public function getPhone()
 	{
 		return $this->phone;
@@ -165,7 +166,7 @@ class AuthTeacher
 	/**
 	 * Get the value of country_id
 	 * @return string
-	 */ 
+	 */
 	public function getCountryId()
 	{
 		return $this->country_id;
@@ -174,7 +175,7 @@ class AuthTeacher
 	/**
 	 * Get the value of state_id
 	 * @return string
-	 */ 
+	 */
 	public function getStateId()
 	{
 		return $this->state_id;
@@ -183,7 +184,7 @@ class AuthTeacher
 	/**
 	 * Get the value of city_id
 	 * @return string
-	 */ 
+	 */
 	public function getCityId()
 	{
 		return $this->city_id;
@@ -192,7 +193,7 @@ class AuthTeacher
 	/**
 	 * Get the value of school_id
 	 * @return string
-	 */ 
+	 */
 	public function getSchoolId()
 	{
 		return $this->school_id;
@@ -201,7 +202,7 @@ class AuthTeacher
 	/**
 	 * Get the value of school_name
 	 * @return string
-	 */ 
+	 */
 	public function getSchoolName()
 	{
 		return $this->school_name;
@@ -210,7 +211,7 @@ class AuthTeacher
 	/**
 	 * Get the value of school_code
 	 * @return string
-	 */ 
+	 */
 	public function getSchoolCode()
 	{
 		return $this->school_code;
@@ -219,7 +220,7 @@ class AuthTeacher
 	/**
 	 * Get the value of use_token
 	 * @return bool|int
-	 */ 
+	 */
 	public function getUseToken()
 	{
 		return $this->use_token;

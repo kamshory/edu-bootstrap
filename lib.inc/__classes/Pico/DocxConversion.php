@@ -83,7 +83,8 @@ class DocxConversion
 	}
 
 	/*************************power point files*****************************/
-	public function pptxToText($input_file) {
+	public function pptxToText($input_file)
+	{
 		$zip_handle = new \ZipArchive;
 		$output_text = "";
 		if (true === $zip_handle->open($input_file)) {

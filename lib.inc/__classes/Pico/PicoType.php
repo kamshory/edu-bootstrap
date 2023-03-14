@@ -1,7 +1,9 @@
 <?php
+
 namespace Pico;
 
-class PicoType {
+class PicoType
+{
     /**
      * Get type of variable or object
      * @param mixed $object
@@ -20,23 +22,18 @@ class PicoType {
      */
     public static function valueOf($object, $type = null)
     {
-        if($type === null)
-        {
+        if ($type === null) {
             $type = \Pico\PicoType::getType($object);
         }
-        if($type == "boolean")
-        {
-            return $object?true:false;
+        if ($type == "boolean") {
+            return $object ? true : false;
         }
-        if($type == "double")
-        {
-            return (double) $object;
+        if ($type == "double") {
+            return (float) $object;
         }
-        if($type == "integer")
-        {
+        if ($type == "integer") {
             return (int) $object;
         }
         return $object;
     }
-    
 }

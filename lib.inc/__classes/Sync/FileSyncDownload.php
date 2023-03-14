@@ -1,4 +1,5 @@
 <?php
+
 namespace Sync;
 
 class FileSyncDownload extends \Sync\FileSyncMaster
@@ -17,9 +18,9 @@ class FileSyncDownload extends \Sync\FileSyncMaster
      */
     public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null, $useRelativePath = false) //NOSONAR
     {
-        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension, $useRelativePath);      
+        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension, $useRelativePath);
     }
-    
+
     /**
      * (step 1, 2 and 3)
      * @param string $fileSyncUrl Synch hub URL
@@ -30,26 +31,20 @@ class FileSyncDownload extends \Sync\FileSyncMaster
     public function fileDownloadInformation($fileSyncUrl, $username, $password)
     {
         $lastSync = $this->getLastSyncTime();
-        if($lastSync === null)
-        {
+        if ($lastSync === null) {
             $lastSync = '0000-00-00 00:00:00';
         }
-        try
-        {
+        try {
             $response = $this->getSyncRecordListFromRemote($lastSync, $fileSyncUrl, $username, $password);
-            if($response['response_code'] == '00')
-            {
+            if ($response['response_code'] == '00') {
                 $recordList = $response['data'];
                 return $this->createDownloadSyncRecord($recordList);
             }
             return true;
-
-        }
-        catch(\Exception $e)
-        {
+        } catch (\Exception $e) {
             return false;
         }
-     }
+    }
 
     /**
      * Get last sync time
@@ -59,8 +54,7 @@ class FileSyncDownload extends \Sync\FileSyncMaster
     {
         $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_direction` = 'down' AND `status` > 0 ORDER BY `time_create` DESC LIMIT 0,1 ";
         $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0)
-        {
+        if ($stmt->rowCount() > 0) {
             $data = $stmt->fetch(\PDO::FETCH_ASSOC);
             return $data['time_create'];
         }
@@ -78,18 +72,18 @@ class FileSyncDownload extends \Sync\FileSyncMaster
     private function getSyncRecordListFromRemote($lastSync, $fileSyncUrl, $username, $password) //NOSONAR
     {
         $httpQuery = array(
-            'application_id'=>$this->application,
-            'sync_type'=>'file',
-            'action'=>'list-record',
-            'last_sync'=>$lastSync
+            'application_id' => $this->application,
+            'sync_type' => 'file',
+            'action' => 'list-record',
+            'last_sync' => $lastSync
         );
         $fileSyncUrl = $this->buildURL($fileSyncUrl, $httpQuery);
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
+        curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
         curl_setopt($ch, CURLOPT_URL, $fileSyncUrl);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
- 
+
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $server_output = curl_exec($ch);
@@ -97,17 +91,14 @@ class FileSyncDownload extends \Sync\FileSyncMaster
 
         curl_close($ch);
 
-        if($httpcode == 200)
-        {
+        if ($httpcode == 200) {
             return json_decode($server_output, true);
-        }
-        else
-        {
+        } else {
             throw new \Sync\SyncException("File not found");
         }
     }
 
-     /**
+    /**
      * Download file from remote host and copy it into local path
      * @param string $remotePath Remote path
      * @param string $localPath Local path
@@ -119,9 +110,9 @@ class FileSyncDownload extends \Sync\FileSyncMaster
      */
     public function downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password) //NOSONAR
     {
-        $url = rtrim($fileSyncUrl, "/")."/".ltrim($relativePath, "/");
+        $url = rtrim($fileSyncUrl, "/") . "/" . ltrim($relativePath, "/");
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
+        curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HEADER, false);
@@ -129,24 +120,20 @@ class FileSyncDownload extends \Sync\FileSyncMaster
         $server_output = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-        if($httpcode == 200)
-        {
+        if ($httpcode == 200) {
             return $server_output;
-        }
-        else
-        {
+        } else {
             throw new \Sync\SyncException("File not found", $httpcode);
         }
     }
-    
+
     /**
      * Create download sync record
      * @param array $recordList Record list
-    */
+     */
     private function createDownloadSyncRecord($recordList)
     {
-        foreach($recordList as $record)
-        {
+        foreach ($recordList as $record) {
             $fileSize = ((int) $record['file_size']);
             $sync_file_id = addslashes($record['sync_file_id']);
             $time_create = addslashes($record['time_create']);
@@ -155,9 +142,9 @@ class FileSyncDownload extends \Sync\FileSyncMaster
             $time_upload = addslashes($record['time_upload']);
             $time_download = date('Y-m-d H:i:s');
 
-  
+
             $localPath = $this->downloadBaseDir . "/" . $baseName;
- 
+
             $localPath = addslashes($localPath);
             $sql = "INSERT INTO `edu_sync_file`
             (`sync_file_id`, `file_path`, `relative_path`, `file_name`, `file_size`, `sync_direction`, `time_create`, `time_upload`, `time_download`, `status`) VALUES
@@ -182,16 +169,14 @@ class FileSyncDownload extends \Sync\FileSyncMaster
 
     public function fileDownloadSyncFiles($recordId, $permission, $fileSyncUrl, $username, $password)
     {
-        try
-        {
+        try {
             $record = $this->getSyncRecord($recordId);
-            if ($record != null) 
-            {
+            if ($record != null) {
                 $relativePath = $record['relative_path'];
-                $absolutePath = $this->downloadBaseDir."/".basename($relativePath);
+                $absolutePath = $this->downloadBaseDir . "/" . basename($relativePath);
 
                 $content = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
-                
+
                 $dir = dirname($absolutePath);
                 $this->prepareDirectory($dir);
 
@@ -200,37 +185,29 @@ class FileSyncDownload extends \Sync\FileSyncMaster
                 $this->updatePathAndStatus($recordId, $absolutePath, $relativePath, 1);
                 return true;
             }
-        }
-        catch(\Sync\SyncException $e)
-        {
+        } catch (\Sync\SyncException $e) {
             $this->updateSyncRecord($recordId, 1);
         }
         return true;
-        
     }
 
     public function fileDownloadUserFiles($recordId, $permission, $fileSyncUrl, $username, $password)
-    {     
-        try
-        {
+    {
+        try {
             $record = $this->getSyncRecord($recordId);
-            if ($record != null) 
-            {
+            if ($record != null) {
                 $this->syncUserFilesFromSyncRecord($record, $permission, $fileSyncUrl, $username, $password);
                 $this->updateSyncRecord($recordId, 2);
                 return true;
             }
-        }
-        catch(\Sync\SyncException $e)
-        {
-           // DO nothing
+        } catch (\Sync\SyncException $e) {
+            // DO nothing
         }
         return true;
-        
     }
 
-    
-    
+
+
     /**
      * Synchronize user file from sync record
      * @param mixed $record Sync record
@@ -242,32 +219,22 @@ class FileSyncDownload extends \Sync\FileSyncMaster
      */
     private function syncUserFilesFromSyncRecord($record, $permission, $fileSyncUrl, $username, $password)
     {
-        $syncFilePath = rtrim($this->downloadBaseDir, "/")."/".basename($record['relative_path']);
-        if(file_exists($syncFilePath))
-        {
+        $syncFilePath = rtrim($this->downloadBaseDir, "/") . "/" . basename($record['relative_path']);
+        if (file_exists($syncFilePath)) {
             $handle = fopen($syncFilePath, "r");
             if ($handle) {
                 while (($line = fgets($handle)) !== false) {
                     $info = json_decode($line, true);
-                    
-                    if($info['op'] == 'CREATEFILE')
-                    {                   
+
+                    if ($info['op'] == 'CREATEFILE') {
                         $this->procCreateFile($info, $permission, $fileSyncUrl, $username, $password);
-                    }
-                    else if($info['op'] == 'RENAMEFILE')
-                    {
+                    } else if ($info['op'] == 'RENAMEFILE') {
                         $this->procRenameFile($info, $permission, $fileSyncUrl, $username, $password);
-                    }
-                    else if($info['op'] == 'DELETEFILE')
-                    {
+                    } else if ($info['op'] == 'DELETEFILE') {
                         $this->procDeleteFile($info);
-                    }
-                    else if($info['op'] == 'CREATEDIR')
-                    {
+                    } else if ($info['op'] == 'CREATEDIR') {
                         $this->procCreateDir($info, $permission);
-                    }
-                    else if($info['op'] == 'RENAMEDIR')
-                    {
+                    } else if ($info['op'] == 'RENAMEDIR') {
                         $this->procRenameDir($info, $permission);
                     }
                 }
@@ -288,34 +255,26 @@ class FileSyncDownload extends \Sync\FileSyncMaster
      */
     public function procCreateFile($info, $permission, $fileSyncUrl, $username, $password)
     {
-        try
-        {
+        try {
             $tm = $info['tm'];
-            
-            if($this->useRelativePath)
-            {
+
+            if ($this->useRelativePath) {
                 $relativePath = $info['path'];
-                $localPath = rtrim($this->applicationRoot, "/")."/".ltrim($relativePath);
-            }
-            else
-            {
+                $localPath = rtrim($this->applicationRoot, "/") . "/" . ltrim($relativePath);
+            } else {
                 $localPath = $info['path'];
                 $relativePath = $this->getRelativePath($localPath);
             }
-            
+
             $response = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
             $dir = dirname($localPath);
             $this->prepareDirectory($dir);
             file_put_contents($localPath, $response);
             touch($localPath, $tm);
             chmod($localPath, $permission);
-        }
-        catch(\Sync\SyncException $e)
-        {
+        } catch (\Sync\SyncException $e) {
             //NOSONAR
-        }
-        catch(\Exception $e)
-        {
+        } catch (\Exception $e) {
             //NOSONAR
         }
     }
@@ -335,47 +294,35 @@ class FileSyncDownload extends \Sync\FileSyncMaster
         $oldName = $info['path']; // Assumed path is absolute
         $newName = $info['to']; // Assumed path is absolute
 
-        if($this->useRelativePath)
-        {
+        if ($this->useRelativePath) {
             $relativePath = $info['to']; // Relative
-            $oldName = rtrim($this->applicationRoot, "/")."/".ltrim($oldName); // Absolute
-            $newName = rtrim($this->applicationRoot, "/")."/".ltrim($newName); // Absolute
-        }
-        else
-        {
+            $oldName = rtrim($this->applicationRoot, "/") . "/" . ltrim($oldName); // Absolute
+            $newName = rtrim($this->applicationRoot, "/") . "/" . ltrim($newName); // Absolute
+        } else {
             $relativePath = $this->getRelativePath($newName); //Relative
         }
 
 
 
-        if(file_exists($oldName) && !file_exists($newName))
-        {
+        if (file_exists($oldName) && !file_exists($newName)) {
             chmod($oldName, 0777);
             $dir = dirname($newName);
-            if(!file_exists($dir))
-            {
+            if (!file_exists($dir)) {
                 $this->prepareDirectory($dir);
             }
             rename($oldName, $newName);
             chmod($newName, $permission);
-        }
-        else
-        {
+        } else {
             // force download
-            try
-            {
+            try {
                 $response = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
                 $dir = dirname($newName);
-                $this->prepareDirectory($dir);               
+                $this->prepareDirectory($dir);
                 file_put_contents($newName, $response);
                 touch($newName, $tm);
-            }
-            catch(\Sync\SyncException $e)
-            {
+            } catch (\Sync\SyncException $e) {
                 //NOSONAR
-            }
-            catch(\Exception $e)
-            {
+            } catch (\Exception $e) {
                 //NOSONAR
             }
         }
@@ -389,12 +336,10 @@ class FileSyncDownload extends \Sync\FileSyncMaster
     public function procDeleteFile($info)
     {
         $localPath = $info['path'];
-        if($this->useRelativePath)
-        {
-            $localPath = rtrim($this->applicationRoot, "/")."/".ltrim($localPath);
+        if ($this->useRelativePath) {
+            $localPath = rtrim($this->applicationRoot, "/") . "/" . ltrim($localPath);
         }
-        if(file_exists($localPath))
-        {
+        if (file_exists($localPath)) {
             chmod($localPath, 0777);
             unlink($localPath);
         }
@@ -409,12 +354,10 @@ class FileSyncDownload extends \Sync\FileSyncMaster
     public function procCreateDir($info, $permission)
     {
         $localPath = $info['path'];
-        if($this->useRelativePath)
-        {
-            $localPath = rtrim($this->applicationRoot, "/")."/".ltrim($localPath);
+        if ($this->useRelativePath) {
+            $localPath = rtrim($this->applicationRoot, "/") . "/" . ltrim($localPath);
         }
-        if(!file_exists($localPath))
-        {
+        if (!file_exists($localPath)) {
             $this->prepareDirectory($localPath, $permission);
         }
     }
@@ -430,29 +373,22 @@ class FileSyncDownload extends \Sync\FileSyncMaster
         $oldName = $info['path']; // Assumed path is absolute
         $newName = $info['to']; // Assumed path is absolute
 
-        if($this->useRelativePath)
-        {
-            $oldName = rtrim($this->applicationRoot, "/")."/".ltrim($oldName); // Absolute
-            $newName = rtrim($this->applicationRoot, "/")."/".ltrim($newName); // Absolute
+        if ($this->useRelativePath) {
+            $oldName = rtrim($this->applicationRoot, "/") . "/" . ltrim($oldName); // Absolute
+            $newName = rtrim($this->applicationRoot, "/") . "/" . ltrim($newName); // Absolute
         }
 
-        if(!file_exists($newName))
-        {
-            if(file_exists($oldName))
-            {
+        if (!file_exists($newName)) {
+            if (file_exists($oldName)) {
                 chmod($oldName, 0777);
                 rename($oldName, $newName);
                 chmod($newName, $permission);
-            }
-            else
-            {
+            } else {
                 // force create new direcory
                 mkdir($newName, $permission);
             }
         }
     }
-
-    
 }
 
 

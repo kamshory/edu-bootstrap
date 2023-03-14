@@ -1,4 +1,5 @@
 <?php
+
 namespace Pico;
 
 class PicoTest
@@ -99,8 +100,7 @@ class PicoTest
     public function getToken($token, $test, $studentId)
     {
         $filter = "";
-        if($test != null)
-        {
+        if ($test != null) {
             $testId = addslashes($test->test_id);
             $filter .= " AND `edu_token`.`test_id` = '$testId' 
             ";
@@ -112,7 +112,7 @@ class PicoTest
         WHERE `edu_token`.`token` = '$token' 
         AND `edu_token`.`student_id` = '$studentId' 
         $filter
-        ";      
+        ";
         $obj = $this->database->executeQuery($sql)->fetchObject();
         $tokenObj = new \Pico\EduToken();
         if (!is_null($obj) && $obj !== false) {
@@ -147,33 +147,29 @@ class PicoTest
     {
         $listQuestion = explode(",", $list);
         $result = array();
-        foreach($listQuestion as $key=>$val)
-        {
+        foreach ($listQuestion as $key => $val) {
             $questionId = addslashes($val);
             $sql = "SELECT `question_id`, `basic_competence`, `multiple_choice`, `random`, `numbering`, `content`
             FROM `edu_question` WHERE `question_id` = '$questionId'       
-            ";    
+            ";
             $stmt = $this->database->executeQuery($sql);
-            if($stmt->rowCount() > 0)
-            {
+            if ($stmt->rowCount() > 0) {
                 $data = $stmt->fetch(\PDO::FETCH_ASSOC);
                 $data['number'] = (int) $key + 1;
                 $questionId = addslashes($val);
                 $sql = "SELECT `option_id`, `sort_order`, `content`
                 FROM `edu_option` WHERE `question_id` = '$questionId'       
-                ";    
+                ";
                 $stmtOption = $this->database->executeQuery($sql);
-                if($stmtOption->rowCount() > 0)
-                {
+                if ($stmtOption->rowCount() > 0) {
                     $dataOption = $stmtOption->fetchAll(\PDO::FETCH_ASSOC);
-                    if($data['random'] && $test->random_option)
-                    {
+                    if ($data['random'] && $test->random_option) {
                         shuffle($dataOption);
                     }
                     $dataOption[] = array(
-                        'option_id'=>'', 
-                        'sort_order'=>count($dataOption), 
-                        'content'=>'Tidak menjawab'
+                        'option_id' => '',
+                        'sort_order' => count($dataOption),
+                        'content' => 'Tidak menjawab'
                     );
                     $data['option'] = $dataOption;
                 }
@@ -192,7 +188,7 @@ class PicoTest
      */
     public function getTestData($eduTest, $question)
     {
-        return array('test'=>$eduTest, 'data'=>$question);
+        return array('test' => $eduTest, 'data' => $question);
     }
 
     /**
@@ -205,8 +201,7 @@ class PicoTest
     public function getQuestionList($studentLoggedIn, $eduTest, $eduTestAnswer)
     {
         $saved = $this->getSavedQuestionList($studentLoggedIn, $eduTest, $eduTestAnswer);
-        if($saved == null)
-        {
+        if ($saved == null) {
             $saved = $this->generateQuestionList($eduTest);
         }
         return $saved;
@@ -230,8 +225,7 @@ class PicoTest
         AND `edu_answer`.`finish` = false
         ";
         $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0)
-        {
+        if ($stmt->rowCount() > 0) {
             return $stmt->fetch(\PDO::FETCH_ASSOC);
         }
         return null;
@@ -242,12 +236,12 @@ class PicoTest
         $answer_id = $this->database->generateNewId();
         $school_id = $studentLoggedIn->school_id;
         $student_id = $studentLoggedIn->student_id;
-        $start = "'".date('Y-m-d H:i:s')."'";
+        $start = "'" . date('Y-m-d H:i:s') . "'";
         $end = "null";
 
         $test_id = $eduTest->test_id;
         $question_list = addslashes($list);
-        
+
         $sql = "INSERT INTO `edu_answer` 
         (`answer_id`, `school_id`, `test_id`, `student_id`, `start`, `end`, `question_list`, `answer`, `answer_true`, `answer_false`, `initial_score`, `penalty`, `final_score`, `competence_score`, `percent`, `finish`, `active`) VALUES
         ('$answer_id', '$school_id', '$test_id', '$student_id', $start, $end, '$question_list', NULL, 0, 0, 0, 0, 0, NULL, 0, false, true);
@@ -269,16 +263,12 @@ class PicoTest
         AND `edu_question`.`active` = true
         ";
         $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0)
-        {
+        if ($stmt->rowCount() > 0) {
             $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-            foreach($data as $key=>$val)
-            {
-                $data[$key]['number'] = (int)$key+1;
+            foreach ($data as $key => $val) {
+                $data[$key]['number'] = (int)$key + 1;
             }
-        }
-        else
-        {
+        } else {
             $data = array();
         }
         $testData['number_of_question'] = $eduTest->number_of_question;
@@ -287,11 +277,10 @@ class PicoTest
         $testData['data'] = $data;
 
         $obj = new \Pico\PicoSortQuestion($testData);
-        $obj->process();    
+        $obj->process();
         $random = $obj->getRandom();
         $result = array();
-        foreach($random as $key=>$val)
-        {
+        foreach ($random as $key => $val) {
             $result[] = $val['question_id'];
         }
         return implode(",", $result);
@@ -306,8 +295,7 @@ class PicoTest
      */
     public function getSavedQuestionList($studentLoggedIn, $eduTest, $eduTestAnswer)
     {
-        if($eduTestAnswer != null && $studentLoggedIn->student_id == $eduTestAnswer['student_id'] && $eduTest->test_id == $eduTestAnswer['test_id'])
-        {
+        if ($eduTestAnswer != null && $studentLoggedIn->student_id == $eduTestAnswer['student_id'] && $eduTest->test_id == $eduTestAnswer['test_id']) {
             return $eduTestAnswer['question_list'];
         }
         return null;

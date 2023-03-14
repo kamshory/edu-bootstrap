@@ -1,4 +1,5 @@
 <?php
+
 namespace WS;
 
 class WSClient //NOSONAR
@@ -23,14 +24,14 @@ class WSClient //NOSONAR
 	private $username = "";
 	private $name = "";
 	public $sessionParams;
-	
-	
+
+
 	/**
 	 * @param string $resourceId Resource ID 
 	 * @param \Socket $socket 
 	 * @param string $headers
 	 * @param \WS\WSRemoteConnection $wsRemoteConnection
-	 * @param \WS\SessionParams $sessionParams 
+	 * @param \WS\WSSessionParams $sessionParams 
 	 * @param object $callbackObject,
 	 * @param string $callbackPostConstruct
 	 */
@@ -39,37 +40,31 @@ class WSClient //NOSONAR
 		$this->resourceId = $resourceId;
 		$this->socket = $socket;
 		$this->wsRemoteConnection = $wsRemoteConnection;
-		
+
 		$headerInfo = \WS\WSUtil::parseRawHeaders($headers);
 
-		$this->parseHeaders($headerInfo);	
-		
+		$this->parseHeaders($headerInfo);
+
 		$this->performHandshaking($headers, $this->host, $this->port);
-		
-		if(isset($this->headers['cookie']))
-		{
+
+		if (isset($this->headers['cookie'])) {
 			$this->cookies = \WS\WSUtil::parseRawCookies($this->headers['cookie']);
 		}
 
-		if($sessionParams === null)
-		{
-			$this->setSessionParams(new \WS\SessionParams(null, session_save_path(), null));
-		}
-		else
-		{
+		if ($sessionParams === null) {
+			$this->setSessionParams(new \WS\WSSessionParams(null, session_save_path(), null));
+		} else {
 			$this->setSessionParams($sessionParams);
 		}
 		$sessionName = $this->getSessionParams()->getSessionCookieName();
-		if(isset($this->cookies[$sessionName]))
-		{
+		if (isset($this->cookies[$sessionName])) {
 			$this->setSessionID($this->cookies[$sessionName]);
 		}
 
 		$this->setSessions(\WS\WSUtil::getSessions($this->getSessionID(), $this->getSessionParams()));
-		
-		if($callbackObject != null && $callbackPostConstruct != null)
-		{
-			$this->clientData = call_user_func(array($callbackObject, $callbackPostConstruct), $this); 
+
+		if ($callbackObject != null && $callbackPostConstruct != null) {
+			$this->clientData = call_user_func(array($callbackObject, $callbackPostConstruct), $this);
 			$this->groupId = $this->clientData['group_id'];
 			$this->username = $this->clientData['username'];
 		}
@@ -97,30 +92,22 @@ class WSClient //NOSONAR
 		$this->query = $headerInfo['query'];
 		$this->httpVersion = $headerInfo['version'];
 
-		if(isset($headers['x-forwarded-host']))
-		{
+		if (isset($headers['x-forwarded-host'])) {
 			$host = $headers['x-forwarded-host'];
-		}
-		else if(isset($headers['x-forwarded-server']))
-		{
+		} else if (isset($headers['x-forwarded-server'])) {
 			$host = $headers['x-forwarded-server'];
-		}
-		else
-		{
+		} else {
 			$host = $headers['host'];
 		}
-		if(stripos($host, ":") !== false)
-		{
+		if (stripos($host, ":") !== false) {
 			$arrHost = explode(":", $host);
 			$host = $arrHost[0];
 			$port = (int) $arrHost[1];
-		}
-		else
-		{
+		} else {
 			$port = 443;
 		}
 		$this->host = $host;
-		$this->port = $port;	
+		$this->port = $port;
 	}
 
 	/**
@@ -146,24 +133,21 @@ class WSClient //NOSONAR
 	{
 		$headers = array();
 		$lines = preg_split("/\r\n/", $recevedHeader);
-		foreach ($lines as $line) 
-		{
+		foreach ($lines as $line) {
 			$line = chop($line);
-			if (preg_match('/\A(\S+): (.*)\z/', $line, $matches)) 
-			{
+			if (preg_match('/\A(\S+): (.*)\z/', $line, $matches)) {
 				$headers[$matches[1]] = $matches[2];
 			}
 		}
-		if(isset($headers['Sec-WebSocket-Key']))
-		{
+		if (isset($headers['Sec-WebSocket-Key'])) {
 			$secKey = $headers['Sec-WebSocket-Key'];
 			$secAccept = base64_encode(pack('H*', sha1($secKey . '258EAFA5-E914-47DA-95CA-C5AB0DC85B11')));
 			//hand shaking header
-			$upgrade = "HTTP/1.1 101 Web Socket Protocol Handshake\r\n" 
-				. "Upgrade: websocket\r\n" 
-				. "Connection: Upgrade\r\n" 
-				. "WebSocket-Origin: $host\r\n" 
-				. "WebSocket-Location: ws://$host:$port\r\n" 
+			$upgrade = "HTTP/1.1 101 Web Socket Protocol Handshake\r\n"
+				. "Upgrade: websocket\r\n"
+				. "Connection: Upgrade\r\n"
+				. "WebSocket-Origin: $host\r\n"
+				. "WebSocket-Location: ws://$host:$port\r\n"
 				. "Sec-WebSocket-Accept: $secAccept\r\n"
 				. "Access-Control-Allow-Origin: *\r\n"
 				. "X-Engine: PlanetChat\r\n\r\n";
@@ -179,8 +163,8 @@ class WSClient //NOSONAR
 
 	/**
 	 * Get the value of sessionParams
-	 * @return \WS\SessionParams
-	 */ 
+	 * @return \WS\WSSessionParams
+	 */
 	public function getSessionParams()
 	{
 		return $this->sessionParams;
@@ -188,9 +172,9 @@ class WSClient //NOSONAR
 
 	/**
 	 * Set the value of sessionParams
-	 * @param \WS\SessionParams $sessionParams
+	 * @param \WS\WSSessionParams $sessionParams
 	 * @return self
-	 */ 
+	 */
 	public function setSessionParams($sessionParams)
 	{
 		$this->sessionParams = $sessionParams;
@@ -201,7 +185,7 @@ class WSClient //NOSONAR
 	/**
 	 * Get the value of headerInfo
 	 * @return array
-	 */ 
+	 */
 	public function getHeaderInfo()
 	{
 		return $this->headerInfo;
@@ -209,7 +193,7 @@ class WSClient //NOSONAR
 
 	/**
 	 * Get the value of \WSRemoteConnection
-	 */ 
+	 */
 	public function getRemoteConnection()
 	{
 		return $this->wsRemoteConnection;
@@ -218,7 +202,7 @@ class WSClient //NOSONAR
 	/**
 	 * Get the value of resourceId
 	 * @return int
-	 */ 
+	 */
 	public function getResourceId()
 	{
 		return $this->resourceId;
@@ -227,7 +211,7 @@ class WSClient //NOSONAR
 	/**
 	 * Get the value of httpVersion
 	 * @return string
-	 */ 
+	 */
 	public function getHttpVersion()
 	{
 		return $this->httpVersion;
@@ -236,7 +220,7 @@ class WSClient //NOSONAR
 	/**
 	 * Get the value of method
 	 * @return string
-	 */ 
+	 */
 	public function getMethod()
 	{
 		return $this->method;
@@ -245,7 +229,7 @@ class WSClient //NOSONAR
 	/**
 	 * Get the value of uri
 	 * @return string
-	 */ 
+	 */
 	public function getUri()
 	{
 		return $this->uri;
@@ -254,7 +238,7 @@ class WSClient //NOSONAR
 	/**
 	 * Get the value of groupId
 	 * @return string
-	 */ 
+	 */
 	public function getGroupId()
 	{
 		return $this->groupId;
@@ -262,7 +246,7 @@ class WSClient //NOSONAR
 
 	/**
 	 * Get the value of path
-	 */ 
+	 */
 	public function getPath()
 	{
 		return $this->path;
@@ -272,7 +256,7 @@ class WSClient //NOSONAR
 	/**
 	 * Get the value of query
 	 * @return array
-	 */ 
+	 */
 	public function getQuery()
 	{
 		return $this->query;
@@ -281,7 +265,7 @@ class WSClient //NOSONAR
 	/**
 	 * Get the value of sessionID
 	 * @return string
-	 */ 
+	 */
 	public function getSessionID()
 	{
 		return $this->sessionID;
@@ -291,7 +275,7 @@ class WSClient //NOSONAR
 	 * Set the value of sessionID
 	 *
 	 * @return self
-	 */ 
+	 */
 	public function setSessionID($sessionID)
 	{
 		$this->sessionID = $sessionID;
@@ -302,7 +286,7 @@ class WSClient //NOSONAR
 	/**
 	 * Get the value of sessions
 	 * @return array
-	 */ 
+	 */
 	public function getSessions()
 	{
 		return $this->sessions;
@@ -312,7 +296,7 @@ class WSClient //NOSONAR
 	 * Set the value of sessions
 	 *
 	 * @return self
-	 */ 
+	 */
 	public function setSessions($sessions)
 	{
 		$this->sessions = $sessions;
@@ -323,7 +307,7 @@ class WSClient //NOSONAR
 	/**
 	 * Get the value of clientData
 	 * @return array
-	 */ 
+	 */
 	public function getClientData()
 	{
 		return $this->clientData;
@@ -333,7 +317,7 @@ class WSClient //NOSONAR
 	 * Set the value of clientData
 	 *
 	 * @return self
-	 */ 
+	 */
 	public function setClientData($clientData)
 	{
 		$this->clientData = $clientData;
@@ -343,7 +327,7 @@ class WSClient //NOSONAR
 
 	/**
 	 * Get the value of cookies
-	 */ 
+	 */
 	public function getCookies()
 	{
 		return $this->cookies;
@@ -351,7 +335,7 @@ class WSClient //NOSONAR
 
 	/**
 	 * Get the value of username
-	 */ 
+	 */
 	public function getUsername()
 	{
 		return $this->username;
@@ -360,7 +344,7 @@ class WSClient //NOSONAR
 
 	/**
 	 * Get the value of name
-	 */ 
+	 */
 	public function getName()
 	{
 		return $this->name;
@@ -370,7 +354,7 @@ class WSClient //NOSONAR
 	 * Set the value of name
 	 *
 	 * @return self
-	 */ 
+	 */
 	public function setName($name)
 	{
 		$this->name = $name;

@@ -1,7 +1,9 @@
 <?php
+
 namespace Pico;
 
-class EduToken {
+class EduToken
+{
     public $token_id = "";
     public $school_id = "";
     public $class_id = "";

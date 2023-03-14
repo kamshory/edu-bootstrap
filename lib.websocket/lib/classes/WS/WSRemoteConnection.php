@@ -1,8 +1,10 @@
 <?php
+
 namespace WS;
 
-class WSRemoteConnection {
-    
+class WSRemoteConnection
+{
+
     private $host = "";
     private $port = 0;
 
@@ -27,7 +29,7 @@ class WSRemoteConnection {
     {
         return $this->host;
     }
-    
+
     /**
      * Get port
      *

@@ -1,4 +1,5 @@
 <?php
+
 namespace Pico;
 
 class FileSynchronizer
@@ -33,7 +34,7 @@ class FileSynchronizer
 	private $maximumlength = 20000;
 
 	private $useRelativePath = false;
-	
+
 	/**
 	 * Constructor of FileSynchronizer
 	 * @param string $applicationDir Application directory
@@ -48,20 +49,16 @@ class FileSynchronizer
 	{
 		$this->applicationDir = $applicationDir;
 		$this->baseDir = $baseDir;
-		if($fileName != null)
-		{
+		if ($fileName != null) {
 			$this->fileName = $fileName;
 		}
-		if($prefix != null)
-		{
+		if ($prefix != null) {
 			$this->prefix = $prefix;
 		}
-		if($extension != null)
-		{
+		if ($extension != null) {
 			$this->extension = $extension;
 		}
-		if($maximumlength > 0)
-		{
+		if ($maximumlength > 0) {
 			$this->maximumlength = $maximumlength;
 		}
 		$this->useRelativePath = $useRelativePath;
@@ -72,10 +69,10 @@ class FileSynchronizer
 	 * @param bool $useRelativePath use relative path
 	 */
 	public function setUseRelativePath($useRelativePath)
-    {
-        $this->useRelativePath = $useRelativePath;
-    }
-	
+	{
+		$this->useRelativePath = $useRelativePath;
+	}
+
 	/**
 	 * Generate 20 bytes unique ID
 	 * @return string 20 bytes
@@ -83,31 +80,27 @@ class FileSynchronizer
 	public function generateNewId()
 	{
 		$uuid = uniqid();
-		if((strlen($uuid) % 2) == 1)
-		{
-			$uuid = '0'.$uuid;
+		if ((strlen($uuid) % 2) == 1) {
+			$uuid = '0' . $uuid;
 		}
 		$random = sprintf('%06x', mt_rand(0, 16777215));
 		return sprintf('%s%s', $uuid, $random);
 	}
 
 	/**
-     * Get relative from absolute path given
-     * @param mixed $path Absolute path
-     * @return mixed Relative path
-     */
-    public function getRelativePath($path)
-    {
-        $post = stripos($path, $this->applicationDir);
-        if($post === 0)
-        {
-            return substr($path, strlen($this->applicationDir));
-        } 
-        else 
-        {
-            return $path;
-        }
-    }
+	 * Get relative from absolute path given
+	 * @param mixed $path Absolute path
+	 * @return mixed Relative path
+	 */
+	public function getRelativePath($path)
+	{
+		$post = stripos($path, $this->applicationDir);
+		if ($post === 0) {
+			return substr($path, strlen($this->applicationDir));
+		} else {
+			return $path;
+		}
+	}
 
 	/**
 	 * Get pooling path
@@ -115,14 +108,12 @@ class FileSynchronizer
 	 */
 	public function getPoolPath()
 	{
-		if(!file_exists($this->baseDir))
-		{
+		if (!file_exists($this->baseDir)) {
 			$this->prepareDirectory($this->baseDir, $this->applicationDir, 0777, false);
 		}
 		$poolPath = $this->baseDir . "/" . $this->fileName . $this->extension;
-		if(file_exists($poolPath) && filesize($poolPath) > $this->maximumlength)
-		{
-			$newPath = $this->baseDir . "/" . $this->prefix.date('Y-m-d-H-i-s') . "-" . $this->generateNewId() . $this->extension;
+		if (file_exists($poolPath) && filesize($poolPath) > $this->maximumlength) {
+			$newPath = $this->baseDir . "/" . $this->prefix . date('Y-m-d-H-i-s') . "-" . $this->generateNewId() . $this->extension;
 			rename($poolPath, $newPath);
 		}
 		return $poolPath;
@@ -137,26 +128,22 @@ class FileSynchronizer
 	 */
 	public function createFileWithContent($path, $content, $sync)
 	{
-		if($sync)
-		{
-			if($this->useRelativePath)
-			{
+		if ($sync) {
+			if ($this->useRelativePath) {
 				$pathRel = $this->getRelativePath($path);
-			}
-			else
-			{
+			} else {
 				$pathRel = $path;
 			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
 			$syncContent = json_encode(array(
-				'op'=>'CREATEFILE',
-				'tm'=>$time,
-				'path'=>$pathRel
+				'op' => 'CREATEFILE',
+				'tm' => $time,
+				'path' => $pathRel
 			));
-			fwrite($fp, $syncContent.self::NEW_LINE);  
-			fclose($fp);  
+			fwrite($fp, $syncContent . self::NEW_LINE);
+			fclose($fp);
 		}
 		return file_put_contents($path, $content);
 	}
@@ -169,27 +156,23 @@ class FileSynchronizer
 	 */
 	public function createFile($path, $sync)
 	{
-		if($sync)
-		{
-			if($this->useRelativePath)
-			{
+		if ($sync) {
+			if ($this->useRelativePath) {
 				$pathRel = $this->getRelativePath($path);
-			}
-			else
-			{
+			} else {
 				$pathRel = $path;
 			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
 			$syncContent = json_encode(array(
-				'op'=>'CREATEFILE',
-				'tm'=>$time,
-				'path'=>$pathRel
+				'op' => 'CREATEFILE',
+				'tm' => $time,
+				'path' => $pathRel
 			));
-			$ret = fwrite($fp, $syncContent.self::NEW_LINE);  
+			$ret = fwrite($fp, $syncContent . self::NEW_LINE);
 			fclose($fp);
-			return $ret; 
+			return $ret;
 		}
 		return true;
 	}
@@ -202,26 +185,22 @@ class FileSynchronizer
 	 */
 	public function deleteFile($path, $sync)
 	{
-		if($sync)
-		{
-			if($this->useRelativePath)
-			{
+		if ($sync) {
+			if ($this->useRelativePath) {
 				$pathRel = $this->getRelativePath($path);
-			}
-			else
-			{
+			} else {
 				$pathRel = $path;
 			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
 			$syncContent = json_encode(array(
-				'op'=>'DELETEFILE',
-				'tm'=>$time,
-				'path'=>$pathRel
+				'op' => 'DELETEFILE',
+				'tm' => $time,
+				'path' => $pathRel
 			));
-			fwrite($fp, $syncContent.self::NEW_LINE);  
-			fclose($fp);  
+			fwrite($fp, $syncContent . self::NEW_LINE);
+			fclose($fp);
 		}
 		return @unlink($path);
 	}
@@ -235,15 +214,11 @@ class FileSynchronizer
 	 */
 	public function renameFile($oldPath, $newPath, $sync)
 	{
-		if($sync)
-		{
-			if($this->useRelativePath)
-			{
+		if ($sync) {
+			if ($this->useRelativePath) {
 				$oldPathRel = $this->getRelativePath($oldPath);
 				$newPathRel = $this->getRelativePath($newPath);
-			}
-			else
-			{
+			} else {
 				$oldPathRel = $oldPath;
 				$newPathRel = $newPath;
 			}
@@ -251,13 +226,13 @@ class FileSynchronizer
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
 			$syncContent = json_encode(array(
-				'op'=>'RENAMEFILE',
-				'tm'=>$time,
-				'path'=>$oldPathRel,
-				'to'=>$newPathRel
+				'op' => 'RENAMEFILE',
+				'tm' => $time,
+				'path' => $oldPathRel,
+				'to' => $newPathRel
 			));
-			fwrite($fp, $syncContent.self::NEW_LINE);  
-			fclose($fp);  
+			fwrite($fp, $syncContent . self::NEW_LINE);
+			fclose($fp);
 		}
 		return @rename($oldPath, $newPath);
 	}
@@ -278,11 +253,9 @@ class FileSynchronizer
 		$arrBase = explode("/", $base);
 		$base = implode("/", $arrBase);
 		$dir2created = "";
-		foreach($arrDir as $val)
-		{
+		foreach ($arrDir as $val) {
 			$dir2created .= $val;
-			if(stripos($base, $dir2created) !== 0 && !file_exists($dir2created))
-			{
+			if (stripos($base, $dir2created) !== 0 && !file_exists($dir2created)) {
 				$this->createDirecory($dir2created, $permission, $sync);
 			}
 			$dir2created .= "/";
@@ -298,26 +271,22 @@ class FileSynchronizer
 	 */
 	public function createDirecory($path, $permission, $sync)
 	{
-		if($sync)
-		{
-			if($this->useRelativePath)
-			{
+		if ($sync) {
+			if ($this->useRelativePath) {
 				$pathRel = $this->getRelativePath($path);
-			}
-			else
-			{
+			} else {
 				$pathRel = $path;
 			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
 			$syncContent = json_encode(array(
-				'op'=>'CREATEDIR',
-				'tm'=>$time,
-				'path'=>$pathRel
+				'op' => 'CREATEDIR',
+				'tm' => $time,
+				'path' => $pathRel
 			));
-			fwrite($fp, $syncContent.self::NEW_LINE);  
-			fclose($fp);  
+			fwrite($fp, $syncContent . self::NEW_LINE);
+			fclose($fp);
 		}
 		return @mkdir($path, $permission);
 	}
@@ -330,32 +299,27 @@ class FileSynchronizer
 	 */
 	public function deleteDirecory($path, $sync)
 	{
-		if($sync)
-		{
-			if($this->useRelativePath)
-			{
+		if ($sync) {
+			if ($this->useRelativePath) {
 				$pathRel = $this->getRelativePath($path);
-			}
-			else
-			{
+			} else {
 				$pathRel = $path;
 			}
 			$time = time();
 			$syncPath = $this->getPoolPath();
 			$fp = fopen($syncPath, 'a');
 			$syncContent = json_encode(array(
-				'op'=>'DELETEDIR',
-				'tm'=>$time,
-				'path'=>$pathRel
+				'op' => 'DELETEDIR',
+				'tm' => $time,
+				'path' => $pathRel
 			));
-			fwrite($fp, $syncContent.self::NEW_LINE);  
-			fclose($fp);  
+			fwrite($fp, $syncContent . self::NEW_LINE);
+			fclose($fp);
 		}
 		$perms = fileperms($path);
 		chmod($path, 0777);
 		$ret = @rmdir($path);
-		if(!$ret)
-		{
+		if (!$ret) {
 			chmod($path, $perms);
 		}
 		return $ret;

@@ -1,5 +1,7 @@
 <?php
+
 namespace Pico;
+
 class PicoEdu //NOSONAR
 {
 	const SPAN_OPEN = '<span>';
@@ -152,8 +154,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT `name` FROM `country` WHERE `country_id` = '$country_id' ";
 		$stmt = $this->database->executeQuery($sql);
-		if($stmt->rowCount() == 0)
-		{
+		if ($stmt->rowCount() == 0) {
 			return null;
 		}
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
@@ -169,8 +170,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT `country_id` FROM `country` WHERE `name` like '$name' ";
 		$stmt = $this->database->executeQuery($sql);
-		if($stmt->rowCount() == 0)
-		{
+		if ($stmt->rowCount() == 0) {
 			return null;
 		}
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
@@ -237,8 +237,7 @@ class PicoEdu //NOSONAR
 		$language = $user_data['language'];
 		$country_id = $user_data['country_id'];
 
-		if(!$use_national_id)
-		{
+		if (!$use_national_id) {
 			$uname = str_replace(" ", "", $name);
 			$uname = substr($uname, 0, 16);
 			$oke = false;
@@ -251,21 +250,16 @@ class PicoEdu //NOSONAR
 				}
 			}
 			$username = addslashes($username);
-		}
-		else
-		{
+		} else {
 			$username = addslashes($member_id);
 		}
 
 		$filter = "";
-		
-		if(!$use_national_id)
-		{
+
+		if (!$use_national_id) {
 			$member_id = $this->database->generateNewId();
 			$filter = " AND `member_id` LIKE '$member_id' ";
-		}
-		else
-		{
+		} else {
 			$filter = " AND `name` LIKE '$name' AND `birth_day` LIKE '$birth_day' ";
 		}
 
@@ -273,7 +267,7 @@ class PicoEdu //NOSONAR
 			FROM `member` 
 			WHERE (1=1) $filter
 			";
-		
+
 		$stmt = $this->database->executeQuery($sql);
 		if ($stmt->rowCount()) {
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
@@ -292,9 +286,9 @@ class PicoEdu //NOSONAR
 			('$member_id', '$name', '$username', '$email', '$gender', '$birth_day', '$password', '$auth', '$language', '$phone', '$country_id', 
 			'$now', '$ip', '$now', '$ip', '$now', '1');
 			";
-			
+
 			$this->database->executeInsert($sql, true);
-			
+
 			return array(
 				'member_id' => $member_id,
 				'name' => stripslashes($name),
@@ -318,14 +312,13 @@ class PicoEdu //NOSONAR
 			WHERE `username` LIKE '$username'
 			";
 			$stmt = $this->database->executeQuery($sql);
-			if($stmt->rowCount() == 0)
-			{
+			if ($stmt->rowCount() == 0) {
 				return $username;
 			}
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Get class list
 	 * @param string $school_id School ID
@@ -369,7 +362,7 @@ class PicoEdu //NOSONAR
 		global $cfg;
 		return number_format($bilangan, $cfg->dec_precision, $cfg->dec_separator, $cfg->dec_thousands_separator);
 	}
-	
+
 	public function secondsToTime($seconds)
 	{
 		// extract hours
@@ -399,8 +392,7 @@ class PicoEdu //NOSONAR
 			$answer = str_replace(",]", ",0]", $answer);
 			$json = '[' . $answer . ']';
 			$arr = json_decode($json, true);
-			if($arr != null && is_array($arr))
-			{
+			if ($arr != null && is_array($arr)) {
 				foreach ($arr as $question) {
 					$question_id = $question[0] * 1;
 					$option_id = $question[1] * 1;
@@ -669,10 +661,8 @@ class PicoEdu //NOSONAR
 				$data['answer'] = str_replace(",]", ",0]", $data['answer']);
 				$json = '[' . $data['answer'] . ']';
 				$arr = json_decode($json, true);
-				if($arr != null && is_array($arr))
-				{
-					foreach ($arr as $question) 
-					{
+				if ($arr != null && is_array($arr)) {
+					foreach ($arr as $question) {
 						$question_id = $question[0] * 1;
 						$option_id = $question[1] * 1;
 						$sql2 = "SELECT `edu_option`.`question_id`, `edu_option`.`option_id`, 
@@ -772,20 +762,20 @@ class PicoEdu //NOSONAR
 	public function getGradeName($grade)
 	{
 		$arr = array(
-			"0"=>"",
-			"1"=>"Tingkat 1",
-			"2"=>"Tingkat 2",
-			"3"=>"Tingkat 3",
-			"4"=>"Tingkat 4",
-			"5"=>"Tingkat 5",
-			"6"=>"Tingkat 6",
-			"7"=>"Tingkat 7",
-			"8"=>"Tingkat 8",
-			"9"=>"Tingkat 9",
-			"10"=>"Tingkat 10",
-			"11"=>"Tingkat 11",
-			"12"=>"Tingkat 12",
-			"13"=>"Perguruan Tinggi"
+			"0" => "",
+			"1" => "Tingkat 1",
+			"2" => "Tingkat 2",
+			"3" => "Tingkat 3",
+			"4" => "Tingkat 4",
+			"5" => "Tingkat 5",
+			"6" => "Tingkat 6",
+			"7" => "Tingkat 7",
+			"8" => "Tingkat 8",
+			"9" => "Tingkat 9",
+			"10" => "Tingkat 10",
+			"11" => "Tingkat 11",
+			"12" => "Tingkat 12",
+			"13" => "Perguruan Tinggi"
 
 		);
 		return @$arr[$grade];
@@ -794,44 +784,39 @@ class PicoEdu //NOSONAR
 	public function createGradeOption($grade)
 	{
 		$arr = array();
-		for($i = 1; $i<=12; $i++)
-		{
+		for ($i = 1; $i <= 12; $i++) {
 			$sel = $i == $grade ? \Pico\PicoConst::SELECT_OPTION_SELECTED : '';
-			$arr[] = '<option value="'.$i.'" '.$sel.'>Tingkat '.$i.'</option>';
+			$arr[] = '<option value="' . $i . '" ' . $sel . '>Tingkat ' . $i . '</option>';
 		}
 
 		return implode("\r\n", $arr);
 	}
 	public function getGenderName($gender)
 	{
-		if($gender == 'M')
-		{
+		if ($gender == 'M') {
 			return 'Laki-Laki';
-		} 
-		else if($gender == 'W')
-		{
+		} else if ($gender == 'W') {
 			return 'Perempuan';
 		}
 		return '';
 	}
 
-	public static function arrayToObject($inputArray) {
-		if (!is_array($inputArray)) 
-		{
+	public static function arrayToObject($inputArray)
+	{
+		if (!is_array($inputArray)) {
 			return $inputArray;
 		}
-	
+
 		$object = new \stdClass();
 		if (is_array($inputArray) && count($inputArray) > 0) {
-			foreach ($inputArray as $name=>$value) {
+			foreach ($inputArray as $name => $value) {
 				$name = strtolower(trim($name));
 				if (!empty($name)) {
 					$object->$name = \Pico\PicoEdu::arrayToObject($value);
 				}
 			}
-		return $object;
-		}
-		else {
+			return $object;
+		} else {
 			return false;
 		}
 	}
@@ -863,11 +848,10 @@ class PicoEdu //NOSONAR
 		return trim($value, " \r\n\t ");
 	}
 
-	
+
 	public function log($content = "", $file = null)
 	{
-		if($file == null)
-		{
+		if ($file == null) {
 			$file = dirname(dirname(dirname(__FILE__))) . "/log.txt";
 		}
 		$fp = fopen($file, 'a');
@@ -894,39 +878,34 @@ class PicoEdu //NOSONAR
 
 	public function createFilterDb($sql, $params = null)
 	{
-		if($params == null)
-		{
+		if ($params == null) {
 			$params = array();
 		}
 
 		$stmt = $this->database->executeQuery($sql);
 		$options = array();
-		if($stmt->rowCount() > 0)
-		{
+		if ($stmt->rowCount() > 0) {
 			$attributes = array();
 			$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-			foreach($rows as $data)
-			{
+			foreach ($rows as $data) {
 				$attributes = array();
-				foreach($params['attributeList'] as $val)
-				{
+				foreach ($params['attributeList'] as $val) {
 					$attributes[] = $val['attribute'] . '="' . htmlspecialchars($data[$val['source']]) . '"';
 				}
 				$selectConditionSource = $params['selectCondition']['source'];
 				$selectConditionValueClient = $params['selectCondition']['value'];
-				if($selectConditionValueClient != null 
-					&& !empty($selectConditionValueClient) 
+				if (
+					$selectConditionValueClient != null
+					&& !empty($selectConditionValueClient)
 					&& $selectConditionValueClient == $data[$selectConditionSource]
-					)
-				{
+				) {
 					$attributes[] = 'selected="selected"';
 				}
 
 				$captionDelimiter = $params['caption']['delimiter'];
 				$captionVals = array();
 
-				foreach($params['caption']['values'] as $sourceVal)
-				{
+				foreach ($params['caption']['values'] as $sourceVal) {
 					$captionVals[] = $data[$sourceVal];
 				}
 
@@ -942,8 +921,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT * from edu_admin where admin_id = '$admin_id' ";
 		$stmt = $this->database->executeQuery($sql);
-		if($stmt->rowCount() > 0)
-		{
+		if ($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 
 			$member_id = addslashes($data['admin_id']);
@@ -953,12 +931,9 @@ class PicoEdu //NOSONAR
 			$phone = addslashes($data['phone']);
 			$gender = addslashes($data['gender']);
 			$birth_day = addslashes($data['birth_day']);
-			if(empty($birth_day))
-			{
+			if (empty($birth_day)) {
 				$birth_day = "'" . $birth_day . "'";
-			}
-			else
-			{
+			} else {
 				$birth_day = 'NULL';
 			}
 			$birth_place = addslashes($data['birth_place']);
@@ -991,26 +966,21 @@ class PicoEdu //NOSONAR
 
 		$stmt = $this->database->executeQuery($sql);
 
-		if($stmt->rowCount() > 0)
-		{
+		if ($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			return $data['school_program_id'];
-		}
-		else
-		{
+		} else {
 			$school_program_id = $this->database->generateNewId();
 			$now = $this->database->getLocalDateTime();
 			$sql = "INSERT INTO `edu_school_program` 
 			(`school_program_id`, `school_id`, `name`, `time_create`, `time_edit`, `active`) VALUES
 			('$school_program_id', '$school_id', '$school_program', '$now', '$now', true)";
 			$stmt = $this->database->executeInsert($sql, true);
-			if($stmt->rowCount() > 0)
-			{
+			if ($stmt->rowCount() > 0) {
 				return $school_program_id;
 			}
 			return null;
 		}
-
 	}
 
 	public function getClassId($class, $school_id)
@@ -1026,26 +996,21 @@ class PicoEdu //NOSONAR
 
 		$stmt = $this->database->executeQuery($sql);
 
-		if($stmt->rowCount() > 0)
-		{
+		if ($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			return $data['class_id'];
-		}
-		else
-		{
+		} else {
 			$class_id = $this->database->generateNewId();
 			$now = $this->database->getLocalDateTime();
 			$sql = "INSERT INTO `edu_class` 
 			(`class_id`, `school_id`, `name`, `time_create`, `time_edit`, `active`) VALUES
 			('$class_id', '$school_id', '$class', '$now', '$now', true)";
 			$stmt = $this->database->executeInsert($sql, true);
-			if($stmt->rowCount() > 0)
-			{
+			if ($stmt->rowCount() > 0) {
 				return $class_id;
 			}
 			return null;
 		}
-
 	}
 
 	public function ifMatch($v1, $v2, $out)
@@ -1060,12 +1025,10 @@ class PicoEdu //NOSONAR
 
 	public function selectFromMap($value, $map)
 	{
-		if($value == null || $map == null || !is_array($map))
-		{
+		if ($value == null || $map == null || !is_array($map)) {
 			return "";
 		}
-		if(isset($map[$value]))
-		{
+		if (isset($map[$value])) {
 			return $map[trim($value)];
 		}
 		return "";
@@ -1079,43 +1042,36 @@ class PicoEdu //NOSONAR
 	 */
 	public function getRowClass($data, $defaultCondition = false)
 	{
-		if(!isset($data) || empty($data))
-		{
+		if (!isset($data) || empty($data)) {
 			return "";
 		}
-		$rowclass = array(); 
-		if($defaultCondition || (isset($data['default']) && $data['default']==1))
-		{
-			$rowclass[] = "data-default"; 
+		$rowclass = array();
+		if ($defaultCondition || (isset($data['default']) && $data['default'] == 1)) {
+			$rowclass[] = "data-default";
 		}
-		if(isset($data['blocked']) && $data['blocked']==1) 
-		{
-			$rowclass[] = "data-blocked"; 
+		if (isset($data['blocked']) && $data['blocked'] == 1) {
+			$rowclass[] = "data-blocked";
 		}
-		if(isset($data['active']))
-		{
-			if($data['active']==1) 
-			{
-				$rowclass[] = "data-active"; 
-			}
-			else if($data['active']==0) 
-			{
+		if (isset($data['active'])) {
+			if ($data['active'] == 1) {
+				$rowclass[] = "data-active";
+			} else if ($data['active'] == 0) {
 				$rowclass[] = "data-inactive";
 			}
 		}
 		$rowclass = array_unique($rowclass);
-		return trim(implode(' ', $rowclass)); 
+		return trim(implode(' ', $rowclass));
 	}
 
 	public function getSchoolGradeList()
 	{
 		return array(
-			'1'=>'Play Group',
-			'2'=>'Taman Kanak-Kanak',
-			'3'=>'SD Sederajat',
-			'4'=>'SMP Sederajat',
-			'5'=>'SMA Sederajat',
-			'6'=>'Perguruan Tinggi'
+			'1' => 'Play Group',
+			'2' => 'Taman Kanak-Kanak',
+			'3' => 'SD Sederajat',
+			'4' => 'SMP Sederajat',
+			'5' => 'SMA Sederajat',
+			'6' => 'Perguruan Tinggi'
 		);
 	}
 
@@ -1123,17 +1079,13 @@ class PicoEdu //NOSONAR
 	{
 		$html = "";
 		$arr = $this->getSchoolGradeList();
-		foreach($arr as $key => $val)
-		{
-			if($selected != null && $selected == $key)
-			{
+		foreach ($arr as $key => $val) {
+			if ($selected != null && $selected == $key) {
 				$sel = \Pico\PicoConst::SELECT_OPTION_SELECTED;
-			}
-			else
-			{
+			} else {
 				$sel = "";
 			}
-			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$val</option>"; //NOSONAR
+			$html .= "\r\n\t\t<option value=\"" . $key . "\"$sel>$val</option>"; //NOSONAR
 		}
 		return $html;
 	}
@@ -1141,18 +1093,14 @@ class PicoEdu //NOSONAR
 	public function getSchoolTypeOption($selected = null)
 	{
 		$html = "";
-		$arr = array('U'=>'Negeri', 'I'=>'Swasta');
-		foreach($arr as $key => $val)
-		{
-			if($selected != null && $selected == $key)
-			{
+		$arr = array('U' => 'Negeri', 'I' => 'Swasta');
+		foreach ($arr as $key => $val) {
+			if ($selected != null && $selected == $key) {
 				$sel = \Pico\PicoConst::SELECT_OPTION_SELECTED;
-			}
-			else
-			{
+			} else {
 				$sel = "";
 			}
-			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$val</option>"; //NOSONAR
+			$html .= "\r\n\t\t<option value=\"" . $key . "\"$sel>$val</option>"; //NOSONAR
 		}
 		return $html;
 	}
@@ -1174,23 +1122,20 @@ class PicoEdu //NOSONAR
 	 */
 	public function fixInputTimeSQL($input)
 	{
-		if($input == null || empty($input))
-		{
+		if ($input == null || empty($input)) {
 			$input = 'null';
-		}
-		else
-		{
+		} else {
 			$input = "'$input'";
 		}
 		return $input;
 	}
-	
+
 	/**
 	 * Get page title to be printed 
 	 */
 	public function printPageTitle($pageTitle, $appName)
 	{
-		return trim($pageTitle .' - '. $appName, ' ');
+		return trim($pageTitle . ' - ' . $appName, ' ');
 	}
 
 	/**
@@ -1209,8 +1154,7 @@ class PicoEdu //NOSONAR
 
 		$stmt = $this->database->executeQuery($sql);
 
-		if(!$stmt->rowCount() > 0)
-		{
+		if (!$stmt->rowCount() > 0) {
 			$sql = "INSERT INTO `edu_subject` 
 			(`subject_id`, `name`, `sort_order`) VALUES
 			('$subject_id', '$subject', 0)";
@@ -1229,12 +1173,10 @@ class PicoEdu //NOSONAR
 		ORDER BY `sort_order` ASC, `name` ASC
 		";
 		$stmt = $this->database->executeQuery($sql);
-		if($stmt->rowCount() > 0)
-		{
+		if ($stmt->rowCount() > 0) {
 			$list = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 			$ret = array();
-			foreach($list as $val)
-			{
+			foreach ($list as $val) {
 				$ret[$val['name']] = $val['subject_id'];
 			}
 			return $ret;
@@ -1248,53 +1190,45 @@ class PicoEdu //NOSONAR
 	 */
 	public function getSearchQueryFromUrl()
 	{
-		return htmlspecialchars(rawurldecode((trim(@$_GET['q'])))); 
+		return htmlspecialchars(rawurldecode((trim(@$_GET['q']))));
 	}
 
-	
+
 	public function getWebsocketHost()
 	{
-		
-		$host = isset($_SERVER['HTTP_HOST'])?$_SERVER['HTTP_HOST']:$_SERVER['SERVER_NAME'];
-		if(stripos($host,":") !== false)
-		{
+
+		$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME'];
+		if (stripos($host, ":") !== false) {
 			$arr = explode(":", $host);
 			$host = $arr[0];
 		}
-		if($host == '::1')
-		{
+		if ($host == '::1') {
 			$host = '127.0.0.1'; // Many browser not support ::1
 		}
 		global $cfg;
-		return 'ws://'.$host.':'.$cfg->ws_port;		
+		return 'ws://' . $host . ':' . $cfg->ws_port;
 	}
 
 	public function selectOptionNumbering($selected = null)
 	{
 		global $cfg;
 		$numberring = $cfg->numbering;
-		foreach($numberring as $key=>$val)
-		{
-			while(count($numberring[$key]) > 4)
-			{
+		foreach ($numberring as $key => $val) {
+			while (count($numberring[$key]) > 4) {
 				array_pop($numberring[$key]);
 			}
 			$numberring[$key][] = "&#8230;";
 		}
 		$html = "";
 		$sel = "";
-		foreach($numberring as $key => $val)
-		{
+		foreach ($numberring as $key => $val) {
 			$label = implode(", ", $val);
-			if($selected != null && $selected == $key)
-			{
+			if ($selected != null && $selected == $key) {
 				$sel = \Pico\PicoConst::SELECT_OPTION_SELECTED;
-			}
-			else
-			{
+			} else {
 				$sel = "";
 			}
-			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$label</option>";
+			$html .= "\r\n\t\t<option value=\"" . $key . "\"$sel>$label</option>";
 		}
 		return $html;
 	}
@@ -1302,25 +1236,21 @@ class PicoEdu //NOSONAR
 	public function selectOptionAlertTime($selected = null)
 	{
 		$alertTimeArray = array(
-			'120'=>'2 menit',
-			'300'=>'5 menit',
-			'600'=>'10 menit',
-			'900'=>'15 menit'
+			'120' => '2 menit',
+			'300' => '5 menit',
+			'600' => '10 menit',
+			'900' => '15 menit'
 		);
-		
+
 		$html = "";
 		$sel = "";
-		foreach($alertTimeArray as $key => $val)
-		{
-			if($selected != null && $selected == $key)
-			{
+		foreach ($alertTimeArray as $key => $val) {
+			if ($selected != null && $selected == $key) {
 				$sel = \Pico\PicoConst::SELECT_OPTION_SELECTED;
-			}
-			else
-			{
+			} else {
 				$sel = "";
 			}
-			$html .= "\r\n\t\t<option value=\"".$key."\"$sel>$val</option>";
+			$html .= "\r\n\t\t<option value=\"" . $key . "\"$sel>$val</option>";
 		}
 		return $html;
 	}
@@ -1334,6 +1264,4 @@ class PicoEdu //NOSONAR
 	{
 		return basename($_SERVER['PHP_SELF']);
 	}
-
-	
 }

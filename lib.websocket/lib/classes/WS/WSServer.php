@@ -1,7 +1,9 @@
 <?php
+
 namespace WS;
 
-class WSServer implements \WS\WSInterface {
+class WSServer implements \WS\WSInterface
+{
 	protected $wsClients = array();
 	protected $wsDatabase;
 	private $host = '127.0.0.1';
@@ -51,9 +53,8 @@ class WSServer implements \WS\WSInterface {
 		$this->sessionSavePath = session_save_path();
 		$this->callbackObject = $callbackObject;
 		$this->callbackPostConstruct = $callbackPostConstruct;
-		
-		if($this->socketOk && !empty($messageOnStarted))
-		{
+
+		if ($this->socketOk && !empty($messageOnStarted)) {
 			echo $messageOnStarted;
 		}
 	}
@@ -91,10 +92,8 @@ class WSServer implements \WS\WSInterface {
 	protected function updateUserOnSystem()
 	{
 		$this->resetUserOnSystem();
-		foreach($this->wsClients as $client)
-		{
-			if(isset($client->getClientData()['username']))
-			{
+		foreach ($this->wsClients as $client) {
+			if (isset($client->getClientData()['username'])) {
 				$this->setUserOnSystem($client->getClientData()['username'], $client->getClientData());
 			}
 		}
@@ -105,37 +104,32 @@ class WSServer implements \WS\WSInterface {
 	 */
 	public function run() //NOSONAR
 	{
-		if($this->socketOk)
-		{
+		if ($this->socketOk) {
 			$index = 0;
 			$null = null; //null var
-			while ($this->running) 
-			{
+			while ($this->running) {
 				// manage multiple connections
 				$changed = $this->clientSockets;
 				// returns the socket resources in $changed array
-				if(@socket_select($changed, $null, $null, 0, 10000) < 1)
-				{
+				if (@socket_select($changed, $null, $null, 0, 10000) < 1) {
 					continue;
 				}
 				// check for new socket
-				if (in_array($this->masterSocket, $changed)) 
-				{
+				if (in_array($this->masterSocket, $changed)) {
 					$clientSocket = socket_accept($this->masterSocket); //accpet new socket
 					//stream_set_blocking($clientSocket, 0);
 					$header = socket_read($clientSocket, $this->maxHeaderSize); //read data sent by the socket
 					$header = trim($header, " \r\n ");
-					if(strlen($header) > 2 && stripos($header, 'Sec-WebSocket-Key') !== false)
-					{
+					if (strlen($header) > 2 && stripos($header, 'Sec-WebSocket-Key') !== false) {
 						$index++;
 						socket_getpeername($clientSocket, $remoteAddress, $remotePort); //get ip address of connected socket
 						$wsClient = new \WS\WSClient(
-							$index, 
-							$clientSocket, 
-							$header, 
-							new \WS\WSRemoteConnection($remoteAddress, $remotePort), 
-							new \WS\SessionParams($this->sessionCookieName, $this->sessionSavePath, $this->sessionFilePrefix), 
-							$this->callbackObject, 
+							$index,
+							$clientSocket,
+							$header,
+							new \WS\WSRemoteConnection($remoteAddress, $remotePort),
+							new \WS\WSSessionParams($this->sessionCookieName, $this->sessionSavePath, $this->sessionFilePrefix),
+							$this->callbackObject,
 							$this->callbackPostConstruct
 						);
 						$this->clientSockets[$index] = $clientSocket; //add socket to client array
@@ -143,67 +137,49 @@ class WSServer implements \WS\WSInterface {
 						$this->onOpen($wsClient);
 						$foundSocket = array_search($this->masterSocket, $changed);
 						unset($changed[$foundSocket]);
-					
 					}
 				}
-				if(is_array($changed))
-				{
+				if (is_array($changed)) {
 					//loop through all connected sockets
-					foreach ($changed as $index => $changeSocket) 
-					{
+					foreach ($changed as $index => $changeSocket) {
 						//check for any incomming data
-						
+
 						$buffer = '';
 						$buf1 = '';
 						$nread = 0;
-						do
-						{
-							$recv = @socket_recv($changeSocket, $buf1, $this->dataChunk, 0); 
-							if($recv > 1)
-							{
+						do {
+							$recv = @socket_recv($changeSocket, $buf1, $this->dataChunk, 0);
+							if ($recv > 1) {
 								$nread++;
 								$buffer .= $buf1;
-								if($recv < $this->dataChunk || $recv === false)
-								{
+								if ($recv < $this->dataChunk || $recv === false) {
 									break;
 								}
-							}
-							else
-							{
+							} else {
 								break;
 							}
-						}
-						while($recv > 0);
-							
-						if($nread > 0 && strlen($buffer) > 0)
-						{
-							socket_getpeername($changeSocket, $ip, $port); 
-							$decodedData = $this->hybi10Decode($buffer); 
-							if(isset($decodedData['type']))
-							{
-								if($decodedData['type'] == 'close')
-								{
+						} while ($recv > 0);
+
+						if ($nread > 0 && strlen($buffer) > 0) {
+							socket_getpeername($changeSocket, $ip, $port);
+							$decodedData = $this->hybi10Decode($buffer);
+							if (isset($decodedData['type'])) {
+								if ($decodedData['type'] == 'close') {
 									break;
-								}
-								else
-								{
+								} else {
 									$this->onMessage($this->wsClients[$index], $decodedData['payload']);
 									break;
 								}
-							}
-							else
-							{
+							} else {
 								break;
-							}						
+							}
 						}
 						$buf2 = @socket_read($changeSocket, $this->dataChunk, PHP_NORMAL_READ);
-						if ($buf2 === false) 
-						{ 
+						if ($buf2 === false) {
 							// check disconnected client
 							// remove client for $clientSockets array
 							$foundSocket = array_search($changeSocket, $this->clientSockets);
-							if(isset($this->wsClients[$foundSocket]))
-							{
+							if (isset($this->wsClients[$foundSocket])) {
 								$closeClient = $this->wsClients[$foundSocket];
 								unset($this->clientSockets[$foundSocket]);
 								unset($this->wsClients[$foundSocket]);
@@ -213,9 +189,7 @@ class WSServer implements \WS\WSInterface {
 					}
 				}
 			}
-		}
-		else
-		{
+		} else {
 			return false;
 		}
 		return true;
@@ -227,26 +201,18 @@ class WSServer implements \WS\WSInterface {
 	private function getFirstFrameHead($type)
 	{
 		$ffh = 0;
-		if($type == 'text')
-        {
+		if ($type == 'text') {
 			// first byte indicates FIN, Text-Frame (10000001):
 			$ffh = 129;
-		}
-        else if($type == 'close')
-		{
+		} else if ($type == 'close') {
 			// first byte indicates FIN, Close Frame(10001000):
 			$ffh = 136;
-        }
-
-        else if($type == 'ping')
-        {
+		} else if ($type == 'ping') {
 			// first byte indicates FIN, Ping frame (10001001):
 			$ffh = 137;
-		}
-        else if($type == 'pong')
-        {
-			 // first byte indicates FIN, Pong frame (10001010):
-			 $ffh = 138;
+		} else if ($type == 'pong') {
+			// first byte indicates FIN, Pong frame (10001010):
+			$ffh = 138;
 		}
 		return $ffh;
 	}
@@ -256,183 +222,151 @@ class WSServer implements \WS\WSInterface {
 	 */
 	private function getDataType($opcode)
 	{
-        $decodedDataType = '';    
-		if($opcode == 1){
+		$decodedDataType = '';
+		if ($opcode == 1) {
 			// text frame
 			$decodedDataType = 'text';
-		}
-		else if($opcode == 2){
+		} else if ($opcode == 2) {
 			// connection close frame
 			$decodedDataType = 'binary';
-		}
-		
-		else if($opcode == 8){
+		} else if ($opcode == 8) {
 			// connection close frame
 			$decodedDataType = 'close';
-		}
-		
-		else if($opcode == 9){
-				// ping frame
+		} else if ($opcode == 9) {
+			// ping frame
 			$decodedDataType = 'ping';
-		}
-		
-		else if($opcode == 10){
+		} else if ($opcode == 10) {
 			// pong frame
 			$decodedDataType = 'pong';
 		}
-        
-		return $decodedDataType;
 
+		return $decodedDataType;
 	}
 
-	 /**
-     * Encodes a frame/message according the the WebSocket protocol standard.     
-     * @param $payload
-     * @param $type
-     * @param $masked
-     * @throws \WS\WSException
-     * @return string
-     */
-    public function hybi10Encode($payload, $type = 'text', $masked = true) //NOSONAR
-    {
-        $frameHead = array();
-        $payloadLength = strlen($payload);
+	/**
+	 * Encodes a frame/message according the the WebSocket protocol standard.     
+	 * @param $payload
+	 * @param $type
+	 * @param $masked
+	 * @throws \WS\WSException
+	 * @return string
+	 */
+	public function hybi10Encode($payload, $type = 'text', $masked = true) //NOSONAR
+	{
+		$frameHead = array();
+		$payloadLength = strlen($payload);
 
-        $frameHead[0] = $this->getFirstFrameHead($type);
-        // set mask and payload length (using 1, 3 or 9 bytes)
-        if ($payloadLength > 65535) 
-        {
-            $payloadLengthBin = str_split(sprintf('%064b', $payloadLength), 8);
-            $frameHead[1] = ($masked === true) ? 255 : 127;
-            for ($i = 0; $i < 8; $i++) 
-            {
-                $frameHead[$i + 2] = bindec($payloadLengthBin[$i]);
-            }
-            // most significant bit MUST be 0 (close connection if frame too big)
-            if ($frameHead[2] > 127) 
-            {
-                throw new \WS\WSException('Invalid payload. Could not encode frame.');
-            }
-        } 
-		elseif ($payloadLength > 125) 
-        {
-            $payloadLengthBin = str_split(sprintf('%016b', $payloadLength), 8);
-            $frameHead[1] = ($masked === true) ? 254 : 126;
-            $frameHead[2] = bindec($payloadLengthBin[0]);
-            $frameHead[3] = bindec($payloadLengthBin[1]);
-        } 
-        else 
-        {
-            $frameHead[1] = ($masked === true) ? $payloadLength + 128 : $payloadLength;
-        }
+		$frameHead[0] = $this->getFirstFrameHead($type);
+		// set mask and payload length (using 1, 3 or 9 bytes)
+		if ($payloadLength > 65535) {
+			$payloadLengthBin = str_split(sprintf('%064b', $payloadLength), 8);
+			$frameHead[1] = ($masked === true) ? 255 : 127;
+			for ($i = 0; $i < 8; $i++) {
+				$frameHead[$i + 2] = bindec($payloadLengthBin[$i]);
+			}
+			// most significant bit MUST be 0 (close connection if frame too big)
+			if ($frameHead[2] > 127) {
+				throw new \WS\WSException('Invalid payload. Could not encode frame.');
+			}
+		} elseif ($payloadLength > 125) {
+			$payloadLengthBin = str_split(sprintf('%016b', $payloadLength), 8);
+			$frameHead[1] = ($masked === true) ? 254 : 126;
+			$frameHead[2] = bindec($payloadLengthBin[0]);
+			$frameHead[3] = bindec($payloadLengthBin[1]);
+		} else {
+			$frameHead[1] = ($masked === true) ? $payloadLength + 128 : $payloadLength;
+		}
 
-        // convert frame-head to string:
-        foreach (array_keys($frameHead) as $i) 
-        {
-            $frameHead[$i] = chr($frameHead[$i]);
-        }
-        if($masked === true) 
-        {
-            // generate a random mask:
-            $mask = array();
-            for ($i = 0; $i < 4; $i++) 
-            {
-                $mask[$i] = chr(rand(0, 255));
-            }
+		// convert frame-head to string:
+		foreach (array_keys($frameHead) as $i) {
+			$frameHead[$i] = chr($frameHead[$i]);
+		}
+		if ($masked === true) {
+			// generate a random mask:
+			$mask = array();
+			for ($i = 0; $i < 4; $i++) {
+				$mask[$i] = chr(rand(0, 255));
+			}
 
-            $frameHead = array_merge($frameHead, $mask);
-        }
-        $frame = implode('', $frameHead);
+			$frameHead = array_merge($frameHead, $mask);
+		}
+		$frame = implode('', $frameHead);
 
-        // append payload to frame:
-        for ($i = 0; $i < $payloadLength; $i++) 
-        {
-            $frame .= ($masked === true) ? $payload[$i] ^ $mask[$i % 4] : $payload[$i];
-        }
-        return $frame;
-    }
+		// append payload to frame:
+		for ($i = 0; $i < $payloadLength; $i++) {
+			$frame .= ($masked === true) ? $payload[$i] ^ $mask[$i % 4] : $payload[$i];
+		}
+		return $frame;
+	}
 
-    /**
-     * Decodes a frame/message according to the WebSocket protocol standard.
-     *
-     * @param $data
-     * @return array
-     */
-    public function hybi10Decode($data)
-    {
-        $unmaskedPayload = '';
-        $decodedData = array();
+	/**
+	 * Decodes a frame/message according to the WebSocket protocol standard.
+	 *
+	 * @param $data
+	 * @return array
+	 */
+	public function hybi10Decode($data)
+	{
+		$unmaskedPayload = '';
+		$decodedData = array();
 
-        // estimate frame type:
-        $firstByteBinary = sprintf('%08b', ord($data[0]));
-        $secondByteBinary = sprintf('%08b', ord($data[1]));
-        $opcode = bindec(substr($firstByteBinary, 4, 4));
-        $isMasked = ($secondByteBinary[0] == '1') ? true : false;
-        $payloadLength = ord($data[1]) & 127;
+		// estimate frame type:
+		$firstByteBinary = sprintf('%08b', ord($data[0]));
+		$secondByteBinary = sprintf('%08b', ord($data[1]));
+		$opcode = bindec(substr($firstByteBinary, 4, 4));
+		$isMasked = ($secondByteBinary[0] == '1') ? true : false;
+		$payloadLength = ord($data[1]) & 127;
 
-        // close connection if unmasked frame is received:
-        if ($isMasked === false) 
-        {
+		// close connection if unmasked frame is received:
+		if ($isMasked === false) {
 			// Do nothing
-        }
-        
+		}
+
 		$decodedData['type'] = $this->getDataType($opcode);
 
-        if ($payloadLength === 126) 
-        {
-            $mask = substr($data, 4, 4);
-            $payloadOffset = 8;
-            $dataLength = bindec(sprintf('%08b', ord($data[2])) . sprintf('%08b', ord($data[3]))) + $payloadOffset;
-        } 
-        elseif ($payloadLength === 127) 
-        {
-            $mask = substr($data, 10, 4);
-            $payloadOffset = 14;
-            $tmp = '';
-            for ($i = 0; $i < 8; $i++) 
-            {
-                $tmp .= sprintf('%08b', ord($data[$i + 2]));
-            }
-            $dataLength = bindec($tmp) + $payloadOffset;
-            unset($tmp);
-        } 
-        else 
-        {
-            $mask = substr($data, 2, 4);
-            $payloadOffset = 6;
-            $dataLength = $payloadLength + $payloadOffset;
-        }
+		if ($payloadLength === 126) {
+			$mask = substr($data, 4, 4);
+			$payloadOffset = 8;
+			$dataLength = bindec(sprintf('%08b', ord($data[2])) . sprintf('%08b', ord($data[3]))) + $payloadOffset;
+		} elseif ($payloadLength === 127) {
+			$mask = substr($data, 10, 4);
+			$payloadOffset = 14;
+			$tmp = '';
+			for ($i = 0; $i < 8; $i++) {
+				$tmp .= sprintf('%08b', ord($data[$i + 2]));
+			}
+			$dataLength = bindec($tmp) + $payloadOffset;
+			unset($tmp);
+		} else {
+			$mask = substr($data, 2, 4);
+			$payloadOffset = 6;
+			$dataLength = $payloadLength + $payloadOffset;
+		}
 
-        /**
-         * We have to check for large frames here. socket_recv cuts at 1024 bytes
-         * so if websocket-frame is > 1024 bytes we have to wait until whole
-         * data is transferd.
-         */
-        if (strlen($data) < $dataLength) 
-        {
-            return array();
-        }
+		/**
+		 * We have to check for large frames here. socket_recv cuts at 1024 bytes
+		 * so if websocket-frame is > 1024 bytes we have to wait until whole
+		 * data is transferd.
+		 */
+		if (strlen($data) < $dataLength) {
+			return array();
+		}
 
-        if ($isMasked === true) 
-        {
-            for ($i = $payloadOffset; $i < $dataLength; $i++) 
-            {
-                $j = $i - $payloadOffset;
-                if (isset($data[$i])) 
-                {
-                    $unmaskedPayload .= $data[$i] ^ $mask[$j % 4];
-                }
-            }
-            $decodedData['payload'] = $unmaskedPayload;
-        } 
-        else 
-        {
-            $payloadOffset = $payloadOffset - 4;
-            $decodedData['payload'] = substr($data, $payloadOffset);
-        }
+		if ($isMasked === true) {
+			for ($i = $payloadOffset; $i < $dataLength; $i++) {
+				$j = $i - $payloadOffset;
+				if (isset($data[$i])) {
+					$unmaskedPayload .= $data[$i] ^ $mask[$j % 4];
+				}
+			}
+			$decodedData['payload'] = $unmaskedPayload;
+		} else {
+			$payloadOffset = $payloadOffset - 4;
+			$decodedData['payload'] = substr($data, $payloadOffset);
+		}
 
-        return $decodedData;
-    }
+		return $decodedData;
+	}
 
 
 	/**
@@ -441,9 +375,8 @@ class WSServer implements \WS\WSInterface {
 	 */
 	public function onOpen($wsClient)
 	{
-		
 	}
-	
+
 	/**
 	 * Method when a new client is disconnected
 	 * @param $wsClient Chat client
@@ -476,14 +409,13 @@ class WSServer implements \WS\WSInterface {
 	 */
 	public function sendBroadcast($wsClient, $message, $receiverGroups = null, $meeToo = false)
 	{
-		foreach($this->wsClients as $client) 
-		{
-			if(
-				$meeToo 
-				|| $receiverGroups == null 
-				|| empty($receiverGroups) 
-				|| ($wsClient->getResourceId() != $client->getResourceId() && ($this->groupReceive($receiverGroups, $client->getGroupId()))))
-			{
+		foreach ($this->wsClients as $client) {
+			if (
+				$meeToo
+				|| $receiverGroups == null
+				|| empty($receiverGroups)
+				|| ($wsClient->getResourceId() != $client->getResourceId() && ($this->groupReceive($receiverGroups, $client->getGroupId())))
+			) {
 				$client->sendMessage($message);
 			}
 		}
@@ -498,10 +430,10 @@ class WSServer implements \WS\WSInterface {
 	 */
 	public function groupReceive($receiverGroups, $groupId)
 	{
-		return isset($receiverGroups) 
-		&& is_array($receiverGroups) 
-		&& isset($groupId) 
-		&& in_array($groupId, $receiverGroups);
+		return isset($receiverGroups)
+			&& is_array($receiverGroups)
+			&& isset($groupId)
+			&& in_array($groupId, $receiverGroups);
 	}
 
 	/**
@@ -513,16 +445,11 @@ class WSServer implements \WS\WSInterface {
 	 */
 	public function sendMessage($textMessage, $receiver)
 	{
-		foreach($this->wsClients as $client) 
-		{
+		foreach ($this->wsClients as $client) {
 			$clientData = $client->getClientData();
-			if(in_array($clientData['username'], $receiver))
-			{
+			if (in_array($clientData['username'], $receiver)) {
 				$client->sendMessage($textMessage);
 			}
 		}
 	}
 }
-
-
-

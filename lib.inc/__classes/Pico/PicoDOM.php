@@ -1,4 +1,5 @@
 <?php
+
 namespace Pico;
 
 class PicoDOM //NOSONAR
@@ -777,7 +778,7 @@ class PicoDOM //NOSONAR
                 $type = trim($arr2[0], "/;");
                 unset($arr);
                 $fn = md5($data);
-                
+
                 if (stripos($type, 'svg') !== false) {
                     $path = $directory . "/" . $fn . ".svg";
                     $filename = $prefix . "/" . $fn . ".svg";
@@ -798,7 +799,7 @@ class PicoDOM //NOSONAR
                         }
                         print_r($type);
                         switch ($type) {
-                            
+
                             case "png":
                                 $path = $directory . "/" . $fn . ".png";
                                 $filename = $prefix . "/" . $fn . ".png";

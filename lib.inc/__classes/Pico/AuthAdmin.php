@@ -1,4 +1,5 @@
 <?php
+
 namespace Pico;
 
 class AuthAdmin

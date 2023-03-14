@@ -1,11 +1,11 @@
 <?php
+
 namespace Pico;
 
 class PicoPagination
 {
-	const RAQUO = ' &raquo; ';
-	const AMPERSAND_OFFSET = '&offset=';
-
+    const RAQUO = ' &raquo; ';
+    const AMPERSAND_OFFSET = '&offset=';
     private $start = 0;
     private $end = 0;
     private $result = "";
@@ -13,7 +13,6 @@ class PicoPagination
     private $num_page = 3;
     private $total_record = 0;
     private $total_record_with_limit = 0;
-
     private $str_first = '&laquo;'; //NOSONAR
     private $str_last = '&raquo;'; //NOSONAR
     private $str_prev = '&lsaquo;'; //NOSONAR
@@ -28,16 +27,11 @@ class PicoPagination
     private $str_from = ' dari '; //NOSONAR
     private $str_to = ' hingga '; //NOSONAR
     private $str_of = ' dari '; //NOSONAR
-
     private $query = '';
     private $query_edit = '';
     private $offset = '';
-
     private $limit_sql = '';
-
-
     private $array_get = array();
-
     public function __construct()
     {
         $this->query = trim(kh_filter_input(INPUT_GET, "q", FILTER_SANITIZE_SPECIAL_CHARS));
@@ -45,7 +39,7 @@ class PicoPagination
         $this->query_edit = trim(htmlspecialchars($this->query_edit));
         $this->offset = kh_filter_input(INPUT_GET, "offset", FILTER_SANITIZE_NUMBER_UINT);
         $this->start = $this->offset + 1;
-        $this->limit_sql = " limit ".$this->offset.", ".$this->limit;
+        $this->limit_sql = " limit " . $this->offset . ", " . $this->limit;
     }
 
     public function getQuery()
@@ -91,9 +85,9 @@ class PicoPagination
 
     public function getResultInfo()
     {
-        return $this->str_record.$this->start.$this->str_to.$this->end.$this->str_of.$this->total_record;
+        return $this->str_record . $this->start . $this->str_to . $this->end . $this->str_of . $this->total_record;
     }
-    
+
     public function createPagination($module, $showfirstandlast = true) //NOSONAR
     {
         $totalrecord = $this->total_record;
@@ -183,33 +177,28 @@ class PicoPagination
         $result[$j]->text = $paginationObject->str_last;
         $result[$j]->ref = str_replace("?&", "?", $arg . self::AMPERSAND_OFFSET . $paginationObject->ref_last);
         $result[$j]->sel = false;
-       
+
         $this->result = $result;
     }
 
     public function buildHTML()
-	{
-		$str_result = "";
-		if(is_array($this->result))
-		{
-			$str_result .= '
+    {
+        $str_result = "";
+        if (is_array($this->result)) {
+            $str_result .= '
 			<nav aria-label="Page navigation example">
 			<ul class="pagination">';
-				foreach($this->result as $obj)
-			{
-				$cls = ($obj->sel)?" active":"";
-				$str_result .= '
-				<li class="page-item'.$cls.'"><a class="page-link" href="'.$obj->ref.'">'.$obj->text.'</a></li>';
-			}
-			$str_result .= '
+            foreach ($this->result as $obj) {
+                $cls = ($obj->sel) ? " active" : "";
+                $str_result .= '
+				<li class="page-item' . $cls . '"><a class="page-link" href="' . $obj->ref . '">' . $obj->text . '</a></li>';
+            }
+            $str_result .= '
 			</ul>
 			</nav>
 			';
-			return $str_result;
-		}
-		return "";
-	}
- 
-
-   
+            return $str_result;
+        }
+        return "";
+    }
 }

@@ -155,26 +155,6 @@ class Chat extends WSServer implements WSInterface {
 			{
 				$this->clearMessage($clientChat, $json_message); 
 			}
-			else if($command == 'video-call')
-			{
-				$this->videoCall($clientChat, $json_message); 
-			}
-			else if($command == 'voice-call')
-			{
-				$this->voiceCall($clientChat, $json_message); 
-			}
-			else if($command == 'on-call')
-			{
-				$this->onCall($clientChat, $json_message); 
-			}
-			else if($command == 'missed-call')
-			{
-				$this->missedCall($clientChat, $json_message); 
-			}
-			else if($command == 'reject-call')
-			{
-				$this->rejectCall($clientChat, $json_message); 
-			}
 			else if($command == 'client-call' || $command == 'client-accept' || $command == 'client-answer' || $command == 'client-offer' || $command == 'client-candidate')
 			{
 				$this->forwardWebRTCInfo($clientChat, $json_message); 
@@ -194,116 +174,7 @@ class Chat extends WSServer implements WSInterface {
 			}
 		}			
 	}
-	public function voiceCall($clientChat, $json_message)
-	{
-		$my_id = @$clientChat->getClientData()['username'];
-		$sender_id = $clientChat->getClientData()['username'];
-		$sender_name = $clientChat->getClientData()['full_name'];
-		
-		$receiver = $json_message['data'][0]['receiver_id'];
-		$receiver_name = @$this->userOnSystem[$receiver]['full_name'];
-
-		$json_message['data'][0]['partner_id'] = $sender_id;
-		$json_message['data'][0]['partner_name'] = $clientChat->getClientData()['full_name'];
-		$json_message['data'][0]['partner_uri'] = $clientChat->getClientData()['username'];
-		$json_message['data'][0]['avatar'] = $clientChat->getClientData()['avatar'];
-		
-		foreach($this->wsClients as $client)
-		{
-			if($client->getClientData()['username'] == $receiver)
-			{
-				$client->send(json_encode($json_message));
-			}
-		}
-	}
-	public function videoCall($clientChat, $json_message)
-	{
-		$my_id = @$clientChat->getClientData()['username'];
-		$sender_id = $clientChat->getClientData()['username'];
-		$sender_name = $clientChat->getClientData()['full_name'];
-		
-		$receiver = $json_message['data'][0]['receiver_id'];
-		$receiver_name = @$this->userOnSystem[$receiver]['full_name'];
-
-		$json_message['data'][0]['partner_id'] = $sender_id;
-		$json_message['data'][0]['partner_name'] = $clientChat->getClientData()['full_name'];
-		$json_message['data'][0]['partner_uri'] = $clientChat->getClientData()['username'];
-		$json_message['data'][0]['avatar'] = $clientChat->getClientData()['avatar'];
-		
-		foreach($this->wsClients as $client)
-		{
-			if($client->getClientData()['username'] == $receiver)
-			{
-				$client->send(json_encode($json_message));
-			}
-		}
-	}
-	public function onCall($clientChat, $json_message)
-	{
-		$my_id = @$clientChat->getClientData()['username'];
-		$sender_id = $clientChat->getClientData()['username'];
-		$sender_name = $clientChat->getClientData()['full_name'];
-		
-		$receiver = $json_message['data'][0]['receiver_id'];
-		$receiver_name = @$this->userOnSystem[$receiver]['full_name'];
-
-		$json_message['data'][0]['partner_id'] = $sender_id;
-		$json_message['data'][0]['partner_name'] = $clientChat->getClientData()['full_name'];
-		$json_message['data'][0]['partner_uri'] = $clientChat->getClientData()['username'];
-		$json_message['data'][0]['avatar'] = $clientChat->getClientData()['avatar'];
-		
-		foreach($this->wsClients as $client)
-		{
-			if($client->getClientData()['username'] == $receiver || $client->getClientData()['username'] == $sender_id)
-			{
-				$client->send(json_encode($json_message));
-			}
-		}
-	}
-	public function missedCall($clientChat, $json_message)
-	{
-		$my_id = @$clientChat->getClientData()['username'];
-		$sender_id = $clientChat->getClientData()['username'];
-		$sender_name = $clientChat->getClientData()['full_name'];
-		
-		$receiver = $json_message['data'][0]['receiver_id'];
-		$receiver_name = @$this->userOnSystem[$receiver]['full_name'];
-
-		$json_message['data'][0]['partner_id'] = $sender_id;
-		$json_message['data'][0]['partner_name'] = $clientChat->getClientData()['full_name'];
-		$json_message['data'][0]['partner_uri'] = $clientChat->getClientData()['username'];
-		$json_message['data'][0]['avatar'] = $clientChat->getClientData()['avatar'];
-		
-		foreach($this->wsClients as $client)
-		{
-			if($client->getClientData()['username'] == $receiver || $client->getClientData()['username'] == $sender_id)
-			{
-				$client->send(json_encode($json_message));
-			}
-		}
-	}
-	public function rejectCall($clientChat, $json_message)
-	{
-		$my_id = @$clientChat->getClientData()['username'];
-		$sender_id = $clientChat->getClientData()['username'];
-		$sender_name = $clientChat->getClientData()['full_name'];
-		
-		$receiver = $json_message['data'][0]['receiver_id'];
-		$receiver_name = @$this->userOnSystem[$receiver]['full_name'];
-
-		$json_message['data'][0]['partner_id'] = $sender_id;
-		$json_message['data'][0]['partner_name'] = $clientChat->getClientData()['full_name'];
-		$json_message['data'][0]['partner_uri'] = $clientChat->getClientData()['username'];
-		$json_message['data'][0]['avatar'] = $clientChat->getClientData()['avatar'];
-		
-		foreach($this->wsClients as $client)
-		{
-			if($client->getClientData()['username'] == $receiver || $client->getClientData()['username'] == $sender_id)
-			{
-				$client->send(json_encode($json_message));
-			}
-		}
-	}
+	
 	public function loadMessage($clientChat, $json_message)
 	{
 		// TODO Add your code

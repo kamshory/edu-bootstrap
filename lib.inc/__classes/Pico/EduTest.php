@@ -1,4 +1,5 @@
 <?php
+
 namespace Pico;
 
 class EduTest
@@ -47,5 +48,4 @@ class EduTest
     public $ip_create = '';
     public $ip_edit = '';
     public $active = false;
-    
 }

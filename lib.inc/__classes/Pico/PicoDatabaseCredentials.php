@@ -1,4 +1,5 @@
 <?php
+
 namespace Pico;
 
 class PicoDatabaseCredentials
@@ -23,34 +24,27 @@ class PicoDatabaseCredentials
 	 */
 	public function __construct($driver = null, $host = null, $port = 0, $username = null, $password = null, $databaseName = null, $timeZone = null)
 	{
-		if($driver != null)
-		{
+		if ($driver != null) {
 			$this->driver = $driver;
 		}
-		if($host != null)
-		{
+		if ($host != null) {
 			$this->host = $host;
 		}
-		if($port != 0)
-		{
+		if ($port != 0) {
 			$this->port = $port;
 		}
-		if($username != null)
-		{
+		if ($username != null) {
 			$this->username = $username;
 		}
-		if($password != null)
-		{
+		if ($password != null) {
 			$this->password = $password;
 		}
-		if($databaseName != null)
-		{
+		if ($databaseName != null) {
 			$this->databaseName = $databaseName;
 		}
-		if($timeZone != null)
-		{
+		if ($timeZone != null) {
 			$this->timeZone = $timeZone;
-		}	
+		}
 	}
 
 	/**
@@ -61,11 +55,9 @@ class PicoDatabaseCredentials
 	public function load($path)
 	{
 		$obj = parse_ini_file($path);
-		if($obj['timezone_system'])
-		{
+		if ($obj['timezone_system']) {
 			$timeZone = ini_get('date.timezone');
-			if(!empty($timeZone))
-			{
+			if (!empty($timeZone)) {
 				$obj['timezone'] = $timeZone;
 			}
 		}
@@ -75,7 +67,7 @@ class PicoDatabaseCredentials
 		$this->username = $obj['username'];
 		$this->password = $obj['password'];
 		$this->databaseName = $obj['database_name'];
-		$this->timeZone = $obj['timezone'];	
+		$this->timeZone = $obj['timezone'];
 		return $this;
 	}
 
@@ -105,7 +97,7 @@ class PicoDatabaseCredentials
 
 	/**
 	 * Get the value of username
-	 */ 
+	 */
 	public function getUsername()
 	{
 		return $this->username;
@@ -113,7 +105,7 @@ class PicoDatabaseCredentials
 
 	/**
 	 * Get the value of password
-	 */ 
+	 */
 	public function getPassword()
 	{
 		return $this->password;
@@ -121,17 +113,15 @@ class PicoDatabaseCredentials
 
 	/**
 	 * Get the value of databaseName
-	 */ 
+	 */
 	public function getDatabaseName()
 	{
 		return $this->databaseName;
 	}
 
-	
-
 	/**
 	 * Get the value of timeZone
-	 */ 
+	 */
 	public function getTimeZone()
 	{
 		return $this->timeZone;

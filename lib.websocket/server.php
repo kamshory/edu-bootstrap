@@ -9,7 +9,7 @@ require_once dirname(dirname(__FILE__))."/lib.config/ws-cfg.php"; //NOSONAR
 $wsDatabaseCredentials = new \Pico\PicoDatabaseCredentials();
 $wsDatabaseCredentials->load($dbConfig);
 
-$app = new \WS\SessionParser();
+$app = new \WS\WSSessionParser();
 $wsDatabase = new \WS\WSDatabase(
     $wsDatabaseCredentials->getDriver(), 
     $wsDatabaseCredentials->getHost(), 
@@ -26,6 +26,6 @@ $wss = new \WS\WSTestService(
     $wsConfig->ws_port, 
     $app, 
     'postConstructClient', 
-    "Message started on port ".$wsConfig->ws_port."\r\n"
+    "WSServer started on port ".$wsConfig->ws_port."\r\n"
 );
 $ret = $wss->run();

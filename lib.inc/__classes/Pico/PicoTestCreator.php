@@ -1,4 +1,5 @@
 <?php
+
 namespace Pico;
 
 class PicoTestCreator
@@ -13,7 +14,7 @@ class PicoTestCreator
         $sort_order = 0;
         $index = 0;
         $answer_key = '';
-    
+
         $answer = array(
             'upper-alpha' => array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'),
             'lower-alpha' => array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'),
@@ -22,7 +23,7 @@ class PicoTestCreator
             'decimal' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
             'decimal-leading-zero' => array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')
         );
-    
+
         foreach ($test_data->item as $question) {
             // petanyaan
             $text_pertanyaan = trim(@$question->question->text);
@@ -40,7 +41,7 @@ class PicoTestCreator
                 }
             }
             $pertanyaan = $text_pertanyaan;
-    
+
             if (count(@$question->answer->option) > 0) {
                 $options = array();
                 $answer_key = '';
@@ -58,7 +59,7 @@ class PicoTestCreator
                         }
                     }
                     $option = \Pico\PicoDOM::removeParagraphTag($text_option);
-    
+
                     $sort_order = ((int) $index_option) + 1;
                     if ($score > 0) {
                         if ($answer_key == '') {
@@ -107,7 +108,7 @@ class PicoTestCreator
                 }
             }
             $pertanyaan = $text_pertanyaan;
-    
+
             if (count(@$question->answer->option) > 0) {
                 $options = array();
                 foreach ($question->answer->option as $index_option => $option) {
@@ -123,7 +124,7 @@ class PicoTestCreator
                         }
                     }
                     $option = $text_option;
-        
+
                     $sort_order = ((int)$index_option) + 1;
                     if ($score > 0) {
                         $cs = ' option-circle-selected';
@@ -141,7 +142,7 @@ class PicoTestCreator
             $text_all = str_replace(' src="' . $name . '"', ' src="data:' . $data['type'] . ';' . $data['encoding'] . ',' . $data['data'] . '"', $text_all);
         }
         return $text_all;
-    }   
+    }
     public function replaceImageData($html, $base_dir) //NOSONAR
     {
         global $cfg;
@@ -166,7 +167,7 @@ class PicoTestCreator
             if ($skip) {
                 continue;
             }
-    
+
             if (stripos($src, "data:") === 0) //NOSONAR
             {
                 $arr = explode(",", $src, 2);
@@ -193,7 +194,7 @@ class PicoTestCreator
                     curl_close($ch);
                 }
                 $hash = substr(md5($src), 0, 6) . "_";
-    
+
                 if (stripos($src, "?", 0) !== false) {
                     $bn = explode("?", $src);
                     $src = $bn[0];
@@ -202,39 +203,39 @@ class PicoTestCreator
                     $bn = explode("#", $src);
                     $src = $bn[0];
                 }
-    
+
                 $base_name = $hash . basename($src);
                 $ext = pathinfo($src, PATHINFO_EXTENSION);
-    
+
                 $image->setAttribute('src', $base_name);
-    
+
                 switch ($ext) {
                     case 'gif':
                         $content_type = "image/gif"; //NOSONAR
                         break;
-    
+
                     case 'png':
                         $content_type = "image/png"; //NOSONAR
                         break;
-    
+
                     case 'jpeg':
                     case 'jpg':
                         $content_type = "image/jpeg"; //NOSONAR
                         break;
-    
+
                     default:
                         $content_type = "image/jpeg"; //NOSONAR
                 }
             }
             unset($obj);
-            $obj = new \stdClass();  
+            $obj = new \stdClass();
             $obj->name = $base_name;
             $obj->type = $content_type;
             $obj->encoding = 'base64';
-            $obj->data = base64_encode($data);   
+            $obj->data = base64_encode($data);
             $files[] = $obj;
         }
-    
+
         $dom->encoding = "utf-8";
         $data = $dom->saveHTML();
         $data = utf8ToEntities($data);
@@ -242,11 +243,11 @@ class PicoTestCreator
             $data = \Pico\PicoDOM::getDataInTag($data, 'body');
         } else if (stripos($data, '<head') !== false) {
             $data = \Pico\PicoDOM::getDataInTag($data, 'head');
-        }  
+        }
         unset($obj);
-        $obj = new \stdClass();  
+        $obj = new \stdClass();
         $obj->html = $data;
-        $obj->files = $files;  
+        $obj->files = $files;
         return $obj;
     }
     public function extractImage($html, $base_dir) //NOSONAR
@@ -298,7 +299,7 @@ class PicoTestCreator
                     curl_close($ch);
                 }
                 $hash = substr(md5($src), 0, 6) . "_";
-    
+
                 if (stripos($src, "?", 0) !== false) {
                     $bn = explode("?", $src);
                     $src = $bn[0];
@@ -307,39 +308,39 @@ class PicoTestCreator
                     $bn = explode("#", $src);
                     $src = $bn[0];
                 }
-    
+
                 $base_name = $hash . basename($src);
                 $ext = pathinfo($src, PATHINFO_EXTENSION);
-    
+
                 $image->setAttribute('src', $base_name);
-    
+
                 switch ($ext) {
                     case 'gif':
                         $content_type = "image/gif";
                         break;
-    
+
                     case 'png':
                         $content_type = "image/png";
                         break;
-    
+
                     case 'jpeg':
                     case 'jpg':
                         $content_type = "image/jpeg";
                         break;
-    
+
                     default:
                         $content_type = "image/jpeg";
                 }
             }
             unset($obj);
-            $obj = new \stdClass();   
+            $obj = new \stdClass();
             $obj->name = $base_name;
             $obj->type = $content_type;
             $obj->encoding = 'base64';
             $obj->data = base64_encode($data);
             $files[] = $obj;
         }
-    
+
         $audios = $dom->getElementsByTagName('audio');
         $obj = new \stdClass();
         foreach ($audios as $audio) {
@@ -354,8 +355,8 @@ class PicoTestCreator
             }
             if ($skip) {
                 continue;
-            }  
-    
+            }
+
             if (stripos($src, "data:") === 0) {
                 $arr = explode(",", $src, 2);
                 $arr2 = explode(";", $arr[0]);
@@ -382,7 +383,7 @@ class PicoTestCreator
                     curl_close($ch);
                 }
                 $hash = substr(md5($src), 0, 6) . "_";
-    
+
                 if (stripos($src, "?", 0) !== false) {
                     $bn = explode("?", $src);
                     $src = $bn[0];
@@ -391,48 +392,48 @@ class PicoTestCreator
                     $bn = explode("#", $src);
                     $src = $bn[0];
                 }
-    
+
                 $base_name = $hash . basename($src);
                 $ext = pathinfo($src, PATHINFO_EXTENSION);
-    
+
                 $audio->setAttribute('src', $base_name);
-    
+
                 switch ($ext) {
                     case 'ogg':
                         $content_type = "audio/ogg";
                         break;
-    
+
                     case 'mp4':
                         $content_type = "audio/mp4";
                         break;
-    
+
                     case 'mp3':
                         $content_type = "audio/mp3";
                         break;
-    
+
                     case 'mpeg':
                         $content_type = "audio/mpeg";
                         break;
-    
+
                     case 'wav':
                         $content_type = "audio/wav";
                         break;
-    
+
                     default:
                         $content_type = "audio/mp3";
                 }
             }
             unset($obj);
             $obj = new \stdClass();
-    
+
             $obj->name = $base_name;
             $obj->type = $content_type;
             $obj->encoding = 'base64';
             $obj->data = base64_encode($data);
-    
+
             $files[] = $obj;
         }
-    
+
         $dom->encoding = "utf-8";
         $data = $dom->saveHTML();
         $data = utf8ToEntities($data);
@@ -441,13 +442,13 @@ class PicoTestCreator
         } else if (stripos($data, '<head') !== false) {
             $data = \Pico\PicoDOM::getDataInTag($data, 'head');
         }
-    
+
         unset($obj);
         $obj = new \stdClass();
-    
+
         $obj->html = $data;
         $obj->files = $files;
-    
+
         return $obj;
     }
 
@@ -461,7 +462,7 @@ class PicoTestCreator
         $numbering = $data['numbering'];
         $random = ((int) $data['random']);
         $competence = trim($data['basic_competence']);
-    
+
         $html_question = "";
         $html_option = "";
         $file1 = "";
@@ -470,7 +471,7 @@ class PicoTestCreator
             $parsed_data = $this->extractImage($content, $base_dir);
             $files = $parsed_data->files;
             $content = htmlspecialchars($parsed_data->html);
-    
+
             if (count($files) > 0) {
                 foreach ($files as $val) {
                     if (!in_array($val->name, $arr_files)) {
@@ -486,7 +487,7 @@ class PicoTestCreator
                 }
             }
         }
-    
+
         $html_question = "
         <question>
         <text>" . ($content) . "</text>
@@ -495,8 +496,8 @@ class PicoTestCreator
         <competence>$competence</competence>
         $file1
         </question>\r\n";
-    
-    
+
+
         $sql = "SELECT * FROM `edu_option` WHERE `question_id` = '$question_id' ORDER BY `sort_order` ASC ";
         $stmt = $database->executeQuery($sql);
         $html_option .= "
@@ -507,7 +508,7 @@ class PicoTestCreator
             foreach ($rows as $data) {
                 $content = $data['content'];
                 $score = $data['score'] * 1;
-    
+
                 $file2 = "";
                 if ($content != '') {
                     $parsed_data = $this->extractImage($content, $base_dir);
@@ -539,10 +540,10 @@ class PicoTestCreator
         }
         $html_option .= "
             </answer>\r\n";
-    
+
         return $html_question . $html_option;
     }
-    
+
     public function exportTest($database, $test_id, $base_dir = "")
     {
         $html = "<" . "?xml version=\"1.0\" encoding=\"utf-8\"?" . ">
@@ -608,12 +609,10 @@ class PicoTestCreator
             'decimal' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
             'decimal-leading-zero' => array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')
         );
-        foreach($numberingList as $type)
-        {
+        foreach ($numberingList as $type) {
             $arrType = array();
             $lastLine = -1;
-            foreach($lines as $key2=>$line)
-            {
+            foreach ($lines as $key2 => $line) {
                 if (stripos($line, ".") !== false) {
                     $arr = explode('.', trim($line), 2);
                     $tp = trim($arr[0]);
@@ -623,8 +622,7 @@ class PicoTestCreator
                 }
             }
             $numbering = $this->matchNumberingType($arrType, $numberingList);
-            if($numbering !== false)
-            {
+            if ($numbering !== false) {
                 return $numbering;
             }
         }
@@ -632,8 +630,7 @@ class PicoTestCreator
     }
     public function matchNumberingType($arrType, $numberingList)
     {
-        foreach($numberingList as $key1=>$type)
-        {
+        foreach ($numberingList as $key1 => $type) {
             if (count($arrType) > 1 && $type[0] == $arrType[0] && $type[1] == $arrType[1]) {
                 return $key1;
             }
@@ -647,7 +644,7 @@ class PicoTestCreator
         $question_text = "";
         $question = str_replace("\\\\\r\n", "<br />", $question); //NOSONAR
         $lines = explode("\r\n", $question);
-        
+
         $question_text = $lines[0];
         $numbering_type = false;
         $result = array();
@@ -663,9 +660,9 @@ class PicoTestCreator
                     $tmp = explode(".", $lines[$i], 2);
                     $opt = trim($tmp[0], $whiteSpaceTrimmer);
                     if ($this->optionMatch($opt, $numbering_type) > -1) {
-                        $texx = $tmp[1];					
+                        $texx = $tmp[1];
                         $options[] = array(
-                            'text' => trim($texx, $whiteSpaceTrimmer), 
+                            'text' => trim($texx, $whiteSpaceTrimmer),
                             'value' => 0,
                             'score' => 0
                         );
@@ -707,9 +704,9 @@ class PicoTestCreator
                         $opt = trim($tmp[0], $whiteSpaceTrimmer);
                         if ($this->optionMatch($opt, $numbering_type) > -1) {
                             $texx = $tmp[1];
-                            
+
                             $options[] = array(
-                                'text' > trim($texx, $whiteSpaceTrimmer), 
+                                'text' > trim($texx, $whiteSpaceTrimmer),
                                 'value' => 0,
                                 'score' => 0
                             );
@@ -720,9 +717,9 @@ class PicoTestCreator
                         $tmp = explode(".", $lines[$lineslength - 1], 2);
                         $opt = trim($tmp[0], $whiteSpaceTrimmer);
                         if ($this->optionMatch($opt, $numbering_type) > -1) {
-                            $texx = $tmp[1];						
+                            $texx = $tmp[1];
                             $options[] = array(
-                                'text' => trim($texx, $whiteSpaceTrimmer), 
+                                'text' => trim($texx, $whiteSpaceTrimmer),
                                 'value' => 0,
                                 'score' => 0
                             );
@@ -772,22 +769,21 @@ class PicoTestCreator
     {
         $nPipe = count(explode('|', $lineContent)) - 1;
         $x1 = preg_replace("/[^-\|]/", '', $lineContent);
-        $x2 = preg_replace("/[^-\|]/", '', $lineContent)."\\";
+        $x2 = preg_replace("/[^-\|]/", '', $lineContent) . "\\";
         $x4 = preg_replace("/\s/", '', $lineContent);
 
-        $hasPipeAndDash = 
-        ($x1 == $x4 && strlen($x4) > 1)
-        || 
-        ($x2 == $x4 && strlen($x4) > 1)
-        ;
+        $hasPipeAndDash =
+            ($x1 == $x4 && strlen($x4) > 1)
+            ||
+            ($x2 == $x4 && strlen($x4) > 1);
         return array(
-            'lineNumber'=> ((int) $lineNumber), 
-            'content'=> $lineContent, 
-            'pipe'=> $nPipe, 
-            'pipeDash'=> $hasPipeAndDash, 
-            'startTable'=>false, 
-            'inTable'=>false, 
-            'endTable'=>false
+            'lineNumber' => ((int) $lineNumber),
+            'content' => $lineContent,
+            'pipe' => $nPipe,
+            'pipeDash' => $hasPipeAndDash,
+            'startTable' => false,
+            'inTable' => false,
+            'endTable' => false
         );
     }
 
@@ -797,77 +793,60 @@ class PicoTestCreator
         $arr = explode("<br />", $html2);
         $arr2 = explode("<br />", $html2);
         $lineObj = array();
-        foreach($arr as $i=>$val)
-        {
+        foreach ($arr as $i => $val) {
             $arr2[$i] = trim($val);
             $lineObj[$i] = $this->createLineObject($i, $arr2[$i]);
         }
         $inTable = false;
         $tableObj = array();
         $j = 0;
-        for($i = 1; $i<count($lineObj); $i++)
-        {
-            if($lineObj[$i]['pipeDash'] && $lineObj[$i-1]['pipe'] > 0)
-            {
+        for ($i = 1; $i < count($lineObj); $i++) {
+            if ($lineObj[$i]['pipeDash'] && $lineObj[$i - 1]['pipe'] > 0) {
                 $inTable = true;
                 $lineObj[$i]['inTable'] = true;
-                $lineObj[$i-1]['startTable'] = true;
+                $lineObj[$i - 1]['startTable'] = true;
                 $tableObj[$j] = array();
-                $tableObj[$j][] = $lineObj[$i-1]; 
-                $tableObj[$j][] = $lineObj[$i]; 
+                $tableObj[$j][] = $lineObj[$i - 1];
+                $tableObj[$j][] = $lineObj[$i];
             }
-            if($inTable && !$lineObj[$i]['pipeDash'] && $lineObj[$i]['pipe'] > 0)
-            {
+            if ($inTable && !$lineObj[$i]['pipeDash'] && $lineObj[$i]['pipe'] > 0) {
                 $lineObj[$i]['inTable'] = true;
                 $lineObj[$i]['startTable'] = false;
-                if($i == count($lineObj) - 1)
-                {
+                if ($i == count($lineObj) - 1) {
                     $lineObj[$i]['endTable'] = true;
                 }
                 $tableObj[$j][] = $lineObj[$i];
             }
-            if($inTable && $lineObj[$i]['pipe'] == 0)
-            {
+            if ($inTable && $lineObj[$i]['pipe'] == 0) {
                 $inTable = false;
-                $lineObj[$i-1]['endTable'] = true;
-                $lineObj[$i-1]['startTable'] = false;
-                $tableObj[$j][$i-2]['endTable'] = true;
-                $tableObj[$j][$i-2]['startTable'] = false;
-                $tableObj[$j][$i-2]['lineNumber'] = $lineObj[$i-1]['lineNumber'];
-                $tableObj[$j][$i-2]['inTable'] = $lineObj[$i-1]['inTable'];
-                $tableObj[$j][$i-2]['pipeDash'] = $lineObj[$i-1]['pipeDash'];
-                $tableObj[$j][$i-2]['content'] = $lineObj[$i-1]['content'];
+                $lineObj[$i - 1]['endTable'] = true;
+                $lineObj[$i - 1]['startTable'] = false;
+                $tableObj[$j][$i - 2]['endTable'] = true;
+                $tableObj[$j][$i - 2]['startTable'] = false;
+                $tableObj[$j][$i - 2]['lineNumber'] = $lineObj[$i - 1]['lineNumber'];
+                $tableObj[$j][$i - 2]['inTable'] = $lineObj[$i - 1]['inTable'];
+                $tableObj[$j][$i - 2]['pipeDash'] = $lineObj[$i - 1]['pipeDash'];
+                $tableObj[$j][$i - 2]['content'] = $lineObj[$i - 1]['content'];
                 $j++;
             }
         }
 
-        foreach($arr as $i=>$val)
-        {
+        foreach ($arr as $i => $val) {
             $arr[$i] = $val . "<br />";
         }
 
-        foreach($tableObj as $j=>$val)
-        {
+        foreach ($tableObj as $j => $val) {
             $tab = $val;
-            foreach($tab as $i=>$val2)
-            {
+            foreach ($tab as $i => $val2) {
                 $content = '';
-                if($tab[$i]['startTable'])
-                {
+                if ($tab[$i]['startTable']) {
                     $content = $this->createTableHeader($tab[$i]['content']);
-                }
-                else if($tab[$i]['inTable'])
-                {
-                    if($tab[$i]['pipeDash'])
-                    {
+                } else if ($tab[$i]['inTable']) {
+                    if ($tab[$i]['pipeDash']) {
                         $content = '';
-                    }
-                    else if($tab[$i]['endTable'])
-                    {
-                        $content = $this->createTableContent($tab[$i]['content']).'</tbody></table>';
-                    }
-                    else 
-                    {
+                    } else if ($tab[$i]['endTable']) {
+                        $content = $this->createTableContent($tab[$i]['content']) . '</tbody></table>';
+                    } else {
                         $content = $this->createTableContent($tab[$i]['content']);
                     }
                 }
@@ -883,19 +862,16 @@ class PicoTestCreator
         $arr = explode('|', $input);
 
         $content = '<table border="1"><thead><tr>';
-        for($i = 0; $i < count($arr); $i++)
-        {
-            if(
-                ($i == 0 && $arr[$i] != '') 
-                || 
-                ($i == count($arr) -1 && $arr[$i] != '' && $arr[$i] != '\\') 
-                || 
+        for ($i = 0; $i < count($arr); $i++) {
+            if (
+                ($i == 0 && $arr[$i] != '')
+                ||
+                ($i == count($arr) - 1 && $arr[$i] != '' && $arr[$i] != '\\')
+                ||
                 $arr[$i] != ''
-                )
-            {
+            ) {
                 // start with |
-                if($i == count($arr) -1 && trim($arr[$i]) == '\\')
-                {
+                if ($i == count($arr) - 1 && trim($arr[$i]) == '\\') {
                     // Do nothing
                 } else {
                     $content .= '<td>' . $arr[$i] . '</td>';
@@ -910,18 +886,15 @@ class PicoTestCreator
         $input = trim($input);
         $arr = explode('|', $input);
         $content = '<tr>';
-        for($i = 0; $i < count($arr); $i++)
-        {
-            if(
-                ($i == 0 && $arr[$i] != '') 
-                || 
-                ($i == count($arr) -1 && trim($arr[$i]) != '' && trim($arr[$i]) != '\\') 
-                || 
+        for ($i = 0; $i < count($arr); $i++) {
+            if (
+                ($i == 0 && $arr[$i] != '')
+                ||
+                ($i == count($arr) - 1 && trim($arr[$i]) != '' && trim($arr[$i]) != '\\')
+                ||
                 $arr[$i] != ''
-                )
-            {
-                if($i == count($arr) -1 && trim($arr[$i]) == '\\')
-                {
+            ) {
+                if ($i == count($arr) - 1 && trim($arr[$i]) == '\\') {
                     // Do nothing
                 } else {
                     $content .= '<td>' . $arr[$i] . '</td>';
@@ -934,11 +907,9 @@ class PicoTestCreator
 
     public function customRTrim($line, $sub)
     {
-        if(stripos($line, $sub) !== false && substr($line, strlen($line) - count($sub)) == $sub)
-        {
+        if (stripos($line, $sub) !== false && substr($line, strlen($line) - count($sub)) == $sub) {
             return substr($line, 0, strlen($line) - strlen($sub));
         }
         return $line;
     }
-    
 }

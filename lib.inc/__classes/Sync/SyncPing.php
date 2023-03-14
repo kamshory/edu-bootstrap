@@ -1,4 +1,5 @@
 <?php
+
 namespace Sync;
 
 class SyncPing extends \Sync\SyncMaster
@@ -19,12 +20,12 @@ class SyncPing extends \Sync\SyncMaster
     public function ping($fileSyncUrl, $username, $password) //NOSONAR
     {
         $httpQuery = array(
-            'action'=>'ping'
+            'action' => 'ping'
         );
         $fileSyncUrl = $this->buildURL($fileSyncUrl, $httpQuery);
 
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_USERPWD, $username.":".$password);
+        curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
         curl_setopt($ch, CURLOPT_URL, $fileSyncUrl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, 1);
@@ -33,39 +34,33 @@ class SyncPing extends \Sync\SyncMaster
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
-        if($httpcode == 200)
-        {
-            try
-            {
+        if ($httpcode == 200) {
+            try {
                 $response = json_decode($server_output, true);
                 if ($response === null && json_last_error() !== JSON_ERROR_NONE) {
                     $response = array(
-                        'response_code'=>'02',
-                        'response_text'=>'Respon tidak sesuai spesifikasi'
+                        'response_code' => '02',
+                        'response_text' => 'Respon tidak sesuai spesifikasi'
                     );
                 }
-            }
-            catch(\Exception $e)
-            {
+            } catch (\Exception $e) {
                 $response = array(
-                    'response_code'=>'02',
-                    'response_text'=>'Respon tidak sesuai spesifikasi'
+                    'response_code' => '02',
+                    'response_text' => 'Respon tidak sesuai spesifikasi'
                 );
             }
             return $response;
-        }
-        else
-        {
+        } else {
             return array(
-                'response_code'=>'01',
-                'response_text'=>'Server tidak ditemukan'
+                'response_code' => '01',
+                'response_text' => 'Server tidak ditemukan'
             );
         }
     }
 
     /**
      * Get the value of application
-     */ 
+     */
     public function getApplication()
     {
         return $this->application;

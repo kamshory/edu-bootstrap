@@ -1,7 +1,8 @@
 <?php
+
 namespace WS;
 
-class SessionParams
+class WSSessionParams
 {
     /**
      * Session cookie name
@@ -17,9 +18,9 @@ class SessionParams
      * Session file prefix
      */
     private $sessionFilePrefix = 'sess_';
-    
+
     /**
-     * Constructor of \WS\SessionParams
+     * Constructor of \WS\WSSessionParams
      *
      * @param string $sessionCookieName Session cookie name
      * @param string $sessionSavePath Session save path
@@ -27,16 +28,13 @@ class SessionParams
      */
     public function __construct($sessionCookieName = null, $sessionSavePath = null, $sessionFilePrefix = null)
     {
-        if($sessionCookieName != null)
-        {
+        if ($sessionCookieName != null) {
             $this->sessionCookieName = $sessionCookieName;
         }
-        if($sessionSavePath != null)
-        {
+        if ($sessionSavePath != null) {
             $this->sessionSavePath = $sessionSavePath;
         }
-        if($sessionFilePrefix != null)
-        {
+        if ($sessionFilePrefix != null) {
             $this->sessionFilePrefix = $sessionFilePrefix;
         }
     }

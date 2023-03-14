@@ -1,4 +1,5 @@
 <?php
+
 namespace Pico;
 
 class PicoDatabaseSyncConfig
@@ -10,7 +11,7 @@ class PicoDatabaseSyncConfig
 	private $extension = '';
 	private $maximumlength = 1000000;
 	private $delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
-	
+
 
 	/**
 	 * Constructor of PicoDatabaseSyncConfig
@@ -40,9 +41,8 @@ class PicoDatabaseSyncConfig
 	public function generateNewId()
 	{
 		$uuid = uniqid();
-		if((strlen($uuid) % 2) == 1)
-		{
-			$uuid = '0'.$uuid;
+		if ((strlen($uuid) % 2) == 1) {
+			$uuid = '0' . $uuid;
 		}
 		$random = sprintf('%06x', mt_rand(0, 16777215));
 		return sprintf('%s%s', $uuid, $random);
@@ -54,14 +54,12 @@ class PicoDatabaseSyncConfig
 	 */
 	public function getPoolPath()
 	{
-		if(!file_exists($this->baseDir))
-		{
+		if (!file_exists($this->baseDir)) {
 			$this->prepareDirectory($this->baseDir, $this->applicationDir, 0777);
 		}
 		$poolPath = $this->baseDir . "/" . $this->poolName . $this->extension;
-		if(file_exists($poolPath) && filesize($poolPath) > $this->maximumlength)
-		{
-			$newPath = $this->baseDir . "/" . $this->rollingPrefix.date('Y-m-d-H-i-s')."-".$this->generateNewId().$this->extension;
+		if (file_exists($poolPath) && filesize($poolPath) > $this->maximumlength) {
+			$newPath = $this->baseDir . "/" . $this->rollingPrefix . date('Y-m-d-H-i-s') . "-" . $this->generateNewId() . $this->extension;
 			rename($poolPath, $newPath);
 		}
 		return $poolPath;
@@ -76,8 +74,8 @@ class PicoDatabaseSyncConfig
 	{
 		$syncPath = $this->getPoolPath();
 		$fp = fopen($syncPath, 'a');
-		$l1 = fwrite($fp, $this->delimiter.\Pico\PicoConst::NEW_LINE);
-		$l2 = fwrite($fp, trim($sql).";".\Pico\PicoConst::NEW_LINE);
+		$l1 = fwrite($fp, $this->delimiter . \Pico\PicoConst::NEW_LINE);
+		$l2 = fwrite($fp, trim($sql) . ";" . \Pico\PicoConst::NEW_LINE);
 		fclose($fp);
 		return $l1 + $l2;
 	}
@@ -107,11 +105,9 @@ class PicoDatabaseSyncConfig
 		$arrBase = explode("/", $base);
 		$base = implode("/", $arrBase);
 		$dir2created = "";
-		foreach($arrDir as $val)
-		{
+		foreach ($arrDir as $val) {
 			$dir2created .= $val;
-			if(stripos($base, $dir2created) !== 0 && !file_exists($dir2created))
-			{
+			if (stripos($base, $dir2created) !== 0 && !file_exists($dir2created)) {
 				$this->createDirecory($dir2created, $permission);
 			}
 			$dir2created .= "/";

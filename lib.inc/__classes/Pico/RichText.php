@@ -1,31 +1,33 @@
 <?php
+
 namespace Pico;
 
-class RichText {
-    
+class RichText
+{
+
 	private function isVideo($s)
 	{
-		return stripos($s, "://") !== false 
-		&& stripos($s, "facebook.com") !== false 
-		&& (stripos($s, "/videos/") !== false || stripos($s, "/video/embed") !== false);
+		return stripos($s, "://") !== false
+			&& stripos($s, "facebook.com") !== false
+			&& (stripos($s, "/videos/") !== false || stripos($s, "/video/embed") !== false);
 	}
 
 	private function isYouTube($s)
 	{
-		return stripos($s, "://") !== false 
-		&& stripos($s, "youtube.com") !== false;
+		return stripos($s, "://") !== false
+			&& stripos($s, "youtube.com") !== false;
 	}
 
 	private function isYouTubeShort($s)
 	{
-		return stripos($s, "://") !== false 
-		&& stripos($s, "youtu.be") !== false;
+		return stripos($s, "://") !== false
+			&& stripos($s, "youtu.be") !== false;
 	}
 
 	private function isYtImage($s)
 	{
-		return stripos($s, "://") !== false 
-		&& stripos($s, "ytimg.com") !== false;
+		return stripos($s, "://") !== false
+			&& stripos($s, "ytimg.com") !== false;
 	}
 
 	private function isContainURL($s)
@@ -215,15 +217,12 @@ class RichText {
 	public function createRichContent($s)
 	{
 		$souce = htmlspecialchars_decode($s);
-		if ($this->isVideo($s)){
+		if ($this->isVideo($s)) {
 			$s = $this->createVideo($s);
-		} 
-		else if ($this->isYouTube($s)) 
-		{
+		} else if ($this->isYouTube($s)) {
 			$s = $this->createYouTube($s);
 		} else if ($this->isYouTubeShort($s)) {
 			$s = $this->createYpuTubeShort($s);
-			
 		} else if ($this->isYtImage($s)) {
 			$s = $this->createYtImage($s);
 		} else if ($this->isContainURL($s)) {
@@ -261,5 +260,4 @@ class RichText {
 		}
 		return $ret;
 	}
-
 }
