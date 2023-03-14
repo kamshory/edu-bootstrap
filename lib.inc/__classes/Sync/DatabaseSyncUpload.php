@@ -1,4 +1,5 @@
 <?php
+
 namespace Sync;
 
 class DatabaseSyncUpload extends \Sync\DatabaseSyncMaster
@@ -16,7 +17,7 @@ class DatabaseSyncUpload extends \Sync\DatabaseSyncMaster
      */
     public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
     {
-        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);      
+        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);
     }
 
     /**
@@ -24,13 +25,12 @@ class DatabaseSyncUpload extends \Sync\DatabaseSyncMaster
      */
     private function movePoolingFileToUpload()
     {
-        $this->prepareDirectory($this->uploadBaseDir);     
+        $this->prepareDirectory($this->uploadBaseDir);
         $fileList = $this->glob($this->poolBaseDir);
         $fileList = $this->rollingLastPoolingFile($fileList, $this->poolBaseDir, $this->poolFileName, $this->poolFileExtension);
         $fileList = $this->sort($fileList);
         $fileToUpload = array();
-        foreach($fileList as $val)
-        {
+        foreach ($fileList as $val) {
             $baseName = basename($val);
             $newPath = $this->uploadBaseDir . "/" . $baseName;
             copy($val, $newPath);
@@ -64,25 +64,22 @@ class DatabaseSyncUpload extends \Sync\DatabaseSyncMaster
     public function syncLocalQueryToDatabase()
     {
         $fileList = $this->movePoolingFileToUpload();
-        foreach($fileList as $val)
-        {
+        foreach ($fileList as $val) {
             $this->createUploadSyncRecord($val);
         }
         return true;
     }
-    
+
     /**
      * Sync all local user file to remote host and upload file (step 3, 4 and 5)
      */
     public function syncLocalQueryToRemoteHost($url, $username, $password)
     {
         $records = $this->getSyncRecordListFromDatabase('up', array(0,));
-        foreach($records as $record)
-        {
+        foreach ($records as $record) {
             $path = $record['file_path'];
             $sync_database_id = $record['sync_database_id'];
-            if($this->uploadSyncFile($path, $record, $url, $username, $password))
-            {
+            if ($this->uploadSyncFile($path, $record, $url, $username, $password)) {
                 $this->updateSyncRecord($sync_database_id, 1);
             }
         }
@@ -103,19 +100,14 @@ class DatabaseSyncUpload extends \Sync\DatabaseSyncMaster
     {
         $record = $this->getSyncRecord($recordId);
         $path = $record['file_path'];
-        if(file_exists($path))
-        {
-            try{
+        if (file_exists($path)) {
+            try {
                 $result = $this->uploadSyncFile($path, $record, $fileSyncUrl, $username, $password); // NOSONAR            
                 $this->updateSyncRecord($recordId, 1);
-            }
-            catch(\Exception $e)
-            {
+            } catch (\Exception $e) {
                 $this->updateSyncRecord($recordId, 1);
             }
         }
         return true;
     }
-
 }
-
