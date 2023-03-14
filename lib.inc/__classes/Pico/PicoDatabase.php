@@ -5,18 +5,35 @@ namespace Pico;
 class PicoDatabase
 {
 
+	/**
+	 * Database connection
+	 *
+	 * @var \PDO
+	 */
 	private $conn;
+
+	/**
+	 * Database credential
+	 *
+	 * @var \Pico\PicoDatabaseCredentials
+	 */
 	private $databaseCredentials;
+
+	/**
+	 * Database synchronization config
+	 *
+	 * @var \Pico\PicoDatabaseSyncConfig
+	 */
 	private $databaseSyncConfig;
 
 	/**
 	 * Summary of __construct
-	 * @param PicoDatabaseCredentials $databaseCredentials
+	 * @param \Pico\PicoDatabaseCredentials $databaseCredentials
 	 * @param string $username
 	 * @param string $password
 	 * @param string $databaseName
 	 * @param string $timezone
-	 * @param PicoDatabaseSyncConfig $databaseSyncConfig
+	 * @param \Pico\PicoDatabaseSyncConfig $databaseSyncConfig
 	 */
 	public function __construct($databaseCredentials, $databaseSyncConfig) //NOSONAR
 	{
@@ -26,7 +43,7 @@ class PicoDatabase
 
 	/**
 	 * Get database server information
-	 * @return PicoDatabaseCredentials Database server information
+	 * @return \Pico\PicoDatabaseCredentials Database server information
 	 */
 	public function getDatabaseServer()
 	{
