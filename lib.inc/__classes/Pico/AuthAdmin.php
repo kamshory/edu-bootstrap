@@ -87,7 +87,9 @@ class AuthAdmin
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
 					$now = $database->getLocalDateTime();
-					$sql = "UPDATE `edu_admin` SET `ip_last_activity` = '$ip', `time_last_activity` = '$now' WHERE `admin_id` = '" . $this->admin_id . "'";
+					$sql = "UPDATE `edu_admin` 
+						SET `ip_last_activity` = '$ip', `time_last_activity` = '$now' 
+						WHERE `admin_id` = '" . $this->admin_id . "'";
 					$database->executeUpdate($sql, true);
 				}
 			}

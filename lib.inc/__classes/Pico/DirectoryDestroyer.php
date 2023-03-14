@@ -4,6 +4,11 @@ namespace Pico;
 
 class DirectoryDestroyer
 {
+	/**
+	 * File synchronizer
+	 *
+	 * @var \Pico\FileSynchronizer
+	 */
 	public $fileSync = null;
 
 	/**
@@ -19,8 +24,8 @@ class DirectoryDestroyer
 	/**
 	 * Destroy directory
 	 *
-	 * @param string $dir
-	 * @param bool $sync
+	 * @param string $dir Directory
+	 * @param bool $sync Flag to sync
 	 * @return void
 	 */
 	public function destroy($dir, $sync)

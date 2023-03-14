@@ -3,7 +3,7 @@ namespace Pico;
 
 class AuthStudent
 {
-	public $student_id = 0;
+	public $student_id = '';
 	public $username = '';
 	public $name = '';
 	public $gender = 'M';
@@ -18,7 +18,8 @@ class AuthStudent
 	public $school_id = "";
 	public $school_name = '';
 	public $school_code = '';
-	public $use_token = 0;
+	public $use_token = false;
+
 	private $password;
 	private $createlog = false;
 	private $database;
@@ -63,7 +64,7 @@ class AuthStudent
 				$studentLoggedIn = $stmt->fetchObject();
 				$this->student_id = $studentLoggedIn->student_id;
 				$this->username = ($studentLoggedIn->username != '') ? $studentLoggedIn->username : $studentLoggedIn->member_id;
-				$this->name = trim($studentLoggedIn->name);
+				$this->name = $studentLoggedIn->name;
 				$this->gender = $studentLoggedIn->gender;
 				$this->birth_place = $studentLoggedIn->birth_place;
 				$this->birth_day = $studentLoggedIn->birth_day;
@@ -80,7 +81,9 @@ class AuthStudent
 				if ($createlog) {
 					$ip = addslashes($_SERVER['REMOTE_ADDR']);
 					$now = $database->getLocalDateTime();
-					$sql = "UPDATE `edu_student` SET `ip_last_activity` = '$ip', `time_last_activity` = '$now' WHERE `student_id` = '" . $this->student_id . "'";
+					$sql = "UPDATE `edu_student` 
+						SET `ip_last_activity` = '$ip', `time_last_activity` = '$now' 
+						WHERE `student_id` = '" . $this->student_id . "'";
 					$database->executeUpdate($sql, true);
 				}
 			}

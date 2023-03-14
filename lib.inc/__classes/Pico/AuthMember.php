@@ -80,7 +80,9 @@ class AuthMember
 			if ($createlog) {
 				$ip = addslashes($_SERVER['REMOTE_ADDR']);
 				$now = $database->getLocalDateTime();
-				$sql = "UPDATE `member` SET `last_seen_ip` = '$ip', `last_seen_time` = '$now' WHERE `member_id` = '" . $this->member_id . "'";
+				$sql = "UPDATE `member` 
+					SET `last_seen_ip` = '$ip', `last_seen_time` = '$now' 
+					WHERE `member_id` = '" . $this->member_id . "'";
 				$database->executeUpdate($sql, false);
 			}
 		}
