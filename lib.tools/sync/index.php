@@ -86,6 +86,7 @@ if(@$_GET['action'] == 'sync-time')
     {
         $response->response_code = '00';
         $response->response_text = 'Sukses';
+        $success = $response->response_code == '00';
     }
 
     header('Content-type: application/json'); //NOSONAR
