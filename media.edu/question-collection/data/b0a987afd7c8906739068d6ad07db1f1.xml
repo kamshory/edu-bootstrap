@@ -4,7 +4,8 @@
 	<question>
 		<text>&lt;p&gt;Nilai dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;39887d3657503407ca28af848fe9b2a8.png&quot; alt=&quot;\frac{25^{\frac{2}{3}}\left(36^{\frac{5}{2}}+9^{\frac{5}{2}}\right)2^{4}}{22.10^{3}}&quot; data-latex=&quot;\frac{25^{\frac{2}{3}}\left(36^{\frac{5}{2}}+9^{\frac{5}{2}}\right)2^{4}}{22.10^{3}}&quot;&gt; adalah ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>39887d3657503407ca28af848fe9b2a8.png</name>
 			<type>image/png</type>
@@ -15,22 +16,27 @@
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;3&lt;sup&gt;5&lt;/sup&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;3&lt;sup&gt;6&lt;/sup&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;3&lt;sup&gt;8&lt;/sup&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;3&lt;sup&gt;9&lt;/sup&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;3&lt;sup&gt;4&lt;/sup&gt;&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -40,7 +46,8 @@
 	<question>
 		<text>&lt;p&gt;Bentuk sederhana dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;5fec67ac541eb2d171b6e14b0ab90f22.png&quot; alt=&quot;\frac{3sqrt{2}-2sqrt{2}}{sqrt{6}-2}&quot; data-latex=&quot;\frac{3sqrt{2}-2sqrt{2}}{sqrt{6}-2}&quot;&gt; adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>5fec67ac541eb2d171b6e14b0ab90f22.png</name>
 			<type>image/png</type>
@@ -51,6 +58,7 @@
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;1b1b43d46d4b7ba96dcdb8139a6df28c.png&quot; alt=&quot;5\sqrt{2}+\frac{1}{2}\sqrt{3}&quot; data-latex=&quot;5\sqrt{2}+\frac{1}{2}\sqrt{3}&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>1b1b43d46d4b7ba96dcdb8139a6df28c.png</name>
@@ -61,6 +69,7 @@
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;bf42054f0307808a858186d011dc9b51.png&quot; alt=&quot;\frac{5}{2}sqrt{2}+sqrt{3}&quot; data-latex=&quot;\frac{5}{2}sqrt{2}+sqrt{3}&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>bf42054f0307808a858186d011dc9b51.png</name>
@@ -71,6 +80,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;3720d03a61ae21daa69b3d8ab8b66290.png&quot; alt=&quot;\frac{5}{2}\sqrt{2}+2\sqrt{3}&quot; data-latex=&quot;\frac{5}{2}\sqrt{2}+2\sqrt{3}&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>3720d03a61ae21daa69b3d8ab8b66290.png</name>
@@ -81,6 +91,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;22c5f749c7d70c023652a55c366b7059.png&quot; alt=&quot;5sqrt{2}+2sqrt{3}&quot; data-latex=&quot;5sqrt{2}+2sqrt{3}&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>22c5f749c7d70c023652a55c366b7059.png</name>
@@ -91,6 +102,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;36dc0bc316fc5b5bb847c8c661999f26.png&quot; alt=&quot;5sqrt{3}+2sqrt{2}&quot; data-latex=&quot;5sqrt{3}+2sqrt{2}&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>36dc0bc316fc5b5bb847c8c661999f26.png</name>
@@ -106,27 +118,33 @@
 	<question>
 		<text>&lt;p&gt;Bentuk sederhana dari &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,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&quot; alt=&quot;\left(\frac{\log _{2}3c\dot \log _{3}16-\log _{2}16}{\log _{3}\frac{1}{9}+\log _{3}243}\right)^{2}&quot; data-latex=&quot;\left(\frac{\log _{2}3c\dot \log _{3}16-\log _{2}16}{\log _{3}\frac{1}{9}+\log _{3}243}\right)^{2}&quot; /&gt; adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAApElEQVQ4je2UzQ2FIBAGpwQK4OrVuwVYgR3YgT3YgzXQhUVYBU3gwc9o9LH6bu/HSUggzC4bAgsfiwMGoLoSKyACCSgtsQZazS/lPT8tO8m1JRVAYLvnpLUZ9PAW6cb4LxzQs726CaMdBGAEvNaNgvxR9Lz+HSPQHeUyIweNE5GlbbldgiknF9pMCuxzZeSI3PyDjU4y8SwNMqo0M9ta7+l+v5EZMtMzDAlWLX8AAAAASUVORK5CYII=&quot; alt=&quot;\frac{1}{9}&quot; data-latex=&quot;\frac{1}{9}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAkUlEQVQ4je3UywkDIRCA4a8EC8h1r7lvAVaQDraW9JAa0sUWkSq2ic1BJQ+IGsghrx8GFP5BR8bhbQk4YGyJIxas2NbEiCmvm/I1Xy2HLMeaNODo8s5r3leT/jzF2hG/yyB1X7OnA2adH2CPXY8cpWmkJW/y8aFHnqXCCkWe7pPKHR9Fs9DXjoPCKcuL2zo+jjN46zK0feR1WAAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{1}{4}&quot; data-latex=&quot;\frac{1}{4}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAq0lEQVQ4je2UzQ3DIAxG3wgdgCtX7hkgi7BBdsgOnYEtGKJTdAl6iFESZIgvlSK1T7KExYf/JAy34wFE4AUU4C2+SgJWeYScCxCsmcoo+hEn4skifopdEoHMXn+XmXOjQ2E6+J5Og15JHXvizNZ9a6bR/TGhzbe130JbBUtP3K6CKI9mS6YgYn9VzsT2s4dRa7QiZZm2keOb64uRuL2oo3OauE6gNpgx1ntnPjnQNfYtIujZAAAAAElFTkSuQmCC&quot; alt=&quot;\frac{2}{3}&quot; data-latex=&quot;\frac{2}{3}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAuUlEQVQ4je2USw3DMBBEHwQD8DVX3wugCMygDMohHIohLAwiKEwiPeyuqjjxR+qlVTvSSrH0Is8kmoWP1gRkIPRAByRgG4FnII7AV+Chz03Y6/VuBE5IMJPBt/Il81ibbtAhCPW9IYG7WhXO7HP89Z5av9rmt+SQsmYk/QpcavCCVMvr2drjS9Bz3owE3Es4VOBF56CM7AxbBUF9n8IT+zrNNRs1ZQZLG/WmpjyyhbrNjrz8Hr7vN+oJIBo7DqBbnTMAAAAASUVORK5CYII=&quot; alt=&quot;\frac{4}{9}&quot; data-latex=&quot;\frac{4}{9}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAu0lEQVQ4je2UwQ3DIAxF3wgMwJVr7h0gE2SDbNAd2KEzZAuGyBQsQQ8YtYWaIOUSqf2SD4FnY1C+4XIygAcikIAduGnwBgTAyvciSbYGrWxM1XoA7jU8KfAm0SgCD+m9FNg12MlmkkSvtaEpAvMIuMhJXVlglaruqFrpt3nfv04rDcTvypH/vtqTjQzZTt8M3MjzmhldeCY7nCPYyvFmBA58eq7Aa51UetTi8KJDENJ3YnDAvI+x7uy4up6D8TsO0EutcgAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{9}{4}&quot; data-latex=&quot;\frac{9}{4}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -134,9 +152,10 @@
 
 <item>
 	<question>
-		<text>&lt;p&gt;Nilai x yang memenuhi pertidaksamaan&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;63ff03158f0f9d5a523a7df721d47433.png&quot; alt=&quot;\log _{2}\left(x^{2}-x-6\right)-\log _{2}\left(2x+3\right)leq \log _{2}\left(x+2\right)&quot; data-latex=&quot;\log _{2}\left(x^{2}-x-6\right)-\log _{2}\left(2x+3\right)leq \log _{2}\left(x+2\right)&quot;&gt; adalah...&lt;/p&gt;</text>
+		<text>&lt;p&gt;Nilai x yang memenuhi pertidaksamaan&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,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&quot; alt=&quot;\log _{2}\left(x^{2}-x-6\right)-\log _{2}\left(2x+3\right)leq \log _{2}\left(x+2\right)&quot; data-latex=&quot;\log _{2}\left(x^{2}-x-6\right)-\log _{2}\left(2x+3\right)leq \log _{2}\left(x+2\right)&quot; /&gt; adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>63ff03158f0f9d5a523a7df721d47433.png</name>
 			<type>image/png</type>
@@ -147,7 +166,8 @@
 <answer>
 	<option>
 		<value>0</value>
-		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;abe1cf5d871a9f22338d37317595a4d5.png&quot; alt=&quot;-6&amp;lt;x&amp;lt;-2&quot; data-latex=&quot;-6&amp;lt;x&amp;lt;-2&quot;&gt;&amp;nbsp;atau&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;f6227cb90bd8c5c259c97a64b047e47f.png&quot; alt=&quot;x&amp;gt; -\frac{3}{2}&quot; data-latex=&quot;x&amp;gt; -\frac{3}{2}&quot;&gt;&lt;/p&gt;</text>
+		<score>0</score>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAUCAYAAAB7wJiVAAACVUlEQVRYR+2XvS9lQRjG3T8BvYLVSRTINhTbCYmKIBKRkBUKBbG7WZQiaDcrhEbiK7HNFoJaNDR6FHp/A7/n5MzNwXXunDknTDGTPHHuNfOe932e92NuqSYsrxgoeeVNcKYmCOJZEgRBgiCeMeCZO0VUyCQxTYAmUOdZfD66M4RTc6A9dm6Dv0vgUZ/zCFLP+VNwB/6Ai5zRy9Ex0J3TTpbjjWweBw9gM8tBx70/ODcABsE9UMwH4CdYyyOIEeMKI9OOzumYIWSK50OwX4CwNu4Y8b+weR0cgyhDP2GJQ707SkTXClGbWgHNjoH0cG4UqGy3wI6lHRH5F6gqO4ASYw+IWCFtSfx+8B1cgyKqugj9bjFyBBaSgijQhirWVdbKYi2jqim7Wr47A6oWfVdpvSZkl00nGSIS+bNA4kmQXjADVO43KXZei69qeM9HG3fUdqqtSzbYtHAl9jz4Cl7MkKyCPGFAWaZhLjJEtlQWUbJVaSmQVdBl6Wxa0EoILfP+tL3yVclS1GwqSpBOfPoPvsUcRjG4tiwFWR5EMRuG8Pds5q2QJOnLfGizJLnoCkkT3/Z/rXFyvukoroKo752D5ECXIL+AzdXXdYYoYAWzDbJes32ZIfL/Hyi3KZ41CqLO4iqIIb8PG+qVClYClYeTZapkvWUlM8vMkRbelXUufNYty9xOk61WrWvRVLurIOLbiKKBLnJ0W4ru0o6r2u8QVaUwAjQAlVW6zw/Hzy6v/ejfIWq1vys4Wp5xeQRxISCcqcJAEMSzFAmCBEE8Y8Azd0KFeCbIM7YQghXOESiYAAAAAElFTkSuQmCC&quot; alt=&quot;-6&amp;lt;x&amp;lt;-2&quot; data-latex=&quot;-6&amp;lt;x&amp;lt;-2&quot; data-renderer=&quot;mathml-png&quot; /&gt;&amp;nbsp;atau&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAnCAYAAABT7SsqAAACGklEQVRoQ+2ZOy8FQRiGz/kLtApBT4ROjSg0CnpCXBokJKIkoaBzDR2iIBGJuBUS0RAFNfEPhH/A+25mNmN37MUSu9+cTZ7sOZPJZN/5rrNbLjl2lR3TW5ImuA0GHAO9ypD3uA+AR21YSYIp9hh0gxtQBy6U0AaJgm3ReYbBd9AnXXAjBHaAZjAKXiULplUp9g0sgG3pgrUxu/BjB9yBTskWNmN5Hn9mgJ+cJWVpW9KawuCiVMEUNwjawYtRlliaRiS6dDVETQA2HfUqaa3hvuxK0rK5uLjW0irSHJSetEIbkEXwKlZjU35gxkjsFv/zhCyC2Zz3g2GwD/YAm/ZcX1owe89DUAVaVFrXRZsZj2k+6mJzPqkmLOF+mVera8EUx/R9CzZBLbhWlktjMW7cEGAtZP3bAP5ZNM1CfzU36NIUzjo2+wOx5jPqs+gzBv0+NkaEbvqjpp1/s95Hgg3ytAYFs+E+sYwnWM+bUigLs1NZURZuSumKhYthit0F02BLxd8p7jURrl3YLM16yiTTo6zKpLMO2If6TbfFp52rw0njOlfzsjQeuRKiHib4mpZZnWHqxGtaVowrUHnFk0fX/K1nYmJtVXhrSothc6Po0g/gS08hVTD7iidVVnmS8y+JgnUTNQeVoeOqNMEUy0PIuCGWFhb7bYnijoB2Y+3aPOeLS1r6pGfL8M58eQiJlxbDsfW7Ijh2iwo+4ROU3WIoGNrKbQAAAABJRU5ErkJggg==&quot; alt=&quot;x&amp;gt; -\frac{3}{2}&quot; data-latex=&quot;x&amp;gt; -\frac{3}{2}&quot; data-renderer=&quot;mathml-png&quot; /&gt;&lt;/p&gt;</text>
 		<file>
 			<name>Array</name>
 			<type>Array</type>
@@ -157,7 +177,8 @@
 	</option>
 	<option>
 		<value>0</value>
-		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;abe1cf5d871a9f22338d37317595a4d5.png&quot; alt=&quot;-6&amp;lt;x&amp;lt;-2&quot; data-latex=&quot;-6&amp;lt;x&amp;lt;-2&quot;&gt;&amp;nbsp;atau&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;60a08e9f64e85442abb97e0108ea3442.png&quot; alt=&quot;x&amp;gt;3&quot; data-latex=&quot;x&amp;gt;3&quot;&gt;&lt;/p&gt;</text>
+		<score>0</score>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAUCAYAAAB7wJiVAAACVUlEQVRYR+2XvS9lQRjG3T8BvYLVSRTINhTbCYmKIBKRkBUKBbG7WZQiaDcrhEbiK7HNFoJaNDR6FHp/A7/n5MzNwXXunDknTDGTPHHuNfOe932e92NuqSYsrxgoeeVNcKYmCOJZEgRBgiCeMeCZO0VUyCQxTYAmUOdZfD66M4RTc6A9dm6Dv0vgUZ/zCFLP+VNwB/6Ai5zRy9Ex0J3TTpbjjWweBw9gM8tBx70/ODcABsE9UMwH4CdYyyOIEeMKI9OOzumYIWSK50OwX4CwNu4Y8b+weR0cgyhDP2GJQ707SkTXClGbWgHNjoH0cG4UqGy3wI6lHRH5F6gqO4ASYw+IWCFtSfx+8B1cgyKqugj9bjFyBBaSgijQhirWVdbKYi2jqim7Wr47A6oWfVdpvSZkl00nGSIS+bNA4kmQXjADVO43KXZei69qeM9HG3fUdqqtSzbYtHAl9jz4Cl7MkKyCPGFAWaZhLjJEtlQWUbJVaSmQVdBl6Wxa0EoILfP+tL3yVclS1GwqSpBOfPoPvsUcRjG4tiwFWR5EMRuG8Pds5q2QJOnLfGizJLnoCkkT3/Z/rXFyvukoroKo752D5ECXIL+AzdXXdYYoYAWzDbJes32ZIfL/Hyi3KZ41CqLO4iqIIb8PG+qVClYClYeTZapkvWUlM8vMkRbelXUufNYty9xOk61WrWvRVLurIOLbiKKBLnJ0W4ru0o6r2u8QVaUwAjQAlVW6zw/Hzy6v/ejfIWq1vys4Wp5xeQRxISCcqcJAEMSzFAmCBEE8Y8Azd0KFeCbIM7YQghXOESiYAAAAAElFTkSuQmCC&quot; alt=&quot;-6&amp;lt;x&amp;lt;-2&quot; data-latex=&quot;-6&amp;lt;x&amp;lt;-2&quot; data-renderer=&quot;mathml-png&quot; /&gt;&amp;nbsp;atau&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAUCAYAAAAOTSQ2AAABaklEQVRIS+2UPS9EQRSGd/8CrULQE1FubUWhUayeEFZFYhPRSijofIYOUdBIhNCJZkWjF/9A+Ame9+YcmWziZndGscW9yZM7c/fMnHffc2bKpS5+yl2srVSIi61O4VyOcxV+W4aaxbzynoM3zVOc27dNrnh/RpROwm5gCp5hAB5sn6FUcdpsFhbhEi4sSYTO3yX3jL5hJhQ3zOQaemAMPmAT1mHQ5nlJtdmqBezwfuzQTeWvwijUfa2XVUJ2oQnH0A9P5kgnTijJAoyDSnQEWf/kPHJLwr5gC05bxflaiVRzbkQIC/N7/7zzcaLNfzdJ3Bm8+JrWA6GAW4g9KDHOhdq9lbL8oYhe5nvm3Egb5Qg3Te0532uNwbbrcnESdg4NOAH1yx305ZQ39bRKyDyoP3UAvRWUe8md032lgGlzSw19CAceFFoUjFPvORmyYpXSjaADoZw6mNm9Gdtbf+j938+FuFg/C+dinfsBKNFJFdo69WoAAAAASUVORK5CYII=&quot; alt=&quot;x&amp;gt;3&quot; data-latex=&quot;x&amp;gt;3&quot; data-renderer=&quot;mathml-png&quot; /&gt;&lt;/p&gt;</text>
 		<file>
 			<name>Array</name>
 			<type>Array</type>
@@ -167,7 +188,8 @@
 	</option>
 	<option>
 		<value>0</value>
-		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;88de6912e5ff118a1c08a6956d5d0ec1.png&quot; alt=&quot;-2&amp;lt;x&amp;lt;3&quot; data-latex=&quot;-2&amp;lt;x&amp;lt;3&quot;&gt;&lt;/p&gt;</text>
+		<score>0</score>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAAAVCAYAAAA+RgJMAAABUElEQVRYhe2Wwa2DMAyGvxEyAFeuvXcAJngbsEF36A7M0C0Ygim6BD3YFoFWkJCohz5/UqSiRk5++48TcBzHcRzndwhAD0zADDz1+xf5pPVWI/ADuOsC6O8ZuBTE7DTuN2mQhPztzNlq7RGtXe3NBA2c60YT8UQ2WlKEHKxgE5LAsD99xQXR2tbeVKOBr4nzr8CAiOhJF9EhCR/1O7AkI2WPdiwH8gsWWPb95sJOg++NI+sOOvbYikhNuBEQ18YFe3DsiG3Bmsx1YXHfrGu+FaA0iT3ijCM3WS+pcWRHHSlHyoTXoKFO/1/RsW66RxsocWLMjfTE1HBizNn+/5HtbdpmBD7bE22dEemNOZT2xJgqSTQhsXg7+jnk3s4tUri4L55xV87tvE2YtaVSRzOyNNp4lFTn6J046f8meKD8vZbyTrRTYxpHvvcUcxzHcf4bLyATZTm1ZBwYAAAAAElFTkSuQmCC&quot; alt=&quot;-2&amp;lt;x&amp;lt;3&quot; data-latex=&quot;-2&amp;lt;x&amp;lt;3&quot; /&gt;&lt;/p&gt;</text>
 		<file>
 			<name>88de6912e5ff118a1c08a6956d5d0ec1.png</name>
 			<type>image/png</type>
@@ -177,7 +199,8 @@
 	</option>
 	<option>
 		<value>0</value>
-		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;f6227cb90bd8c5c259c97a64b047e47f.png&quot; alt=&quot;x&amp;gt; - \frac{3}{2}&quot; data-latex=&quot;x&amp;gt; - \frac{3}{2}&quot;&gt;&lt;/p&gt;</text>
+		<score>0</score>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAABTUlEQVRoge2Z242DMBBFTwkugF//8p8CtoJ0QAf0QA+pgS5SBFXQxO7H9Qg2EiQkIuDHkawkSoxmNI87dqBQKJyYGrgBv2HdAX+kQXtSA2N4BaiAIaxs6FHEk8cDDXLWHWzL7vSofkfkdPIOGxfkdH+0Id+kRdHOhoaEHW6QBFXhs8lSd5hFO+NQCg9MTaslo6ZVKGykA65kVCMVagojcr5e//m58Ki7jUxt3US7Wto04wcdxe7h/emjbu17QHrWIcO34sNe07/Tn0VNx95xdo6J/pY51ob+tbX0vGf7Fqety9qXLxBVhB3T9chWQ6OrYYfSxSOjW9R111I72i5tKWhRvaIoPxu6s9Phwgl4vKa1Mk2Sx2taT7niSZ8OqU4WeN6bKaLEofr9dESOAhuiohmEPsGhmp07m/R/Szf+p7GldpLYSe/lo2GhUIiPPyenYH7u+UWVAAAAAElFTkSuQmCC&quot; alt=&quot;x&amp;gt; - \frac{3}{2}&quot; data-latex=&quot;x&amp;gt; - \frac{3}{2}&quot; /&gt;&lt;/p&gt;</text>
 		<file>
 			<name>f6227cb90bd8c5c259c97a64b047e47f.png</name>
 			<type>image/png</type>
@@ -187,7 +210,8 @@
 	</option>
 	<option>
 		<value>1</value>
-		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;60a08e9f64e85442abb97e0108ea3442.png&quot; alt=&quot;x&amp;gt;3&quot; data-latex=&quot;x&amp;gt;3&quot;&gt;&lt;/p&gt;</text>
+		<score>1</score>
+		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAVCAYAAADFEfeTAAAA4UlEQVRIie2USxGEMBBEnwQEcM117whYBTjAAR7wsBpwgQhUYII9TE8Rlk8B2WNeVSpAZdKdyQyQyWQyV3gBH2DWGIDwj407oAaKBGOTZoASGDWSKYFWAl0kkkKPZXJFwBxPEkXCc/R+xhu7kkHPd7MZgEbGNrGtPo5a1EnkLkGxo+Yr9dNjSZikfXiwVhs/MRbj9dPfiKkwg4cxFXaKpzzJXIyX0oaCpa3vbppac06zZ67A0hkk0GLdd3a9qd3aYBn2hvNS6OJFfg2erVruV4t2SP3PFSw17g3hjZnJZH75AsauN+3bBOhYAAAAAElFTkSuQmCC&quot; alt=&quot;x&amp;gt;3&quot; data-latex=&quot;x&amp;gt;3&quot; /&gt;&lt;/p&gt;</text>
 		<file>
 			<name>60a08e9f64e85442abb97e0108ea3442.png</name>
 			<type>image/png</type>
@@ -202,27 +226,33 @@
 	<question>
 		<text>&lt;p&gt;Batas &amp;ndash; batas nilai p agar persamaan kuadrat &amp;nbsp;x&lt;sup&gt;2&lt;/sup&gt; &amp;ndash; 2px + p + 2 = 0 , mempunyai akar &amp;ndash; akar real adalah ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;p &amp;le; &amp;ndash;2 atau p &amp;ge; 1&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;p &amp;le; &amp;ndash;1 atau p &amp;ge; 2&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;p  2&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&amp;ndash;1 &amp;le; p &amp;le; 2&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&amp;ndash;1 &lt;/p&gt;</text>
 	</option>
 </answer>
@@ -232,27 +262,33 @@
 	<question>
 		<text>&lt;p&gt;Misalkan akar &amp;ndash; akar persamaan 2x&lt;sup&gt;2 &lt;/sup&gt;+ (2a &amp;ndash; 7)x + 24 = 0 adalah&amp;nbsp;&amp;alpha; dan &amp;beta;. Jika&amp;nbsp;&amp;alpha; = 3&amp;beta; untuk &amp;alpha;,&amp;nbsp;&amp;beta; positif, maka nilai (1 &amp;ndash; 2a) &amp;nbsp;= ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;10&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;9&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;8&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;6&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -262,27 +298,33 @@
 	<question>
 		<text>&lt;p&gt;Persamaan garis singgung lingkaran x&lt;sup&gt;2&lt;/sup&gt; + y&lt;sup&gt;2&lt;/sup&gt; &amp;ndash; 14x + 8y + 60 = 0, yang sejajar garis 2x &amp;ndash; y &amp;ndash; 5 = 0 adalah &amp;hellip;&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2x + y &amp;ndash; 13 = 0 dan 2x + y &amp;ndash; 23 = 0&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;x + 2y &amp;ndash; 3 = 0 dan x + 2y &amp;ndash; 15 = 0&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2x &amp;ndash; y + 13 = 0 dan 2x &amp;ndash; y + 23 = 0&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2x &amp;ndash; y &amp;ndash; 3 = 0&amp;nbsp; dan&amp;nbsp; 2x &amp;ndash; y &amp;ndash; 15 = 0&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;2x &amp;ndash; y&amp;nbsp; &amp;ndash; 13 = 0&amp;nbsp; dan 2x &amp;ndash; y &amp;ndash; 23 = 0&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -292,27 +334,33 @@
 	<question>
 		<text>&lt;p&gt;Jika diketahui f(x) = x + 1 dan g(x) = 3x&lt;sup&gt;2&lt;/sup&gt; + x + 3 maka (gof)(x) = ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;3x&lt;sup&gt;2&lt;/sup&gt; + x + 4&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;3x&lt;sup&gt;2&lt;/sup&gt; + x + 7&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;3x&lt;sup&gt;2&lt;/sup&gt; + &amp;nbsp;7x + 7&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;7x&lt;sup&gt;2 &lt;/sup&gt;&amp;nbsp;+ 3x + 3&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;7x&lt;sup&gt;2&lt;/sup&gt; + 7x + 3&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -322,27 +370,33 @@
 	<question>
 		<text>&lt;p&gt;Diketahui fungsi&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ0AAAAoCAYAAADkIfgQAAADwElEQVR4nO2by7WCMBBAbwkUwJYtewqwAjugA3uwB2uwC4qwCpvwLcIcMS8kE0CEkHsOCwQlTobJfDKQyWQymUwmo6YGbsCrPzqgWvgZr4h7C6AFHv33nsBl4fFsgTXkvklqzKTW/XmJmezHws+JUbo7cMUoHxgFfAGnhcf0S9aS+264Y97AJYlROpu6/37qVuAbct88Fcaq3HhbGeGCmfjL4N4HxiJpmKJ0BdD040nJytn45J40d97+U8vnn6+AM2bixeLciRNQrNKJdXv1z6r9t+8Wn9wPQ4MRwN1xrcAIKPRGDhXGd2gUqcRYU+39e8Un90MgS6mLDvNGxjLHpxNln/LcPeGTe/JItGhzwvhxU5zducI8gtKNyT05JB9W9ucSutsBwqn/rMEIpnDc4yNGmLaCyWSU7tt3iVbukynQOYi/EGqBMet2IlbGW/IZtRb9vU/iUhgxSicR6zBpmpo/F5L7LFqMc6iZoDNpChgOsmysRcNbWzvr2pV4cylmtpk9skySDDPlNZ/hbo1RninmUkokh8zZZPxIjdBFh1kup9KRfrS2B4bO/s+pGC9Ci/M9Z7At/5frzLpUbKgWKiH88BgGClIucqGtYcrSHTsO13E0Thj3pOvPC8yqFLuD40JczVfSSE/ec9yxoJskf8zFmJWKqWGK0qUYyX4TSUXIatOgyx5oXt6Qu9P1R2mdL8aV8TpZ67kGuhrmWkqnEfbWDi0d0zdGnojzqc/8D/7uuDefTv6PD8+gQkoH4UBBo3R5efVzYXoBvSNuWXQFlU8WTH1JEDGmEC3jSy/oapiidJuJnHZGhVEc3zwMmbu82tfPvMuFiyA/OIYojOuB2hqmz2fM+FcC8ZWHfl2L/gXuiF+Sh0bkjJnTLvI3vNwIm23btMbWMK9sKFzfIGNb2B98BmdSw9VGoSXTlEWMhFSTbizcTPQknPidUgITCj6bNjL/afhOHjM2TTLGov6cRCkhUz1HcS6sa+XsVjjtBoVvoWlB3HI/gfj8ofGp5C4JRq0GS+JXe7/kmGL7D+Zgt8JV/H7b9N5bEGW8oezE1+Qub612a9MWBLu1bdNHaUHcmtxXxRV5zW1BnMJRWhCFxSPevSD+SGV9FtOCWGCsU+jQdpSl3IIouOR+CCT4GbMq2hZEUcrQoRHwEVoQQ3JPFtmJEZrYjvX3+aXcgqiVe3IU/O/NcKVs5rQgziVFpdPKPUlsR13M/ZC5LYgx2AqWYgsi6OSeJKJEY7tTlmpBjB1T6i2IIblnMplMJpPJZBLhD0f9okSKTqPdAAAAAElFTkSuQmCC&quot; alt=&quot;f\left(x\right)=\frac{3x+3}{2x-3},xneq \frac{3}{2}&quot; data-latex=&quot;f\left(x\right)=\frac{3x+3}{2x-3},xneq \frac{3}{2}&quot; /&gt; dan &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAAAXCAYAAADwSpp8AAACNklEQVRoge2YzRWCMAyAvxEYgCtX7g7gBGzgBuzADszgFg7hFC6BhyRPwFBbfjxov/d6UEKbJmmSAplMJvNznCPlTkB5pCL/SgXcgAYoIuRrlb8cp9L/UQIPxBmpXPkdZxSss8Fu9Kw3ZgkMfCdN1Yiug44r+xqu1jljKYEOCeIBuBOf2t3JthqyV4WOpEY2XOvvSn+nGC5mjZT5BiSVg5wmC5JVtmyQXL+FBomGEBWy0dBIje4W2fhepDpizgUJDpeKl6fuKjxerA8sbhttR3PdeY/+WuVCRb7VdUKjXXzbp2MaRIXOMyBdHUiqeBCXMtY6otT5F1OlFeFOlSyYGhaWi22FRPpZ36lU1jO2OaJ2nh1FNdLLaPR3h+h6JpwyS6Yn0rLD/KSGuPCqWR0LacmL9nG0wOeux5zXsxzxMY7YMzUVhKP8pM8/nTCLYhs3XnVnPGKw9v+BY6dhpqxF0Vgwpv28fZCJccReqcnST2gtC57UE7q1Rpy8dT3jmNfHhGoEiCPvKrdETI3Yg4JX6jA8vTpE58Z5FmKrI9yAtLbUbsotfpsZ6ngsx5qnC+f9T3PsSc/0hFuKGtOpTIs4zfYeQ4oj5ka39tW1g3U9Vs29C4d3j7D/bAOFvrt0+/7GPcKCwRvw3h3ZveNG/ElNPRFW3E2PnlmxPvEeBdb9eEpt+UzxzZv10VSkt9BBrkxzp0XH0iL5W9NBWCtlR8YucjHvxBa4/PX1YGI/WtX8RjrKZDKZf+IJVuew6M/iKg8AAAAASUVORK5CYII=&quot; alt=&quot;g\left(x\right)=2x+3&quot; data-latex=&quot;g\left(x\right)=2x+3&quot; /&gt;. Persamaan&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGoAAAAZCAYAAADZl7v4AAACVUlEQVRoge2Zy5GrMBBFTwgE4C1b9gTgCJwBGZADORADWRAEUTgJv0WrCwz68RH41XCqVK4ZbLhqtW5LAm5ubm62kAEV0F4t5MZNBtTIQHUXa/mzfBzNNiCF4///LZlpv8DjwHvFDlTsM4/Uthq1h/xKEYYHoqXmmMQJDVQJ9OYzxNHaVtGY5iIz19VeYjp0BBUSwL28PPd5mmtrg36UtmgKYMAvtGNcNXXmN2fRIUHZyryGTbVnwJvtLrJX2yp6JONcFEgHr/LlEglmCpup2bdsT6ntiwfhQWiRGXclqex2QKxvD6eUgqd5kE/EtPmyL0es4IMEIMZOtIh/zGeFZPmcFBajSWqz8Rzpw5sxiWvsSR3Spo4Uat5yElMQB/zWqLQTwU/Cs7BEBL5mf9uys+P4fZAG0GZbuqIbkD41uGdeCm0LQjt2X9bNmc9M30wFydZpJvoCl3KgfNSE7fEnBipkjVPWzCjbAsW3hL5qoMqI74S0HWZ9b8/1NiBiyrRG9fhrVMV3AHSZbKtPmPv69nlb0AC6dGZI/33fgTTaFvjsBpb2dBQ6U3NkVoUsJrZOrsVVEzPGU5re6Csc+lJpW/DGLjYnvj6tRQPxQbJRn2XbJmidTHG01bKcxQ3fq9bXROeZ2ha4jo9e+G1xKxXLzGxw16eUryhiVqc+Tn19ovVhfrQy4K4Ze5guyWHMWNusfrDviCeGrXu0M7Qt0A1eyVi3GtIcjWgW62qnxz5Ihbm29+QgRMa42Y7lLG1W9JX1L7zm0NP6M88Xn8QF/gptNzc3N3+Jf9NGvmvKkgzsAAAAAElFTkSuQmCC&quot; alt=&quot;\left(f circ g\right)^{-1}\left(x\right)=&quot; data-latex=&quot;\left(f circ g\right)^{-1}\left(x\right)=&quot; /&gt;&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAAoCAYAAADXNiVcAAADTElEQVR4nO2azZWrMAyFbwkUwJbt7FMAFdABHdADPaSGdEERqSJN8BbyPTYOfwaR8Ii+c7yY4CGOry1ZsgDDMAzDSKIC0AF4fXkcJIOMp/7yOM5CAZmPTPOlnOQ7gD/NF++kBdDDxAdkDnrX1KDwreZLFSghi/EBE78BcINsTFXxK4iZnzMlpevTub8ziChPzYEEhObNxPeoi99BJriFCNy7v3P3PIOsvNw9u7nnheYgRsbE95v4HnXxewwnO4f3/zFd1HfunUttStAGYo0Ixf+b+Z9f4RDx40nl4SKmgYhxFAW2LZhfQV38J94PezXewz364U+HgWb2PeriU2iGeDlkQTRBnwL+HEC/X8OfC46kw/kikW9xg8y/6rxzAfQQ4cOd9oQIz2jg7vqVmgOYgHH+p77vrJQQDTgXLxx/6DYMwzAMY5wWv30u+WmOSnUbB1FARHvBh08N0sOpG9LD0dp9N9PprXuP8SEaSAjL8HaN6Q5Drqm2lAVtMMytcMHtvqdfk1f/lbaWBrIAtvjsHGkpb6aww7qJGv7GNEbzdxojMHO2hRZpBTA09yF3DDOqxofI4LOWazJme83+I3pOS2D+/iCmbgRZLMJLqwayi9ea//j6eQ0tZOdn7rvU/L0xTo93kSgCd3vl+qWc2iliCmGEUcMXzRqQydHcBRmGoZwWW8K7MU7l7+kDx3xQjmG513Oi3x4eSDtAlZCdQ397x3DxNDj37dcLaXNY4qAT/g1e2DEBQvPJqt+l4s9UUsRniMRdzWKH/+X+n+ONF+wUBbw+qpTwh6Ip8WMYImnW+qfu/Jgx/34FuNl4NjmMtYLSBGXRZ3vKvLeK/wfZ8afxn8q0EOEXS7kK12muzfnBNeIzLVpFn6WWecfj6uB/JNvSYY3+fmuW7uzc4KupF8Vnle1cm9sha8TnZcQUHdaVecfjotUIP1sjaAZvEq9U8MlSelrXUPxDKqmXxKcJmmNrmfden99t/N6zwuzjx/L6c+K3GO6saqTvnjLvveLH6dOroV6+HZK5l4+Z2grvpj4Wa2+Zd4r4DwzDJE7MFf0+OaR8m6IxjuQFBScyj56FjWJplHmniF/gPel0xTCPhHH+JSuHzp6RMwzDMIxv8w/N2m7VdZ8E+gAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{6x-4}{-12x+3},xneq \frac{1}{4}&quot; data-latex=&quot;\frac{6x-4}{-12x+3},xneq \frac{1}{4}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAAAoCAYAAAAiyK7sAAADQUlEQVR4nO2b27GDIBBATwkW4K+//qcAK7ADO7AHe7AGu7CIVJEmvB+wV3wDamIMZ4aZOGoUln3ArhAIBAKBE4mAAngCHfACyoOfUejmygNoFs5lQIt65w6oUH25EzGqXy9UH5+ofs/SMByEQt+0eIMHroKMgFq/x5wgC5QQY32c6Wt9JsuV6YBc/zbHJF68wyDVFycHvpCrIGv9/IJljRzTOlz7rRQo7VwlQpmymqk2ZvoPWuPaBqXqti/goy0ugnxyvEu4CjFKBg0bCiZaKKYsNc5FqAGK9XnxWy4ae7Ygc5Qg7+YjoXd1EgdYmVVxrh1DYQqtbltCbIyHLzUbAdkIMkVZiyNdwRVJUGP/wnLCRiwHDiV+fugsjUz0eatZegMeLCvZLHOCNGeEK2cIMmFqTmuPZ3wT4gJnBTkWmthkc5abM1/8ZIG9JvgKsmQ+oIqYmviUe0WtY6HJ8mMxwJRIVXxXy1DiT9QAycyXa13Wma6CLBku9uUdzPO+fvebyBmOQ82H3YivRgYCgUDgJ6k4dl868CFstykDJyBr0Bd9FCiRsEtU+EBppAtmylAyTw/H/whoStRy6okaWBvzeMS2Y4maPKlx3HHAHvHWi31rs0U2HHx8XIzbujVhuisjedU5juzn7ZG9Sx8qHPY86U2qSc19U29vw8y422RO9prWZnReNDT4RwvGgydIYlwSASVKu2xNbElfgmFLRb/Jn3Kgf/wFGqYZERlQ0cKcPmlri08S24yUC/p91IAFLcebLp8lxxxv8Y8pw4yIa2nH0TiVBWoyi2s+yYvtSTbXb+uJKaUTEpEl+viTKaKOHWWBF0RyjTXrJnrc7xaHUo85xDFfBauywBviXOoxpmLomCXqM8NnKZk805xZlwXeFCnE9tJIWe+YA5fr4wo1qBnrAUCMmkVbbQ2vssAbIVuKrsue/5vXtOyB3bciokVbzQbnssCbIBvszoj5XNMUKZ30ttme7PYVX0bFDk1sGQ7UXKmhLK69HrKD1bLAm1ExrHfKcej3+PsPMbHjB2T0FW/yacHROJcF3oicqTndspL/iNlaSpuMo1NZd7ac57MuVxb4BmL6jYBx+wVLFAgEAoHALv4AMeVWu7fLP98AAAAASUVORK5CYII=&quot; alt=&quot;\frac{3x+12}{2x-3},xneq \frac{3}{2}&quot; data-latex=&quot;\frac{3x+12}{2x-3},xneq \frac{3}{2}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHYAAAAoCAYAAAArIw6WAAADNElEQVR4nO2by7XqMAxFdwkpIFOmzCmACtIBHaSH9EANdJEiqIImeAPlrJh8wHacdyHxXssDLrnxR5YsyQIymUwm8+MUwAW4A0/gAdSJ+7h0zZcT0HbjeQINNs4tUWLzemBzvAPnlB3ceF24S9dRyk5CBHvs+q+6zyUm5CbheL4Bd44FcO3+Vq7VoRb2kPCdIYJtsM3mcurGtDWtdblg2pucAlvAK2NtPXedts6zN8x8+BAi2BtjwWqzHT3f8UuU2PreSKtMQL9wz64DdwEL7Mwtu+9PEYMIEWzFqxDV/xYFq2NPfsSsGb45D861oTa46ECfW8S2a5+EunQctfNc63zeqik+YPN8sOIcC2wRpzSs5r1A5gj1iodU+Jv9X0V+xKpWaUqw7q4KZYlgC1YIBb6Q5H7EUIiy+669P2Ca6p6zF/xd81jBKp7dWqgzFKLCnaRWSZ6we6a5u+aOCVW2X8+GaFCMYOWFb1VTK16TMFdWjGHXYukZm8lkMpndcmZ7jlsGc2iSp/kycSiPrbAM+lx3iIet+DkE9/pTt2ant/+R8abCtEy3RD7m1M3ZvmvvqLHNc3Q+J0mD+gxsC82XE8uKBlr8hXJgnDW60N+GDUk5z92hnHdMiu5MWNwtE+xyJX0lSgYzv3f6KoV3LDXFwztkaXA+XyOYupAXDaZ1Nb1J9dUepVhD0CYqMAux9WvGVbkxFsDQ+z3S55x9FznGkz1ggn1g2q88cCaClvSmLibEmeLPztepgrG/RDvc9673zHff+jz4vOmmyk8XbdQzn0tT/hcFJtAr26ln0l3rlffm/8lr+WnLgtIYVUHElrikRJPJuVgjujRGC3nADvihYFOl4nypWLl468eQJQ1ej5pe9acEG5qKk2v/qc0NtKXPp+qcUfnN3pDT5hNzvzCMzSTYgnHI4JuKUx3UpzZ3O6IyHH2vn3KExpBbQBs8GGmET33vklRcCFOVkMoA7YmGCE2dY8oUux1FmYVA7ox36Wq/X/lSGl43d8VChaqZDsSXpOJCkRA1kbIb014S5xXjjT38eU0Q8r6ezotTpOJikHAVoO+lkrFk/njcSjyfyWQymczX8g8hG1s0vY/jtgAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{-3x+9}{4x-6},xneq \frac{3}{2}&quot; data-latex=&quot;\frac{-3x+9}{4x-6},xneq \frac{3}{2}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI8AAAAoCAYAAADHeqnFAAADQElEQVR4nO2czbWyMBCGnxIswC1b9hZgBbcDOqAHe7AGuqAIq7AJv0WYjxAD5I8rF+c5JwslJwHnZTKTH0FRFEVRvoYT0AAP4AU8gbZwH81QYrkA3cy1K9Bj7vkF3DDPooxsbtuO6Q/fDB1dC/YRK54TcB/uwyeeBiOc8/D5OtRNEeiR+Q3bTqiHDqqCbcaK5z703zDveVz6iLrfyha2BYw6LxjDucq8Ylxeb9XtMO4whNRhK0Y8D8oPt0dhybbZiCJlmKidjlvMEPFijENi1Lu1eH4w4tGY550l207orIpzZckYZ8wY+ZrppB/KmnBy70MIEU+N8YrFXfHBWLNtEU7MB58taXHFVp6nGq6fF+ooI0u2LYavgwrjdZ4J7W0hnor3oeqe0Me3UVQ8bmOSztlvs/2GS9zTEP7Gp4qnxR+Un3gfPms023IJsW0WEoVLLNIzHRMfGKPIGy51Y6L2WPG0TCcA5R7s66lx1DexZts/QarnURRFURSlKDc2XCtSjk3oEo1yEGSO6MmYtkoGF5PGXjCeJwZ7i4Ssel8i21A+SIuZenhgjBky9JRYcmkxgq2tzy92sCa39mDfVEKRSciUmOVM3LxSxfu6kuxL8mEvaC6VuXmbkr+T4uFC+o94I27CTYYrmzu6jeRPYu9WDFmRzx22Oue6eCKNd3bK3CKgbGaTxd4W40VCh68Ws4cohhvjQm7NjuIdxc+LdyOLEcXb/Az1YrKmlI1ndobXDP32kW18FRWfe7NOTFPxUqSk5z4OE+9UTFPIUixue/TgHqe5ky6+ln3vLnzyu/HOJjaWvTFLaV8qMeJxj9NIqlriLd8b8mw5L0cMm9n4xjjuf9rzuPhiFiWeTWx8Zdy66Ws498hNqnhqzAMfIib4MGs2TuKMEYW4TbfhlCM3tVN6jOLt79YCWIl3Umd+lZE1GyfTMxWCNNx4Oug99X10ThGvZX8XIogTo5vVHYjp9ITbOBgxTOh6SeqRm9yYp0/sV4m3cRZzDeYcuckVjzulr+SxRVL0/zCYO6TkHrmJEU/HNHWVdFbjnjLM2Tgb+/9bKuu73CM3MeKpMBnWkzFg1jS9HD4b75q9z/IqiqIoivJ3+AcsvoS4ocbovgAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{-3x+12}{4x+3},xneq -\frac{3}{4}&quot; data-latex=&quot;\frac{-3x+12}{4x+3},xneq -\frac{3}{4}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI8AAAAoCAYAAADHeqnFAAADXklEQVR4nO2czdWqMBBAbwkW4JYtewqggq8DOqAHe6AGuqAIq7AJ3iLMIUBA8sNTYe45WSiRoDOZmWQmgqIoiqJchhtQAU+gB15AnXiMami+FEC7cq0EOswz98AD812UkcNl2zL94athoDLhGL7KcwOa4TlcylNhFOc+vC6HviEKemb+h2wn5MMAWcJ7+ipPM4xfsW555nQefa/KEbIFjHYWGMHNNbPEmLzO6ttizOEeQt2Wj/I8Se9uz8KWbKMRjRQ3kc8GrjEuomeMQ3y092jl+cMoj8Y8S7ZkO6G1Oq61LWHcMT6yXxmkG9o7xYl9DmGP8uQYq5jcFJ+Md7JNwo314LMmLK44yvJkw/X7Rh9lZEu2yXANkGGszivgfkcoT8bSVTUBY1yNpMozv5ks5+zZbM9wiXsq9s/4UOWpcQflN5buM0dXW3P2yDYKicIlFumY+sQnRigyw6WvT9Tuqzw10w1AeQb7emgcdSXeyfYnCLU8iqIoiqIk5cGBuSLl3OxN0SgnQfaIXozLVlnB+SxjC4zl8cEukZCsd+F5D+WD1JithydGmHtcT4qUS41R2Nx63fMFObl3X+xKbS+yCRkSs9zx21fKWOaVpC7JhZ3Q3Gpr+zYpfyfFQUH4j/jAb8NN3JVNg5aR/CR2teKejHys22pn18USabzzpawlAaWYTZK9NcaK7HVfNaaGyIcHYyI354viHcVNz1LIIkSxNn9DP59VU0jhmb3Cq4ZxO897XIqMz82sG9OleCpClucuThPvZEyXkKnYLHvcwM4Gh1YI1hGf/R+8OD7ecR29SZqgltqYrWVfKCHK8xiep+C88YAswxuO/Y7zozfJy1AfjH7/08ojinNWpfk0SctQS8bSTZfyxB658VEe1yaakha7EjT6Rh3jLJ8LLuTITT5rHcaq2e+tBbCydW/76CeqTClpSFTn3TFVBFGeiqXAOkd/F+2sidWy31vbS5H+MituGDcWUnCvLJFUSHRIIDHO3nxJ6JEbH7c134GFMbBU6xNHycF/BLEmpJgjNz7KI5t3Noedrb4QJcu0SPLles/SpcQeufFRHlEU2RGW3FO38/PKEpn4tsVJfhjB3kTKrPdij9z4LtWL2bPof+7E0eEOS37iJMu37/IqiqIoivI7/ANcpYRNcKYcvAAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{-3x+12}{4x+6},xneq -\frac{3}{2}&quot; data-latex=&quot;\frac{-3x+12}{4x+6},xneq -\frac{3}{2}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -352,27 +406,33 @@
 	<question>
 		<text>&lt;p&gt;Diketahui suku banyak &lt;em&gt;f(x) = &lt;/em&gt;&lt;em&gt;2x&lt;sup&gt;3&lt;/sup&gt; + ax&lt;sup&gt;2&lt;/sup&gt; &amp;ndash; 15x &amp;ndash; 6&lt;/em&gt;. f(x) dibagi oleh (x + 2) mempunyai sisa 4. Hasil bagi f(x) jika dibagi oleh (2x &amp;ndash; 3) adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;x&lt;sup&gt;2&lt;/sup&gt; + x &amp;ndash; 6&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2x&lt;sup&gt;2&lt;/sup&gt; + 2x &amp;ndash; 12&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;3x&lt;sup&gt;2&lt;/sup&gt; + 3x &amp;ndash; 18&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;x&lt;sup&gt;2&lt;/sup&gt; + x + 6&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2x&lt;sup&gt;2&lt;/sup&gt; + 2x+12&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -382,27 +442,33 @@
 	<question>
 		<text>&lt;p&gt;Diketahui (x &amp;ndash; 1) dan (x + 2) adalah faktor dari suku banyak &lt;em&gt;f(x) = 2x&lt;sup&gt;3&lt;/sup&gt; &amp;ndash; x&lt;sup&gt;2&lt;/sup&gt; &amp;ndash; ax + b&lt;/em&gt;. Jika x&lt;sub&gt;1, &lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; dan x&lt;sub&gt;3&lt;/sub&gt; adalah akar-akar persamaan suku banyak f(x) = 0 dengan x&lt;sub&gt;1&lt;/sub&gt;2 3. Nilai 2x&lt;sub&gt;3&lt;/sub&gt; + x&lt;sub&gt;2&lt;/sub&gt; &amp;ndash; 2x&lt;sub&gt;1&lt;/sub&gt; = ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;6&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;8&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;10&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;12&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;16&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -412,27 +478,33 @@
 	<question>
 		<text>&lt;p&gt;Adik membeli 2 kg mangga dan 3 kg salak, ia membayar Rp60.000,00. Kakak membeli 3 kg mangga dan 5 kg salak di toko buah yang sama ia membayar Rp95.000,00. Bibi membeli 3 kg mangga dan 3 kg salak ditoko buah yang sama, ia membayar dengan 2 lembar uang Rp50.000,00, maka sisa uang (kembalian) yang di terima Bibi adalah..&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;Rp15.000,00&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;Rp25.000,00&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;Rp35.000,00&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;Rp55.000,00&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;Rp75.000,00&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -442,27 +514,33 @@
 	<question>
 		<text>&lt;p&gt;Seorang ibu penjaja kue Risol dan Lemper, yang menjajakan kuenya dengan menggunakan sebuah baskom, dengan kapasitas maksimum 100 kue. Harga kue Risol dan Lemper adalah Rp4.000,00 dan Rp5.000,00. Modal yang dimilikinya adalah Rp460.000,00. Keuntungan hasil penjualan sebuah Risol dan sebuah Lemper adalah Rp800,00 dan Rp1.000,00. Jika semuanya terjual habis maka keuntungan maksimum yang diperoleh adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;Rp85.000,00&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;Rp87.500,00&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;Rp90.000,00&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;Rp92.000,00&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;Rp100.000,00&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -473,27 +551,33 @@
 		<text>&lt;p&gt;Diberikan matriks &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAA2CAYAAAAWCr1AAAAC10lEQVR4nO2c0ZGrIBRATwkW4K+/+U8BqSAdpAN7SA+pIV2kiFSxTeR9XO8s4SHiEiPKPTPM7LqY9XICAoJgGIZhVEQLXLxkxDnxXl6ndS/nnQPwAu6Y0FRcoVp2xaBCTeTfMKE7w4TujOqEXiks4Bk0wA04RvJUJfREgQEncgR+kOs/RPIVF99SQjvgAfQUFnAC2osFEwpIU/VApF4oLOCZmFCkVp6Hn9cW2iExxlIXOb96oUekI6Go0MY7/i20yY+lPnJ+9UK1IxFKRQWeSPVCfdZucnMxoR498Fzos5emQcomNvlelVAdh76QCYat0CGS3NvHnbDYqoTWgAndGSZ0Z5jQnZEsVAe9S2NC80gSqjP93+jum9A8JoU2iMjjkHkKf4FXKMUGxiY0j0mhPTLe0YKewoSuS1TowfljqtBcTGgeUaF3ZJ0s/BZ07NEOWA1dm1GhusbTTzEZep4JXY+g0BbpCLXOMZ0YnhKaiwnNIyg09JC1Y3qm/xOY0Dz+E3pzDjZexheyNsetuZ/GhOZhU387w4TuDBO6M6oSemJep+7Ab59CC2pqHL4EDVIez+E6fhgvn6qEztlvekAKTodp3fD7GoV1R5bMaCf1yvgQ0oTOoOc7059T6JxAKJbNCXWbHh0vx3Zj+efmCL0iw7a1aZH4Q3FvSmjPezOo05NNIG+IHKE6sbLGPdTnxviq/80I1QJ17xtn4jXG33bwHFLqtgOlQb5In5gly90KcUFiHvsSb0aoNrUuN+LB+xuDrkNK3RgEUnB3PjeHnbNZ6cR75yjEZoT6a5pCNXaKuU2ubkN0/8caG5xAZPrxb7pTdEVqaDPkOQ/5WqSWptxH5wq98d7MatP7bXSzshvjWCybEdohQt1B9WM4ltpRmSNU11CF0rd5jFzHpoV+ghpeZFWV0JZlH/2VQFVCa8CE7oxihdrLG9Mp+uWN9nrV+RT9elXDMIxK+Ac37FIELov7rAAAAABJRU5ErkJggg==&quot; alt=&quot;A=\left[\begin{array}{ccc}4 &amp;amp; -1 \\a+2 &amp;amp; -2 \\\end{array}\right]&quot; data-latex=&quot;A=\left[\begin{array}{ccc}4 &amp;amp; -1 \\a+2 &amp;amp; -2 \\\end{array}\right]&quot; /&gt;;&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAA2CAYAAACP8mT1AAACKklEQVRoge2bzdGCMBBAXwkU4NWrdwuwAjqwA3qwB2qwC4ugCprgOyw75IuAZIjK4r6ZzPjDkPiGbJYNguM4DgDXqB2+OJbTyHg2RQc0bE9Wg4xtU3TA/duDGOGOy1qMy0rAlKwDcANahrh2ydjveaJfxZSsDij71wVQ95+tXQDCc+1GVswVucrWUgPH/ny7k3VApt8d+ZG52J2sa/99h8SvnDnY7mQpR+CBTMMiU7+7lQWyenVIlp2DXcs64bJGZcVidLlvMvZbvTifGVkgOdaDIcDX5AnwVXTeZqJ/U7K+jctKwGUl4LISmJQVZsraWiSo5koCpzAnC2SFuAXvT4iwd9ehTcrqkCw5RGvjU1x4LvDH7VUNypysY/SFFt4ezE/Dn5RV8hyzbrw/XoFBWTWS2SpLb1p/8spqGY9X1cixIT8nS+NVOOWK/rNP7MiakqU3rEpYaPvE7rAZWUeGbeowGc1dwp3DjKwt4LIScFkJTMnSamlH3i2wpZiSBZLO5NhYneI207c5WVckYX4Hlxd9m5NV855cT9OjaqZvc7JaJHZVDJsLa+9XC0TUq+cdTMnSO4uyf12Qp75WMTydsxtZJSInXAnvrJN15n8MVFkFz7HRlKy4EqLHliPHLkUfjBtr8RhMyYorIRfyPhgCO5mGYbyCYT9gzVU1xtwWvhlZZd90wA3P9ba1aJ6lVeEYM7K2gMtKwGUl4LIS2Kws/6PTQvwvdI7jLOEPYTgtMAtZ3gwAAAAASUVORK5CYII=&quot; alt=&quot;B=\left[\begin{array}{ccc}3 &amp;amp; 1 \\b &amp;amp; 4 \\\end{array}\right]&quot; data-latex=&quot;B=\left[\begin{array}{ccc}3 &amp;amp; 1 \\b &amp;amp; 4 \\\end{array}\right]&quot; /&gt; dan &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAA2CAYAAAA4T5zSAAACo0lEQVR4nO2czZmqMBSG3xIogK1b91MAFdiBHdiDPVgDXVgEVdAEdxFyE2ICgoacYN7nycJhBr7DB/k5OSMUCoXCT9MAV6ud08qJwplpjNe0cqa0wMDvGNCh4hWDNuBXEBevOEGRERfvtwXdv3iuGGRnwAl4ApXn2HX8W7eloEHp1Bru+DVnZYB9g0PH2xiiVnJF3fx6/NxgJhYu2RhwA/5QMwjpBvh44teWjQGaXA3oUA+Ry6EMaIAeM7fuUG/NJ9TjNZfaHJdRS/ZjAMwbYFOhBr4B0xdvoRk1LbU5vT1q8uDjsAaAMmFAPYEpOKHimXsADm1ATToDTrx2Ow/P72VnwB/hbmXA9Pm6C+rx970xqVCzHrvbOZP5LKixjg2oG9syDfKBGYCH8XOo743JzdJgt6wNOCri4hUnKDLi4hUnKDLi4hUnKDKz8VZMd20GXkf3XQUdkGC8eir1xCy1dVbvk5XlZkEHJRhvaA7dz5zM3VD3tWaroIPijVevIJdulksxYD3eePVCYu8VJBQD/v9wS169vAHr8cYb2j5bohiwHm+8PemqtYoBqBlQh5lu1qjE1h5p3WIAavB98JrJ2yOzWAxIjDhBkREXrzhBkREXbylNTExIUI1Jj4RKTiSVJr5LNgbYm+s6UejmqiQXZoXIxgAXvTlvF0UVA77Au4J0alzCG6Ar33SXtyaJmaUBFSpgd2EYozRxidt4Tf0mtiuvmaUBLcuzm2+VJs6h0/af/B9bdgbceT8lErs0UW/XfkJWBtyZJgkvzD99sUsTt6bt3XNkYcCF126nZWrA3qWJN0z9ZzVqXLuLmIUBNWYB5jbbgL1LEytLb8e2FH4WBhwZcfGKExQZcfGKExQZcfGKExQZcfGWL+tITPm6mkKhUEjDPxXSTX3XuwxwAAAAAElFTkSuQmCC&quot; alt=&quot;C=\left[\begin{array}{ccc}15 &amp;amp; -2 \\25 &amp;amp; c \\\end{array}\right]&quot; data-latex=&quot;C=\left[\begin{array}{ccc}15 &amp;amp; -2 \\25 &amp;amp; c \\\end{array}\right]&quot; /&gt;.&lt;/p&gt;
 &lt;p&gt;Jika 2A + AB = C, maka nilai a - bc =&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;-20&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;-10&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;10&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;20&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;30&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -503,27 +587,33 @@
 	<question>
 		<text>&lt;p&gt;Diketahui matriks &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAA2CAYAAACP8mT1AAACFElEQVRoge2bwZWCMBBAfwkUwJUrdwugAjuwA3qgh62BLizCKmzCPcRZIwZJNuHB6Pz3clhAZvIfCWOygmEYBjVwmrQt6Sa5dNum80wL3ICR/cmSvHaDyNpaUgiTlYB6WcOKuUxRJWu8n/NbyeQr4DwTmxXiZbMka83hObyJDSbrjw74WYhhsoAGN/yqhRiqZA3ABbjySLwpEPPs3edjZPnUuE5eMuP1wNH7W2S1gRzUygI43K/979PV8Pp29dtHyerIkxXiI4ZhixtyIkaGYenkz8wXumpk1bhEZXK/4jpVFYwtddaN8OqCGll7wGQlYLISMFkJRMsaYy/MRL2sA+7tk1stx6BaVoWTJNXyEtPNhlBr33xetaweV3NIJ5b4WlmtdzJWVi5qZY24yhkenVj6HvaVT5bsk03bu47K575KVo2b1GvvWEWcrFzUyRpxE7uPrP2svX2tStaPd7CaXHjDLWH4T1xpVMnaGpOVgMlKwGQlECtroFziHW4ulnl5bgVWpSzZqCiR+Innl5bcOxRfnSzZPe5ZL/HzzL1VyZL/cmnu59dK/MJrnQnKZPm7x2vJOuJkqZ6zDriCWRBZ1eR4buwr84sFamTJfmGolehAw/MqSwg1sqaUHIYNr0Mv9LSqldVTZk/Af2n4Oah/GwpSC0kBmUNP/NBWKWsrTFYCJisBk5XAbmXZD50isJ/QGYYRyy81vSZudMoFGwAAAABJRU5ErkJggg==&quot; alt=&quot;A=\left[\begin{array}{ccc}5 &amp;amp; 4 \\ 4 &amp;amp; 2 \end{array}\right]&quot; data-latex=&quot;A=\left[\begin{array}{ccc}5 &amp;amp; 4 \\ 4 &amp;amp; 2 \end{array}\right]&quot; /&gt;,&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAA2CAYAAACP8mT1AAACG0lEQVRoge2bzbGCMBRGTwkU4JYtewuwAjqwA3ugB2ugC4uwCprgLZI7RghKngG5eM8MM/5kIB6TkORTMAzDAOA8OA5frEsVqc+m6IE725N1x9VtU/RA++1KRGgxWbMxWQmoknUAGqDjMa4dM1yvAq7+nD1wA8pIOVWyeqD2jwvch+r84/9S+XNU/vkB9yXcI2VVyRpy9GWrdwUTaXEtLfa6WlknX/aTlhVS4qYI14lzqpVV4LpK/abcXEREhxO2K1ktbrDPzREnLHZ9lbIa8rWoGBfiUtTJanhen9XkH+DP7EBWzbjrtXwmS9Z8sv6UqUOsi6uRdeAxGR0en8gqcN1OFsmdf76rAf4bmKwETFYCJiuBSVly+wyPjumlQE7UyQK3qg9vobJCX3ofWqWsnvF+keyNT3FivME/PE5vKqVOVjl4Qzbebrzuhj8pq2Y8ZjUsP16BQllX3ExWmLvR9pMtqyM+Xl0iZUN+TpaMV2GXK/xraySyqmTVuIFcKHmEA2ukw2pklTxW4OFktGG9GF2NrC1gshIwWQmYrATWju9DmolrgzJZS8T3IRLa7kLWkJzxvUyPLi+urVpWrvheWqnE97uTlTO+vwTn2aWsXPH9kedfzIisgvEvaVTKyhnfT2WRsTqok7V0fL+bbrhEfD9E0ukYamQtFd+HyN1VdoWHqJG1BUxWAiYrAZOVwGZl2R+dZmJ/oTMMYw5/MlQvkfV+GUkAAAAASUVORK5CYII=&quot; alt=&quot;B=\left[\begin{array}{ccc}2 &amp;amp; 3 \\ 2 &amp;amp; 4 \end{array}\right]&quot; data-latex=&quot;B=\left[\begin{array}{ccc}2 &amp;amp; 3 \\ 2 &amp;amp; 4 \end{array}\right]&quot; /&gt; dan&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAVCAYAAACQcBTNAAAAcUlEQVQokWNgGAXYgR4DA8N/KE6CiiVhEYODFgYGhgNIfBmowhZcpr9C04xVIQxcYWBgcCVGIQMDA0Mw1HSCChkYIG7+z8DAoEpIYQvU5OmETEZ2oyXUdAFc7jyAJoY1bGEBvxJJzBUq9ooBEpwjAwAAl/gbNqtyFRkAAAAASUVORK5CYII=&quot; alt=&quot;X&quot; data-latex=&quot;X&quot; /&gt; adalah matriks ordo 2x2. Jika &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAeCAYAAABpE5PpAAABn0lEQVRoge2YwZWDIBCGvxIswGuuuVuAFaQDO0gP6SE10AVFpAqbcA8wTyTgaoTN5mW+97gYcMafmWEIKIqiKIqifD0GGN7txKfxdaI1uA++v9uRT6EBrjjRzJt9+ReYzLgm5p5R0QAnRGqcMnNVtJ18nWiSdke4APZF25MfwpR4VoMhsjUBI+5Aa9YWdn7i44Dx2PB5x9rWr+mCZzfvU6oMlMZ6e8LZ2862Pw1OrI76u7qGwUUqOKEe/C7YsGFs2bx4w/D2s6Jdgd6/vJZo0pKMzOEfC9IzC7VFMCgj2onld7e4qLNk0jMs3DVFs3603pEx45CUiL9ISeHCc2m5sVLPDO5DYBattMM9eZFCpDzsuVGUiLQ7y55T/EiuS50aewv4FgzLIpvihItE2bh2dfZMCdFG0vXsqXlv/Q+hcw11RJtYv4THNcySvm3UQOpZmAWiw5PPqWuQvKAv7JhlTjkpsrJZ4cktDGxL5xLEfaVE/EgU7XecOCZyTNLTxgsOIpEk7+6C55ZldLfMjW7tf0tCv8KmNtxURVEURVFe4gdulYjdWzClgQAAAABJRU5ErkJggg==&quot; alt=&quot;A^{-1}c \dot X=B&quot; data-latex=&quot;A^{-1}c \dot X=B&quot; /&gt;, maka nilai determinan matriks&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAVCAYAAACQcBTNAAAAcUlEQVQokWNgGAXYgR4DA8N/KE6CiiVhEYODFgYGhgNIfBmowhZcpr9C04xVIQxcYWBgcCVGIQMDA0Mw1HSCChkYIG7+z8DAoEpIYQvU5OmETEZ2oyXUdAFc7jyAJoY1bGEBvxJJzBUq9ooBEpwjAwAAl/gbNqtyFRkAAAAASUVORK5CYII=&quot; alt=&quot;X&quot; data-latex=&quot;X&quot; /&gt; adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;-12&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;-6&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;6&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;12&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -535,7 +625,8 @@
 0 &amp;amp; 2 \\
 \end{array}\right]&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cleft%5B%5C%5Cbegin%7Barray%7D%7Bccc%7D-1%20%26%201%20%5C%5C%5C%5C%5Cr%5Cn0%20%26%202%20%5C%5C%5C%5C%5Cr%5Cn%5C%5Cend%7Barray%7D%5C%5Cright%5D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22BracketPair%22%2C%22value%22%3A%22squareBracket%22%2C%22operands%22%3A%7B%22bracketedExpression%22%3A%5B%7B%22type%22%3A%22Matrix%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22elements%22%3A%5B%5B%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%5D%2C%5B%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%2C%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%5D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; adalah ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>71abd8256c315ddf28255191643eecb0.png</name>
 			<type>image/png</type>
@@ -546,22 +637,27 @@
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;x + 6y &amp;ndash; 4 = 0&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;x &amp;ndash; 4y + 4 = 0&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;6x + y &amp;ndash; 4 = 0&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;6x &amp;ndash; y &amp;ndash; 4 = 0&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;6x + 3y &amp;ndash; 4 = 0&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -572,7 +668,8 @@
 		<text>&lt;p&gt;Diketahui barisan bilangan:&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;46e84682faa8cf1b3f6c44a98a0a2757.png&quot; alt=&quot;12,6,3,\frac{3}{2},\frac{3}{4},...&quot; data-latex=&quot;12,6,3,\frac{3}{2},\frac{3}{4},...&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Jumlah n suku pertama dari barisan bilangan tersebut adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>46e84682faa8cf1b3f6c44a98a0a2757.png</name>
 			<type>image/png</type>
@@ -583,6 +680,7 @@
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;474b0492aa59080fdf1b5485744e268f.png&quot; alt=&quot;12\left(1-\left(\frac{1}{2}\right)^{n}\right)&quot; data-latex=&quot;12\left(1-\left(\frac{1}{2}\right)^{n}\right)&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>474b0492aa59080fdf1b5485744e268f.png</name>
@@ -593,6 +691,7 @@
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;0d8fb7889eb02f89c215a66661e4bb13.png&quot; alt=&quot;24\left(1-\left(\frac{1}{2}\right)^{n}\right)&quot; data-latex=&quot;24\left(1-\left(\frac{1}{2}\right)^{n}\right)&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>0d8fb7889eb02f89c215a66661e4bb13.png</name>
@@ -603,6 +702,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;cba3b9cb3c0d245d24d27d1255673357.png&quot; alt=&quot;12\left(\left(\frac{1}{2}\right)^{n}-1\right)&quot; data-latex=&quot;12\left(\left(\frac{1}{2}\right)^{n}-1\right)&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>cba3b9cb3c0d245d24d27d1255673357.png</name>
@@ -613,6 +713,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;abc98edc140293014031ffdf5721c882.png&quot; alt=&quot;24\left(\left(\frac{1}{2}\right)^{n}-1\right)&quot; data-latex=&quot;24\left(\left(\frac{1}{2}\right)^{n}-1\right)&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>abc98edc140293014031ffdf5721c882.png</name>
@@ -623,6 +724,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;d88db4578fb48e838288ea2602fa30a5.png&quot; alt=&quot;12\left(1+\left(\frac{1}{2}\right)^{n}\right)&quot; data-latex=&quot;12\left(1+\left(\frac{1}{2}\right)^{n}\right)&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>d88db4578fb48e838288ea2602fa30a5.png</name>
@@ -638,27 +740,33 @@
 	<question>
 		<text>&lt;p&gt;Seorang petani mangga mencatat hasil panennya selama satu bulan pertama. Setiap harinya mengalami kenaikan tetap dimulai hari pertama, kedua, ketiga berturut-turut 17 kg, 19 kg, 21 kg dan seterusnya. Jumlah seluruh hasil panen selama satu bulan (30 hari) adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;1180 kb&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;1260 kg&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;1280 kg&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;1380 kg&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2760 kg&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -668,7 +776,8 @@
 	<question>
 		<text>&lt;p&gt;Seorang atlet lari berlatih untuk persiapan lomba. Pada hari pertama ia berlatih menempuh jarak 4 km, pada hari-hari &amp;nbsp;berikutnya ia dapat menempuh jarak&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;1f21a08107c1dc6cd8c0ef54c4c2f250.png&quot; alt=&quot;\frac{3}{2}&quot; data-latex=&quot;\frac{3}{2}&quot;&gt; dari jarak yang ditempuh pada hari sebelumnya. Jumlah jarak yang di tempuh atlet tersebut selama enam hari adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>1f21a08107c1dc6cd8c0ef54c4c2f250.png</name>
 			<type>image/png</type>
@@ -679,6 +788,7 @@
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;3f4c7252900a772585f76fa3f8476910.png&quot; alt=&quot;63\frac{1}{8}&quot; data-equation=&quot;%7B%22latex%22%3A%2263%5C%5Cfrac%7B1%7D%7B8%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; km&lt;/p&gt;</text>
 		<file>
 			<name>3f4c7252900a772585f76fa3f8476910.png</name>
@@ -689,6 +799,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;e426fbea6cf12687ffc7bf1fe2becadf.png&quot; alt=&quot;73\frac{1}{8}&quot; data-equation=&quot;%7B%22latex%22%3A%2273%5C%5Cfrac%7B1%7D%7B8%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; km&lt;/p&gt;</text>
 		<file>
 			<name>e426fbea6cf12687ffc7bf1fe2becadf.png</name>
@@ -699,6 +810,7 @@
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;5998151f6e7f90c58aacb64d2a96f6dc.png&quot; alt=&quot;83\frac{1}{8}&quot; data-equation=&quot;%7B%22latex%22%3A%2283%5C%5Cfrac%7B1%7D%7B8%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; km&lt;/p&gt;</text>
 		<file>
 			<name>5998151f6e7f90c58aacb64d2a96f6dc.png</name>
@@ -709,6 +821,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;18033d49aa3beed654eca744395edc63.png&quot; alt=&quot;88\frac{1}{8}&quot; data-equation=&quot;%7B%22latex%22%3A%2288%5C%5Cfrac%7B1%7D%7B8%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; km&lt;/p&gt;</text>
 		<file>
 			<name>18033d49aa3beed654eca744395edc63.png</name>
@@ -719,6 +832,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;147917aaf61b787bfceb5bd01d0a4503.png&quot; alt=&quot;98\frac{1}{8}&quot; data-equation=&quot;%7B%22latex%22%3A%2298%5C%5Cfrac%7B1%7D%7B8%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%229%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; km&lt;/p&gt;</text>
 		<file>
 			<name>147917aaf61b787bfceb5bd01d0a4503.png</name>
@@ -736,7 +850,8 @@
 &lt;p&gt;&lt;img src=&quot;a69190_20.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Luas permukaan prisma tersebut adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>a69190_20.gif</name>
 			<type>image/gif</type>
@@ -747,22 +862,27 @@
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;(180 + 9&amp;radic;3) cm&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;(180 + 18&amp;radic;3) cm&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;(360 + 9&amp;radic;3) cm&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;(360 + 18&amp;radic;3) cm&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;(360 + 36&amp;radic;3) cm&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -772,11 +892,13 @@
 	<question>
 		<text>&lt;p&gt;Diketahui kubus ABCD.EFGH dengan panjang rusuk 6 cm. Titik P pada pertengahan AB dan Q pada pertengahan BC. Jarak titik P dengan bidang yang melalui titik D, Q dan H adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;b750638acc8e3a9553a33d1ef8079b6b.png&quot; alt=&quot;\frac{9}{5}\sqrt{5}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B9%7D%7B5%7D%5C%5Csqrt%7B5%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%229%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; cm&lt;/p&gt;</text>
 		<file>
 			<name>b750638acc8e3a9553a33d1ef8079b6b.png</name>
@@ -787,6 +909,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;49221835241121da3c595e9fd2782d9c.png&quot; alt=&quot;\frac{12}{5}\sqrt{5}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B12%7D%7B5%7D%5C%5Csqrt%7B5%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; cm&lt;/p&gt;</text>
 		<file>
 			<name>49221835241121da3c595e9fd2782d9c.png</name>
@@ -797,6 +920,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;308481660d272711613f304362dbce44.png&quot; alt=&quot;3\sqrt{5}&quot; data-equation=&quot;%7B%22latex%22%3A%223%5C%5Csqrt%7B5%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; cm&lt;/p&gt;</text>
 		<file>
 			<name>308481660d272711613f304362dbce44.png</name>
@@ -807,6 +931,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;6934f2d3f11786b55f6a6058159f1a19.png&quot; alt=&quot;\frac{18}{5}\sqrt{5}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B18%7D%7B5%7D%5C%5Csqrt%7B5%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; cm&lt;/p&gt;</text>
 		<file>
 			<name>6934f2d3f11786b55f6a6058159f1a19.png</name>
@@ -817,6 +942,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;b294d5881fde3c246d4211f7652d3d91.png&quot; alt=&quot;4\sqrt{5}&quot; data-equation=&quot;%7B%22latex%22%3A%224%5C%5Csqrt%7B5%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%225%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; cm&lt;/p&gt;</text>
 		<file>
 			<name>b294d5881fde3c246d4211f7652d3d91.png</name>
@@ -832,11 +958,13 @@
 	<question>
 		<text>&lt;p&gt;Diketahui kubus ABCD.EFGH dengan panjang rusuk 6 cm. Titik P pada pertengahan FG. Cosius sudut antara AP dengan bidang CDHG adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;342fbec47eb65e9f17a7b36f649d86e3.png&quot; alt=&quot;\frac{2}{3}\sqrt{2}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B2%7D%7B3%7D%5C%5Csqrt%7B2%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>342fbec47eb65e9f17a7b36f649d86e3.png</name>
@@ -847,6 +975,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;60fbe6f0c7416ca12d0a89268a0caccf.png&quot; alt=&quot;\frac{1}{2}\sqrt{2}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B1%7D%7B2%7D%5C%5Csqrt%7B2%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>60fbe6f0c7416ca12d0a89268a0caccf.png</name>
@@ -857,6 +986,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;841958205242324cf13954abc99ec9b1.png&quot; alt=&quot;\frac{1}{3}\sqrt{2}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B1%7D%7B3%7D%5C%5Csqrt%7B2%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>841958205242324cf13954abc99ec9b1.png</name>
@@ -867,6 +997,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;d5a09496ed9fe13b605d55eaccc65a11.png&quot; alt=&quot;\frac{1}{4}\sqrt{2}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B1%7D%7B4%7D%5C%5Csqrt%7B2%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>d5a09496ed9fe13b605d55eaccc65a11.png</name>
@@ -877,6 +1008,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;993068582b434dff3f5738c51930a958.png&quot; alt=&quot;\frac{1}{3}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B1%7D%7B3%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>993068582b434dff3f5738c51930a958.png</name>
@@ -893,27 +1025,33 @@
 		<text>&lt;p&gt;Diketahui panjang AD = 9 cm, dan BC = 9&amp;radic;6 cm; &amp;ang;CBD = 120&amp;deg;, &amp;ang;BAD = 45&amp;deg; dan &amp;ang;ABD = 60&amp;deg;.&lt;/p&gt;
 &lt;p&gt;Panjang CD = ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2&amp;radic;78 cm&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;3&amp;radic;78 cm&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;6&amp;radic;10 cm&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;9&amp;radic;10 cm&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;20&amp;radic;6 cm&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -924,7 +1062,8 @@
 		<text>&lt;p&gt;Persamaan yang menyatakan grafik berikut adalah...&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;eadad5_24.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>eadad5_24.gif</name>
 			<type>image/gif</type>
@@ -935,22 +1074,27 @@
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;y = 3 cos (2x + 10)&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;y = 3 cos (2x &amp;ndash; 20)&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;y = 3 sin (2x + 20)&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;y = 3 sin (2x &amp;ndash; 10)&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;y = 3 sin (2x &amp;ndash; 20)&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -960,7 +1104,8 @@
 	<question>
 		<text>&lt;p&gt;Nilai dari&amp;nbsp;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;d103d11ba2a948d41be962d30482b849.png&quot; alt=&quot;\frac{\sin63^{\circ }+\sin177^{\circ }}{\cos87^{\circ }+\cos27^{\circ }}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B%5C%5Csin63%5E%7B%5C%5Ccirc%20%7D%2B%5C%5Csin177%5E%7B%5C%5Ccirc%20%7D%7D%7B%5C%5Ccos87%5E%7B%5C%5Ccirc%20%7D%2B%5C%5Ccos27%5E%7B%5C%5Ccirc%20%7D%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22sin%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%97%A6%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22sin%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%97%A6%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22cos%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%97%A6%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Function%22%2C%22value%22%3A%22cos%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%97%A6%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt; = ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>d103d11ba2a948d41be962d30482b849.png</name>
 			<type>image/png</type>
@@ -971,10 +1116,12 @@
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;-&amp;radic;3&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;ae50b4f225a5c5a30186c9db18a97688.png&quot; alt=&quot;-\frac{1}{2}\sqrt3&quot; data-latex=&quot;-\frac{1}{2}\sqrt3&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>ae50b4f225a5c5a30186c9db18a97688.png</name>
@@ -985,6 +1132,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;60fbe6f0c7416ca12d0a89268a0caccf.png&quot; alt=&quot;\frac{1}{2}\sqrt2&quot; data-latex=&quot;\frac{1}{2}\sqrt2&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>60fbe6f0c7416ca12d0a89268a0caccf.png</name>
@@ -995,10 +1143,12 @@
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;1&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&amp;radic;3&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1008,27 +1158,33 @@
 	<question>
 		<text>&lt;p&gt;Nilai dari &lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOcAAAAiCAYAAACk0c4nAAAEt0lEQVR4nO2czZHiMBBGXwgE4CtX7gRABGTgDMiBHIiBLBwEUZAEe5C/svBItoQt27D9qly1u6O1JXW3+kfSgGEYhmEYhmEYC7EDLmt3wjBmpALqtTsxlR1wB45rd8QwZuYENDgd/0oa3CCM8pxxC+HLnuKPqIHbsFi2SY1TFmMZGuAA7Ffux//Ggy9zQDvgiVMWozwVzjiN5TnhDPRrqElXlqpgP0qzlb6fsKLbmjz5Iu/5YLyatceFvd9a9apw/b+wflHgSpkopWrf/cIpoBX2wlzJyD0fuAldI6zcJ3x7j+vjL+RHOVFCKUqFVTWu0ARuEbIaQpgT74WiQXb8NZA7y0xuSkfvdELv/9+Grip2ZV6vVJPnqQ+4FVH9aQgvKGtGAHuGV+098+T/J5YZ4xk3z8+Z31tK9pDmkN5YyzgvDK/kR8ITLw+kPE5GPqdC5AjowLtSV7hxhcamMa0R3tbE850d3WI3xTh3lN8yUF9vlIn4SslevAg7nGjjNcLasUXg2j4pNCPvyiV39exzJ66kL9bJye7EC1NXnMJM0YUd80cwoW80pOvFJ5SUPThjTn6/LxB5IV/RlZce6ZJ+5YFH7+e5VcAx40wpFvlt/e8rV33SKeQF18+UyumnAtrTbTjHlHSN0FZKHeJEp0wh40yZy75hlqoInxmPPLYsexg33jfGwtoDncFW7YcfOGHLPddtm5xVc8w4Uz3Mue2P/21VRmXgV/JK2J8ISKdutDIOGefSBZMjYYPRvqf6GjLOlLnUoq2n1Pia9t1X3Dz7epnT3yFKyl5tk+cn1Thz24yRYpxj71PMH0vAldeOCSflOFvqhCqvjLVPGffYM6Q8B/56iNgWSsP73GnO60D71LkcQnoy9sTk3i+4aHEJeaItyl7f+3nj1P7nUKhyJKN07TE171AYFaKU59R8PPmbk4UKFMoxUw3k07mck9DCpKitzxZlDz9knLGqlvIKP3zor56qHL7I3yedKqCYwkAXlpWi5j0vq0jPcWIynDKXc/Lg79xpvD5blT1k5Jza5/Rd/1aMU6dq+qi44U/6ofcuXUHbt20vbZvUkCxHQDVOaeTBVU6PGeCDjFL6B+i8svp/TvxeSBf071Pmck5kiP2tC19Ptix7yNj2U6VVeZuqtb7X8tsQaaPkPOcESmjF89Emcx+FDbG84Mr7qSKFbzneKkdAuiTuz1PsqF7FMt7H95430qqUfV2AeeZybjQ26Zsvpy3LXoQWwM0hI48NRIq8xqHxqaHN0HuXqNTKe6qSbaRTSvbQRZibP44q4xsKhX/prmfFcGV5bpT72C2U7aB92q+gYVx5dJJ/7RsdUziw/G97kPe0GyLb4caMKUFpg0i9gKq9t29Ep2fWCM83Hz79R4QumUyidFXOfhOC8b8QK3ACXZVTVVnfKHbtn0PPjbiB6j264a2/5+Q6g502jB9g1Akd6Q7mXto/K9TS6ZLQ8yC+adq0H1bo5hc8bqSHVTe+N2w1jDGuJDgr3SJJZewaUNP+TGcc/bY5xqmN45Kb84axBqNXH2UoF7qrNClVvAPDRaF+WKtjdZ+W8De/OWsYGexIsDOFqDrRsOR+m2EYhmEYhmEYhvG7/AMb5CJQcfHuDQAAAABJRU5ErkJggg==&quot; alt=&quot;\lim _{x \to \infty }\left(\left(2x+3\right)-\sqrt{4x^{2}-6x+3}\right)&quot; data-latex=&quot;\lim _{x \to \infty }\left(\left(2x+3\right)-\sqrt{4x^{2}-6x+3}\right)&quot; /&gt;= ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAqklEQVQ4je2UwQ3DIAxF3wgMwJVr7hkgi7BBd8gOmSFbZIhO0SXcQ4zURBD+pVKk9kscEM/mG2HD7RSADDwBA17AowWvwOxBeKABk3LT4HDq2RmBpZe1ZDO3NSgWIrt/UwOCw1mBuYLPB+XpYg0uL1AK3BD9/iXLhPVbqo2C5sc/j4LvtVV0eFTgxVdXmb2tQodj4ljoJbh+7BONAlPl6tyCN+pfU55Id9QbAeQ19v/SVdIAAAAASUVORK5CYII=&quot; alt=&quot;\frac{3}{2}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B3%7D%7B2%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAp0lEQVQ4je2UsQ2DMBBF3wgegNYtfQbwBNnAG2QHdmAGtmAIT8ESTsEhmch2fhMJKTzpCqTHPx26Ay7HAuRKpZY8FM8O2ICgdHqaLJGAqIjBUp2a+lJTM+dhmyzApIijpXpFni355jfUlv6z/gvHfnOJffqNzg0eS3/c3WQvjWqn3EsvGUx+KPJs9ZUIrAj/jcB50K5YHqynMaCvtI4teaW+mtKnuypvqKoxUhMj7+cAAAAASUVORK5CYII=&quot; alt=&quot;\frac{7}{2}&quot; data-latex=&quot;\frac{7}{2}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAwElEQVQ4je2UsQ3EIAxF3wgMQEub/gbIBNmADW4HdsgM2YIhMkWW4IoYiSMxRLomUu5JLoCPbZBtuB0GCMAGJGAFXpp4ASJgZT3JJVsLrRwM1X4E3rV4UMSL2IENmCX37GDVxE4Ok1wMWhoaGzBeEU4SqYkFvHh1PW8538P//vmZdMGehWEvzbJbvCZe2Esz92DgvInVSKnlvSTPEnUqlcxiXTz7GDAdHSPfD20KywnkUB7oTkJ7TRw5L81LX3dXPoeaN/fm+JLJAAAAAElFTkSuQmCC&quot; alt=&quot;\frac{9}{2}&quot; data-latex=&quot;\frac{9}{2}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAYAAAD+MdrbAAAAwElEQVRIie2WwQ3DIBAEpwQKyJcvfwqgkXTgHtIDNbgL1+MmyINDJpFysR1kKdKNxAOzWg4L7QEG4IAMREXjgUW0KhFYgQKED5q7rJdvZknEKIaTbBr2GPZoFWKG1xs6ESdFE0Vz04w8MLPdwyLz3jjJt7a+ytzvrdYwFMqgYfwjgdpS+/Q5nSyBGk8taD1bXA1jYvB9e1BfDEPw1OqGpLOj/j+tzxwym9G74CGz5c0s/2KYeT1mO/opWu+1mLqYJzKySiHeKRvNAAAAAElFTkSuQmCC&quot; alt=&quot;\frac{11}{2}&quot; data-latex=&quot;\frac{11}{2}&quot; /&gt;&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1038,7 +1194,8 @@
 	<question>
 		<text>&lt;p&gt;Nilai dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;5f7e688cab1cb14dc5eb0bf8b86b5386.png&quot; alt=&quot;\lim _{x \to 0}\frac{\cos5x-\cos3x}{\left(\frac{1}{2}\cos2x-\frac{1}{2}\right)}&quot; data-latex=&quot;\lim _{x \to 0}\frac{\cos5x-\cos3x}{\left(\frac{1}{2}\cos2x-\frac{1}{2}\right)}&quot;&gt; = ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>5f7e688cab1cb14dc5eb0bf8b86b5386.png</name>
 			<type>image/png</type>
@@ -1049,22 +1206,27 @@
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;1&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;3&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;4&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;8&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1074,27 +1236,33 @@
 	<question>
 		<text>&lt;p&gt;Turunan pertama dari f(x) = cos&lt;sup&gt;4&lt;/sup&gt;(1-4x) adalah f&lt;sup&gt;'(x) =...&lt;/sup&gt;&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;-8sin(2-8x) . cos&lt;sup&gt;2&lt;/sup&gt;(1-4x)&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;8sin(2-8x) . cos&lt;sup&gt;2&lt;/sup&gt;(1-4x)&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;-8sin(8x-2) . cos&lt;sup&gt;2&lt;/sup&gt;(4x-1)&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;16sin(2-8x) . cos&lt;sup&gt;2&lt;/sup&gt;(1-4x)&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;16sin(8x-2) . cos&lt;sup&gt;2&lt;/sup&gt;(4x-1)&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1104,27 +1272,33 @@
 	<question>
 		<text>&lt;p&gt;Persamaan garis singgung kurva f(x) = x&lt;sup&gt;3&lt;/sup&gt; &amp;ndash; 9x&lt;sup&gt;2&lt;/sup&gt; + 5x + 10, di titik yang berabsis 1 adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;10x + y - 17 = 0&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;10x + y - 3 = 0&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;x + 10y - 3 = 0&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;10x + y + 3 = 0&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;10x + y + 17 = 0&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1134,27 +1308,33 @@
 	<question>
 		<text>&lt;p&gt;Sebuah perusahaan memproduksi x unit barang, dengan biaya total (100 + 4x + 0,2x&lt;sup&gt;2&lt;/sup&gt;) ribu rupiah. Jika semua barang&amp;nbsp; terjual&amp;nbsp; dengan&amp;nbsp; Rp60.000,00&amp;nbsp; untuk&amp;nbsp; setiap&amp;nbsp; barang, maka keuntungan maksimum yang diperoleh adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;Rp2.820.000,00&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;Rp2.830.000,00&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;Rp3.820.000,00&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;Rp3.830.000,00&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;Rp4.820.000,00&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1164,7 +1344,8 @@
 	<question>
 		<text>&lt;p&gt;Hasil dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;b35bf924b581acb446985c186122016b.png&quot; alt=&quot;\int 2x\left(2x-3\right)^{2}dx&quot; data-latex=&quot;\int 2x\left(2x-3\right)^{2}dx&quot;&gt; = ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>b35bf924b581acb446985c186122016b.png</name>
 			<type>image/png</type>
@@ -1175,22 +1356,27 @@
 <answer>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;2x&lt;sup&gt;4&lt;/sup&gt; &amp;ndash; 8x&lt;sup&gt;3&lt;/sup&gt; + 9x&lt;sup&gt;2&lt;/sup&gt; + C&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2x&lt;sup&gt;4&lt;/sup&gt; + 8x&lt;sup&gt;3&lt;/sup&gt; + 18x&lt;sup&gt;2&lt;/sup&gt; + C&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2x&lt;sup&gt;3&lt;/sup&gt; &amp;ndash; 8x&lt;sup&gt;2&lt;/sup&gt; + 9x + C&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2x&lt;sup&gt;3&lt;/sup&gt; + 8x&lt;sup&gt;2&lt;/sup&gt; + 18x + C&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;x&lt;sup&gt;4&lt;/sup&gt; &amp;ndash; 8x&lt;sup&gt;3&lt;/sup&gt; + 9 + C&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1200,7 +1386,8 @@
 	<question>
 		<text>&lt;p&gt;Nilai dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;95756e1d8f027515d2860a027c50998f.png&quot; alt=&quot;\int \left(3x^{2}+4x-5\right)dx&quot; data-latex=&quot;\int \left(3x^{2}+4x-5\right)dx&quot;&gt; = ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>95756e1d8f027515d2860a027c50998f.png</name>
 			<type>image/png</type>
@@ -1211,22 +1398,27 @@
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;-4&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;-2&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;6&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;8&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;13&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1236,7 +1428,8 @@
 	<question>
 		<text>&lt;p&gt;Hasil dari pengintegralan&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;c17de028b1c77f8ba8a1d05e8519b03b.png&quot; alt=&quot;\int 2\cos^{2}2x\c\dot \sinxdx&quot; data-latex=&quot;\int 2\cos^{2}2x\c\dot \sinxdx&quot;&gt; adalah ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>c17de028b1c77f8ba8a1d05e8519b03b.png</name>
 			<type>image/png</type>
@@ -1247,6 +1440,7 @@
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;97879d5d135a62e8018fa663517aaef3.png&quot; alt=&quot;-\frac{1}{2}\cos^{4}2x+C&quot; data-equation=&quot;%7B%22latex%22%3A%22-%5C%5Cfrac%7B1%7D%7B2%7Dcos%5E%7B4%7D2x%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22c%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22o%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22s%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>97879d5d135a62e8018fa663517aaef3.png</name>
@@ -1257,6 +1451,7 @@
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;bd7837b0bca6b7c7c4aefa35ee3c354a.png&quot; alt=&quot;-\frac{1}{4}\cos^{4}2x+C&quot; data-equation=&quot;%7B%22latex%22%3A%22-%5C%5Cfrac%7B1%7D%7B4%7Dcos%5E%7B4%7D2x%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22c%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22o%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22s%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>bd7837b0bca6b7c7c4aefa35ee3c354a.png</name>
@@ -1267,6 +1462,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;de4816c23ffa46fff2da0c2387c8bf67.png&quot; alt=&quot;-\frac{1}{4}\cos^{4}4x+C&quot; data-equation=&quot;%7B%22latex%22%3A%22-%5C%5Cfrac%7B1%7D%7B4%7Dcos%5E%7B4%7D4x%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22c%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22o%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22s%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>de4816c23ffa46fff2da0c2387c8bf67.png</name>
@@ -1277,6 +1473,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;4c249b2d7be88afad89d410321ba8ef7.png&quot; alt=&quot;-\frac{1}{8}\cos^{4}2x+C&quot; data-equation=&quot;%7B%22latex%22%3A%22-%5C%5Cfrac%7B1%7D%7B8%7Dcos%5E%7B4%7D2x%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22c%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22o%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22s%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>4c249b2d7be88afad89d410321ba8ef7.png</name>
@@ -1287,6 +1484,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;a52baac7ff4443e536880d231911d9fd.png&quot; alt=&quot;-\frac{1}{8}\sin^{4}2x+C&quot; data-equation=&quot;%7B%22latex%22%3A%22-%5C%5Cfrac%7B1%7D%7B8%7Dsin%5E%7B4%7D2x%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%228%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22s%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22i%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22n%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%224%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>a52baac7ff4443e536880d231911d9fd.png</name>
@@ -1302,7 +1500,8 @@
 	<question>
 		<text>&lt;p&gt;Hasil dari&amp;nbsp;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;bff48ce8162695a919e21ddff5fd5de7.png&quot; alt=&quot;\int \frac{\left(2x+1\right)}{\sqrt{x^{2}+x+1}}dx&quot; data-latex=&quot;\int \frac{\left(2x+1\right)}{\sqrt{x^{2}+x+1}}dx&quot;&gt; = ...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>bff48ce8162695a919e21ddff5fd5de7.png</name>
 			<type>image/png</type>
@@ -1313,6 +1512,7 @@
 <answer>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;bf576b4271997ea4e61a50246d2bf0aa.png&quot; alt=&quot;2\sqrt{x^{2}+x+1}+C&quot; data-equation=&quot;%7B%22latex%22%3A%222%5C%5Csqrt%7Bx%5E%7B2%7D%2Bx%2B1%7D%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>bf576b4271997ea4e61a50246d2bf0aa.png</name>
@@ -1323,6 +1523,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;9ee1b85029e30e95a296985279909f1f.png&quot; alt=&quot;2x\sqrt{x^{2}+x+1}+C&quot; data-equation=&quot;%7B%22latex%22%3A%222x%5C%5Csqrt%7Bx%5E%7B2%7D%2Bx%2B1%7D%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>9ee1b85029e30e95a296985279909f1f.png</name>
@@ -1333,6 +1534,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;5b92d475fbb3f3b175e429719b408e14.png&quot; alt=&quot;x\sqrt{x^{2}+x+1}+C&quot; data-equation=&quot;%7B%22latex%22%3A%22x%5C%5Csqrt%7Bx%5E%7B2%7D%2Bx%2B1%7D%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>5b92d475fbb3f3b175e429719b408e14.png</name>
@@ -1343,6 +1545,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;f7ccc438e4cf00002b4c017714f2bd86.png&quot; alt=&quot;\frac{x}{2}\sqrt{x^{2}+x+1}+C&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7Bx%7D%7B2%7D%5C%5Csqrt%7Bx%5E%7B2%7D%2Bx%2B1%7D%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>f7ccc438e4cf00002b4c017714f2bd86.png</name>
@@ -1353,6 +1556,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;d5f03484f54348e4623aa441ae8758e0.png&quot; alt=&quot;-x\sqrt{x^{2}+x+1}+C&quot; data-equation=&quot;%7B%22latex%22%3A%22-x%5C%5Csqrt%7Bx%5E%7B2%7D%2Bx%2B1%7D%2BC%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%E2%88%92%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22SquareRoot%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22radicand%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Superscript%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22superscript%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22x%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%5D%7D%7D%2C%7B%22type%22%3A%22Operator%22%2C%22value%22%3A%22%2B%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%22C%22%2C%22operands%22%3Anull%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>d5f03484f54348e4623aa441ae8758e0.png</name>
@@ -1368,27 +1572,33 @@
 	<question>
 		<text>&lt;p&gt;Luas daerah tertutup yang dibatasi kurva y&amp;nbsp;= &amp;ndash;x&lt;sup&gt;2&lt;/sup&gt; + 2x, garis x = -1, x = 2 dan sumbu X adalah&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAYAAAD+MdrbAAAA7ElEQVRIie2Wyw2EIBBAXwkU4JWrdwvYRujAHuzBGuxii7AKm2APMxM/EVcXLpvwEmIUfMIwYYTKgRYYgajtDfgc2aJXgAaYtRVjQmacjQeCylyubELit6g0W2h0Kp1KCQF6ZLbFCDnCgKRIo/eWNsOvQocscWbdlJ6Cm1KpHIiFWuVfcEjt6BL9ATl5bpXVbjO4Pek3md98eCFxpL30BS6EM3ImGl7Hvq5mmRI2+vwYiriZyCNhm3geuVEJnwq//k2cvWjxKrZkWAuVkYrrDkd653r2aTMguXiKR4JreWjB3opNYv0ja92uFOIDfMdXMVGb24sAAAAASUVORK5CYII=&quot; alt=&quot;\frac{3}{10}&quot; data-latex=&quot;\frac{3}{10}&quot; /&gt;&amp;nbsp;satuan luas&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;3 satuan luas&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAxElEQVQ4je2UsRXDIAxE/wgMQJuWPgNkgmzABuzgHTKDt/AQnsJLkAKRED2wVcYvufeofDqfQCf4OjggAiuQgQ1II/IMTFKEFGbgZvlTEPLlyM4VeBypVrUstoLFgqf4z9YCJ+RoIbNH1h/q1fkeud5AbXDB6PcPM7Lh/BYcJR0b71XQpv0Ds5w6v4GyQ6YeOVNmukUUga7y0ih7UdYCL7RJ2d1Gd6UcKE0OA6szl6SgS9b+EoMh0g1WG921qx9lHfk9E57n2D6BpkXEuAAAAABJRU5ErkJggg==&quot; alt=&quot;\frac{3}{8}&quot; data-latex=&quot;\frac{3}{8}&quot; /&gt;&amp;nbsp;satuan luas&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;latex-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAoCAYAAAAolAC+AAAAq0lEQVQ4je2UwQ2DMAxF3wgegGuv3DsAE7ABG3SH7tAZ2IIhMgVLhENsqUUh+pdKSPAlH6L8/NiWv+F0mIFciXRE7r7OBqzAoPw0OllCAiaFOLiqqaovVTXzW+whZuCtEHtXfSjkjyvf+A9qQ7+Pa8EonkuU6lcabomhD99N/khaBZIRDHhSjNBUDbXsafVKCh0l/6w+MCdLW4kWeX8Rrasum+hAFLgg5ntmbPOnMsBWiH9dAAAAAElFTkSuQmCC&quot; alt=&quot;\frac{7}{3}&quot; data-latex=&quot;\frac{7}{3}&quot; /&gt;&amp;nbsp;satuan luas&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;2 satuan luas&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1399,7 +1609,8 @@
 		<text>&lt;p&gt;Nilai modus data-data pada histrogram berikut adalah...&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;b27866_36.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 		<file>
 			<name>b27866_36.gif</name>
 			<type>image/gif</type>
@@ -1410,22 +1621,27 @@
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;141,25&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;141,50&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;141,75&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;142,25&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;142,50&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1464,27 +1680,33 @@
 &lt;/td&gt;
 &lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;170,125&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;170,175&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;170,150&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;171,125&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;171,175&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1494,27 +1716,33 @@
 	<question>
 		<text>&lt;p&gt;Banyak bilangan yang bernilai kurang dari 1000, yang di susun oleh : 1, 2, 3, 4, 5 dan 6 adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;120&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;156&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;216&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;258&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;360&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1524,27 +1752,33 @@
 	<question>
 		<text>&lt;p&gt;Kelompok kebersihan &amp;ldquo;Sari Bersih&amp;rdquo; beranggotakan 5 orang, yang akan di bentuk (di pilih) dari 5 laki-laki dan 4 perempuan. Banyak kelompok kebersihan dapat terbentuk, jika sekurang kurangnya terdiri atas 3 laki-laki adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;20&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;21&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;60&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;81&lt;/p&gt;</text>
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;120&lt;/p&gt;</text>
 	</option>
 </answer>
@@ -1554,11 +1788,13 @@
 	<question>
 		<text>&lt;p&gt;Dari 6 orang pria dan 4 wanita dipilih 3 orang terdiri dari 2 orang pria dan 1 orang wanita. Peluang pemilihan tersebut adalah...&lt;/p&gt;</text>
 		<numbering>upper-alpha</numbering>
-		<random>1</random>
+		<competence></competence>
+		<random></random>
 	</question>
 <answer>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;6a1ec43b287ee415dfc734b9623962f6.png&quot; alt=&quot;\frac{70}{120}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B70%7D%7B120%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%227%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>6a1ec43b287ee415dfc734b9623962f6.png</name>
@@ -1569,6 +1805,7 @@
 	</option>
 	<option>
 		<value>1</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;ced57add8d829e773dad88fd49bc6159.png&quot; alt=&quot;\frac{60}{120}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B60%7D%7B120%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>ced57add8d829e773dad88fd49bc6159.png</name>
@@ -1579,6 +1816,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;75f3fd1efde52e6bd2b4b6b87b6d5575.png&quot; alt=&quot;\frac{36}{120}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B36%7D%7B120%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%223%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%226%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>75f3fd1efde52e6bd2b4b6b87b6d5575.png</name>
@@ -1589,6 +1827,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;10bb87d4a9307874a1a03b650a31cd0f.png&quot; alt=&quot;\frac{19}{120}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B19%7D%7B120%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%229%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>10bb87d4a9307874a1a03b650a31cd0f.png</name>
@@ -1599,6 +1838,7 @@
 	</option>
 	<option>
 		<value>0</value>
+		<score></score>
 		<text>&lt;p&gt;&lt;img class=&quot;equation-image&quot; style=&quot;vertical-align: middle;&quot; src=&quot;2b508c29d74b4e18e1a15a1a5e1c025b.png&quot; alt=&quot;\frac{10}{120}&quot; data-equation=&quot;%7B%22latex%22%3A%22%5C%5Cfrac%7B10%7D%7B120%7D%22%2C%22json%22%3A%7B%22type%22%3A%22Equation%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22topLevelContainer%22%3A%5B%7B%22type%22%3A%22StackedFraction%22%2C%22value%22%3Anull%2C%22operands%22%3A%7B%22numerator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%2C%22denominator%22%3A%5B%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%221%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%222%22%2C%22operands%22%3Anull%7D%2C%7B%22type%22%3A%22Symbol%22%2C%22value%22%3A%220%22%2C%22operands%22%3Anull%7D%5D%7D%7D%5D%7D%7D%7D&quot;&gt;&lt;/p&gt;</text>
 		<file>
 			<name>2b508c29d74b4e18e1a15a1a5e1c025b.png</name>
