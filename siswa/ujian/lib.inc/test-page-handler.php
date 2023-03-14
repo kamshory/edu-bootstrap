@@ -6,11 +6,11 @@ $list = $picoTest->getQuestionList($studentLoggedIn, $eduTest, $testAnswer);
 
 if($testAnswer == null)
 {
-    $picoTest->createTestAnswer($studentLoggedIn, $eduTest, $list);
+    $testAnswer = $picoTest->createTestAnswer($studentLoggedIn, $eduTest, $list);
 }
 
 $question = $picoTest->getQuestion($list, $eduTest);
-$testDataFinal = $picoTest->getTestData($eduTest, $question);
+$testDataFinal = $picoTest->getTestData($eduTest, $question, $testAnswer);
 $testDataJSON = json_encode($testDataFinal);
 
 ?><!DOCTYPE html>
@@ -76,7 +76,13 @@ $testDataJSON = json_encode($testDataFinal);
             <div class="content-wrapper">
                 <div class="row">
                     <div class="col col-9 test-area">
+                        
                         <div class="test-wrapper">
+                            <div class="row test-status">
+                                <div class="col col-6 text-left">Nomor : 1</div>
+                                <div class="col col-6 text-right">Siswa Waktu: 12:00</div>
+                            </div>
+
                             <div class="test-question-area">
                             </div>
                             <div class="test-option-area">                           

@@ -193,11 +193,25 @@ class PicoTest
      *
      * @param \Pico\EduTest $eduTest Test
      * @param array $question Question
+     * @param array $testAnswer
      * @return array
      */
-    public function getTestData($eduTest, $question)
+    public function getTestData($eduTest, $question, $testAnswer)
     {
-        return array('test' => $eduTest, 'data' => $question);
+        $startUnix = strtotime($testAnswer['start']);
+        $deadline = $startUnix + $eduTest->duration;
+        return array(
+            'test' => $eduTest, 
+            'data' => $question,
+            'timer' => array(
+                'start' => array(
+                    'string'=> $testAnswer['start'], 
+                    'unix_time_stamp' => $startUnix), 
+                'deadline' => array(
+                    'string'=> date('Y-m-d H:i:s', $deadline), 
+                    'unix_time_stamp' => $deadline)
+            )
+        );
     }
 
     /**
@@ -240,12 +254,21 @@ class PicoTest
         return null;
     }
 
+    /**
+     * Create answer
+     *
+     * @param \Pico\AuthStudent $studentLoggedIn
+     * @param \Pico\EduTest $eduTest
+     * @param string $list
+     * @return array
+     */
     public function createTestAnswer($studentLoggedIn, $eduTest, $list)
     {
         $answer_id = $this->database->generateNewId();
         $school_id = $studentLoggedIn->school_id;
         $student_id = $studentLoggedIn->student_id;
-        $start = "'" . date('Y-m-d H:i:s') . "'";
+        $timeStart = date('Y-m-d H:i:s');
+        $start = "'" . $timeStart . "'";
         $end = "null";
 
         $test_id = $eduTest->test_id;
@@ -256,6 +279,26 @@ class PicoTest
         ('$answer_id', '$school_id', '$test_id', '$student_id', $start, $end, '$question_list', NULL, 0, 0, 0, 0, 0, NULL, 0, false, true);
         ";
         $this->database->executeInsert($sql, true);
+
+        return array(
+            'answer_id' => $answer_id,
+            'school_id' => $school_id,
+            'test_id' => $test_id,
+            'student_id' => $student_id,
+            'start' => $timeStart,
+            'end' => null,
+            'question_list' => $question_list,
+            'answer' => null,
+            'answer_true' => 0, 
+            'answer_false' => 0,
+            'initial_score' => 0,
+            'penalty' => 0, 
+            'final_score' => 0, 
+            'competence_score' => null, 
+            'percent' => 0, 
+            'finish' => false, 
+            'active' => true
+        );
     }
 
     /**

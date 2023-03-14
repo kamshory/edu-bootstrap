@@ -198,6 +198,13 @@ a.download:hover {
     border-radius: 10px;
 }
 
+.test-status{
+    padding-bottom: 10px;
+
+}
+.test-status > .col{
+}
+
 .button-area .btn{
     margin-bottom: 10px;
 }

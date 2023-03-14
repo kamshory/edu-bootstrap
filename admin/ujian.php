@@ -178,6 +178,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$basename = $data['file_path'];
 			$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
+			
 			if(file_exists($file_path))
 			{	
 				$sql = "SELECT `edu_test`.*, 
@@ -194,8 +195,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 					$random_option = ((int) $data['random_option']);
 					$random_distribution = ((int) $data['random_distribution']);
 					$sort_order = ((int) $data['sort_order']);
-					$score_standar = $data['standard_score'];
-	
+					$score_standar = $data['standard_score'];	
 					
 					$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
 					$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
