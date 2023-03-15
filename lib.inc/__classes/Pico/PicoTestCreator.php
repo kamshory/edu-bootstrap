@@ -4,6 +4,14 @@ namespace Pico;
 
 class PicoTestCreator
 {
+    public static $numberingList = array(
+        'upper-alpha' => array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'),
+        'lower-alpha' => array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'),
+        'upper-roman' => array('I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'),
+        'lower-roman' => array('i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x'),
+        'decimal' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
+        'decimal-leading-zero' => array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')
+    );
     public function loadXmlData_word($xml_file, $key = 0) //NOSONAR
     {
         $s = file_get_contents($xml_file);
@@ -15,14 +23,7 @@ class PicoTestCreator
         $index = 0;
         $answer_key = '';
 
-        $answer = array(
-            'upper-alpha' => array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'),
-            'lower-alpha' => array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'),
-            'upper-roman' => array('I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'),
-            'lower-roman' => array('i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x'),
-            'decimal' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
-            'decimal-leading-zero' => array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')
-        );
+        $answer = \Pico\PicoTestCreator::$numberingList;
 
         foreach ($test_data->item as $question) {
             // petanyaan
@@ -601,14 +602,7 @@ class PicoTestCreator
 
     public function getNumType($lines)
     {
-        $numberingList = array(
-            'upper-alpha' => array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'),
-            'lower-alpha' => array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'),
-            'upper-roman' => array('I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'),
-            'lower-roman' => array('i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'vii', 'ix', 'x'),
-            'decimal' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
-            'decimal-leading-zero' => array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')
-        );
+        $numberingList = \Pico\PicoTestCreator::$numberingList;;
         foreach ($numberingList as $type) {
             $arrType = array();
             $lastLine = -1;

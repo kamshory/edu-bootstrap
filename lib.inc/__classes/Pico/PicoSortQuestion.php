@@ -1,16 +1,69 @@
 <?php
 namespace Pico;
 
-class PicoSortQuestion{
+class PicoSortQuestion {
     
+    /**
+     * Unsorted question list
+     *
+     * @var array
+     */
     private $unsorted = array();
+
+    /**
+     * Sorted question list
+     *
+     * @var array
+     */
     private $unsortedOri = array();
+
+    /**
+     * Unsorted data
+     *
+     * @var array
+     */
     private $unsortedData = array();
+
+    /**
+     * Sorted question list
+     *
+     * @var array
+     */
     private $sorted = array();
+
+    /**
+     * Final question list
+     *
+     * @var array
+     */
     private $final = array();
+
+    /**
+     * Total question
+     *
+     * @var integer
+     */
     private $totalQuestion = 0;
+
+    /**
+     * Number of question 
+     *
+     * @var integer
+     */
     private $numberOfQuestion = 0;
+
+    /**
+     * Test data
+     *
+     * @var array
+     */
     private $testData = array();
+
+    /**
+     * Maximum number of group member
+     *
+     * @var integer
+     */
     private $maxGroupMember = 0;
 
     public function __construct($testData)
@@ -28,7 +81,7 @@ class PicoSortQuestion{
     {
        
         $merged = array();
-        foreach($data as $key=>$val)
+        foreach($data as $val)
         {
             $bc = $val['basic_competence'];
             $merged[$bc][] = $val;
@@ -54,36 +107,10 @@ class PicoSortQuestion{
         $this->final = array();
         
         $this->numberOfQuestion = $this->testData['number_of_question'];
-        $data = $this->testData['data'];
-        
-        
 
         if($this->testData['random_distribution'])
         {
-            $merged = $this->mergeBasicCompetence($data);
-            foreach($merged as $key=>$val)
-            {
-                $this->unsorted[$key] = count($val);
-            }
-            $this->final = $this->unsorted;
-    
-            $this->unsortedOri = $this->unsorted;
-            $num_group = count($merged);
-            if($num_group == 0)
-            {
-                $num_group = 1;
-            }
-            $this->totalQuestion = count($data);
-            
-            $this->maxGroupMember = ceil($this->numberOfQuestion/$num_group);
-            
-            foreach($this->unsorted as $key=>$val)
-            {
-                if($val > $this->maxGroupMember)
-                {
-                    $this->unsorted[$key] = $this->maxGroupMember;
-                }
-            }
+            $this->randomDistribution();
 
             if(array_sum($this->unsorted) < $this->numberOfQuestion && $this->totalQuestion > $this->numberOfQuestion)
             {
@@ -104,6 +131,35 @@ class PicoSortQuestion{
             $this->unsorted = $this->unsortedOri;
             $this->sorted = $this->unsorted;
             $this->final = $this->sorted;
+        }
+    }
+
+    public function randomDistribution()
+    {
+        $data = $this->testData['data'];    
+        $merged = $this->mergeBasicCompetence($data);
+        foreach($merged as $key=>$val)
+        {
+            $this->unsorted[$key] = count($val);
+        }
+        $this->final = $this->unsorted;
+
+        $this->unsortedOri = $this->unsorted;
+        $num_group = count($merged);
+        if($num_group == 0)
+        {
+            $num_group = 1;
+        }
+        $this->totalQuestion = count($data);
+        
+        $this->maxGroupMember = ceil($this->numberOfQuestion/$num_group);
+        
+        foreach($this->unsorted as $key=>$val)
+        {
+            if($val > $this->maxGroupMember)
+            {
+                $this->unsorted[$key] = $this->maxGroupMember;
+            }
         }
     }
 
