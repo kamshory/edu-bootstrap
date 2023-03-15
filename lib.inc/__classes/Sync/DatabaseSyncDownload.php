@@ -5,7 +5,12 @@ namespace Sync;
 class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
 {
     /**
-     * (step 1, 2 and 3)
+     * Download database information
+     *
+     * @param string $url
+     * @param string $username
+     * @param string $password
+     * @return mixed
      */
     public function databaseDownloadInformation($url, $username, $password)
     {
@@ -25,18 +30,38 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
         return true;
     }
 
+    /**
+     * Prepare download sync file
+     *
+     * @return mixed
+     */
     public function databasePrepareDownloadSyncFiles()
     {
         return $this->getSyncRecordListFromDatabase('down', array(0));
     }
+
+    /**
+     * Prepare execute query
+     *
+     * @return mixed
+     */
     public function databasePrepareExecuteQuery()
     {
         return $this->getSyncRecordListFromDatabase('down', array(0, 1));
     }
 
+    /**
+     * Get last sync time
+     *
+     * @return string|null
+     */
     private function getLastSyncTime()
     {
-        $sql = "SELECT * FROM `edu_sync_database` WHERE `sync_direction` = 'down' AND `status` > 0 ORDER BY `time_create` DESC LIMIT 0,1 ";
+        $sql = "SELECT * FROM `edu_sync_database` 
+        WHERE `sync_direction` = 'down' 
+        AND `status` > 0 
+        ORDER BY `time_create` DESC 
+        LIMIT 0,1 ";
         $stmt = $this->database->executeQuery($sql);
         if ($stmt->rowCount() > 0) {
             $data = $stmt->fetch(\PDO::FETCH_ASSOC);
@@ -116,6 +141,16 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
         }
     }
 
+    /**
+     * Download database sync file
+     *
+     * @param string $recordId
+     * @param string $permission
+     * @param string $fileSyncUrl
+     * @param string $username
+     * @param string $password
+     * @return \PDOStatement|bool
+     */
     public function databaseDownloadSyncFiles($recordId, $permission, $fileSyncUrl, $username, $password)
     {
         try {
@@ -137,6 +172,13 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
         }
         return true;
     }
+
+    /**
+     * Create download sync record
+     *
+     * @param array $recordList
+     * @return bool
+     */
     private function createDownloadSyncRecord($recordList)
     {
         foreach ($recordList as $record) {

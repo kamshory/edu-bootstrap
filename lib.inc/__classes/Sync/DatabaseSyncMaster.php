@@ -4,16 +4,6 @@ namespace Sync;
 
 class DatabaseSyncMaster extends \Sync\SyncMaster
 {
-    protected $database = null;
-    protected $applicationRoot = '';
-    protected $uploadBaseDir = '';
-    protected $downloadBaseDir = '';
-    protected $poolBaseDir = '';
-    protected $poolFileName = '';
-    protected $poolRollingPrefix = '';
-    protected $poolFileExtension = '';
-    protected $application = \Pico\PicoConst::PICO_EDU;
-
     /**
      * Constructor of DatabaseSyncMaster
      * @param \Pico\PicoDatabase $database Database
@@ -249,26 +239,5 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
         }
         $random = sprintf('%06x', mt_rand(0, 16777215));
         return sprintf('%s%s', $uuid, $random);
-    }
-
-
-
-    /**
-     * Get the value of application
-     */
-    public function getApplication()
-    {
-        return $this->application;
-    }
-
-    /**
-     * Set the value of application
-     *
-     * @return self
-     */
-    public function setApplication($application)
-    {
-        $this->application = $application;
-        return $this;
     }
 }

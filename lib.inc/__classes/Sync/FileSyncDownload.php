@@ -5,23 +5,6 @@ namespace Sync;
 class FileSyncDownload extends \Sync\FileSyncMaster
 {
     /**
-     * Constructor of FileSyncDownload
-     * @param \Pico\PicoDatabase $database Database
-     * @param string $applicationRoot Application root
-     * @param string $uploadBaseDir Upload base direcory
-     * @param string $downloadBaseDir Download base directory
-     * @param string $poolBaseDir Pooling file base directory
-     * @param string $poolFileName Pooling file name
-     * @param string $poolRollingPrefix Pooling file prefix
-     * @param string $poolFileExtension Pooling file extension
-     * @param bool $useRelativePath Use relative path
-     */
-    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null, $useRelativePath = false) //NOSONAR
-    {
-        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension, $useRelativePath);
-    }
-
-    /**
      * (step 1, 2 and 3)
      * @param string $fileSyncUrl Synch hub URL
      * @param string $username Sync username
@@ -206,8 +189,6 @@ class FileSyncDownload extends \Sync\FileSyncMaster
         return true;
     }
 
-
-
     /**
      * Synchronize user file from sync record
      * @param mixed $record Sync record
@@ -301,8 +282,6 @@ class FileSyncDownload extends \Sync\FileSyncMaster
         } else {
             $relativePath = $this->getRelativePath($newName); //Relative
         }
-
-
 
         if (file_exists($oldName) && !file_exists($newName)) {
             chmod($oldName, 0777);

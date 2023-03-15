@@ -4,27 +4,102 @@ namespace Pico;
 
 class AuthAdmin
 {
+	/**
+	 * Admin ID
+	 *
+	 * @var string
+	 */
 	public $admin_id = "";
+	/**
+	 * Admin level
+	 *
+	 * @var integer
+	 */
 	public $admin_level = 0;
-	public $username = '';
-	public $name = '';
+	/**
+	 * Username
+	 *
+	 * @var string
+	 */
+	public $username = "";
+	/**
+	 * Name
+	 *
+	 * @var string
+	 */
+	public $name = "";
+	/**
+	 * Gender
+	 *
+	 * @var string
+	 */
 	public $gender = 'M';
-	public $birth_place = '';
-	public $birth_day = '';
-	public $email = '';
-	public $phone = '';
-	public $country_id = '';
-	public $state_id = '';
-	public $city_id = '';
+	/**
+	 * Birthplace
+	 *
+	 * @var string
+	 */
+	public $birth_place = "";
+	/**
+	 * Biththday
+	 *
+	 * @var string
+	 */
+	public $birth_day = "";
+	/**
+	 * Email
+	 *
+	 * @var string
+	 */
+	public $email = "";
+	/**
+	 * Phone
+	 *
+	 * @var string
+	 */
+	public $phone = "";
+	/**
+	 * Country ID
+	 *
+	 * @var string
+	 */
+	public $country_id = "";
+	/**
+	 * State ID
+	 *
+	 * @var string
+	 */
+	public $state_id = "";
+	/**
+	 * City ID
+	 *
+	 * @var string
+	 */
+	public $city_id = "";
+	/**
+	 * School ID
+	 *
+	 * @var string
+	 */
 	public $school_id = "";
+	/**
+	 * Real school ID
+	 *
+	 * @var string
+	 */
 	public $real_school_id = "";
-	public $school_name = '';
-	public $school_code = '';
+	public $school_name = "";
+	public $school_code = "";
 	public $use_token = 0;
 	public $use_national_id = 0;
+	/**
+	 * Database
+	 *
+	 * @var \Pico\PicoDatabase
+	 */
 	private $database;
 	private $createlog = false;
-	private $password;
+	private $password = "";
 
 	/**
 	 * Constructor of TeacherAuth

@@ -4,7 +4,6 @@ namespace Sync;
 
 class SyncPing extends \Sync\SyncMaster
 {
-    private $application = "";
     public function __construct($application)
     {
         $this->application = $application;
@@ -56,13 +55,5 @@ class SyncPing extends \Sync\SyncMaster
                 'response_text' => 'Server tidak ditemukan'
             );
         }
-    }
-
-    /**
-     * Get the value of application
-     */
-    public function getApplication()
-    {
-        return $this->application;
     }
 }

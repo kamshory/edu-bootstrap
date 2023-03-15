@@ -1,25 +1,9 @@
 <?php
+
 namespace Sync;
 
 class FileSyncUpload extends \Sync\FileSyncMaster
 {
-    /**
-     * Constructor of FileSyncUpload
-     * @param \Pico\PicoDatabase $database Database
-     * @param string $applicationRoot Application root
-     * @param string $uploadBaseDir Upload base direcory
-     * @param string $downloadBaseDir Download base directory
-     * @param string $poolBaseDir Pooling file base directory
-     * @param string $poolFileName Pooling file name
-     * @param string $poolRollingPrefix Pooling file prefix
-     * @param string $poolFileExtension Pooling file extension
-     * @param bool $useRelativePath Use relative path
-     */
-    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null, $useRelativePath = false) //NOSONAR
-    {
-        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension, $useRelativePath);      
-    }
-    
 
     /**
      * Move pooling file to new path and return the new file list
@@ -58,8 +42,7 @@ class FileSyncUpload extends \Sync\FileSyncMaster
     public function syncLocalUserFileToDatabase()
     {
         $fileList = $this->getPoolingFiles();
-        foreach($fileList as $localPath)
-        {
+        foreach ($fileList as $localPath) {
             $baseName = basename($localPath);
             $this->prepareDirectory($this->uploadBaseDir);
             $newPath = $this->uploadBaseDir . "/" . $baseName;
@@ -79,7 +62,7 @@ class FileSyncUpload extends \Sync\FileSyncMaster
     {
         return $this->syncLocalUserFileToDatabase();
     }
-    
+
     /**
      * Sync all local user file to sync hub and upload file (step 3, 4 and 5)
      * @param string $recordId Sync record ID
@@ -89,56 +72,61 @@ class FileSyncUpload extends \Sync\FileSyncMaster
      */
     public function fileUploadSyncFiles($recordId, $fileSyncUrl, $username, $password)
     {
-        $record = $this->getSyncRecord($recordId);   
+        $record = $this->getSyncRecord($recordId);
         $path = $record['file_path'];
         $sync_file_id = $record['sync_file_id'];
-        
-        if(file_exists($path))
-        {
+
+        if (file_exists($path)) {
             $response = $this->uploadSyncFile($path, $record, $fileSyncUrl, $username, $password);
-            if(!empty($response))
-            {
+            if (!empty($response)) {
                 $this->updateSyncRecord($sync_file_id, 2);
-            }  
-            else
-            {
+            } else {
                 $this->updateSyncRecord($sync_file_id, 1);
-            } 
+            }
         }
     }
 
     public function fileUploadUserFiles($recordId, $fileSyncUrl, $username, $password)
     {
-        try
-        {
+        try {
             $record = $this->getSyncRecord($recordId);
-            if ($record != null) 
-            {
+            if ($record != null) {
                 $syncFilePath = $record['file_path'];
-                if(file_exists($syncFilePath))
-                {
+                if (file_exists($syncFilePath)) {
                     $handle = fopen($syncFilePath, "r");
                     if ($handle) {
                         while (($line = fgets($handle)) !== false) {
-                            $info = json_decode($line, true);                      
-                            if ($info['op'] == 'CREATEFILE') {                           
-                                $path = $this->getPath($info);
-                                $this->uploadUserFile($path, $fileSyncUrl, $username, $password);
-                            }
+                            $this->processLine($line, $fileSyncUrl, $username, $password);
                         }
-                    }               
+                    }
                     $this->updateSyncRecord($recordId, 1);
                     return true;
                 }
             }
-        }
-        catch(\Sync\SyncException $e)
-        {
+        } catch (\Sync\SyncException $e) {
             // Do nothing
         }
-        return true;        
+        return true;
     }
-    
+
+    /**
+     * Process line
+     *
+     * @param string $line
+     * @param string $fileSyncUrl
+     * @param string $username
+     * @param string $password
+     * @return void
+     */
+    public function processLine($line, $fileSyncUrl, $username, $password)
+    {
+        $info = json_decode($line, true);
+        if ($info['op'] == 'CREATEFILE') {
+            $path = $this->getPath($info);
+            $this->uploadUserFile($path, $fileSyncUrl, $username, $password);
+        }
+    }
+
     /**
      * Get apth
      *
@@ -148,8 +136,7 @@ class FileSyncUpload extends \Sync\FileSyncMaster
     public function getPath($info)
     {
         $path = $info['path'];
-        if($this->useRelativePath)
-        {
+        if ($this->useRelativePath) {
             $path = $this->getAbsolutePath($path);
         }
         return $path;

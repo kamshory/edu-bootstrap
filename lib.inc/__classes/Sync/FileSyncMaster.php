@@ -4,54 +4,7 @@ namespace Sync;
 
 class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
 {
-    /**
-     * Database
-     *
-     * @var \Pico\PicoDatabase
-     */
-    protected $database;
-    /**
-     * Application root
-     *
-     * @var string
-     */
-    protected $applicationRoot = '';
-    /**
-     * Upload base directory
-     *
-     * @var string
-     */
-    protected $uploadBaseDir = '';
-    /**
-     * Download base directory
-     *
-     * @var string
-     */
-    protected $downloadBaseDir = '';
-    /**
-     * Pooling file base directory
-     *
-     * @var string
-     */
-    protected $poolBaseDir = '';
-    /**
-     * Pooling file name
-     *
-     * @var string
-     */
-    protected $poolFileName = '';
-    /**
-     * Pooling file prefix
-     *
-     * @var string
-     */
-    protected $poolRollingPrefix = '';
-    /**
-     * Pooling file extension
-     *
-     * @var string
-     */
-    protected $poolFileExtension = '';
+    
     /**
      * Flag use relative path
      *
@@ -59,13 +12,7 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
      */
     protected $useRelativePath = false;
 
-    /**
-     * Aplication code
-     *
-     * @var string
-     */
-    protected $application = \Pico\PicoConst::PICO_EDU;
-
+ 
     /**
      * Constructor of FileSyncMaster
      * @param \Pico\PicoDatabase $database Database
@@ -152,7 +99,7 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
      * @param string $fileSyncUrl Synch hub URL
      * @param string $username Sync username
      * @param string $password Sync password
-     * @return mixed
+     * @return array
      */
     protected function uploadSyncFile($path, $record, $fileSyncUrl, $username, $password) //NOSONAR
     {
@@ -211,7 +158,7 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
      * @param string $fileSyncUrl Synch hub URL
      * @param string $username Sync username
      * @param string $password Sync password
-     * @return mixed
+     * @return array
      */
     protected function uploadUserFile($absolutePath, $fileSyncUrl, $username, $password) //NOSONAR
     {
@@ -315,7 +262,7 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
      * Update sync record
      * @param string $syncFileId Sync record ID
      * @param int $status Record status
-     * @return mixed
+     * @return \PDOStatement|bool
      */
     public function updateSyncRecord($syncFileId, $status)
     {
@@ -327,7 +274,7 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
     /**
      * Get relative from absolute path given
      * @param mixed $path Absolute path
-     * @return mixed Relative path
+     * @return string Relative path
      */
     public function getRelativePath($path)
     {
@@ -342,7 +289,7 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
     /**
      * Get absolute from relative path given
      * @param mixed $path Relative path
-     * @return mixed Absolute path
+     * @return string Absolute path
      */
     public function getAbsolutePath($path)
     {
@@ -402,23 +349,5 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
         return sprintf('%s%s', $uuid, $random);
     }
 
-    /**
-     * Get the value of application
-     */
-    public function getApplication()
-    {
-        return $this->application;
-    }
-
-    /**
-     * Set the value of application
-     *
-     * @return self
-     */
-    public function setApplication($application)
-    {
-        $this->application = $application;
-
-        return $this;
-    }
+    
 }
