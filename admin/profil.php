@@ -153,20 +153,12 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		<td><?php echo translateDate(date('d F Y', strtotime($data['birth_day'])));?> </td>
 		</tr>
 		<tr>
-		<td>Token Admin</td>
-		<td><?php echo $data['token_admin'];?> </td>
-		</tr>
-		<tr>
 		<td>Email</td>
 		<td><?php echo $data['email'];?> </td>
 		</tr>
 		<tr>
 		<td>Phone</td>
 		<td><?php echo $data['phone'];?> </td>
-		</tr>
-		<tr>
-		<td>Password Initial</td>
-		<td><?php echo $data['password_initial'];?> </td>
 		</tr>
 		<tr>
 		<td>Dibuat</td>
