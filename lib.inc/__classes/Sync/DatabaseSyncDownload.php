@@ -5,22 +5,6 @@ namespace Sync;
 class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
 {
     /**
-     * Constructor of DatabaseSyncDownload
-     * @param \Pico\PicoDatabase $database Database
-     * @param string $applicationRoot Application root
-     * @param string $uploadBaseDir Upload base direcory
-     * @param string $downloadBaseDir Download base directory
-     * @param string $poolBaseDir Pooling file base directory
-     * @param string $poolFileName Pooling file name
-     * @param string $poolRollingPrefix Pooling file prefix
-     * @param string $poolFileExtension Pooling file extension
-     */
-    public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null) //NOSONAR
-    {
-        parent::__construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension);
-    }
-
-    /**
      * (step 1, 2 and 3)
      */
     public function databaseDownloadInformation($url, $username, $password)

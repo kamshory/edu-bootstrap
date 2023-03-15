@@ -4,6 +4,11 @@ namespace Sync;
 
 class SyncException extends \Exception
 {
+    /**
+     * Previous exception
+     *
+     * @var \Exception
+     */
     private $previous;
     public function __construct($message, $code = 0, \Exception $previous = null)
     {

@@ -4,15 +4,66 @@ namespace Sync;
 
 class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
 {
+    /**
+     * Database
+     *
+     * @var \Pico\PicoDatabase
+     */
     protected $database;
+    /**
+     * Application root
+     *
+     * @var string
+     */
     protected $applicationRoot = '';
+    /**
+     * Upload base directory
+     *
+     * @var string
+     */
     protected $uploadBaseDir = '';
+    /**
+     * Download base directory
+     *
+     * @var string
+     */
     protected $downloadBaseDir = '';
+    /**
+     * Pooling file base directory
+     *
+     * @var string
+     */
     protected $poolBaseDir = '';
+    /**
+     * Pooling file name
+     *
+     * @var string
+     */
     protected $poolFileName = '';
+    /**
+     * Pooling file prefix
+     *
+     * @var string
+     */
     protected $poolRollingPrefix = '';
+    /**
+     * Pooling file extension
+     *
+     * @var string
+     */
     protected $poolFileExtension = '';
-    protected $useRelativePath;
+    /**
+     * Flag use relative path
+     *
+     * @var boolean
+     */
+    protected $useRelativePath = false;
+
+    /**
+     * Aplication code
+     *
+     * @var string
+     */
     protected $application = \Pico\PicoConst::PICO_EDU;
 
     /**
@@ -25,6 +76,7 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
      * @param string $poolFileName Pooling file name
      * @param string $poolRollingPrefix Pooling file prefix
      * @param string $poolFileExtension Pooling file extension
+     * @param boolean $useRelativePath Flag use relative path
      */
     public function __construct($database, $applicationRoot, $uploadBaseDir, $downloadBaseDir, $poolBaseDir, $poolFileName, $poolRollingPrefix, $poolFileExtension = null, $useRelativePath = false) //NOSONAR
     {
