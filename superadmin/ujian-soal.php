@@ -216,7 +216,7 @@ if(@$_GET['option'] == 'edit')
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
-var numbering = <?php echo json_encode($cfg->numbering); ?>;
+var numbering = <?php echo json_encode(\Pico\PicoConst::NUMBERING_TYPE); ?>;
 var test_id = '<?php echo $data['test_id']; ?>';
 var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$test_id/"); ?>;	
 
@@ -462,7 +462,7 @@ $rows2 = $stmt2->fetchAll(\PDO::FETCH_ASSOC);
 foreach ($rows2 as $data2) {
 ?>
 <div class="option-item" data-index="<?php echo $i; ?>">
-<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i]; ?></span> | Nilai <input type="number" min="0" max="<?php echo $data3['standard_score']; ?>" class="input-text input-text-short" name="score_<?php echo $data2['option_id']; ?>" id="score_<?php echo $data2['option_id']; ?>" value="<?php echo $data2['score']; ?>" autocomplete="off" /> (Nilai Maksimum <?php echo $data3['standard_score']; ?>)</div>
+<div class="option-score">Pilihan <span class="option-label"><?php echo \Pico\PicoConst::NUMBERING_TYPE[$numbering][$i]; ?></span> | Nilai <input type="number" min="0" max="<?php echo $data3['standard_score']; ?>" class="input-text input-text-short" name="score_<?php echo $data2['option_id']; ?>" id="score_<?php echo $data2['option_id']; ?>" value="<?php echo $data2['score']; ?>" autocomplete="off" /> (Nilai Maksimum <?php echo $data3['standard_score']; ?>)</div>
 <div class="option-editor">
 <textarea spellcheck="false" class="htmleditor" name="option_<?php echo $data2['option_id']; ?>" id="option_<?php echo $data2['option_id']; ?>" style="width:100%;"><?php echo htmlspecialchars(($data2['content'])); ?></textarea>
 </div>

@@ -41,20 +41,8 @@ $cfg->base_url = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/"; //NOSONAR
 $cfg->base_assets = "http://".$_SERVER['SERVER_NAME']."/edu-bootstrap/"; //NOSONAR
 
 $cfg->app_name = "Planet Edu";
-$cfg->mail_noreply = "noreply@planetbiru.com";
 $cfg->main_domain = "www.planetbiru.com";
-
 $cfg->meta_description = "Planet Edu merupakan sekolah virtual yang dapat dimanfaatkan oleh sekolah, guru dan siswa untuk pengayaan materi dan ujian online. Planet Edu bukanlan sistem informasi akademik karena sebenarnya Planet Edu merupakan media sosial yang mendukung pendidikan.";
-
-
-$cfg->numbering = array(
-	"upper-alpha"=>array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'),
-	"lower-alpha"=>array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'),
-	"upper-roman"=>array('I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'),
-	"lower-roman"=>array('i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x'),
-	"decimal"=>array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
-	"decimal-leading-zero"=>array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')
-);
 
 $cfg->equation_url_preview = "http://".$_SERVER['HTTP_HOST']."/cgi-bin/equgen.cgi";
 $cfg->equation_url_generator = "http://".$_SERVER['HTTP_HOST']."/equgen.php";
@@ -62,15 +50,12 @@ $cfg->equation_url_generator = "http://".$_SERVER['HTTP_HOST']."/equgen.php";
 $cfg->max_invalid_signin_time = 420;
 $cfg->max_invalid_signin_count = 3;
 
-
-$cfg->dec_precision = 2;// Old code getProfile('dec_precision', $cfg->dec_precision);
-$cfg->dec_separator = ".";// Old code getProfile('dec_separator', $cfg->dec_separator);
-$cfg->dec_thousands_separator = ",";// Old code getProfile('dec_thousands_separator', $cfg->dec_thousands_separator);
-
 $cfg->dec_precision = 2;
 $cfg->dec_separator = ".";
 $cfg->dec_thousands_separator = ",";
 $cfg->sync_data_enable = true;
 $cfg->sync_time_enable = false;
+$cfg->image_not_exported = array();
+$cfg->audio_not_exported = array();
 
 $pageTitle = "";

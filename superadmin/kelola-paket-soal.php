@@ -529,7 +529,7 @@ else
 <script type="text/javascript" src="../lib.assets/script/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
-var numbering = <?php echo json_encode($cfg->numbering);?>;
+var numbering = <?php echo json_encode(\Pico\PicoConst::NUMBERING_TYPE);?>;
 var test_collection_id = '<?php echo $data3['test_collection_id'];?>';
 var baseTestURLLength = <?php echo strlen("media.edu/school/$school_id/test/$data3[test_collection_id]/");?>;	
 
@@ -838,7 +838,7 @@ for($jj = 0; $jj < $count_option; $jj++)
 	}
 ?>
 <div class="option-item" data-index="<?php echo $i;?>">
-<div class="option-score">Pilihan <span class="option-label"><?php echo $cfg->numbering[$numbering][$i];?></span> | Nilai 
+<div class="option-score">Pilihan <span class="option-label"><?php echo \Pico\PicoConst::NUMBERING_TYPE[$numbering][$i];?></span> | Nilai 
 <input type="number" min="0" max="<?php echo $data3['standard_score'];?>" class="input-text input-text-short" name="score[<?php echo $i;?>]" id="score_<?php echo $i;?>" value="<?php echo $data2->value;?>" autocomplete="off" /> (Nilai Maksimum <?php echo $data3['standard_score'];?>)</div>
 <div class="option-editor">
 <textarea spellcheck="false" class="htmleditor" name="option[<?php echo $i;?>]" id="option_<?php echo $i;?>" style="width:100%;"><?php echo htmlspecialchars(($data2->text));?></textarea>

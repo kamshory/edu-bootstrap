@@ -339,6 +339,8 @@ class PicoEdu //NOSONAR
 		}
 		return $ret;
 	}
+
+	
 	public function textClass($array_kelas, $teks_kelas, $max = 0)
 	{
 		$arr = explode(",", $teks_kelas);
@@ -1215,8 +1217,7 @@ class PicoEdu //NOSONAR
 
 	public function selectOptionNumbering($selected = null)
 	{
-		global $cfg;
-		$numberring = $cfg->numbering;
+		$numberring = \Pico\PicoConst::NUMBERING_TYPE;
 		foreach ($numberring as $key => $val) {
 			while (count($numberring[$key]) > 4) {
 				array_pop($numberring[$key]);

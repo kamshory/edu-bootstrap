@@ -15,7 +15,8 @@ if(isset($_SESSION['admin_password']))
 	$password = $_SESSION['admin_password'];
 }
 
-$memberLoggedIn = (new \Pico\AuthAdmin($database, $username, $password, false))->login();
+$memberLoggedIn = new \Pico\AuthAdmin($database, $username, $password, false);
+$memberLoggedIn->login();
 
 if(empty($memberLoggedIn->admin_id))
 {

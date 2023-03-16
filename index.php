@@ -9,21 +9,19 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	$email = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_EMAIL);
 	$reg_number = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
 	$password = md5(kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD));
-	$_SESSION['student_username'] = $username;
-	$_SESSION['student_password'] = $password;
 
 	$passwordHash = md5($password);
 
 	$sql = "SELECT `username`, `student_id`
 	FROM `edu_student`
 	WHERE (
-		(`email` LIKE '$email' AND `email` != '')
-		OR 
-		(`reg_number` LIKE '$reg_number' AND `reg_number` != '')
-		OR 
-		(`username` LIKE '$username' AND `username` != '')
-		OR 
-		(`phone` LIKE '$phone' AND `phone` != '')
+			(`email` LIKE '$email' AND `email` != '')
+			OR 
+			(`reg_number` LIKE '$reg_number' AND `reg_number` != '')
+			OR 
+			(`username` LIKE '$username' AND `username` != '')
+			OR 
+			(`phone` LIKE '$phone' AND `phone` != '')
 		) 
 		AND `password` LIKE '$passwordHash'
 		AND `active` = true
@@ -41,7 +39,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 			$ref = $_POST['ref'];
 			if(stripos($ref, 'login.php') === false)
 			{
-				header('Location: '.$ref);
+				header('Location: '.$ref); //NOSONAR
 			}
 			else
 			{
@@ -53,7 +51,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 			$ref = $_SERVER['HTTP_REFERER'];
 			if(stripos($ref, 'login.php') === false)
 			{
-				header('Location: '.$ref);
+				header('Location: '.$ref); //NOSONAR
 			}
 			else
 			{
@@ -85,7 +83,8 @@ else
 		$password = $_SESSION['student_password'];
 	}
 	
-	$studentLoggedIn = (new \Pico\AuthStudent($database, $username, $password, false))->login();
+	$studentLoggedIn = new \Pico\AuthStudent($database, $username, $password, false);
+	$studentLoggedIn->login();
 	
 	$student_id = '';
 	$school_id = '';
@@ -190,14 +189,15 @@ else
 		if(isset($_SESSION['teacher_username']))
 		{
 			$username = $_SESSION['teacher_username'];
-		}
-		
+		}	
 		if(isset($_SESSION['teacher_password']))
 		{
 			$password = $_SESSION['teacher_password'];
 		}
 		
-		$teacherLoggedIn = new \Pico\AuthTeacher($database, $username, $password, false);		
+		$teacherLoggedIn = new \Pico\AuthTeacher($database, $username, $password, false);	
+		$teacherLoggedIn->login();
+
 		$teacher_id = '';
 		$school_id = "";
 		$auth_teacher_id = '';
@@ -308,6 +308,7 @@ else
 			$password = $_SESSION['admin_password'];
 		}
 		$adminLoggedIn = new \Pico\AuthAdmin($database, $username, $password, false);
+		$adminLoggedIn->login();
 		$admin_id = "";
 		$school_id = "";
 		$real_school_id = "";

@@ -14,7 +14,9 @@ if(isset($_SESSION['admin_password']))
 	$password = $_SESSION['admin_password'];
 }
 
-$adminLoggedIn = (new \Pico\AuthAdmin($database, $username, $password, false))->login();
+$adminLoggedIn = new \Pico\AuthAdmin($database, $username, $password, false);
+$adminLoggedIn->login();
+
 $admin_id = "";
 $school_id = "";
 $real_school_id = "";

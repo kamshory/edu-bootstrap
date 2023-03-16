@@ -15,7 +15,8 @@ if(isset($_SESSION['student_password']))
 	$password = $_SESSION['student_password'];
 }
 
-$studentLoggedIn = (new \Pico\AuthStudent($database, $username, $password, false))->login();
+$studentLoggedIn = new \Pico\AuthStudent($database, $username, $password, false);
+$studentLoggedIn->login();
 
 $member_id = "";
 $student_id = "";
