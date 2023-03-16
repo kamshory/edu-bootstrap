@@ -7,12 +7,7 @@ if(empty($school_id))
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $test_status = kh_filter_input(INPUT_GET, "status", FILTER_SANITIZE_NUMBER_UINT);
 
-$arr_status = array(
-	1=>'Ujian',
-	2=>'Selesai',
-	3=>'Dikeluarkan',
-	4=>'Diblokir'
-);
+$arr_status = \Pico\PicoConst::TEST_STATUS;
 
 if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET['id']))
 {

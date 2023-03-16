@@ -128,7 +128,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		`ip_create`, `ip_edit`, `blocked`, `active`) VALUES 
 		('$admin_id', '$school_id', '$username', '$name', '$token_admin', '$email', '$phone', '$passwordHash', 
 		'$password', '$gender', '$birth_day', '$time_create', '$time_edit', '$admin_create', '$admin_edit', 
-		'$ip_create', '$ip_edit', '0', '1');
+		'$ip_create', '$ip_edit', false, true);
 		";
 		$database->executeInsert($sql, true);
 		
