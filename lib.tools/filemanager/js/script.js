@@ -1,8 +1,3 @@
-/*
-** Copyright Kamshory Developer 2010-2013 
-** All rights reserved
-** Join Planet Biru http://www.planetbiru.com
-*/
 let angle = 0;
 let fliph = 0;
 let flipv = 0;
