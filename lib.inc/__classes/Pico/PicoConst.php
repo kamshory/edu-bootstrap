@@ -34,12 +34,11 @@ class PicoConst
 	const TEST_STATUS_4 = 4;
 	const TEST_STATUS_5 = 5;
 	
-
 	const TEST_STATUS = array(
-		TEST_STATUS_1=>'Ujian',
-		TEST_STATUS_2=>'Selesai',
-		TEST_STATUS_3=>'Dikeluarkan',
-		TEST_STATUS_4=>'Diblokir',
-		TEST_STATUS_5=>'Tidak selesai'
+		self::TEST_STATUS_1=>'Ujian',
+		self::TEST_STATUS_2=>'Selesai',
+		self::TEST_STATUS_3=>'Dikeluarkan',
+		self::TEST_STATUS_4=>'Diblokir',
+		self::TEST_STATUS_5=>'Tidak selesai'
 	);
 }
