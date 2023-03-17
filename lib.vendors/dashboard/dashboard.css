@@ -1,3 +1,18 @@
+@font-face {
+  font-family: fontArab;
+  src: url('../../lib.assets/fonts/lpmq/lpmq.ttf');
+}
+
+
+.quran-verse-arabic {
+  direction: rtl;
+  font-size: 24px;
+  line-height: 165%;
+  font-family: fontArab,"Traditional Arabic",Tahoma,sans-serif;
+  font-weight: 400;
+  text-align: right;
+}
+
 body {
   font-size: .875rem;
 }

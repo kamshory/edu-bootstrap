@@ -195,7 +195,7 @@ $().ready(function() {
 		extended_valid_elements : "iframe[style|src|title|width|height|allowfullscreen|frameborder]",
 
 		// Example content CSS (should be your site CSS)
-		content_css : "../lib.assets/theme/default/css/content.css",
+		content_css : "../lib.assets/theme/default/css/content.min.css",
 		
 		file_browser_callback:"fileBrowserCallBack",
 		
@@ -346,7 +346,7 @@ $().ready(function() {
 		extended_valid_elements : "iframe[style|src|title|width|height|allowfullscreen|frameborder]",
 
 		// Example content CSS (should be your site CSS)
-		content_css : "../lib.assets/theme/default/css/content.css",
+		content_css : "../lib.assets/theme/default/css/content.min.css",
 		
 		file_browser_callback:"fileBrowserCallBack",
 		
