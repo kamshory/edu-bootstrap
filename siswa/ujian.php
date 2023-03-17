@@ -775,10 +775,12 @@ else if($use_token)
 {
 require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 ?>
-<ul class="list-rounded">
-  <li><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=enter-token">Masuk Ujian</a></li>
-  <li><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=list">Daftar Ujian</a></li>
-</ul>
+
+<div class="button-area">
+<button class="btn btn-primary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=enter-token'">Masuk Ujian</button>
+<button class="btn btn-primary" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?option=list'">Daftar Ujian</button>
+</div>
+
 <?php
 require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
