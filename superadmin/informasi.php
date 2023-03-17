@@ -168,7 +168,7 @@ var ascii_svg_server = '../lib.tools/asciisvg/svgimg.php';
 var equation_preview_url = '../../../../../../cgi-bin/equgen.cgi?' ;
 var equation_generator_url = '../../../../../../equgen.php?' ;
 var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'mathml-png':'mathjax-svg';
-var quran_server = '../quran';
+var quran_server = '../lib.quran';
 $().ready(function() {
 	if($('textarea').length)
 	{
@@ -319,7 +319,7 @@ var ascii_svg_server = '../lib.tools/asciisvg/svgimg.php';
 var equation_preview_url = '../../../../../../cgi-bin/equgen.cgi?' ;
 var equation_generator_url = '../../../../../../equgen.php?' ;
 var equation_renderer_machine = (navigator.userAgent.toString().indexOf('Firefox') > -1)?'mathml-png':'mathjax-svg';
-var quran_server = '../quran';
+var quran_server = '../lib.quran';
 $().ready(function() {
 	if($('textarea').length)
 	{

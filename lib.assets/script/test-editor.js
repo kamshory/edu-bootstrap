@@ -58,7 +58,7 @@ let equation_renderer_machine = navigator.userAgent
   .indexOf ('Firefox') > -1
   ? 'mathml-png'
   : 'mathjax-svg';
-let quran_server = '../quran';
+let quran_server = '../lib.quran';
 $ (document).ready (function () {
   $ ('textarea.htmleditor').tinymce ({
     // Location of TinyMCE script

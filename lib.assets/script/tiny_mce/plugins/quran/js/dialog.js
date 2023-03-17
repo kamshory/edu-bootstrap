@@ -18,7 +18,7 @@ var QuranDialog = {
 		var val = '';
 		var ed = tinyMCEPopup.editor;
 		var base_src = ed.getParam('quran_server');
-		if(base_src == '../quran')
+		if(base_src == '../lib.quran')
 		{
 			var uri = '../../../../'+base_src+'/'+lang+'/'+surah+'/'+verse+'-'+verse2+'.htm';
 		}
