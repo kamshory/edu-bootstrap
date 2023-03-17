@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Kams File Manager</title>
+<title>Planetbiru File Manager</title>
 <link rel="shortcut icon" href="../static/images/16x16.png" type="image/jpeg" />
-<link rel="stylesheet" type="text/css" href="style/login.css" />
+<link rel="stylesheet" type="text/css" href="style/login.min.css" />
 </head>
 <body>
 <div class="all">

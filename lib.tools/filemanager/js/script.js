@@ -297,8 +297,7 @@ function initContextMenuDir() {
 	});
 }
 
-function previewSVG(url)
-{	
+function previewSVG(url) {
 	let previewURL = '../../' + url;
 	playVideo(previewURL, 'iframe');
 }
@@ -1071,12 +1070,10 @@ function compressSelectedFile() //NOSONAR
 		let num1 = 1;
 		let num2 = 1;
 		do {
-			if (i > 1)
-			{
+			if (i > 1) {
 				dir = val + '-' + i + '.zip';
 			}
-			else
-			{
+			else {
 				dir = val + '.zip';
 			}
 			num1 = $('.file-area .row-data-dir[data-file-name="' + dir + '"]').length;
@@ -1280,12 +1277,10 @@ function createFile() {
 	let num1 = 1;
 	let num2 = 1;
 	do {
-		if (i > 1)
-		{
+		if (i > 1) {
 			dir = val + '-' + i + '.txt';
 		}
-		else
-		{
+		else {
 			dir = val + '.txt';
 		}
 		num1 = $('.file-area .row-data-dir[data-file-name="' + dir + '"]').length;
@@ -1352,12 +1347,10 @@ function createDirectory() {
 	let num1 = 1;
 	let num2 = 1;
 	do {
-		if (i > 1)
-		{
+		if (i > 1) {
 			dir = val + '-' + i;
 		}
-		else
-		{
+		else {
 			dir = val;
 		}
 		num1 = $('.file-area .row-data-dir[data-file-name="' + dir + '"]').length;

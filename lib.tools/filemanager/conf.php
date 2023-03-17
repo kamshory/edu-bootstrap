@@ -75,7 +75,17 @@ $fmanConfig->cache_max_age_dir = 120; 				/* Maximum age for directory thumbnail
 
 $fmanConfig->delete_forbidden_extension = true;	
 /* Delete forbidden files on upload, rename, copy, or extract operation */
-$fmanConfig->forbidden_extension = array('php', 'ini', 'sh', 'js', 'css', 'html', 'htm');
+$fmanConfig->forbidden_extension = array(
+	'php', 
+	'ini', 
+	'sh', 
+	'bash', 
+	'js', 
+	'css', 
+	'html', 
+	'htm', 
+	'exe'
+);
 
 /* Note
    You can permit user to upload images but not other type for security reason.
@@ -109,8 +119,6 @@ foreach($chkdir as $k=>$v)
 
 
 $fmanConfig->users = array(
-	array("kamshory", "j4n94nk451ht4u0r4n9", "plain"),
-	array("masroy", "indonesia", "plain")
 );
 /*
 0 = username

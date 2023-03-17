@@ -1,10 +1,9 @@
-(function() //NOSONAR
+(function () //NOSONAR
 {
     let input = document.getElementById("images");
     let formdata = false;
 
-    function showUploadedItem(source, name) 
-    {
+    function showUploadedItem(source, name) {
         let list = document.getElementById("image-list");
         let li = document.createElement("li");
         let img = document.createElement("img");
@@ -17,7 +16,7 @@
     } else {
         $('.upload-button').css('display', 'inline');
     }
-    input.addEventListener('change', function(evt) {
+    input.addEventListener('change', function (evt) {
         if (window.FormData) {
             $('#response').html('Uploading . . .');
         }
@@ -30,7 +29,7 @@
             if (!!file.type.match(/image.*/)) {
                 if (window.FileReader) {
                     reader = new FileReader();
-                    reader.onloadend = function(e) {
+                    reader.onloadend = function (e) {
                         showUploadedItem(e.target.result, file.fileName);
                     };
                     reader.readAsDataURL(file);
@@ -50,7 +49,7 @@
                 data: formdata,
                 processData: false,
                 contentType: false,
-                success: function(answer) {
+                success: function (answer) {
                     console.log(answer)
                     if (answer == 'SUCCESS') {
                         $('#response').html('File has been uploaded.');

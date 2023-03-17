@@ -24,13 +24,13 @@ if(empty($dir))
 <title>Planetbiru File Manager</title>
 <link rel="shortcut icon" type="image/jpeg" href="../../../favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="../../../lib.assets/script/jquery-ui/jquery-ui.min.css">
-<link rel="stylesheet" type="text/css" href="style/file-type.css" />
-<link rel="stylesheet" type="text/css" href="style/style.css" />
-<script type="text/javascript" src="js/script.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style/file-type.min.css" />
+<link rel="stylesheet" type="text/css" href="style/style.min.css" />
 <script type="text/javascript" src="../../../lib.assets/script/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="../../../lib.assets/script/jquery-ui/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../../../lib.assets/script/jquery-ui/jquery-ui.datetimepicker.addon.min.js"></script>
 <script type="text/javascript" src="js/overlay-dialog.min.js"></script>
+<script type="text/javascript" src="js/script.min.js"></script>
 <script type="text/javascript">
 var vrel = '<?php echo $fmanConfig->rooturl;?>/';
 var vabs = 'base/';
