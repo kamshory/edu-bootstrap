@@ -2,9 +2,9 @@
 class Quran{
 
     public $suratName = array(
-        "1"=>array("Al Fatihah", "Pembuka", 7),
-        "2"=>array("Al Baqarah", "Sapi Betina", 286),
-        "3"=>array("Ali Imran", "Keluarga Imran", 200),
+        "1"=>array("Al Fatihah", "Pembuka"),
+        "2"=>array("Al Baqarah", "Sapi Betina"),
+        "3"=>array("Ali Imran", "Keluarga Imran"),
         "4"=>array("An Nisa", "Wanita"),
         "5"=>array("Al Ma'idah", "Jamuan"),
         "6"=>array("Al An'am", "Hewan Ternak"),
@@ -118,10 +118,19 @@ class Quran{
         "114"=>array("An-Nas", "Umat Manusia"),
         );        
 
-    public function getAyat($s)
+    public function getAyat($s, $langs)
     {
-        $max = @$this->suratName[$s][2];
-        return array();
+        $verses = array();
+        foreach($langs as $lang)
+        {
+            $file = dirname(dirname(__FILE__))."/lib.quran/$lang-src/$s.php";
+            if(file_exists($file))
+            {
+                include($file);
+                $verses[$lang] = $verse;
+            }
+        }
+        return $verses;
     }
 
     public function markTranslation($data, $arr)
@@ -200,17 +209,16 @@ $s = @$_GET['s'];
 
 $scroll = @$_GET['scroll'];
 
-
 $q = preg_replace('/[^A-Za-z0-9\-\"\' ]/', '', $q); 
 $q = str_replace("'", '"', $q);
 $result = array();
 if($s != '')
 {
-    $result = $quran->getAyat($s);
+    $result = $quran->getAyat($s, array('ar', 'id'));
 }
 else 
 {
-    $result = $quran->getAyat(1);
+    $result = $quran->getAyat('1', array('ar', 'id'));
 }
 
 ?>
@@ -230,8 +238,7 @@ else
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="lib.vendors/bootstrap/css/bootstrap.min.css">
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="lib.style/signin.css">
-
+    <link rel="stylesheet" href="css/style.min.css">
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="lib.favs/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="lib.favs/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -241,6 +248,11 @@ else
     <link rel="icon" href="lib.favs/favicon.ico">
     <meta name="msapplication-config" content="lib.favs/browserconfig.xml">
     <meta name="theme-color" content="#3558BE">
+
+    
+    <script src="lib.vendors/jquery/jquery.min.js"></script> 
+    <script src="lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>     
+    <script src="js/js.min.js"></script>
 
     <script>
         var surat = '<?php echo $s;?>';
@@ -323,44 +335,34 @@ else
                 </div>
             </nav>
 
-            <div class="search-form">
-                <form action="" method="get">
-                    <input type="text" name="q" id="q" value="<?php echo htmlspecialchars($q);?>" autocomplete="off">
-                    <input type="submit" value="Cari" class="btn btn-sm btn-success">
-                </form>
-            </div>
-
             <div class="main-content">
                 <?php
-    foreach($result as $data)
-    {
-        ?>
+                $arabic = $result['ar'];
+             
+                $indonesian = $result['id'];
+                foreach($arabic as $verse=>$text)
+                {
+                    ?>
                 <div class="ayat-item" data-anchor="<?php echo str_replace(':', '', $data['ayat_key']);?>">
                     <div class="text arab">
                         <?php
-            echo ($data['text']);
-            echo ' '.$quran->arabicNumber($data['ayat']);
+            echo ($text);
+            echo ' '.$quran->arabicNumber($verse);
             ?>
 
                     </div>
                     <div class="text translation">
                         <?php
-            echo $data['translation'];
-            ?>
-                    </div>
-                    <div class="sound">
-                        <audio onended="endAudio(this)" onplay="playAudio(this)"
-                            data-ayat-key="<?php echo str_replace(':', '', $data['ayat_key']);?>"
-                            data-src="<?php echo $audio->createAudio($data);?>"
-                            controls></audio>
-                    </div>
+                        echo $indonesian[$verse];
+                        ?>
+                    </div>                
 
                     <div class="link-surat">
                         <a
-                            href="./?s=<?php echo $data['surat'];?>&scroll=<?php echo str_replace(':', '', $data['ayat_key']);?>">
+                            href="./?s=<?php echo $s;?>&scroll=<?php echo str_replace(':', '', $verse);?>">
                             <?php
-                    echo $quran->getAyatLabel($data['ayat_key']);
-                ?>
+                            echo $quran->getAyatLabel($s.":".$verse);
+                        ?>
                         </a>
                     </div>
                 </div>
@@ -373,10 +375,7 @@ else
     </div>
 
     <button type="button" class="btn btn-success btn-floating btn-lg" id="btn-back-to-top">
-        <i class="fas fa-arrow-up"></i>
+        Atas
     </button>
-
-
 </body>
-
 </html>
