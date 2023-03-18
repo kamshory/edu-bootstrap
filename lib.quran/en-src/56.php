@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"When the event befalleth.",
 2=>"There is no denying that it will befall",
 3=>"Abasing ( some ), exalting ( others );",
@@ -96,4 +96,4 @@ $verse = array(
 94=>"And roasting at hell fire.",
 95=>"Lo! this is certain truth.",
 96=>"Therefor ( O Muhammad ) praise the name of thy Lord, the Tremendous."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"The Calamity!",
 2=>"What is the Calamity?",
 3=>"Ah, what will convey unto thee what the calamity is!",
@@ -11,4 +11,4 @@ $verse = array(
 9=>"The Bereft and Hungry One will be his mother.",
 10=>"Ah, what will convey unto thee what she is!",
 11=>"Raging fire."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif Laam Raa. Inilah ayat-ayat Al Qur'an yang mengandung hikmah.",
 2=>"Patutkah menjadi keheranan bagi manusia bahwa Kami mewahyukan kepada seorang laki-laki di antara mereka: &quot;Berilah peringatan kepada manusia dan gembirakanlah orang-orang beriman bahwa mereka mempunyai kedudukan yang tinggi di sisi Tuhan mereka&quot;. Orang-orang kafir berkata: &quot;Sesungguhnya orang ini (Muhammad) benar-benar adalah tukang sihir yang nyata.&quot;",
 3=>"Sesungguhnya Tuhan kamu ialah Allah Yang menciptakan langit dan bumi dalam enam masa, kemudian Dia bersemayam di atas Arasy untuk mengatur segala urusan. Tiada seorang pun yang akan memberi syafaat kecuali sesudah ada izin-Nya. (Zat) yang demikian itulah Allah, Tuhan kamu, maka sembahlah Dia. Maka apakah kamu tidak mengambil pelajaran?",
@@ -109,4 +109,4 @@ $verse = array(
 107=>"Jika Allah menimpakan sesuatu kemudaratan kepadamu, maka tidak ada yang dapat menghilangkannya kecuali Dia. Dan jika Allah menghendaki kebaikan bagi kamu, maka tak ada yang dapat menolak karunia-Nya. Dia memberikan kebaikan itu kepada siapa yang dikehendaki-Nya di antara hamba-hamba-Nya dan Dia-lah Yang Maha Pengampun lagi Maha Penyayang.",
 108=>"Katakanlah: &quot;Hai manusia, sesungguhnya telah datang kepadamu kebenaran (Al Qur'an) dari Tuhanmu, sebab itu barang siapa yang mendapat petunjuk maka sesungguhnya (petunjuk itu) untuk kebaikan dirinya sendiri. Dan barang siapa yang sesat, maka sesungguhnya kesesatannya itu mencelakakan dirinya sendiri. Dan aku bukanlah seorang penjaga terhadap dirimu&quot;.",
 109=>"Dan ikutilah apa yang diwahyukan kepadamu, dan bersabarlah hingga Allah memberi keputusan dan Dia adalah Hakim yang sebaik-baiknya."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By the sun and his brightness,",
 2=>"And the moon when she followeth him,",
 3=>"And the day when it revealeth him,",
@@ -15,4 +15,4 @@ $verse = array(
 13=>"And the messenger of Allah said : It is the she camel of Allah, so let her drink!",
 14=>"But they denied him, and they hamstrung her, so Allah doomed them for their sin and razed ( their dwellings ).",
 15=>"He dreadeth not the sequel ( of events )."
-);?>
+);

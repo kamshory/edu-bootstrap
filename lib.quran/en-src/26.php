@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Ta. Sin. Mim.",
 2=>"These are revelations of the Scripture that maketh plain.",
 3=>"It may be that thou tormentest thyself ( O Muhammad ) because they believe not.",
@@ -227,4 +227,4 @@ $verse = array(
 225=>"Hast thou not seen how they stray in every valley,",
 226=>"And how they say that which they do not?",
 227=>"Save those who believe and do good works, and remember Allah much, and vindicate themselves after they have been wronged. Those who do wrong will come to know by what a ( great ) reverse they will be overturned!"
-);?>
+);

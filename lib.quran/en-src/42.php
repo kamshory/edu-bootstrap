@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Ha. Mim.",
 2=>"Ain. Sin. Qaf.",
 3=>"Thus Allah the Mighty, the Knower inspireth thee ( Muhammad ) as ( He inspired ) those before thee.",
@@ -53,4 +53,4 @@ $verse = array(
 51=>"And it was not ( vouchsafed ) to any mortal that Allah should speak to him unless ( it be ) by revelation or from behind a veil, or ( that ) He sendeth a messenger to reveal what He will by His leave. Lo! He is Exalted, Wise.",
 52=>"And thus have We inspired in thee ( Muhammad ) a Spirit of Our command. Thou knewest not what the Scripture was, nor what the Faith. But We have made it a light whereby We guide whom We will of Our bondmen. And lo! thou verily dost guide unto a right path.",
 53=>"The path of Allah, unto Whom belongeth whatsoever is in the heavens and whatsoever is in the earth. Do not all things reach Allah at last?"
-);?>
+);

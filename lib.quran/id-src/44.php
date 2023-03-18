@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Haa Miim.",
 2=>"Demi Kitab (Al Qur'an) yang menjelaskan,",
 3=>"sesungguhnya Kami menurunkannya pada suatu malam yang diberkahi dan sesungguhnya Kami-lah yang memberi peringatan.",
@@ -59,4 +59,4 @@ $verse = array(
 57=>"sebagai karunia dari Tuhanmu. Yang demikian itu adalah keberuntungan yang besar.",
 58=>"Sesungguhnya Kami mudahkan Al Qur'an itu dengan bahasamu supaya mereka mendapat pelajaran.",
 59=>"Maka tunggulah; sesungguhnya mereka itu menunggu (pula)."
-);?>
+);

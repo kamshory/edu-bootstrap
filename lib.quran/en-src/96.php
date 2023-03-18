@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Read : In the name of thy Lord who createth,",
 2=>"Createth man from a clot.",
 3=>"Read : And thy Lord is the Most Bounteous,",
@@ -19,4 +19,4 @@ $verse = array(
 17=>"Then let him call upon his henchmen!",
 18=>"We will call the guards of hell.",
 19=>"Nay! Obey not thou him. But prostrate thyself, and draw near ( unto Allah )."
-);?>
+);

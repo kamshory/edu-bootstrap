@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Ta. Ha.",
 2=>"We have not revealed unto thee ( Muhammad ) this Quran that thou shouldst be distressed,",
 3=>"But as a reminder unto him who feareth,",
@@ -135,4 +135,4 @@ $verse = array(
 133=>"And they say : If only he would bring us a miracle from his Lord! Hath there not come unto them the proof of what is in the former Scriptures?",
 134=>"And if We had destroyed them with some punishment before it, they would assuredly have said : Our Lord! If only Thou hadst sent unto us a messenger, so that we might have followed Thy revelations before we were ( thus ) humbled and disgraced!",
 135=>"Say : Each is awaiting; so await ye! Ye will come to know who are the owners of the path of equity, and who is right."
-);?>
+);

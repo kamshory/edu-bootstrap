@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Demi matahari dan cahayanya di pagi hari,",
 2=>"dan bulan apabila mengiringinya,",
 3=>"dan siang apabila menampakkannya,",
@@ -15,4 +15,4 @@ $verse = array(
 13=>"lalu Rasul Allah (Saleh) berkata kepada mereka: (&quot;Biarkanlah) unta  betina Allah dan minumannya&quot;.",
 14=>"Lalu mereka mendustakannya dan menyembelih unta itu, maka Tuhan  mereka membinasakan mereka disebabkan dosa mereka, lalu Allah  menyama-ratakan mereka (dengan tanah).",
 15=>"dan Allah tidak takut terhadap akibat tindakan-Nya itu."
-);?>
+);

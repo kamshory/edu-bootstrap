@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Segala puji bagi Allah Pencipta langit dan bumi, Yang menjadikan malaikat sebagai utusan-utusan (untuk mengurus berbagai macam urusan) yang mempunyai sayap, masing-masing (ada yang) dua, tiga dan empat. Allah menambahkan pada ciptaan-Nya apa yang dikehendaki-Nya. Sesungguhnya Allah Maha Kuasa atas segala sesuatu.",
 2=>"Apa saja yang Allah anugerahkan kepada manusia berupa rahmat, maka tidak ada seorang pun yang dapat menahannya; dan apa saja yang ditahan oleh Allah maka tidak seorang pun yang sanggup untuk melepaskannya sesudah itu. Dan Dia-lah Yang Maha Perkasa lagi Maha Bijaksana.",
 3=>"Hai manusia, ingatlah akan nikmat Allah kepadamu. Adakah pencipta selain Allah yang dapat memberikan rezeki kepada kamu dari langit dan bumi? Tidak ada Tuhan (yang berhak disembah) selain Dia; maka mengapakah kamu berpaling (dari ketauhidan)?",
@@ -45,4 +45,4 @@ $verse = array(
 43=>"karena kesombongan (mereka) di muka bumi dan karena rencana (mereka) yang jahat. Rencana yang jahat itu tidak akan menimpa selain orang yang merencanakannya sendiri. Tiadalah yang mereka nanti-nantikan melainkan (berlakunya) sunnah (Allah yang telah berlaku) kepada orang-orang yang terdahulu. Maka sekali-kali kamu tidak akan mendapat penggantian bagi sunah Allah, dan sekali-kali tidak (pula) akan menemui penyimpangan bagi sunah Allah itu.",
 44=>"Dan apakah mereka tidak berjalan di muka bumi, lalu melihat bagaimana kesudahan orang-orang yang sebelum mereka, sedangkan orang-orang itu adalah lebih besar kekuatannya dari mereka? Dan tiada sesuatu pun yang dapat melemahkan Allah baik di langit maupun di bumi. Sesungguhnya Allah Maha Mengetahui lagi Maha Kuasa.",
 45=>"Dan kalau sekiranya Allah menyiksa manusia disebabkan usahanya, niscaya Dia tidak akan meninggalkan di atas permukaan bumi suatu makhluk yang melata pun akan tetapi Allah menangguhkan (penyiksaan) mereka, sampai waktu yang tertentu; maka apabila datang ajal mereka, maka sesungguhnya Allah adalah Maha Melihat (keadaan) hamba-hamba-Nya."
-);?>
+);

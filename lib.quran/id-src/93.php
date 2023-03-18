@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Demi waktu matahari sepenggalahan naik,",
 2=>"dan demi malam apabila telah sunyi,",
 3=>"Tuhanmu tiada meninggalkan kamu dan tiada (pula) benci kepadamu,",
@@ -11,4 +11,4 @@ $verse = array(
 9=>"Adapun terhadap anak yatim maka janganlah kamu berlaku  sewenang-wenang.",
 10=>"Dan terhadap orang yang minta-minta maka janganlah kamu  menghardiknya.",
 11=>"Dan terhadap nikmat Tuhanmu maka hendaklah kamu menyebut-nyebutnya  (dengan bersyukur)."
-);?>
+);

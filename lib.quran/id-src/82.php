@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Apabila langit terbelah,",
 2=>"dan apabila bintang-bintang jatuh berserakan,",
 3=>"dan apabila lautan dijadikan meluap,",
@@ -19,4 +19,4 @@ $verse = array(
 17=>"Tahukah kamu apakah hari pembalasan itu?",
 18=>"Sekali lagi, tahukah kamu apakah hari pembalasan itu?",
 19=>"(Yaitu) hari (ketika) seseorang tidak berdaya sedikit pun untuk  menolong orang lain. Dan segala urusan pada hari itu dalam kekuasaan  Allah."
-);?>
+);

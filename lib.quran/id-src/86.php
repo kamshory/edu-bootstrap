@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Demi langit dan yang datang pada malam hari,",
 2=>"tahukah kamu apakah yang datang pada malam hari itu?,",
 3=>"(yaitu) bintang yang cahayanya menembus,",
@@ -17,4 +17,4 @@ $verse = array(
 15=>"Sesungguhnya orang kafir itu merencanakan tipu daya yang jahat  dengan sebenar-benarnya.",
 16=>"Dan Aku pun membuat rencana (pula) dengan sebenar-benarnya.",
 17=>"Karena itu beri tangguhlah orang-orang kafir itu yaitu beri  tangguhlah mereka itu barang sebentar."
-);?>
+);

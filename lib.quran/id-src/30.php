@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif Laam Miim.",
 2=>"Telah dikalahkan bangsa Rumawi,",
 3=>"di negeri yang terdekat dan mereka sesudah dikalahkan itu akan menang,",
@@ -60,4 +60,4 @@ $verse = array(
 58=>"Dan sesungguhnya telah Kami buat dalam Al Qur'an ini segala macam perumpamaan untuk manusia. Dan sesungguhnya jika kamu membawa kepada mereka suatu ayat, pastilah orang-orang yang kafir itu akan berkata: &quot;Kamu tidak lain hanyalah orang-orang yang membuat kepalsuan belaka&quot;.",
 59=>"Demikianlah Allah mengunci mati hati orang-orang yang tidak (mau) memahami.",
 60=>"Maka bersabarlah kamu, sesungguhnya janji Allah adalah benar dan sekali-kali janganlah orang-orang yang tidak meyakini (kebenaran ayat-ayat Allah) itu menggelisahkan kamu."
-);?>
+);

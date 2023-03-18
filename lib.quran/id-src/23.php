@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Sesungguhnya beruntunglah orang-orang yang beriman,",
 2=>"(yaitu) orang-orang yang khusyuk dalam salatnya,",
 3=>"dan orang-orang yang menjauhkan diri dari (perbuatan dan perkataan) yang tiada berguna,",
@@ -118,4 +118,4 @@ $verse = array(
 116=>"Maka Maha Tinggi Allah, Raja Yang Sebenarnya; tidak ada Tuhan (yang berhak disembah) selain Dia, Tuhan (Yang mempunyai) Arasy yang mulia.",
 117=>"Dan barang siapa menyembah tuhan yang lain di samping Allah, padahal tidak ada suatu dalil pun baginya tentang itu, maka sesungguhnya perhitungannya di sisi Tuhannya. Sesungguhnya orang-orang yang kafir itu tiada beruntung.",
 118=>"Dan katakanlah: &quot;Ya Tuhanku berilah ampun dan berilah rahmat, dan Engkau adalah Pemberi rahmat Yang Paling baik.&quot;"
-);?>
+);

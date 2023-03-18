@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By the Star when it setteth,",
 2=>"Your comrade erreth not, nor is deceived;",
 3=>"Nor doth he speak of ( his own ) desire.",
@@ -62,4 +62,4 @@ $verse = array(
 60=>"And laugh and not weep,",
 61=>"While ye amuse yourselves?",
 62=>"Rather prostrate yourselves before Allah and serve Him."
-);?>
+);

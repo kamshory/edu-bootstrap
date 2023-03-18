@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"When the sun is overthrown,",
 2=>"And when the stars fall,",
 3=>"And when the hills are moved,",
@@ -29,4 +29,4 @@ $verse = array(
 27=>"This is naught else than a reminder unto creation,",
 28=>"Unto whomsoever of you willeth to walk straight.",
 29=>"And ye will not, unless ( it be ) that Allah willeth, the Lord of Creation."
-);?>
+);

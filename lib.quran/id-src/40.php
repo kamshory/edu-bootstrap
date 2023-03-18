@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Haa Miim.",
 2=>"Diturunkan Kitab ini (Al Qur'an) dari Allah Yang Maha Perkasa lagi Maha Mengetahui,",
 3=>"Yang Mengampuni dosa dan Menerima tobat lagi keras hukuman-Nya; Yang mempunyai karunia. Tiada Tuhan (yang berhak disembah) selain Dia. Hanya kepada-Nya lah kembali (semua makhluk).",
@@ -85,4 +85,4 @@ $verse = array(
 83=>"Maka tatkala datang kepada mereka rasul-rasul (yang diutus kepada) mereka dengan membawa keterangan-keterangan, mereka merasa senang dengan pengetahuan yang ada pada mereka dan mereka dikepung oleh azab Allah yang selalu mereka perolok-olokkan itu.",
 84=>"Maka tatkala mereka melihat azab Kami, mereka berkata: &quot;Kami beriman hanya kepada Allah saja dan kami kafir kepada sembahan-sembahan yang telah kami persekutukan dengan Allah.",
 85=>"Maka iman mereka tiada berguna bagi mereka tatkala mereka telah melihat siksa Kami. Itulah sunah Allah yang telah berlaku terhadap hamba-hamba-Nya. Dan di waktu itu binasalah orang-orang kafir."
-);?>
+);

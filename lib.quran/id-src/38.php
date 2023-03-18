@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Shaad, demi Al Qur'an yang mempunyai keagungan.",
 2=>"Sebenarnya orang-orang kafir itu (berada) dalam kesombongan dan permusuhan yang sengit.",
 3=>"Betapa banyaknya umat sebelum mereka yang telah Kami binasakan, lalu mereka meminta tolong padahal (waktu itu) bukanlah saat untuk lari melepaskan diri.",
@@ -88,4 +88,4 @@ $verse = array(
 86=>"Katakanlah (hai Muhammad): &quot;Aku tidak meminta upah sedikit pun kepadamu atas dakwahku; dan bukanlah aku termasuk orang-orang yang mengada-adakan.",
 87=>"Al Qur'an ini tidak lain hanyalah peringatan bagi semesta alam.",
 88=>"Dan sesungguhnya kamu akan mengetahui (kebenaran) berita Al Qur'an setelah beberapa waktu lagi."
-);?>
+);

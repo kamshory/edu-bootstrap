@@ -7,9 +7,5 @@ if(!isset($cfg))
       </main>
     </div>
   </div>
-
-
- 
 </body>
-
 </html>

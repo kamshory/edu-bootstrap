@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Kaf. Ha. Ya. Ain. Sad.",
 2=>"A mention of the mercy of thy Lord unto His servant Zachariah.",
 3=>"When he cried unto his Lord a cry in secret,",
@@ -98,4 +98,4 @@ $verse = array(
 96=>"Lo! those who believe and do good works, the Beneficent will appoint for them love.",
 97=>"And We make ( this Scripture ) easy in thy tongue, ( O Muhammad ) only that thou mayst bear good tidings therewith unto those who ward off ( evil ), and warn therewith the froward folk.",
 98=>"And how many a generation before them have We destroyed! Canst thou ( Muhammad ) see a single man of them, or hear from them the slightest sound?"
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Sad. By the renowned Quran,",
 2=>"Nay, but those who disbelieve are in false pride and schism.",
 3=>"How many a generation We destroyed before them, and they cried out when it was no longer the time for escape!",
@@ -88,4 +88,4 @@ $verse = array(
 86=>"Say ( O Muhammad, unto mankind ) : I ask of you no fee for this, and I am no impostor.",
 87=>"Lo! it is naught else than a reminder for all peoples",
 88=>"And ye will come in time to know the truth thereof."
-);?>
+);

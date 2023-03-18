@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Hari Kiamat,",
 2=>"apakah hari Kiamat itu?",
 3=>"Tahukah kamu apakah hari Kiamat itu?",
@@ -11,4 +11,4 @@ $verse = array(
 9=>"maka tempat kembalinya adalah neraka Hawiyah.",
 10=>"Dan tahukah kamu apakah neraka Hawiyah itu?",
 11=>"(Yaitu) api yang sangat panas."
-);?>
+);

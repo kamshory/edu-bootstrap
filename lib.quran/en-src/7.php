@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif. Lam Mim. Sad.",
 2=>"( It is ) a Scripture that is revealed unto thee ( Muhammad ) so let there be no heaviness in thy heart therefrom that thou mayest warn thereby, and ( it is ) a Reminder unto believers.",
 3=>"( Saying ) : Follow that which is sent down unto you from your Lord, and follow no protecting friends beside Him. Little do ye recollect!",
@@ -206,4 +206,4 @@ $verse = array(
 204=>"And when the Quran is recited, give ear to it and pay heed, that ye may obtain mercy.",
 205=>"And do thou ( O Muhammad ) remember thy. Lord within thyself humbly and with awe, below thy breath, at morn and evening. And be thou not of the neglectful.",
 206=>"Lo! those who are with thy Lord are not too proud to do Him service, but they praise Him and prostrate before Him."
-);?>
+);

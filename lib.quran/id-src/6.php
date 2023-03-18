@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Segala puji bagi Allah Yang telah menciptakan langit dan bumi, dan mengadakan gelap dan terang, namun orang-orang yang kafir mempersekutukan (sesuatu) dengan Tuhan mereka.",
 2=>"Dialah Yang menciptakan kamu dari tanah, sesudah itu ditentukannya ajal (kematianmu), dan ada lagi suatu ajal yang ditentukan (untuk berbangkit) yang ada pada sisi-Nya (yang Dia sendirilah mengetahuinya), kemudian kamu masih ragu-ragu (tentang berbangkit itu).",
 3=>"Dan Dialah Allah (Yang disembah), baik di langit maupun di bumi; Dia mengetahui apa yang kamu rahasiakan dan apa yang kamu lahirkan dan mengetahui (pula) apa yang kamu usahakan.",
@@ -165,4 +165,4 @@ $verse = array(
 163=>"tiada sekutu bagi-Nya; dan demikian itulah yang diperintahkan kepadaku dan aku adalah orang yang pertama-tama menyerahkan diri (kepada Allah)&quot;.",
 164=>"Katakanlah: &quot;Apakah aku akan mencari Tuhan selain Allah, padahal Dia adalah Tuhan bagi segala sesuatu. Dan tidaklah seorang membuat dosa melainkan kemudaratannya kembali kepada dirinya sendiri; dan seorang yang berdosa tidak akan memikul dosa orang lain. Kemudian kepada Tuhanmulah kamu kembali, dan akan diberitakan-Nya kepadamu apa yang kamu perselisihkan&quot;.",
 165=>"Dan Dialah yang menjadikan kamu penguasa-penguasa di bumi dan Dia meninggikan sebahagian kamu atas sebahagian (yang lain) beberapa derajat, untuk mengujimu tentang apa yang diberikan-Nya kepadamu. Sesungguhnya Tuhanmu amat cepat siksaan-Nya, dan sesungguhnya Dia Maha Pengampun lagi Maha Penyayang."
-);?>
+);

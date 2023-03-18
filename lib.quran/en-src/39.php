@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"The revelation of the Scripture is from Allah, the Mighty, the Wise.",
 2=>"Lo! We have revealed the Scripture unto thee ( Muhammad ) with truth; so worship Allah, making religion pure for Him ( only ).",
 3=>"Surely Pure religion is for Allah only. And those who choose protecting friends beside Him ( say ) : We worship them only that they may bring us near unto Allah. Lo! Allah will judge between them concerning that wherein they differ. Lo! Allah guideth not him who is a liar, an ingrate.",
@@ -75,4 +75,4 @@ $verse = array(
 73=>"And those who keep their duty to their Lord are driven unto the Garden in troops till, when they reach it, and the gates thereof are opened, and the warders thereof say unto them : Peace be unto you! Ye are good, so enter ye ( the Garden of delight ), to dwell therein;",
 74=>"They say : Praise be to Allah, Who hath fulfilled His promise unto us and hath made us inherit the land, sojourning in the Garden where we will! So bounteous is the wage of workers.",
 75=>"And thou ( O Muhammad ) seest the angels thronging round the Throne, hymning the praises of their Lord. And they are judged aright. And it is said : Praise be to Allah, the Lord of the Worlds!"
-);?>
+);

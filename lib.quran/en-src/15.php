@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif. Lam. Ra. These are verses of the Scripture and a plain Reading.",
 2=>"It may be that those who disbelieve wish ardently that they were Muslims.",
 3=>"Let them eat and enjoy life, and let ( false ) hope beguile them. They will come to know!",
@@ -99,4 +99,4 @@ $verse = array(
 97=>"Well know We that thy bosom is at times oppressed by what they say,",
 98=>"But hymn the praise of thy Lord, and be of those who make prostration ( unto Him ).",
 99=>"And serve thy Lord till the inevitable cometh unto thee."
-);?>
+);

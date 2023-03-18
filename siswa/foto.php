@@ -28,8 +28,7 @@ if(@$_POST['option'] == 'upload-image')
         $white = imagecolorallocate($jpeg, 255, 255, 255);
 		imagefilledrectangle($jpeg, 0, 0, 300, 300, $white);
 		$png = imagecreatefromstring(base64_decode($img));
-		imagecopy($jpeg, $png, 0, 0, 0, 0, 300, 300);
-		
+		imagecopy($jpeg, $png, 0, 0, 0, 0, 300, 300);	
 
         imagejpeg($jpeg, $path, 70);
         $fileSync->createFile($path, true);      
@@ -61,7 +60,9 @@ if(@$_POST['option'] == 'upload-image')
 		$fileSync->createFile($path2, true);
 
 		$rand = sprintf("%06d", mt_rand(0, 999999));
-        $sql = "UPDATE `edu_student` SET `picture_rand` = '$rand' WHERE `student_id` = '$student_id' ";
+        $sql = "UPDATE `edu_student` 
+		SET `picture_rand` = '$rand' 
+		WHERE `student_id` = '$student_id' ";
         $database->executeUpdate($sql, true);
     }
 	exit();
@@ -74,7 +75,7 @@ $nt = '';
 $sql = "SELECT `edu_student`.* , `edu_school`.`name` AS `school_name`, `edu_school`.`open` AS `school_open`,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_create`) AS `admin_create`,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_student`.`admin_edit`) AS `admin_edit`,
-(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` limit 0,1) AS `class_id`
+(SELECT `edu_class`.`name` FROM `edu_class` WHERE `edu_class`.`class_id` = `edu_student`.`class_id` LIMIT 0, 1) AS `class_id`
 FROM `edu_student` 
 LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_student`.`school_id`)
 WHERE `edu_student`.`school_id` = '$school_id'

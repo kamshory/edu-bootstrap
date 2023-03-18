@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Haa Miim.",
 2=>"Diturunkan dari Tuhan Yang Maha Pemurah lagi Maha Penyayang.",
 3=>"Kitab yang dijelaskan ayat-ayatnya, yakni bacaan dalam bahasa Arab, untuk kaum yang mengetahui,",
@@ -54,4 +54,4 @@ $verse = array(
 52=>"Katakanlah: &quot;Bagaimana pendapatmu jika (Al Qur'an) itu datang dari sisi Allah, kemudian kamu mengingkarinya. Siapakah yang lebih sesat daripada orang yang selalu berada dalam penyimpangan yang jauh?&quot;",
 53=>"Kami akan memperlihatkan kepada mereka tanda-tanda (kekuasaan) Kami di segenap ufuk dan pada diri mereka sendiri, sehingga jelaslah bagi mereka bahwa Al Qur'an itu adalah benar. Dan apakah Tuhanmu tidak cukup (bagi kamu) bahwa sesungguhnya Dia menyaksikan segala sesuatu?",
 54=>"Ingatlah bahwa sesungguhnya mereka adalah dalam keraguan tentang pertemuan dengan Tuhan mereka. Ingatlah, bahwa sesungguhnya Dia Maha Meliputi segala sesuatu."
-);?>
+);

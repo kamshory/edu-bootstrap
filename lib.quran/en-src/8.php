@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"They ask thee ( O Muhammad ) of the spoils of war. Say : The spoils of war belong to Allah and the messenger, so keep your duty to Allah, and adjust the matter of your difference, and obey Allah and His messenger, if ye are ( true ) believers.",
 2=>"They only are the ( true ) believers whose hearts feel fear when Allah is mentioned, and when the revelations of Allah are recited unto them they increase their faith, and who trust in their Lord;",
 3=>"Who establish worship and spend of that We have bestowed on them.",
@@ -75,4 +75,4 @@ $verse = array(
 73=>"And those who disbelieve are protectors one of another If ye do not so, there will be confusion in the land, and great corruption.",
 74=>"Those who believed and left their homes and strove for the cause of Allah, and those who took them in and helped them these are the believers in truth. For them is pardon, and a bountiful provision.",
 75=>"And those who afterwards believed and left their homes and strove along with you, they are of you; and those who are akin are nearer one to another in the ordinance of Allah. Lo! Allah is Knower of all things."
-);?>
+);

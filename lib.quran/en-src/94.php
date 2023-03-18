@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Have We not caused thy bosom to dilate,",
 2=>"And eased thee of the burden",
 3=>"Which weighed down thy back;",
@@ -8,4 +8,4 @@ $verse = array(
 6=>"Lo! with hardship goeth ease;",
 7=>"So when thou art relieved, still toil",
 8=>"And strive to please thy Lord."
-);?>
+);

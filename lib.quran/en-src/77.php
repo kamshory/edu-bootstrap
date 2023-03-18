@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By the emissary winds, ( sent ) one after another",
 2=>"By the raging hurricanes,",
 3=>"By those which cause earth ' s vegetation to revive;",
@@ -50,4 +50,4 @@ $verse = array(
 48=>"When it is said unto them : Bow down, they bow not down!",
 49=>"Woe unto the repudiators on that day!",
 50=>"In what statement, after this, will they believe?"
-);?>
+);

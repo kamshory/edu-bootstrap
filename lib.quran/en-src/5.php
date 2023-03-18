@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"O ye who believe! Fulfil your undertakings. The beast of cattle is made lawful unto you ( for food ) except that which is announced unto you ( herein ), game being unlawful when ye are on pilgrimage. Lo! Allah ordaineth that which pleaseth Him.",
 2=>"O ye who believe! Profane not Allah ' s monuments nor the Sacred Month nor the offerings nor the garlands, nor those repairing to the Sacred House, seeking the grace and pleasure of Allah. But when ye have left the sacred territory, then go hunting ( if ye will ). And let not your hatred of a folk who ( once ) stopped your going to the Inviolable Place of Worship seduce you to transgress; but help ye one another unto righteousness and pious duty. Help not one another unto sin and transgression, but keep your duty to Allah. Lo! Allah is severe in punishment.",
 3=>"Forbidden unto you ( for food ) are carrion and blood and swine flesh, and that which hath been dedicated unto any other than Allah, and the strangled, and the dead through beating, and the dead through falling from a height, and that which hath been killed by ( the goring of ) horns, and the devoured of wild beasts, saving that which ye make lawful ( by the death stroke ), and that which hath been immolated unto idols. And ( forbidden is it ) that ye swear by the divining arrows. This is an abomination. This day are those who disbelieve in despair of ( ever harming ) your religion; so fear them not, fear Me! This day have I perfected your religion for you and completed My favor unto you, and have chosen for you as religion AL- ISLAM. Whoso is forced by hunger, not by will, to sin : ( for him ) lo! Allah is Forgiving, Merciful.",
@@ -120,4 +120,4 @@ $verse = array(
 118=>"If Thou punish them, lo! they are Thy slaves, and if Thou forgive them ( lo! they are Thy slaves ). Lo! Thou, only Thou art the Mighty, the Wise.",
 119=>"Allah saith : This is a day in which their truthfulness profiteth the truthful, for theirs are Gardens underneath which rivers flow, wherein they are secure for ever, Allah taking pleasure in them and they in Him. That is the great triumph.",
 120=>"Unto Allah belongeth the Sovereignty of the heavens and the earth and whatsoever is therein, and He is Able to do all things."
-);?>
+);

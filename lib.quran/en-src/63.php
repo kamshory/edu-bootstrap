@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"When the hypocrites come unto thee ( O Muhammad ), they say : We bear witness that thou art indeed Allah ' s messenger. And Allah knoweth that thou art indeed His messenger, and Allah beareth witness that the Hypocrites are speaking falsely.",
 2=>"They make their faith a pretext that they may turn ( men ) from the way of Allah. Verily evil is that which they are wont to do,",
 3=>"That is because they believed, then disbelieved, therefore their hearts are sealed so that they understand not.",
@@ -11,4 +11,4 @@ $verse = array(
 9=>"O ye who believe! Let not your wealth nor your children distract you from remembrance of Allah. Those who do so, they are the losers.",
 10=>"And spend of that wherewith We have provided you before death cometh unto one of you and he saith : My Lord! If only thou wouldst reprieve me for a little while, then I would give alms and be among the righteous.",
 11=>"But Allah reprieveth no soul when its term cometh, and Allah is Aware of what ye do."
-);?>
+);

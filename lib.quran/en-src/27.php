@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Ta. Sin. These are revelations of the Quran and a Scripture that maketh plain;",
 2=>"A guidance and good tidings for believers",
 3=>"Who establish worship and pay the poor due and are sure of the Hereafter.",
@@ -93,4 +93,4 @@ $verse = array(
 91=>"( Say ) : I ( Muhammad ) am commanded only to serve the Lord of this land which He hath hallowed, and unto Whom all things belong. And I am commanded to be of those who surrender ( unto Him ),",
 92=>"And to recite the Quran. And whoso goeth right, goeth right only for ( the good of ) his own soul; and as for him who goeth astray ( Unto him ) say : Lo! I am only a warner.",
 93=>"And say : Praise be to Allah who will show you His portents so that ye shall know them. And thy Lord is not unaware of what ye ( mortals ) do."
-);?>
+);

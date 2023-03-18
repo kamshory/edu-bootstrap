@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"The Reality",
 2=>"What is the Reality",
 3=>"Ah, what will convey unto thee what the reality is!",
@@ -52,4 +52,4 @@ $verse = array(
 50=>"And lo! it is indeed an anguish for the disbelievers.",
 51=>"And lo! it is absolute truth.",
 52=>"So glorify the name of thy Tremendous Lord."
-);?>
+);

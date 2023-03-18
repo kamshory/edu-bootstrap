@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Bukankah telah datang atas manusia satu waktu dari masa, sedang dia ketika itu belum merupakan sesuatu yang dapat disebut?",
 2=>"Sesungguhnya Kami telah menciptakan manusia dari setetes mani yang bercampur yang Kami hendak mengujinya (dengan perintah dan larangan), karena itu Kami jadikan dia mendengar dan melihat.",
 3=>"Sesungguhnya Kami telah menunjukinya jalan yang lurus; ada yang bersyukur dan ada pula yang kafir.",
@@ -31,4 +31,4 @@ $verse = array(
 29=>"Sesungguhnya (ayat-ayat) ini adalah suatu peringatan, maka barang siapa menghendaki (kebaikan bagi dirinya) niscaya dia mengambil jalan kepada Tuhannya.",
 30=>"Dan kamu tidak mampu (menempuh jalan itu), kecuali bila dikehendaki Allah. Sesungguhnya Allah adalah Maha Mengetahui lagi Maha Bijaksana.",
 31=>"Dia memasukkan siapa yang dikehendaki-Nya ke dalam rahmat-Nya (surga). Dan bagi orang-orang lalim disediakan-Nya azab yang pedih."
-);?>
+);

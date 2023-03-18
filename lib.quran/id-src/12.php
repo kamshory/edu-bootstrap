@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif, laam, raa. Ini adalah ayat-ayat kitab (Al Qur'an) yang nyata (dari Allah).",
 2=>"Sesungguhnya Kami menurunkannya berupa Al Qur'an dengan berbahasa Arab, agar kamu memahaminya.",
 3=>"Kami menceriterakan kepadamu kisah yang paling baik dengan mewahyukan Al Qur'an ini kepadamu, dan sesungguhnya kamu sebelum (Kami mewahyukan) nya adalah termasuk orang-orang yang belum mengetahui.",
@@ -111,4 +111,4 @@ $verse = array(
 109=>"Kami tidak mengutus sebelum kamu, melainkan orang laki-laki yang Kami berikan wahyu kepadanya di antara penduduk negeri. Maka tidakkah mereka bepergian di muka bumi lalu melihat bagaimana kesudahan orang-orang sebelum mereka (yang mendustakan rasul) dan sesungguhnya kampung akhirat adalah lebih baik bagi orang-orang yang bertakwa. Maka tidakkah kamu memikirkannya?",
 110=>"Sehingga apabila para rasul tidak mempunyai harapan lagi (tentang keimanan mereka) dan telah meyakini bahwa mereka telah didustakan, datanglah kepada para rasul itu pertolongan Kami, lalu diselamatkan orang-orang yang Kami kehendaki. Dan tidak dapat ditolak siksa Kami daripada orang-orang yang berdosa.",
 111=>"Sesungguhnya pada kisah-kisah mereka itu terdapat pengajaran bagi orang-orang yang mempunyai akal. Al Qur'an itu bukanlah cerita yang dibuat-buat, akan tetapi membenarkan (kitab-kitab) yang sebelumnya dan menjelaskan segala sesuatu, dan sebagai petunjuk dan rahmat bagi kaum yang beriman."
-);?>
+);

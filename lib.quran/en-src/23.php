@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Successful indeed are the believers",
 2=>"Who are humble in their prayers,",
 3=>"And who shun vain conversation,",
@@ -118,4 +118,4 @@ $verse = array(
 116=>"Now Allah be exalted, the True King! There is no God save Him, the Lord of the Throne of Grace.",
 117=>"He who crieth unto any other god along with Allah hath no proof thereof. His reckoning is only with his Lord. Lo! disbelievers will not be successful.",
 118=>"And ( O Muhammad ) say : My Lord! Forgive and have mercy, for Thou art best of all who show mercy."
-);?>
+);

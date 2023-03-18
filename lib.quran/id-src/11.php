@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif Laam Raa, (inilah) suatu kitab yang ayat-ayatnya disusun dengan rapi serta dijelaskan secara terperinci yang diturunkan dari sisi (Allah) yang Maha Bijaksana lagi Maha Tahu,",
 2=>"agar kamu tidak menyembah selain Allah. Sesungguhnya aku (Muhammad) adalah pemberi peringatan dan pembawa kabar gembira kepadamu daripada-Nya,",
 3=>"dan hendaklah kamu meminta ampun kepada Tuhanmu dan bertobat kepada-Nya. (Jika kamu, mengerjakan yang demikian), niscaya Dia akan memberi kenikmatan yang baik (terus menerus) kepadamu sampai kepada waktu yang telah ditentukan dan Dia akan memberi kepada tiap-tiap orang yang mempunyai keutamaan (balasan) keutamaannya. Jika kamu berpaling, maka sesungguhnya aku takut kamu akan ditimpa siksa hari kiamat.",
@@ -123,4 +123,4 @@ $verse = array(
 121=>"Dan katakanlah kepada orang-orang yang tidak beriman: &quot;Berbuatlah menurut kemampuanmu; sesungguhnya kami-pun berbuat (pula).&quot;",
 122=>"Dan tunggulah (akibat perbuatanmu); sesungguhnya kami pun menunggu (pula).&quot;",
 123=>"Dan kepunyaan Allah-lah apa yang gaib di langit dan di bumi dan kepada-Nya-lah dikembalikan urusan-urusan semuanya, maka sembahlah Dia, dan bertawakallah kepada-Nya. Dan sekali-kali Tuhanmu tidak lalai dari apa yang kamu kerjakan."
-);?>
+);

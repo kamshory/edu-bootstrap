@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Ta. Sin. Mim.",
 2=>"These are revelations of the Scripture that maketh plain.",
 3=>"We narrate unto thee ( somewhat ) of the story of Moses and Pharaoh with truth, for folk who believe.",
@@ -88,4 +88,4 @@ $verse = array(
 86=>"Thou hadst no hope that the Scripture would be inspired in thee; but it is a mercy from thy Lord, so never be a helper to the disbelievers.",
 87=>"And let them not divert thee from the revelations of Allah after they have been sent down unto thee; but call ( mankind ) unto thy Lord, and be not of those who ascribe partners ( unto turn ).",
 88=>"And cry not unto any other god along with Allah. There is no God save him. Everything will perish save His countenance. His is the command, and unto Him ye will be brought back."
-);?>
+);

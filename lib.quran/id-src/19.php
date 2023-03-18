@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Kaaf Haa Yaa 'Ain Shaad.",
 2=>"(Yang dibacakan ini adalah) penjelasan tentang rahmat Tuhan kamu kepada hamba-Nya, Zakaria,",
 3=>"yaitu tatkala ia berdoa kepada Tuhannya dengan suara yang lembut.",
@@ -98,4 +98,4 @@ $verse = array(
 96=>"Sesungguhnya orang-orang yang beriman dan beramal saleh, kelak Allah Yang Maha Pemurah akan menanamkan dalam (hati) mereka rasa kasih sayang.",
 97=>"Maka sesungguhnya telah Kami mudahkan Al Qur'an itu dengan bahasamu, agar kamu dapat memberi kabar gembira dengan Al Qur'an itu kepada orang-orang yang bertakwa, dan agar kamu memberi peringatan dengannya kepada kaum yang membangkang.",
 98=>"Dan berapa banyak telah Kami binasakan umat-umat sebelum mereka. Adakah kamu melihat seorang pun dari mereka atau kamu dengar suara mereka yang samar-samar?"
-);?>
+);

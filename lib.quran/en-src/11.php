@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif. Lam. Ra. ( This is ) a Scripture the revelations whereof are perfected and then expounded. ( It cometh ) from One Wise, Informed,",
 2=>"( Saying ) : Serve none but Allah. Lo! I am Unto you from Him a warner and a bringer of good tidings.",
 3=>"And ( bidding you ) : Ask pardon of your Lord and turn to Him repentant. He will cause you to enjoy a fair estate until a time appointed. He giveth His bounty unto every bountiful one. But if ye turn away, Lo! ( then ) I fear for you the retribution of an awful Day.",
@@ -123,4 +123,4 @@ $verse = array(
 121=>"And say unto those who believe not : Act according to your power. Lo! we ( too ) are acting.",
 122=>"And wait! Lo! we ( too ) are waiting.",
 123=>"And Allah ' s is the Invisible of the heavens and the earth, and unto Him the whole matter will be returned. So worship Him and put thy trust in Him. Lo! thy Lord is not unaware of what ye ( mortals ) do."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif Laam Miim.",
 2=>"Turunnya Al Qur'an yang tidak ada keraguan padanya, (adalah) dari Tuhan semesta alam.",
 3=>"Tetapi mengapa mereka (orang kafir) mengatakan: &quot;Dia Muhammad mengada-adakannya&quot;. Sebenarnya Al Qur'an itu adalah kebenaran (yang datang) dari Tuhanmu, agar kamu memberi peringatan kepada kaum yang belum datang kepada mereka orang yang memberi peringatan sebelum kamu; mudah-mudahan mereka mendapat petunjuk.",
@@ -30,4 +30,4 @@ $verse = array(
 28=>"Dan mereka bertanya: &quot;Bilakah kemenangan itu (datang) jika kamu memang orang-orang yang benar?&quot;",
 29=>"Katakanlah: &quot;Pada hari kemenangan itu tidak berguna bagi orang-orang kafir iman mereka dan tidak (pula) mereka diberi tangguh.&quot;",
 30=>"Maka berpalinglah kamu dari mereka dan tunggulah, sesungguhnya mereka (juga) menunggu."
-);?>
+);

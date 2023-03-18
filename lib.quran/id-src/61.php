@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Bertasbih kepada Allah apa saja yang ada di langit dan apa saja yang ada di bumi; dan Dia-lah Yang Maha Perkasa lagi Maha Bijaksana.",
 2=>"Hai orang-orang yang beriman, mengapa kamu mengatakan apa yang tidak kamu perbuat?",
 3=>"Amat besar kebencian di sisi Allah bahwa kamu mengatakan apa-apa yang tiada kamu kerjakan.",
@@ -14,4 +14,4 @@ $verse = array(
 12=>"niscaya Allah akan mengampuni dosa-dosamu dan memasukkan kamu ke dalam surga yang mengalir di bawahnya sungai-sungai, dan (memasukkan kamu) ke tempat tinggal yang baik di dalam surga Adn. Itulah keberuntungan yang besar.",
 13=>"Dan (ada lagi) karunia yang lain yang kamu sukai (yaitu) pertolongan dari Allah dan kemenangan yang dekat (waktunya). Dan sampaikanlah berita gembira kepada orang-orang yang beriman.",
 14=>"Hai orang-orang yang beriman, jadilah kamu penolong-penolong (agama) Allah sebagaimana Isa putra Maryam telah berkata kepada pengikut-pengikutnya yang setia: &quot;Siapakah yang akan menjadi penolong-penolongku (untuk menegakkan agama) Allah?&quot; Pengikut-pengikut yang setia itu berkata: &quot;Kami lah penolong-penolong agama Allah&quot;, lalu segolongan dari Bani Israel beriman dan segolongan (yang lain) kafir; maka kami berikan kekuatan kepada orang-orang yang beriman terhadap musuh-musuh mereka, lalu mereka menjadi orang-orang yang menang."
-);?>
+);

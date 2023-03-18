@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Allah hath heard the saying of her that disputeth with thee ( Muhammad ) concerning her husband, and complaineth unto Allah. And Allah heareth your colloquy. Lo! Allah is Nearer, Knower.",
 2=>"Such of you as put away your wives ( by saying they are as their mothers ) They are not their mothers; none are their mothers except those who gave them birth they indeed utter an ill word and a lie. And lo! Allah is Forgiving, Merciful.",
 3=>"Those who put away their wives ( by saying they are as their mothers ) and afterward would go back on that which they have said; ( the penalty ) in that case ( is ) the freeing of a slave before they touch one another. Unto this ye are exhorted; and Allah is informed of what ye do.",
@@ -22,4 +22,4 @@ $verse = array(
 20=>"Lo! those who oppose Allah and His messenger, they will be among the lowest.",
 21=>"Allah hath decreed : Lo! I verily shall conquer, I and My messengers. Lo! Allah is Strong, Almighty.",
 22=>"Thou wilt not find folk who believe in Allah and the Last Day loving those who oppose Allah and His messenger : even though they be their fathers or, their sons or their brethren or their clan. As for such, He hath written faith upon their hearts and hath strengthened them with a Spirit from Him, and He will bring them into Gardens underneath which rivers flow, wherein they will abide. Allah is well pleased with them, and they are well pleased with Him. They are Allah ' s party. Lo! is it not Allah ' s party who are the successful?"
-);?>
+);

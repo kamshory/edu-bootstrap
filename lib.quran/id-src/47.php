@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Orang-orang yang kafir dan menghalang-halangi (manusia) dari jalan Allah, Allah menghapus perbuatan-perbuatan mereka.",
 2=>"Dan orang-orang yang beriman (kepada Allah) dan mengerjakan amal-amal yang saleh serta beriman (pula) kepada apa yang diturunkan kepada Muhammad dan itulah yang hak dari Tuhan mereka, Allah menghapuskan kesalahan-kesalahan mereka dan memperbaiki keadaan mereka.",
 3=>"Yang demikian adalah karena sesungguhnya orang-orang kafir mengikuti yang batil dan sesungguhnya orang-orang yang beriman mengikuti yang hak dari Tuhan mereka. Demikianlah Allah membuat untuk manusia perbandingan-perbandingan bagi mereka.",
@@ -38,4 +38,4 @@ $verse = array(
 36=>"Sesungguhnya kehidupan dunia hanyalah permainan dan senda gurau. Dan jika kamu beriman serta bertakwa, Allah akan memberikan pahala kepadamu dan Dia tidak akan meminta harta-hartamu.",
 37=>"Jika Dia meminta harta kepadamu lalu mendesak kamu (supaya memberikan semuanya) niscaya kamu akan kikir dan Dia akan menampakkan kedengkianmu.",
 38=>"Ingatlah, kamu ini orang-orang yang diajak untuk menafkahkan (hartamu) pada jalan Allah. Maka di antara kamu ada orang yang kikir, dan siapa yang kikir sesungguhnya dia hanyalah kikir terhadap dirinya sendiri. Dan Allah-lah yang Maha Kaya sedangkan kamulah orang-orang yang membutuhkan (Nya); dan jika kamu berpaling niscaya Dia akan mengganti (kamu) dengan kaum yang lain, dan mereka tidak akan seperti kamu (ini)."
-);?>
+);

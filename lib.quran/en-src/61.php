@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"All that is in the heavens and all that is in the earth glorifieth Allah, and He is the Mighty, the Wise.",
 2=>"O ye who believe! why say ye that which ye do not?",
 3=>"It is most hateful in the sight of Allah that ye say that which ye do not.",
@@ -14,4 +14,4 @@ $verse = array(
 12=>"He will forgive you your sins and bring you into Gardens underneath which rivers flow, and pleasant dwellings in Gardens of Eden. That is the supreme triumph.",
 13=>"And ( He will give you ) another blessing which ye love : help from Allah and present victory. Give good tidings ( O Muhammad ) to believers.",
 14=>"O ye who believe! Be Allah ' s helpers, even as Jesus son of Mary said unto the disciples : Who are my helpers for Allah? They said : We are Allah ' s helpers. And a party of the Children of Israel believed, while a party disbelieved. Then We strengthened those who believed against their foe, and they became the uppermost."
-);?>
+);

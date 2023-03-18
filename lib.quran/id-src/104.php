@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Kecelakaanlah bagi setiap pengumpat lagi pencela,",
 2=>"yang mengumpulkan harta dan menghitung-hitungnya,",
 3=>"dia mengira bahwa hartanya itu dapat mengekalkannya,",
@@ -9,4 +9,4 @@ $verse = array(
 7=>"yang (membakar) sampai ke hati.",
 8=>"Sesungguhnya api itu ditutup rapat atas mereka,",
 9=>"(sedang mereka itu) diikat pada tiang-tiang yang panjang."
-);?>
+);

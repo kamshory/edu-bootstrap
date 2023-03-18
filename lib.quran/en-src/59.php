@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"All that is in the heavens and all that is in the earth glorifieth Allah, and He is the Mighty, the Wise.",
 2=>"He it is Who hath caused those of the People of the Scripture who disbelieved to go forth from their homes unto the first exile. Ye deemed not that they would go forth, while they deemed that their strongholds would protect them from Allah. But Allah reached them from a place whereof they reckoned not, and cast terror in their hearts so that they ruined their houses with their own hands and the hands of the believers. So learn a lesson, O ye who have eyes!",
 3=>"And if Allah had not decreed migration for them, He verily would have punished them in this world, and theirs in the Hereafter is the punishment of the Fire.",
@@ -24,4 +24,4 @@ $verse = array(
 22=>"He is Allah, than whom there is no other God, the Knower of the invisible and the visible. He is the Beneficent, the Merciful.",
 23=>"He is Allah, than whom there is no other God, the Sovereign Lord the Holy One, Peace, the Keeper of Faith, the Guardian, the Majestic, the Compeller, the Superb. Glorified be Allah from all that they ascribe as partner ( unto Him ).",
 24=>"He is Allah, the Creator, the Shaper out of naught, the Fashioner. His are the most beautiful names. All that is in the heavens and the earth glorifieth Him, and He is the Mighty, the Wise."
-);?>
+);

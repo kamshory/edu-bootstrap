@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Demi bintang ketika terbenam,",
 2=>"kawanmu (Muhammad) tidak sesat dan tidak pula keliru,",
 3=>"dan tiadalah yang diucapkannya itu (Al Qur'an) menurut kemauan hawa nafsunya.",
@@ -62,4 +62,4 @@ $verse = array(
 60=>"Dan kamu mentertawakan dan tidak menangis?",
 61=>"Sedang kamu melengahkan (nya)?",
 62=>"Maka bersujudlah kepada Allah dan sembahlah (Dia)."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"( Here is ) a Surah which We have revealed and enjoined, and wherein We have revealed plain tokens, that haply we may take heed.",
 2=>"The adulterer and the adulteress, scourge ye each one of them ( with ) a hundred stripes. And let not pity for the twain withhold you from obedience to Allah, if ye believe in Allah and the Last Day. And let a party of believers witness their punishment.",
 3=>"The adulterer shall not marry save an adulteress or an idolatress, and the adulteress none shall marry save an adulterer or an idolater. All that is forbidden unto believers.",
@@ -64,4 +64,4 @@ $verse = array(
 62=>"They only are the true believers who believe in Allah and His messenger and, when they are with him on some common errand, go not away until they have asked leave of him. Lo! those who ask leave of thee, those are they who believe in Allah and His messenger. So, if they ask thy leave for some affair of theirs, give leave to whom thou wilt of them, and ask for them forgiveness of Allah. Lo! Allah is Forgiving, Merciful.",
 63=>"Make not the calling of the messenger among you as your calling one of another. Allah knoweth those of you who steal away, hiding themselves. And let those who conspire to evade orders beware lest grief or painful punishment befall them.",
 64=>"Lo! verily unto Allah belongeth whatsoever is in the heavens and the earth. He knoweth your condition. And ( He knoweth ) the Day when they are returned unto Him so that He may inform them of what they did. Allah is Knower of all things."
-);?>
+);

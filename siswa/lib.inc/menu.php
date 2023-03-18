@@ -115,7 +115,5 @@ $structure = array(
 
 );
 
-
-
 $maniMenu = new \Pico\MainMenu();
 echo $maniMenu->show($structure, $picoEdu->gateBaseSelfName());

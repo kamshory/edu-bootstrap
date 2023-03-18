@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Qaf. By the glorious Quran,",
 2=>"Nay, but they marvel that a warner of their own hath come unto them; and the disbelievers say : This is a strange thing :",
 3=>"When we are dead and have become dust ( shall we be brought back again )? That would be a far return!",
@@ -45,4 +45,4 @@ $verse = array(
 43=>"Lo! We it is Who quicken and give death, and unto Us is the journeying.",
 44=>"On the day when the earth splitteth asunder from them, hastening forth ( they come ). That is a gathering easy for Us ( to make ).",
 45=>"We are best aware of what they say, and thou ( O Muhammad ) art in no wise a compeller over them. But warn by the Quran him who feareth My threat."
-);?>
+);

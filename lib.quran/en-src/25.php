@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Blessed is He Who hath revealed unto His slave the Criterion ( of right and wrong ), that he may be a warner to the peoples.",
 2=>"He unto Whom belongeth the sovereignty of the heavens and the earth. He hath chosen no son nor hath He any partner. in the sovereignty. He hath created everything and hath meted out for it a measure.",
 3=>"Yet they choose beside Him other gods who create naught but are themselves created, and possess not hurt nor profit for themselves, and possess not death nor life, nor power to raise the dead.",
@@ -77,4 +77,4 @@ $verse = array(
 75=>"They will be awarded the high place forasmuch as they were steadfast, and they will meet therein with welcome and the word of peace,",
 76=>"Abiding there for ever. Happy is it as abode and station!",
 77=>"Say ( O Muhammad, unto the disbelievers ) : My Lord would not concern himself with you but for your prayer. But now ye have denied ( the Truth ), therefor there will be judgment."
-);?>
+);

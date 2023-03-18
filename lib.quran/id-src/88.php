@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Sudah datangkah kepadamu berita (tentang) hari pembalasan?",
 2=>"Banyak muka pada hari itu tunduk terhina,",
 3=>"bekerja keras lagi kepayahan,",
@@ -26,4 +26,4 @@ $verse = array(
 24=>"maka Allah akan mengazabnya dengan azab yang besar.",
 25=>"Sesungguhnya kepada Kami-lah kembali mereka,",
 26=>"kemudian sesungguhnya kewajiban Kami-lah menghisab mereka."
-);?>
+);

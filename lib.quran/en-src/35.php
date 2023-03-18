@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Praise be to Allah, the Creator of the heavens and the earth, who appointeth the angels messengers having wings two, three and four. He multiplieth in creation what He will. Lo! Allah is Able to do all things.",
 2=>"That which Allah openeth unto mankind of mercy none can withhold it; and that which He withholdeth none can release thereafter. He is the Mighty, the Wise.",
 3=>"O mankind! Remember Allah ' s grace toward you! Is there any creator other than Allah who provideth for you from the sky and the earth? There is no God save Him. Whither then are ye turned?",
@@ -45,4 +45,4 @@ $verse = array(
 43=>"( Shown in their ) behaving arrogantly in the land and plotting evil; and the evil plot encloseth but the men who make it. Then, can they expect aught save the treatment of the folk of old? Thou wilt not find for Allah ' s way of treatment any substitute, nor wilt thou find for Allah ' s way of treatment aught of power to change.",
 44=>"Have they not travelled in the land and seen the nature of the consequence for those who were before them, and they were mightier than these in power? Allah is not such that aught in the heavens or in the earth escapeth Him. Lo! He is the Wise, the Mighty.",
 45=>"If Allah took mankind to task by that which they deserve, He would not leave a living creature on the surface of the earth; but He reprieveth them unto an appointed term, and when their term cometh then verily ( they will know that ) Allah is ever Seer of His slaves."
-);?>
+);

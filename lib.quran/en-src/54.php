@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"The hour drew nigh and the moon was rent in twain.",
 2=>"And if they behold a portent they turn away and say : Prolonged illusion.",
 3=>"They denied ( the Truth ) and followed their own lusts. Yet everything will come to a decision",
@@ -55,4 +55,4 @@ $verse = array(
 53=>"And every small and great thing is recorded.",
 54=>"Lo! the righteous will dwell among gardens and rivers,",
 55=>"Firmly established in the favor of a Mighty King."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"O ye who believe! Be not forward in the presence of Allah and His messenger, and keep your duty to Allah. Lo! Allah is Hearer, Knower.",
 2=>"O ye who believe! Lift not up your voices above the voice of the Prophet, nor shout when speaking to him as ye shout one to another, lest your works be rendered vain while ye perceive not.",
 3=>"Lo! they who subdue their voices in the presence of the messenger of Allah, those are they whose hearts Allah hath proven unto righteousness. Theirs will be forgiveness and immense reward.",
@@ -18,4 +18,4 @@ $verse = array(
 16=>"Say ( unto them, O Muhammad ) : Would ye teach Allah your religion, when Allah knoweth all that is in the heavens and all that is in the earth, and Allah is Aware of all things?",
 17=>"They make it favor unto thee ( Muhammad ) that they have surrendered ( unto Him ). Say : Deem not your Surrender a favor unto me; nay, but Allah doth confer a favor on you, inasmuch as He hath led you to the Faith, if ye are earnest.",
 18=>"Lo! Allah knoweth the Unseen of the heavens and the earth. And Allah is Seer of what ye do."
-);?>
+);

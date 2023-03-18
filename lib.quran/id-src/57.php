@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Semua yang berada di langit dan yang berada di bumi bertasbih kepada Allah (menyatakan kebesaran Allah). Dan Dialah Yang Maha Kuasa atas segala sesuatu.",
 2=>"Kepunyaan-Nya lah kerajaan langit dan bumi, Dia menghidupkan dan mematikan, dan Dia Maha Kuasa atas segala sesuatu.",
 3=>"Dialah Yang Awal dan Yang Akhir, Yang Lahir dan Yang Batin; dan Dia Maha Mengetahui segala sesuatu.",
@@ -29,4 +29,4 @@ $verse = array(
 27=>"Kemudian Kami iringkan di belakang mereka rasul-rasul Kami dan Kami iringkan (pula) Isa putra Maryam; dan Kami berikan kepadanya Injil dan Kami jadikan dalam hati orang-orang yang mengikutinya rasa santun dan kasih sayang. Dan mereka mengada-adakan rahbaniyyah padahal Kami tidak mewajibkannya kepada mereka tetapi (mereka sendirilah yang mengada-adakannya) untuk mencari keridaan Allah, lalu mereka tidak memeliharanya dengan pemeliharaan yang semestinya. Maka Kami berikan kepada orang-orang yang beriman di antara mereka pahalanya dan banyak di antara mereka orang-orang fasik.",
 28=>"Hai orang-orang yang beriman (kepada para rasul), bertakwalah kepada Allah dan berimanlah kepada Rasul-Nya, niscaya Allah memberikan rahmat-Nya kepadamu dua bagian, dan menjadikan untukmu cahaya yang dengan cahaya itu kamu dapat berjalan dan Dia mengampuni kamu. Dan Allah Maha Pengampun lagi Maha Penyayang,",
 29=>"(Kami terangkan yang demikian itu) supaya ahli Kitab mengetahui bahwa mereka tiada mendapat sedikit pun akan karunia Allah (jika mereka tidak beriman kepada Muhammad), dan bahwasanya karunia itu adalah di tangan Allah. Dia berikan karunia itu kepada siapa yang dikehendaki-Nya. Dan Allah mempunyai karunia yang besar."
-);?>
+);

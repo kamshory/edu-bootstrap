@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Sesungguhnya Kami telah mengutus Nuh kepada kaumnya (dengan memerintahkan): &quot;Berilah kaummu peringatan sebelum datang kepadanya azab yang pedih&quot;.",
 2=>"Nuh berkata: &quot;Hai kaumku, sesungguhnya aku adalah pemberi peringatan yang menjelaskan kepada kamu,",
 3=>"(yaitu) sembahlah olehmu Allah, bertakwalah kepada-Nya dan taatlah kepadaku,",
@@ -28,4 +28,4 @@ $verse = array(
 26=>"Nuh berkata: &quot;Ya Tuhanku, janganlah Engkau biarkan seorang pun di antara orang-orang kafir itu tinggal di atas bumi.",
 27=>"Sesungguhnya jika Engkau biarkan mereka tinggal, niscaya mereka akan menyesatkan hamba-hamba-Mu, dan mereka tidak akan melahirkan selain anak yang berbuat maksiat lagi sangat kafir.",
 28=>"Ya Tuhanku! Ampunilah aku, ibu bapakku, orang yang masuk ke rumahku dengan beriman dan semua orang yang beriman laki-laki dan perempuan. Dan janganlah Engkau tambahkan bagi orang-orang yang lalim itu selain kebinasaan&quot;."
-);?>
+);

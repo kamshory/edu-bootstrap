@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Thaahaa.",
 2=>"Kami tidak menurunkan Al Qur'an ini kepadamu agar kamu menjadi susah;",
 3=>"tetapi sebagai peringatan bagi orang yang takut (kepada Allah),",
@@ -135,4 +135,4 @@ $verse = array(
 133=>"Dan mereka berkata: &quot;Mengapa ia tidak membawa bukti kepada kami dari Tuhannya?&quot; Dan apakah belum datang kepada mereka bukti yang nyata dari apa yang tersebut di dalam kitab-kitab yang dahulu?",
 134=>"Dan sekiranya Kami binasakan mereka dengan suatu azab sebelum Al Qur'an itu (diturunkan), tentulah mereka berkata: &quot;Ya Tuhan kami, mengapa tidak Engkau utus seorang rasul kepada kami, lalu kami mengikuti ayat-ayat Engkau sebelum kami menjadi hina dan rendah?&quot;",
 135=>"Katakanlah: &quot;Masing-masing (kita) menanti, maka nantikanlah oleh kamu sekalian! Maka kamu kelak akan mengetahui, siapa yang menempuh jalan yang lurus dan siapa yang telah mendapat petunjuk&quot;."
-);?>
+);

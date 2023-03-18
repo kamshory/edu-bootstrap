@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"O mankind! Fear your Lord. Lo! the earthquake of the Hour ( of Doom ) is a tremendous thing.",
 2=>"On the day when ye behold it, every nursing mother will forget her nursling and every pregnant one will be delivered of her burden, and thou ( Muhammad ) wilt see mankind a drunken, yet they will not be drunken, but the Doom of Allah will be strong ( upon them ).",
 3=>"Among mankind is he who disputeth concerning Allah without knowledge, and followeth each froward devil;",
@@ -78,4 +78,4 @@ $verse = array(
 76=>"He knoweth all that is before them and all that is hind them, and unto Allah all things are returned.",
 77=>"O, ye who believe! Bow down and prostrate yourselves, and worship your Lord, and do good, that haply ye may prosper.",
 78=>"And strive for Allah with the endeavor which is His right. He hath chosen you and hath not laid upon you in religion any hardship; the faith of your father Abraham ( is yours ). He hath named you Muslims of old time and in this ( Scripture ), that the messenger may be a witness against you, and that ye may be witnesses against mankind. So establish worship, pay the poor due, and hold fast to Allah. He is your Protecting Friend. A blessed Patron and a blessed Helper!"
-);?>
+);

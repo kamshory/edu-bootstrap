@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"(Inilah pernyataan) pemutusan perhubungan daripada Allah dan Rasul-Nya (yang dihadapkan) kepada orang-orang musyrikin yang kamu (kaum muslimin) telah mengadakan perjanjian (dengan mereka).",
 2=>"Maka berjalanlah kamu (kaum musyrikin) di muka bumi selama empat bulan dan ketahuilah bahwa sesungguhnya kamu tidak akan dapat melemahkan Allah, dan sesungguhnya Allah menghinakan orang-orang kafir.",
 3=>"Dan (inilah) suatu permakluman dari Allah dan Rasul-Nya kepada umat manusia pada hari haji akbar, bahwa sesungguhnya Allah dan Rasul-Nya berlepas diri dari orang-orang musyrikin. Kemudian jika kamu (kaum musyrikin) bertobat, maka bertobat itu lebih baik bagimu; dan jika kamu berpaling, maka ketahuilah bahwa sesungguhnya kamu tidak dapat melemahkan Allah. Dan beritakanlah kepada orang-orang kafir (bahwa mereka akan mendapat) siksa yang pedih.",
@@ -129,4 +129,4 @@ $verse = array(
 127=>"Dan apabila diturunkan satu surat sebagian mereka memandang kepada sebagian yang lain (sambil berkata): &quot;Adakah seorang dari (orang-orang muslimin) yang melihat kamu?&quot; Sesudah itu mereka pun pergi. Allah telah memalingkan hati mereka disebabkan mereka adalah kaum yang tidak mengerti.",
 128=>"Sesungguhnya telah datang kepadamu seorang rasul dari kaummu sendiri, berat terasa olehnya penderitaanmu, sangat menginginkan (keimanan dan keselamatan) bagimu, amat belas kasihan lagi penyayang terhadap orang-orang mukmin.",
 129=>"Jika mereka berpaling (dari keimanan), maka katakanlah: &quot;Cukuplah Allah bagiku; tidak ada Tuhan selain Dia. Hanya kepada-Nya aku bertawakal dan Dia adalah Tuhan yang memiliki Arasy yang agung&quot;"
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Haa Miim.",
 2=>"Demi Kitab (Al Qur'an) yang menerangkan.",
 3=>"Sesungguhnya Kami menjadikan Al Qur'an dalam bahasa Arab supaya kamu memahami (nya).",
@@ -89,4 +89,4 @@ $verse = array(
 87=>"Dan sungguh jika kamu bertanya kepada mereka: &quot;Siapakah yang menciptakan mereka, niscaya mereka menjawab: &quot;Allah&quot;, maka bagaimanakah mereka dapat dipalingkan (dari menyembah Allah)?,",
 88=>"dan (Allah mengetahui) ucapan Muhammad: &quot;Ya Tuhanku, sesungguhnya mereka itu adalah kaum yang tidak beriman&quot;.",
 89=>"Maka berpalinglah (hai Muhammad) dari mereka dan katakanlah: &quot;Salam (selamat tinggal).&quot; Kelak mereka akan mengetahui (nasib mereka yang buruk)."
-);?>
+);

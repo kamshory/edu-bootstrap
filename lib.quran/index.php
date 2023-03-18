@@ -1,7 +1,6 @@
 <?php
 function showquran($lang, $numVerse, $verse)
 {
-
 	$_GET['verse'] = $v = $numVerse;
 	$numVersenumber = @$_GET['versenumber'];
 	$vn = "";
@@ -24,14 +23,14 @@ function showquran($lang, $numVerse, $verse)
 		}
 		$content = "<p>$vn$content</p>\r\n";
 	}
-	echo $content;
+	return $content;
 }
 if (isset($_GET['v'])) {
 	$v = $_GET['v'];
 	$arr = @explode("/", $v);
 	if (count($arr) >= 3) {
 		$arr = @explode("/", $v, 3);
-		$arr[0] = addslashes(strtolower(substr($arr[0], 0, 2)));
+		$arr[0] = strtolower(substr($arr[0], 0, 2));
 		$arr[1] = (int) $arr[1];
 		$arr[2] = preg_replace("/[^\d\-]/i", "", strtolower($arr[2]));
 		$lang = $arr[0] . '-src';
@@ -51,11 +50,11 @@ if (isset($_GET['v'])) {
 				$end = ($end > 0) ? $end : 1;
 				for ($i = $start; $i <= $end; $i++) {
 					$numVerse = $i;
-					showquran($lang, $numVerse, $verse);
+					echo showquran($lang, $numVerse, $quranArray);
 				}
 			} else {
 				$numVerse = (int) $arr[2];
-				showquran($lang, $numVerse, $verse);
+				echo showquran($lang, $numVerse, $quranArray);
 			}
 		}
 	}

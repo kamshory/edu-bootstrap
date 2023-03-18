@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Lo! We sent Noah unto his people ( saying ) : Warn thy people ere the painful doom come unto them.",
 2=>"He said : O my people! Lo! I am a plain warner unto you",
 3=>"( Bidding you ) : Serve Allah and keep your duty unto Him and obey me,",
@@ -28,4 +28,4 @@ $verse = array(
 26=>"And Noah said : My Lord! Leave not one of the disbelievers in the land.",
 27=>"If Thou shouldst leave them, they will mislead Thy slaves and will beget none save lewd ingrates.",
 28=>"My Lord! Forgive me and my parents and him who entereth my house believing, and believing men and believing women, and increase not the wrong doers in aught save ruin."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Nun. By the pen and that which they write ( therewith ),",
 2=>"Thou art not, for thy Lord ' s favor unto thee, a madman.",
 3=>"And lo! thine verily will he a reward unfailing.",
@@ -52,4 +52,4 @@ $verse = array(
 50=>"But his Lord chose him and placed him among the righteous.",
 51=>"And lo! those who disbelieve would fain disconcert thee with their eyes when they bear the Reminder, and they say : Lo! he is indeed mad;",
 52=>"When it is naught else than a Reminder to creation."
-);?>
+);

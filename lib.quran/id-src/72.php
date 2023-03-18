@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Katakanlah (hai Muhammad): &quot;Telah diwahyukan kepadaku bahwasanya: sekumpulan jin telah mendengarkan (Al Qur'an), lalu mereka berkata: &quot;Sesungguhnya kami telah mendengarkan Al Qur'an yang menakjubkan,",
 2=>"(yang) memberi petunjuk kepada jalan yang benar, lalu kami beriman kepadanya. Dan kami sekali-kali tidak akan mempersekutukan seorang pun dengan Tuhan kami,",
 3=>"dan bahwasanya Maha Tinggi kebesaran Tuhan kami, Dia tidak beristri dan tidak (pula) beranak.",
@@ -28,4 +28,4 @@ $verse = array(
 26=>"(Dia adalah Tuhan) Yang Mengetahui yang gaib, maka Dia tidak memperlihatkan kepada seorang pun tentang yang gaib itu.",
 27=>"Kecuali kepada rasul yang diridai-Nya, maka sesungguhnya Dia mengadakan penjaga-penjaga (malaikat) di muka dan di belakangnya.",
 28=>"Supaya Dia mengetahui, bahwa sesungguhnya rasul-rasul itu telah menyampaikan risalah-risalah Tuhannya, sedang (sebenarnya) ilmu-Nya meliputi apa yang ada pada mereka, dan Dia menghitung segala sesuatu satu persatu."
-);?>
+);

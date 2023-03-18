@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"When the heaven is split asunder",
 2=>"And attentive to her Lord in fear,",
 3=>"And when the earth is spread out",
@@ -25,4 +25,4 @@ $verse = array(
 23=>"And Allah knoweth best what they are hiding.",
 24=>"So give them tidings of a painful doom,",
 25=>"Save those who believe and do good works, for theirs is a reward unfailing."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Maha Suci Allah yang telah menurunkan Al-Furqaan (Al Qur'an) kepada hamba-Nya, agar dia menjadi pemberi peringatan kepada seluruh alam,",
 2=>"yang kepunyaan-Nya-lah kerajaan langit dan bumi, dan Dia tidak mempunyai anak, dan tidak ada sekutu bagi-Nya dalam kekuasaan (Nya), dan Dia telah menciptakan segala sesuatu, dan Dia menetapkan ukuran-ukurannya dengan serapi-rapinya.",
 3=>"Kemudian mereka mengambil tuhan-tuhan selain daripada-Nya (untuk disembah), yang tuhan-tuhan itu tidak menciptakan apa pun, bahkan mereka sendiri diciptakan dan tidak kuasa untuk (menolak) sesuatu kemudaratan dari dirinya dan tidak (pula untuk mengambil) sesuatu kemanfaatan pun dan (juga) tidak kuasa mematikan, menghidupkan dan tidak (pula) membangkitkan.",
@@ -77,4 +77,4 @@ $verse = array(
 75=>"Mereka itulah orang yang dibalasi dengan martabat yang tinggi (dalam surga) karena kesabaran mereka dan mereka disambut dengan penghormatan dan ucapan selamat di dalamnya,",
 76=>"mereka kekal di dalamnya. Surga itu sebaik-baik tempat menetap dan tempat kediaman.",
 77=>"Katakanlah (kepada orang-orang musyrik): &quot;Tuhanku tidak mengindahkan kamu, melainkan kalau ada ibadahmu. (Tetapi bagaimana kamu beribadah kepada-Nya), padahal kamu sungguh telah mendustakan-Nya? karena itu kelak (azab) pasti (menimpamu)&quot;."
-);?>
+);

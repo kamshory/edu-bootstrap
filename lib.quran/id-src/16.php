@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Telah pasti datangnya ketetapan Allah maka janganlah kamu meminta agar disegerakan (datang) nya. Maha Suci Allah dan Maha Tinggi dari apa yang mereka persekutukan.",
 2=>"Dia menurunkan para malaikat dengan (membawa) wahyu dengan perintah-Nya kepada siapa yang Dia kehendaki di antara hamba-hamba-Nya, yaitu: &quot;Peringatkanlah olehmu sekalian, bahwasanya tidak ada Tuhan (yang hak) melainkan Aku, maka hendaklah kamu bertakwa kepada-Ku&quot;.",
 3=>"Dia menciptakan langit dan bumi dengan hak. Maha Tinggi Allah daripada apa yang mereka persekutukan.",
@@ -128,4 +128,4 @@ $verse = array(
 126=>"Dan jika kamu memberikan balasan, maka balaslah dengan balasan yang sama dengan siksaan yang ditimpakan kepadamu. Akan tetapi jika kamu bersabar, sesungguhnya itulah yang lebih baik bagi orang-orang yang sabar.",
 127=>"Bersabarlah (hai Muhammad) dan tiadalah kesabaranmu itu melainkan dengan pertolongan Allah dan janganlah kamu bersedih hati terhadap (kekafiran) mereka dan janganlah kamu bersempit dada terhadap apa yang mereka tipu dayakan.",
 128=>"Sesungguhnya Allah beserta orang-orang yang bertakwa dan orang-orang yang berbuat kebaikan."
-);?>
+);

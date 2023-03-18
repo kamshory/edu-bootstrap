@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif. Lam. Mim.",
 2=>"These are revelations of the wise Scripture,",
 3=>"A guidance and a mercy for the good,",
@@ -34,4 +34,4 @@ $verse = array(
 32=>"And if a wave enshroudeth them like awnings, they cry unto Allah, making their faith pure for Him only. But when He bringeth them safe to land, come of them compromise. None denieth Our signs save every traitor ingrate.",
 33=>"O mankind! Keep your duty to your Lord and fear a Day when the parent will not be able to avail the child in aught, nor the child to avail the parent. Lo! Allah ' s promise is the very truth. Let not the life of the world beguile you, nor let the deceiver beguile you, in regard to Allah.",
 34=>"Lo! Allah! With Him is knowledge of the Hour. He sendeth down the rain, and knoweth that which is in the wombs. No soul knoweth what it will earn tomorrow, and no soul knoweth in what land it will die. Lo! Allah is Knower, Aware."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Demi (angin) yang menerbangkan debu dengan sekuat-kuatnya,",
 2=>"dan awan yang mengandung hujan,",
 3=>"dan kapal-kapal yang berlayar dengan mudah,",
@@ -60,4 +60,4 @@ $verse = array(
 58=>"Sesungguhnya Allah Dialah Maha Pemberi rezeki Yang Mempunyai Kekuatan lagi Sangat Kokoh.",
 59=>"Maka sesungguhnya untuk orang-orang lalim ada bahagian (siksa) seperti bahagian teman-teman mereka (dahulu); maka janganlah mereka meminta kepada-Ku menyegerakannya.",
 60=>"Maka kecelakaanlah bagi orang-orang yang kafir pada hari yang diancamkan kepada mereka."
-);?>
+);

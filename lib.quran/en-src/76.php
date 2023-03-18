@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Hath there come Upon man ( ever ) any period of time in which he was a thing unremembered?",
 2=>"Lo! We create man from a drop of thickened fluid to test him; so We make him hearing, knowing.",
 3=>"Lo! We have shown him the way, whether he be grateful or disbelieving.",
@@ -31,4 +31,4 @@ $verse = array(
 29=>"Lo! this is an Admonishment, that whosoever will may choose a way unto his Lord.",
 30=>"Yet ye will not, unless Allah willeth. Lo! Allah is Knower, Wise.",
 31=>"He maketh whom He will to enter His mercy, and for evil doers hath prepared a painful doom."
-);?>
+);

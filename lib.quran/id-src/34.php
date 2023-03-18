@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Segala puji bagi Allah yang memiliki apa yang di langit dan apa yang di bumi dan bagi-Nya (pula) segala puji di akhirat. Dan Dia-lah Yang Maha Bijaksana lagi Maha Mengetahui.",
 2=>"Dia mengetahui apa yang masuk ke dalam bumi, apa yang ke luar daripadanya, apa yang turun dari langit dan apa yang naik kepadanya. Dan Dia-lah Yang Maha Penyayang lagi Maha Pengampun.",
 3=>"Dan orang-orang yang kafir berkata: &quot;Hari berbangkit itu tidak akan datang kepada kami&quot;. Katakanlah: &quot;Pasti datang, demi Tuhanku Yang mengetahui yang gaib, sesungguhnya kiamat itu pasti akan datang kepadamu. Tidak ada tersembunyi daripada-Nya seberat zarrah pun yang ada di langit dan yang ada di bumi dan tidak ada (pula) yang lebih kecil dari itu dan yang lebih besar, melainkan tersebut dalam Kitab yang nyata (Lohmahfuz)&quot;,",
@@ -54,4 +54,4 @@ $verse = array(
 52=>"dan (di waktu itu) mereka berkata: &quot;Kami beriman kepada Allah&quot;, bagaimanakah mereka dapat mencapai (keimanan) dari tempat yang jauh itu.",
 53=>"Dan sesungguhnya mereka telah mengingkari Allah sebelum itu; dan mereka menduga-duga tentang yang gaib dari tempat yang jauh.",
 54=>"Dan dihalangi antara mereka dengan apa yang mereka ingini sebagaimana yang dilakukan terhadap orang-orang yang serupa dengan mereka pada masa dahulu. Sesungguhnya mereka dahulu (di dunia) dalam keraguan yang mendalam."
-);?>
+);

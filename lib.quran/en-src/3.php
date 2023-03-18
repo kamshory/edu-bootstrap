@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif. Lam. Mim.",
 2=>"Allah! There is no God save Him, the Alive, the Eternal.",
 3=>"He hath revealed unto thee ( Muhammad ) the Scripture with truth, confirming that which was ( revealed ) before it, even as He revealed the Torah and the Gospel",
@@ -200,4 +200,4 @@ $verse = array(
 198=>"But those who keep their duty to their Lord, for them are Gardens underneath which rivers flow, wherein they will be safe for ever. A gift of welcome from their Lord. That which Allah hath in store is better for the righteous.",
 199=>"And Lo! of the People of the Scripture there are some who believe in Allah and that which is revealed unto you and that which was revealed unto them, humbling themselves before Allah. They purchase not a trifling gain at the price of the revelations of Allah. Verily their reward is with their Lord, and Lo! Allah is swift to take account.",
 200=>"O ye who believe! Endure, outdo all others in endurance, be ready, and observe your duty to Allah, in order that ye may succeed."
-);?>
+);

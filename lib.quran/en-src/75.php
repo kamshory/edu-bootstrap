@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Nay, I swear by the Day of Resurrection;",
 2=>"Nay, I swear by the accusing soul ( that this Scripture is true ).",
 3=>"Thinketh man that We shall not assemble his bones?",
@@ -40,4 +40,4 @@ $verse = array(
 38=>"Then he became a clot; then ( Allah ) shaped and fashioned",
 39=>"And made of him a pair, the male and female.",
 40=>"Is not He ( who doeth so ) able to bring the dead to life?"
-);?>
+);

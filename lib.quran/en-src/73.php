@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"O thou wrapped up in thy raiment!",
 2=>"Keep vigil the night long, save a little",
 3=>"A half thereof, or abate a little thereof",
@@ -20,4 +20,4 @@ $verse = array(
 18=>"The very heaven being then rent asunder. His promise is to be fulfilled.",
 19=>"Lo! This is a Reminder. Let him who will, then, choose a way unto his Lord.",
 20=>"Lo! thy Lord knoweth how thou keepest vigil sometimes nearly two thirds of the night, or ( sometimes ) half or a third thereof, as do a party of those with thee. Allah measureth the night and the day. He knoweth that ye count it not, and turneth unto you in mercy. Recite, then, of the Quran that which is easy for you. He knoweth that there are sick folk among you, while others travel in the land in search of Allah ' s bounty, and others ( still ) are fighting for the cause of Allah. So recite of it that which is easy ( for you ), and establish worship and pay the poor due and ( so ) lend unto Allah a goodly loan. Whatsoever good ye send before you far your souls, ye will surely find it with Allah, better and greater in the recompense. And seek forgiveness of Allah. Lo! Allah is Forgiving, Merciful."
-);?>
+);

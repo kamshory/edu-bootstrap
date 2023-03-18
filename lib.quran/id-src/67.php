@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Maha Suci Allah Yang di tangan-Nya lah segala kerajaan, dan Dia Maha Kuasa atas segala sesuatu,",
 2=>"Yang menjadikan mati dan hidup, supaya Dia menguji kamu, siapa di antara kamu yang lebih baik amalnya. Dan Dia Maha Perkasa lagi Maha Pengampun.",
 3=>"Yang telah menciptakan tujuh langit berlapis-lapis, kamu sekali-kali tidak melihat pada ciptaan Tuhan Yang Maha Pemurah sesuatu yang tidak seimbang. Maka lihatlah berulang-ulang, adakah kamu lihat sesuatu yang tidak seimbang?",
@@ -30,4 +30,4 @@ $verse = array(
 28=>"Katakanlah: &quot;Terangkanlah kepadaku jika Allah mematikan aku dan orang-orang yang bersama dengan aku atau memberi rahmat kepada kami, (maka kami akan masuk surga), tetapi siapakah yang dapat melindungi orang-orang yang kafir dari siksa yang pedih?&quot;",
 29=>"Katakanlah: &quot;Dia-lah Allah Yang Maha Penyayang, kami beriman kepada-Nya dan kepada-Nya-lah kami bertawakal. Kelak kamu akan mengetahui siapakah dia yang berada dalam kesesatan yang nyata&quot;.",
 30=>"Katakanlah: &quot;Terangkanlah kepadaku jika sumber air kamu menjadi kering; maka siapakah yang akan mendatangkan air yang mengalir bagimu?&quot;."
-);?>
+);

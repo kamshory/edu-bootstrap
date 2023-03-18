@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Haa Miim.",
 2=>"'Ain Siin Qaaf.",
 3=>"Demikianlah Allah Yang Maha Perkasa lagi Maha Bijaksana, mewahyukan kepada kamu dan kepada orang-orang yang sebelum kamu.",
@@ -53,4 +53,4 @@ $verse = array(
 51=>"Dan tidak ada bagi seorang manusia pun bahwa Allah berkata-kata dengan dia kecuali dengan perantaraan wahyu atau di belakang tabir atau dengan mengutus seorang utusan (malaikat) lalu diwahyukan kepadanya dengan seizin-Nya apa yang Dia kehendaki. Sesungguhnya Dia Maha Tinggi lagi Maha Bijaksana.",
 52=>"Dan demikianlah Kami wahyukan kepadamu wahyu (Al Qur'an) dengan perintah Kami. Sebelumnya kamu tidaklah mengetahui apakah Al Kitab (Al Qur'an) dan tidak pula mengetahui apakah iman itu, tetapi Kami menjadikan Al Qur'an itu cahaya, yang Kami tunjuki dengan dia siapa yang Kami kehendaki di antara hamba-hamba Kami. Dan sesungguhnya kamu benar-benar memberi petunjuk kepada jalan yang lurus.",
 53=>"(Yaitu) jalan Allah yang kepunyaan-Nya segala apa yang ada di langit dan apa yang ada di bumi. Ingatlah, bahwa kepada Allah-lah kembali semua urusan."
-);?>
+);

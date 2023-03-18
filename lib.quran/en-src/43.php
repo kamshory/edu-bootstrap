@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Ha. Mim.",
 2=>"By the Scripture which maketh plain,",
 3=>"Lo! We have appointed it a Lecture in Arabic that haply ye may understand.",
@@ -89,4 +89,4 @@ $verse = array(
 87=>"And if thou ask them who created them, they will surely say : Allah. How then are they turned away?",
 88=>"And he saith : O my Lord! Lo! those are a folk who believe not.",
 89=>"Then bear with them ( O Muhammad ) and say : Peace. But they will come to know."
-);?>
+);

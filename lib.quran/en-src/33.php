@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"O Prophet! Keep thy duty to Allah and obey not the disbelievers and the hypocrites. Lo! Allah is Knower, Wise.",
 2=>"And follow that which is inspired in thee from thy Lord. Lo! Allah is Aware of what ye do.",
 3=>"And put thy trust in Allah, for Allah is sufficient as Trustee.",
@@ -73,4 +73,4 @@ $verse = array(
 71=>"He will adjust your works for you and will forgive you your sins. Whosoever obeyeth Allah and His messenger, he verily hath gained a signal victory.",
 72=>"Lo! We offered the trust unto the heavens and the earth and the hills, but they shrank from bearing it and were afraid of it. And man assumed it. Lo! he hath proved a tyrant and a fool.",
 73=>"Allah punisheth hypocritical men and hypocritical women, and idolatrous men and idolatrous women. But Allah pardoneth believing men and believing women, and Allah is Forgiving, Merciful."
-);?>
+);

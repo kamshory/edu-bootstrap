@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Dia (Muhammad) bermuka masam dan berpaling,",
 2=>"karena telah datang seorang buta kepadanya.",
 3=>"Tahukah kamu barangkali ia ingin membersihkan dirinya (dari dosa).",
@@ -42,4 +42,4 @@ $verse = array(
 40=>"dan banyak (pula) muka pada hari itu tertutup debu,",
 41=>"dan ditutup lagi oleh kegelapan.",
 42=>"Mereka itulah orang-orang kafir lagi durhaka."
-);?>
+);

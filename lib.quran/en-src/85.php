@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By the heaven, holding mansions of the stars,",
 2=>"And by the Promised Day.",
 3=>"And by the witness and that whereunto he beareth testimony,",
@@ -22,4 +22,4 @@ $verse = array(
 20=>"And Allah, all unseen, surroundeth them.",
 21=>"Nay, but it is a glorious Quran",
 22=>"On a guarded tablet."
-);?>
+);

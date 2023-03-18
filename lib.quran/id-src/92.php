@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Demi malam apabila menutupi (cahaya siang),",
 2=>"dan siang apabila terang benderang,",
 3=>"dan penciptaan laki-laki dan perempuan,",
@@ -21,4 +21,4 @@ $verse = array(
 19=>"padahal tidak ada seorang pun memberikan suatu nikmat kepadanya yang  harus dibalasnya,",
 20=>"tetapi (dia memberikan itu semata-mata) karena mencari keridaan  Tuhannya Yang Maha Tinggi.",
 21=>"Dan kelak dia benar-benar mendapat kepuasan."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Tentang apakah mereka saling bertanya-tanya?",
 2=>"Tentang berita yang besar,",
 3=>"yang mereka perselisihkan tentang ini.",
@@ -40,4 +40,4 @@ $verse = array(
 38=>"Pada hari, ketika ruh dan para malaikat berdiri bersaf-saf, mereka tidak berkata-kata kecuali siapa yang telah diberi izin kepadanya oleh Tuhan Yang Maha Pemurah; dan ia mengucapkan kata yang benar.",
 39=>"Itulah hari yang pasti terjadi. Maka barang siapa yang menghendaki, niscaya ia menempuh jalan kembali kepada Tuhannya.",
 40=>"Sesungguhnya Kami telah memperingatkan kepadamu (hai orang kafir) siksa yang dekat, pada hari manusia melihat apa yang telah diperbuat oleh kedua tangannya; dan orang kafir berkata: &quot;Alangkah baiknya sekiranya aku dahulu adalah tanah&quot;."
-);?>
+);

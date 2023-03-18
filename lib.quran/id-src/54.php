@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Telah dekat (datangnya) saat itu dan telah terbelah bulan.",
 2=>"Dan jika mereka (orang-orang musyrikin) melihat sesuatu tanda (mukjizat), mereka berpaling dan berkata: &quot;(Ini adalah) sihir yang terus menerus&quot;.",
 3=>"Dan mereka mendustakan (Nabi) dan mengikuti hawa nafsu mereka, sedang tiap-tiap urusan telah ada ketetapannya.",
@@ -55,4 +55,4 @@ $verse = array(
 53=>"Dan segala (urusan) yang kecil maupun yang besar adalah tertulis.",
 54=>"Sesungguhnya orang-orang yang bertakwa itu di dalam taman-taman dan sungai-sungai,",
 55=>"di tempat yang disenangi di sisi Tuhan Yang Berkuasa."
-);?>
+);

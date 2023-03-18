@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Praise be to Allah Who hath revealed the Scripture unto His slave, and hath not placed therein any crookedness,",
 2=>"( But hath made it ) straight, to give warning of stem punishment from Him, and to bring unto the believers who do good works the news that theirs will be a fair reward.",
 3=>"Wherein they will abide for ever;",
@@ -110,4 +110,4 @@ $verse = array(
 108=>"Wherein they will abide, with no desire to be removed from thence.",
 109=>"Say : Though the sea became ink for the Words of my Lord, verily the sea would be used up before the Words of my Lord were exhausted, even though We brought the like thereof to help.",
 110=>"Say : I am only a mortal like you. My Lord inspireth in me that your God is only One God. And whoever hopeth for the meeting with his Lord, let him do righteous work, and make none sharer of the worship due unto his Lord."
-);?>
+);

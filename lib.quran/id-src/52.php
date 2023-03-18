@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Demi bukit,",
 2=>"dan Kitab yang ditulis,",
 3=>"pada lembaran yang terbuka,",
@@ -49,4 +49,4 @@ $verse = array(
 47=>"Dan sesungguhnya untuk orang-orang yang lalim ada azab selain itu. Tetapi kebanyakan mereka tidak mengetahui.",
 48=>"Dan bersabarlah dalam menunggu ketetapan Tuhanmu, maka sesungguhnya kamu berada dalam penglihatan Kami, dan bertasbihlah dengan memuji Tuhanmu ketika kamu bangun berdiri,",
 49=>"dan bertasbihlah kepada-Nya pada beberapa saat di malam hari dan di waktu terbenam bintang-bintang (di waktu fajar)."
-);?>
+);

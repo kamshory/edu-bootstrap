@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"All that is in the heavens and the earth glorifieth Allah and He is the Mighty, the Wise.",
 2=>"His is the Sovereignty of the heavens and the earth; He quickeneth and He giveth death; and He is Able to do things.",
 3=>"He is the First and the Last, and the Outward and the Inward; and He is Knower of all things.",
@@ -29,4 +29,4 @@ $verse = array(
 27=>"Then We caused Our messengers to follow in their footsteps; and We caused Jesus, son of Mary, to follow, and gave him the Gospel, and placed compassion and mercy in the hearts of those who followed him. But monasticism they invented. We ordained it not for them. Only seeking Allah ' s pleasure, and they observed it not with right observance. So We give those of them who believe their reward, but many of them are evil livers.",
 28=>"O ye who believe! Be mindful of your duty to Allah and put faith in His messenger. He will give you twofold of His mercy and will appoint for you a light wherein ye shall walk, and will forgive you. Allah is Forgiving, Merciful;",
 29=>"That the People of the Scripture may know that they control naught of the bounty of Allah, but that the bounty is in Allah ' s hand to give to whom He will. And Allah is of infinite bounty."
-);?>
+);

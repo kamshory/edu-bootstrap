@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Ya Sin.",
 2=>"By the wise Quran,",
 3=>"Lo! thou art of those sent",
@@ -83,4 +83,4 @@ $verse = array(
 81=>"Is not He Who created the heavens and the earth Able to create the like of them? Aye, that He is! for He is the All Wise Creator,",
 82=>"But His command, when He intendeth a thing, is only that he saith unto it : Be! and it is.",
 83=>"Therefor glory be to Him in Whose hand is the dominion over all things! Unto Him ye will be brought back."
-);?>
+);

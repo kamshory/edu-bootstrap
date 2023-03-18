@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Rivalry in worldly increase distracteth you",
 2=>"Until ye come to the graves.",
 3=>"Nay, but ye will come to know!",
@@ -8,4 +8,4 @@ $verse = array(
 6=>"For ye will behold hell fire",
 7=>"Aye, ye will behold it with sure vision.",
 8=>"Then, on that day, ye will be asked concerning pleasure."
-);?>
+);

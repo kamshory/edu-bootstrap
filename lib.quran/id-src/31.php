@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif Laam Miim.",
 2=>"Inilah ayat-ayat Al Qur'an yang mengandung hikmah,",
 3=>"menjadi petunjuk dan rahmat bagi orang-orang yang berbuat kebaikan.",
@@ -34,4 +34,4 @@ $verse = array(
 32=>"Dan apabila mereka dilamun ombak yang besar seperti gunung, mereka menyeru Allah dengan memurnikan ketaatan kepada-Nya maka tatkala Allah menyelamatkan mereka sampai di daratan, lalu sebagian mereka tetap menempuh jalan yang lurus. Dan tidak ada yang mengingkari ayat-ayat Kami selain orang-orang yang tidak setia lagi ingkar.",
 33=>"Hai manusia, bertakwalah kepada Tuhanmu dan takutilah suatu hari yang (pada hari itu) seorang bapak tidak dapat menolong anaknya dan seorang anak tidak dapat (pula) menolong bapaknya sedikit pun. Sesungguhnya janji Allah adalah benar, maka janganlah sekali-kali kehidupan dunia memperdayakan kamu, dan jangan (pula) penipu (setan) memperdayakan kamu dalam (menaati) Allah.",
 34=>"Sesungguhnya Allah, hanya pada sisi-Nya sajalah pengetahuan tentang Hari Kiamat; dan Dia-lah Yang menurunkan hujan, dan mengetahui apa yang ada dalam rahim. Dan tiada seorang pun yang dapat mengetahui (dengan pasti) apa yang akan diusahakannya besok. Dan tiada seorang pun yang dapat mengetahui di bumi mana dia akan mati. Sesungguhnya Allah Maha Mengetahui lagi Maha Mengenal."
-);?>
+);

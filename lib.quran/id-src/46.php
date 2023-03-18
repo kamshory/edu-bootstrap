@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Haa Miim.",
 2=>"Diturunkan Kitab ini dari Allah Yang Maha Perkasa lagi Maha Bijaksana.",
 3=>"Kami tiada menciptakan langit dan bumi dan apa yang ada antara keduanya melainkan dengan (tujuan) yang benar dan dalam waktu yang ditentukan. Dan orang-orang yang kafir berpaling dari apa yang diperingatkan kepada mereka.",
@@ -35,4 +35,4 @@ $verse = array(
 33=>"Dan apakah mereka tidak memperhatikan bahwa sesungguhnya Allah yang menciptakan langit dan bumi dan Dia tidak merasa payah karena menciptakannya, kuasa menghidupkan orang-orang mati? Ya (bahkan) sesungguhnya Dia Maha Kuasa atas segala sesuatu.",
 34=>"Dan (Ingatlah) hari (ketika) orang-orang kafir dihadapkan kepada neraka, (dikatakan kepada mereka): &quot;Bukankah (azab) ini benar?&quot; Mereka menjawab: &quot;Ya benar, demi Tuhan kami&quot;. Allah berfirman: &quot;Maka rasakanlah azab ini disebabkan kamu selalu ingkar&quot;.",
 35=>"Maka bersabarlah kamu seperti orang-orang yang mempunyai keteguhan hati dari rasul-rasul telah bersabar dan janganlah kamu meminta disegerakan (azab) bagi mereka. Pada hari mereka melihat azab yang diancamkan kepada mereka (merasa) seolah-olah tidak tinggal (di dunia) melainkan sesaat pada siang hari. (Inilah) suatu pelajaran yang cukup, maka tidak dibinasakan melainkan kaum yang fasik."
-);?>
+);

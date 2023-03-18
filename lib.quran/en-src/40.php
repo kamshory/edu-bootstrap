@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Ha. Mim.",
 2=>"The revelation of the Scripture is from Allah, the Mighty, the Knower,",
 3=>"The Forgiver of sin, the Acceptor of repentance, the Stern in punishment, the Bountiful. There is no God save Him. Unto Him is the journeying.",
@@ -85,4 +85,4 @@ $verse = array(
 83=>"And when their messengers brought them clear proofs ( of Allah ' s Sovereignty ) they exulted in the knowledge they ( themselves ) possessed. And that which they were wont to mock befell them.",
 84=>"Then, when they saw Our doom, they said : We believe in Allah only and reject ( all ) that we used to associate ( with Him ).",
 85=>"But their faith could not avail them when they saw Our doom. This is Allah ' s law which hath ever taken course for his Bondsmen. And then the disbelievers will be ruined."
-);?>
+);

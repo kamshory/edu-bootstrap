@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By the Mount,",
 2=>"And a Scripture inscribed",
 3=>"On fire parchment unrolled,",
@@ -49,4 +49,4 @@ $verse = array(
 47=>"And verily, for those who do wrong, there is a punishment beyond that. But most of them know not.",
 48=>"So wait patiently ( O Muhammad ) for thy Lord ' s decree, for surely thou art in Our sight; and hymn the praise of thy Lord when thou uprisest.",
 49=>"And in the night time also hymn His praise, and at the setting of the stars."
-);?>
+);

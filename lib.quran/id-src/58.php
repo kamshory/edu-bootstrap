@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Sesungguhnya Allah telah mendengar perkataan wanita yang memajukan gugatan kepada kamu tentang suaminya, dan mengadukan (halnya) kepada Allah. Dan Allah mendengar soal jawab antara kamu berdua. Sesungguhnya Allah Maha Mendengar lagi Maha Melihat.",
 2=>"Orang-orang yang menzihar istrinya di antara kamu, (menganggap istrinya sebagai ibunya, padahal) tiadalah istri mereka itu ibu mereka. Ibu-ibu mereka tidak lain hanyalah wanita yang melahirkan mereka. Dan sesungguhnya mereka sungguh-sungguh mengucapkan suatu perkataan yang mungkar dan dusta. Dan sesungguhnya Allah Maha Pemaaf lagi Maha Pengampun.",
 3=>"Orang-orang yang menzihar istri mereka, kemudian mereka hendak menarik kembali apa yang mereka ucapkan, maka (wajib atasnya) memerdekakan seorang budak sebelum kedua suami istri itu bercampur. Demikianlah yang diajarkan kepada kamu, dan Allah Maha Mengetahui apa yang kamu kerjakan.",
@@ -22,4 +22,4 @@ $verse = array(
 20=>"Sesungguhnya orang-orang yang menentang Allah dan Rasul-Nya, mereka termasuk orang-orang yang sangat hina.",
 21=>"Allah telah menetapkan: &quot;Aku dan rasul-rasul-Ku pasti menang&quot;. Sesungguhnya Allah Maha Kuat lagi Maha Perkasa.",
 22=>"Kamu tidak akan mendapati sesuatu kaum yang beriman kepada Allah dan hari akhirat, saling berkasih sayang dengan orang-orang yang menentang Allah dan Rasul-Nya, sekalipun orang-orang itu bapak-bapak, atau anak-anak atau saudara-saudara atau pun keluarga mereka. Mereka itulah orang-orang yang Allah telah menanamkan keimanan dalam hati mereka dan menguatkan mereka dengan pertolongan yang datang daripada-Nya. Dan dimasukkan-Nya mereka ke dalam surga yang mengalir di bawahnya sungai-sungai, mereka kekal di dalamnya. Allah rida terhadap mereka dan mereka pun merasa puas terhadap (limpahan rahmat) Nya. Mereka itulah golongan Allah. Ketahuilah, bahwa sesungguhnya golongan Allah itulah golongan yang beruntung."
-);?>
+);

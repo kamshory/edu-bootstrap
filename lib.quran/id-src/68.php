@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Nun, demi kalam dan apa yang mereka tulis,",
 2=>"berkat nikmat Tuhanmu kamu (Muhammad) sekali-kali bukan orang gila.",
 3=>"Dan sesungguhnya bagi kamu benar-benar pahala yang besar yang tidak putus-putusnya.",
@@ -52,4 +52,4 @@ $verse = array(
 50=>"Lalu Tuhannya memilihnya dan menjadikannya termasuk orang-orang yang saleh.",
 51=>"Dan sesungguhnya orang-orang kafir itu benar-benar hampir menggelincirkan kamu dengan pandangan mereka, tatkala mereka mendengar Al Qur'an dan mereka berkata: &quot;Sesungguhnya ia (Muhammad) benar-benar orang yang gila&quot;.",
 52=>"Dan Al Qur'an itu tidak lain hanyalah peringatan bagi seluruh umat."
-);?>
+);

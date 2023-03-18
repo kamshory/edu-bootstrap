@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By the heaven and the Morning Star",
 2=>"Ah, what will tell thee what the Morning Star is!",
 3=>"The piercing Star!",
@@ -17,4 +17,4 @@ $verse = array(
 15=>"Lo! they plot a plot ( against thee, O Muhammad )",
 16=>"And I plot a plot ( against them ).",
 17=>"So give a respite to the disbelievers. Deal thou gently with them for a while."
-);?>
+);

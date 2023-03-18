@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Demi malaikat-malaikat yang diutus untuk membawa kebaikan,",
 2=>"dan (malaikat-malaikat) yang terbang dengan kencangnya,",
 3=>"dan (malaikat-malaikat) yang menyebarkan (rahmat Tuhannya) dengan seluas-luasnya,",
@@ -50,4 +50,4 @@ $verse = array(
 48=>"Dan apabila dikatakan kepada mereka: &quot;Ruku'lah&quot;, niscaya mereka tidak mau rukuk.",
 49=>"Kecelakaan yang besarlah pada hari itu bagi orang-orang yang mendustakan.",
 50=>"Maka kepada perkataan apakah selain Al Qur'an ini mereka akan beriman?"
-);?>
+);

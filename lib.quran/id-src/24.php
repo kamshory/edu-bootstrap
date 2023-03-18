@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"(Ini adalah) satu surat yang Kami turunkan dan Kami wajibkan (menjalankan hukum-hukum yang ada di dalam) nya, dan Kami turunkan di dalamnya ayat-ayat yang jelas, agar kamu selalu mengingatinya.",
 2=>"Perempuan yang berzina dan laki-laki yang berzina, maka deralah tiap-tiap seorang dari keduanya seratus kali dera, dan janganlah belas kasihan kepada keduanya mencegah kamu untuk (menjalankan) agama Allah, jika kamu beriman kepada Allah, dan hari akhirat, dan hendaklah (pelaksanaan) hukuman mereka disaksikan oleh sekumpulan dari orang-orang yang beriman.",
 3=>"Laki-laki yang berzina tidak mengawini melainkan perempuan yang berzina, atau perempuan yang musyrik; dan perempuan yang berzina tidak dikawini melainkan oleh laki-laki yang berzina atau laki-laki musyrik, dan yang demikian itu diharamkan atas orang-orang yang mukmin.",
@@ -64,4 +64,4 @@ $verse = array(
 62=>"Sesungguhnya yang sebenar-benar orang mukmin ialah orang-orang yang beriman kepada Allah dan Rasul-Nya dan apabila mereka berada bersama-sama Rasulullah dalam sesuatu urusan yang memerlukan pertemuan, mereka tidak meninggalkan (Rasulullah) sebelum meminta izin kepadanya. Sesungguhnya orang-orang yang meminta izin kepadamu (Muhammad) mereka itulah orang-orang yang beriman kepada Allah dan rasul-Nya, maka apabila mereka meminta izin kepadamu karena sesuatu keperluan, berilah izin kepada siapa yang kamu kehendaki di antara mereka, dan mohonkanlah ampunan untuk mereka kepada Allah. Sesungguhnya Allah Maha Pengampun lagi Maha Penyayang.",
 63=>"Janganlah kamu jadikan panggilan Rasul di antara kamu seperti panggilan sebahagian kamu kepada sebahagian (yang lain). Sesungguhnya Allah telah mengetahui orang-orang yang berangsur-angsur pergi di antara kamu dengan berlindung (kepada kawannya), maka hendaklah orang-orang yang menyalahi perintah Rasul takut akan ditimpa cobaan atau ditimpa azab yang pedih.",
 64=>"Ketahuilah sesungguhnya kepunyaan Allah lah apa yang di langit dan di bumi. Sesungguhnya Dia mengetahui keadaan yang kamu berada di dalamnya (sekarang). Dan (mengetahui pula) hari (manusia) dikembalikan kepada-Nya, lalu diterangkan-Nya kepada mereka apa yang telah mereka kerjakan. Dan Allah Maha Mengetahui segala sesuatu."
-);?>
+);

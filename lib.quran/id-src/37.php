@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Demi (rombongan) yang bersaf-saf dengan sebenar-benarnya,",
 2=>"dan demi (rombongan) yang melarang dengan sebenar-benarnya (dari perbuatan-perbuatan maksiat),",
 3=>"dan demi (rombongan) yang membacakan pelajaran,",
@@ -182,4 +182,4 @@ $verse = array(
 180=>"Maha Suci Tuhanmu Yang mempunyai keperkasaan dari apa yang mereka katakan.",
 181=>"Dan kesejahteraan dilimpahkan atas para rasul.",
 182=>"Dan segala puji bagi Allah Tuhan seru sekalian alam."
-);?>
+);

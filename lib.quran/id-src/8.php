@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Mereka menanyakan kepadamu tentang (pembagian) harta rampasan perang. Katakanlah: &quot;Harta rampasan perang itu kepunyaan Allah dan Rasul, sebab itu bertakwalah kepada Allah dan perbaikilah perhubungan di antara sesamamu, dan taatlah kepada Allah dan Rasul-Nya jika kamu adalah orang-orang yang beriman&quot;.",
 2=>"Sesungguhnya orang-orang yang beriman itu adalah mereka yang apabila disebut nama Allah gemetarlah hati mereka, dan apabila dibacakan kepada mereka ayat-ayat-Nya bertambahlah iman mereka (karenanya) dan kepada Tuhan-lah mereka bertawakal,",
 3=>"(yaitu) orang-orang yang mendirikan salat dan yang menafkahkan sebagian dari rezeki yang Kami berikan kepada mereka.",
@@ -75,4 +75,4 @@ $verse = array(
 73=>"Adapun orang-orang yang kafir, sebagian mereka menjadi pelindung bagi sebagian yang lain. Jika kamu (hai para muslimin) tidak melaksanakan apa yang telah diperintahkan Allah itu, niscaya akan terjadi kekacauan di muka bumi dan kerusakan yang besar.",
 74=>"Dan orang-orang yang beriman dan berhijrah serta berjihad pada jalan Allah, dan orang-orang yang memberi tempat kediaman dan memberi pertolongan (kepada orang-orang muhajirin), mereka itulah orang-orang yang benar-benar beriman. Mereka memperoleh ampunan dan rezeki (nikmat) yang mulia.",
 75=>"Dan orang-orang yang beriman sesudah itu, kemudian berhijrah dan berjihad bersamamu maka orang-orang itu termasuk golonganmu (juga). Orang-orang yang mempunyai hubungan itu sebagiannya lebih berhak terhadap sesamanya (daripada yang kerabat) di dalam kitab Allah. Sesungguhnya Allah Maha Mengetahui segala sesuatu."
-);?>
+);

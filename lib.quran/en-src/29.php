@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif. Lam. Mim.",
 2=>"Do men imagine that they will be left ( at ease ) because they say, We believe, and will not be tested with affliction?",
 3=>"Lo! We tested those who were before you. Thus Allah knoweth those who are sincere, and knoweth those who feign.",
@@ -69,4 +69,4 @@ $verse = array(
 67=>"Have they not seen that We have appointed a sanctuary immune ( from violence ), while mankind are ravaged all around them? Do they then believe in falsehood and disbelieve in the bounty of Allah?",
 68=>"Who doeth greater wrong than he who inventeth a lie concerning Allah, or denieth the truth when it cometh unto him? Is not there a home in hell for disbelievers?",
 69=>"As for those who strive in Us, We surely guide them to Our paths, and lo! Allah is with the good."
-);?>
+);

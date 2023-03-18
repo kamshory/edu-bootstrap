@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif. Lam. Ra. ( This is ) a Scripture which We have revealed unto thee ( Muhammad ) that thereby thou mayst bring forth mankind from darkness unto light, by the permission of their Lord, unto the path of the Mighty, the Owner of Praise.",
 2=>"Allah, unto Whom belongeth whatsoever is in the heavens and whatsoever is in the earth. And woe unto the disbelievers from an awful doom.",
 3=>"Those who love the life of the world more than the Hereafter, and debar ( men ) from the way of Allah and would have it crooked : such are far astray.",
@@ -52,4 +52,4 @@ $verse = array(
 50=>"Their raiment of pitch, and the Fire covering their faces.",
 51=>"That Allah may repay each soul what it hath earned. Lo! Allah is swift at reckoning.",
 52=>"This is a clear message for mankind in order that they may be warned thereby, and that they may know that He is only One God, and that men of understanding may take heed."
-);?>
+);

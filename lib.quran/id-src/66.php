@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Hai Nabi, mengapa kamu mengharamkan apa yang Allah menghalalkannya bagimu; kamu mencari kesenangan hati istri-istrimu? Dan Allah Maha Pengampun lagi Maha Penyayang.",
 2=>"Sesungguhnya Allah telah mewajibkan kepada kamu sekalian membebaskan diri dari sumpahmu; dan Allah adalah Pelindungmu dan Dia Maha Mengetahui lagi Maha Bijaksana.",
 3=>"Dan ingatlah ketika Nabi membicarakan secara rahasia kepada salah seorang dari istri-istrinya (Hafshah) suatu peristiwa. Maka tatkala (Hafshah) menceritakan peristiwa itu (kepada Aisyah) dan Allah memberitahukan hal itu (semua pembicaraan antara Hafshah dengan Aisyah) kepada Muhammad lalu Muhammad memberitahukan sebagian (yang diberitakan Allah kepadanya) dan menyembunyikan sebagian yang lain (kepada Hafshah). Maka tatkala (Muhammad) memberitahukan pembicaraan (antara Hafshah dan Aisyah) lalu Hafshah bertanya: &quot;Siapakah yang telah memberitahukan hal ini kepadamu?&quot; Nabi menjawab: &quot;Telah diberitahukan kepadaku oleh Allah Yang Maha Mengetahui lagi Maha Mengenal&quot;.",
@@ -12,4 +12,4 @@ $verse = array(
 10=>"Allah membuat istri Nuh dan istri Lut perumpamaan bagi orang-orang kafir. Keduanya berada di bawah pengawasan dua orang hamba yang saleh di antara hamba-hamba Kami; lalu kedua istri itu berkhianat kepada kedua suaminya, maka kedua suaminya itu tiada dapat membantu mereka sedikit pun dari (siksa) Allah; dan dikatakan (kepada keduanya); &quot;Masuklah ke neraka bersama orang-orang yang masuk (neraka)&quot;.",
 11=>"Dan Allah membuat istri Firaun perumpamaan bagi orang-orang yang beriman, ketika ia berkata: &quot;Ya Tuhanku, bangunlah untukku sebuah rumah di sisi-Mu dalam surga dan selamatkanlah aku dari Firaun dan perbuatannya dan selamatkanlah aku dari kaum yang lalim&quot;,",
 12=>"dan Maryam putri Imran yang memelihara kehormatannya, maka Kami tiupkan ke dalam rahimnya sebagian dari roh (ciptaan) Kami; dan dia membenarkan kalimat-kalimat Tuhannya dan Kitab-kitab-Nya; dan adalah dia termasuk orang-orang yang taat."
-);?>
+);

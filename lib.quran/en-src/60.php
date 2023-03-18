@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"O ye who believe! Choose not My enemy and your enemy for friends. Do ye give them friendship when they disbelieve in that truth which hath come unto you, driving out the messenger and you because ye believe in Allah, your Lord? If ye have come forth to strive in My way and seeking My good pleasure, ( show them not friendship ). Do ye show friendship unto them in secret, when I am best Aware of what ye hide and what ye proclaim? And whosoever doeth it among you, be verily hath strayed from the right way.",
 2=>"If they have the upper hand of you, they will be your foes, and will stretch out their hands and their tongues toward you with evil ( intent ), and they long for you to disbelieve.",
 3=>"Your ties of kindred and your children will avail you naught upon the Day of Resurrection. He will part you. Allah is Seer of what ye do.",
@@ -13,4 +13,4 @@ $verse = array(
 11=>"And if any of your wives have gone from you unto the disbelievers and afterward ye have your turn ( of triumph ), then give unto those whose wives have gone the like of that which they have spent, and keep your duty to Allah in whom ye are believers.",
 12=>"O Prophet! If believing women come unto thee, taking oath of allegiance unto thee that they will ascribe nothing as partner unto Allah, and will neither steal nor commit adultery nor kill their children, nor produce any lie that they have devised between their hands and feet, nor disobey thee in what is right, then accept their allegiance and ask Allah to forgive them. Lo! Allah is Forgiving, Merciful.",
 13=>"O ye who believe! Be not friendly with a folk with whom Allah is wroth, ( a folk ) who have despaired of the Hereafter as the disbelievers despair of those who are in the graves."
-);?>
+);

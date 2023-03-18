@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"The commandment of Allah will come to pass, so seek not ye to hasten it. Glorified and Exalted be He above all that they associate ( with Him ).",
 2=>"He sendeth down the angels with the Spirit of His command unto whom He will of His bondmen, ( saying ) : Warn mankind that there is no god save Me, so keep your duty unto Me.",
 3=>"He hath created the heavens and the earth with truth. High be He exalted above all that they associate ( with Him ).",
@@ -128,4 +128,4 @@ $verse = array(
 126=>"If ye punish, then punish with the like of that wherewith ye were afflicted. But if ye endure patiently, verily it is better for the patient.",
 127=>"Endure thou patiently ( O Muhammad ). Thine endurance is only by ( the help of ) Allah. Grieve not for them, and be not in distress because of that which they devise.",
 128=>"Lo! Allah is with those who keep their duty unto Him and those who are doers of good."
-);?>
+);

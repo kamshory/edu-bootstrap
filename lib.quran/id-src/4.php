@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Hai sekalian manusia, bertakwalah kepada Tuhan-mu yang telah menciptakan kamu dari diri yang satu, dan daripadanya Allah menciptakan istrinya; dan daripada keduanya Allah memperkembang biakkan laki-laki dan perempuan yang banyak. Dan bertakwalah kepada Allah yang dengan (mempergunakan) nama-Nya kamu saling meminta satu sama lain, dan (peliharalah) hubungan silaturahmi. Sesungguhnya Allah selalu menjaga dan mengawasi kamu.",
 2=>"Dan berikanlah kepada anak-anak yatim (yang sudah balig) harta mereka, jangan kamu menukar yang baik dengan yang buruk dan jangan kamu makan harta mereka bersama hartamu. Sesungguhnya tindakan-tindakan (menukar dan memakan) itu, adalah dosa yang besar.",
 3=>"Dan jika kamu takut tidak akan dapat berlaku adil terhadap (hak-hak) perempuan yatim (bilamana kamu mengawininya), maka kawinilah wanita-wanita (lain) yang kamu senangi: dua, tiga atau empat. Kemudian jika kamu takut tidak akan dapat berlaku adil, maka (kawinilah) seorang saja, atau budak-budak yang kamu miliki. Yang demikian itu adalah lebih dekat kepada tidak berbuat aniaya.",
@@ -176,4 +176,4 @@ $verse = array(
 174=>"Hai manusia, sesungguhnya telah datang kepadamu bukti kebenaran dari Tuhanmu, (Muhammad dengan mukjizatnya) dan telah Kami turunkan kepadamu cahaya yang terang benderang (Al Qur'an).",
 175=>"Adapun orang-orang yang beriman kepada Allah dan berpegang kepada (agama)-Nya, niscaya Allah akan memasukkan mereka ke dalam rahmat yang besar dari-Nya (surga) dan limpahan karunia-Nya. Dan menunjuki mereka kepada jalan yang lurus (untuk sampai) kepada-Nya.",
 176=>"Mereka meminta fatwa kepadamu (tentang kalalah). Katakanlah: &quot;Allah memberi fatwa kepadamu tentang kalalah (yaitu): jika seorang meninggal dunia, dan ia tidak mempunyai anak dan mempunyai saudara perempuan, maka bagi saudaranya yang perempuan itu seperdua dari harta yang ditinggalkannya, dan saudaranya yang laki-laki mempusakai (seluruh harta saudara perempuan), jika ia tidak mempunyai anak; tetapi jika saudara perempuan itu dua orang, maka bagi keduanya dua pertiga dari harta yang ditinggalkan oleh yang meninggal. Dan jika mereka (ahli waris itu terdiri dari) saudara-saudara laki dan perempuan, maka bahagian seorang saudara laki-laki sebanyak bahagian dua orang saudara perempuan. Allah menerangkan (hukum ini) kepadamu, supaya kamu tidak sesat. Dan Allah Maha Mengetahui segala sesuatu."
-);?>
+);

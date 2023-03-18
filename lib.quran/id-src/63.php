@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Apabila orang-orang munafik datang kepadamu, mereka berkata: &quot;Kami mengakui, bahwa sesungguhnya kamu benar-benar Rasul Allah&quot;. Dan Allah mengetahui bahwa sesungguhnya kamu benar-benar Rasul-Nya; dan Allah mengetahui bahwa sesungguhnya orang-orang munafik itu benar-benar orang pendusta.",
 2=>"Mereka itu menjadikan sumpah mereka sebagai perisai, lalu mereka menghalangi (manusia) dari jalan Allah. Sesungguhnya amat buruklah apa yang telah mereka kerjakan.",
 3=>"Yang demikian itu adalah karena bahwa sesungguhnya mereka telah beriman, kemudian menjadi kafir (lagi) lalu hati mereka dikunci mati; karena itu mereka tidak dapat mengerti.",
@@ -11,4 +11,4 @@ $verse = array(
 9=>"Hai orang-orang yang beriman, janganlah harta-hartamu dan anak-anakmu melalaikan kamu dari mengingat Allah. Barang siapa yang membuat demikian maka mereka itulah orang-orang yang rugi.",
 10=>"Dan belanjakanlah sebagian dari apa yang telah Kami berikan kepadamu sebelum datang kematian kepada salah seorang di antara kamu; lalu ia berkata: &quot;Ya Tuhanku, mengapa Engkau tidak menangguhkan (kematian) ku sampai waktu yang dekat, yang menyebabkan aku dapat bersedekah dan aku termasuk orang-orang yang saleh?&quot;",
 11=>"Dan Allah sekali-kali tidak akan menangguhkan (kematian) seseorang apabila datang waktu kematiannya. Dan Allah Maha Mengetahui apa yang kamu kerjakan."
-);?>
+);

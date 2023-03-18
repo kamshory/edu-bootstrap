@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Maha Suci Allah, yang telah memperjalankan hamba-Nya pada suatu malam dari Al Masjidilharam ke Al Masjidilaksa yang telah Kami berkahi sekelilingnya agar Kami perlihatkan kepadanya sebagian dari tanda-tanda (kebesaran) Kami. Sesungguhnya Dia adalah Maha Mendengar lagi Maha Melihat.",
 2=>"Dan Kami berikan kepada Musa kitab (Taurat) dan Kami jadikan kitab Taurat itu petunjuk bagi Bani Israel (dengan firman): &quot;Janganlah kamu mengambil penolong selain Aku,",
 3=>"(yaitu) anak cucu dari orang-orang yang Kami bawa bersama-sama Nuh. Sesungguhnya dia adalah hamba (Allah) yang banyak bersyukur.",
@@ -111,4 +111,4 @@ $verse = array(
 109=>"Dan mereka menyungkur atas muka mereka sambil menangis dan mereka bertambah khusyuk.",
 110=>"Katakanlah: &quot;Serulah Allah atau serulah Ar-Rahman. Dengan nama yang mana saja kamu seru, Dia mempunyai al asmaaulhusna (nama-nama yang terbaik) dan janganlah kamu mengeraskan suaramu dalam salatmu dan janganlah pula merendahkannya dan carilah jalan tengah di antara kedua itu&quot;",
 111=>"Dan katakanlah: &quot;Segala puji bagi Allah Yang tidak mempunyai anak dan tidak mempunyai sekutu dalam kerajaan-Nya dan Dia bukan pula hina yang memerlukan penolong dan agungkanlah Dia dengan pengagungan yang sebesar-besarnya."
-);?>
+);

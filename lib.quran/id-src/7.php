@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif, laam miim shaad.",
 2=>"Ini adalah sebuah kitab yang diturunkan kepadamu, maka janganlah ada kesempitan di dalam dadamu karenanya, supaya kamu memberi peringatan dengan kitab itu (kepada orang kafir), dan menjadi pelajaran bagi orang-orang yang beriman.",
 3=>"Ikutilah apa yang diturunkan kepadamu dari Tuhanmu dan janganlah kamu mengikuti pemimpin-pemimpin selain-Nya. Amat sedikitlah kamu mengambil pelajaran (daripadanya).",
@@ -206,4 +206,4 @@ $verse = array(
 204=>"Dan apabila dibacakan Al Qur'an, maka dengarkanlah baik-baik, dan perhatikanlah dengan tenang agar kamu mendapat rahmat.",
 205=>"Dan sebutlah (nama) Tuhanmu dalam hatimu dengan merendahkan diri dan rasa takut, dan dengan tidak mengeraskan suara, di waktu pagi dan petang, dan janganlah kamu termasuk orang-orang yang lalai.",
 206=>"Sesungguhnya malaikat-malaikat yang ada di sisi Tuhanmu tidaklah merasa enggan menyembah Allah dan mereka mentasbihkan-Nya dan hanya kepada-Nya lah mereka bersujud."
-);?>
+);

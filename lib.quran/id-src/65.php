@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Hai Nabi, apabila kamu menceraikan istri-istrimu maka hendaklah kamu ceraikan mereka pada waktu mereka dapat (menghadapi) idahnya (yang wajar) dan hitunglah waktu idah itu serta bertakwalah kepada Allah Tuhanmu. Janganlah kamu keluarkan mereka dari rumah mereka dan janganlah mereka (diizinkan) ke luar kecuali kalau mereka mengerjakan perbuatan keji yang terang. Itulah hukum-hukum Allah dan barang siapa yang melanggar hukum-hukum Allah, maka sesungguhnya dia telah berbuat lalim terhadap dirinya sendiri. Kamu tidak mengetahui barangkali Allah mengadakan sesudah itu suatu hal yang baru.",
 2=>"Apabila mereka telah mendekati akhir idahnya, maka rujukilah mereka dengan baik atau lepaskanlah mereka dengan baik dan persaksikanlah dengan dua orang saksi yang adil di antara kamu dan hendaklah kamu tegakkan kesaksian itu karena Allah. Demikianlah diberi pengajaran dengan itu orang yang beriman kepada Allah dan hari akhirat. Barang siapa yang bertakwa kepada Allah niscaya Dia akan mengadakan baginya jalan ke luar.",
 3=>"Dan memberinya rezeki dari arah yang tiada disangka-sangkanya. Dan barang siapa yang bertawakal kepada Allah niscaya Allah akan mencukupkan (keperluan) nya. Sesungguhnya Allah melaksanakan urusan (yang dikehendaki) Nya. Sesungguhnya Allah telah mengadakan ketentuan bagi tiap-tiap sesuatu.",
@@ -12,4 +12,4 @@ $verse = array(
 10=>"Allah menyediakan bagi mereka azab yang keras, maka bertakwalah kepada Allah hai orang-orang yang mempunyai akal, (yaitu) orang-orang yang beriman. Sesungguhnya Allah telah menurunkan peringatan kepadamu,",
 11=>"(Dan mengutus) seorang Rasul yang membacakan kepadamu ayat-ayat Allah yang menerangkan (bermacam-macam hukum) supaya Dia mengeluarkan orang-orang yang beriman dan mengerjakan amal-amal yang saleh dari kegelapan kepada cahaya. Dan barang siapa beriman kepada Allah dan mengerjakan amal yang saleh niscaya Allah akan memasukkannya ke dalam surga-surga yang mengalir di bawahnya sungai-sungai; mereka kekal di dalamnya selama-lamanya. Sesungguhnya Allah memberikan rezeki yang baik kepadanya.",
 12=>"Allah-lah yang menciptakan tujuh langit dan seperti itu pula bumi. Perintah Allah berlaku padanya, agar kamu mengetahui bahwasanya Allah Maha Kuasa atas segala sesuatu, dan sesungguhnya Allah, ilmu-Nya benar-benar meliputi segala sesuatu."
-);?>
+);

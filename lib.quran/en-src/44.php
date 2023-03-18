@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Ha. Mim.",
 2=>"By the Scripture that maketh plain",
 3=>"Lo! We revealed it on a blessed night. Lo! We are ever warning.",
@@ -59,4 +59,4 @@ $verse = array(
 57=>"A bounty from thy Lord. That is the supreme triumph.",
 58=>"And We have made ( this Scripture ) easy in thy language only that they may heed.",
 59=>"Wait then ( O Muhammad ). Lo! they ( too ) are waiting."
-);?>
+);

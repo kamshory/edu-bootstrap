@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By the Dawn",
 2=>"And ten nights,",
 3=>"And the Even and the Odd,",
@@ -30,4 +30,4 @@ $verse = array(
 28=>"Return unto thy Lord, content in His good pleasure!",
 29=>"Enter thou among My bondmen!",
 30=>"Enter thou My Garden!"
-);?>
+);

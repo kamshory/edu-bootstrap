@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Woe unto the defrauders :",
 2=>"Those who when they take the measure from mankind demand it full,",
 3=>"But if they measure unto them or weigh for them, they cause them loss.",
@@ -36,4 +36,4 @@ $verse = array(
 34=>"This day it is those who believe who have the laugh of disbelievers,",
 35=>"On high couches, gazing.",
 36=>"Are not the disbelievers paid for what they used to do?"
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Ha. Mim.",
 2=>"The revelation of the Scripture is from Allah, the Mighty, the Wise.",
 3=>"Lo! in the heavens and the earth are portents for believers.",
@@ -37,4 +37,4 @@ $verse = array(
 35=>"This, forasmuch as ye made the revelations of Allah a jest, and the life of the world beguiled you. Therefor this day they come not forth from thence, nor can they make amends",
 36=>"Then praise be to Allah, Lord of the heavens and Lords of the earth, the Lord of the Worlds.",
 37=>"And unto Him ( alone ) belongeth majesty in the heavens and the earth, and He is the Mighty, the Wise."
-);?>
+);

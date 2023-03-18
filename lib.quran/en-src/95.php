@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By the fig and the olive,",
 2=>"By Mount Sinai,",
 3=>"And by this land made safe;",
@@ -8,4 +8,4 @@ $verse = array(
 6=>"Save those who believe and do good works, and theirs is a reward unfailing.",
 7=>"So who henceforth will give the lie to thee about the judgment?",
 8=>"Is not Allah the most conclusive of all judges?"
-);?>
+);

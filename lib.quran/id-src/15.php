@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif, laam, raa. (Surat) ini adalah (sebagian dari) ayat-ayat Al-Kitab (yang sempurna), yaitu (ayat-ayat) Al Qur'an yang memberi penjelasan.",
 2=>"Orang-orang yang kafir itu sering kali (nanti di akhirat) menginginkan, kiranya mereka dahulu (di dunia) menjadi orang-orang muslim.",
 3=>"Biarkanlah mereka (di dunia ini) makan dan bersenang-senang dan dilalaikan oleh angan-angan (kosong), maka kelak mereka akan mengetahui (akibat perbuatan mereka).",
@@ -99,4 +99,4 @@ $verse = array(
 97=>"Dan Kami sungguh-sungguh mengetahui, bahwa dadamu menjadi sempit disebabkan apa yang mereka ucapkan,",
 98=>"maka bertasbihlah dengan memuji Tuhanmu dan jadilah kamu di antara orang-orang yang bersujud (salat),",
 99=>"dan sembahlah Tuhanmu sampai datang kepadamu yang diyakini (ajal)."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By those who set the ranks in battle order",
 2=>"And those who drive away ( the wicked ) with reproof",
 3=>"And those who read ( the Word ) for a reminder,",
@@ -182,4 +182,4 @@ $verse = array(
 180=>"Glorified be thy Lord, the Lord of Majesty, from that which they attribute ( unto Him )",
 181=>"And peace be unto those sent ( to warn ).",
 182=>"And praise be to Allah, Lord of the Worlds!"
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Glorified be He Who carried His servant by night from the Inviolable Place of Worship to the Far Distant Place of Worship the neighborhood whereof We have blessed, that We might show him of Our tokens! Lo! He, only He, is the Nearer, the Seer.",
 2=>"We gave unto Moses the Scripture, and We appointed it a guidance for the Children of Israel, saying : Choose no guardian beside Me.",
 3=>"( They were ) the seed of those whom We carried ( in the ship ) along with Noah. Lo! he was a grateful slave.",
@@ -111,4 +111,4 @@ $verse = array(
 109=>"They fall down on their faces, weeping, and it increaseth humility in them.",
 110=>"Say ( unto mankind ) : Cry unto Allah, or cry unto the Beneficent, unto whichsoever ye cry ( it is the same ). His are the most beautiful names. And thou ( Muhammad ), be not loud voiced in thy worship nor yet silent therein, but follow a way between.",
 111=>"And say : Praise be to Allah, Who hath not taken unto Himself a son, and Who hath no partner in the Sovereignty, nor hath He any protecting friend through dependence. And magnify Him with all magnificence."
-);?>
+);

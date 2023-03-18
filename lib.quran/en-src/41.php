@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Ha. Mim.",
 2=>"A revelation from the Beneficent, the Merciful,",
 3=>"A scripture whereof the verses are expounded, a Lecture in Arabic for people who have knowledge.",
@@ -54,4 +54,4 @@ $verse = array(
 52=>"Bethink you : If it is from Allah and ye reject it Who is further astray than one who is at open feud ( with Allah )?",
 53=>"We shall show them Our portents on the horizons and within themselves until it will be manifest unto them that it is the Truth. Doth not thy Lord suffice, since He is Witness over all things?",
 54=>"How! Are they still in doubt about the meeting with their Lord? Lo! Is not He surrounding all things?"
-);?>
+);

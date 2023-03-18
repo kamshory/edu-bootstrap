@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Haa Miim.",
 2=>"Kitab (ini) diturunkan dari Allah Yang Maha Perkasa lagi Maha Bijaksana.",
 3=>"Sesungguhnya pada langit dan bumi benar-benar terdapat tanda-tanda (kekuasaan Allah) untuk orang-orang yang beriman.",
@@ -37,4 +37,4 @@ $verse = array(
 35=>"Yang demikian itu, karena sesungguhnya kamu menjadikan ayat-ayat Allah sebagai olok-olokan dan kamu telah ditipu oleh kehidupan dunia, maka pada hari ini mereka tidak dikeluarkan dari neraka dan tidak pula mereka diberi kesempatan untuk bertobat.",
 36=>"Maka bagi Allah-lah segala puji, Tuhan langit dan Tuhan bumi, Tuhan semesta alam.",
 37=>"Dan bagi-Nya lah keagungan di langit dan di bumi, Dialah Yang Maha Perkasa lagi Maha Bijaksana."
-);?>
+);

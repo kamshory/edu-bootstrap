@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"When the heaven is cleft asunder,",
 2=>"When the planets are dispersed,",
 3=>"When the seas are poured forth,",
@@ -19,4 +19,4 @@ $verse = array(
 17=>"Ah, what will convey unto thee what the Day of Judgment is!",
 18=>"Again, what will convey unto thee what the Day of Judgment is!",
 19=>"A day on which no soul hath power at all for any ( other ) soul. The ( absolute ) command on that day is Allah ' s."
-);?>
+);

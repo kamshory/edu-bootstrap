@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Aku benar-benar bersumpah dengan kota ini (Mekah),",
 2=>"dan kamu (Muhammad) bertempat di kota Mekah ini,",
 3=>"dan demi bapak dan anaknya.",
@@ -20,4 +20,4 @@ $verse = array(
 18=>"Mereka (orang-orang yang beriman dan saling berpesan itu) adalah  golongan kanan.",
 19=>"Dan orang-orang yang kafir kepada ayat-ayat Kami, mereka itu adalah  golongan kiri.",
 20=>"Mereka berada dalam neraka yang ditutup rapat."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Kitab (Al Qur'an ini) diturunkan oleh Allah Yang Maha Perkasa lagi Maha Bijaksana.",
 2=>"Sesungguhnya Kami menurunkan kepadamu Kitab (Al Qur'an) dengan (membawa) kebenaran. Maka sembahlah Allah dengan memurnikan ketaatan kepada-Nya.",
 3=>"Ingatlah, hanya kepunyaan Allah-lah agama yang bersih (dari syirik). Dan orang-orang yang mengambil pelindung selain Allah (berkata): &quot;Kami tidak menyembah mereka melainkan supaya mereka mendekatkan kami kepada Allah dengan sedekat-dekatnya&quot;. Sesungguhnya Allah akan memutuskan di antara mereka tentang apa yang mereka berselisih padanya. Sesungguhnya Allah tidak menunjuki orang-orang yang pendusta dan sangat ingkar.",
@@ -75,4 +75,4 @@ $verse = array(
 73=>"Dan orang-orang yang bertakwa kepada Tuhannya dibawa ke dalam surga berombong-rombongan (pula). Sehingga apabila mereka sampai ke surga itu sedang pintu-pintunya telah terbuka dan berkatalah kepada mereka penjaga-penjaganya: &quot;Kesejahteraan (dilimpahkan) atasmu, berbahagialah kamu! maka masukilah surga ini, sedang kamu kekal di dalamnya&quot;.",
 74=>"Dan mereka mengucapkan: &quot;Segala puji bagi Allah yang telah memenuhi janji-Nya kepada kami dan telah (memberi) kepada kami tempat ini sedang kami (diperkenankan) menempati tempat dalam surga di mana saja yang kami kehendaki.&quot; Maka surga itulah sebaik-baik balasan bagi orang-orang yang beramal.",
 75=>"Dan kamu (Muhammad) akan melihat malaikat-malaikat berlingkar di sekeliling Arasy bertasbih sambil memuji Tuhannya; dan diberi putusan di antara hamba-hamba Allah dengan adil dan diucapkan: &quot;Segala puji bagi Allah, Tuhan semesta alam&quot;."
-);?>
+);

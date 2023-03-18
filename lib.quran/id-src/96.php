@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Bacalah dengan (menyebut) nama Tuhanmu Yang menciptakan,",
 2=>"Dia telah menciptakan manusia dari segumpal darah.",
 3=>"Bacalah, dan Tuhanmulah Yang Maha Pemurah,",
@@ -19,4 +19,4 @@ $verse = array(
 17=>"Maka biarlah dia memanggil golongannya (untuk menolongnya),",
 18=>"kelak Kami akan memanggil malaikat Zabaniyah,",
 19=>"sekali-kali jangan, janganlah kamu patuh kepadanya; dan sujudlah dan  dekatkanlah (dirimu kepada Tuhan),"
-);?>
+);

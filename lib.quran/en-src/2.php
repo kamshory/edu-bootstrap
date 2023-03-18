@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif. Lam. Mim.",
 2=>"This is the Scripture whereof there is no doubt, a guidance unto those who ward off ( evil ).",
 3=>"Who believe in the unseen, and establish worship, and spend of that We have bestowed upon them;",
@@ -286,4 +286,4 @@ $verse = array(
 284=>"Unto Allah ( belongeth ) whatsoever is in the heavens and whatsoever is in the earth; and whether ye make known what is in your minds or hide it, Allah will bring you to account for it. He will forgive whom He will and He will punish whom He will. Allah is Able to do all things.",
 285=>"The messenger believeth in that which hath been revealed unto him from his Lord and ( so do ) the believers. Each one believeth in Allah and His angels and His scriptures and His messengers We make no distinction between any of His messengers and they say : We hear, and we obey. ( Grant us ) Thy forgiveness, our Lord. Unto Thee is the journeying.",
 286=>"Allah tasketh not a soul beyond its scope. For it ( is only ) that which it hath earned, and against it ( only ) that which it hath deserved. Our Lord! Condemn us not if we forget, or miss the mark! Our Lord! Lay not on us such a burden as Thou didst lay on those before us! Our Lord! Impose not on us that which we have not the strength to bear! Pardon us, absolve us and have mercy on us, Thou, our Protector, and give us victory over the disbelieving folk."
-);?>
+);

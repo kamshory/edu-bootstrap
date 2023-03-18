@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Say ( O Muhammad ) : It is revealed unto me that a company of the Jinn gave ear, and they said : Lo! it is a marvellous Quran,",
 2=>"Which guideth unto righteousness, so we believe in it and we ascribe unto our Lord no partner.",
 3=>"And ( we believe ) that He, exalted be the glory of our Lord! hath taken neither wife nor son,",
@@ -28,4 +28,4 @@ $verse = array(
 26=>"( He is ) the knower of the Unseen, and He revealeth unto none His secret,",
 27=>"Save unto every messenger whom he hath chosen, and then He maketh a guard to go before him and a guard behind him",
 28=>"That He may know that they have indeed conveyed the messages of their Lord. He surroundeth all their doings, and He keepeth count of all things."
-);?>
+);

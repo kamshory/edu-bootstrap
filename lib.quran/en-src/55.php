@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"The Beneficent",
 2=>"Hath made known the Quran.",
 3=>"He hath created man.",
@@ -78,4 +78,4 @@ $verse = array(
 76=>"Reclining on green cushions and fair carpets.",
 77=>"Which is it, of the favors of your Lord, that ye deny?",
 78=>"Blessed be the of thy Lord, Mighty and Glorious!"
-);?>
+);

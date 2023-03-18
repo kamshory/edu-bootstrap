@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Sucikanlah nama Tuhanmu Yang Maha Tinggi,",
 2=>"yang menciptakan dan menyempurnakan (penciptaan-Nya),",
 3=>"dan yang menentukan kadar (masing-masing) dan memberi petunjuk,",
@@ -19,4 +19,4 @@ $verse = array(
 17=>"Sedang kehidupan akhirat adalah lebih baik dan lebih kekal.",
 18=>"Sesungguhnya ini benar-benar terdapat dalam kitab-kitab yang dahulu,",
 19=>"(yaitu) Kitab-kitab Ibrahim dan Musa."
-);?>
+);

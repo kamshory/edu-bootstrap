@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Their reckoning draweth nigh for mankind, while they turn away in heedlessness.",
 2=>"Never cometh there unto them a new reminder from their Lord but they listen to it while they play.",
 3=>"With hearts preoccupied. And they confer in secret The wrong doers say : Is this other than a mortal like you? Will ye then succumb to magic when ye see ( it )?",
@@ -112,4 +112,4 @@ $verse = array(
 110=>"Lo! He knoweth that which is said openly, and that which ye conceal.",
 111=>"And I know not but that this may be a trial for you, and enjoyment for a while.",
 112=>"He saith : My Lord! Judge Thou with truth. Our Lord is the Beneficent, whose help is to be implored against that which ye ascribe ( unto Him )."
-);?>
+);

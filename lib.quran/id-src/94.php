@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Bukankah Kami telah melapangkan untukmu dadamu?,",
 2=>"Dan Kami telah menghilangkan dari padamu bebanmu,",
 3=>"yang memberatkan punggungmu?",
@@ -8,4 +8,4 @@ $verse = array(
 6=>"sesungguhnya sesudah kesulitan itu ada kemudahan.",
 7=>"Maka apabila kamu telah selesai (dari sesuatu urusan), kerjakanlah  dengan sungguh-sungguh (urusan) yang lain,",
 8=>"dan hanya kepada Tuhanmulah hendaknya kamu berharap."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By those who drag forth to destruction,",
 2=>"By the meteors rushing,",
 3=>"By the lone stars floating,",
@@ -46,4 +46,4 @@ $verse = array(
 44=>"Unto thy Lord belongeth ( knowledge of ) the term thereof.",
 45=>"Thou art but a warner unto him who feareth it.",
 46=>"On the day when they behold it, it will be as if they had but tarried for an evening or the morn thereof."
-);?>
+);

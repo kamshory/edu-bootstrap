@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Blessed is He in Whose hand is the Sovereignty, and He is Able to do all things.",
 2=>"Who hath created life and death that He may try you, which of you is best in conduct; and He is the Mighty, Forgiving,",
 3=>"Who hath created seven heavens in harmony. Thou ( Muhammad ) canst see no fault in the Beneficent One ' s creation; then look again : Canst thou see any rifts?",
@@ -30,4 +30,4 @@ $verse = array(
 28=>"Say ( O Muhammad ) : Have ye thought : Whether Allah causeth me ( Muhammad ) and those with me to perish or hath mercy on us, still, who will protect the disbelievers from a painful doom?",
 29=>"Say : He is the Beneficent. In Him we believe and in Him we put our trust. And ye will soon know who it is that is in error manifest.",
 30=>"Say : Have ye thought : If ( all ) your water were to disappear into the earth, who then could bring you gushing water?"
-);?>
+);

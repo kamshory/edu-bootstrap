@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"O Prophet! When ye ( men ) put away women, put them away for their ( legal ) period and reckon the period, and keep your duty to Allah, your Lord. Expel them not from their houses nor let them go forth unless they commit open immorality. Such are the limits ( imposed by ) Allah; and whoso transgresseth Allah ' s limits, he verily wrongeth his soul. Thou knowest not : it may be that Allah will afterward bring some new thing to pass.",
 2=>"Then, when they have reached their term, take them back in kindness or part from them in kindness, and call to witness two just men among you, and keep your testimony upright for Allah. Whoso believeth in Allah and the Last Day is exhorted to act thus. And whosoever keepeth his duty to Allah, Allah will appoint a way out for him,",
 3=>"And will provide for him from ( a quarter ) whence he hath no expectation. And whosoever putteth his trust in Allah, He will suffice him. Lo! Allah bringeth His command to pass. Allah hath set a measure for all things.",
@@ -12,4 +12,4 @@ $verse = array(
 10=>"Allah hath prepared for them stern punishment; so keep your duty to Allah, O men of understanding! O ye who believe! Now Allah hath sent down unto you a reminder,",
 11=>"A messenger reciting unto you the revelations of Allah made plain, that He may bring forth those who believe and do good works from darkness unto light. And whosoever believeth in Allah and doeth right, He will bring him into Gardens underneath which rivers flow, therein to abide for ever. Allah hath made good provision for him.",
 12=>"Allah it is who hath created seven heavens, and of the earth the like thereof. The commandment cometh down among them slowly, that ye may know that Allah is Able to do all things, and that Allah surroundeth all things in knowledge."
-);?>
+);

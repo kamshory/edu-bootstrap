@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"He frowned and turned away",
 2=>"Because the blind man came unto him.",
 3=>"What could inform thee but that he might grow ( in grace )",
@@ -42,4 +42,4 @@ $verse = array(
 40=>"And other faces, on that day, with dust upon them,",
 41=>"Veiled in darkness,",
 42=>"Those are the disbelievers, the wicked."
-);?>
+);

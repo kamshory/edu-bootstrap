@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif. Lam. Mim.",
 2=>"The revelation of the Scripture whereof there is no doubt is from the Lord of the Worlds.",
 3=>"Or say they : He hath invented it? Nay, but it is the Truth from thy Lord, that thou mayst warn a folk to whom no warner came before thee, that haply they may walk aright.",
@@ -30,4 +30,4 @@ $verse = array(
 28=>"And they say : When cometh this victory ( of yours ) if ye are truthful?",
 29=>"Say ( unto them ) : On the day of the victory the faith of those who disbelieve ( and who then will believe ) will not avail them, neither will they be reprieved.",
 30=>"So withdraw from them ( O Muhammad ), and await ( the event ). Lo! they also are awaiting ( it )"
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Praise be to Allah, unto Whom belongeth whatsoever is in the heavens and whatsoever is in the earth. His is the praise in the Hereafter, and He is the Wise, the Aware.",
 2=>"He knoweth that which goeth down into the earth and that which cometh forth from it, and that which descendeth from the heaven and that which ascendeth into it. He is the Merciful, the Forgiving.",
 3=>"Those who disbelieve say : The Hour will never come unto us. Say : Nay, by my Lord, but it is coming unto you surely. ( He is ) the Knower of the Unseen. Not an atom ' s weight, or less than that or greater, escapeth Him in the heavens or in the earth, but it is in a clear Record,",
@@ -54,4 +54,4 @@ $verse = array(
 52=>"And say : We ( now ) believe therein. But how can they reach ( faith ) from afar off,",
 53=>"When they disbelieved in it of yore. They aim at the unseen from afar off.",
 54=>"And a gulf is set between them and that which they desire, as was done for people of their kind of old. Lo! they were in hopeless doubt."
-);?>
+);

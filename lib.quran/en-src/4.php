@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"O mankind! Be careful of your duty to your Lord Who created you from a single soul and from it created its mate and from them twain hath spread abroad a multitude of men and women. Be careful of your duty toward Allah in Whom ye claim ( your rights ) of one another, and toward the wombs ( that bare you ). Lo! Allah hath been a Watcher over you.",
 2=>"Give unto orphans their wealth. Exchange not the good for the bad ( in your management thereof ) nor absorb their wealth into your own wealth. Lo! that would be a great sin.",
 3=>"And if ye fear that ye will not deal fairly by the orphans, marry of the women, who seem good to you, two or three or four; and if ye fear that ye cannot do justice ( to so many ) then one ( only ) or ( the captives ) that your right hands possess. Thus it is more likely that ye will not do injustice.",
@@ -177,4 +177,4 @@ $verse = array(
 174=>"O mankind! Now hath a proof from your Lord come unto you, and We have sent down unto you a clear light;",
 175=>"As for those who believe in Allah, and hold fast unto Him, them He will cause to enter into His mercy and grace, and will guide them unto Him by a straight road.",
 176=>""
-);?>
+);

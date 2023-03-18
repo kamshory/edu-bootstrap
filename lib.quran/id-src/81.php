@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Apabila matahari digulung,",
 2=>"dan apabila bintang-bintang berjatuhan,",
 3=>"dan apabila gunung-gunung dihancurkan,",
@@ -29,4 +29,4 @@ $verse = array(
 27=>"Al Qur'an itu tiada lain hanyalah peringatan bagi semesta alam,",
 28=>"(yaitu) bagi siapa di antara kamu yang mau menempuh jalan yang  lurus.",
 29=>"Dan kamu tidak dapat menghendaki (menempuh jalan itu) kecuali  apabila dikehendaki Allah, Tuhan semesta alam."
-);?>
+);

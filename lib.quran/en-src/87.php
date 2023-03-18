@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Praise the name of thy Lord the Most High,",
 2=>"Who createth, then disposeth;",
 3=>"Who measureth, then guideth;",
@@ -19,4 +19,4 @@ $verse = array(
 17=>"Although the Hereafter is better and more lasting.",
 18=>"Lo! This is in the former scrolls,",
 19=>"The Book of Abraham and Moses."
-);?>
+);

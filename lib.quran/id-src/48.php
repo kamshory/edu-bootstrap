@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Sesungguhnya Kami telah memberikan kepadamu kemenangan yang nyata,",
 2=>"supaya Allah memberi ampunan kepadamu terhadap dosamu yang telah lalu dan yang akan datang serta menyempurnakan nikmat-Nya atasmu dan memimpin kamu kepada jalan yang lurus,",
 3=>"dan supaya Allah menolongmu dengan pertolongan yang kuat (banyak).",
@@ -29,4 +29,4 @@ $verse = array(
 27=>"Sesungguhnya Allah akan membuktikan kepada Rasul-Nya tentang kebenaran mimpinya dengan sebenarnya (yaitu) bahwa sesungguhnya kamu pasti akan memasuki Masjidilharam, insya Allah dalam keadaan aman, dengan mencukur rambut kepala dan mengguntingnya, sedang kamu tidak merasa takut. Maka Allah mengetahui apa yang tiada kamu ketahui dan Dia memberikan sebelum itu kemenangan yang dekat.",
 28=>"Dia-lah yang mengutus Rasul-Nya dengan membawa petunjuk dan agama yang hak agar dimenangkan-Nya terhadap semua agama. Dan cukuplah Allah sebagai saksi.",
 29=>"Muhammad itu adalah utusan Allah dan orang-orang yang bersama dengan dia adalah keras terhadap orang-orang kafir, tetapi berkasih sayang sesama mereka, kamu lihat mereka rukuk dan sujud mencari karunia Allah dan keridaan-Nya, tanda-tanda mereka tampak pada muka mereka dari bekas sujud. Demikianlah sifat-sifat mereka dalam Taurat dan sifat-sifat mereka dalam Injil, yaitu seperti tanaman yang mengeluarkan tunasnya maka tunas itu menjadikan tanaman itu kuat lalu menjadi besarlah dia dan tegak lurus di atas pokoknya; tanaman itu menyenangkan hati penanam-penanamnya karena Allah hendak menjengkelkan hati orang-orang kafir (dengan kekuatan orang-orang mukmin). Allah menjanjikan kepada orang-orang yang beriman dan mengerjakan amal yang saleh di antara mereka ampunan dan pahala yang besar."
-);?>
+);

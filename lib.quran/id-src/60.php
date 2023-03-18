@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Hai orang-orang yang beriman, janganlah kamu mengambil musuh-Ku dan musuhmu menjadi teman-teman setia yang kamu sampaikan kepada mereka (berita-berita Muhammad), karena rasa kasih sayang; padahal sesungguhnya mereka telah ingkar kepada kebenaran yang datang kepadamu, mereka mengusir Rasul dan (mengusir) kamu karena kamu beriman kepada Allah, Tuhanmu. Jika kamu benar-benar keluar untuk berjihad pada jalan-Ku dan mencari keridaan-Ku (janganlah kamu berbuat demikian). Kamu memberitahukan secara rahasia (berita-berita Muhammad) kepada mereka, karena rasa kasih sayang. Aku lebih mengetahui apa yang kamu sembunyikan dan apa yang kamu nyatakan. Dan barang siapa di antara kamu yang melakukannya, maka sesungguhnya dia telah tersesat dari jalan yang lurus.",
 2=>"Jika mereka menangkap kamu, niscaya mereka bertindak sebagai musuh bagimu dan melepaskan tangan dan lidah mereka kepadamu dengan menyakiti (mu); dan mereka ingin supaya kamu (kembali) kafir.",
 3=>"Karib kerabat dan anak-anakmu sekali-kali tiada bermanfaat bagimu pada hari Kiamat. Dia akan memisahkan antara kamu. Dan Allah Maha Melihat apa yang kamu kerjakan.",
@@ -13,4 +13,4 @@ $verse = array(
 11=>"Dan jika seseorang dari istri-istrimu lari kepada orang-orang kafir, lalu kamu mengalahkan mereka maka bayarkanlah kepada orang-orang yang lari istrinya itu mahar sebanyak yang telah mereka bayar. Dan bertakwalah kepada Allah Yang kepada-Nya kamu beriman.",
 12=>"Hai Nabi, apabila datang kepadamu perempuan-perempuan yang beriman untuk mengadakan janji setia, bahwa mereka tidak akan mempersekutukan sesuatu pun dengan Allah; tidak akan mencuri, tidak akan berzina, tidak akan membunuh anak-anaknya, tidak akan berbuat dusta yang mereka ada-adakan antara tangan dan kaki mereka dan tidak akan mendurhakaimu dalam urusan yang baik, maka terimalah janji setia mereka dan mohonkanlah ampunan kepada Allah untuk mereka. Sesungguhnya Allah Maha Pengampun lagi Maha Penyayang.",
 13=>"Hai orang-orang yang beriman, janganlah kamu jadikan penolongmu kaum yang dimurkai Allah, sesungguhnya mereka telah putus asa terhadap negeri akhirat sebagaimana orang-orang kafir yang telah berada dalam kubur berputus asa."
-);?>
+);

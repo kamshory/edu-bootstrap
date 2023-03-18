@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Lo! We have given thee ( O Muhammad ) a signal victory,",
 2=>"That Allah may forgive thee of thy sin that which is past and that which is to come, and may perfect His favor unto thee, and may guide thee on a right path,",
 3=>"And that Allah may help thee with strong help",
@@ -29,4 +29,4 @@ $verse = array(
 27=>"Allah hath fulfilled the vision for His messenger in very truth. Ye shall indeed enter the Inviolable Place of Worship, if Allah will, secure, ( having your hair ) shaven and cut, not fearing. But He knoweth that which ye know not, and hath given you a near victory beforehand.",
 28=>"He it is Who hath sent His messenger with the guidance and the religion of truth, that He may cause it to prevail over all religion. And Allah sufficeth as a witness.",
 29=>"Muhammad is the messenger of Allah. And those with him are hard against the disbelievers and merciful among themselves. Thou ( O Muhammad ) seest them bowing and falling prostrate ( in worship ), seeking bounty from Allah and ( His ) acceptance. The mark of them is on their foreheads from the traces of prostration. Such is their likeness in the Torah and their likeness in the Gospel like as sown corn that sendeth forth its shoot and strengtheneth it and riseth firm upon its stalk, delighting the sowers that He may enrage the disbelievers with ( the sight of ) them. Allah hath promised, unto such of them as believe and do good works, forgiveness and immense reward."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif laam miim.",
 2=>"Apakah manusia itu mengira bahwa mereka dibiarkan (saja) mengatakan: &quot;Kami telah beriman&quot;, sedang mereka tidak diuji lagi?",
 3=>"Dan sesungguhnya Kami telah menguji orang-orang yang sebelum mereka, maka sesungguhnya Allah mengetahui orang-orang yang benar dan sesungguhnya Dia mengetahui orang-orang yang dusta.",
@@ -69,4 +69,4 @@ $verse = array(
 67=>"Dan apakah mereka tidak memperhatikan, bahwa sesungguhnya Kami telah menjadikan (negeri mereka) tanah suci yang aman, sedang manusia sekitarnya rampok-merampok. Maka mengapa (sesudah nyata kebenaran) mereka masih percaya kepada yang bathil dan ingkar kepada nikmat Allah?",
 68=>"Dan siapakah yang lebih lalim daripada orang-orang yang mengada-adakan kedustaan terhadap Allah atau mendustakan yang hak tatkala yang hak itu datang kepadanya? Bukankah dalam neraka Jahanam itu ada tempat bagi orang-orang yang kafir?",
 69=>"Dan orang-orang yang berjihad untuk (mencari keridaan) Kami, benar-benar akan Kami tunjukkan Kepada mereka jalan-jalan Kami. Dan sesungguhnya Allah benar-benar beserta orang-orang yang berbuat baik."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Telah dekat kepada manusia hari menghisab segala amalan mereka, sedang mereka berada dalam kelalaian lagi berpaling (daripadanya).",
 2=>"Tidak datang kepada mereka suatu ayat Al Qur'an pun yang baru (diturunkan) dari Tuhan mereka, melainkan mereka mendengarnya, sedang mereka bermain-main,",
 3=>"(lagi) hati mereka dalam keadaan lalai. Dan mereka yang lalim itu merahasiakan pembicaraan mereka: &quot;Orang ini tidak lain hanyalah seorang manusia (jua) seperti kamu, maka apakah kamu menerima sihir itu, padahal kamu menyaksikannya?&quot;",
@@ -112,4 +112,4 @@ $verse = array(
 110=>"Sesungguhnya Dia mengetahui perkataan (yang kamu ucapkan) dengan terang-terangan dan Dia mengetahui apa yang kamu rahasiakan.",
 111=>"Dan aku tiada mengetahui boleh jadi hal itu cobaan bagi kamu dan kesenangan sampai kepada suatu waktu.",
 112=>"(Muhammad) berkata: &quot;Ya Tuhanku, berilah keputusan dengan adil. Dan Tuhan kami ialah Tuhan Yang Maha Pemurah lagi Yang dimohon pertolongan-Nya terhadap apa yang kamu katakan&quot;."
-);?>
+);

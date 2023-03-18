@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Hai Nabi, bertakwalah kepada Allah dan janganlah kamu menuruti (keinginan) orang-orang kafir dan orang-orang munafik. Sesungguhnya Allah adalah Maha Mengetahui lagi Maha Bijaksana,",
 2=>"dan ikutilah apa yang diwahyukan Tuhanmu kepadamu. Sesungguhnya Allah adalah Maha Mengetahui apa yang kamu kerjakan.",
 3=>"dan bertawakkallah kepada Allah. Dan cukuplah Allah sebagai Pemelihara.",
@@ -73,4 +73,4 @@ $verse = array(
 71=>"niscaya Allah memperbaiki bagimu amalan-amalanmu dan mengampuni bagimu dosa-dosamu. Dan barang siapa menaati Allah dan Rasul-Nya, maka sesungguhnya ia telah mendapat kemenangan yang besar.",
 72=>"Sesungguhnya Kami telah mengemukakan amanat kepada langit, bumi dan gunung-gunung, maka semuanya enggan untuk memikul amanat itu dan mereka khawatir akan mengkhianatinya, dan dipikullah amanat itu oleh manusia. Sesungguhnya manusia itu amat lalim dan amat bodoh,",
 73=>"sehingga Allah mengazab orang-orang munafik laki-laki dan perempuan dan orang-orang musyrikin laki-laki dan perempuan; dan sehingga Allah menerima tobat orang-orang mukmin laki-laki dan perempuan. Dan adalah Allah Maha Pengampun lagi Maha Penyayang."
-);?>
+);

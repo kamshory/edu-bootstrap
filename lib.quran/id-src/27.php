@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Thaa Siin (Surat) ini adalah ayat-ayat Al Qur'an, dan (ayat-ayat) Kitab yang menjelaskan,",
 2=>"untuk menjadi petunjuk dan berita gembira untuk orang-orang yang beriman,",
 3=>"(yaitu) orang-orang yang mendirikan sembahyang dan menunaikan zakat dan mereka yakin akan adanya negeri akhirat.",
@@ -93,4 +93,4 @@ $verse = array(
 91=>"Aku hanya diperintahkan untuk menyembah Tuhan negeri ini (Mekah) Yang telah menjadikannya suci dan kepunyaan-Nya-lah segala sesuatu, dan aku diperintahkan supaya aku termasuk orang-orang yang berserah diri.",
 92=>"Dan supaya aku membacakan Al Qur'an (kepada manusia). Maka barang siapa yang mendapat petunjuk maka sesungguhnya ia hanyalah mendapat petunjuk untuk (kebaikan) dirinya, dan barang siapa yang sesat maka katakanlah: &quot;Sesungguhnya aku (ini) tidak lain hanyalah salah seorang pemberi peringatan&quot;.",
 93=>"Dan katakanlah: &quot;Segala puji bagi Allah, Dia akan memperlihatkan kepadamu tanda-tanda kebesaran-Nya, maka kamu akan mengetahuinya. Dan Tuhanmu tiada lalai dari apa yang kamu kerjakan&quot;."
-);?>
+);

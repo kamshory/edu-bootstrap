@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"All that is in the heavens and all that is in the earth glorifieth Allah; unto Him belongeth sovereignty and unto Him longeth praise, and He is Able to do all things.",
 2=>"He it is Who created you, but one of you is a disbeliever and one of you is a believer, and Allah is Seer of what ye do.",
 3=>"He created the heavens and the earth with truth, and He shaped you and made good your shapes, and unto Him is the journeying.",
@@ -18,4 +18,4 @@ $verse = array(
 16=>"So keep your duty to Allah as best ye can, and listen, and obey, and spend; that is better for your souls. And whoso is saved from his own greed, such are the successful.",
 17=>"If ye lend unto Allah a goodly loan, He will double it for you and will forgive you, for Allah is Responsive, Clement,",
 18=>"Knower of the invisible and the visible, the Mighty, the Wise."
-);?>
+);

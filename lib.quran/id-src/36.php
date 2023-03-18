@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Yaa Siin.",
 2=>"Demi Al Qur'an yang penuh hikmah,",
 3=>"sesungguhnya kamu salah seorang dari rasul-rasul,",
@@ -83,4 +83,4 @@ $verse = array(
 81=>"Dan tidakkah Tuhan yang menciptakan langit dan bumi itu berkuasa menciptakan kembali jasad-jasad mereka yang sudah hancur itu? Benar, Dia berkuasa. Dan Dialah Maha Pencipta lagi Maha Mengetahui.",
 82=>"Sesungguhnya perintah-Nya apabila Dia menghendaki sesuatu hanyalah berkata kepadanya: &quot;Jadilah!&quot; maka terjadilah ia.",
 83=>"Maka Maha Suci (Allah) yang di tangan-Nya kekuasaan atas segala sesuatu dan kepada-Nya lah kamu dikembalikan."
-);?>
+);

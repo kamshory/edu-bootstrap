@@ -174,11 +174,6 @@ MEDIAQUERIES
 }
 
 
-
-
-
-
-
 .list-surat ul {
     margin: 0;
     padding: 0;
@@ -229,7 +224,7 @@ MEDIAQUERIES
 
 .arab {
     direction: rtl;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 185%;
     font-family: fontArab, "Traditional Arabic", Tahoma, sans-serif;
     font-weight: normal;

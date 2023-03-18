@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Nay, I swear by this city",
 2=>"And thou art an indweller of this city",
 3=>"And the begetter and that which he begat,",
@@ -20,4 +20,4 @@ $verse = array(
 18=>"Their place will be on the right hand.",
 19=>"But those who disbelieve Our revelations, their place will be on the left hand.",
 20=>"Fire will be an awning over them."
-);?>
+);

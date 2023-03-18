@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Apabila terjadi hari kiamat,",
 2=>"terjadinya kiamat itu tidak dapat didustakan (disangkal).",
 3=>"(Kejadian itu) merendahkan (satu golongan) dan meninggikan (golongan yang lain),",
@@ -96,4 +96,4 @@ $verse = array(
 94=>"dan dibakar di dalam neraka.",
 95=>"Sesungguhnya (yang disebutkan ini) adalah suatu keyakinan yang benar.",
 96=>"Maka bertasbihlah dengan (menyebut) nama Tuhanmu Yang Maha Besar."
-);?>
+);

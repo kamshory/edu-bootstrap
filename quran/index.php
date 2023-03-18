@@ -124,8 +124,8 @@ class Quran
         foreach ($langs as $lang) {
             $file = dirname(dirname(__FILE__)) . "/lib.quran/$lang-src/$s.php";
             if (file_exists($file)) {
-                include($file);
-                $verses[$lang] = $verse;
+                include($file); //NOSONAR
+                $verses[$lang] = $quranArray;
             }
         }
         return $verses;
@@ -183,7 +183,7 @@ class Quran
     {
         $menu = "";
         foreach ($this->suratName as $number => $names) {
-            $menu .= '<li><a href="./?s=' . $number . '">' . htmlspecialchars($names[0]) . '</a></li>';
+            $menu .= '<li><a href="./?s=' . $number . '">' .$number.'. '. htmlspecialchars($names[0]) . '</a></li>';
         }
         return $menu;
     }
@@ -231,6 +231,7 @@ if ($s != '') {
     <link rel="stylesheet" type="text/css" href="lib.vendors/bootstrap/css/bootstrap.min.css">
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="lib.vendors/fontawesome/css/all.min.css">
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="lib.favs/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="lib.favs/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -361,8 +362,8 @@ if ($s != '') {
         </div>
     </div>
 
-    <button type="button" class="btn btn-success btn-floating btn-lg" id="btn-back-to-top">
-        Atas
+    <button type="button" class="btn btn-success btn-floating" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
     </button>
 </body>
 

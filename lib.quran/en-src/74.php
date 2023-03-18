@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"O thou enveloped in thy cloak,",
 2=>"Arise and warn!",
 3=>"Thy Lord magnify,",
@@ -56,4 +56,4 @@ $verse = array(
 54=>"Nay, verily. Lo! this is an Admonishment.",
 55=>"So whosoever will may heed.",
 56=>"And they will not heed unless Allah willeth ( it ). He is the fount of fear. He is the fount of Mercy."
-);?>
+);

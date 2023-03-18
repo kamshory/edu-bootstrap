@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Bertasbih kepada Allah apa yang ada di langit dan apa yang ada di bumi dan Dia-lah Yang Maha Perkasa lagi Maha Bijaksana.",
 2=>"Dia-lah yang mengeluarkan orang-orang kafir di antara ahli Kitab dari kampung-kampung mereka pada saat pengusiran kali yang pertama. Kamu tiada menyangka, bahwa mereka akan keluar dan mereka pun yakin, bahwa benteng-benteng mereka akan dapat mempertahankan mereka dari (siksaan) Allah; maka Allah mendatangkan kepada mereka (hukuman) dari arah yang tidak mereka sangka-sangka. Dan Allah mencampakkan ketakutan ke dalam hati mereka; mereka memusnahkan rumah-rumah mereka dengan tangan mereka sendiri dan tangan orang-orang yang beriman. Maka ambillah (kejadian itu) untuk menjadi pelajaran, hai orang-orang yang mempunyai pandangan.",
 3=>"Dan jika tidaklah karena Allah telah menetapkan pengusiran terhadap mereka benar-benar Allah mengazab mereka di dunia. Dan bagi mereka di akhirat azab neraka.",
@@ -24,4 +24,4 @@ $verse = array(
 22=>"Dia-lah Allah Yang tiada Tuhan (yang berhak disembah) selain Dia, Yang Mengetahui yang gaib dan yang nyata, Dia-lah Yang Maha Pemurah lagi Maha Penyayang.",
 23=>"Dia-lah Allah Yang tiada Tuhan (yang berhak disembah) selain Dia, Raja, Yang Maha Suci, Yang Maha Sejahtera, Yang Mengaruniakan keamanan, Yang Maha Memelihara, Yang Maha Perkasa, Yang Maha Kuasa, Yang Memiliki segala keagungan, Maha Suci, Allah dari apa yang mereka persekutukan.",
 24=>"Dia-lah Allah Yang Menciptakan, Yang Mengadakan, Yang Membentuk Rupa, Yang Mempunyai Nama-Nama Yang Paling baik. Bertasbih kepada-Nya apa yang ada di langit dan di bumi. Dan Dia-lah Yang Maha Perkasa lagi Maha Bijaksana."
-);?>
+);

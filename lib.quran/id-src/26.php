@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Thaa Siin Miim.",
 2=>"Inilah ayat-ayat Al Qur'an yang menerangkan.",
 3=>"Boleh jadi kamu (Muhammad) akan membinasakan dirimu, karena mereka tidak beriman.",
@@ -227,4 +227,4 @@ $verse = array(
 225=>"Tidakkah kamu melihat bahwasanya mereka mengembara di tiap-tiap lembah,",
 226=>"dan bahwasanya mereka suka mengatakan apa yang mereka sendiri tidak mengerjakan (nya)?,",
 227=>"kecuali orang-orang (penyair-penyair) yang beriman dan beramal saleh dan banyak menyebut Allah dan mendapat kemenangan sesudah menderita kelaliman. Dan orang-orang yang lalim itu kelak akan mengetahui ke tempat mana mereka akan kembali."
-);?>
+);

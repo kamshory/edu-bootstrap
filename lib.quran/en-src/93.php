@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By the morning hours",
 2=>"And by the night when it is stillest,",
 3=>"Thy Lord hath not forsaken thee nor doth He hate thee,",
@@ -11,4 +11,4 @@ $verse = array(
 9=>"Therefor the orphan oppress not,",
 10=>"Therefor the beggar drive not away,",
 11=>"Therefor of the bounty of thy Lord be thy discourse."
-);?>
+);

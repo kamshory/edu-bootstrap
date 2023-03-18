@@ -5,19 +5,15 @@ if(!isset($cfg))
 }
 ?><!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title><?php echo $picoEdu->printPageTitle($pageTitle, $cfg->app_name);?></title>
-
 <link rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.vendors/fontawesome/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
-
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/css/bootstrap.min.css">
-
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>lib.favs/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -27,13 +23,11 @@ if(!isset($cfg))
 <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon.ico">
 <meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>lib.favs/browserconfig.xml">
 <meta name="theme-color" content="#3558BE">
-
 <!-- Custom styles for this template -->
 <link href="<?php echo $cfg->base_assets;?>lib.vendors/dashboard/dashboard.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.style/style.css">
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.vendors/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 <script>
   $(document).ready(function(){
     $(document).on('change', 'input[type="checkbox"].checkbox-selector', function(e2){
@@ -60,9 +54,8 @@ if(!isset($cfg))
   <div class="container-fluid">
     <div class="row">
       <?php
-	  require_once dirname(__FILE__) . '/menu.php';
-      $phpSelf = $picoEdu->gateBaseSelfName();
-	  
+	    require_once dirname(__FILE__) . '/menu.php';
+      $phpSelf = $picoEdu->gateBaseSelfName();  
       ?>
 
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
@@ -91,5 +84,3 @@ if(!isset($cfg))
             </div>          
           </div>
         </div>
-
-

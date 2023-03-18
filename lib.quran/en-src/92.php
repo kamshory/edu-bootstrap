@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By the night enshrouding",
 2=>"And the day resplendent",
 3=>"And Him Who hath created male and female,",
@@ -21,4 +21,4 @@ $verse = array(
 19=>"And none hath with him any favor for reward,",
 20=>"Except as seeking ( to fulfil ) the purpose of his Lord Most High.",
 21=>"He verily will be content."
-);?>
+);

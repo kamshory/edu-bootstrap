@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif laam miim raa. Ini adalah ayat-ayat Al Kitab (Al Qur'an). Dan Kitab yang diturunkan kepadamu daripada Tuhanmu itu adalah benar; akan tetapi kebanyakan manusia tidak beriman (kepadanya).",
 2=>"Allah-lah Yang meninggikan langit tanpa tiang (sebagaimana) yang kamu lihat, kemudian Dia bersemayam di atas Arasy, dan menundukkan matahari dan bulan. Masing-masing beredar hingga waktu yang ditentukan. Allah mengatur urusan (makhluk-Nya), menjelaskan tanda-tanda (kebesaran-Nya), supaya kamu meyakini pertemuan (mu) dengan Tuhanmu.",
 3=>"Dan Dia-lah Tuhan yang membentangkan bumi dan menjadikan gunung-gunung dan sungai-sungai padanya. Dan menjadikan padanya semua buah-buahan berpasang-pasangan, Allah menutupkan malam kepada siang. Sesungguhnya pada yang demikian itu terdapat tanda-tanda (kebesaran Allah) bagi kaum yang memikirkan.",
@@ -43,4 +43,4 @@ $verse = array(
 41=>"Dan apakah mereka tidak melihat bahwa sesungguhnya Kami mendatangi daerah-daerah (orang-orang kafir), lalu Kami kurangi daerah-daerah itu (sedikit demi sedikit) dari tepi-tepinya? Dan Allah menetapkan hukum (menurut kehendak-Nya), tidak ada yang dapat menolak ketetapan-Nya; dan Dia-lah Yang Maha cepat hisab-Nya.",
 42=>"Dan sungguh orang-orang kafir yang sebelum mereka (kafir Mekah) telah mengadakan tipu daya, tetapi semua tipu daya itu adalah dalam kekuasaan Allah. Dia mengetahui apa yang diusahakan oleh setiap diri, dan orang-orang kafir akan mengetahui untuk siapa tempat kesudahan (yang baik) itu.",
 43=>"Berkatalah orang-orang kafir: &quot;Kamu bukan seorang yang dijadikan Rasul&quot;. Katakanlah: &quot;Cukuplah Allah menjadi saksi antaraku dan kamu dan antara orang yang mempunyai ilmu Al Kitab&quot;."
-);?>
+);

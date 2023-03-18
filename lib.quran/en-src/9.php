@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Freedom from obligation ( is proclaimed ) from Allah and His messenger toward those of the idolaters with whom ye made a treaty :",
 2=>"Travel freely in the land four months, and know that ye cannot escape Allah and that Allah will confound the disbelievers ( in His guidance ).",
 3=>"And a proclamation from Allah and His messenger to all men on the day of the Greater Pilgrimage that Allah is free from obligation to the idolaters, and ( so is ) His messenger. So, if ye repent, it will be better for you; but if ye are averse, then know that ye cannot escape Allah. Give tidings ( O Muhammad ) of a painful doom to those who disbelieve.",
@@ -129,4 +129,4 @@ $verse = array(
 127=>"And whenever a surah is revealed, they look one at another ( as who should say ) : Doth anybody see you? Then they turn away. Allah turneth away their hearts because they are a folk who understand not.",
 128=>"There hath come unto you a messenger, ( one ) of yourselves, unto whom aught that ye are overburdened is grievous, full of concern for you, for the believers full of pity, merciful.",
 129=>"Now, if they turn away ( O Muhammad ) say : Allah sufficeth me. There is no God save Him. In Him have I put my trust, and He is Lord of the Tremendous Throne."
-);?>
+);

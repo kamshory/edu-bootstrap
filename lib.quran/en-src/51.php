@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By those that winnow with a winnowing",
 2=>"And those that bear the burden ( of the rain )",
 3=>"And those that glide with ease ( upon the sea )",
@@ -60,4 +60,4 @@ $verse = array(
 58=>"Lo! Allah! He it is that giveth livelihood, the Lord of unbreakable might.",
 59=>"And lo! for those who ( now ) do wrong there is an evil day like unto the evil day ( which came for ) their likes ( of old ); so let them not ask Me to hasten on ( that day ).",
 60=>"And woe unto those who disbelieve, from ( that ) their day which they are promised."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Seseorang peminta telah meminta kedatangan azab yang bakal terjadi,",
 2=>"Untuk orang-orang kafir, yang tidak seorang pun dapat menolaknya,",
 3=>"(Yang datang) dari Allah, Yang mempunyai tempat-tempat naik.",
@@ -44,4 +44,4 @@ $verse = array(
 42=>"Maka biarkanlah mereka tenggelam (dalam kebatilan) dan bermain-main sampai mereka menjumpai hari yang diancamkan kepada mereka,",
 43=>"(yaitu) pada hari mereka keluar dari kubur dengan cepat seakan-akan mereka pergi dengan segera kepada berhala-berhala (sewaktu di dunia),",
 44=>"dalam keadaan mereka menekurkan pandangannya (serta) diliputi kehinaan. Itulah hari yang dahulunya diancamkan kepada mereka."
-);?>
+);

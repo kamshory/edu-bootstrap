@@ -1744,14 +1744,6 @@ function unserializePartner(selector, key)
 
 
 
-
-
-
-
-
-
-
-
 function handleFileSelectPrivate(evt, selector)
 {
 	let box = $(selector).closest('.planet-chat-box');

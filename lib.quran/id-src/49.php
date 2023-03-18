@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Hai orang-orang yang beriman, janganlah kamu mendahului Allah dan Rasul-Nya dan bertakwalah kepada Allah. Sesungguhnya Allah Maha Mendengar lagi Maha Mengetahui.",
 2=>"Hai orang-orang yang beriman, janganlah kamu meninggikan suaramu lebih dari suara Nabi, dan janganlah kamu berkata kepadanya dengan suara keras sebagaimana kerasnya (suara) sebahagian kamu terhadap sebahagian yang lain, supaya tidak hapus (pahala) amalanmu sedangkan kamu tidak menyadari.",
 3=>"Sesungguhnya orang-orang yang merendahkan suaranya di sisi Rasulullah mereka itulah orang-orang yang telah diuji hati mereka oleh Allah untuk bertakwa. Bagi mereka ampunan dan pahala yang besar.",
@@ -18,4 +18,4 @@ $verse = array(
 16=>"Katakanlah (kepada mereka): &quot;Apakah kamu akan memberitahukan kepada Allah tentang agamamu (keyakinanmu), padahal Allah mengetahui apa yang ada di langit dan apa yang ada di bumi dan Allah Maha Mengetahui segala sesuatu.&quot;",
 17=>"Mereka merasa telah memberi nikmat kepadamu dengan keislaman mereka. Katakanlah: &quot;Janganlah kamu merasa telah memberi nikmat kepadaku dengan keislamanmu, sebenarnya Allah Dialah yang melimpahkan nikmat kepadamu dengan menunjuki kamu kepada keimanan jika kamu adalah orang-orang yang benar&quot;.",
 18=>"Sesungguhnya Allah mengetahui apa yang gaib di langit dan di bumi. Dan Allah Maha Melihat apa yang kamu kerjakan."
-);?>
+);

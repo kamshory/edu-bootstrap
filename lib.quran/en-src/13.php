@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif. Lam. Mim. Ra. These are verses of the Scripture. That which is revealed unto thee from thy Lord is the Truth, but most of mankind believe not.",
 2=>"Allah it is who raised up the heavens without visible supports, then mounted the Throne, and compelled the sun and the moon to be of service, each runneth unto an appointed term; He ordereth the course; He detaileth the revelations, that haply ye may be certain of the meeting with your Lord.",
 3=>"And He it is who spread out the earth and placed therein firm hills and flowing streams, and of all fruits be placed therein two spouses ( male and female ). He covereth the night with the day. Lo! herein verily are portents for people who take thought.",
@@ -43,4 +43,4 @@ $verse = array(
 41=>"See they not how We visit the land, reducing it of its outlying parts? ( When ) Allah doometh there is none that can postpone His doom, and He is swift at reckoning.",
 42=>"Those who were before them plotted; but all plotting is Allah ' s. He knoweth that which each soul earneth. The disbelievers will come to know for whom will be the sequel of the ( heavenly ) Home.",
 43=>"They who disbelieve say : Thou art no messenger ( of Allah ). Say : Allah, and whosoever hath true knowledge of the Scripture, is sufficient witness between me and you."
-);?>
+);

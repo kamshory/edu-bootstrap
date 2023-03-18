@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Praise be to Allah, Who hath created the heavens and the earth, and hath appointed darkness and light. Yet those who disbelieve ascribe rivals unto their Lord.",
 2=>"He it is Who hath created you from clay, and hath decreed a term for you. A term is fixed with Him. Yet still ye doubt!",
 3=>"He is Allah in the heavens and in the earth. He knoweth both your secret and your utterance, and He knoweth what ye earn.",
@@ -165,4 +165,4 @@ $verse = array(
 163=>"He hath no partner. This am I commanded, and I am first of those who surrender ( unto Him ).",
 164=>"Say : Shall I seek another than Allah for Lord, when He is Lord of all things? Each soul earneth only on its own account, nor doth any laden bear another ' s load. Then unto your Lord is your return and He will tell you that wherein ye differed.",
 165=>"He it is who hath placed you as viceroys of the earth and hath exalted some of you in rank above others, that He may try you by ( the test of ) that which He hath given you. Lo! Thy Lord is swift in prosecution, and lo! He is Forgiving, Merciful."
-);?>
+);

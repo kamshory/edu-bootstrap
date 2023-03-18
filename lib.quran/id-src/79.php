@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Demi (malaikat-malaikat) yang mencabut (nyawa) dengan keras,",
 2=>"dan (malaikat-malaikat) yang mencabut (nyawa) dengan lemah-lembut,",
 3=>"dan (malaikat-malaikat) yang turun dari langit dengan cepat,",
@@ -46,4 +46,4 @@ $verse = array(
 44=>"Kepada Tuhanmulah dikembalikan kesudahannya (ketentuan waktunya).",
 45=>"Kamu hanyalah pemberi peringatan bagi siapa yang takut kepadanya (hari berbangkit).",
 46=>"Pada hari mereka melihat hari berbangkit itu, mereka merasa seakan-akan tidak tinggal (di dunia) melainkan (sebentar saja) di waktu sore atau pagi hari."
-);?>
+);

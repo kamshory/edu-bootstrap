@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Ha. Mim.",
 2=>"The revelation of the Scripture from Allah the Mighty, the Wise.",
 3=>"We created not the heavens and the earth and all that is between them save with truth, and for a term appointed. But those who disbelieve turn away from that whereof they are warned.",
@@ -35,4 +35,4 @@ $verse = array(
 33=>"Have they not seen that Allah, Who created the heavens and the earth and was not wearied by their creation, is Able to give life to the dead? Aye, He verily is Able to do all things.",
 34=>"And on the day when those who disbelieve are exposed to the Fire ( they will be asked ) : Is not this real? They will say : Yea, by our Lord. He will say : Then taste the doom for that ye disbelieved..",
 35=>"Then have patience ( O Muhammad ) even as the stout of heart among the messengers ( of old ) had patience, and seek not to hasten on the doom for them. On the day when they see that which they are promised ( it will seem to them ) as though they had tarried but an hour of daylight. A clear message. Shall any be destroyed save evil living folk?"
-);?>
+);

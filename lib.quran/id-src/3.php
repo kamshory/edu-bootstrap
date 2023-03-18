@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif laam miim.",
 2=>"Allah, tidak ada Tuhan (yang berhak disembah) melainkan Dia. Yang Hidup kekal lagi terus menerus mengurus makhluk-Nya.",
 3=>"Dia menurunkan Al Kitab (Al Qur'an) kepadamu dengan sebenarnya; membenarkan kitab yang telah diturunkan sebelumnya dan menurunkan Taurat dan Injil.",
@@ -200,4 +200,4 @@ $verse = array(
 198=>"Akan tetapi orang-orang yang bertakwa kepada Tuhan-nya bagi mereka surga yang mengalir sungai-sungai di dalamnya, sedang mereka kekal di dalamnya sebagai tempat tinggal (anugerah) dari sisi Allah. Dan apa yang di sisi Allah adalah lebih baik bagi orang-orang yang berbakti.",
 199=>"Dan sesungguhnya di antara ahli kitab ada orang yang beriman kepada Allah dan kepada apa yang diturunkan kepada kamu dan yang diturunkan kepada mereka sedang mereka berendah hati kepada Allah dan mereka tidak menukarkan ayat-ayat Allah dengan harga yang sedikit. Mereka memperoleh pahala di sisi Tuhan-nya. Sesungguhnya Allah amat cepat perhitungan-Nya.",
 200=>"Hai orang-orang yang beriman, bersabarlah kamu dan kuatkanlah kesabaranmu dan tetaplah bersiap siaga (di perbatasan negerimu) dan bertakwalah kepada Allah supaya kamu beruntung."
-);?>
+);

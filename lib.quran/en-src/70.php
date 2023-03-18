@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"A questioner questioned concerning the doom about to fall",
 2=>"Upon the disbelievers, which none can repel,",
 3=>"From Allah, Lord of the Ascending Stairways",
@@ -44,4 +44,4 @@ $verse = array(
 42=>"So let them chat and play until they meet their Day which they are promised,",
 43=>"The day when they come forth from the graves in haste. as racing to a goal,",
 44=>"With eyes aghast, abasement stupefying them : Such is the Day which they are promised."
-);?>
+);

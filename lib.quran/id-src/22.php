@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Hai manusia, bertakwalah kepada Tuhanmu; sesungguhnya keguncangan hari kiamat itu adalah suatu kejadian yang sangat besar (dahsyat).",
 2=>"(Ingatlah) pada hari (ketika) kamu melihat keguncangan itu, lalailah semua wanita yang menyusui anaknya dari anak yang disusuinya dan gugurlah kandungan segala wanita yang hamil, dan kamu lihat manusia dalam keadaan mabuk, padahal sebenarnya mereka tidak mabuk, akan tetapi azab Allah itu sangat keras.",
 3=>"Di antara manusia ada orang yang membantah tentang Allah tanpa ilmu pengetahuan dan mengikuti setiap setan yang sangat jahat,",
@@ -78,4 +78,4 @@ $verse = array(
 76=>"Allah mengetahui apa yang di hadapan mereka dan apa yang di belakang mereka. Dan hanya kepada Allah dikembalikan semua urusan.",
 77=>"Hai orang-orang yang beriman, rukuklah kamu, sujudlah kamu, sembahlah Tuhanmu dan perbuatlah kebajikan, supaya kamu mendapat kemenangan.",
 78=>"Dan berjihadlah kamu pada jalan Allah dengan jihad yang sebenar-benarnya. Dia telah memilih kamu dan Dia sekali-kali tidak menjadikan untuk kamu dalam agama suatu kesempitan. (Ikutilah) agama orang tuamu Ibrahim. Dia (Allah) telah menamai kamu sekalian orang-orang muslim dari dahulu, dan (begitu pula) dalam (Al Qur'an) ini, supaya Rasul itu menjadi saksi atas dirimu dan supaya kamu semua menjadi saksi atas segenap manusia, maka dirikanlah sembahyang, tunaikanlah zakat dan berpeganglah kamu pada tali Allah. Dia adalah Pelindungmu, maka Dialah sebaik-baik Pelindung dan sebaik-baik Penolong."
-);?>
+);

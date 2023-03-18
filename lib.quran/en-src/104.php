@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Woe unto every slandering traducer,",
 2=>"Who hath gathered wealth ( of this world ) and arranged it.",
 3=>"He thinketh that his wealth will render him immortal.",
@@ -9,4 +9,4 @@ $verse = array(
 7=>"Which leapeth up over the hearts ( of men ).",
 8=>"Lo! it is closed in on them",
 9=>"In outstretched columns."
-);?>
+);

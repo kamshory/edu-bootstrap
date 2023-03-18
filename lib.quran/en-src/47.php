@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Those who disbelieve and turn ( men ) from the way of Allah, He rendereth their actions vain.",
 2=>"And those who believe and do good works and believe in that which is revealed unto Muhammad and it is the truth from their Lord. He riddeth them of their ill deeds and improveth their state.",
 3=>"That is because those who disbelieve follow falsehood and because those who believe follow the truth from their Lord. Thus Allah coineth their similitudes for mankind.",
@@ -38,4 +38,4 @@ $verse = array(
 36=>"The life of the world is but a sport and a pastime. And if ye believe and ward off ( evil ), He will give you your wages, and will not ask of you your worldly wealth.",
 37=>"If He should ask it of you and importune you, ye would hoard it, and He would bring to light your ( secret ) hates.",
 38=>"Lo! ye are those who are called to spend in the way of Allah, yet among you there are some who hoard. And as for him who hoardeth, he hoardeth only from his soul. And Allah is the Rich, and ye are the poor. And if ye turn away He will exchange you for some other folk, and they will not be the likes of you."
-);?>
+);

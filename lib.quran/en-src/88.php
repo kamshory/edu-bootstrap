@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Hath there come unto thee tidings of the Overwhelming?",
 2=>"On that day ( many ) faces will be downcast,",
 3=>"Toiling, weary,",
@@ -26,4 +26,4 @@ $verse = array(
 24=>"Allah will punish him with direst punishment.",
 25=>"Lo! unto Us is their return",
 26=>"And Ours their reckoning."
-);?>
+);

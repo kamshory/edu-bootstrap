@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif. Lam. Ra. These are verses of the wise Scripture.",
 2=>"Is it a wonder for mankind that We have inspired a man among them, saying : Warn mankind and bring unto those who believe the good tidings that they have a sure footing with their Lord? The disbelievers say : Lo! this is a mere wizard.",
 3=>"Lo! your Lord is Allah Who created the heavens and the earth in six days, then He established Himself upon the Throne, directing all things. There is no intercessor ( with Him ) save after His permission. That is Allah, your Lord, so worship Him. Oh, will ye not remind?",
@@ -109,4 +109,4 @@ $verse = array(
 107=>"If Allah aflicteth thee with some hurt, there is none who can remove it save Him; and if He desireth good for thee,",
 108=>"Say : O mankind! Now hath the Truth from your Lord come unto you. So whosoever is guided, is guided only for ( the food of ) his soul, and whosoever erreth erreth only against it. And I am not a warder over you.",
 109=>"And ( O Muhammad ) follow that which is inspired in thee, and forbear until Allah give judgment. And He is the Best of Judges."
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Apabila langit terbelah,",
 2=>"dan patuh kepada Tuhannya, dan sudah semestinya langit itu patuh,",
 3=>"dan apabila bumi diratakan,",
@@ -25,4 +25,4 @@ $verse = array(
 23=>"Padahal Allah mengetahui apa yang mereka sembunyikan (dalam hati  mereka).",
 24=>"Maka beri kabar gembiralah mereka dengan azab yang pedih,",
 25=>"Tetapi orang-orang yang beriman dan beramal saleh, bagi mereka  pahala yang tidak putus-putusnya."
-);?>
+);

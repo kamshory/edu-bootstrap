@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Kecelakaan besarlah bagi orang-orang yang curang,",
 2=>"(yaitu) orang-orang yang apabila menerima takaran dari orang lain  mereka minta dipenuhi,",
 3=>"dan apabila mereka menakar atau menimbang untuk orang lain, mereka  mengurangi.",
@@ -36,4 +36,4 @@ $verse = array(
 34=>"Maka pada hari ini, orang-orang yang beriman menertawakan  orang-orang kafir,",
 35=>"mereka (duduk) di atas dipan-dipan sambil memandang.",
 36=>"Sesungguhnya orang-orang kafir telah diberi ganjaran terhadap apa  yang dahulu mereka kerjakan."
-);?>
+);

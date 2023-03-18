@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif. Lam. Mim.",
 2=>"The Romans have been defeated",
 3=>"In the nearer land, and they, after their defeat will be victorious",
@@ -60,4 +60,4 @@ $verse = array(
 58=>"Verily We have coined for mankind in the Quran all kinds of similitudes; and indeed if thou comest unto them with a miracle, those who disbelieve would verily exclaim : Ye are but tricksters!",
 59=>"Thus doth Allah seal the hearts of those who know not.",
 60=>"So have patience ( O Muhammad )! Allah ' s promise is the very truth, and let not those who have no certainty make thee impatient."
-);?>
+);

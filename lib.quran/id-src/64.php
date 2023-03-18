@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Senantiasa bertasbih kepada Allah apa yang di langit dan apa yang di bumi; hanya Allah-lah yang mempunyai semua kerajaan dan semua puji-pujian; dan Dia Maha Kuasa atas segala sesuatu.",
 2=>"Dia-lah yang menciptakan kamu, maka di antara kamu ada yang kafir dan di antaramu ada yang beriman. Dan Allah Maha Melihat apa yang kamu kerjakan.",
 3=>"Dia menciptakan langit dan bumi dengan (tujuan) yang benar, Dia membentuk rupamu dan dibaguskan-Nya rupamu itu, dan hanya kepada-Nya-lah kembali (mu).",
@@ -18,4 +18,4 @@ $verse = array(
 16=>"Maka bertakwalah kamu kepada Allah menurut kesanggupanmu dan dengarlah serta taatlah; dan nafkahkanlah nafkah yang baik untuk dirimu. Dan barang siapa yang dipelihara dari kekikiran dirinya maka mereka itulah orang-orang yang beruntung.",
 17=>"Jika kamu meminjamkan kepada Allah pinjaman yang baik, niscaya Allah melipat gandakan (pembalasannya) kepadamu dan mengampuni kamu. Dan Allah Maha Pembalas Jasa lagi Maha Penyantun.",
 18=>"Yang Mengetahui yang gaib dan yang nyata, Yang Maha Perkasa lagi Maha Bijaksana."
-);?>
+);

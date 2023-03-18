@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Alif, laam raa. (Ini adalah) Kitab yang Kami turunkan kepadamu supaya kamu mengeluarkan manusia dari gelap gulita kepada cahaya terang benderang dengan izin Tuhan mereka, (yaitu) menuju jalan Tuhan Yang Maha Perkasa lagi Maha Terpuji.",
 2=>"Allah yang memiliki segala apa yang di langit dan di bumi. Dan celakalah bagi orang-orang kafir karena siksaan yang sangat pedih.",
 3=>"(yaitu) orang-orang yang lebih menyukai kehidupan dunia daripada kehidupan akhirat, dan menghalang-halangi (manusia) dari jalan Allah dan menginginkan agar jalan Allah itu bengkok. Mereka itu berada dalam kesesatan yang jauh.",
@@ -52,4 +52,4 @@ $verse = array(
 50=>"Pakaian mereka adalah dari pelangkin (ter) dan muka mereka ditutup oleh api neraka,",
 51=>"agar Allah memberi pembalasan kepada tiap-tiap orang terhadap apa yang ia usahakan. Sesungguhnya Allah Maha cepat hisab-Nya.",
 52=>"(Al Qur'an) ini adalah penjelasan yang sempurna bagi manusia, dan supaya mereka diberi peringatan dengannya, dan supaya mereka mengetahui bahwasanya Dia adalah Tuhan Yang Maha Esa dan agar orang-orang yang berakal mengambil pelajaran."
-);?>
+);

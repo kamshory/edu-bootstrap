@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Segala puji bagi Allah yang telah menurunkan kepada hamba-Nya Al Kitab (Al Qur'an) dan Dia tidak mengadakan kebengkokan di dalamnya;",
 2=>"sebagai bimbingan yang lurus, untuk memperingatkan akan siksaan yang sangat pedih dari sisi Allah dan memberi berita gembira kepada orang-orang yang beriman, yang mengerjakan amal saleh, bahwa mereka akan mendapat pembalasan yang baik,",
 3=>"mereka kekal di dalamnya untuk selama-lamanya.",
@@ -110,4 +110,4 @@ $verse = array(
 108=>"mereka kekal di dalamnya, mereka tidak ingin berpindah daripadanya.",
 109=>"Katakanlah: &quot;Kalau sekiranya lautan menjadi tinta untuk (menulis) kalimat-kalimat Tuhanku, sungguh habislah lautan itu sebelum habis (ditulis) kalimat-kalimat Tuhanku, meskipun Kami datangkan tambahan sebanyak itu (pula).",
 110=>"Katakanlah: &quot;Sesungguhnya aku ini hanya seorang manusia seperti kamu, yang diwahyukan kepadaku: &quot;Bahwa sesungguhnya Tuhan kamu itu adalah Tuhan Yang Esa&quot;. Barang siapa mengharap perjumpaan dengan Tuhannya maka hendaklah ia mengerjakan amal yang saleh dan janganlah ia mempersekutukan seorang pun dalam beribadah kepada Tuhannya&quot;."
-);?>
+);

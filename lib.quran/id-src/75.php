@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Aku bersumpah dengan hari kiamat,",
 2=>"dan aku bersumpah dengan jiwa yang amat menyesali (dirinya sendiri).",
 3=>"Apakah manusia mengira, bahwa kami tidak akan mengumpulkan (kembali) tulang belulangnya?",
@@ -40,4 +40,4 @@ $verse = array(
 38=>"kemudian mani itu menjadi segumpal darah, lalu Allah menciptakannya, dan menyempurnakannya,",
 39=>"lalu Allah menjadikan daripadanya sepasang: laki laki dan perempuan.",
 40=>"Bukankah (Allah yang berbuat) demikian berkuasa (pula) menghidupkan orang mati?"
-);?>
+);

@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"Qaaf. Demi Al Qur'an yang sangat mulia.",
 2=>"(Mereka tidak menerimanya) bahkan mereka tercengang karena telah datang kepada mereka seorang pemberi peringatan dari (kalangan) mereka sendiri, maka berkatalah orang-orang kafir: &quot;Ini adalah suatu yang amat ajaib&quot;.",
 3=>"Apakah kami setelah mati dan setelah menjadi tanah (kami akan kembali lagi)?, itu adalah suatu pengembalian yang tidak mungkin.",
@@ -45,4 +45,4 @@ $verse = array(
 43=>"Sesungguhnya Kami menghidupkan dan mematikan dan hanya kepada Kami-lah tempat kembali (semua makhluk).",
 44=>"(Yaitu) pada hari bumi terbelah-belah menampakkan mereka (lalu mereka keluar) dengan cepat. Yang demikian itu adalah pengumpulan yang mudah bagi Kami.",
 45=>"Kami lebih mengetahui tentang apa yang mereka katakan, dan kamu sekali-kali bukanlah seorang pemaksa terhadap mereka. Maka beri peringatanlah dengan Al Qur'an orang yang takut kepada ancaman-Ku."
-);?>
+);

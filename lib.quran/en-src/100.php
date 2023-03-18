@@ -1,5 +1,5 @@
 <?php 
-$verse = array(
+$quranArray = array(
 1=>"By the snorting coursers,",
 2=>"Striking sparks of fire",
 3=>"And scouring to the raid at dawn,",
@@ -11,4 +11,4 @@ $verse = array(
 9=>"Knoweth he not that, when the contents of the graves are poured forth",
 10=>"And the secrets of the breasts are made known.",
 11=>"On that day will their Lord be perfectly informed concerning them."
-);?>
+);
