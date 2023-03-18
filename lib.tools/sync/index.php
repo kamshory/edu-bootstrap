@@ -1,6 +1,6 @@
 <?php
 include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-sync.php";
-if(!$cfg->sync_data_enable)
+if(!$syncConfigs->sync_data_enable)
 {
     exit();
 }
@@ -64,7 +64,7 @@ if(@$_GET['action'] == 'sync-time')
     $response = new \stdClass;
     $success = false;
 
-    if($cfg->sync_time_enable)
+    if($syncConfigs->sync_time_enable)
     {
         $syncTime = new \Sync\SyncTime($cfg->app_code);
 

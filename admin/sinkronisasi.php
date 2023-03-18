@@ -2,7 +2,7 @@
 require_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
 $pageTitle = "Sinkronisasi Data";
 
-if(!$cfg->sync_data_enable)
+if(!$syncConfigs->sync_data_enable)
 {
     require_once dirname(__FILE__) . "/lib.inc/header.php";
     require_once dirname(__FILE__) . "/lib.inc/footer.php";
