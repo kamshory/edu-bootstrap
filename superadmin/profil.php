@@ -93,7 +93,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		<td><input type="email" class="form-control input-text" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
 		</tr>
 		<tr>
-		<td>Phone</td>
+		<td>Telepon</td>
 		<td><input type="tel" class="form-control input-text" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
 		</tr>
 		<tr>
@@ -162,7 +162,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		<td><?php echo $data['email'];?> </td>
 		</tr>
 		<tr>
-		<td>Phone</td>
+		<td>Telepon</td>
 		<td><?php echo $data['phone'];?> </td>
 		</tr>
 		<tr>

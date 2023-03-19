@@ -792,7 +792,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		<td><?php echo $data['address'];?> </td>
 		</tr>
 		<tr>
-		<td>Phone</td>
+		<td>Telepon</td>
 		<td><?php echo $data['phone'];?> </td>
 		</tr>
 		<tr>

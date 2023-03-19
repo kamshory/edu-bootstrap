@@ -215,7 +215,7 @@ if(@$_GET['option'] == 'add')
 			<td><input type="email" class="form-control input-text" name="email" id="email" autocomplete="off" data-type="email" /></td>
 			</tr>
 			<tr>
-			<td>Phone</td>
+			<td>Telepon</td>
 			<td><input type="tel" class="form-control input-text" name="phone" id="phone" autocomplete="off" /></td>
 			</tr>
 			<tr>
@@ -295,7 +295,7 @@ if($stmt->rowCount() > 0)
 			<td><input type="email" class="form-control input-text" name="email" id="email" value="<?php echo $data['email'];?>" autocomplete="off" data-type="email" /></td>
 			</tr>
 			<tr>
-			<td>Phone</td>
+			<td>Telepon</td>
 			<td><input type="tel" class="form-control input-text" name="phone" id="phone" value="<?php echo $data['phone'];?>" autocomplete="off" /></td>
 			</tr>
 			<tr>
@@ -377,7 +377,7 @@ else if(@$_GET['option'] == 'detail')
 			<td><?php echo $data['email'];?> </td>
 			</tr>
 			<tr>
-			<td>Phone</td>
+			<td>Telepon</td>
 			<td><?php echo $data['phone'];?> </td>
 			</tr>
 			<tr>

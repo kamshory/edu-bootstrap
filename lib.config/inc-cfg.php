@@ -2,6 +2,22 @@
 
 $oneLevelUp = dirname(dirname(__FILE__));
 $twoLevelUp = dirname(dirname(dirname(__FILE__)));
+
+class URLBuilder{
+    public static function createURL($schema, $serverName, $base_path = "")
+    {
+        if(!empty($schema))
+        {
+            $schema .= "://";
+        }
+        else
+        {
+            $schema .= "//";
+        }
+        return $schema.$serverName.$base_path."/"; //NOSONAR
+    }
+}
+
 require_once dirname(__FILE__)."/ws-cfg.php";
 
 $syncConfigs = new stdClass();
@@ -41,10 +57,10 @@ $cfg->app_code = "picoedu";
 $cfg->ws_port = $wsConfig->ws_port;
 
 $cfg->base_path = "/edu-bootstrap";
-$cfg->schema = "http";
+$cfg->schema = "";
 
-$cfg->base_url = $cfg->schema."://".$_SERVER['SERVER_NAME'].$cfg->base_path."/"; //NOSONAR
-$cfg->base_assets = $cfg->schema."://".$_SERVER['SERVER_NAME'].$cfg->base_path."/"; //NOSONAR
+$cfg->base_url = \URLBuilder::createURL($cfg->schema, $_SERVER['SERVER_NAME'], $cfg->base_path);
+$cfg->base_assets = \URLBuilder::createURL($cfg->schema, $_SERVER['SERVER_NAME'], $cfg->base_path);
 
 $cfg->app_name = "Planet Edu";
 $cfg->main_domain = "edu.planetbiru.com";
