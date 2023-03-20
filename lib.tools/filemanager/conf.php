@@ -101,8 +101,6 @@ $fmanConfig->forbidden_extension = array(
    You can place an .htaccess file in
    /home/youname/public_html
    to redirect client access   
-   
-   
 */
 
 $chkdir = explode("/", $_SESSION['curdir']);
