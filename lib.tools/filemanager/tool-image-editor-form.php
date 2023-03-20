@@ -22,8 +22,8 @@ if(stripos($size['mime'], 'image')===0)
 <div id="image-editor-all">
 <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
   <div class="image-editor-filename-name-area"><input type="text" name="curfilepath" id="curfilepath" value="<?php echo $fileurl;?>" /><input type="hidden" name="curfileurl" id="curfileurl" value="<?php echo htmlspecialchars(stripslashes($url));?>" />
-    <input type="button" name="openimage" id="openimage" value="Open" onClick="editImage($('#curfilepath').val())" class="btn btn-success" />
-    <input type="button" name="closeeditor" id="closeeditor" value="Close" onClick="destroyImageEditor()" class="btn btn-success delete-button" />
+    <input type="button" name="openimage" id="openimage" value="Open" onClick="editImage($('#curfilepath').val())" class="com-button btn btn-success" />
+    <input type="button" name="closeeditor" id="closeeditor" value="Close" onClick="destroyImageEditor()" class="com-button btn btn-success delete-button" />
   </div>
   <div class="image-editor-middle">
 	<div class="image-editor-sidebar">
@@ -32,7 +32,7 @@ if(stripos($size['mime'], 'image')===0)
 	{
 	?>
     <div class="image-editor-sidebar-inner">
-      <div class="original-image"><img alt="" id="imageori" src="<?php echo htmlspecialchars(stripslashes($url));?>?rand=<?php echo mt_rand(111111,999999);?>" /></div>
+      <div class="original-image"><img alt="" id="imageori" src="../../<?php echo htmlspecialchars(stripslashes($url));?>?rand=<?php echo mt_rand(111111,999999);?>" /></div>
     	<div class="current-dimension">
     	<table width="165" border="0" cellspacing="0" cellpadding="0">
     	  <tr>
@@ -75,8 +75,8 @@ if(stripos($size['mime'], 'image')===0)
       	<div class="image-editor-tool-item image-tool-flip-v"><a href="javascript:flipV('<?php echo $fileurl;?>')">Flip Vertical</a></div>
       </div>
       <div class="button-area">
-      <input type="button" name="save" id="save" value="Save" class="btn btn-success" onclick="saveImage()" />
-      <input type="button" name="discharge" id="discharge" value="Close" class="btn btn-success delete-button" onClick="destroyImageEditor()" />
+      <input type="button" name="save" id="save" value="Save" class="com-button btn btn-success" onclick="saveImage()" />
+      <input type="button" name="discharge" id="discharge" value="Close" class="com-button btn btn-success delete-button" onClick="destroyImageEditor()" />
       </div>
       </div>
       <?php
@@ -94,7 +94,7 @@ if(stripos($size['mime'], 'image')===0)
 	<div class="image-editor-mainbar">
     	<div class="image-editor-mainbar-inner">
         	<div id="image-content">
-            	<img alt="" id="image2edit" src="<?php echo htmlspecialchars(stripslashes($url));?>?rand=<?php echo mt_rand(111111,999999);?>" />
+            	<img alt="" id="image2edit" src="../../<?php echo htmlspecialchars(stripslashes($url));?>?rand=<?php echo mt_rand(111111,999999);?>" />
             </div>
         </div>
     </div>  
@@ -124,8 +124,8 @@ if(strlen($error_code))
 <div id="image-editor-all">
 <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
 <div class="image-editor-filename-name-area"><input type="text" name="curfilepath" id="curfilepath" value="<?php echo $fileurl;?>" /><input type="hidden" name="curfileurl" id="curfileurl" value="<?php echo htmlspecialchars(stripslashes($url));?>" />
-<input type="button" name="openimage" id="openimage" value="Open" onClick="editImage($('#curfilepath').val())" class="btn btn-success" />
-<input type="button" name="closeeditor" id="closeeditor" value="Close" onClick="destroyImageEditor()" class="btn btn-success delete-button" />
+<input type="button" name="openimage" id="openimage" value="Open" onClick="editImage($('#curfilepath').val())" class="com-button btn btn-success" />
+<input type="button" name="closeeditor" id="closeeditor" value="Close" onClick="destroyImageEditor()" class="com-button btn btn-success delete-button" />
 </div>
 </form>
   <div class="image-editor-middle">
