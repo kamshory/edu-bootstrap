@@ -108,7 +108,7 @@ function PlanetMessage()
 	}
 }
 
-function planetChat(container, pMessage, websocketURL)
+function PlanetChat(container, pMessage, websocketURL)
 {
 	this.container = container;
 	this.pMessage = pMessage ;
@@ -428,7 +428,7 @@ function planetChat(container, pMessage, websocketURL)
 }
 
 let pMessage = new PlanetMessage();
-let pChat = new planetChat('.planet-chat-container', pMessage, websocketURL);
+let pChat = new PlanetChat('.planet-chat-container', pMessage, websocketURL);
 
 pChat.onOpen = function(e){
 	console.log("Connection established!");	 

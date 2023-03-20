@@ -1,4 +1,4 @@
-function planetChat(websocketURL, options) {
+function PlanetChat(websocketURL, options) {
 	this.settings = {
 		reconnectTimeout: 1000
 	};

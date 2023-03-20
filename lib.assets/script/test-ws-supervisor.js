@@ -1,4 +1,4 @@
-let pChat = new planetChat(websocketURL);
+let pChat = new PlanetChat(websocketURL);
 
 pChat.onOpen = function(e){
 };
