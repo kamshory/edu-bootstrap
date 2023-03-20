@@ -3537,6 +3537,8 @@ function getQueryParams () {
       query[i] = urlParams[i];
     }
   }
+  console.log(window.location.search);
+  console.log(urlParams);
   console.log(query);
   return query;
 }
