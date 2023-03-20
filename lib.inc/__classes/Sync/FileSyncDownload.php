@@ -19,7 +19,7 @@ class FileSyncDownload extends \Sync\FileSyncMaster
         }
         try {
             $response = $this->getSyncRecordListFromRemote($lastSync, $fileSyncUrl, $username, $password);
-            if ($response['response_code'] == '00') {
+            if ($response['response_code'] == \Sync\SyncResponseCode::SUCCESS) {
                 $recordList = $response['data'];
                 return $this->createDownloadSyncRecord($recordList);
             }

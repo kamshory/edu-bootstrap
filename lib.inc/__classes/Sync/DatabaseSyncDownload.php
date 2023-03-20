@@ -20,7 +20,7 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
         }
         try {
             $response = $this->getSyncRecordListFromRemote($lastSync, $url, $username, $password);
-            if ($response['response_code'] == '00') {
+            if ($response['response_code'] == \Sync\SyncResponseCode::SUCCESS) {
                 $recordList = $response['data'];
                 return $this->createDownloadSyncRecord($recordList);
             }

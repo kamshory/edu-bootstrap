@@ -33,7 +33,7 @@ function gettumbpict($originalfile, $maxw, $maxh)
 	}
 	if ($maxw > 0 && $image->width > $maxw) {
 		$newwidth = $maxw;
-		$newheight = $image->height * $maxw / $image->width;	
+		$newheight = $image->height * $maxw / $image->width;
 	}
 	if ($maxh > 0 && $newheight > $maxh) {
 		$tmp = $newheight;

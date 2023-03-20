@@ -14,5 +14,4 @@ $(document).ready(function(e) {
 	$('.input-text-date').datepicker({dateFormat:'yy-mm-dd', changeMonth:true, changeYear:true});
 	$('.input-text-time').timepicker({timeFormat:'hh:mm:ss', clockType:24});
 	$('.input-text-datetime').datetimepicker({dateFormat:'yy-mm-dd', timeFormat:'hh:mm:ss', clockType:24, changeMonth:true, changeYear:true});
-    
 });

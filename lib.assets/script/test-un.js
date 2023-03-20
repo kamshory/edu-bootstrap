@@ -1,6 +1,8 @@
 function initTest()
 {
-	var i, question_id, answer_id;
+	let i;
+	let question_id;
+	let answer_id;
 	for(i = 0; i < questionSet.length; i++)
 	{
 		answerData[i] = {question:questionSet[i], read:0, answer:0, doubt:0};
@@ -9,18 +11,18 @@ function initTest()
 }
 function loadAnswer()
 {
-	var json = window.localStorage.getItem(storageKey+'-answer-set') || '';
-	var currentIndexSaved = loadCurrentIndex();
+	let json = window.localStorage.getItem(storageKey+'-answer-set') || '';
+	let currentIndexSaved = loadCurrentIndex();
 	if(json != '')
 	{
-		var data = JSON.parse(json);
+		let data = JSON.parse(json);
 		if(data.length)
 		{
 			answerData = data;
-			for(i = 0; i<answerData.length; i++)
+			for(let i in answerData)
 			{
-				question_id = answerData[i].question;
-				answer_id = answerData[i].answer;
+				let question_id = answerData[i].question;
+				let answer_id = answerData[i].answer;
 				$('#answer_'+question_id).val(answer_id);
 			}
 		}
@@ -32,7 +34,7 @@ function loadAnswer()
 }
 function saveAnswer()
 {
-	var json = JSON.stringify(answerData);
+	let json = JSON.stringify(answerData);
 	window.localStorage.setItem(storageKey+'-answer-set', json);
 }
 function saveCurrentIndex()
@@ -45,7 +47,7 @@ function loadCurrentIndex()
 }
 function createSidebarNumber()
 {
-	var i, number;
+	let i, number;
 	$('.question-number').empty();
 	for(i = 0, number = 1; i < questionSet.length; i++, number++)
 	{
@@ -54,7 +56,7 @@ function createSidebarNumber()
 }
 function renderSidebar()
 {
-	var i, number, obj;
+	let i, number, obj;
 	for(i = 0, number = 1; i < answerData.length; i++, number++)
 	{
 		obj = answerData[i];
@@ -83,7 +85,7 @@ function renderSidebar()
 			$('.question-number li[data-number="'+number+'"]').removeClass('answered');
 		}
 	}
-	var doubtButtonValue = $('#doubt').val();
+	let doubtButtonValue = $('#doubt').val();
 	doubtButtonValue = doubtButtonValue.replace(String.fromCharCode(9635)+' ', '');
 	doubtButtonValue = doubtButtonValue.replace(String.fromCharCode(9634)+' ', '');
 	if(answerData[currentIndex].doubt == 0)
@@ -105,18 +107,18 @@ function renderQuestion(index)
 {
 	try{
 	$('.question-area').attr({'data-index': index, 'data-question-id': questionSet[index]}); 
-	var questionStr = questionData[index].text;
-	var optionList = questionData[index].options;
-	var numbering = questionData[index].numbering;
-	var optionStr = '';
-	var i, option;
+	let questionStr = questionData[index].text;
+	let optionList = questionData[index].options;
+	let numbering = questionData[index].numbering;
+	let optionStr = '';
+	let i, option;
 	for(i = 0; i<optionList.length; i++)
 	{
 		option = optionList[i];
 		optionStr += '\r\n		<div class="option" data-option-id="'+option.option_id+'"><div class="option-ctrl"><a href="#">'+numberingList[numbering][i]+'</a></div> '+option.text+'</div>\r\n';
 	}
 	optionStr += '\r\n		<div class="option not-answer" data-option-id="0"><div class="option-ctrl"><a href="#">'+numberingList[numbering][i]+'</a></div> '+optionNotAnswer+'</div>\r\n';
-	var html = 
+	let html = 
 	'	<div class="question">\r\n'+
 	'		'+questionStr+
 	'	</div>\r\n'+
@@ -131,7 +133,7 @@ function renderQuestion(index)
 }
 function renderAnswer(index)
 {
-	var data = answerData[index];
+	let data = answerData[index];
 	$('.option-area .option').removeClass('answered').removeClass('doubt');
 	$('.option-area .option[data-option-id="'+data.answer+'"]').addClass('answered');
 	if(data.answer != 0)
@@ -171,8 +173,8 @@ function selectAnswer(index, answerID)
 	try{
 	answerData[index].read = 1;
 	answerData[index].answer = answerID;
-	var question_id = answerData[index].question;
-	var answer_id = answerData[index].answer;
+	let question_id = answerData[index].question;
+	let answer_id = answerData[index].answer;
 	$('#answer_'+question_id).val(answer_id);
 	saveAnswer();
 	renderSidebar();
@@ -200,7 +202,7 @@ function prevQuestion()
 }
 function preloadImage(data)
 {
-	var i, j, k, l, imageSrc = [];
+	let i, j, k, l, imageSrc = [];
 	for(i = 0; i < data.length; i++)
 	{
 		j = $('<div>'+data[i].text+'</div>');
@@ -215,7 +217,7 @@ function preloadImage(data)
 			});
 		}
 	}
-	var img = [];
+	let img = []; //NOSONAR
 	for(i = 0; i< imageSrc.length; i++)
 	{
 		j = imageSrc[i];
@@ -225,7 +227,7 @@ function preloadImage(data)
 }
 function submitTest()
 {
-	var doubt = checkDoubtAnswer();
+	let doubt = checkDoubtAnswer();
 	if(doubt == 0)
 	{
 		$('#testfrm').submit();
@@ -241,7 +243,7 @@ function customAlert(message, button1)
 {
 	button1 = button1 || 'Tutup';
 	$('.dialog-mask, .dialog-container').remove();
-	var html = 
+	let html = 
 	'<div class="dialog-mask"></div>\r\n'+
 	'<div class="dialog-container">\r\n'+
 	'	<div class="dialog-body">'+message+'</div>\r\n'+
@@ -257,7 +259,7 @@ function customConfirm(message, callback1, button1, button2)
 	button1 = button1 || 'Ya';
 	button2 = button2 || 'Tidak';
 	$('.dialog-mask, .dialog-container').remove();
-	var html = 
+	let html = 
 	'<div class="dialog-mask"></div>\r\n'+
 	'<div class="dialog-container">\r\n'+
 	'	<div class="dialog-body">'+message+'</div>\r\n'+
@@ -274,7 +276,7 @@ function customConfirm(message, callback1, button1, button2)
 }
 function checkDoubtAnswer()
 {
-	var i, j, doubt = 0;
+	let i, j, doubt = 0;
 	for(i = 0; i<answerData.length; i++)
 	{
 		if(answerData[i].doubt == 1 && answerData[i].answer !=0 )
@@ -310,7 +312,7 @@ $(document).ready(function(e) {
 		renderAnswer(currentIndex);
 	});
 	$(document).on('click', '.question-number li a', function(e){
-		var index = parseInt($(this).closest('li').attr('data-number'))-1;
+		let index = parseInt($(this).closest('li').attr('data-number'))-1;
 		selectQuestion(index);
 		e.preventDefault();
 	});
@@ -319,7 +321,7 @@ $(document).ready(function(e) {
 		e.preventDefault();
 	});
 	$(document).on('click', '.test-question-control .before a', function(e){
-		var obj = $(this).closest('.test-question-control');
+		let obj = $(this).closest('.test-question-control');
 		if(obj.hasClass('hidden'))
 		{
 			obj.removeClass('hidden');
@@ -345,13 +347,13 @@ $(document).ready(function(e) {
 	$(document).on('keydown', function(e){
 		if(e.keyCode >= 65 && e.keyCode <= 80)
 		{
-			var index = e.keyCode - 64;
+			let index = e.keyCode - 64;
 			$('.option-area .option:nth-child('+index+') .option-ctrl a').click();
 			e.preventDefault();
 		}
 		if(e.keyCode >= 49 && e.keyCode <= 57)
 		{
-			var index = e.keyCode - 48;
+			let index = e.keyCode - 48;
 			$('.question-number li:nth-child('+index+') a').click();
 			e.preventDefault();
 		}
@@ -399,8 +401,8 @@ $(document).ready(function(e) {
 		e.stopPropagation();
 	});
 	
-	var t = new Date();
-	var s = parseInt(t.getTime()/1000);
+	let t = new Date();
+	let s = parseInt(t.getTime()/1000);
 	tval = due_time+s;
 	intervalID = setInterval(
 	function(){
@@ -411,33 +413,33 @@ $(document).ready(function(e) {
 });
 function secondsToTime(secs)
 {
-    var hours = Math.floor(secs / (60 * 60));  
-    var divisor_for_minutes = secs % (60 * 60);
-    var minutes = Math.floor(divisor_for_minutes / 60);
-    var divisor_for_seconds = divisor_for_minutes % 60;
-    var seconds = Math.ceil(divisor_for_seconds);
+    let hours = Math.floor(secs / (60 * 60));  
+    let divisor_for_minutes = secs % (60 * 60);
+    let minutes = Math.floor(divisor_for_minutes / 60);
+    let divisor_for_seconds = divisor_for_minutes % 60;
+    let seconds = Math.ceil(divisor_for_seconds);
 	if(hours<10 && hours>=0) hours = '0'+hours;
 	if(minutes<10 && minutes>=0) minutes = '0'+minutes;
 	if(seconds<10 && seconds>=0) seconds = '0'+seconds;
-	var obj = {
+	let obj = {
         "h": hours,
         "m": minutes,
         "s": seconds
     };
     return obj;
 }
-var hideAlert = false;
+let hideAlert = false;
 function displayRemainingTime(obj)
 {
-	var t = new Date();
-	var s = parseInt(t.getTime()/1000);
-	var secs = tval - s;
+	let t = new Date();
+	let s = parseInt(t.getTime()/1000);
+	let secs = tval - s;
 	if(autosubmit)
 	{
 		secs = secs - 10;
 	}
-	var minus = false;
-	var ov = '';
+	let minus = false;
+	let ov = '';
 	if(secs <= alert_time)
 	{
 		$('.timer-placeholder').attr('data-has-alert', 'true');
@@ -457,20 +459,19 @@ function displayRemainingTime(obj)
 	if(secs<0)
 	{
 		secs = -secs;
-		minus = true;
 		ov = 'Lewat ';
 		$('.timer-placeholder').attr('data-time-over', 'true');
 	}
-	var tm = secondsToTime(secs);
+	let tm = secondsToTime(secs);
 	$(obj).text(ov+tm['h']+':'+tm['m']+':'+tm['s']);
 }
-var intervalID = null;
-var tval;
-var blankObject = {question:0, read:0, answer:0, doubt:0};
-var answerData = [];
-var currentIndex = 0;
-var optionNotAnswer = 'Tidak menjawab';
-var numberingList = {
+let intervalID = null;
+let tval;
+let blankObject = {question:0, read:0, answer:0, doubt:0};
+let answerData = [];
+let currentIndex = 0;
+let optionNotAnswer = 'Tidak menjawab';
+let numberingList = {
 	'upper-alpha':['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
 	'lower-alpha':['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'],
 	'upper-roman':['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'],

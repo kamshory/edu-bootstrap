@@ -43,7 +43,7 @@ if(@$_GET['action'] == 'ping')
     try
     {
         $response = $ping->ping($fileSyncUrl2, $username2, $password2);
-        $success = $response['response_code'] == '00';
+        $success = $response['response_code'] == \Sync\SyncResponseCode::SUCCESS;
     }
     catch(\Sync\SyncException $e)
     {
@@ -75,7 +75,7 @@ if(@$_GET['action'] == 'sync-time')
         try
         {
             $response = $syncTime->syncTime($fileSyncUrl2, $username2, $password2, $database);
-            $success = $response['response_code'] == '00';
+            $success = $response['response_code'] == \Sync\SyncResponseCode::SUCCESS;
         }
         catch(\Sync\SyncException $e)
         {
@@ -84,9 +84,9 @@ if(@$_GET['action'] == 'sync-time')
     }
     else
     {
-        $response->response_code = '00';
-        $response->response_text = 'Sukses';
-        $success = $response->response_code == '00';
+        $response->response_code = \Sync\SyncResponseCode::SUCCESS;
+        $response->response_text = \Sync\SyncResponseCode::getResponseText($response->response_code);
+        $success = $response->response_code == \Sync\SyncResponseCode::SUCCESS;
     }
 
     header('Content-type: application/json'); //NOSONAR

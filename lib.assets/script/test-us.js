@@ -8,7 +8,7 @@ function setanswer()
 	let i, j, k;
 	for(i in data_answer)
 	{
-		j = i.substr(4);
+		j = i.substring(4);
 		k = data_answer[i];
 		let soal = j;
 		let answer = k;
@@ -72,21 +72,7 @@ window.onload=function(){
 		let segmen = $(this).attr('data-segmen');
 		let soal = $(this).attr('data-question');
 		let number = $(this).attr('data-number');
-		$('.pagination ul li a[data-segmen="'+segmen+'"]').click();
-		
-		/*
-		$('ol#test-question > li[data-question="'+soal+'"]').css('background-color', '#ddf7ff');
-		$('ol#test-question > li[data-question="'+soal+'"]').animate({'background-color': '#FFFFFF'}, 2000, 'swing', function(e){
-		});
-
-		$('ol#test-question > li[data-question="'+soal+'"] .option-ctrl').css('background-color', '#2498ed');
-		
-		setTimeout(function(){
-			$('ol#test-question > li[data-question="'+soal+'"] .option-ctrl').animate({'background-color': '#FFFFFF'}, 2000, 'swing', function(e){
-		});
-		}, 3000);
-		*/
-		
+		$('.pagination ul li a[data-segmen="'+segmen+'"]').click();		
 		
 		let offset = $('#question-test-wrapper li[data-number="'+number+'"]').offset().top;
 		$(window).scrollTop(offset - 50);

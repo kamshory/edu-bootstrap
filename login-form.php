@@ -28,16 +28,8 @@ include_once dirname(__FILE__) . "/lib.inc/sessions.php";
     <meta name="theme-color" content="#3558BE">
 
     <?php
-  if (date('Y') < 2017) {
-    if (!isset($_SESSION['set_time_token'])) {
-      $setTimeToken = md5($_SERVER['REMOTE_ADDR'] . '-' . time() . '-' . mt_rand(111111, 999999));
-      $_SESSION['set_time_token'] = $setTimeToken;
-    }
-    $setTimeToken = $_SESSION['set_time_token'];
+  if (date('Y') < $cfg->max_year_sync_time) {
   ?>
-    <script type="text/javascript">
-      var setTimeToken = '<?php echo $setTimeToken; ?>';
-    </script>
     <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/time-sync.min.js">
     </script>
   <?php

@@ -78,4 +78,6 @@ $cfg->dec_thousands_separator = ",";
 $cfg->image_not_exported = array();
 $cfg->audio_not_exported = array();
 
+$cfg->max_year_sync_time = 2024;
+
 $pageTitle = "";

@@ -1752,7 +1752,7 @@ function renameFile(
                 return;
               }
             }
-            letq = '?option=renamefile';
+            let q = '?option=renamefile';
             q = updateQueryParam(q);
             $.post(
               'tool-file-operation.php' + q,
