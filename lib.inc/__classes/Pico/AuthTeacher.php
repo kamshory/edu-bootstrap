@@ -4,20 +4,20 @@ namespace Pico;
 
 class AuthTeacher
 {
-	public $teacher_id = '';
-	public $username = '';
-	public $name = '';
+	public $teacher_id = "";
+	public $username = "";
+	public $name = "";
 	public $gender = 'M';
-	public $birth_place = '';
-	public $birth_day = '';
-	public $email = '';
-	public $phone = '';
-	public $country_id = '';
-	public $state_id = '';
-	public $city_id = '';
+	public $birth_place = "";
+	public $birth_day = "";
+	public $email = "";
+	public $phone = "";
+	public $country_id = "";
+	public $state_id = "";
+	public $city_id = "";
 	public $school_id = "";
-	public $school_name = '';
-	public $school_code = '';
+	public $school_name = "";
+	public $school_code = "";
 	public $use_token = 0;
 	private $password;
 	private $createlog = false;
