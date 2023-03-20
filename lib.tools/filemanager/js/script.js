@@ -1520,7 +1520,7 @@ function compressAudio (path) {
         );
         let q = '?option=compress-audio';
         q = updateQueryParam (q);
-        $.post('tool-file-operation.php' + q, {path: path}, function (answer) {
+        $.post ('tool-file-operation.php' + q, {path: path}, function (answer) {
           if (answer == 'SUCCESS') {
             openDir ($ ('#fftargetdir').val ());
           } else {
@@ -1579,7 +1579,7 @@ function propertyFile (filepath) {
   });
   let data = getQueryParams ();
   data.filepath = filepath;
-  $.get('tool-property-file.php', data, function (answer) {
+  $.get ('tool-property-file.php', data, function (answer) {
     $ ('#common-dialog-inner').html (answer);
     let mime = $ ('.mime-type').attr ('data-content');
     if (mime == 'application/zip') {
@@ -1608,7 +1608,7 @@ function propertyImage (filepath) {
   let data = getQueryParams ();
   data.filepath = filepath;
   data.type = 'image';
-  $.get('tool-property-file.php', data, function (answer) {
+  $.get ('tool-property-file.php', data, function (answer) {
     $ ('#common-dialog-inner').html (answer);
   });
 }
@@ -1628,7 +1628,7 @@ function propertyVideo (filepath) {
   let data = getQueryParams ();
   data.filepath = filepath;
   data.type = 'video';
-  $.get('tool-property-file.php', data, function (answer) {
+  $.get ('tool-property-file.php', data, function (answer) {
     $ ('#common-dialog-inner').html (answer);
   });
 }
@@ -1648,7 +1648,7 @@ function propertyDir (filepath) {
   let data = getQueryParams ();
   data.filepath = filepath;
   data.type = 'directory';
-  $.get('tool-property-file.php', data, function (answer) {
+  $.get ('tool-property-file.php', data, function (answer) {
     $ ('#common-dialog-inner').html (answer);
   });
 }
@@ -1670,7 +1670,7 @@ function showZipContent (filepath) {
   });
   let data = getQueryParams ();
   data.filepath = filepath;
-  $.get('tool-zip-content.php', data, function (answer) {
+  $.get ('tool-zip-content.php', data, function (answer) {
     $ ('#common-dialog-inner').html (answer);
   });
 }
@@ -1754,7 +1754,7 @@ function renameFile (
             }
             letq = '?option=renamefile';
             q = updateQueryParam (q);
-            $.post(
+            $.post (
               'tool-file-operation.php' + q,
               {location: dl, oldname: on, newname: nn},
               function (answer) {
@@ -1836,7 +1836,7 @@ function compressFile (filepath) {
         let tf = $ ('#fftargetpath').val ();
         let q = '?option=compressfile';
         q = updateQueryParam (q);
-        $.post(
+        $.post (
           'tool-file-operation.php' + q,
           {'sourcepath[]': sf, targetpath: tf},
           function (answer) {
@@ -1904,7 +1904,8 @@ function compressFile (filepath) {
     endPos
   );
 }
-function compressSelectedFile () { //NOSONAR
+function compressSelectedFile () {
+  //NOSONAR
   let dl = $ ('#address').val ();
   let file2compress = '';
   let chk = 0;
@@ -1938,7 +1939,7 @@ function compressSelectedFile () { //NOSONAR
           });
           let q = '?option=compressfile';
           q = updateQueryParam (q);
-          $.post('tool-file-operation.php' + q, {postdata: args}, function (
+          $.post ('tool-file-operation.php' + q, {postdata: args}, function (
             answer
           ) {
             if (answer == 'SUCCESS' || answer == 'EXIST') {
@@ -2024,7 +2025,8 @@ function compressSelectedFile () { //NOSONAR
     jqAlert ('No file selected.', 'Invalid Operation');
   }
 }
-function moveSelectedFile () { //NOSONAR
+function moveSelectedFile () {
+  //NOSONAR
   let dl = $ ('#address').val ();
   let file2move = '';
   let chk = 0;
@@ -2049,7 +2051,7 @@ function moveSelectedFile () { //NOSONAR
               args += '&file[]=' + encodeURIComponent ($ (this).val ());
             });
             let q = '?option=copyfile&deletesource=1';
-            $.post('tool-file-operation.php' + q, {postdata: args}, function (
+            $.post ('tool-file-operation.php' + q, {postdata: args}, function (
               answer
             ) {
               if (answer == 'SUCCESS' || answer == 'EXIST') {
@@ -2125,7 +2127,7 @@ function extractFile (filepath) {
         let targetdir = $ ('#fftargetdir').val ();
         let q = '?option=extractfile';
         q = updateQueryParam (q);
-        $.post(
+        $.post (
           'tool-file-operation.php' + q,
           {filepath: filepath, targetdir: targetdir},
           function (answer) {
@@ -2188,7 +2190,7 @@ function createFile () {
         let dn = $ ('#ffname').val ();
         let q = '?option=createfile';
         q = updateQueryParam (q);
-        $.post(
+        $.post (
           'tool-file-operation.php' + q,
           {location: dl, name: dn},
           function (answer) {
@@ -2273,7 +2275,7 @@ function createDirectory () {
         let dn = $ ('#ffname').val ();
         let q = '?option=createdir';
         q = updateQueryParam (q);
-        $.post(
+        $.post (
           'tool-file-operation.php' + q,
           {location: dl, name: dn},
           function (answer) {
@@ -2363,7 +2365,7 @@ function moveFile (filepath, isdir) {
           '&file[]=' +
           encodeURIComponent (curlocation + '/' + $ ('#ffpath').val ());
         let q = '?option=copyfile&deletesource=1';
-        $.post('tool-file-operation.php' + q, {postdata: args}, function (
+        $.post ('tool-file-operation.php' + q, {postdata: args}, function (
           answer
         ) {
           if (answer == 'SUCCESS' || answer == 'EXIST') {
@@ -2442,7 +2444,7 @@ function uploadFile () {
   $ ('#common-dialog-inner').html (html);
   let data = getQueryParams ();
   data['show-control'] = '1';
-  $.get('tool-upload-file-settings.php', data, function (answer) {
+  $.get ('tool-upload-file-settings.php', data, function (answer) {
     $ ('#image-settings-controller').html (answer);
   });
 
@@ -2460,7 +2462,7 @@ function saveFile (filepath, filecontent, callback) {
     $ ('.ui-dialog-buttonset button:first').attr ('aria-disabled', 'true');
     let q = '?option=savefile';
     q = updateQueryParam (q);
-    $.post(
+    $.post (
       'tool-edit-file.php' + q,
       {filepath: filepath, filecontent: filecontent},
       function (answer) {
@@ -2504,7 +2506,7 @@ function setActiveCompress (val) {
   let value = val ? 1 : 0;
   let q = '?';
   q = updateQueryParam (q);
-  $.post(
+  $.post (
     'tool-upload-file-settings.php' + q,
     {'change-state': 'change-state', state: value},
     function (answer) {}
@@ -2523,7 +2525,7 @@ function uploadFileSettings () {
         let args = $ ('#uploadsetting').serialize ();
         let q = '?';
         q = updateQueryParam (q);
-        $.post(
+        $.post (
           'tool-upload-file-settings.php' + q,
           {save: 'save', data: args},
           function (answer) {}
@@ -2537,7 +2539,7 @@ function uploadFileSettings () {
   });
   let data = getQueryParams ();
   data['show-form'] = '1';
-  $.get('tool-upload-file-settings.php', data, function (answer) {
+  $.get ('tool-upload-file-settings.php', data, function (answer) {
     $ ('#common-dialog-inner').html (answer);
   });
 }
@@ -2596,7 +2598,7 @@ function editFile (filepath) {
   data.option = 'openfile';
   data.filepath = filepath;
 
-  $.get('tool-edit-file.php', data, function (answer) {
+  $.get ('tool-edit-file.php', data, function (answer) {
     $ ('#common-dialog-inner').html (answer);
     cnt1 = $ ('#filecontent').val ();
   });
@@ -2615,7 +2617,7 @@ function deleteFile (filepath) {
         args = 'file[]=' + filepath;
         let q = '?option=deletefile';
         q = updateQueryParam (q);
-        $.post('tool-file-operation.php' + q, {postdata: args}, function (
+        $.post ('tool-file-operation.php' + q, {postdata: args}, function (
           answer
         ) {
           if (answer == 'SUCCESS') {
@@ -2655,7 +2657,7 @@ function deleteDirectory (filepath) {
         args = 'file[]=' + filepath;
         let q = '?option=deletefile';
         q = updateQueryParam (q);
-        $.post('tool-file-operation.php' + q, {postdata: args}, function (
+        $.post ('tool-file-operation.php' + q, {postdata: args}, function (
           answer
         ) {
           if (answer == 'SUCCESS') {
@@ -2706,7 +2708,7 @@ function deleteSelectedFile () {
         OK: function () {
           let q = '?option=deletefile';
           q = updateQueryParam (q);
-          $.post('tool-file-operation.php' + q, {postdata: args}, function (
+          $.post ('tool-file-operation.php' + q, {postdata: args}, function (
             answer
           ) {
             if (answer == 'SUCCESS') {
@@ -2802,7 +2804,7 @@ function transferFile () {
         let targetname = $ ('#filename').val ();
         let q = '?option=transferfile';
         q = updateQueryParam (q);
-        $.post(
+        $.post (
           'tool-file-operation.php' + q,
           {source: sourcefile, location: targetlocation, name: targetname},
           function (answer) {
@@ -2961,7 +2963,7 @@ function pasteFile () {
       q += '&deletesource=1';
     }
     q = updateQueryParam (q);
-    $.post('tool-file-operation.php' + q, {postdata: args}, function (answer) {
+    $.post ('tool-file-operation.php' + q, {postdata: args}, function (answer) {
       if (answer == 'SUCCESS' || answer == 'EXIST') {
         openDir (dl);
         if (clipboardfile.operation == 'cut') {
@@ -3085,7 +3087,7 @@ function changePermission (
           let q = '?option=change-perms';
           q = updateQueryParam (q);
 
-          $.post(
+          $.post (
             'tool-file-operation.php' + q,
             {recursive: rec, perms: perms, data: data},
             function (answer) {
@@ -3123,7 +3125,7 @@ function changePermission (
     let data = getQueryParams ();
     data.option = 'get-perms';
     data.filepath = filepath;
-    $.get('tool-file-operation.php', data, function (answer) {
+    $.get ('tool-file-operation.php', data, function (answer) {
       let obj = eval (answer)[0];
       let i;
       for (i in obj) {
@@ -3174,7 +3176,7 @@ function editImage (fp) {
   let data = getQueryParams ();
   data.filepath = fp;
 
-  $.get('tool-image-editor-form.php', data, function (answer) {
+  $.get ('tool-image-editor-form.php', data, function (answer) {
     $ ('#image-editor-layer').html (answer);
     let eh = wheight - 73;
     $ ('.image-editor-sidebar-inner, .image-editor-mainbar-inner').css (
@@ -3328,13 +3330,13 @@ function saveImage () {
       crop;
     let q = '?';
     q = updateQueryParam (q);
-    $.post('tool-image-editor-thumbnail.php' + q, {postdata: args}, function (
+    $.post ('tool-image-editor-thumbnail.php' + q, {postdata: args}, function (
       answer
     ) {
       if (answer == 'SUCCESS') {
         let data = getQueryParams ();
         data.filepath = filepath;
-        $.get('tool-image-editor-form.php', data, function (answer) {
+        $.get ('tool-image-editor-form.php', data, function (answer) {
           $ ('#image-editor-layer').html (answer);
           initImageEditorForm ();
         });
@@ -3442,7 +3444,7 @@ function initDropable () {
       args += '&file[]=' + encodeURIComponent (curlocation);
       let q = '?option=copyfile&deletesource=1';
       q = updateQueryParam (q);
-      $.post('tool-file-operation.php' + q, {postdata: args}, function (
+      $.post ('tool-file-operation.php' + q, {postdata: args}, function (
         answer
       ) {
         if (answer == 'SUCCESS' || answer == 'EXIST') {
@@ -3528,33 +3530,33 @@ function mergeObject (obj1, obj2) {
   return obj1;
 }
 function getQueryParams () {
-	let urlParams = new URLSearchParams (window.location.search);
-	let query = {};
-	for (let i in urlParams) {
-	  if (urlParams.hasOwnProperty (i)) {
-		query[i] = urlParams[i];
-	  }
-	}
-	return query;
+  let urlParams = new URLSearchParams (window.location.search);
+  let query = {};
+  for (let i in urlParams) {
+    if (urlParams.hasOwnProperty (i)) {
+      query[i] = urlParams[i];
+    }
   }
-  
-  function updateQueryParam(q)
-  {
-	  let additional = getQueryParams();
-	  let urlParams = new URLSearchParams (q);
-	  mergeObject(urlParams, additional);
-	  let ret = '?'+serializeQuery(urlParams);
-  }
+  console.log(query);
+  return query;
+}
 
-  function serializeQuery(obj) {
-	var str = [];
-	for (var p in obj)
-	  if (obj.hasOwnProperty(p)) {
-		str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-	  }
-	return str.join("&");
-  }
-  
+function updateQueryParam (q) {
+  let additional = getQueryParams ();
+  let urlParams = new URLSearchParams (q);
+  mergeObject (urlParams, additional);
+  let ret = '?' + serializeQuery (urlParams);
+}
+
+function serializeQuery (obj) {
+  var str = [];
+  for (var p in obj)
+    if (obj.hasOwnProperty (p)) {
+      str.push (encodeURIComponent (p) + '=' + encodeURIComponent (obj[p]));
+    }
+  return str.join ('&');
+}
+
 function openDir (
   filepath,
   selfile,
@@ -3587,7 +3589,7 @@ function openDir (
     }
     let data = getQueryParams ();
     mergeObject (arg, data);
-    $.get('tool-load-file-json.php', arg, function (answer) {
+    $.get ('tool-load-file-json.php', arg, function (answer) {
       arrthumbnail = eval (answer);
       arrthumbnailURL = new Array ();
       if (arrthumbnail.length) {
@@ -3597,7 +3599,7 @@ function openDir (
         }
       }
     });
-    $.get('tool-load-file.php', arg, function (answer) {
+    $.get ('tool-load-file.php', arg, function (answer) {
       $ ('#file-container').html (answer);
       try {
         if (selfile.length) {
@@ -3640,7 +3642,7 @@ function openDir (
     let pth = '';
     let data2 = getQueryParams ();
     data2.seldir = filepath;
-    $.get('tool-load-dir.php', data2, function (answer) {
+    $.get ('tool-load-dir.php', data2, function (answer) {
       $ ('.dir-control').each (function (index) {
         pth =
           $ (this).attr ('data-file-location') +
@@ -3764,7 +3766,7 @@ function showInformation () {
     },
   });
   let data = getQueryParams ();
-  $.get('tool-info.php', data, function (answer) {
+  $.get ('tool-info.php', data, function (answer) {
     $ ('#common-dialog-inner').html (answer);
   });
   return false;
@@ -3824,7 +3826,7 @@ function searchFile () {
   $ ('#sfile').select ();
   let data = getQueryParams ();
   data.dir = dir;
-  $.get('tool-search-file.php', data, function (answer) {
+  $.get ('tool-search-file.php', data, function (answer) {
     $ ('.search-result').html (answer);
     normalizeTable ();
   });
