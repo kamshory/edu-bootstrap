@@ -3532,23 +3532,25 @@ function mergeObject(obj1, obj2) {
 }
 
 function getQueryParams() {
-  let urlParams = new URLSearchParams(window.location.search);
+  return parseQueryParams(window.location.search);
+}
+
+function updateQueryParam(q) {
+  let additional = getQueryParams();
+  let urlParams = parseQueryParams(q);
+  mergeObject(urlParams, additional);
+  let ret = '?' + serializeQueryParams(urlParams);
+  return ret;
+}
+function parseQueryParams(q) {
+  let urlParams = new URLSearchParams(q);
   let query = {};
   urlParams.forEach((value, key) => {
     query[key] = value;
   });
   return query;
 }
-
-function updateQueryParam(q) {
-  let additional = getQueryParams();
-  let urlParams = new URLSearchParams(q);
-  mergeObject(urlParams, additional);
-  let ret = '?' + serializeQuery(urlParams);
-  return ret;
-}
-
-function serializeQuery(obj) {
+function serializeQueryParams(obj) {
   var str = [];
   for (var p in obj)
     if (obj.hasOwnProperty(p)) {
