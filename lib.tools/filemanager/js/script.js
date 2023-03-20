@@ -7,12 +7,12 @@ let imgheight = 1;
 let crop = 0;
 let filepath = '';
 let fileurl = '';
-let arrthumbnail = new Array ();
-let arrthumbnailURL = new Array ();
+let arrthumbnail = new Array();
+let arrthumbnailURL = new Array();
 let startX, startY, endX, endY, centerX, centerY, width, height, show = false;
 let xhr;
 if (window.XMLHttpRequest) {
-  xhr = new XMLHttpRequest ();
+  xhr = new XMLHttpRequest();
 } else {
   let versions = [
     'MSXML2.XmlHttp.5.0',
@@ -23,46 +23,46 @@ if (window.XMLHttpRequest) {
   ];
   for (let i = 0, len = versions.length; i < len; i++) {
     try {
-      xhr = new ActiveXObject (versions[i]);
+      xhr = new ActiveXObject(versions[i]);
       break;
-    } catch (e) {}
+    } catch (e) { }
   }
 }
 
-function setInputSelection (input, startPos, endPos) {
-  input.focus ();
+function setInputSelection(input, startPos, endPos) {
+  input.focus();
   if (typeof input.selectionStart != 'undefined') {
     input.selectionStart = startPos;
     input.selectionEnd = endPos;
   } else if (document.selection && document.selection.createRange) {
-    input.select ();
-    let range = document.selection.createRange ();
-    range.collapse (true);
-    range.moveEnd ('character', endPos);
-    range.moveStart ('character', startPos);
-    range.select ();
+    input.select();
+    let range = document.selection.createRange();
+    range.collapse(true);
+    range.moveEnd('character', endPos);
+    range.moveStart('character', startPos);
+    range.select();
   }
 }
-function initPreviewImageUpload () {
-  $ (document).on ('click', '#image-list li img', function () {
-    let src = '../../../' + $ (this).attr ('src');
+function initPreviewImageUpload() {
+  $(document).on('click', '#image-list li img', function () {
+    let src = '../../../' + $(this).attr('src');
     show = true;
-    width = parseFloat ($ (this).width ());
-    height = parseFloat ($ (this).height ());
+    width = parseFloat($(this).width());
+    height = parseFloat($(this).height());
     let width2 = 6 * width;
     let height2 = 6 * height;
-    startX = parseFloat ($ (this).offset ().left);
-    startY = parseFloat ($ (this).offset ().top);
-    centerX = parseFloat ($ (window).width ()) / 2;
-    centerY = parseFloat ($ (window).height ()) / 2;
+    startX = parseFloat($(this).offset().left);
+    startY = parseFloat($(this).offset().top);
+    centerX = parseFloat($(window).width()) / 2;
+    centerY = parseFloat($(window).height()) / 2;
     endX = centerX - width2 / 2 - 5;
     endY = centerY - height2 / 2 - 5;
-    $ ('.preview-image').remove ();
+    $('.preview-image').remove();
     show = true;
-    $ ('<img/>')
-      .attr ('src', src)
-      .addClass ('preview-image')
-      .css ({
+    $('<img/>')
+      .attr('src', src)
+      .addClass('preview-image')
+      .css({
         width: width + 'px',
         height: height + 'px',
         position: 'absolute',
@@ -75,184 +75,184 @@ function initPreviewImageUpload () {
         'background-color': '#FFFFFF',
         'box-shadow': '0 0 2px #CCCCCC',
       })
-      .appendTo ('body');
-    $ ('.preview-image').animate (
-      {width: width2, height: height2, left: endX, top: endY},
+      .appendTo('body');
+    $('.preview-image').animate(
+      { width: width2, height: height2, left: endX, top: endY },
       200
     );
-    $ ('.preview-image, .ui-dialog, .ui-widget-overlay').click (function () {
+    $('.preview-image, .ui-dialog, .ui-widget-overlay').click(function () {
       show = false;
-      $ ('.preview-image').animate (
-        {width: width, height: height, left: startX, top: startY},
+      $('.preview-image').animate(
+        { width: width, height: height, left: startX, top: startY },
         200,
         function () {
           if (!show) {
-            $ ('.preview-image').remove ();
+            $('.preview-image').remove();
           }
         }
       );
     });
   });
 }
-function updateToolbarStatus () {
-  if ($ ('.fileid:checked').length == $ ('.fileid').length) {
-    $ ('.toolbar-inner li a img.check')
-      .parent ()
-      .parent ()
-      .addClass ('inactive');
+function updateToolbarStatus() {
+  if ($('.fileid:checked').length == $('.fileid').length) {
+    $('.toolbar-inner li a img.check')
+      .parent()
+      .parent()
+      .addClass('inactive');
   } else {
-    $ ('.toolbar-inner li a img.check')
-      .parent ()
-      .parent ()
-      .removeClass ('inactive');
+    $('.toolbar-inner li a img.check')
+      .parent()
+      .parent()
+      .removeClass('inactive');
   }
 
   if (clipboardfile.operation == '') {
-    $ ('.toolbar-inner li a img.paste')
-      .parent ()
-      .parent ()
-      .addClass ('inactive');
+    $('.toolbar-inner li a img.paste')
+      .parent()
+      .parent()
+      .addClass('inactive');
   } else {
-    $ ('.toolbar-inner li a img.paste')
-      .parent ()
-      .parent ()
-      .removeClass ('inactive');
+    $('.toolbar-inner li a img.paste')
+      .parent()
+      .parent()
+      .removeClass('inactive');
   }
 
-  if ($ ('.fileid:checked').length == 0) {
-    $ ('.toolbar-inner li a img.uncheck')
-      .parent ()
-      .parent ()
-      .addClass ('inactive');
-    $ ('.toolbar-inner li a img.copy')
-      .parent ()
-      .parent ()
-      .addClass ('inactive');
-    $ ('.toolbar-inner li a img.cut').parent ().parent ().addClass ('inactive');
-    $ ('.toolbar-inner li a img.move')
-      .parent ()
-      .parent ()
-      .addClass ('inactive');
-    $ ('.toolbar-inner li a img.delete')
-      .parent ()
-      .parent ()
-      .addClass ('inactive');
-    $ ('.toolbar-inner li a img.rename')
-      .parent ()
-      .parent ()
-      .addClass ('inactive');
-    $ ('.toolbar-inner li a img.compress')
-      .parent ()
-      .parent ()
-      .addClass ('inactive');
-    $ ('.toolbar-inner li a img.permission')
-      .parent ()
-      .parent ()
-      .addClass ('inactive');
+  if ($('.fileid:checked').length == 0) {
+    $('.toolbar-inner li a img.uncheck')
+      .parent()
+      .parent()
+      .addClass('inactive');
+    $('.toolbar-inner li a img.copy')
+      .parent()
+      .parent()
+      .addClass('inactive');
+    $('.toolbar-inner li a img.cut').parent().parent().addClass('inactive');
+    $('.toolbar-inner li a img.move')
+      .parent()
+      .parent()
+      .addClass('inactive');
+    $('.toolbar-inner li a img.delete')
+      .parent()
+      .parent()
+      .addClass('inactive');
+    $('.toolbar-inner li a img.rename')
+      .parent()
+      .parent()
+      .addClass('inactive');
+    $('.toolbar-inner li a img.compress')
+      .parent()
+      .parent()
+      .addClass('inactive');
+    $('.toolbar-inner li a img.permission')
+      .parent()
+      .parent()
+      .addClass('inactive');
   } else {
-    $ ('.toolbar-inner li a img.uncheck')
-      .parent ()
-      .parent ()
-      .removeClass ('inactive');
-    $ ('.toolbar-inner li a img.copy')
-      .parent ()
-      .parent ()
-      .removeClass ('inactive');
-    $ ('.toolbar-inner li a img.cut')
-      .parent ()
-      .parent ()
-      .removeClass ('inactive');
-    $ ('.toolbar-inner li a img.move')
-      .parent ()
-      .parent ()
-      .removeClass ('inactive');
-    $ ('.toolbar-inner li a img.delete')
-      .parent ()
-      .parent ()
-      .removeClass ('inactive');
-    $ ('.toolbar-inner li a img.rename')
-      .parent ()
-      .parent ()
-      .removeClass ('inactive');
-    $ ('.toolbar-inner li a img.compress')
-      .parent ()
-      .parent ()
-      .removeClass ('inactive');
-    $ ('.toolbar-inner li a img.permission')
-      .parent ()
-      .parent ()
-      .removeClass ('inactive');
+    $('.toolbar-inner li a img.uncheck')
+      .parent()
+      .parent()
+      .removeClass('inactive');
+    $('.toolbar-inner li a img.copy')
+      .parent()
+      .parent()
+      .removeClass('inactive');
+    $('.toolbar-inner li a img.cut')
+      .parent()
+      .parent()
+      .removeClass('inactive');
+    $('.toolbar-inner li a img.move')
+      .parent()
+      .parent()
+      .removeClass('inactive');
+    $('.toolbar-inner li a img.delete')
+      .parent()
+      .parent()
+      .removeClass('inactive');
+    $('.toolbar-inner li a img.rename')
+      .parent()
+      .parent()
+      .removeClass('inactive');
+    $('.toolbar-inner li a img.compress')
+      .parent()
+      .parent()
+      .removeClass('inactive');
+    $('.toolbar-inner li a img.permission')
+      .parent()
+      .parent()
+      .removeClass('inactive');
   }
   if (
-    $ ('.row-data-file[data-file-type="application/zip"]').find (
+    $('.row-data-file[data-file-type="application/zip"]').find(
       'input[type=checkbox]:checked'
     ).length
   ) {
-    $ ('.toolbar-inner li a img.extract')
-      .parent ()
-      .parent ()
-      .removeClass ('inactive');
+    $('.toolbar-inner li a img.extract')
+      .parent()
+      .parent()
+      .removeClass('inactive');
   } else {
-    $ ('.toolbar-inner li a img.extract')
-      .parent ()
-      .parent ()
-      .addClass ('inactive');
+    $('.toolbar-inner li a img.extract')
+      .parent()
+      .parent()
+      .addClass('inactive');
   }
-  $ (document).on ('click', '.toolbar-inner li.inactive a', function () {
+  $(document).on('click', '.toolbar-inner li.inactive a', function () {
     return false;
   });
 }
 
-function addslashes (input) {
+function addslashes(input) {
   let searchStr = "'";
   let replaceStr = "\\'";
-  let re = new RegExp (searchStr, 'g');
-  let output = input.replace (re, replaceStr);
+  let re = new RegExp(searchStr, 'g');
+  let output = input.replace(re, replaceStr);
   return output;
 }
-function basename (path) {
-  return path.replace (/\\/g, '/').replace (/.*\//, '');
+function basename(path) {
+  return path.replace(/\\/g, '/').replace(/.*\//, '');
 }
-function dirname (path) {
-  return path.replace (/\\/g, '/').replace (/\/[^\/]*$/, '');
+function dirname(path) {
+  return path.replace(/\\/g, '/').replace(/\/[^\/]*$/, '');
 }
-function getfileExtension (filename) {
-  return filename.slice (((filename.lastIndexOf ('.') - 1) >>> 0) + 2);
+function getfileExtension(filename) {
+  return filename.slice(((filename.lastIndexOf('.') - 1) >>> 0) + 2);
 }
-function removefileextension (filename) {
-  return filename.replace (/\.[^/.]+$/, '');
+function removefileextension(filename) {
+  return filename.replace(/\.[^/.]+$/, '');
 }
-function setCheckRelation () {
-  $ (document).on ('change', '.checkbox-selector', function () {
-    let chk = $ (this)[0].checked;
-    let selector = $ (this).attr ('data-target');
-    let len = $ (selector).length;
+function setCheckRelation() {
+  $(document).on('change', '.checkbox-selector', function () {
+    let chk = $(this)[0].checked;
+    let selector = $(this).attr('data-target');
+    let len = $(selector).length;
     let i;
     if (chk) {
       for (i = 0; i < len; i++) {
-        $ (selector)[i].checked = true;
+        $(selector)[i].checked = true;
       }
     } else {
       for (i = 0; i < len; i++) {
-        $ (selector)[i].checked = false;
+        $(selector)[i].checked = false;
       }
     }
-    updateToolbarStatus ();
+    updateToolbarStatus();
   });
 }
-function jqAlert (msg, title, width, height) {
-  $ ('#mb-area').remove ();
-  $ ('body').append (
+function jqAlert(msg, title, width, height) {
+  $('#mb-area').remove();
+  $('body').append(
     '<div id="mb-area" style="display:none;"><div id="message-box-dialog"><div id="message-box-dialog-inner"></div></div></div>'
   );
   if (!title) title = 'Alert';
   if (!width) width = 300;
   if (!height) height = 165;
   try {
-    $ ('#message-box-dialog').dialog ('destroy');
-  } catch (e) {}
-  $ ('#message-box-dialog-inner').html (msg);
-  $ ('#message-box-dialog').dialog ({
+    $('#message-box-dialog').dialog('destroy');
+  } catch (e) { }
+  $('#message-box-dialog-inner').html(msg);
+  $('#message-box-dialog').dialog({
     width: width,
     height: height,
     modal: true,
@@ -260,35 +260,35 @@ function jqAlert (msg, title, width, height) {
     buttons: {
       Close: function () {
         try {
-          $ ('#message-box-dialog').dialog ('destroy');
-        } catch (e) {}
+          $('#message-box-dialog').dialog('destroy');
+        } catch (e) { }
       },
     },
   });
 }
-function contextMenu (selector, menu) {
-  $ (selector).on ('contextmenu', function (
+function contextMenu(selector, menu) {
+  $(selector).on('contextmenu', function (
     e //NOSONAR
   ) {
-    e.preventDefault ();
-    let left = parseInt (e.clientX);
+    e.preventDefault();
+    let left = parseInt(e.clientX);
     let top = e.clientY;
     let html;
-    let scrllf = $ (document).scrollLeft ();
-    let scrltp = $ (document).scrollTop ();
-    left = parseInt (left) + parseInt (scrllf);
-    top = parseInt (top) + parseInt (scrltp);
-    let width = parseInt ($ (window).width ());
-    let height = parseInt ($ (window).height ());
-    $ ('.kams-context-menu').remove ();
+    let scrllf = $(document).scrollLeft();
+    let scrltp = $(document).scrollTop();
+    left = parseInt(left) + parseInt(scrllf);
+    top = parseInt(top) + parseInt(scrltp);
+    let width = parseInt($(window).width());
+    let height = parseInt($(window).height());
+    $('.kams-context-menu').remove();
     html = '<div class="kams-context-menu"></div>';
-    $ ('body').append (html);
+    $('body').append(html);
     html = '<ul>';
     for (let i in menu) {
       let classname = menu[i]['classname'];
       if (
-        !$ (selector).hasClass ('row-data-file') &&
-        !$ (selector).hasClass ('row-data-dir')
+        !$(selector).hasClass('row-data-file') &&
+        !$(selector).hasClass('row-data-dir')
       ) {
         if (
           clipboardfile.operation == '' &&
@@ -305,12 +305,12 @@ function contextMenu (selector, menu) {
           classname == 'permission' ||
           classname == 'uncheck'
         ) {
-          if ($ ('.fileid:checked').length == 0) {
+          if ($('.fileid:checked').length == 0) {
             continue;
           }
         }
         if (
-          $ ('.fileid:checked').length == $ ('.fileid').length &&
+          $('.fileid:checked').length == $('.fileid').length &&
           classname == 'check'
         ) {
           continue;
@@ -326,44 +326,44 @@ function contextMenu (selector, menu) {
         '</a></li>';
     }
     html += '</ul>';
-    $ ('.kams-context-menu').html (html);
-    $ ('.kams-context-menu').css ({
+    $('.kams-context-menu').html(html);
+    $('.kams-context-menu').css({
       display: 'none',
       left: left + 'px',
       top: top + 'px',
     });
-    let cmwidth = parseInt ($ ('.kams-context-menu').width ());
-    let cmheight = parseInt ($ ('.kams-context-menu').height ());
+    let cmwidth = parseInt($('.kams-context-menu').width());
+    let cmheight = parseInt($('.kams-context-menu').height());
     if (cmwidth + left + 16 >= width) {
       left = left - cmwidth;
-      $ ('.kams-context-menu').css ({left: left + 'px', top: top + 'px'});
+      $('.kams-context-menu').css({ left: left + 'px', top: top + 'px' });
     }
     if (cmheight + top + 20 >= height) {
-      top = height - parseInt (cmheight) - 20;
-      $ ('.kams-context-menu').css ({left: left + 'px', top: top + 'px'});
+      top = height - parseInt(cmheight) - 20;
+      $('.kams-context-menu').css({ left: left + 'px', top: top + 'px' });
     }
-    $ ('.kams-context-menu').fadeIn (300);
-    $ (document).on ('click', function () {
-      $ ('.kams-context-menu').fadeOut (150, function () {});
+    $('.kams-context-menu').fadeIn(300);
+    $(document).on('click', function () {
+      $('.kams-context-menu').fadeOut(150, function () { });
     });
-    $ (document).on ('keydown', function (event) {
+    $(document).on('keydown', function (event) {
       if (event.keyCode && event.keyCode === $.ui.keyCode.ESCAPE) {
-        $ ('.kams-context-menu').fadeOut (150, function () {});
+        $('.kams-context-menu').fadeOut(150, function () { });
       }
     });
     return false;
   });
 }
 
-function setSize () {
-  let wh = parseInt ($ (window).height ());
-  let ww = parseInt ($ (window).width ());
-  let sw = parseInt ($ ('.directory-area').outerWidth ()) + 20;
-  $ ('.directory-area, .file-area').css ('height', wh - 84 + 'px');
-  $ ('.file-area').css ({width: ww - sw + 'px', 'margin-left': sw - 14 + 'px'});
+function setSize() {
+  let wh = parseInt($(window).height());
+  let ww = parseInt($(window).width());
+  let sw = parseInt($('.directory-area').outerWidth()) + 20;
+  $('.directory-area, .file-area').css('height', wh - 84 + 'px');
+  $('.file-area').css({ width: ww - sw + 'px', 'margin-left': sw - 14 + 'px' });
 }
 
-function initContextMenuFileArea () {
+function initContextMenuFileArea() {
   let cm = [
     {
       caption: 'Copy Selected File',
@@ -447,56 +447,56 @@ function initContextMenuFileArea () {
     },
   ];
 
-  contextMenu ('.file-area', cm);
+  contextMenu('.file-area', cm);
 }
 
-function initContextMenuFile () {
-  $ ('.row-data-file').each (function (index) {
-    let filetype = $ (this).attr ('data-file-type');
-    let filename = $ (this).attr ('data-file-name');
-    let filelocation = $ (this).attr ('data-file-location');
+function initContextMenuFile() {
+  $('.row-data-file').each(function (index) {
+    let filetype = $(this).attr('data-file-type');
+    let filename = $(this).attr('data-file-name');
+    let filelocation = $(this).attr('data-file-location');
     let filepath = filelocation + '/' + filename;
-    let fileurl = $ (this).attr ('data-file-url');
+    let fileurl = $(this).attr('data-file-url');
     if (
-      filetype.indexOf ('image') != -1 ||
-      filetype.indexOf ('shockwave') != -1
+      filetype.indexOf('image') != -1 ||
+      filetype.indexOf('shockwave') != -1
     ) {
-      let width = $ (this).attr ('data-image-width');
-      let height = $ (this).attr ('data-image-height');
-      let attr = {width: width, height: height};
-      contextMenu (
+      let width = $(this).attr('data-image-width');
+      let height = $(this).attr('data-image-height');
+      let attr = { width: width, height: height };
+      contextMenu(
         this,
-        contextMenuListFile (filetype, filepath, fileurl, attr)
+        contextMenuListFile(filetype, filepath, fileurl, attr)
       );
     } else {
-      contextMenu (this, contextMenuListFile (filetype, filepath, fileurl));
+      contextMenu(this, contextMenuListFile(filetype, filepath, fileurl));
     }
   });
 }
 
-function initContextMenuDir () {
-  $ ('.row-data-dir').each (function (index) {
-    let filename = $ (this).attr ('data-file-name');
-    let filelocation = $ (this).attr ('data-file-location');
+function initContextMenuDir() {
+  $('.row-data-dir').each(function (index) {
+    let filename = $(this).attr('data-file-name');
+    let filelocation = $(this).attr('data-file-location');
     let filepath = filelocation + '/' + filename;
-    contextMenu (this, contextMenuListDir (filepath));
+    contextMenu(this, contextMenuListDir(filepath));
   });
 }
 
-function previewSVG (url) {
+function previewSVG(url) {
   let previewURL = '../../' + url;
-  playVideo (previewURL, 'iframe');
+  playVideo(previewURL, 'iframe');
 }
 
-function contextMenuListFile (filetype, filepath, fileurl, attr) {
-  filepath = addslashes (filepath);
-  fileurl = addslashes (fileurl);
+function contextMenuListFile(filetype, filepath, fileurl, attr) {
+  filepath = addslashes(filepath);
+  fileurl = addslashes(fileurl);
   let width = '0';
   let height = '0';
   let cm;
-  if (filetype.indexOf ('image') == 0) {
-    width = parseInt (attr['width']);
-    height = parseInt (attr['height']);
+  if (filetype.indexOf('image') == 0) {
+    width = parseInt(attr['width']);
+    height = parseInt(attr['height']);
     cm = [
       {
         caption: 'Select File',
@@ -570,7 +570,7 @@ function contextMenuListFile (filetype, filepath, fileurl, attr) {
         classname: 'property',
       },
     ];
-  } else if (filetype.indexOf ('video') == 0) {
+  } else if (filetype.indexOf('video') == 0) {
     cm = [
       {
         caption: 'Select File',
@@ -633,7 +633,7 @@ function contextMenuListFile (filetype, filepath, fileurl, attr) {
         classname: 'property',
       },
     ];
-  } else if (filetype.indexOf ('audio') == 0) {
+  } else if (filetype.indexOf('audio') == 0) {
     cm = [
       {
         caption: 'Select File',
@@ -701,7 +701,7 @@ function contextMenuListFile (filetype, filepath, fileurl, attr) {
         classname: 'property',
       },
     ];
-  } else if (filetype.indexOf ('pdf') != -1) {
+  } else if (filetype.indexOf('pdf') != -1) {
     cm = [
       {
         caption: 'Select File',
@@ -764,7 +764,7 @@ function contextMenuListFile (filetype, filepath, fileurl, attr) {
         classname: 'property',
       },
     ];
-  } else if (filetype.indexOf ('svg') != -1) {
+  } else if (filetype.indexOf('svg') != -1) {
     cm = [
       {
         caption: 'Select File',
@@ -809,7 +809,7 @@ function contextMenuListFile (filetype, filepath, fileurl, attr) {
       {
         caption: 'Edit Code',
         linkurl: 'code-editor.php?filepath=' +
-          encodeURIComponent (filepath) +
+          encodeURIComponent(filepath) +
           '" target="_blank',
         classname: 'edit',
       },
@@ -839,9 +839,9 @@ function contextMenuListFile (filetype, filepath, fileurl, attr) {
         classname: 'property',
       },
     ];
-  } else if (filetype.indexOf ('shockwave') != -1) {
-    width = parseInt (attr['width']);
-    height = parseInt (attr['height']);
+  } else if (filetype.indexOf('shockwave') != -1) {
+    width = parseInt(attr['width']);
+    height = parseInt(attr['height']);
     cm = [
       {
         caption: 'Select File',
@@ -910,7 +910,7 @@ function contextMenuListFile (filetype, filepath, fileurl, attr) {
         classname: 'property',
       },
     ];
-  } else if (filetype.indexOf ('application/zip') == 0) {
+  } else if (filetype.indexOf('application/zip') == 0) {
     cm = [
       {
         caption: 'Select File',
@@ -968,7 +968,7 @@ function contextMenuListFile (filetype, filepath, fileurl, attr) {
         classname: 'property',
       },
     ];
-  } else if (filetype.indexOf ('text') == 0 || filetype.indexOf ('php') != -1) {
+  } else if (filetype.indexOf('text') == 0 || filetype.indexOf('php') != -1) {
     cm = [
       {
         caption: 'Select File',
@@ -1008,7 +1008,7 @@ function contextMenuListFile (filetype, filepath, fileurl, attr) {
       {
         caption: 'Edit Code',
         linkurl: 'code-editor.php?filepath=' +
-          encodeURIComponent (filepath) +
+          encodeURIComponent(filepath) +
           '" target="_blank',
         classname: 'edit',
       },
@@ -1099,8 +1099,8 @@ function contextMenuListFile (filetype, filepath, fileurl, attr) {
   }
   return cm;
 }
-function contextMenuListDir (filepath) {
-  filepath = addslashes (filepath);
+function contextMenuListDir(filepath) {
+  filepath = addslashes(filepath);
   let cm;
   cm = [
     {
@@ -1153,19 +1153,19 @@ function contextMenuListDir (filepath) {
 }
 let skipondrop = false;
 // file function
-function goToUpDir () {
-  openDir (dirname ($ ('#address').val ()));
+function goToUpDir() {
+  openDir(dirname($('#address').val()));
 }
-function forceDownloadFile (filepath) {
-  window.open (
-    'tool-download-file.php?filepath=' + encodeURIComponent (filepath)
+function forceDownloadFile(filepath) {
+  window.open(
+    'tool-download-file.php?filepath=' + encodeURIComponent(filepath)
   );
 }
 let thumbnailIndexCur = 0;
 let thumbnailIndexNext = 0;
 let thumbnailIndexPrev = 0;
 
-function previewFile (
+function previewFile(
   url,
   width,
   height,
@@ -1173,9 +1173,9 @@ function previewFile (
   frommenu //NOSONAR
 ) {
   let w = width, h = height, html = '';
-  let bn = basename (url);
+  let bn = basename(url);
   if (arrthumbnail.length) {
-    thumbnailIndexCur = $.inArray (url, arrthumbnailURL);
+    thumbnailIndexCur = $.inArray(url, arrthumbnailURL);
     if (thumbnailIndexCur == -1) {
       thumbnailIndexCur = 0;
       thumbnailIndexNext = 0;
@@ -1244,7 +1244,7 @@ function previewFile (
   nextThumb['width'] = arrthumbnail[thumbnailIndexNext]['image_width'];
   nextThumb['height'] = arrthumbnail[thumbnailIndexNext]['image_height'];
 
-  let navtop = Math.round (h / 2 - 3);
+  let navtop = Math.round(h / 2 - 3);
   let navleft = 0;
   let navright = w - 8;
   let tooltop = navtop + 32;
@@ -1289,10 +1289,10 @@ function previewFile (
     url +
     '\');" title="Download Image"><img src="style/images/trans16.gif" class="download" border="0"></a> ' +
     '<a href="javascript:;" onclick="editImage(\'' +
-    relative2absolute (url) +
+    relative2absolute(url) +
     '\');closeOverlayDialog();" title="Edit Image"><img src="style/images/trans16.gif" class="edit-image" border="0"></a> ' +
     '<a href="javascript:;" onclick="propertyImage(\'' +
-    relative2absolute (url) +
+    relative2absolute(url) +
     '\');" title="Image Properties"><img src="style/images/trans16.gif" class="property" border="0"></a> ' +
     '</div>';
 
@@ -1300,9 +1300,9 @@ function previewFile (
     html += prevHTML + nextHTML + toolHTML;
   }
   if (frommenu && togglethumb) {
-    let obj = $ ('li[data-file-url="' + url + '"] .thumbimage img');
-    let lfrom = parseFloat (obj.offset ().left);
-    let tfrom = parseFloat (obj.offset ().top);
+    let obj = $('li[data-file-url="' + url + '"] .thumbimage img');
+    let lfrom = parseFloat(obj.offset().left);
+    let tfrom = parseFloat(obj.offset().top);
 
     let tw = 96;
     if (h > w) {
@@ -1314,16 +1314,16 @@ function previewFile (
       th = 96 * h / w;
       tfrom += (96 - th) / 2;
     }
-    let lto = (parseFloat ($ (window).width ()) - w) / 2;
-    let tto = (parseFloat ($ (window).height ()) - h) / 2;
+    let lto = (parseFloat($(window).width()) - w) / 2;
+    let tto = (parseFloat($(window).height()) - h) / 2;
     let bgurl =
       'url(tool-thumb-image.php?filepath=' +
-      encodeURIComponent (relative2absolute (url)) +
+      encodeURIComponent(relative2absolute(url)) +
       ')';
-    $ ('<img />')
-      .addClass ('anim-preview')
-      .attr ('src', url)
-      .css ({
+    $('<img />')
+      .addClass('anim-preview')
+      .attr('src', url)
+      .css({
         'background-image': bgurl,
         'background-size': '100%',
         width: tw + 'px',
@@ -1333,56 +1333,56 @@ function previewFile (
         position: 'absolute',
         'z-index': '5000',
       })
-      .appendTo ('body');
-    $ ('.anim-preview').animate (
-      {left: lto, top: tto, width: w, height: h},
+      .appendTo('body');
+    $('.anim-preview').animate(
+      { left: lto, top: tto, width: w, height: h },
       200,
       function () {
-        $ ('.anim-preview').remove ();
-        overlayDialog (html, w, h);
-        $ ('.image2zoomout, .image2zoomin').on ('mouseover', function () {
-          let imgsrc = $ (this).attr ('src');
-          $ ('li[data-file-url="' + imgsrc + '"] .thumbitem').addClass (
+        $('.anim-preview').remove();
+        overlayDialog(html, w, h);
+        $('.image2zoomout, .image2zoomin').on('mouseover', function () {
+          let imgsrc = $(this).attr('src');
+          $('li[data-file-url="' + imgsrc + '"] .thumbitem').addClass(
             'thumbitem-selected'
           );
         });
 
-        $ ('.image2zoomout, .image2zoomin').on ('mouseout', function () {
-          let imgsrc = $ (this).attr ('src');
-          $ ('li[data-file-url="' + imgsrc + '"] .thumbitem').removeClass (
+        $('.image2zoomout, .image2zoomin').on('mouseout', function () {
+          let imgsrc = $(this).attr('src');
+          $('li[data-file-url="' + imgsrc + '"] .thumbitem').removeClass(
             'thumbitem-selected'
           );
         });
       }
     );
   } else {
-    overlayDialog (html, w, h);
-    $ ('.image2zoomout, .image2zoomin').on ('mouseover', function () {
-      let imgsrc = $ (this).attr ('src');
-      $ ('li[data-file-url="' + imgsrc + '"] .thumbitem').addClass (
+    overlayDialog(html, w, h);
+    $('.image2zoomout, .image2zoomin').on('mouseover', function () {
+      let imgsrc = $(this).attr('src');
+      $('li[data-file-url="' + imgsrc + '"] .thumbitem').addClass(
         'thumbitem-selected'
       );
     });
-    $ ('.image2zoomout, .image2zoomin').on ('mouseout', function () {
-      let imgsrc = $ (this).attr ('src');
-      $ ('li[data-file-url="' + imgsrc + '"] .thumbitem').removeClass (
+    $('.image2zoomout, .image2zoomin').on('mouseout', function () {
+      let imgsrc = $(this).attr('src');
+      $('li[data-file-url="' + imgsrc + '"] .thumbitem').removeClass(
         'thumbitem-selected'
       );
     });
   }
 }
-function preloadImage () {
-  $ (
+function preloadImage() {
+  $(
     document
-  ).on ('hover', '.row-data-file[data-file-type*="image"]', function () {
-    let url = $ (this).attr ('data-file-url');
-    let w = parseInt ($ (this).attr ('data-image-width'));
-    let h = parseInt ($ (this).attr ('data-image-height'));
-    let img = new Image (w, h);
+  ).on('hover', '.row-data-file[data-file-type*="image"]', function () {
+    let url = $(this).attr('data-file-url');
+    let w = parseInt($(this).attr('data-image-width'));
+    let h = parseInt($(this).attr('data-image-height'));
+    let img = new Image(w, h);
     img.src = url;
   });
 }
-function playVideo (url, type) {
+function playVideo(url, type) {
   let previewURL = '../../' + url;
   let html = '';
 
@@ -1394,8 +1394,8 @@ function playVideo (url, type) {
       videoDimensions[previewURL].height /
       videoDimensions[previewURL].width;
   }
-  let dheight = $ (document).height ();
-  let dwidth = $ (document).width ();
+  let dheight = $(document).height();
+  let dwidth = $(document).width();
   if (height > dheight - 60) {
     height = dheight - 60;
     width =
@@ -1460,11 +1460,11 @@ function playVideo (url, type) {
       previewURL +
       '" /></object>';
   {
-    overlayDialog (html, width, height);
+    overlayDialog(html, width, height);
   }
 }
 
-function playAudio (url, type) {
+function playAudio(url, type) {
   let previewURL = '../../' + url;
   let html = '';
   if (type == 'iframe')
@@ -1495,58 +1495,58 @@ function playAudio (url, type) {
       '" type="application/x-mplayer2"><param name="url" value="' +
       previewURL +
       '" /></object>';
-  overlayDialog (html, 320, 50);
+  overlayDialog(html, 320, 50);
 }
-function compressAudio (path) {
-  $ ('#common-dialog-inner').html (
+function compressAudio(path) {
+  $('#common-dialog-inner').html(
     'Compress audio will reduce the quality and file size. This process can not be undone.<br />Are you sure yo want to compress this audio?'
   );
-  $ ('#common-dialog').dialog ({
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Compress Audio',
     width: 330,
     height: 180,
     buttons: {
       Yes: function () {
-        $ ('#common-dialog')
-          .parent ()
-          .find ('.ui-dialog-buttonpane')
-          .find ('button')
-          .each (function (index, element) {
-            $ (this).prop ('disabled', true);
+        $('#common-dialog')
+          .parent()
+          .find('.ui-dialog-buttonpane')
+          .find('button')
+          .each(function (index, element) {
+            $(this).prop('disabled', true);
           });
-        $ ('#common-dialog').html (
+        $('#common-dialog').html(
           'Please wait while audio file is being compressed.'
         );
         let q = '?option=compress-audio';
-        q = updateQueryParam (q);
-        $.post ('tool-file-operation.php' + q, {path: path}, function (answer) {
+        q = updateQueryParam(q);
+        $.post('tool-file-operation.php' + q, { path: path }, function (answer) {
           if (answer == 'SUCCESS') {
-            openDir ($ ('#fftargetdir').val ());
+            openDir($('#fftargetdir').val());
           } else {
-            alert ('File type can not be compressed.');
+            alert('File type can not be compressed.');
           }
           try {
-            $ ('#common-dialog').dialog ('destroy');
-          } catch (e) {}
+            $('#common-dialog').dialog('destroy');
+          } catch (e) { }
         });
       },
       No: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
 }
 
-function previewPDF (url) {
+function previewPDF(url) {
   let previewURL = '../../' + url;
   let html =
     '<embed src="' +
     previewURL +
     '#toolbar=0&amp;navpanes=0&amp;scrollbar=0" width="720" height="400">';
-  overlayDialog (html, 720, 400);
+  overlayDialog(html, 720, 400);
 }
-function previewSWF (url, width, height) {
+function previewSWF(url, width, height) {
   let previewURL = '../../' + url;
   let html =
     '<object width="' +
@@ -1562,123 +1562,123 @@ function previewSWF (url, width, height) {
     '" height="' +
     height +
     '"></embed></object>';
-  overlayDialog (html, width, height);
+  overlayDialog(html, width, height);
 }
-function propertyFile (filepath) {
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function propertyFile(filepath) {
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'File Properties',
     width: 400,
     height: 270,
     buttons: {
       Close: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
-  let data = getQueryParams ();
+  let data = getQueryParams();
   data.filepath = filepath;
-  $.get ('tool-property-file.php', data, function (answer) {
-    $ ('#common-dialog-inner').html (answer);
-    let mime = $ ('.mime-type').attr ('data-content');
+  $.get('tool-property-file.php', data, function (answer) {
+    $('#common-dialog-inner').html(answer);
+    let mime = $('.mime-type').attr('data-content');
     if (mime == 'application/zip') {
-      $ ('.ui-dialog-buttonset').prepend (
+      $('.ui-dialog-buttonset').prepend(
         '<button aria-disabled="false" role="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button"><span class="ui-button-text">Show Content</span></button>'
       );
-      $ ('.ui-dialog-buttonset')
-        .find ('button:first')
-        .attr ('onclick', "showZipContent('" + filepath + "')");
+      $('.ui-dialog-buttonset')
+        .find('button:first')
+        .attr('onclick', "showZipContent('" + filepath + "')");
     }
   });
 }
-function propertyImage (filepath) {
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function propertyImage(filepath) {
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Image Properties',
     width: 400,
     height: 410,
     buttons: {
       Close: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
-  let data = getQueryParams ();
+  let data = getQueryParams();
   data.filepath = filepath;
   data.type = 'image';
-  $.get ('tool-property-file.php', data, function (answer) {
-    $ ('#common-dialog-inner').html (answer);
+  $.get('tool-property-file.php', data, function (answer) {
+    $('#common-dialog-inner').html(answer);
   });
 }
-function propertyVideo (filepath) {
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function propertyVideo(filepath) {
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Video Properties',
     width: 400,
     height: 410,
     buttons: {
       Close: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
-  let data = getQueryParams ();
+  let data = getQueryParams();
   data.filepath = filepath;
   data.type = 'video';
-  $.get ('tool-property-file.php', data, function (answer) {
-    $ ('#common-dialog-inner').html (answer);
+  $.get('tool-property-file.php', data, function (answer) {
+    $('#common-dialog-inner').html(answer);
   });
 }
-function propertyDir (filepath) {
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function propertyDir(filepath) {
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Directory Properties',
     width: 400,
     height: 230,
     buttons: {
       Close: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
-  let data = getQueryParams ();
+  let data = getQueryParams();
   data.filepath = filepath;
   data.type = 'directory';
-  $.get ('tool-property-file.php', data, function (answer) {
-    $ ('#common-dialog-inner').html (answer);
+  $.get('tool-property-file.php', data, function (answer) {
+    $('#common-dialog-inner').html(answer);
   });
 }
-function showZipContent (filepath) {
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function showZipContent(filepath) {
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Zip Content',
     width: 400,
     height: 230,
     buttons: {
       'Extract File': function () {
-        extractFile (filepath);
+        extractFile(filepath);
       },
       Close: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
-  let data = getQueryParams ();
+  let data = getQueryParams();
   data.filepath = filepath;
-  $.get ('tool-zip-content.php', data, function (answer) {
-    $ ('#common-dialog-inner').html (answer);
+  $.get('tool-zip-content.php', data, function (answer) {
+    $('#common-dialog-inner').html(answer);
   });
 }
 
 String.prototype.trim = function () {
-  return this.replace (/^\s+|\s+$/g, ''); //NOSONAR
+  return this.replace(/^\s+|\s+$/g, ''); //NOSONAR
 };
-function renameFile (
+function renameFile(
   filepath,
   isdir //NOSONAR
 ) {
@@ -1686,12 +1686,12 @@ function renameFile (
     // assume this is a file
     // get selected file
     let pth;
-    $ ('.fileid:checked').each (function (index) {
+    $('.fileid:checked').each(function (index) {
       if (pth == undefined) {
-        pth = $ (this).attr ('value');
+        pth = $(this).attr('value');
         if (pth != undefined) {
           filepath = pth;
-          if ($ (this).attr ('data-isdir') == 'true') {
+          if ($(this).attr('data-isdir') == 'true') {
             isdir = true;
           }
         }
@@ -1700,81 +1700,81 @@ function renameFile (
   }
   let title = '';
   if (filepath) {
-    $ ('#common-dialog-inner').html ('');
+    $('#common-dialog-inner').html('');
     if (isdir) {
       title = 'Rename Directory';
     } else {
       title = 'Rename File';
     }
-    $ ('#common-dialog').dialog ({
+    $('#common-dialog').dialog({
       modal: true,
       title: title,
       width: 400,
       height: 200,
       buttons: {
         OK: function () {
-          let dl = $ ('#fflocation').val ();
-          let on = $ ('#ffoldname').val ();
-          let nn = $ ('#ffnewname').val ();
+          let dl = $('#fflocation').val();
+          let on = $('#ffoldname').val();
+          let nn = $('#ffnewname').val();
           let oe;
           let ne;
           try {
-            oe = getfileExtension (on.trim ());
+            oe = getfileExtension(on.trim());
           } catch (e) {
-            oe = getfileExtension (on);
+            oe = getfileExtension(on);
           }
           try {
-            ne = getfileExtension (nn.trim ());
+            ne = getfileExtension(nn.trim());
           } catch (e) {
-            ne = getfileExtension (nn);
+            ne = getfileExtension(nn);
           }
           try {
-            nn = nn.trim ();
-          } catch (e) {}
+            nn = nn.trim();
+          } catch (e) { }
           if (nn == '') {
-            jqAlert ('Please type new name.', 'Input Needed');
-            $ ('#ffnewname').val (on);
-            $ ('#ffnewname').select ();
+            jqAlert('Please type new name.', 'Input Needed');
+            $('#ffnewname').val(on);
+            $('#ffnewname').select();
           } else if (on == nn) {
-            jqAlert (
+            jqAlert(
               'New name and old name must be different.',
               'Invalid Name'
             );
           } else {
-            if (oe.toString () != ne.toString () && !isdir) {
+            if (oe.toString() != ne.toString() && !isdir) {
               if (
-                !confirm (
+                !confirm(
                   'The new file extension is different with old one.\n' +
-                    'If you change a file name extension, the file might become unusable.\n' +
-                    'Are you sure you want to change it?'
+                  'If you change a file name extension, the file might become unusable.\n' +
+                  'Are you sure you want to change it?'
                 )
               ) {
                 return;
               }
             }
             letq = '?option=renamefile';
-            q = updateQueryParam (q);
-            $.post (
+            q = updateQueryParam(q);
+            $.post(
               'tool-file-operation.php' + q,
-              {location: dl, oldname: on, newname: nn},
+              { location: dl, oldname: on, newname: nn },
               function (answer) {
                 if (answer == 'SUCCESS') {
-                  openDir (dl);
+                  openDir(dl);
                   try {
-                    $ ('#common-dialog').dialog ('destroy');
-                  } catch (e) {}
+                    $('#common-dialog').dialog('destroy');
+                  } catch (e) { }
                 } else if (answer == 'EXIST') {
-                  jqAlert (
+                  jqAlert(
                     nn + ' already exists. Please type another name.',
                     'Invalid Name'
                   );
                 } else if (answer == 'READONLY') {
-                  jqAlert (
+                  jqAlert(
                     'The operation was disabled on read-only mode.',
                     'Read-Only'
                   );
                 } else if (answer == 'FORBIDDENEXT') {
-                  jqAlert (
+                  jqAlert(
                     'The operation was aborted because this file name extension is forbidden. Please use another file name extension.',
                     'Forbidden Extension'
                   );
@@ -1784,7 +1784,7 @@ function renameFile (
           }
         },
         Cancel: function () {
-          $ (this).dialog ('destroy');
+          $(this).dialog('destroy');
         },
       },
     });
@@ -1806,66 +1806,66 @@ function renameFile (
       '</tr>' +
       '</table>' +
       '</form>';
-    $ ('#common-dialog-inner').html (html);
-    $ ('#fflocation').val (dirname (filepath));
-    $ ('#ffoldname, #ffnewname').val (basename (filepath));
-    let name = removefileextension ($ ('#ffnewname').val ());
+    $('#common-dialog-inner').html(html);
+    $('#fflocation').val(dirname(filepath));
+    $('#ffoldname, #ffnewname').val(basename(filepath));
+    let name = removefileextension($('#ffnewname').val());
     let startPos = 0;
     let endPos = name.length;
-    setInputSelection (document.getElementById ('ffnewname'), startPos, endPos);
+    setInputSelection(document.getElementById('ffnewname'), startPos, endPos);
   } else {
-    jqAlert ('No file or directory selected.', 'Invalid Operation');
+    jqAlert('No file or directory selected.', 'Invalid Operation');
   }
 }
 
-function compressFile (filepath) {
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function compressFile(filepath) {
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Compress File',
     width: 400,
     height: 175,
     buttons: {
       OK: function () {
-        $ ('.ui-dialog-buttonpane').append (
+        $('.ui-dialog-buttonpane').append(
           '<div class="wait-status">Plase wait...</div>'
         );
-        $ ('.ui-dialog-buttonset button:first').attr ('disabled', 'disabled');
-        $ ('.ui-dialog-buttonset button:first').attr ('aria-disabled', 'true');
-        let sf = $ ('#ffsourcepath').val ();
-        let tf = $ ('#fftargetpath').val ();
+        $('.ui-dialog-buttonset button:first').attr('disabled', 'disabled');
+        $('.ui-dialog-buttonset button:first').attr('aria-disabled', 'true');
+        let sf = $('#ffsourcepath').val();
+        let tf = $('#fftargetpath').val();
         let q = '?option=compressfile';
-        q = updateQueryParam (q);
-        $.post (
+        q = updateQueryParam(q);
+        $.post(
           'tool-file-operation.php' + q,
-          {'sourcepath[]': sf, targetpath: tf},
+          { 'sourcepath[]': sf, targetpath: tf },
           function (answer) {
             if (answer == 'CONFLICT') {
-              jqAlert (
+              jqAlert(
                 filepath + ' already exists. Please enter another name.',
                 'Invalid Name'
               );
             } else if (answer == 'SUCCESS') {
-              openDir (dirname (tf));
+              openDir(dirname(tf));
               try {
-                $ ('#common-dialog').dialog ('destroy');
-              } catch (e) {}
+                $('#common-dialog').dialog('destroy');
+              } catch (e) { }
             } else if (answer == 'FAILED') {
-              jqAlert ('The operation was failed.', 'Unknown Error Occured');
+              jqAlert('The operation was failed.', 'Unknown Error Occured');
             } else if (answer == 'NOTSUPPORTED') {
-              jqAlert (
+              jqAlert(
                 'The operation was failed.',
                 'ZipArchive class not exists. Please verify that php_zip extension is available on this server.'
               );
             } else if (answer == 'READONLY') {
-              jqAlert (
+              jqAlert(
                 'The operation was disabled on read-only mode.',
                 'Read-Only'
               );
             }
-            $ ('.ui-dialog-buttonpane').find ('.wait-status').remove ();
-            $ ('.ui-dialog-buttonset button:first').removeAttr ('disabled');
-            $ ('.ui-dialog-buttonset button:first').attr (
+            $('.ui-dialog-buttonpane').find('.wait-status').remove();
+            $('.ui-dialog-buttonset button:first').removeAttr('disabled');
+            $('.ui-dialog-buttonset button:first').attr(
               'aria-disabled',
               'false'
             );
@@ -1873,7 +1873,7 @@ function compressFile (filepath) {
         );
       },
       Cancel: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
@@ -1891,93 +1891,93 @@ function compressFile (filepath) {
     '</tr>' +
     '</table>' +
     '</form>';
-  $ ('#common-dialog-inner').html (html);
-  $ ('#ffsourcepath').val (filepath);
-  $ ('#fftargetpath').val (removefileextension (filepath) + '.zip');
-  let dir = dirname ($ ('#fftargetpath').val ());
+  $('#common-dialog-inner').html(html);
+  $('#ffsourcepath').val(filepath);
+  $('#fftargetpath').val(removefileextension(filepath) + '.zip');
+  let dir = dirname($('#fftargetpath').val());
   let startPos = dir.length + 1;
-  let name = removefileextension (basename ($ ('#fftargetpath').val ()));
+  let name = removefileextension(basename($('#fftargetpath').val()));
   let endPos = startPos + name.length;
-  setInputSelection (
-    document.getElementById ('fftargetpath'),
+  setInputSelection(
+    document.getElementById('fftargetpath'),
     startPos,
     endPos
   );
 }
-function compressSelectedFile () {
+function compressSelectedFile() {
   //NOSONAR
-  let dl = $ ('#address').val ();
+  let dl = $('#address').val();
   let file2compress = '';
   let chk = 0;
   let html = '';
-  $ ('.fileid:checked').each (function (index) {
-    file2compress += '<div>' + $ (this).val () + '</div>';
+  $('.fileid:checked').each(function (index) {
+    file2compress += '<div>' + $(this).val() + '</div>';
     chk++;
   });
 
   if (chk) {
-    $ ('#common-dialog-inner').html ('');
-    $ ('#common-dialog').dialog ({
+    $('#common-dialog-inner').html('');
+    $('#common-dialog').dialog({
       modal: true,
       title: 'Compress File',
       width: 400,
       height: 260,
       buttons: {
         OK: function () {
-          $ ('.ui-dialog-buttonpane').append (
+          $('.ui-dialog-buttonpane').append(
             '<div class="wait-status">Plase wait...</div>'
           );
-          $ ('.ui-dialog-buttonset button:first').attr ('disabled', 'disabled');
-          $ ('.ui-dialog-buttonset button:first').attr (
+          $('.ui-dialog-buttonset button:first').attr('disabled', 'disabled');
+          $('.ui-dialog-buttonset button:first').attr(
             'aria-disabled',
             'true'
           );
-          let targetpath = $ ('#fftargetpath').val ();
-          let args = 'targetpath=' + encodeURIComponent (targetpath);
-          $ ('.fileid:checked').each (function (index) {
-            args += '&sourcepath[]=' + encodeURIComponent ($ (this).val ());
+          let targetpath = $('#fftargetpath').val();
+          let args = 'targetpath=' + encodeURIComponent(targetpath);
+          $('.fileid:checked').each(function (index) {
+            args += '&sourcepath[]=' + encodeURIComponent($(this).val());
           });
           let q = '?option=compressfile';
-          q = updateQueryParam (q);
-          $.post ('tool-file-operation.php' + q, {postdata: args}, function (
+          q = updateQueryParam(q);
+          $.post('tool-file-operation.php' + q, { postdata: args }, function (
             answer
           ) {
             if (answer == 'SUCCESS' || answer == 'EXIST') {
-              openDir (dirname (targetpath));
+              openDir(dirname(targetpath));
               try {
-                $ ('#common-dialog').dialog ('destroy');
-              } catch (e) {}
+                $('#common-dialog').dialog('destroy');
+              } catch (e) { }
             }
             if (answer == 'CONFLICT') {
-              jqAlert ('Please enter another name.', 'Invalid Name');
+              jqAlert('Please enter another name.', 'Invalid Name');
             } else if (answer == 'SUCCESS') {
-              openDir (dirname (tf));
+              openDir(dirname(tf));
               try {
-                $ ('#common-dialog').dialog ('destroy');
-              } catch (e) {}
+                $('#common-dialog').dialog('destroy');
+              } catch (e) { }
             } else if (answer == 'FAILED') {
-              jqAlert ('The operation was failed.', 'Unknown Error Occured');
+              jqAlert('The operation was failed.', 'Unknown Error Occured');
             } else if (answer == 'NOTSUPPORTED') {
-              jqAlert (
+              jqAlert(
                 'The operation was failed.',
                 'ZipArchive class not exists. Please verify that php_zip extension is available on this server.'
               );
             } else if (answer == 'READONLY') {
-              jqAlert (
+              jqAlert(
                 'The operation was disabled on read-only mode.',
                 'Read-Only'
               );
             }
-            $ ('.ui-dialog-buttonpane').find ('.wait-status').remove ();
-            $ ('.ui-dialog-buttonset button:first').removeAttr ('disabled');
-            $ ('.ui-dialog-buttonset button:first').attr (
+            $('.ui-dialog-buttonpane').find('.wait-status').remove();
+            $('.ui-dialog-buttonset button:first').removeAttr('disabled');
+            $('.ui-dialog-buttonset button:first').attr(
               'aria-disabled',
               'false'
             );
           });
         },
         Cancel: function () {
-          $ (this).dialog ('destroy');
+          $(this).dialog('destroy');
         },
       },
     });
@@ -1993,7 +1993,7 @@ function compressSelectedFile () {
       '<div></div><div>File to be compressed:</div><div class="seleted-file-list">' +
       file2compress +
       '</div></div>';
-    $ ('#common-dialog-inner').html (html);
+    $('#common-dialog-inner').html(html);
     let val = 'new-compressed';
     let i = 1;
     let dir = '';
@@ -2005,79 +2005,79 @@ function compressSelectedFile () {
       } else {
         dir = val + '.zip';
       }
-      num1 = $ ('.file-area .row-data-dir[data-file-name="' + dir + '"]')
+      num1 = $('.file-area .row-data-dir[data-file-name="' + dir + '"]')
         .length;
-      num2 = $ ('.file-area .row-data-file[data-file-name="' + dir + '"]')
+      num2 = $('.file-area .row-data-file[data-file-name="' + dir + '"]')
         .length;
       i++;
     } while (num1 || num2);
-    $ ('#fftargetpath').val (dl + '/' + dir);
-    dir = dirname ($ ('#fftargetpath').val ());
+    $('#fftargetpath').val(dl + '/' + dir);
+    dir = dirname($('#fftargetpath').val());
     let startPos = dir.length + 1;
-    let name = removefileextension (basename ($ ('#fftargetpath').val ()));
+    let name = removefileextension(basename($('#fftargetpath').val()));
     let endPos = startPos + name.length;
-    setInputSelection (
-      document.getElementById ('fftargetpath'),
+    setInputSelection(
+      document.getElementById('fftargetpath'),
       startPos,
       endPos
     );
   } else {
-    jqAlert ('No file selected.', 'Invalid Operation');
+    jqAlert('No file selected.', 'Invalid Operation');
   }
 }
-function moveSelectedFile () {
+function moveSelectedFile() {
   //NOSONAR
-  let dl = $ ('#address').val ();
+  let dl = $('#address').val();
   let file2move = '';
   let chk = 0;
   let html = '';
-  $ ('.fileid:checked').each (function (index) {
-    file2move += '<div>' + $ (this).val () + '</div>';
+  $('.fileid:checked').each(function (index) {
+    file2move += '<div>' + $(this).val() + '</div>';
     chk++;
   });
   if (chk) {
-    $ ('#common-dialog-inner').html ('');
-    $ ('#common-dialog').dialog ({
+    $('#common-dialog-inner').html('');
+    $('#common-dialog').dialog({
       modal: true,
       title: 'Move File',
       width: 400,
       height: 260,
       buttons: {
         OK: function () {
-          let targetdir = $ ('#fftargetdir').val ();
+          let targetdir = $('#fftargetdir').val();
           if (dl != targetdir) {
-            let args = 'targetdir=' + encodeURIComponent (targetdir);
-            $ ('.fileid:checked').each (function (index) {
-              args += '&file[]=' + encodeURIComponent ($ (this).val ());
+            let args = 'targetdir=' + encodeURIComponent(targetdir);
+            $('.fileid:checked').each(function (index) {
+              args += '&file[]=' + encodeURIComponent($(this).val());
             });
             let q = '?option=copyfile&deletesource=1';
-            $.post ('tool-file-operation.php' + q, {postdata: args}, function (
+            $.post('tool-file-operation.php' + q, { postdata: args }, function (
               answer
             ) {
               if (answer == 'SUCCESS' || answer == 'EXIST') {
-                openDir ($ ('#fftargetdir').val ());
+                openDir($('#fftargetdir').val());
                 try {
-                  $ ('#common-dialog').dialog ('destroy');
-                } catch (e) {}
+                  $('#common-dialog').dialog('destroy');
+                } catch (e) { }
               } else if (answer == 'READONLY') {
-                jqAlert (
+                jqAlert(
                   'The operation was disabled on read-only mode.',
                   'Read-Only'
                 );
               }
-              $ ('.ui-dialog-buttonpane').find ('.wait-status').remove ();
-              $ ('.ui-dialog-buttonset button:first').removeAttr ('disabled');
-              $ ('.ui-dialog-buttonset button:first').attr (
+              $('.ui-dialog-buttonpane').find('.wait-status').remove();
+              $('.ui-dialog-buttonset button:first').removeAttr('disabled');
+              $('.ui-dialog-buttonset button:first').attr(
                 'aria-disabled',
                 'false'
               );
             });
           } else {
-            jqAlert ('Please enter another name.', 'Invalid Name');
+            jqAlert('Please enter another name.', 'Invalid Name');
           }
         },
         Cancel: function () {
-          $ (this).dialog ('destroy');
+          $(this).dialog('destroy');
         },
       },
     });
@@ -2093,58 +2093,58 @@ function moveSelectedFile () {
       '<div></div><div>File to be moved:</div><div class="seleted-file-list">' +
       file2move +
       '</div></div>';
-    $ ('#common-dialog-inner').html (html);
-    $ ('#fftargetdir').focus ();
-    $ ('#fftargetdir').val (dl);
+    $('#common-dialog-inner').html(html);
+    $('#fftargetdir').focus();
+    $('#fftargetdir').val(dl);
   } else {
-    jqAlert ('No file selected.', 'Invalid Operation');
+    jqAlert('No file selected.', 'Invalid Operation');
   }
 }
-function extractFile (filepath) {
+function extractFile(filepath) {
   if (!filepath) {
-    let pth = $ ('.fileid:checked[data-iszip=true]').attr ('value');
+    let pth = $('.fileid:checked[data-iszip=true]').attr('value');
     if (pth != undefined) {
       filepath = pth;
     } else {
-      jqAlert ('No file selected.', 'Invalid Operation');
+      jqAlert('No file selected.', 'Invalid Operation');
       return;
     }
   }
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Extract File',
     width: 400,
     height: 175,
     buttons: {
       OK: function () {
-        $ ('.ui-dialog-buttonpane').append (
+        $('.ui-dialog-buttonpane').append(
           '<div class="wait-status">Plase wait...</div>'
         );
-        $ ('.ui-dialog-buttonset button:first').attr ('disabled', 'disabled');
-        $ ('.ui-dialog-buttonset button:first').attr ('aria-disabled', 'true');
-        let filepath = $ ('#ffsourcename').val ();
-        let targetdir = $ ('#fftargetdir').val ();
+        $('.ui-dialog-buttonset button:first').attr('disabled', 'disabled');
+        $('.ui-dialog-buttonset button:first').attr('aria-disabled', 'true');
+        let filepath = $('#ffsourcename').val();
+        let targetdir = $('#fftargetdir').val();
         let q = '?option=extractfile';
-        q = updateQueryParam (q);
-        $.post (
+        q = updateQueryParam(q);
+        $.post(
           'tool-file-operation.php' + q,
-          {filepath: filepath, targetdir: targetdir},
+          { filepath: filepath, targetdir: targetdir },
           function (answer) {
             if (answer == 'SUCCESS') {
-              openDir (targetdir);
+              openDir(targetdir);
               try {
-                $ ('#common-dialog').dialog ('destroy');
-              } catch (e) {}
+                $('#common-dialog').dialog('destroy');
+              } catch (e) { }
             } else if (answer == 'FAILED') {
-              jqAlert ('This is not a Zip file.', 'Invalid Format');
+              jqAlert('This is not a Zip file.', 'Invalid Format');
             } else if (answer == 'NOTSUPPORTED') {
-              jqAlert (
+              jqAlert(
                 'The operation was failed.',
                 'ZipArchive class not exists. Please verify that php_zip extension is available on this server.'
               );
             } else if (answer == 'READONLY') {
-              jqAlert (
+              jqAlert(
                 'The operation was disabled on read-only mode.',
                 'Read-Only'
               );
@@ -2153,7 +2153,7 @@ function extractFile (filepath) {
         );
       },
       Cancel: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
@@ -2171,46 +2171,46 @@ function extractFile (filepath) {
     '</tr>' +
     '</table>' +
     '</form>';
-  $ ('#common-dialog-inner').html (html);
-  $ ('#ffsourcename').val (filepath);
-  $ ('#fftargetdir').val (dirname (filepath));
+  $('#common-dialog-inner').html(html);
+  $('#ffsourcename').val(filepath);
+  $('#fftargetdir').val(dirname(filepath));
 }
 
-function createFile () {
-  let dir = $ ('#address').val ();
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function createFile() {
+  let dir = $('#address').val();
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Create New File',
     width: 400,
     height: 200,
     buttons: {
       OK: function () {
-        let dl = $ ('#fflocation').val ();
-        let dn = $ ('#ffname').val ();
+        let dl = $('#fflocation').val();
+        let dn = $('#ffname').val();
         let q = '?option=createfile';
-        q = updateQueryParam (q);
-        $.post (
+        q = updateQueryParam(q);
+        $.post(
           'tool-file-operation.php' + q,
-          {location: dl, name: dn},
+          { location: dl, name: dn },
           function (answer) {
             if (answer == 'EXIST') {
-              jqAlert (
+              jqAlert(
                 dl + '/' + dn + ' already exists. Please type another name.'
               );
-              $ ('#ffname').select ();
+              $('#ffname').select();
             } else if (answer == 'SUCCESS') {
-              openDir (dl);
+              openDir(dl);
               try {
-                $ ('#common-dialog').dialog ('destroy');
-              } catch (e) {}
+                $('#common-dialog').dialog('destroy');
+              } catch (e) { }
             } else if (answer == 'FORBIDDENEXT') {
-              jqAlert (
+              jqAlert(
                 'Creating file was aborted because this file name extension is forbidden. Please use another file name extension.',
                 'Forbidden Extension'
               );
             } else if (answer == 'READONLY') {
-              jqAlert (
+              jqAlert(
                 'The operation was disabled on read-only mode.',
                 'Read-Only'
               );
@@ -2219,7 +2219,7 @@ function createFile () {
         );
       },
       Cancel: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
@@ -2237,8 +2237,8 @@ function createFile () {
     '</tr>' +
     '</table>' +
     '</form>';
-  $ ('#common-dialog-inner').html (html);
-  $ ('#fflocation').val (dir);
+  $('#common-dialog-inner').html(html);
+  $('#fflocation').val(dir);
   let val = 'new-file';
   let i = 1;
 
@@ -2250,47 +2250,47 @@ function createFile () {
     } else {
       dir = val + '.txt';
     }
-    num1 = $ ('.file-area .row-data-dir[data-file-name="' + dir + '"]').length;
-    num2 = $ ('.file-area .row-data-file[data-file-name="' + dir + '"]').length;
+    num1 = $('.file-area .row-data-dir[data-file-name="' + dir + '"]').length;
+    num2 = $('.file-area .row-data-file[data-file-name="' + dir + '"]').length;
     i++;
   } while (num1 || num2);
-  $ ('#ffname').val (dir);
-  let name = removefileextension (dir);
+  $('#ffname').val(dir);
+  let name = removefileextension(dir);
   let startPos = 0;
   let endPos = name.length;
-  setInputSelection (document.getElementById ('ffname'), startPos, endPos);
+  setInputSelection(document.getElementById('ffname'), startPos, endPos);
 }
 
-function createDirectory () {
-  let dir = $ ('#address').val ();
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function createDirectory() {
+  let dir = $('#address').val();
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Create Directory',
     width: 400,
     height: 200,
     buttons: {
       OK: function () {
-        let dl = $ ('#fflocation').val ();
-        let dn = $ ('#ffname').val ();
+        let dl = $('#fflocation').val();
+        let dn = $('#ffname').val();
         let q = '?option=createdir';
-        q = updateQueryParam (q);
-        $.post (
+        q = updateQueryParam(q);
+        $.post(
           'tool-file-operation.php' + q,
-          {location: dl, name: dn},
+          { location: dl, name: dn },
           function (answer) {
             if (answer == 'EXIST') {
-              jqAlert (
+              jqAlert(
                 dl + '/' + dn + ' already exists. Please type another name.'
               );
-              $ ('#ffname').select ();
+              $('#ffname').select();
             } else if (answer == 'SUCCESS') {
-              openDir (dl);
+              openDir(dl);
               try {
-                $ ('#common-dialog').dialog ('destroy');
-              } catch (e) {}
+                $('#common-dialog').dialog('destroy');
+              } catch (e) { }
             } else if (answer == 'READONLY') {
-              jqAlert (
+              jqAlert(
                 'The operation was disabled on read-only mode.',
                 'Read-Only'
               );
@@ -2299,7 +2299,7 @@ function createDirectory () {
         );
       },
       Cancel: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
@@ -2317,8 +2317,8 @@ function createDirectory () {
     '</tr>' +
     '</table>' +
     '</form>';
-  $ ('#common-dialog-inner').html (html);
-  $ ('#fflocation').val (dir);
+  $('#common-dialog-inner').html(html);
+  $('#fflocation').val(dir);
   let val = 'new-directory';
   let i = 1;
   let num1 = 1;
@@ -2329,66 +2329,66 @@ function createDirectory () {
     } else {
       dir = val;
     }
-    num1 = $ ('.file-area .row-data-dir[data-file-name="' + dir + '"]').length;
-    num2 = $ ('.file-area .row-data-file[data-file-name="' + dir + '"]').length;
+    num1 = $('.file-area .row-data-dir[data-file-name="' + dir + '"]').length;
+    num2 = $('.file-area .row-data-file[data-file-name="' + dir + '"]').length;
     i++;
   } while (num1 || num2);
-  $ ('#ffname').val (dir);
-  $ ('#ffname').select ();
+  $('#ffname').val(dir);
+  $('#ffname').select();
 }
 
-function moveFile (filepath, isdir) {
-  $ ('#common-dialog-inner').html ('');
+function moveFile(filepath, isdir) {
+  $('#common-dialog-inner').html('');
   let title = '';
   if (isdir) {
     title = 'Move Directory';
   } else {
     title = 'Move File';
   }
-  $ ('#common-dialog').dialog ({
+  $('#common-dialog').dialog({
     modal: true,
     title: title,
     width: 400,
     height: 190,
     buttons: {
       OK: function () {
-        $ ('.ui-dialog-buttonpane').append (
+        $('.ui-dialog-buttonpane').append(
           '<div class="wait-status">Plase wait...</div>'
         );
-        $ ('.ui-dialog-buttonset button:first').attr ('disabled', 'disabled');
-        $ ('.ui-dialog-buttonset button:first').attr ('aria-disabled', 'true');
-        let dl = $ ('#address').val ();
-        let targetdir = $ ('#ffnewlocation').val ();
-        let curlocation = $ ('#ffcurrentlocation').val ();
-        let args = 'targetdir=' + encodeURIComponent (targetdir);
+        $('.ui-dialog-buttonset button:first').attr('disabled', 'disabled');
+        $('.ui-dialog-buttonset button:first').attr('aria-disabled', 'true');
+        let dl = $('#address').val();
+        let targetdir = $('#ffnewlocation').val();
+        let curlocation = $('#ffcurrentlocation').val();
+        let args = 'targetdir=' + encodeURIComponent(targetdir);
         args +=
           '&file[]=' +
-          encodeURIComponent (curlocation + '/' + $ ('#ffpath').val ());
+          encodeURIComponent(curlocation + '/' + $('#ffpath').val());
         let q = '?option=copyfile&deletesource=1';
-        $.post ('tool-file-operation.php' + q, {postdata: args}, function (
+        $.post('tool-file-operation.php' + q, { postdata: args }, function (
           answer
         ) {
           if (answer == 'SUCCESS' || answer == 'EXIST') {
-            openDir (dl);
+            openDir(dl);
             try {
-              $ ('#common-dialog').dialog ('destroy');
-            } catch (e) {}
+              $('#common-dialog').dialog('destroy');
+            } catch (e) { }
           } else if (answer == 'READONLY') {
-            jqAlert (
+            jqAlert(
               'The operation was disabled on read-only mode.',
               'Read-Only'
             );
           }
-          $ ('.ui-dialog-buttonpane').find ('.wait-status').remove ();
-          $ ('.ui-dialog-buttonset button:first').removeAttr ('disabled');
-          $ ('.ui-dialog-buttonset button:first').attr (
+          $('.ui-dialog-buttonpane').find('.wait-status').remove();
+          $('.ui-dialog-buttonset button:first').removeAttr('disabled');
+          $('.ui-dialog-buttonset button:first').attr(
             'aria-disabled',
             'false'
           );
         });
       },
       Cancel: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
@@ -2410,26 +2410,26 @@ function moveFile (filepath, isdir) {
     '</tr>' +
     '</table>' +
     '</form>';
-  $ ('#common-dialog-inner').html (html);
-  $ ('#ffpath').val (basename (filepath));
-  $ ('#ffcurrentlocation').val (dirname (filepath));
-  $ ('#ffnewlocation').focus ();
-  $ ('#ffnewlocation').val (dirname (filepath));
+  $('#common-dialog-inner').html(html);
+  $('#ffpath').val(basename(filepath));
+  $('#ffcurrentlocation').val(dirname(filepath));
+  $('#ffnewlocation').focus();
+  $('#ffnewlocation').val(dirname(filepath));
 }
-function uploadFile () {
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function uploadFile() {
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Upload File',
     width: 600,
     height: 410,
     buttons: {
       Close: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
-  let dl = $ ('#address').val ();
+  let dl = $('#address').val();
   let html =
     '' +
     '<div id="imageuploader">' +
@@ -2441,123 +2441,123 @@ function uploadFile () {
     '<iframe style="display:none; width:0px; height:0px;" id="formdumper" name="formdumper"></iframe>' +
     '</div>';
 
-  $ ('#common-dialog-inner').html (html);
-  let data = getQueryParams ();
+  $('#common-dialog-inner').html(html);
+  let data = getQueryParams();
   data['show-control'] = '1';
-  $.get ('tool-upload-file-settings.php', data, function (answer) {
-    $ ('#image-settings-controller').html (answer);
+  $.get('tool-upload-file-settings.php', data, function (answer) {
+    $('#image-settings-controller').html(answer);
   });
 
-  $ ('#targetdir').val (dl);
-  $.ajax ({type: 'GET', url: 'js/upload.min.js', dataType: 'script'});
+  $('#targetdir').val(dl);
+  $.ajax({ type: 'GET', url: 'js/upload.min.js', dataType: 'script' });
 }
-function saveFile (filepath, filecontent, callback) {
+function saveFile(filepath, filecontent, callback) {
   if (filepath == '') {
-    jqAlert ('Please enter a valid file name.', 'Invalid File Name');
+    jqAlert('Please enter a valid file name.', 'Invalid File Name');
   } else {
-    $ ('.ui-dialog-buttonpane').append (
+    $('.ui-dialog-buttonpane').append(
       '<div class="wait-status">Plase wait...</div>'
     );
-    $ ('.ui-dialog-buttonset button:first').attr ('disabled', 'disabled');
-    $ ('.ui-dialog-buttonset button:first').attr ('aria-disabled', 'true');
+    $('.ui-dialog-buttonset button:first').attr('disabled', 'disabled');
+    $('.ui-dialog-buttonset button:first').attr('aria-disabled', 'true');
     let q = '?option=savefile';
-    q = updateQueryParam (q);
-    $.post (
+    q = updateQueryParam(q);
+    $.post(
       'tool-edit-file.php' + q,
-      {filepath: filepath, filecontent: filecontent},
+      { filepath: filepath, filecontent: filecontent },
       function (answer) {
         if (answer == 'READONLY') {
-          jqAlert (
+          jqAlert(
             'The operation was disabled on read-only mode.',
             'Read-Only'
           );
         } else if (answer == 'READONLYFILE') {
-          jqAlert (
+          jqAlert(
             'Saving was aborted because this file is read-only. You should to change permission of this file first.',
             'Read-Only'
           );
         } else if (answer == 'ISDIR') {
-          jqAlert (
+          jqAlert(
             'Saving was aborted because this file name is similiar to a directory name. You should to change file name first.',
             'Invalid File Name'
           );
         } else if (answer == 'FORBIDDENEXT') {
-          jqAlert (
+          jqAlert(
             'Saving was aborted because this file name extension is forbidden. Please use another file name extension to save it.',
             'Forbidden Extension'
           );
         } else if (answer == 'NOTMODIFIED') {
-          jqAlert ('Content is not modified.', 'Not Modified');
+          jqAlert('Content is not modified.', 'Not Modified');
         } else {
           if (typeof callback == 'function') {
-            callback ();
+            callback();
           }
-          openDir ();
+          openDir();
         }
-        $ ('.ui-dialog-buttonpane').find ('.wait-status').remove ();
-        $ ('.ui-dialog-buttonset button:first').removeAttr ('disabled');
-        $ ('.ui-dialog-buttonset button:first').attr ('aria-disabled', 'false');
+        $('.ui-dialog-buttonpane').find('.wait-status').remove();
+        $('.ui-dialog-buttonset button:first').removeAttr('disabled');
+        $('.ui-dialog-buttonset button:first').attr('aria-disabled', 'false');
       }
     );
   }
 }
 
-function setActiveCompress (val) {
+function setActiveCompress(val) {
   let value = val ? 1 : 0;
   let q = '?';
-  q = updateQueryParam (q);
-  $.post (
+  q = updateQueryParam(q);
+  $.post(
     'tool-upload-file-settings.php' + q,
-    {'change-state': 'change-state', state: value},
-    function (answer) {}
+    { 'change-state': 'change-state', state: value },
+    function (answer) { }
   );
 }
 
-function uploadFileSettings () {
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function uploadFileSettings() {
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Upload File Settings',
     width: 420,
     height: 270,
     buttons: {
       Save: function () {
-        let args = $ ('#uploadsetting').serialize ();
+        let args = $('#uploadsetting').serialize();
         let q = '?';
-        q = updateQueryParam (q);
-        $.post (
+        q = updateQueryParam(q);
+        $.post(
           'tool-upload-file-settings.php' + q,
-          {save: 'save', data: args},
-          function (answer) {}
+          { save: 'save', data: args },
+          function (answer) { }
         );
-        $ (this).dialog ('close');
+        $(this).dialog('close');
       },
       Cancel: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
-  let data = getQueryParams ();
+  let data = getQueryParams();
   data['show-form'] = '1';
-  $.get ('tool-upload-file-settings.php', data, function (answer) {
-    $ ('#common-dialog-inner').html (answer);
+  $.get('tool-upload-file-settings.php', data, function (answer) {
+    $('#common-dialog-inner').html(answer);
   });
 }
 
 let cnt1 = '', cnt2 = '';
-function openFile (filepath) {
-  cnt2 = $ ('#filecontent').val ();
+function openFile(filepath) {
+  cnt2 = $('#filecontent').val();
   let of = true;
   if (cnt1 != cnt2) {
-    of = confirm ('Are you sure you want to reopen file without save change?');
+    of = confirm('Are you sure you want to reopen file without save change?');
   }
   if (of) {
-    editFile (filepath);
+    editFile(filepath);
   }
 }
-function editFile (filepath) {
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function editFile(filepath) {
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Edit Text File',
     closeOnEscape: false,
@@ -2566,47 +2566,47 @@ function editFile (filepath) {
     height: 410,
     buttons: {
       Save: function () {
-        saveFile ($ ('#filepath').val (), $ ('#filecontent').val ());
-        cnt1 = $ ('#filecontent').val ();
+        saveFile($('#filepath').val(), $('#filecontent').val());
+        cnt1 = $('#filecontent').val();
       },
       'Save and Close': function () {
-        saveFile (
-          $ ('#filepath').val (),
-          $ ('#filecontent').val (),
+        saveFile(
+          $('#filepath').val(),
+          $('#filecontent').val(),
           function () {
-            $ ('#common-dialog').dialog ('destroy');
+            $('#common-dialog').dialog('destroy');
           }
         );
       },
       'Close without Save': function () {
-        cnt2 = $ ('#filecontent').val ();
+        cnt2 = $('#filecontent').val();
         if (cnt1 != cnt2) {
-          if (confirm ('Are you sure you want to close without save?')) {
-            $ (this).dialog ('destroy');
+          if (confirm('Are you sure you want to close without save?')) {
+            $(this).dialog('destroy');
           }
         } else {
-          $ (this).dialog ('destroy');
+          $(this).dialog('destroy');
         }
       },
     },
     resize: function (event, ui) {
-      $ ('#filecontent').css ({height: ui.size.height - 158 + 'px'});
+      $('#filecontent').css({ height: ui.size.height - 158 + 'px' });
     },
   });
-  $ ('.ui-dialog-titlebar-close').remove ();
-  let data = getQueryParams ();
+  $('.ui-dialog-titlebar-close').remove();
+  let data = getQueryParams();
   data.option = 'openfile';
   data.filepath = filepath;
 
-  $.get ('tool-edit-file.php', data, function (answer) {
-    $ ('#common-dialog-inner').html (answer);
-    cnt1 = $ ('#filecontent').val ();
+  $.get('tool-edit-file.php', data, function (answer) {
+    $('#common-dialog-inner').html(answer);
+    cnt1 = $('#filecontent').val();
   });
 }
-function deleteFile (filepath) {
-  let dl = dirname (filepath);
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function deleteFile(filepath) {
+  let dl = dirname(filepath);
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Delete File',
     width: 400,
@@ -2616,17 +2616,17 @@ function deleteFile (filepath) {
         let args = '';
         args = 'file[]=' + filepath;
         let q = '?option=deletefile';
-        q = updateQueryParam (q);
-        $.post ('tool-file-operation.php' + q, {postdata: args}, function (
+        q = updateQueryParam(q);
+        $.post('tool-file-operation.php' + q, { postdata: args }, function (
           answer
         ) {
           if (answer == 'SUCCESS') {
-            openDir (dl);
+            openDir(dl);
             try {
-              $ ('#common-dialog').dialog ('destroy');
-            } catch (e) {}
+              $('#common-dialog').dialog('destroy');
+            } catch (e) { }
           } else if (answer == 'READONLY') {
-            jqAlert (
+            jqAlert(
               'The operation was disabled on read-only mode.',
               'Read-Only'
             );
@@ -2634,19 +2634,19 @@ function deleteFile (filepath) {
         });
       },
       Cancel: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
   let html =
     '' + '<div>Are you sure to delete this file:<br />' + filepath + '</div>';
-  $ ('#common-dialog-inner').html (html);
-  $ ('.ui-dialog-buttonset button:last').focus ();
+  $('#common-dialog-inner').html(html);
+  $('.ui-dialog-buttonset button:last').focus();
 }
-function deleteDirectory (filepath) {
-  let dl = $ ('#address').val ();
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function deleteDirectory(filepath) {
+  let dl = $('#address').val();
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Delete Directory',
     width: 400,
@@ -2656,17 +2656,17 @@ function deleteDirectory (filepath) {
         let args = '';
         args = 'file[]=' + filepath;
         let q = '?option=deletefile';
-        q = updateQueryParam (q);
-        $.post ('tool-file-operation.php' + q, {postdata: args}, function (
+        q = updateQueryParam(q);
+        $.post('tool-file-operation.php' + q, { postdata: args }, function (
           answer
         ) {
           if (answer == 'SUCCESS') {
-            openDir (dl);
+            openDir(dl);
             try {
-              $ ('#common-dialog').dialog ('destroy');
-            } catch (e) {}
+              $('#common-dialog').dialog('destroy');
+            } catch (e) { }
           } else if (answer == 'READONLY') {
-            jqAlert (
+            jqAlert(
               'The operation was disabled on read-only mode.',
               'Read-Only'
             );
@@ -2674,7 +2674,7 @@ function deleteDirectory (filepath) {
         });
       },
       Cancel: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
@@ -2683,23 +2683,23 @@ function deleteDirectory (filepath) {
     '<div>Are you sure to delete this directory including its content:<br />' +
     filepath +
     '</div>';
-  $ ('#common-dialog-inner').html (html);
-  $ ('.ui-dialog-buttonset button:last').focus ();
+  $('#common-dialog-inner').html(html);
+  $('.ui-dialog-buttonset button:last').focus();
 }
-function deleteSelectedFile () {
-  let dl = $ ('#address').val ();
+function deleteSelectedFile() {
+  let dl = $('#address').val();
   let args = '';
   let file2del = '';
   let chk = 0;
   let html = '';
-  $ ('.fileid:checked').each (function (index) {
-    file2del += '<div>' + $ (this).val () + '</div>';
-    args += '&file[]=' + encodeURIComponent ($ (this).val ());
+  $('.fileid:checked').each(function (index) {
+    file2del += '<div>' + $(this).val() + '</div>';
+    args += '&file[]=' + encodeURIComponent($(this).val());
     chk++;
   });
   if (chk) {
-    $ ('#common-dialog-inner').html ('');
-    $ ('#common-dialog').dialog ({
+    $('#common-dialog-inner').html('');
+    $('#common-dialog').dialog({
       modal: true,
       title: 'Delete File',
       width: 400,
@@ -2707,17 +2707,17 @@ function deleteSelectedFile () {
       buttons: {
         OK: function () {
           let q = '?option=deletefile';
-          q = updateQueryParam (q);
-          $.post ('tool-file-operation.php' + q, {postdata: args}, function (
+          q = updateQueryParam(q);
+          $.post('tool-file-operation.php' + q, { postdata: args }, function (
             answer
           ) {
             if (answer == 'SUCCESS') {
-              openDir (dl);
+              openDir(dl);
               try {
-                $ ('#common-dialog').dialog ('destroy');
-              } catch (e) {}
+                $('#common-dialog').dialog('destroy');
+              } catch (e) { }
             } else if (answer == 'READONLY') {
-              jqAlert (
+              jqAlert(
                 'The operation was disabled on read-only mode.',
                 'Read-Only'
               );
@@ -2725,7 +2725,7 @@ function deleteSelectedFile () {
           });
         },
         Cancel: function () {
-          $ (this).dialog ('destroy');
+          $(this).dialog('destroy');
         },
       },
     });
@@ -2733,101 +2733,101 @@ function deleteSelectedFile () {
       '<div>Are you sure to delete file/s:</div><div class="seleted-file-list">' +
       file2del +
       '</div></div>';
-    $ ('#common-dialog-inner').html (html);
-    $ ('.ui-dialog-buttonset button:last').focus ();
+    $('#common-dialog-inner').html(html);
+    $('.ui-dialog-buttonset button:last').focus();
   } else {
-    jqAlert ('No file selected.', 'Invalid Operation');
+    jqAlert('No file selected.', 'Invalid Operation');
   }
 }
 
-function selectAll (sel) {
+function selectAll(sel) {
   if (sel) {
-    let len = $ ('.fileid').length;
+    let len = $('.fileid').length;
     let i;
     for (i = 0; i < len; i++) {
-      $ ('.fileid')[i].checked = true;
+      $('.fileid')[i].checked = true;
     }
     try {
-      $ ('#control-fileid')[0].checked = true;
-    } catch (e) {}
+      $('#control-fileid')[0].checked = true;
+    } catch (e) { }
   } else {
-    let len = $ ('.fileid').length;
+    let len = $('.fileid').length;
     let i;
     for (i = 0; i < len; i++) {
-      $ ('.fileid')[i].checked = false;
+      $('.fileid')[i].checked = false;
     }
     try {
-      $ ('#control-fileid')[0].checked = false;
-    } catch (e) {}
+      $('#control-fileid')[0].checked = false;
+    } catch (e) { }
   }
-  updateToolbarStatus ();
+  updateToolbarStatus();
 }
 let togglethumb = false;
-function thumbnail () {
-  let curdir = $ ('#address').val ();
+function thumbnail() {
+  let curdir = $('#address').val();
   togglethumb = !togglethumb;
   if (togglethumb) {
-    $ ('#tb-thumbnail').addClass ('tb-selected');
+    $('#tb-thumbnail').addClass('tb-selected');
   } else {
-    $ ('#tb-thumbnail').removeClass ('tb-selected');
+    $('#tb-thumbnail').removeClass('tb-selected');
   }
-  let selectedfile = new Array ();
-  $ ('.fileid:checked').each (function (index) {
-    selectedfile[selectedfile.length] = $ (this).val ();
+  let selectedfile = new Array();
+  $('.fileid:checked').each(function (index) {
+    selectedfile[selectedfile.length] = $(this).val();
   });
   let tgl = togglethumb ? 1 : 0;
-  cookieWrite ('togglethumb', tgl, 24);
-  openDir (curdir, selectedfile);
+  cookieWrite('togglethumb', tgl, 24);
+  openDir(curdir, selectedfile);
 }
 
-function refreshList () {
-  let curdir = $ ('#address').val ();
-  let selectedfile = new Array ();
-  $ ('.fileid:checked').each (function (index) {
-    selectedfile[selectedfile.length] = $ (this).val ();
+function refreshList() {
+  let curdir = $('#address').val();
+  let selectedfile = new Array();
+  $('.fileid:checked').each(function (index) {
+    selectedfile[selectedfile.length] = $(this).val();
   });
-  openDir (curdir, selectedfile);
+  openDir(curdir, selectedfile);
 }
-let clipboardfile = {operation: '', content: []};
+let clipboardfile = { operation: '', content: [] };
 
-function transferFile () {
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function transferFile() {
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Transfer File',
     width: 400,
     height: 200,
     buttons: {
       'Get File': function () {
-        let sourcefile = $ ('#source').val ();
-        let targetlocation = $ ('#target').val ();
-        let targetname = $ ('#filename').val ();
+        let sourcefile = $('#source').val();
+        let targetlocation = $('#target').val();
+        let targetname = $('#filename').val();
         let q = '?option=transferfile';
-        q = updateQueryParam (q);
-        $.post (
+        q = updateQueryParam(q);
+        $.post(
           'tool-file-operation.php' + q,
-          {source: sourcefile, location: targetlocation, name: targetname},
+          { source: sourcefile, location: targetlocation, name: targetname },
           function (answer) {
             if (answer == 'READONLY') {
-              jqAlert (
+              jqAlert(
                 'The operation was disabled on read-only mode.',
                 'Read-Only'
               );
             } else if (answer == 'FAILED') {
-              jqAlert ('Transfer file failed.', 'Failed');
+              jqAlert('Transfer file failed.', 'Failed');
             } else {
               try {
-                $ ('#common-dialog').dialog ('destroy');
-              } catch (e) {}
-              openDir (targetlocation);
+                $('#common-dialog').dialog('destroy');
+              } catch (e) { }
+              openDir(targetlocation);
             }
           }
         );
       },
       Cancle: function () {
         try {
-          $ ('#common-dialog').dialog ('destroy');
-        } catch (e) {}
+          $('#common-dialog').dialog('destroy');
+        } catch (e) { }
       },
     },
   });
@@ -2848,154 +2848,154 @@ function transferFile () {
     '</tr>' +
     '</table>' +
     '</form>';
-  $ ('#common-dialog-inner').html (html);
-  let targetlocation = $ ('#address').val ();
-  $ ('#target').val (targetlocation);
-  $ ('#source').on ('change', function () {
-    let val = $ (this).val ();
+  $('#common-dialog-inner').html(html);
+  let targetlocation = $('#address').val();
+  $('#target').val(targetlocation);
+  $('#source').on('change', function () {
+    let val = $(this).val();
     let fn = '';
-    if (val.indexOf ('data:') == 0) {
-      fn = dataToFileName (val);
+    if (val.indexOf('data:') == 0) {
+      fn = dataToFileName(val);
     } else {
-      fn = filterFileName (basename ($ (this).val ()));
+      fn = filterFileName(basename($(this).val()));
     }
-    $ ('#filename').val (fn);
+    $('#filename').val(fn);
   });
-  $ ('#source').on ('keyup', function () {
-    let val = $ (this).val ();
+  $('#source').on('keyup', function () {
+    let val = $(this).val();
     let fn = '';
-    if (val.indexOf ('data:') == 0) {
-      fn = dataToFileName (val);
+    if (val.indexOf('data:') == 0) {
+      fn = dataToFileName(val);
     } else {
-      fn = filterFileName (basename ($ (this).val ()));
+      fn = filterFileName(basename($(this).val()));
     }
-    $ ('#filename').val (fn);
+    $('#filename').val(fn);
   });
 }
-function dataToFileName (data) {
-  let arr0 = data.split (',');
-  let arr1 = arr0[0].split (':');
-  let arr2 = arr1[1].split (';');
-  let arr3 = arr2[0].split ('/').join ('.');
+function dataToFileName(data) {
+  let arr0 = data.split(',');
+  let arr1 = arr0[0].split(':');
+  let arr2 = arr1[1].split(';');
+  let arr3 = arr2[0].split('/').join('.');
   return arr3;
 }
 
-function filterFileName (name) {
-  return name.replace (/[^A-Za-z\.\-\d_\/]/g, '');
+function filterFileName(name) {
+  return name.replace(/[^A-Za-z\.\-\d_\/]/g, '');
 }
 
-function copySelectedFile () {
+function copySelectedFile() {
   this.operation = 'copy';
-  this.content = new Array ();
+  this.content = new Array();
   let ff = this;
   let chk = 0;
-  $ ('.fileid:checked').each (function (index) {
-    ff.content[ff.content.length] = $ (this).val ();
+  $('.fileid:checked').each(function (index) {
+    ff.content[ff.content.length] = $(this).val();
     chk++;
   });
   clipboardfile = ff;
   if (chk == 0) {
-    jqAlert ('No file selected.', 'Invalid Operation');
+    jqAlert('No file selected.', 'Invalid Operation');
   } else {
-    $ ('#tb-clipboard').removeClass ('tb-hide');
-    $ ('#tb-clipboard-empty').removeClass ('tb-hide');
+    $('#tb-clipboard').removeClass('tb-hide');
+    $('#tb-clipboard-empty').removeClass('tb-hide');
   }
-  updateToolbarStatus ();
+  updateToolbarStatus();
 }
 
-function cutSelectedFile () {
+function cutSelectedFile() {
   this.operation = 'cut';
-  this.content = new Array ();
+  this.content = new Array();
   let ff = this;
   let chk = 0;
-  $ ('.fileid:checked').each (function (index) {
-    ff.content[ff.content.length] = $ (this).val ();
+  $('.fileid:checked').each(function (index) {
+    ff.content[ff.content.length] = $(this).val();
     chk++;
   });
   clipboardfile = ff;
   if (chk == 0) {
-    jqAlert ('No file selected.', 'Invalid Operation');
+    jqAlert('No file selected.', 'Invalid Operation');
   } else {
-    $ ('#tb-clipboard').removeClass ('tb-hide');
-    $ ('#tb-clipboard-empty').removeClass ('tb-hide');
+    $('#tb-clipboard').removeClass('tb-hide');
+    $('#tb-clipboard-empty').removeClass('tb-hide');
   }
-  updateToolbarStatus ();
+  updateToolbarStatus();
 }
-function cutFile (filepath) {
+function cutFile(filepath) {
   if (!filepath) {
-    jqAlert ('No file selected.', 'Invalid Operation');
+    jqAlert('No file selected.', 'Invalid Operation');
   } else {
     this.operation = 'cut';
-    this.content = new Array ();
+    this.content = new Array();
     let ff = this;
     ff.content[ff.content.length] = filepath;
     clipboardfile = ff;
-    $ ('#tb-clipboard').removeClass ('tb-hide');
-    $ ('#tb-clipboard-empty').removeClass ('tb-hide');
-    updateToolbarStatus ();
+    $('#tb-clipboard').removeClass('tb-hide');
+    $('#tb-clipboard-empty').removeClass('tb-hide');
+    updateToolbarStatus();
   }
 }
-function copyFile (filepath) {
+function copyFile(filepath) {
   if (!filepath) {
-    jqAlert ('No file selected.', 'Invalid Operation');
+    jqAlert('No file selected.', 'Invalid Operation');
   } else {
     this.operation = 'copy';
-    this.content = new Array ();
+    this.content = new Array();
     let ff = this;
     ff.content[ff.content.length] = filepath;
     clipboardfile = ff;
-    $ ('#tb-clipboard').removeClass ('tb-hide');
-    $ ('#tb-clipboard-empty').removeClass ('tb-hide');
-    updateToolbarStatus ();
+    $('#tb-clipboard').removeClass('tb-hide');
+    $('#tb-clipboard-empty').removeClass('tb-hide');
+    updateToolbarStatus();
   }
 }
 
-function pasteFile () {
+function pasteFile() {
   let i = 0;
-  let dl = $ ('#address').val ();
+  let dl = $('#address').val();
   if (clipboardfile.content.length) {
-    let args = 'targetdir=' + encodeURIComponent (dl);
+    let args = 'targetdir=' + encodeURIComponent(dl);
     for (i in clipboardfile.content) {
-      args += '&file[]=' + encodeURIComponent (clipboardfile.content[i]);
+      args += '&file[]=' + encodeURIComponent(clipboardfile.content[i]);
     }
     let q = '?option=copyfile';
     if (clipboardfile.operation == 'cut') {
       q += '&deletesource=1';
     }
-    q = updateQueryParam (q);
-    $.post ('tool-file-operation.php' + q, {postdata: args}, function (answer) {
+    q = updateQueryParam(q);
+    $.post('tool-file-operation.php' + q, { postdata: args }, function (answer) {
       if (answer == 'SUCCESS' || answer == 'EXIST') {
-        openDir (dl);
+        openDir(dl);
         if (clipboardfile.operation == 'cut') {
-          emptyClipboard ();
+          emptyClipboard();
         }
       } else if (answer == 'READONLY') {
-        jqAlert ('The operation was disabled on read-only mode.', 'Read-Only');
+        jqAlert('The operation was disabled on read-only mode.', 'Read-Only');
       }
     });
   } else {
-    jqAlert ('The clipboard is empty.', 'Invalid Operation');
+    jqAlert('The clipboard is empty.', 'Invalid Operation');
   }
-  updateToolbarStatus ();
+  updateToolbarStatus();
 }
 
-function emptyClipboard () {
-  clipboardfile.content = new Array ();
+function emptyClipboard() {
+  clipboardfile.content = new Array();
   clipboardfile.operation = '';
-  $ ('#tb-clipboard').addClass ('tb-hide');
-  $ ('#tb-clipboard-empty').addClass ('tb-hide');
-  updateToolbarStatus ();
+  $('#tb-clipboard').addClass('tb-hide');
+  $('#tb-clipboard-empty').addClass('tb-hide');
+  updateToolbarStatus();
 }
-function showClipboard () {
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function showClipboard() {
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Clipboard Content',
     width: 400,
     height: 230,
     buttons: {
       Close: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
@@ -3007,18 +3007,18 @@ function showClipboard () {
     clipboardfile.content.length +
     '</div>' +
     '<div class="seleted-file-list">' +
-    clipboardfile.content.join ('<br />') +
+    clipboardfile.content.join('<br />') +
     '</div>' +
     '';
-  $ ('#common-dialog-inner').html (html);
+  $('#common-dialog-inner').html(html);
 }
-function changePermission (
+function changePermission(
   filepath //NOSONAR
 ) {
   let data = [];
   if (!filepath) {
-    $ ('.fileid:checked').each (function (index, element) {
-      data.push ($ (this).val ());
+    $('.fileid:checked').each(function (index, element) {
+      data.push($(this).val());
     });
   } else {
     data = [filepath];
@@ -3026,44 +3026,44 @@ function changePermission (
   if (data.length == 1) {
     filepath = data[0];
   }
-  initPermissionControl ();
-  $ ('#common-dialog-inner').html (
+  initPermissionControl();
+  $('#common-dialog-inner').html(
     '<table width="100%" border="0" cellspacing="1" cellpadding="2" class="table table-striped table-sm file-table permission-table">' +
-      '<thead>' +
-      '  <tr>' +
-      '    <td>User</td>' +
-      '    <td width="25%">Read</td>' +
-      '    <td width="25%">Write</td>' +
-      '    <td width="25%">Execute</td>' +
-      '  </tr>' +
-      '</thead>' +
-      '<tbody>' +
-      '  <tr>' +
-      '    <td>Owner</td>' +
-      '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="user_read" checked="checked"> Allowed</label></td>' +
-      '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="user_write"> Allowed</label></td>' +
-      '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="user_execute" checked="checked"> Allowed</label></td>' +
-      '  </tr>' +
-      '  <tr>' +
-      '    <td>Group</td>' +
-      '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="group_read" checked="checked"> Allowed</label></td>' +
-      '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="group_write"> Allowed</label></td>' +
-      '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="group_execute" checked="checked"> Allowed</label></td>' +
-      '  </tr>' +
-      '  <tr>' +
-      '    <td>World</td>' +
-      '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="world_read" checked="checked"> Allowed</label></td>' +
-      '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="world_write"> Allowed</label></td>' +
-      '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="world_execute" checked="checked"> Allowed</label></td>' +
-      '  </tr>' +
-      '  <tr>' +
-      '    <td>Permission</td>' +
-      '    <td colspan="3"><input type="text" id="file-permission" name="file-permission" class="form-control input-text input-text-medium" value="0555" readonly="readonly"> <span id="recursive-control"><label><input type="checkbox" class="recursive" value="1" name="recursive"> Recursive to contents</label><span></td>' +
-      '    </tr>' +
-      '</tbody>' +
-      '</table>'
+    '<thead>' +
+    '  <tr>' +
+    '    <td>User</td>' +
+    '    <td width="25%">Read</td>' +
+    '    <td width="25%">Write</td>' +
+    '    <td width="25%">Execute</td>' +
+    '  </tr>' +
+    '</thead>' +
+    '<tbody>' +
+    '  <tr>' +
+    '    <td>Owner</td>' +
+    '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="user_read" checked="checked"> Allowed</label></td>' +
+    '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="user_write"> Allowed</label></td>' +
+    '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="user_execute" checked="checked"> Allowed</label></td>' +
+    '  </tr>' +
+    '  <tr>' +
+    '    <td>Group</td>' +
+    '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="group_read" checked="checked"> Allowed</label></td>' +
+    '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="group_write"> Allowed</label></td>' +
+    '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="group_execute" checked="checked"> Allowed</label></td>' +
+    '  </tr>' +
+    '  <tr>' +
+    '    <td>World</td>' +
+    '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="world_read" checked="checked"> Allowed</label></td>' +
+    '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="world_write"> Allowed</label></td>' +
+    '    <td><label><input type="checkbox" class="perm-checkbox" value="1" name="world_execute" checked="checked"> Allowed</label></td>' +
+    '  </tr>' +
+    '  <tr>' +
+    '    <td>Permission</td>' +
+    '    <td colspan="3"><input type="text" id="file-permission" name="file-permission" class="form-control input-text input-text-medium" value="0555" readonly="readonly"> <span id="recursive-control"><label><input type="checkbox" class="recursive" value="1" name="recursive"> Recursive to contents</label><span></td>' +
+    '    </tr>' +
+    '</tbody>' +
+    '</table>'
   );
-  $ ('#common-dialog').dialog ({
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Set Permission',
     width: 400,
@@ -3071,40 +3071,40 @@ function changePermission (
     buttons: {
       Change: function () {
         if (data.length == 0) {
-          jqAlert ('No file selected.', 'Invalid Operation');
+          jqAlert('No file selected.', 'Invalid Operation');
         } else {
-          $ ('.ui-dialog-buttonpane').append (
+          $('.ui-dialog-buttonpane').append(
             '<div class="wait-status">Plase wait...</div>'
           );
-          $ ('.ui-dialog-buttonset button:first').attr ('disabled', 'disabled');
-          $ ('.ui-dialog-buttonset button:first').attr (
+          $('.ui-dialog-buttonset button:first').attr('disabled', 'disabled');
+          $('.ui-dialog-buttonset button:first').attr(
             'aria-disabled',
             'true'
           );
-          let rec = $ ('#recursive:checked').val ();
-          let perms = $ ('#file-permission').val ();
+          let rec = $('#recursive:checked').val();
+          let perms = $('#file-permission').val();
 
           let q = '?option=change-perms';
-          q = updateQueryParam (q);
+          q = updateQueryParam(q);
 
-          $.post (
+          $.post(
             'tool-file-operation.php' + q,
-            {recursive: rec, perms: perms, data: data},
+            { recursive: rec, perms: perms, data: data },
             function (answer) {
               if (answer == 'SUCCESS') {
                 try {
-                  $ ('#common-dialog').dialog ('destroy');
-                } catch (e) {}
-                openDir ();
+                  $('#common-dialog').dialog('destroy');
+                } catch (e) { }
+                openDir();
               } else if (answer == 'READONLY') {
-                jqAlert (
+                jqAlert(
                   'The operation was disabled on read-only mode.',
                   'Read-Only'
                 );
               }
-              $ ('.ui-dialog-buttonpane').find ('.wait-status').remove ();
-              $ ('.ui-dialog-buttonset button:first').removeAttr ('disabled');
-              $ ('.ui-dialog-buttonset button:first').attr (
+              $('.ui-dialog-buttonpane').find('.wait-status').remove();
+              $('.ui-dialog-buttonset button:first').removeAttr('disabled');
+              $('.ui-dialog-buttonset button:first').attr(
                 'aria-disabled',
                 'false'
               );
@@ -3113,186 +3113,186 @@ function changePermission (
         }
       },
       Close: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
   if (!filepath) {
-    if ($ ('.fileid[data-isdir=true]:checked').length == 0) {
-      $ ('#recursive-control').remove ();
+    if ($('.fileid[data-isdir=true]:checked').length == 0) {
+      $('#recursive-control').remove();
     }
   } else {
-    let data = getQueryParams ();
+    let data = getQueryParams();
     data.option = 'get-perms';
     data.filepath = filepath;
-    $.get ('tool-file-operation.php', data, function (answer) {
-      let obj = eval (answer)[0];
+    $.get('tool-file-operation.php', data, function (answer) {
+      let obj = eval(answer)[0];
       let i;
       for (i in obj) {
-        if (i.indexOf ('_') != -1) {
+        if (i.indexOf('_') != -1) {
           if (obj[i] == '1') {
-            $ ('input[name="' + i + '"]').attr ('checked', 'checked');
+            $('input[name="' + i + '"]').attr('checked', 'checked');
           } else {
-            $ ('input[name="' + i + '"]').removeAttr ('checked');
+            $('input[name="' + i + '"]').removeAttr('checked');
           }
-        } else if (i.indexOf ('-') != -1) {
-          $ ('input[name="' + i + '"]').val (obj[i]);
+        } else if (i.indexOf('-') != -1) {
+          $('input[name="' + i + '"]').val(obj[i]);
         }
         if (obj['filetype'] == 'file') {
-          $ ('#recursive-control').remove ();
+          $('#recursive-control').remove();
         }
       }
     });
   }
 }
-function initPermissionControl () {
-  $ (document).on ('change', '.perm-checkbox', function () {
-    let c11 = $ ('.perm-checkbox[name=user_read]:checked').length ? 1 : 0;
-    let c12 = $ ('.perm-checkbox[name=user_write]:checked').length ? 1 : 0;
-    let c13 = $ ('.perm-checkbox[name=user_execute]:checked').length ? 1 : 0;
-    let c21 = $ ('.perm-checkbox[name=group_read]:checked').length ? 1 : 0;
-    let c22 = $ ('.perm-checkbox[name=group_write]:checked').length ? 1 : 0;
-    let c23 = $ ('.perm-checkbox[name=group_execute]:checked').length ? 1 : 0;
-    let c31 = $ ('.perm-checkbox[name=world_read]:checked').length ? 1 : 0;
-    let c32 = $ ('.perm-checkbox[name=world_write]:checked').length ? 1 : 0;
-    let c33 = $ ('.perm-checkbox[name=world_execute]:checked').length ? 1 : 0;
+function initPermissionControl() {
+  $(document).on('change', '.perm-checkbox', function () {
+    let c11 = $('.perm-checkbox[name=user_read]:checked').length ? 1 : 0;
+    let c12 = $('.perm-checkbox[name=user_write]:checked').length ? 1 : 0;
+    let c13 = $('.perm-checkbox[name=user_execute]:checked').length ? 1 : 0;
+    let c21 = $('.perm-checkbox[name=group_read]:checked').length ? 1 : 0;
+    let c22 = $('.perm-checkbox[name=group_write]:checked').length ? 1 : 0;
+    let c23 = $('.perm-checkbox[name=group_execute]:checked').length ? 1 : 0;
+    let c31 = $('.perm-checkbox[name=world_read]:checked').length ? 1 : 0;
+    let c32 = $('.perm-checkbox[name=world_write]:checked').length ? 1 : 0;
+    let c33 = $('.perm-checkbox[name=world_execute]:checked').length ? 1 : 0;
 
     let u = c11 * 4 + c12 * 2 + c13;
     let g = c21 * 4 + c22 * 2 + c23;
     let w = c31 * 4 + c32 * 2 + c33;
     let p = '0' + u + '' + g + '' + w + '';
-    $ ('#file-permission').val (p);
+    $('#file-permission').val(p);
   });
 }
-function editImage (fp) {
+function editImage(fp) {
   // calculate window size
-  let wwidth = $ (window).width ();
-  let wheight = $ (window).height ();
+  let wwidth = $(window).width();
+  let wheight = $(window).height();
   // create layer
   let html = '<div id="image-editor-layer"></div>';
-  $ ('#all').append (html);
-  $ ('#image-editor-layer').css ({width: 0 + 'px', height: 0 + 'px'});
+  $('#all').append(html);
+  $('#image-editor-layer').css({ width: 0 + 'px', height: 0 + 'px' });
 
-  let data = getQueryParams ();
+  let data = getQueryParams();
   data.filepath = fp;
 
-  $.get ('tool-image-editor-form.php', data, function (answer) {
-    $ ('#image-editor-layer').html (answer);
+  $.get('tool-image-editor-form.php', data, function (answer) {
+    $('#image-editor-layer').html(answer);
     let eh = wheight - 73;
-    $ ('.image-editor-sidebar-inner, .image-editor-mainbar-inner').css (
+    $('.image-editor-sidebar-inner, .image-editor-mainbar-inner').css(
       'height',
       eh + 'px'
     );
-    let options = {to: {width: wwidth, height: wheight}};
-    $ ('#image-editor-layer').show (
+    let options = { to: { width: wwidth, height: wheight } };
+    $('#image-editor-layer').show(
       'size',
       options,
       500,
       callbackShowImageEditor
     );
-    initImageEditorForm ();
+    initImageEditorForm();
   });
 }
 
-function initImageEditorForm () {
-  $ ('.new-dimension input[type=checkbox]').each (function (index) {
-    $ (this).css ({border: 'none', padding: '0'});
+function initImageEditorForm() {
+  $('.new-dimension input[type=checkbox]').each(function (index) {
+    $(this).css({ border: 'none', padding: '0' });
   });
-  setSizeImageEditor ();
-  filepath = $ ('#curfilepath').val ();
-  fileurl = $ ('#curfileurl').val ();
-  let curw = parseInt ($ ('#curwidth').val ());
-  let curh = parseInt ($ ('#curheight').val ());
+  setSizeImageEditor();
+  filepath = $('#curfilepath').val();
+  fileurl = $('#curfileurl').val();
+  let curw = parseInt($('#curwidth').val());
+  let curh = parseInt($('#curheight').val());
   imgwidth = curw;
   imgheight = curh;
   angle = 0;
   fliph = 0;
   flipv = 0;
-  $ (document).on ('change', '#newwidth', function () {
-    if ($ ('#aspectratio:checked').val ()) {
+  $(document).on('change', '#newwidth', function () {
+    if ($('#aspectratio:checked').val()) {
       let ratio = 1;
       if (angle % 180 == 0) {
         ratio = curh / curw;
       } else {
         ratio = curw / curh;
       }
-      let nw = parseInt ($ (this).val ());
-      let h2 = parseInt (ratio * nw);
-      $ ('#newheight').val (h2);
+      let nw = parseInt($(this).val());
+      let h2 = parseInt(ratio * nw);
+      $('#newheight').val(h2);
     }
-    $ ('#image2edit').css ({
-      width: $ ('#newwidth').val () + 'px',
-      height: $ ('#newheight').val () + 'px',
+    $('#image2edit').css({
+      width: $('#newwidth').val() + 'px',
+      height: $('#newheight').val() + 'px',
     });
-    imgwidth = $ ('#newwidth').val ();
-    imgheight = $ ('#newheight').val ();
-    previewImageEdit ();
+    imgwidth = $('#newwidth').val();
+    imgheight = $('#newheight').val();
+    previewImageEdit();
   });
-  $ (document).on ('change', '#newheight', function () {
-    if ($ ('#aspectratio:checked').val ()) {
+  $(document).on('change', '#newheight', function () {
+    if ($('#aspectratio:checked').val()) {
       let ratio = 1;
       if (angle % 180 == 0) {
         ratio = curw / curh;
       } else {
         ratio = curh / curw;
       }
-      let nh = parseInt ($ (this).val ());
-      let w2 = parseInt (ratio * nh);
-      $ ('#newwidth').val (w2);
+      let nh = parseInt($(this).val());
+      let w2 = parseInt(ratio * nh);
+      $('#newwidth').val(w2);
     }
-    $ ('#image2edit').css ({
-      width: $ ('#newwidth').val () + 'px',
-      height: $ ('#newheight').val () + 'px',
+    $('#image2edit').css({
+      width: $('#newwidth').val() + 'px',
+      height: $('#newheight').val() + 'px',
     });
-    imgwidth = $ ('#newwidth').val ();
-    imgheight = $ ('#newheight').val ();
-    previewImageEdit ();
+    imgwidth = $('#newwidth').val();
+    imgheight = $('#newheight').val();
+    previewImageEdit();
   });
-  $ (document).on ('click', '#cropimage', function () {
-    crop = $ (this).attr ('checked') ? 1 : 0;
-    previewImageEdit ();
+  $(document).on('click', '#cropimage', function () {
+    crop = $(this).attr('checked') ? 1 : 0;
+    previewImageEdit();
   });
 
-  $ (window).resize (function () {
-    setSizeImageEditor ();
+  $(window).resize(function () {
+    setSizeImageEditor();
   });
 }
-function setSizeImageEditor () {
-  let wh = parseInt ($ (window).height ());
-  let ww = parseInt ($ (window).width ());
+function setSizeImageEditor() {
+  let wh = parseInt($(window).height());
+  let ww = parseInt($(window).width());
   let eh = wh - 73;
   let ew = ww - 200;
-  $ ('.image-editor-sidebar-inner, .image-editor-mainbar-inner').css (
+  $('.image-editor-sidebar-inner, .image-editor-mainbar-inner').css(
     'height',
     eh + 'px'
   );
-  $ ('#image-editor-layer').css ('height', wh + 'px');
-  $ ('#curfilepath').css ('width', ew + 'px');
+  $('#image-editor-layer').css('height', wh + 'px');
+  $('#curfilepath').css('width', ew + 'px');
 }
-function callbackShowImageEditor () {
-  $ ('#wrapper').css ('display', 'none');
-  $ ('#image-editor-layer').css ('position', 'static');
-  $ ('#image-editor-layer').css ('width', '100%');
+function callbackShowImageEditor() {
+  $('#wrapper').css('display', 'none');
+  $('#image-editor-layer').css('position', 'static');
+  $('#image-editor-layer').css('width', '100%');
 }
-function callbackDestroyImageEditor () {
-  $ ('#image-editor-layer').remove ();
+function callbackDestroyImageEditor() {
+  $('#image-editor-layer').remove();
 }
 
-function destroyImageEditor () {
-  $ ('#wrapper').css ('display', 'block');
-  $ ('#image-editor-layer').css ('top', 0);
-  $ ('#image-editor-layer').css ('left', 0);
-  $ ('#image-editor-layer').css ('position', 'absolute');
-  let options = {to: {width: 0, height: 0}};
-  $ ('#image-editor-layer').hide ('size', options, 500, function () {
-    $ ('#image-editor-layer').remove ();
+function destroyImageEditor() {
+  $('#wrapper').css('display', 'block');
+  $('#image-editor-layer').css('top', 0);
+  $('#image-editor-layer').css('left', 0);
+  $('#image-editor-layer').css('position', 'absolute');
+  let options = { to: { width: 0, height: 0 } };
+  $('#image-editor-layer').hide('size', options, 500, function () {
+    $('#image-editor-layer').remove();
   });
 }
-function previewImageEdit () {
-  let rnd = Math.random () * 1000;
+function previewImageEdit() {
+  let rnd = Math.random() * 1000;
   let html =
     '<img src="tool-image-editor-thumbnail.php?filepath=' +
-    encodeURIComponent (filepath) +
+    encodeURIComponent(filepath) +
     '&flipv=' +
     flipv +
     '&fliph=' +
@@ -3308,14 +3308,14 @@ function previewImageEdit () {
     '&rand=' +
     rnd +
     '" >';
-  $ ('#image-content').html (html);
+  $('#image-content').html(html);
 }
-function saveImage () {
-  if (confirm ('Are you sure to save this state and replace current file?')) {
-    filepath = $ ('#curfilepath').val ();
+function saveImage() {
+  if (confirm('Are you sure to save this state and replace current file?')) {
+    filepath = $('#curfilepath').val();
     let args =
       'option=save2file&filepath=' +
-      encodeURIComponent (filepath) +
+      encodeURIComponent(filepath) +
       '&flipv=' +
       flipv +
       '&fliph=' +
@@ -3329,72 +3329,72 @@ function saveImage () {
       '&crop=' +
       crop;
     let q = '?';
-    q = updateQueryParam (q);
-    $.post ('tool-image-editor-thumbnail.php' + q, {postdata: args}, function (
+    q = updateQueryParam(q);
+    $.post('tool-image-editor-thumbnail.php' + q, { postdata: args }, function (
       answer
     ) {
       if (answer == 'SUCCESS') {
-        let data = getQueryParams ();
+        let data = getQueryParams();
         data.filepath = filepath;
-        $.get ('tool-image-editor-form.php', data, function (answer) {
-          $ ('#image-editor-layer').html (answer);
-          initImageEditorForm ();
+        $.get('tool-image-editor-form.php', data, function (answer) {
+          $('#image-editor-layer').html(answer);
+          initImageEditorForm();
         });
       } else if (answer == 'READONLY') {
-        jqAlert ('The operation was disabled on read-only mode.', 'Read-Only');
+        jqAlert('The operation was disabled on read-only mode.', 'Read-Only');
       }
     });
   }
 }
-function rotateCW () {
+function rotateCW() {
   angle -= 90;
   while (angle < 0)
     angle += 360;
   angle = angle % 360;
-  imgwidth = $ ('#newwidth').val ();
-  imgheight = $ ('#newheight').val ();
+  imgwidth = $('#newwidth').val();
+  imgheight = $('#newheight').val();
   let tmp = imgwidth;
   imgwidth = imgheight;
   imgheight = tmp;
-  $ ('#newwidth').val (imgwidth);
-  $ ('#newheight').val (imgheight);
-  previewImageEdit ();
+  $('#newwidth').val(imgwidth);
+  $('#newheight').val(imgheight);
+  previewImageEdit();
 }
-function rotateCCW () {
+function rotateCCW() {
   angle += 90;
   while (angle > 360)
     angle -= 360;
   angle = angle % 360;
-  imgwidth = $ ('#newwidth').val ();
-  imgheight = $ ('#newheight').val ();
+  imgwidth = $('#newwidth').val();
+  imgheight = $('#newheight').val();
   let tmp = imgwidth;
   imgwidth = imgheight;
   imgheight = tmp;
-  $ ('#newwidth').val (imgwidth);
-  $ ('#newheight').val (imgheight);
-  previewImageEdit ();
+  $('#newwidth').val(imgwidth);
+  $('#newheight').val(imgheight);
+  previewImageEdit();
 }
-function flipV () {
+function flipV() {
   flipv++;
   flipv = flipv % 2;
-  previewImageEdit ();
+  previewImageEdit();
 }
 
-function flipH () {
+function flipH() {
   fliph++;
   fliph = fliph % 2;
-  previewImageEdit ();
+  previewImageEdit();
 }
-function resizeImage () {
+function resizeImage() {
   resize++;
   resize = resize % 2;
   if (resize) {
-    $ ('.image-tool-resize-dimension').slideDown (400);
+    $('.image-tool-resize-dimension').slideDown(400);
   } else {
-    $ ('.image-tool-resize-dimension').slideUp (400);
+    $('.image-tool-resize-dimension').slideUp(400);
   }
 }
-function about () {
+function about() {
   let html =
     '' +
     '<table width="100%" border="0" cellpadding="0" cellspacing="0" class="dialog-table dialog-about">' +
@@ -3406,96 +3406,96 @@ function about () {
     '<tr><td>Sponsored Link</td><td><a href="http://www.planetbiru.com/" target="_blank">Planetbiru</a></td></tr>' +
     '<tr><td>Information</td><td><a href="javascript:;" onclick="return showInformation();">Click Here</a></td></tr>' +
     '</table>';
-  overlayDialog (html, 320, 140);
-  $ ('.dialog-about a').css ({'text-decoration': 'none'});
-  fixOverlayDialogToInner ('.dialog-about');
+  overlayDialog(html, 320, 140);
+  $('.dialog-about a').css({ 'text-decoration': 'none' });
+  fixOverlayDialogToInner('.dialog-about');
 }
 
-function preventSelect (url) {
+function preventSelect(url) {
   skipondrop = true;
 }
 
-function initDropable () {
-  $ ('.file-list .row-data-dir').draggable ({
+function initDropable() {
+  $('.file-list .row-data-dir').draggable({
     drag: function () {
-      preventSelect ($ (this).attr ('data-file-url'));
-      $ (this).css ({'z-index': 400, opacity: 0.8});
+      preventSelect($(this).attr('data-file-url'));
+      $(this).css({ 'z-index': 400, opacity: 0.8 });
     },
   });
-  $ ('.file-list .row-data-file').draggable ({
+  $('.file-list .row-data-file').draggable({
     drag: function () {
-      preventSelect ($ (this).attr ('data-file-url'));
-      $ (this).css ({'z-index': 400, opacity: 0.8});
+      preventSelect($(this).attr('data-file-url'));
+      $(this).css({ 'z-index': 400, opacity: 0.8 });
     },
   });
-  $ ('.file-list .row-data-dir').droppable ({
+  $('.file-list .row-data-dir').droppable({
     activeClass: 'directory-drop-active',
     hoverClass: 'directory-drop-hover',
     drop: function (event, ui) {
       let curlocation =
-        ui.draggable.attr ('data-file-location') +
+        ui.draggable.attr('data-file-location') +
         '/' +
-        ui.draggable.attr ('data-file-name');
+        ui.draggable.attr('data-file-name');
       let targetdir =
-        $ (this).attr ('data-file-location') +
+        $(this).attr('data-file-location') +
         '/' +
-        $ (this).attr ('data-file-name');
-      let args = 'targetdir=' + encodeURIComponent (targetdir);
-      args += '&file[]=' + encodeURIComponent (curlocation);
+        $(this).attr('data-file-name');
+      let args = 'targetdir=' + encodeURIComponent(targetdir);
+      args += '&file[]=' + encodeURIComponent(curlocation);
       let q = '?option=copyfile&deletesource=1';
-      q = updateQueryParam (q);
-      $.post ('tool-file-operation.php' + q, {postdata: args}, function (
+      q = updateQueryParam(q);
+      $.post('tool-file-operation.php' + q, { postdata: args }, function (
         answer
       ) {
         if (answer == 'SUCCESS' || answer == 'EXIST') {
-          openDir ();
+          openDir();
         } else if (answer == 'READONLY') {
-          jqAlert (
+          jqAlert(
             'The operation was disabled on read-only mode.',
             'Read-Only'
           );
         }
       });
       skipondrop = true;
-      ui.draggable.hide ('scale', {percent: 0}, 300, function () {
-        ui.draggable.css ('display', 'none');
-        openDir ();
+      ui.draggable.hide('scale', { percent: 0 }, 300, function () {
+        ui.draggable.css('display', 'none');
+        openDir();
       });
       return false;
     },
   });
 }
-function loadAnimationStart () {
-  $ ('#anim-loader').addClass ('anim-active');
+function loadAnimationStart() {
+  $('#anim-loader').addClass('anim-active');
 }
-function loadAnimationStop () {
-  $ ('#anim-loader').removeClass ('anim-active');
+function loadAnimationStop() {
+  $('#anim-loader').removeClass('anim-active');
 }
-function openDirSearch (filepath) {
-  openDir (filepath);
-  $ ('#common-dialog').dialog ('destroy');
+function openDirSearch(filepath) {
+  openDir(filepath);
+  $('#common-dialog').dialog('destroy');
 }
-function selectFileSeach (filepath) {
-  selectFile (filepath);
-  $ ('#common-dialog').dialog ('destroy');
+function selectFileSeach(filepath) {
+  selectFile(filepath);
+  $('#common-dialog').dialog('destroy');
 }
-function openDirTree () {
-  let filepath = $ ('#address').val ();
-  let dirs = filepath.split ('/');
+function openDirTree() {
+  let filepath = $('#address').val();
+  let dirs = filepath.split('/');
   let i;
   let _parentdir = 'base';
   let _curdir = '';
   let _parentli;
   let _buff = [];
   for (i in dirs) {
-    _buff.push (dirs[i]);
-    _curdir = _buff.join ('/');
-    _parentli = $ ('a[onclick~="' + _curdir + '"]').parent ();
+    _buff.push(dirs[i]);
+    _curdir = _buff.join('/');
+    _parentli = $('a[onclick~="' + _curdir + '"]').parent();
     if (_curdir == 'base') {
       continue;
     }
     if (
-      !$ ('#directory-container').find ('a[onclick~="' + _curdir + '"]').length
+      !$('#directory-container').find('a[onclick~="' + _curdir + '"]').length
     ) {
       let _child =
         '<ul><li class="row-data-dir dir-control" data-file-path="' +
@@ -3509,79 +3509,77 @@ function openDirTree () {
         '\')">' +
         dirs[i] +
         '</a></li></ul>';
-      $ ('#directory-container')
-        .find ('[data-file-path="' + _parentdir + '"]')
-        .append (_child);
+      $('#directory-container')
+        .find('[data-file-path="' + _parentdir + '"]')
+        .append(_child);
     }
     _parentdir = _curdir;
   }
-  openDir ();
+  openDir();
   return false;
 }
-function mergeObject (obj1, obj2) {
+
+function mergeObject(obj1, obj2) {
   if (typeof obj1 == 'undefined') {
     obj1 = {};
   }
   for (let i in obj2) {
-    if (obj2.hasOwnProperty (i)) {
+    if (obj2.hasOwnProperty(i)) {
       obj1[i] = obj2[i];
     }
   }
   return obj1;
 }
-function getQueryParams () {
-  let urlParams = new URLSearchParams (window.location.search);
+
+function getQueryParams() {
+  let urlParams = new URLSearchParams(window.location.search);
   let query = {};
-  for (let i in urlParams) {
-    if (urlParams.hasOwnProperty (i)) {
-      query[i] = urlParams[i];
-    }
-  }
-  console.log(window.location.search);
-  console.log(urlParams);
-  console.log(query);
+  urlParams.forEach((value, key) => {
+    query[key] = value;
+  });
   return query;
 }
 
-function updateQueryParam (q) {
-  let additional = getQueryParams ();
-  let urlParams = new URLSearchParams (q);
-  mergeObject (urlParams, additional);
-  let ret = '?' + serializeQuery (urlParams);
+function updateQueryParam(q) {
+  let additional = getQueryParams();
+  let urlParams = new URLSearchParams(q);
+  mergeObject(urlParams, additional);
+  let ret = '?' + serializeQuery(urlParams);
+  return ret;
 }
 
-function serializeQuery (obj) {
+function serializeQuery(obj) {
   var str = [];
   for (var p in obj)
-    if (obj.hasOwnProperty (p)) {
-      str.push (encodeURIComponent (p) + '=' + encodeURIComponent (obj[p]));
+    if (obj.hasOwnProperty(p)) {
+      str.push(encodeURIComponent(p) + '=' + encodeURIComponent(obj[p]));
     }
-  return str.join ('&');
+  return str.join('&');
 }
 
-function openDir (
+function openDir(
   filepath,
   selfile,
   sortby,
   sortorder //NOSONAR
 ) {
   if (!skipondrop) {
-    loadAnimationStart ();
+    loadAnimationStart();
     let ret = true;
     if (!filepath) {
-      filepath = $ ('#address').val ();
+      filepath = $('#address').val();
       ret = false;
     } else {
       try {
-        filepath = filepath.trim ('/');
-      } catch (e) {}
+        filepath = filepath.trim('/');
+      } catch (e) { }
     }
-    $ ('#address').val (filepath);
+    $('#address').val(filepath);
     let arg = {};
     if (togglethumb) {
-      arg = {dir: filepath, thumbnail: 1};
+      arg = { dir: filepath, thumbnail: 1 };
     } else {
-      arg = {dir: filepath};
+      arg = { dir: filepath };
     }
     if (sortby) {
       arg['sortby'] = sortby;
@@ -3589,11 +3587,11 @@ function openDir (
     if (sortorder) {
       arg['sortorder'] = sortorder;
     }
-    let data = getQueryParams ();
-    mergeObject (arg, data);
-    $.get ('tool-load-file-json.php', arg, function (answer) {
-      arrthumbnail = eval (answer);
-      arrthumbnailURL = new Array ();
+    let data = getQueryParams();
+    arg = mergeObject(arg, data);
+    $.get('tool-load-file-json.php', arg, function (answer) {
+      arrthumbnail = eval(answer);
+      arrthumbnailURL = new Array();
       if (arrthumbnail.length) {
         let xx = 0;
         for (xx in arrthumbnail) {
@@ -3601,68 +3599,68 @@ function openDir (
         }
       }
     });
-    $.get ('tool-load-file.php', arg, function (answer) {
-      $ ('#file-container').html (answer);
+    $.get('tool-load-file.php', arg, function (answer) {
+      $('#file-container').html(answer);
       try {
         if (selfile.length) {
           let fn = '';
-          $ ('.fileid').each (function (index) {
-            fn = $ (this).val ();
-            if ($.inArray (fn, selfile) != -1) {
-              $ (this).attr ('checked', 'checked');
+          $('.fileid').each(function (index) {
+            fn = $(this).val();
+            if ($.inArray(fn, selfile) != -1) {
+              $(this).attr('checked', 'checked');
             }
           });
         }
         if (
-          $ ('.fileid:checked').length == $ ('.fileid').length &&
-          $ ('.fileid').length
+          $('.fileid:checked').length == $('.fileid').length &&
+          $('.fileid').length
         ) {
           try {
-            $ ('#control-fileid').attr ('checked', 'checked');
-          } catch (e) {}
+            $('#control-fileid').attr('checked', 'checked');
+          } catch (e) { }
         } else {
           try {
-            $ ('#control-fileid').removeAttr ('checked');
-          } catch (e) {}
+            $('#control-fileid').removeAttr('checked');
+          } catch (e) { }
         }
-      } catch (e) {}
-      initContextMenuFile ();
-      initContextMenuDir ();
-      setCheckRelation ();
-      initDropable ();
-      loadAnimationStop ();
-      removeCheckboxBorder ();
-      updateToolbarStatus ();
+      } catch (e) { }
+      initContextMenuFile();
+      initContextMenuDir();
+      setCheckRelation();
+      initDropable();
+      loadAnimationStop();
+      removeCheckboxBorder();
+      updateToolbarStatus();
 
-      $ ('#directory-container .basedir ul li')
-        .removeClass ('dir-open')
-        .addClass ('dir-normal');
-      $ (
+      $('#directory-container .basedir ul li')
+        .removeClass('dir-open')
+        .addClass('dir-normal');
+      $(
         '#directory-container .basedir ul li[data-file-path="' + filepath + '"]'
-      ).addClass ('dir-open');
+      ).addClass('dir-open');
     });
     let pth = '';
-    let data2 = getQueryParams ();
+    let data2 = getQueryParams();
     data2.seldir = filepath;
-    $.get ('tool-load-dir.php', data2, function (answer) {
-      $ ('.dir-control').each (function (index) {
+    $.get('tool-load-dir.php', data2, function (answer) {
+      $('.dir-control').each(function (index) {
         pth =
-          $ (this).attr ('data-file-location') +
+          $(this).attr('data-file-location') +
           '/' +
-          $ (this).attr ('data-file-name');
-        if (pth[pth.length] == '/') pth = pth.substring (0, pth.length - 1);
-        if (pth[0] == '/') pth = pth.substring (1);
+          $(this).attr('data-file-name');
+        if (pth[pth.length] == '/') pth = pth.substring(0, pth.length - 1);
+        if (pth[0] == '/') pth = pth.substring(1);
         if (filepath == pth) {
-          $ (this).children ('ul').remove ();
-          $ (this).append (answer);
+          $(this).children('ul').remove();
+          $(this).append(answer);
         }
       });
     });
     return ret;
   }
   skipondrop = false;
-  $ ('.row-data-dir').css ({left: '0px', top: '0px', 'z-index': 0, opacity: 1});
-  $ ('.row-data-file').css ({
+  $('.row-data-dir').css({ left: '0px', top: '0px', 'z-index': 0, opacity: 1 });
+  $('.row-data-file').css({
     left: '0px',
     top: '0px',
     'z-index': 0,
@@ -3670,46 +3668,46 @@ function openDir (
   });
 }
 
-function selectFile (url) {
+function selectFile(url) {
   if (!skipondrop) {
-    selectFileIndex (url);
+    selectFileIndex(url);
   }
   skipondrop = false;
-  $ ('.row-data-dir').css ({left: '0px', top: '0px', 'z-index': 0, opacity: 1});
-  $ ('.row-data-file').css ({
+  $('.row-data-dir').css({ left: '0px', top: '0px', 'z-index': 0, opacity: 1 });
+  $('.row-data-file').css({
     left: '0px',
     top: '0px',
     'z-index': 0,
     opacity: 1,
   });
 }
-function removeCheckboxBorder () {
+function removeCheckboxBorder() {
   // IE need this
-  $ ('#file-container input[type=checkbox]').each (function (index) {
-    $ (this).css ({border: 'none', padding: '0'});
+  $('#file-container input[type=checkbox]').each(function (index) {
+    $(this).css({ border: 'none', padding: '0' });
   });
 }
-function initSortable () {
-  $ (document).on ('click', '.sort-holder', function () {
-    let curdir = $ ('#address').val ();
-    let sortby = $ (this).attr ('data-sortby');
-    let sortorder = $ (this).attr ('data-sortorder');
-    let selectedfile = new Array ();
-    $ ('.fileid:checked').each (function (index) {
-      selectedfile[selectedfile.length] = $ (this).val ();
+function initSortable() {
+  $(document).on('click', '.sort-holder', function () {
+    let curdir = $('#address').val();
+    let sortby = $(this).attr('data-sortby');
+    let sortorder = $(this).attr('data-sortorder');
+    let selectedfile = new Array();
+    $('.fileid:checked').each(function (index) {
+      selectedfile[selectedfile.length] = $(this).val();
     });
-    openDir (curdir, selectedfile, sortby, sortorder);
+    openDir(curdir, selectedfile, sortby, sortorder);
   });
 }
 
-function showPermission (perms) {
+function showPermission(perms) {
   perms += '';
   if (perms.length > 3) {
-    perms = perms.substr (perms.length - 3);
+    perms = perms.substr(perms.length - 3);
   }
-  let p_user = parseInt (perms.substr (0, 1));
-  let p_group = parseInt (perms.substr (1, 1));
-  let p_world = parseInt (perms.substr (2, 1));
+  let p_user = parseInt(perms.substr(0, 1));
+  let p_group = parseInt(perms.substr(1, 1));
+  let p_world = parseInt(perms.substr(2, 1));
   let ur = (p_user >> 2) % 2;
   let uw = (p_user >> 1) % 2;
   let ue = p_user % 2;
@@ -3732,50 +3730,50 @@ function showPermission (perms) {
   };
   return ret;
 }
-function initPermission () {
-  $ (document).on ('click', '.permission-info', function () {
-    let perms = $ (this).text () + '';
+function initPermission() {
+  $(document).on('click', '.permission-info', function () {
+    let perms = $(this).text() + '';
     try {
-      $ ('#perms-dialog').dialog ('destroy');
-    } catch (e) {}
-    let perms_obj = showPermission (perms);
+      $('#perms-dialog').dialog('destroy');
+    } catch (e) { }
+    let perms_obj = showPermission(perms);
     let p_key;
     for (p_key in perms_obj) {
-      $ ('.' + p_key).text (
-        parseInt (perms_obj[p_key]) == 1 ? 'Allowed' : 'Disallowed'
+      $('.' + p_key).text(
+        parseInt(perms_obj[p_key]) == 1 ? 'Allowed' : 'Disallowed'
       );
     }
-    $ ('#perms-dialog').dialog ({
+    $('#perms-dialog').dialog({
       resizable: false,
       modal: true,
       width: 280,
       height: 165,
     });
-    $ ('.permission-table').fadeIn (200);
+    $('.permission-table').fadeIn(200);
   });
 }
-function showInformation () {
-  $ ('#common-dialog-inner').html ('');
-  $ ('#common-dialog').dialog ({
+function showInformation() {
+  $('#common-dialog-inner').html('');
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Information',
     width: 400,
     height: 310,
     buttons: {
       Close: function () {
-        $ (this).dialog ('destroy');
+        $(this).dialog('destroy');
       },
     },
   });
-  let data = getQueryParams ();
-  $.get ('tool-info.php', data, function (answer) {
-    $ ('#common-dialog-inner').html (answer);
+  let data = getQueryParams();
+  $.get('tool-info.php', data, function (answer) {
+    $('#common-dialog-inner').html(answer);
   });
   return false;
 }
 
-function searchFile () {
-  let dir = $ ('#address').val ();
+function searchFile() {
+  let dir = $('#address').val();
   let html =
     '' +
     '<div class="search-container">' +
@@ -3805,68 +3803,68 @@ function searchFile () {
     '</div>' +
     '</div>' +
     '</div>';
-  let width = $ ('body').width () - 14;
-  let height = $ ('body').height () - 14;
+  let width = $('body').width() - 14;
+  let height = $('body').height() - 14;
   let hr = height - 136;
 
-  $ ('#common-dialog').dialog ({
+  $('#common-dialog').dialog({
     modal: true,
     title: 'Search File',
     width: width,
     height: height,
   });
-  $ ('#common-dialog-inner').html (html);
-  $ ('.search-result').css ({height: hr + 'px', overflow: 'auto'});
-  $ (document).on ('keyup', '#sfile', function () {
-    filterFile ($ (this).val ());
+  $('#common-dialog-inner').html(html);
+  $('.search-result').css({ height: hr + 'px', overflow: 'auto' });
+  $(document).on('keyup', '#sfile', function () {
+    filterFile($(this).val());
   });
-  $ (document).on ('change', '#sfile', function () {
-    filterFile ($ (this).val ());
+  $(document).on('change', '#sfile', function () {
+    filterFile($(this).val());
   });
 
-  $ ('#sdir').val (dir);
-  $ ('#sfile').select ();
-  let data = getQueryParams ();
+  $('#sdir').val(dir);
+  $('#sfile').select();
+  let data = getQueryParams();
   data.dir = dir;
-  $.get ('tool-search-file.php', data, function (answer) {
-    $ ('.search-result').html (answer);
-    normalizeTable ();
+  $.get('tool-search-file.php', data, function (answer) {
+    $('.search-result').html(answer);
+    normalizeTable();
   });
 }
-function normalizeTable () {
-  $ ('.file-result-table tbody tr').each (function (index, element) {
-    $ (this).attr (
+function normalizeTable() {
+  $('.file-result-table tbody tr').each(function (index, element) {
+    $(this).attr(
       'data-file-name-lower',
-      $ (this).attr ('data-file-name').toLowerCase ()
+      $(this).attr('data-file-name').toLowerCase()
     );
   });
 }
-function filterFile (name) {
-  name = name.toLowerCase ();
-  $ ('.file-result-table').css ({display: ''});
+function filterFile(name) {
+  name = name.toLowerCase();
+  $('.file-result-table').css({ display: '' });
   if (name == '') {
-    $ ('.file-result-table tbody tr').css ({display: ''});
+    $('.file-result-table tbody tr').css({ display: '' });
   } else {
-    $ ('.file-result-table tbody tr').css ({display: 'none'});
-    $ (
+    $('.file-result-table tbody tr').css({ display: 'none' });
+    $(
       '.file-result-table tbody tr[data-file-name-lower*="' + name + '"]'
-    ).css ({display: ''});
+    ).css({ display: '' });
   }
-  if ($ ('.file-result-table tbody tr:visible').length == 0) {
-    $ ('.file-result-table').css ({display: 'none'});
+  if ($('.file-result-table tbody tr:visible').length == 0) {
+    $('.file-result-table').css({ display: 'none' });
   }
 }
 
-function initEXIF () {
-  $ (document).on ('click', '.capture-info', function () {
+function initEXIF() {
+  $(document).on('click', '.capture-info', function () {
     try {
-      $ ('#exif-dialog').dialog ('destroy');
-    } catch (e) {}
-    $ ('#exif-dialog').remove ();
-    $ ('#dialogs').append (
+      $('#exif-dialog').dialog('destroy');
+    } catch (e) { }
+    $('#exif-dialog').remove();
+    $('#dialogs').append(
       '<div id="exif-dialog"><div id="exif-dialog-inner"></div></div>'
     );
-    let jsdata = eval (decodeURIComponent ($ (this).attr ('data-exif')));
+    let jsdata = eval(decodeURIComponent($(this).attr('data-exif')));
     let key;
     let obj = jsdata[0];
     let html =
@@ -3877,8 +3875,8 @@ function initEXIF () {
         '<tr><td width="50%">' + key + '</td><td>' + obj[key] + '</td></tr>';
     }
     html += '</tbody></table>';
-    $ ('#exif-dialog-inner').html (html);
-    $ ('#exif-dialog').dialog ({
+    $('#exif-dialog-inner').html(html);
+    $('#exif-dialog').dialog({
       resizable: false,
       modal: true,
       title: 'Capture Information',
@@ -3886,148 +3884,148 @@ function initEXIF () {
       height: 410,
       buttons: {
         Close: function () {
-          $ ('#exif-dialog').dialog ('destroy');
+          $('#exif-dialog').dialog('destroy');
         },
       },
     });
   });
 }
 
-function relative2absolute (url) {
-  return vabs + url.substr (vrel.length);
+function relative2absolute(url) {
+  return vabs + url.substr(vrel.length);
 }
 
-function absolute2relative (url) {
-  return vrel + url.substr (vabs.length);
+function absolute2relative(url) {
+  return vrel + url.substr(vabs.length);
 }
 let ca = false;
 
 let focusOnInput = false;
-function toggleFocusInput () {
-  $ (document).on ('focus', ':input', function () {
+function toggleFocusInput() {
+  $(document).on('focus', ':input', function () {
     focusOnInput = true;
   });
-  $ (document).on ('blur', ':input', function () {
+  $(document).on('blur', ':input', function () {
     focusOnInput = false;
   });
 }
 
-function initHotKey () {
-  toggleFocusInput ();
-  $ (document).on ('keypress', function (
+function initHotKey() {
+  toggleFocusInput();
+  $(document).on('keypress', function (
     e //NOSONAR
   ) {
     if (e.ctrlKey && !focusOnInput) {
       if (e.which == 65 || e.which == 97) {
         ca = !ca;
-        selectAll (ca);
-        e.preventDefault ();
+        selectAll(ca);
+        e.preventDefault();
       }
       if (e.which == 67 || e.which == 99) {
-        copySelectedFile ();
-        e.preventDefault ();
+        copySelectedFile();
+        e.preventDefault();
       }
       if (e.which == 86 || e.which == 118) {
-        pasteFile ();
-        e.preventDefault ();
+        pasteFile();
+        e.preventDefault();
       }
       if (e.which == 88 || e.which == 120) {
-        cutSelectedFile ();
-        e.preventDefault ();
+        cutSelectedFile();
+        e.preventDefault();
       }
       if (e.which == 70 || e.which == 102) {
-        searchFile ();
-        e.preventDefault ();
+        searchFile();
+        e.preventDefault();
       }
       if (e.which == 68 || e.which == 100) {
-        thumbnail ();
-        e.preventDefault ();
+        thumbnail();
+        e.preventDefault();
       }
     }
   });
 }
 
-function FileDragHover (e) {
-  e.stopPropagation ();
-  e.preventDefault ();
-  if (e.type == 'dragover') $ ('.file-area').addClass ('file-area-hover');
-  else $ ('.file-area').removeClass ('file-area-hover');
+function FileDragHover(e) {
+  e.stopPropagation();
+  e.preventDefault();
+  if (e.type == 'dragover') $('.file-area').addClass('file-area-hover');
+  else $('.file-area').removeClass('file-area-hover');
 }
 
-function FileSelectHandler (e) {
-  FileDragHover (e);
+function FileSelectHandler(e) {
+  FileDragHover(e);
   let files = e.target.files || e.dataTransfer.files;
-  let formData = new FormData ();
+  let formData = new FormData();
   let html = '<div class="file-upload-caption">Uploading...</div>';
   html +=
     '<div class="progressbar" style="margin:5px 0px;height:10px; background-color:#EEEEEE;"><div class="progressbar-inner" style="height:10px;background-color:rgb(23, 96, 125);width:0%;"></div></div>';
   html += '<div class="file-upload" style="height:180px; overflow:auto;">';
   for (let i in files) {
-    formData.append ('images[]', files[i]);
+    formData.append('images[]', files[i]);
     html +=
       '<div class="file-upload-item" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">' +
       files[i].name +
       '</div>';
   }
   html += '</div>';
-  overlayDialog (html, 360, 224);
-  xhr.open (
+  overlayDialog(html, 360, 224);
+  xhr.open(
     'POST',
     'tool-upload-file-multi.php?targetdir=' +
-      encodeURIComponent ($ ('#address').val ())
+    encodeURIComponent($('#address').val())
   );
   xhr.onload = function () {
     if (xhr.status === 200) {
-      refreshList ();
-      closeOverlayDialog ();
+      refreshList();
+      closeOverlayDialog();
     }
   };
-  xhr.upload.addEventListener ('progress', progressHandler, false);
-  xhr.addEventListener ('load', completeHandler, false);
-  xhr.addEventListener ('error', errorHandler, false);
-  xhr.addEventListener ('abort', abortHandler, false);
-  xhr.send (formData);
+  xhr.upload.addEventListener('progress', progressHandler, false);
+  xhr.addEventListener('load', completeHandler, false);
+  xhr.addEventListener('error', errorHandler, false);
+  xhr.addEventListener('abort', abortHandler, false);
+  xhr.send(formData);
 }
 
-function progressHandler (event) {
+function progressHandler(event) {
   let percent = event.loaded / event.total * 100;
-  $ ('.progressbar-inner').css ({width: percent + '%'});
+  $('.progressbar-inner').css({ width: percent + '%' });
 }
-function completeHandler (event) {
+function completeHandler(event) {
   let response = event.target.responseText;
-  let data = $.parseJSON (response);
-  $ ('.progressbar-inner').css ({width: '0%'});
+  let data = $.parseJSON(response);
+  $('.progressbar-inner').css({ width: '0%' });
   if (data.success) {
-    closeOverlayDialog ();
+    closeOverlayDialog();
   }
 }
-function errorHandler (event) {
-  jqAlert ('Uploading error.', 'Error');
+function errorHandler(event) {
+  jqAlert('Uploading error.', 'Error');
 }
-function abortHandler (event) {
-  jqAlert ('Process aborted.', 'Aborted');
+function abortHandler(event) {
+  jqAlert('Process aborted.', 'Aborted');
 }
 
-function initDragDropUpload () {
+function initDragDropUpload() {
   if (window.File && window.FileList && window.FileReader) {
-    let filedrag = $ ('.file-area')[0];
+    let filedrag = $('.file-area')[0];
     if (xhr.upload) {
-      filedrag.addEventListener ('dragover', FileDragHover, false);
-      filedrag.addEventListener ('dragleave', FileDragHover, false);
-      filedrag.addEventListener ('drop', FileSelectHandler, false);
+      filedrag.addEventListener('dragover', FileDragHover, false);
+      filedrag.addEventListener('dragleave', FileDragHover, false);
+      filedrag.addEventListener('drop', FileSelectHandler, false);
       filedrag.style.display = 'block';
     }
   }
 }
-function getVideoDimensionsOf (url) {
-  return new Promise (function (resolve) {
-    let video = document.createElement ('video');
-    video.addEventListener (
+function getVideoDimensionsOf(url) {
+  return new Promise(function (resolve) {
+    let video = document.createElement('video');
+    video.addEventListener(
       'loadedmetadata',
       function () {
         let height = this.videoHeight;
         let width = this.videoWidth;
-        resolve ({
+        resolve({
           height: height,
           width: width,
         });
@@ -4038,27 +4036,27 @@ function getVideoDimensionsOf (url) {
   });
 }
 
-function cookieRead (name) {
+function cookieRead(name) {
   let cookieValue = '';
   let search = name + '=';
   if (document.cookie.length > 0) {
-    let offset = document.cookie.indexOf (search);
+    let offset = document.cookie.indexOf(search);
     if (offset != -1) {
       offset += search.length;
-      let end = document.cookie.indexOf (';', offset);
+      let end = document.cookie.indexOf(';', offset);
       if (end == -1) {
         end = document.cookie.length;
       }
-      cookieValue = unescape (document.cookie.substring (offset, end));
+      cookieValue = unescape(document.cookie.substring(offset, end));
     }
   }
   return cookieValue;
 }
-function cookieWrite (name, value, hours) {
+function cookieWrite(name, value, hours) {
   let expire = '';
   if (hours != null) {
-    expire = new Date (new Date ().getTime () + hours * 3600000);
-    expire = ';expires=' + expire.toGMTString ();
+    expire = new Date(new Date().getTime() + hours * 3600000);
+    expire = ';expires=' + expire.toGMTString();
   }
-  document.cookie = name + '=' + escape (value) + expire;
+  document.cookie = name + '=' + escape(value) + expire;
 }
