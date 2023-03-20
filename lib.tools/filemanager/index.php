@@ -21,7 +21,12 @@ if(empty($dir))
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<<<<<<< Updated upstream
 <meta name="curdir" content="<?php echo htmlspecialchars($_SESSION['curdir']);?>" />
+=======
+<meta name="basedir" content="<?php echo htmlspecialchars($dir);?>">
+<meta name="curdir" content="<?php echo htmlspecialchars($_SESSION['curdir']);?>">
+>>>>>>> Stashed changes
 <title>Planetbiru File Manager</title>
 <link rel="shortcut icon" type="image/jpeg" href="../../../favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="../../../lib.assets/script/jquery-ui/jquery-ui.min.css">
