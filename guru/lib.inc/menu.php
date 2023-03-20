@@ -134,6 +134,11 @@ $structure = array(
                     'caption'=>'Informasi',
                     'icon'=>'fa-file',
                     'link'=>'informasi.php'                       
+                ),
+                array(
+                    'caption'=>'Al Quran',
+                    'icon'=>'fa-file',
+                    'link'=>'../quran/'                       
                 )
             )
         ),

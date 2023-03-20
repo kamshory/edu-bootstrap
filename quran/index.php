@@ -276,15 +276,12 @@ if ($s != '') {
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Link</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="https://planetbiru.com">Our Website</a>
+                            <a href="https://edu.planetbiru.com">Our Website</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="https://planetbiru.com">About</a>
-                </li>
-                <li>
-                    <a href="https://planetbiru.com">Contact</a>
+                    <a href="../">Depan</a>
                 </li>
             </ul>
 
@@ -293,7 +290,7 @@ if ($s != '') {
                     <a href="https://github.com/kamshory/Al-Quran" class="download">Download source</a>
                 </li>
                 <li>
-                    <a href="https://planetbiru.com" class="article">Our Website</a>
+                    <a href="https://edu.planetbiru.com" class="article">Our Website</a>
                 </li>
             </ul>
         </nav>
