@@ -28,6 +28,7 @@ function showquran($lang, $numVerse, $verse)
 if (isset($_GET['v'])) {
 	$v = $_GET['v'];
 	$arr = @explode("/", $v);
+	$quranArray = array();
 	if (count($arr) >= 3) {
 		$arr = @explode("/", $v, 3);
 		$arr[0] = strtolower(substr($arr[0], 0, 2));
