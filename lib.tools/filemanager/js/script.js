@@ -717,7 +717,9 @@ function propertyFile(filepath) {
 			}
 		}
 	});
-	$.get('tool-property-file.php', { 'filepath': filepath }, function (answer) {
+	let data = getQueryParams(); 
+	data.filepath = filepath;
+	$.get('tool-property-file.php', data, function (answer) {
 		$('#common-dialog-inner').html(answer);
 		let mime = $('.mime-type').attr('data-content');
 		if (mime == 'application/zip') {
@@ -739,7 +741,10 @@ function propertyImage(filepath) {
 			}
 		}
 	});
-	$.get('tool-property-file.php', { 'filepath': filepath, 'type': 'image' }, function (answer) {
+	let data = getQueryParams(); 
+	data.filepath = filepath;
+	data.type = 'image';
+	$.get('tool-property-file.php', data, function (answer) {
 		$('#common-dialog-inner').html(answer);
 	});
 }
@@ -756,7 +761,10 @@ function propertyVideo(filepath) {
 			}
 		}
 	});
-	$.get('tool-property-file.php', { 'filepath': filepath, 'type': 'video' }, function (answer) {
+	let data = getQueryParams(); 
+	data.filepath = filepath;
+	data.type = 'video';
+	$.get('tool-property-file.php', data, function (answer) {
 		$('#common-dialog-inner').html(answer);
 	});
 }
@@ -774,7 +782,10 @@ function propertyDir(filepath) {
 			}
 		}
 	});
-	$.get('tool-property-file.php', { 'filepath': filepath, 'type': 'directory' }, function (answer) {
+	let data = getQueryParams(); 
+	data.filepath = filepath;
+	data.type = 'directory';
+	$.get('tool-property-file.php', data, function (answer) {
 		$('#common-dialog-inner').html(answer);
 	});
 }
@@ -795,7 +806,9 @@ function showZipContent(filepath) {
 			}
 		}
 	});
-	$.get('tool-zip-content.php', { 'filepath': filepath }, function (answer) {
+	let data = getQueryParams(); 
+	data.filepath = filepath;
+	$.get('tool-zip-content.php', data, function (answer) {
 		$('#common-dialog-inner').html(answer);
 	});
 }
@@ -1455,7 +1468,9 @@ function uploadFile() {
 		'</div>';
 
 	$('#common-dialog-inner').html(html);
-	$.get('tool-upload-file-settings.php', { 'show-control': '1' }, function (answer) {
+	let data = getQueryParams(); 
+	data['show-control'] = '1';
+	$.get('tool-upload-file-settings.php', data, function (answer) {
 		$('#image-settings-controller').html(answer);
 	});
 
@@ -1525,7 +1540,9 @@ function uploadFileSettings() {
 			}
 		}
 	});
-	$.get('tool-upload-file-settings.php', { 'show-form': '1' }, function (answer) {
+	let data = getQueryParams(); 
+	data['show-form'] = '1';
+	$.get('tool-upload-file-settings.php', data, function (answer) {
 		$('#common-dialog-inner').html(answer);
 	});
 
@@ -1577,7 +1594,11 @@ function editFile(filepath) {
 		}
 	});
 	$('.ui-dialog-titlebar-close').remove();
-	$.get('tool-edit-file.php', { 'option': 'openfile', 'filepath': filepath }, function (answer) {
+	let data = getQueryParams(); 
+	data.option = 'openfile';
+	data.filepath = filepath;
+
+	$.get('tool-edit-file.php', data, function (answer) {
 		$('#common-dialog-inner').html(answer);
 		cnt1 = $('#filecontent').val();
 	});
@@ -2049,7 +2070,10 @@ function changePermission(filepath) //NOSONAR
 		}
 	}
 	else {
-		$.get('tool-file-operation.php', { 'option': 'get-perms', 'filepath': filepath }, function (answer) {
+		let data = getQueryParams(); 
+		data.option = 'get-perms';
+		data.filepath = filepath;
+		$.get('tool-file-operation.php', data, function (answer) {
 			let obj = eval(answer)[0];
 			let i;
 			for (i in obj) {
@@ -2098,7 +2122,11 @@ function editImage(fp) {
 	let html = '<div id="image-editor-layer"></div>';
 	$('#all').append(html);
 	$('#image-editor-layer').css({ 'width': 0 + 'px', 'height': 0 + 'px' });
-	$.get('tool-image-editor-form.php', { 'filepath': fp }, function (answer) {
+
+	let data = getQueryParams(); 
+	data.filepath = fp;
+
+	$.get('tool-image-editor-form.php', data, function (answer) {
 		$('#image-editor-layer').html(answer);
 		let eh = wheight - 73;
 		$('.image-editor-sidebar-inner, .image-editor-mainbar-inner').css('height', eh + 'px');
@@ -2209,7 +2237,9 @@ function saveImage() {
 			'&flipv=' + flipv + '&fliph=' + fliph + '&angle=' + angle + '&width=' + imgwidth + '&height=' + imgheight + '&crop=' + crop;
 		$.post('tool-image-editor-thumbnail.php', { 'postdata': args }, function (answer) {
 			if (answer == 'SUCCESS') {
-				$.get('tool-image-editor-form.php', { 'filepath': filepath }, function (answer) {
+				let data = getQueryParams(); 
+				data.filepath = filepath;
+				$.get('tool-image-editor-form.php', data, function (answer) {
 					$('#image-editor-layer').html(answer);
 					initImageEditorForm();
 				});
@@ -2362,6 +2392,21 @@ function openDirTree() {
 	openDir();
 	return false;
 }
+function mergeObject(obj1, obj2)
+{
+	if(typeof obj1 == 'undefined')
+	{
+		obj1 = {};
+	}
+	for(let i in obj2)
+	{
+		if(obj2.hasOwnProperty(i))
+		{
+			obj1[i] = obj2[i];
+		}
+	}
+	return obj1;
+}
 function openDir(filepath, selfile, sortby, sortorder) //NOSONAR
 {
 	if (!skipondrop) {
@@ -2392,7 +2437,8 @@ function openDir(filepath, selfile, sortby, sortorder) //NOSONAR
 		if (sortorder) {
 			arg['sortorder'] = sortorder;
 		}
-
+		let data = getQueryParams(); 
+		mergeObject(arg, data);
 		$.get('tool-load-file-json.php', arg, function (answer) {
 			arrthumbnail = eval(answer);
 			arrthumbnailURL = new Array();
@@ -2437,7 +2483,9 @@ function openDir(filepath, selfile, sortby, sortorder) //NOSONAR
 
 		});
 		let pth = '';
-		$.get('tool-load-dir.php', { 'seldir': filepath }, function (answer) {
+		let data2 = getQueryParams(); 
+		data2.seldir =filepath;
+		$.get('tool-load-dir.php', data2, function (answer) {
 			$('.dir-control').each(function (index) {
 				pth = $(this).attr('data-file-location') + '/' + $(this).attr('data-file-name');
 				if (pth[pth.length] == '/') pth = pth.substring(0, pth.length - 1);
@@ -2538,10 +2586,24 @@ function showInformation() {
 			}
 		}
 	});
-	$.get('tool-info.php', {}, function (answer) {
+	let data = getQueryParams(); 
+	$.get('tool-info.php', data, function (answer) {
 		$('#common-dialog-inner').html(answer);
 	});
 	return false;
+}
+function getQueryParams()
+{
+	let urlParams = new URLSearchParams(window.location.search); 
+	let query = {};
+	for(let i in urlParams)
+	{
+		if(urlParams.hasOwnProperty(i))
+		{
+			query[i] = urlParams[i];
+		}
+	}
+	return query;
 }
 function searchFile() {
 	let dir = $('#address').val();
@@ -2594,7 +2656,9 @@ function searchFile() {
 
 	$('#sdir').val(dir);
 	$('#sfile').select();
-	$.get('tool-search-file.php', { 'dir': dir }, function (answer) {
+	let data = getQueryParams(); 
+	data.dir = dir;
+	$.get('tool-search-file.php', data, function (answer) {
 		$('.search-result').html(answer);
 		normalizeTable();
 	});
