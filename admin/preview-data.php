@@ -9,7 +9,7 @@ $path = __DIR__ . "/planetedu.xlsx";
 require_once dirname(__DIR__) . '/lib.inc/PHPExcel_1.8.0/Classes/PHPExcel/IOFactory.php';
 	
 
-function generateTable($header, $body)
+function generateTable($header, $body, $user_data)
 {
     $table = '';
     $table .= '<table border="1" style="border-collapse:collapse">';
@@ -20,7 +20,7 @@ function generateTable($header, $body)
     $table .= '</thead>';
 
     $table .= '<tbody>';
-    foreach($body as $val)
+    foreach($user_data as $val)
     {
         $table .= '<tr>';
         $table .= '<td>'.implode('</td><td>', $val).'</td>';
@@ -51,6 +51,7 @@ try{
         $fieldArray[$col] = strtolower($rawHeader[$col]);
     }
 
+    $fixedData = array();
     for($row = 2; $row <= $highestRow; ++$row) 
     {
         $data = array();
@@ -95,9 +96,9 @@ try{
         $user_data['principal'] = $principal;
         $user_data['school_grade'] = $school_grade;
 
-        
+        $fixedData[] = $user_data;
     }
-    echo generateTable($rawHeader, $rawData);
+    echo generateTable($rawHeader, $rawData, $fixedData);
 }
 catch(Exception $e)
 {
@@ -125,6 +126,8 @@ try {
         $fieldArray[$col] = strtolower($rawHeader[$col]);
     }
 
+    $fixedData = array();
+
     for($row = 2; $row <= $highestRow; ++$row) 
     {
         $data = array();
@@ -141,7 +144,7 @@ try {
 
         $gender = $picoEdu->mapGender((trim(@$data['gender'])));
         $bd = isset($data['birth_day']) ? ((int) $data['birth_day']) : 0;
-        $birth_day = (excel2MySQLDate($bd));
+        $birth_day = substr(excel2MySQLDate($bd), 0, 10);
         $phone = ($picoEdu->fixPhone(trim(@$data['phone'])));
         $email = (trim(@$data['email']));
         $email = $picoEdu->filterEmailAddress($email);
@@ -159,8 +162,9 @@ try {
         $user_data['country_id'] = $country_id;
         $user_data['language'] = $language;
         
+        $fixedData[] = $user_data;
     }
-    echo generateTable($rawHeader, $rawData);
+    echo generateTable($rawHeader, $rawData, $fixedData);
 } catch (Exception $e) {
     // Do nothing
 }
@@ -185,6 +189,8 @@ try {
         $fieldArray[$col] = strtolower($rawHeader[$col]);
     }
 
+    $fixedData = array();
+
     for($row = 2; $row <= $highestRow; ++$row) 
     {
         $data = array();
@@ -203,10 +209,15 @@ try {
         $grade_id = (trim(@$data['grade']));
         $school_program = (trim(@$data['school_program']));
 
-        
+        $user_data = array();
+        $user_data['name'] = $name;
+        $user_data['grade_id'] = $grade_id;
+        $user_data['school_program'] = $school_program;
+
+        $fixedData[] = $user_data;
     }
 
-    echo generateTable($rawHeader, $rawData);
+    echo generateTable($rawHeader, $rawData, $fixedData);
 } catch (Exception $e) {
     // Do nothing
 }
@@ -233,6 +244,8 @@ try {
         $fieldArray[$col] = strtolower($rawHeader[$col]);
     }
 
+    $fixedData = array();
+
     for($row = 2; $row <= $highestRow; ++$row) 
     {
         $data = array();
@@ -258,7 +271,7 @@ try {
         $gender = $picoEdu->mapGender((trim(@$data['gender'])));
         $birth_place = (trim(@$data['birth_place']));
         $bd = isset($data['birth_day']) ? ((int) $data['birth_day']) : 0;
-        $birth_day = (excel2MySQLDate($bd));
+        $birth_day = substr(excel2MySQLDate($bd), 0, 10);
 
         $token_student = md5($school_id . '-' . $reg_number . '-' . time() . '-' . mt_rand(111111, 999999));
 
@@ -289,9 +302,10 @@ try {
         $user_data['country_id'] = $country_id;
         $user_data['language'] = $language;
         
+        $fixedData[] = $user_data;
     }
 
-    echo generateTable($rawHeader, $rawData);
+    echo generateTable($rawHeader, $rawData, $fixedData);
 } catch (Exception $e) {
     // Do nothing
 }
@@ -316,6 +330,8 @@ try {
         $rawHeader[$col] = $objWorksheet->getCellByColumnAndRow($col, $row)->getValue();
         $fieldArray[$col] = strtolower($rawHeader[$col]);
     }
+
+    $fixedData = array();
 
     for($row = 2; $row <= $highestRow; ++$row) 
     {
@@ -342,7 +358,7 @@ try {
         $gender = $picoEdu->mapGender((trim(@$data['gender'])));
         $birth_place = (trim(@$data['birth_place']));
         $bd = isset($data['birth_day']) ? ((int) $data['birth_day']) : 0;
-        $birth_day = (excel2MySQLDate($bd));
+        $birth_day = substr(excel2MySQLDate($bd), 0, 10);
 
         $token_teacher = md5($school_id . '-' . $reg_number . '-' . time() . '-' . mt_rand(111111, 999999));
 
@@ -372,8 +388,9 @@ try {
         $user_data['country_id'] = $country_id;
         $user_data['language'] = $language;
         
+        $fixedData[] = $user_data;
     }
-    echo generateTable($rawHeader, $rawData);
+    echo generateTable($rawHeader, $rawData, $fixedData);
 } catch (Exception $e) {
     // Do nothing
 }
