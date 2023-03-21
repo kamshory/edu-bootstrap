@@ -1,7 +1,7 @@
 <?php
-include_once dirname(__FILE__) . "/functions.php";
-include_once dirname(__FILE__) . "/auth.php";
-include dirname(__FILE__) . "/conf.php"; //NOSONAR
+include_once __DIR__ . "/functions.php";
+include_once __DIR__ . "/auth.php";
+include __DIR__ . "/conf.php"; //NOSONAR
 if ($fmanConfig->authentification_needed && !$userlogin) {
 	exit();
 }
@@ -83,7 +83,7 @@ if (file_exists($filepath)) {
 		header("Cache-Control: maxage=" . $expires);
 		header('Expires: ' . gmdate('D, d M Y H:i:s', time() + $expires) . ' GMT');
 		if (!function_exists('imagecreatefrompng')) {
-			readfile(dirname(__FILE__) . "/style/images/common/image.png");
+			readfile(__DIR__ . "/style/images/common/image.png");
 			header('Content-Type: image/png');
 		} else {
 			$image = gettumbpict($filepath, 96, 96);
@@ -91,7 +91,7 @@ if (file_exists($filepath)) {
 				header('Content-Type: image/jpeg');
 				@imagejpeg($image, null, $fmanConfig->thumbnail_quality);
 			} else {
-				$image = imagecreatefrompng(dirname(__FILE__) . "/style/images/binfile.png");
+				$image = imagecreatefrompng(__DIR__ . "/style/images/binfile.png");
 				header('Content-Type: image/png');
 				@imagepng($image);
 			}
@@ -103,10 +103,10 @@ if (file_exists($filepath)) {
 		header("Cache-Control: maxage=" . $expires);
 		header('Expires: ' . gmdate('D, d M Y H:i:s', time() + $expires) . ' GMT');
 		if (!function_exists('imagecreatefrompng')) {
-			readfile(dirname(__FILE__) . "/style/images/folder.png");
+			readfile(__DIR__ . "/style/images/folder.png");
 			header('Content-Type: image/png');
 		} else {
-			$image = imagecreatefrompng(dirname(__FILE__) . "/style/images/folder.png");
+			$image = imagecreatefrompng(__DIR__ . "/style/images/folder.png");
 			if ($handle = opendir($filepath)) {
 				$i = 0;
 				while (false !== ($ufile = readdir($handle))) {

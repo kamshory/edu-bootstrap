@@ -1,12 +1,12 @@
 <?php
-include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-admin.php";
+include_once dirname(dirname(__DIR__))."/lib.inc/auth-admin.php";
 if(empty(@$memberLoggedIn->member_id))
 {
 	if(!isset($school_id) || empty($school_id))
 	{
-		include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-guru.php";
+		include_once dirname(dirname(__DIR__))."/lib.inc/auth-guru.php";
 	}
-	include_once dirname(__FILE__)."/conf.php";
+	include_once __DIR__."/conf.php";
 	$userlogin = null;
 	if((@$admin_id || @$teacher_id) && @$school_id)
 	{
@@ -16,6 +16,6 @@ if(empty(@$memberLoggedIn->member_id))
 }
 else
 {
-	include_once dirname(__FILE__)."/conf.php";
+	include_once __DIR__."/conf.php";
 	$userlogin = 1;
 }

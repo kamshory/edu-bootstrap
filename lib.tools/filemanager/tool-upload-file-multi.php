@@ -1,7 +1,7 @@
 <?php
-include_once(dirname(__FILE__) . "/functions.php");
-include_once dirname(__FILE__) . "/auth.php";
-include dirname(__FILE__) . "/conf.php"; //NOSONAR
+include_once(__DIR__ . "/functions.php");
+include_once __DIR__ . "/auth.php";
+include __DIR__ . "/conf.php"; //NOSONAR
 if ($fmanConfig->authentification_needed && !$userlogin) {
 	exit();
 }

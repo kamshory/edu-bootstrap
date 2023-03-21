@@ -207,7 +207,7 @@ function chmoddir($dir, $perms)
 function getMIMEType($filename) //NOSONAR
 {
 	$obj = new \stdClass();
-	$arr = parse_ini_file(dirname(__FILE__)."/ext.ini");
+	$arr = parse_ini_file(__DIR__."/ext.ini");
 
 	$ext = '';
 	$mime = '';

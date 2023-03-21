@@ -1,10 +1,10 @@
 <?php
-include_once dirname(__FILE__)."/functions.php";
-include dirname(__FILE__)."/conf.php"; //NOSONAR
-include dirname(__FILE__)."/auth.php"; //NOSONAR
+include_once __DIR__."/functions.php";
+include __DIR__."/conf.php"; //NOSONAR
+include __DIR__."/auth.php"; //NOSONAR
 if(!$userlogin)
 {
-	include_once dirname(__FILE__)."/tool-login-form.php";
+	include_once __DIR__."/tool-login-form.php";
 	exit();
 }
 $dir = trim(stripslashes(@$_GET['dir']),"/");
@@ -175,7 +175,7 @@ function selectFileIndex(url){
             <li class="basedir dir-control" data-file-name="base" data-file-location="">
             <a href="javascript:;" onClick="return openDir('base')">base</a>
 			  <?php 
-              include_once dirname(__FILE__)."/tool-load-dir.php";
+              include_once __DIR__."/tool-load-dir.php";
               ?>
             </li>
             </ul>
@@ -185,7 +185,7 @@ function selectFileIndex(url){
     <div class="file-area">
     	<div id="file-container">
     	  <?php 
-		  include_once dirname(__FILE__)."/tool-load-file.php";
+		  include_once __DIR__."/tool-load-file.php";
 		  ?>
     	</div>
     </div>
