@@ -240,7 +240,7 @@ var quran_server = '../lib.quran';
 $().ready(function() {
 	$('textarea.htmleditor').tinymce({
 		// Location of TinyMCE script
-		script_url : 'lib.assets/script/tiny_mce/tiny_mce.js',
+		script_url : '../lib.assets/script/tiny_mce/tiny_mce.js',
 
 		// General options
 		theme : "advanced",
@@ -375,7 +375,7 @@ if(url.indexOf('data:') != -1)
 	url = '';
 }
 url = url.substr(baseTestURLLength);
-var ajaxFilemanagerURL = "lib.tools/filemanager/?test_id="+test_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
+var ajaxFilemanagerURL = "../lib.tools/filemanager/?test_id="+test_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
 switch (type){
 case "image":break;
 case "media":break;
@@ -1110,7 +1110,7 @@ function buildMenu(id)
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm hide-some-cell">
 					<thead>
 						<tr>
-						<td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></td>
+						<td width="16"><img src="<?php echo $cfg->base_assets;?>lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Detail" border="0" /></td>
 						<td width="25">No</td>
 						<td>Sekolah</td>
 						<td>Nama Ujian</td>

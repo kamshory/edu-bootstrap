@@ -61,7 +61,7 @@ $lang_pack['id']['label_no'] = "Tidak";
 $lang_pack['id']['tip_needed'] = "Wajib";
 
 
-function createEnumOption(PicoDatabase $database, $table, $field, $defaultValue=null)
+function createEnumOption($database, $table, $field, $defaultValue = null)
 {
 	$sql = "show columns FROM `$table` WHERE `Field` like '$field' ";
 	$stmt = $database->executeQuery($sql);
@@ -72,7 +72,7 @@ function createEnumOption(PicoDatabase $database, $table, $field, $defaultValue=
 		$enum = substr($enum, $off + 1, strlen($enum) - $off - 2);
 		$values = explode(",", $enum);
 
-		for ($n = 0; $n < Count($values); $n++) {
+		for ($n = 0; $n < count($values); $n++) {
 			$val = substr($values[$n], 1, strlen($values[$n]) - 2);
 			$val = str_replace("''", "'", $val);
 			$values[$n] = array($val, $val);

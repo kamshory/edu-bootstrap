@@ -83,8 +83,8 @@ $rand = $data['picture_rand'];
 $avatar_url = "media.edu/user.avatar/admin/$admin_id/img-300x300.jpg?rand=$rand";
 ?>
   
-  <script src="lib.assets/script/croppie.js"></script>
-    <link rel="stylesheet" href="lib.assets/croppie.css" />
+  <script src="<?php echo $cfg->base_assets;?>lib.assets/script/croppie.js"></script>
+    <link rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.assets/croppie.css" />
     <input type="file" name="upload" id="upload" style="position:absolute; left:-10000px; top:-10000px" />
     <div class="container">
         <div class="avatar-uploaded">

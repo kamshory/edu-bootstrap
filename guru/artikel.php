@@ -515,7 +515,7 @@ $paginationHTML = $pagination->buildHTML();
 	  else
 	  {
 	  ?>  
-      <img src="lib.tools/images/trans.gif" class="icon-16 icon-edit-16-2" alt="Ubah" border="0" />
+      <img src="<?php echo $cfg->base_assets;?>lib.tools/images/trans.gif" class="icon-16 icon-edit-16-2" alt="Ubah" border="0" />
       <?php
 	  }
 	  ?>

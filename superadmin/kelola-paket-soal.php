@@ -687,7 +687,7 @@ if(url.indexOf('data:') != -1)
 	url = '';
 }
 url = url.substr(baseTestURLLength);
-var ajaxFilemanagerURL = "lib.tools/filemanager/?test_collection_id="+test_collection_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
+var ajaxFilemanagerURL = "../lib.tools/filemanager/?test_collection_id="+test_collection_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
 switch (type){
 case "image":break;
 case "media":break;
@@ -1168,9 +1168,9 @@ $paginationHTML = $pagination->buildHTML();
     <tr>
       <td width="16"><input type="checkbox" name="control-test_collection_id" id="control-test_collection_id" class="checkbox-selector" data-target=".test_collection_id" value="1"></td>
       <td width="16"><i class="fas fa-list"></i></td>
-      <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Browse" border="0" /></td>
-      <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-download-16" alt="Download" border="0" /></td>
-      <td width="16"><img src="lib.tools/images/trans.gif" class="icon-16 icon-key-16" alt="Key" border="0" /></td>
+      <td width="16"><img src="<?php echo $cfg->base_assets;?>lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Browse" border="0" /></td>
+      <td width="16"><img src="<?php echo $cfg->base_assets;?>lib.tools/images/trans.gif" class="icon-16 icon-download-16" alt="Download" border="0" /></td>
+      <td width="16"><img src="<?php echo $cfg->base_assets;?>lib.tools/images/trans.gif" class="icon-16 icon-key-16" alt="Key" border="0" /></td>
       <td width="25">No</td>
       <td>Name</td>
       <td>Tingkat</td>
@@ -1193,9 +1193,9 @@ $paginationHTML = $pagination->buildHTML();
     <tr class="<?php echo $picoEdu->getRowClass($data);?>">
       <td><input type="checkbox" name="test_collection_id[]" id="test_collection_id" value="<?php echo $data['test_collection_id'];?>" class="test_collection_id" /></td>
       <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=edit&test_collection_id=<?php echo $data['test_collection_id'];?>"><i class="fas fa-list"></i></a></td>
-      <td><a class="load-collection" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Browse" border="0" /></a></td>
-      <td><a class="load-word" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="lib.tools/images/trans.gif" class="icon-16 icon-download-16" alt="Download" border="0" /></a></td>
-      <td><a class="load-key" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>&key=1"><img src="lib.tools/images/trans.gif" class="icon-16 icon-key-16" alt="Key" border="0" /></a></td>
+      <td><a class="load-collection" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="<?php echo $cfg->base_assets;?>lib.tools/images/trans.gif" class="icon-16 icon-browse-16" alt="Browse" border="0" /></a></td>
+      <td><a class="load-word" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><img src="<?php echo $cfg->base_assets;?>lib.tools/images/trans.gif" class="icon-16 icon-download-16" alt="Download" border="0" /></a></td>
+      <td><a class="load-key" data-collection-id="<?php echo $data['test_collection_id'];?>" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>&key=1"><img src="<?php echo $cfg->base_assets;?>lib.tools/images/trans.gif" class="icon-16 icon-key-16" alt="Key" border="0" /></a></td>
       <td align="right"><?php echo $no;?> </td>
       <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['name'];?></a></td>
       <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_collection_id=<?php echo $data['test_collection_id'];?>"><?php echo $data['grade_id'];?></a></td>

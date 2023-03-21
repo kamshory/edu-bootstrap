@@ -64,7 +64,6 @@ $cfg->app_code = "picoedu";
 $cfg->ws_port = $wsConfig->ws_port;
 
 $cfg->base_path = "/edu-bootstrap";
-$cfg->base_path = "";
 $cfg->schema = "";
 
 $cfg->base_url = \URLBuilder::createURL($cfg->schema, $_SERVER['SERVER_NAME'], $_SERVER['SERVER_PORT'], $cfg->base_path);

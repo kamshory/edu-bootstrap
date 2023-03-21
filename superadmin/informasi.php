@@ -240,7 +240,7 @@ function fileBrowserCallBack(field_name, url, type, win)
 		}
 		url = url.substr(21);
 		
-		var ajaxFilemanagerURL = "lib.tools/filemanager/?section=info&info_id="+info_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
+		var ajaxFilemanagerURL = "../lib.tools/filemanager/?section=info&info_id="+info_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
 		switch (type){
 			case "image":break;
 			case "media":break;
@@ -393,7 +393,7 @@ function fileBrowserCallBack(field_name, url, type, win)
 		}
 		url = url.substr(21);
 		
-		var ajaxFilemanagerURL = "lib.tools/filemanager/?section=info&info_id="+info_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
+		var ajaxFilemanagerURL = "../lib.tools/filemanager/?section=info&info_id="+info_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
 		switch (type){
 			case "image":break;
 			case "media":break;

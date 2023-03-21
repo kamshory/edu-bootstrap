@@ -111,7 +111,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="siswa/kelas.php"><div><img alt="img" src="lib.assets/theme/default/css/images/class-80.png" /></div><div class="menu-label">Kelas</div></a>
+					<a href="siswa/kelas.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/class-80.png" /></div><div class="menu-label">Kelas</div></a>
 					</div>
 				</div>
 			</div>
@@ -119,7 +119,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="siswa/siswa.php"><div><img alt="img" src="lib.assets/theme/default/css/images/students-80.png" /></div><div class="menu-label">Siswa</div></a>
+					<a href="siswa/siswa.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/students-80.png" /></div><div class="menu-label">Siswa</div></a>
 					</div>
 				</div>
 			</div>
@@ -127,7 +127,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="siswa/guru.php"><div><img alt="img" src="lib.assets/theme/default/css/images/teachers-80.png" /></div><div class="menu-label">Guru</div></a>
+					<a href="siswa/guru.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/teachers-80.png" /></div><div class="menu-label">Guru</div></a>
 					</div>
 				</div>
 			</div>
@@ -135,7 +135,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="siswa/artikel.php"><div><img alt="img" src="lib.assets/theme/default/css/images/article-80.png" /></div><div class="menu-label">Artikel</div></a>
+					<a href="siswa/artikel.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/article-80.png" /></div><div class="menu-label">Artikel</div></a>
 					</div>
 				</div>
 			</div>
@@ -147,7 +147,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="siswa/informasi.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a>
+					<a href="siswa/informasi.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a>
 					</div>
 				</div>
 			</div>
@@ -155,7 +155,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="siswa/ujian.php"><div><img alt="img" src="lib.assets/theme/default/css/images/exam-80.png" /></div><div class="menu-label">Ujian</div></a>
+					<a href="siswa/ujian.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/exam-80.png" /></div><div class="menu-label">Ujian</div></a>
 					</div>
 				</div>
 			</div>
@@ -163,7 +163,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="siswa/profil.php"><div><img alt="img" src="lib.assets/theme/default/css/images/profile-80.png" /></div><div class="menu-label">Profil</div></a>
+					<a href="siswa/profil.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/profile-80.png" /></div><div class="menu-label">Profil</div></a>
 					</div>
 				</div>
 			</div>
@@ -171,7 +171,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="siswa/logout.php"><div><img alt="img" src="lib.assets/theme/default/css/images/logout-80.png" /></div><div class="menu-label">Logout</div></a>
+					<a href="siswa/logout.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/logout-80.png" /></div><div class="menu-label">Logout</div></a>
 					</div>
 				</div>
 			</div>
@@ -222,7 +222,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="guru/kelas.php"><div><img alt="img" src="lib.assets/theme/default/css/images/class-80.png" /></div><div class="menu-label">Kelas</div></a>
+					<a href="guru/kelas.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/class-80.png" /></div><div class="menu-label">Kelas</div></a>
 					</div>
 				</div>
 			</div>
@@ -230,7 +230,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="guru/siswa.php"><div><img alt="img" src="lib.assets/theme/default/css/images/students-80.png" /></div><div class="menu-label">Siswa</div></a>
+					<a href="guru/siswa.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/students-80.png" /></div><div class="menu-label">Siswa</div></a>
 					</div>
 				</div>
 			</div>
@@ -238,7 +238,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="guru/guru.php"><div><img alt="img" src="lib.assets/theme/default/css/images/teachers-80.png" /></div><div class="menu-label">Guru</div></a>
+					<a href="guru/guru.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/teachers-80.png" /></div><div class="menu-label">Guru</div></a>
 					</div>
 				</div>
 			</div>
@@ -246,7 +246,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="guru/artikel.php"><div><img alt="img" src="lib.assets/theme/default/css/images/article-80.png" /></div><div class="menu-label">Artikel</div></a>
+					<a href="guru/artikel.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/article-80.png" /></div><div class="menu-label">Artikel</div></a>
 					</div>
 				</div>
 			</div>
@@ -258,7 +258,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="guru/informasi.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a>
+					<a href="guru/informasi.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a>
 					</div>
 				</div>
 			</div>
@@ -266,7 +266,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="guru/ujian.php"><div><img alt="img" src="lib.assets/theme/default/css/images/exam-80.png" /></div><div class="menu-label">Ujian</div></a>
+					<a href="guru/ujian.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/exam-80.png" /></div><div class="menu-label">Ujian</div></a>
 					</div>
 				</div>
 			</div>
@@ -274,7 +274,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="guru/profil.php"><div><img alt="img" src="lib.assets/theme/default/css/images/profile-80.png" /></div><div class="menu-label">Profil</div></a>
+					<a href="guru/profil.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/profile-80.png" /></div><div class="menu-label">Profil</div></a>
 					</div>
 				</div>
 			</div>
@@ -282,7 +282,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="guru/logout.php"><div><img alt="img" src="lib.assets/theme/default/css/images/logout-80.png" /></div><div class="menu-label">Logout</div></a>
+					<a href="guru/logout.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/logout-80.png" /></div><div class="menu-label">Logout</div></a>
 					</div>
 				</div>
 			</div>
@@ -330,7 +330,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="admin/kelas.php"><div><img alt="img" src="lib.assets/theme/default/css/images/class-80.png" /></div><div class="menu-label">Kelas</div></a>
+					<a href="admin/kelas.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/class-80.png" /></div><div class="menu-label">Kelas</div></a>
 					</div>
 				</div>
 			</div>
@@ -338,7 +338,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="admin/siswa.php"><div><img alt="img" src="lib.assets/theme/default/css/images/students-80.png" /></div><div class="menu-label">Siswa</div></a>
+					<a href="admin/siswa.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/students-80.png" /></div><div class="menu-label">Siswa</div></a>
 					</div>
 				</div>
 			</div>
@@ -346,7 +346,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="admin/guru.php"><div><img alt="img" src="lib.assets/theme/default/css/images/teachers-80.png" /></div><div class="menu-label">Guru</div></a>
+					<a href="admin/guru.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/teachers-80.png" /></div><div class="menu-label">Guru</div></a>
 					</div>
 				</div>
 			</div>
@@ -354,7 +354,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="admin/artikel.php"><div><img alt="img" src="lib.assets/theme/default/css/images/article-80.png" /></div><div class="menu-label">Artikel</div></a>
+					<a href="admin/artikel.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/article-80.png" /></div><div class="menu-label">Artikel</div></a>
 					</div>
 				</div>
 			</div>
@@ -366,7 +366,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="admin/informasi.php"><div><img alt="img" src="lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a>
+					<a href="admin/informasi.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/news-80.png" /></div><div class="menu-label">Info</div></a>
 					</div>
 				</div>
 			</div>
@@ -375,7 +375,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="admin/ujian.php"><div><img alt="img" src="lib.assets/theme/default/css/images/exam-80.png" /></div><div class="menu-label">Ujian</div></a>
+					<a href="admin/ujian.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/exam-80.png" /></div><div class="menu-label">Ujian</div></a>
 					</div>
 				</div>
 			</div>
@@ -383,7 +383,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="admin/profil.php"><div><img alt="img" src="lib.assets/theme/default/css/images/profile-80.png" /></div><div class="menu-label">Profil</div></a>
+					<a href="admin/profil.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/profile-80.png" /></div><div class="menu-label">Profil</div></a>
 					</div>
 				</div>
 			</div>
@@ -391,7 +391,7 @@ else
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
 					<div class="card-body card-center">
-					<a href="admin/logout.php"><div><img alt="img" src="lib.assets/theme/default/css/images/logout-80.png" /></div><div class="menu-label">Logout</div></a>
+					<a href="admin/logout.php"><div><img alt="img" src="<?php echo $cfg->base_assets;?>lib.assets/theme/default/css/images/logout-80.png" /></div><div class="menu-label">Logout</div></a>
 					</div>
 				</div>
 			</div>
