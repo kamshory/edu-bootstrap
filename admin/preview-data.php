@@ -11,11 +11,12 @@ require_once dirname(__DIR__) . '/lib.inc/PHPExcel_1.8.0/Classes/PHPExcel/IOFact
 
 function generateTable($header, $body, $user_data)
 {
+    $headerKeys = array_keys($user_data[0]);
     $table = '';
     $table .= '<table border="1" style="border-collapse:collapse">';
     $table .= '<thead>';
     $table .= '<tr>';
-    $table .= '<td>'.implode('</td><td>', $header).'</td>';
+    $table .= '<td>'.implode('</td><td>', $headerKeys).'</td>';
     $table .= '</tr>';
     $table .= '</thead>';
 
@@ -84,6 +85,7 @@ try{
         $principal = @$data['principal'];
         $language = strtolower(@$data['language']);
         $school_grade = strtolower(@$data['school_grade']);
+        $use_national_id = strtolower(@$data['use_national_id']);
 
         $user_data = array();
         $user_data['name'] = $name;
@@ -95,6 +97,7 @@ try{
         $user_data['language'] = $language;
         $user_data['principal'] = $principal;
         $user_data['school_grade'] = $school_grade;
+        $user_data['use_national_id'] = $use_national_id;
 
         $fixedData[] = $user_data;
     }
@@ -291,7 +294,13 @@ try {
             $email = $picoEdu->generateAltEmail('local', ($reg_number_national != '') ? 'st_' . $reg_number_national : '', ($reg_number != '') ? 'st_' . $reg_number : '', ($phone != '') ? 'ph_' . $country_id . '_' . $phone : '');
         }
 
+
         $user_data = array();
+        $reg_number = @$data['reg_number'];
+        $reg_number_national = @$data['reg_number_national'];
+        $user_data['reg_number'] = $reg_number;
+        $user_data['reg_number_national'] = $reg_number_national;
+
         $user_data['name'] = $name;
         $user_data['gender'] = $gender;
         $user_data['email'] = $email;
@@ -378,6 +387,12 @@ try {
         }
 
         $user_data = array();
+
+        $reg_number = @$data['reg_number'];
+        $reg_number_national = @$data['reg_number_national'];
+        $user_data['reg_number'] = $reg_number;
+        $user_data['reg_number_national'] = $reg_number_national;
+
         $user_data['name'] = $name;
         $user_data['gender'] = $gender;
         $user_data['email'] = $email;
