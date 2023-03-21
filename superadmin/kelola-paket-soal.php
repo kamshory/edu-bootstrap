@@ -1,11 +1,11 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
-	require_once dirname(__FILE__)."/bukan-super-admin.php";
+	require_once __DIR__."/bukan-super-admin.php";
 	exit();
 }
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 
 $pageTitle = "Kelola Paket Soal";
 $pagination = new \Pico\PicoPagination();
@@ -21,7 +21,7 @@ if(@$_GET['option'] == 'export')
 	{
 		$data3 = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$basename = $data3['file_path'];
-		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
+		$file_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$basename;
 		header("Content-Type: text/xml");
 		$fn = str_replace(" ", "-", strtolower($data3['name']));
 		header("Content-Disposition: attachment; filename=\"$fn.xml\"");
@@ -45,7 +45,7 @@ if(isset($_POST['sort']))
 	{
 		$data3 = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$basename = $data3['file_path'];
-		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
+		$file_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$basename;
 		
 		$s = file_get_contents($file_path);
 		$test_data = simplexml_load_string($s);
@@ -158,7 +158,7 @@ if(@$_GET['option'] == 'delete')
 	{
 		$data3 = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$basename = $data3['file_path'];
-		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
+		$file_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$basename;
 		
 		$s = file_get_contents($file_path);
 		$test_data = simplexml_load_string($s);
@@ -276,7 +276,7 @@ if(isset($_POST['save']) && (@$_GET['option'] == 'edit' || @$_GET['option'] == '
 	{
 		$data3 = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$basename = $data3['file_path'];
-		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
+		$file_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$basename;
 		
 		$s = file_get_contents($file_path);
 		$test_data = simplexml_load_string($s);
@@ -436,7 +436,7 @@ if(@$_GET['option'] == 'edit' || @$_GET['option'] == 'add')
 {
 if(isset($_GET['test_collection_id']) && (@$_GET['option'] == 'add' || isset($_GET['question_index'])))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $test_collection_id = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
 $question_index = kh_filter_input(INPUT_GET, "question_index", FILTER_SANITIZE_NUMBER_UINT);
 $sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
@@ -446,7 +446,7 @@ if($stmt->rowCount() > 0)
 
 $data3 = $stmt->fetch(\PDO::FETCH_ASSOC);
 $basename = $data3['file_path'];
-$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
+$file_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$basename;
 
 $s = file_get_contents($file_path);
 $test_data = simplexml_load_string($s);
@@ -871,11 +871,11 @@ else
 <?php
 }
 
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else if(isset($_GET['test_collection_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $test_collection_id = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id'  ";
 $stmt = $database->executeQuery($sql);
@@ -883,7 +883,7 @@ if($stmt->rowCount() > 0)
 {
 	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	$basename = $data['file_path'];
-	$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
+	$file_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$basename;
 	if(file_exists($file_path))
 	{
 		$picoTest = new \Pico\PicoTestCreator();
@@ -1010,7 +1010,7 @@ if($stmt->rowCount() > 0)
         <?php
 	}
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 	
 	
@@ -1018,7 +1018,7 @@ require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $grade_id = kh_filter_input(INPUT_GET, "grade_id", FILTER_SANITIZE_NUMBER_INT);
 ?>
 <style type="text/css">
@@ -1240,6 +1240,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

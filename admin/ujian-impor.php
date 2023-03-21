@@ -1,17 +1,17 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-admin.php";
+	require_once __DIR__."/bukan-admin.php";
 	exit();
 }
 if(empty($real_school_id))
 {
-	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	require_once __DIR__."/belum-ada-sekolah.php";
 	exit();
 }
 
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 
 $pageTitle = "Impor Soal Ujian";
 $pagination = new \Pico\PicoPagination();
@@ -39,9 +39,9 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 		$sort_order = ((int) $data['sort_order']);
 		$score_standar = $data['standard_score'];
 		
-		$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-		$dirBase = dirname(dirname(__FILE__));
+		$test_dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+		$dir2prepared = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+		$dirBase = dirname(__DIR__);
 		$permission = 0755;
 		$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 		
@@ -308,7 +308,7 @@ if(isset($_POST['import']) && isset($_POST['test_id']) && isset($_FILES['file'])
 }
 if(isset($_GET['test_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
@@ -412,11 +412,11 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $tahun_id = kh_filter_input(INPUT_GET, "tahun_id", FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 
@@ -600,6 +600,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

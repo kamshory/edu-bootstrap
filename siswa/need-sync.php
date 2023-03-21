@@ -1,6 +1,6 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/sessions.php";
+require_once dirname(__DIR__)."/lib.inc/functions-pico.php";
+require_once dirname(__DIR__)."/lib.inc/sessions.php";
 
 if(isset($_POST['sync']))
 {
@@ -69,9 +69,9 @@ if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?><?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
+require_once dirname(__DIR__)."/lib.inc/auth-siswa.php";
 $pageTitle = "Pengguna Tidak Terdaftar";
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <?php
 if(@$_GET['option'] == 'email-taken')
@@ -114,7 +114,7 @@ else
 }
 ?>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 ?>
 <?php
 }

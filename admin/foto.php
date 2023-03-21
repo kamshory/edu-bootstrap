@@ -1,16 +1,16 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(!isset($school_id) || empty($school_id))
 {
-	require_once dirname(__FILE__)."/login-form.php";
+	require_once __DIR__."/login-form.php";
 	exit();
 }
 
 if(@$_POST['option'] == 'upload-image')
 {
-	$avatar_dir = dirname(dirname(__FILE__)) . "/media.edu/user.avatar/admin/$admin_id";
-	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/user.avatar/admin/$admin_id";
-	$dirBase = dirname(dirname(__FILE__));
+	$avatar_dir = dirname(__DIR__) . "/media.edu/user.avatar/admin/$admin_id";
+	$dir2prepared = dirname(__DIR__) . "/media.edu/user.avatar/admin/$admin_id";
+	$dirBase = dirname(__DIR__);
 	$permission = 0755;
 	$fileSync->prepareDirectory($avatar_dir, $dirBase, $permission, true);	
 	$base_src = "media.edu/user.avatar/admin/$admin_id";

@@ -1,13 +1,13 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 
 if(empty($admin_id))
 {
-require_once dirname(__FILE__)."/login-form.php";
+require_once __DIR__."/login-form.php";
 exit();
 }
 $pageTitle = "Peralatan";
-$dir2 = dirname(__FILE__)."/tmp";
+$dir2 = __DIR__."/tmp";
 if(isset($_POST['clear']))
 {
 	if(file_exists($dir2) && ($handle = opendir($dir2)))
@@ -22,7 +22,7 @@ if(isset($_POST['clear']))
 }
 
 
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $li = "";
 $totalsize = 0;
 if(file_exists($dir2) && ($handle = opendir($dir2)))
@@ -56,5 +56,5 @@ echo $li;
 </form>
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 ?>

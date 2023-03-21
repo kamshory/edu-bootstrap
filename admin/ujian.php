@@ -1,20 +1,20 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-admin.php";
+	require_once __DIR__."/bukan-admin.php";
 	exit();
 }
 if(empty($real_school_id))
 {
-	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	require_once __DIR__."/belum-ada-sekolah.php";
 	exit();
 }
 
 $real_school_id = @$real_school_id . '';
 
 $pageTitle = "Ujian";
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 $pagination = new \Pico\PicoPagination();
 if(count(@$_POST) && isset($_POST['save']))
 {
@@ -145,7 +145,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 				$database->executeDelete($sql, true);
 				$sql = "DELETE FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = '$school_id' ";
 				$database->executeDelete($sql, true);
-				$dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+				$dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
 				$destroyer = new \Pico\DirectoryDestroyer($fileSync);
 				$destroyer->destroy($dir, true);
 				$database->executeTransaction("commit", true);
@@ -177,7 +177,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		{
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$basename = $data['file_path'];
-			$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
+			$file_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$basename;
 			
 			if(file_exists($file_path))
 			{	
@@ -197,9 +197,9 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 					$sort_order = ((int) $data['sort_order']);
 					$score_standar = $data['standard_score'];	
 					
-					$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-					$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-					$dirBase = dirname(dirname(__FILE__));
+					$test_dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+					$dir2prepared = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+					$dirBase = dirname(__DIR__);
 					$permission = 0755;
 					$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 					
@@ -338,7 +338,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 }
 if(@$_GET['option'] == 'add')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $collection = kh_filter_input(INPUT_GET, "collection", FILTER_SANITIZE_STRING_NEW);
 $selection = kh_filter_input(INPUT_GET, "selection", FILTER_SANITIZE_STRING_NEW);
 
@@ -631,12 +631,12 @@ $subjectList = $picoEdu->getSubjectList();
   </div>
 </div>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'edit')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* 
 FROM `edu_test` 
@@ -929,12 +929,12 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'detail')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $array_class = $picoEdu->getArrayClass($school_id);
 $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
@@ -1151,12 +1151,12 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);
 $array_class = $picoEdu->getArrayClass($school_id);
@@ -1377,6 +1377,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

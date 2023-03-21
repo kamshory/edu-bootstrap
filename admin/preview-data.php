@@ -1,13 +1,13 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($admin_id))
 {
-	require_once dirname(__FILE__)."/login-form.php";
+	require_once __DIR__."/login-form.php";
 	exit();
 }
-$path = dirname(__FILE__) . "/planetedu.xlsx";
-require_once dirname(dirname(__FILE__)) . '/lib.inc/PHPExcel_1.8.0/Classes/PHPExcel/IOFactory.php';
-require_once dirname(dirname(__FILE__)) . '/lib.inc/dom.php';
+$path = __DIR__ . "/planetedu.xlsx";
+require_once dirname(__DIR__) . '/lib.inc/PHPExcel_1.8.0/Classes/PHPExcel/IOFactory.php';
+require_once dirname(__DIR__) . '/lib.inc/dom.php';
 	
 
 function generateTable($header, $body)

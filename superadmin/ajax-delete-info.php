@@ -1,5 +1,5 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
 	exit();

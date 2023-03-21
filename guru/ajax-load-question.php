@@ -1,5 +1,5 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+require_once dirname(__DIR__)."/lib.inc/auth-guru.php";
 if(!empty($school_id))
 {
     $question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);

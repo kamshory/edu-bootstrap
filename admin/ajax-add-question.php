@@ -1,11 +1,11 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($school_id))
 {
 	exit();
 }
 
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 
 $time_create = $time_edit = $database->getLocalDateTime();
 
@@ -33,7 +33,7 @@ if(isset($_POST['question']))
 		$basic_competence = trim(str_replace("..", ".", $basic_competence), " . ");
 		$random = kh_filter_input(INPUT_POST, "random", FILTER_SANITIZE_NUMBER_UINT);
 		
-		$directory = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+		$directory = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
 		$prefiks = "media.edu/school/$school_id/test/$test_id";
 
 		$question = kh_filter_input(INPUT_POST, "question");

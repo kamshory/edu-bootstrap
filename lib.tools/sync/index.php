@@ -1,5 +1,5 @@
 <?php
-include_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-sync.php";
+include_once dirname(dirname(__DIR__))."/lib.inc/auth-sync.php";
 if(!$syncConfigs->sync_data_enable)
 {
     exit();

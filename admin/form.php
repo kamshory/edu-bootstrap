@@ -368,10 +368,10 @@ $str = "";
 if(isset($field))
 {
 $str .= "<"."?php
-require_once dirname(dirname(dirname(__FILE__))).\"/planetbiru/lib.inc/auth.php\";
+require_once dirname(dirname(__DIR__)).\"/planetbiru/lib.inc/auth.php\";
 
 \$pageTitle = \"$module_title\";
-require_once dirname(dirname(__FILE__)).\"/lib.inc/cfg.pagination.php\";
+require_once dirname(__DIR__).\"/lib.inc/cfg.pagination.php\";
 ";
 
 $str .= "if(count(@\$_POST))
@@ -522,7 +522,7 @@ $str .= "\tmysql_query(\$sql);
 $str .= "if(@\$_GET"."['option']"."=='add')
 {
 ";
-$str .= "require_once dirname(__FILE__).\"/lib.inc/header.php\";
+$str .= "require_once __DIR__.\"/lib.inc/header.php\";
 ";
 $str .= "?".">
 ";
@@ -632,7 +632,7 @@ $str .= "</form>
 ";
 $str .= "<"."?php getDefaultValues(DB_PREFIX.'$table', array('".implode("','", $field_new)."')); ?".">\r\n";
 $str .= "<"."?php
-require_once dirname(__FILE__).\"/lib.inc/footer.php\";
+require_once __DIR__.\"/lib.inc/footer.php\";
 ";
 $str .= "
 }
@@ -640,7 +640,7 @@ $str .= "
 $str .= "else if(@\$_GET"."['option']"."=='edit')
 {
 ";
-$str .= "require_once dirname(__FILE__).\"/lib.inc/header.php\";
+$str .= "require_once __DIR__.\"/lib.inc/header.php\";
 \$edit_key = kh_filter_input(INPUT_GET, '$edit_key', $edit_key_type);
 \$sql = \"SELECT `\".DB_PREFIX.\"$table"."`.* 
 FROM `\".DB_PREFIX.\"$table"."` 
@@ -773,7 +773,7 @@ $str .= "<div class=\"warning\">".$lpack['message_search_data_not_found']." <a h
 ";
 $str .= "<"."?php
 }
-require_once dirname(__FILE__).\"/lib.inc/footer.php\";
+require_once __DIR__.\"/lib.inc/footer.php\";
 ";
 $str .= "
 }
@@ -781,7 +781,7 @@ $str .= "
 $str .= "else if(@\$_GET"."['option']"."=='detail')
 {
 ";
-$str .= "require_once dirname(__FILE__).\"/lib.inc/header.php\";
+$str .= "require_once __DIR__.\"/lib.inc/header.php\";
 \$edit_key = kh_filter_input(INPUT_GET, '$edit_key', $edit_key_type);
 \$nt = '';
 ";
@@ -844,14 +844,14 @@ $str .= "<div class=\"warning\">".$lpack['message_search_data_not_found']." <a h
 ";
 $str .= "<"."?php
 }
-require_once dirname(__FILE__).\"/lib.inc/footer.php\";
+require_once __DIR__.\"/lib.inc/footer.php\";
 ";
 $str .= "
 }
 ";
 $str .= "else
 {
-require_once dirname(__FILE__).\"/lib.inc/header.php\";
+require_once __DIR__.\"/lib.inc/header.php\";
 ?".">
 ";
 $str .= "<div class=\"search-control\">
@@ -997,12 +997,12 @@ $str .= "</div>
 ";
 $str .= "
 <"."?php
-require_once dirname(__FILE__).\"/lib.inc/footer.php\";
+require_once __DIR__.\"/lib.inc/footer.php\";
 }
 ";
 $str .= "?".">";
 $str = str_replace(" Id<", " ID<", $str);
-file_put_contents(dirname(__FILE__)."/".$_POST['filename'], $str);
+file_put_contents(__DIR__."/".$_POST['filename'], $str);
 }
 ?>
 <!DOCTYPE html>

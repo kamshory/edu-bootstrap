@@ -1,6 +1,6 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/auth-guru.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 if(!empty($school_id))
 {
 	$basename = "ujian-soal.php";
@@ -32,9 +32,9 @@ if(!empty($school_id))
 				$raw_txt_data = kh_filter_input(INPUT_POST, "question_text", FILTER_DEFAULT);
 				$clear_data = $picoTest->parseRawQuestion($raw_txt_data);
 				
-				$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-				$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-				$dirBase = dirname(dirname(__FILE__));
+				$test_dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+				$dir2prepared = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+				$dirBase = dirname(__DIR__);
 				$permission = 0755;
 				$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 				

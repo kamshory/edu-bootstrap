@@ -1,5 +1,5 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(!empty($school_id))
 {
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
@@ -13,9 +13,9 @@ if($stmt->rowCount() > 0)
 {
 	error_reporting(0);
 	
-	$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-	$dirBase = dirname(dirname(__FILE__));
+	$test_dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+	$dir2prepared = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+	$dirBase = dirname(__DIR__);
 	$permission = 0755;
 	$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 	

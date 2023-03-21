@@ -1,14 +1,14 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 
 if(!isset($school_id) || empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-admin.php";
+	require_once __DIR__."/bukan-admin.php";
 	exit();
 }
 if(empty($real_school_id))
 {
-	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	require_once __DIR__."/belum-ada-sekolah.php";
 	exit();
 }
 
@@ -48,11 +48,11 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		";
 		$database->executeInsert($sql, true);
 
-		$article_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
+		$article_dir = dirname(__DIR__) . "/media.edu/school/$school_id/article/$article_id";
 		$base_src = "media.edu/school/$school_id/article/$article_id";
 
-		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
-		$dirBase = dirname(dirname(__FILE__));
+		$dir2prepared = dirname(__DIR__) . "/media.edu/school/$school_id/article/$article_id";
+		$dirBase = dirname(__DIR__);
 		$permission = 0755;
 		$fileSync->prepareDirectory($article_dir, $dirBase, $permission, true);
 			
@@ -66,11 +66,11 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	{
 		$article_id = kh_filter_input(INPUT_POST, "article_id", FILTER_SANITIZE_STRING_NEW);
 
-		$article_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
+		$article_dir = dirname(__DIR__) . "/media.edu/school/$school_id/article/$article_id";
 		$base_src = "media.edu/school/$school_id/article/$article_id";
 
-		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
-		$dirBase = dirname(dirname(__FILE__));
+		$dir2prepared = dirname(__DIR__) . "/media.edu/school/$school_id/article/$article_id";
+		$dirBase = dirname(__DIR__);
 		$permission = 0755;
 		$fileSync->prepareDirectory($article_dir, $dirBase, $permission, true);
 
@@ -126,7 +126,7 @@ if(isset($_POST['delete']) && isset($_POST['article_id']))
 			if($stmt->rowCount() > 0)
 			{
 				// destroy directory
-				$dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/article/$article_id";
+				$dir = dirname(__DIR__) . "/media.edu/school/$school_id/article/$article_id";
 				$destroyer = new \Pico\DirectoryDestroyer($fileSync);
 				$destroyer->destroy($dir, true);
 			}
@@ -136,7 +136,7 @@ if(isset($_POST['delete']) && isset($_POST['article_id']))
 
 if(@$_GET['option'] == 'add')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 
 <script type="text/javascript">
@@ -177,11 +177,11 @@ var defaultdir = 'lib.content/media/article/';
 </div>
 </form>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else if(@$_GET['option'] == 'edit' && isset($_GET['article_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
@@ -231,11 +231,11 @@ var defaultdir = 'lib.content/media/article/';
 </form>
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else if(isset($_GET['article_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $article_id = kh_filter_input(INPUT_GET, "article_id", FILTER_SANITIZE_STRING_NEW);
 $sql_filter_article = " AND `edu_article`.`article_id` = '$article_id' ";
 
@@ -247,7 +247,7 @@ $sql = "SELECT `edu_article`.*, `member`.`name` AS `creator`
 FROM `edu_article` 
 LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 where (`edu_article`.`school_id` = '$school_id') $sql_filter_article ";
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
@@ -314,11 +314,11 @@ return doc;
 </div>
 <?php
 	}
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 ?>
 <script type="text/javascript">
@@ -500,6 +500,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

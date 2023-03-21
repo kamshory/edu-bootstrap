@@ -1,13 +1,13 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-admin.php";
+	require_once __DIR__."/bukan-admin.php";
 	exit();
 }
 if(empty(@$real_school_id))
 {
-	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	require_once __DIR__."/belum-ada-sekolah.php";
 	exit();
 }
 
@@ -89,7 +89,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 }
 if(@$_GET['option'] == 'add')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <form name="formedu_school_program" id="formedu_school_program" action="" method="post" enctype="multipart/form-data" onsubmit="return checkForm(this, 'Wajib')">
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -121,12 +121,12 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 </form>
 <?php getDefaultValues($database, 'edu_school_program', array('name','sort_order','default','active')); ?>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'edit')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "school_program_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_school_program`.* 
 FROM `edu_school_program` 
@@ -173,12 +173,12 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'detail')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "school_program_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_school_program`.* ,
@@ -253,12 +253,12 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
@@ -371,6 +371,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

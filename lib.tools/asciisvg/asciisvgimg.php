@@ -1,5 +1,5 @@
 <?php
-$graphfilterdir = rtrim(dirname(__FILE__), '/\\');
+$graphfilterdir = rtrim(__DIR__, '/\\');
 require_once("$graphfilterdir/mathphp.php");
 // ASCIIsvgIMG.php
 // (c) 2006-2009 David Lippman   http://www.pierce.ctc.edu/dlippman

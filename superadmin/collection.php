@@ -1,10 +1,10 @@
 <?php
-require_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
+require_once dirname(__DIR__) . "/lib.inc/auth-admin.php";
 if ($adminLoggedIn->admin_level != 1) {
-    require_once dirname(__FILE__) . "/bukan-super-admin.php";
+    require_once __DIR__ . "/bukan-super-admin.php";
     exit();
 }
-require_once dirname(dirname(__FILE__)) . "/lib.inc/lib.test.php";
+require_once dirname(__DIR__) . "/lib.inc/lib.test.php";
 
 $pageTitle = "Kelola Paket Soal";
 $pagination = new \Pico\PicoPagination();
@@ -19,7 +19,7 @@ if ($stmt->rowCount() > 0) {
     $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
     foreach ($rows as $data3) {
         $basename = $data3['file_path'];
-        $file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/" . $basename;
+        $file_path = dirname(__DIR__) . "/media.edu/question-collection/data/" . $basename;
 
         $s = file_get_contents($file_path);
         $test_data = simplexml_load_string($s);

@@ -1,12 +1,12 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($school_id))
 {
-  require_once dirname(__FILE__)."/bukan-admin.php";
+  require_once __DIR__."/bukan-admin.php";
   exit();
 }
 $url = rtrim($database->getSystemVariable('base_url_student'), "/")."/";
-require_once dirname(dirname(__FILE__)) . "/lib.inc/phpqrcode/phpqrcode.php";
+require_once dirname(__DIR__) . "/lib.inc/phpqrcode/phpqrcode.php";
 ob_start();
 QRCode::png($url, null);
 $imageString = base64_encode( ob_get_contents() );

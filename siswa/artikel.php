@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
+require_once dirname(__DIR__)."/lib.inc/auth-siswa.php";
 if(!isset($school_id) || empty($school_id))
 {
-	require_once dirname(__FILE__)."/login-form.php";
+	require_once __DIR__."/login-form.php";
 	exit();
 }
 
@@ -17,7 +17,7 @@ if(isset($_GET['article_id']))
 	FROM `edu_article` 
 	LEFT JOIN (`member`) ON (`member`.`member_id` = `edu_article`.`member_create`) 
 	WHERE `edu_article`.`article_id` = '$article_id' AND `edu_article`.`active` = true ";
-	require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+	require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -36,11 +36,11 @@ if(isset($_GET['article_id']))
         </div>
         <?php
 	}
-	require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+	require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-	require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+	require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 	?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
 <div class="search-control">
@@ -190,6 +190,6 @@ if($pagination->getQuery()){
 	<?php
 		
 	}
-	require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+	require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

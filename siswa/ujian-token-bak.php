@@ -1,7 +1,7 @@
 <?php
 if(!isset($school_id) || empty($school_id))
 {
-	require_once dirname(__FILE__)."/login-form.php";
+	require_once __DIR__."/login-form.php";
 	exit();
 }
 $token_valid = 0;
