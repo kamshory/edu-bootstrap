@@ -60,60 +60,87 @@ if(file_exists($filename))
 		{
 			$exif = @exif_read_data($filename, 0, true);
 			$json_exif = rawurlencode(json_encode(array(get_capture_info($exif))));
-			if(isset($exif['IFD0']['Make']))
-			{
-				if(isset($exif['IFD0']['Model']))
-				{
-					if(strpos($exif['IFD0']['Model'], $exif['IFD0']['Make']) === 0)
-					{
-						$exif['IFD0']['Make'] = '';
-					}
-				}
-			}
+			if(isset($exif['IFD0']['Make']) && isset($exif['IFD0']['Model']) && strpos($exif['IFD0']['Model'], $exif['IFD0']['Make']) === 0)
+      {
+        $exif['IFD0']['Make'] = '';
+      }
+
+      $camera = "-";
+      if(isset($exif['IFD0']['Make']))
+      {
+        $camera = trim(@$exif['IFD0']['Make'].' '.@$exif['IFD0']['Model']);
+      }
+
+      $time_capture = "-";
+      
+      if(!empty(@$exif['IFD0']['Datetime']))
+      {
+        $time_capture = @$exif['IFD0']['Datetime'];
+      }
+      else if(!empty(@$exif['EXIF']['DateTimeOriginal']))
+      {
+        $time_capture = @$exif['EXIF']['DateTimeOriginal'];
+      }	
 			
-			$camera = (isset($exif['IFD0']['Make']))?(($exif['IFD0']['Make'].' '.$exif['IFD0']['Model'])):'-';
-			$time_capture = (@$exif['IFD0']['Datetime'])?(@$exif['IFD0']['Datetime']):(@$exif['EXIF']['DateTimeOriginal'])?(@$exif['EXIF']['DateTimeOriginal']):'-';
 			if(isset($exif['GPS']))
-			{
-				$gpsinfo = $exif['GPS'];
-				
-				$latar = explode("/",@$gpsinfo['GPSLatitude'][0]);
-				if(count($latar)>1 && $latar[1])
-				$latd = $latar[0]/$latar[1];
-				$latar = explode("/",@$gpsinfo['GPSLatitude'][1]);
-				if(count($latar)>1 && $latar[1])
-				$latm = $latar[0]/$latar[1];
-				$latar = explode("/",@$gpsinfo['GPSLatitude'][2]);
-				if(count($latar)>1 && $latar[1])
-				$lats = $latar[0]/$latar[1];
-				$reallat = dmstoreal($latd, $latm, $lats);
-				if(stripos(@$gpsinfo['GPSLatitudeRef'],"S")!==false)
-				$reallat = $reallat*-1;
-				$latitude = "$latd; $latm; $lats ".@$gpsinfo['GPSLatitudeRef'];
-				$latitude = trim($latitude, " ; ");
-				
-				$longar = explode("/",@$gpsinfo['GPSLongitude'][0]);
-				if(count($longar)>1 && $longar[1])
-				$longd = $longar[0]/$longar[1];
-				$longar = explode("/",@$gpsinfo['GPSLongitude'][1]);
-				if(count($longar)>1 && $longar[1])
-				$longm = $longar[0]/$longar[1];
-				$longar = explode("/",@$gpsinfo['GPSLongitude'][2]);
-				if(count($longar)>1 && $longar[1])
-				$longs = $longar[0]/$longar[1];
-				
-				$reallong = dmstoreal($longd, $longm, $longs);
-				if(stripos(@$gpsinfo['GPSLongitudeRef'],"W")!==false)
-				$reallong = $reallong*-1;
-				$longitude = "$longd; $longm; $longs ".@$gpsinfo['GPSLongitudeRef'];
-				
-				$longitude = trim($longitude, " ; ");
-				
-				$alar = explode("/",@$gpsinfo['GPSAltitude']);
-				if(count($alar)>1 && $alar[1])
-				$altitude = $alar[0]/$alar[1];
-				$altref = @$gpsinfo['GPSAltitudeRef'];
-			}
+		  {
+        $gpsinfo = $exif['GPS'];
+        
+        $latar = explode("/", @$gpsinfo['GPSLatitude'][0]);
+        if(count($latar)>1 && $latar[1])
+        {
+          $latd = $latar[0]/$latar[1];
+        }
+        $latar = explode("/", @$gpsinfo['GPSLatitude'][1]);
+        if(count($latar)>1 && $latar[1])
+        {
+          $latm = $latar[0]/$latar[1];
+        }
+        $latar = explode("/", @$gpsinfo['GPSLatitude'][2]);
+        if(count($latar)>1 && $latar[1])
+        {
+          $lats = $latar[0]/$latar[1];
+        }
+        $reallat = dmstoreal($latd, $latm, $lats);
+        if(stripos(@$gpsinfo['GPSLatitudeRef'],"S")!==false)
+        {
+          $reallat = $reallat*-1;
+        }
+        $latitude = "$latd; $latm; $lats ".@$gpsinfo['GPSLatitudeRef'];
+        $latitude = trim($latitude, " ; ");
+        
+        $longar = explode("/", @$gpsinfo['GPSLongitude'][0]);
+        if(count($longar)>1 && $longar[1])
+        {
+          $longd = $longar[0]/$longar[1];
+        }
+        $longar = explode("/", @$gpsinfo['GPSLongitude'][1]);
+        if(count($longar)>1 && $longar[1])
+        {
+          $longm = $longar[0]/$longar[1];
+        }
+        $longar = explode("/", @$gpsinfo['GPSLongitude'][2]);
+        if(count($longar)>1 && $longar[1])
+        {
+          $longs = $longar[0]/$longar[1];
+        }
+        
+        $reallong = dmstoreal($longd, $longm, $longs);
+        if(stripos(@$gpsinfo['GPSLongitudeRef'],"W")!==false)
+        {
+          $reallong = $reallong*-1;
+        }
+        $longitude = "$longd; $longm; $longs ".@$gpsinfo['GPSLongitudeRef'];
+        
+        $longitude = trim($longitude, " ; ");
+        
+        $alar = explode("/", @$gpsinfo['GPSAltitude']);
+        if(count($alar)>1 && $alar[1])
+        {
+          $altitude = $alar[0]/$alar[1];
+        }
+        $altref = @$gpsinfo['GPSAltitudeRef'];
+      }
 			else
 			{
 				$latitude = "-";
@@ -142,6 +169,10 @@ $url = $fmanConfig->rooturl.'/'.substr(path_encode($filename, $fmanConfig->rootd
     <td>MIME Type</td>
     <td><?php echo $ft->mime;?> </td>
   </tr>
+  <?php
+  if(stripos($ft->mime, 'image') === 0)
+  {
+  ?>
   <tr>
     <td>Image Width</td>
     <td><?php echo $width;?> </td>
@@ -170,6 +201,9 @@ $url = $fmanConfig->rooturl.'/'.substr(path_encode($filename, $fmanConfig->rootd
     <td>Altitude</td>
     <td><?php echo $altitude." ".$altref;?> </td>
   </tr>
+  <?php
+  }
+  ?>
   <tr>
     <td>File Size</td>
     <td><?php echo ($filesize>0)?($filesize.' bytes'):($filesize.' byte');?> </td>
@@ -197,7 +231,7 @@ $url = $fmanConfig->rooturl.'/'.substr(path_encode($filename, $fmanConfig->rootd
 </table>
 <?php
 }
-else if(@$_GET['type']=='video')
+else 
 {
 $ft = getMIMEType($filename);
 if(file_exists($filename))
@@ -247,54 +281,5 @@ $url = $fmanConfig->rooturl.'/'.substr(path_encode($filename, $fmanConfig->rootd
 </table>
 <?php
 }
-else
-{
-$ft = getMIMEType($filename);
-if(file_exists($filename))
-{
-	$filectime = date(\Pico\PicoConst::DATE_TIME_MYSQL, filectime($filename));
-	$fileatime = date(\Pico\PicoConst::DATE_TIME_MYSQL, fileatime($filename));
-	$filemtime = date(\Pico\PicoConst::DATE_TIME_MYSQL, filemtime($filename));
-	$fileperms = substr(sprintf('%o', fileperms($filename)), -4);
-	$md5 = md5_file($filename);
-	$filesize = filesize($filename);
-}
-$url = $fmanConfig->rooturl.'/'.substr(path_encode($filename, $fmanConfig->rootdir),5);
-?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0" class="dialog-table">
-  <tr>
-    <td width="30%">File Name</td>
-    <td><div class="file-name-cropped"><a href="<?php echo $url;?>" target="_blank" title="Click to download"><?php echo basename($filename);?></a></div></td>
-  </tr>
-  <tr>
-    <td>MIME Type</td>
-    <td><span class="mime-type" data-content="<?php echo trim($ft->mime);?>"><?php echo $ft->mime;?></span></td>
-  </tr>
-  <tr>
-    <td>File Size</td>
-    <td><?php echo ($filesize>0)?($filesize.' bytes'):($filesize.' byte');?> </td>
-  </tr>
-  <tr>
-    <td>MD5</td>
-    <td><?php echo $md5;?> </td>
-  </tr>
-  <tr>
-    <td>Created</td>
-    <td><?php echo $filectime;?> </td>
-  </tr>
-  <tr>
-    <td>Last Modified</td>
-    <td><?php echo $filemtime;?> </td>
-  </tr>
-  <tr>
-    <td>Last Accessed</td>
-    <td><?php echo $fileatime;?> </td>
-  </tr>
-  <tr>
-    <td>Permission</td>
-    <td><span class="permission-info"><?php echo $fileperms;?></span></td>
-  </tr>
-</table>
-<?php
-}
+
 ?>
