@@ -87,7 +87,7 @@ h3{
 }
 .user-item .image{
   position: absolute;
-  margin-left: -10px;
+  margin-left: -120px;
   margin-top: -25px;
   vertical-align: top;
 }
