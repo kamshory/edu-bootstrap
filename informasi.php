@@ -16,7 +16,6 @@ if(isset($_GET['info_id']))
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
-		$pageTitle = $data['name'];
 
 		$obj = \Pico\PicoDOM::parseHtmlData('<html><body>'.($data['content']).'</body></html>');
 		$arrparno = array();
