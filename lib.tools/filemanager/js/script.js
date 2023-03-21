@@ -3579,9 +3579,9 @@ function openDir(
     $('#address').val(filepath);
     let arg = {};
     if (togglethumb) {
-      arg = { dir: filepath, thumbnail: 1 };
+      arg = { curdir: filepath, thumbnail: 1 };
     } else {
-      arg = { dir: filepath };
+      arg = { curdir: filepath };
     }
     if (sortby) {
       arg['sortby'] = sortby;

@@ -16,7 +16,7 @@ if(@$fmanConfig->thumbnail_on_load)
 }
 
 
-$dir2 = path_decode(kh_filter_input(INPUT_GET, "dir"), $fmanConfig->rootdir);
+$dir2 = path_decode(kh_filter_input(INPUT_GET, "curdir"), $fmanConfig->rootdir);
 if(!is_dir($dir2)){
 	$dir2 = path_decode('base', $fmanConfig->rootdir);	
 }
