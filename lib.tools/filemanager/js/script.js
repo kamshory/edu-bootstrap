@@ -3584,10 +3584,10 @@ function openDir(
       arg = { curdir: filepath };
     }
     if (sortby) {
-      arg['sortby'] = sortby;
+      arg.sortby = sortby;
     }
     if (sortorder) {
-      arg['sortorder'] = sortorder;
+      arg.sortorder = sortorder;
     }
     let data = getQueryParams();
     arg = mergeObject(arg, data);
@@ -3827,7 +3827,7 @@ function searchFile() {
   $('#sdir').val(dir);
   $('#sfile').select();
   let data = getQueryParams();
-  data.dir = dir;
+  data.curdir = dir;
   $.get('tool-search-file.php', data, function (answer) {
     $('.search-result').html(answer);
     normalizeTable();

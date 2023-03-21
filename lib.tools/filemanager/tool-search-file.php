@@ -6,7 +6,7 @@ if($fmanConfig->authentification_needed && !$userlogin)
 {
 	exit();
 }
-$dir = path_decode(kh_filter_input(INPUT_GET, "dir"), $fmanConfig->rootdir);
+$dir = path_decode(kh_filter_input(INPUT_GET, "curdir"), $fmanConfig->rootdir);
 $lv2 = new listFile($dir);
 $arrfile = $lv2->result_file;
 $arrdir = $lv2->result_dir;
