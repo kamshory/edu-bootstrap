@@ -1,10 +1,10 @@
 <?php
-$dbConfig = dirname(dirname(dirname(__FILE__)))."/db.ini";
+$dbConfig = dirname(dirname(__DIR__))."/db.ini";
 date_default_timezone_set("Asia/Jakarta");
 
-require_once dirname(__FILE__)."/lib/autoload.php"; //NOSONAR
-require_once dirname(dirname(__FILE__))."/lib.inc/autoload.php"; //NOSONAR
-require_once dirname(dirname(__FILE__))."/lib.config/ws-cfg.php"; //NOSONAR
+require_once __DIR__."/lib/autoload.php"; //NOSONAR
+require_once dirname(__DIR__)."/lib.inc/autoload.php"; //NOSONAR
+require_once dirname(__DIR__)."/lib.config/ws-cfg.php"; //NOSONAR
 
 $wsDatabaseCredentials = new \Pico\PicoDatabaseCredentials();
 $wsDatabaseCredentials->load($dbConfig);

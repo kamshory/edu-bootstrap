@@ -13,7 +13,7 @@ function resizePng($im, $dst_width, $dst_height) {
     imagecopyresampled($newImg, $im, 0, 0, 0, 0, $dst_width, $dst_height, $width, $height);
     return $newImg;
 }
-$dir2 = dirname(__FILE__);
+$dir2 = __DIR__;
 $scale = 1;
 if(file_exists($dir2))
 {

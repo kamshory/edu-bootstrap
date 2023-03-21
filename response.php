@@ -1,8 +1,8 @@
 <?php
-include_once dirname(__FILE__)."/lib.inc/functions-pico.php";
-include_once dirname(__FILE__)."/lib.inc/sessions.php";
+include_once __DIR__."/lib.inc/functions-pico.php";
+include_once __DIR__."/lib.inc/sessions.php";
 $pageTitle = "Tanggapan Sekolah";
-include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
+include_once __DIR__."/lib.inc/header-bootstrap.php";
 
 $sql = "SELECT `edu_school_response`.* 
 FROM `edu_school_response` 
@@ -37,5 +37,5 @@ if($stmt->rowCount() > 0)
 </div>
 	<?php	
 }
-include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
+include_once __DIR__."/lib.inc/footer-bootstrap.php";
 ?>

@@ -1,6 +1,6 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/auth-guru.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 if(!isset($school_id) || empty($school_id))
 {
 	exit();
@@ -14,7 +14,7 @@ if($stmt->rowCount() > 0)
 	$picoTest = new \Pico\PicoTestCreator();
 	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	$basename = $data['file_path'];
-	$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
+	$file_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$basename;
 	if(file_exists($file_path))
 	{
 		$text_all = $picoTest->loadXmlData($file_path);

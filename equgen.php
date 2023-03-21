@@ -1,5 +1,5 @@
 <?php
-include_once dirname(__FILE__)."/inc-cfg.php";
+include_once __DIR__."/inc-cfg.php";
 $url = $_SERVER['REQUEST_URI'];
 $arr = explode("?", $url, 2);
 $latex = $arr[1];

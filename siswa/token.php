@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
+require_once dirname(__DIR__)."/lib.inc/auth-siswa.php";
 if(!isset($school_id) || empty($school_id))
 {
-	require_once dirname(__FILE__)."/login-form.php";
+	require_once __DIR__."/login-form.php";
 	exit();
 }
 if(isset($_POST['token']) && isset($_POST['test_id']))

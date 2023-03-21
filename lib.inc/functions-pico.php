@@ -1,6 +1,6 @@
 <?php
-require_once dirname(dirname(__FILE__)) . "/lib.config/inc-cfg.php";
-require_once dirname(__FILE__) . "/autoload.php";
+require_once dirname(__DIR__) . "/lib.config/inc-cfg.php";
+require_once __DIR__ . "/autoload.php";
 
 mb_regex_encoding('UTF-8');
 function mb_replace($search, $replace, $subject, &$count = 0) //NOSONAR

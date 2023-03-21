@@ -1,11 +1,11 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($school_id))
 {
-  require_once dirname(__FILE__)."/bukan-admin.php";
+  require_once __DIR__."/bukan-admin.php";
   exit();
 }
-require_once dirname(dirname(__FILE__)) . "/lib.inc/phpqrcode/phpqrcode.php";
+require_once dirname(__DIR__) . "/lib.inc/phpqrcode/phpqrcode.php";
 
 
 $tokens = kh_filter_input(INPUT_GET, "tokens", FILTER_SANITIZE_STRING_NEW);

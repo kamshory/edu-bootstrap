@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($admin_id))
 {
-	require_once dirname(__FILE__)."/login-form.php";
+	require_once __DIR__."/login-form.php";
 	exit();
 }
 
@@ -160,7 +160,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 	$admin_create = $admin_edit = $admin_id;
 	/** Include PHPExcel_IOFactory */
-	require_once dirname(dirname(__FILE__)) . '/lib.inc/PHPExcel_1.8.0/Classes/PHPExcel/IOFactory.php';
+	require_once dirname(__DIR__) . '/lib.inc/PHPExcel_1.8.0/Classes/PHPExcel/IOFactory.php';
 	
 	if(isset($_FILES['file']['tmp_name']))
 	{
@@ -169,12 +169,12 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 		$myschool = true;
 		$ip = str_replace(array(':','.'), '-', $_SERVER['REMOTE_ADDR']);
 
-		if(!file_exists(dirname(__FILE__)."/tmp"))
+		if(!file_exists(__DIR__."/tmp"))
 		{
-			mkdir(dirname(__FILE__) . "/tmp", 755);
+			mkdir(__DIR__ . "/tmp", 755);
 		}
 
-		$path = dirname(__FILE__)."/tmp/$ip-".mt_rand(1000000, 9000000).".xlsx";
+		$path = __DIR__."/tmp/$ip-".mt_rand(1000000, 9000000).".xlsx";
 		$success = move_uploaded_file($_FILES['file']['tmp_name'], $path);
 		$fileSync->createFile($path, true);
 		$errors = 0;
@@ -806,7 +806,7 @@ if(@$_GET['option'] == 'success')
 {
 if(isset($_GET['school_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $nt = '';
@@ -957,22 +957,22 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 </form>
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 exit();
 }
 }
 else if(@$_GET['option'] == 'duplicated')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="alert alert-warning">GAGAL! Data sekolah dengan name yang sama telah dimasukkan sebelumnya. Mohon periksa kembali data yang Anda masukkan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Impor lagi</a>.</div>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
 	
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="alert alert-success">
 Modul ini digunakan untuk mengimpor data sekolah, kelas, siswa, dan guru. Contoh data dapat didownload <a href="planetedu.xlsx">di sini</a>. Apabila terjadi kesalahan saat melakukan import data, segera hapus data tersebut sebelum mengimpor data yang lain.</div>
@@ -1013,6 +1013,6 @@ $(document).ready(function(e) {
 });
 </script>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

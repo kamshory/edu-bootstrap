@@ -1,6 +1,6 @@
 <?php
-require_once dirname(__FILE__)."/functions-pico.php";
-require_once dirname(__FILE__)."/sessions.php";
+require_once __DIR__."/functions-pico.php";
+require_once __DIR__."/sessions.php";
 
 $username = "";
 $password = "";
@@ -46,7 +46,7 @@ if(empty($user_id))
     exit();
 }
 
-$applicationRoot = dirname(dirname(__FILE__));
+$applicationRoot = dirname(__DIR__);
 $permission = 0755;
 
 $fileUploadBaseDir = $applicationRoot."/volume.sync/file/upload";

@@ -25,8 +25,8 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
  
-    $QR_BASEDIR = dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR;
-    $QR_TOOLSDIR = dirname(__FILE__).DIRECTORY_SEPARATOR;
+    $QR_BASEDIR = __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR;
+    $QR_TOOLSDIR = __DIR__.DIRECTORY_SEPARATOR;
     
     $outputFile = $QR_BASEDIR.'phpqrcode.php';
     

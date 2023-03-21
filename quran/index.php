@@ -122,7 +122,7 @@ class Quran
     {
         $verses = array();
         foreach ($langs as $lang) {
-            $file = dirname(dirname(__FILE__)) . "/lib.quran/$lang-src/$s.php";
+            $file = dirname(__DIR__) . "/lib.quran/$lang-src/$s.php";
             if (file_exists($file)) {
                 include($file); //NOSONAR
                 $verses[$lang] = $quranArray;

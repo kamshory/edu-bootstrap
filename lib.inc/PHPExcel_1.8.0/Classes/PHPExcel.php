@@ -28,7 +28,7 @@
 
 /** PHPExcel root directory */
 if (!defined('PHPEXCEL_ROOT')) {
-    define('PHPEXCEL_ROOT', dirname(__FILE__) . '/');
+    define('PHPEXCEL_ROOT', __DIR__ . '/');
     require_once (PHPEXCEL_ROOT . 'PHPExcel/Autoloader.php');
 }
 

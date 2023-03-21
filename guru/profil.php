@@ -1,5 +1,5 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+require_once dirname(__DIR__)."/lib.inc/auth-guru.php";
 $pageTitle = "Profil Guru";
 if(count(@$_POST) && isset($_POST['save']))
 {
@@ -44,7 +44,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 }
 if(@$_GET['option'] == 'edit')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $sql = "SELECT `edu_teacher`.* , `edu_school`.`name` AS `school_name`
 FROM `edu_teacher` 
 LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_teacher`.`school_id`)
@@ -119,12 +119,12 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="profil.php">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $nt = '';
 $sql = "SELECT `edu_teacher`.* , `edu_school`.`name` AS `school_name`
 FROM `edu_teacher` 
@@ -212,7 +212,7 @@ else
 <div class="alert alert-warning">Anda tidak terdaftar sebagai guru. <a href="../">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 ?>

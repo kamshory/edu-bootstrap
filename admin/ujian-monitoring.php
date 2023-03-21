@@ -1,13 +1,13 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-admin.php";
+	require_once __DIR__."/bukan-admin.php";
 	exit();
 }
 if(empty($real_school_id))
 {
-	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	require_once __DIR__."/belum-ada-sekolah.php";
 	exit();
 }
 $pageTitle = "Monitoring Ujian";
@@ -58,7 +58,7 @@ if(@$_GET['option'] == 'block-student' && isset($_GET['test_id']) && isset($_GET
 
 if(@$_GET['option'] == 'detail')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $status = kh_filter_input(INPUT_GET, "status", FILTER_SANITIZE_STRING_NEW);
@@ -189,7 +189,7 @@ $(window).ready(function(e) {
 
 <div id="tabel-monitoring" data-test-id="<?php echo $test_id;?>" data-status="<?php echo $status;?>" data-url="ajax-test-monitoring.php">
 <?php
-require_once dirname(__FILE__)."/ajax-test-monitoring.php";
+require_once __DIR__."/ajax-test-monitoring.php";
 ?>
 </div>
 <div class="button-area">
@@ -200,7 +200,7 @@ require_once dirname(__FILE__)."/ajax-test-monitoring.php";
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);
 ?>
@@ -393,6 +393,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

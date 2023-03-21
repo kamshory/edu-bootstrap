@@ -1,7 +1,7 @@
 <?php
 if(!function_exists("exif_read_data"))
 {
-	include_once dirname(__FILE__)."/exif.php";
+	include_once __DIR__."/exif.php";
 }
 function imageResizeMax($source, $destination, $maxwidth, $maxheight, $interlace=false, $type = 'jpeg', $quality = 80) //NOSONAR
 {

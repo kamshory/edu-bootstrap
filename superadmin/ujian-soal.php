@@ -1,11 +1,11 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
-	require_once dirname(__FILE__)."/bukan-super-admin.php";
+	require_once __DIR__."/bukan-super-admin.php";
 	exit();
 }
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 
 $pageTitle = "Soal Ujian";
 $pagination = new \Pico\PicoPagination();
@@ -56,13 +56,13 @@ if(isset($_POST['savetext']) && @$_GET['option'] == 'add')
 		$xml_data = kh_filter_input(INPUT_POST, "question_text", FILTER_DEFAULT);
 		$clear_data = $picoTest->parseRawQuestion($xml_data);
 
-		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school";
-		$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-		$dirBase = dirname(dirname(__FILE__));
+		$base_dir = dirname(__DIR__) . "/media.edu/school";
+		$test_dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+		$dirBase = dirname(__DIR__);
 		$permission = 0755;
 		$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 	
-		$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+		$base_dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
 
 		$base_src = "media.edu/school/$school_id/test/$test_id";
 		$database->executeTransaction("start transaction", true);
@@ -146,7 +146,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$dt = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$test_id = $dt['test_id'];
 		
-		$direktori = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+		$direktori = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
 		$prefiks = "media.edu/school/$school_id/test/$test_id";
 	
 		$question = kh_filter_input(INPUT_POST, "question");
@@ -196,7 +196,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 
 if(@$_GET['option'] == 'edit')
 {
-	require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+	require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 	$question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
@@ -492,11 +492,11 @@ foreach ($rows2 as $data2) {
 }
 }
 
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else if(isset($_GET['test_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* ,
 (SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id`) AS `collection`
@@ -862,12 +862,12 @@ echo $data2['content'];
 ?>
 </form>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 
 } else {
 	
-		require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+		require_once __DIR__ . "/lib.inc/header.php"; //NOSONAR
 		$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 		$class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 		?>
@@ -1174,7 +1174,7 @@ function buildMenu(id)
 
 <?php
 	
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 
 ?>

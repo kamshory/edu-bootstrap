@@ -858,7 +858,7 @@ class PicoEdu //NOSONAR
 	public function log($content = "", $file = null)
 	{
 		if ($file == null) {
-			$file = dirname(dirname(dirname(__FILE__))) . "/log.txt";
+			$file = dirname(dirname(__DIR__)) . "/log.txt";
 		}
 		$fp = fopen($file, 'a');
 		fputs($fp, date("Y-m-d H:s:s") . " " . $content . "\r\n");

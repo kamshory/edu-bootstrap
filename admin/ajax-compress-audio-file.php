@@ -1,12 +1,12 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(!empty($school_id) && isset($_POST['filename']) && isset($_POST['test_id']))
 {
-	$absolute_dir = dirname(dirname(__FILE__));
+	$absolute_dir = dirname(__DIR__);
 	$filename = trim(@$_POST['filename']);
 	$test_id = trim(@$_POST['test_id']);
 	$no = abs($_POST['no'])*1;
-	$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+	$test_dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
 	$path = $test_dir."/".trim($filename, "/");
 	if(file_exists($path))
 	{

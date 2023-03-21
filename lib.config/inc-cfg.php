@@ -1,7 +1,7 @@
 <?php
 
-$oneLevelUp = dirname(dirname(__FILE__));
-$twoLevelUp = dirname(dirname(dirname(__FILE__)));
+$oneLevelUp = dirname(__DIR__);
+$twoLevelUp = dirname(dirname(__DIR__));
 
 class URLBuilder{
     public static function createURL($schema, $serverName, $base_path = "")
@@ -18,7 +18,7 @@ class URLBuilder{
     }
 }
 
-require_once dirname(__FILE__)."/ws-cfg.php";
+require_once __DIR__."/ws-cfg.php";
 
 $syncConfigs = new stdClass();
 $databaseConfigs = new stdClass();

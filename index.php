@@ -1,7 +1,7 @@
 <?php
-include_once dirname(__FILE__)."/lib.inc/functions-pico.php";
+include_once __DIR__."/lib.inc/functions-pico.php";
 
-include_once dirname(__FILE__)."/lib.inc/sessions.php";
+include_once __DIR__."/lib.inc/sessions.php";
 if(isset($_POST['username']) && isset($_POST['password']))
 {
 	$username = kh_filter_input(INPUT_POST, "username", FILTER_SANITIZE_ALPHANUMERICPUNC);
@@ -65,12 +65,12 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	}
 	else
 	{
-		include_once dirname(__FILE__)."/login-form.php";
+		include_once __DIR__."/login-form.php";
 	}
 }
 else
 {
-	include_once dirname(__FILE__)."/lib.inc/auth-siswa.php";
+	include_once __DIR__."/lib.inc/auth-siswa.php";
 	$username = '';
 	$password = '';
 	$loged_in = false;
@@ -104,7 +104,7 @@ else
 
 	if(!empty($student_id))
 	{
-		include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php"; //NOSONAR
+		include_once __DIR__."/lib.inc/header-bootstrap.php"; //NOSONAR
 		?>
 		
 		<div class="card-container row container container-fluid d-flex justify-content-between">
@@ -178,14 +178,14 @@ else
 		</div>
 
 		<?php
-		include_once dirname(__FILE__)."/lib.inc/inc-informasi.php"; //NOSONAR
-		include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php"; //NOSONAR
+		include_once __DIR__."/lib.inc/inc-informasi.php"; //NOSONAR
+		include_once __DIR__."/lib.inc/footer-bootstrap.php"; //NOSONAR
 		exit();
 	}
 	
 	if(!$loged_in)
 	{
-		include_once dirname(__FILE__)."/lib.inc/auth-guru.php";
+		include_once __DIR__."/lib.inc/auth-guru.php";
 		if(isset($_SESSION['teacher_username']))
 		{
 			$username = $_SESSION['teacher_username'];
@@ -216,7 +216,7 @@ else
 		}
 		if(!empty($teacher_id))
 		{
-			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php"; //NOSONAR
+			include_once __DIR__."/lib.inc/header-bootstrap.php"; //NOSONAR
 			?>
 			<div class="card-container row container container-fluid d-flex justify-content-between">
 			<div class="col-md-3 col-sm-6">
@@ -289,15 +289,15 @@ else
 
 		</div>
 			<?php
-			include_once dirname(__FILE__)."/lib.inc/inc-informasi.php"; //NOSONAR
-			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php"; //NOSONAR
+			include_once __DIR__."/lib.inc/inc-informasi.php"; //NOSONAR
+			include_once __DIR__."/lib.inc/footer-bootstrap.php"; //NOSONAR
 			exit();
 		}
 	}
 	
 	if(!$loged_in)
 	{
-		include_once dirname(__FILE__)."/lib.inc/auth-admin.php";
+		include_once __DIR__."/lib.inc/auth-admin.php";
 		if(isset($_SESSION['admin_username']))
 		{
 			$username = $_SESSION['admin_username'];
@@ -324,7 +324,7 @@ else
 		}
 		if(!empty($admin_id))
 		{
-			include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php"; //NOSONAR
+			include_once __DIR__."/lib.inc/header-bootstrap.php"; //NOSONAR
 			?>
 			<div class="card-container row container container-fluid d-flex justify-content-between">
 			<div class="col-md-3 col-sm-6">
@@ -398,15 +398,15 @@ else
 
 		</div>
 			<?php
-			include_once dirname(__FILE__)."/lib.inc/inc-informasi.php"; //NOSONAR
-			include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php"; //NOSONAR
+			include_once __DIR__."/lib.inc/inc-informasi.php"; //NOSONAR
+			include_once __DIR__."/lib.inc/footer-bootstrap.php"; //NOSONAR
 			exit();
 		}
 	}
 	
 	if(!$loged_in)
 	{
-		include_once dirname(__FILE__)."/login-form.php";
+		include_once __DIR__."/login-form.php";
 		exit();
 	}
 }

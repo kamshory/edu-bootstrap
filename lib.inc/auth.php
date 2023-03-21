@@ -1,7 +1,7 @@
 <?php
-include_once dirname(__FILE__)."/functions-pico.php";
-include_once dirname(__FILE__)."/member-auth.php";
-include_once dirname(__FILE__)."/sessions.php";
+include_once __DIR__."/functions-pico.php";
+include_once __DIR__."/member-auth.php";
+include_once __DIR__."/sessions.php";
 
 $username = '';
 $password = '';

@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
-	require_once dirname(__FILE__)."/bukan-super-admin.php";
+	require_once __DIR__."/bukan-super-admin.php";
 	exit();
 }
 
@@ -10,8 +10,8 @@ $pageTitle = "Daftar Paket Soal";
 $pagination = new \Pico\PicoPagination();
 if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 {
-	$collection_dir = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
-	$dirBase = dirname(dirname(__FILE__));
+	$collection_dir = dirname(__DIR__) . "/media.edu/question-collection/data"; //NOSONAR
+	$dirBase = dirname(__DIR__);
 	$permission = 0755;
 	$fileSync->prepareDirectory($collection_dir, $dirBase, $permission, true);
 
@@ -27,7 +27,7 @@ if(isset($_POST['count']) && isset($_POST['test_collection_id']))
 		{
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$file_path = $data['file_path'];
-			$real_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$file_path;
+			$real_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$file_path;
 			$md5 = md5_file($real_path);
 			$sha1 = sha1_file($real_path);
 			$s = file_get_contents($real_path);
@@ -85,8 +85,8 @@ if(isset($_POST['set_inactive']) && isset($_POST['test_collection_id']))
 if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 {
 	$test_id = $_POST['test_collection_id'];
-	$collection_dir = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
-	$dirBase = dirname(dirname(__FILE__));
+	$collection_dir = dirname(__DIR__) . "/media.edu/question-collection/data"; //NOSONAR
+	$dirBase = dirname(__DIR__);
 	$permission = 0755;
 	$fileSync->prepareDirectory($collection_dir, $dirBase, $permission, true);
 
@@ -101,7 +101,7 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 			$file_path = $data['file_path'];
 			$sql = "DELETE FROM `edu_test_collection` WHERE `test_collection_id` = '$test_collection_id' ";
 			$database->executeDelete($sql, true);
-			$real_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$file_path;
+			$real_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$file_path;
 			if(file_exists($real_path))
 			{
 				@unlink($real_path);
@@ -115,14 +115,14 @@ if(isset($_POST['delete']) && isset($_POST['test_collection_id']))
 
 if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 {
-	$collection_dir = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
-	$dirBase = dirname(dirname(__FILE__));
+	$collection_dir = dirname(__DIR__) . "/media.edu/question-collection/data"; //NOSONAR
+	$dirBase = dirname(__DIR__);
 	$permission = 0755;
 	$fileSync->prepareDirectory($collection_dir, $dirBase, $permission, true);
 
 	$name = kh_filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
 	$grade_id = kh_filter_input(INPUT_POST, "grade_id", FILTER_SANITIZE_NUMBER_INT);
-	$target_dir = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
+	$target_dir = dirname(__DIR__) . "/media.edu/question-collection/data"; //NOSONAR
 	$base_name = md5(session_id()."-".time()."-".mt_rand(111111, 999999)).".xml";
 	$file_path = $target_dir."/".$base_name;
 
@@ -180,8 +180,8 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add' && isset($_FILES['file']))
 }
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
-	$collection_dir = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data"; //NOSONAR
-	$dirBase = dirname(dirname(__FILE__));
+	$collection_dir = dirname(__DIR__) . "/media.edu/question-collection/data"; //NOSONAR
+	$dirBase = dirname(__DIR__);
 	$permission = 0755;
 	$fileSync->prepareDirectory($collection_dir, $dirBase, $permission, true);
 
@@ -200,7 +200,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 }
 if(@$_GET['option'] == 'add')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <form name="formedu_test_collection" id="formedu_test_collection" action="" method="post" enctype="multipart/form-data" onsubmit="return checkForm(this, 'Wajib')">
 	<table width="800" border="0" class="table two-side-table" cellspacing="0" cellpadding="0">
@@ -236,12 +236,12 @@ require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
 </form>
 <?php getDefaultValues($database, 'edu_test_collection', array('name','grade_id','file_name','file_path','file_size','file_md5','file_sha1','time_create','time_edit','ip_create','ip_edit','taken','active')); ?>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'edit')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test_collection`.* 
 FROM `edu_test_collection` 
@@ -288,12 +288,12 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'detail')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "test_collection_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test_collection`.* $nt
@@ -385,12 +385,12 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $grade_id = kh_filter_input(INPUT_GET, "grade_id", FILTER_SANITIZE_NUMBER_INT);
 ?>
 <style type="text/css">
@@ -602,6 +602,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>
