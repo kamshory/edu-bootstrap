@@ -162,7 +162,7 @@ class PicoTest
             FROM `edu_question` WHERE `question_id` = '$questionId'       
             ";
             $stmt = $this->database->executeQuery($sql);
-            if ($stmt->rowCount() > 0) {
+            if($stmt->rowCount() > 0) {
                 $data = $stmt->fetch(\PDO::FETCH_ASSOC);
                 $data['number'] = (int) $key + 1;
                 $questionId = addslashes($val);
@@ -248,7 +248,7 @@ class PicoTest
         AND `edu_answer`.`finish` = false
         ";
         $stmt = $this->database->executeQuery($sql);
-        if ($stmt->rowCount() > 0) {
+        if($stmt->rowCount() > 0) {
             return $stmt->fetch(\PDO::FETCH_ASSOC);
         }
         return null;
@@ -315,7 +315,7 @@ class PicoTest
         AND `edu_question`.`active` = true
         ";
         $stmt = $this->database->executeQuery($sql);
-        if ($stmt->rowCount() > 0) {
+        if($stmt->rowCount() > 0) {
             $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
             foreach ($data as $key => $val) {
                 $data[$key]['number'] = (int)$key + 1;

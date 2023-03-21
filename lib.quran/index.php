@@ -1,5 +1,5 @@
 <?php
-function showquran($lang, $numVerse, $verse)
+function showQuran($lang, $numVerse, $verse)
 {
 	$_GET['verse'] = $v = $numVerse;
 	$numVersenumber = @$_GET['versenumber'];
@@ -36,8 +36,9 @@ if (isset($_GET['v'])) {
 		$arr[2] = preg_replace("/[^\d\-]/i", "", strtolower($arr[2]));
 		$lang = $arr[0] . '-src';
 		$surah = $arr[1];
-		if (file_exists($lang . "/" . $surah . ".php")) {
-			include_once($lang . "/" . $surah . ".php");
+		$file = __DIR__ . "/" . $lang . "/" . $surah . ".php";
+		if (file_exists($file)) {
+			include_once $file;
 			if (stripos($arr[2], '-') !== false) {
 				$arrv = @explode("-", $arr[2], 2);
 				$start = $arrv[0];
@@ -51,11 +52,11 @@ if (isset($_GET['v'])) {
 				$end = ($end > 0) ? $end : 1;
 				for ($i = $start; $i <= $end; $i++) {
 					$numVerse = $i;
-					echo showquran($lang, $numVerse, $quranArray);
+					echo showQuran($lang, $numVerse, $quranArray);
 				}
 			} else {
 				$numVerse = (int) $arr[2];
-				echo showquran($lang, $numVerse, $quranArray);
+				echo showQuran($lang, $numVerse, $quranArray);
 			}
 		}
 	}

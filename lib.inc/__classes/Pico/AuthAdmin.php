@@ -139,7 +139,7 @@ class AuthAdmin
 			AND `edu_admin`.`blocked` = false
 			";
 			$stmt = $database->executeQuery($sql);
-			if ($stmt->rowCount()) {
+			if($stmt->rowCount() > 0) {
 				$adminLoggedIn = $stmt->fetchObject();
 				$this->admin_id = $adminLoggedIn->admin_id . "";
 				$this->admin_level = $adminLoggedIn->admin_level;

@@ -42,15 +42,6 @@ class PicoDatabase
 	}
 
 	/**
-	 * Get database server information
-	 * @return \Pico\PicoDatabaseCredentials Database server information
-	 */
-	public function getDatabaseServer()
-	{
-		return $this->databaseCredentials;
-	}
-
-	/**
 	 * Get database sync configuration
 	 * @return PicoDatabaseSyncConfig Database sync configuration
 	 */
@@ -96,6 +87,60 @@ class PicoDatabase
 	public function getDatabaseConnection()
 	{
 		return $this->conn;
+	}
+
+	/**
+	 * Fetch result
+	 *
+	 * @param string $sql
+	 * @param array $defaultValue
+	 * @return array|null
+	 */
+	public function fetchAssoc($sql, $defaultValue = null)
+	{
+		$result = array();
+		$stmt = $this->conn->prepare($sql);
+		try {
+			$stmt->execute();
+			if($stmt->rowCount() > 0)
+			{
+				$result = $stmt->fetch(\PDO::FETCH_ASSOC);
+			}
+			else
+			{
+				$result = $defaultValue;
+			}
+		} catch (\PDOException $e) {
+			$result = $defaultValue;
+		}
+		return $result;
+	}
+
+	/**
+	 * Fetch result all
+	 *
+	 * @param string $sql
+	 * @param array $defaultValue
+	 * @return array|null
+	 */
+	public function fetchAssocAll($sql, $defaultValue = null)
+	{
+		$result = array();
+		$stmt = $this->conn->prepare($sql);
+		try {
+			$stmt->execute();
+			if($stmt->rowCount() > 0)
+			{
+				$result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+			}
+			else
+			{
+				$result = $defaultValue;
+			}
+		} catch (\PDOException $e) {
+			$result = $defaultValue;
+		}
+		return $result;
 	}
 
 	/**

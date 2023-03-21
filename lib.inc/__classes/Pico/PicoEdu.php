@@ -158,7 +158,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT `name` FROM `country` WHERE `country_id` = '$country_id' ";
 		$stmt = $this->database->executeQuery($sql);
-		if ($stmt->rowCount() == 0) {
+		if($stmt->rowCount() == 0) {
 			return null;
 		}
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
@@ -174,7 +174,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT `country_id` FROM `country` WHERE `name` like '$name' ";
 		$stmt = $this->database->executeQuery($sql);
-		if ($stmt->rowCount() == 0) {
+		if($stmt->rowCount() == 0) {
 			return null;
 		}
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
@@ -273,7 +273,7 @@ class PicoEdu //NOSONAR
 			";
 
 		$stmt = $this->database->executeQuery($sql);
-		if ($stmt->rowCount()) {
+		if($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			return array(
 				'member_id' => $data['member_id'],
@@ -316,7 +316,7 @@ class PicoEdu //NOSONAR
 			WHERE `username` LIKE '$username'
 			";
 			$stmt = $this->database->executeQuery($sql);
-			if ($stmt->rowCount() == 0) {
+			if($stmt->rowCount() == 0) {
 				return $username;
 			}
 		}
@@ -411,7 +411,7 @@ class PicoEdu //NOSONAR
 					WHERE `edu_option`.`question_id` = '$question_id' AND `edu_option`.`option_id` = '$option_id';
 					";
 					$stmt = $this->database->executeQuery($sql2);
-					if ($stmt->rowCount() > 0) {
+					if($stmt->rowCount() > 0) {
 						$data2 = $stmt->fetch(\PDO::FETCH_ASSOC);
 						$basic_competence = $data2['basic_competence'];
 						$basic_competence = preg_replace(\Pico\PicoConst::TRIM_NON_NUMERIC, ".", $basic_competence);
@@ -469,7 +469,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT `basic_competence` FROM `edu_question` WHERE `test_id` = '$test_id' GROUP BY `basic_competence` ";
 		$stmt = $this->database->executeQuery($sql);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$result = array();
 			$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 			foreach ($rows as $data) {
@@ -528,7 +528,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT * FROM `profile` WHERE `name` = '$name' AND `school_id` = '$school' ";
 		$stmt = $this->database->executeQuery($sql);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$sql = "UPDATE `profile` SET `value` = '$value' WHERE `name` = '$name' AND `school_id` = '$school'";
 		} else {
 			$profil_id = $this->database->generateNewId();
@@ -542,7 +542,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT * FROM `profile` WHERE `name` = '$name' AND `school_id` = '$school' ";
 		$stmt = $this->database->executeQuery($sql);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			return $data['value'];
 		} else {
@@ -558,7 +558,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT `version_id` FROM `version` WHERE `active` = true AND `current_version` = '1' ";
 		$stmt = $this->database->executeQuery($sql);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$version_id = $data['version_id'];
 			if ($version_id == "") {
@@ -661,7 +661,7 @@ class PicoEdu //NOSONAR
 		$sql = "SELECT `edu_answer`.`answer` FROM `edu_answer` WHERE `edu_answer`.`answer_id` = '$answer_id' ";
 		$stmt = $this->database->executeQuery($sql);
 		$result = array();
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			if ($data['answer'] != '') {
 				$data['answer'] = str_replace(",]", ",0]", $data['answer']);
@@ -890,7 +890,7 @@ class PicoEdu //NOSONAR
 
 		$stmt = $this->database->executeQuery($sql);
 		$options = array();
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$attributes = array();
 			$rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 			foreach ($rows as $data) {
@@ -927,7 +927,7 @@ class PicoEdu //NOSONAR
 	{
 		$sql = "SELECT * from edu_admin where admin_id = '$admin_id' ";
 		$stmt = $this->database->executeQuery($sql);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 
 			$member_id = addslashes($data['admin_id']);
@@ -972,7 +972,7 @@ class PicoEdu //NOSONAR
 
 		$stmt = $this->database->executeQuery($sql);
 
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			return $data['school_program_id'];
 		} else {
@@ -982,7 +982,7 @@ class PicoEdu //NOSONAR
 			(`school_program_id`, `school_id`, `name`, `time_create`, `time_edit`, `active`) VALUES
 			('$school_program_id', '$school_id', '$school_program', '$now', '$now', true)";
 			$stmt = $this->database->executeInsert($sql, true);
-			if ($stmt->rowCount() > 0) {
+			if($stmt->rowCount() > 0) {
 				return $school_program_id;
 			}
 			return null;
@@ -1002,7 +1002,7 @@ class PicoEdu //NOSONAR
 
 		$stmt = $this->database->executeQuery($sql);
 
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			return $data['class_id'];
 		} else {
@@ -1012,7 +1012,7 @@ class PicoEdu //NOSONAR
 			(`class_id`, `school_id`, `name`, `time_create`, `time_edit`, `active`) VALUES
 			('$class_id', '$school_id', '$class', '$now', '$now', true)";
 			$stmt = $this->database->executeInsert($sql, true);
-			if ($stmt->rowCount() > 0) {
+			if($stmt->rowCount() > 0) {
 				return $class_id;
 			}
 			return null;
@@ -1179,7 +1179,7 @@ class PicoEdu //NOSONAR
 		ORDER BY `sort_order` ASC, `name` ASC
 		";
 		$stmt = $this->database->executeQuery($sql);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$list = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 			$ret = array();
 			foreach ($list as $val) {

@@ -148,12 +148,7 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 
 <?php
 $sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
-$stmt = $database->executeQuery($sqlc);
-		$arrc = array();
-if($stmt->rowCount() > 0)
-{
-	$arrc = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-}
+$arrc = $database->fetchAssocAll($sqlc, array());
 ?>
 <script type="text/javascript">
 var classList = <?php echo json_encode($arrc);?>;
@@ -200,12 +195,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <?php
 $sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
-$stmt = $database->executeQuery($sqlc);
-$arrc = array();
-if($stmt->rowCount() > 0)
-{
-	$arrc = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-}
+$arrc = $database->fetchAssocAll($sqlc, array());
 ?>
 <script type="text/javascript">
 var classList = <?php echo json_encode($arrc);?>;

@@ -14,7 +14,7 @@ $time_create = $time_edit = $database->getLocalDateTime();
 
 $sql = "SELECT * FROM `edu_test_collection` WHERE `active` = true ";
 $stmt = $database->executeQuery($sql);
-if ($stmt->rowCount() > 0) {
+if($stmt->rowCount() > 0) {
 
     $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
     foreach ($rows as $data3) {

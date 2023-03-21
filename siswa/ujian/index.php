@@ -32,7 +32,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 	
 	$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$test_id_name = $data['name'];
 		if ($data['standard_score'] == 0) {

@@ -42,7 +42,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 		AND `blocked` = false
 	";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$_SESSION['student_username'] = $data['username'];
 		$_SESSION['student_password'] = $password;

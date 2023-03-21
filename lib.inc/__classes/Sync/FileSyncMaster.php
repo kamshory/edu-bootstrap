@@ -252,7 +252,7 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
         }
         $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_direction` = '$direction' $filter ORDER BY  `edu_sync_file`.`time_create` ASC ";
         $stmt = $this->database->executeQuery($sql);
-        if ($stmt->rowCount() > 0) {
+        if($stmt->rowCount() > 0) {
             return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }
         return array();
@@ -317,7 +317,7 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
         $recordId = addslashes($recordId);
         $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_file_id` = '$recordId' ";
         $stmt = $this->database->executeQuery($sql);
-        if ($stmt->rowCount() > 0) {
+        if($stmt->rowCount() > 0) {
             return $stmt->fetch(\PDO::FETCH_ASSOC);
         }
         return null;

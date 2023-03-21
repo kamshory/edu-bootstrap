@@ -10,7 +10,7 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 	$edit_mode = kh_filter_input(INPUT_POST, "edit_mode", FILTER_SANITIZE_NUMBER_UINT);
 	$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		// Format Plain
 		$picoEdu->sortQuestion($test_id);
 		$sql = "SELECT `edu_test`.*, 
@@ -19,7 +19,7 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 		WHERE `edu_test`.`test_id` = '$test_id'
 		";
 		$stmt = $database->executeQuery($sql);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$time_create = $database->getLocalDateTime();
 			$time_edit = $database->getLocalDateTime();
 			
@@ -112,7 +112,7 @@ if(isset($school_id) && !empty($school_id)) {
 
 	$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 	?>
 	<ol class="question-ol">
 	<?php

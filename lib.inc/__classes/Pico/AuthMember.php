@@ -63,7 +63,7 @@ class AuthMember
 		AND `blocked` = false
 		";
 		$stmt = $database->executeQuery($sql);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$memberLoggedIn = $stmt->fetchObject();
 			$this->member_id = $memberLoggedIn->member_id;
 			$this->username = ($memberLoggedIn->username != '') ? $memberLoggedIn->username : $memberLoggedIn->member_id;

@@ -433,7 +433,7 @@ else if(@$_GET['option'] == 'edit')
 	$question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) 
+	if($stmt->rowCount() > 0) 
 	{
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$test_id = $data['test_id'];
@@ -578,7 +578,7 @@ else if(isset($_GET['test_id']))
 	";
 
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	?>
 		
@@ -623,7 +623,7 @@ else if(isset($_GET['test_id']))
 		if (@$_GET['option'] == 'analys') {
 			$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` ASC ";
 			$stmt = $database->executeQuery($sql);
-			if ($stmt->rowCount() > 0) {
+			if($stmt->rowCount() > 0) {
 				?>
 		<table width="100%" border="1" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
 		<thead>

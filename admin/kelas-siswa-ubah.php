@@ -60,7 +60,7 @@ if(isset($_POST['setclass']) && isset($_POST['students']) && isset($_POST['class
 	$class_id = kh_filter_input(INPUT_POST, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `grade_id` FROM `edu_class` WHERE `class_id` = '$class_id' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$grade_id = $data['grade_id'];
 		$students_str = @$_POST['students'];

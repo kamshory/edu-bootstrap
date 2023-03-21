@@ -88,7 +88,7 @@ h3{
 }
 .user-item .image{
   position: absolute;
-  margin-left: -110px;
+  margin-left: -120px;
   margin-top: -25px;
   vertical-align: top;
 }
@@ -148,7 +148,7 @@ WHERE `edu_student`.`school_id` = '$school_id' AND `edu_student`.`active` = true
 ORDER BY `edu_student`.`name` ASC ";
 $stmt = $database->executeQuery($sql);
 
-if ($stmt->rowCount() > 0) {
+if($stmt->rowCount() > 0) {
   $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
   foreach($rows as $data) {
     ?>

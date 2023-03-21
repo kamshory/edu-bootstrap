@@ -78,7 +78,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
 	$sql = "SELECT `school_id` FROM `edu_teacher` WHERE `teacher_id` = '$teacher_id2'  ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) 
+	if($stmt->rowCount() > 0) 
 	{
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$initial = $data['school_id'];

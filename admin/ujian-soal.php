@@ -456,7 +456,7 @@ else if(@$_GET['option'] == 'edit')
 	$question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT * FROM `edu_question` WHERE `question_id` = '$question_id' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$test_id = $data['test_id'];
 
@@ -852,7 +852,7 @@ ORDER BY `sort_order` ASC, `question_id` ASC
 ";
 $stmt = $database->executeQuery($sql);
 
-if ($stmt->rowCount() > 0) {
+if($stmt->rowCount() > 0) {
 $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 foreach ($rows as $data) {
 ?>

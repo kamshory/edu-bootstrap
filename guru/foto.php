@@ -77,7 +77,7 @@ WHERE `edu_teacher`.`school_id` = '$school_id'
 AND `edu_teacher`.`teacher_id` = '$teacher_id'
 ";
 $stmt = $database->executeQuery($sql);
-if ($stmt->rowCount() > 0) {
+if($stmt->rowCount() > 0) {
     $data = $stmt->fetch(\PDO::FETCH_ASSOC);
     $rand = $data['picture_rand'];
     $avatar_url = "media.edu/user.avatar/teacher/$teacher_id/img-300x300.jpg?rand=$rand";

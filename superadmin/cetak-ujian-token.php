@@ -97,7 +97,7 @@ INNER JOIN (`edu_student`) ON (`edu_student`.`student_id` = `edu_token`.`student
 WHERE `edu_token`.`token_id` in ($tokens)
 ORDER BY `edu_student`.`reg_number` ASC ";
 $stmt = $database->executeQuery($sql);
-    if ($stmt->rowCount() > 0) {
+    if($stmt->rowCount() > 0) {
       $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
       foreach ($rows as $data) {
         ?>
