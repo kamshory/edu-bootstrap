@@ -99,6 +99,33 @@ class PicoDatabase
 	}
 
 	/**
+	 * Fetch result all
+	 *
+	 * @param string $sql
+	 * @param array $defaultValue
+	 * @return array|null
+	 */
+	public function fetchAssocAll($sql, $defaultValue = null)
+	{
+		$result = array();
+		$stmt = $this->conn->prepare($sql);
+		try {
+			$stmt->execute();
+			if($stmt->rowCount() > 0)
+			{
+				$result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+			}
+			else
+			{
+				$result = $defaultValue;
+			}
+		} catch (\PDOException $e) {
+			$result = $defaultValue;
+		}
+		return $result;
+	}
+
+	/**
 	 * Execute query without return anything
 	 * @param string $sql Query string to be executed
 	 */

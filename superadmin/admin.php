@@ -83,7 +83,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$sql = "SELECT * FROM `edu_school` WHERE `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$country_id = $data['country_id'];
 		$language = $data['language'];
@@ -144,7 +144,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 	$sql = "SELECT `school_id` FROM `edu_admin` WHERE `admin_id` = '$admin_id2'  ";
 	$sql = "SELECT * FROM `edu_school` WHERE `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$initial = $data['school_id'];
 

@@ -223,7 +223,7 @@ $(document).ready(function(e) {
 			AND `edu_token`.`token_id` = '$edit_key'
 			";
 			$stmt = $database->executeQuery($sql);
-			if ($stmt->rowCount() > 0) {
+			if($stmt->rowCount() > 0) {
 				$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 				?>
 <form name="formedu_token" action="" method="post" enctype="multipart/form-data">

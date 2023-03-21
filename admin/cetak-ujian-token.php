@@ -21,7 +21,7 @@ FROM `edu_school`
 WHERE `edu_school`.`school_id` = '$school_id'
 ";
 $stmt = $database->executeQuery($sql);
-if ($stmt->rowCount() > 0) {
+if($stmt->rowCount() > 0) {
   $rows = array();
   $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 
@@ -37,7 +37,7 @@ if ($stmt->rowCount() > 0) {
   
   $url = rtrim($database->getSystemVariable('base_url_test'), "/");
 
-  if ($stmt->rowCount() > 0) {
+  if($stmt->rowCount() > 0) {
     $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
     $token_images = array();
     foreach($rows as $token_image)

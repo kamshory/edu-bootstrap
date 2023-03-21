@@ -29,7 +29,7 @@ if($stmt->rowCount() > 0)
 }
 else
 {
-  $class_id = 0;
+  $class_id = "";
   $sql = "SELECT `edu_school`.*, `edu_school`.`name` AS `school_name`
   FROM `edu_school` 
   WHERE `edu_school`.`school_id` = '$school_id'
@@ -87,7 +87,7 @@ h3{
 }
 .user-item .image{
   position: absolute;
-  margin-left: -110px;
+  margin-left: -10px;
   margin-top: -25px;
   vertical-align: top;
 }
@@ -147,7 +147,7 @@ WHERE `edu_student`.`school_id` = '$school_id' AND `edu_student`.`active` = true
 ORDER BY `edu_student`.`name` ASC ";
 $stmt = $database->executeQuery($sql);
 
-if ($stmt->rowCount() > 0) {
+if($stmt->rowCount() > 0) {
   $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
   foreach($rows as $data) {
     ?>

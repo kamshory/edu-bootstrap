@@ -192,12 +192,7 @@ LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = 
 WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id' AND `edu_class`.`name` != '' 
 ORDER BY `edu_school_program`.`sort_order` ASC , `edu_class`.`sort_order` ASC 
 ";
-$arrc = array();
-$stmt = $database->executeQuery($sqlc);
-if($stmt->rowCount() > 0)
-{
-	$arrc = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-}
+$arrc = $database->fetchAssocAll($sqlc, array());
 ?>
 <script type="text/javascript">
 var classList = <?php echo json_encode($arrc);?>;

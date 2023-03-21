@@ -74,7 +74,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		('$info_id', '$name', '$time', '$time', '$admin_id', '$admin_id', '$ip', '$ip', '$active')
 		";
 		$stmt = $database->executeInsert($sql, true);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 
 			$info_dir = dirname(__DIR__) . "/media.edu/info/$info_id";
 			$base_src = "media.edu/info/$info_id";

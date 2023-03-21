@@ -60,7 +60,7 @@ class AuthTeacher
 				AND `edu_teacher`.`blocked` = false
 				";
 			$stmt = $database->executeQuery($sql);
-			if ($stmt->rowCount() > 0) {
+			if($stmt->rowCount() > 0) {
 				$teacherLoggedIn = $stmt->fetchObject();
 				$this->teacher_id = $teacherLoggedIn->teacher_id . "";
 				$this->username = ($teacherLoggedIn->username != '') ? $teacherLoggedIn->username . "" : $teacherLoggedIn->member_id . "";

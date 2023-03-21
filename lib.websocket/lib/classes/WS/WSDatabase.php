@@ -178,7 +178,7 @@ class WSDatabase
 			";
 
 			$stmt = $this->executeQuery($sql);
-			if ($stmt->rowCount() > 0) {
+			if($stmt->rowCount() > 0) {
 				$studentLoggedIn = $stmt->fetchObject();
 				$student->student_id = $studentLoggedIn->student_id;
 				$student->username = $studentLoggedIn->username;

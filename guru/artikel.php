@@ -37,7 +37,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		('$article_id', '$school_id', '$title', '$open', '$class', '$time', '$time', '$teacher_id', 'T', '$teacher_id', 'T', '$ip', '$ip', '$active')
 		";
 		$stmt = $database->executeInsert($sql, true);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 
 			$article_dir = dirname(__DIR__) . "/media.edu/school/$school_id/article/$article_id";
 			$base_src = "media.edu/school/$school_id/article/$article_id";
@@ -149,12 +149,7 @@ var base_assets = '<?php echo $cfg->base_assets;?>';
 
 <?php
 $sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
-$stmtc = $database->executeQuery($sqlc);
-$arrc = array();
-if($stmtc->rowCount() > 0)
-{
-	$arrc = $stmtc->fetchAll(\PDO::FETCH_ASSOC);
-}
+$arrc = $database->fetchAssocAll($sqlc, array());
 
 ?>
 <script type="text/javascript">
@@ -223,12 +218,7 @@ $data = $stmt->fetch(\PDO::FETCH_ASSOC);
 ?>
 <?php
 $sqlc = "SELECT `class_id`, `name` FROM `edu_class` WHERE `active` = true AND `school_id` = '$school_id' AND `name` != '' ORDER BY `sort_order` ASC ";
-$stmtc = $database->executeQuery($sqlc);
-$arrc = array();
-if($stmtc->rowCount() > 0)
-{
-	$arrc = $stmtc->fetchAll(\PDO::FETCH_ASSOC);
-}
+$arrc = $database->fetchAssocAll($sqlc, array());
 ?>
 <script type="text/javascript">
 var classList = <?php echo json_encode($arrc);?>;

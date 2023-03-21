@@ -156,7 +156,7 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
         $sql = "SELECT * FROM `edu_sync_database` WHERE `sync_direction` = '$direction' $filter ORDER BY  `edu_sync_database`.`time_create` ASC ";
 
         $stmt = $this->database->executeQuery($sql);
-        if ($stmt->rowCount() > 0) {
+        if($stmt->rowCount() > 0) {
             return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }
         return array();
@@ -214,7 +214,7 @@ class DatabaseSyncMaster extends \Sync\SyncMaster
         $recordId = addslashes($recordId);
         $sql = "SELECT * FROM `edu_sync_database` WHERE `sync_database_id` = '$recordId' ";
         $stmt = $this->database->executeQuery($sql);
-        if ($stmt->rowCount() > 0) {
+        if($stmt->rowCount() > 0) {
             return $stmt->fetch(\PDO::FETCH_ASSOC);
         }
         return null;

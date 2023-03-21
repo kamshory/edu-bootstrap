@@ -65,7 +65,7 @@ function createEnumOption(PicoDatabase $database, $table, $field, $defaultValue=
 {
 	$sql = "show columns FROM `$table` WHERE `Field` like '$field' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$enum = $data['Type'];
 		$off = strpos($enum, "(");
