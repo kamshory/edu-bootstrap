@@ -7,7 +7,6 @@ if(empty($admin_id))
 }
 $path = __DIR__ . "/planetedu.xlsx";
 require_once dirname(__DIR__) . '/lib.inc/PHPExcel_1.8.0/Classes/PHPExcel/IOFactory.php';
-require_once dirname(__DIR__) . '/lib.inc/dom.php';
 	
 
 function generateTable($header, $body)

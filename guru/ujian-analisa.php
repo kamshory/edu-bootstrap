@@ -2,7 +2,6 @@
 require_once dirname(__DIR__)."/lib.inc/auth-guru.php";
 if(!empty($school_id)) 
 {
-	require_once dirname(__DIR__) . "/lib.inc/dom.php";
 	require_once dirname(__DIR__) . "/lib.inc/lib.test.php";
 	if (isset($_GET['test_id'])) 
 	{
