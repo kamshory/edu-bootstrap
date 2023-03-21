@@ -30,4 +30,11 @@ else if(isset($_POST['token']))
         exit();
     }
 }
-header("Location: ".$_SERVER['REQUEST_URI']);
+if(basename($_SERVER['REQUEST_URI']) != basename($_SERVER['PHP_SELF']))
+{
+    header("Location: ".$_SERVER['REQUEST_URI']);
+}
+else
+{
+    header("Location: ./");
+}

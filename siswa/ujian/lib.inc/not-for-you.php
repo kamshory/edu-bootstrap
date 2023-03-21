@@ -25,10 +25,7 @@
 <body class="text-center">
     <form class="form-signin" method="post" action="siswa/token.php">
         <img class="mb-4" src="<?php echo $cfg->base_assets;?>lib.assets/images/logo-120.png" alt="" width="90" height="90">
-        <h1 class="h3 mb-3 font-weight-normal">Masukkan Token</h1>
-        <label for="inputEmail" class="sr-only">Token</label>
-        <input type="text" id="inputEmail" name="token" class="form-control" placeholder="Token" required autofocus>
-        <button class="btn btn-lg btn-success btn-block" type="submit">Masukkan</button>
+        <h1 class="h3 mb-3 font-weight-normal">Bukan Untuk Anda</h1>
         <button class="btn btn-lg btn-primary btn-block" type="button" onclick="window.location='siswa/'">Depan</button>
         <p class="mt-5 mb-3 text-muted">&copy; 2008-<?php echo date('Y'); ?></p>
         <input type="hidden" name="ref" value="<?php echo $_SERVER['REQUEST_URI'];?>">

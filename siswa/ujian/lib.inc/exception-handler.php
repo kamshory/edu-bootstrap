@@ -1,9 +1,7 @@
 <?php
 $code = $e->getCode();
-
 if($code == \Pico\PicoTestException::LOGIN_REQUIRED)
 {
-    //echo "INCLUDE LOGIN FORM HERE";
     require_once dirname(__FILE__)."/login-form.php";
 }
 if($code == \Pico\PicoTestException::TOKEN_REQUIRED
@@ -12,4 +10,8 @@ if($code == \Pico\PicoTestException::TOKEN_REQUIRED
 )
 {
     require_once dirname(__FILE__)."/token-form.php";
+}
+if($code == \Pico\PicoTestException::TEST_NOT_FOR_YOU)
+{
+    require_once dirname(__FILE__)."/not-for-you.php";
 }

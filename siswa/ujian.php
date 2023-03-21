@@ -583,7 +583,7 @@ else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 }
 else if(@$_GET['option'] == 'enter-token')
 {
-	require_once dirname(__FILE__)."/ujian-token.php";
+	require_once dirname(__FILE__)."/ujian/lib.inc/token-form.php";
 }
 else
 {
