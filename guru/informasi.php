@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+require_once dirname(__DIR__)."/lib.inc/auth-guru.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-guru.php";
+	require_once __DIR__."/bukan-guru.php";
 	exit();
 }
 
@@ -11,7 +11,7 @@ $pagination = new \Pico\PicoPagination();
 $pageTitle = "Infomasi";
 if(!isset($school_id) || empty($school_id))
 {
-	require_once dirname(__FILE__)."/login-form.php";
+	require_once __DIR__."/login-form.php";
 	exit();
 }
 
@@ -28,7 +28,6 @@ if(isset($_GET['info_id']))
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
-		$pageTitle = $data['name'];
 
 		$obj = \Pico\PicoDOM::parseHtmlData('<html><body>'.($data['content']).'</body></html>');
 		$arrparno = array();
@@ -87,7 +86,7 @@ if(isset($_GET['info_id']))
 		}
 	
 		$cfg->meta_description = htmlspecialchars(strip_tags($content));
-		require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+		require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 		?>
 		<script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/FileSaver.js"></script>
         <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/info.js"></script>
@@ -110,17 +109,17 @@ if(isset($_GET['info_id']))
         </div>
         </div>
 		<?php
-		require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+		require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 	}
 	else
 	{
-		require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-		require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+		require_once __DIR__."/lib.inc/header.php"; //NOSONAR
+		require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 	}
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.assets/fonts/roboto/font.css">
@@ -274,6 +273,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

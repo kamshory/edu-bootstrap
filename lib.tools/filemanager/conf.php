@@ -1,5 +1,5 @@
 <?php
-include_once dirname(__FILE__)."/auth.php";
+include_once __DIR__."/auth.php";
 $fmanConfig = new stdClass;
 $fmanConfig->authentification_needed = true;		
 
@@ -49,7 +49,7 @@ if(@$_GET['section'] == 'info' && @$_GET['info_id']!='')
 	$_SESSION['curdir'] = "info/$info_id";
 }
 
-$fmanConfig->rootdir = dirname(dirname(dirname(__FILE__)))."/media.edu"."/".$_SESSION['curdir'];	
+$fmanConfig->rootdir = dirname(dirname(__DIR__))."/media.edu"."/".$_SESSION['curdir'];	
 /* Root directory for uploaded file. Use .htaccess file to protect this directory from executing PHP files.*/
 $fmanConfig->hiddendir = array();	 
 /* File or directory under root directory to be hidden and forbidden to access it.*/
@@ -104,7 +104,7 @@ $fmanConfig->forbidden_extension = array(
 */
 
 $chkdir = explode("/", $_SESSION['curdir']);
-$dir2create = dirname(dirname(dirname(__FILE__)))."/media.edu";
+$dir2create = dirname(dirname(__DIR__))."/media.edu";
 foreach($chkdir as $k=>$v)
 {
 	$dir2create .= "/".$v;

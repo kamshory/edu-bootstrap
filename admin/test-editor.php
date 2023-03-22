@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/login-form.php";
+	require_once __DIR__."/login-form.php";
 	exit();
 }
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
@@ -69,7 +69,7 @@ var equationURLGenerator = '<?php echo $cfg->equation_url_generator;?>';
 	<a class="toobar" id="toolbar-audio" href="javascript:insertAudio()" title="Masukkan Suara"><span class="toolbar-icon toolbar-icon-audio"></span></a>
 	<a class="toobar" id="toolbar-compress-audio" href="javascript:compressAudio()" title="Kompres Suara"><span class="toolbar-icon toolbar-icon-compress-audio"></span></a>
 	<a class="toobar" id="toolbar-insert-table" href="javascript:showTableDialog()" title="Tabel"><span class="toolbar-icon toolbar-icon-table"></span></a>
-	<a class="toobar" id="toolbar-file-manager" href="lib.tools/filemanager/?test_id=<?php echo $test_id;?>" target="_blank" title="File Manager"><span class="toolbar-icon toolbar-icon-file-manager"></span></a>
+	<a class="toobar" id="toolbar-file-manager" href="../lib.tools/filemanager/?test_id=<?php echo $test_id;?>" target="_blank" title="File Manager"><span class="toolbar-icon toolbar-icon-file-manager"></span></a>
 	<a class="toobar" id="toolbar-html" href="ujian-soal.php?option=add&test_id=<?php echo $test_id;?>" title="Modus HTML" target="_blank"><span class="toolbar-icon toolbar-icon-html"></span></a>
 	<a class="toobar" id="toolbar-append" href="javascript:appendToTest()" title="Masukkan Ke Dalam Ujian"><span class="toolbar-icon toolbar-icon-append"></span></a>
 	<a class="toobar toolbar-selected" id="toolbar-restart" href="javascript:restartQuestion()" title="Sembunyikan Soal Sebelumnya"><span class="toolbar-icon toolbar-icon-restart"></span></a>

@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
-	require_once dirname(__FILE__)."/bukan-super-admin.php";
+	require_once __DIR__."/bukan-super-admin.php";
 	exit();
 }
 $pageTitle = "Informasi";
@@ -74,24 +74,24 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		('$info_id', '$name', '$time', '$time', '$admin_id', '$admin_id', '$ip', '$ip', '$active')
 		";
 		$stmt = $database->executeInsert($sql, true);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 
-			$info_dir = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
+			$info_dir = dirname(__DIR__) . "/media.edu/info/$info_id";
 			$base_src = "media.edu/info/$info_id";
 
-			$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
-			$dirBase = dirname(dirname(__FILE__));
+			$dir2prepared = dirname(__DIR__) . "/media.edu/info/$info_id";
+			$dirBase = dirname(__DIR__);
 			$permission = 0755;
 			$fileSync->prepareDirectory($info_dir, $dirBase, $permission, true);
 
-			if (!file_exists($info_dir = dirname(dirname(__FILE__)) . "/media.edu")) {
-				mkdir(dirname(dirname(__FILE__)) . "/media.edu", 0755);
+			if (!file_exists($info_dir = dirname(__DIR__) . "/media.edu")) {
+				mkdir(dirname(__DIR__) . "/media.edu", 0755);
 			}
-			if (!file_exists($info_dir = dirname(dirname(__FILE__)) . "/media.edu/info")) {
-				mkdir(dirname(dirname(__FILE__)) . "/media.edu/info", 0755);
+			if (!file_exists($info_dir = dirname(__DIR__) . "/media.edu/info")) {
+				mkdir(dirname(__DIR__) . "/media.edu/info", 0755);
 			}
-			if (!file_exists($info_dir = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id")) {
-				mkdir(dirname(dirname(__FILE__)) . "/media.edu/info/$info_id", 0755);
+			if (!file_exists($info_dir = dirname(__DIR__) . "/media.edu/info/$info_id")) {
+				mkdir(dirname(__DIR__) . "/media.edu/info/$info_id", 0755);
 			}
 
 			$content = kh_filter_input(INPUT_POST, "content");
@@ -111,11 +111,11 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 	{
 		$info_id = kh_filter_input(INPUT_POST, "info_id");
 		
-		$info_dir = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
+		$info_dir = dirname(__DIR__) . "/media.edu/info/$info_id";
 		$base_src = "media.edu/info/$info_id";
 
-		$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/info/$info_id";
-		$dirBase = dirname(dirname(__FILE__));
+		$dir2prepared = dirname(__DIR__) . "/media.edu/info/$info_id";
+		$dirBase = dirname(__DIR__);
 		$permission = 0755;
 		$fileSync->prepareDirectory($info_dir, $dirBase, $permission, true);
 		
@@ -137,7 +137,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 
 if(@$_GET['option'] == 'add')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <script type="text/javascript">
 var base_assets = '<?php echo $cfg->base_assets;?>';
@@ -240,7 +240,7 @@ function fileBrowserCallBack(field_name, url, type, win)
 		}
 		url = url.substr(21);
 		
-		var ajaxFilemanagerURL = "lib.tools/filemanager/?section=info&info_id="+info_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
+		var ajaxFilemanagerURL = "../lib.tools/filemanager/?section=info&info_id="+info_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
 		switch (type){
 			case "image":break;
 			case "media":break;
@@ -280,11 +280,11 @@ var defaultdir = 'lib.content/media/info/';
 </div>
 </form>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else if(@$_GET['option'] == 'edit' && isset($_GET['info_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT * FROM `edu_info` WHERE `info_id` = '$info_id'";
 $stmt = $database->executeQuery($sql);
@@ -393,7 +393,7 @@ function fileBrowserCallBack(field_name, url, type, win)
 		}
 		url = url.substr(21);
 		
-		var ajaxFilemanagerURL = "lib.tools/filemanager/?section=info&info_id="+info_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
+		var ajaxFilemanagerURL = "../lib.tools/filemanager/?section=info&info_id="+info_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
 		switch (type){
 			case "image":break;
 			case "media":break;
@@ -436,11 +436,11 @@ var info_id = '<?php echo $info_id;?>';
 </form>
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else if(isset($_GET['info_id']))
 {
-	require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+	require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 	$info_id = kh_filter_input(INPUT_GET, "info_id", FILTER_SANITIZE_STRING_NEW);
 	$sql_filter_info = " AND `edu_info`.`info_id` = '$info_id' ";
 
@@ -524,7 +524,7 @@ else if(isset($_GET['info_id']))
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="search-control">
 <form id="searchform" name="form1" method="get" action="">
@@ -648,6 +648,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

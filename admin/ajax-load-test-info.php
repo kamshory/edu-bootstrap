@@ -1,5 +1,5 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($school_id))
 {
 	exit();
@@ -40,9 +40,9 @@ if(isset($_GET['test_id']))
 	AND `edu_test`.`test_id` = '$test_id' AND `edu_test`.`school_id` = '$school_id' 
 	";
 	$stmt = $database->executeQuery($sql);
-if($stmt->rowCount() > 0)
-{
-$data = $stmt->fetch(\PDO::FETCH_ASSOC);
+	if($stmt->rowCount() > 0)
+	{
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 
 ?>
 <form name="formedu_test" action="" method="post" enctype="multipart/form-data">

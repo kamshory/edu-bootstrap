@@ -90,7 +90,7 @@ function fileBrowserCallBack(field_name, url, type, win) {
 		}
 		url = url.substr(21);
 
-		let ajaxFilemanagerURL = "lib.tools/filemanager/?article_id=" + article_id + "&editor=tiny_mce&type=" + type + "&field_name=" + field_name + '&dir=base/' + dirname(url);
+		let ajaxFilemanagerURL = "../lib.tools/filemanager/?article_id=" + article_id + "&editor=tiny_mce&type=" + type + "&field_name=" + field_name + '&dir=base/' + dirname(url);
 		switch (type) {
 			case "image": break;
 			case "media": break;

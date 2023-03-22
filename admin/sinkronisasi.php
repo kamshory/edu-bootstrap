@@ -1,11 +1,11 @@
 <?php
-require_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
+require_once dirname(__DIR__) . "/lib.inc/auth-admin.php";
 $pageTitle = "Sinkronisasi Data";
 
 if(!$syncConfigs->sync_data_enable)
 {
-    require_once dirname(__FILE__) . "/lib.inc/header.php";
-    require_once dirname(__FILE__) . "/lib.inc/footer.php";
+    require_once __DIR__ . "/lib.inc/header.php";
+    require_once __DIR__ . "/lib.inc/footer.php";
     exit();
 }
 
@@ -33,7 +33,7 @@ if(@$_POST['action'] == 'save-config')
 
 if(!empty($school_id)) 
 {
-    require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+    require_once __DIR__ . "/lib.inc/header.php"; //NOSONAR
     ?>
     <style>
         .sync-container{
@@ -346,6 +346,6 @@ if(!empty($school_id))
     </div>
 
     <?php
-    require_once dirname(__FILE__) . "/lib.inc/footer.php";
+    require_once __DIR__ . "/lib.inc/footer.php";
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
+include_once dirname(__DIR__)."/lib.inc/functions-pico.php";
 $class_id = trim(kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW));
 
 $sql = "SELECT `edu_student`.`student_id` AS `v`, `edu_student`.`name` AS `l`

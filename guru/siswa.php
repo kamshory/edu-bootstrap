@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+require_once dirname(__DIR__)."/lib.inc/auth-guru.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-guru.php";
+	require_once __DIR__."/bukan-guru.php";
 	exit();
 }
 $pageTitle = "Siswa";
@@ -10,7 +10,7 @@ $pagination = new \Pico\PicoPagination();
 
 if(@$_GET['option'] == 'detail')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "student_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_student`.* , `edu_school_program`.`name` AS `school_program_name`,
@@ -147,17 +147,17 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'print-password')
 {
-require_once dirname(__FILE__)."/cetak-login-siswa.php";
+require_once __DIR__."/cetak-login-siswa.php";
 }
 
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 ?>
 <script type="text/javascript">
@@ -324,6 +324,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

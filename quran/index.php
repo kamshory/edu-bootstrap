@@ -122,7 +122,7 @@ class Quran
     {
         $verses = array();
         foreach ($langs as $lang) {
-            $file = dirname(dirname(__FILE__)) . "/lib.quran/$lang-src/$s.php";
+            $file = dirname(__DIR__) . "/lib.quran/$lang-src/$s.php";
             if (file_exists($file)) {
                 include($file); //NOSONAR
                 $verses[$lang] = $quranArray;
@@ -228,23 +228,23 @@ if ($s != '') {
     <meta name="generator" content="Planetbiru">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="lib.vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/css/bootstrap.min.css">
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="lib.vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo $cfg->base_assets;?>lib.vendors/fontawesome/css/all.min.css">
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="lib.favs/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="lib.favs/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="lib.favs/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="lib.favs/manifest.json">
-    <link rel="mask-icon" href="lib.favs/safari-pinned-tab.svg" color="#563d7c">
-    <link rel="icon" href="lib.favs/favicon.ico">
-    <meta name="msapplication-config" content="lib.favs/browserconfig.xml">
+    <link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>lib.favs/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="<?php echo $cfg->base_assets;?>lib.favs/manifest.json">
+    <link rel="mask-icon" href="<?php echo $cfg->base_assets;?>lib.favs/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="<?php echo $cfg->base_assets;?>lib.favs/favicon.ico">
+    <meta name="msapplication-config" content="<?php echo $cfg->base_assets;?>lib.favs/browserconfig.xml">
     <meta name="theme-color" content="#3558BE">
 
 
-    <script src="lib.vendors/jquery/jquery.min.js"></script>
-    <script src="lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo $cfg->base_assets;?>lib.vendors/jquery/jquery.min.js"></script>
+    <script src="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/js.min.js"></script>
 
     <script>

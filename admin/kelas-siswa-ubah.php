@@ -1,13 +1,13 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-admin.php";
+	require_once __DIR__."/bukan-admin.php";
 	exit();
 }
 if(empty($real_school_id))
 {
-	require_once dirname(__FILE__)."/belum-ada-sekolah.php";
+	require_once __DIR__."/belum-ada-sekolah.php";
 	exit();
 }
 $pageTitle = "Perubahan Kelas Siswa";
@@ -60,7 +60,7 @@ if(isset($_POST['setclass']) && isset($_POST['students']) && isset($_POST['class
 	$class_id = kh_filter_input(INPUT_POST, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `grade_id` FROM `edu_class` WHERE `class_id` = '$class_id' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$grade_id = $data['grade_id'];
 		$students_str = @$_POST['students'];
@@ -142,7 +142,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 }
 if(@$_GET['option'] == 'edit')
 {
-	require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+	require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 	$edit_key = kh_filter_input(INPUT_GET, "student_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_student`.* 
 	FROM `edu_student` 
@@ -262,12 +262,12 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'detail')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "student_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_student`.* ,
@@ -381,12 +381,12 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 ?>
 
@@ -627,6 +627,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

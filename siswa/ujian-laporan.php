@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
+require_once dirname(__DIR__)."/lib.inc/auth-siswa.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-siswa.php";
+	require_once __DIR__."/bukan-siswa.php";
 	exit();
 }
 
@@ -339,7 +339,7 @@ echo '</body>
 }
 else if(@$_GET['option'] == 'answerdetail' && isset($_GET['answer_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $array_class = $picoEdu->getArrayClass($school_id);
 $answer_id = kh_filter_input(INPUT_GET, "answer_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.*, `edu_answer`.*, 
@@ -606,17 +606,17 @@ $i++;
 }
 ?>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 }
 else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $q = kh_filter_input(INPUT_GET, "q", FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
@@ -950,11 +950,11 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $teacher_id = kh_filter_input(INPUT_GET, "teacher_id", FILTER_SANITIZE_STRING_NEW);
 
@@ -1037,8 +1037,8 @@ $array_class = $picoEdu->getArrayClass($school_id);
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
   <thead>
     <tr>
-        <td width="16"><img alt="Excel" src="lib.tools/images/excel.png" /></td>
-        <td width="16"><img alt="Excel" src="lib.tools/images/excel.png" /></td>
+        <td width="16"><img alt="Excel" src="<?php echo $cfg->base_assets;?>lib.tools/images/excel.png" /></td>
+        <td width="16"><img alt="Excel" src="<?php echo $cfg->base_assets;?>lib.tools/images/excel.png" /></td>
         <td width="25">No</td>
         <td>Ujian</td>
         <td>Kelas</td>
@@ -1058,8 +1058,8 @@ $array_class = $picoEdu->getArrayClass($school_id);
 	$no++;
 	?>
     <tr class="row-data">
-        <td width="16"><a title="Per Ujian" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=export&test_id=<?php echo $data['test_id'];?>&expand=1"><img alt="Excel" src="lib.tools/images/excel.png" /></a></td>
-        <td width="16"><a title="Per Siswa" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=export&test_id=<?php echo $data['test_id'];?>"><img alt="Excel" src="lib.tools/images/excel.png" /></a></td>
+        <td width="16"><a title="Per Ujian" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=export&test_id=<?php echo $data['test_id'];?>&expand=1"><img alt="Excel" src="<?php echo $cfg->base_assets;?>lib.tools/images/excel.png" /></a></td>
+        <td width="16"><a title="Per Siswa" href="<?php echo $picoEdu->gateBaseSelfName();?>?option=export&test_id=<?php echo $data['test_id'];?>"><img alt="Excel" src="<?php echo $cfg->base_assets;?>lib.tools/images/excel.png" /></a></td>
         <td align="right"><?php echo $no;?> </td>
         <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_id=<?php echo $data['test_id'];?>"><?php echo $data['name'];?></a></td>
         <td><?php $class = $picoEdu->textClass($array_class, $data['class']); $class_sort = $picoEdu->textClass($array_class, $data['class'], 2);?><a href="#" class="class-list-control" title="<?php echo htmlspecialchars($class);?>" data-toggle="tooltip" data-html="true" data-class="<?php echo htmlspecialchars($data['class']);?>"><?php echo $class_sort;?></a></td>
@@ -1098,6 +1098,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

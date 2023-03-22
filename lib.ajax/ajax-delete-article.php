@@ -1,5 +1,5 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+include_once dirname(__DIR__)."/lib.inc/auth-guru.php";
 if(!isset($school_id) || empty($school_id))
 {
 	exit();

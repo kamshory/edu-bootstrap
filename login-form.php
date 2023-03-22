@@ -1,6 +1,6 @@
 <?php
-include_once dirname(__FILE__) . "/lib.inc/functions-pico.php";
-include_once dirname(__FILE__) . "/lib.inc/sessions.php";
+include_once __DIR__ . "/lib.inc/functions-pico.php";
+include_once __DIR__ . "/lib.inc/sessions.php";
 ?>
 <!doctype html>
 <html lang="en">

@@ -1,6 +1,6 @@
 <?php
-require_once dirname(dirname(dirname(__FILE__)))."/lib.inc/auth-siswa.php";
-require_once dirname(dirname(dirname(__FILE__)))."/lib.inc/mobile-detector.php";
+require_once dirname(dirname(__DIR__))."/lib.inc/auth-siswa.php";
+require_once dirname(dirname(__DIR__))."/lib.inc/mobile-detector.php";
 $auth_student_id = @$auth_student_id . '';
 $class_id = @$class_id . '';
 $test_id = addslashes((@$_GET['test_id']));
@@ -32,7 +32,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 	
 	$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$test_id_name = $data['name'];
 		if ($data['standard_score'] == 0) {
@@ -136,7 +136,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 			$picoEdu->logoutTest($school_id, $auth_student_id, $test_id, session_id(), date('Y-m-d H:i:s'), addslashes($_SERVER['REMOTE_ADDR']));
 			
 			
-			require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+			require_once __DIR__ . "/lib.inc/header.php"; //NOSONAR
 			
 			?>
 			<div class="alert alert-success">Jawaban berhasil dikirim.</div>
@@ -148,7 +148,7 @@ if(isset($_POST['save']) || strlen(@$_POST['submit_test']))
 			window.location = '<?php echo $cfg->base_url . "siswa/ujian/" . $picoEdu->gateBaseSelfName(); ?>?option=sent&test_id=<?php echo $test_id; ?>';
 			</script>
 			<?php
-			require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
+			require_once __DIR__ . "/lib.inc/footer.php"; //NOSONAR
 			exit();
 		}
 	}
@@ -190,14 +190,14 @@ if(isset($data['autosubmit']))
 $curtime = date('Y-m-d H:is');
 if($data['test_availability'] != 'F' && ($data['available_from'] > $curtime || $data['available_to'] < $curtime))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <blockquote>
 <p>Anda tidak dapat bisa mengikuti test <strong><?php echo $data['name'];?></strong> karena tidak dalam masa ujian. <a href="../">Klik di sini untuk kembali</a>
 </p>
 </blockquote>
 <?php	
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
@@ -206,7 +206,7 @@ $test_id = $data['test_id'];
 
 if(@$_GET['option'] == 'sent')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="alert alert-success">
 <?php
@@ -233,13 +233,13 @@ else
 ?>
 </div>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 exit();
 }
 
 else if(@$_GET['confirm-login-to-test'] == 'yes' || @$_GET['option'] == 'login-to-test')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="label">
 Informasi Singkat Ujian
@@ -282,20 +282,20 @@ Informasi Singkat Ujian
 <input type="button" value="Batal" onclick="window.location='<?php echo $cfg->base_url."/siswa/ujian.php";?>'">
 </div>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 exit();
 }
 
 else if(@$_GET['option'] == 'limited')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="alert alert-warning">
 <p>Anda telah melaksanakan ujian sebanyak <strong><?php echo $ntest;?></strong> kali. Ujian terahir pada tanggal<strong> <?php echo translatedate(date('j F Y', strtotime($test_id_terakhir)));?></strong> jam <strong><?php echo date('H:i:s', strtotime($test_id_terakhir));?></strong>. <a href="../">Klik di sini untuk kembali</a>
 </p>
 </div>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 exit();
 }
 
@@ -403,13 +403,13 @@ else if(@$_GET['login-to-test']=="yes")
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 ?>
 <div class="alert alert-success">
 <p>Ujian ini tidak tersedia untuk Anda. <a href="../ujian.php">Klik di sini untuk kembali</a></p>
 </div>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 exit();
 }
 
@@ -422,11 +422,11 @@ if(isset($_SESSION['session_test'][$auth_student_id][$test_id]))
 
 	if(@!$mobileBrowser)
 	{
-		require_once dirname(dirname(dirname(__FILE__)))."/lib.inc/test-template-un.php";
+		require_once dirname(dirname(__DIR__))."/lib.inc/test-template-un.php";
 	}
 	else
 	{
-		require_once dirname(dirname(dirname(__FILE__)))."/lib.inc/test-template-us.php";
+		require_once dirname(dirname(__DIR__))."/lib.inc/test-template-us.php";
 	}
 }
 ?>

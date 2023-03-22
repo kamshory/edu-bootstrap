@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
-	require_once dirname(__FILE__)."/bukan-super-admin.php";
+	require_once __DIR__."/bukan-super-admin.php";
 	exit();
 }
 
@@ -86,7 +86,7 @@ h3{
     ORDER BY `edu_teacher`.`name` ASC 
     ";
     $stmt = $database->executeQuery($sql);
-    if ($stmt->rowCount() > 0) {
+    if($stmt->rowCount() > 0) {
       $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
       foreach ($rows as $data) {
         ?>

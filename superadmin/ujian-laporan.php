@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
-	require_once dirname(__FILE__)."/bukan-super-admin.php";
+	require_once __DIR__."/bukan-super-admin.php";
 	exit();
 }
 $pageTitle = "Hasil Ujian";
@@ -262,7 +262,7 @@ echo '</body>
 }
 else if(@$_GET['option'] == 'answerdetail' && isset($_GET['test_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.*, `edu_answer`.*, 
 timediff(`edu_answer`.`end`,`edu_answer`.`start`) AS `duration_test` ,
@@ -404,17 +404,17 @@ $i++;
 }
 ?>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 }
 else if(@$_GET['option'] == 'detail' && isset($_GET['test_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = "";
 $sql = "SELECT `edu_test`.* $nt
@@ -771,9 +771,9 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 } else {
-    require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+    require_once __DIR__ . "/lib.inc/header.php"; //NOSONAR
     $school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
     $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 
@@ -910,8 +910,8 @@ window.onload = function()
   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-sm">
   <thead>
     <tr>
-        <td width="16"><img alt="Excel" src="lib.tools/images/excel.png" /></td>
-        <td width="16"><img alt="Excel" src="lib.tools/images/excel.png" /></td>
+        <td width="16"><img alt="Excel" src="<?php echo $cfg->base_assets;?>lib.tools/images/excel.png" /></td>
+        <td width="16"><img alt="Excel" src="<?php echo $cfg->base_assets;?>lib.tools/images/excel.png" /></td>
         <td width="25">No</td>
         <td>Sekolah</td>
         <td>Ujian</td>
@@ -932,8 +932,8 @@ window.onload = function()
             $no++;
             ?>
     <tr class="row-data">
-        <td width="16"><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=export&test_id=<?php echo $data['test_id']; ?>&expand=1"><img alt="Excel" src="lib.tools/images/excel.png" /></a></td>
-        <td width="16"><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=export&test_id=<?php echo $data['test_id']; ?>"><img alt="Excel" src="lib.tools/images/excel.png" /></a></td>
+        <td width="16"><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=export&test_id=<?php echo $data['test_id']; ?>&expand=1"><img alt="Excel" src="<?php echo $cfg->base_assets;?>lib.tools/images/excel.png" /></a></td>
+        <td width="16"><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=export&test_id=<?php echo $data['test_id']; ?>"><img alt="Excel" src="<?php echo $cfg->base_assets;?>lib.tools/images/excel.png" /></a></td>
         <td align="right"><?php echo $no; ?> </td>
         <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['school_name']; ?></a></td>
         <td><a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=detail&test_id=<?php echo $data['test_id']; ?>"><?php echo $data['name']; ?></a></td>
@@ -971,6 +971,6 @@ window.onload = function()
 
 <?php
   }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

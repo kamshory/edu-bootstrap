@@ -120,8 +120,8 @@ $testDataJSON = json_encode($testDataFinal);
     
     
     </script>
-	<script src="lib.assets/script/test-ws.js"></script>
-	<script src="lib.assets/script/test-ws-student.js"></script>
+	<script src="<?php echo $cfg->base_assets;?>lib.assets/script/test-ws.js"></script>
+	<script src="<?php echo $cfg->base_assets;?>lib.assets/script/test-ws-student.js"></script>
 
 	<div class="modal fade" id="test-alert" tabindex="-1" role="dialog" aria-labelledby="test-alert-title" aria-hidden="true">
 	<div class="modal-dialog modal-md" role="document">

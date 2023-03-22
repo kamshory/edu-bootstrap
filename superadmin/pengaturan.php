@@ -1,5 +1,5 @@
 <?php
-require_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
+require_once dirname(__DIR__) . "/lib.inc/auth-admin.php";
 $pageTitle = "Pengaturan";
 if(@$_POST['save'] != '')
 {
@@ -38,7 +38,7 @@ if(@$_POST['save'] != '')
 
 if(!empty($school_id)) 
 {
-    require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+    require_once __DIR__ . "/lib.inc/header.php"; //NOSONAR
     ?>
     <style>
         .sync-container{
@@ -202,6 +202,6 @@ if(!empty($school_id))
    
 
     <?php
-    require_once dirname(__FILE__) . "/lib.inc/footer.php";
+    require_once __DIR__ . "/lib.inc/footer.php";
 }
 ?>

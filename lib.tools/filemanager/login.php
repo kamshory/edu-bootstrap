@@ -1,8 +1,8 @@
 <?php
-include dirname(__FILE__)."/session.php";
-include_once dirname(__FILE__)."/conf.php";
+include __DIR__."/session.php";
+include_once __DIR__."/conf.php";
 
-include_once dirname(__FILE__)."/functions.php";
+include_once __DIR__."/functions.php";
 
 
 if($_POST['username'] && $_POST['password'])
@@ -50,7 +50,7 @@ if($_POST['username'] && $_POST['password'])
 
 if(!isset($_SESSION['userid']))
 {
-	include_once dirname(__FILE__)."/tool-login-form.php";
+	include_once __DIR__."/tool-login-form.php";
 }
 else
 {

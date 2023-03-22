@@ -1,7 +1,7 @@
 <?php
-require_once dirname(dirname(__FILE__)) . "/lib.inc/auth-admin.php";
+require_once dirname(__DIR__) . "/lib.inc/auth-admin.php";
 if ($adminLoggedIn->admin_level != 1) {
-	require_once dirname(__FILE__) . "/bukan-super-admin.php";
+	require_once __DIR__ . "/bukan-super-admin.php";
 	exit();
 }
 
@@ -65,7 +65,7 @@ if (isset($_POST['save']) && @$_GET['option'] == 'edit') {
 	header("Location: " . $picoEdu->gateBaseSelfName() . "?option=detail&class_id=$class_id");
 }
 if (@$_GET['option'] == 'add') {
-	require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+	require_once __DIR__ . "/lib.inc/header.php"; //NOSONAR
 ?>
 <form name="formedu_class" id="formedu_class" action="" method="post" enctype="multipart/form-data">
 <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -139,9 +139,9 @@ if (@$_GET['option'] == 'add') {
 	</form>
 	<?php getDefaultValues($database, 'edu_class', array('active')); ?>
 	<?php
-	require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
+	require_once __DIR__ . "/lib.inc/footer.php"; //NOSONAR
 } else if (@$_GET['option'] == 'edit') {
-	require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+	require_once __DIR__ . "/lib.inc/header.php"; //NOSONAR
 	$edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$sql = "SELECT `edu_class`.* 
 	FROM `edu_class` 
@@ -230,11 +230,11 @@ if (@$_GET['option'] == 'add') {
 		<div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>
 	<?php
 	}
-	require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
+	require_once __DIR__ . "/lib.inc/footer.php"; //NOSONAR
 } else if (@$_GET['option'] == 'print') {
-	require_once dirname(__FILE__) . "/cetak-login-siswa.php";
+	require_once __DIR__ . "/cetak-login-siswa.php";
 } else if (@$_GET['option'] == 'detail') {
-	require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+	require_once __DIR__ . "/lib.inc/header.php"; //NOSONAR
 	$edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 	$nt = '';
 	$sql = "SELECT `edu_class`.* $nt,
@@ -324,9 +324,9 @@ if($stmt->rowCount() > 0)
 		<div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>
 	<?php
 	}
-	require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
+	require_once __DIR__ . "/lib.inc/footer.php"; //NOSONAR
 } else {
-	require_once dirname(__FILE__) . "/lib.inc/header.php"; //NOSONAR
+	require_once __DIR__ . "/lib.inc/header.php"; //NOSONAR
 	$school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 	?>
 	<script type="text/javascript">
@@ -500,6 +500,6 @@ if($stmt->rowCount() > 0)
 	</div>
 
 <?php
-	require_once dirname(__FILE__) . "/lib.inc/footer.php"; //NOSONAR
+	require_once __DIR__ . "/lib.inc/footer.php"; //NOSONAR
 }
 ?>

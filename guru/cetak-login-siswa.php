@@ -1,12 +1,12 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($school_id))
 {
-  require_once dirname(__FILE__)."/bukan-admin.php";
+  require_once __DIR__."/bukan-admin.php";
   exit();
 }
 $url = rtrim($database->getSystemVariable('base_url_student'), "/")."/";
-require_once dirname(dirname(__FILE__)) . "/lib.inc/phpqrcode/phpqrcode.php";
+require_once dirname(__DIR__) . "/lib.inc/phpqrcode/phpqrcode.php";
 ob_start();
 QRCode::png($url, null);
 $imageString = base64_encode(ob_get_contents());
@@ -29,7 +29,7 @@ if($stmt->rowCount() > 0)
 }
 else
 {
-  $class_id = 0;
+  $class_id = "";
   $sql = "SELECT `edu_school`.*, `edu_school`.`name` AS `school_name`
   FROM `edu_school` 
   WHERE `edu_school`.`school_id` = '$school_id'
@@ -87,7 +87,7 @@ h3{
 }
 .user-item .image{
   position: absolute;
-  margin-left: -110px;
+  margin-left: -120px;
   margin-top: -25px;
   vertical-align: top;
 }
@@ -147,7 +147,7 @@ WHERE `edu_student`.`school_id` = '$school_id' AND `edu_student`.`active` = true
 ORDER BY `edu_student`.`name` ASC ";
 $stmt = $database->executeQuery($sql);
 
-if ($stmt->rowCount() > 0) {
+if($stmt->rowCount() > 0) {
   $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
   foreach($rows as $data) {
     ?>

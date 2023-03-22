@@ -1,6 +1,6 @@
 <?php
-include_once dirname(__FILE__) . "/lib.inc/functions-pico.php";
-include_once dirname(__FILE__) . "/lib.inc/sessions.php";
+include_once __DIR__ . "/lib.inc/functions-pico.php";
+include_once __DIR__ . "/lib.inc/sessions.php";
 if (isset($_SESSION['invalid_login']) && $_SESSION['invalid_login'] > 10) {
 	if (@$_SESSION['last_try'] > (time() - 300)) {
 		if (count(@$_POST)) {
@@ -42,7 +42,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 		AND `blocked` = false
 	";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$_SESSION['student_username'] = $data['username'];
 		$_SESSION['student_password'] = $password;
@@ -75,13 +75,13 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 			}
 		}
 
-		include_once dirname(__FILE__) . "/login-form.php";
+		include_once __DIR__ . "/login-form.php";
 	}
 } else {
-	include_once dirname(__FILE__) . "/lib.inc/auth-siswa.php";
+	include_once __DIR__ . "/lib.inc/auth-siswa.php";
 	if (!empty(@$student_id)) {
 		header('Location: index.php'); //NOSONAR
 	} else {
-		include_once dirname(__FILE__) . "/login-form.php";
+		include_once __DIR__ . "/login-form.php";
 	}
 }

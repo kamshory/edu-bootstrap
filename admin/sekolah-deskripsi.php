@@ -1,9 +1,9 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 
 if(!isset($school_id) || empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-admin.php";
+	require_once __DIR__."/bukan-admin.php";
 	exit();
 }
 $pageTitle = "Keterangan Sekolah";
@@ -12,11 +12,11 @@ if(isset($_POST['save']))
 {
 	$description = kh_filter_input(INPUT_POST, "description");
 	
-	$school_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/description";
+	$school_dir = dirname(__DIR__) . "/media.edu/school/$school_id/description";
 	$base_src = "media.edu/school/$school_id/description";
 
-	$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/description";
-	$dirBase = dirname(dirname(__FILE__));
+	$dir2prepared = dirname(__DIR__) . "/media.edu/school/$school_id/description";
+	$dirBase = dirname(__DIR__);
 	$permission = 0755;
 	$fileSync->prepareDirectory($school_dir, $dirBase, $permission, true);
 
@@ -39,7 +39,7 @@ if(isset($_POST['save']))
 
 if(@$_GET['option'] == 'edit')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 
 $state_list = array();
 $city_list = array();
@@ -91,12 +91,12 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $nt = '';
 $sql = "SELECT `edu_school`.* $nt,
 (SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) AS `country_id`,
@@ -136,6 +136,6 @@ else
 <div class="alert alert-warning">Anda tidak terdaftar sebagai Administrator sekolah. <a href="impor-data.php">Klik di sini untuk import data.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

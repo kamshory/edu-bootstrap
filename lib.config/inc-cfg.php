@@ -1,10 +1,10 @@
 <?php
 
-$oneLevelUp = dirname(dirname(__FILE__));
-$twoLevelUp = dirname(dirname(dirname(__FILE__)));
+$oneLevelUp = dirname(__DIR__);
+$twoLevelUp = dirname(dirname(__DIR__));
 
 class URLBuilder{
-    public static function createURL($schema, $serverName, $base_path = "")
+    public static function createURL($schema, $serverName, $serverPort = 80, $basePath = "")
     {
         if(!empty($schema))
         {
@@ -14,11 +14,18 @@ class URLBuilder{
         {
             $schema .= "//";
         }
-        return $schema.$serverName.$base_path."/"; //NOSONAR
+        if($serverPort != 80 && $serverPort != 443)
+        {
+            return $schema.$serverName.":".$serverPort.$basePath."/"; //NOSONAR
+        }
+        else
+        {
+            return $schema.$serverName.$basePath."/"; //NOSONAR
+        }
     }
 }
 
-require_once dirname(__FILE__)."/ws-cfg.php";
+require_once __DIR__."/ws-cfg.php";
 
 $syncConfigs = new stdClass();
 $databaseConfigs = new stdClass();
@@ -59,8 +66,8 @@ $cfg->ws_port = $wsConfig->ws_port;
 $cfg->base_path = "/edu-bootstrap";
 $cfg->schema = "";
 
-$cfg->base_url = \URLBuilder::createURL($cfg->schema, $_SERVER['SERVER_NAME'], $cfg->base_path);
-$cfg->base_assets = \URLBuilder::createURL($cfg->schema, $_SERVER['SERVER_NAME'], $cfg->base_path);
+$cfg->base_url = \URLBuilder::createURL($cfg->schema, $_SERVER['SERVER_NAME'], $_SERVER['SERVER_PORT'], $cfg->base_path);
+$cfg->base_assets = \URLBuilder::createURL($cfg->schema, $_SERVER['SERVER_NAME'], $_SERVER['SERVER_PORT'], $cfg->base_path);
 
 $cfg->app_name = "Planet Edu";
 $cfg->main_domain = "edu.planetbiru.com";

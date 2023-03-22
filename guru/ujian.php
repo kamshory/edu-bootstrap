@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+require_once dirname(__DIR__)."/lib.inc/auth-guru.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-guru.php";
+	require_once __DIR__."/bukan-guru.php";
 	exit();
 }
 $pageTitle = "Ujian";
@@ -133,7 +133,7 @@ if(isset($_POST['delete']) && isset($_POST['test_id']))
 				$database->executeDelete($sql, true);
 				$sql = "DELETE FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = '$school_id' AND `teacher_id` = '$auth_teacher_id'";
 				$database->executeDelete($sql, true);
-				$dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+				$dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
 				$destroyer = new \Pico\DirectoryDestroyer($fileSync);
 				$destroyer->destroy($dir, true);
 				$database->executeTransaction("commit", true);
@@ -167,7 +167,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 		{
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			$basename = $data['file_path'];
-			$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
+			$file_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$basename;
 			if(file_exists($file_path))
 			{
 	
@@ -188,9 +188,9 @@ if(isset($_POST['save']) && @$_GET['option'] == 'add')
 					$score_standar = $data['standard_score'];
 	
 					
-					$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-					$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-					$dirBase = dirname(dirname(__FILE__));
+					$test_dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+					$dir2prepared = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+					$dirBase = dirname(__DIR__);
 					$permission = 0755;
 					$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 					
@@ -326,7 +326,7 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 }
 if(@$_GET['option'] == 'add')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $collection = kh_filter_input(INPUT_GET, "collection", FILTER_SANITIZE_STRING_NEW);
 $selection = kh_filter_input(INPUT_GET, "selection", FILTER_SANITIZE_STRING_NEW);
 
@@ -335,7 +335,7 @@ if(!empty($collection))
 {
 	$sql = "SELECT * FROM `edu_test_collection` WHERE `test_collection_id` = '$collection' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$name = $data['name'];
 	}
@@ -349,12 +349,7 @@ LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = 
 WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id' AND `edu_class`.`name` != '' 
 ORDER BY `edu_school_program`.`sort_order` ASC , `edu_class`.`sort_order` ASC 
 ";
-$arrc = array();
-$stmt = $database->executeQuery($sqlc);
-if($stmt->rowCount() > 0)
-{
-	$arrc = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-}
+$arrc = $database->fetchAssocAll($sqlc, array());
 ?>
 <script type="text/javascript">
 var classList = <?php echo json_encode($arrc);?>;
@@ -589,12 +584,12 @@ $subjectList = $picoEdu->getSubjectList();
   </div>
 </div>
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'edit')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $sql = "SELECT `edu_test`.* 
 FROM `edu_test` 
@@ -613,12 +608,7 @@ LEFT JOIN (`edu_school_program`) ON (`edu_school_program`.`school_program_id` = 
 WHERE `edu_class`.`active` = true AND `edu_class`.`school_id` = '$school_id' AND `edu_class`.`name` != '' 
 ORDER BY `edu_school_program`.`sort_order` ASC , `edu_class`.`sort_order` ASC 
 ";
-$arrc = array();
-$stmt = $database->executeQuery($sqlc);
-if($stmt->rowCount() > 0)
-{
-	$arrc = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-}
+$arrc = $database->fetchAssocAll($sqlc, array());
 ?>
 <script type="text/javascript">
 var classList = <?php echo json_encode($arrc);?>;
@@ -856,12 +846,12 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else if(@$_GET['option'] == 'detail')
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $array_class = $picoEdu->getArrayClass($school_id);
 $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
@@ -1077,12 +1067,12 @@ else
 <div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>">Klik di sini untuk kembali.</a></div>	
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
@@ -1272,6 +1262,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

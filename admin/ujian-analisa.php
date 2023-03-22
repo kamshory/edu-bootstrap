@@ -1,9 +1,9 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(!empty($school_id))
 {
 
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 	if (isset($_GET['test_id'])) {
 		$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 		$sql = "SELECT `edu_test`.* ,
@@ -11,7 +11,7 @@ require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
 FROM `edu_test` WHERE `test_id` = '$test_id' 
 ";
 		$stmt = $database->executeQuery($sql);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 			header("Content-Type: application/vnd.xls");
 			header("Content-Disposition: attachment; filename=\"" . $data['name'] . ".xls\"");
@@ -35,7 +35,7 @@ for ($i = 0; $i < $number_of_option; $i++) {
 
 $sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` ASC ";
 $stmt = $database->executeQuery($sql);
-if ($stmt->rowCount() > 0) {
+if($stmt->rowCount() > 0) {
 {
 ?>
 <table width="100%" border="1" cellspacing="0" cellpadding="0" class="table table-striped table-sm">

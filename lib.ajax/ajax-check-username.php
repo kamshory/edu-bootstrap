@@ -1,5 +1,5 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/auth.php";
+include_once dirname(__DIR__)."/lib.inc/auth.php";
 
 $mlid = $memberLoggedIn->member_id;
 

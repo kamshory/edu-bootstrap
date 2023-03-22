@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+require_once dirname(__DIR__)."/lib.inc/auth-guru.php";
 if(!empty($school_id))
 {
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 $test_id = kh_filter_input(INPUT_POST, "test_id", FILTER_SANITIZE_STRING_NEW);
 $xml_data = kh_filter_input(INPUT_POST, "text", FILTER_DEFAULT);
 if(!empty($test_id) && $xml_data!= '')
@@ -10,7 +10,7 @@ if(!empty($test_id) && $xml_data!= '')
 	$picoTest = new \Pico\PicoTestCreator();
 	$clear_data = $picoTest->parseRawQuestion($xml_data);
 
-	$base_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
+	$base_dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
 	$base_src = "media.edu/school/$school_id/test/$test_id";
 	?>
     <ol class="question-ol">

@@ -1,8 +1,8 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($school_id))
 {
-	require_once dirname(__FILE__)."/bukan-admin.php";
+	require_once __DIR__."/bukan-admin.php";
 	exit();
 }
 $edit_key = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
@@ -13,7 +13,7 @@ WHERE `edu_school`.`school_id` = '$school_id'
 ";
 
 $stmt = $database->executeQuery($sql);
-if ($stmt->rowCount() > 0) {
+if($stmt->rowCount() > 0) {
   $data = $stmt->fetch(\PDO::FETCH_ASSOC);
   ?><!DOCTYPE html>
 <html lang="en">
@@ -96,7 +96,7 @@ h3{
     ORDER BY `edu_teacher`.`name` ASC 
     ";
     $stmt = $database->executeQuery($sql);
-    if ($stmt->rowCount() > 0) {
+    if($stmt->rowCount() > 0) {
       $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
       foreach ($rows as $data) {
         ?>

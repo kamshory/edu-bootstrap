@@ -1,11 +1,11 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
-	require_once dirname(__FILE__)."/bukan-super-admin.php";
+	require_once __DIR__."/bukan-super-admin.php";
 	exit();
 }
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 if(!isset($school_id) || empty($school_id))
 {
 	exit();
@@ -17,7 +17,7 @@ if($stmt->rowCount() > 0)
 {
 	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 	$basename = $data['file_path'];
-	$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
+	$file_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$basename;
 	if(file_exists($file_path))
 	{
 		$picoTest = new \Pico\PicoTestCreator();

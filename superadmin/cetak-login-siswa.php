@@ -1,14 +1,14 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if($adminLoggedIn->admin_level != 1)
 {
-	require_once dirname(__FILE__)."/bukan-super-admin.php";
+	require_once __DIR__."/bukan-super-admin.php";
 	exit();
 }
 $school_id = kh_filter_input(INPUT_GET, "school_id", FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 $url = 'http://192.168.0.11/';
-require_once dirname(dirname(__FILE__)) . "/lib.inc/phpqrcode/phpqrcode.php";
+require_once dirname(__DIR__) . "/lib.inc/phpqrcode/phpqrcode.php";
 ob_start();
 QRCode::png($url, null);
 $imageString = base64_encode( ob_get_contents() );
@@ -148,7 +148,7 @@ WHERE `edu_student`.`school_id` = '$school_id' AND `edu_student`.`active` = true
 ORDER BY `edu_student`.`name` ASC ";
 $stmt = $database->executeQuery($sql);
 
-if ($stmt->rowCount() > 0) {
+if($stmt->rowCount() > 0) {
   $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
   foreach($rows as $data) {
     ?>

@@ -1,27 +1,27 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($admin_id))
 {
-	require_once dirname(__FILE__)."/login-form.php";
+	require_once __DIR__."/login-form.php";
 	exit();
 }
-$path = dirname(__FILE__) . "/planetedu.xlsx";
-require_once dirname(dirname(__FILE__)) . '/lib.inc/PHPExcel_1.8.0/Classes/PHPExcel/IOFactory.php';
-require_once dirname(dirname(__FILE__)) . '/lib.inc/dom.php';
+$path = __DIR__ . "/planetedu.xlsx";
+require_once dirname(__DIR__) . '/lib.inc/PHPExcel_1.8.0/Classes/PHPExcel/IOFactory.php';
 	
 
-function generateTable($header, $body)
+function generateTable($header, $body, $user_data)
 {
+    $headerKeys = array_keys($user_data[0]);
     $table = '';
     $table .= '<table border="1" style="border-collapse:collapse">';
     $table .= '<thead>';
     $table .= '<tr>';
-    $table .= '<td>'.implode('</td><td>', $header).'</td>';
+    $table .= '<td>'.implode('</td><td>', $headerKeys).'</td>';
     $table .= '</tr>';
     $table .= '</thead>';
 
     $table .= '<tbody>';
-    foreach($body as $val)
+    foreach($user_data as $val)
     {
         $table .= '<tr>';
         $table .= '<td>'.implode('</td><td>', $val).'</td>';
@@ -52,6 +52,7 @@ try{
         $fieldArray[$col] = strtolower($rawHeader[$col]);
     }
 
+    $fixedData = array();
     for($row = 2; $row <= $highestRow; ++$row) 
     {
         $data = array();
@@ -84,6 +85,7 @@ try{
         $principal = @$data['principal'];
         $language = strtolower(@$data['language']);
         $school_grade = strtolower(@$data['school_grade']);
+        $use_national_id = strtolower(@$data['use_national_id']);
 
         $user_data = array();
         $user_data['name'] = $name;
@@ -95,10 +97,11 @@ try{
         $user_data['language'] = $language;
         $user_data['principal'] = $principal;
         $user_data['school_grade'] = $school_grade;
+        $user_data['use_national_id'] = $use_national_id;
 
-        
+        $fixedData[] = $user_data;
     }
-    echo generateTable($rawHeader, $rawData);
+    echo generateTable($rawHeader, $rawData, $fixedData);
 }
 catch(Exception $e)
 {
@@ -126,6 +129,8 @@ try {
         $fieldArray[$col] = strtolower($rawHeader[$col]);
     }
 
+    $fixedData = array();
+
     for($row = 2; $row <= $highestRow; ++$row) 
     {
         $data = array();
@@ -142,7 +147,7 @@ try {
 
         $gender = $picoEdu->mapGender((trim(@$data['gender'])));
         $bd = isset($data['birth_day']) ? ((int) $data['birth_day']) : 0;
-        $birth_day = (excel2MySQLDate($bd));
+        $birth_day = substr(excel2MySQLDate($bd), 0, 10);
         $phone = ($picoEdu->fixPhone(trim(@$data['phone'])));
         $email = (trim(@$data['email']));
         $email = $picoEdu->filterEmailAddress($email);
@@ -160,8 +165,9 @@ try {
         $user_data['country_id'] = $country_id;
         $user_data['language'] = $language;
         
+        $fixedData[] = $user_data;
     }
-    echo generateTable($rawHeader, $rawData);
+    echo generateTable($rawHeader, $rawData, $fixedData);
 } catch (Exception $e) {
     // Do nothing
 }
@@ -186,6 +192,8 @@ try {
         $fieldArray[$col] = strtolower($rawHeader[$col]);
     }
 
+    $fixedData = array();
+
     for($row = 2; $row <= $highestRow; ++$row) 
     {
         $data = array();
@@ -204,10 +212,15 @@ try {
         $grade_id = (trim(@$data['grade']));
         $school_program = (trim(@$data['school_program']));
 
-        
+        $user_data = array();
+        $user_data['name'] = $name;
+        $user_data['grade_id'] = $grade_id;
+        $user_data['school_program'] = $school_program;
+
+        $fixedData[] = $user_data;
     }
 
-    echo generateTable($rawHeader, $rawData);
+    echo generateTable($rawHeader, $rawData, $fixedData);
 } catch (Exception $e) {
     // Do nothing
 }
@@ -234,6 +247,8 @@ try {
         $fieldArray[$col] = strtolower($rawHeader[$col]);
     }
 
+    $fixedData = array();
+
     for($row = 2; $row <= $highestRow; ++$row) 
     {
         $data = array();
@@ -259,7 +274,7 @@ try {
         $gender = $picoEdu->mapGender((trim(@$data['gender'])));
         $birth_place = (trim(@$data['birth_place']));
         $bd = isset($data['birth_day']) ? ((int) $data['birth_day']) : 0;
-        $birth_day = (excel2MySQLDate($bd));
+        $birth_day = substr(excel2MySQLDate($bd), 0, 10);
 
         $token_student = md5($school_id . '-' . $reg_number . '-' . time() . '-' . mt_rand(111111, 999999));
 
@@ -279,7 +294,13 @@ try {
             $email = $picoEdu->generateAltEmail('local', ($reg_number_national != '') ? 'st_' . $reg_number_national : '', ($reg_number != '') ? 'st_' . $reg_number : '', ($phone != '') ? 'ph_' . $country_id . '_' . $phone : '');
         }
 
+
         $user_data = array();
+        $reg_number = @$data['reg_number'];
+        $reg_number_national = @$data['reg_number_national'];
+        $user_data['reg_number'] = $reg_number;
+        $user_data['reg_number_national'] = $reg_number_national;
+
         $user_data['name'] = $name;
         $user_data['gender'] = $gender;
         $user_data['email'] = $email;
@@ -290,9 +311,10 @@ try {
         $user_data['country_id'] = $country_id;
         $user_data['language'] = $language;
         
+        $fixedData[] = $user_data;
     }
 
-    echo generateTable($rawHeader, $rawData);
+    echo generateTable($rawHeader, $rawData, $fixedData);
 } catch (Exception $e) {
     // Do nothing
 }
@@ -317,6 +339,8 @@ try {
         $rawHeader[$col] = $objWorksheet->getCellByColumnAndRow($col, $row)->getValue();
         $fieldArray[$col] = strtolower($rawHeader[$col]);
     }
+
+    $fixedData = array();
 
     for($row = 2; $row <= $highestRow; ++$row) 
     {
@@ -343,7 +367,7 @@ try {
         $gender = $picoEdu->mapGender((trim(@$data['gender'])));
         $birth_place = (trim(@$data['birth_place']));
         $bd = isset($data['birth_day']) ? ((int) $data['birth_day']) : 0;
-        $birth_day = (excel2MySQLDate($bd));
+        $birth_day = substr(excel2MySQLDate($bd), 0, 10);
 
         $token_teacher = md5($school_id . '-' . $reg_number . '-' . time() . '-' . mt_rand(111111, 999999));
 
@@ -363,6 +387,12 @@ try {
         }
 
         $user_data = array();
+
+        $reg_number = @$data['reg_number'];
+        $reg_number_national = @$data['reg_number_national'];
+        $user_data['reg_number'] = $reg_number;
+        $user_data['reg_number_national'] = $reg_number_national;
+
         $user_data['name'] = $name;
         $user_data['gender'] = $gender;
         $user_data['email'] = $email;
@@ -373,8 +403,9 @@ try {
         $user_data['country_id'] = $country_id;
         $user_data['language'] = $language;
         
+        $fixedData[] = $user_data;
     }
-    echo generateTable($rawHeader, $rawData);
+    echo generateTable($rawHeader, $rawData, $fixedData);
 } catch (Exception $e) {
     // Do nothing
 }

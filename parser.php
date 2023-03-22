@@ -12,8 +12,8 @@ $arr_module = array(
 	'ujian.php'
 );
 
-include_once dirname(__FILE__)."/lib.inc/functions-pico.php";
-include_once dirname(__FILE__)."/lib.inc/sessions.php";
+include_once __DIR__."/lib.inc/functions-pico.php";
+include_once __DIR__."/lib.inc/sessions.php";
 
 $uri_params = @$_GET['uri_params'];
 $uri_params = trim($uri_params, "/");
@@ -53,7 +53,7 @@ else
 	$modul_name = "sekolah.php";
 	$school_code = $school_code_from_parser = $uri_arr1[0];
 }
-if(file_exists(dirname(__FILE__)."/sch-".$modul_name))
+if(file_exists(__DIR__."/sch-".$modul_name))
 {
 	$school_code = $school_code_from_parser = preg_replace("/[^a-z\-\d]/i","-", $school_code);
 	$sql_filter = "";
@@ -81,6 +81,6 @@ if(file_exists(dirname(__FILE__)."/sch-".$modul_name))
 	$modul_name = basename($modul_name);
 	if(in_array($modul_name, $arr_module))
 	{	
-		include_once dirname(__FILE__)."/sch-".$modul_name;
+		include_once __DIR__."/sch-".$modul_name;
 	}
 }

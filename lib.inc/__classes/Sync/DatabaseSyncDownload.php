@@ -63,7 +63,7 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
         ORDER BY `time_create` DESC 
         LIMIT 0,1 ";
         $stmt = $this->database->executeQuery($sql);
-        if ($stmt->rowCount() > 0) {
+        if($stmt->rowCount() > 0) {
             $data = $stmt->fetch(\PDO::FETCH_ASSOC);
             return $data['time_create'];
         }

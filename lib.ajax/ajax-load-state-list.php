@@ -1,5 +1,5 @@
 <?php
-include_once dirname(dirname(__FILE__))."/lib.inc/functions-pico.php";
+include_once dirname(__DIR__)."/lib.inc/functions-pico.php";
 $country_id = trim(kh_filter_input(INPUT_GET, "country_id", FILTER_SANITIZE_STRING_NEW));
 
 $sql = "SELECT `state`.`state_id` AS `v`, `state`.`name` AS `l`

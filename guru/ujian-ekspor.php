@@ -1,12 +1,12 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+require_once dirname(__DIR__)."/lib.inc/auth-guru.php";
 if(empty($school_id))
 {
-  require_once dirname(__FILE__)."/bukan-guru.php";
+  require_once __DIR__."/bukan-guru.php";
   exit();
 }
 
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 
 $pageTitle = "Ekspor Soal Ujian";
 $pagination = new \Pico\PicoPagination();
@@ -24,14 +24,14 @@ if(isset($_POST['export']) && isset($_POST['test_id']))
 		$filename = strtolower(str_replace(' ', '-', $name)).'.xml';
 		header("Content-Type: text/xml");
 		header("Content-Disposition: attachment; filename=\"$filename\"");
-		echo exportTest($database, $test_id, dirname(dirname(__FILE__))."/");
+		echo exportTest($database, $test_id, dirname(__DIR__)."/");
 	}
 	exit();	
 }
 
 if(isset($_GET['test_id']))
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
@@ -117,11 +117,11 @@ $array_class = $picoEdu->getArrayClass($school_id);
 </form>
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $tahun_id = kh_filter_input(INPUT_GET, "tahun_id", FILTER_SANITIZE_STRING_NEW);
 $class_id = kh_filter_input(INPUT_GET, "class_id", FILTER_SANITIZE_STRING_NEW);
 ?>
@@ -303,6 +303,6 @@ else
 </div>
 
 <?php
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 ?>

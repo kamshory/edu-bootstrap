@@ -27,7 +27,7 @@ let quran_server = '../lib.quran';
 $(document).ready(function () {
     $('textarea.wysiwyg-editor').tinymce({
         // Location of TinyMCE script
-        script_url: 'lib.assets/script/tiny_mce/tiny_mce.js',
+        script_url: '../lib.assets/script/tiny_mce/tiny_mce.js',
 
         // General options
         theme: "advanced",
@@ -73,7 +73,7 @@ $(document).ready(function () {
 
 
 function fileBrowserCallBack(field_name, url, type, win) {
-    let ajaxFilemanagerURL = "lib.tools/filemanager/?description=true&editor=tiny_mce&type=" + type + "&field_name=" + field_name + '&dir=base/' + dirname(url);
+    let ajaxFilemanagerURL = "../lib.tools/filemanager/?description=true&editor=tiny_mce&type=" + type + "&field_name=" + field_name + '&dir=base/' + dirname(url);
 
     if (url.indexOf('data:') != -1) {
         url = '';

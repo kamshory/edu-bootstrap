@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="lib.style/album.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.style/album.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="<?php echo $cfg->base_assets;?>lib.favs/apple-touch-icon.png" sizes="180x180">

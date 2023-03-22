@@ -1,5 +1,5 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-guru.php";
+require_once dirname(__DIR__)."/lib.inc/auth-guru.php";
 if(empty($school_id))
 {
 	exit();
@@ -7,7 +7,7 @@ if(empty($school_id))
 if(isset($_POST['from']) && isset($_POST['to']))
 {
 	
-	require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+	require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 	$collection = kh_filter_input(INPUT_POST, "from", FILTER_SANITIZE_STRING_NEW);
 	$test_id = kh_filter_input(INPUT_POST, "to", FILTER_SANITIZE_STRING_NEW);
 	$selection = kh_filter_input(INPUT_POST, "selection", FILTER_SANITIZE_STRING_NEW);
@@ -21,7 +21,7 @@ if(isset($_POST['from']) && isset($_POST['to']))
 	{
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$basename = $data['file_path'];
-		$file_path = dirname(dirname(__FILE__)) . "/media.edu/question-collection/data/".$basename;
+		$file_path = dirname(__DIR__) . "/media.edu/question-collection/data/".$basename;
 		if(file_exists($file_path))
 		{
 			$sql = "SELECT `edu_test`.*, 
@@ -38,9 +38,9 @@ if(isset($_POST['from']) && isset($_POST['to']))
 				$sort_order = ((int) $data['sort_order']);
 				$score_standar = $data['standard_score'];
 				
-				$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-				$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-				$dirBase = dirname(dirname(__FILE__));
+				$test_dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+				$dir2prepared = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+				$dirBase = dirname(__DIR__);
 				$permission = 0755;
 				$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 				

@@ -17,7 +17,7 @@ function fileBrowserCallBack(field_name, url, type, win) {
   }
   url = url.substr(baseTestURLLength);
   let ajaxFilemanagerURL =
-    'lib.tools/filemanager/?test_id=' +
+    '../lib.tools/filemanager/?test_id=' +
     test_id +
     '&editor=tiny_mce&type=' +
     type +

@@ -1,6 +1,6 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 $basename = "ujian-soal.php";
 $test_id = 0;
 $edit_mode = '';
@@ -10,7 +10,7 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 	$edit_mode = kh_filter_input(INPUT_POST, "edit_mode", FILTER_SANITIZE_NUMBER_UINT);
 	$sql = "SELECT * FROM `edu_test` WHERE `test_id` = '$test_id' AND `school_id` = '$school_id' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 		// Format Plain
 		$picoEdu->sortQuestion($test_id);
 		$sql = "SELECT `edu_test`.*, 
@@ -19,7 +19,7 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 		WHERE `edu_test`.`test_id` = '$test_id'
 		";
 		$stmt = $database->executeQuery($sql);
-		if ($stmt->rowCount() > 0) {
+		if($stmt->rowCount() > 0) {
 			$time_create = $database->getLocalDateTime();
 			$time_edit = $database->getLocalDateTime();
 			
@@ -30,9 +30,9 @@ if (isset($school_id) && !empty($school_id) && isset($_POST['question_text']) &&
 			$raw_txt_data = kh_filter_input(INPUT_POST, "question_text", FILTER_DEFAULT);
 			$clear_data = $picoTest->parseRawQuestion($raw_txt_data);
 			
-			$test_dir = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-			$dir2prepared = dirname(dirname(__FILE__)) . "/media.edu/school/$school_id/test/$test_id";
-			$dirBase = dirname(dirname(__FILE__));
+			$test_dir = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+			$dir2prepared = dirname(__DIR__) . "/media.edu/school/$school_id/test/$test_id";
+			$dirBase = dirname(__DIR__);
 			$permission = 0755;
 			$fileSync->prepareDirectory($test_dir, $dirBase, $permission, true);
 
@@ -112,7 +112,7 @@ if(isset($school_id) && !empty($school_id)) {
 
 	$sql = "SELECT * FROM `edu_question` WHERE `test_id` = '$test_id' ";
 	$stmt = $database->executeQuery($sql);
-	if ($stmt->rowCount() > 0) {
+	if($stmt->rowCount() > 0) {
 	?>
 	<ol class="question-ol">
 	<?php

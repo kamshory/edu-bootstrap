@@ -1,6 +1,6 @@
 <?php
-include_once dirname(__FILE__)."/lib.inc/functions-pico.php";
-include_once dirname(__FILE__)."/lib.inc/sessions.php";
+include_once __DIR__."/lib.inc/functions-pico.php";
+include_once __DIR__."/lib.inc/sessions.php";
 
 $pageTitle = "Infomasi";
 if(isset($_GET['info_id']))
@@ -16,7 +16,6 @@ if(isset($_GET['info_id']))
 	if($stmt->rowCount() > 0)
 	{
 		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
-		$pageTitle = $data['name'];
 
 		$obj = \Pico\PicoDOM::parseHtmlData('<html><body>'.($data['content']).'</body></html>');
 		$arrparno = array();
@@ -72,7 +71,7 @@ if(isset($_GET['info_id']))
 		}
 	
 		$cfg->meta_description = htmlspecialchars(strip_tags($content));
-		include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
+		include_once __DIR__."/lib.inc/header-bootstrap.php";
 		?>
                 <div class="">
 					<div class="article-title"><h1><?php echo $data['name'];?></h1></div>
@@ -85,18 +84,18 @@ if(isset($_GET['info_id']))
 					</div>
 				</div>            
 		<?php
-		include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
+		include_once __DIR__."/lib.inc/footer-bootstrap.php";
 	}
 	else
 	{
-		include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
-		include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
+		include_once __DIR__."/lib.inc/header-bootstrap.php";
+		include_once __DIR__."/lib.inc/footer-bootstrap.php";
 	}
 }
 else
 {
-	include_once dirname(__FILE__)."/lib.inc/header-bootstrap.php";
-	include_once dirname(__FILE__)."/lib.inc/inc-informasi.php";
-	include_once dirname(__FILE__)."/lib.inc/footer-bootstrap.php";
+	include_once __DIR__."/lib.inc/header-bootstrap.php";
+	include_once __DIR__."/lib.inc/inc-informasi.php";
+	include_once __DIR__."/lib.inc/footer-bootstrap.php";
 }
 ?>

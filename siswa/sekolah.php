@@ -1,12 +1,12 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-siswa.php";
+require_once dirname(__DIR__)."/lib.inc/auth-siswa.php";
 if(!isset($school_id) || empty($school_id))
 {
-	require_once dirname(__FILE__)."/login-form.php";
+	require_once __DIR__."/login-form.php";
 	exit();
 }
 $pageTitle = "Sekolah";
-require_once dirname(__FILE__)."/lib.inc/header.php"; //NOSONAR
+require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $sql = "SELECT `edu_school`.*,
 (SELECT `country`.`name` FROM `country` WHERE `country`.`country_id` = `edu_school`.`country_id`) AS `country_id`,
 (SELECT `state`.`name` FROM `state` WHERE `state`.`state_id` = `edu_school`.`state_id`) AS `state_id`,
@@ -85,5 +85,5 @@ $pageTitle = "Tentang ".$school_name;
 </table>
 <?php
 }
-require_once dirname(__FILE__)."/lib.inc/footer.php"; //NOSONAR
+require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 ?>

@@ -1,6 +1,6 @@
 <?php
-require_once dirname(dirname(__FILE__))."/lib.inc/auth-admin.php";
-require_once dirname(dirname(__FILE__))."/lib.inc/lib.test.php";
+require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
+require_once dirname(__DIR__)."/lib.inc/lib.test.php";
 $raw_txt_data = '
 
 Berikut ini adalah sebuah tabel
