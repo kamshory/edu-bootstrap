@@ -105,11 +105,7 @@ if (@$_GET['option'] == 'add') {
 					<select class="form-control" name="school_program_id" id="school_program_id">
 						<option value=""></option>
 						<?php
-							$sql2 = "SELECT `edu_school_program`.*
-							FROM `edu_school_program`
-							WHERE `edu_school_program`.`school_id` = '$school_id' AND `active` = true 
-							ORDER BY `edu_school_program`.`name` ASC
-							";
+							$sql2 = "SELECT * FROM `edu_school_program` WHERE `school_id` = '$school_id' AND `active` = true ORDER BY `sort_order` ASC ";
 							echo $picoEdu->createFilterDb(
 								$sql2,
 								array(
@@ -193,11 +189,7 @@ else if (@$_GET['option'] == 'edit')
 						<select class="form-control" name="school_program_id" id="school_program_id">
 							<option value=""></option>
 							<?php
-							$sql2 = "SELECT `edu_school_program`.*
-							FROM `edu_school_program`
-							WHERE `edu_school_program`.`school_id` = '$school_id' AND `active` = true 
-							ORDER BY `edu_school_program`.`name` ASC
-							";
+							$sql2 = "SELECT * FROM `edu_school_program` WHERE `school_id` = '$school_id' AND `active` = true ORDER BY `sort_order` ASC ";
 							echo $picoEdu->createFilterDb(
 								$sql2,
 								array(
@@ -363,7 +355,7 @@ if($stmt->rowCount() > 0)
 		<select class="form-control input-select" name="school_program_id" id="school_program_id">
 		<option value=""></option>
 		<?php 
-		$sql2 = "SELECT `edu_school_program`.* FROM `edu_school_program` WHERE `edu_school_program`.`school_id` = '$school_id' ORDER BY `name` ASC ";
+		$sql2 = "SELECT * FROM `edu_school_program` WHERE `school_id` = '$school_id' AND `active` = true ORDER BY `sort_order` ASC ";
 		echo $picoEdu->createFilterDb(
 			$sql2,
 			array(
