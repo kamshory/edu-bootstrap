@@ -60,8 +60,6 @@ class SyncMaster
      */
     protected $application = \Pico\PicoConst::PICO_EDU;
 
-
-
     /**
      * Build URL
      *

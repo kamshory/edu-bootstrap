@@ -4,7 +4,7 @@ namespace Sync;
 
 class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
 {
-    
+
     /**
      * Flag use relative path
      *
@@ -12,7 +12,6 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
      */
     protected $useRelativePath = false;
 
- 
     /**
      * Constructor of FileSyncMaster
      * @param \Pico\PicoDatabase $database Database
@@ -150,7 +149,6 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
         }
     }
 
-
     /**
      * Upload sync file to sync hub
      * @param string $path Sync file path
@@ -206,6 +204,7 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
     {
         return $this->getSyncRecordListFromDatabase('down', array(0));
     }
+
     /**
      * Get sync record list from database with status 1
      * @return array
@@ -252,7 +251,7 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
         }
         $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_direction` = '$direction' $filter ORDER BY  `edu_sync_file`.`time_create` ASC ";
         $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0) {
+        if ($stmt->rowCount() > 0) {
             return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }
         return array();
@@ -301,6 +300,15 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
         }
     }
 
+    /**
+     * Update path and status
+     *
+     * @param string $recordId
+     * @param string $absolutePath
+     * @param string $relativePath
+     * @param integer $status
+     * @return \PDOStatement|bool
+     */
     protected function updatePathAndStatus($recordId, $absolutePath, $relativePath, $status)
     {
         $sql = "UPDATE `edu_sync_file` SET `file_path` = '$absolutePath', `relative_path` = '$relativePath', `status` = '$status' WHERE `sync_file_id` = '$recordId' ";
@@ -317,7 +325,7 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
         $recordId = addslashes($recordId);
         $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_file_id` = '$recordId' ";
         $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0) {
+        if ($stmt->rowCount() > 0) {
             return $stmt->fetch(\PDO::FETCH_ASSOC);
         }
         return null;
@@ -348,6 +356,4 @@ class FileSyncMaster extends \Sync\SyncMaster //NOSONAR
         $random = sprintf('%06x', mt_rand(0, 16777215));
         return sprintf('%s%s', $uuid, $random);
     }
-
-    
 }

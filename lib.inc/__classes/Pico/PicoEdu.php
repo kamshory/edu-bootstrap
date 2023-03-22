@@ -283,11 +283,12 @@ class PicoEdu //NOSONAR
 				'email' => $data['email']
 			);
 		} else {
+			$email = empty($email) || $email == "''" ? 'null' : "'$email'";
 			$auth = md5($username . $email);
 			$sql = "INSERT INTO `member` 
 			(`member_id`, `name`, `username`, `email`, `gender`, `birth_day`, `password`, `auth`, `language`, `phone`, `country_id`, 
 			`time_register`, `last_activity_ip`, `last_activity_time`, `last_seen_ip`, `last_seen_time`, `active`) VALUES 
-			('$member_id', '$name', '$username', '$email', '$gender', '$birth_day', '$password', '$auth', '$language', '$phone', '$country_id', 
+			('$member_id', '$name', '$username', $email, '$gender', '$birth_day', '$password', '$auth', '$language', '$phone', '$country_id', 
 			'$now', '$ip', '$now', '$ip', '$now', '1');
 			";
 
@@ -297,7 +298,7 @@ class PicoEdu //NOSONAR
 				'member_id' => $member_id,
 				'name' => stripslashes($name),
 				'birth_day' => stripslashes($birth_day),
-				'username' => stripslashes($name),
+				'username' => stripslashes($username),
 				'email' => stripslashes($email)
 			);
 		}

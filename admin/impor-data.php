@@ -13,7 +13,7 @@ if(empty($admin_id))
 	{
 		$sql = "INSERT INTO `edu_admin` 
 		(`admin_id`, `school_id`, `name`, `gender`, `birth_place`, `birth_day`, `username`, `admin_level`, `token_admin`, `email`, `phone`, `address`, `country_id`, `state_id`, `city_id`, `password`, `password_initial`, `auth`, `picture_rand`, `time_create`, `time_edit`, `time_last_activity`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `ip_last_activity`, `blocked`, `active`) VALUES
-		('$admin_id', '', 'Admin', 'M', 'Jambi', '2000-01-01', '$username', 1, '$passwordDatabase', 'admin@edu.planetbiru.com', '', '', 0, 0, 0, 'c3284d0f94606de1fd2af172aba15bf3', 'admin', '', '742251', '2017-10-14 00:00:00', '2017-10-14 00:00:00', '2017-10-14 00:00:00', '0', '$admin_id', '127.0.0.1', '127.0.0.1', '127.0.0.1', 0, 1)";
+		('$admin_id', '', 'Admin', 'M', 'Jambi', '2000-01-01', '$username', 1, '$passwordDatabase', 'admin@local', '', '', 0, 0, 0, 'c3284d0f94606de1fd2af172aba15bf3', 'admin', '', '742251', '2017-10-14 00:00:00', '2017-10-14 00:00:00', '2017-10-14 00:00:00', '0', '$admin_id', '127.0.0.1', '127.0.0.1', '127.0.0.1', 0, 1)";
 		$stmt = $database->executeInsert($sql, true);
 		if($stmt->rowCount() > 0)
 		{
@@ -200,7 +200,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 		$path = __DIR__."/tmp/$ip-".mt_rand(1000000, 9000000).".xlsx";
 		$success = move_uploaded_file($_FILES['file']['tmp_name'], $path);
-		$fileSync->createFile($path, true);
+		$fileSync->createFile($path, false);
 		$errors = 0;
 		if($success && file_exists($path))
 		{
@@ -282,16 +282,17 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 					{
 						$myschool = false;
 					}
-					if($errors)
+					else
 					{
-						break;
+						$myschool = true;
 					}
-					break;
+					
 				}
 			}
 			catch(Exception $e)
 			{
 				// Do nothing
+				$myschool = false;
 			}
 			
 			if(empty($school_id))
@@ -404,7 +405,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 
 								$gender = $picoEdu->mapGender(addslashes(trim(@$data['gender'])));
 								$bd = isset($data['birth_day']) ? ((int) $data['birth_day']) : 0;
-								$birth_day = addslashes(excel2MySQLDate($bd));
+								$birth_day = excel2MySQLDate($bd);
 								$phone = addslashes($picoEdu->fixPhone(trim(@$data['phone'])));
 								$email = addslashes(trim(@$data['email']));
 								$email = $picoEdu->filterEmailAddress($email);
@@ -431,7 +432,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$user_data['address'] = $address;
 								$user_data['country_id'] = $country_id;
 								$user_data['language'] = $language;
-								if (!empty($name) && !empty($email)) {
+								if (!empty($name)) {
 									$chk = $picoEdu->getExistsingUser($user_data);
 									$admin_id = addslashes($chk['member_id']);
 									$username = addslashes($chk['username']);
@@ -442,12 +443,13 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									{
 										$db_fixed = "'" . $birth_day . "'";
 									}
-
+									$email = empty($email) || $email == "''" ? 'null' : "'$email'";
+				
 									$sql = "INSERT INTO `edu_admin` 
 									(`admin_id`, `school_id`, `admin_level`, `username`, `name`, `token_admin`, `email`, `phone`, `password`, 
 									`password_initial`, `gender`, `birth_day`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, 
 									`ip_create`, `ip_edit`, `blocked`, `active`) VALUES 
-									('$admin_id', '$school_id', '2', '$username', '$name', '$token_admin', '$email', '$phone', '$passwordHash', 
+									('$admin_id', '$school_id', '2', '$username', '$name', '$token_admin', $email, '$phone', '$passwordHash', 
 									'$password', '$gender', $db_fixed, '$time_create', '$time_edit', '$admin_create', '$admin_edit', 
 									'$ip_create', '$ip_edit', '0', '1');
 									";
@@ -466,6 +468,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 							}
 						} catch (Exception $e) {
 							// Do nothing
+							echo $e->getMessage();
 						}
 						// import data admin school
 						// selesai
@@ -584,7 +587,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$gender = $picoEdu->mapGender(addslashes(trim(@$data['gender'])));
 								$birth_place = addslashes(trim(@$data['birth_place']));
 								$bd = isset($data['birth_day']) ? ((int) $data['birth_day']) : 0;
-								$birth_day = addslashes(excel2MySQLDate($bd));
+								$birth_day = excel2MySQLDate($bd);
 
 								$token_student = md5($school_id . '-' . $reg_number . '-' . time() . '-' . mt_rand(111111, 999999));
 
@@ -637,14 +640,15 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 									}
 
 									$class_id = $picoEdu->getClassId($class, $school_id);
-
-
+						
+									$email = empty($email) || $email == "''" ? 'null' : "'$email'";
+						
 									$sql = "INSERT INTO `edu_student` 
 									(`student_id`, `username`, `token_student`, `school_id`, `reg_number`, `reg_number_national`, `class_id`, 
 									`name`, `gender`, `birth_place`, `birth_day`, `phone`, `email`, `password`, `password_initial`, 
 									`address`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `blocked`, `active`) VALUES
 									('$student_id', '$username', '$token_student', '$school_id', '$reg_number', '$reg_number_national', '$class_id', 
-									'$name', '$gender', '$birth_place', $db_fixed, '$phone', '$email', '$password', '$password_initial', 
+									'$name', '$gender', '$birth_place', $db_fixed, '$phone', $email, '$password', '$password_initial', 
 									'$address', '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', 0, 1)
 									";
 									$database->executeInsert($sql, true);
@@ -716,7 +720,7 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 								$gender = $picoEdu->mapGender(addslashes(trim(@$data['gender'])));
 								$birth_place = addslashes(trim(@$data['birth_place']));
 								$bd = isset($data['birth_day']) ? ((int) $data['birth_day']) : 0;
-								$birth_day = addslashes(excel2MySQLDate($bd));
+								$birth_day = excel2MySQLDate($bd);
 
 								$token_teacher = md5($school_id . '-' . $reg_number . '-' . time() . '-' . mt_rand(111111, 999999));
 
@@ -764,12 +768,14 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 										$db_fixed = "'" . $birth_day . "'";
 									}
 
+									$email = empty($email) || $email == "''" ? 'null' : "'$email'";
+
 									$sql = "INSERT INTO `edu_teacher` 
 									(`teacher_id`, `username`, `token_teacher`, `school_id`, `reg_number`, `reg_number_national`, `name`, 
 									`gender`, `birth_place`, `birth_day`, `phone`, `email`, `password`, `password_initial`, `address`, 
 									`time_create`, `time_edit`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `active`) VALUES
 									('$teacher_id', '$username', '$token_teacher', '$school_id', '$reg_number', '$reg_number_national', '$name', 
-									'$gender', '$birth_place', $db_fixed, '$phone', '$email', '$password', '$password_initial', '$address', 
+									'$gender', '$birth_place', $db_fixed, '$phone', $email, '$password', '$password_initial', '$address', 
 									'$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', 1)
 									";
 									$database->executeInsert($sql, true);
@@ -808,16 +814,16 @@ if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 				}
 				
 				
-				$fileSync->deleteFile($path, true);
+				$fileSync->deleteFile($path, false);
 				header("Location: ".$picoEdu->gateBaseSelfName()."?option=success&school_id=$school_id");
 			}
 			else
 			{
-				$fileSync->deleteFile($path, true);
+				$fileSync->deleteFile($path, false);
 				// delete file
 				header("Location: ".$picoEdu->gateBaseSelfName()."?option=duplicated");
 			}
-			$fileSync->deleteFile($path, true);
+			$fileSync->deleteFile($path, false);
 			// delete file
 		}
 	}

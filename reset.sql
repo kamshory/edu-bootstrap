@@ -1,3 +1,4 @@
+-- Active: 1668849312648@@127.0.0.1@3306@mini_picopi
 TRUNCATE `edu_admin`;
 TRUNCATE `edu_answer`;
 TRUNCATE `edu_article`;
@@ -21,3 +22,5 @@ TRUNCATE `edu_teacher`;
 TRUNCATE `edu_test`;
 TRUNCATE `edu_test_member`;
 TRUNCATE `edu_token`;
+TRUNCATE `member`;
+

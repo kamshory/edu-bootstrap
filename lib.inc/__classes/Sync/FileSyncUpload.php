@@ -86,6 +86,15 @@ class FileSyncUpload extends \Sync\FileSyncMaster
         }
     }
 
+    /**
+     * Upload user files
+     *
+     * @param string $recordId
+     * @param string $fileSyncUrl
+     * @param string $username
+     * @param string $password
+     * @return bool
+     */
     public function fileUploadUserFiles($recordId, $fileSyncUrl, $username, $password)
     {
         try {
