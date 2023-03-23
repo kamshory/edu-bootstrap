@@ -120,8 +120,6 @@ body{
 <?php
 echo '
 <body>';
-?>
-<?php
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <table width="100%" border="0" class="table two-side-table" cellpadding="0" cellspacing="0">
@@ -1107,8 +1105,6 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 $pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
-?>
-<?php
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <form name="form1" method="post" action="" enctype="multipart/form-data">

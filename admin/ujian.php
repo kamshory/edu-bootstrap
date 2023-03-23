@@ -466,8 +466,6 @@ $subjectList = $picoEdu->getSubjectList();
 				)
 			)
 		);
-		
-		
 		?>
 		</select></td>
 		</tr>
