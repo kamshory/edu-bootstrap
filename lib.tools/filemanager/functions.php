@@ -12,6 +12,7 @@ class ListFile
 			$this->findAll($location);
 		}
 	}
+
 	public function findAll($location) //NOSONAR
 	{
 		global $fmanConfig;
@@ -538,7 +539,12 @@ function get_capture_info($exif)
 	if (is_array($exif)) {
 		$tmpdt['Camera Maker'] = @$exif['IFD0']['Make'];
 		$tmpdt['Camera Model'] = @$exif['IFD0']['Model'];
-		$tmpdt['Capture Time'] = (@$exif['IFD0']['Datetime']) ? (@$exif['IFD0']['Datetime']) : (@$exif['EXIF']['DateTimeOriginal']) ? (@$exif['EXIF']['DateTimeOriginal']) : '';
+		$tmpdt['Capture Time'] = '';
+		if (!empty(@$exif['IFD0']['Datetime'])) {
+			$tmpdt['Capture Time'] = @$exif['IFD0']['Datetime'];
+		} else if (!empty(@$exif['EXIF']['DateTimeOriginal'])) {
+			$tmpdt['Capture Time'] = @$exif['EXIF']['DateTimeOriginal'];
+		}
 		$tmpdt['Aperture F Number'] = @$exif['COMPUTED']['ApertureFNumber'];
 		$tmpdt['Orientation'] = @$exif['IFD0']['Orientation'];
 		$tmpdt['X Resolution'] = @$exif['IFD0']['XResolution'];

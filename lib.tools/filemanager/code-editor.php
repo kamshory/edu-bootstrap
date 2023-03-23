@@ -32,6 +32,7 @@ else
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Planetbiru Code Editor</title>
+<link rel="shortcut icon" type="image/jpeg" href="../../favicon.ico"/>
 <link rel="stylesheet" href="style/file-type.css">
 <link rel="stylesheet" href="cm/lib/codemirror.css">
 <script src="cm/lib/codemirror.js"></script>
@@ -272,13 +273,13 @@ return (/[.]/.exec(filename))?/[^.]+$/.exec(filename):'';
 }
 
 function change() {
-	var modeInput = document.getElementById('filename');
-	var val = modeInput.value, m, mode, spec;
-	var ext = getfileExtension(val);
+	let modeInput = document.getElementById('filename');
+	let val = modeInput.value, m, mode, spec;
+	let ext = getfileExtension(val);
 	document.getElementById('filename').setAttribute('class', 'fileicon-'+ext+' filepath');
 	if (m = /.+\.([^.]+)$/.exec(val)) 
 	{
-		var info = CodeMirror.findModeByExtension(m[1]);
+		let info = CodeMirror.findModeByExtension(m[1]);
 		if (info)
 		{
 			mode = info.mode;
@@ -287,7 +288,7 @@ function change() {
 	}
 	else if (/\//.test(val))
 	{
-		var info = CodeMirror.findModeByMIME(val);
+		let info = CodeMirror.findModeByMIME(val);
 		if (info) 
 		{
 			mode = info.mode;

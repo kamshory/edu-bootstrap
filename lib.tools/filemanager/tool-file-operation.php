@@ -9,7 +9,6 @@ if ($fmanConfig->readonly) {
 	die('READONLY');
 }
 
-
 $rooturl = $fmanConfig->rootdir;
 if (@$_GET['option'] == 'compress-audio') {
 	$path = path_decode(kh_filter_input(INPUT_POST, "path"), $fmanConfig->rootdir);
