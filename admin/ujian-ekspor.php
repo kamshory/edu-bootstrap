@@ -19,8 +19,7 @@ $pagination = new \Pico\PicoPagination();
 if(isset($_POST['export']) && isset($_POST['test_id']))
 {
 	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `name` FROM `edu_test` WHERE `school_id` = '$school_id' AND `test_id` = '$test_id'
-	";
+	$sql = "SELECT `name` FROM `edu_test` WHERE `school_id` = '$school_id' AND `test_id` = '$test_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -29,7 +28,8 @@ if(isset($_POST['export']) && isset($_POST['test_id']))
 		$filename = strtolower(str_replace(' ', '-', $name)).'.xml';
 		header("Content-Type: application/xml");
 		header("Content-Disposition: attachment; filename=\"$filename\"");
-		echo exportTest($database, $test_id, dirname(__DIR__)."/");
+    $testCreator = new \Pico\PicoTestCreator();
+		echo $testCreator->exportTest($database, $test_id, dirname(__DIR__)."/");
 	}
 	exit();	
 }
@@ -37,20 +37,18 @@ if(isset($_POST['export']) && isset($_POST['test_id']))
 if(isset($_GET['test_id']))
 {
 require_once __DIR__."/lib.inc/header.php"; //NOSONAR
-$edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
-$nt = '';
-$sql = "SELECT `edu_test`.* $nt,
-(SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` GROUP BY `edu_question`.`test_id`) AS `number_of_real_question`
-FROM `edu_test` 
-WHERE `edu_test`.`test_id` = '$edit_key' AND `school_id` = '$school_id'
-";
-$stmt = $database->executeQuery($sql);
+  $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
+  $nt = '';
+  $sql = "SELECT `edu_test`.* $nt,
+  (SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` GROUP BY `edu_question`.`test_id`) AS `number_of_real_question`
+  FROM `edu_test` 
+  WHERE `edu_test`.`test_id` = '$edit_key' AND `school_id` = '$school_id'
+  ";
+  $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
 	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
-?>
-<?php
-$array_class = $picoEdu->getArrayClass($school_id);
+  $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
   <table width="100%" border="0" class="table two-side-table responsive-tow-side-table" cellspacing="0" cellpadding="0">
@@ -177,10 +175,9 @@ window.onload = function()
 <div class="search-result">
 <?php
 $sql_filter = "";
-
 if($pagination->getQuery()){
-$pagination->appendQueryName('q');
-$sql_filter .= " AND (`edu_test`.`name` like '%".addslashes($pagination->getQuery())."%' )";
+  $pagination->appendQueryName('q');
+  $sql_filter .= " AND (`edu_test`.`name` like '%".addslashes($pagination->getQuery())."%' )";
 }
 
 if($class_id != '')
@@ -191,7 +188,6 @@ if($class_id != '')
 
 $nt = '';
 
-
 $sql = "SELECT `edu_test`.* $nt,
 (SELECT `edu_teacher`.`name` FROM `edu_teacher` WHERE `edu_teacher`.`teacher_id` = `edu_test`.`teacher_id`) AS `teacher`,
 (SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` GROUP BY `edu_question`.`test_id`)*1 AS `number_of_question`
@@ -199,6 +195,7 @@ FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
 ORDER BY `edu_test`.`test_id` DESC
 ";
+
 $sql_test = "SELECT `edu_test`.`test_id`
 FROM `edu_test`
 WHERE `edu_test`.`school_id` = '$school_id' $sql_filter
@@ -209,13 +206,8 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-
-
-
 $pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
-?>
-<?php
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <form name="form1" method="post" action="">

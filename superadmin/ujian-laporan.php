@@ -95,8 +95,6 @@ body{
 <?php
 echo '
 <body>';
-?>
-<?php
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <table width="100%" border="0" class="table two-side-table" cellpadding="0" cellspacing="0">

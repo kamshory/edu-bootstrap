@@ -22,7 +22,7 @@ if(@$_GET['option'] == 'kick-student' && isset($_GET['test_id']) && isset($_GET[
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
-	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
+		$data = $stmt->fetch(\PDO::FETCH_ASSOC);
 		$waktu = $database->getLocalDateTime();
 		$ip = addslashes($_SERVER['REMOTE_ADDR']);
 		$sessions_id = $data['sessions_id'];
@@ -319,8 +319,6 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 $pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
-?>
-<?php
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <form name="form1" method="post" action="">

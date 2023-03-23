@@ -43,7 +43,6 @@ if($stmt->rowCount() > 0)
     }
 
 	.btn-test-info {
-
 		padding: 2px 2px;
 		width: 22px;
 		height: 22px;
@@ -52,7 +51,6 @@ if($stmt->rowCount() > 0)
 		border-radius: 50%;
 		margin-top: -4px
 	}
-
 
 	.test-member .card-body{
 		padding:1.6rem;
@@ -94,8 +92,6 @@ if($stmt->rowCount() > 0)
 </script>
 <script src="../lib.assets/script/test-ws.js"></script>
 <script src="../lib.assets/script/test-ws-supervisor.js"></script>
-
-
 
 <div class="modal fade" id="detail-test-modal" tabindex="-1" role="dialog" aria-labelledby="detail-test-modal-title" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">

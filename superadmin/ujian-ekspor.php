@@ -16,8 +16,7 @@ $pagination = new \Pico\PicoPagination();
 if(isset($_POST['export']) && isset($_POST['test_id']))
 {
 	$test_id = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
-	$sql = "SELECT `name` FROM `edu_test` WHERE `test_id` = '$test_id'
-	";
+	$sql = "SELECT `name` FROM `edu_test` WHERE `test_id` = '$test_id' ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -26,7 +25,8 @@ if(isset($_POST['export']) && isset($_POST['test_id']))
 		$filename = strtolower(str_replace(' ', '-', $name)).'.xml';
 		header("Content-Type: text/xml");
 		header("Content-Disposition: attachment; filename=\"$filename\"");
-		echo exportTest($test_id, dirname(__DIR__)."/");
+    $testCreator = new \Pico\PicoTestCreator();
+		echo $testCreator->exportTest($test_id, dirname(__DIR__)."/");
 	}
 	exit();	
 }
@@ -45,8 +45,6 @@ $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {
 $data = $stmt->fetch(\PDO::FETCH_ASSOC);
-?>
-<?php
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
@@ -176,8 +174,6 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 $pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
-?>
-<?php
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <form name="form1" method="post" action="">

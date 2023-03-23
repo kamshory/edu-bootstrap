@@ -5,7 +5,7 @@ include __DIR__ . "/conf.php"; //NOSONAR
 if ($fmanConfig->authentification_needed && !$userlogin) {
 	exit();
 }
-$dir2 = path_decode(kh_filter_input(INPUT_GET, "dir"), $fmanConfig->rootdir);
+$dir2 = path_decode(kh_filter_input(INPUT_GET, "curdir"), $fmanConfig->rootdir);
 if (!is_dir($dir2)) {
 	$dir2 = path_decode('base', $fmanConfig->rootdir);
 }

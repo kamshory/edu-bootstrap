@@ -285,8 +285,6 @@ if($pagination->getTotalRecordWithLimit() > 0)
 
 $pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
-?>
-<?php
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <form name="form1" method="post" action="">

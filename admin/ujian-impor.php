@@ -321,8 +321,6 @@ $stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
 	$data = $stmt->fetch(\PDO::FETCH_ASSOC);
-?>
-<?php
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
@@ -499,13 +497,8 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-
-
-
 $pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
-?>
-<?php
 $array_class = $picoEdu->getArrayClass($school_id);
 ?>
 <form name="form1" method="post" action="">
