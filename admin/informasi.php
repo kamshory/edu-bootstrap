@@ -266,7 +266,7 @@ else if(@$_GET['q'] != '')
 else
 {
 ?>
-<div class="alert alert-warning">Data tidak ditemukan. <a href="<?php echo $picoEdu->gateBaseSelfName();?>?option=add">Klik di sini untuk membuat baru.</a></div>
+<div class="alert alert-warning">Data tidak ditemukan.</a></div>
 <?php
 }
 ?>

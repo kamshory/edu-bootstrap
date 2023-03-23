@@ -11,7 +11,7 @@ if (!$fmanConfig->thumbnail_quality) {
 
 $filepath = path_decode(kh_filter_input(INPUT_GET, "filepath"), $fmanConfig->rootdir);
 
-function gettumbpict($originalfile, $maxw, $maxh)
+function gettumbpict($originalfile, $maxw, $maxh, $center = false, $transparent = false)
 {
 	global $fmanConfig;
 	$image = new StdClass();
@@ -65,13 +65,31 @@ function gettumbpict($originalfile, $maxw, $maxh)
 		default:
 			return false;
 	}
-	$im1 = imagecreatetruecolor($newwidth, $newheight);
-	$white = imagecolorallocate($im1, 255, 255, 255);
 	if (!$im) {
 		return false;
 	}
-	imagefilledrectangle($im1, 0, 0, $newwidth, $newheight, $white);
-	imagecopyresized($im1, $im, 0, 0, 0, 0, $newwidth, $newheight, $image->width, $image->height);
+	if($center)
+	{
+		$im1 = imagecreatetruecolor($maxw, $maxh);
+		$white = imagecolorallocate($im1, 255, 255, 255);	
+		$divw = $maxw - $newwidth;
+		$divh = $maxh - $newheight;
+		imagefilledrectangle($im1, 0, 0, $maxw, $maxh, $white);
+		if($transparent)
+		{
+			imagecolortransparent($im1, $white);
+		}
+		$startx = round($divw/2);
+		$starty = round($divh/2);
+		imagecopyresized($im1, $im, $startx, $starty, 0, 0, $newwidth, $newheight, $image->width, $image->height);
+	}
+	else
+	{
+		$im1 = imagecreatetruecolor($newwidth, $newheight);
+		$white = imagecolorallocate($im1, 255, 255, 255);
+		imagefilledrectangle($im1, 0, 0, $newwidth, $newheight, $white);
+		imagecopyresized($im1, $im, 0, 0, 0, 0, $newwidth, $newheight, $image->width, $image->height);
+	}
 	return $im1;
 }
 
@@ -86,10 +104,10 @@ if (file_exists($filepath)) {
 			readfile(__DIR__ . "/style/images/common/image.png");
 			header('Content-Type: image/png');
 		} else {
-			$image = gettumbpict($filepath, 96, 96);
+			$image = gettumbpict($filepath, 96, 96, true, true);
 			if ($image) {
-				header('Content-Type: image/jpeg');
-				@imagejpeg($image, null, $fmanConfig->thumbnail_quality);
+				header('Content-Type: image/png');
+				@imagepng($image, null);
 			} else {
 				$image = imagecreatefrompng(__DIR__ . "/style/images/binfile.png");
 				header('Content-Type: image/png');
@@ -97,7 +115,7 @@ if (file_exists($filepath)) {
 			}
 		}
 	}
-	if ($filetype == "dir") {
+	else if ($filetype == "dir") {
 		$expires = $fmanConfig->cache_max_age_dir;
 		header("Pragma: public");
 		header("Cache-Control: maxage=" . $expires);
@@ -116,7 +134,7 @@ if (file_exists($filepath)) {
 					}
 					$filetype = filetype($fn);
 					if ($filetype == "file") {
-						$img2[$i] = gettumbpict($fn, 32, 32);
+						$img2[$i] = gettumbpict($fn, 32, 32, true, true);
 						if ($img2[$i]) {
 							$width = imagesx($img2[$i]);
 							$height = imagesy($img2[$i]);
@@ -143,8 +161,8 @@ if (file_exists($filepath)) {
 				}
 			}
 
-			header('Content-Type: image/jpeg');
-			@imagejpeg($image, null, $fmanConfig->thumbnail_quality);
+			header('Content-Type: image/png');
+			@imagepng($image, null);
 		}
 	}
 }

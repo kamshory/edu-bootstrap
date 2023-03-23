@@ -51,7 +51,7 @@ class WaveToPNG{
 		}
 		return $data2;
 	}
-	public function generate_html()
+	public function generateHTML()
 	{
 		$data = shell_exec("sox $this->input_file -b $this->bit_depth -c $this->number_of_channel -r $this->sample_rate -t raw - | od -t u1 -v - | cut -c 9- | sed -e 's/\ / /g' -e 's/ / /g' -e 's/ /,/g' | tr '\n' ','");
 		$data = str_replace(",,", ",0,", $data); 
@@ -66,7 +66,10 @@ class WaveToPNG{
 		$samples = array();
 		$image = imagecreatetruecolor($this->image_width, $this->image_height);
 		
-		$x1 = 0; $y1 = 0; $x2 = $this->image_width - 1; $y2 = $this->image_height - 1;
+		$x1 = 0; 
+		$y1 = 0; 
+		$x2 = $this->image_width - 1; 
+		$y2 = $this->image_height - 1;
 		$white = imagecolorallocate($image, 255, 255, 255);
 		$black = imagecolorallocate($image, 0, 0, 0);
 		ImageFilledRectangle($image , $x1 , $y1 , $x2 , $y2 , $white);
@@ -94,7 +97,7 @@ class WaveToPNG{
 		imagecolortransparent($image, $white);
 		return $image;
 	}
-	public function generate_png($width = null, $height = null)
+	public function generatePNG($width = null, $height = null)
 	{
 		if($width !== null && $width > 0)
 		{
@@ -111,7 +114,7 @@ class WaveToPNG{
 		$data = str_replace(",,", ",0,", $data); 
 		$data = trim($data, ",");
 		$wave = explode(",", $data);
-		$wave = normalization_data($wave);
+		$wave = $this->normalization_data($wave);
 		$number_of_sample = count($wave);
 		$factor = $number_of_sample/$this->image_width; // float
 		$samples = array();
@@ -144,6 +147,6 @@ class WaveToPNG{
 }
 
 $wave2png = new WaveToPNG("Number-7.wav");
-$image = $wave2png->generate_png();
+$image = $wave2png->generatePNG();
 header("Content-Type: image/png");
 imagepng($image);

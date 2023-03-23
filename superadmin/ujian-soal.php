@@ -11,7 +11,6 @@ $pageTitle = "Soal Ujian";
 $pagination = new \Pico\PicoPagination();
 $time_create = $time_edit = $database->getLocalDateTime();
 
-
 if(@$_GET['option'] == 'delete')
 {
 	$question_id = kh_filter_input(INPUT_GET, "question_id", FILTER_SANITIZE_STRING_NEW);

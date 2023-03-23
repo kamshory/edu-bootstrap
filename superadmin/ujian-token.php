@@ -6,7 +6,6 @@ if($adminLoggedIn->admin_level != 1)
 	exit();
 }
 
-
 $pageTitle = "Token Ujian";
 $pagination = new \Pico\PicoPagination();
 if(isset($_POST['save']))
@@ -44,24 +43,20 @@ if(isset($_POST['set_inactive']) && isset($_POST['token_id']))
 	}
 }
 
-
 if(isset($_POST['save']) && @$_GET['option'] == 'add')
 {
 	$now = $database->getLocalDateTime();
 	$oneday = date(\Pico\PicoConst::DATE_TIME_MYSQL, time()-86400);
-	$sql = "DELETE FROM `edu_token` WHERE `time_expire` < '$oneday'
-	";
+	$sql = "DELETE FROM `edu_token` WHERE `time_expire` < '$oneday' ";
 	$database->executeDelete($sql, true);
-	$sql = "UPDATE `edu_token` SET `active` = false WHERE `time_expire` < '$now'
-	";
+	$sql = "UPDATE `edu_token` SET `active` = false WHERE `time_expire` < '$now' ";
 	$database->executeUpdate($sql, true);
 	if($class_id)
 	{
 		if($student_id == 0)
 		{
 			// membuat token untuk semua siswa
-			$sql = "SELECT `student_id` FROM `edu_student` WHERE `class_id` = '$class_id' AND `active` = true
-			";
+			$sql = "SELECT `student_id` FROM `edu_student` WHERE `class_id` = '$class_id' AND `active` = true ";
 			$stmt = $database->executeQuery($sql);
 			$students = array();
 			if($stmt->rowCount() > 0)
