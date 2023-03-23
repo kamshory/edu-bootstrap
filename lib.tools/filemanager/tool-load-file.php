@@ -7,12 +7,9 @@ if($fmanConfig->authentification_needed && !$userlogin)
 	exit();
 }
 
-if(@$fmanConfig->thumbnail_on_load)
+if(@$fmanConfig->thumbnail_on_load && @$_COOKIE['togglethumb']==1)
 {
-  if(@$_COOKIE['togglethumb']==1)
-  {
-	  $_GET['thumbnail']=1;
-  }
+	$_GET['thumbnail']=1;
 }
 
 
@@ -62,7 +59,11 @@ if(file_exists($dir2) && ($handle = opendir($dir2)))
 			$obj['filemtime'] = '<span title="'.date(\Pico\PicoConst::DATE_TIME_MYSQL, $fti).'">'.date('y-m-d', $fti).'</span>';
 			$obj['mtime'] = $fti;
 			
-			if((stripos($obj['type'], 'image') !== false || stripos($obj['type'], 'application/x-shockwave-flash') !== false) && $obj['filesize'] <= $fmanConfig->thumbnail_max_size)
+			if((
+				stripos($obj['type'], 'image') !== false 
+				|| stripos($obj['type'], 'application/x-shockwave-flash') !== false
+			) 
+			&& $obj['filesize'] <= $fmanConfig->thumbnail_max_size)
 			{
 				try
 				{

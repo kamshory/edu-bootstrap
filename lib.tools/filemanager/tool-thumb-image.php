@@ -65,7 +65,6 @@ function gettumbpict($originalFile, $maxw, $maxh, $center = false, $transparent 
 	}
 
 	$im = createimagefromfile($originalFile, $image->type);
-
 	
 	if ($im == null) {
 		return false;
