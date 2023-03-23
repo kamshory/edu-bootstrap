@@ -37,7 +37,8 @@ require_once __DIR__."/lib.inc/header.php"; //NOSONAR
 $edit_key = kh_filter_input(INPUT_GET, "test_id", FILTER_SANITIZE_STRING_NEW);
 $nt = '';
 $sql = "SELECT `edu_test`.* $nt,
-(SELECT COUNT(DISTINCT `edu_question`.`question_id`) FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` GROUP BY `edu_question`.`test_id`) AS `number_of_real_question`
+(SELECT COUNT(DISTINCT `edu_question`.`question_id`) 
+FROM `edu_question` WHERE `edu_question`.`test_id` = `edu_test`.`test_id` GROUP BY `edu_question`.`test_id`) AS `number_of_real_question`
 FROM `edu_test` 
 WHERE `edu_test`.`test_id` = '$edit_key' 
 ";

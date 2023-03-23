@@ -580,14 +580,7 @@ class PicoTestCreator
 
     public function optionMatch($opt, $numbering)
     {
-        $numberingList = array(
-            'upper-alpha' => array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'),
-            'lower-alpha' => array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'),
-            'upper-roman' => array('I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'),
-            'lower-roman' => array('i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'vii', 'ix', 'x'),
-            'decimal' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
-            'decimal-leading-zero' => array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')
-        );
+        $numberingList = self::$numberingList;
         if (!isset($numberingList[$numbering])) {
             return -1;
         }
