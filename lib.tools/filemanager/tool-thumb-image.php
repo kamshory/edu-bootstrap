@@ -10,16 +10,39 @@ if (!$fmanConfig->thumbnail_quality) {
 }
 
 $filepath = path_decode(kh_filter_input(INPUT_GET, "filepath"), $fmanConfig->rootdir);
-
-function gettumbpict($originalfile, $maxw, $maxh, $center = false, $transparent = false)
+function createimagefromfile($originalFile, $type)
+{
+	$im = null;
+	switch ($type) {
+		case IMAGETYPE_GIF:
+			if (function_exists('ImageCreateFromGIF')) {
+				$im = @ImageCreateFromGIF($originalFile);
+			} 
+			break;
+		case IMAGETYPE_JPEG:
+			if (function_exists('ImageCreateFromJPEG')) {
+				$im = @ImageCreateFromJPEG($originalFile);
+			} 
+			break;
+		case IMAGETYPE_PNG:
+			if (function_exists('ImageCreateFromPNG')) {
+				$im = @ImageCreateFromPNG($originalFile);
+			} 
+			break;
+		default:
+			return false;
+	}
+	return $im;
+}
+function gettumbpict($originalFile, $maxw, $maxh, $center = false, $transparent = false)
 {
 	global $fmanConfig;
 	$image = new StdClass();
-	$filesize = filesize($originalfile);
+	$filesize = filesize($originalFile);
 	if ($filesize > $fmanConfig->thumbnail_max_size) {
 		return false;
 	}
-	$imageinfo = @getimagesize($originalfile);
+	$imageinfo = @getimagesize($originalFile);
 	if (empty($imageinfo)) {
 		return 0;
 	}
@@ -40,32 +63,11 @@ function gettumbpict($originalfile, $maxw, $maxh, $center = false, $transparent 
 		$newheight = $maxh;
 		$newwidth = $newwidth * $maxh / $tmp;
 	}
-	switch ($image->type) {
-		case IMAGETYPE_GIF:
-			if (function_exists('ImageCreateFromGIF')) {
-				$im = @ImageCreateFromGIF($originalfile);
-			} else {
-				return false;
-			}
-			break;
-		case IMAGETYPE_JPEG:
-			if (function_exists('ImageCreateFromJPEG')) {
-				$im = @ImageCreateFromJPEG($originalfile);
-			} else {
-				return false;
-			}
-			break;
-		case IMAGETYPE_PNG:
-			if (function_exists('ImageCreateFromPNG')) {
-				$im = @ImageCreateFromPNG($originalfile);
-			} else {
-				return false;
-			}
-			break;
-		default:
-			return false;
-	}
-	if (!$im) {
+
+	$im = createimagefromfile($originalFile, $image->type);
+
+	
+	if ($im == null) {
 		return false;
 	}
 	if($center)
@@ -102,15 +104,15 @@ if (file_exists($filepath)) {
 		header('Expires: ' . gmdate('D, d M Y H:i:s', time() + $expires) . ' GMT');
 		if (!function_exists('imagecreatefrompng')) {
 			readfile(__DIR__ . "/style/images/common/image.png");
-			header('Content-Type: image/png');
+			header('Content-Type: image/png'); //NOSONAR
 		} else {
 			$image = gettumbpict($filepath, 96, 96, true, true);
 			if ($image) {
-				header('Content-Type: image/png');
+				header('Content-Type: image/png'); //NOSONAR
 				@imagepng($image, null);
 			} else {
 				$image = imagecreatefrompng(__DIR__ . "/style/images/binfile.png");
-				header('Content-Type: image/png');
+				header('Content-Type: image/png'); //NOSONAR
 				@imagepng($image);
 			}
 		}
@@ -122,7 +124,7 @@ if (file_exists($filepath)) {
 		header('Expires: ' . gmdate('D, d M Y H:i:s', time() + $expires) . ' GMT');
 		if (!function_exists('imagecreatefrompng')) {
 			readfile(__DIR__ . "/style/images/folder.png");
-			header('Content-Type: image/png');
+			header('Content-Type: image/png'); //NOSONAR
 		} else {
 			$image = imagecreatefrompng(__DIR__ . "/style/images/folder.png");
 			if ($handle = opendir($filepath)) {
@@ -161,7 +163,7 @@ if (file_exists($filepath)) {
 				}
 			}
 
-			header('Content-Type: image/png');
+			header('Content-Type: image/png'); //NOSONAR
 			@imagepng($image, null);
 		}
 	}
