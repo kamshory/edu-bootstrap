@@ -114,9 +114,7 @@ if(!empty($school_id))
         }
         
     </script>
-
-    <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/sync.js"></script>
-    
+    <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/sync.js"></script> 
 <!-- Modal -->
 <?php
     $syncHubURL = $database->getSystemVariable("sync_hub_url");
@@ -130,41 +128,31 @@ if(!empty($school_id))
         <form action="" method="post" enctype="application/x-www-form-urlencoded">
         <table class="table two-side-table responsive-tow-side-table" width="100%">
             <tr>
-                <td>
-                    URL Perangkat (Ethernet)
-                </td>
+                <td>URL Perangkat (Ethernet)</td>
                 <td>
                     <input class="form-control" type="url_ethernet" name="url_ethernet" value="<?php echo htmlspecialchars($url_ethernet);?>">
                 </td>
             </tr>
             <tr>
-                <td>
-                URL Perangkat (Wifi)
-                </td>
+                <td>URL Perangkat (Wifi)</td>
                 <td>
                     <input class="form-control" type="url_wifi" name="url_wifi" value="<?php echo htmlspecialchars($url_wifi);?>">
                 </td>
             </tr>
             <tr>
-                <td>
-                    URL Sync Hub
-                </td>
+                <td>URL Sync Hub</td>
                 <td>
                     <input class="form-control" type="url" name="url" value="<?php echo htmlspecialchars($fileSyncUrl);?>">
                 </td>
             </tr>
             <tr>
-                <td>
-                    Username Sync Hub
-                </td>
+                <td>Username Sync Hub</td>
                 <td>
                     <input class="form-control" type="text" name="username" value="<?php echo htmlspecialchars($username);?>">
                 </td>
             </tr>
             <tr>
-                <td>
-                    Password Sync Hub
-                </td>
+                <td>Password Sync Hub</td>
                 <td>
                     <input class="form-control" type="password" name="password">
                 </td>
@@ -176,8 +164,7 @@ if(!empty($school_id))
             <input type="button" name="showall" id="showall" value="Batalkan" class="btn btn-primary" onclick="window.location='./'" /></td>
             </tr>
         </table>
-        </form>
-        
+        </form>  
 
 <!-- Modal -->
 <div class="modal fade" id="alerModal" tabindex="-1" role="dialog" aria-labelledby="alerModalTitle" aria-hidden="true">
@@ -199,9 +186,7 @@ if(!empty($school_id))
   </div>
 </div>
 
-   
-
-    <?php
+<?php
     require_once __DIR__ . "/lib.inc/footer.php";
 }
 ?>

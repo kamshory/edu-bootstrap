@@ -16,11 +16,9 @@ if(count(@$_POST))
 	$email = kh_filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
 	$phone = kh_filter_input(INPUT_POST, "phone", FILTER_SANITIZE_SPECIAL_CHARS);
 	$password = kh_filter_input(INPUT_POST, "password", FILTER_SANITIZE_PASSWORD);
-	$time_create = $time_edit = $database->getLocalDateTime();
-	
+	$time_create = $time_edit = $database->getLocalDateTime();	
 	$ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
 }
-
 
 if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 {
@@ -49,7 +47,6 @@ if(isset($_POST['save']) && @$_GET['option'] == 'edit')
 		$database->executeUpdate($sql, true);
 		$_SESSION['password'] = md5($password);
 	}
-
 	header("Location: profil.php");
 }
 if(@$_GET['option'] == 'edit')
@@ -117,7 +114,6 @@ else
 <?php
 }
 require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
-
 }
 else
 {

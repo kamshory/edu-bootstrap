@@ -682,23 +682,22 @@ function pasteHandler(e)
 }
 
 function fileBrowserCallBack(field_name, url, type, win){
-if(url.indexOf('data:') != -1)
-{
-	url = '';
+	if(url.indexOf('data:') != -1)
+	{
+		url = '';
+	}
+	url = url.substr(baseTestURLLength);
+	var ajaxFilemanagerURL = "../lib.tools/filemanager/?test_collection_id="+test_collection_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
+	switch (type){
+		case "image":break;
+		case "media":break;
+		case "flash":break;
+		case "file":break;
+		default:
+		return false;
+	}
+	tinyMCE.activeEditor.windowManager.open({url:ajaxFilemanagerURL,width:780,height:440,resizable:true,maximizable:true,inline:"yes",close_previous:"no"},{window:win,input:field_name});
 }
-url = url.substr(baseTestURLLength);
-var ajaxFilemanagerURL = "../lib.tools/filemanager/?test_collection_id="+test_collection_id+"&editor=tiny_mce&type="+type+"&field_name="+field_name+'&dir=base/'+dirname(url);
-switch (type){
-case "image":break;
-case "media":break;
-case "flash":break;
-case "file":break;
-default:
-return false;
-}
-tinyMCE.activeEditor.windowManager.open({url:ajaxFilemanagerURL,width:780,height:440,resizable:true,maximizable:true,inline:"yes",close_previous:"no"},{window:win,input:field_name});
-}
-	
 </script>
 
 <div class="dialogs">
@@ -736,7 +735,6 @@ if(isset($data->file))
 		$data->text = str_ireplace($search, ' src="'.$replace.$content.'"', $data->text);
 	}
 }
-
 ?>
 
 <form id="form2" name="form2" method="post" action="">
@@ -783,7 +781,6 @@ if(isset($data->file))
 </div>
 </fieldset>
 </div>
-
 <div class="option-area">
 <fieldset>
 <legend>Pilihan Jawaban</legend>
@@ -853,12 +850,11 @@ $i++;
 </fieldset>
 </div>
 
-
 <div class="button-area">
-<input type="hidden" name="test_collection_id" id="test_collection_id" value="<?php echo $test_collection_id;?>" />
-<input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" />
-<input type="button" name="showall" id="showall" class="btn btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?test_collection_id=<?php echo $test_collection_id;?>'" />
-<input type="hidden" name="number_of_option" value="<?php echo $count_option;?>" />
+	<input type="hidden" name="test_collection_id" id="test_collection_id" value="<?php echo $test_collection_id;?>" />
+	<input type="submit" name="save" id="save" class="btn btn-success" value="Simpan" />
+	<input type="button" name="showall" id="showall" class="btn btn-success" value="Tampilkan Semua Soal" onclick="window.location='<?php echo $picoEdu->gateBaseSelfName();?>?test_collection_id=<?php echo $test_collection_id;?>'" />
+	<input type="hidden" name="number_of_option" value="<?php echo $count_option;?>" />
 </div>
 
 </form>
@@ -901,22 +897,18 @@ if($stmt->rowCount() > 0)
         document.addEventListener("DOMContentLoaded", function () {
             function setNoiseBackground(el, width, height, opacity) {
                 var canvas = document.createElement("canvas");
-                var context = canvas.getContext("2d");
-        
+                var context = canvas.getContext("2d");       
                 canvas.width = width;
-                canvas.height = height;
-        
+                canvas.height = height;       
                 for (var i = 0; i < width; i++) {
                     for (var j = 0; j < height; j++) {
                         var val = Math.floor(Math.random() * 255);
                         context.fillStyle = "rgba(" + val + "," + val + "," + val + "," + opacity + ")";
                         context.fillRect(i, j, 1, 1);
                     }
-                }
-        
+                }       
                 el.style.background = "url(" + canvas.toDataURL("image/png") + ")";
-            }
-        
+            }       
             setNoiseBackground(document.getElementsByTagName('body')[0], 50, 50, 0.02);
         }, false);
         
@@ -964,8 +956,7 @@ if($stmt->rowCount() > 0)
 					window.location = 'kelola-paket-soal.php?option=delete&test_collection_id='+test_collection_id+'&question_index='+index;
 				}
 				e.preventDefault();
-			});
-        
+			});       
         }
 		var test_collection_id = <?php echo $test_collection_id;?>;
         </script>
@@ -1012,9 +1003,6 @@ if($stmt->rowCount() > 0)
 }
 require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
-	
-	
-
 }
 else
 {
@@ -1107,20 +1095,17 @@ $(document).ready(function(e) {
 <div class="search-result">
 <?php
 $sql_filter = "";
-
 if($pagination->getQuery()){
-$pagination->appendQueryName('q');
-$sql_filter .= " AND (`edu_test_collection`.`name` like '%".addslashes($pagination->getQuery())."%' )";
+	$pagination->appendQueryName('q');
+	$sql_filter .= " AND (`edu_test_collection`.`name` like '%".addslashes($pagination->getQuery())."%' )";
 }
 
-
 if($grade_id){
-$pagination->appendQueryName('grade_id');
-$sql_filter .= " AND (`edu_test_collection`.`grade_id` = '$grade_id' )";
+	$pagination->appendQueryName('grade_id');
+	$sql_filter .= " AND (`edu_test_collection`.`grade_id` = '$grade_id' )";
 }
 
 $nt = '';
-
 
 $sql = "SELECT `edu_test_collection`.* $nt
 FROM `edu_test_collection`
@@ -1137,9 +1122,6 @@ $stmt = $database->executeQuery($sql . $pagination->getLimitSql());
 $pagination->setTotalRecordWithLimit($stmt->rowCount());
 if($pagination->getTotalRecordWithLimit() > 0)
 {
-
-
-
 $pagination->createPagination($picoEdu->gateBaseSelfName(), true); 
 $paginationHTML = $pagination->buildHTML();
 ?>
