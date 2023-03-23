@@ -61,7 +61,7 @@ $(document).ready(function () {
         // Replace values for the template plugin
         template_replace_values: {
             username: "Kamshory",
-            staffid: "612126"
+            staffid: "-"
         }
     });
     setTimeout(function () {

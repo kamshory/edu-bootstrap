@@ -82,7 +82,7 @@ if(file_exists($dir2) && ($handle = opendir($dir2)))
 					$obj['image_height'] = 0;
 					}
 				}
-				catch(Exception $e)
+				catch(\Exception $e)
 				{
 					$obj['image_width'] = 0;
 					$obj['image_height'] = 0;

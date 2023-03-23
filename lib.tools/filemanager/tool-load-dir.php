@@ -35,7 +35,7 @@ if(file_exists($dir2) && ($handle = opendir($dir2)))
 				$arrdir[] = $obj;
 			}
 		}
-		catch(Exception $e)
+		catch(\Exception $e)
 		{
 			try
 			{
@@ -49,7 +49,7 @@ if(file_exists($dir2) && ($handle = opendir($dir2)))
 				}
 				
 			}
-			catch(Exception $e)
+			catch(\Exception $e)
 			{
 				// Do nothing
 			}
