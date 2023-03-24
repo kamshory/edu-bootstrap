@@ -269,7 +269,7 @@ function saveFile()
 	});
 }
 function getfileExtension(filename){
-return (/[.]/.exec(filename))?/[^.]+$/.exec(filename):'';
+	return (/[.]/.exec(filename))?/[^.]+$/.exec(filename):'';
 }
 
 function change() {
