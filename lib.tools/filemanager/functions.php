@@ -1,7 +1,7 @@
 <?php
 class ListFile
 {
-	public $location;
+	public $location = "";
 	public $result_file = array();
 	public $result_dir = array();
 
@@ -76,7 +76,6 @@ class ListFile
 					$fti = filemtime($fn);
 					$obj['filemtime'] = '<span title="' . date(\Pico\PicoConst::DATE_TIME_MYSQL, $fti) . '">' . date('y-m-d', $fti) . '</span>';
 					$this->result_dir[] = $obj;
-
 
 					// recursive
 					$lv = new ListFile($fn);
