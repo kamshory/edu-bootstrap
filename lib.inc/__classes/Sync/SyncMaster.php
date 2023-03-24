@@ -60,6 +60,21 @@ class SyncMaster
      */
     protected $application = \Pico\PicoConst::PICO_EDU;
 
+    protected $forbiddenExtension = array(
+        'php', 
+        'sh', 
+        'shell', 
+        'exe', 
+        'htaccess', 
+        'htpasswd', 
+        'ini', 
+        'inf', 
+        'bat',
+        'rb',
+        'phy'
+    );
+
+
     /**
      * Build URL
      *
@@ -106,4 +121,27 @@ class SyncMaster
 
         return $this;
     }
+
+    /**
+     * Get file extension
+     *
+     * @param string $path
+     * @return string
+     */
+    protected function getFileExtension($path)
+    {
+        $ext = "";
+        if(stripos($path, "."))
+        {
+            $arr = explode(".", $path);
+            $ext = end($arr);
+        }
+        else
+        {
+            $ext = $path;
+        }
+        return $ext;
+    }
+
+
 }

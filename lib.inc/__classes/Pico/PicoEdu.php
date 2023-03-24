@@ -1270,4 +1270,14 @@ class PicoEdu //NOSONAR
 	{
 		return basename($_SERVER['PHP_SELF']);
 	}
+
+	/**
+	 * Get database object
+	 *
+	 * @return  \Pico\PicoDatabase
+	 */ 
+	public function getDatabase()
+	{
+		return $this->database;
+	}
 }

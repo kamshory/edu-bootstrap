@@ -246,18 +246,26 @@ class FileSyncDownload extends \Sync\FileSyncMaster
                 $localPath = $info['path'];
                 $relativePath = $this->getRelativePath($localPath);
             }
-
-            $response = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
-            $dir = dirname($localPath);
-            $this->prepareDirectory($dir);
-            file_put_contents($localPath, $response);
-            touch($localPath, $tm);
-            chmod($localPath, $permission);
+            if($this->isAllowedFileExtension($relativePath))
+            {
+                $response = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
+                $dir = dirname($localPath);
+                $this->prepareDirectory($dir);
+                file_put_contents($localPath, $response);
+                touch($localPath, $tm);
+                chmod($localPath, $permission);
+            }
         } catch (\Sync\SyncException $e) {
             //NOSONAR
         } catch (\Exception $e) {
             //NOSONAR
         }
+    }
+
+    public function isAllowedFileExtension($path)
+    {
+        $ext = $this->getFileExtension($path);
+        return !in_array($ext, $this->forbiddenExtension);
     }
 
     /**

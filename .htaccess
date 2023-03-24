@@ -8,12 +8,16 @@ SetOutputFilter DEFLATE
 </Files>
 
 Options -Indexes
-#ErrorDocument 400 /400.php
-#ErrorDocument 403 /403.php
-#ErrorDocument 404 /404.php
+ErrorDocument 400 /edu-bootstrap/err/400.php
+ErrorDocument 401 /edu-bootstrap/err/401.php
+ErrorDocument 403 /edu-bootstrap/err/403.php
+ErrorDocument 404 /edu-bootstrap/err/404.php
 
 <IfModule mod_rewrite.c>
 RewriteEngine on
+
+# php|sh|shell|exe|htaccess|htpasswd|ini|inf|bat|rb|phy
+RewriteRule ^media.edu/.*\.(php|sh|shell|exe|htaccess|htpasswd|ini|inf|bat|rb|phy)$ - [F,L,NC]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

@@ -44,8 +44,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		(`article_id`, `school_id`, `title`, `open`, `class`, `time_create`, `time_edit`, `member_create`, `role_create`, `member_edit`, 
 		`role_edit`, `ip_create`, `ip_edit`, `active`) VALUES	
 		('$article_id', '$school_id', '$title', '$open', '$class', '$time', '$time', '$admin_id', 'A', '$admin_id', 
-		'A', '$ip', '$ip', '$active')
-		";
+		'A', '$ip', '$ip', '$active') ";
 		$database->executeInsert($sql, true);
 
 		$article_dir = dirname(__DIR__) . "/media.edu/school/$school_id/article/$article_id";
@@ -78,8 +77,7 @@ if(isset($_POST['publish']) || isset($_POST['draff']))
 		$content = addslashes($content);
 		$sql = "UPDATE `edu_article` SET `title` = '$title', `content` = '$content', `open` = '$open', `class` = '$class', 
 		`time_edit` = '$time', `member_edit` = '$admin_id', `role_edit` = 'A', `ip_edit` =  '$ip', `active` = '$active'
-		WHERE `article_id` = '$article_id' AND `school_id` = '$school_id'
-		";
+		WHERE `article_id` = '$article_id' AND `school_id` = '$school_id' ";
 		$database->executeUpdate($sql, true);
 		header("Location: ".$picoEdu->gateBaseSelfName()."?option=detail&article_id=$article_id");
 	}
