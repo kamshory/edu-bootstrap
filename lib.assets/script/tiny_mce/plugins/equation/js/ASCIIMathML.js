@@ -2983,7 +2983,10 @@
 		'⅚':'frac{5}{6}',
 		'⅝':'frac{5}{8}',
 		
-		'⅞':'frac{7}{8}'
+		'⅞':'frac{7}{8}',
+        '⅐':'frac{1}{7}',
+        '⅑':'frac{1}{9}',
+        '⅒':'frac{1}{10}'
 		};
 	let token = 
 	"iiiint|oiiint|iiint|oiint|iint|oint|int|lim|ln|del|grad|aleph|prod|prop|sinh|cosh|tanh|cos|sec|pi|tt|fr|sf|sube|supe|sub|sup|det|mod|gcd|lcm|min|max|vec|ddot|ul|chi|eta|nu|mu|sum|ox|log|sin|tan|dim|hat|bar|dot";

@@ -1430,7 +1430,7 @@ function showSubSuperscriptDialog()
 {
 	let html = ''+
 	'<div class="file-dialog" style="width:600px">\r\n'+
-	'	<div class="file-dialog-title"><a class=\"file-dialog-close-icon\" href=\"javascript:closeEquationDialog();\"><span></span></a><span id="file-dialog-title-label">Masukkan Subscript &amp; Superscript</span></div>\r\n'+
+	'	<div class="file-dialog-title"><a class=\"file-dialog-close-icon\" href=\"javascript:closeEquationDialog();\"><span></span></a><span id="file-dialog-title-label">Masukkan Subscript, Superscript &amp; Fraksi</span></div>\r\n'+
 	'    <div id="equation-area" style="position:relative; height:278px; overflow:hidden;">\r\n'+
 	'    </div>\r\n'+
 	'</div>\r\n';

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Subscript &amp; Superscript</title>
+<title>Superscript Subscript and Fraction</title>
 </head>
 <script type="text/javascript" src="../lib.assets/script/jquery/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../lib.assets/theme/default/css/test-editor.min.css">
@@ -47,7 +47,7 @@ body{
 }
 </style>
 <script type="text/javascript">
-var charmap = [
+let charmapSupSub = [
 	['&#8304;',     '&#8304;',  true,'superscript zero'],
 	['&#185;',     '&#185;',  true,'superscript one'],
 	['&#178;',     '&#178;',  true,'superscript two'],
@@ -97,24 +97,51 @@ var charmap = [
 	['&#7530;',     '&#7530;',  true,'subscript chi']
 	
 ];
+
+let charmapFraction = [
+	['&#189;', '&#189;', true, '&frac12'],
+	['&#8531;', '&#8531;', true, '&frac13;'],
+	['&#8532;', '&#8532;', true, '&frac23;'],
+	['&#188;', '&#188;', true, '&frac14;'],
+	['&#190;', '&#190;', true, '&frac34;'],
+	['&#8533;', '&#8533;', true, '&frac15;'],
+	['&#8534;', '&#8534;', true, '&frac25;'],
+	['&#8535;', '&#8535;', true, '&frac35;'],
+	['&#8536;', '&#8536;', true, '&frac45;'],
+	['&#8537;', '&#8537;', true, '&frac16;'],
+	['&#8538;', '&#8538;', true, '&frac56;'],
+	['&#8528;', '&#8528;', true, '&frac17;'],
+	['&#8539;', '&#8539;', true, '&frac18;'],
+	['&#8540;', '&#8540;', true, '&frac38;'],
+	['&#8541;', '&#8541;', true, '&frac58;'],
+	['&#8542;', '&#8542;', true, '&frac78;'],
+	['&#8529;', '&#8529;', true, '—'],
+	['&#8530;', '&#8530;', true, '—'],
+
+];
 function renderCharMapHTML() {
-	var charsPerRow = 17, tdWidth=20, tdHeight=20, i;
-	var html = '<div id="charmapgroup" aria-labelledby="charmap_label" tabindex="0" role="listbox">'+
-	'<table role="presentation" border="0" cellspacing="1" cellpadding="0" width="' + (tdWidth*charsPerRow) + 
+	let charsPerRow = 17;
+	let tdWidth=20;
+	let tdHeight=20;
+	let i;
+	let html = '<div id="charmapgroup" aria-labelledby="charmap_label" tabindex="0" role="listbox">';
+
+
+		html += '<table role="presentation" border="0" cellspacing="1" cellpadding="0" width="' + (tdWidth*charsPerRow) + 
 	'"><tr height="' + tdHeight + '">';
-	var cols=-1;
+	let cols=-1;
 
-	for (i=0; i<charmap.length; i++) 
+	for (i in charmapSupSub) 
 	{
-		var previewCharFn;
+		let previewCharFn;
 
-		if (charmap[i][2]==true) {
+		if (charmapSupSub[i][2]==true) {
 			cols++;
-			previewCharFn = 'previewChar(\'' + charmap[i][1].substring(1,charmap[i][1].length) + '\',\'' + charmap[i][0].substring(1,charmap[i][0].length) + '\',\'' + charmap[i][3] + '\');';
+			previewCharFn = 'previewChar(\'' + charmapSupSub[i][1].substring(1,charmapSupSub[i][1].length) + '\',\'' + charmapSupSub[i][0].substring(1,charmapSupSub[i][0].length) + '\',\'' + charmapSupSub[i][3] + '\');';
 			html += ''
 				+ '<td class="charmap">'
-				+ '<a class="charmaplink" role="button" onmouseover="'+previewCharFn+'" onfocus="'+previewCharFn+'" href="javascript:void(0)" onclick="insertChar(\'' + charmap[i][1].substring(2,charmap[i][1].length-1) + '\');" onclick="return false;" onmousedown="return false;" title="' + charmap[i][3] + ' '+'">'
-				+ charmap[i][1]
+				+ '<a class="charmaplink" role="button" onmouseover="'+previewCharFn+'" onfocus="'+previewCharFn+'" href="javascript:void(0)" onclick="insertChar(\'' + charmapSupSub[i][1].substring(2,charmapSupSub[i][1].length-1) + '\');" onclick="return false;" onmousedown="return false;" title="' + charmapSupSub[i][3] + ' '+'">'
+				+ charmapSupSub[i][1]
 				+ '</a></td>';
 			if ((cols+1) % charsPerRow == 0)
 				html += '</tr><tr height="' + tdHeight + '">';
@@ -122,12 +149,44 @@ function renderCharMapHTML() {
 	 }
 
 	if (cols % charsPerRow > 0) {
-		var padd = charsPerRow - (cols % charsPerRow);
-		for (var i=0; i<padd-1; i++)
+		let padd = charsPerRow - (cols % charsPerRow);
+		for (let i=0; i<padd-1; i++)
 			html += '<td width="' + tdWidth + '" height="' + tdHeight + '" class="charmap">&nbsp;</td>';
 	}
 
-	html += '</tr></table></div>';
+	html += '</tr></table>\r\n';
+	
+	html += '<table role="presentation" border="0" cellspacing="1" cellpadding="0" width="' + (tdWidth*charsPerRow) + 
+	'"><tr height="' + tdHeight + '">';
+	cols=-1;
+
+	for (i in charmapFraction) 
+	{
+		let previewCharFn;
+
+		if (charmapFraction[i][2]==true) {
+			cols++;
+			previewCharFn = 'previewChar(\'' + charmapFraction[i][1].substring(1,charmapFraction[i][1].length) + '\',\'' + charmapFraction[i][0].substring(1,charmapFraction[i][0].length) + '\',\'' + charmapFraction[i][3] + '\');';
+			html += ''
+				+ '<td class="charmap">'
+				+ '<a class="charmaplink" role="button" onmouseover="'+previewCharFn+'" onfocus="'+previewCharFn+'" href="javascript:void(0)" onclick="insertChar(\'' + charmapFraction[i][1].substring(2,charmapFraction[i][1].length-1) + '\');" onclick="return false;" onmousedown="return false;" title="' + charmapFraction[i][3] + ' '+'">'
+				+ charmapFraction[i][1]
+				+ '</a></td>';
+			if ((cols+1) % charsPerRow == 0)
+				html += '</tr><tr height="' + tdHeight + '">';
+		}
+	 }
+
+	if (cols % charsPerRow > 0) {
+		let padd = charsPerRow - (cols % charsPerRow);
+		for (let i=0; i<padd-1; i++)
+			html += '<td width="' + tdWidth + '" height="' + tdHeight + '" class="charmap">&nbsp;</td>';
+	}
+
+	html += '</tr></table>\r\n';
+	
+	
+	html += '</div>';
 	html = html.replace(/<tr height="20"><\/tr>/g, '');
 
 	return html;
@@ -138,10 +197,10 @@ function insertChar(chr) {
 }
 
 function previewChar(codeA, codeB, codeN) {
-	var elmA = document.getElementById('codeA');
-	var elmB = document.getElementById('codeB');
-	var elmV = document.getElementById('codeV');
-	var elmN = document.getElementById('codeN');
+	let elmA = document.getElementById('codeA');
+	let elmB = document.getElementById('codeB');
+	let elmV = document.getElementById('codeV');
+	let elmN = document.getElementById('codeN');
 
 	if (codeA=='#160;') {
 		elmV.innerHTML = '__';
