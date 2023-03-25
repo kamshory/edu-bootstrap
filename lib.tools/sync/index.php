@@ -21,7 +21,7 @@ if(@$_GET['type'] == 'file'
 
 if(@$_GET['action'] == 'ping')
 {
-    $ping = new \Sync\SyncPing($cfg->app_code);
+    $ping = new \Sync\SyncPing($school_id);
     $response = new \stdClass;
     $success = false;
     if(isset($_POST['test']))
@@ -66,7 +66,7 @@ if(@$_GET['action'] == 'sync-time')
 
     if($syncConfigs->sync_time_enable)
     {
-        $syncTime = new \Sync\SyncTime($cfg->app_code);
+        $syncTime = new \Sync\SyncTime($school_id);
 
         $fileSyncUrl2 = $fileSyncUrl;
         $username2 = $username;
@@ -105,7 +105,7 @@ if(@$_GET['type'] == 'file')
     if(@$_GET['direction'] == 'down')
     {
         $fileSyncDownload = new \Sync\FileSyncDownload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
-        $fileSyncDownload->setApplication($cfg->app_code);
+        $fileSyncDownload->setApplication($school_id);
         $fileSyncDownload->setUseRelativePath($syncConfigs->sync_file_use_relative_path);
         if(@$_GET['step'] == '1')
         {
@@ -197,7 +197,7 @@ if(@$_GET['type'] == 'file')
     if(@$_GET['direction'] == 'up')
     {
         $fileSyncUpload = new \Sync\FileSyncUpload($database, $applicationRoot, $fileUploadBaseDir, $fileDownloadBaseDir, $filePoolBaseDir, $filePoolName, $filePoolRollingPrefix, $filePoolExtension);
-        $fileSyncUpload->setApplication($cfg->app_code);
+        $fileSyncUpload->setApplication($school_id);
         $fileSyncUpload->setUseRelativePath($syncConfigs->sync_file_use_relative_path);
         if(@$_GET['step'] == '1')
         {
@@ -305,7 +305,7 @@ if(@$_GET['type'] == 'database')
     if(@$_GET['direction'] == 'down')
     {
         $databaseSyncDownload = new \Sync\DatabaseSyncDownload($database, $applicationRoot, $databaseUploadBaseDir, $databaseDownloadBaseDir, $databasePoolBaseDir, $databasePoolName, $databasePoolRollingPrefix, $databasePoolExtension);
-        $databaseSyncDownload->setApplication($cfg->app_code);
+        $databaseSyncDownload->setApplication($school_id);
         if(@$_GET['step'] == '1')
         {
             $success = $databaseSyncDownload->databaseDownloadInformation($databaseSyncUrl, $username, $password);
@@ -392,7 +392,7 @@ if(@$_GET['type'] == 'database')
     if(@$_GET['direction'] == 'up')
     {
         $databaseSyncUpload = new \Sync\DatabaseSyncUpload($database, $applicationRoot, $databaseUploadBaseDir, $databaseDownloadBaseDir, $databasePoolBaseDir, $databasePoolName, $databasePoolRollingPrefix, $databasePoolExtension);
-        $databaseSyncUpload->setApplication($cfg->app_code);
+        $databaseSyncUpload->setApplication($school_id);
         if(@$_GET['step'] == '1')
         {
             $success = $databaseSyncUpload->syncLocalQueryToDatabase();

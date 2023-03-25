@@ -46,6 +46,8 @@ if(empty($user_id))
     exit();
 }
 
+$school_id = $memberLoggedIn->school_id;
+
 $applicationRoot = dirname(__DIR__);
 $permission = 0755;
 
