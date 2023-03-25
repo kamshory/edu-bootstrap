@@ -739,7 +739,7 @@ class PicoTestCreator
         $html = str_replace('&lt;table border=&quot;1&quot;&gt;', '<table border="1">', $html);
         $html = str_replace('&lt;table border="1"&gt;', '<table border="1">', $html);
         $html = str_replace('&lt;table&gt;', '<table>', $html);
-        $html = str_replace('&lt;/table&gt;', '</table>', $html);
+        $html = str_replace('&lt;/table&gt;', '</table> ', $html);
         $html = str_replace('&lt;thead&gt;', '<thead>', $html);
         $html = str_replace('&lt;/thead&gt;', '</thead>', $html);
         $html = str_replace('&lt;tbody&gt;', '<tbody>', $html);
@@ -832,7 +832,7 @@ class PicoTestCreator
                     if ($tab[$i]['pipeDash']) {
                         $content = '';
                     } else if ($tab[$i]['endTable']) {
-                        $content = $this->createTableContent($tab[$i]['content']) . '</tbody></table>';
+                        $content = $this->createTableContent($tab[$i]['content']) . '</tbody></table> ';
                     } else {
                         $content = $this->createTableContent($tab[$i]['content']);
                     }

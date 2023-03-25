@@ -900,7 +900,9 @@ class PicoDOM //NOSONAR
         $temp = str_replace(self::BR_OPEN, self::BR_OPEN_WITH_SPACE, $temp);
         $temp = str_replace(self::BR_CLOSED, self::BR_CLOSE_WITH_SPACE, $temp);
         $temp = trim(preg_replace("/\s+/", " ", $temp));
-        $arr = explode(" ", $temp);
+        $arr = preg_split('/\s+/', $temp); //explode(" ", $temp);
+
+        
         $arr_find = array();
         $arr_replace = array();
         foreach ($arr as $val) {
@@ -1125,10 +1127,12 @@ class PicoDOM //NOSONAR
             }
         }
 
+        
+
         $text = str_replace(self::BR_OPEN, "\r\n", $text);
         $text = str_replace(self::BR_CLOSED, "\r\n", $text);
         $text = htmlspecialchars($text);
-        if (count($arr_replace)) {
+        if (count($arr_replace) > 0) {
             $text = str_replace($arr_find, $arr_replace, $text);
         }
 
