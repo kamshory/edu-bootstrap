@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/PHPExcel_1.8.0/Classes/PHPExcel/IOFactory.php';
 
+/**
+ * Import data preprocessor
+ */
+
 $school_id = "";
 $country_id = 'ID';
 $admin_id = $adminLoggedIn->admin_id;
@@ -30,7 +34,7 @@ if($success && file_exists($path))
     // mulai
     $objWorksheetSource = PHPExcel_IOFactory::load($path);
 
-    $importExcel = new ImportExcel();
+    $importExcel = new \Pico\ImportExcel();
 
     $response = $importExcel->validate($objWorksheetSource, 'SCHOOL', 'STUDENT', 'reg_number_national', 'TEACHER', 'reg_number_national');
 
@@ -105,7 +109,7 @@ if($success && file_exists($path))
             
         }
     }
-    catch(Exception $e)
+    catch(\Exception $e)
     {
         // Do nothing
         $myschool = false;
@@ -628,5 +632,7 @@ if($success && file_exists($path))
         header("Location: ".$picoEdu->gateBaseSelfName()."?option=duplicated");
     }
     $fileSync->deleteFile($path, false);
+
+    $database->setSystemVariable('import-'.$school_id, 'true');
     // delete file
 }

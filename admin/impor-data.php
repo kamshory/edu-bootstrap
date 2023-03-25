@@ -2,179 +2,11 @@
 require_once dirname(__DIR__)."/lib.inc/auth-admin.php";
 if(empty($admin_id))
 {
-	$sql = "SELECT * FROM `edu_admin` ";
-	$stmt = $database->executeQuery($sql);
-	$admin_id = $database->generateNewId();
-	$username = 'admin';
-	$password = 'admin';
-	$passwordSession = md5($password);
-	$passwordDatabase = md5($passwordSession);
-	if($stmt->rowCount() == 0)
-	{
-		$sql = "INSERT INTO `edu_admin` 
-		(`admin_id`, `school_id`, `name`, `gender`, `birth_place`, `birth_day`, `username`, `admin_level`, `token_admin`, `email`, `phone`, `address`, `country_id`, `state_id`, `city_id`, `password`, `password_initial`, `auth`, `picture_rand`, `time_create`, `time_edit`, `time_last_activity`, `admin_create`, `admin_edit`, `ip_create`, `ip_edit`, `ip_last_activity`, `blocked`, `active`) VALUES
-		('$admin_id', '', 'Admin', 'M', 'Jambi', '2000-01-01', '$username', 1, '$passwordDatabase', 'admin@local', '', '', 0, 0, 0, 'c3284d0f94606de1fd2af172aba15bf3', 'admin', '', '742251', '2017-10-14 00:00:00', '2017-10-14 00:00:00', '2017-10-14 00:00:00', '0', '$admin_id', '127.0.0.1', '127.0.0.1', '127.0.0.1', 0, 1)";
-		$stmt = $database->executeInsert($sql, true);
-		if($stmt->rowCount() > 0)
-		{
-			$_SESSION['admin_username'] = $username;
-			$_SESSION['admin_password'] = $passwordSession;
-			usleep(10000);
-			header("Location: ".basename($_SERVER['PHP_SELF']));
-		}
-	}
+	require_once dirname(__DIR__)."/lib.inc/add-first-admin.php";
 	require_once __DIR__."/login-form.php";
 	exit();
 }
 
-/**
- * Import data preprocessor
- */
-class ImportExcel {
-
-	/**
-	 * Check if school use national ID or not
-	 * @param \PHPExcel $objWorksheetSource Worksheet
-	 * @param string $sheetNameSchool Sheet name for school
-	 * @return bool true if school use national ID and false if school is not use national ID
-	 */
-	public function isUseNationalId($objWorksheetSource, $sheetNameSchool)
-	{
-		$useNationalId = false;
-		try
-		{
-			$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName($sheetNameSchool);
-			$highestRow = $objWorksheet->getHighestRow(); 
-			$highestColumn = $objWorksheet->getHighestColumn(); 
-			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
-			
-			$fieldArray = array();
-			$row = 1;
-			for ($col = 0; $col < $highestColumnIndex; ++$col) {
-				$fieldArray[$col] = strtolower($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
-			}
-			for($row = 2; $row <= $highestRow; ++$row) 
-			{
-				$data = array();
-				for ($col = 0; $col < $highestColumnIndex; ++$col) 
-				{
-					$data[$fieldArray[$col]] = $this->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
-				}
-				if(
-					strtolower($data['use_national_id'])
-					|| strtolower($data['use_national_id']) == 1
-					|| strtolower($data['use_national_id']) == 'y' 
-					|| strtolower($data['use_national_id']) == 'yes'
-					|| strtolower($data['use_national_id']) == 'ya'
-					|| strtolower($data['use_national_id']) == 'true'
-					)
-				{
-					$useNationalId = true;
-					break;
-				}
-			}
-		}
-		catch(Exception $e)
-		{
-			// Do nothing
-		}
-		return $useNationalId;
-	}
-
-	/**
-	 * Validate imported data
-	 * @param \PHPExcel $objWorksheetSource Worksheet
-	 * @param string $sheetNameSchool Sheet name for school
-	 * @param string $sheetNameStudent Sheet name for student
-	 * @param string $columnNameStudent Lower case of column name name student ID
-	 * @param string $sheetNameTeacher Sheet name for teacher
-	 * @param string $columnNameTeacher Lower case of column name name teacher ID
-	 * @return array Contain response_code and response_text
-	 */
-	public function validate($objWorksheetSource, $sheetNameSchool, $sheetNameStudent, $columnNameStudent, $sheetNameTeacher, $columnNameTeacher)
-	{
-		$useNationalId = $this->isUseNationalId($objWorksheetSource, $sheetNameSchool);
-		$validData1 = true;
-		$validData2 = true;		
-		$message = "Sukses";
-		$response_code = "00";
-
-		if($useNationalId)
-		{
-			$validData1 = $this->validData($objWorksheetSource, $sheetNameStudent, $columnNameStudent);
-			$validData2 = $this->validData($objWorksheetSource, $sheetNameTeacher, $columnNameTeacher);		
-
-			if($useNationalId)
-			{
-				if(!$validData1 && !$validData2)
-				{
-					$message = "Data siswa dan guru tidak lengkap";
-					$response_code = "05";
-				}
-				else if(!$validData1)
-				{
-					$message = "Data siswa tidak lengkap";
-					$response_code = "05";
-				}
-				else if(!$validData2)
-				{
-					$message = "Data guru tidak lengkap";
-					$response_code = "05";
-				}
-				if($validData1 && $validData2)
-				{
-					$response_code = "00";
-				}
-			}
-			
-		}
-		return array(
-			'response_code'=>$response_code,
-			'response_text'=>$message
-		);
-	}
-
-	public function validData($objWorksheetSource, $sheetName, $columnName)
-	{
-		$validData = true;
-		try
-		{
-			$objWorksheet = $objWorksheetSource->setActiveSheetIndexByName($sheetName);
-			$highestRow = $objWorksheet->getHighestRow(); 
-			$highestColumn = $objWorksheet->getHighestColumn(); 
-			$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
-			
-			$fieldArray = array();
-			$row = 1;
-			for ($col = 0; $col < $highestColumnIndex; ++$col) {
-				$fieldArray[$col] = strtolower($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
-			}
-			for($row = 2; $row <= $highestRow; ++$row) 
-			{
-				$data = array();
-				for ($col = 0; $col < $highestColumnIndex; ++$col) 
-				{
-					$data[$fieldArray[$col]] = $this->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
-				}
-				if(empty($data[$columnName]))
-				{
-					$validData = false;
-					break;
-				}
-			}
-		}
-		catch(Exception $e)
-		{
-			// Do nothing
-		}
-		return $validData;
-	}
-	
-	public function trimWhitespace($value)
-	{
-		return trim($value, " \r\n\t ");
-	}
-}
 
 if(isset($_POST['upload']) && isset($_FILES['file']['name']))
 { 
@@ -356,25 +188,60 @@ require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
 else
 {
-	
 require_once __DIR__."/lib.inc/header.php"; //NOSONAR
+
+?>
+	<style type="text/css">
+	.input-group > *:first-child{
+		border-top-right-radius: 0 0;
+		border-bottom-right-radius: 0 0;
+	}
+	.input-group > *:last-child{
+		border-top-left-radius: 0 0;
+		border-bottom-left-radius: 0 0;
+	}
+	.input-file-label.form-control[readonly]{
+		background-color: #FFFFFF;
+	}
+	</style>
+	<script type="text/javascript">
+	$(document).ready(function(e) {
+		$(document).on('change', 'input[type="file"]', function(e){
+			var files = $(this)[0].files;
+			var fileName = files[0].name;
+			$(this).closest('form').find('.input-file-label').val(fileName);
+		});
+		$(document).on('click', 'input.input-file-button', function(e){
+			$(this).closest('form').find('input[type="file"]').click();
+		});
+	});
+	</script>
+	<?php
+$imported = $database->getSystemVariable('import-'.$school_id, 'false') == 'true';
+if($imported)
+{
+	?>
+	<div class="alert alert-success">Impor data siswa baru. <a href="tambah-siswa.php">Klik di sini</a> untuk mendownload template. Isi data siswa sesuai dengan kelasnya lalu upload kembali.</div>
+	<p>Pilih file</p>
+	<form action="tambah-siswa.php" method="post" enctype="multipart/form-data" name="form1">		
+	  <input type="file" name="file" id="file" accept=".xlsx" style="position:absolute; left:-10000px; top:-10000px;">
+	  <div class="input-group mb-3" id="input-file-data">
+		  <input type="button" class="btn btn-secondary input-file-button" value="Pilih File" />
+		<input type="text" class="input-file-label form-control" readonly>
+	  </div>
+	  <input class="btn btn-success" type="submit" name="upload" id="upload" value="Upload File">
+	  <input class="btn btn-secondary" type="button" name="cancel" id="cancel" value="Batalkan" onclick="window.location='sekolah.php'">
+	</form>
+	
+	<?php
+}
+else
+{
 ?>
 <div class="alert alert-success">
-Modul ini digunakan untuk mengimpor data sekolah, kelas, siswa, dan guru. Contoh data dapat didownload <a href="planetedu.xlsx">di sini</a>. Apabila terjadi kesalahan saat melakukan import data, segera hapus data tersebut sebelum mengimpor data yang lain.</div>
+Modul ini digunakan untuk mengimpor data awal untuk sekolah, kelas, siswa, dan guru. Contoh data dapat didownload <a href="planetedu.xlsx">di sini</a>. Apabila terjadi kesalahan saat melakukan import data, segera hapus data tersebut sebelum mengimpor data yang lain.</div>
 <p>Pilih file</p>
-<style type="text/css">
-.input-group > *:first-child{
-	border-top-right-radius: 0 0;
-	border-bottom-right-radius: 0 0;
-}
-.input-group > *:last-child{
-	border-top-left-radius: 0 0;
-	border-bottom-left-radius: 0 0;
-}
-.input-file-label.form-control[readonly]{
-	background-color: #FFFFFF;
-}
-</style>
+
 <form action="" method="post" enctype="multipart/form-data" name="form1">
 	
   <input type="file" name="file" id="file" accept=".xlsx" style="position:absolute; left:-10000px; top:-10000px;">
@@ -385,19 +252,10 @@ Modul ini digunakan untuk mengimpor data sekolah, kelas, siswa, dan guru. Contoh
   <input class="btn btn-success" type="submit" name="upload" id="upload" value="Upload File">
   <input class="btn btn-secondary" type="button" name="cancel" id="cancel" value="Batalkan" onclick="window.location='sekolah.php'">
 </form>
-<script type="text/javascript">
-$(document).ready(function(e) {
-	$(document).on('change', 'input[type="file"]', function(e){
-		var files = $(this)[0].files;
-		var fileName = files[0].name;
-		$(this).closest('form').find('.input-file-label').val(fileName);
-	});
-    $(document).on('click', 'input.input-file-button', function(e){
-		$(this).closest('form').find('input[type="file"]').click();
-	});
-});
-</script>
+
 <?php
+}
 require_once __DIR__."/lib.inc/footer.php"; //NOSONAR
 }
+
 ?>

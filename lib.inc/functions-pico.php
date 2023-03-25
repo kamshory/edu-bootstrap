@@ -503,6 +503,19 @@ function kh_filter_file_name($input)
 	);
 	return $output;
 }
+
+function filter_sanitize_file_name($filename)
+{
+	return preg_replace(
+        '~
+        [<>:"/\\\|?*]|
+        [\x00-\x1F]|
+        [\x7F\xA0\xAD]|
+        [#\[\]@!$&\'()+,;=]|
+        [{}^\~`]
+        ~x',
+        '-', $filename);
+}
 function my_addslashes($inp)
 {
 	return addslashes($inp);
