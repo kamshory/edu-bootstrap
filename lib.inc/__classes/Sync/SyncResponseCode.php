@@ -2,7 +2,8 @@
 
 namespace Sync;
 
-class SyncResponseCode{
+class SyncResponseCode
+{
     const SUCCESS = '00';
     const INVALID_FORMAT = '02';
     const FAILED = '03';
@@ -16,16 +17,11 @@ class SyncResponseCode{
     public static function getResponseText($code)
     {
         $rt = '';
-        if($code == self::SUCCESS)
-        {
+        if ($code == self::SUCCESS) {
             $rt = 'Sukses';
-        }
-        else if($code == self::INVALID_FORMAT)
-        {
+        } else if ($code == self::INVALID_FORMAT) {
             $rt = 'Respon tidak sesuai spesifikasi';
-        }
-        else if($code == self::FAILED)
-        {
+        } else if ($code == self::FAILED) {
             $rt = 'Gagal';
         }
         return $rt;

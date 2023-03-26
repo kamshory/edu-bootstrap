@@ -5,7 +5,7 @@ if(empty($admin_id))
 	require_once __DIR__."/login-form.php";
 	exit();
 }
-if(count(@$_POST) || true)
+if(isset($_FILES['file']['tmp_name']))
 {
     require_once dirname(__DIR__)."/lib.inc/add-student.php";
 }

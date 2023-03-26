@@ -902,7 +902,7 @@ class PicoDOM //NOSONAR
         $temp = trim(preg_replace("/\s+/", " ", $temp));
         $arr = preg_split('/\s+/', $temp); //explode(" ", $temp);
 
-        
+
         $arr_find = array();
         $arr_replace = array();
         foreach ($arr as $val) {
@@ -1127,7 +1127,7 @@ class PicoDOM //NOSONAR
             }
         }
 
-        
+
 
         $text = str_replace(self::BR_OPEN, "\r\n", $text);
         $text = str_replace(self::BR_CLOSED, "\r\n", $text);

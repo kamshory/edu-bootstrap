@@ -52,23 +52,23 @@ class SyncMaster
      * @var string
      */
     protected $poolFileExtension = '';
-    
+
     /**
      * Application code
      *
-     * @var [type]
+     * @var string
      */
     protected $application = \Pico\PicoConst::PICO_EDU;
 
     protected $forbiddenExtension = array(
-        'php', 
-        'sh', 
-        'shell', 
-        'exe', 
-        'htaccess', 
-        'htpasswd', 
-        'ini', 
-        'inf', 
+        'php',
+        'sh',
+        'shell',
+        'exe',
+        'htaccess',
+        'htpasswd',
+        'ini',
+        'inf',
         'bat',
         'rb',
         'phy'
@@ -131,17 +131,138 @@ class SyncMaster
     protected function getFileExtension($path)
     {
         $ext = "";
-        if(stripos($path, "."))
-        {
+        if (stripos($path, ".")) {
             $arr = explode(".", $path);
             $ext = end($arr);
-        }
-        else
-        {
+        } else {
             $ext = $path;
         }
         return $ext;
     }
 
 
+
+    /**
+     * Set database
+     *
+     * @param  \Pico\PicoDatabase  $database  Database
+     *
+     * @return  self
+     */
+    public function withDatabase(\Pico\PicoDatabase $database)
+    {
+        $this->database = $database;
+
+        return $this;
+    }
+
+    /**
+     * Set application root
+     *
+     * @param  string  $applicationRoot  Application root
+     *
+     * @return  self
+     */
+    public function withApplicationRoot(string $applicationRoot)
+    {
+        $this->applicationRoot = $applicationRoot;
+
+        return $this;
+    }
+
+    /**
+     * Set upload base directory
+     *
+     * @param  string  $uploadBaseDir  Upload base directory
+     *
+     * @return  self
+     */
+    public function withUploadBaseDir(string $uploadBaseDir)
+    {
+        $this->uploadBaseDir = $uploadBaseDir;
+
+        return $this;
+    }
+
+    /**
+     * Set download base directory
+     *
+     * @param  string  $downloadBaseDir  Download base directory
+     *
+     * @return  self
+     */
+    public function withDownloadBaseDir(string $downloadBaseDir)
+    {
+        $this->downloadBaseDir = $downloadBaseDir;
+
+        return $this;
+    }
+
+    /**
+     * Set pooling file base directory
+     *
+     * @param  string  $poolBaseDir  Pooling file base directory
+     *
+     * @return  self
+     */
+    public function withPoolBaseDir(string $poolBaseDir)
+    {
+        $this->poolBaseDir = $poolBaseDir;
+
+        return $this;
+    }
+
+    /**
+     * Set pooling file name
+     *
+     * @param  string  $poolFileName  Pooling file name
+     *
+     * @return  self
+     */
+    public function withPoolFileName(string $poolFileName)
+    {
+        $this->poolFileName = $poolFileName;
+
+        return $this;
+    }
+
+    /**
+     * Set pooling file prefix
+     *
+     * @param  string  $poolRollingPrefix  Pooling file prefix
+     *
+     * @return  self
+     */
+    public function withPoolRollingPrefix(string $poolRollingPrefix)
+    {
+        $this->poolRollingPrefix = $poolRollingPrefix;
+
+        return $this;
+    }
+
+    /**
+     * Set pooling file extension
+     *
+     * @param  string  $poolFileExtension  Pooling file extension
+     *
+     * @return  self
+     */
+    public function withPoolFileExtension(string $poolFileExtension)
+    {
+        $this->poolFileExtension = $poolFileExtension;
+
+        return $this;
+    }
+
+    /**
+     * Set application code
+     *
+     * @param  string  $application  Application code
+     *
+     * @return  self
+     */
+    public function withApplication(string $application)
+    {
+        return $this->setApplication($application);
+    }
 }

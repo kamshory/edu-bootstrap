@@ -63,7 +63,7 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
         ORDER BY `time_create` DESC 
         LIMIT 0,1 ";
         $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0) {
+        if ($stmt->rowCount() > 0) {
             $data = $stmt->fetch(\PDO::FETCH_ASSOC);
             return $data['time_create'];
         }
@@ -262,19 +262,3 @@ class DatabaseSyncDownload extends \Sync\DatabaseSyncMaster
         return true;
     }
 }
-
-
-/**
- * Database Sync Upload
- * 1. Move pooling file to upload directory
- * 2. Create sync record to database
- * 3. Upload sync file to remote host
- * 5. Update sync record status
- * 
- * Database Sync Download
- * 1. Get sync record from remote host
- * 2. Download sync file from remote host
- * 3. Create sync record to database
- * 4. Execute every query file sync file
- * 5. Update sync record status
- */

@@ -32,6 +32,7 @@ class SyncTime extends \Sync\SyncMaster
         curl_setopt($ch, CURLOPT_HEADER, false);
 
         $post = array(
+            'application_id' => $this->application,
             'timezone' => $database->getDatabaseCredentials()->getTimeZone(),
             'time' => time()
         );
@@ -40,7 +41,7 @@ class SyncTime extends \Sync\SyncMaster
 
         $server_output = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
- 
+
         curl_close($ch);
 
         if ($httpcode == 200) {

@@ -504,7 +504,7 @@ class PicoTestCreator
         $html_option .= "
             <answer>
             ";
-        if($stmt->rowCount() > 0) {
+        if ($stmt->rowCount() > 0) {
             $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
             foreach ($rows as $data) {
                 $content = $data['content'];
@@ -552,7 +552,7 @@ class PicoTestCreator
     ";
         $sql = "SELECT `question_id` FROM `edu_question` WHERE `test_id` = '$test_id' ORDER BY `sort_order` ASC, `question_id` ASC ";
         $stmt = $database->executeQuery($sql);
-        if($stmt->rowCount() > 0) {
+        if ($stmt->rowCount() > 0) {
             $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
             foreach ($rows as $data) {
                 $question = $this->exportQuestion($database, $data['question_id'], $base_dir);

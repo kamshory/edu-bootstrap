@@ -1,6 +1,9 @@
 <?php
+
 namespace Pico;
-class PicoSFTP {
+
+class PicoSFTP
+{
     /**
      * Host
      *
@@ -25,7 +28,7 @@ class PicoSFTP {
      * @var string
      */
     private $password = 'centos';
-    
+
     /**
      * Constructor
      *
@@ -51,20 +54,20 @@ class PicoSFTP {
     public function load($path)
     {
         $obj = parse_ini_file($path);
-		$this->host = $obj['host'];
-		$this->port = $obj['port'];
-		$this->username = $obj['username'];
-		$this->password = $obj['password'];
-		return $this;
+        $this->host = $obj['host'];
+        $this->port = $obj['port'];
+        $this->username = $obj['username'];
+        $this->password = $obj['password'];
+        return $this;
     }
 
-    
+
 
     /**
      * Get host
      *
      * @return  string
-     */ 
+     */
     public function getHost()
     {
         return $this->host;
@@ -74,7 +77,7 @@ class PicoSFTP {
      * Get port
      *
      * @return  integer
-     */ 
+     */
     public function getPort()
     {
         return $this->port;
@@ -84,7 +87,7 @@ class PicoSFTP {
      * Get username
      *
      * @return  string
-     */ 
+     */
     public function getUsername()
     {
         return $this->username;
@@ -94,7 +97,7 @@ class PicoSFTP {
      * Get password
      *
      * @return  string
-     */ 
+     */
     public function getPassword()
     {
         return $this->password;

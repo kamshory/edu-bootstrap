@@ -162,7 +162,7 @@ class PicoTest
             FROM `edu_question` WHERE `question_id` = '$questionId'       
             ";
             $stmt = $this->database->executeQuery($sql);
-            if($stmt->rowCount() > 0) {
+            if ($stmt->rowCount() > 0) {
                 $data = $stmt->fetch(\PDO::FETCH_ASSOC);
                 $data['number'] = (int) $key + 1;
                 $questionId = addslashes($val);
@@ -201,15 +201,17 @@ class PicoTest
         $startUnix = strtotime($testAnswer['start']);
         $deadline = $startUnix + $eduTest->duration;
         return array(
-            'test' => $eduTest, 
+            'test' => $eduTest,
             'data' => $question,
             'timer' => array(
                 'start' => array(
-                    'string'=> $testAnswer['start'], 
-                    'unix_time_stamp' => $startUnix), 
+                    'string' => $testAnswer['start'],
+                    'unix_time_stamp' => $startUnix
+                ),
                 'deadline' => array(
-                    'string'=> date('Y-m-d H:i:s', $deadline), 
-                    'unix_time_stamp' => $deadline)
+                    'string' => date('Y-m-d H:i:s', $deadline),
+                    'unix_time_stamp' => $deadline
+                )
             )
         );
     }
@@ -248,7 +250,7 @@ class PicoTest
         AND `edu_answer`.`finish` = false
         ";
         $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0) {
+        if ($stmt->rowCount() > 0) {
             return $stmt->fetch(\PDO::FETCH_ASSOC);
         }
         return null;
@@ -289,14 +291,14 @@ class PicoTest
             'end' => null,
             'question_list' => $question_list,
             'answer' => null,
-            'answer_true' => 0, 
+            'answer_true' => 0,
             'answer_false' => 0,
             'initial_score' => 0,
-            'penalty' => 0, 
-            'final_score' => 0, 
-            'competence_score' => null, 
-            'percent' => 0, 
-            'finish' => false, 
+            'penalty' => 0,
+            'final_score' => 0,
+            'competence_score' => null,
+            'percent' => 0,
+            'finish' => false,
             'active' => true
         );
     }
@@ -315,7 +317,7 @@ class PicoTest
         AND `edu_question`.`active` = true
         ";
         $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0) {
+        if ($stmt->rowCount() > 0) {
             $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
             foreach ($data as $key => $val) {
                 $data[$key]['number'] = (int)$key + 1;

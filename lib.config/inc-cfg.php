@@ -43,7 +43,7 @@ $syncConfigs->sync_database_application_dir = $oneLevelUp;
 $syncConfigs->sync_database_base_dir = $oneLevelUp."/volume.sync/database/pool";
 $syncConfigs->sync_database_pool_name = "pool";
 $syncConfigs->sync_database_rolling_prefix = "poll_";
-$syncConfigs->sync_database_extension = ".txt";
+$syncConfigs->sync_database_extension = ".dat";
 $syncConfigs->sync_database_maximum_length = 1000000;
 $syncConfigs->sync_database_delimiter = '------------------------912284ba5a823ba425efba890f57a4e2c88e8369';
 
@@ -51,7 +51,7 @@ $syncConfigs->sync_file_application_dir = $oneLevelUp;
 $syncConfigs->sync_file_base_dir = $oneLevelUp."/volume.sync/file/pool";
 $syncConfigs->sync_file_pool_name = "pool";
 $syncConfigs->sync_file_rolling_prefix = "poll_";
-$syncConfigs->sync_file_extension = ".txt";
+$syncConfigs->sync_file_extension = ".dat";
 $syncConfigs->sync_file_maximum_length = 50000;
 $syncConfigs->sync_file_use_relative_path = true;
 

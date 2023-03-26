@@ -15,21 +15,19 @@ $admin_create = $admin_edit = $admin_id;
 $myschool = true;
 $ip = str_replace(array(':', '.'), '-', $_SERVER['REMOTE_ADDR']);
 
-if(!file_exists(dirname(__DIR__)."/tmp"))
-{
+if (!file_exists(dirname(__DIR__) . "/tmp")) {
     mkdir(dirname(__DIR__) . "/tmp", 755);
 }
 
-$path = dirname(__DIR__)."/tmp/$ip-".mt_rand(1000000, 9000000).".xlsx";
+$path = dirname(__DIR__) . "/tmp/$ip-" . mt_rand(1000000, 9000000) . ".xlsx";
 $success = move_uploaded_file($_FILES['file']['tmp_name'], $path);
 $fileSync->createFile($path, false);
 $errors = 0;
-if($success && file_exists($path))
-{
+if ($success && file_exists($path)) {
     $callStartTime = microtime(true);
-    
+
     $name_school = '';
-    
+
     // import data school
     // mulai
     $objWorksheetSource = PHPExcel_IOFactory::load($path);
@@ -38,36 +36,37 @@ if($success && file_exists($path))
 
     $response = $importExcel->validate($objWorksheetSource, 'SCHOOL', 'STUDENT', 'reg_number_national', 'TEACHER', 'reg_number_national');
 
-    try{
+    try {
         $objWorksheet = $objWorksheetSource->setActiveSheetIndexByName('SCHOOL');
-        $highestRow = $objWorksheet->getHighestRow(); 
-        $highestColumn = $objWorksheet->getHighestColumn(); 
-        $highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn); 
-        
+        $highestRow = $objWorksheet->getHighestRow();
+        $highestColumn = $objWorksheet->getHighestColumn();
+        $highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
+
         $fieldArray = array();
         $row = 1;
         for ($col = 0; $col < $highestColumnIndex; ++$col) {
             $fieldArray[$col] = strtolower($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
         }
-        
-        
-        for($row = 2; $row <= $highestRow; ++$row) 
-        {
+
+
+        for ($row = 2; $row <= $highestRow; ++$row) {
             $data = array();
-            for ($col = 0; $col < $highestColumnIndex; ++$col) 
-            {
+            for ($col = 0; $col < $highestColumnIndex; ++$col) {
                 $data[$fieldArray[$col]] = $picoEdu->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
             }
             $name = $picoEdu->filterSanitizeName(@$data['name'], true);
-            
+            if (empty($name)) {
+                continue;
+            }
+
             $school_code = strtolower($name);
-            $school_code = preg_replace("/[^a-z\-\d]/i","-",$school_code);
+            $school_code = preg_replace("/[^a-z\-\d]/i", "-", $school_code);
             $school_code = str_replace("---", "-", $school_code);
             $school_code = str_replace("--", "-", $school_code);
             $school_code = str_replace("--", "-", $school_code);
-            
+
             $school_code = addslashes($school_code);
-            
+
             $address = addslashes(@$data['address']);
             $phone = addslashes($picoEdu->fixPhone(@$data['phone']));
             $email = addslashes(@$data['email']);
@@ -78,17 +77,14 @@ if($success && file_exists($path))
             $school_grade = addslashes(@$data['school_grade']);
             $country_id = strtoupper(addslashes(@$data['country']));
             $language = strtolower(addslashes(@$data['language']));
-            
-            $token_school = md5($name.'-'.time().'-'.mt_rand(111111, 999999));
-            
+
+            $token_school = md5($name . '-' . time() . '-' . mt_rand(111111, 999999));
+
             $name_school = $name;
-            if(empty($name))
-            {
-                continue;
-            }
+
 
             $school_id = $database->generateNewId();
-            
+
             $sql = "INSERT INTO `edu_school` 
             (`school_id`, `school_code`, `token_school`, `name`, `use_national_id`, `school_grade_id`, `public_private`, `principal`, `address`, `phone`, 
             `email`, `language`, `country_id`, `time_import_first`, `admin_import_first`, `ip_import_first`, 
@@ -98,49 +94,39 @@ if($success && file_exists($path))
             '$time_create', '$time_edit', '$admin_create', '$admin_edit', '$ip_create', '$ip_edit', 1) ";
 
             $stmt = $database->executeInsert($sql, true);
-            if($stmt->rowCount() == 0)
-            {
+            if ($stmt->rowCount() == 0) {
                 $myschool = false;
-            }
-            else
-            {
+            } else {
                 $myschool = true;
             }
-            
         }
-    }
-    catch(\Exception $e)
-    {
+    } catch (\Exception $e) {
         // Do nothing
         $myschool = false;
     }
-    
-    if(empty($school_id))
-    {
+
+    if (empty($school_id)) {
         $sql = "SELECT `school_id` FROM `edu_school` WHERE `name` LIKE '$name_school' ";
         $stmt = $database->executeQuery($sql);
         $data_school = $stmt->fetch(\PDO::FETCH_ASSOC);
         $useNationalId = $data_school['use_national_id'];
         $school_id = $data_school['school_id'];
     }
-    
-    if(!$myschool)
-    {
+
+    if (!$myschool) {
         $sql = "SELECT `edu_school`.*
         FROM `edu_school`
         LEFT JOIN (`edu_member_school`) ON (`edu_member_school`.`school_id` = `edu_school`.`school_id` AND `edu_member_school`.`role` = 'A')
         WHERE `edu_school`.`school_id` = '$school_id' AND `edu_member_school`.`member_id` = '$admin_id' ";
         $stmt = $database->executeQuery($sql);
-        if($stmt->rowCount() == 0)
-        {
+        if ($stmt->rowCount() == 0) {
             $errors++;
             // yang bersangkutan bukan administrator sekolah
         }
     }
     // jika terjadi error, maka batalkan semua proses
-    
-    if($errors == 0)
-    {
+
+    if ($errors == 0) {
         // add me first
         $sql = "SELECT * FROM `member` WHERE `member_id` = '$admin_id' ";
         $stmt2 = $database->executeQuery($sql);
@@ -219,6 +205,10 @@ if($success && file_exists($path))
                         }
 
                         $name = $picoEdu->filterSanitizeName(@$data['name']);
+                        if (empty($name)) {
+                            continue;
+                        }
+
 
                         $gender = $picoEdu->mapGender(addslashes(trim(@$data['gender'])));
                         $bd = isset($data['birth_day']) ? ((int) $data['birth_day']) : 0;
@@ -229,9 +219,6 @@ if($success && file_exists($path))
                         $password = addslashes(trim(@$data['password']));
                         $address = addslashes(trim(@$data['address']));
 
-                        if (empty($name)) {
-                            continue;
-                        }
 
                         $time_create = $time_edit = $database->getLocalDateTime();
                         $ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
@@ -256,12 +243,11 @@ if($success && file_exists($path))
                             $passwordHash = md5(md5($password));
 
                             $db_fixed = 'NULL';
-                            if(!empty($birth_day))
-                            {
+                            if (!empty($birth_day)) {
                                 $db_fixed = "'" . $birth_day . "'";
                             }
                             $email = empty($email) || $email == "''" ? 'null' : "'$email'";
-        
+
                             $sql = "INSERT INTO `edu_admin` 
                             (`admin_id`, `school_id`, `admin_level`, `username`, `name`, `token_admin`, `email`, `phone`, `password`, 
                             `password_initial`, `gender`, `birth_day`, `time_create`, `time_edit`, `admin_create`, `admin_edit`, 
@@ -280,7 +266,6 @@ if($success && file_exists($path))
                         } else {
                             // Do nothing
                         }
-
                     }
                 } catch (Exception $e) {
                     // Do nothing
@@ -313,6 +298,9 @@ if($success && file_exists($path))
                         }
 
                         $name = $picoEdu->filterSanitizeName(@$data['name']);
+                        if (empty($name)) {
+                            continue;
+                        }
 
                         $class_code = addslashes(trim(str_replace(' ', '', @$data['name'])));
                         $grade_id = addslashes(trim(@$data['grade']));
@@ -323,9 +311,7 @@ if($success && file_exists($path))
                         $time_create = $time_edit = $database->getLocalDateTime();
                         $ip_create = $ip_edit = $_SERVER['REMOTE_ADDR'];
                         $admin_create = $admin_edit = $admin_id;
-                        if (empty($name)) {
-                            continue;
-                        }
+
 
                         if (!isset($o[$school_program])) {
                             $o[$school_program] = $kode_school_program;
@@ -388,10 +374,13 @@ if($success && file_exists($path))
                         for ($col = 0; $col < $highestColumnIndex; ++$col) {
                             $data[$fieldArray[$col]] = $picoEdu->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
                         }
+                        $name = $picoEdu->filterSanitizeName(@$data['name']);
+                        if (empty($name)) {
+                            continue;
+                        }
+
                         $reg_number = $picoEdu->filterSanitizeDoubleSpace(@$data['reg_number']);
                         $reg_number_national = $picoEdu->filterSanitizeDoubleSpace(@$data['reg_number_national']);
-                        $name = $picoEdu->filterSanitizeName(@$data['name']);
-
                         $class = addslashes(trim(@$data['class']));
                         $address = addslashes(trim(@$data['address']));
                         $phone = addslashes($picoEdu->fixPhone(@$data['phone']));
@@ -417,9 +406,7 @@ if($success && file_exists($path))
                         $email = $picoEdu->trimPunctuation($email);
                         $email = $picoEdu->filterEmailAddress($email);
 
-                        if (empty($name)) {
-                            continue;
-                        }
+
                         if (empty($email)) {
                             $email = $picoEdu->generateAltEmail('local', ($reg_number_national != '') ? 'st_' . $reg_number_national : '', ($reg_number != '') ? 'st_' . $reg_number : '', ($phone != '') ? 'ph_' . $country_id . '_' . $phone : '');
                         }
@@ -439,8 +426,7 @@ if($success && file_exists($path))
                                 continue;
                             }
                             $student_id = null;
-                            if($useNationalId && !empty($reg_number_national))
-                            {
+                            if ($useNationalId && !empty($reg_number_national)) {
                                 $student_id = trim($reg_number_national);
                             }
                             $chk = $picoEdu->getExistsingUser($user_data, $student_id);
@@ -448,15 +434,14 @@ if($success && file_exists($path))
                             $username = addslashes($chk['username']);
 
                             $db_fixed = 'NULL';
-                            if(!empty($birth_day))
-                            {
+                            if (!empty($birth_day)) {
                                 $db_fixed = "'" . $birth_day . "'";
                             }
 
                             $class_id = $picoEdu->getClassId($class, $school_id);
-                
+
                             $email = empty($email) || $email == "''" ? 'null' : "'$email'";
-                
+
                             $sql = "INSERT INTO `edu_student` 
                             (`student_id`, `username`, `token_student`, `school_id`, `reg_number`, `reg_number_national`, `class_id`, 
                             `name`, `gender`, `birth_place`, `birth_day`, `phone`, `email`, `password`, `password_initial`, 
@@ -471,9 +456,7 @@ if($success && file_exists($path))
                             ('$student_id', '$school_id', 'S', '$class_id', '$time_create', true)
                             ";
                             $database->executeInsert($sql2, true);
-
-
-                        } 
+                        }
                     }
 
                     $sql = "UPDATE `edu_student` 
@@ -482,8 +465,6 @@ if($success && file_exists($path))
                     `prevent_change_school` = '1', `prevent_resign` = '1' 
                     WHERE `edu_student`.`school_id` = '$school_id' ";
                     $database->executeUpdate($sql, true);
-
-                    
                 } catch (Exception $e) {
                     // Do nothing
                 }
@@ -512,10 +493,14 @@ if($success && file_exists($path))
                             $data[$fieldArray[$col]] = $picoEdu->trimWhitespace($objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
                         }
 
-                        $reg_number = $picoEdu->filterSanitizeDoubleSpace(@$data['reg_number']);
-                        $reg_number_national = $picoEdu->filterSanitizeDoubleSpace(@$data['reg_number_national']);
 
                         $name = $picoEdu->filterSanitizeName(@$data['name']);
+                        if (empty($name)) {
+                            continue;
+                        }
+
+                        $reg_number = $picoEdu->filterSanitizeDoubleSpace(@$data['reg_number']);
+                        $reg_number_national = $picoEdu->filterSanitizeDoubleSpace(@$data['reg_number_national']);
 
                         $address = addslashes(trim(@$data['address']));
                         $phone = addslashes($picoEdu->fixPhone(trim(@$data['phone'])));
@@ -537,9 +522,7 @@ if($success && file_exists($path))
                         $phone = $picoEdu->trimPunctuation($phone);
                         $email = $picoEdu->trimPunctuation($email);
 
-                        if (empty($name)) {
-                            continue;
-                        }
+
                         if (empty($email)) {
                             $email = $picoEdu->generateAltEmail('local', ($reg_number_national != '') ? 'tc_' . $reg_number_national : '', ($reg_number != '') ? 'tc_' . $reg_number : '', ($phone != '') ? 'ph_' . $country_id . '_' . $phone : '');
                         }
@@ -556,8 +539,7 @@ if($success && file_exists($path))
                         $user_data['language'] = $language;
                         if (!empty($name) && !empty($email)) {
                             $teacher_id = null;
-                            if($useNationalId && !empty($reg_number_national))
-                            {
+                            if ($useNationalId && !empty($reg_number_national)) {
                                 $teacher_id = trim($reg_number_national);
                             }
                             $chk = $picoEdu->getExistsingUser($user_data, $teacher_id);
@@ -568,8 +550,7 @@ if($success && file_exists($path))
                             }
 
                             $db_fixed = 'NULL';
-                            if(!empty($birth_day))
-                            {
+                            if (!empty($birth_day)) {
                                 $db_fixed = "'" . $birth_day . "'";
                             }
 
@@ -609,19 +590,17 @@ if($success && file_exists($path))
                 // import data teacher
                 // delete file
             }
-        }      
-        
+        }
+
         $fileSync->deleteFile($path, false);
-        header("Location: ".$picoEdu->gateBaseSelfName()."?option=success&school_id=$school_id");
-    }
-    else
-    {
+        header("Location: " . $picoEdu->gateBaseSelfName() . "?option=success&school_id=$school_id");
+    } else {
         $fileSync->deleteFile($path, false);
         // delete file
-        header("Location: ".$picoEdu->gateBaseSelfName()."?option=duplicated");
+        header("Location: " . $picoEdu->gateBaseSelfName() . "?option=duplicated");
     }
     $fileSync->deleteFile($path, false);
 
-    $database->setSystemVariable('import-'.$school_id, 'true');
+    $database->setSystemVariable('import-' . $school_id, 'true');
     // delete file
 }

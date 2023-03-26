@@ -1,4 +1,5 @@
 <?php
+
 namespace Pico;
 
 class AuthStudent
@@ -60,7 +61,7 @@ class AuthStudent
 			AND `edu_student`.`blocked` = false
 			";
 			$stmt = $database->executeQuery($sql);
-			if($stmt->rowCount() > 0) {
+			if ($stmt->rowCount() > 0) {
 				$studentLoggedIn = $stmt->fetchObject();
 				$this->student_id = $studentLoggedIn->student_id;
 				$this->username = ($studentLoggedIn->username != '') ? $studentLoggedIn->username : $studentLoggedIn->member_id;

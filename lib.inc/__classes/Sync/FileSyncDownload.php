@@ -37,7 +37,7 @@ class FileSyncDownload extends \Sync\FileSyncMaster
     {
         $sql = "SELECT * FROM `edu_sync_file` WHERE `sync_direction` = 'down' AND `status` > 0 ORDER BY `time_create` DESC LIMIT 0,1 ";
         $stmt = $this->database->executeQuery($sql);
-        if($stmt->rowCount() > 0) {
+        if ($stmt->rowCount() > 0) {
             $data = $stmt->fetch(\PDO::FETCH_ASSOC);
             return $data['time_create'];
         }
@@ -124,7 +124,6 @@ class FileSyncDownload extends \Sync\FileSyncMaster
             $relative_path = addslashes($record['relative_path']);
             $time_upload = addslashes($record['time_upload']);
             $time_download = date('Y-m-d H:i:s');
-
 
             $localPath = $this->downloadBaseDir . "/" . $baseName;
 
@@ -246,8 +245,7 @@ class FileSyncDownload extends \Sync\FileSyncMaster
                 $localPath = $info['path'];
                 $relativePath = $this->getRelativePath($localPath);
             }
-            if($this->isAllowedFileExtension($relativePath))
-            {
+            if ($this->isAllowedFileExtension($relativePath)) {
                 $response = $this->downloadFileFromRemote($relativePath, $fileSyncUrl, $username, $password);
                 $dir = dirname($localPath);
                 $this->prepareDirectory($dir);
@@ -377,22 +375,3 @@ class FileSyncDownload extends \Sync\FileSyncMaster
         }
     }
 }
-
-
-
-
-/**
- * File Sync Upload
- * 1. Move pooling file to upload directory
- * 2. Create sync record to database
- * 3. Upload sync file to remote host
- * 4. Upload user file to remote host
- * 5. Update sync record status
- * 
- * File Sync Download
- * 1. Get sync record from remote host
- * 2. Download sync file from remote host
- * 3. Create sync record to database
- * 4. Sync user file : CREATEFILE=>DOWNLOAD, RENAMEFILE=>RENAME if exists or DOWNLOAD if not exists, CREATEDIR, RENAMEDIR, DELETEDIR
- * 5. Update sync record status
- */

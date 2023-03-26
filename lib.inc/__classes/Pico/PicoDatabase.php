@@ -102,12 +102,9 @@ class PicoDatabase
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
-			if($stmt->rowCount() > 0)
-			{
+			if ($stmt->rowCount() > 0) {
 				$result = $stmt->fetch(\PDO::FETCH_ASSOC);
-			}
-			else
-			{
+			} else {
 				$result = $defaultValue;
 			}
 		} catch (\PDOException $e) {
@@ -129,12 +126,9 @@ class PicoDatabase
 		$stmt = $this->conn->prepare($sql);
 		try {
 			$stmt->execute();
-			if($stmt->rowCount() > 0)
-			{
+			if ($stmt->rowCount() > 0) {
 				$result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-			}
-			else
-			{
+			} else {
 				$result = $defaultValue;
 			}
 		} catch (\PDOException $e) {
