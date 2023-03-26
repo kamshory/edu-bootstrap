@@ -646,7 +646,12 @@ class PicoEdu //NOSONAR
 		WHERE `school_id` = '$school_id' 
 		AND (`reg_number` LIKE '$reg_number' AND `reg_number` != '') ";
 		$stmt = $this->database->executeQuery($sql);
-		return $stmt->rowCount() > 0;
+		echo $sql;
+		echo $stmt->rowCount();
+		$exists = $stmt->rowCount() > 0;
+		
+		
+		return $exists;
 	}
 	public function checkTeacher($school_id, $reg_number, $reg_number_national, $name) //NOSONAR
 	{

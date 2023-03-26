@@ -472,13 +472,8 @@ if($success && file_exists($path))
                             ";
                             $database->executeInsert($sql2, true);
 
-                            $sql3 = "UPDATE `edu_student` SET `school_id` = '$school_id' WHERE `student_id` = '$student_id' 
-                            AND (`school_id` = '' OR `school_id` is null)
-                            ";
-                            $database->executeUpdate($sql3, true);
-                        } else {
-                            break;
-                        }
+
+                        } 
                     }
 
                     $sql = "UPDATE `edu_student` 
@@ -488,9 +483,7 @@ if($success && file_exists($path))
                     WHERE `edu_student`.`school_id` = '$school_id' ";
                     $database->executeUpdate($sql, true);
 
-                    $sql1 = "UPDATE `edu_school` SET `prevent_change_school` = '1', `prevent_resign` = '1'
-                    WHERE `school_id` = '$school_id' ";
-                    $database->executeUpdate($sql1, true);
+                    
                 } catch (Exception $e) {
                     // Do nothing
                 }
@@ -601,10 +594,7 @@ if($success && file_exists($path))
                             WHERE `teacher_id` = '$teacher_id' 
                             AND (`school_id` = '' OR `school_id` is null) ";
                             $database->executeUpdate($sql3, true);
-                        } else {
-                            break;
                         }
-
                     }
                 } catch (Exception $e) {
                     // Do nothing
@@ -619,8 +609,7 @@ if($success && file_exists($path))
                 // import data teacher
                 // delete file
             }
-        }
-        
+        }      
         
         $fileSync->deleteFile($path, false);
         header("Location: ".$picoEdu->gateBaseSelfName()."?option=success&school_id=$school_id");
