@@ -24,6 +24,11 @@ $structure = array(
                 'caption'=>'Sekolah',
                 'icon'=>'fa-school',
                 'link'=>'sekolah.php'                       
+            ),
+            array(
+                'caption'=>'Impor Data',
+                'icon'=>'fa-file-import',
+                'link'=>'import-data.php'                       
             )
         )
     ),
