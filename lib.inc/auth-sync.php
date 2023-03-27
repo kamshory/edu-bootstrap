@@ -50,17 +50,19 @@ if(empty($user_id))
 $applicationRoot = dirname(__DIR__);
 $permission = 0755;
 
-$fileUploadBaseDir = $applicationRoot."/volume.sync/file/upload";
-$fileDownloadBaseDir = $applicationRoot."/volume.sync/file/download";
-$filePoolBaseDir = $applicationRoot."/volume.sync/file/pool";
-$filePoolName = "pool";
-$filePoolRollingPrefix = "pool_";
-$filePoolExtension = ".txt";
+$fileUploadBaseDir = $syncConfigs->volume_sync_file_upload;
+$fileDownloadBaseDir =$syncConfigs->volume_sync_file_download;
+$filePoolBaseDir = $syncConfigs->volume_sync_file_pool;
+$filePoolName = $syncConfigs->sync_file_pool_name;
+$filePoolRollingPrefix = $syncConfigs->sync_database_rolling_prefix;
+$filePoolExtension = $syncConfigs->sync_database_extension;
 
-$databaseUploadBaseDir = $applicationRoot."/volume.sync/database/upload";
-$databaseDownloadBaseDir = $applicationRoot."/volume.sync/database/download";
-$databasePoolBaseDir = $applicationRoot."/volume.sync/database/pool";
-$databasePoolName = "pool";
-$databasePoolRollingPrefix = "pool_";
-$databasePoolExtension = ".txt";
+
+
+$databaseUploadBaseDir = $syncConfigs->volume_sync_database_upload;
+$databaseDownloadBaseDir = $syncConfigs->volume_sync_database_download;
+$databasePoolBaseDir = $syncConfigs->sync_database_base_dir;
+$databasePoolName = $syncConfigs->sync_file_pool_name;
+$databasePoolRollingPrefix = $syncConfigs->sync_database_rolling_prefix;
+$databasePoolExtension = $syncConfigs->sync_database_extension;
 

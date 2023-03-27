@@ -55,9 +55,14 @@ $syncConfigs->sync_file_extension = ".dat";
 $syncConfigs->sync_file_maximum_length = 50000;
 $syncConfigs->sync_file_use_relative_path = true;
 
+$syncConfigs->volume_sync_file_upload = $oneLevelUp."/volume.sync/file/upload";
+$syncConfigs->volume_sync_file_download = $oneLevelUp."/volume.sync/file/download";
+$syncConfigs->volume_sync_file_pool = $oneLevelUp."/volume.sync/file/pool";
+$syncConfigs->volume_sync_database_upload = $oneLevelUp."/volume.sync/database/upload";
+$syncConfigs->volume_sync_database_download = $oneLevelUp."/volume.sync/database/download";
+
 $syncConfigs->sync_data_enable = true;
 $syncConfigs->sync_time_enable = true;
-
 
 $cfg = new stdClass();
 $cfg->app_code = "picoedu";
