@@ -37,6 +37,7 @@ $sql = "SELECT `edu_school`.* $nt,
 (SELECT COUNT(DISTINCT `edu_class`.`class_id`) FROM `edu_class` WHERE `edu_class`.`school_id` = `edu_school`.`school_id` GROUP BY `edu_class`.`school_id` limit 0,1) AS `num_class`,
 (SELECT COUNT(DISTINCT `edu_teacher`.`teacher_id`) FROM `edu_teacher` WHERE `edu_teacher`.`school_id` = `edu_school`.`school_id` GROUP BY `edu_teacher`.`school_id` limit 0,1) AS `num_teacher`,
 (SELECT COUNT(DISTINCT `edu_student`.`student_id`) FROM `edu_student` WHERE `edu_student`.`school_id` = `edu_school`.`school_id` GROUP BY `edu_student`.`school_id` limit 0,1) AS `num_student`
+FROM `edu_school` 
 WHERE `edu_school`.`school_id` = '$edit_key'
 ";
 $stmt = $database->executeQuery($sql);
