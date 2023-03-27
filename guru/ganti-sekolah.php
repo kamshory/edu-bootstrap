@@ -14,8 +14,7 @@ if(@$_GET['option'] == 'select')
 	FROM `edu_member_school`
 	INNER JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_member_school`.`school_id`)
 	WHERE `edu_member_school`.`member_id` = '$teacher_id' AND `edu_member_school`.`role` = 'T' 
-	ORDER BY `edu_school`.`school_id` ASC
-	";
+	ORDER BY `edu_school`.`school_id` ASC ";
 	$stmt = $database->executeQuery($sql);
 	if($stmt->rowCount() > 0)
 	{
@@ -38,8 +37,7 @@ $sql = "SELECT `edu_school`.* $nt,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_create`) AS `admin_create`,
 (SELECT `edu_admin`.`name` FROM `edu_admin` WHERE `edu_admin`.`admin_id` = `edu_school`.`admin_edit`) AS `admin_edit`
 FROM `edu_school` 
-WHERE `edu_school`.`school_id` = '$edit_key'
-";
+WHERE `edu_school`.`school_id` = '$edit_key' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0)
 {

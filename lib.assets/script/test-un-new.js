@@ -66,6 +66,7 @@ $(document).ready(function () {
         answer[questionId].answerId = optionId;
         window.localStorage.setItem(keyAnswer, JSON.stringify(answer));
         setActiveNumber(testData, index, selector1, selector2, answer);
+        saveAnswer(JSON.parse(JSON.stringify(answer)));
     });
 
     $(document).on('click', '.button-doubtful', function (e) {
@@ -102,8 +103,10 @@ $(document).ready(function () {
                 $(this).find('input')[0].checked = true;
                 let optionId = $(this).find('input').val();
                 updateQuestionSelector(optionId);
+                saveAnswer(JSON.parse(JSON.stringify(answer)));
             }
         });
+        
     });
 
     renderQuestion(testData, lastIndex, selector1, answer);
@@ -113,6 +116,24 @@ $(document).ready(function () {
     setActiveNumber(testData, lastIndex, selector1, selector2, answer);
     markDoubtful(testData, lastIndex, selector1, selector2, answer);
 });
+
+function saveAnswer(answerToSaved)
+{
+    let answerId = testDataJSON.answer.answer_id;
+    let testId = testDataJSON.test.test_id;
+    $.ajax({
+        'type':'POST',
+        'url':'siswa/simpan-jawaban.php',
+        'dataType':'json',
+        'data':{test_id:testId, answer_id:answerId, answer:answerToSaved},
+        'success':function(data){
+            console.log(data);
+        },
+        'error':function(data){
+            console.log(data);
+        }
+    });
+}
 
 function updateQuestionSelector(optionId) {
     let question = testData[lastIndex];
@@ -172,7 +193,7 @@ function setActiveNumber(testData, index, selector1, selector2, answer) {
     }
 }
 
-function setAnswer(testData, index, selector1, selector2, answer) {
+function setAnswer(testData, index, selector1, selector2, answer) {  
     let question = testData[index];
     let questionId = question.question_id;
     if (typeof answer[questionId] != 'undefined') {

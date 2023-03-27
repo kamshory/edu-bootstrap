@@ -26,8 +26,7 @@ if (@$_POST['option'] == 'upload-image') {
         $white = imagecolorallocate($jpeg, 255, 255, 255);
 		imagefilledrectangle($jpeg, 0, 0, 300, 300, $white);
 		$png = imagecreatefromstring(base64_decode($img));
-		imagecopy($jpeg, $png, 0, 0, 0, 0, 300, 300);
-		
+		imagecopy($jpeg, $png, 0, 0, 0, 0, 300, 300);		
 
         imagejpeg($jpeg, $path, 70);
         $fileSync->createFile($path, true);      
@@ -53,7 +52,6 @@ if (@$_POST['option'] == 'upload-image') {
             $src_width,
             $src_height
         );
-
         
         imagejpeg($jpeg2, $path2, 70);
 		$fileSync->createFile($path2, true);
@@ -61,7 +59,6 @@ if (@$_POST['option'] == 'upload-image') {
         $rand = sprintf("%06d", mt_rand(0, 999999));
         $sql = "UPDATE `edu_teacher` SET `picture_rand` = '$rand' WHERE `teacher_id` = '$teacher_id' ";
         $database->executeUpdate($sql, true);
-
     }
     exit();
 }
@@ -74,8 +71,7 @@ $sql = "SELECT `edu_teacher`.* , `edu_school`.`name` AS `school_name`
 FROM `edu_teacher` 
 LEFT JOIN (`edu_school`) ON (`edu_school`.`school_id` = `edu_teacher`.`school_id`)
 WHERE `edu_teacher`.`school_id` = '$school_id'
-AND `edu_teacher`.`teacher_id` = '$teacher_id'
-";
+AND `edu_teacher`.`teacher_id` = '$teacher_id' ";
 $stmt = $database->executeQuery($sql);
 if($stmt->rowCount() > 0) {
     $data = $stmt->fetch(\PDO::FETCH_ASSOC);

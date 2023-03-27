@@ -55,8 +55,7 @@ if(isset($_GET['info_id']))
 				}
 			}
 			if(!$content)
-			{
-				
+			{				
 				$content = $cntmax;
 			}
 		}
@@ -92,8 +91,8 @@ if(isset($_GET['info_id']))
         <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/info.js"></script>
         <style type="text/css">
 		.article-title h1{
-			font-family:"Roboto";
-			font-size:28px;
+			font-family: "Roboto";
+			font-size: 28px;
 		}
 		</style>
         <div class="main-content">

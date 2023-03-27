@@ -203,6 +203,7 @@ class PicoTest
         return array(
             'test' => $eduTest,
             'data' => $question,
+            'answer'=> $testAnswer,
             'timer' => array(
                 'start' => array(
                     'string' => $testAnswer['start'],

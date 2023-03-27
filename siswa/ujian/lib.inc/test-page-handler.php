@@ -42,6 +42,7 @@ $testDataJSON = json_encode($testDataFinal);
         let testStudentId = '<?php echo $studentLoggedIn->student_id.$eduTest->test_id;?>';
 		let testId = '<?php echo $eduTest->test_id;?>';
 		let websocketURL = '<?php echo $picoEdu->getWebsocketHost();?>/?module=test&test_id='+testId;
+        let sessionId = '<?php echo md5(session_id());?>';
 	</script>
     <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.assets/script/test-un-new.js">
     </script>
