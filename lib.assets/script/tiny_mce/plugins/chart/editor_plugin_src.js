@@ -29,8 +29,8 @@
             return {
                 longname: "Chart plugin",
                 author: "Kamshory",
-                authorurl: "http://www.planetbiru.com",
-                infourl: "http://www.planetbiru.com/kamshory",
+                authorurl: "https://www.planetbiru.com",
+                infourl: "https://www.planetbiru.com/kamshory",
                 version: "1.0"
             }
         }

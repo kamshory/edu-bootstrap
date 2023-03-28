@@ -2,7 +2,7 @@
 Copyright Planetbiru Studio 2014 - 2017
 Some rights reserved
 http://www.planetbiru.net
-http://www.planetbiru.com
+https://www.planetbiru.com
 */
 
 function mobileUI(resources, opt)

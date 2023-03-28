@@ -82,9 +82,9 @@ if(@$_GET['option'] == 'email-taken')
 <p>Email yang Anda gunakan di <?php echo $cfg->app_name;?> telah digunakan oleh pengguna lain di Planetbiru. Kami tidak melakukan perubahan apapun kecuali:</p>
 <ol>
   <li>Anda meminta kepada sekolah untuk mengganti alamat email dengan yang baru yang Anda yakin milik Anda dan tidak digunakan oleh orang lain.</li>
-  <li>Anda melakukan <a href="http://www.planetbiru.com/reset-password.php" target="_blank">reset password dari Planetbiru</a>.</li>
+  <li>Anda melakukan <a href="https://www.planetbiru.com/reset-password.php" target="_blank">reset password dari Planetbiru</a>.</li>
 </ol>
-<p><a href="http://www.planetbiru.com/reset-password.php" target="_blank">Klik di sini untuk reset password</a></p>
+<p><a href="https://www.planetbiru.com/reset-password.php" target="_blank">Klik di sini untuk reset password</a></p>
 <p><a href="../">Kembali ke depan</a></p>
 <?php
 }
@@ -108,7 +108,7 @@ else
   <input type="hidden" name="auth" value="<?php echo $data['auth'];?>">
 </form>
 
-<p><a href="http://www.planetbiru.com/register.php" target="_blank">Klik di sini jika belum terdaftar</a></p>
+<p><a href="https://www.planetbiru.com/register.php" target="_blank">Klik di sini jika belum terdaftar</a></p>
 <p><a href="../">Kembali ke depan</a></p>
 <?php
 }
