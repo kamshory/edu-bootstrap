@@ -29,6 +29,12 @@ catch (e) {
     answer = {};
 }
 
+let sessionId1;
+let sessionId2;
+let answer1;
+let answer2;
+
+
 $(document).ready(function () {
 
     $(document).on('click', selector2 + ' li a', function (e) {
@@ -109,12 +115,35 @@ $(document).ready(function () {
         
     });
 
+    $('#copy-answer').on('click', function(e2){
+        answer = JSON.parse(answer1);
+        renderQuestion(testData, lastIndex, selector1, answer);
+        renderQuestionSelector(testData, lastIndex, selector2, answer);
+
+        setAnswer(testData, lastIndex, selector1, selector2, answer);
+        setActiveNumber(testData, lastIndex, selector1, selector2, answer);
+        markDoubtful(testData, lastIndex, selector1, selector2, answer);
+        $('#test-confirm').modal('hide');
+    });
+
     renderQuestion(testData, lastIndex, selector1, answer);
     renderQuestionSelector(testData, lastIndex, selector2, answer);
 
     setAnswer(testData, lastIndex, selector1, selector2, answer);
     setActiveNumber(testData, lastIndex, selector1, selector2, answer);
     markDoubtful(testData, lastIndex, selector1, selector2, answer);
+
+
+    sessionId1 = testDataJSON.answer.last_session_id;
+    sessionId2 = sessionId;
+    answer1 = JSON.stringify(JSON.parse(testDataJSON.answer.answer));
+    answer2 = JSON.stringify(answer);
+    
+    //if(sessionId1 != sessionId2 && answer1.length > answer2.length)
+    {
+        $('#test-confirm').modal('show');
+    }
+
 });
 
 function saveAnswer(answerToSaved)

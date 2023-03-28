@@ -125,15 +125,32 @@ $testDataJSON = json_encode($testDataFinal);
 	<script src="<?php echo $cfg->base_assets;?>lib.assets/script/test-ws-student.js"></script>
 
 	<div class="modal fade" id="test-alert" tabindex="-1" role="dialog" aria-labelledby="test-alert-title" aria-hidden="true">
-	<div class="modal-dialog modal-md" role="document">
-		<div class="modal-content">
-		<div class="modal-header">
-			<h5 class="modal-title" id="test-alert-title">Pesan Pengawas</h5>
-		</div>
-			<div class="modal-body">
-			</div>
-		</div>
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="test-alert-title">Pesan Pengawas</h5>
+            </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
 	</div>
+
+    <div class="modal fade" id="test-confirm" tabindex="-1" role="dialog" aria-labelledby="test-alert-title" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="test-alert-title">Konfirmasi</h5>
+                </div>
+                <div class="modal-body">
+                    Apakah Anda akan menyalin data jawaban dari server?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="copy-answer">Ya</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                </div>
+            </div>
+        </div>
 	</div>
 
     <script type="text/javascript">
