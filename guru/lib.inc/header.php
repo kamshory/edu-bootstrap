@@ -29,7 +29,7 @@ if(!isset($cfg))
 <meta name="theme-color" content="#3558BE">
 
 <!-- Custom styles for this template -->
-<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/dashboard/dashboard.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.vendors/dashboard/dashboard.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $cfg->base_assets;?>lib.style/style.css">
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.vendors/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $cfg->base_assets;?>lib.vendors/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -178,18 +178,16 @@ a.download:hover {
     border-radius: 10px;
 }
 
-.test-area{
-    padding-bottom:20px;
+.test-area {
+    padding-bottom: 20px;
 }
-@media and (min-width:992px)
-{
+
+@media and (min-width:992px) {
     min-height: calc(100vh - 160px);
     max-height: calc(100vh - 160px);
     overflow-y: auto;
-    padding-bottom:0px;
+    padding-bottom: 0px;
 }
-
-
 
 .test-area .test-nav {
     text-align: center;
@@ -208,15 +206,15 @@ a.download:hover {
     border-radius: 10px;
 }
 
-.test-status{
+.test-status {
     padding-bottom: 10px;
     margin-bottom: 10px;
 
 }
-.test-status > .col{
-}
 
-.button-area .btn{
+.test-status>.col {}
+
+.button-area .btn {
     margin-bottom: 10px;
 }
 
@@ -365,4 +363,3 @@ a.download:hover {
 .button-area {
     padding: 10px 0;
 }
-

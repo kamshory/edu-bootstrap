@@ -28,7 +28,7 @@ $structure = array(
             array(
                 'caption'=>'Impor Data',
                 'icon'=>'fa-file-import',
-                'link'=>'import-data.php'                       
+                'link'=>'impor-data.php'                       
             )
         )
     ),
