@@ -176,6 +176,7 @@ a.download:hover {
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
+    position: relative;
 }
 
 .test-area {
@@ -214,7 +215,6 @@ a.download:hover {
 
 }
 
-.test-status>.col {}
 
 .button-area .btn {
     margin-bottom: 10px;
@@ -242,7 +242,6 @@ a.download:hover {
     text-align: center;
     padding: 8px 0px;
     border-radius: 50%;
-    box-sizing: border-box;
 }
 
 .selector-area ul li[data-answered="true"] a {
@@ -264,6 +263,7 @@ a.download:hover {
 .test-option-area {
     line-height: 1.7;
     padding-left: 40px;
+    position: relative;
 }
 
 .test-option {
@@ -335,19 +335,12 @@ a.download:hover {
     height: 1.8rem;
 }
 
-.test-option-area {
-    position: relative;
-}
 
 .test-option-area .option-control {
     position: absolute;
     left: -40px;
     top: -8px;
     width: 32px;
-}
-
-.test-wrapper {
-    position: relative;
 }
 
 .test-wrapper img {
