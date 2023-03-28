@@ -139,7 +139,7 @@ $(document).ready(function () {
     answer1 = JSON.stringify(JSON.parse(testDataJSON.answer.answer));
     answer2 = JSON.stringify(answer);
     
-    //if(sessionId1 != sessionId2 && answer1.length > answer2.length)
+    if(sessionId1 != sessionId2 && answer1.length > answer2.length)
     {
         $('#test-confirm').modal('show');
     }
