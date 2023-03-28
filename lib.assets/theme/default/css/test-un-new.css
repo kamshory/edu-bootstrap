@@ -183,10 +183,12 @@ a.download:hover {
 }
 
 @media and (min-width:992px) {
-    min-height: calc(100vh - 160px);
-    max-height: calc(100vh - 160px);
-    overflow-y: auto;
-    padding-bottom: 0px;
+    .test-area {
+        min-height: calc(100vh - 160px);
+        max-height: calc(100vh - 160px);
+        overflow-y: auto;
+        padding-bottom: 0px;
+    }
 }
 
 .test-area .test-nav {
