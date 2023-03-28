@@ -133,8 +133,37 @@ $(document).ready(function () {
     if (sessionId1 != sessionId2 && answer1.length > answer2.length) {
         $('#test-confirm').modal('show');
     }
-
+    showTimer(testDataJSON.timer.deadline.unix_time_stamp);
+    setInterval(function(){
+        showTimer(testDataJSON.timer.deadline.unix_time_stamp);
+    }, 1000);
 });
+
+function showTimer(deadline)
+{
+    let deadlineMs = deadline * 1000;
+    let tm = deadlineMs - (new Date()).getTime();
+    let timer = degToDMS(tm/3600000);
+    $('.test-timer').text(timer.join(':'))
+}
+
+function degToDMS (deg, dplaces) {
+    dplaces = dplaces || 0;
+    var d = Math.floor (deg);          // make degrees
+    var m = Math.floor((deg-d)*60);    // make minutes
+    var s = Math.round(((deg-d)*60-m)*60*Math.pow(10,dplaces))/Math.pow(10,dplaces); // Make sec rounded
+    s == 60 && (m++, s=0 );            // if seconds rounds to 60 then increment minutes, reset seconds
+    m == 60 && (d++, m=0 );            // if minutes rounds to 60 then increment degress, reset minutes
+    if(m < 10)
+    {
+        m = '0'+m;
+    }
+    if(s < 10)
+    {
+        s = '0'+s;
+    }
+    return [d, m, s];   // create output DMS string
+}
 
 function saveAnswer(answerToSaved) {
     let answerId = testDataJSON.answer.answer_id;
@@ -238,6 +267,7 @@ function markDoubtful(testData, index, selector1, selector2, answer) {
 }
 
 function renderQuestion(testData, index, selector, answer) {
+    $('.question-number').text(parseInt(index) + 1);
     let question = testData[index];
     let questionId = question.question_id;
     let sel = $(selector);

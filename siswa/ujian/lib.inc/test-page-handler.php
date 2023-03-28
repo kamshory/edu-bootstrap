@@ -56,7 +56,7 @@ $testDataJSON = json_encode($testDataFinal);
                 <hr>
             </div>
             <ul class="list-unstyled CTAs">
-                <li> <a href="#" class="download">Subscribe</a> </li>
+                
             </ul>
         </nav>
         <div class="content">
@@ -76,12 +76,11 @@ $testDataJSON = json_encode($testDataFinal);
             </nav>
             <div class="content-wrapper">
                 <div class="row">
-                    <div class="col col-9 test-area">
-                        
+                    <div class="col col-12 col-lg-9 col-sm-12 test-area">                    
                         <div class="test-wrapper">
                             <div class="row test-status">
-                                <div class="col col-6 text-left">Nomor : 1</div>
-                                <div class="col col-6 text-right">Siswa Waktu: 12:00</div>
+                                <div class="col col-6 text-left">Nomor: <span class="question-number">1</span></div>
+                                <div class="col col-6 text-right">Waktu: <span class="test-timer">0:00:00</span></div>
                             </div>
 
                             <div class="test-question-area">
@@ -95,7 +94,7 @@ $testDataJSON = json_encode($testDataFinal);
                             <a class="btn btn-primary button-next" href="#">Sesudahnya</a>                               
                         </div>
                     </div>
-                    <div class="col col-3 selector-area">                       
+                    <div class="col col-12 col-lg-3 col-sm-12 selector-area">                       
                         <div class="selector-wrapper">
                             <ul>                               
                             </ul>                         
