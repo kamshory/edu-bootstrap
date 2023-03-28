@@ -34,7 +34,6 @@ let sessionId2;
 let answer1;
 let answer2;
 
-
 $(document).ready(function () {
 
     $(document).on('click', selector2 + ' li a', function (e) {
@@ -44,14 +43,11 @@ $(document).ready(function () {
         a.parent().addClass('active');
         let indexStr = a.parent().attr('data-index');
         let index = parseInt(indexStr);
-        if(isNaN(index))
-        {
+        if (isNaN(index)) {
             index = 0;
         }
-
         lastIndex = index;
-
-        window.localStorage.setItem(keyIndex, index);      
+        window.localStorage.setItem(keyIndex, index);
 
         renderQuestion(testData, index, selector1, answer);
         setAnswer(testData, index, selector1, selector2, answer);
@@ -92,7 +88,6 @@ $(document).ready(function () {
     });
 
     $(document).on("keydown", 'body', function (event) {
-
         let key = event.key;
         key = key.toUpperCase();
         if (key == "ArrowRight".toUpperCase()) {
@@ -112,14 +107,12 @@ $(document).ready(function () {
                 saveAnswer(JSON.parse(JSON.stringify(answer)));
             }
         });
-        
     });
 
-    $('#copy-answer').on('click', function(e2){
+    $('#copy-answer').on('click', function (e2) {
         answer = JSON.parse(answer1);
         renderQuestion(testData, lastIndex, selector1, answer);
         renderQuestionSelector(testData, lastIndex, selector2, answer);
-
         setAnswer(testData, lastIndex, selector1, selector2, answer);
         setActiveNumber(testData, lastIndex, selector1, selector2, answer);
         markDoubtful(testData, lastIndex, selector1, selector2, answer);
@@ -128,37 +121,33 @@ $(document).ready(function () {
 
     renderQuestion(testData, lastIndex, selector1, answer);
     renderQuestionSelector(testData, lastIndex, selector2, answer);
-
     setAnswer(testData, lastIndex, selector1, selector2, answer);
     setActiveNumber(testData, lastIndex, selector1, selector2, answer);
     markDoubtful(testData, lastIndex, selector1, selector2, answer);
-
 
     sessionId1 = testDataJSON.answer.last_session_id;
     sessionId2 = sessionId;
     answer1 = JSON.stringify(JSON.parse(testDataJSON.answer.answer));
     answer2 = JSON.stringify(answer);
-    
-    if(sessionId1 != sessionId2 && answer1.length > answer2.length)
-    {
+
+    if (sessionId1 != sessionId2 && answer1.length > answer2.length) {
         $('#test-confirm').modal('show');
     }
 
 });
 
-function saveAnswer(answerToSaved)
-{
+function saveAnswer(answerToSaved) {
     let answerId = testDataJSON.answer.answer_id;
     let testId = testDataJSON.test.test_id;
     $.ajax({
-        'type':'POST',
-        'url':'siswa/simpan-jawaban.php',
-        'dataType':'json',
-        'data':{test_id:testId, answer_id:answerId, answer:answerToSaved},
-        'success':function(data){
+        'type': 'POST',
+        'url': 'siswa/simpan-jawaban.php',
+        'dataType': 'json',
+        'data': { test_id: testId, answer_id: answerId, answer: answerToSaved },
+        'success': function (data) {
             console.log(data);
         },
-        'error':function(data){
+        'error': function (data) {
             console.log(data);
         }
     });
@@ -167,7 +156,6 @@ function saveAnswer(answerToSaved)
 function updateQuestionSelector(optionId) {
     let question = testData[lastIndex];
     let questionId = question.question_id;
-
     answer[questionId] = (typeof answer[questionId] == 'undefined') ? {} : answer[questionId];
     answer[questionId].answerId = optionId;
     window.localStorage.setItem(keyAnswer, JSON.stringify(answer));
@@ -215,14 +203,13 @@ function setActiveNumber(testData, index, selector1, selector2, answer) {
     li.addClass('active');
     let question = testData[index];
     let questionId = question.question_id;
-
     if (typeof answer[questionId] != 'undefined') {
         let answered = (answer[questionId].answerId || '') != '';
         li.attr({ 'data-answered': answered ? 'true' : 'false' });
     }
 }
 
-function setAnswer(testData, index, selector1, selector2, answer) {  
+function setAnswer(testData, index, selector1, selector2, answer) {
     let question = testData[index];
     let questionId = question.question_id;
     if (typeof answer[questionId] != 'undefined') {
@@ -244,7 +231,6 @@ function markDoubtful(testData, index, selector1, selector2, answer) {
         let li = $(listSelector);
         li.attr({ 'data-doubtful': doubtful ? 'true' : 'false' });
         $('body').attr('data-doubtful', doubtful ? 'true' : 'false');
-
         let answered = (answer[questionId].answerId || '') != '';
         li.attr({ 'data-doubtful': doubtful ? 'true' : 'false' });
         li.attr({ 'data-answered': answered ? 'true' : 'false' });
@@ -302,8 +288,8 @@ function renderQuestionSelector(testData, index, selector, answer) {
             let answered = (answer[questionId].answerId || '') != '';
             li.attr({ 'data-doubtful': doubtful ? 'true' : 'false' });
             li.attr({ 'data-answered': answered ? 'true' : 'false' });
-
         }
+
         let a = $('<a />');
         a.attr({ 'href': '#' });
         a.text(j);
