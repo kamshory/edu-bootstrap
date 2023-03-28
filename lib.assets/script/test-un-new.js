@@ -149,11 +149,21 @@ function showTimer(deadline)
 
 function degToDMS (deg, dplaces) {
     dplaces = dplaces || 0;
+    let minus = false;
+    if(deg < 0)
+    {
+        minus = true;
+        deg = deg * -1;
+    }
     var d = Math.floor (deg);          // make degrees
     var m = Math.floor((deg-d)*60);    // make minutes
     var s = Math.round(((deg-d)*60-m)*60*Math.pow(10,dplaces))/Math.pow(10,dplaces); // Make sec rounded
     s == 60 && (m++, s=0 );            // if seconds rounds to 60 then increment minutes, reset seconds
     m == 60 && (d++, m=0 );            // if minutes rounds to 60 then increment degress, reset minutes
+    if(d < 10)
+    {
+        d = '0'+d;
+    }
     if(m < 10)
     {
         m = '0'+m;
@@ -161,6 +171,10 @@ function degToDMS (deg, dplaces) {
     if(s < 10)
     {
         s = '0'+s;
+    }
+    if(minus)
+    {
+        d = '-'+d;
     }
     return [d, m, s];   // create output DMS string
 }

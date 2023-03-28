@@ -100,11 +100,11 @@ $testDataJSON = json_encode($testDataFinal);
                             </ul>                         
                         </div>
                         <div class="button-area">
-                            <button class="btn btn-danger button-help" data-type="medical"><i class="fas fa-suitcase-medical"></i></button>
-                            <button class="btn btn-primary button-help" data-type="paper"><i class="fas fa-file"></i></button>
-                            <button class="btn btn-primary button-help" data-type="pencil"><i class="fas fa-pencil"></i></button>
-                            <button class="btn btn-primary button-help" data-type="toilet"><i class="fas fa-toilet"></i></button>
-                            <button class="btn btn-primary button-help" data-type="help"><i class="fas fa-hand-paper"></i></button>
+                            <button title="Darurat medis" class="btn btn-danger button-help" data-type="medical"><i class="fas fa-suitcase-medical"></i></button>
+                            <button title="Minta kertas" class="btn btn-primary button-help" data-type="paper"><i class="fas fa-file"></i></button>
+                            <button title="Minta pena/pensil" class="btn btn-primary button-help" data-type="pencil"><i class="fas fa-pencil"></i></button>
+                            <button title="Ijin ke toilet" class="btn btn-primary button-help" data-type="toilet"><i class="fas fa-toilet"></i></button>
+                            <button title="Ijin bicara/bertanya" class="btn btn-primary button-help" data-type="help"><i class="fas fa-hand-paper"></i></button>
                             
                             <button class="btn btn-success">Kirim Hasil</button>
                         </div>
