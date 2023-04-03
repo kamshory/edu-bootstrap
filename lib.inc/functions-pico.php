@@ -290,14 +290,14 @@ function ar_rom($ar, $br = "\r\n")
 
 
 /**
- * Filter input from POST, GET, REQUEST, etc
- * @param int $type
- * @param string $variable_name
- * @param int $filter
- * @param mixed $options
- * @return string
+ * Filter input from POST, GET, COOKIE, etc
+ * @param int $type Input type (INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER, INPUT_ENV)
+ * @param string $key Key
+ * @param int $filter Filter type
+ * @param mixed $options Option
+ * @return mixed
  */
-function kh_filter_input($type, $variable_name, $filter = FILTER_DEFAULT, $options = null) //NOSONAR
+function kh_filter_input($type, $key, $filter = FILTER_DEFAULT, $options = null) //NOSONAR
 {
 	switch ($type) //NOSONAR
 	{
@@ -316,7 +316,7 @@ function kh_filter_input($type, $variable_name, $filter = FILTER_DEFAULT, $optio
 		case INPUT_ENV:
 			$var = $_ENV;
 	}
-	$val = (isset($var[$variable_name])) ? $var[$variable_name] : "";
+	$val = isset($var[$key]) ? $var[$key] : "";
 	if (!is_scalar($val)) {
 		unset($val);
 		$val = "";
