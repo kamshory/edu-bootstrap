@@ -12,6 +12,7 @@ class PicoTestCreator
         'decimal' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
         'decimal-leading-zero' => array('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')
     );
+
     public function loadXmlData_word($xml_file, $key = 0) //NOSONAR
     {
         $s = file_get_contents($xml_file);
@@ -34,10 +35,10 @@ class PicoTestCreator
             $sort_order++;
             if (count(@$question->question->file)) {
                 foreach ($question->question->file as $file) {
-                    $name_file = trimWhitespace(@$file->name);
-                    $type_file = trimWhitespace(@$file->type);
-                    $encoding_file = trimWhitespace(@$file->encoding);
-                    $data_file = trimWhitespace(@$file->data);
+                    $name_file = $this->trimWhitespace(@$file->name);
+                    $type_file = $this->trimWhitespace(@$file->type);
+                    $encoding_file = $this->trimWhitespace(@$file->encoding);
+                    $data_file = $this->trimWhitespace(@$file->data);
                     $files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
                 }
             }
@@ -52,10 +53,10 @@ class PicoTestCreator
                     $score = trim(@$option->value) * 1;
                     if (count(@$option->file)) {
                         foreach ($option->file as $file) {
-                            $name_file = trimWhitespace(@$file->name);
-                            $type_file = trimWhitespace(@$file->type);
-                            $encoding_file = trimWhitespace(@$file->encoding);
-                            $data_file = trimWhitespace(@$file->data);
+                            $name_file = $this->trimWhitespace(@$file->name);
+                            $type_file = $this->trimWhitespace(@$file->type);
+                            $encoding_file = $this->trimWhitespace(@$file->encoding);
+                            $data_file = $this->trimWhitespace(@$file->data);
                             $files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
                         }
                     }
@@ -83,7 +84,7 @@ class PicoTestCreator
         }
         return $text_all;
     }
-
+    
     public function loadXmlData($xml_file) //NOSONAR
     {
         $s = file_get_contents($xml_file);
@@ -101,10 +102,10 @@ class PicoTestCreator
             $sort_order++;
             if (count(@$question->question->file)) {
                 foreach ($question->question->file as $file) {
-                    $name_file = trimWhitespace(@$file->name);
-                    $type_file = trimWhitespace(@$file->type);
-                    $encoding_file = trimWhitespace(@$file->encoding);
-                    $data_file = trimWhitespace(@$file->data);
+                    $name_file = $this->trimWhitespace(@$file->name);
+                    $type_file = $this->trimWhitespace(@$file->type);
+                    $encoding_file = $this->trimWhitespace(@$file->encoding);
+                    $data_file = $this->trimWhitespace(@$file->data);
                     $files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
                 }
             }
@@ -117,10 +118,10 @@ class PicoTestCreator
                     $score = trim(@$option->value) * 1;
                     if (count(@$option->file)) {
                         foreach ($option->file as $file) {
-                            $name_file = trimWhitespace(@$file->name);
-                            $type_file = trimWhitespace(@$file->type);
-                            $encoding_file = trimWhitespace(@$file->encoding);
-                            $data_file = trimWhitespace(@$file->data);
+                            $name_file = $this->trimWhitespace(@$file->name);
+                            $type_file = $this->trimWhitespace(@$file->type);
+                            $encoding_file = $this->trimWhitespace(@$file->encoding);
+                            $data_file = $this->trimWhitespace(@$file->data);
                             $files[$name_file] = array('type' => $type_file, 'encoding' => $encoding_file, 'data' => $data_file);
                         }
                     }
@@ -595,7 +596,7 @@ class PicoTestCreator
 
     public function getNumType($lines)
     {
-        $numberingList = \Pico\PicoTestCreator::$numberingList;;
+        $numberingList = \Pico\PicoTestCreator::$numberingList;
         foreach ($numberingList as $type) {
             $arrType = array();
             $lastLine = -1;
@@ -899,4 +900,9 @@ class PicoTestCreator
         }
         return $line;
     }
+
+    public function trimWhitespace($value)
+	{
+		return trim($value, " \r\n\t ");
+	}
 }
