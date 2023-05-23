@@ -92,12 +92,13 @@ class WSDatabase
 	/**
 	 * Execute query without return anything
 	 * @param string $sql Query string to be executed
+	 * @return \PDOStatement
 	 */
 	public function execute($sql)
 	{
 		$stmt = $this->conn->prepare($sql);
 		try {
-			$stmt->execute();
+			return $stmt->execute();
 		} catch (\PDOException $e) {
 			// Do nothing
 		}
